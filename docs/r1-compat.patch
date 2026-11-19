@@ -1,0 +1,1172 @@
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Anchor.php text-wiki/Text/Wiki/Parse/Default/Anchor.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Anchor.php	2026-11-20 07:01:22.834474719 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Anchor.php	2026-11-20 07:05:46.349523613 +0900
+@@ -61,7 +61,7 @@
+      * the source text.
+      *
+      */
+-    function process(&$matches) {
++    function process($matches) {
+         
+         $name = $matches[2];
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Bibcite.php text-wiki/Text/Wiki/Parse/Default/Bibcite.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Bibcite.php	2026-11-20 07:01:22.834583071 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Bibcite.php	2026-11-20 07:05:46.349645345 +0900
+@@ -45,7 +45,7 @@
+ 
+     public $regex = '/\(\(bibcite\s([a-z0-9]+)\)\)/i';
+ 
+-    function process(&$matches) {
++    function process($matches) {
+         $label = $matches[1];	
+         $options = array(
+             'label' => $label);
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Bibitem.php text-wiki/Text/Wiki/Parse/Default/Bibitem.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Bibitem.php	2026-11-20 07:01:22.834583071 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Bibitem.php	2026-11-20 07:05:46.350120838 +0900
+@@ -41,7 +41,7 @@
+      * 
+      */
+ 
+-    function process(&$matches) {
++    function process($matches) {
+         $label = $matches[1];
+         $content = $matches[2];
+         $content = trim(str_replace("\n", " ", $content));
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Blockquote.php text-wiki/Text/Wiki/Parse/Default/Blockquote.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Blockquote.php	2026-11-20 07:01:22.834726676 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Blockquote.php	2026-11-20 07:05:46.350331694 +0900
+@@ -75,7 +75,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         // the replacement text we will return to parse()
+         $return = '';
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Bold.php text-wiki/Text/Wiki/Parse/Default/Bold.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Bold.php	2026-11-20 07:01:22.834770011 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Bold.php	2026-11-20 07:05:46.350581007 +0900
+@@ -69,7 +69,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         $start = $this->wiki->addToken($this->rule, array('type' => 'start'));
+         $end = $this->wiki->addToken($this->rule, array('type' => 'end'));
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Break.php text-wiki/Text/Wiki/Parse/Default/Break.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Break.php	2026-11-20 07:01:22.834854648 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Break.php	2026-11-20 07:05:46.350697802 +0900
+@@ -63,7 +63,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {    
+         return $this->wiki->addToken($this->rule);
+     }
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Button.php text-wiki/Text/Wiki/Parse/Default/Button.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Button.php	2026-11-20 07:01:22.834891463 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Button.php	2026-11-20 07:05:46.350824893 +0900
+@@ -30,7 +30,7 @@
+ 
+     public $regex = '/\[\[button\s+([a-z0-9\-_]+)(?:\s+(.+?))?\]\]/is';
+ 
+-    function process(&$matches)
++    function process($matches)
+     {
+         $type = $matches[1];
+         $attrString = $matches[2];
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Center.php text-wiki/Text/Wiki/Parse/Default/Center.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Center.php	2026-11-20 07:01:22.834923631 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Center.php	2026-11-20 07:05:46.350926315 +0900
+@@ -63,7 +63,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $start = $this->wiki->addToken($this->rule, array(
+             'type' => 'start'));
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Clearfloat.php text-wiki/Text/Wiki/Parse/Default/Clearfloat.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Clearfloat.php	2026-11-20 07:01:22.834965735 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Clearfloat.php	2026-11-20 07:05:46.351014146 +0900
+@@ -57,7 +57,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $side = $matches[2];
+         $options = array('side' => $side);
+         return "\n\n" . $this->wiki->addToken($this->rule, $options) . "\n\n";
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Code.php text-wiki/Text/Wiki/Parse/Default/Code.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Code.php	2026-11-20 07:01:22.835015459 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Code.php	2026-11-20 07:05:46.351104462 +0900
+@@ -67,7 +67,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         // are there additional attribute arguments?
+         $args = trim($matches[1]);
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Collapsible.php text-wiki/Text/Wiki/Parse/Default/Collapsible.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Collapsible.php	2026-11-20 07:01:22.835059775 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Collapsible.php	2026-11-20 07:05:46.351208568 +0900
+@@ -60,7 +60,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         
+         $content = $matches[3];
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Colortext.php text-wiki/Text/Wiki/Parse/Default/Colortext.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Colortext.php	2026-11-20 07:01:22.835102830 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Colortext.php	2026-11-20 07:05:46.351303791 +0900
+@@ -68,7 +68,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $start = $this->wiki->addToken($this->rule, array(
+             'type' => 'start', 
+             'color' => $matches[1]));
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Comment.php text-wiki/Text/Wiki/Parse/Default/Comment.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Comment.php	2026-11-20 07:01:22.835136470 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Comment.php	2026-11-20 07:05:46.351425513 +0900
+@@ -58,7 +58,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         
+         return '';
+     
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Date.php text-wiki/Text/Wiki/Parse/Default/Date.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Date.php	2026-11-20 07:01:22.835229520 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Date.php	2026-11-20 07:05:46.351559744 +0900
+@@ -43,7 +43,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+     	
+     	$options = array();
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Deflist.php text-wiki/Text/Wiki/Parse/Default/Deflist.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Deflist.php	2026-11-20 07:01:22.835303471 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Deflist.php	2026-11-20 07:05:46.351669929 +0900
+@@ -78,7 +78,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         // the replacement text we will return to parse()
+         $return = '';
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Delimiter.php text-wiki/Text/Wiki/Parse/Default/Delimiter.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Delimiter.php	2026-11-20 07:01:22.835345283 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Delimiter.php	2026-11-20 07:07:15.407590329 +0900
+@@ -47,9 +47,9 @@
+     * 
+     */
+     
+-    function Text_Wiki_Parse_delimiter(&$obj)
++    function __construct(&$obj)
+     {
+-        parent::Text_Wiki_Parse($obj);
++        parent::__construct($obj);
+         $this->regex = '/' . $this->wiki->delim . '/';
+     }
+ 
+@@ -68,7 +68,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {    
+         return $this->wiki->addToken(
+             $this->rule,
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Div.php text-wiki/Text/Wiki/Parse/Default/Div.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Div.php	2026-11-20 07:01:22.835411523 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Div.php	2026-11-20 07:05:46.351907425 +0900
+@@ -57,7 +57,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $content = $matches[3];
+         
+         $attr = $this->getAttrs(trim($matches[2]));
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Divalign.php text-wiki/Text/Wiki/Parse/Default/Divalign.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Divalign.php	2026-11-20 07:01:22.835444993 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Divalign.php	2026-11-20 07:05:46.352044641 +0900
+@@ -56,7 +56,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $align = $matches[1];
+         $content = $matches[2];
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Divprefilter.php text-wiki/Text/Wiki/Parse/Default/Divprefilter.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Divprefilter.php	2026-11-20 07:01:22.835488949 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Divprefilter.php	2026-11-20 07:05:46.352167875 +0900
+@@ -58,7 +58,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {     
+         return '[[/div]][[div';
+ 
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Email.php text-wiki/Text/Wiki/Parse/Default/Email.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Email.php	2026-11-20 07:01:22.835523290 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Email.php	2026-11-20 07:05:46.352263749 +0900
+@@ -62,7 +62,7 @@
+ 
+     }
+     
+-    function process(&$matches){
++    function process($matches){
+         $options = array(
+             'email' => $matches[0],
+             'text' => $matches[0]
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Embed.php text-wiki/Text/Wiki/Parse/Default/Embed.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Embed.php	2026-11-20 07:01:22.835555869 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Embed.php	2026-11-20 07:05:46.352365842 +0900
+@@ -54,7 +54,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+ 	    	$content =trim($matches[1]);
+ 		$options = array('content' => $content);
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Emphasis.php text-wiki/Text/Wiki/Parse/Default/Emphasis.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Emphasis.php	2026-11-20 07:01:22.835595689 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Emphasis.php	2026-11-20 07:05:46.352456148 +0900
+@@ -69,7 +69,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         $start = $this->wiki->addToken(
+             $this->rule, array('type' => 'start')
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Equationreference.php text-wiki/Text/Wiki/Parse/Default/Equationreference.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Equationreference.php	2026-11-20 07:01:22.835648738 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Equationreference.php	2026-11-20 07:05:46.352545231 +0900
+@@ -58,7 +58,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+     		$label = trim($matches[1]);
+     	
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/File.php text-wiki/Text/Wiki/Parse/Default/File.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/File.php	2026-11-20 07:01:22.835685093 +0900
++++ text-wiki/Text/Wiki/Parse/Default/File.php	2026-11-20 07:05:46.352631040 +0900
+@@ -40,7 +40,7 @@
+ 
+     public $regex = '/\[\[file\s+(.+?)(?:\|(.+?))?\]\]/i';
+ 
+-    function process(&$matches)
++    function process($matches)
+     {
+     	
+     		$file = trim($matches[1]);
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Footnote.php text-wiki/Text/Wiki/Parse/Default/Footnote.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Footnote.php	2026-11-20 07:01:22.835740395 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Footnote.php	2026-11-20 07:05:46.352741335 +0900
+@@ -43,7 +43,7 @@
+ 
+     public $regex = ';\s*\[\[footnote\]\](.*?)\[\[/footnote\]\];s';
+ 
+-    function process(&$matches)
++    function process($matches)
+     {
+     		if($this->wiki->vars['footnotes'] == null){
+     			$this->wiki->vars['footnotes'] = array();
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Footnoteblock.php text-wiki/Text/Wiki/Parse/Default/Footnoteblock.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Footnoteblock.php	2026-11-20 07:01:22.835772113 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Footnoteblock.php	2026-11-20 07:05:46.358037833 +0900
+@@ -49,7 +49,7 @@
+     
+     function process($matches)
+     {
+-    		$footnotes = $this->wiki->vars['footnotes'];
++    		$footnotes = $this->wiki->vars['footnotes'] ?? array();
+     		if(count($footnotes) == 0){return '';} // render nothing if no footnotes.
+     		$inside = '';
+     		$fni = $this->wiki->parseObj['Footnoteitem'];
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Footnoteitem.php text-wiki/Text/Wiki/Parse/Default/Footnoteitem.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Footnoteitem.php	2026-11-20 07:01:22.835817872 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Footnoteitem.php	2026-11-20 07:05:46.352937038 +0900
+@@ -42,7 +42,7 @@
+ 
+     public $regex = null;
+ 
+-    function process(&$matches)
++    function process($matches)
+     {
+ 
+         return $this->wiki->addToken($this->rule, $options);
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Form.php text-wiki/Text/Wiki/Parse/Default/Form.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Form.php	2026-11-20 07:01:22.835848678 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Form.php	2026-11-20 07:05:46.353055546 +0900
+@@ -62,7 +62,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $formYaml = $matches[1];
+         $dataYaml = $matches[2];
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Freelink.php text-wiki/Text/Wiki/Parse/Default/Freelink.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Freelink.php	2026-11-20 07:01:22.835915278 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Freelink.php	2026-11-20 07:07:15.407374155 +0900
+@@ -54,10 +54,10 @@
+     * 
+     */
+     
+-    function Text_Wiki_Parse_Freelink(&$obj)
++    function __construct(&$obj)
+     {
+     
+-        parent::Text_Wiki_Parse($obj);
++        parent::__construct($obj);
+         
+ //        $this->regex =
+ //            '/' .                                                   // START regex
+@@ -118,14 +118,14 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         // use nice variable names
+         $page = $matches[1];
+         $text = $matches[3];
+         $anchor = $matches[2];
+ 
+-        if($page{0} == '_'){
++        if($page[0] == '_'){
+         		$page = substr($page, 1);
+         		$nonbr = true;	
+         }
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Function.php text-wiki/Text/Wiki/Parse/Default/Function.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Function.php	2026-11-20 07:01:22.835978512 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Function.php	2026-11-20 07:05:46.353540713 +0900
+@@ -32,7 +32,7 @@
+ 
+     public $regex = '/^(\<function\>)\n(.+)\n(\<\/function\>)(\s|$)/Umsi';
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         // default options
+         $opts = array(
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Gallery.php text-wiki/Text/Wiki/Parse/Default/Gallery.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Gallery.php	2026-11-20 07:01:22.836032043 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Gallery.php	2026-11-20 07:05:46.353634874 +0900
+@@ -57,7 +57,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         
+         $attr = $this->getAttrs(trim($matches[1]));
+         $sources = $matches[2];
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Heading.php text-wiki/Text/Wiki/Parse/Default/Heading.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Heading.php	2026-11-20 07:01:22.836072713 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Heading.php	2026-11-20 07:05:46.353806000 +0900
+@@ -71,7 +71,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         // keep a running count for header IDs.  we use this later
+         // when constructing TOC entries, etc.
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Horiz.php text-wiki/Text/Wiki/Parse/Default/Horiz.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Horiz.php	2026-11-20 07:01:22.836134666 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Horiz.php	2026-11-20 07:05:46.353915264 +0900
+@@ -60,7 +60,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {    
+         return "\n".$this->wiki->addToken($this->rule)."\n\n";
+     }
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Html.php text-wiki/Text/Wiki/Parse/Default/Html.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Html.php	2026-11-20 07:01:22.836171171 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Html.php	2026-11-20 07:05:46.354012039 +0900
+@@ -64,7 +64,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {    
+         $options = array('text' => $matches[1]);
+         return $this->wiki->addToken($this->rule, $options) . $matches[2];
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Iframe.php text-wiki/Text/Wiki/Parse/Default/Iframe.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Iframe.php	2026-11-20 07:01:22.836203339 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Iframe.php	2026-11-20 07:05:46.354104758 +0900
+@@ -78,7 +78,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+     	
+     	$options = array();
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Iftags.php text-wiki/Text/Wiki/Parse/Default/Iftags.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Iftags.php	2026-11-20 07:01:22.836264210 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Iftags.php	2026-11-20 07:05:46.354226901 +0900
+@@ -44,7 +44,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+     	$page = $this->wiki->vars['page'];
+     	if(!$page){
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Image.php text-wiki/Text/Wiki/Parse/Default/Image.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Image.php	2026-11-20 07:01:22.836295327 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Image.php	2026-11-20 07:07:15.407132653 +0900
+@@ -72,9 +72,9 @@
+      * @return The parser object
+      * @access public
+      */
+-    function Text_Wiki_Parse_Image(&$obj) {
++    function __construct(&$obj) {
+         $default = $this->conf;
+-        parent::Text_Wiki_Parse($obj);
++        parent::__construct($obj);
+         
+         // convert the list of recognized schemes to a regex OR,
+         $schemes = $this->getConf('schemes', $default['schemes']);
+@@ -98,7 +98,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $pos = strpos($matches[3], ' ');
+         
+         if ($pos === false) {
+@@ -139,7 +139,7 @@
+             // fix the target="_blank"
+ 
+             $link = $options['attr']['link'];
+-            if ($link && $link{0} == '*') {
++            if ($link && $link[0] == '*') {
+                 $link = substr($link, 1);
+                 $options['target'] = '_blank';
+                 $options['attr']['link'] = $link;
+@@ -171,7 +171,7 @@
+         // fix the target="_blank"
+ 
+         $src = $options['src'];
+-        if ($src && $src{0} == '*') {
++        if ($src && $src[0] == '*') {
+             $src = substr($src, 1);
+             $options['target'] = '_blank';
+             $options['src'] = $src;
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Include.php text-wiki/Text/Wiki/Parse/Default/Include.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Include.php	2026-11-20 07:01:22.836363730 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Include.php	2026-11-20 07:05:46.354696575 +0900
+@@ -77,7 +77,7 @@
+ 
+  	}
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+      
+      	$pageName =  WDStringUtils::toUnixName(trim($matches[1]));
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Interwiki.php text-wiki/Text/Wiki/Parse/Default/Interwiki.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Interwiki.php	2026-11-20 07:01:22.836431581 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Interwiki.php	2026-11-20 07:05:46.354818147 +0900
+@@ -84,7 +84,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $t = substr($matches[1], strpos($matches[1], ':') + 1);
+         $options = array('site' => $matches[2], 
+             'page' => $matches[3], 'text' => $t);
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Italic.php text-wiki/Text/Wiki/Parse/Default/Italic.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Italic.php	2026-11-20 07:01:22.836504050 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Italic.php	2026-11-20 07:05:46.354888573 +0900
+@@ -67,7 +67,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         $start = $this->wiki->addToken(
+             $this->rule, array('type' => 'start')
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/List.php text-wiki/Text/Wiki/Parse/Default/List.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/List.php	2026-11-20 07:01:22.836547795 +0900
++++ text-wiki/Text/Wiki/Parse/Default/List.php	2026-11-20 07:05:46.354963986 +0900
+@@ -81,7 +81,7 @@
+     *
+     */
+ 
+-    function process(&$matches)
++    function process($matches)
+     {
+         // the replacement text we will return
+         $return = '';
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Math.php text-wiki/Text/Wiki/Parse/Default/Math.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Math.php	2026-11-20 07:01:22.836637370 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Math.php	2026-11-20 07:05:46.355170706 +0900
+@@ -60,7 +60,7 @@
+     *
+     */
+     
+-    function process(&$matches){
++    function process($matches){
+         
+         if($this->wiki->vars['math_id'] == null){
+     			$this->wiki->vars['math_id'] = 1;
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Mathinline.php text-wiki/Text/Wiki/Parse/Default/Mathinline.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Mathinline.php	2026-11-20 07:01:22.836712853 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Mathinline.php	2026-11-20 07:05:46.355227751 +0900
+@@ -58,7 +58,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+     	$content = trim($matches[1]);
+     	
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Module.php text-wiki/Text/Wiki/Parse/Default/Module.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Module.php	2026-11-20 07:01:22.836769758 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Module.php	2026-11-20 07:05:46.355327330 +0900
+@@ -70,11 +70,11 @@
+         } while ($oldText !== $this->wiki->source);
+     }
+ 
+-    function process(&$matches) {
++    function process($matches) {
+         // check if not containing another module!!!
+         $con = $matches[0];
+         
+-        if (preg_match_all('/^\[\[module\s([a-z0-9_\-\/]+)(\s+.*?)?\]\]/smi', $con, &$dummy) > 1) {
++        if (preg_match_all('/^\[\[module\s([a-z0-9_\-\/]+)(\s+.*?)?\]\]/smi', $con, $dummy) > 1) {
+             return preg_replace('/^\[\[module/', '[[module654', $con);
+         }
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Module654.php text-wiki/Text/Wiki/Parse/Default/Module654.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Module654.php	2026-11-20 07:01:22.836814956 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Module654.php	2026-11-20 07:05:46.355387561 +0900
+@@ -58,7 +58,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         
+         $moduleName = trim($matches[1]);
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Moduledelimiter.php text-wiki/Text/Wiki/Parse/Default/Moduledelimiter.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Moduledelimiter.php	2026-11-20 07:01:22.836871961 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Moduledelimiter.php	2026-11-20 07:07:15.407025553 +0900
+@@ -42,9 +42,9 @@
+     * 
+     */
+     
+-    function Text_Wiki_Parse_delimiter(&$obj)
++    function __construct(&$obj)
+     {
+-        parent::Text_Wiki_Parse($obj);
++        parent::__construct($obj);
+         $this->regex = "/".utf8_encode("\xFE")."/";
+     }
+ 
+@@ -63,7 +63,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {    
+         return $this->wiki->addToken(
+             $this->rule,
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Modulepre.php text-wiki/Text/Wiki/Parse/Default/Modulepre.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Modulepre.php	2026-11-20 07:01:22.836923879 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Modulepre.php	2026-11-20 07:05:46.355513509 +0900
+@@ -57,7 +57,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         
+         return preg_replace('/^\[\[module654/', '[[module', $matches[0]);
+     
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Newline.php text-wiki/Text/Wiki/Parse/Default/Newline.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Newline.php	2026-11-20 07:01:22.836967885 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Newline.php	2026-11-20 07:05:46.355567250 +0900
+@@ -63,7 +63,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {    
+         return $matches[1] .
+             $this->wiki->addToken($this->rule)
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Note.php text-wiki/Text/Wiki/Parse/Default/Note.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Note.php	2026-11-20 07:01:22.837009968 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Note.php	2026-11-20 07:05:46.355618957 +0900
+@@ -57,7 +57,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         
+         $content = $matches[2];
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Paragraph.php text-wiki/Text/Wiki/Parse/Default/Paragraph.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Paragraph.php	2026-11-20 07:01:22.837050849 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Paragraph.php	2026-11-20 07:05:46.355675803 +0900
+@@ -83,7 +83,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $delim = $this->wiki->delim;
+         
+         // was anything there?
+@@ -116,7 +116,7 @@
+         $key = '';
+         $len = strlen($matches[0]);
+         for ($i = 1; $i < $len; $i++) {
+-            $char = $matches[0]{$i};
++            $char = $matches[0][$i];
+             if ($char == $delim) {
+                 break;
+             } else {
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Phplookup.php text-wiki/Text/Wiki/Parse/Default/Phplookup.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Phplookup.php	2026-11-20 07:01:22.837093654 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Phplookup.php	2026-11-20 07:05:46.355743204 +0900
+@@ -61,7 +61,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         return $this->wiki->addToken(
+             $this->rule, array('text' => $matches[1])
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Raw.php text-wiki/Text/Wiki/Parse/Default/Raw.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Raw.php	2026-11-20 07:01:22.837226643 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Raw.php	2026-11-20 07:05:46.355838196 +0900
+@@ -64,7 +64,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $options = array('text' => $matches[1]);
+         return $this->wiki->addToken($this->rule, $options);
+     }
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Rawold.php text-wiki/Text/Wiki/Parse/Default/Rawold.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Rawold.php	2026-11-20 07:01:22.837268466 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Rawold.php	2026-11-20 07:05:46.355887720 +0900
+@@ -64,7 +64,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $options = array('text' => $matches[1]);
+         return $this->wiki->addToken($this->rule, $options);
+     }
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Revise.php text-wiki/Text/Wiki/Parse/Default/Revise.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Revise.php	2026-11-20 07:01:22.837339252 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Revise.php	2026-11-20 07:05:46.355940800 +0900
+@@ -76,7 +76,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         $output = '';
+         $src = $matches[1];
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Separator.php text-wiki/Text/Wiki/Parse/Default/Separator.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Separator.php	2026-11-20 07:01:22.837376377 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Separator.php	2026-11-20 07:05:46.356005276 +0900
+@@ -60,7 +60,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {    
+         return "\n".$this->wiki->addToken($this->rule)."\n\n";
+     }
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Size.php text-wiki/Text/Wiki/Parse/Default/Size.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Size.php	2026-11-20 07:01:22.837406923 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Size.php	2026-11-20 07:05:46.356070404 +0900
+@@ -55,7 +55,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+     		
+     		$content =$matches[2];
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Smiley.php text-wiki/Text/Wiki/Parse/Default/Smiley.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Smiley.php	2026-11-20 07:01:22.837468766 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Smiley.php	2026-11-20 07:07:15.406808037 +0900
+@@ -91,10 +91,10 @@
+      * @return The parser object
+      * @access public
+      */
+-    function Text_Wiki_Parse_Smiley(&$obj)
++    function __construct(&$obj)
+     {
+         $default = $this->conf;
+-        parent::Text_Wiki_Parse($obj);
++        parent::__construct($obj);
+ 
+         // read the list of smileys to sort out variantes and :xxx: while building the regexp
+         $this->_smileys = $this->getConf('smileys', $default['smileys']);
+@@ -111,15 +111,15 @@
+                     $cur = $smiley;
+                 }
+                 $len = strlen($cur);
+-                if (($cur{0} == ':') && ($len > 2) && ($cur{$len - 1} == ':')) {
++                if (($cur[0] == ':') && ($len > 2) && ($cur[$len - 1] == ':')) {
+                     $reg1 .= $sep1 . preg_quote(substr($cur, 1, -1), '#');
+                     $sep1 = '|';
+                     continue;
+                 }
+                 if ($autoNose && ($len === 2)) {
+-                    $variante = $cur{0} . '-' . $cur{1};
++                    $variante = $cur[0] . '-' . $cur[1];
+                     $this->_smileys[$variante] = &$this->_smileys[$smiley];
+-                    $cur = preg_quote($cur{0}, '#') . '-?' . preg_quote($cur{1}, '#');
++                    $cur = preg_quote($cur[0], '#') . '-?' . preg_quote($cur[1], '#');
+                 } else {
+                     $cur = preg_quote($cur, '#');
+                 }
+@@ -143,7 +143,7 @@
+      * @return string Delimited token representing the smiley
+      * @access public
+      */
+-    function process(&$matches)
++    function process($matches)
+     {
+         // tokenize
+         return $this->wiki->addToken($this->rule,
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Social.php text-wiki/Text/Wiki/Parse/Default/Social.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Social.php	2026-11-20 07:01:22.837553913 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Social.php	2026-11-20 07:05:46.356483523 +0900
+@@ -42,7 +42,7 @@
+ 
+     public $regex = '/\[\[social(\s+[^\]]+?)?(?:\]\])/is';
+ 
+-    function process(&$matches)
++    function process($matches)
+     {
+         $sites = trim($matches[1]);
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Span.php text-wiki/Text/Wiki/Parse/Default/Span.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Span.php	2026-11-20 07:01:22.837608916 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Span.php	2026-11-20 07:05:46.356564384 +0900
+@@ -57,7 +57,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         
+         $content = $matches[2];
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Strikethrough.php text-wiki/Text/Wiki/Parse/Default/Strikethrough.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Strikethrough.php	2026-11-20 07:01:22.837658129 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Strikethrough.php	2026-11-20 07:05:46.356628290 +0900
+@@ -61,7 +61,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $start = $this->wiki->addToken($this->rule, array(
+             'type' => 'start'));
+         $end = $this->wiki->addToken($this->rule, array(
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Strong.php text-wiki/Text/Wiki/Parse/Default/Strong.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Strong.php	2026-11-20 07:01:22.837736467 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Strong.php	2026-11-20 07:05:46.356682872 +0900
+@@ -69,7 +69,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $start = $this->wiki->addToken($this->rule, array(
+             'type' => 'start'));
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Subscript.php text-wiki/Text/Wiki/Parse/Default/Subscript.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Subscript.php	2026-11-20 07:01:22.837779211 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Subscript.php	2026-11-20 07:05:46.356760528 +0900
+@@ -63,7 +63,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $start = $this->wiki->addToken($this->rule, array(
+             'type' => 'start'));
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Superscript.php text-wiki/Text/Wiki/Parse/Default/Superscript.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Superscript.php	2026-11-20 07:01:22.837829516 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Superscript.php	2026-11-20 07:05:46.356812256 +0900
+@@ -63,7 +63,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         $start = $this->wiki->addToken(
+             $this->rule, array('type' => 'start')
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Table.php text-wiki/Text/Wiki/Parse/Default/Table.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Table.php	2026-11-20 07:01:22.837864869 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Table.php	2026-11-20 07:05:46.356878475 +0900
+@@ -82,7 +82,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         // our eventual return value
+         $return = '';
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Tableadv.php text-wiki/Text/Wiki/Parse/Default/Tableadv.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Tableadv.php	2026-11-20 07:01:22.837942996 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Tableadv.php	2026-11-20 07:05:46.357034930 +0900
+@@ -33,7 +33,7 @@
+     
+     private $_tmpSource = null;
+ 
+-    function process(&$matches) {
++    function process($matches) {
+         $content = $matches[2];
+         $attr = $this->getAttrs(trim($matches[1]));
+         $options = array();
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Tabview.php text-wiki/Text/Wiki/Parse/Default/Tabview.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Tabview.php	2026-11-20 07:01:22.838001955 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Tabview.php	2026-11-20 07:05:46.357104303 +0900
+@@ -49,7 +49,7 @@
+     
+     private $_tabCounter = 0;
+ 
+-    function process(&$matches) {
++    function process($matches) {
+         $this->_tabs = array();
+         $this->_tabCounter = 0;
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Toc.php text-wiki/Text/Wiki/Parse/Default/Toc.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Toc.php	2026-11-20 07:01:22.838087613 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Toc.php	2026-11-20 07:05:46.357228079 +0900
+@@ -71,7 +71,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         $count = 0;
+         
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Tt.php text-wiki/Text/Wiki/Parse/Default/Tt.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Tt.php	2026-11-20 07:01:22.838143427 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Tt.php	2026-11-20 07:05:46.357301980 +0900
+@@ -68,7 +68,7 @@
+     *
+     */
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         $start = $this->wiki->addToken(
+             $this->rule, array('type' => 'start')
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Typography.php text-wiki/Text/Wiki/Parse/Default/Typography.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Typography.php	2026-11-20 07:01:22.838178950 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Typography.php	2026-11-20 07:05:46.357371123 +0900
+@@ -54,7 +54,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+ 
+     }
+ 
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Underline.php text-wiki/Text/Wiki/Parse/Default/Underline.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Underline.php	2026-11-20 07:01:22.838209476 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Underline.php	2026-11-20 07:05:46.357424033 +0900
+@@ -69,7 +69,7 @@
+      *
+      */
+     
+-    function process(&$matches) {
++    function process($matches) {
+         $start = $this->wiki->addToken($this->rule, array(
+             'type' => 'start'));
+         $end = $this->wiki->addToken($this->rule, array(
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Url.php text-wiki/Text/Wiki/Parse/Default/Url.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Url.php	2026-11-20 07:01:22.838246351 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Url.php	2026-11-20 07:07:15.406458093 +0900
+@@ -95,9 +95,9 @@
+     * 
+     */
+     
+-    function Text_Wiki_Parse_Url(&$obj)
++    function __construct(&$obj)
+     {
+-        parent::Text_Wiki_Parse($obj);
++        parent::__construct($obj);
+         
+         // convert the list of recognized schemes to a regex-safe string,
+         // where the pattern delim is a slash
+@@ -195,7 +195,7 @@
+     * 
+     */ 
+     
+-    function process(&$matches)
++    function process($matches)
+     {
+         // set options
+         $options = array(
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/User.php text-wiki/Text/Wiki/Parse/Default/User.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/User.php	2026-11-20 07:01:22.838315064 +0900
++++ text-wiki/Text/Wiki/Parse/Default/User.php	2026-11-20 07:05:46.357654889 +0900
+@@ -40,7 +40,7 @@
+     
+     public $regex = '/\[\[(\*)?user ([^\]]+)\]\]/i';
+ 
+-    function process(&$matches) {
++    function process($matches) {
+         $userName = $matches[2];
+         $options = array('userName' => $userName);
+         if ($matches[1] == '*') {
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Wikilink.php text-wiki/Text/Wiki/Parse/Default/Wikilink.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse/Default/Wikilink.php	2026-11-20 07:01:22.838346521 +0900
++++ text-wiki/Text/Wiki/Parse/Default/Wikilink.php	2026-11-20 07:07:15.405466086 +0900
+@@ -61,9 +61,9 @@
+     *
+     */
+ 
+-    function Text_Wiki_Parse_Wikilink(&$obj)
++    function __construct(&$obj)
+     {
+-        parent::Text_Wiki_Parse($obj);
++        parent::__construct($obj);
+ 
+         if ($this->getConf('ext_chars')) {
+         	// use an extended character set; this should
+@@ -172,11 +172,11 @@
+     *
+     */
+ 
+-    function process(&$matches)
++    function process($matches)
+     {
+         // when prefixed with !, it's explicitly not a wiki link.
+         // return everything as it was.
+-        if ($matches[2]{0} == '!') {
++        if ($matches[2][0] == '!') {
+             return $matches[1] . substr($matches[2], 1) . $matches[3];
+         }
+ 
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Parse.php text-wiki/Text/Wiki/Parse.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Parse.php	2026-11-20 07:01:22.834357823 +0900
++++ text-wiki/Text/Wiki/Parse.php	2026-11-20 07:05:46.349062341 +0900
+@@ -101,7 +101,7 @@
+     *
+     */
+ 
+-    function Text_Wiki_Parse(&$obj)
++    function __construct(&$obj)
+     {
+         // this allows us access to the shared source text, token
+         // array, etc.
+@@ -169,7 +169,7 @@
+     *
+     */
+ 
+-    function process(&$matches)
++    function process($matches)
+     {
+         return $matches[0];
+     }
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Render/Xhtml/Colortext.php text-wiki/Text/Wiki/Render/Xhtml/Colortext.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Render/Xhtml/Colortext.php	2026-11-20 07:01:22.839619980 +0900
++++ text-wiki/Text/Wiki/Render/Xhtml/Colortext.php	2026-11-20 07:03:59.511763656 +0900
+@@ -62,7 +62,7 @@
+         $type = $options['type'];
+         $color = $options['color'];
+ 
+-        if (! in_array($color, $this->colors) && $color{0} != '#') {
++        if (! in_array($color, $this->colors) && $color[0] != '#') {
+             $color = '#' . $color;
+         }
+ 
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Render/Xhtml/Embed.php text-wiki/Text/Wiki/Render/Xhtml/Embed.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Render/Xhtml/Embed.php	2026-11-20 07:01:22.840004266 +0900
++++ text-wiki/Text/Wiki/Render/Xhtml/Embed.php	2026-11-20 07:06:58.386172733 +0900
+@@ -39,8 +39,8 @@
+     
+     public $patterns = array();
+ 
+-    public function Text_Wiki_Render_Xhtml_Embed($obj) {
+-        parent::Text_Wiki_Render($obj);
++    public function __construct($obj) {
++        parent::__construct($obj);
+         
+         $patternDir = WIKIDOT_ROOT . '/conf/wikiparser/embed';
+         $files = glob($patternDir . '/*.php');
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Render/Xhtml/Gallery.php text-wiki/Text/Wiki/Render/Xhtml/Gallery.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Render/Xhtml/Gallery.php	2026-11-20 07:01:22.840572667 +0900
++++ text-wiki/Text/Wiki/Render/Xhtml/Gallery.php	2026-11-20 07:03:59.515537161 +0900
+@@ -85,7 +85,7 @@
+       			
+       			// SINGLE IMAGE PROCESSING BEGINS
+ 
+-				if($src && $src{0} == '*'){
++				if($src && $src[0] == '*'){
+ 					$src = substr($src, 1);
+ 				   	$target  = 'target="_blank"';
+ 				}
+@@ -140,7 +140,7 @@
+ 		        
+ 		       if (isset($attr['link'])) {
+ 		       		$link = $attr['link'];
+-		       		if($link{0} == '*'){
++		       		if($link[0] == '*'){
+ 	        				$link = substr($link, 1);
+ 	        				$target  = 'target="_blank"';
+ 	        				$attr['link'] = $link;
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Render/Xhtml/Url.php text-wiki/Text/Wiki/Render/Xhtml/Url.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Render/Xhtml/Url.php	2026-11-20 07:01:22.842406686 +0900
++++ text-wiki/Text/Wiki/Render/Xhtml/Url.php	2026-11-20 07:03:59.515856099 +0900
+@@ -81,7 +81,7 @@
+         } else {
+ 
+             // should we build a target clause?
+-            if ($href{0} == '#' ||
++            if ($href[0] == '#' ||
+             	strtolower(substr($href, 0, 7)) == 'mailto:') {
+             	// targets not allowed for on-page anchors
+             	// and mailto: links.
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Render/Xhtml.php text-wiki/Text/Wiki/Render/Xhtml.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Render/Xhtml.php	2026-11-20 07:01:22.838512580 +0900
++++ text-wiki/Text/Wiki/Render/Xhtml.php	2026-11-20 07:09:19.480428807 +0900
+@@ -36,7 +36,14 @@
+         // attempt to translate HTML entities in the source.
+         // get the config options.
+         $type = $this->getConf('translate', HTML_ENTITIES);
+-        $quotes = $this->getConf('quotes', ENT_COMPAT);
++        // Reference-implementation era bridge (PHP >= 5.4): without
++        // ENT_SUBSTITUTE, htmlentities/htmlspecialchars return an empty
++        // string for input containing invalid UTF-8 bytes, and the parsed
++        // source always contains the \xFF token delimiter. The fossil era
++        // passed such bytes through. ENT_SUBSTITUTE keeps the delimiter
++        // re-conversion below working; how invalid bytes in user text are
++        // treated is an R2 adjudication item (see ref-php/INVENTORY.md).
++        $quotes = $this->getConf('quotes', ENT_COMPAT) | ENT_SUBSTITUTE;
+         $charset = $this->getConf('charset', 'UTF-8');
+ 
+         // have to check null and false because HTML_ENTITIES is a zero
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki/Render.php text-wiki/Text/Wiki/Render.php
+--- fossil/lib/Text_Wiki/Text/Wiki/Render.php	2026-11-20 07:01:22.838418679 +0900
++++ text-wiki/Text/Wiki/Render.php	2026-11-20 07:03:59.511371608 +0900
+@@ -85,7 +85,7 @@
+     *
+     */
+ 
+-    function Text_Wiki_Render(&$obj)
++    function __construct(&$obj)
+     {
+         // keep a reference to the calling Text_Wiki object
+         $this->wiki =& $obj;
+diff -ruN fossil/lib/Text_Wiki/Text/Wiki.php text-wiki/Text/Wiki.php
+--- fossil/lib/Text_Wiki/Text/Wiki.php	2026-11-20 07:01:22.834337243 +0900
++++ text-wiki/Text/Wiki.php	2026-11-20 07:04:53.498240261 +0900
+@@ -17,11 +17,11 @@
+ /**
+  * The baseline abstract parser class.
+  */
+-require_once WIKIDOT_ROOT.'/lib/Text_Wiki/Text/Wiki/Parse.php';
++require_once __DIR__.'/Wiki/Parse.php';
+ /**
+  * The baseline abstract render class.
+  */
+-require_once WIKIDOT_ROOT.'/lib/Text_Wiki/Text/Wiki/Render.php';
++require_once __DIR__.'/Wiki/Render.php';
+ 
+ /**
+  * Parse structured wiki text and render into arbitrary formats such as XHTML.
+@@ -378,7 +378,7 @@
+     *
+     */
+ 
+-    function Text_Wiki($rules = null)
++    function __construct($rules = null)
+     {
+         if (is_array($rules)) {
+             $this->rules = $rules;
+@@ -913,7 +913,7 @@
+         for ($i = 0; $i < $k; $i++) {
+ 
+             // the current character
+-            $char = $this->source{$i};
++            $char = $this->source[$i];
+ 
+             // are alredy in a delimited section?
+             if ($in_delim) {

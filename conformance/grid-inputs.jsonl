@@ -1,0 +1,114 @@
+{"id": "basic-mid", "source": "BEFORE\n[[include muse-probe-g14-target]]\nAFTER"}
+{"id": "basic-start", "source": "[[include muse-probe-g14-target]]\nAFTER"}
+{"id": "basic-end", "source": "BEFORE\n[[include muse-probe-g14-target]]"}
+{"id": "basic-whole", "source": "[[include muse-probe-g14-target]]"}
+{"id": "basic-crlf", "source": "BEFORE\r\n[[include muse-probe-g14-target]]\r\nAFTER"}
+{"id": "term-cr-then-other", "source": "[[include muse-probe-g14-target]]\rX\n[[include other-page]]\nY"}
+{"id": "no-terminator", "source": "BEFORE\n[[include muse-probe-g14-target\nAFTER"}
+{"id": "term-space", "source": "[[include muse-probe-g14-target]] \nAFTER"}
+{"id": "term-x-then-other", "source": "[[include muse-probe-g14-target]]x\n[[include other-page]]\nY"}
+{"id": "upper", "source": "[[INCLUDE muse-probe-g14-target]]\nX"}
+{"id": "mixed-case", "source": "[[InClUdE muse-probe-g14-target]]\nX"}
+{"id": "tab-after", "source": "[[include\tmuse-probe-g14-target]]\nX"}
+{"id": "multi-space", "source": "[[include   muse-probe-g14-target]]\nX"}
+{"id": "newline-after", "source": "[[include\nmuse-probe-g14-target]]\nX"}
+{"id": "cr-after", "source": "[[include\rmuse-probe-g14-target]]\nX"}
+{"id": "double-newline-after", "source": "[[include\n\nmuse-probe-g14-target]]\nX"}
+{"id": "space-before-include", "source": "[[ include muse-probe-g14-target]]\nX"}
+{"id": "tab-before-include", "source": "[[\tinclude muse-probe-g14-target]]\nX"}
+{"id": "not-line-start", "source": "x [[include muse-probe-g14-target]]\nX"}
+{"id": "indented-spaces", "source": "  [[include muse-probe-g14-target]]\nX"}
+{"id": "include-eof", "source": "[[include"}
+{"id": "include-ws-eof", "source": "[[include "}
+{"id": "gt-line-before", "source": ">\n[[include muse-probe-g14-target]]\nX"}
+{"id": "missing", "source": "[[include no-such-page]]\nX"}
+{"id": "empty-page-inc", "source": "A\n[[include empty-page]]\nB"}
+{"id": "site", "source": "[[include :sandbox:other-page]]\nX"}
+{"id": "site-dotted", "source": "[[include :sandbox.wikidot.com:other-page]]\nX"}
+{"id": "site-dotted-upper", "source": "[[include :SANDBOX.WIKIDOT.COM:other-page]]\nX"}
+{"id": "site-trailing-dot", "source": "[[include :sandbox.:other-page]]\nX"}
+{"id": "colon-page", "source": "[[include component:box]]\nX"}
+{"id": "multi-colon", "source": "[[include a:b:c]]\nX"}
+{"id": "colon-single-err", "source": "[[include :foo]]\nX"}
+{"id": "colon-double-err", "source": "[[include ::page]]\nX"}
+{"id": "site-empty-page", "source": "[[include :sandbox:]]\nX"}
+{"id": "upper-ref", "source": "[[include MUSE-PROBE-G14-TARGET]]\nX"}
+{"id": "underscore-ref", "source": "[[include my_page]]\nX"}
+{"id": "template-ref", "source": "[[include __template]]\nX"}
+{"id": "extra-slash", "source": "[[include muse-probe-g14-target/edit]]\nX"}
+{"id": "extra-hash", "source": "[[include muse-probe-g14-target#frag]]\nX"}
+{"id": "extra-only", "source": "[[include /edit]]\nX"}
+{"id": "dotted-page", "source": "[[include some.page]]\nX"}
+{"id": "default-cat", "source": "[[include _default:thing]]\nX"}
+{"id": "ref-cr", "source": "[[include muse-probe-g14-target\r]]\nX"}
+{"id": "ref-quote-fail", "source": "[[include page\"x]]\n[[include muse-probe-g14-target]]\nY"}
+{"id": "empty-ref", "source": "[[include ]]\nX"}
+{"id": "host-as-page", "source": "[[include scp-jp.wikidot.com]]\nX"}
+{"id": "one-arg", "source": "[[include muse-probe-g14-target | marker=HELLO]]\nX"}
+{"id": "arg-spaces", "source": "[[include muse-probe-g14-target | marker = SPACED ]]\nX"}
+{"id": "arg-tabs", "source": "[[include muse-probe-g14-target | marker\t=\tTABBY ]]\nX"}
+{"id": "arg-second-segment", "source": "[[include muse-probe-g14-target | x=1 | marker=SECOND]]\nX"}
+{"id": "arg-empty-value", "source": "[[include muse-probe-g14-target | marker=]]\nX"}
+{"id": "arg-empty-spaced", "source": "[[include muse-probe-g14-target | marker=   ]]\nX"}
+{"id": "arg-no-equals", "source": "[[include muse-probe-g14-target | marker]]\nX"}
+{"id": "arg-empty-segment", "source": "[[include muse-probe-g14-target || marker=DEEP]]\nX"}
+{"id": "arg-pipe-in-value", "source": "[[include muse-probe-g14-target | marker=a|b]]\nX"}
+{"id": "arg-quoted-value", "source": "[[include muse-probe-g14-target | marker=\"quoted\"]]\nX"}
+{"id": "arg-value-spaces-inside", "source": "[[include muse-probe-g14-target | marker=a b c]]\nX"}
+{"id": "arg-key-chars", "source": "[[include muse-probe-g14-target | my-key_2=v | marker=OK]]\nX"}
+{"id": "arg-duplicate", "source": "[[include muse-probe-g14-target | marker=FIRST | marker=SECOND]]\nX"}
+{"id": "arg-vt-trim", "source": "[[include muse-probe-g14-target | marker=VT\u000b]]\nX"}
+{"id": "arg-ff-inert", "source": "[[include muse-probe-g14-target | \fmarker=NO | marker=YES]]\nX"}
+{"id": "arg-comment-pipe", "source": "[[include muse-probe-g14-target | marker=A [!-- | marker=B --] | other=c]]\nX"}
+{"id": "arg-comment-first", "source": "[[include muse-probe-g14-target [!-- lead --] | marker=CF]]\nX"}
+{"id": "arg-unterminated-comment", "source": "A\n[[include muse-probe-g14-target | marker=X [!-- open]]\n[[include other-page]]\nB"}
+{"id": "arg-newlines", "source": "[[include muse-probe-g14-target |\nmarker=NL]]\nX"}
+{"id": "arg-crlf-tail", "source": "[[include muse-probe-g14-target | marker=CRLF]]\r\nX"}
+{"id": "arg-spaced-sep", "source": "[[include muse-probe-g14-target | ]]\nX"}
+{"id": "arg-nospace-pipe", "source": "[[include muse-probe-g14-target|marker=NOSPACE]]\nX"}
+{"id": "arg-multiline-comment", "source": "[[include muse-probe-g14-target | a=1 [!-- x\ny --] | marker=ML]]\nX"}
+{"id": "arg-eof", "source": "[[include muse-probe-g14-target | marker=EOF]]"}
+{"id": "ref-space-before-close", "source": "[[include muse-probe-g14-target ]]\nX"}
+{"id": "swallow-next-opener", "source": "[[include muse-probe-g14-target | a=1\n[[include other-page]]\nX"}
+{"id": "stray-with-after", "source": "[[include muse-probe-g14-target\n[[\n| marker=S1]]\nAFTER"}
+{"id": "stray-many", "source": "[[include muse-probe-g14-target [[[ | marker=S2]]\nX"}
+{"id": "stray-nospace", "source": "[[include muse-probe-g14-target [[| marker=S3]]\nX"}
+{"id": "stray-comment-guard", "source": "[[include muse-probe-g14-target [!-- not stray --] | marker=S4]]\nX"}
+{"id": "stray-comment-space", "source": "[[include muse-probe-g14-target [[ [!-- c --] | marker=S5]]\nX"}
+{"id": "q-spaced", "source": "> [[include muse-probe-g14-target]]\nX"}
+{"id": "q-unspaced", "source": "BEFORE\n>[[include muse-probe-g14-target]]\nAFTER"}
+{"id": "q-unspaced-args", "source": ">[[include muse-probe-g14-target\n>| marker=NSOK]]\nAFTER"}
+{"id": "q-depth2-unspaced", "source": ">>[[include muse-probe-g14-target]]\nX"}
+{"id": "q-spaced-depth2", "source": ">> [[include muse-probe-g14-target]]\nX"}
+{"id": "q-midtext", "source": "intro\n> some text\n>[[include muse-probe-g14-target]]\nX"}
+{"id": "q-trailing-line", "source": ">[[include muse-probe-g14-target]]\n> trailing quoted\nX"}
+{"id": "q-broken-continuation", "source": ">[[include muse-probe-g14-target\nplain line | marker=X]]\nY"}
+{"id": "q-arg-spaced-cont", "source": ">[[include muse-probe-g14-target\n> | marker=QC]]\nY"}
+{"id": "q-early-term-line", "source": ">[[include muse-probe-g14-target\n>]]\n> | marker=X]]\nY"}
+{"id": "q-not-at-line-start", "source": "x>[[include muse-probe-g14-target]]\nY"}
+{"id": "q-prefix-blanks", "source": " >[[include muse-probe-g14-target]]\nY"}
+{"id": "q-tab-prefix", "source": "\t>[[include muse-probe-g14-target]]\nY"}
+{"id": "q-gt-space-gt", "source": "> >[[include muse-probe-g14-target]]\nX"}
+{"id": "two-includes", "source": "[[include muse-probe-g14-target | marker=A]]\nMIDDLE\n[[include other-page | marker=B]]\nEND"}
+{"id": "empty-then-real", "source": "[[include empty-page]]\n[[include muse-probe-g14-target]]\nX"}
+{"id": "adjacent-crlf", "source": "A\r\n[[include muse-probe-g14-target]]\r\nB"}
+{"id": "include-only-crlf", "source": "[[include muse-probe-g14-target]]\r\n"}
+{"id": "missing-mid", "source": "A\n[[include nope]]\nB"}
+{"id": "var-in-caller", "source": "{$marker}\n[[include muse-probe-g14-target]]\nX"}
+{"id": "other-with-arg", "source": "[[include other-page | marker=ZZ]]\nX"}
+{"id": "crlf-throughout", "source": "A\r\n[[include muse-probe-g14-target | marker=W]]\r\nB\r\n[[include other-page]]\r\nC"}
+{"id": "term-cr-in-tail", "source": "[[include muse-probe-g14-target | a=]]\r]]\nX"}
+{"id": "term-cr-eof", "source": "[[include muse-probe-g14-target]]\r"}
+{"id": "value-brackets", "source": "[[include muse-probe-g14-target | marker=a]] b]]\nX"}
+{"id": "q-cr-term", "source": ">[[include muse-probe-g14-target]]\rX"}
+{"id": "cr-no-line-start", "source": "A\r[[include muse-probe-g14-target]]\nX"}
+{"id": "arg-value-comment-only", "source": "[[include muse-probe-g14-target | marker=[!-- x --]]]\nX"}
+{"id": "arg-comment-segment", "source": "[[include muse-probe-g14-target | [!-- c --] | marker=BC]]\nX"}
+{"id": "value-nested-brackets", "source": "[[include muse-probe-g14-target | marker=[[[include]]]]\nX"}
+{"id": "tail-pipe-eof", "source": "[[include muse-probe-g14-target |]]"}
+{"id": "site-extra-hash", "source": "[[include :sandbox:page#x]]\nX"}
+{"id": "multi-mixed", "source": ">[[include muse-probe-g14-target]]\n[[include other-page]]\n>[[include muse-probe-g14-target]]\nEND"}
+{"id": "arg-value-equals", "source": "[[include muse-probe-g14-target | marker=a=b]]\nX"}
+{"id": "arg-digit-key", "source": "[[include muse-probe-g14-target | 9key=v | marker=DK]]\nX"}
+{"id": "q-depth2-args", "source": ">>[[include muse-probe-g14-target\n>>| marker=D2]]\nX"}
+{"id": "q-blanks-between-gt", "source": "  >  >[[include muse-probe-g14-target]]\nX"}

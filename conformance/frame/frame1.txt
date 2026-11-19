@@ -1,0 +1,13 @@
+TABSTART word1	word2 TABEND
+
+[[code]]
+line1
+
+
+
+line2	tabbed
+[[/code]]
+
+UU-START üü UU-END
+
+Y-START ÿ Y-END

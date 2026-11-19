@@ -1,0 +1,3 @@
+[[collapsible]]
+hidden body
+[[/collapsible]]

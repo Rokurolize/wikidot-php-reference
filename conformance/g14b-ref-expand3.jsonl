@@ -1,0 +1,15 @@
+{"id":"target","output":"A is {$a}.\nB is {$b}.\nM is {$marker}.\nTARGET-END"}
+{"id":"e1-forward","output":"\n\nA is HELLO.\nB is {$b}.\nM is {$a}.\nTARGET-END\n\n"}
+{"id":"e2-backward","output":"\n\nA is LATE.\nB is {$b}.\nM is LATE.\nTARGET-END\n\n"}
+{"id":"e3-key-expr","output":"\n\nA is {$a}.\nB is {$b}.\nM is {$marker}.\nTARGET-END\n\n"}
+{"id":"e4-self","output":"\n\nA is {$a}.\nB is {$b}.\nM is {$marker}.\nTARGET-END\n\n"}
+{"id":"e5-cycle","output":"\n\nA is {$a}.\nB is {$a}.\nM is {$a}.\nTARGET-END\n\n"}
+{"id":"e6-undef","output":"\n\nA is {$a}.\nB is {$b}.\nM is {$nope}.\nTARGET-END\n\n"}
+{"id":"e7-chain","output":"\n\nA is DEEP.\nB is DEEP.\nM is {$a}.\nTARGET-END\n\n"}
+{"id":"e8-empty","output":"\n\nA is {$a}.\nB is {$b}.\nM is {$marker}.\nTARGET-END\n\n"}
+{"id":"e9-dup","output":"\n\nA is {$a}.\nB is {$b}.\nM is FIRST.\nTARGET-END\n\n"}
+{"id":"e10-mixed","output":"\n\nA is X.\nB is {$b}.\nM is pre-{$a}-post.\nTARGET-END\n\n"}
+{"id":"e11-double","output":"\n\nA is X.\nB is {$b}.\nM is {$a}{$a}.\nTARGET-END\n\n"}
+{"id":"e12-late-ref","output":"\n\nA is {$a}.\nB is B.\nM is {$b}.\nTARGET-END\n\n"}
+{"id":"e13-empty-then-second","output":"\n\nA is {$a}.\nB is {$b}.\nM is SECOND.\nTARGET-END\n\n"}
+{"id":"e14-self-then-second","output":"\n\nA is {$a}.\nB is {$b}.\nM is SECONDX.\nTARGET-END\n\n"}
