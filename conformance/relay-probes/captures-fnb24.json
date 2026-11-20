@@ -1,0 +1,12 @@
+{
+ "fnb24": {
+  "fullname": "muse-probe-r2notes-fnb24",
+  "html": "<p>Claim<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. first para\n<p>second para</p>\n</div>\n</div>",
+  "html_sha256": "75bf77f9680a874b54298dbb05699f32f6cb90971fd878de355bceefbd69c0f5",
+  "source": "Claim[[footnote]]first para\n\nsecond para[[/footnote]]\n\n[[footnoteblock]]",
+  "source_sha256": "eec067179dadd5d055e5331161ed0cbc932e71d42a26e6bd09c40b3e77d7704a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,15 @@
+{"id": "im01", "source": "[[include no-such-page]]"}
+{"id": "im02", "source": "[[include :no-such-page]]"}
+{"id": "im03", "source": "[[include :cat:sub:no-such-page]]"}
+{"id": "im04", "source": "[[include cat:no-such-page]]"}
+{"id": "im05", "source": "[[include :::]]"}
+{"id": "im06", "source": "[[include :foo:bar]]"}
+{"id": "im07", "source": "[[include :scp-jp.wikidot.com:other-page]]"}
+{"id": "im08", "source": "[[include :sandbox-for-codex:no-such-page]]"}
+{"id": "im09", "source": "[[include :]]"}
+{"id": "im10", "source": "[[include ---]]"}
+{"id": "im11", "source": "[[include :site:]]"}
+{"id": "im12", "source": "[[include ::page]]"}
+{"id": "im13", "source": "[[include no-such-page var=1]]"}
+{"id": "im14", "source": "Before\n\n[[include no-such-page]]\n\nAfter"}
+{"id": "im15", "source": "[[include include-target]]\n\n[[include no-such-page]]"}

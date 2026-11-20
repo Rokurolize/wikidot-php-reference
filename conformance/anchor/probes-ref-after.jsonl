@@ -1,0 +1,16 @@
+{"id":"p01","output":"<p><a name=\"top\"><\/a><br \/>\n<a href=\"#top\">jump<\/a><\/p>\n\n"}
+{"id":"p02","output":"<p><a href=\"https:\/\/example.com\"><sup>label<\/sup><\/a><br \/>\nx<\/p>\n\n"}
+{"id":"p03","output":"<a href=\"\">X<\/a>"}
+{"id":"p04","output":"<a href=\"https:\/\/example.com\"><sup>label<\/sup><\/a>"}
+{"id":"p05","output":"<p>PRE<a href=\"\/x\">mid<\/a>POST<\/p>\n\n"}
+{"id":"p06","output":"<a href=\"some-page\">line1<br \/>\nline2<\/a>"}
+{"id":"p07","output":"<p><a href=\"\/x\"><br \/>\nline1<br \/>\nline2<br \/>\n<\/a><\/p>\n\n"}
+{"id":"p08","output":"<p><a href=\"\/x\">line1<\/a><\/p>\n\n<p><a href=\"\/x\">line2<\/a><\/p>\n\n"}
+{"id":"p09","output":"<p>[[anchor href=&quot;\/x&quot;]]txt[[\/anchor]]<br \/>\n[[*a href=&quot;\/x&quot;]]txt[[\/a]]<br \/>\n[[a href=&quot;\/x&quot;]]txt[[\/anchor]]<\/p>\n\n"}
+{"id":"p10","output":"<p><a href=\"\/y\">UPPER<\/a><\/p>\n\n"}
+{"id":"p11","output":"<p><a href=\"https:\/\/example.com\" target=\"_blank\">star-ext<\/a><br \/>\n<a href=\"some-page\">star-slug<\/a><br \/>\n<a href=\"https:\/\/example.com\" target=\"_self\">star-override<\/a><\/p>\n\n"}
+{"id":"p12","output":"<p><a href=\"https:\/\/example.com\/a%20b\/%E6%97%A5%E6%9C%AC%E8%AA%9E\">enc<\/a><\/p>\n\n"}
+{"id":"p13","output":"<p><a href=\"\/x\"><a href=\"http:\/\/example.com\">http:\/\/example.com<\/a><\/a><br \/>\n<a href=\"\/x\"><a class=\"newpage\" href=\"\/some-page\">free<\/a><\/a><\/p>\n\n"}
+{"id":"p14","output":"<p><a href=\"\/1\">before<\/p>\n\n<div ><p>in<\/p>\n\n<\/div><br \/>\nafter<\/a>"}
+{"id":"p15","output":"<p><a href=\"\/x&quot;%20class='single'%20id=unquoted%20style%20=%20&quot;spaced\">quote-forms<\/a><\/p>\n\n"}
+{"id":"p16","output":"<p><a href=\"\/x\">txt<\/a>]<br \/>\n<a name=\"name\"><\/a>]<\/p>\n\n"}

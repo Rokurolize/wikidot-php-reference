@@ -1,0 +1,8 @@
+/home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2in2/conformance-refphp/inline2/rust-dump/target/release/build/lightningcss-derive/e358e03ca5406e61/out/lightningcss_derive-e358e03ca5406e61.d: /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/lib.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/parse.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/to_css.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/visit.rs
+
+/home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2in2/conformance-refphp/inline2/rust-dump/target/release/build/lightningcss-derive/e358e03ca5406e61/out/liblightningcss_derive-e358e03ca5406e61.so: /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/lib.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/parse.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/to_css.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/visit.rs
+
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/lib.rs:
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/parse.rs:
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/to_css.rs:
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lightningcss-derive-1.0.0-alpha.43/src/visit.rs:

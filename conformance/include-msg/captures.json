@@ -1,0 +1,82 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refgaps-incmsg-p01",
+  "html": "<div class=\"error-block\">\n<p>Included page &quot;no-such-page&quot; does not exist (<a href=\"/no-such-page/edit/true\">create it now</a>)</p>\n</div>",
+  "html_sha256": "e13e99ecf4aa15cc56011355151c48f2e8a0449f8818b59c183b75e0af5b29ad",
+  "source": "[[include no-such-page]]",
+  "source_sha256": "13404eb1dedf6777926d6220a7e0317fe482082189f4cf74b3fc794ab8d103c6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refgaps-incmsg-p02",
+  "html": "<div class=\"error-block\">\n<p>Included page &quot;no-such-page&quot; does not exist (<a href=\"/no-such-page/edit/true\">create it now</a>)</p>\n</div>",
+  "html_sha256": "e13e99ecf4aa15cc56011355151c48f2e8a0449f8818b59c183b75e0af5b29ad",
+  "source": "[[include :no-such-page]]",
+  "source_sha256": "f398ceb936957c12e9f89b60b9c44695ce85f4ca52f121febfd90dc94a333b4d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refgaps-incmsg-p03",
+  "html": "<div class=\"error-block\">\n<p>Included page &quot;sub:no-such-page&quot; does not exist (<a href=\"https://cat.wikidot.com/sub:no-such-page/edit/true\">create it now</a>)</p>\n</div>",
+  "html_sha256": "7769dd598a5ced73ecbbaf01751243103c9b7c7d12f862495213c9f7586809f0",
+  "source": "[[include :cat:sub:no-such-page]]",
+  "source_sha256": "42d6f96d0306094b5822ea579da4b46835982d063a05a29644889e6888c3cd4e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refgaps-incmsg-p04",
+  "html": "<div class=\"error-block\">\n<p>Included page &quot;cat:no-such-page&quot; does not exist (<a href=\"/cat:no-such-page/edit/true\">create it now</a>)</p>\n</div>",
+  "html_sha256": "4d6e4d47b58b4e9da03b6dfad77c1421d9c5196208ca120a854c611e66340683",
+  "source": "[[include cat:no-such-page]]",
+  "source_sha256": "9a532319dfcbf9d39b4dbda9d7f6932fcadb3fa0910fb9669c437d372d7b2483",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refgaps-incmsg-p05",
+  "html": "<div class=\"error-block\">\n<p>Included page &quot;&quot; does not exist (<a href=\"//edit/true\">create it now</a>)</p>\n</div>",
+  "html_sha256": "8d22b56dc680c9914387438a92cea7ca7b0d12d7ec55082fd3305439a40cd740",
+  "source": "[[include :::]]",
+  "source_sha256": "c567a706404a1882701b486abaca0666b4f06c096552335830f5a34fa51598e5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refgaps-incmsg-p06",
+  "html": "<div class=\"error-block\">\n<p>Included page &quot;bar&quot; does not exist (<a href=\"https://foo.wikidot.com/bar/edit/true\">create it now</a>)</p>\n</div>",
+  "html_sha256": "d48f5543c4f3494b9760e5e24325787ce4a731b17a8cd1d0f7c48d5678fcf8da",
+  "source": "[[include :foo:bar]]",
+  "source_sha256": "dd8c1a04ff72830c11ecf2c3bc929aa3006bdeccea451f835dc9ce0707c0c3ea",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refgaps-incmsg-p07",
+  "html": "<div class=\"error-block\">\n<p>Included page &quot;other-page&quot; does not exist (<a href=\"https://scp-jp.wikidot.com/other-page/edit/true\">create it now</a>)</p>\n</div>",
+  "html_sha256": "ccf3c6f7287aa59439fa060e96a04d017ff35dee058573ac5da2fb98f387ae2e",
+  "source": "[[include :scp-jp.wikidot.com:other-page]]",
+  "source_sha256": "0d7c8a48dbe949b80b34ad88ded84207629fa84c498ed47a05b041f02e3d4de8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refgaps-incmsg-p08",
+  "html": "<div class=\"error-block\">\n<p>Included page &quot;no-such-page&quot; does not exist (<a href=\"https://sandbox-for-codex.wikidot.com/no-such-page/edit/true\">create it now</a>)</p>\n</div>",
+  "html_sha256": "f81e87389e4379d15dc377470225675d447a89c861a256f2bf860b914649a34a",
+  "source": "[[include :sandbox-for-codex:no-such-page]]",
+  "source_sha256": "40e6d6ae0ed4832d45c662fc0b004e4861a389129ad00b5af47eaa6e2b09bd75",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

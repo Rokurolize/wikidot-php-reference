@@ -1,0 +1,82 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refgaps-listblocks-p01",
+  "source": "[[ul]]\n[[li]]Apple[[/li]]\n[[li]]Banana[[/li]]\n[[/ul]]\n[[ol]]\n[[li]]First[[/li]]\n[[li]]Second[[/li]]\n[[/ol]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refgaps-listblocks-p02",
+  "source": "[[ul]][[li]]Inline[[/li]][[li]]list[[/li]][[/ul]]",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refgaps-listblocks-p03",
+  "source": "[[ul]]\n[[li]] Indented [[/li]]\n[[ol]]\n[[li]] and [[/li]]\n[[li]] nested [[/li]]\n[[/ol]]\n[[li]] list [[/li]]\n[[/ul]]",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refgaps-listblocks-p04",
+  "source": "[[ol]]\n[[ul]]\n[[li]]-[[/li]]\n[[/ul]]\n[[/ol]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refgaps-listblocks-p05",
+  "source": "[[ul]]\n[[li]]outer\n[[ol]]\n[[li]]inner[[/li]]\n[[/ol]]\n[[/li]]\n[[/ul]]",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refgaps-listblocks-p06",
+  "source": "[[ul id=\"my-list\" class=\"a\" style=\"color: red;\" role=\"list\" type=\"disc\" data-x=\"1\" title=\"ignored\" hidden=\"yes\"]]\n[[li id=\"item-1\" class=\"b\" style=\"color: blue;\" data-Y=\"2\" value=\"9\"]]One[[/li]]\n[[/ul]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refgaps-listblocks-p07",
+  "source": "[[ol id=\"num-list\" class=\"n\" style=\"color: green;\" type=\"A\" start=\"5\" reversed=\"reversed\"]]\n[[li]]Item[[/li]]\n[[/ol]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refgaps-listblocks-p08",
+  "source": "[[ul]]\n* one\n* two\n[[/ul]]\n[[ol]]\n* bullet\n# num\n[[/ol]]",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refgaps-listblocks-p09",
+  "source": "[[ul]]\n[[li]]\n* one\n* two\n[[/li]]\n[[/ul]]",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refgaps-listblocks-p10",
+  "source": "||[[ul]]\n[[li]]one[[/li]]\n[[li]]two[[/li]]\n[[/ul]] ||\n|| after ||\nx",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refgaps-listblocks-p11",
+  "source": "[[table]][[row]][[cell]][[ul]]\n[[li]]one[[/li]]\n[[li]]two[[/li]]\n[[/ul]][[/cell]][[/row]][[/table]]\nx",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refgaps-listblocks-p12",
+  "source": "[[ul]][[/ul]]\n[[ol]][[/ol]]\n[[ul]][[li]][[/li]][[/ul]]\nx",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refgaps-listblocks-p13",
+  "source": "[[ul]]\nFoo\n[[/ul]]\n[[li]]\nBaz\n[[/li]]",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refgaps-listblocks-p14",
+  "source": "[[ul_]]\n[[li]]Alpha[[/li]]\n[[li]]Beta[[/li]]\n[[/ul]]\n[[ol_]]\n[[li]]One[[/li]]\n[[/ol]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refgaps-listblocks-p15",
+  "source": "[[ul ]]\n[[li]]a[[/li]]\n[[/ul]]\n[[ul]]\n[[li ]]b[[/li]]\n[[/ul]]\n[[ul]]\n[[li]]c[[/li ]]\n[[/ul ]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refgaps-listblocks-p16",
+  "source": "^^a\n* list\nb^^\nx\n^^a\n[[ul]]\n[[li]]list[[/li]]\n[[/ul]]\nb^^\nx",
+  "action": "created"
+ }
+}

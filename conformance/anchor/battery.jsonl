@@ -1,0 +1,60 @@
+{"id": "a01", "source": "[[# strawberry]]"}
+{"id": "a02", "source": "[[# _lemon-lime.2%20]]"}
+{"id": "a03", "source": "[[#durian]]"}
+{"id": "a04", "source": "[[# ]]"}
+{"id": "a05", "source": "[[#  a]]"}
+{"id": "a06", "source": "[[#  a  ]]"}
+{"id": "a07", "source": "[[# apple banana]]"}
+{"id": "a08", "source": "[[# apple banana]]]"}
+{"id": "a09", "source": "[[# symbol$%_foo]]"}
+{"id": "a10", "source": "[[# name]]]"}
+{"id": "a11", "source": "[[[# a]]]\n[[[# a | L]]]"}
+{"id": "a12", "source": "[[# top]]\n[[a href=\"#top\"]]jump[[/a]]"}
+{"id": "a13", "source": "[[a]]Test[[/a]]"}
+{"id": "a14", "source": "[[a]][[/a]]"}
+{"id": "a15", "source": "[[a href=\"some-page\"]]click[[/a]]"}
+{"id": "a16", "source": "[[a href=\"*some-page\"]]click[[/a]]"}
+{"id": "a17", "source": "[[a href=\"https://example.com\"]]click[[/a]]"}
+{"id": "a18", "source": "[[a href=\"*https://example.com\"]]click[[/a]]"}
+{"id": "a19", "source": "[[a href=\"*https://example.com\" target=\"_self\"]]click[[/a]]"}
+{"id": "a20", "source": "[[a href=\"#something\"]]click[[/a]]"}
+{"id": "a21", "source": "[[a href=\"*#something\"]]click[[/a]]"}
+{"id": "a22", "source": "[[a href=\"/local/path\"]]click[[/a]]"}
+{"id": "a23", "source": "[[a href=\"*/local/path\"]]click[[/a]]"}
+{"id": "a24", "source": "[[a href=\"mailto:user@example.com\"]]mail[[/a]]"}
+{"id": "a25", "source": "[[a href=\"ftp://files.example.com/pub\"]]ftp[[/a]]"}
+{"id": "a26", "source": "[[a href=\"javascript:alert(1)\"]]xss[[/a]]"}
+{"id": "a27", "source": "[[a href=\"JAVASCRIPT:alert(1)\"]]xss2[[/a]]"}
+{"id": "a28", "source": "[[a href=\"data:text/html,<b>x</b>\"]]data[[/a]]"}
+{"id": "a29", "source": "[[a href=\"HTTP://X/Y\"]]upper-http[[/a]]"}
+{"id": "a30", "source": "[[a href=\" http://x\"]]lead-sp[[/a]]\n[[a href=\"http://x \"]]trail-sp[[/a]]"}
+{"id": "a31", "source": "[[a href=\"http://example.com/a b\"]]sp1[[/a]]\n[[a href=\"/a b\"]]sp2[[/a]]\n[[a href=\"#a b\"]]sp3[[/a]]"}
+{"id": "a32", "source": "[[a href=\"https://example.com/a b/日本語\"]]enc[[/a]]"}
+{"id": "a33", "source": "[[a href=\"a::b\"]]c1[[/a]]\n[[a href=\"a - b\"]]c2[[/a]]\n[[a href=\":\"]]c3[[/a]]\n[[a href=\"abc=\"]]c4[[/a]]"}
+{"id": "a34", "source": "[[a href=\"@@a@@\"]]r1[[/a]]\n[[a class=\"@@a@@\" href=\"/x\"]]r2[[/a]]\n[[a href=\"/x@@a@@\"]]r3[[/a]]"}
+{"id": "a35", "source": "[[a href=\"*https://example.com\"]]star-ext[[/a]]\n[[a href=\"*some-page\"]]star-slug[[/a]]\n[[a href=\"*https://example.com\" target=\"_self\"]]star-override[[/a]]"}
+{"id": "a36", "source": "[[a href=\"/x\" id=\"i\" class=\"c\" style=\"s\" role=\"r\" type=\"t\" data-x=\"d\" target=\"_blank\"]]y[[/a]]"}
+{"id": "a37", "source": "[[a href=\"/x\" style=\"s\" class=\"c\" id=\"i\"]]y[[/a]]"}
+{"id": "a38", "source": "[[a href=\"/x\" data-z=\"1\" data-a=\"2\" data-m=\"3\"]]y[[/a]]"}
+{"id": "a39", "source": "[[a href=\"/x\" data-X=\"1\"]]y1[[/a]]\n[[a href=\"/x\" DATA-X=\"1\"]]y2[[/a]]\n[[a href=\"/x\" data-=\"1\"]]y3[[/a]]"}
+{"id": "a40", "source": "[[a href=\"/x\" name=\"n\" title=\"t\" rel=\"r\" onclick=\"o\" foo=\"f\" lang=\"en\" dir=\"ltr\" align=\"left\" tabindex=\"2\" aria-label=\"a\"]]y[[/a]]"}
+{"id": "a41", "source": "[[a href=\"/x\" CLASS=\"c\" HREF=\"/u\"]]y[[/a]]"}
+{"id": "a42", "source": "[[a data-x=\"\" id=\"i\"]]y1[[/a]]\n[[a href=\"/x\" class=\"a  b\"]]y2[[/a]]\n[[a href=\"/x\" class=\"c\" class=\"\"]]y3[[/a]]\n[[a href=\"/x\" href=\"/u\"]]y4[[/a]]"}
+{"id": "a43", "source": "[[A HREF=\"/x\" href=\"/y\"]]UPPER[[/A]]"}
+{"id": "a44", "source": "[[a href=\"/x\" class='single' id=unquoted style = \"spaced\"]]quote-forms[[/a]]"}
+{"id": "a45", "source": "[[a]] one [[/a]]\nx[[a]] one [[/a]]y\n[[a]]one[[/a]][[a]] two[[/a]]\n[[a]]one [[/a]][[a]]two[[/a]]"}
+{"id": "a46", "source": "[[a href=\"/1\"]]x[[a href=\"/2\"]]y[[/a]]z[[/a]]\n[[a href=\"/1\"]][[/a]] [[a href=\"/2\"]]y[[/a]]"}
+{"id": "a47", "source": "a[[a ]] b[[/a]]c"}
+{"id": "a48", "source": "[[anchor href=\"/x\"]]txt[[/anchor]]\n[[*a href=\"/x\"]]txt[[/a]]\n[[a href=\"/x\"]]txt[[/anchor]]"}
+{"id": "a49", "source": "[[a href=\"http://example.com\"]]unterminated\n[[div]]\ninside\n[[/div]]"}
+{"id": "a50", "source": "[[a href=\"/x\"]]txt[[/a]]]\n[[# name]]]"}
+{"id": "a51", "source": "[[a href=\"/x\"]]\nline1\nline2\n[[/a]]"}
+{"id": "a52", "source": "[[a href=\"/x\"]]line1\n\nline2[[/a]]"}
+{"id": "a53", "source": "[[a_]]X[[/a]]"}
+{"id": "a54", "source": "[[a_ href=\"https://example.com\"]]^^label^^[[/a]]"}
+{"id": "a55", "source": "PRE\n[[a_ href=\"https://example.com\"]]x[[/a]]\nPOST"}
+{"id": "a56", "source": "PRE\n\n[[a_ href=\"/x\"]]mid[[/a]]\n\nPOST"}
+{"id": "a57", "source": "[[a_ href=\"some-page\"]]\nline1\nline2\n[[/a]]"}
+{"id": "a58", "source": "[[a href=\"http://x/a--b\"]]label[[/a]]\nx"}
+{"id": "a59", "source": "[[a href=\"https://example.com\"]]^^label^^[[/a]]\nx"}
+{"id": "a60", "source": "[[a href=\"http://x\"]]__label__[[/a]]"}

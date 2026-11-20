@@ -1,0 +1,42 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refgaps-incmsg-p01",
+  "source": "[[include no-such-page]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refgaps-incmsg-p02",
+  "source": "[[include :no-such-page]]",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refgaps-incmsg-p03",
+  "source": "[[include :cat:sub:no-such-page]]",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refgaps-incmsg-p04",
+  "source": "[[include cat:no-such-page]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refgaps-incmsg-p05",
+  "source": "[[include :::]]",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refgaps-incmsg-p06",
+  "source": "[[include :foo:bar]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refgaps-incmsg-p07",
+  "source": "[[include :scp-jp.wikidot.com:other-page]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refgaps-incmsg-p08",
+  "source": "[[include :sandbox-for-codex:no-such-page]]",
+  "action": "created"
+ }
+}

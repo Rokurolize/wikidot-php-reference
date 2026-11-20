@@ -1,0 +1,162 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refgaps-listblocks-p01",
+  "html": "<ul>\n<li>Apple</li>\n<li>Banana</li>\n</ul>\n<ol>\n<li>First</li>\n<li>Second</li>\n</ol>\n<br />",
+  "html_sha256": "d17e7e2d609dd82b72c94a2048c63853ed94b84316059991cfbca58de1c6ffb5",
+  "source": "[[ul]]\n[[li]]Apple[[/li]]\n[[li]]Banana[[/li]]\n[[/ul]]\n[[ol]]\n[[li]]First[[/li]]\n[[li]]Second[[/li]]\n[[/ol]]",
+  "source_sha256": "0448dfc0c34497b2740c43efdf32217e6c38c02348ffe84bf8de2a435b484aa2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refgaps-listblocks-p02",
+  "html": "<ul>\n<li>Inline</li>\n<li>list</li>\n</ul>\n<br />",
+  "html_sha256": "49476ca6e858ac17d93c5fb69c1745556ac8d6555e8ae95906927a81d67d017c",
+  "source": "[[ul]][[li]]Inline[[/li]][[li]]list[[/li]][[/ul]]",
+  "source_sha256": "c0e1b79f24bba11f24e6e21295be630cb520f8ec545c59ef742bd9695c477b5e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refgaps-listblocks-p03",
+  "html": "<ul>\n<li>Indented\n<ol>\n<li>and</li>\n<li>nested</li>\n</ol>\n</li>\n<li>list</li>\n</ul>\n<br />",
+  "html_sha256": "7f2c3ccee4afcbd85c8f48e09c85156126dbfd32672754306af49e97365e0dce",
+  "source": "[[ul]]\n[[li]] Indented [[/li]]\n[[ol]]\n[[li]] and [[/li]]\n[[li]] nested [[/li]]\n[[/ol]]\n[[li]] list [[/li]]\n[[/ul]]",
+  "source_sha256": "161396aac8aa5423a553f859ac11d375e5110f1f12894cf3ec8f43aeef07dd66",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refgaps-listblocks-p04",
+  "html": "<ol>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>-</li>\n</ul>\n</li>\n</ol>\n<br />",
+  "html_sha256": "39f6335466be009cd3a886ac6bd3db0c3be87a97e3a7086221d3fd7dd768ece5",
+  "source": "[[ol]]\n[[ul]]\n[[li]]-[[/li]]\n[[/ul]]\n[[/ol]]",
+  "source_sha256": "0bf51c1c30c2ca069c3588efca1faace0f1cea496f23d62195cb79a6d5760177",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refgaps-listblocks-p05",
+  "html": "<ul>\n<li>outer<br />\n<ol>\n<li>inner</li>\n</ol>\n</li>\n</ul>\n<br />",
+  "html_sha256": "b836412b4c4fd6ba73988cc2808ed3250e767157904b63edc16a25ce0e3a20f6",
+  "source": "[[ul]]\n[[li]]outer\n[[ol]]\n[[li]]inner[[/li]]\n[[/ol]]\n[[/li]]\n[[/ul]]",
+  "source_sha256": "5cbca8b7ce260813390c00b8465df50ee2d074d9a85391877a872c3012d5dbe1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refgaps-listblocks-p06",
+  "html": "<ul id=\"u-my-list\" class=\"a\" style=\"color: red;\" role=\"list\" type=\"disc\" data-x=\"1\">\n<li id=\"u-item-1\" class=\"b\" style=\"color: blue;\" data-y=\"2\">One</li>\n</ul>\n<br />",
+  "html_sha256": "ff70f10f94bc5131c803247d1aa1572137c81e77e268a8cc781a13d76860f077",
+  "source": "[[ul id=\"my-list\" class=\"a\" style=\"color: red;\" role=\"list\" type=\"disc\" data-x=\"1\" title=\"ignored\" hidden=\"yes\"]]\n[[li id=\"item-1\" class=\"b\" style=\"color: blue;\" data-Y=\"2\" value=\"9\"]]One[[/li]]\n[[/ul]]",
+  "source_sha256": "cc1813f381d70660ea06fff5a020e19e91889dde13ee6b3df19b7f1cdceccabd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refgaps-listblocks-p07",
+  "html": "<ol id=\"u-num-list\" class=\"n\" style=\"color: green;\" type=\"A\">\n<li>Item</li>\n</ol>\n<br />",
+  "html_sha256": "c1799068cf317275dab7741eb0c3a9c3070ec3a5cb2d4c50a88610b22194fba0",
+  "source": "[[ol id=\"num-list\" class=\"n\" style=\"color: green;\" type=\"A\" start=\"5\" reversed=\"reversed\"]]\n[[li]]Item[[/li]]\n[[/ol]]",
+  "source_sha256": "2de8cf4db1080e7285a33615c622b42977378c59aedb8482d1d6bf015aa46d42",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refgaps-listblocks-p08",
+  "html": "<ul>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>\n</li>\n</ul>\n<ol>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>bullet</li>\n</ul>\n<ol>\n<li>num</li>\n</ol>\n</li>\n</ol>\n<br />",
+  "html_sha256": "81bd0bc7f4dc16e8d8d01b0ff69c49c069fbb3a7b4c9852bab5b773c1b9bbd61",
+  "source": "[[ul]]\n* one\n* two\n[[/ul]]\n[[ol]]\n* bullet\n# num\n[[/ol]]",
+  "source_sha256": "907296c37cdfbd5d72f522008bf4dac701328f36b88f02fc0ba9c313ef036e37",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09": {
+  "fullname": "muse-probe-refgaps-listblocks-p09",
+  "html": "<ul>\n<li>\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>\n</li>\n</ul>\n<br />",
+  "html_sha256": "8fd0836edd59e3ed3877726501fe09675d6e87b4e59c53b092d4e1665f783de1",
+  "source": "[[ul]]\n[[li]]\n* one\n* two\n[[/li]]\n[[/ul]]",
+  "source_sha256": "33ea1455311c146642668ed8b7eb8a968ff18672f42f2cd75deb06c648db3969",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10": {
+  "fullname": "muse-probe-refgaps-listblocks-p10",
+  "html": "<table class=\"wiki-content-table\">\n<tr>\n<td>\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>\n</td>\n</tr>\n<tr>\n<td>after</td>\n</tr>\n</table>\n<p>x</p>",
+  "html_sha256": "cd6d8b34a4435788690b114de02455861e78c20b974920c3b866426f4f4359af",
+  "source": "||[[ul]]\n[[li]]one[[/li]]\n[[li]]two[[/li]]\n[[/ul]] ||\n|| after ||\nx",
+  "source_sha256": "216e1f4090d1eca307d0028a9bbbfb0b224e2062ac18302002a11d28876477bd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11": {
+  "fullname": "muse-probe-refgaps-listblocks-p11",
+  "html": "<table>\n<tr>\n<td>\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>\n</td>\n</tr>\n</table>\n<p>x</p>",
+  "html_sha256": "bea2684f7504ffb21f63b51900160edc91c755d8aa8d5a42a4f0b8c88ca9350a",
+  "source": "[[table]][[row]][[cell]][[ul]]\n[[li]]one[[/li]]\n[[li]]two[[/li]]\n[[/ul]][[/cell]][[/row]][[/table]]\nx",
+  "source_sha256": "b5e849611e02e7a37be50b58face9379280b9c71e337539a59cc44ef294c0489",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12": {
+  "fullname": "muse-probe-refgaps-listblocks-p12",
+  "html": "x",
+  "html_sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+  "source": "[[ul]][[/ul]]\n[[ol]][[/ol]]\n[[ul]][[li]][[/li]][[/ul]]\nx",
+  "source_sha256": "de3baef6a16c59d399f1622867abddec644290c4dada6f1b80d826ab7aa5a498",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13": {
+  "fullname": "muse-probe-refgaps-listblocks-p13",
+  "html": "<ul>\n<li style=\"list-style: none\">Foo</li>\n</ul>\n[[li]]<br />\nBaz<br />\n[[/li]]",
+  "html_sha256": "91b8c1608484c848ef5e7b5d111a4270872b3a6baacf17ec27381e1332773a35",
+  "source": "[[ul]]\nFoo\n[[/ul]]\n[[li]]\nBaz\n[[/li]]",
+  "source_sha256": "430de87a40d633928719916d03daf2aeae0c73eb5cfaed8bbb0293438f35c245",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14": {
+  "fullname": "muse-probe-refgaps-listblocks-p14",
+  "html": "<ul>\n<li>Alpha</li>\n<li>Beta</li>\n</ul>\n<ol>\n<li>One</li>\n</ol>",
+  "html_sha256": "fdc30ab79c8b6488283b30a90a3ad1a3e532d10753e492777b44e0ec9ff8fcee",
+  "source": "[[ul_]]\n[[li]]Alpha[[/li]]\n[[li]]Beta[[/li]]\n[[/ul]]\n[[ol_]]\n[[li]]One[[/li]]\n[[/ol]]",
+  "source_sha256": "115d46c3aaf92fcb1dfaaf7f7f05d96324f21848e595070be598d6ccc6c4d045",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15": {
+  "fullname": "muse-probe-refgaps-listblocks-p15",
+  "html": "<p>[[ul ]]<br />\n[[li]]a[[/li]]<br />\n[[/ul]]<br /></p>\n<ul>\n<li style=\"list-style: none\">[[li ]]b[[/li]]</li>\n</ul>\n[[ul]]<br />\n[[li]]c[[/li ]]<br />\n[[/ul ]]",
+  "html_sha256": "d1441abec4f52f36e2eb1516f71f075974dfbacebd8115cf804f2383241ea0ac",
+  "source": "[[ul ]]\n[[li]]a[[/li]]\n[[/ul]]\n[[ul]]\n[[li ]]b[[/li]]\n[[/ul]]\n[[ul]]\n[[li]]c[[/li ]]\n[[/ul ]]",
+  "source_sha256": "c67f7551e7f819ef75dbfac79d22a5333681870dbb33a09fd894a1603577a5b8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16": {
+  "fullname": "muse-probe-refgaps-listblocks-p16",
+  "html": "<p>^^a</p>\n<ul>\n<li>list</li>\n</ul>\n<p>b<sup><br />\nx<br /></sup> a<br /></p>\n<ul>\n<li>list</li>\n</ul>\nb^^<br />\nx",
+  "html_sha256": "e917fb0fcbb5623e5b4d8a6215834cd1767b101df1641b5966aad10061550528",
+  "source": "^^a\n* list\nb^^\nx\n^^a\n[[ul]]\n[[li]]list[[/li]]\n[[/ul]]\nb^^\nx",
+  "source_sha256": "baeb99bb2e9a71bfdd3667801ad4f91d7554c1209ec5f9ff38d34ebb968e5b2c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

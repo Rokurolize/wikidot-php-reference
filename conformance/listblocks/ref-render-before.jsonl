@@ -1,0 +1,50 @@
+{"id":"lb01","output":"<p>[[ul]]<br \/>\n[[li]]Apple[[\/li]]<br \/>\n[[li]]Banana[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb02","output":"<p>[[ol]]<br \/>\n[[li]]First[[\/li]]<br \/>\n[[li]]Second[[\/li]]<br \/>\n[[\/ol]]<\/p>\n\n"}
+{"id":"lb03","output":"<p>[[ul]]<br \/>\n[[li]]Apple[[\/li]]<br \/>\n[[li]]Banana[[\/li]]<br \/>\n[[\/ul]]<br \/>\n[[ol]]<br \/>\n[[li]]First[[\/li]]<br \/>\n[[li]]Second[[\/li]]<br \/>\n[[\/ol]]<\/p>\n\n"}
+{"id":"lb04","output":"<p>[[ul]][[li]]Inline[[\/li]][[li]]list[[\/li]][[\/ul]]<\/p>\n\n"}
+{"id":"lb05","output":"<p>[[ol]][[li]]One[[\/li]][[li]]Two[[\/li]][[\/ol]]<\/p>\n\n"}
+{"id":"lb06","output":"<p>[[ul]]<br \/>\n[[li]] Indented [[\/li]]<br \/>\n[[li]] spaced [[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb07","output":"<p>[[UL]]<br \/>\n[[LI]]Case[[\/LI]]<br \/>\n[[\/UL]]<\/p>\n\n"}
+{"id":"lb08","output":"<p>[[ul]]<br \/>\n[[li]]<br \/>\nALPHA<br \/>\n[[\/li]]<br \/>\n[[li]]<br \/>\nBETA<br \/>\n[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb09","output":"<p>[[ul]]<br \/>\n[[li]]line1<br \/>\nline2[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb10","output":"<p>[[ul]]<br \/>\n[[li]]u[[\/li]]<br \/>\n[[\/ul]]<br \/>\n[[ul]]<br \/>\n[[li]]u[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb11","output":"<p>[[ul]]<br \/>\n[[li]] Indented [[\/li]]<br \/>\n[[ol]]<br \/>\n[[li]] and [[\/li]]<br \/>\n[[li]] nested [[\/li]]<br \/>\n[[\/ol]]<br \/>\n[[li]] list [[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb12","output":"<p>[[ol]]<br \/>\n[[ul]]<br \/>\n[[li]]-[[\/li]]<br \/>\n[[\/ul]]<br \/>\n[[\/ol]]<\/p>\n\n"}
+{"id":"lb13","output":"<p>[[ul]]<br \/>\n[[ul]]<br \/>\n[[li]]deep[[\/li]]<br \/>\n[[\/ul]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb14","output":"<p>[[ul]]<br \/>\n[[li]]outer<br \/>\n[[ol]]<br \/>\n[[li]]inner[[\/li]]<br \/>\n[[\/ol]]<br \/>\n[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb15","output":"<p>[[ol]]<br \/>\n[[li]]1<br \/>\n[[ul]]<br \/>\n[[li]]a[[\/li]]<br \/>\n[[li]]b[[\/li]]<br \/>\n[[\/ul]]<br \/>\n[[\/li]]<br \/>\n[[li]]2[[\/li]]<br \/>\n[[\/ol]]<\/p>\n\n"}
+{"id":"lb16","output":"<p>[[ul]]<br \/>\n[[li]]L1[[\/li]]<br \/>\n[[ul]]<br \/>\n[[li]]L2[[\/li]]<br \/>\n[[ol]]<br \/>\n[[li]]L3[[\/li]]<br \/>\n[[\/ol]]<br \/>\n[[\/ul]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb17","output":"<p>[[ul id=&quot;my-list&quot; class=&quot;a&quot; style=&quot;color: red;&quot; role=&quot;list&quot; type=&quot;disc&quot; data-x=&quot;1&quot; title=&quot;ignored&quot; hidden=&quot;yes&quot;]]<br \/>\n[[li id=&quot;item-1&quot; class=&quot;b&quot; style=&quot;color: blue;&quot; data-Y=&quot;2&quot; value=&quot;9&quot;]]One[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb18","output":"<p>[[ol id=&quot;num-list&quot; class=&quot;n&quot; style=&quot;color: green;&quot; type=&quot;A&quot; start=&quot;5&quot; reversed=&quot;reversed&quot;]]<br \/>\n[[li]]Item[[\/li]]<br \/>\n[[\/ol]]<\/p>\n\n"}
+{"id":"lb19","output":"<p>[[ul class=&quot;c&quot; id=&quot;i&quot; style=&quot;s&quot;]]<br \/>\n[[li style=&quot;ls&quot; id=&quot;li&quot; class=&quot;lc&quot;]]ordered-attrs[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb20","output":"<p>[[ul data-z=&quot;1&quot; data-a=&quot;2&quot; DATA-UPPER=&quot;3&quot; data-Mixed=&quot;4&quot;]]<br \/>\n[[li data-k=&quot;v&quot; CLASS=&quot;upper&quot;]]data-attrs[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb21","output":"<p>[[ul id=&quot;&quot; class=&quot;&quot; data-empty=&quot;&quot;]]<br \/>\n[[li id=&quot;u-already&quot; class=&quot;a b&quot;]]norm[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb22","output":"<p>[[ul]]<\/p>\n\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><p>[[\/ul]]<\/p>\n\n"}
+{"id":"lb23","output":"<p>[[ol]]<\/p>\n\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><p>[[\/ol]]<\/p>\n\n"}
+{"id":"lb24","output":"<p>[[ul]]<\/p>\n\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><p>[[\/ul]]<br \/>\n[[ol]]<\/p>\n\n<ul>\n<li>bullet<\/li>\n<\/ul><ol>\n<li>num<\/li>\n<\/ol><p>[[\/ol]]<\/p>\n\n"}
+{"id":"lb25","output":"<p>[[ul]]<\/p>\n\n<ul>\n<li>a<\/li>\n<li>b<\/li>\n<\/ul><ol>\n<li>c<\/li>\n<li>d<\/li>\n<\/ol><p>[[\/ul]]<\/p>\n\n"}
+{"id":"lb26","output":"<p>[[ul]]<br \/>\n[[li]]<\/p>\n\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><p>[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb27","output":"<p>[[ul]]<br \/>\n[[li]]header<\/p>\n\n<ul>\n<li>sub1<\/li>\n<li>sub2<\/li>\n<\/ul><p>[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb28","output":"<ul>\n<li>line1<\/li>\n<li>line2<\/li>\n<\/ul><p>[[ul]]<br \/>\n[[li]]block1[[\/li]]<br \/>\n[[li]]block2[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb29","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><\/td>\n<\/tr>\n<\/table><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><p>[[\/ul]] ||<br \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>after<\/td>\n<\/tr>\n<\/table><\/p>\n\n<p>x<\/p>\n\n"}
+{"id":"lb30","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><\/td>\n<\/tr>\n<\/table><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><p>[[\/ol]] ||<br \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>after<\/td>\n<\/tr>\n<\/table><\/p>\n\n<p>x<\/p>\n\n"}
+{"id":"lb31","output":"<table>\n<tr>\n<td><p>[[ul]]<\/p>\n\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><p>[[\/ul]]<\/p>\n\n<\/td>\n<\/tr>\n<\/table><br \/>\nx"}
+{"id":"lb32","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><\/td>\n<\/tr>\n<\/table><p>[[li]]one[[\/li]]<br \/>\n[[li]]two[[\/li]]<br \/>\n[[\/ul]] ||<br \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>after<\/td>\n<\/tr>\n<\/table><\/p>\n\n<p>x<\/p>\n\n"}
+{"id":"lb33","output":"<table>\n<tr>\n<td>[[ul]]<br \/>\n[[li]]one[[\/li]]<br \/>\n[[li]]two[[\/li]]<br \/>\n[[\/ul]]<\/td>\n<\/tr>\n<\/table><br \/>\nx"}
+{"id":"lb34","output":"<div ><p>[[ul]]<br \/>\n[[li]]in-div[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n<\/div>"}
+{"id":"lb35","output":"<div class=\"wiki-note\"><p>[[ul]]<br \/>\n[[li]]u[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n<\/div>"}
+{"id":"lb36","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><p>[[ul]]<br \/>\n[[li]]u[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n<\/div><\/div><\/div>"}
+{"id":"lb37","output":"<p>[[ul]]<br \/>\n[[li]]<strong>bold<\/strong> <em>italic<\/em> <span style=\"text-decoration: underline;\">under<\/span> <sup>sup<\/sup>[[\/li]]<br \/>\n[[li]]<a class=\"newpage\" href=\"\/some-page\">link<\/a> and [[a href=&quot;\/x&quot;]]anchor[[\/a]][[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb38","output":"<p>^^a<\/p>\n\n<ul>\n<li>list<\/li>\n<\/ul><p>b^^<br \/>\nx<\/p>\n\n"}
+{"id":"lb39","output":"<p><sup>a<br \/>\n[[ul]]<br \/>\n[[li]]list[[\/li]]<br \/>\n[[\/ul]]<br \/>\nb<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"lb40","output":"<p>^^a<\/p>\n\n<ul>\n<li>list<\/li>\n<\/ul><p>b<sup><br \/>\nx<br \/>\n<\/sup>a<br \/>\n[[ul]]<br \/>\n[[li]]list[[\/li]]<br \/>\n[[\/ul]]<br \/>\nb^^<br \/>\nx<\/p>\n\n"}
+{"id":"lb41","output":"<p>a<\/p>\n\n<p>[[div]]x[[\/div]]<\/p>\n\n<p>b<\/p>\n\n"}
+{"id":"lb42","output":"<p>[[ul]][[\/ul]]<br \/>\n[[ol]][[\/ol]]<br \/>\n[[ul]][[li]][[\/li]][[\/ul]]<br \/>\nx<\/p>\n\n"}
+{"id":"lb43","output":"<p>[[ul]]<br \/>\nFoo<br \/>\n[[\/ul]]<br \/>\n[[li]]<br \/>\nBaz<br \/>\n[[\/li]]<\/p>\n\n"}
+{"id":"lb44","output":"<p>[[ol]]<br \/>\nBar<br \/>\n[[\/ol]]<\/p>\n\n"}
+{"id":"lb45","output":"<p>[[ul_]]<br \/>\n[[li]]Alpha[[\/li]]<br \/>\n[[li]]Beta[[\/li]]<br \/>\n[[\/ul]]<br \/>\n[[ol_]]<br \/>\n[[li]]One[[\/li]]<br \/>\n[[\/ol]]<\/p>\n\n"}
+{"id":"lb46","output":"<p>[[ul_]]<br \/>\n[[li_]]<br \/>\nAlpha<br \/>\n[[\/li]]<br \/>\n[[li_]]<br \/>\nBeta<br \/>\n[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb47","output":"<p>[[ul ]]<br \/>\n[[li]]a[[\/li]]<br \/>\n[[\/ul]]<br \/>\n[[ul]]<br \/>\n[[li ]]b[[\/li]]<br \/>\n[[\/ul]]<br \/>\n[[ul]]<br \/>\n[[li]]c[[\/li ]]<br \/>\n[[\/ul ]]<\/p>\n\n"}
+{"id":"lb48","output":"<p>[[ul]]<br \/>\n[[li]]ab<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"lb49","output":"<p>[[ul]]<br \/>\n[[li]]unterminated<\/p>\n\n"}
+{"id":"lb50","output":"<p>[[ul]]<br \/>\n[[li]]fused[[\/li]]]<br \/>\n[[\/ul]]]<\/p>\n\n"}

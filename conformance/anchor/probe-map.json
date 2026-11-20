@@ -1,0 +1,82 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refgaps-anchor-p01",
+  "source": "[[# top]]\n[[a href=\"#top\"]]jump[[/a]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refgaps-anchor-p02",
+  "source": "[[a href=\"https://example.com\"]]^^label^^[[/a]]\nx",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refgaps-anchor-p03",
+  "source": "[[a_]]X[[/a]]",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refgaps-anchor-p04",
+  "source": "[[a_ href=\"https://example.com\"]]^^label^^[[/a]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refgaps-anchor-p05",
+  "source": "PRE\n\n[[a_ href=\"/x\"]]mid[[/a]]\n\nPOST",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refgaps-anchor-p06",
+  "source": "[[a_ href=\"some-page\"]]\nline1\nline2\n[[/a]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refgaps-anchor-p07",
+  "source": "[[a href=\"/x\"]]\nline1\nline2\n[[/a]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refgaps-anchor-p08",
+  "source": "[[a href=\"/x\"]]line1\n\nline2[[/a]]",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refgaps-anchor-p09",
+  "source": "[[anchor href=\"/x\"]]txt[[/anchor]]\n[[*a href=\"/x\"]]txt[[/a]]\n[[a href=\"/x\"]]txt[[/anchor]]",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refgaps-anchor-p10",
+  "source": "[[A HREF=\"/x\" href=\"/y\"]]UPPER[[/A]]",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refgaps-anchor-p11",
+  "source": "[[a href=\"*https://example.com\"]]star-ext[[/a]]\n[[a href=\"*some-page\"]]star-slug[[/a]]\n[[a href=\"*https://example.com\" target=\"_self\"]]star-override[[/a]]",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refgaps-anchor-p12",
+  "source": "[[a href=\"https://example.com/a b/日本語\"]]enc[[/a]]",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refgaps-anchor-p13",
+  "source": "[[a href=\"/x\"]]http://example.com[[/a]]\n[[a href=\"/x\"]][[[some-page|free]]][[/a]]",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refgaps-anchor-p14",
+  "source": "[[a href=\"/1\"]]before\n[[div]]\nin\n[[/div]]\nafter[[/a]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refgaps-anchor-p15",
+  "source": "[[a href=\"/x\" class='single' id=unquoted style = \"spaced\"]]quote-forms[[/a]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refgaps-anchor-p16",
+  "source": "[[a href=\"/x\"]]txt[[/a]]]\n[[# name]]]",
+  "action": "created"
+ }
+}

@@ -1,0 +1,50 @@
+{"id": "lb01", "source": "[[ul]]\n[[li]]Apple[[/li]]\n[[li]]Banana[[/li]]\n[[/ul]]"}
+{"id": "lb02", "source": "[[ol]]\n[[li]]First[[/li]]\n[[li]]Second[[/li]]\n[[/ol]]"}
+{"id": "lb03", "source": "[[ul]]\n[[li]]Apple[[/li]]\n[[li]]Banana[[/li]]\n[[/ul]]\n[[ol]]\n[[li]]First[[/li]]\n[[li]]Second[[/li]]\n[[/ol]]"}
+{"id": "lb04", "source": "[[ul]][[li]]Inline[[/li]][[li]]list[[/li]][[/ul]]"}
+{"id": "lb05", "source": "[[ol]][[li]]One[[/li]][[li]]Two[[/li]][[/ol]]"}
+{"id": "lb06", "source": "[[ul]]\n[[li]] Indented [[/li]]\n[[li]]   spaced   [[/li]]\n[[/ul]]"}
+{"id": "lb07", "source": "[[UL]]\n[[LI]]Case[[/LI]]\n[[/UL]]"}
+{"id": "lb08", "source": "[[ul]]\n[[li]]\nALPHA\n[[/li]]\n[[li]]\nBETA\n[[/li]]\n[[/ul]]"}
+{"id": "lb09", "source": "[[ul]]\n[[li]]line1\nline2[[/li]]\n[[/ul]]"}
+{"id": "lb10", "source": "[[ul]]\n[[li]]u[[/li]]\n[[/ul]]\n[[ul]]\n[[li]]u[[/li]]\n[[/ul]]"}
+{"id": "lb11", "source": "[[ul]]\n[[li]] Indented [[/li]]\n[[ol]]\n[[li]] and [[/li]]\n[[li]] nested [[/li]]\n[[/ol]]\n[[li]] list [[/li]]\n[[/ul]]"}
+{"id": "lb12", "source": "[[ol]]\n[[ul]]\n[[li]]-[[/li]]\n[[/ul]]\n[[/ol]]"}
+{"id": "lb13", "source": "[[ul]]\n[[ul]]\n[[li]]deep[[/li]]\n[[/ul]]\n[[/ul]]"}
+{"id": "lb14", "source": "[[ul]]\n[[li]]outer\n[[ol]]\n[[li]]inner[[/li]]\n[[/ol]]\n[[/li]]\n[[/ul]]"}
+{"id": "lb15", "source": "[[ol]]\n[[li]]1\n[[ul]]\n[[li]]a[[/li]]\n[[li]]b[[/li]]\n[[/ul]]\n[[/li]]\n[[li]]2[[/li]]\n[[/ol]]"}
+{"id": "lb16", "source": "[[ul]]\n[[li]]L1[[/li]]\n[[ul]]\n[[li]]L2[[/li]]\n[[ol]]\n[[li]]L3[[/li]]\n[[/ol]]\n[[/ul]]\n[[/ul]]"}
+{"id": "lb17", "source": "[[ul id=\"my-list\" class=\"a\" style=\"color: red;\" role=\"list\" type=\"disc\" data-x=\"1\" title=\"ignored\" hidden=\"yes\"]]\n[[li id=\"item-1\" class=\"b\" style=\"color: blue;\" data-Y=\"2\" value=\"9\"]]One[[/li]]\n[[/ul]]"}
+{"id": "lb18", "source": "[[ol id=\"num-list\" class=\"n\" style=\"color: green;\" type=\"A\" start=\"5\" reversed=\"reversed\"]]\n[[li]]Item[[/li]]\n[[/ol]]"}
+{"id": "lb19", "source": "[[ul class=\"c\" id=\"i\" style=\"s\"]]\n[[li style=\"ls\" id=\"li\" class=\"lc\"]]ordered-attrs[[/li]]\n[[/ul]]"}
+{"id": "lb20", "source": "[[ul data-z=\"1\" data-a=\"2\" DATA-UPPER=\"3\" data-Mixed=\"4\"]]\n[[li data-k=\"v\" CLASS=\"upper\"]]data-attrs[[/li]]\n[[/ul]]"}
+{"id": "lb21", "source": "[[ul id=\"\" class=\"\" data-empty=\"\"]]\n[[li id=\"u-already\" class=\"a  b\"]]norm[[/li]]\n[[/ul]]"}
+{"id": "lb22", "source": "[[ul]]\n* one\n* two\n[[/ul]]"}
+{"id": "lb23", "source": "[[ol]]\n* one\n* two\n[[/ol]]"}
+{"id": "lb24", "source": "[[ul]]\n* one\n* two\n[[/ul]]\n[[ol]]\n* bullet\n# num\n[[/ol]]"}
+{"id": "lb25", "source": "[[ul]]\n* a\n* b\n# c\n# d\n[[/ul]]"}
+{"id": "lb26", "source": "[[ul]]\n[[li]]\n* one\n* two\n[[/li]]\n[[/ul]]"}
+{"id": "lb27", "source": "[[ul]]\n[[li]]header\n* sub1\n* sub2\n[[/li]]\n[[/ul]]"}
+{"id": "lb28", "source": "* line1\n* line2\n\n[[ul]]\n[[li]]block1[[/li]]\n[[li]]block2[[/li]]\n[[/ul]]"}
+{"id": "lb29", "source": "||[[ul]]\n* one\n* two\n[[/ul]] ||\n|| after ||\nx"}
+{"id": "lb30", "source": "||[[ol]]\n* one\n* two\n[[/ol]] ||\n|| after ||\nx"}
+{"id": "lb31", "source": "[[table]][[row]][[cell]][[ul]]\n* one\n* two\n[[/ul]][[/cell]][[/row]][[/table]]\nx"}
+{"id": "lb32", "source": "||[[ul]]\n[[li]]one[[/li]]\n[[li]]two[[/li]]\n[[/ul]] ||\n|| after ||\nx"}
+{"id": "lb33", "source": "[[table]][[row]][[cell]][[ul]]\n[[li]]one[[/li]]\n[[li]]two[[/li]]\n[[/ul]][[/cell]][[/row]][[/table]]\nx"}
+{"id": "lb34", "source": "[[div]]\n[[ul]]\n[[li]]in-div[[/li]]\n[[/ul]]\n[[/div]]"}
+{"id": "lb35", "source": "[[note]]\n[[ul]]\n[[li]]u[[/li]]\n[[/ul]]\n[[/note]]"}
+{"id": "lb36", "source": "[[collapsible]]\n[[ul]]\n[[li]]u[[/li]]\n[[/ul]]\n[[/collapsible]]"}
+{"id": "lb37", "source": "[[ul]]\n[[li]]**bold** //italic// __under__ ^^sup^^[[/li]]\n[[li]][[[some-page|link]]] and [[a href=\"/x\"]]anchor[[/a]][[/li]]\n[[/ul]]"}
+{"id": "lb38", "source": "^^a\n* list\nb^^\nx"}
+{"id": "lb39", "source": "^^a\n[[ul]]\n[[li]]list[[/li]]\n[[/ul]]\nb^^\nx"}
+{"id": "lb40", "source": "^^a\n* list\nb^^\nx\n^^a\n[[ul]]\n[[li]]list[[/li]]\n[[/ul]]\nb^^\nx"}
+{"id": "lb41", "source": "a\n\n[[div]]x[[/div]]\n\nb"}
+{"id": "lb42", "source": "[[ul]][[/ul]]\n[[ol]][[/ol]]\n[[ul]][[li]][[/li]][[/ul]]\nx"}
+{"id": "lb43", "source": "[[ul]]\nFoo\n[[/ul]]\n[[li]]\nBaz\n[[/li]]"}
+{"id": "lb44", "source": "[[ol]]\nBar\n[[/ol]]"}
+{"id": "lb45", "source": "[[ul_]]\n[[li]]Alpha[[/li]]\n[[li]]Beta[[/li]]\n[[/ul]]\n[[ol_]]\n[[li]]One[[/li]]\n[[/ol]]"}
+{"id": "lb46", "source": "[[ul_]]\n[[li_]]\nAlpha\n[[/li]]\n[[li_]]\nBeta\n[[/li]]\n[[/ul]]"}
+{"id": "lb47", "source": "[[ul ]]\n[[li]]a[[/li]]\n[[/ul]]\n[[ul]]\n[[li ]]b[[/li]]\n[[/ul]]\n[[ul]]\n[[li]]c[[/li ]]\n[[/ul ]]"}
+{"id": "lb48", "source": "[[ul]]\n[[li]]ab\n[[/ul]]"}
+{"id": "lb49", "source": "[[ul]]\n[[li]]unterminated"}
+{"id": "lb50", "source": "[[ul]]\n[[li]]fused[[/li]]]\n[[/ul]]]"}

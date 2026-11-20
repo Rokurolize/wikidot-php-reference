@@ -1,0 +1,60 @@
+{"id":"a01","output":"<p><a$ name=\"strawberry\"><\/a><\/p>\n\n"}
+{"id":"a02","output":"<p><a$ name=\"_lemon-lime.2%20\"><\/a><\/p>\n\n"}
+{"id":"a03","output":"<p>[[#durian]]<\/p>\n\n"}
+{"id":"a04","output":"<p>[[# ]]<\/p>\n\n"}
+{"id":"a05","output":"<p>[<a href=\"javascript:;\"> a<\/a>]<\/p>\n\n"}
+{"id":"a06","output":"<p>[<a href=\"javascript:;\"> a  <\/a>]<\/p>\n\n"}
+{"id":"a07","output":"<p>[<a href=\"javascript:;\">apple banana<\/a>]<\/p>\n\n"}
+{"id":"a08","output":"<p>[<a href=\"javascript:;\">apple banana<\/a>]]<\/p>\n\n"}
+{"id":"a09","output":"<p>[<a href=\"javascript:;\">symbol$%_foo<\/a>]<\/p>\n\n"}
+{"id":"a10","output":"<p><a$ name=\"name\"><\/a>]<\/p>\n\n"}
+{"id":"a11","output":"<p><a class=\"newpage\" href=\"\/# a\"><\/a><br \/>\n<a class=\"newpage\" href=\"\/# a\">L<\/a><\/p>\n\n"}
+{"id":"a12","output":"<p><a$ name=\"top\"><\/a><br \/>\n[[a href=&quot;#top&quot;]]jump[[\/a]]<\/p>\n\n"}
+{"id":"a13","output":"<p>[[a]]Test[[\/a]]<\/p>\n\n"}
+{"id":"a14","output":"<p>[[a]][[\/a]]<\/p>\n\n"}
+{"id":"a15","output":"<p>[[a href=&quot;some-page&quot;]]click[[\/a]]<\/p>\n\n"}
+{"id":"a16","output":"<p>[[a href=&quot;*some-page&quot;]]click[[\/a]]<\/p>\n\n"}
+{"id":"a17","output":"<p>[[a href=&quot;<a href=\"https:\/\/example.com\">https:\/\/example.com<\/a>&quot;]]click[[\/a]]<\/p>\n\n"}
+{"id":"a18","output":"<p>[[a href=&quot;<a href=\"https:\/\/example.com\" target=\"_blank\">https:\/\/example.com<\/a>&quot;]]click[[\/a]]<\/p>\n\n"}
+{"id":"a19","output":"<p>[[a href=&quot;<a href=\"https:\/\/example.com\" target=\"_blank\">https:\/\/example.com<\/a>&quot; target=&quot;_self&quot;]]click[[\/a]]<\/p>\n\n"}
+{"id":"a20","output":"<p>[[a href=&quot;#something&quot;]]click[[\/a]]<\/p>\n\n"}
+{"id":"a21","output":"<p>[[a href=&quot;*#something&quot;]]click[[\/a]]<\/p>\n\n"}
+{"id":"a22","output":"<p>[[a href=&quot;\/local\/path&quot;]]click[[\/a]]<\/p>\n\n"}
+{"id":"a23","output":"<p>[[a href=&quot;*\/local\/path&quot;]]click[[\/a]]<\/p>\n\n"}
+{"id":"a24","output":"<p>[[a href=&quot;<a href=\"mailto:user@example.com\">mailto:user@example.com<\/a>&quot;]]mail[[\/a]]<\/p>\n\n"}
+{"id":"a25","output":"<p>[[a href=&quot;<a href=\"ftp:\/\/files.example.com\/pub\">ftp:\/\/files.example.com\/pub<\/a>&quot;]]ftp[[\/a]]<\/p>\n\n"}
+{"id":"a26","output":"<p>[[a href=&quot;javascript:alert(1)&quot;]]xss[[\/a]]<\/p>\n\n"}
+{"id":"a27","output":"<p>[[a href=&quot;JAVASCRIPT:alert(1)&quot;]]xss2[[\/a]]<\/p>\n\n"}
+{"id":"a28","output":"<p>[[a href=&quot;data:text\/html,&lt;b&gt;x&lt;\/b&gt;&quot;]]data[[\/a]]<\/p>\n\n"}
+{"id":"a29","output":"<p>[[a href=&quot;HTTP:\/\/X\/Y&quot;]]upper-http[[\/a]]<\/p>\n\n"}
+{"id":"a30","output":"<p>[[a href=&quot; <a href=\"http:\/\/x\">http:\/\/x<\/a>&quot;]]lead-sp[[\/a]]<br \/>\n[[a href=&quot;<a href=\"http:\/\/x\">http:\/\/x<\/a> &quot;]]trail-sp[[\/a]]<\/p>\n\n"}
+{"id":"a31","output":"<p>[[a href=&quot;<a href=\"http:\/\/example.com\/a\">http:\/\/example.com\/a<\/a> b&quot;]]sp1[[\/a]]<br \/>\n[[a href=&quot;\/a b&quot;]]sp2[[\/a]]<br \/>\n[[a href=&quot;#a b&quot;]]sp3[[\/a]]<\/p>\n\n"}
+{"id":"a32","output":"<p>[[a href=&quot;<a href=\"https:\/\/example.com\/a\">https:\/\/example.com\/a<\/a> b\/\u65e5\u672c\u8a9e&quot;]]enc[[\/a]]<\/p>\n\n"}
+{"id":"a33","output":"<p>[[a href=&quot;a::b&quot;]]c1[[\/a]]<br \/>\n[[a href=&quot;a - b&quot;]]c2[[\/a]]<br \/>\n[[a href=&quot;:&quot;]]c3[[\/a]]<br \/>\n[[a href=&quot;abc=&quot;]]c4[[\/a]]<\/p>\n\n"}
+{"id":"a34","output":"<p>[[a href=&quot;<span style=\"white-space: pre-wrap;\">a<\/span>&quot;]]r1[[\/a]]<br \/>\n[[a class=&quot;<span style=\"white-space: pre-wrap;\">a<\/span>&quot; href=&quot;\/x&quot;]]r2[[\/a]]<br \/>\n[[a href=&quot;\/x<span style=\"white-space: pre-wrap;\">a<\/span>&quot;]]r3[[\/a]]<\/p>\n\n"}
+{"id":"a35","output":"<p>[[a href=&quot;<a href=\"https:\/\/example.com\" target=\"_blank\">https:\/\/example.com<\/a>&quot;]]star-ext[[\/a]]<br \/>\n[[a href=&quot;*some-page&quot;]]star-slug[[\/a]]<br \/>\n[[a href=&quot;<a href=\"https:\/\/example.com\" target=\"_blank\">https:\/\/example.com<\/a>&quot; target=&quot;_self&quot;]]star-override[[\/a]]<\/p>\n\n"}
+{"id":"a36","output":"<p>[[a href=&quot;\/x&quot; id=&quot;i&quot; class=&quot;c&quot; style=&quot;s&quot; role=&quot;r&quot; type=&quot;t&quot; data-x=&quot;d&quot; target=&quot;_blank&quot;]]y[[\/a]]<\/p>\n\n"}
+{"id":"a37","output":"<p>[[a href=&quot;\/x&quot; style=&quot;s&quot; class=&quot;c&quot; id=&quot;i&quot;]]y[[\/a]]<\/p>\n\n"}
+{"id":"a38","output":"<p>[[a href=&quot;\/x&quot; data-z=&quot;1&quot; data-a=&quot;2&quot; data-m=&quot;3&quot;]]y[[\/a]]<\/p>\n\n"}
+{"id":"a39","output":"<p>[[a href=&quot;\/x&quot; data-X=&quot;1&quot;]]y1[[\/a]]<br \/>\n[[a href=&quot;\/x&quot; DATA-X=&quot;1&quot;]]y2[[\/a]]<br \/>\n[[a href=&quot;\/x&quot; data-=&quot;1&quot;]]y3[[\/a]]<\/p>\n\n"}
+{"id":"a40","output":"<p>[[a href=&quot;\/x&quot; name=&quot;n&quot; title=&quot;t&quot; rel=&quot;r&quot; onclick=&quot;o&quot; foo=&quot;f&quot; lang=&quot;en&quot; dir=&quot;ltr&quot; align=&quot;left&quot; tabindex=&quot;2&quot; aria-label=&quot;a&quot;]]y[[\/a]]<\/p>\n\n"}
+{"id":"a41","output":"<p>[[a href=&quot;\/x&quot; CLASS=&quot;c&quot; HREF=&quot;\/u&quot;]]y[[\/a]]<\/p>\n\n"}
+{"id":"a42","output":"<p>[[a data-x=&quot;&quot; id=&quot;i&quot;]]y1[[\/a]]<br \/>\n[[a href=&quot;\/x&quot; class=&quot;a b&quot;]]y2[[\/a]]<br \/>\n[[a href=&quot;\/x&quot; class=&quot;c&quot; class=&quot;&quot;]]y3[[\/a]]<br \/>\n[[a href=&quot;\/x&quot; href=&quot;\/u&quot;]]y4[[\/a]]<\/p>\n\n"}
+{"id":"a43","output":"<p>[[A HREF=&quot;\/x&quot; href=&quot;\/y&quot;]]UPPER[[\/A]]<\/p>\n\n"}
+{"id":"a44","output":"<p>[[a href=&quot;\/x&quot; class='single' id=unquoted style = &quot;spaced&quot;]]quote-forms[[\/a]]<\/p>\n\n"}
+{"id":"a45","output":"<p>[[a]] one [[\/a]]<br \/>\nx[[a]] one [[\/a]]y<br \/>\n[[a]]one[<a href=\"\/a]][[a]]\">two[[\/a<\/a>]<br \/>\n[[a]]one [[\/a]][[a]]two[[\/a]]<\/p>\n\n"}
+{"id":"a46","output":"<p>[[a href=&quot;\/1&quot;]]x[[a href=&quot;\/2&quot;]]y[[\/a]]z[[\/a]]<br \/>\n[[a href=&quot;\/1&quot;]][<a href=\"\/a]]\">[[a href=&quot;\/2&quot;<\/a>]y[[\/a]]<\/p>\n\n"}
+{"id":"a47","output":"<p>a[[a ]] b[[\/a]]c<\/p>\n\n"}
+{"id":"a48","output":"<p>[[anchor href=&quot;\/x&quot;]]txt[[\/anchor]]<br \/>\n[[*a href=&quot;\/x&quot;]]txt[[\/a]]<br \/>\n[[a href=&quot;\/x&quot;]]txt[[\/anchor]]<\/p>\n\n"}
+{"id":"a49","output":"<p>[[a href=&quot;<a href=\"http:\/\/example.com\">http:\/\/example.com<\/a>&quot;]]unterminated<\/p>\n\n<div ><p>inside<\/p>\n\n<\/div>"}
+{"id":"a50","output":"<p>[[a href=&quot;\/x&quot;]]txt[[\/a]]]<br \/>\n<a$ name=\"name\"><\/a>]<\/p>\n\n"}
+{"id":"a51","output":"<p>[[a href=&quot;\/x&quot;]]<br \/>\nline1<br \/>\nline2<br \/>\n[[\/a]]<\/p>\n\n"}
+{"id":"a52","output":"<p>[[a href=&quot;\/x&quot;]]line1<\/p>\n\n<p>line2[[\/a]]<\/p>\n\n"}
+{"id":"a53","output":"<p>[[a_]]X[[\/a]]<\/p>\n\n"}
+{"id":"a54","output":"<p>[[a_ href=&quot;<a href=\"https:\/\/example.com\">https:\/\/example.com<\/a>&quot;]]<sup>label<\/sup>[[\/a]]<\/p>\n\n"}
+{"id":"a55","output":"<p>PRE<br \/>\n[[a_ href=&quot;<a href=\"https:\/\/example.com\">https:\/\/example.com<\/a>&quot;]]x[[\/a]]<br \/>\nPOST<\/p>\n\n"}
+{"id":"a56","output":"<p>PRE<\/p>\n\n<p>[[a_ href=&quot;\/x&quot;]]mid[[\/a]]<\/p>\n\n<p>POST<\/p>\n\n"}
+{"id":"a57","output":"<p>[[a_ href=&quot;some-page&quot;]]<br \/>\nline1<br \/>\nline2<br \/>\n[[\/a]]<\/p>\n\n"}
+{"id":"a58","output":"<p>[[a href=&quot;<a href=\"http:\/\/x\/a--b\">http:\/\/x\/a--b<\/a>&quot;]]label[[\/a]]<br \/>\nx<\/p>\n\n"}
+{"id":"a59","output":"<p>[[a href=&quot;<a href=\"https:\/\/example.com\">https:\/\/example.com<\/a>&quot;]]<sup>label<\/sup>[[\/a]]<br \/>\nx<\/p>\n\n"}
+{"id":"a60","output":"<p>[[a href=&quot;<a href=\"http:\/\/x\">http:\/\/x<\/a>&quot;]]<span style=\"text-decoration: underline;\">label<\/span>[[\/a]]<\/p>\n\n"}

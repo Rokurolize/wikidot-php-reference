@@ -1,0 +1,60 @@
+{"id":"a01","output":"<p><a name=\"strawberry\"><\/a><\/p>\n\n"}
+{"id":"a02","output":"<p><a name=\"_lemon-lime.2%20\"><\/a><\/p>\n\n"}
+{"id":"a03","output":"<p>[[#durian]]<\/p>\n\n"}
+{"id":"a04","output":"<p>[[# ]]<\/p>\n\n"}
+{"id":"a05","output":"<p>[ <a href=\"javascript:;\">a<\/a>]<\/p>\n\n"}
+{"id":"a06","output":"<p>[ <a href=\"javascript:;\">a<\/a>  ]<\/p>\n\n"}
+{"id":"a07","output":"<p>[<a href=\"javascript:;\">apple banana<\/a>]<\/p>\n\n"}
+{"id":"a08","output":"<p>[[# apple banana]]]<\/p>\n\n"}
+{"id":"a09","output":"<p>[<a href=\"javascript:;\">symbol$%_foo<\/a>]<\/p>\n\n"}
+{"id":"a10","output":"<p><a name=\"name\"><\/a>]<\/p>\n\n"}
+{"id":"a11","output":"<p><a class=\"newpage\" href=\"\/# a\"><\/a><br \/>\n<a class=\"newpage\" href=\"\/# a\">L<\/a><\/p>\n\n"}
+{"id":"a12","output":"<p><a name=\"top\"><\/a><br \/>\n<a href=\"#top\">jump<\/a><\/p>\n\n"}
+{"id":"a13","output":"<p><a href=\"\">Test<\/a><\/p>\n\n"}
+{"id":"a14","output":"<p><a href=\"\"><\/a><\/p>\n\n"}
+{"id":"a15","output":"<p><a href=\"some-page\">click<\/a><\/p>\n\n"}
+{"id":"a16","output":"<p><a href=\"some-page\">click<\/a><\/p>\n\n"}
+{"id":"a17","output":"<p><a href=\"https:\/\/example.com\">click<\/a><\/p>\n\n"}
+{"id":"a18","output":"<p><a href=\"https:\/\/example.com\" target=\"_blank\">click<\/a><\/p>\n\n"}
+{"id":"a19","output":"<p><a href=\"https:\/\/example.com\" target=\"_self\">click<\/a><\/p>\n\n"}
+{"id":"a20","output":"<p><a href=\"#something\">click<\/a><\/p>\n\n"}
+{"id":"a21","output":"<p><a href=\"#something\" target=\"_blank\">click<\/a><\/p>\n\n"}
+{"id":"a22","output":"<p><a href=\"\/local\/path\">click<\/a><\/p>\n\n"}
+{"id":"a23","output":"<p><a href=\"\/local\/path\" target=\"_blank\">click<\/a><\/p>\n\n"}
+{"id":"a24","output":"<p><a href=\"mailto:user@example.com\">mail<\/a><\/p>\n\n"}
+{"id":"a25","output":"<p><a href=\"ftp:\/\/files.example.com\/pub\">ftp<\/a><\/p>\n\n"}
+{"id":"a26","output":"<p><a href=\"javascript:alert-1\">xss<\/a><\/p>\n\n"}
+{"id":"a27","output":"<p><a href=\"javascript:alert-1\">xss2<\/a><\/p>\n\n"}
+{"id":"a28","output":"<p><a href=\"data:text-html-b-x-b\">data<\/a><\/p>\n\n"}
+{"id":"a29","output":"<p><a href=\"http:x-y\">upper-http<\/a><\/p>\n\n"}
+{"id":"a30","output":"<p><a href=\"http:x\">lead-sp<\/a><br \/>\n<a href=\"http:\/\/x\">trail-sp<\/a><\/p>\n\n"}
+{"id":"a31","output":"<p><a href=\"http:\/\/example.com\/a%20b\">sp1<\/a><br \/>\n<a href=\"\/a%20b\">sp2<\/a><br \/>\n<a href=\"#a%20b\">sp3<\/a><\/p>\n\n"}
+{"id":"a32","output":"<p><a href=\"https:\/\/example.com\/a%20b\/%E6%97%A5%E6%9C%AC%E8%AA%9E\">enc<\/a><\/p>\n\n"}
+{"id":"a33","output":"<p><a href=\"a:b\">c1<\/a><br \/>\n<a href=\"a-b\">c2<\/a><br \/>\n<a href=\"\">c3<\/a><br \/>\n<a href=\"\">c4<\/a><\/p>\n\n"}
+{"id":"a34","output":"<p><a href=\"570\">r1<\/a><br \/>\n<a class=\"\" href=\"\/x\">r2<\/a><br \/>\n<a href=\"\">r3<\/a><\/p>\n\n"}
+{"id":"a35","output":"<p><a href=\"https:\/\/example.com\" target=\"_blank\">star-ext<\/a><br \/>\n<a href=\"some-page\">star-slug<\/a><br \/>\n<a href=\"https:\/\/example.com\" target=\"_self\">star-override<\/a><\/p>\n\n"}
+{"id":"a36","output":"<p><a id=\"u-i\" class=\"c\" style=\"s\" role=\"r\" type=\"t\" data-x=\"d\" href=\"\/x\" target=\"_blank\">y<\/a><\/p>\n\n"}
+{"id":"a37","output":"<p><a id=\"u-i\" class=\"c\" style=\"s\" href=\"\/x\">y<\/a><\/p>\n\n"}
+{"id":"a38","output":"<p><a data-z=\"1\" data-a=\"2\" data-m=\"3\" href=\"\/x\">y<\/a><\/p>\n\n"}
+{"id":"a39","output":"<p><a data-x=\"1\" href=\"\/x\">y1<\/a><br \/>\n<a href=\"\/x\">y2<\/a><br \/>\n<a data-=\"1\" href=\"\/x\">y3<\/a><\/p>\n\n"}
+{"id":"a40","output":"<p><a href=\"\/x\">y<\/a><\/p>\n\n"}
+{"id":"a41","output":"<p><a href=\"\/x\">y<\/a><\/p>\n\n"}
+{"id":"a42","output":"<p><a id=\"u-i\" data-x=\"\" href=\"\">y1<\/a><br \/>\n<a class=\"a b\" href=\"\/x\">y2<\/a><br \/>\n<a href=\"\/x\">y3<\/a><br \/>\n<a href=\"\/u\">y4<\/a><\/p>\n\n"}
+{"id":"a43","output":"<p><a href=\"\/y\">UPPER<\/a><\/p>\n\n"}
+{"id":"a44","output":"<p><a href=\"\/x&quot;%20class='single'%20id=unquoted%20style%20=%20&quot;spaced\">quote-forms<\/a><\/p>\n\n"}
+{"id":"a45","output":"<p><a href=\"\">one<\/a><br \/>\nx <a href=\"\">one<\/a> y<br \/>\n<a href=\"\">one<\/a> <a href=\"\">two<\/a><br \/>\n<a href=\"\">one<\/a> <a href=\"\">two<\/a><\/p>\n\n"}
+{"id":"a46","output":"<p><a href=\"\/1\">x<\/a><a href=\"\/2\">y<\/a>z<br \/>\n<a href=\"\/1\"><\/a> <a href=\"\/2\">y<\/a><\/p>\n\n"}
+{"id":"a47","output":"<p>a[[a ]] b[[\/a]]c<\/p>\n\n"}
+{"id":"a48","output":"<p>[[anchor href=&quot;\/x&quot;]]txt[[\/anchor]]<br \/>\n[[*a href=&quot;\/x&quot;]]txt[[\/a]]<br \/>\n[[a href=&quot;\/x&quot;]]txt[[\/anchor]]<\/p>\n\n"}
+{"id":"a49","output":"<p>[[a href=&quot;<a href=\"http:\/\/example.com\">http:\/\/example.com<\/a>&quot;]]unterminated<\/p>\n\n<div ><p>inside<\/p>\n\n<\/div>"}
+{"id":"a50","output":"<p><a href=\"\/x\">txt<\/a>]<br \/>\n<a name=\"name\"><\/a>]<\/p>\n\n"}
+{"id":"a51","output":"<p><a href=\"\/x\"><br \/>\nline1<br \/>\nline2<br \/>\n<\/a><\/p>\n\n"}
+{"id":"a52","output":"<p><a href=\"\/x\">line1<\/a><\/p>\n\n<p><a href=\"\/x\">line2<\/a><\/p>\n\n"}
+{"id":"a53","output":"<a href=\"\">X<\/a>"}
+{"id":"a54","output":"<a href=\"https:\/\/example.com\"><sup>label<\/sup><\/a>"}
+{"id":"a55","output":"<p>PRE<a href=\"https:\/\/example.com\">x<\/a>POST<\/p>\n\n"}
+{"id":"a56","output":"<p>PRE<a href=\"\/x\">mid<\/a>POST<\/p>\n\n"}
+{"id":"a57","output":"<a href=\"some-page\">line1<br \/>\nline2<\/a>"}
+{"id":"a58","output":"<p><a href=\"http:\/\/x\/a--b\">label<\/a><br \/>\nx<\/p>\n\n"}
+{"id":"a59","output":"<p><a href=\"https:\/\/example.com\"><sup>label<\/sup><\/a><br \/>\nx<\/p>\n\n"}
+{"id":"a60","output":"<p><a href=\"http:\/\/x\"><span style=\"text-decoration: underline;\">label<\/span><\/a><\/p>\n\n"}

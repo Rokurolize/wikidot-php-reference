@@ -1,0 +1,15 @@
+{"id":"im01","output":"<div  class=\"error-block\"><p>Included page &quot;no-such-page&quot; does not exist (<a href=\"\/no-such-page\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im02","output":"<div  class=\"error-block\"><p>Included page &quot;no-such-page&quot; does not exist (<a href=\"\/no-such-page\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im03","output":"<div  class=\"error-block\"><p>Included page &quot;sub:no-such-page&quot; does not exist (<a href=\"https:\/\/cat.wikidot.com\/sub:no-such-page\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im04","output":"<div  class=\"error-block\"><p>Included page &quot;cat:no-such-page&quot; does not exist (<a href=\"\/cat:no-such-page\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im05","output":"<div  class=\"error-block\"><p>Included page &quot;&quot; does not exist (<a href=\"\/\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im06","output":"<div  class=\"error-block\"><p>Included page &quot;bar&quot; does not exist (<a href=\"https:\/\/foo.wikidot.com\/bar\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im07","output":"<div  class=\"error-block\"><p>Included page &quot;other-page&quot; does not exist (<a href=\"https:\/\/scp-jp.wikidot.com\/other-page\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im08","output":"<div  class=\"error-block\"><p>Included page &quot;no-such-page&quot; does not exist (<a href=\"https:\/\/sandbox-for-codex.wikidot.com\/no-such-page\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im09","output":"<div  class=\"error-block\"><p>Included page &quot;&quot; does not exist (<a href=\"\/\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im10","output":"<div  class=\"error-block\"><p>Included page &quot;&quot; does not exist (<a href=\"\/\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im11","output":"<div  class=\"error-block\"><p>Included page &quot;site&quot; does not exist (<a href=\"\/site\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im12","output":"<div  class=\"error-block\"><p>Included page &quot;page&quot; does not exist (<a href=\"\/page\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im13","output":"<div  class=\"error-block\"><p>Included page &quot;no-such-page&quot; does not exist (<a href=\"\/no-such-page\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}
+{"id":"im14","output":"<p>Before<\/p>\n\n<div  class=\"error-block\"><p>Included page &quot;no-such-page&quot; does not exist (<a href=\"\/no-such-page\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div><p>After<\/p>\n\n"}
+{"id":"im15","output":"<div  class=\"error-block\"><p>Included page &quot;include-target&quot; does not exist (<a href=\"\/include-target\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div><div  class=\"error-block\"><p>Included page &quot;no-such-page&quot; does not exist (<a href=\"\/no-such-page\/edit\/true\">create it now<\/a>)<\/p>\n\n<\/div>"}

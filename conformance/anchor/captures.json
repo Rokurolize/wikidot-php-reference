@@ -1,0 +1,162 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refgaps-anchor-p01",
+  "html": "<p><a name=\"top\"></a><br />\n<a href=\"#top\">jump</a></p>",
+  "html_sha256": "56aedb3ce7edef97c6120b201764cdb90ff3c3f4314cc610e125853e210b6b28",
+  "source": "[[# top]]\n[[a href=\"#top\"]]jump[[/a]]",
+  "source_sha256": "a499c7ae2fdd1105e0b7e7c398305b4eb8305aa1cae9a8debb7577cbdd613d03",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refgaps-anchor-p02",
+  "html": "<p><a href=\"https://example.com\"><sup>label</sup></a><br />\nx</p>",
+  "html_sha256": "ea454138c0f3cb8d3e3fad962fb7be4b3f8d0d8044aad1c596f87b26520d93f2",
+  "source": "[[a href=\"https://example.com\"]]^^label^^[[/a]]\nx",
+  "source_sha256": "feda8ac0a830d306c91ea2491f1568fadc2f76488f03d49a2d0c994284335b43",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refgaps-anchor-p03",
+  "html": "<a href=\"\">X</a>",
+  "html_sha256": "00ae6d65baf69958cf4fa21399a07234b81736cfab5b04caa913363813f02411",
+  "source": "[[a_]]X[[/a]]",
+  "source_sha256": "36da8ba05181b0bfaf525fca0eac9d192b9af25f889c0e9d53053292b7015fb3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refgaps-anchor-p04",
+  "html": "<a href=\"https://example.com\"><sup>label</sup></a>",
+  "html_sha256": "fb248cbec89e58c1fb8ab82b90d86e1be3ec07867afb641d4da138eb42b867f9",
+  "source": "[[a_ href=\"https://example.com\"]]^^label^^[[/a]]",
+  "source_sha256": "8507e0e6d44b5c38554b1b170d3a0330733a9064b64875e1edc6f5293cef442b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refgaps-anchor-p05",
+  "html": "<p>PRE<a href=\"/x\">mid</a>POST</p>",
+  "html_sha256": "63352606c7e779afe027d49f7836a01452025dbbe7bd4cf247d26e68b10302ad",
+  "source": "PRE\n\n[[a_ href=\"/x\"]]mid[[/a]]\n\nPOST",
+  "source_sha256": "d1fbe2c21847d15e0d86997f42b8ae6eba1f62e867c7ae853dd491bc8e8f5472",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refgaps-anchor-p06",
+  "html": "<a href=\"some-page\">line1<br />\nline2</a>",
+  "html_sha256": "6e936b2f1f82825642051c3b81baff2024b10c93db71f79cd7f2b51d2c1ccb5e",
+  "source": "[[a_ href=\"some-page\"]]\nline1\nline2\n[[/a]]",
+  "source_sha256": "d3efa89364e263e69322264a3baa1e0ae0cc4ec6bf6e979c91836fd903f9fc37",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refgaps-anchor-p07",
+  "html": "<p><a href=\"/x\"><br />\nline1<br />\nline2<br /></a></p>",
+  "html_sha256": "4f62654651e307b860a4ba0359237dd7d4c268872a5514d40f5f4fdaeed752be",
+  "source": "[[a href=\"/x\"]]\nline1\nline2\n[[/a]]",
+  "source_sha256": "6da5c86b358839a6932cd3f28344a752afa13074fb770fb6ae76c2c9da4e4eab",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refgaps-anchor-p08",
+  "html": "<p><a href=\"/x\">line1</a></p>\n<p><a href=\"/x\">line2</a></p>",
+  "html_sha256": "7e9f2601f0c4af3d06d74a495a6280931c6b62bf7c7aa0b2d43bdbbd1b86555d",
+  "source": "[[a href=\"/x\"]]line1\n\nline2[[/a]]",
+  "source_sha256": "7896299b93b3839a357a17b1300c9ee71a15cbdce645b491bacd8a316fb9b29f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09": {
+  "fullname": "muse-probe-refgaps-anchor-p09",
+  "html": "<p>[[anchor href=&quot;/x&quot;]]txt[[/anchor]]<br />\n[[*a href=&quot;/x&quot;]]txt[[/a]]<br />\n[[a href=&quot;/x&quot;]]txt[[/anchor]]</p>",
+  "html_sha256": "74db65a1c17783cee05e4a6155c3ccd03af7fe6700d07cfde1428ccf803f24f7",
+  "source": "[[anchor href=\"/x\"]]txt[[/anchor]]\n[[*a href=\"/x\"]]txt[[/a]]\n[[a href=\"/x\"]]txt[[/anchor]]",
+  "source_sha256": "46d217ba81073dffd0cb97bea40d5952eccb0b4e33fe335afce0bc1c28b14b31",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10": {
+  "fullname": "muse-probe-refgaps-anchor-p10",
+  "html": "<p><a href=\"/y\">UPPER</a></p>",
+  "html_sha256": "66d45936042643272eea1f8be0a0fe4487aa2af369a940eb54c69e1dd9ef829a",
+  "source": "[[A HREF=\"/x\" href=\"/y\"]]UPPER[[/A]]",
+  "source_sha256": "7f875ece2cd341b485c9d332feefb5bb9544405b07d75673c39a94d458a20e91",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11": {
+  "fullname": "muse-probe-refgaps-anchor-p11",
+  "html": "<p><a href=\"https://example.com\" target=\"_blank\">star-ext</a><br />\n<a href=\"some-page\">star-slug</a><br />\n<a href=\"https://example.com\" target=\"_self\">star-override</a></p>",
+  "html_sha256": "08deb5154012151c5d30ad9d01acc835f60845060cb038b2954142e6b49be00c",
+  "source": "[[a href=\"*https://example.com\"]]star-ext[[/a]]\n[[a href=\"*some-page\"]]star-slug[[/a]]\n[[a href=\"*https://example.com\" target=\"_self\"]]star-override[[/a]]",
+  "source_sha256": "92ba86ec7dc2fcf9f1ccbcfa298271f8da981448fc0e887253ff7ed3bf650783",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12": {
+  "fullname": "muse-probe-refgaps-anchor-p12",
+  "html": "<p><a href=\"https://example.com/a%20b/%E6%97%A5%E6%9C%AC%E8%AA%9E\">enc</a></p>",
+  "html_sha256": "af9479a16870cd81d7e64932f630e729d6e005c9e3c68cb8cbe6990168587475",
+  "source": "[[a href=\"https://example.com/a b/日本語\"]]enc[[/a]]",
+  "source_sha256": "3fed927a7c52df3efd97b1ad5e7c0f65cd678342da23038409f4ade51405e90f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13": {
+  "fullname": "muse-probe-refgaps-anchor-p13",
+  "html": "<p><a href=\"/x\"></a><a href=\"http://example.com\">http://example.com</a><br />\n<a href=\"/x\"></a><a class=\"newpage\" href=\"/some-page\">free</a></p>",
+  "html_sha256": "ba43b71e4d9cce1653eebcc04cf53ac97b3795dda7d34534fc48f785522a219a",
+  "source": "[[a href=\"/x\"]]http://example.com[[/a]]\n[[a href=\"/x\"]][[[some-page|free]]][[/a]]",
+  "source_sha256": "67939a7e2a5fc8ca6d3687736d66c669380d5f2e18e5fafe8a7e5cbc07d17576",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14": {
+  "fullname": "muse-probe-refgaps-anchor-p14",
+  "html": "<p><a href=\"/1\">before</a></p>\n<div><a href=\"/1\"></a>\n<p>in</p>\n</div>\n<br />\nafter",
+  "html_sha256": "c834a6d4e085e0ab4abc84dc7abe1f1a3b78c45c4a2ce61d8f47884a8718d5df",
+  "source": "[[a href=\"/1\"]]before\n[[div]]\nin\n[[/div]]\nafter[[/a]]",
+  "source_sha256": "64a6234a8b7d0f2b6debecb56822885ed8c2a22089ecd8bc39357323af1780fa",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15": {
+  "fullname": "muse-probe-refgaps-anchor-p15",
+  "html": "<p><a href=\"/x&quot;%20class='single'%20id=unquoted%20style%20=%20&quot;spaced\">quote-forms</a></p>",
+  "html_sha256": "aa4176ec39dd762510cb0c4822859026d6cf68ba6aed1adab16fd362ace0e764",
+  "source": "[[a href=\"/x\" class='single' id=unquoted style = \"spaced\"]]quote-forms[[/a]]",
+  "source_sha256": "b25a1e8d3c35df4b388e984e85b2629702116178d02566f9d3141216661b47ef",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16": {
+  "fullname": "muse-probe-refgaps-anchor-p16",
+  "html": "<p><a href=\"/x\">txt</a>]<br />\n<a name=\"name\"></a>]</p>",
+  "html_sha256": "975faca32e7c2d9265f1c107bb549b7cef3b1e8bfb702b90fe076c5a7d9bc918",
+  "source": "[[a href=\"/x\"]]txt[[/a]]]\n[[# name]]]",
+  "source_sha256": "8c8786c9f5bfba387b501ea31a93e8e51e8502313f02ca0e493c46e7244ec35c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -210,6 +210,19 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
         if (trim($matches[0]) == '') {
             return '';
         }
+
+        // Scored anchor ([[a_ ...]]...[[/a]]) paragraph-wrapper suppression (PG-F1):
+        // when a run ends with a scored anchor closing token (either standalone
+        // [[a_]]X[[/a]] or a line ending with a scored anchor), keep it bare.
+        if (!empty($this->wiki->vars['scored_anchors']) && is_array($this->wiki->vars['scored_anchors'])) {
+            $trimmedRun = trim($matches[0]);
+            foreach ($this->wiki->vars['scored_anchors'] as $endTok => $startTok) {
+                $endLen = strlen($endTok);
+                if ($endLen > 0 && substr($trimmedRun, -$endLen) === $endTok && strpos($trimmedRun, $startTok) !== false) {
+                    return $matches[0];
+                }
+            }
+        }
         
         // does the match start with a delimiter?
         if (substr($matches[0], 0, 1) != $delim) {

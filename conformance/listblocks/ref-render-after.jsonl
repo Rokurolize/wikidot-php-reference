@@ -1,0 +1,50 @@
+{"id":"lb01","output":"<ul>\n<li>Apple<\/li>\n<li>Banana<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb02","output":"<ol>\n<li>First<\/li>\n<li>Second<\/li>\n<\/ol><br \/>\n"}
+{"id":"lb03","output":"<ul>\n<li>Apple<\/li>\n<li>Banana<\/li>\n<\/ul><ol>\n<li>First<\/li>\n<li>Second<\/li>\n<\/ol><br \/>\n"}
+{"id":"lb04","output":"<ul>\n<li>Inline<\/li>\n<li>list<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb05","output":"<ol>\n<li>One<\/li>\n<li>Two<\/li>\n<\/ol><br \/>\n"}
+{"id":"lb06","output":"<ul>\n<li>Indented<\/li>\n<li>spaced<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb07","output":"<p>[[UL]]<br \/>\n[[LI]]Case[[\/LI]]<br \/>\n[[\/UL]]<\/p>\n\n"}
+{"id":"lb08","output":"<ul>\n<li>ALPHA<br \/><\/li>\n<li>BETA<br \/><\/li>\n<\/ul><br \/>\n"}
+{"id":"lb09","output":"<ul>\n<li>line1<br \/>\nline2<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb10","output":"<ul>\n<li>u<\/li>\n<\/ul><ul>\n<li>u<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb11","output":"<ul>\n<li>Indented\n<ol>\n<li>and<\/li>\n<li>nested<\/li>\n<\/ol>\n<\/li>\n<li>list<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb12","output":"<ol>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>-<\/li>\n<\/ul>\n<\/li>\n<\/ol><br \/>\n"}
+{"id":"lb13","output":"<ul>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>deep<\/li>\n<\/ul>\n<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb14","output":"<ul>\n<li>outer<br \/>\n<ol>\n<li>inner<\/li>\n<\/ol>\n<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb15","output":"<ol>\n<li>1<br \/>\n<ul>\n<li>a<\/li>\n<li>b<\/li>\n<\/ul>\n<\/li>\n<li>2<\/li>\n<\/ol><br \/>\n"}
+{"id":"lb16","output":"<ul>\n<li>L1\n<ul>\n<li>L2\n<ol>\n<li>L3<\/li>\n<\/ol>\n<\/li>\n<\/ul>\n<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb17","output":"<ul id=\"u-my-list\" class=\"a\" style=\"color: red;\" role=\"list\" type=\"disc\" data-x=\"1\">\n<li id=\"u-item-1\" class=\"b\" style=\"color: blue;\" data-y=\"2\">One<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb18","output":"<ol id=\"u-num-list\" class=\"n\" style=\"color: green;\" type=\"A\">\n<li>Item<\/li>\n<\/ol><br \/>\n"}
+{"id":"lb19","output":"<ul id=\"u-i\" class=\"c\" style=\"s\">\n<li id=\"u-li\" class=\"lc\" style=\"ls\">ordered-attrs<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb20","output":"<ul data-z=\"1\" data-a=\"2\" data-mixed=\"4\">\n<li data-k=\"v\">data-attrs<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb21","output":"<ul data-empty=\"\">\n<li id=\"u-already\" class=\"a b\">norm<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb22","output":"<ul>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>\n<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb23","output":"<ol>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>\n<\/li>\n<\/ol><br \/>\n"}
+{"id":"lb24","output":"<ul>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>\n<\/li>\n<\/ul><ol>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>bullet<\/li>\n<\/ul>\n<ol>\n<li>num<\/li>\n<\/ol>\n<\/li>\n<\/ol><br \/>\n"}
+{"id":"lb25","output":"<ul>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>a<\/li>\n<li>b<\/li>\n<\/ul>\n<ol>\n<li>c<\/li>\n<li>d<\/li>\n<\/ol>\n<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb26","output":"<ul>\n<li>\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>\n<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb27","output":"<ul>\n<li>header\n<ul>\n<li>sub1<\/li>\n<li>sub2<\/li>\n<\/ul>\n<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb28","output":"<ul>\n<li>line1<\/li>\n<li>line2<\/li>\n<\/ul><ul>\n<li>block1<\/li>\n<li>block2<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb29","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><ul>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>\n<\/li>\n<\/ul><\/td>\n<\/tr>\n<tr>\n<td>after<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"lb30","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><ol>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>\n<\/li>\n<\/ol><\/td>\n<\/tr>\n<tr>\n<td>after<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"lb31","output":"<table>\n<tr>\n<td><ul>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>\n<\/li>\n<\/ul><\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"lb32","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><\/td>\n<\/tr>\n<tr>\n<td>after<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"lb33","output":"<table>\n<tr>\n<td><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"lb34","output":"<div ><ul>\n<li>in-div<\/li>\n<\/ul><\/div>"}
+{"id":"lb35","output":"<div class=\"wiki-note\"><ul>\n<li>u<\/li>\n<\/ul><\/div>"}
+{"id":"lb36","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><ul>\n<li>u<\/li>\n<\/ul><\/div><\/div><\/div>"}
+{"id":"lb37","output":"<ul>\n<li><strong>bold<\/strong> <em>italic<\/em> <span style=\"text-decoration: underline;\">under<\/span> <sup>sup<\/sup><\/li>\n<li><a class=\"newpage\" href=\"\/some-page\">link<\/a> and <a href=\"\/x\">anchor<\/a><\/li>\n<\/ul><br \/>\n"}
+{"id":"lb38","output":"<p>^^a<\/p>\n\n<ul>\n<li>list<\/li>\n<\/ul><p>b^^<br \/>\nx<\/p>\n\n"}
+{"id":"lb39","output":"<p>^^a<br \/><\/p>\n\n<ul>\n<li>list<\/li>\n<\/ul>\nb^^<br \/>\nx"}
+{"id":"lb40","output":"<p>^^a<\/p>\n\n<ul>\n<li>list<\/li>\n<\/ul><p>b<sup><br \/>\nx<br \/>\n<\/sup>a<br \/><\/p>\n\n<ul>\n<li>list<\/li>\n<\/ul>\nb^^<br \/>\nx"}
+{"id":"lb41","output":"<p>a<\/p>\n\n<p>[[div]]x[[\/div]]<\/p>\n\n<p>b<\/p>\n\n"}
+{"id":"lb42","output":"x"}
+{"id":"lb43","output":"<ul>\n<li style=\"list-style: none\">Foo<\/li>\n<\/ul>\n[[li]]<br \/>\nBaz<br \/>\n[[\/li]]"}
+{"id":"lb44","output":"<ol>\n<li style=\"list-style: none\">Bar<\/li>\n<\/ol><br \/>\n"}
+{"id":"lb45","output":"<ul>\n<li>Alpha<\/li>\n<li>Beta<\/li>\n<\/ul><ol>\n<li>One<\/li>\n<\/ol>"}
+{"id":"lb46","output":"<ul>\n<li style=\"list-style: none\">[[li_]]<br \/>\nAlpha<br \/>\n[[\/li]]<br \/>\n[[li_]]<br \/>\nBeta<br \/>\n[[\/li]]<\/li>\n<\/ul>"}
+{"id":"lb47","output":"<p>[[ul ]]<br \/>\n[[li]]a[[\/li]]<br \/>\n[[\/ul]]<br \/><\/p>\n\n<ul>\n<li style=\"list-style: none\">[[li ]]b[[\/li]]<\/li>\n<\/ul>\n[[ul]]<br \/>\n[[li]]c[[\/li ]]<br \/>\n[[\/ul ]]"}
+{"id":"lb48","output":"<ul>\n<li style=\"list-style: none\">[[li]]ab<\/li>\n<\/ul><br \/>\n"}
+{"id":"lb49","output":"<p>[[ul]]<br \/>\n[[li]]unterminated<\/p>\n\n"}
+{"id":"lb50","output":"<ul>\n<li>fused]<\/li>\n<\/ul>\n]"}

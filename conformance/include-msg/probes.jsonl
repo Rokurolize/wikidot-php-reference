@@ -1,0 +1,8 @@
+{"id":"p01","source":"[[include no-such-page]]"}
+{"id":"p02","source":"[[include :no-such-page]]"}
+{"id":"p03","source":"[[include :cat:sub:no-such-page]]"}
+{"id":"p04","source":"[[include cat:no-such-page]]"}
+{"id":"p05","source":"[[include :::]]"}
+{"id":"p06","source":"[[include :foo:bar]]"}
+{"id":"p07","source":"[[include :scp-jp.wikidot.com:other-page]]"}
+{"id":"p08","source":"[[include :sandbox-for-codex:no-such-page]]"}

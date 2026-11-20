@@ -1,0 +1,10 @@
+/home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2in2/conformance-refphp/inline2/rust-dump/target/release/build/serde_stacker/9dfe515f8b418a5f/out/serde_stacker-9dfe515f8b418a5f.d: /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/lib.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/de.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/param.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/ser.rs
+
+/home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2in2/conformance-refphp/inline2/rust-dump/target/release/build/serde_stacker/9dfe515f8b418a5f/out/libserde_stacker-9dfe515f8b418a5f.rlib: /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/lib.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/de.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/param.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/ser.rs
+
+/home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2in2/conformance-refphp/inline2/rust-dump/target/release/build/serde_stacker/9dfe515f8b418a5f/out/libserde_stacker-9dfe515f8b418a5f.rmeta: /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/lib.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/de.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/param.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/ser.rs
+
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/lib.rs:
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/de.rs:
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/param.rs:
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_stacker-0.1.14/src/ser.rs:

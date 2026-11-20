@@ -1,5 +1,5 @@
 <?php
-
+// vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4:
 /**
  * Anchor rule end renderer for Xhtml
  *
@@ -14,7 +14,7 @@
  */
 
 /**
- * This class renders an anchor target name in XHTML.
+ * This class renders an anchor target or anchor element in XHTML.
  *
  * @category   Text
  * @package    Text_Wiki
@@ -31,9 +31,36 @@ class Text_Wiki_Render_Xhtml_Anchor extends Text_Wiki_Render {
 
     function token($options)
     {
-        extract($options); // $type, $name
+        if (isset($options['type'])) {
+            if ($options['type'] === 'start') {
+                $attrs = isset($options['attrs']) && is_array($options['attrs'])
+                    ? $options['attrs']
+                    : array('href' => '');
+                $out = '<a';
+                foreach ($attrs as $k => $v) {
+                    $escaped = htmlspecialchars($v, ENT_COMPAT, 'UTF-8');
+                    $out .= ' ' . $k . '="' . $escaped . '"';
+                }
+                $out .= '>';
+                return $out;
+            }
+            if ($options['type'] === 'end') {
+                return '</a>';
+            }
+            if ($options['type'] === 'invalid_named') {
+                $lead = isset($options['lead']) ? $options['lead'] : '';
+                $text = isset($options['text']) ? htmlspecialchars($options['text'], ENT_COMPAT, 'UTF-8') : '';
+                $trail = isset($options['trail']) ? $options['trail'] : '';
+                return '[' . $lead . '<a href="javascript:;">' . $text . '</a>' . $trail . ']';
+            }
+            if ($options['type'] === 'literal') {
+                return isset($options['text']) ? htmlspecialchars($options['text'], ENT_COMPAT, 'UTF-8') : '';
+            }
+        }
 
-       $format = "<a$ name=\"%s\"></a>";
-       return sprintf($format, htmlentities($name));
+        $name = isset($options['name']) ? $options['name'] : '';
+        $format = "<a name=\"%s\"></a>";
+        return sprintf($format, htmlentities($name));
     }
 }
+?>

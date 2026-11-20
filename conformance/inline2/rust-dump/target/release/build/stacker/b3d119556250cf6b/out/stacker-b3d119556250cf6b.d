@@ -1,0 +1,10 @@
+/home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2in2/conformance-refphp/inline2/rust-dump/target/release/build/stacker/b3d119556250cf6b/out/stacker-b3d119556250cf6b.d: /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/lib.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/backends/mod.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/backends/unix.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/mmap_stack_restore_guard.rs
+
+/home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2in2/conformance-refphp/inline2/rust-dump/target/release/build/stacker/b3d119556250cf6b/out/libstacker-b3d119556250cf6b.rlib: /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/lib.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/backends/mod.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/backends/unix.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/mmap_stack_restore_guard.rs
+
+/home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2in2/conformance-refphp/inline2/rust-dump/target/release/build/stacker/b3d119556250cf6b/out/libstacker-b3d119556250cf6b.rmeta: /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/lib.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/backends/mod.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/backends/unix.rs /home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/mmap_stack_restore_guard.rs
+
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/lib.rs:
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/backends/mod.rs:
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/backends/unix.rs:
+/home/roku/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stacker-0.1.25/src/mmap_stack_restore_guard.rs:

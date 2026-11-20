@@ -1,0 +1,12 @@
+{
+ "def44": {
+  "fullname": "muse-probe-refgaps-def44-def44",
+  "html": "<ul>\n<li>: a : A<br /></li>\n</ul>\n<br />",
+  "html_sha256": "58b7b0725bc1845e09185510cb59f9208ce8c599c3f7ec8db46a70d759ee1ce1",
+  "source": "[[ul]]\n[[li]]\n: a : A\n[[/li]]\n[[/ul]]",
+  "source_sha256": "9a77bc060e3a5ad5d911dd7c374c610b6d36c67052fbb17e12e95fecff2a0800",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

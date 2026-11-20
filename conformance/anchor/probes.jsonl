@@ -1,0 +1,16 @@
+{"id":"p01","source":"[[# top]]\n[[a href=\"#top\"]]jump[[/a]]"}
+{"id":"p02","source":"[[a href=\"https://example.com\"]]^^label^^[[/a]]\nx"}
+{"id":"p03","source":"[[a_]]X[[/a]]"}
+{"id":"p04","source":"[[a_ href=\"https://example.com\"]]^^label^^[[/a]]"}
+{"id":"p05","source":"PRE\n\n[[a_ href=\"/x\"]]mid[[/a]]\n\nPOST"}
+{"id":"p06","source":"[[a_ href=\"some-page\"]]\nline1\nline2\n[[/a]]"}
+{"id":"p07","source":"[[a href=\"/x\"]]\nline1\nline2\n[[/a]]"}
+{"id":"p08","source":"[[a href=\"/x\"]]line1\n\nline2[[/a]]"}
+{"id":"p09","source":"[[anchor href=\"/x\"]]txt[[/anchor]]\n[[*a href=\"/x\"]]txt[[/a]]\n[[a href=\"/x\"]]txt[[/anchor]]"}
+{"id":"p10","source":"[[A HREF=\"/x\" href=\"/y\"]]UPPER[[/A]]"}
+{"id":"p11","source":"[[a href=\"*https://example.com\"]]star-ext[[/a]]\n[[a href=\"*some-page\"]]star-slug[[/a]]\n[[a href=\"*https://example.com\" target=\"_self\"]]star-override[[/a]]"}
+{"id":"p12","source":"[[a href=\"https://example.com/a b/日本語\"]]enc[[/a]]"}
+{"id":"p13","source":"[[a href=\"/x\"]]http://example.com[[/a]]\n[[a href=\"/x\"]][[[some-page|free]]][[/a]]"}
+{"id":"p14","source":"[[a href=\"/1\"]]before\n[[div]]\nin\n[[/div]]\nafter[[/a]]"}
+{"id":"p15","source":"[[a href=\"/x\" class='single' id=unquoted style = \"spaced\"]]quote-forms[[/a]]"}
+{"id":"p16","source":"[[a href=\"/x\"]]txt[[/a]]]\n[[# name]]]"}

@@ -423,7 +423,8 @@ class Text_Wiki_Parse_Include extends Text_Wiki_Parse {
         }
 
         if ($page == null) {
-            $output = "\n\n".'[[div class="error-block"]]'."\n".sprintf(_('Page to be included %s can not be found!'), htmlspecialchars($pageName))."\n".'[[/div]]'."\n\n";
+            $createHref = ($siteName != null) ? 'https://' . $siteName . '.wikidot.com/' . $pageName . '/edit/true' : '/' . $pageName . '/edit/true';
+            $output = "\n\n".'[[div class="error-block"]]'."\n".sprintf(_('Included page "%s" does not exist ([%s create it now])'), htmlspecialchars($pageName), $createHref)."\n".'[[/div]]'."\n\n";
             $wiki = $this->wiki;
             if (empty($wiki->vars['inclusionsNotExist'])) {
                 $wiki->vars['inclusionsNotExist'] = array();

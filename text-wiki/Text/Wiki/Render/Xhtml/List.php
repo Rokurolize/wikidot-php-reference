@@ -115,10 +115,64 @@ class Text_Wiki_Render_Xhtml_List extends Text_Wiki_Render {
 
         case 'bullet_item_end':
         case 'number_item_end':
-        default:
             // item endings are emitted by the next item start or the list end
             return '';
             break;
+
+        // Explicit [[ul]] / [[ol]] / [[li]] block tokens (Gap 2 / M46):
+        case 'explicit_list_start':
+            $listTag = (isset($options['list_type']) && $options['list_type'] === 'ol') ? 'ol' : 'ul';
+            $attrs = isset($options['attrs']) && is_array($options['attrs']) ? $options['attrs'] : array();
+            return '<' . $listTag . $this->renderAttrs($attrs) . ">\n";
+
+        case 'explicit_list_end':
+            $listTag = (isset($options['list_type']) && $options['list_type'] === 'ol') ? 'ol' : 'ul';
+            $trail = isset($options['trail']) ? $options['trail'] : '';
+            return '</' . $listTag . '>' . $trail;
+
+        case 'explicit_item_start':
+            $attrs = isset($options['attrs']) && is_array($options['attrs']) ? $options['attrs'] : array();
+            $lead = isset($options['lead']) ? $options['lead'] : '';
+            return '<li' . $this->renderAttrs($attrs) . '>' . $lead;
+
+        case 'explicit_item_end':
+            $lead = isset($options['lead']) ? $options['lead'] : '';
+            return $lead . "</li>\n";
+
+        case 'explicit_none_item_start':
+            return '<li style="list-style: none">';
+
+        case 'explicit_none_item_end':
+            return "</li>\n";
+
+        case 'explicit_inline_wrapper_start':
+            return '<li style="list-style: none; display: inline">' . "\n";
+
+        case 'explicit_inline_wrapper_end':
+            return "\n</li>\n";
+
+        case 'explicit_br_no_nl':
+            return '<br />';
+
+        case 'explicit_raw_nl':
+            return "\n";
+
+        case 'explicit_empty':
+        default:
+            return '';
         }
+    }
+
+    /**
+     * Formats an attribute array into HTML key="value" pairs.
+     */
+    protected function renderAttrs($attrs)
+    {
+        $out = '';
+        foreach ($attrs as $k => $v) {
+            $escaped = htmlspecialchars($v, ENT_COMPAT, 'UTF-8');
+            $out .= ' ' . $k . '="' . $escaped . '"';
+        }
+        return $out;
     }
 }

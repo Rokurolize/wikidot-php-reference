@@ -1,0 +1,16 @@
+{"errors":[],"html":"<p><a name=\"top\"></a><br>\n<a href=\"#top\">jump</a></p>","id":"p01"}
+{"errors":[],"html":"<p><a href=\"https://example.com\"><sup>label</sup></a><br>\nx</p>","id":"p02"}
+{"errors":[],"html":"<a href=\"\">X</a>","id":"p03"}
+{"errors":[],"html":"<a href=\"https://example.com\"><sup>label</sup></a>","id":"p04"}
+{"errors":[],"html":"<p>PRE<a href=\"/x\">mid</a>POST</p>","id":"p05"}
+{"errors":[],"html":"<a href=\"some-page\">line1<br>\nline2</a>","id":"p06"}
+{"errors":[],"html":"<p><a href=\"/x\"><br>\nline1<br>\nline2<br></a></p>","id":"p07"}
+{"errors":[],"html":"<p><a href=\"/x\">line1</a></p><p><a href=\"/x\">line2</a></p>","id":"p08"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 9..13, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 23..26, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 32..34, kind: NoRulesMatch }","ParseError { token: Identifier, rule: \"block-anchor\", span: 40..44, kind: RuleFailed }","ParseError { token: LeftBlockStar, rule: \"fallback\", span: 35..38, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 49..51, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 54..57, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 58..60, kind: NoRulesMatch }","ParseError { token: Identifier, rule: \"block-anchor\", span: 76..79, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 61..63, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 74..76, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 79..82, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 88..90, kind: NoRulesMatch }"],"html":"<p>[[anchor href=&quot;/x&quot;]]txt[[/anchor]]<br>\n[[*a href=&quot;/x&quot;]]txt[[/a]]<br>\n[[a href=&quot;/x&quot;]]txt[[/anchor]]</p>","id":"p09"}
+{"errors":[],"html":"<p><a href=\"/y\">UPPER</a></p>","id":"p10"}
+{"errors":[],"html":"<p><a href=\"https://example.com\" target=\"_blank\">star-ext</a><br>\n<a href=\"some-page\">star-slug</a><br>\n<a href=\"https://example.com\" target=\"_self\">star-override</a></p>","id":"p11"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a%20b/%E6%97%A5%E6%9C%AC%E8%AA%9E\">enc</a></p>","id":"p12"}
+{"errors":[],"html":"<p><a href=\"/x\"></a><a href=\"http://example.com\">http://example.com</a><br>\n<a href=\"/x\"></a><a href=\"/some-page\">free</a></p>","id":"p13"}
+{"errors":[],"html":"<p><a href=\"/1\">before</a></p><div><a href=\"/1\"></a><p>in</p></div><br>\nafter","id":"p14"}
+{"errors":[],"html":"<p><a href=\"/x&quot;%20class=&#39;single&#39;%20id=unquoted%20style%20=%20&quot;spaced\">quote-forms</a></p>","id":"p15"}
+{"errors":[],"html":"<p><a href=\"/x\">txt</a>]<br>\n<a name=\"name\"></a>]</p>","id":"p16"}

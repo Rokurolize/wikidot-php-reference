@@ -1,0 +1,16 @@
+{"id":"p01","output":"<ul>\n<li>Apple<\/li>\n<li>Banana<\/li>\n<\/ul><ol>\n<li>First<\/li>\n<li>Second<\/li>\n<\/ol><br \/>\n"}
+{"id":"p02","output":"<ul>\n<li>Inline<\/li>\n<li>list<\/li>\n<\/ul><br \/>\n"}
+{"id":"p03","output":"<ul>\n<li>Indented\n<ol>\n<li>and<\/li>\n<li>nested<\/li>\n<\/ol>\n<\/li>\n<li>list<\/li>\n<\/ul><br \/>\n"}
+{"id":"p04","output":"<ol>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>-<\/li>\n<\/ul>\n<\/li>\n<\/ol><br \/>\n"}
+{"id":"p05","output":"<ul>\n<li>outer<br \/>\n<ol>\n<li>inner<\/li>\n<\/ol>\n<\/li>\n<\/ul><br \/>\n"}
+{"id":"p06","output":"<ul id=\"u-my-list\" class=\"a\" style=\"color: red;\" role=\"list\" type=\"disc\" data-x=\"1\">\n<li id=\"u-item-1\" class=\"b\" style=\"color: blue;\" data-y=\"2\">One<\/li>\n<\/ul><br \/>\n"}
+{"id":"p07","output":"<ol id=\"u-num-list\" class=\"n\" style=\"color: green;\" type=\"A\">\n<li>Item<\/li>\n<\/ol><br \/>\n"}
+{"id":"p08","output":"<ul>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>\n<\/li>\n<\/ul><ol>\n<li style=\"list-style: none; display: inline\">\n<ul>\n<li>bullet<\/li>\n<\/ul>\n<ol>\n<li>num<\/li>\n<\/ol>\n<\/li>\n<\/ol><br \/>\n"}
+{"id":"p09","output":"<ul>\n<li>\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>\n<\/li>\n<\/ul><br \/>\n"}
+{"id":"p10","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><\/td>\n<\/tr>\n<tr>\n<td>after<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p11","output":"<table>\n<tr>\n<td><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p12","output":"x"}
+{"id":"p13","output":"<ul>\n<li style=\"list-style: none\">Foo<\/li>\n<\/ul>\n[[li]]<br \/>\nBaz<br \/>\n[[\/li]]"}
+{"id":"p14","output":"<ul>\n<li>Alpha<\/li>\n<li>Beta<\/li>\n<\/ul><ol>\n<li>One<\/li>\n<\/ol>"}
+{"id":"p15","output":"<p>[[ul ]]<br \/>\n[[li]]a[[\/li]]<br \/>\n[[\/ul]]<br \/><\/p>\n\n<ul>\n<li style=\"list-style: none\">[[li ]]b[[\/li]]<\/li>\n<\/ul>\n[[ul]]<br \/>\n[[li]]c[[\/li ]]<br \/>\n[[\/ul ]]"}
+{"id":"p16","output":"<p>^^a<\/p>\n\n<ul>\n<li>list<\/li>\n<\/ul><p>b<sup><br \/>\nx<br \/>\n<\/sup>a<br \/><\/p>\n\n<ul>\n<li>list<\/li>\n<\/ul>\nb^^<br \/>\nx"}
