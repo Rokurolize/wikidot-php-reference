@@ -1,0 +1,7 @@
+# SHA-256 of module rule files at the time ref-render-before.jsonl / ref-tokens-before.jsonl were captured (2026-11-20 ~11:27 JST)
+1d5336676e8e8e5484161540d989f49bf710209447cb117311fc6c8b98c1c6b4  ref-php/text-wiki/Text/Wiki/Parse/Default/Modulepre.php
+9b9922673c43eabfbfd6a56b47b011ae0ab8e552f50fee20565e8d01ebf473e3  ref-php/text-wiki/Text/Wiki/Parse/Default/Module.php
+fc2be54f5e6f99621241edefa59ef720fe2ef790220c74953be56c29448e676c  ref-php/text-wiki/Text/Wiki/Parse/Default/Module654.php
+b81712d2264d7b09c03a1f7e82a0b20bf6a6e45895b3311676f70175dbc52857  ref-php/text-wiki/Text/Wiki/Render/Xhtml/Modulepre.php
+518daa43e02ebf75645e4de67833440948ed47edb4d0a6e82c95ee74c6e49421  ref-php/text-wiki/Text/Wiki/Render/Xhtml/Module.php
+59684f16fb26770d57a26b49ecf90f4bfd761f432be8e6c392c3a3fea025921a  ref-php/text-wiki/Text/Wiki/Render/Xhtml/Module654.php

@@ -1,0 +1,52 @@
+{"id":"mod-basic","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-known-uppercase","output":"\u00femodule \"BACKLINKS\"\u00fe"}
+{"id":"mod-known-mixed","output":"\u00femodule \"BackLinks\"\u00fe"}
+{"id":"mod-unknown","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-unknown-mixed","output":"<div class=\"error-block\">[[module <em>Unknown_Oracle-2<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-leading-digit","output":"<div class=\"error-block\">[[module <em>123abc<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-leading-underscore","output":"<div class=\"error-block\">[[module <em>_foo<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-leading-hyphen","output":"<div class=\"error-block\">[[module <em>-foo<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-slash","output":"<div class=\"error-block\">[[module <em>foo\/bar<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-inner-slash","output":"<div class=\"error-block\">[[module <em>foo\/bar-baz_qux<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-hyphen","output":"<div class=\"error-block\">[[module <em>foo-bar<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-underscore","output":"<div class=\"error-block\">[[module <em>foo_bar<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-uppercase-unknown","output":"<div class=\"error-block\">[[module <em>FOO_BAR<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-empty-space","output":"<p>[[module ]]<\/p>\n\n"}
+{"id":"mod-name-empty-nospace","output":"<p>[[module]]<\/p>\n\n"}
+{"id":"mod-attr-quoted","output":"\u00femodule \"rate\" show%3D%22foo%22 \u00fe"}
+{"id":"mod-attr-unquoted","output":"\u00femodule \"rate\" show%3Dfoo \u00fe"}
+{"id":"mod-attr-empty","output":"\u00femodule \"rate\" show%3D%22%22 \u00fe"}
+{"id":"mod-attr-multiple","output":"\u00femodule \"pagetree\" root%3D%22scp-001%22+depth%3D%222%22 \u00fe"}
+{"id":"mod-attr-on-unknown","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-attr-extra-spaces","output":"\u00femodule \"rate\" show%3D%22foo%22 \u00fe"}
+{"id":"mod-body-present","output":"\u00femodule \"css\" +module_body%3D%22.blue%2B%257B%2Bcolor%253A%2Bblue%253B%2B%257D%22 \u00fe"}
+{"id":"mod-body-empty","output":"\u00femodule \"css\"\u00fe<p>[[\/module]]<\/p>\n\n"}
+{"id":"mod-body-inline-unknown","output":"<p>[[module UnknownOracleModule]]preserved body[[\/module]]<\/p>\n\n"}
+{"id":"mod-body-unknown-newline","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-unterminated","output":"\u00femodule \"css\"\u00fe<p>.blue{color:blue}<\/p>\n\n"}
+{"id":"mod-stray-closer","output":"<p>[[\/module]]<\/p>\n\n"}
+{"id":"mod-body-same-line","output":"<p>[[module css]] body [[\/module]]<\/p>\n\n"}
+{"id":"mod-no-newline","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-spaces-then-newline","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-crlf","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-lone-cr","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-tab-after-opener","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-opener-MODULE","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-opener-mixed","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-closer-case","output":"\u00femodule \"css\" +module_body%3D%22body%22 \u00fe"}
+{"id":"mod-midline","output":"<p>prefix [[module backlinks]]<\/p>\n\n"}
+{"id":"mod-leading-space","output":"<p>[[ module backlinks ]]<\/p>\n\n"}
+{"id":"mod-closer-leading-space","output":"\u00femodule \"css\" +module_body%3D%22body%22 \u00fe"}
+{"id":"mod-nested-two-openers","output":"\u00femodule \"css\" +module_body%3D%22%25FF557%25FF%22 \u00fe"}
+{"id":"mod-nested-unknown-in-body","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-adjacent-module654","output":"\u00femodule \"backlinks\"\u00fe\u00femodule \"rate\"\u00fe"}
+{"id":"mod-module654-basic","output":"\u00femodule \"rate\"\u00fe"}
+{"id":"mod-module654-unknown","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-module654-module-closer","output":"\u00femodule \"css\" +module_body%3D%22body%22 \u00fe"}
+{"id":"mod-module-opener-module654-closer","output":"\u00femodule \"css\"\u00fe<p>body<br \/>\n[[\/module654]]<\/p>\n\n"}
+{"id":"mod-two-adjacent","output":"\u00femodule \"backlinks\"\u00fe\u00femodule \"rate\"\u00fe"}
+{"id":"mod-unknown-tail","output":"<p>[[module UnknownOracleModule]]TAIL<\/p>\n\n"}
+{"id":"mod-unknown-stray-close","output":"<p>[[module UnknownOracleModule]][[\/module]]<\/p>\n\n"}
+{"id":"mod-invalid-head-quoted","output":"<p>[[module foo=&quot;bar&quot;]]<\/p>\n\n"}
+{"id":"mod-two-adjacent-body","output":"\u00femodule \"css\"\u00fe\u00femodule \"rate\"\u00fe<p>[[\/module]]<\/p>\n\n"}
+{"id":"mod-blank-lines","output":"\u00femodule \"backlinks\"\u00fe"}

@@ -1,0 +1,59 @@
+{"id":"m654-name-basic","output":"\u00femodule \"Rate\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-name-uppercase","output":"\u00femodule \"RATE\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-name-mixed","output":"\u00femodule \"rate\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-name-leading-digit","output":"<div class=\"error-block\">Module <em>123abc<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"m654-name-digits-only","output":"<div class=\"error-block\">Module <em>654<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"m654-name-slash","output":"<div class=\"error-block\">Module <em>foo\/bar<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"m654-name-hyphen","output":"<div class=\"error-block\">Module <em>foo-bar<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"m654-name-leading-hyphen","output":"<div class=\"error-block\">Module <em>-foo<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"m654-name-underscore","output":"<div class=\"error-block\">Module <em>foo_bar<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"m654-name-leading-underscore","output":"<div class=\"error-block\">Module <em>_foo<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"m654-name-empty","output":"<p>[[module654 ]]<br \/>\nbody<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"m654-name-no-space","output":"<p>[[module654Rate]]<br \/>\nbody<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"m654-name-dot","output":"<p>[[module654 foo.bar]]<br \/>\nbody<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"m654-name-unicode","output":"<p>[[module654 \u00e9]]<br \/>\nbody<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"m654-attr-one","output":"\u00femodule \"Rate\" show%3D%22x%22+module_body%3D%22body%22 \u00fe"}
+{"id":"m654-attr-bare","output":"\u00femodule \"Rate\" foo+module_body%3D%22body%22 \u00fe"}
+{"id":"m654-attr-two","output":"\u00femodule \"Rate\" a%3D%221%22+b%3D%222%22+module_body%3D%22body%22 \u00fe"}
+{"id":"m654-attr-quoted-space","output":"\u00femodule \"Rate\" title%3D%22a+b%22+module_body%3D%22body%22 \u00fe"}
+{"id":"m654-attr-empty","output":"\u00femodule \"Rate\" %22%22+module_body%3D%22body%22 \u00fe"}
+{"id":"m654-attr-tab","output":"\u00femodule \"Rate\" foo%3D%22x%22+module_body%3D%22body%22 \u00fe"}
+{"id":"m654-attr-multi-space","output":"\u00femodule \"Rate\" foo%3D%22x%22+module_body%3D%22body%22 \u00fe"}
+{"id":"m654-body-present","output":"\u00femodule \"CSS\" +module_body%3D%22.red%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"m654-body-empty","output":"\u00femodule \"CSS\"\u00fe"}
+{"id":"m654-body-absent","output":"\u00femodule \"CSS\"\u00fe"}
+{"id":"m654-body-absent-newline","output":"\u00femodule \"CSS\"\u00fe"}
+{"id":"m654-body-inline","output":"<p>[[module Rate]]body[[\/module]]<\/p>\n\n"}
+{"id":"m654-body-inline-empty","output":"<p>[[module Rate]][[\/module]]<\/p>\n\n"}
+{"id":"m654-unterminated","output":"\u00femodule \"CSS\"\u00fe<p>body<\/p>\n\n"}
+{"id":"m654-stray-closer","output":"<p>before<br \/>\n[[\/module]]<br \/>\nafter<\/p>\n\n"}
+{"id":"m654-stray-closer654","output":"<p>before<br \/>\n[[\/module654]]<br \/>\nafter<\/p>\n\n"}
+{"id":"m654-double-closer","output":"\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe<p>[[\/module]]<\/p>\n\n"}
+{"id":"m654-newline-none","output":"<p>[[module CSS]]body<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"m654-newline-spaces","output":"\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-newline-crlf","output":"\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-newline-lone-cr","output":"\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-newline-two","output":"\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-newline-tab-space","output":"\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-case-opener-upper","output":"\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-case-opener-mixed","output":"\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-case-closer-upper","output":"\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-case-closer-mixed","output":"\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-midline","output":"<p>text [[module654 CSS]]<br \/>\nbody<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"m654-leading-space","output":"<p>[[module654 CSS]]<br \/>\nbody<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"m654-after-blank","output":"<p>before<\/p>\n\n\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-closer-654","output":"\u00femodule \"CSS\"\u00fe<p>body<br \/>\n[[\/module654]]<\/p>\n\n"}
+{"id":"m654-closer-module","output":"\u00femodule \"CSS\" +module_body%3D%22body%22 \u00fe"}
+{"id":"m654-module-closer-654","output":"\u00femodule \"CSS\"\u00fe<p>body<br \/>\n[[\/module654]]<\/p>\n\n"}
+{"id":"m654-adjacent-module","output":"\u00femodule \"CSS\" +module_body%3D%22.a%257B%257D%22 \u00fe\u00femodule \"Rate\"\u00fe"}
+{"id":"m654-nested-module","output":"\u00femodule \"CSS\" +module_body%3D%22%25FF713%25FF%22 \u00fe"}
+{"id":"m654-nested-654","output":"\u00femodule \"CSS\" +module_body%3D%22%255B%255Bmodule654%2BRate%255D%255D%22 \u00fe<p>[[\/module]]<\/p>\n\n"}
+{"id":"m654-module-then-654","output":"\u00femodule \"Rate\" +module_body%3D%22%25FF744%25FF%22 \u00fe"}
+{"id":"m654-vs-module-unknown","output":"<div class=\"error-block\">Module <em>UnknownOracleModule<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"m654-vs-module-invalid-head","output":"<p>[[module654 class=&quot;&quot;]]<br \/>\nv7 body<br \/>\n[[\/module654]]<\/p>\n\n"}
+{"id":"m654-vs-module-tail","output":"<p>[[module UnknownOracleModule]]TAIL<\/p>\n\n"}
+{"id":"m654-vs-module-sameclose","output":"<p>[[module UnknownOracleModule]][[\/module]]<\/p>\n\n"}
+{"id":"m654-vs-module-attr-unknown","output":"<div class=\"error-block\">Module <em>UnknownOracleModule<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"m654-vs-module-newline-unknown","output":"<div class=\"error-block\">Module <em>UnknownOracleModule<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"control-module-basic","output":"\u00femodule \"Rate\"\u00fe"}
+{"id":"control-plain","output":"<p>just plain text<\/p>\n\n"}

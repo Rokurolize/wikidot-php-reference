@@ -1,0 +1,252 @@
+{
+ "known-css-654": {
+  "fullname": "muse-probe-r2mod-modulepre-known-css-654",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[module654 CSS]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "source_sha256": "46dd9ab1b9f0bf2584f2ba35aa06e00aae606919467e50430554eb0aa669653a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unknown-no-newline": {
+  "fullname": "muse-probe-r2mod-modulepre-unknown-no-newline",
+  "html": "<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "be0617bb83a19d33ec9581c364999c4d702e887c4d62e88b10ac35e9c60d726d",
+  "source": "[[module654 UnknownOracleModule]]",
+  "source_sha256": "65efd771f2259800d3ed9ffcd6bd7391ce539421ecd6368af11ed4b95289d643",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unknown-with-body": {
+  "fullname": "muse-probe-r2mod-modulepre-unknown-with-body",
+  "html": "<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "be0617bb83a19d33ec9581c364999c4d702e887c4d62e88b10ac35e9c60d726d",
+  "source": "[[module654 UnknownOracleModule]]\nprobe-body\n[[/module]]",
+  "source_sha256": "970cd458d3345fc6ec894ec85535c03cf47adf2177ccd9bd77883e40550707de",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unknown-inline-tail": {
+  "fullname": "muse-probe-r2mod-modulepre-unknown-inline-tail",
+  "html": "<p>[[module UnknownOracleModule]]TAIL</p>",
+  "html_sha256": "1b1dea4094c28da8e4cbd70233c2a57cd43432f7f562e447c34da9d384b97738",
+  "source": "[[module654 UnknownOracleModule]]TAIL",
+  "source_sha256": "fd5e5b95e1de10819f7e1f20881b70a32b6e2819af93572c865cbafb8d487e85",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unknown-attrs": {
+  "fullname": "muse-probe-r2mod-modulepre-unknown-attrs",
+  "html": "<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "be0617bb83a19d33ec9581c364999c4d702e887c4d62e88b10ac35e9c60d726d",
+  "source": "[[module654 UnknownOracleModule foo=\"bar\"]]",
+  "source_sha256": "4d6837436e399222f539781a009045c06d65c90cd574348dd59dc34772996703",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "name-leading-digit": {
+  "fullname": "muse-probe-r2mod-modulepre-name-leading-digit",
+  "html": "<div class=\"error-block\">[[module <em>9lives</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "9b5f1e9f9f0dbbb31e09c647d4a29d2615443aa7e469ad27931e9585733cba0a",
+  "source": "[[module654 9lives]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "source_sha256": "e0e080b2ef76b00dcf08d366098241a018684bbff6129c0e7408c8980f1bf854",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "name-slash": {
+  "fullname": "muse-probe-r2mod-modulepre-name-slash",
+  "html": "<div class=\"error-block\">[[module <em>foo/bar</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "cd23f4e708e79af143b80f79babcf803b6ef225dd680958b9a052eac0c374ff1",
+  "source": "[[module654 foo/bar]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "source_sha256": "fb4effc85fab6ed8a83f355a28f1b45c234fabb634280783d58b519e3a9a096e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "name-dot": {
+  "fullname": "muse-probe-r2mod-modulepre-name-dot",
+  "html": "<p>[[module654 foo.bar]]<br />\n.mp-probe-box { color: red; }<br />\n[[/module]]</p>",
+  "html_sha256": "9eaaf6c64935e80c4fbc7fecf06b2abe82c9149ba5c7f88c266385dd83fb7c7b",
+  "source": "[[module654 foo.bar]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "source_sha256": "01faf6e84e2491e2c06c5b3f894b5e6d9466f73da9828438b7a87b0934f9e5bf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "name-colon": {
+  "fullname": "muse-probe-r2mod-modulepre-name-colon",
+  "html": "<p>[[module654 foo:bar]]<br />\n.mp-probe-box { color: red; }<br />\n[[/module]]</p>",
+  "html_sha256": "c5395374147808aec11cd0d65c7aefb501e21f1b54a35ceae163cdd24238c731",
+  "source": "[[module654 foo:bar]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "source_sha256": "43345b9b2667e9b7ac59e9a3757bc5937adfb1de8a1948f52ef3fe2ce63de3de",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "name-empty": {
+  "fullname": "muse-probe-r2mod-modulepre-name-empty",
+  "html": "<p>[[module654 ]]<br />\n.mp-probe-box { color: red; }<br />\n[[/module]]</p>",
+  "html_sha256": "9dc2f4e33c8a001d9d99fd1e363659ee8f94a16c75df326591c14e460c416133",
+  "source": "[[module654 ]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "source_sha256": "695cceb91f51c36fed6a3a3b3f645c405002fffc8ea50d4403fa4ac03d794f77",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "no-newline-literal": {
+  "fullname": "muse-probe-r2mod-modulepre-no-newline-literal",
+  "html": "<p>[[module css]]text</p>",
+  "html_sha256": "66b8323056ce01c32a370636d11059bc5a10d82830bfaa896691ec626974c1c2",
+  "source": "[[module654 css]]text",
+  "source_sha256": "9b9cd9c4b1f6c6ab0879400625c7f7c4b6670bd5aa5dfa051a691c20a5b41fe5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "trailing-spaces": {
+  "fullname": "muse-probe-r2mod-modulepre-trailing-spaces",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[module654 css]]   \n.mp-probe-box { color: red; }\n[[/module]]",
+  "source_sha256": "890e96cd05350a9b8b444c67c13c6900cf13b6e1f29f0805f62452f33736e18b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "uppercase-opener": {
+  "fullname": "muse-probe-r2mod-modulepre-uppercase-opener",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[MODULE654 CSS]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "source_sha256": "58c430ca3b475e0d7d95ffe918e887d9a337e31bc092ef09d30fe248d607ce7d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mixed-opener": {
+  "fullname": "muse-probe-r2mod-modulepre-mixed-opener",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[Module654 CSS]]\n.mp-probe-box { color: red; }\n[[/MODULE]]",
+  "source_sha256": "0179d3c9e336831e3e72cbbf19a577dcd99604ab42b113b5b63d4f7f782c383c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "midline-opener": {
+  "fullname": "muse-probe-r2mod-modulepre-midline-opener",
+  "html": "<p>prefix [[module654 css]]<br />\n.mp-probe-box { color: red; }<br />\n[[/module]]</p>",
+  "html_sha256": "7511fb578ac0283ebe18575702fde07b33acf5cd07a895c472339a9f3081c945",
+  "source": "prefix [[module654 css]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "source_sha256": "3f9de134fccc77732e1fce76906837f4370051a6d0340d740f3f1e53c0aaf558",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "quoted-opener": {
+  "fullname": "muse-probe-r2mod-modulepre-quoted-opener",
+  "html": "<blockquote>\n<p>[[module654 CSS]]<br />\n.mp-probe-box { color: red; }<br />\n[[/module]]</p>\n</blockquote>",
+  "html_sha256": "56bbe531de231d5663814bd261fbc435945d267e39c005939d0da2f8a41ac1af",
+  "source": "> [[module654 CSS]]\n> .mp-probe-box { color: red; }\n> [[/module]]",
+  "source_sha256": "1725addb2c8d67bd26333cb8a3319df10b7871e38d1c109b79a54c02f23885ee",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "inline-body": {
+  "fullname": "muse-probe-r2mod-modulepre-inline-body",
+  "html": "<p>[[module css]]probe-inline[[/module]]</p>",
+  "html_sha256": "04fec5ac3e0faba8ebaf40f587e04ce04445940b3d09ce0a84b61755d4557179",
+  "source": "[[module654 css]]probe-inline[[/module]]",
+  "source_sha256": "7e018ff02889ab92317fe38817a18b152665c294c0d5dc636ba574ecf3c934bb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "closer-654": {
+  "fullname": "muse-probe-r2mod-modulepre-closer-654",
+  "html": "<p>.mp-probe-box { color: red; }<br />\n[[/module654]]</p>",
+  "html_sha256": "63210ee00c23a656363d03d43913711bbf6212488d852f450c5fa7fd3c5dfbae",
+  "source": "[[module654 CSS]]\n.mp-probe-box { color: red; }\n[[/module654]]",
+  "source_sha256": "58428e93d4515ab429bdfe6968cf35e0e60618d5fc4293bcea5b153c78202886",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "body-empty": {
+  "fullname": "muse-probe-r2mod-modulepre-body-empty",
+  "html": "<p>[[/module]]</p>",
+  "html_sha256": "78a326d818461bc0dc7f89b89e793731e5915e5f5e9a1d13d1f1416e8b048d4c",
+  "source": "[[module654 css]]\n[[/module]]",
+  "source_sha256": "0e66b2d6aeb5aa907ededf0e93126ea3089f8e94bee9890969c44c0fda28e2e8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "body-absent": {
+  "fullname": "muse-probe-r2mod-modulepre-body-absent",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[module654 css]]",
+  "source_sha256": "fbf0bd059778dcc3deb253e291a325ddd20127462cbda825e6e0ae5afe011c16",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unterm": {
+  "fullname": "muse-probe-r2mod-modulepre-unterm",
+  "html": "<p>.mp-probe-box { color: red; }</p>",
+  "html_sha256": "6c7b274965fc835839af57e6a8db05baec5ba013ce2dbe62c1c7ed52c9ebb6b6",
+  "source": "[[module654 css]]\n.mp-probe-box { color: red; }",
+  "source_sha256": "085eaba6a2abb1e756e19c2a82e29dfb0dd2fc4bad9d7b230d50d2a8078a3675",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nested-module-in-654": {
+  "fullname": "muse-probe-r2mod-modulepre-nested-module-in-654",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[module654 css]]\n[[module rate]]\n[[/module]]",
+  "source_sha256": "9158a4261b6e3f8f4518ed86ed5cc8585784d83c9b10312c0843238b7ae65d87",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "two-654": {
+  "fullname": "muse-probe-r2mod-modulepre-two-654",
+  "html": "<div class=\"page-rate-widget-box\"><span class=\"rate-points\">rating:&nbsp;<span class=\"number prw54353\">0</span></span><span class=\"rateup btn btn-default\"><a title=\"I like it\" href=\"javascript:;\" onclick=\"WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)\">+</a></span><span class=\"cancel btn btn-default\"><a title=\"Cancel my vote\" href=\"javascript:;\" onclick=\"WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)\">x</a></span></div>",
+  "html_sha256": "942cc3624c28d2b05fa401229b1f2a8505003ba9086e2a7802a745ed0629eba4",
+  "source": "[[module654 css]]\nALPHA\n[[/module]]\n[[module654 rate]]\nBETA\n[[/module]]",
+  "source_sha256": "acfd4d8476fd6dc1b8ccb9904465a1d35bd08b99cf2494afa2f460e0231152db",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adjacent-module": {
+  "fullname": "muse-probe-r2mod-modulepre-adjacent-module",
+  "html": "<div class=\"page-rate-widget-box\"><span class=\"rate-points\">rating:&nbsp;<span class=\"number prw54353\">0</span></span><span class=\"rateup btn btn-default\"><a title=\"I like it\" href=\"javascript:;\" onclick=\"WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)\">+</a></span><span class=\"cancel btn btn-default\"><a title=\"Cancel my vote\" href=\"javascript:;\" onclick=\"WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)\">x</a></span></div>",
+  "html_sha256": "942cc3624c28d2b05fa401229b1f2a8505003ba9086e2a7802a745ed0629eba4",
+  "source": "[[module654 css]]\n.mp-probe-box { color: red; }\n[[/module]]\n[[module rate]]",
+  "source_sha256": "da6d44dbff6f4db08bb29bbec4f8267faa0933863104b7f118545bed45aadcec",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "stray-closer": {
+  "fullname": "muse-probe-r2mod-modulepre-stray-closer",
+  "html": "<p>[[/module]]</p>",
+  "html_sha256": "78a326d818461bc0dc7f89b89e793731e5915e5f5e9a1d13d1f1416e8b048d4c",
+  "source": "[[/module]]",
+  "source_sha256": "123ba6c921eb8b23374fe3a8d56bb33523c4cfdcc31cd0ed7f53b63cca4bc2cd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

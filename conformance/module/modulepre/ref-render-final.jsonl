@@ -1,0 +1,55 @@
+{"id":"mp-name-lower","output":"\u00femodule \"backlinks\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-name-upper","output":"\u00femodule \"CSS\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-name-mixed","output":"\u00femodule \"RaTe\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-name-leading-digit","output":"<div class=\"error-block\">[[module <em>9lives<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mp-name-slash","output":"<div class=\"error-block\">[[module <em>foo\/bar<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mp-name-hyphen","output":"<div class=\"error-block\">[[module <em>my-module<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mp-name-underscore","output":"<div class=\"error-block\">[[module <em>my_module<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mp-name-empty","output":"<p>[[module654 ]]<br \/>\n.mp-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"mp-name-dot","output":"<p>[[module654 foo.bar]]<br \/>\n.mp-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"mp-name-colon","output":"<p>[[module654 foo:bar]]<br \/>\n.mp-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"mp-attr-simple","output":"\u00femodule \"rate\" show%3D%22mp-x%22 \u00fe"}
+{"id":"mp-attr-multiple","output":"\u00femodule \"listpages\" category%3D%22cats%22+limit%3D%225%22+module_body%3D%22body%22 \u00fe"}
+{"id":"mp-attr-unquoted","output":"\u00femodule \"rate\" show%3Dmp-x \u00fe"}
+{"id":"mp-attr-empty","output":"\u00femodule \"rate\" %22%22 \u00fe"}
+{"id":"mp-attr-newline","output":"\u00femodule \"rate\" show%3D%22mp-x%22 \u00fe"}
+{"id":"mp-attr-brackets","output":"\u00femodule \"rate\" a%3D%22x%5D%5Dy%22 \u00fe"}
+{"id":"mp-attr-spaces","output":"\u00femodule \"rate\" show%3D%22mp-x%22+module_body%3D%22body%22 \u00fe"}
+{"id":"mp-body-basic","output":"\u00femodule \"css\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-body-empty","output":"\u00femodule \"css\"\u00fe<p>[[\/module]]<\/p>\n\n"}
+{"id":"mp-body-absent","output":"\u00femodule \"css\"\u00fe"}
+{"id":"mp-body-inline","output":"<p>[[module css]]inline-body[[\/module]]<\/p>\n\n"}
+{"id":"mp-body-blank-lines","output":"\u00femodule \"css\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-body-punctuation","output":"\u00femodule \"css\" +module_body%3D%22%252A%252A%252Abold%252A%252A%252A%2Band%2B%255B%255Bdiv%255D%255D%22 \u00fe"}
+{"id":"mp-unterm","output":"\u00femodule \"css\"\u00fe<p>.mp-box { color: red; }<\/p>\n\n"}
+{"id":"mp-stray-closer","output":"<p>[[\/module]]<\/p>\n\n"}
+{"id":"mp-closer-654","output":"<p>[[\/module654]]<\/p>\n\n"}
+{"id":"mp-unterm-then-text","output":"\u00femodule \"css\"\u00fe<p>.mp-box { color: red; }<br \/>\nTRAILING<\/p>\n\n"}
+{"id":"mp-close-then-open","output":"<p>[[\/module]]<\/p>\n\n\u00femodule \"css\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-nl-none","output":"<p>[[module css]]text<\/p>\n\n"}
+{"id":"mp-nl-spaces","output":"\u00femodule \"css\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-nl-tabs","output":"\u00femodule \"css\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-nl-crlf","output":"\u00femodule \"css\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-nl-cr","output":"\u00femodule \"css\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-nl-two","output":"\u00femodule \"css\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-nl-eof","output":"\u00femodule \"css\"\u00fe"}
+{"id":"mp-case-ALL","output":"\u00femodule \"CSS\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-case-mixed","output":"\u00femodule \"CSS\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-case-closer","output":"\u00femodule \"CSS\"\u00fe<p>.mp-box { color: red; }<br \/>\n[[\/MODULE654]]<\/p>\n\n"}
+{"id":"mp-midline","output":"<p>prefix [[module654 css]]<br \/>\n.mp-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"mp-leading-space","output":"<p>[[module654 css]]<br \/>\n.mp-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"mp-leading-space2","output":"<p>[[module654 css]]<br \/>\n.mp-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"mp-quoted","output":"<blockquote><p>[[module654 CSS]]<br \/>\n.mp-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n<\/blockquote>\n"}
+{"id":"mp-adjacent-module","output":"\u00femodule \"css\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe\u00femodule \"rate\"\u00fe"}
+{"id":"mp-nested-module-in-654","output":"\u00femodule \"css\" +module_body%3D%22%25FF642%25FF%22 \u00fe"}
+{"id":"mp-nested-654-in-module","output":"\u00femodule \"css\" +module_body%3D%22%25FF657%25FF%22 \u00fe"}
+{"id":"mp-654-body-has-module-closer","output":"\u00femodule \"css\"\u00fe\u00femodule \"rate\" +module_body%3D%22%255B%255B%252Fmodule%255D%255D%22 \u00fe"}
+{"id":"mp-two-654","output":"\u00femodule \"css\" +module_body%3D%22A%22 \u00fe\u00femodule \"rate\" +module_body%3D%22B%22 \u00fe"}
+{"id":"mp-vs-module-baseline","output":"\u00femodule \"CSS\" +module_body%3D%22.mp-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mp-vs-module-nonewline","output":"<p>[[module CSS]]text<\/p>\n\n"}
+{"id":"mp-vs-654-nonewline","output":"<p>[[module CSS]]text<\/p>\n\n"}
+{"id":"mp-vs-654-closer-654","output":"\u00femodule \"CSS\"\u00fe<p>.mp-box { color: red; }<br \/>\n[[\/module654]]<\/p>\n\n"}
+{"id":"mp-unknown-name","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mp-unknown-with-body","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mp-unknown-no-newline","output":"<p>[[module UnknownOracleModule]]TAIL<\/p>\n\n"}
+{"id":"mp-unknown-attrs","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}

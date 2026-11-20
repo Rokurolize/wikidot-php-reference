@@ -1,0 +1,57 @@
+{
+ "x-both-plain": {
+  "fullname": "muse-probe-r2mod-x-x-both-plain",
+  "source": "[[module654 UnknownModuleX]]",
+  "action": "exists"
+ },
+ "x-both-body": {
+  "fullname": "muse-probe-r2mod-x-x-both-body",
+  "source": "[[module654 UnknownModuleX]]\nbody\n[[/module]]",
+  "action": "exists"
+ },
+ "x-both-no-newline": {
+  "fullname": "muse-probe-r2mod-x-x-both-no-newline",
+  "source": "[[module654 UnknownModuleX]]tail",
+  "action": "exists"
+ },
+ "x-both-spaces-newline": {
+  "fullname": "muse-probe-r2mod-x-x-both-spaces-newline",
+  "source": "[[module654 UnknownModuleX]]   \nbody\n[[/module]]",
+  "action": "exists"
+ },
+ "x-654-body-module": {
+  "fullname": "muse-probe-r2mod-x-x-654-body-module",
+  "source": "[[module654 UnknownModuleX]]\nbefore\n[[module AnotherUnknownY]]\ninner\n[[/module]]\nafter\n[[/module]]",
+  "action": "created"
+ },
+ "x-mod-body-654": {
+  "fullname": "muse-probe-r2mod-x-x-mod-body-654",
+  "source": "[[module UnknownModuleX]]\nbefore\n[[module654 AnotherUnknownY]]\ninner\n[[/module]]\nafter\n[[/module]]",
+  "action": "created"
+ },
+ "x-close-654-tag": {
+  "fullname": "muse-probe-r2mod-x-x-close-654-tag",
+  "source": "[[module654 UnknownModuleX]]\nbody\n[[/module654]]",
+  "action": "created"
+ },
+ "x-close-mod-tag": {
+  "fullname": "muse-probe-r2mod-x-x-close-mod-tag",
+  "source": "[[module UnknownModuleX]]\nbody\n[[/module654]]",
+  "action": "created"
+ },
+ "x-654-in-654": {
+  "fullname": "muse-probe-r2mod-x-x-654-in-654",
+  "source": "[[module654 UnknownModuleX]]\nouter\n[[module654 AnotherUnknownY]]\ninner\n[[/module]]\n[[/module]]",
+  "action": "created"
+ },
+ "x-mod-in-mod": {
+  "fullname": "muse-probe-r2mod-x-x-mod-in-mod",
+  "source": "[[module UnknownModuleX]]\nouter\n[[module AnotherUnknownY]]\ninner\n[[/module]]\n[[/module]]",
+  "action": "created"
+ },
+ "x-midline-654": {
+  "fullname": "muse-probe-r2mod-x-x-midline-654",
+  "source": "prefix [[module654 UnknownModuleX]]\nbody\n[[/module]]",
+  "action": "created"
+ }
+}

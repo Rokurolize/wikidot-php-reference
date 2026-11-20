@@ -1,0 +1,26 @@
+{"id": "p-lower-closer-module", "source": "Before\n[[module654 CSS]]\n.parity-live-blue { color: blue; }\n[[/module]]\nAfter"}
+{"id": "p-lower-closer-654", "source": "Before\n[[module654 CSS]]\n.parity-live-red { color: red; }\n[[/module654]]\nAfter"}
+{"id": "p-lower-unknown", "source": "[[module654 UnknownOracleModule]]"}
+{"id": "p-lower-unknown-attr", "source": "[[module654 UnknownOracleModule foo=\"bar\"]]"}
+{"id": "p-lower-invalid-head", "source": "[[module654 class=\"\"]]\nv7 body\n[[/module654]]"}
+{"id": "p-lower-newline-spaces", "source": "[[module654 CSS]]   \n.live-green { color: green; }\n[[/module]]"}
+{"id": "p-lower-leading-digit", "source": "[[module654 123abc]]\nbody\n[[/module]]"}
+{"id": "p-lower-slash", "source": "[[module654 foo/bar]]\nbody\n[[/module]]"}
+{"id": "p-lower-name-upper", "source": "[[module654 RATE]]\nbody\n[[/module]]"}
+{"id": "p-lower-inline-body", "source": "[[module654 Rate]]body[[/module]]"}
+{"id": "p-lower-no-close", "source": "[[module654 CSS]]\nbody"}
+{"id": "p-lower-empty-body", "source": "[[module654 CSS]]\n\n[[/module]]"}
+{"id": "p-stray-654", "source": "before\n[[/module654]]\nafter"}
+{"id": "p-upper-basic", "source": "Before\n[[MODULE654 CSS]]\n.upper-live-red { color: red; }\n[[/module]]\nAfter"}
+{"id": "p-mixed-basic", "source": "Before\n[[Module654 CSS]]\n.mixed-live-blue { color: blue; }\n[[/module]]\nAfter"}
+{"id": "p-upper-unknown", "source": "[[MODULE654 UnknownOracleModule]]"}
+{"id": "p-upper-no-newline", "source": "[[MODULE654 Rate]]TAIL"}
+{"id": "p-upper-newline-spaces", "source": "[[MODULE654 CSS]]   \n.upper-live-green { color: green; }\n[[/module]]"}
+{"id": "p-upper-closer-654", "source": "Before\n[[MODULE654 CSS]]\n.upper-live-yellow { color: yellow; }\n[[/module654]]\nAfter"}
+{"id": "p-upper-leading-digit", "source": "[[MODULE654 123abc]]\nbody\n[[/module]]"}
+{"id": "p-upper-slash", "source": "[[MODULE654 foo/bar]]\nbody\n[[/module]]"}
+{"id": "p-upper-leading-space", "source": " [[MODULE654 CSS]]\nbody\n[[/module]]"}
+{"id": "p-upper-nested", "source": "[[MODULE654 CSS]]\n[[module654 Rate]]\n[[/module]]\n[[/module]]"}
+{"id": "p-upper-inline-empty", "source": "[[MODULE654 Rate]][[/module]]"}
+{"id": "p-control-module", "source": "[[module Rate]]\n[[/module]]"}
+{"id": "p-control-plain", "source": "just plain text"}

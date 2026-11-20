@@ -95,3 +95,40 @@ class LatexRenderer {
     public function setOutputDir($dir) {}
     public function render($content, $hashcode) {}
 }
+
+// Module environment stubs (R2 module stage). The OZONE module classes are
+// absent from this fossil snapshot, and module evaluation (what ListPages or
+// Rate compute) is a serving-layer concern outside the R2 reference's scope.
+// The fossil render rule only asks the environment two questions: can this
+// site use the named module, and what is its template name. We model the
+// standard-site case: the nine module names ftml recognizes (case-insensitive)
+// are "available" and take the fossil's \xFEmodule ... \xFE handoff marker
+// (the serving layer would expand that marker, which we do not model); any
+// other name takes the render rule's own "does not exist" error-block path.
+// This keeps the stage's in-scope comparison on the unknown-name and
+// malformed-block display shapes without inventing module output.
+class RefWikiSite {
+    public function getUnixName() { return 'sandbox'; }
+    public function getSiteId() { return 1; }
+}
+$GLOBALS['site'] = new RefWikiSite();
+
+class ModuleManager {
+    private static $inst = null;
+    private static $available = array(
+        'backlinks', 'categories', 'css', 'join', 'listpages',
+        'pagetree', 'rate', 'redirect', 'tagcloud',
+    );
+    public static function instance() {
+        if (self::$inst === null) {
+            self::$inst = new ModuleManager();
+        }
+        return self::$inst;
+    }
+    public function canWikiUseModule($siteName, $moduleName) {
+        return in_array(strtolower($moduleName), self::$available, true);
+    }
+    public function resolveWikiModuleName($moduleName) {
+        return $moduleName;
+    }
+}

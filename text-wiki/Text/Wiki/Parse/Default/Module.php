@@ -41,7 +41,16 @@ class Text_Wiki_Parse_Module extends Text_Wiki_Parse {
      * 
      */
     
-    public $regex = "/^\[\[module\s([a-z0-9_\-\/]+)(\s+.*?)?\]\] *\n(?:(.*?)\[\[\/module\]\])?/ism";
+    // R2 MODULE CORRECTION (2026-11-20): the fossil's optional body group used
+    // (.*?), so an empty body still consumed the [[/module]] closer. Live
+    // leaves that closer as literal text for both unknown and known modules
+    // (probes muse-probe-r2mod-module-mod-probe-unknown-empty-body and
+    // -mod-probe-known-empty-body; ftml's own pin
+    // test/module/css-empty-module-paragraph-break/wikidot.html shows the
+    // same literal closer). Requiring one or more body characters makes the
+    // closer survive when the body is empty; non-empty bodies and all other
+    // matching behavior are unchanged.
+    public $regex = "/^\[\[module\s([a-z0-9_\-\/]+)(\s+.*?)?\]\] *\n(?:(.+?)\[\[\/module\]\])?/ism";
 
     /**
      * 

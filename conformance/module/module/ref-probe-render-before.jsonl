@@ -1,0 +1,21 @@
+{"id":"mod-unknown","output":"<div class=\"error-block\">Module <em>UnknownOracleModule<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"mod-unknown-mixed","output":"<div class=\"error-block\">Module <em>Unknown_Oracle-2<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"mod-name-leading-digit","output":"<div class=\"error-block\">Module <em>123abc<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"mod-name-leading-underscore","output":"<div class=\"error-block\">Module <em>_foo<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"mod-name-slash","output":"<div class=\"error-block\">Module <em>foo\/bar<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"mod-name-empty-space","output":"<p>[[module ]]<\/p>\n\n"}
+{"id":"mod-attr-on-unknown","output":"<div class=\"error-block\">Module <em>UnknownOracleModule<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"mod-invalid-head-quoted","output":"<p>[[module foo=&quot;bar&quot;]]<\/p>\n\n"}
+{"id":"mod-no-newline","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-spaces-then-newline","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-stray-closer","output":"<p>[[\/module]]<\/p>\n\n"}
+{"id":"mod-midline","output":"<p>prefix [[module backlinks]]<\/p>\n\n"}
+{"id":"mod-leading-space","output":"<p>[[ module backlinks ]]<\/p>\n\n"}
+{"id":"mod-body-inline-unknown","output":"<p>[[module UnknownOracleModule]]preserved body[[\/module]]<\/p>\n\n"}
+{"id":"mod-body-unknown-newline","output":"<div class=\"error-block\">Module <em>UnknownOracleModule<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"mod-basic","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-body-present","output":"\u00femodule \"css\" +module_body%3D%22.blue%2B%257B%2Bcolor%253A%2Bblue%253B%2B%257D%22 \u00fe"}
+{"id":"mod-probe-module654-basic","output":"<div class=\"error-block\">Module <em>UnknownOracleModule<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"mod-probe-nested","output":"\u00femodule \"css\"\u00fe\u00femodule \"rate\"\u00fe"}
+{"id":"mod-probe-unknown-empty-body","output":"<div class=\"error-block\">Module <em>UnknownOracleModule<\/em> does not exist or can not be used within this site.<\/div>"}
+{"id":"mod-probe-known-empty-body","output":"\u00femodule \"rate\"\u00fe"}

@@ -1,0 +1,55 @@
+{"id": "mp-name-lower", "source": "[[module654 backlinks]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-name-upper", "source": "[[module654 CSS]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-name-mixed", "source": "[[module654 RaTe]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-name-leading-digit", "source": "[[module654 9lives]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-name-slash", "source": "[[module654 foo/bar]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-name-hyphen", "source": "[[module654 my-module]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-name-underscore", "source": "[[module654 my_module]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-name-empty", "source": "[[module654 ]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-name-dot", "source": "[[module654 foo.bar]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-name-colon", "source": "[[module654 foo:bar]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-attr-simple", "source": "[[module654 rate show=\"mp-x\"]]"}
+{"id": "mp-attr-multiple", "source": "[[module654 listpages category=\"cats\" limit=\"5\"]]\nbody\n[[/module]]"}
+{"id": "mp-attr-unquoted", "source": "[[module654 rate show=mp-x]]"}
+{"id": "mp-attr-empty", "source": "[[module654 rate \"\"]]"}
+{"id": "mp-attr-newline", "source": "[[module654 rate\nshow=\"mp-x\"]]"}
+{"id": "mp-attr-brackets", "source": "[[module654 rate a=\"x]]y\"]]"}
+{"id": "mp-attr-spaces", "source": "[[module654 rate   show=\"mp-x\"   ]]\nbody\n[[/module]]"}
+{"id": "mp-body-basic", "source": "[[module654 css]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-body-empty", "source": "[[module654 css]]\n[[/module]]"}
+{"id": "mp-body-absent", "source": "[[module654 css]]"}
+{"id": "mp-body-inline", "source": "[[module654 css]]inline-body[[/module]]"}
+{"id": "mp-body-blank-lines", "source": "[[module654 css]]\n\n\n.mp-box { color: red; }\n\n[[/module]]"}
+{"id": "mp-body-punctuation", "source": "[[module654 css]]\n***bold*** and [[div]]\n[[/module]]"}
+{"id": "mp-unterm", "source": "[[module654 css]]\n.mp-box { color: red; }"}
+{"id": "mp-stray-closer", "source": "[[/module]]"}
+{"id": "mp-closer-654", "source": "[[/module654]]"}
+{"id": "mp-unterm-then-text", "source": "[[module654 css]]\n.mp-box { color: red; }\nTRAILING"}
+{"id": "mp-close-then-open", "source": "[[/module]]\n[[module654 css]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-nl-none", "source": "[[module654 css]]text"}
+{"id": "mp-nl-spaces", "source": "[[module654 css]]   \n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-nl-tabs", "source": "[[module654 css]]\t\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-nl-crlf", "source": "[[module654 css]]\r\n.mp-box { color: red; }\r\n[[/module]]"}
+{"id": "mp-nl-cr", "source": "[[module654 css]]\r.mp-box { color: red; }\r[[/module]]"}
+{"id": "mp-nl-two", "source": "[[module654 css]]\n\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-nl-eof", "source": "[[module654 css]]\n"}
+{"id": "mp-case-ALL", "source": "[[MODULE654 CSS]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-case-mixed", "source": "[[Module654 CSS]]\n.mp-box { color: red; }\n[[/MODULE]]"}
+{"id": "mp-case-closer", "source": "[[module654 CSS]]\n.mp-box { color: red; }\n[[/MODULE654]]"}
+{"id": "mp-midline", "source": "prefix [[module654 css]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-leading-space", "source": " [[module654 css]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-leading-space2", "source": "  [[module654 css]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-quoted", "source": "> [[module654 CSS]]\n> .mp-box { color: red; }\n> [[/module]]"}
+{"id": "mp-adjacent-module", "source": "[[module654 css]]\n.mp-box { color: red; }\n[[/module]]\n[[module rate]]"}
+{"id": "mp-nested-module-in-654", "source": "[[module654 css]]\n[[module rate]]\n[[/module]]"}
+{"id": "mp-nested-654-in-module", "source": "[[module css]]\n[[module654 rate]]\n[[/module]]"}
+{"id": "mp-654-body-has-module-closer", "source": "[[module654 css]]\n[[module rate]]\n[[/module]]\n[[/module]]"}
+{"id": "mp-two-654", "source": "[[module654 css]]\nA\n[[/module]]\n[[module654 rate]]\nB\n[[/module]]"}
+{"id": "mp-vs-module-baseline", "source": "[[module CSS]]\n.mp-box { color: red; }\n[[/module]]"}
+{"id": "mp-vs-module-nonewline", "source": "[[module CSS]]text"}
+{"id": "mp-vs-654-nonewline", "source": "[[module654 CSS]]text"}
+{"id": "mp-vs-654-closer-654", "source": "[[module654 CSS]]\n.mp-box { color: red; }\n[[/module654]]"}
+{"id": "mp-unknown-name", "source": "[[module654 UnknownOracleModule]]"}
+{"id": "mp-unknown-with-body", "source": "[[module654 UnknownOracleModule]]\nbody\n[[/module]]"}
+{"id": "mp-unknown-no-newline", "source": "[[module654 UnknownOracleModule]]TAIL"}
+{"id": "mp-unknown-attrs", "source": "[[module654 UnknownOracleModule foo=\"bar\"]]"}

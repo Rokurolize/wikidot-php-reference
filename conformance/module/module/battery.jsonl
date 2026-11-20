@@ -1,0 +1,52 @@
+{"id": "mod-basic", "source": "[[module backlinks]]\n"}
+{"id": "mod-known-uppercase", "source": "[[module BACKLINKS]]\n"}
+{"id": "mod-known-mixed", "source": "[[module BackLinks]]\n"}
+{"id": "mod-unknown", "source": "[[module UnknownOracleModule]]\n"}
+{"id": "mod-unknown-mixed", "source": "[[module Unknown_Oracle-2]]\n"}
+{"id": "mod-name-leading-digit", "source": "[[module 123abc]]\n"}
+{"id": "mod-name-leading-underscore", "source": "[[module _foo]]\n"}
+{"id": "mod-name-leading-hyphen", "source": "[[module -foo]]\n"}
+{"id": "mod-name-slash", "source": "[[module foo/bar]]\n"}
+{"id": "mod-name-inner-slash", "source": "[[module foo/bar-baz_qux]]\n"}
+{"id": "mod-name-hyphen", "source": "[[module foo-bar]]\n"}
+{"id": "mod-name-underscore", "source": "[[module foo_bar]]\n"}
+{"id": "mod-name-uppercase-unknown", "source": "[[module FOO_BAR]]\n"}
+{"id": "mod-name-empty-space", "source": "[[module ]]\n"}
+{"id": "mod-name-empty-nospace", "source": "[[module]]\n"}
+{"id": "mod-attr-quoted", "source": "[[module rate show=\"foo\"]]\n"}
+{"id": "mod-attr-unquoted", "source": "[[module rate show=foo]]\n"}
+{"id": "mod-attr-empty", "source": "[[module rate show=\"\"]]\n"}
+{"id": "mod-attr-multiple", "source": "[[module pagetree root=\"scp-001\" depth=\"2\"]]\n"}
+{"id": "mod-attr-on-unknown", "source": "[[module UnknownOracleModule foo=\"bar\"]]\n"}
+{"id": "mod-attr-extra-spaces", "source": "[[module rate   show=\"foo\"  ]]\n"}
+{"id": "mod-body-present", "source": "[[module css]]\n.blue { color: blue; }\n[[/module]]\n"}
+{"id": "mod-body-empty", "source": "[[module css]]\n[[/module]]\n"}
+{"id": "mod-body-inline-unknown", "source": "[[module UnknownOracleModule]]preserved body[[/module]]\n"}
+{"id": "mod-body-unknown-newline", "source": "[[module UnknownOracleModule]]\nbody\n[[/module]]\n"}
+{"id": "mod-unterminated", "source": "[[module css]]\n.blue{color:blue}\n"}
+{"id": "mod-stray-closer", "source": "[[/module]]\n"}
+{"id": "mod-body-same-line", "source": "[[module css]] body [[/module]]\n"}
+{"id": "mod-no-newline", "source": "[[module backlinks]]"}
+{"id": "mod-spaces-then-newline", "source": "[[module backlinks]]   \n"}
+{"id": "mod-crlf", "source": "[[module backlinks]]\r\n"}
+{"id": "mod-lone-cr", "source": "[[module backlinks]]\r"}
+{"id": "mod-tab-after-opener", "source": "[[module backlinks]]\t\n"}
+{"id": "mod-opener-MODULE", "source": "[[MODULE backlinks]]\n"}
+{"id": "mod-opener-mixed", "source": "[[Module backlinks]]\n"}
+{"id": "mod-closer-case", "source": "[[module css]]\nbody\n[[/MODULE]]\n"}
+{"id": "mod-midline", "source": "prefix [[module backlinks]]\n"}
+{"id": "mod-leading-space", "source": "[[ module backlinks ]]\n"}
+{"id": "mod-closer-leading-space", "source": "[[module css]]\nbody\n [[/module]]\n"}
+{"id": "mod-nested-two-openers", "source": "[[module css]]\n[[module rate]]\n[[/module]]\n"}
+{"id": "mod-nested-unknown-in-body", "source": "[[module UnknownOracleModule]]\n[[module css]]\n[[/module]]\n"}
+{"id": "mod-adjacent-module654", "source": "[[module backlinks]]\n[[module654 rate]]\n"}
+{"id": "mod-module654-basic", "source": "[[module654 rate]]\n"}
+{"id": "mod-module654-unknown", "source": "[[module654 UnknownOracleModule]]\n"}
+{"id": "mod-module654-module-closer", "source": "[[module654 css]]\nbody\n[[/module]]\n"}
+{"id": "mod-module-opener-module654-closer", "source": "[[module css]]\nbody\n[[/module654]]\n"}
+{"id": "mod-two-adjacent", "source": "[[module backlinks]]\n[[module rate]]\n"}
+{"id": "mod-unknown-tail", "source": "[[module UnknownOracleModule]]TAIL"}
+{"id": "mod-unknown-stray-close", "source": "[[module UnknownOracleModule]][[/module]]"}
+{"id": "mod-invalid-head-quoted", "source": "[[module foo=\"bar\"]]\n"}
+{"id": "mod-two-adjacent-body", "source": "[[module css]]\n[[/module]]\n[[module rate]]\n[[/module]]\n"}
+{"id": "mod-blank-lines", "source": "\n[[module backlinks]]\n\n"}

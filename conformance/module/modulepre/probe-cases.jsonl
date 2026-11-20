@@ -1,0 +1,25 @@
+{"id":"known-css-654","source":"[[module654 CSS]]\n.mp-probe-box { color: red; }\n[[/module]]"}
+{"id":"unknown-no-newline","source":"[[module654 UnknownOracleModule]]"}
+{"id":"unknown-with-body","source":"[[module654 UnknownOracleModule]]\nprobe-body\n[[/module]]"}
+{"id":"unknown-inline-tail","source":"[[module654 UnknownOracleModule]]TAIL"}
+{"id":"unknown-attrs","source":"[[module654 UnknownOracleModule foo=\"bar\"]]"}
+{"id":"name-leading-digit","source":"[[module654 9lives]]\n.mp-probe-box { color: red; }\n[[/module]]"}
+{"id":"name-slash","source":"[[module654 foo/bar]]\n.mp-probe-box { color: red; }\n[[/module]]"}
+{"id":"name-dot","source":"[[module654 foo.bar]]\n.mp-probe-box { color: red; }\n[[/module]]"}
+{"id":"name-colon","source":"[[module654 foo:bar]]\n.mp-probe-box { color: red; }\n[[/module]]"}
+{"id":"name-empty","source":"[[module654 ]]\n.mp-probe-box { color: red; }\n[[/module]]"}
+{"id":"no-newline-literal","source":"[[module654 css]]text"}
+{"id":"trailing-spaces","source":"[[module654 css]]   \n.mp-probe-box { color: red; }\n[[/module]]"}
+{"id":"uppercase-opener","source":"[[MODULE654 CSS]]\n.mp-probe-box { color: red; }\n[[/module]]"}
+{"id":"mixed-opener","source":"[[Module654 CSS]]\n.mp-probe-box { color: red; }\n[[/MODULE]]"}
+{"id":"midline-opener","source":"prefix [[module654 css]]\n.mp-probe-box { color: red; }\n[[/module]]"}
+{"id":"quoted-opener","source":"> [[module654 CSS]]\n> .mp-probe-box { color: red; }\n> [[/module]]"}
+{"id":"inline-body","source":"[[module654 css]]probe-inline[[/module]]"}
+{"id":"closer-654","source":"[[module654 CSS]]\n.mp-probe-box { color: red; }\n[[/module654]]"}
+{"id":"body-empty","source":"[[module654 css]]\n[[/module]]"}
+{"id":"body-absent","source":"[[module654 css]]"}
+{"id":"unterm","source":"[[module654 css]]\n.mp-probe-box { color: red; }"}
+{"id":"nested-module-in-654","source":"[[module654 css]]\n[[module rate]]\n[[/module]]"}
+{"id":"two-654","source":"[[module654 css]]\nALPHA\n[[/module]]\n[[module654 rate]]\nBETA\n[[/module]]"}
+{"id":"adjacent-module","source":"[[module654 css]]\n.mp-probe-box { color: red; }\n[[/module]]\n[[module rate]]"}
+{"id":"stray-closer","source":"[[/module]]"}

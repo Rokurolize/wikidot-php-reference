@@ -1,0 +1,20 @@
+{"id": "mod-unknown", "source": "[[module UnknownOracleModule]]"}
+{"id": "mod-unknown-mixed", "source": "[[module Unknown_Oracle-2]]"}
+{"id": "mod-name-leading-digit", "source": "[[module 123abc]]"}
+{"id": "mod-name-leading-underscore", "source": "[[module _foo]]"}
+{"id": "mod-name-slash", "source": "[[module foo/bar]]"}
+{"id": "mod-name-empty-space", "source": "[[module ]]"}
+{"id": "mod-attr-on-unknown", "source": "[[module UnknownOracleModule foo=\"bar\"]]"}
+{"id": "mod-invalid-head-quoted", "source": "[[module foo=\"bar\"]]"}
+{"id": "mod-no-newline", "source": "[[module backlinks]]"}
+{"id": "mod-stray-closer", "source": "[[/module]]"}
+{"id": "mod-midline", "source": "prefix [[module backlinks]]"}
+{"id": "mod-leading-space", "source": "[[ module backlinks ]]"}
+{"id": "mod-body-inline-unknown", "source": "[[module UnknownOracleModule]]preserved body[[/module]]"}
+{"id": "mod-body-unknown-newline", "source": "[[module UnknownOracleModule]]\nbody\n[[/module]]"}
+{"id": "mod-basic", "source": "[[module backlinks]]"}
+{"id": "mod-body-present", "source": "[[module css]]\n.blue { color: blue; }\n[[/module]]"}
+{"id": "mod-probe-module654-basic", "source": "[[module654 UnknownOracleModule]]"}
+{"id": "mod-probe-nested", "source": "[[module css]]\n[[module rate]]\n[[/module]]"}
+{"id": "mod-probe-unknown-empty-body", "source": "[[module UnknownOracleModule]]\n[[/module]]"}
+{"id": "mod-probe-known-empty-body", "source": "[[module rate]]\n[[/module]]"}

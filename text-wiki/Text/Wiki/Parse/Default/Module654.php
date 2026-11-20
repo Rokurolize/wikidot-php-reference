@@ -41,7 +41,15 @@ class Text_Wiki_Parse_Module654 extends Text_Wiki_Parse {
      * 
      */
     
-    public $regex = "/^\[\[module654\s([a-z0-9_\-\/]+)(\s+.*?)?\]\]\n(?:(.*?)\[\[\/module\]\])?/ims";
+    // R2 MODULE654 CORRECTION (2026-11-20): the fossil required a newline
+    // immediately after the opener. Live Wikidot also claims an opener whose
+    // line has trailing horizontal whitespace before the newline (saved page
+    // muse-probe-r2mod-module654-p-upper-newline-spaces, valid/stable/
+    // saved_source_matches=true), exactly as the sibling Module rule already
+    // does with its " *\n". Fossil-era artifact; name charset (leading digit,
+    // slash), case-insensitive opener and [[/module]] closer were probed and
+    // need no change.
+    public $regex = "/^\[\[module654\s([a-z0-9_\-\/]+)(\s+.*?)?\]\][ \t]*\n(?:(.*?)\[\[\/module\]\])?/ims";
 
     /**
      * 

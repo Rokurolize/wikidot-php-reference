@@ -41,7 +41,16 @@ class Text_Wiki_Render_Xhtml_Module extends Text_Wiki_Render {
         // check if the site is allowed to use this module
         $mm = ModuleManager::instance();
         if ($mm->canWikiUseModule($siteName, $moduleName) == false) {
-            return $this->renderError(sprintf(_("Module <em>%s</em> does not exist or can not be used within this site."), $moduleName));
+            // R2 MODULE CORRECTION (2026-11-20): the fossil's "does not exist
+            // or can not be used within this site" wording is a fossil-era
+            // artifact. Live Wikidot (saved anonymous page view, probes
+            // muse-probe-r2mod-module-mod-unknown, -mod-attr-on-unknown,
+            // -mod-name-leading-digit, -mod-name-leading-underscore and
+            // -mod-name-slash) renders the "No such module" error block with
+            // a doc:modules link and no rel attribute, byte-for-byte as
+            // below; ftml's wikidot_unknown_module_error matches it.
+            $message = sprintf(_('[[module <em>%s</em>]] No such module, please <a href="https://www.wikidot.com/doc:modules" target="_blank">check available modules</a> and fix this page.'), $moduleName);
+            return $this->renderError($message);
         }
         
         $attr = $options['attr'];

@@ -1,0 +1,202 @@
+{
+ "mod-unknown": {
+  "fullname": "muse-probe-r2mod-module-mod-unknown",
+  "html": "<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "be0617bb83a19d33ec9581c364999c4d702e887c4d62e88b10ac35e9c60d726d",
+  "source": "[[module UnknownOracleModule]]",
+  "source_sha256": "6b27359c6dd6c3052c461e6af2f9b27d4203cf3017a37b4d081b074c2f83b72b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-unknown-mixed": {
+  "fullname": "muse-probe-r2mod-module-mod-unknown-mixed",
+  "html": "<div class=\"error-block\">[[module <em>Unknown_Oracle-2</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "1c5421455ae8b5f7a8fb49a07171641d47a802b981f9b8fb85cc377fc0bbb67c",
+  "source": "[[module Unknown_Oracle-2]]",
+  "source_sha256": "b2285b307e9a79bf4d28aec622a836e0dd19e35bda515fbac4133f279c0d17f2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-name-leading-digit": {
+  "fullname": "muse-probe-r2mod-module-mod-name-leading-digit",
+  "html": "<div class=\"error-block\">[[module <em>123abc</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "b8d265390c85dc87bab44218ba18a1961b5830f9ea3a4e03844e02d3b46604a6",
+  "source": "[[module 123abc]]",
+  "source_sha256": "bb59e6d77679d54d7ab734d68a3244a1e4fe57a1bbcbef90a38e5434d67629c0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-name-leading-underscore": {
+  "fullname": "muse-probe-r2mod-module-mod-name-leading-underscore",
+  "html": "<div class=\"error-block\">[[module <em>_foo</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "cc6e0fe179e0a25e444cc9571a1b1025901a33dc1fa7ec690c25411b78243ecc",
+  "source": "[[module _foo]]",
+  "source_sha256": "d3074113487a36a3cf0f588d74b90240413d9aeed8d4b4e401db6cc41c5294b5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-name-slash": {
+  "fullname": "muse-probe-r2mod-module-mod-name-slash",
+  "html": "<div class=\"error-block\">[[module <em>foo/bar</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "cd23f4e708e79af143b80f79babcf803b6ef225dd680958b9a052eac0c374ff1",
+  "source": "[[module foo/bar]]",
+  "source_sha256": "2fe9533c8cd552c5dbfc5f4e28621a9f2a1b7597018aa411a2001e734355df2e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-name-empty-space": {
+  "fullname": "muse-probe-r2mod-module-mod-name-empty-space",
+  "html": "<p>[[module ]]</p>",
+  "html_sha256": "08a2810aa0445029ae3d4fd7337b0e53c8bd8bef68a38ac746751dff38b2c26c",
+  "source": "[[module ]]",
+  "source_sha256": "61f20e64febf43b4e2cfcb0b538da5f02c229333ea66b867edc163d01feaf727",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-attr-on-unknown": {
+  "fullname": "muse-probe-r2mod-module-mod-attr-on-unknown",
+  "html": "<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "be0617bb83a19d33ec9581c364999c4d702e887c4d62e88b10ac35e9c60d726d",
+  "source": "[[module UnknownOracleModule foo=\"bar\"]]",
+  "source_sha256": "dbcc310abe2235233229a2274398831377237473a7fbbe67b0c281bc0a12f186",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-invalid-head-quoted": {
+  "fullname": "muse-probe-r2mod-module-mod-invalid-head-quoted",
+  "html": "<p>[[module foo=&quot;bar&quot;]]</p>",
+  "html_sha256": "8d89264551ed3820b8bc0f4ed7d199457a95b78af4c0456d81da0891e564ac52",
+  "source": "[[module foo=\"bar\"]]",
+  "source_sha256": "d4b451ff9000155d2703ccff6b022ece65a5cad26f0ad0ba583a85c57f476625",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-no-newline": {
+  "fullname": "muse-probe-r2mod-module-mod-no-newline",
+  "html": "<div class=\"backlinks-module-box\">\n\t</div>",
+  "html_sha256": "e872cae02a5ba342fe0ddc284d3db06a5452e6a1c5281de7a0fb5b28594388ad",
+  "source": "[[module backlinks]]",
+  "source_sha256": "205152f9aacf1e909f256fa2ec47994d2f1c4d8f8e0fb4e6df3b23f86c151654",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-stray-closer": {
+  "fullname": "muse-probe-r2mod-module-mod-stray-closer",
+  "html": "<p>[[/module]]</p>",
+  "html_sha256": "78a326d818461bc0dc7f89b89e793731e5915e5f5e9a1d13d1f1416e8b048d4c",
+  "source": "[[/module]]",
+  "source_sha256": "123ba6c921eb8b23374fe3a8d56bb33523c4cfdcc31cd0ed7f53b63cca4bc2cd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-midline": {
+  "fullname": "muse-probe-r2mod-module-mod-midline",
+  "html": "<p>prefix [[module backlinks]]</p>",
+  "html_sha256": "f729308b973f541baa56330edd0ab3fbdfaa0493c5b6a0d086a90fa065c0ca51",
+  "source": "prefix [[module backlinks]]",
+  "source_sha256": "a6bc2e56dea2946d529056513bd9bd26190fe8ffc0d3744febf72ce0fab3182c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-leading-space": {
+  "fullname": "muse-probe-r2mod-module-mod-leading-space",
+  "html": "<p>[[ module backlinks ]]</p>",
+  "html_sha256": "2917037f175071e2fb4e8b1584f880705268880c86190535748364c20920ebf9",
+  "source": "[[ module backlinks ]]",
+  "source_sha256": "91ef52c12fd158d82b3288f270f32231d44da7fc6f040f8ff03997f2b73c4e60",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-body-inline-unknown": {
+  "fullname": "muse-probe-r2mod-module-mod-body-inline-unknown",
+  "html": "<p>[[module UnknownOracleModule]]preserved body[[/module]]</p>",
+  "html_sha256": "c9ae02e3881b73fcf7b41a2cafb1c5d8d8e89672f1808b7c5570efd497770122",
+  "source": "[[module UnknownOracleModule]]preserved body[[/module]]",
+  "source_sha256": "f55885c7144576fb4d7e0bacc2340921fbc59a603e67734b4ecb83565b493681",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-body-unknown-newline": {
+  "fullname": "muse-probe-r2mod-module-mod-body-unknown-newline",
+  "html": "<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "be0617bb83a19d33ec9581c364999c4d702e887c4d62e88b10ac35e9c60d726d",
+  "source": "[[module UnknownOracleModule]]\nbody\n[[/module]]",
+  "source_sha256": "a0e61a422ac868081852ed33e7f9ecd3f0814d8d22f16edf3d6d1ad249f0ad1d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-basic": {
+  "fullname": "muse-probe-r2mod-module-mod-basic",
+  "html": "<div class=\"backlinks-module-box\">\n\t</div>",
+  "html_sha256": "e872cae02a5ba342fe0ddc284d3db06a5452e6a1c5281de7a0fb5b28594388ad",
+  "source": "[[module backlinks]]",
+  "source_sha256": "205152f9aacf1e909f256fa2ec47994d2f1c4d8f8e0fb4e6df3b23f86c151654",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-body-present": {
+  "fullname": "muse-probe-r2mod-module-mod-body-present",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[module css]]\n.blue { color: blue; }\n[[/module]]",
+  "source_sha256": "75b5c839baa98c78f53fbaf69c206b852320c892fea0c4a2a5fdebaa55d3fcf9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-probe-module654-basic": {
+  "fullname": "muse-probe-r2mod-module-mod-probe-module654-basic",
+  "html": "<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "be0617bb83a19d33ec9581c364999c4d702e887c4d62e88b10ac35e9c60d726d",
+  "source": "[[module654 UnknownOracleModule]]",
+  "source_sha256": "65efd771f2259800d3ed9ffcd6bd7391ce539421ecd6368af11ed4b95289d643",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-probe-nested": {
+  "fullname": "muse-probe-r2mod-module-mod-probe-nested",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[module css]]\n[[module rate]]\n[[/module]]",
+  "source_sha256": "8ecbe33b651488b534ec4ba64a829affc912c923e5cdb80cabaf411616991fa6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-probe-unknown-empty-body": {
+  "fullname": "muse-probe-r2mod-module-mod-probe-unknown-empty-body",
+  "html": "<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>\n<p>[[/module]]</p>",
+  "html_sha256": "1078b5d328e62321aeecebb45895a42064949831dbba14e6ba2c19f4bad8ca26",
+  "source": "[[module UnknownOracleModule]]\n[[/module]]",
+  "source_sha256": "288aa03c68b84512097d6b0cff380fe1235cb03dce756a5eac2a2a31b400e52d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mod-probe-known-empty-body": {
+  "fullname": "muse-probe-r2mod-module-mod-probe-known-empty-body",
+  "html": "<div class=\"page-rate-widget-box\"><span class=\"rate-points\">rating:&nbsp;<span class=\"number prw54353\">0</span></span><span class=\"rateup btn btn-default\"><a title=\"I like it\" href=\"javascript:;\" onclick=\"WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)\">+</a></span><span class=\"cancel btn btn-default\"><a title=\"Cancel my vote\" href=\"javascript:;\" onclick=\"WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)\">x</a></span></div>\n<p>[[/module]]</p>",
+  "html_sha256": "ac3c338867d60340a5247cf28bbacae91aa9a1645e54004835f0a9999bdc24c0",
+  "source": "[[module rate]]\n[[/module]]",
+  "source_sha256": "762eb5c706eac7cbd57bc714cc57908c5132914a13433cc2fb40158185144520",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

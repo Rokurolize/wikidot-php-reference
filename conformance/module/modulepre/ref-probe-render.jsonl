@@ -1,0 +1,25 @@
+{"id":"known-css-654","output":"\u00femodule \"CSS\" +module_body%3D%22.mp-probe-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"unknown-no-newline","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"unknown-with-body","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"unknown-inline-tail","output":"<p>[[module UnknownOracleModule]]TAIL<\/p>\n\n"}
+{"id":"unknown-attrs","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"name-leading-digit","output":"<div class=\"error-block\">[[module <em>9lives<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"name-slash","output":"<div class=\"error-block\">[[module <em>foo\/bar<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"name-dot","output":"<p>[[module654 foo.bar]]<br \/>\n.mp-probe-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"name-colon","output":"<p>[[module654 foo:bar]]<br \/>\n.mp-probe-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"name-empty","output":"<p>[[module654 ]]<br \/>\n.mp-probe-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"no-newline-literal","output":"<p>[[module css]]text<\/p>\n\n"}
+{"id":"trailing-spaces","output":"\u00femodule \"css\" +module_body%3D%22.mp-probe-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"uppercase-opener","output":"\u00femodule \"CSS\" +module_body%3D%22.mp-probe-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"mixed-opener","output":"\u00femodule \"CSS\" +module_body%3D%22.mp-probe-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe"}
+{"id":"midline-opener","output":"<p>prefix [[module654 css]]<br \/>\n.mp-probe-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n"}
+{"id":"quoted-opener","output":"<blockquote><p>[[module654 CSS]]<br \/>\n.mp-probe-box { color: red; }<br \/>\n[[\/module]]<\/p>\n\n<\/blockquote>\n"}
+{"id":"inline-body","output":"<p>[[module css]]probe-inline[[\/module]]<\/p>\n\n"}
+{"id":"closer-654","output":"\u00femodule \"CSS\"\u00fe<p>.mp-probe-box { color: red; }<br \/>\n[[\/module654]]<\/p>\n\n"}
+{"id":"body-empty","output":"\u00femodule \"css\"\u00fe"}
+{"id":"body-absent","output":"\u00femodule \"css\"\u00fe"}
+{"id":"unterm","output":"\u00femodule \"css\"\u00fe<p>.mp-probe-box { color: red; }<\/p>\n\n"}
+{"id":"nested-module-in-654","output":"\u00femodule \"css\"\u00fe\u00femodule \"rate\"\u00fe"}
+{"id":"two-654","output":"\u00femodule \"css\" +module_body%3D%22ALPHA%22 \u00fe\u00femodule \"rate\" +module_body%3D%22BETA%22 \u00fe"}
+{"id":"adjacent-module","output":"\u00femodule \"css\" +module_body%3D%22.mp-probe-box%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe\u00femodule \"rate\"\u00fe"}
+{"id":"stray-closer","output":"<p>[[\/module]]<\/p>\n\n"}

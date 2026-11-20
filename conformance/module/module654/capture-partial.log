@@ -1,0 +1,233 @@
+p-lower-closer-module -> muse-probe-r2mod-module654-p-lower-closer-module stable=True saved_source_matches=True valid=True
+p-lower-closer-654 -> muse-probe-r2mod-module654-p-lower-closer-654 stable=True saved_source_matches=True valid=True
+p-lower-unknown -> muse-probe-r2mod-module654-p-lower-unknown stable=True saved_source_matches=True valid=True
+p-lower-unknown-attr -> muse-probe-r2mod-module654-p-lower-unknown-attr stable=True saved_source_matches=True valid=True
+p-lower-invalid-head -> muse-probe-r2mod-module654-p-lower-invalid-head stable=True saved_source_matches=True valid=True
+p-lower-newline-spaces -> muse-probe-r2mod-module654-p-lower-newline-spaces stable=True saved_source_matches=True valid=True
+p-lower-leading-digit -> muse-probe-r2mod-module654-p-lower-leading-digit stable=True saved_source_matches=True valid=True
+p-lower-slash -> muse-probe-r2mod-module654-p-lower-slash stable=True saved_source_matches=True valid=True
+p-lower-name-upper -> muse-probe-r2mod-module654-p-lower-name-upper stable=True saved_source_matches=True valid=True
+p-lower-inline-body -> muse-probe-r2mod-module654-p-lower-inline-body stable=True saved_source_matches=True valid=True
+p-lower-no-close -> muse-probe-r2mod-module654-p-lower-no-close stable=True saved_source_matches=True valid=True
+p-lower-empty-body -> muse-probe-r2mod-module654-p-lower-empty-body stable=True saved_source_matches=True valid=True
+p-stray-654 -> muse-probe-r2mod-module654-p-stray-654 stable=True saved_source_matches=True valid=True
+p-upper-basic -> muse-probe-r2mod-module654-p-upper-basic stable=True saved_source_matches=True valid=True
+p-mixed-basic -> muse-probe-r2mod-module654-p-mixed-basic stable=True saved_source_matches=True valid=True
+p-upper-unknown -> muse-probe-r2mod-module654-p-upper-unknown stable=True saved_source_matches=True valid=True
+p-upper-no-newline -> muse-probe-r2mod-module654-p-upper-no-newline stable=True saved_source_matches=True valid=True
+p-upper-newline-spaces -> muse-probe-r2mod-module654-p-upper-newline-spaces stable=True saved_source_matches=True valid=True
+p-upper-closer-654 -> muse-probe-r2mod-module654-p-upper-closer-654 stable=True saved_source_matches=True valid=True
+p-upper-leading-digit -> muse-probe-r2mod-module654-p-upper-leading-digit stable=True saved_source_matches=True valid=True
+p-upper-slash -> muse-probe-r2mod-module654-p-upper-slash stable=True saved_source_matches=True valid=True
+{
+ "p-lower-closer-module": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-closer-module",
+  "html": "<p>Before</p>\n\n\n\n<p>After</p>",
+  "html_sha256": "ef07edde698115020bb865af1f1add6acb90b95c2c60c8c5ea839cb90af4ed27",
+  "source": "Before\n[[module654 CSS]]\n.parity-live-blue { color: blue; }\n[[/module]]\nAfter",
+  "source_sha256": "2ad2e5ee70711213cae4da5b811b429c8d141c336c8be9e0fc465887e51753a8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-lower-closer-654": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-closer-654",
+  "html": "<p>Before</p>\n\n\n\n<p>.parity-live-red { color: red; }<br />\n[[/module654]]<br />\nAfter</p>",
+  "html_sha256": "e700287c1314d356fef9424ad1dd41859f6caa9028ecafb2b3a6e706bc691640",
+  "source": "Before\n[[module654 CSS]]\n.parity-live-red { color: red; }\n[[/module654]]\nAfter",
+  "source_sha256": "e7240f9ddfc593a652c869b6aa2e3c8ef435693ac8feb063c88b8e4185c48f24",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-lower-unknown": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-unknown",
+  "html": "<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "be0617bb83a19d33ec9581c364999c4d702e887c4d62e88b10ac35e9c60d726d",
+  "source": "[[module654 UnknownOracleModule]]",
+  "source_sha256": "65efd771f2259800d3ed9ffcd6bd7391ce539421ecd6368af11ed4b95289d643",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-lower-unknown-attr": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-unknown-attr",
+  "html": "<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "be0617bb83a19d33ec9581c364999c4d702e887c4d62e88b10ac35e9c60d726d",
+  "source": "[[module654 UnknownOracleModule foo=\"bar\"]]",
+  "source_sha256": "4d6837436e399222f539781a009045c06d65c90cd574348dd59dc34772996703",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-lower-invalid-head": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-invalid-head",
+  "html": "<p>[[module654 class=&quot;&quot;]]<br />\nv7 body<br />\n[[/module654]]</p>",
+  "html_sha256": "bde1baafc22bfbf2c2cc41c296ee923ef187d017e03ada8d1f3e3cfaf6195b67",
+  "source": "[[module654 class=\"\"]]\nv7 body\n[[/module654]]",
+  "source_sha256": "9a442a25dfc91b67e267bf9f337c67f94f64ca54c055665c94e5938f7564f080",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-lower-newline-spaces": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-newline-spaces",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[module654 CSS]]   \n.live-green { color: green; }\n[[/module]]",
+  "source_sha256": "41683a40f693350916c172f9bb277ad9a8fd86fb5dda77a7a077967d3749fbc2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-lower-leading-digit": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-leading-digit",
+  "html": "<div class=\"error-block\">[[module <em>123abc</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "b8d265390c85dc87bab44218ba18a1961b5830f9ea3a4e03844e02d3b46604a6",
+  "source": "[[module654 123abc]]\nbody\n[[/module]]",
+  "source_sha256": "f0b07a6ab8533e89a8d4b3af49cd0b6dac2420b245fa2b0a28185ef919038588",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-lower-slash": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-slash",
+  "html": "<div class=\"error-block\">[[module <em>foo/bar</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "cd23f4e708e79af143b80f79babcf803b6ef225dd680958b9a052eac0c374ff1",
+  "source": "[[module654 foo/bar]]\nbody\n[[/module]]",
+  "source_sha256": "e8f658cb0cd2ccee9970f1dd34ffe97b39e85bd46d014dec053175aea205c8ea",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-lower-name-upper": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-name-upper",
+  "html": "<div class=\"page-rate-widget-box\"><span class=\"rate-points\">rating:&nbsp;<span class=\"number prw54353\">0</span></span><span class=\"rateup btn btn-default\"><a title=\"I like it\" href=\"javascript:;\" onclick=\"WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)\">+</a></span><span class=\"cancel btn btn-default\"><a title=\"Cancel my vote\" href=\"javascript:;\" onclick=\"WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)\">x</a></span></div>",
+  "html_sha256": "942cc3624c28d2b05fa401229b1f2a8505003ba9086e2a7802a745ed0629eba4",
+  "source": "[[module654 RATE]]\nbody\n[[/module]]",
+  "source_sha256": "d4c558a565e31976ad8f7bbc0e0f36e2c1175d3ff9a95d617831714aeacfe560",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-lower-inline-body": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-inline-body",
+  "html": "<p>[[module Rate]]body[[/module]]</p>",
+  "html_sha256": "3976f2169d0aa6ecb1112a3c9c4b7a663f63176d27e8303e33fda79aa61afc25",
+  "source": "[[module654 Rate]]body[[/module]]",
+  "source_sha256": "e6b9c7191ae68aeab0400a908a853a5c1cac1c0ec4f23a1eccc817222bb84a8b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-lower-no-close": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-no-close",
+  "html": "<p>body</p>",
+  "html_sha256": "3f1c9112099c37212c36275efee7d5af85eb2ded958ecd75ad3a74a607830370",
+  "source": "[[module654 CSS]]\nbody",
+  "source_sha256": "52f80e4f730989edc9697ab344154ed013232d047e541405639957294fca4be3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-lower-empty-body": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-empty-body",
+  "html": "<p>[[/module]]</p>",
+  "html_sha256": "78a326d818461bc0dc7f89b89e793731e5915e5f5e9a1d13d1f1416e8b048d4c",
+  "source": "[[module654 CSS]]\n\n[[/module]]",
+  "source_sha256": "ae27a36f5d898ee14416a02eada388acf89e35d10659c445c85b1dbf4d931bc4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-stray-654": {
+  "fullname": "muse-probe-r2mod-module654-p-stray-654",
+  "html": "<p>before<br />\n[[/module654]]<br />\nafter</p>",
+  "html_sha256": "66c6c07282f6168a0415fae77fb9289f76f8ce1223f25613e1c6a205325b7eb3",
+  "source": "before\n[[/module654]]\nafter",
+  "source_sha256": "6283d44d62a1863ed8cb9ead0c425745f0e40b39749cd03b4405317f0c6e212d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-upper-basic": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-basic",
+  "html": "<p>Before</p>\n\n\n\n<p>After</p>",
+  "html_sha256": "ef07edde698115020bb865af1f1add6acb90b95c2c60c8c5ea839cb90af4ed27",
+  "source": "Before\n[[MODULE654 CSS]]\n.upper-live-red { color: red; }\n[[/module]]\nAfter",
+  "source_sha256": "1b979d83255ae26625ba998d7b88a821ed48e451dc001bd16fc9bf488969cdf7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-mixed-basic": {
+  "fullname": "muse-probe-r2mod-module654-p-mixed-basic",
+  "html": "<p>Before</p>\n\n\n\n<p>After</p>",
+  "html_sha256": "ef07edde698115020bb865af1f1add6acb90b95c2c60c8c5ea839cb90af4ed27",
+  "source": "Before\n[[Module654 CSS]]\n.mixed-live-blue { color: blue; }\n[[/module]]\nAfter",
+  "source_sha256": "bfec07b0f9e851a1534122a678fb2ead7464e3208b5b4281639888d667a18f08",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-upper-unknown": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-unknown",
+  "html": "<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "be0617bb83a19d33ec9581c364999c4d702e887c4d62e88b10ac35e9c60d726d",
+  "source": "[[MODULE654 UnknownOracleModule]]",
+  "source_sha256": "de8e8544294f1cf834d8e62c28926b4fe6347267924ddacb3f3d93ad66c9467a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-upper-no-newline": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-no-newline",
+  "html": "<p>[[MODULE654 Rate]]TAIL</p>",
+  "html_sha256": "aa8d9d83d788c5c29da114f2a92143bf6b1f826ad03469bcfe117cfd7b96a539",
+  "source": "[[MODULE654 Rate]]TAIL",
+  "source_sha256": "38303622f2968fb247189bd465d1a97632c6a8497590d284a26bb8f9f780a355",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-upper-newline-spaces": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-newline-spaces",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[MODULE654 CSS]]   \n.upper-live-green { color: green; }\n[[/module]]",
+  "source_sha256": "e5d2f614fbf88c48f5fcbd88c7cca11d48d9747829945a79ec6d80b5a6cf088d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-upper-closer-654": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-closer-654",
+  "html": "<p>Before</p>\n\n\n\n<p>.upper-live-yellow { color: yellow; }<br />\n[[/module654]]<br />\nAfter</p>",
+  "html_sha256": "af13aee45aca6718bf5e85ab7d95c86b3d78d7dfaf4aa4dba4ee5b32716f630d",
+  "source": "Before\n[[MODULE654 CSS]]\n.upper-live-yellow { color: yellow; }\n[[/module654]]\nAfter",
+  "source_sha256": "4b816c9547a479a07f1653842ac81a7b68fe1e66c2294006a307631addde6d9d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-upper-leading-digit": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-leading-digit",
+  "html": "<div class=\"error-block\">[[module <em>123abc</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "b8d265390c85dc87bab44218ba18a1961b5830f9ea3a4e03844e02d3b46604a6",
+  "source": "[[MODULE654 123abc]]\nbody\n[[/module]]",
+  "source_sha256": "0d9ef91198decd1fe8da57cecead619c1c2903017248678e83678de9cdd86e47",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-upper-slash": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-slash",
+  "html": "<div class=\"error-block\">[[module <em>foo/bar</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "cd23f4e708e79af143b80f79babcf803b6ef225dd680958b9a052eac0c374ff1",
+  "source": "[[MODULE654 foo/bar]]\nbody\n[[/module]]",
+  "source_sha256": "60af0db03e1dd8669fd5d9803068cd0c15c6926be4a2730da32b5845b5f0ecc7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,52 @@
+{"errors":[],"html":"<p>TODO: module Backlinks</p>","id":"mod-basic"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p>","id":"mod-known-uppercase"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p>","id":"mod-known-mixed"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>","id":"mod-unknown"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>Unknown_Oracle-2</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>","id":"mod-unknown-mixed"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-module\", span: 17..17, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>[[module 123abc]]</p>","id":"mod-name-leading-digit"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-module\", span: 15..15, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 13..15, kind: NoRulesMatch }"],"html":"<p>[[module _foo]]</p>","id":"mod-name-leading-underscore"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-module\", span: 15..15, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 13..15, kind: NoRulesMatch }"],"html":"<p>[[module -foo]]</p>","id":"mod-name-leading-hyphen"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-module\", span: 18..18, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 16..18, kind: NoRulesMatch }"],"html":"<p>[[module foo/bar]]</p>","id":"mod-name-slash"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-module\", span: 26..26, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 24..26, kind: NoRulesMatch }"],"html":"<p>[[module foo/bar-baz_qux]]</p>","id":"mod-name-inner-slash"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>foo-bar</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>","id":"mod-name-hyphen"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>foo_bar</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>","id":"mod-name-underscore"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>FOO_BAR</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>","id":"mod-name-uppercase-unknown"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-module\", span: 11..11, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }"],"html":"<p>[[module ]]</p>","id":"mod-name-empty-space"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-module\", span: 10..10, kind: BlockMissingName }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>[[module]]</p>","id":"mod-name-empty-nospace"}
+{"errors":[],"html":"<p>TODO: module Rate</p>","id":"mod-attr-quoted"}
+{"errors":[],"html":"<p>TODO: module Rate</p>","id":"mod-attr-unquoted"}
+{"errors":[],"html":"<p>TODO: module Rate</p>","id":"mod-attr-empty"}
+{"errors":[],"html":"<p>TODO: module PageTree</p>","id":"mod-attr-multiple"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>","id":"mod-attr-on-unknown"}
+{"errors":[],"html":"<p>TODO: module Rate</p>","id":"mod-attr-extra-spaces"}
+{"errors":[],"html":"","id":"mod-body-present"}
+{"errors":[],"html":"<p>[[/module]]</p>","id":"mod-body-empty"}
+{"errors":["ParseError { token: Identifier, rule: \"block-module\", span: 30..39, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 28..30, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 44..47, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 53..55, kind: NoRulesMatch }"],"html":"<p>[[module UnknownOracleModule]]preserved body[[/module]]</p>","id":"mod-body-inline-unknown"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\" rel=\"noopener noreferrer\">check available modules</a> and fix this page.</div>","id":"mod-body-unknown-newline"}
+{"errors":[],"html":"<p>.blue{color:blue}</p>","id":"mod-unterminated"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }"],"html":"<p>[[/module]]</p>","id":"mod-stray-closer"}
+{"errors":[],"html":"<p>[[module css]] body [[/module]]</p>","id":"mod-body-same-line"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p>","id":"mod-no-newline"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p>","id":"mod-spaces-then-newline"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p>","id":"mod-crlf"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p>","id":"mod-lone-cr"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p>","id":"mod-tab-after-opener"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p>","id":"mod-opener-MODULE"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p>","id":"mod-opener-mixed"}
+{"errors":[],"html":"","id":"mod-closer-case"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 16..25, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 25..27, kind: NoRulesMatch }"],"html":"<p>prefix [[module backlinks]]</p>","id":"mod-midline"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 3..9, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 20..22, kind: NoRulesMatch }"],"html":"<p>[[ module backlinks ]]</p>","id":"mod-leading-space"}
+{"errors":[],"html":"","id":"mod-closer-leading-space"}
+{"errors":[],"html":"","id":"mod-nested-two-openers"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\" rel=\"noopener noreferrer\">check available modules</a> and fix this page.</div>","id":"mod-nested-unknown-in-body"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p><p>TODO: module Rate</p>","id":"mod-adjacent-module654"}
+{"errors":[],"html":"<p>TODO: module Rate</p>","id":"mod-module654-basic"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>UnknownOracleModule</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>","id":"mod-module654-unknown"}
+{"errors":[],"html":"","id":"mod-module654-module-closer"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 20..23, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 32..34, kind: NoRulesMatch }"],"html":"<p>body<br>\n[[/module654]]</p>","id":"mod-module-opener-module654-closer"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p><p>TODO: module Rate</p>","id":"mod-two-adjacent"}
+{"errors":["ParseError { token: Identifier, rule: \"block-module\", span: 30..34, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 28..30, kind: NoRulesMatch }"],"html":"<p>[[module UnknownOracleModule]]TAIL</p>","id":"mod-unknown-tail"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"block-module\", span: 30..33, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 28..30, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 30..33, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 39..41, kind: NoRulesMatch }"],"html":"<p>[[module UnknownOracleModule]][[/module]]</p>","id":"mod-unknown-stray-close"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-module\", span: 20..20, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[module foo=&quot;bar&quot;]]</p>","id":"mod-invalid-head-quoted"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 43..46, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 52..54, kind: NoRulesMatch }"],"html":"<p>[[/module]]</p><p>TODO: module Rate</p><p>[[/module]]</p>","id":"mod-two-adjacent-body"}
+{"errors":[],"html":"<p>TODO: module Backlinks</p>","id":"mod-blank-lines"}

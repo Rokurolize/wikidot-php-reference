@@ -1,0 +1,59 @@
+{"id": "m654-name-basic", "source": "[[module654 Rate]]\nbody\n[[/module]]"}
+{"id": "m654-name-uppercase", "source": "[[module654 RATE]]\nbody\n[[/module]]"}
+{"id": "m654-name-mixed", "source": "[[module654 rate]]\nbody\n[[/module]]"}
+{"id": "m654-name-leading-digit", "source": "[[module654 123abc]]\nbody\n[[/module]]"}
+{"id": "m654-name-digits-only", "source": "[[module654 654]]\nbody\n[[/module]]"}
+{"id": "m654-name-slash", "source": "[[module654 foo/bar]]\nbody\n[[/module]]"}
+{"id": "m654-name-hyphen", "source": "[[module654 foo-bar]]\nbody\n[[/module]]"}
+{"id": "m654-name-leading-hyphen", "source": "[[module654 -foo]]\nbody\n[[/module]]"}
+{"id": "m654-name-underscore", "source": "[[module654 foo_bar]]\nbody\n[[/module]]"}
+{"id": "m654-name-leading-underscore", "source": "[[module654 _foo]]\nbody\n[[/module]]"}
+{"id": "m654-name-empty", "source": "[[module654 ]]\nbody\n[[/module]]"}
+{"id": "m654-name-no-space", "source": "[[module654Rate]]\nbody\n[[/module]]"}
+{"id": "m654-name-dot", "source": "[[module654 foo.bar]]\nbody\n[[/module]]"}
+{"id": "m654-name-unicode", "source": "[[module654 é]]\nbody\n[[/module]]"}
+{"id": "m654-attr-one", "source": "[[module654 Rate show=\"x\"]]\nbody\n[[/module]]"}
+{"id": "m654-attr-bare", "source": "[[module654 Rate foo]]\nbody\n[[/module]]"}
+{"id": "m654-attr-two", "source": "[[module654 Rate a=\"1\" b=\"2\"]]\nbody\n[[/module]]"}
+{"id": "m654-attr-quoted-space", "source": "[[module654 Rate title=\"a b\"]]\nbody\n[[/module]]"}
+{"id": "m654-attr-empty", "source": "[[module654 Rate \"\"]]\nbody\n[[/module]]"}
+{"id": "m654-attr-tab", "source": "[[module654 Rate\tfoo=\"x\"]]\nbody\n[[/module]]"}
+{"id": "m654-attr-multi-space", "source": "[[module654 Rate   foo=\"x\"]]\nbody\n[[/module]]"}
+{"id": "m654-body-present", "source": "[[module654 CSS]]\n.red { color: red; }\n[[/module]]"}
+{"id": "m654-body-empty", "source": "[[module654 CSS]]\n\n[[/module]]"}
+{"id": "m654-body-absent", "source": "[[module654 CSS]]"}
+{"id": "m654-body-absent-newline", "source": "[[module654 CSS]]\n"}
+{"id": "m654-body-inline", "source": "[[module654 Rate]]body[[/module]]"}
+{"id": "m654-body-inline-empty", "source": "[[module654 Rate]][[/module]]"}
+{"id": "m654-unterminated", "source": "[[module654 CSS]]\nbody"}
+{"id": "m654-stray-closer", "source": "before\n[[/module]]\nafter"}
+{"id": "m654-stray-closer654", "source": "before\n[[/module654]]\nafter"}
+{"id": "m654-double-closer", "source": "[[module654 CSS]]\nbody\n[[/module]]\n[[/module]]"}
+{"id": "m654-newline-none", "source": "[[module654 CSS]]body\n[[/module]]"}
+{"id": "m654-newline-spaces", "source": "[[module654 CSS]]   \nbody\n[[/module]]"}
+{"id": "m654-newline-crlf", "source": "[[module654 CSS]]\r\nbody\r\n[[/module]]"}
+{"id": "m654-newline-lone-cr", "source": "[[module654 CSS]]\rbody\r[[/module]]"}
+{"id": "m654-newline-two", "source": "[[module654 CSS]]\n\nbody\n[[/module]]"}
+{"id": "m654-newline-tab-space", "source": "[[module654 CSS]]\t \nbody\n[[/module]]"}
+{"id": "m654-case-opener-upper", "source": "[[MODULE654 CSS]]\nbody\n[[/module]]"}
+{"id": "m654-case-opener-mixed", "source": "[[Module654 CSS]]\nbody\n[[/module]]"}
+{"id": "m654-case-closer-upper", "source": "[[module654 CSS]]\nbody\n[[/MODULE]]"}
+{"id": "m654-case-closer-mixed", "source": "[[module654 CSS]]\nbody\n[[/Module]]"}
+{"id": "m654-midline", "source": "text [[module654 CSS]]\nbody\n[[/module]]"}
+{"id": "m654-leading-space", "source": " [[module654 CSS]]\nbody\n[[/module]]"}
+{"id": "m654-after-blank", "source": "before\n\n[[module654 CSS]]\nbody\n[[/module]]"}
+{"id": "m654-closer-654", "source": "[[module654 CSS]]\nbody\n[[/module654]]"}
+{"id": "m654-closer-module", "source": "[[module654 CSS]]\nbody\n[[/module]]"}
+{"id": "m654-module-closer-654", "source": "[[module CSS]]\nbody\n[[/module654]]"}
+{"id": "m654-adjacent-module", "source": "[[module654 CSS]]\n.a{}\n[[/module]]\n[[module Rate]]\n[[/module]]"}
+{"id": "m654-nested-module", "source": "[[module654 CSS]]\n[[module Rate]]\n[[/module]]\n[[/module]]"}
+{"id": "m654-nested-654", "source": "[[module654 CSS]]\n[[module654 Rate]]\n[[/module]]\n[[/module]]"}
+{"id": "m654-module-then-654", "source": "[[module Rate]]\n[[module654 CSS]]\n[[/module]]\n[[/module]]"}
+{"id": "m654-vs-module-unknown", "source": "[[module654 UnknownOracleModule]]"}
+{"id": "m654-vs-module-invalid-head", "source": "[[module654 class=\"\"]]\nv7 body\n[[/module654]]"}
+{"id": "m654-vs-module-tail", "source": "[[module654 UnknownOracleModule]]TAIL"}
+{"id": "m654-vs-module-sameclose", "source": "[[module654 UnknownOracleModule]][[/module]]"}
+{"id": "m654-vs-module-attr-unknown", "source": "[[module654 UnknownOracleModule foo=\"bar\"]]"}
+{"id": "m654-vs-module-newline-unknown", "source": "[[module654 UnknownOracleModule]]\nbody\n[[/module]]"}
+{"id": "control-module-basic", "source": "[[module Rate]]\n[[/module]]"}
+{"id": "control-plain", "source": "just plain text"}

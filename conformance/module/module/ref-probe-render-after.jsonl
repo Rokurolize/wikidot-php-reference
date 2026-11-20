@@ -1,0 +1,20 @@
+{"id":"mod-unknown","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-unknown-mixed","output":"<div class=\"error-block\">[[module <em>Unknown_Oracle-2<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-leading-digit","output":"<div class=\"error-block\">[[module <em>123abc<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-leading-underscore","output":"<div class=\"error-block\">[[module <em>_foo<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-slash","output":"<div class=\"error-block\">[[module <em>foo\/bar<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-name-empty-space","output":"<p>[[module ]]<\/p>\n\n"}
+{"id":"mod-attr-on-unknown","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-invalid-head-quoted","output":"<p>[[module foo=&quot;bar&quot;]]<\/p>\n\n"}
+{"id":"mod-no-newline","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-stray-closer","output":"<p>[[\/module]]<\/p>\n\n"}
+{"id":"mod-midline","output":"<p>prefix [[module backlinks]]<\/p>\n\n"}
+{"id":"mod-leading-space","output":"<p>[[ module backlinks ]]<\/p>\n\n"}
+{"id":"mod-body-inline-unknown","output":"<p>[[module UnknownOracleModule]]preserved body[[\/module]]<\/p>\n\n"}
+{"id":"mod-body-unknown-newline","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-basic","output":"\u00femodule \"backlinks\"\u00fe"}
+{"id":"mod-body-present","output":"\u00femodule \"css\" +module_body%3D%22.blue%2B%257B%2Bcolor%253A%2Bblue%253B%2B%257D%22 \u00fe"}
+{"id":"mod-probe-module654-basic","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"mod-probe-nested","output":"\u00femodule \"css\" +module_body%3D%22%25FF244%25FF%22 \u00fe"}
+{"id":"mod-probe-unknown-empty-body","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div><p>[[\/module]]<\/p>\n\n"}
+{"id":"mod-probe-known-empty-body","output":"\u00femodule \"rate\"\u00fe<p>[[\/module]]<\/p>\n\n"}

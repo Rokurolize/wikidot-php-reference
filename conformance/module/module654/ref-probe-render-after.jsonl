@@ -1,0 +1,25 @@
+{"id":"p-lower-closer-module","output":"<p>Before<\/p>\n\n\u00femodule \"CSS\" +module_body%3D%22.parity-live-blue%2B%257B%2Bcolor%253A%2Bblue%253B%2B%257D%22 \u00fe<p>After<\/p>\n\n"}
+{"id":"p-lower-closer-654","output":"<p>Before<\/p>\n\n\u00femodule \"CSS\"\u00fe<p>.parity-live-red { color: red; }<br \/>\n[[\/module654]]<br \/>\nAfter<\/p>\n\n"}
+{"id":"p-lower-unknown","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"p-lower-unknown-attr","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"p-lower-invalid-head","output":"<p>[[module654 class=&quot;&quot;]]<br \/>\nv7 body<br \/>\n[[\/module654]]<\/p>\n\n"}
+{"id":"p-lower-newline-spaces","output":"\u00femodule \"CSS\" +module_body%3D%22.live-green%2B%257B%2Bcolor%253A%2Bgreen%253B%2B%257D%22 \u00fe"}
+{"id":"p-lower-leading-digit","output":"<div class=\"error-block\">[[module <em>123abc<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"p-lower-slash","output":"<div class=\"error-block\">[[module <em>foo\/bar<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"p-lower-name-upper","output":"\u00femodule \"RATE\" +module_body%3D%22body%22 \u00fe"}
+{"id":"p-lower-inline-body","output":"<p>[[module Rate]]body[[\/module]]<\/p>\n\n"}
+{"id":"p-lower-no-close","output":"\u00femodule \"CSS\"\u00fe<p>body<\/p>\n\n"}
+{"id":"p-lower-empty-body","output":"\u00femodule \"CSS\"\u00fe"}
+{"id":"p-stray-654","output":"<p>before<br \/>\n[[\/module654]]<br \/>\nafter<\/p>\n\n"}
+{"id":"p-upper-basic","output":"<p>Before<\/p>\n\n\u00femodule \"CSS\" +module_body%3D%22.upper-live-red%2B%257B%2Bcolor%253A%2Bred%253B%2B%257D%22 \u00fe<p>After<\/p>\n\n"}
+{"id":"p-mixed-basic","output":"<p>Before<\/p>\n\n\u00femodule \"CSS\" +module_body%3D%22.mixed-live-blue%2B%257B%2Bcolor%253A%2Bblue%253B%2B%257D%22 \u00fe<p>After<\/p>\n\n"}
+{"id":"p-upper-unknown","output":"<div class=\"error-block\">[[module <em>UnknownOracleModule<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"p-upper-no-newline","output":"<p>[[MODULE654 Rate]]TAIL<\/p>\n\n"}
+{"id":"p-upper-newline-spaces","output":"\u00femodule \"CSS\" +module_body%3D%22.upper-live-green%2B%257B%2Bcolor%253A%2Bgreen%253B%2B%257D%22 \u00fe"}
+{"id":"p-upper-closer-654","output":"<p>Before<\/p>\n\n\u00femodule \"CSS\"\u00fe<p>.upper-live-yellow { color: yellow; }<br \/>\n[[\/module654]]<br \/>\nAfter<\/p>\n\n"}
+{"id":"p-upper-leading-digit","output":"<div class=\"error-block\">[[module <em>123abc<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"p-upper-slash","output":"<div class=\"error-block\">[[module <em>foo\/bar<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"p-upper-nested","output":"\u00femodule \"CSS\" +module_body%3D%22%255B%255Bmodule654%2BRate%255D%255D%22 \u00fe<p>[[\/module]]<\/p>\n\n"}
+{"id":"p-upper-inline-empty","output":"<p>[[MODULE654 Rate]][[\/module]]<\/p>\n\n"}
+{"id":"p-control-module","output":"\u00femodule \"Rate\"\u00fe<p>[[\/module]]<\/p>\n\n"}
+{"id":"p-control-plain","output":"<p>just plain text<\/p>\n\n"}

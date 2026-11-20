@@ -1,0 +1,153 @@
+p-lower-closer-module -> muse-probe-r2mod-module654-p-lower-closer-module (exists)
+p-lower-closer-654 -> muse-probe-r2mod-module654-p-lower-closer-654 (exists)
+p-lower-unknown -> muse-probe-r2mod-module654-p-lower-unknown (exists)
+p-lower-unknown-attr -> muse-probe-r2mod-module654-p-lower-unknown-attr (exists)
+p-lower-invalid-head -> muse-probe-r2mod-module654-p-lower-invalid-head (exists)
+p-lower-newline-spaces -> muse-probe-r2mod-module654-p-lower-newline-spaces (exists)
+p-lower-leading-digit -> muse-probe-r2mod-module654-p-lower-leading-digit (exists)
+p-lower-slash -> muse-probe-r2mod-module654-p-lower-slash (exists)
+p-lower-name-upper -> muse-probe-r2mod-module654-p-lower-name-upper (exists)
+p-lower-inline-body -> muse-probe-r2mod-module654-p-lower-inline-body (exists)
+p-lower-no-close -> muse-probe-r2mod-module654-p-lower-no-close (exists)
+p-lower-empty-body -> muse-probe-r2mod-module654-p-lower-empty-body (exists)
+p-stray-654 -> muse-probe-r2mod-module654-p-stray-654 (exists)
+p-upper-basic -> muse-probe-r2mod-module654-p-upper-basic (exists)
+p-mixed-basic -> muse-probe-r2mod-module654-p-mixed-basic (exists)
+p-upper-unknown -> muse-probe-r2mod-module654-p-upper-unknown (exists)
+p-upper-no-newline -> muse-probe-r2mod-module654-p-upper-no-newline (exists)
+p-upper-newline-spaces -> muse-probe-r2mod-module654-p-upper-newline-spaces (exists)
+p-upper-closer-654 -> muse-probe-r2mod-module654-p-upper-closer-654 (exists)
+p-upper-leading-digit -> muse-probe-r2mod-module654-p-upper-leading-digit (exists)
+p-upper-slash -> muse-probe-r2mod-module654-p-upper-slash (exists)
+p-upper-nested -> muse-probe-r2mod-module654-p-upper-nested (created)
+p-upper-inline-empty -> muse-probe-r2mod-module654-p-upper-inline-empty (created)
+p-control-module -> muse-probe-r2mod-module654-p-control-module (created)
+p-control-plain -> muse-probe-r2mod-module654-p-control-plain (created)
+25 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p-lower-closer-module": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-closer-module",
+  "source": "Before\n[[module654 CSS]]\n.parity-live-blue { color: blue; }\n[[/module]]\nAfter",
+  "action": "exists"
+ },
+ "p-lower-closer-654": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-closer-654",
+  "source": "Before\n[[module654 CSS]]\n.parity-live-red { color: red; }\n[[/module654]]\nAfter",
+  "action": "exists"
+ },
+ "p-lower-unknown": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-unknown",
+  "source": "[[module654 UnknownOracleModule]]",
+  "action": "exists"
+ },
+ "p-lower-unknown-attr": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-unknown-attr",
+  "source": "[[module654 UnknownOracleModule foo=\"bar\"]]",
+  "action": "exists"
+ },
+ "p-lower-invalid-head": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-invalid-head",
+  "source": "[[module654 class=\"\"]]\nv7 body\n[[/module654]]",
+  "action": "exists"
+ },
+ "p-lower-newline-spaces": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-newline-spaces",
+  "source": "[[module654 CSS]]   \n.live-green { color: green; }\n[[/module]]",
+  "action": "exists"
+ },
+ "p-lower-leading-digit": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-leading-digit",
+  "source": "[[module654 123abc]]\nbody\n[[/module]]",
+  "action": "exists"
+ },
+ "p-lower-slash": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-slash",
+  "source": "[[module654 foo/bar]]\nbody\n[[/module]]",
+  "action": "exists"
+ },
+ "p-lower-name-upper": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-name-upper",
+  "source": "[[module654 RATE]]\nbody\n[[/module]]",
+  "action": "exists"
+ },
+ "p-lower-inline-body": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-inline-body",
+  "source": "[[module654 Rate]]body[[/module]]",
+  "action": "exists"
+ },
+ "p-lower-no-close": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-no-close",
+  "source": "[[module654 CSS]]\nbody",
+  "action": "exists"
+ },
+ "p-lower-empty-body": {
+  "fullname": "muse-probe-r2mod-module654-p-lower-empty-body",
+  "source": "[[module654 CSS]]\n\n[[/module]]",
+  "action": "exists"
+ },
+ "p-stray-654": {
+  "fullname": "muse-probe-r2mod-module654-p-stray-654",
+  "source": "before\n[[/module654]]\nafter",
+  "action": "exists"
+ },
+ "p-upper-basic": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-basic",
+  "source": "Before\n[[MODULE654 CSS]]\n.upper-live-red { color: red; }\n[[/module]]\nAfter",
+  "action": "exists"
+ },
+ "p-mixed-basic": {
+  "fullname": "muse-probe-r2mod-module654-p-mixed-basic",
+  "source": "Before\n[[Module654 CSS]]\n.mixed-live-blue { color: blue; }\n[[/module]]\nAfter",
+  "action": "exists"
+ },
+ "p-upper-unknown": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-unknown",
+  "source": "[[MODULE654 UnknownOracleModule]]",
+  "action": "exists"
+ },
+ "p-upper-no-newline": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-no-newline",
+  "source": "[[MODULE654 Rate]]TAIL",
+  "action": "exists"
+ },
+ "p-upper-newline-spaces": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-newline-spaces",
+  "source": "[[MODULE654 CSS]]   \n.upper-live-green { color: green; }\n[[/module]]",
+  "action": "exists"
+ },
+ "p-upper-closer-654": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-closer-654",
+  "source": "Before\n[[MODULE654 CSS]]\n.upper-live-yellow { color: yellow; }\n[[/module654]]\nAfter",
+  "action": "exists"
+ },
+ "p-upper-leading-digit": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-leading-digit",
+  "source": "[[MODULE654 123abc]]\nbody\n[[/module]]",
+  "action": "exists"
+ },
+ "p-upper-slash": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-slash",
+  "source": "[[MODULE654 foo/bar]]\nbody\n[[/module]]",
+  "action": "exists"
+ },
+ "p-upper-nested": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-nested",
+  "source": "[[MODULE654 CSS]]\n[[module654 Rate]]\n[[/module]]\n[[/module]]",
+  "action": "created"
+ },
+ "p-upper-inline-empty": {
+  "fullname": "muse-probe-r2mod-module654-p-upper-inline-empty",
+  "source": "[[MODULE654 Rate]][[/module]]",
+  "action": "created"
+ },
+ "p-control-module": {
+  "fullname": "muse-probe-r2mod-module654-p-control-module",
+  "source": "[[module Rate]]\n[[/module]]",
+  "action": "created"
+ },
+ "p-control-plain": {
+  "fullname": "muse-probe-r2mod-module654-p-control-plain",
+  "source": "just plain text",
+  "action": "created"
+ }
+}

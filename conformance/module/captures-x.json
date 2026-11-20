@@ -1,0 +1,112 @@
+{
+ "x-both-plain": {
+  "fullname": "muse-probe-r2mod-x-x-both-plain",
+  "html": "<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "4519c092f36652fe5f24804fd3c6845c00a18a45e80c419b785ce84e0abe3101",
+  "source": "[[module654 UnknownModuleX]]",
+  "source_sha256": "31f45c61ace819b22f7487d0ef7f368056fe815e4c8118bd2493e9e9b73252eb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-both-body": {
+  "fullname": "muse-probe-r2mod-x-x-both-body",
+  "html": "<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "4519c092f36652fe5f24804fd3c6845c00a18a45e80c419b785ce84e0abe3101",
+  "source": "[[module654 UnknownModuleX]]\nbody\n[[/module]]",
+  "source_sha256": "d0b6d54e7c64b1c923ad128e2c245007498d342fa05710d684ab96179bc78395",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-both-no-newline": {
+  "fullname": "muse-probe-r2mod-x-x-both-no-newline",
+  "html": "<p>[[module UnknownModuleX]]tail</p>",
+  "html_sha256": "dea1a62cb7d907f3debd48b4830f86f3ec54b85943b47c2c8c5763d60559fd9c",
+  "source": "[[module654 UnknownModuleX]]tail",
+  "source_sha256": "d090152d4a8ae2994f32f3e562ec96baa21bff65c5f69736c0bc5281fc1ed4e0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-both-spaces-newline": {
+  "fullname": "muse-probe-r2mod-x-x-both-spaces-newline",
+  "html": "<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "4519c092f36652fe5f24804fd3c6845c00a18a45e80c419b785ce84e0abe3101",
+  "source": "[[module654 UnknownModuleX]]   \nbody\n[[/module]]",
+  "source_sha256": "1f71fa9d7064488ad9a0ba8dd94c0fd1b4715f28f1ab40a229f16f20fd5da462",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-654-body-module": {
+  "fullname": "muse-probe-r2mod-x-x-654-body-module",
+  "html": "<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "4519c092f36652fe5f24804fd3c6845c00a18a45e80c419b785ce84e0abe3101",
+  "source": "[[module654 UnknownModuleX]]\nbefore\n[[module AnotherUnknownY]]\ninner\n[[/module]]\nafter\n[[/module]]",
+  "source_sha256": "4c6c81918523e7d45e1509dbdbffa351f282cce79e4f55ba5b6c304c6dcaa73b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-mod-body-654": {
+  "fullname": "muse-probe-r2mod-x-x-mod-body-654",
+  "html": "<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "4519c092f36652fe5f24804fd3c6845c00a18a45e80c419b785ce84e0abe3101",
+  "source": "[[module UnknownModuleX]]\nbefore\n[[module654 AnotherUnknownY]]\ninner\n[[/module]]\nafter\n[[/module]]",
+  "source_sha256": "d2828b7de4368936a8588bf830b702e898b254d75cdb4e9a71b9805532b87e40",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-close-654-tag": {
+  "fullname": "muse-probe-r2mod-x-x-close-654-tag",
+  "html": "<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>\n<p>body<br />\n[[/module654]]</p>",
+  "html_sha256": "157187ce65a3acb0e68466e996c6584cec280928af470a09cc9c1cabf85294ed",
+  "source": "[[module654 UnknownModuleX]]\nbody\n[[/module654]]",
+  "source_sha256": "bd13a1a9a985f1e6a239908dcd0f024ffcfb2ab0b006a6d1d608ca4d7834a42c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-close-mod-tag": {
+  "fullname": "muse-probe-r2mod-x-x-close-mod-tag",
+  "html": "<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>\n<p>body<br />\n[[/module654]]</p>",
+  "html_sha256": "157187ce65a3acb0e68466e996c6584cec280928af470a09cc9c1cabf85294ed",
+  "source": "[[module UnknownModuleX]]\nbody\n[[/module654]]",
+  "source_sha256": "d58a80820e9afaf6dd98bc2e5534f9e74d50dc52a91cef95548aaeeb6cff377f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-654-in-654": {
+  "fullname": "muse-probe-r2mod-x-x-654-in-654",
+  "html": "<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>\n<p>[[/module]]</p>",
+  "html_sha256": "244a33b8c3594f89c1d60cdc8d5cf06570a3ea6cc4d3a5b0fdcd5cbc80265565",
+  "source": "[[module654 UnknownModuleX]]\nouter\n[[module654 AnotherUnknownY]]\ninner\n[[/module]]\n[[/module]]",
+  "source_sha256": "a8f73552603dff0683c4a43bcb1a95a2af742f80479bad2f4d7064b0cee62044",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-mod-in-mod": {
+  "fullname": "muse-probe-r2mod-x-x-mod-in-mod",
+  "html": "<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "4519c092f36652fe5f24804fd3c6845c00a18a45e80c419b785ce84e0abe3101",
+  "source": "[[module UnknownModuleX]]\nouter\n[[module AnotherUnknownY]]\ninner\n[[/module]]\n[[/module]]",
+  "source_sha256": "13679a72299267b9d139c2cfcad48a264bd14c9762570bc97dffebf3e6a11e7d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-midline-654": {
+  "fullname": "muse-probe-r2mod-x-x-midline-654",
+  "html": "<p>prefix [[module654 UnknownModuleX]]<br />\nbody<br />\n[[/module]]</p>",
+  "html_sha256": "4fe534915c8668156380df7026d2d8723ecda966caaeacf6efbd35eb84982d55",
+  "source": "prefix [[module654 UnknownModuleX]]\nbody\n[[/module]]",
+  "source_sha256": "a90ca378e9718eeea96a7ff375318477329ceacbc07407ea4a8d77b9761df43d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

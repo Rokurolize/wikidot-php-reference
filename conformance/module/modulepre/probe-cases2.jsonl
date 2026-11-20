@@ -1,0 +1,10 @@
+{"id":"quoted-opener","source":"> [[module654 CSS]]\n> .mp-probe-box { color: red; }\n> [[/module]]"}
+{"id":"inline-body","source":"[[module654 css]]probe-inline[[/module]]"}
+{"id":"closer-654","source":"[[module654 CSS]]\n.mp-probe-box { color: red; }\n[[/module654]]"}
+{"id":"body-empty","source":"[[module654 css]]\n[[/module]]"}
+{"id":"body-absent","source":"[[module654 css]]"}
+{"id":"unterm","source":"[[module654 css]]\n.mp-probe-box { color: red; }"}
+{"id":"nested-module-in-654","source":"[[module654 css]]\n[[module rate]]\n[[/module]]"}
+{"id":"two-654","source":"[[module654 css]]\nALPHA\n[[/module]]\n[[module654 rate]]\nBETA\n[[/module]]"}
+{"id":"adjacent-module","source":"[[module654 css]]\n.mp-probe-box { color: red; }\n[[/module]]\n[[module rate]]"}
+{"id":"stray-closer","source":"[[/module]]"}

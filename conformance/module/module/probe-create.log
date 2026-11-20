@@ -1,0 +1,123 @@
+mod-unknown -> muse-probe-r2mod-module-mod-unknown (exists)
+mod-unknown-mixed -> muse-probe-r2mod-module-mod-unknown-mixed (exists)
+mod-name-leading-digit -> muse-probe-r2mod-module-mod-name-leading-digit (exists)
+mod-name-leading-underscore -> muse-probe-r2mod-module-mod-name-leading-underscore (exists)
+mod-name-slash -> muse-probe-r2mod-module-mod-name-slash (exists)
+mod-name-empty-space -> muse-probe-r2mod-module-mod-name-empty-space (exists)
+mod-attr-on-unknown -> muse-probe-r2mod-module-mod-attr-on-unknown (exists)
+mod-invalid-head-quoted -> muse-probe-r2mod-module-mod-invalid-head-quoted (exists)
+mod-no-newline -> muse-probe-r2mod-module-mod-no-newline (exists)
+mod-stray-closer -> muse-probe-r2mod-module-mod-stray-closer (created)
+mod-midline -> muse-probe-r2mod-module-mod-midline (created)
+mod-leading-space -> muse-probe-r2mod-module-mod-leading-space (created)
+mod-body-inline-unknown -> muse-probe-r2mod-module-mod-body-inline-unknown (created)
+mod-body-unknown-newline -> muse-probe-r2mod-module-mod-body-unknown-newline (created)
+mod-basic -> muse-probe-r2mod-module-mod-basic (created)
+mod-body-present -> muse-probe-r2mod-module-mod-body-present (created)
+mod-probe-module654-basic -> muse-probe-r2mod-module-mod-probe-module654-basic (created)
+mod-probe-nested -> muse-probe-r2mod-module-mod-probe-nested (created)
+mod-probe-unknown-empty-body -> muse-probe-r2mod-module-mod-probe-unknown-empty-body (created)
+mod-probe-known-empty-body -> muse-probe-r2mod-module-mod-probe-known-empty-body (created)
+20 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "mod-unknown": {
+  "fullname": "muse-probe-r2mod-module-mod-unknown",
+  "source": "[[module UnknownOracleModule]]",
+  "action": "exists"
+ },
+ "mod-unknown-mixed": {
+  "fullname": "muse-probe-r2mod-module-mod-unknown-mixed",
+  "source": "[[module Unknown_Oracle-2]]",
+  "action": "exists"
+ },
+ "mod-name-leading-digit": {
+  "fullname": "muse-probe-r2mod-module-mod-name-leading-digit",
+  "source": "[[module 123abc]]",
+  "action": "exists"
+ },
+ "mod-name-leading-underscore": {
+  "fullname": "muse-probe-r2mod-module-mod-name-leading-underscore",
+  "source": "[[module _foo]]",
+  "action": "exists"
+ },
+ "mod-name-slash": {
+  "fullname": "muse-probe-r2mod-module-mod-name-slash",
+  "source": "[[module foo/bar]]",
+  "action": "exists"
+ },
+ "mod-name-empty-space": {
+  "fullname": "muse-probe-r2mod-module-mod-name-empty-space",
+  "source": "[[module ]]",
+  "action": "exists"
+ },
+ "mod-attr-on-unknown": {
+  "fullname": "muse-probe-r2mod-module-mod-attr-on-unknown",
+  "source": "[[module UnknownOracleModule foo=\"bar\"]]",
+  "action": "exists"
+ },
+ "mod-invalid-head-quoted": {
+  "fullname": "muse-probe-r2mod-module-mod-invalid-head-quoted",
+  "source": "[[module foo=\"bar\"]]",
+  "action": "exists"
+ },
+ "mod-no-newline": {
+  "fullname": "muse-probe-r2mod-module-mod-no-newline",
+  "source": "[[module backlinks]]",
+  "action": "exists"
+ },
+ "mod-stray-closer": {
+  "fullname": "muse-probe-r2mod-module-mod-stray-closer",
+  "source": "[[/module]]",
+  "action": "created"
+ },
+ "mod-midline": {
+  "fullname": "muse-probe-r2mod-module-mod-midline",
+  "source": "prefix [[module backlinks]]",
+  "action": "created"
+ },
+ "mod-leading-space": {
+  "fullname": "muse-probe-r2mod-module-mod-leading-space",
+  "source": "[[ module backlinks ]]",
+  "action": "created"
+ },
+ "mod-body-inline-unknown": {
+  "fullname": "muse-probe-r2mod-module-mod-body-inline-unknown",
+  "source": "[[module UnknownOracleModule]]preserved body[[/module]]",
+  "action": "created"
+ },
+ "mod-body-unknown-newline": {
+  "fullname": "muse-probe-r2mod-module-mod-body-unknown-newline",
+  "source": "[[module UnknownOracleModule]]\nbody\n[[/module]]",
+  "action": "created"
+ },
+ "mod-basic": {
+  "fullname": "muse-probe-r2mod-module-mod-basic",
+  "source": "[[module backlinks]]",
+  "action": "created"
+ },
+ "mod-body-present": {
+  "fullname": "muse-probe-r2mod-module-mod-body-present",
+  "source": "[[module css]]\n.blue { color: blue; }\n[[/module]]",
+  "action": "created"
+ },
+ "mod-probe-module654-basic": {
+  "fullname": "muse-probe-r2mod-module-mod-probe-module654-basic",
+  "source": "[[module654 UnknownOracleModule]]",
+  "action": "created"
+ },
+ "mod-probe-nested": {
+  "fullname": "muse-probe-r2mod-module-mod-probe-nested",
+  "source": "[[module css]]\n[[module rate]]\n[[/module]]",
+  "action": "created"
+ },
+ "mod-probe-unknown-empty-body": {
+  "fullname": "muse-probe-r2mod-module-mod-probe-unknown-empty-body",
+  "source": "[[module UnknownOracleModule]]\n[[/module]]",
+  "action": "created"
+ },
+ "mod-probe-known-empty-body": {
+  "fullname": "muse-probe-r2mod-module-mod-probe-known-empty-body",
+  "source": "[[module rate]]\n[[/module]]",
+  "action": "created"
+ }
+}

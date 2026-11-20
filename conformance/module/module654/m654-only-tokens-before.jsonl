@@ -1,0 +1,59 @@
+{"id":"m654-name-basic","output":"[[\"Module654\",{\"moduleName\":\"Rate\",\"attr\":\"\",\"module_body\":\"body\"}]]"}
+{"id":"m654-name-uppercase","output":"{\"1\":[\"Module654\",{\"moduleName\":\"RATE\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-name-mixed","output":"{\"2\":[\"Module654\",{\"moduleName\":\"rate\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-name-leading-digit","output":"{\"3\":[\"Module654\",{\"moduleName\":\"123abc\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-name-digits-only","output":"{\"4\":[\"Module654\",{\"moduleName\":\"654\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-name-slash","output":"{\"5\":[\"Module654\",{\"moduleName\":\"foo\\\/bar\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-name-hyphen","output":"{\"6\":[\"Module654\",{\"moduleName\":\"foo-bar\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-name-leading-hyphen","output":"{\"7\":[\"Module654\",{\"moduleName\":\"-foo\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-name-underscore","output":"{\"8\":[\"Module654\",{\"moduleName\":\"foo_bar\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-name-leading-underscore","output":"{\"9\":[\"Module654\",{\"moduleName\":\"_foo\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-name-empty","output":"[]"}
+{"id":"m654-name-no-space","output":"[]"}
+{"id":"m654-name-dot","output":"[]"}
+{"id":"m654-name-unicode","output":"[]"}
+{"id":"m654-attr-one","output":"{\"10\":[\"Module654\",{\"moduleName\":\"Rate\",\"attr\":\"show=\\\"x\\\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-attr-bare","output":"{\"11\":[\"Module654\",{\"moduleName\":\"Rate\",\"attr\":\"foo\",\"module_body\":\"body\"}]}"}
+{"id":"m654-attr-two","output":"{\"12\":[\"Module654\",{\"moduleName\":\"Rate\",\"attr\":\"a=\\\"1\\\" b=\\\"2\\\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-attr-quoted-space","output":"{\"13\":[\"Module654\",{\"moduleName\":\"Rate\",\"attr\":\"title=\\\"a b\\\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-attr-empty","output":"{\"14\":[\"Module654\",{\"moduleName\":\"Rate\",\"attr\":\"\\\"\\\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-attr-tab","output":"{\"15\":[\"Module654\",{\"moduleName\":\"Rate\",\"attr\":\"foo=\\\"x\\\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-attr-multi-space","output":"{\"16\":[\"Module654\",{\"moduleName\":\"Rate\",\"attr\":\"foo=\\\"x\\\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-body-present","output":"{\"17\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\".red { color: red; }\"}]}"}
+{"id":"m654-body-empty","output":"{\"18\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"\"}]}"}
+{"id":"m654-body-absent","output":"[]"}
+{"id":"m654-body-absent-newline","output":"{\"19\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"\"}]}"}
+{"id":"m654-body-inline","output":"[]"}
+{"id":"m654-body-inline-empty","output":"[]"}
+{"id":"m654-unterminated","output":"{\"20\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"\"}]}"}
+{"id":"m654-stray-closer","output":"[]"}
+{"id":"m654-stray-closer654","output":"[]"}
+{"id":"m654-double-closer","output":"{\"21\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-newline-none","output":"[]"}
+{"id":"m654-newline-spaces","output":"[]"}
+{"id":"m654-newline-crlf","output":"{\"22\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-newline-lone-cr","output":"[]"}
+{"id":"m654-newline-two","output":"{\"23\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-newline-tab-space","output":"[]"}
+{"id":"m654-case-opener-upper","output":"{\"24\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-case-opener-mixed","output":"{\"25\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-case-closer-upper","output":"{\"26\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-case-closer-mixed","output":"{\"27\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-midline","output":"[]"}
+{"id":"m654-leading-space","output":"[]"}
+{"id":"m654-after-blank","output":"{\"28\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-closer-654","output":"{\"29\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"\"}]}"}
+{"id":"m654-closer-module","output":"{\"30\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"m654-module-closer-654","output":"[]"}
+{"id":"m654-adjacent-module","output":"{\"31\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\".a{}\"}]}"}
+{"id":"m654-nested-module","output":"{\"32\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"[[module Rate]]\"}]}"}
+{"id":"m654-nested-654","output":"{\"33\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"[[module654 Rate]]\"}]}"}
+{"id":"m654-module-then-654","output":"{\"34\":[\"Module654\",{\"moduleName\":\"CSS\",\"attr\":\"\",\"module_body\":\"\"}]}"}
+{"id":"m654-vs-module-unknown","output":"[]"}
+{"id":"m654-vs-module-invalid-head","output":"[]"}
+{"id":"m654-vs-module-tail","output":"[]"}
+{"id":"m654-vs-module-sameclose","output":"[]"}
+{"id":"m654-vs-module-attr-unknown","output":"[]"}
+{"id":"m654-vs-module-newline-unknown","output":"{\"35\":[\"Module654\",{\"moduleName\":\"UnknownOracleModule\",\"attr\":\"\",\"module_body\":\"body\"}]}"}
+{"id":"control-module-basic","output":"[]"}
+{"id":"control-plain","output":"[]"}

@@ -1,0 +1,127 @@
+{
+ "known-css-654": {
+  "fullname": "muse-probe-r2mod-modulepre-known-css-654",
+  "source": "[[module654 CSS]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "action": "exists"
+ },
+ "unknown-no-newline": {
+  "fullname": "muse-probe-r2mod-modulepre-unknown-no-newline",
+  "source": "[[module654 UnknownOracleModule]]",
+  "action": "exists"
+ },
+ "unknown-with-body": {
+  "fullname": "muse-probe-r2mod-modulepre-unknown-with-body",
+  "source": "[[module654 UnknownOracleModule]]\nprobe-body\n[[/module]]",
+  "action": "exists"
+ },
+ "unknown-inline-tail": {
+  "fullname": "muse-probe-r2mod-modulepre-unknown-inline-tail",
+  "source": "[[module654 UnknownOracleModule]]TAIL",
+  "action": "exists"
+ },
+ "unknown-attrs": {
+  "fullname": "muse-probe-r2mod-modulepre-unknown-attrs",
+  "source": "[[module654 UnknownOracleModule foo=\"bar\"]]",
+  "action": "exists"
+ },
+ "name-leading-digit": {
+  "fullname": "muse-probe-r2mod-modulepre-name-leading-digit",
+  "source": "[[module654 9lives]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "action": "exists"
+ },
+ "name-slash": {
+  "fullname": "muse-probe-r2mod-modulepre-name-slash",
+  "source": "[[module654 foo/bar]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "action": "exists"
+ },
+ "name-dot": {
+  "fullname": "muse-probe-r2mod-modulepre-name-dot",
+  "source": "[[module654 foo.bar]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "action": "exists"
+ },
+ "name-colon": {
+  "fullname": "muse-probe-r2mod-modulepre-name-colon",
+  "source": "[[module654 foo:bar]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "action": "exists"
+ },
+ "name-empty": {
+  "fullname": "muse-probe-r2mod-modulepre-name-empty",
+  "source": "[[module654 ]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "action": "exists"
+ },
+ "no-newline-literal": {
+  "fullname": "muse-probe-r2mod-modulepre-no-newline-literal",
+  "source": "[[module654 css]]text",
+  "action": "exists"
+ },
+ "trailing-spaces": {
+  "fullname": "muse-probe-r2mod-modulepre-trailing-spaces",
+  "source": "[[module654 css]]   \n.mp-probe-box { color: red; }\n[[/module]]",
+  "action": "exists"
+ },
+ "uppercase-opener": {
+  "fullname": "muse-probe-r2mod-modulepre-uppercase-opener",
+  "source": "[[MODULE654 CSS]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "action": "exists"
+ },
+ "mixed-opener": {
+  "fullname": "muse-probe-r2mod-modulepre-mixed-opener",
+  "source": "[[Module654 CSS]]\n.mp-probe-box { color: red; }\n[[/MODULE]]",
+  "action": "exists"
+ },
+ "midline-opener": {
+  "fullname": "muse-probe-r2mod-modulepre-midline-opener",
+  "source": "prefix [[module654 css]]\n.mp-probe-box { color: red; }\n[[/module]]",
+  "action": "exists"
+ },
+ "quoted-opener": {
+  "fullname": "muse-probe-r2mod-modulepre-quoted-opener",
+  "source": "> [[module654 CSS]]\n> .mp-probe-box { color: red; }\n> [[/module]]",
+  "action": "created"
+ },
+ "inline-body": {
+  "fullname": "muse-probe-r2mod-modulepre-inline-body",
+  "source": "[[module654 css]]probe-inline[[/module]]",
+  "action": "created"
+ },
+ "closer-654": {
+  "fullname": "muse-probe-r2mod-modulepre-closer-654",
+  "source": "[[module654 CSS]]\n.mp-probe-box { color: red; }\n[[/module654]]",
+  "action": "created"
+ },
+ "body-empty": {
+  "fullname": "muse-probe-r2mod-modulepre-body-empty",
+  "source": "[[module654 css]]\n[[/module]]",
+  "action": "created"
+ },
+ "body-absent": {
+  "fullname": "muse-probe-r2mod-modulepre-body-absent",
+  "source": "[[module654 css]]",
+  "action": "created"
+ },
+ "unterm": {
+  "fullname": "muse-probe-r2mod-modulepre-unterm",
+  "source": "[[module654 css]]\n.mp-probe-box { color: red; }",
+  "action": "created"
+ },
+ "nested-module-in-654": {
+  "fullname": "muse-probe-r2mod-modulepre-nested-module-in-654",
+  "source": "[[module654 css]]\n[[module rate]]\n[[/module]]",
+  "action": "created"
+ },
+ "two-654": {
+  "fullname": "muse-probe-r2mod-modulepre-two-654",
+  "source": "[[module654 css]]\nALPHA\n[[/module]]\n[[module654 rate]]\nBETA\n[[/module]]",
+  "action": "created"
+ },
+ "adjacent-module": {
+  "fullname": "muse-probe-r2mod-modulepre-adjacent-module",
+  "source": "[[module654 css]]\n.mp-probe-box { color: red; }\n[[/module]]\n[[module rate]]",
+  "action": "created"
+ },
+ "stray-closer": {
+  "fullname": "muse-probe-r2mod-modulepre-stray-closer",
+  "source": "[[/module]]",
+  "action": "created"
+ }
+}

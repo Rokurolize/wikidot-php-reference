@@ -1,0 +1,11 @@
+{"id": "x-both-plain", "source": "[[module654 UnknownModuleX]]"}
+{"id": "x-both-body", "source": "[[module654 UnknownModuleX]]\nbody\n[[/module]]"}
+{"id": "x-both-no-newline", "source": "[[module654 UnknownModuleX]]tail"}
+{"id": "x-both-spaces-newline", "source": "[[module654 UnknownModuleX]]   \nbody\n[[/module]]"}
+{"id": "x-654-body-module", "source": "[[module654 UnknownModuleX]]\nbefore\n[[module AnotherUnknownY]]\ninner\n[[/module]]\nafter\n[[/module]]"}
+{"id": "x-mod-body-654", "source": "[[module UnknownModuleX]]\nbefore\n[[module654 AnotherUnknownY]]\ninner\n[[/module]]\nafter\n[[/module]]"}
+{"id": "x-close-654-tag", "source": "[[module654 UnknownModuleX]]\nbody\n[[/module654]]"}
+{"id": "x-close-mod-tag", "source": "[[module UnknownModuleX]]\nbody\n[[/module654]]"}
+{"id": "x-654-in-654", "source": "[[module654 UnknownModuleX]]\nouter\n[[module654 AnotherUnknownY]]\ninner\n[[/module]]\n[[/module]]"}
+{"id": "x-mod-in-mod", "source": "[[module UnknownModuleX]]\nouter\n[[module AnotherUnknownY]]\ninner\n[[/module]]\n[[/module]]"}
+{"id": "x-midline-654", "source": "prefix [[module654 UnknownModuleX]]\nbody\n[[/module]]"}
