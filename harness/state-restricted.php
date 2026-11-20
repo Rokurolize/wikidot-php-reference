@@ -102,7 +102,17 @@ while (($line = fgets(STDIN)) !== false) {
     $src = str_replace("\r\n", "\n", $case['source']);
     try {
         $wiki = new Text_Wiki($rules);
-        $wiki->vars['page'] = new RefPage('', 0, array());
+        // R3.4 disclosed driver change: the per-case page is constructed
+        // exactly as harness/batch.php constructs it (the case's "tags"
+        // array, always injected, empty when the case has none), because
+        // Iftags reads vars['page']->getTagsAsArray(); an empty page
+        // object here would silently drop every positively tagged body.
+        // Math's equations map is a process-wide static, reset per case
+        // exactly as batch.php resets it, so cases cannot leak into
+        // each other.
+        $caseTags = (isset($case['tags']) && is_array($case['tags'])) ? $case['tags'] : array();
+        $wiki->vars['page'] = new RefPage('', 0, $caseTags);
+        Text_Wiki_Parse_Math::$equationsArray = array();
         $wiki->parse($src);
         // Split the post-parse source on the delimiter byte: parts
         // alternate text / token id / text / ... / text.
@@ -115,8 +125,52 @@ while (($line = fgets(STDIN)) !== false) {
                 $segments[] = array('k' => (int)$part);
             }
         }
+        // R3.4 disclosed compared-state extension: Math's equations map
+        // (label => id pairs, in insertion order) and the math_id
+        // counter join the compared state for this stage, serialized
+        // identically on the Lean side. Earlier stages' slices carry
+        // the same two fields with their empty values (the map empty,
+        // the counter null) because Math never runs there.
+        $equations = array();
+        foreach (Text_Wiki_Parse_Math::$equationsArray as $label => $mid) {
+            $equations[] = array((string) $label, $mid);
+        }
+        // R3.6 disclosed compared-state extension (second in the R3.4
+        // pattern): the NOTES family's document state joins the
+        // compared state, serialized identically on the Lean side.
+        // "footnotes" is vars['footnotes'] in index order (Footnote
+        // appends each claimed body; Footnoteblock reads the list);
+        // "bibitems" and "bibitemIds" are vars['bibitems'] and
+        // vars['bibitemIds'] as (label, value) pairs in insertion
+        // order (Bibitem writes both; Bibliography and Bibcite read
+        // them). A var the pipeline never touched reads as the empty
+        // list, matching the model's per-document initial values.
+        // The state lives in the per-case Text_Wiki instance's vars,
+        // so no cross-case reset is needed (the R2 NOTES harness
+        // audit verified the family's state does not leak).
+        $footnotes = array();
+        if (isset($wiki->vars['footnotes']) && is_array($wiki->vars['footnotes'])) {
+            foreach ($wiki->vars['footnotes'] as $fnBody) {
+                $footnotes[] = $fnBody;
+            }
+        }
+        $bibitems = array();
+        if (isset($wiki->vars['bibitems']) && is_array($wiki->vars['bibitems'])) {
+            foreach ($wiki->vars['bibitems'] as $label => $content) {
+                $bibitems[] = array((string) $label, $content);
+            }
+        }
+        $bibitemIds = array();
+        if (isset($wiki->vars['bibitemIds']) && is_array($wiki->vars['bibitemIds'])) {
+            foreach ($wiki->vars['bibitemIds'] as $label => $bid) {
+                $bibitemIds[] = array((string) $label, $bid);
+            }
+        }
         $out = ref_wire_encode(array('id' => $id, 'segments' => $segments,
-            'tokens' => $wiki->tokens));
+            'tokens' => $wiki->tokens, 'equations' => $equations,
+            'mathId' => isset($wiki->vars['math_id']) ? $wiki->vars['math_id'] : null,
+            'footnotes' => $footnotes, 'bibitems' => $bibitems,
+            'bibitemIds' => $bibitemIds));
         $json = json_encode($out);
         if ($json === false) {
             echo json_encode(array('id' => $id,
@@ -124,6 +178,14 @@ while (($line = fgets(STDIN)) !== false) {
         } else {
             echo $json, "\n";
         }
+    } catch (ProcessException $e) {
+        // R3.4 PARSE-FATAL protocol: Math's guard throws ProcessException
+        // ("Invalid LaTeX expression(s) found.") and the whole parse
+        // aborts; the case's record is the fatal record, the same shape
+        // the full-pipeline fixture files use, and the Lean driver emits
+        // the identical record when the mirror's guard predicate fires.
+        echo json_encode(array('id' => $id,
+            'fatal' => get_class($e) . ': ' . $e->getMessage())), "\n";
     } catch (Throwable $e) {
         echo json_encode(array('id' => $id,
             'error' => get_class($e) . ': ' . $e->getMessage())), "\n";

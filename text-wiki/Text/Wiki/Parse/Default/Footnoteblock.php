@@ -55,6 +55,29 @@ class Text_Wiki_Parse_Footnoteblock extends Text_Wiki_Parse {
     		$fni = $this->wiki->parseObj['Footnoteitem'];
 
     		foreach($footnotes as $id => $content){
+    			// A footnote body of two paragraphs is re-parsed after this
+    			// assembly. The Paragraph rule leaves the blank line between
+    			// the unwrapped lead and the next paragraph as raw newlines,
+    			// and Tighten then deletes every remaining newline, so the
+    			// rendered body was "first para<p>second para</p>". Live
+    			// (muse-probe-r2notes-fnb24) keeps the break:
+    			// "first para\n<p>second para</p>". A parabreak token placed
+    			// on the lead side of the first blank line renders that
+    			// newline itself. Later paragraphs already separate through
+    			// the paragraph-end renderer, so only the first break is marked.
+    			$marked = false;
+    			$content = preg_replace_callback(
+    				'/\n[ ]*\n/',
+    				function ($m) use ($fni, &$marked) {
+    					if ($marked) {
+    						return $m[0];
+    					}
+    					$marked = true;
+    					return $this->wiki->addToken(
+    						$fni->rule, array('type' => 'parabreak')) . $m[0];
+    				},
+    				$content
+    			);
     			$inside.=$this->wiki->addToken($fni->rule, array('type'=>'start', 'id' => $id+1))
     					.$content."\n\n"
     					.$this->wiki->addToken($fni->rule, array('type'=>'end', 'id' => $id+1));

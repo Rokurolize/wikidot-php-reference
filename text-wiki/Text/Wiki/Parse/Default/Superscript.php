@@ -60,7 +60,16 @@ class Text_Wiki_Parse_Superscript extends Text_Wiki_Parse {
     // the pair match; process() emits no tokens for it, so nothing renders and
     // the surrounding line structure is untouched. Padded empty pairs such as
     // `^^ ^^` stay literal on live (probe p07) and in the reference, unchanged.
-    public $regex =  "/\^\^([^\s](?:.*[^\s])?|)\^\^/U";
+    //
+    // The empty pair has to be the first alternative, the same first-fit the
+    // Subscript rule uses for `,,,,`. Written as an optional body inside one
+    // pair, the non-empty branch is tried first and `^` is a legal body
+    // character, so `^^^^` opens a span that runs to a later `^^`. On
+    // `^^ a ^^ ,, b ,, ^^^^ ,,,, ^^x^^^^ ,,,,y,,,,` that claimed the body
+    // `^^ ,,,, ^^x` and rendered `<sup>^^ ^^x</sup>`. Live
+    // (muse-probe-r2in3-x-x87) consumes `^^^^` as the empty pair, then pairs
+    // `^^x^^` as `<sup>x</sup>` and leaves the surrounding markers literal.
+    public $regex =  "/\^\^\^\^|\^\^([^\s](?:.*[^\s])?)\^\^/U";
     
     /**
     * 
@@ -82,7 +91,10 @@ class Text_Wiki_Parse_Superscript extends Text_Wiki_Parse {
     {
         // R2-inline3 correction C1 (continued): an empty body consumes the
         // four markers but emits no start/end tokens, matching live and ftml.
-        if ($matches[1] === '') {
+        // The leading ^^^^ alternative leaves group 1 unset; the pair
+        // alternative leaves it empty only when it does not match.
+        $body = isset($matches[1]) ? $matches[1] : '';
+        if ($body === '') {
             return '';
         }
         $start = $this->wiki->addToken(
@@ -93,6 +105,6 @@ class Text_Wiki_Parse_Superscript extends Text_Wiki_Parse {
             $this->rule, array('type' => 'end')
         );
         
-        return $start . $matches[1] . $end;
+        return $start . $body . $end;
     }
 }

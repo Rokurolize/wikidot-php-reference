@@ -36,6 +36,13 @@ class Text_Wiki_Render_Xhtml_Footnoteitem extends Text_Wiki_Render {
      */
     
     function token($options) {
+        // Emitted by Footnoteblock on the lead side of the first paragraph
+        // break in a note body. Tighten deletes raw newlines, so the break
+        // has to be a token to survive as the newline live puts before the
+        // next <p> (muse-probe-r2notes-fnb24).
+        if ($options['type'] == 'parabreak') {
+            return "\n";
+        }
         if ($options['type'] == 'start') {
 
             $idPrefix = $this->wiki->getRenderConf('xhtml', 'footnote', 'id_prefix');
