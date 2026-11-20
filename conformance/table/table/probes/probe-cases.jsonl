@@ -1,0 +1,15 @@
+{"id": "p01-header-spaced-literal", "source": "|| ~ Head ||\nx"}
+{"id": "p02-header-unspaced", "source": "||~ Head ||\nx"}
+{"id": "p03-empty-only-rows", "source": "||||\n||||||\nx"}
+{"id": "p04-trailing-empties", "source": "|| A ||||\n|| B ||||||\nx"}
+{"id": "p05-alignment-markers", "source": "||> Right ||\n||= Center ||\n||< Left ||\nx"}
+{"id": "p06-header-span", "source": "||||||~ Very Berry ||\nx"}
+{"id": "p07-unterminated-row", "source": "|| A || B ||\n|| C || D\nx"}
+{"id": "p08-bold-crosses-cell", "source": "|| **A1 || B2** || C3 ||\nx"}
+{"id": "p09-list-in-cell", "source": "||[[ul]]\n* one\n* two\n[[/ul]] ||\n|| after ||\nx"}
+{"id": "p10-div-in-cell", "source": "||[[div class=\"x\"]]\ninside\n[[/div]] ||\n|| after ||\nx"}
+{"id": "p11-two-tables-blank", "source": "|| one ||\n\n|| two ||\nx"}
+{"id": "p12-paragraph-then-table", "source": "Plain paragraph before.\n\n|| Alpha ||\nx"}
+{"id": "p13-heading-between-tables", "source": "|| A || B ||\n+ Heading\n|| C || D ||\nx"}
+{"id": "p14-entity-and-color", "source": "||<<french quotes>>|| ##red|color## ||\nx"}
+{"id": "p15-quoted-table", "source": "> || quoted ||\n> || row ||\nx"}

@@ -1,0 +1,65 @@
+R2-table root cross-rule interaction: three-way comparison (pre)
+valid probes: 46; signature counts: {'all3': 41, 'ref_live': 3, 'ftm_live': 2, 'ref_ftm': 0, 'all_disagree': 0}
+canon counts: ref==ftml 39, ref==live 42, ftml==live 43
+
+x01-table-in-div                   ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x02-table-in-div-attr              ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x03-table-in-collapsible           ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x04-table-in-collapsible-closed    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x05-table-in-quote                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x06-table-in-quote-head            ALL3           canon(r=f)=False canon(r=l)=False canon(f=l)=True
+x07-adv-in-div                     ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x08-adv-in-collapsible             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x09-table-in-quote-in-div          ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x10-simple-then-adv                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x11-adv-then-simple                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x12-simple-adv-no-blank            ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x13-adv-in-simple-cell             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x14-simple-in-adv-cell             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x15-adv-in-adv-cell                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x16-two-adv-adjacent               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x17-simple-adv-simple              ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x18-cell-with-span                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x19-cell-with-size                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x20-cell-with-color                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x21-cell-with-bold                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x22-cell-with-footnote             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x23-cell-with-triple-link          ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x24-cell-with-url-pipe             REF+LIVE       canon(r=f)=False canon(r=l)=True canon(f=l)=False
+  ref : {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c='), ('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': '[[ https://example.com|Example ]] b'}
+  ftml: {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c='), ('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': '[[ https://example.com |Example]] b'}
+  live: {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c='), ('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': '[[ https://example.com|Example ]] b'}
+x25-cell-with-url-pipe-cell2       REF+LIVE       canon(r=f)=False canon(r=l)=True canon(f=l)=False
+  ref : {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c='), ('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': 'a [[ http://example.com|link ]]'}
+  ftml: {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c='), ('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': 'a [[ http://example.com |link]]'}
+  live: {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c='), ('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': 'a [[ http://example.com|link ]]'}
+x26-cell-with-raw                  ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x27-adv-cell-with-span             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x28-adv-cell-with-url-pipe         REF+LIVE       canon(r=f)=False canon(r=l)=True canon(f=l)=False
+  ref : {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': '[[ https://example.com|E ]]'}
+  ftml: {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': '[[ https://example.com |E]]'}
+  live: {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': '[[ https://example.com|E ]]'}
+x29-cell-with-div                  ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x30-cell-with-collapsible          FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'tags': [('', 'table'), ('', 'tr'), ('/', 'tr'), ('/', 'table')], 'cells': [], 'spans': [], 'lit': {}, 'text': 'hidden || b ||'}
+  ftml: {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': 'hidden || b ||'}
+  live: {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': 'hidden || b ||'}
+x31-table-heading-table            ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x32-table-toc-table                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x33-table-list-table               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x34-table-deflist-table            ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x35-table-hr-table                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x36-table-code-table               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x37-heading-then-table             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x38-list-then-table                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x39-adv-heading-adv                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x40-adv-colspan-rowspan            FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=', 'rs=', 'c='), ('td', 'cs=', 'rs=', 'c='), ('td', 'cs=', 'rs=', 'c='), ('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': 'wide tall b d'}
+  ftml: {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=2', 'rs=', 'c='), ('td', 'cs=', 'rs=2', 'c='), ('td', 'cs=', 'rs=', 'c='), ('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': 'wide tall b d'}
+  live: {'tags': [('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table')], 'cells': [('td', 'cs=2', 'rs=', 'c='), ('td', 'cs=', 'rs=2', 'c='), ('td', 'cs=', 'rs=', 'c='), ('td', 'cs=', 'rs=', 'c=')], 'spans': [], 'lit': {}, 'text': 'wide tall b d'}
+x41-simple-trailing-empty-span     ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x42-simple-header-mix              ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x43-adv-empty-cells                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x44-malformed-adv-opener           ALL3           canon(r=f)=False canon(r=l)=False canon(f=l)=True
+x45-table-then-literal-brackets    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x46-div-simple-collapsible-adv     ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True

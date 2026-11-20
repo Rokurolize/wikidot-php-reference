@@ -1,0 +1,60 @@
+{"id": "adv01-single-cell", "source": "[[table]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv02-two-rows", "source": "[[table]]\n[[row]]\n[[cell]]A[[/cell]]\n[[cell]]B[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]C[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv03-three-cells", "source": "[[table]]\n[[row]]\n[[cell]]A[[/cell]]\n[[cell]]B[[/cell]]\n[[cell]]C[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv04-two-tables", "source": "[[table]]\n[[row]]\n[[cell]]A[[/cell]]\n[[/row]]\n[[/table]]\n\n[[table]]\n[[row]]\n[[cell]]B[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv05-inline-form", "source": "[[table]] [[row]] [[cell]] Apple [[/cell]] [[/row]] [[/table]]", "tags": []}
+{"id": "adv06-midline-table", "source": "intro [[table]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]] tail", "tags": []}
+{"id": "adv07-after-heading", "source": "= Heading =\n\n[[table]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv08-table-then-paragraph", "source": "[[table]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]\n\nafter", "tags": []}
+{"id": "adv09-empty-table-literal", "source": "[[table]]\n[[/table]]", "tags": []}
+{"id": "adv10-empty-row-literal", "source": "[[table]]\n[[row]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv11-empty-cell", "source": "[[table]]\n[[row]]\n[[cell]][[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv12-empty-plus-content", "source": "[[table]]\n[[row]]\n[[cell]][[/cell]]\n[[cell]]B[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv13-empty-row-then-full-row", "source": "[[table]]\n[[row]]\n[[/row]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv14-header-row", "source": "[[table]]\n[[row]]\n[[hcell]]A[[/hcell]]\n[[hcell]]B[[/hcell]]\n[[/row]]\n[[row]]\n[[cell]]1[[/cell]]\n[[cell]]2[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv15-hcell-cell-closer", "source": "[[table]]\n[[row]]\n[[hcell]]Heading[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv16-cell-hcell-closer", "source": "[[table]]\n[[row]]\n[[cell]]Heading[[/hcell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv17-header-attrs", "source": "[[table]]\n[[row]]\n[[hcell colspan=\"2\" class=\"heading\"]]Group[[/hcell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv18-mixed-header-body", "source": "[[table]]\n[[row]]\n[[hcell]]H[[/hcell]]\n[[/row]]\n[[row]]\n[[cell]]D[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv19-colspan", "source": "[[table]]\n[[row]]\n[[cell colspan=\"3\"]]Three[[/cell]]\n[[cell rowspan=\"2\"]]Two[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv20-rowspan", "source": "[[table]]\n[[row]]\n[[cell rowspan=\"2\"]]Two[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]A[[/cell]]\n[[cell]]B[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv21-colspan-zero", "source": "[[table]]\n[[row]]\n[[cell colspan=\"0\" data-name=\"zero\"]]Zero[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv22-rowspan-zero", "source": "[[table]]\n[[row]]\n[[cell rowspan=\"0\"]]Zero[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv23-colspan-bad", "source": "[[table]]\n[[row]]\n[[cell colspan=\"abc\" data-name=\"bad\"]]Bad[[/cell]]\n[[hcell colspan=\"2\"]]Good[[/hcell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv24-colspan-big", "source": "[[table]]\n[[row]]\n[[cell colspan=\"10\" rowspan=\"2\"]]Wide[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv25-header-colspan", "source": "[[table]]\n[[row]]\n[[hcell colspan=\"2\"]]Group[[/hcell]]\n[[/row]]\n[[row]]\n[[cell]]A[[/cell]]\n[[cell]]B[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv26-table-attrs", "source": "[[table class=\"grid\" style=\"color: red\"]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv27-table-id", "source": "[[table id=\"fruit\"]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv28-row-attrs", "source": "[[table]]\n[[row data-id=\"r1\" class=\"top\"]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv29-cell-attrs", "source": "[[table]]\n[[row]]\n[[cell data-sort=\"number\" class=\"c\"]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv30-unknown-attrs", "source": "[[table foo=\"2\"]]\n[[row]]\n[[cell foo=\"1\" aria-label=\"l\"]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv31-uppercase-attrs", "source": "[[table CLASS=\"g\"]]\n[[row]]\n[[cell CLASS=\"c\" DATA-X=\"1\"]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv32-quoted-close-bracket", "source": "[[table class=\"a]]b\"]]\n[[row]][[cell]]x[[/cell]][[/row]]\n[[/table]]", "tags": []}
+{"id": "adv33-empty-attr-values", "source": "[[table class=\"\"]]\n[[row]]\n[[cell class=\"\" data-x=\"\"]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv34-title-attr", "source": "[[table title=\"tip\"]]\n[[row]]\n[[cell title=\"tip\"]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv35-many-attrs", "source": "[[table class=\"a\" id=\"x\" style=\"color:red\"]]\n[[row]]\n[[cell z=\"1\" a=\"2\" m=\"3\" class=\"c\"]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv36-dup-attr", "source": "[[table]]\n[[row]]\n[[cell class=\"a\" class=\"b\"]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv37-id-prefixed", "source": "[[table id=\"u-foo\"]]\n[[row]]\n[[cell id=\"u-bar\"]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv38-unquoted-attrs", "source": "[[table]]\n[[row]]\n[[cell class=foo data-x=1]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv39-align-center", "source": "[[table]]\n[[row]]\n[[cell align=\"center\"]]C[[/cell]]\n[[cell style=\"text-align: right;\"]]R[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv40-valign-dropped", "source": "[[table]]\n[[row]]\n[[cell valign=\"top\"]]X[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv41-inline-markup", "source": "[[table]]\n[[row]]\n[[cell]]**bold** and //italic//[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv42-paragraph-cell", "source": "[[table]]\n[[row]]\n[[cell]]\n\nApple\n\n[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv43-two-paragraph-cell", "source": "[[table]]\n[[row]]\n[[cell]]\n\nApple\n\nPear\n\n[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv44-list-in-cell", "source": "[[table]]\n[[row]]\n[[cell]]\n* one\n* two\n[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv45-heading-in-cell", "source": "[[table]]\n[[row]]\n[[cell]]\n= Inner =\n[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv46-quote-in-cell", "source": "[[table]]\n[[row]]\n[[cell]]\n> quoted\n[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv47-space-junk", "source": "[[table]]   \n [[row]]  [[cell]]A[[/cell]]  [[/row]] \n[[/table]]", "tags": []}
+{"id": "adv48-nested-inline", "source": "[[table]][[row]][[cell]][[table]][[row]][[cell]].[[/cell]][[/row]][[/table]][[/cell]][[/row]][[/table]]", "tags": []}
+{"id": "adv49-nested-paragraph", "source": "[[table]]\n[[row]]\n[[cell]]\n\n1\n\n[[table]]\n[[row]]\n[[cell]]\n\n2\n\n[[/cell]]\n[[/row]]\n[[/table]]\n\n[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv50-nested-deep", "source": "[[table]]\n[[row]]\n[[cell]][[table]]\n[[row]]\n[[cell]][[table]]\n[[row]]\n[[cell]]deep[[/cell]]\n[[/row]]\n[[/table]][[/cell]]\n[[/row]]\n[[/table]][[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv51-junk-in-table", "source": "[[table]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\njunk\n[[/table]]", "tags": []}
+{"id": "adv52-junk-in-row", "source": "[[table]]\n[[row]]\n[[cell]]X[[/cell]]\njunk\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv53-unterminated-table", "source": "[[table]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]", "tags": []}
+{"id": "adv54-unterminated-cell", "source": "[[table]]\n[[row]]\n[[cell]]X\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv55-naked-row-cell", "source": "[[row]] naked [[/row]]\n\n[[cell]] naked [[/cell]]\n\n[[hcell]] naked [[/hcell]]", "tags": []}
+{"id": "adv56-col-alias", "source": "[[table]]\n[[row]]\n[[col]]X[[/col]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv57-fused-close", "source": "[[table]]\n[[row]]\n[[cell]]x[[/cell]]\n[[/row]]\n[[/table]]]\nafter", "tags": []}
+{"id": "adv58-table-in-div", "source": "[[div]]\n[[table]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]\n[[/div]]", "tags": []}
+{"id": "adv59-malformed-args", "source": "[[table bad=1]]\n[[/table]]\n\n[[table]]\n[[row]]\n[[cell bad=1]]x[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}
+{"id": "adv60-cell-quoted-bracket", "source": "[[table]]\n[[row]]\n[[cell class=\"a]b\"]]x[[/cell]]\n[[/row]]\n[[/table]]", "tags": []}

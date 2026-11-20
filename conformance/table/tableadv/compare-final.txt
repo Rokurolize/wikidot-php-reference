@@ -1,0 +1,31 @@
+vs ftml: total=60 shaped_same=50 byte_same=40 diff=10
+=== adv06-midline-table
+  ref: '<p>intro <table>\n<tr>\n<td>X</td>\n</tr>\n</table> tail</p>\n\n'
+  ftml: '<p>intro</p><table>\n<tr>\n<td>X</td>\n</tr>\n</table><p>tail</p>'
+=== adv42-paragraph-cell
+  ref: '<table>\n<tr>\n<td><p>Apple</p>\n\n</td>\n</tr>\n</table>'
+  ftml: '<table>\n<tr>\n<td><p>Apple</p></td>\n</tr>\n</table>'
+=== adv43-two-paragraph-cell
+  ref: '<table>\n<tr>\n<td><p>Apple</p>\n\n<p>Pear</p>\n\n</td>\n</tr>\n</table>'
+  ftml: '<table>\n<tr>\n<td><p>Apple</p><p>Pear</p></td>\n</tr>\n</table>'
+=== adv45-heading-in-cell
+  ref: '<table>\n<tr>\n<td>= Inner =</td>\n</tr>\n</table>'
+  ftml: '<table>\n<tr>\n<td>Inner =</td>\n</tr>\n</table>'
+=== adv46-quote-in-cell
+  ref: '<table>\n<tr>\n<td><blockquote><p>quoted</p>\n\n</blockquote>\n</td>\n</tr>\n</table>'
+  ftml: '<table>\n<tr>\n<td><blockquote><p>quoted</p></blockquote></td>\n</tr>\n</table>'
+=== adv49-nested-paragraph
+  ref: '<table>\n<tr>\n<td><p>1</p>\n\n<table>\n<tr>\n<td><p>2</p>\n\n</td>\n</tr>\n</table></td>\n</tr>\n</table>'
+  ftml: '<table>\n<tr>\n<td><p>1</p><table>\n<tr>\n<td><p>2</p></td>\n</tr>\n</table></td>\n</tr>\n</table>'
+=== adv55-naked-row-cell
+  ref: '<p>[[row]] naked [[/row]]</p>\n\n<p>[[cell]] naked [[/cell]]</p>\n\n<p>[[hcell]] naked [[/hcell]]</p>\n\n'
+  ftml: '<p>[[row]] naked [[/row]]</p><p>[[cell]] naked [[/cell]]</p><p>[[hcell]] naked [[/hcell]]</p>'
+=== adv57-fused-close
+  ref: '<table>\n<tr>\n<td>x</td>\n</tr>\n</table>]<br />\nafter'
+  ftml: '<table>\n<tr>\n<td>x</td>\n</tr>\n</table><p>]<br>\nafter</p>'
+=== adv58-table-in-div
+  ref: '<div ><table>\n<tr>\n<td>X</td>\n</tr>\n</table></div>'
+  ftml: '<div><table>\n<tr>\n<td>X</td>\n</tr>\n</table></div>'
+=== adv59-malformed-args
+  ref: '<p>[[table bad=1]]<br />\n[[/table]]</p>\n\n<table>\n<tr>\n<td>x</td>\n</tr>\n</table>'
+  ftml: '<table>\n<tr>\n<td>x</td>\n</tr>\n</table>'

@@ -1,0 +1,73 @@
+BATTERY (whole-document cases)
+cases=60
+before: byte_identical=0/60 shaped_agreement=0/60 shaped_diff=60
+final: byte_identical=41/60 shaped_agreement=45/60 shaped_diff=15
+final shaped disagreements: t35-07-trailing-space, t35-11-header-repeated-literal, t35-25-all-empty-row, t35-27-bold-italic-color, t35-32-french-quotes-and-literal-angle, t35-34-cell-with-div, t35-35-cell-with-list, t35-38-paragraph-then-table, t35-39-interrupted-by-heading, t35-40-interrupted-by-hr, t35-41-interrupted-by-code, t35-47-single-pipe-lines, t35-52-nested-table-opener, t35-53-advanced-inside-simple, t35-59-inline-bold-crosses-cell
+=== t35-07-trailing-space
+  ref: '<table class="wiki-content-table">\n<tr>\n<td>Para space</td>\n</tr>\n</table><p>After</p>\n<table class="wiki-content-table">\n<tr>\n<td>EOF space</td>\n</tr>\n</table>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td>Para space</td>\n</tr>\n</table><p>After</p><table class="wiki-content-table">\n<tr>\n<td>EOF space</td>\n</tr>\n</table>'
+=== t35-11-header-repeated-literal
+  ref: '<table class="wiki-content-table">\n<tr>\n<td>~~ A</td>\n</tr>\n<tr>\n<td>=== B</td>\n</tr>\n<tr>\n<td>&#187;&gt; C</td>\n</tr>\n</table>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td>~~ A</td>\n</tr>\n<tr>\n<td>=== B</td>\n</tr>\n<tr>\n<td>»&gt; C</td>\n</tr>\n</table>'
+=== t35-25-all-empty-row
+  ref: '<table class="wiki-content-table">\n<tr>\n<td></td>\n</tr>\n<tr>\n<td></td>\n</tr>\n</table>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td colspan="2"></td>\n</tr>\n<tr>\n<td></td>\n</tr>\n</table>'
+=== t35-27-bold-italic-color
+  ref: '<table class="wiki-content-table">\n<tr>\n<td><strong>bold</strong></td>\n<td><em>italic</em></td>\n<td><span style="color: red;">color</span></td>\n</tr>\n</table>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td><strong>bold</strong></td>\n<td><em>italic</em></td>\n<td><span style="color: red">color</span></td>\n</tr>\n</table>'
+=== t35-32-french-quotes-and-literal-angle
+  ref: '<table class="wiki-content-table">\n<tr>\n<td>&#171;french quotes&#187;</td>\n<td>&lt;div&gt;</td>\n</tr>\n</table>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td>«french quotes»</td>\n<td>&lt;div&gt;</td>\n</tr>\n</table>'
+=== t35-34-cell-with-div
+  ref: '<table class="wiki-content-table">\n<tr>\n<td></td>\n</tr>\n</table><p>inside</p>\n</div>||<br>\n<table class="wiki-content-table">\n<tr>\n<td>after</td>\n</tr>\n</table>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td></td>\n</tr>\n</table><p>inside</p>\n||<br>\n<table class="wiki-content-table">\n<tr>\n<td>after</td>\n</tr>\n</table>'
+=== t35-35-cell-with-list
+  ref: '<table class="wiki-content-table">\n<tr>\n<td></td>\n</tr>\n</table><ul>\n<li>one</li>\n<li>two</li>\n</ul><p>[[/ul]] ||<br>\n<table class="wiki-content-table">\n<tr>\n<td>after</td>\n</tr>\n</table></p>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td><ul>\n<li style="list-style: none; display: inline"><ul>\n<li>one</li>\n<li>two</li>\n</ul></li></ul></td>\n</tr>\n<tr>\n<td>after</td>\n</tr>\n</table>'
+=== t35-38-paragraph-then-table
+  ref: '<p>Plain paragraph before.</p>\n<table class="wiki-content-table">\n<tr>\n<td>Alpha</td>\n</tr>\n</table>'
+  ftml: '<p>Plain paragraph before.</p><table class="wiki-content-table">\n<tr>\n<td>Alpha</td>\n</tr>\n</table>'
+=== t35-39-interrupted-by-heading
+  ref: '<table class="wiki-content-table">\n<tr>\n<td>A</td>\n<td>B</td>\n</tr>\n</table>\n<h1 id="toc0"><span>Heading</span></h1>\n<table class="wiki-content-table">\n<tr>\n<td>C</td>\n<td>D</td>\n</tr>\n</table>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td>A</td>\n<td>B</td>\n</tr>\n</table><h1 id="toc0"><span>Heading</span></h1><table class="wiki-content-table">\n<tr>\n<td>C</td>\n<td>D</td>\n</tr>\n</table>'
+=== t35-40-interrupted-by-hr
+  ref: '<table class="wiki-content-table">\n<tr>\n<td>A</td>\n</tr>\n</table><hr />\n<table class="wiki-content-table">\n<tr>\n<td>B</td>\n</tr>\n</table>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td>A</td>\n</tr>\n</table><hr><table class="wiki-content-table">\n<tr>\n<td>B</td>\n</tr>\n</table>'
+=== t35-41-interrupted-by-code
+  ref: '<table class="wiki-content-table">\n<tr>\n<td>A</td>\n</tr>\n</table><p><tt> some code </tt><br>\n<table class="wiki-content-table">\n<tr>\n<td>B</td>\n</tr>\n</table></p>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td>A</td>\n</tr>\n</table><tt>some code</tt><br>\n<table class="wiki-content-table">\n<tr>\n<td>B</td>\n</tr>\n</table>'
+=== t35-47-single-pipe-lines
+  ref: '<table class="wiki-content-table">\n<tr>\n<td>A</td>\n</tr>\n</table><p>| single ||<br>\n<table class="wiki-content-table">\n<tr>\n<td>B</td>\n</tr>\n</table></p>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td>A</td>\n</tr>\n</table>\n| single ||<br>\n<table class="wiki-content-table">\n<tr>\n<td>B</td>\n</tr>\n</table>'
+=== t35-52-nested-table-opener
+  ref: '<table class="wiki-content-table">\n<tr>\n<td>outer A1</td>\n</tr>\n<tr>\n<td></td>\n</tr>\n<tr>\n<td>inner B2</td>\n</tr>\n</table><p>[[/table]] ||<br>\n<table class="wiki-content-table">\n<tr>\n<td>outer C3</td>\n</tr>\n</table></p>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td>outer A1</td>\n</tr>\n<tr>\n<td></td>\n</tr>\n<tr>\n<td>inner B2</td>\n</tr>\n</table>\n[[/table]] ||<br>\n<table class="wiki-content-table">\n<tr>\n<td>outer C3</td>\n</tr>\n</table>'
+=== t35-53-advanced-inside-simple
+  ref: '<table class="wiki-content-table">\n<tr>\n<td>outer</td>\n</tr>\n</table><table>\n<tr>\n<td>inner</td>\n</tr>\n</table><br>\n<table class="wiki-content-table">\n<tr>\n<td>tail</td>\n</tr>\n</table>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td>outer</td>\n</tr>\n</table><table>\n<tr>\n<td>inner</td>\n</tr>\n</table><table class="wiki-content-table">\n<tr>\n<td>tail</td>\n</tr>\n</table>'
+=== t35-59-inline-bold-crosses-cell
+  ref: '<table class="wiki-content-table">\n<tr>\n<td><strong>A1</td>\n<td>B2</strong></td>\n<td>C3</td>\n</tr>\n</table>'
+  ftml: '<table class="wiki-content-table">\n<tr>\n<td><strong>A1</strong></td>\n<td>B2</td>\n<td>C3</td>\n</tr>\n</table>'
+
+LIVE PROBES
+probes=15 valid=15 stable=15 source_matches=15
+strict inter-block newline comparison: every live capture has one serving-layer newline between adjacent block tags that neither the dumper nor the reference emits, so strict matches are 0 on all three sides; the frame-tolerant numbers below remove only that newline
+before vs live (frame-tolerant): match=0/15
+final vs live (frame-tolerant): match=11/15
+ftml vs live (frame-tolerant): match=13/15
+=== p08-bold-crosses-cell
+  ref:  '<table class="wiki-content-table"><tr><td><strong>A1</td><td>B2</strong></td><td>C3</td></tr></table><p>x</p>'
+  ftml: '<table class="wiki-content-table"><tr><td><strong>A1</strong></td><td>B2</td><td>C3</td></tr></table><p>x</p>'
+  live: '<table class="wiki-content-table"><tr><td><strong>A1</strong></td><td>B2</td><td>C3</td></tr></table><p>x</p>'
+=== p09-list-in-cell
+  ref:  '<table class="wiki-content-table"><tr><td></td></tr></table><ul><li>one</li><li>two</li></ul><p>[[/ul]] ||<br><table class="wiki-content-table"><tr><td>after</td></tr></table></p><p>x</p>'
+  ftml: '<table class="wiki-content-table"><tr><td><ul><li style="list-style: none; display: inline"><ul><li>one</li><li>two</li></ul></li></ul></td></tr><tr><td>after</td></tr></table><p>x</p>'
+  live: '<table class="wiki-content-table"><tr><td><ul><li style="list-style: none; display: inline"><ul><li>one</li><li>two</li></ul></li></ul></td></tr><tr><td>after</td></tr></table><p>x</p>'
+=== p10-div-in-cell
+  ref:  '<table class="wiki-content-table"><tr><td></td></tr></table><p>inside</p></div>||<br><table class="wiki-content-table"><tr><td>after</td></tr></table><p>x</p>'
+  ftml: '<table class="wiki-content-table"><tr><td></td></tr></table><p>inside</p>\n||<br><table class="wiki-content-table"><tr><td>after</td></tr></table><p>x</p>'
+  live: '<table class="wiki-content-table"><tr><td></td></tr></table><p>inside</p>\n||<br><table class="wiki-content-table"><tr><td>after</td></tr></table><p>x</p>'
+=== p14-entity-and-color
+  ref:  '<table class="wiki-content-table"><tr><td>&#171;french quotes&#187;</td><td><span style="color: red;">color</span></td></tr></table><p>x</p>'
+  ftml: '<table class="wiki-content-table"><tr><td>«french quotes»</td><td><span style="color: red">color</span></td></tr></table><p>x</p>'
+  live: '<table class="wiki-content-table"><tr><td>&#171;french quotes&#187;</td><td><span style="color: red">color</span></td></tr></table><p>x</p>'

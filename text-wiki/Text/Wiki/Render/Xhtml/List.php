@@ -86,7 +86,7 @@ class Text_Wiki_Render_Xhtml_List extends Text_Wiki_Render {
             } else {
                 $html = "</li>\n</{$tag}>";
             }
-            if (($level > 0 && ! $inSublist)
+            if ($level > 0
                 || ($level === 0 && $tailSublist)) {
                 $html .= "\n";
             }
@@ -94,11 +94,11 @@ class Text_Wiki_Render_Xhtml_List extends Text_Wiki_Render {
             break;
 
         case 'sublist_start':
-            return '<li style="list-style: none; display: inline">';
+            return '<li style="list-style: none; display: inline">' . "\n";
             break;
 
         case 'sublist_end':
-            return '</li>';
+            return '</li>' . "\n";
             break;
 
         case 'bullet_item_start':

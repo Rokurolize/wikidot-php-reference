@@ -1,0 +1,15 @@
+{"id":"p01-header-spaced-literal","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>~ Head<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p02-header-unspaced","output":"<table class=\"wiki-content-table\">\n<tr>\n<th>Head<\/th>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p03-empty-only-rows","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><\/td>\n<\/tr>\n<tr>\n<td><\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p04-trailing-empties","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>A<\/td>\n<\/tr>\n<tr>\n<td>B<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p05-alignment-markers","output":"<table class=\"wiki-content-table\">\n<tr>\n<td style=\"text-align: right;\">Right<\/td>\n<\/tr>\n<tr>\n<td style=\"text-align: center;\">Center<\/td>\n<\/tr>\n<tr>\n<td style=\"text-align: left;\">Left<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p06-header-span","output":"<table class=\"wiki-content-table\">\n<tr>\n<th colspan=\"3\">Very Berry<\/th>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p07-unterminated-row","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>A<\/td>\n<td>B<\/td>\n<\/tr>\n<tr>\n<td>C<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p08-bold-crosses-cell","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><strong>A1<\/td>\n<td>B2<\/strong><\/td>\n<td>C3<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p09-list-in-cell","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><\/td>\n<\/tr>\n<\/table><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><p>[[\/ul]] ||<br \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>after<\/td>\n<\/tr>\n<\/table><\/p>\n\n<p>x<\/p>\n\n"}
+{"id":"p10-div-in-cell","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><\/td>\n<\/tr>\n<\/table><p>inside<\/p>\n\n<\/div>||<br \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>after<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p11-two-tables-blank","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>one<\/td>\n<\/tr>\n<\/table><table class=\"wiki-content-table\">\n<tr>\n<td>two<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p12-paragraph-then-table","output":"<p>Plain paragraph before.<\/p>\n\n<table class=\"wiki-content-table\">\n<tr>\n<td>Alpha<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p13-heading-between-tables","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>A<\/td>\n<td>B<\/td>\n<\/tr>\n<\/table>\n<h1 id=\"toc0\"><span>Heading<\/span><\/h1>\n<table class=\"wiki-content-table\">\n<tr>\n<td>C<\/td>\n<td>D<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p14-entity-and-color","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>&#171;french quotes&#187;<\/td>\n<td><span style=\"color: red;\">color<\/span><\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p15-quoted-table","output":"<blockquote><table class=\"wiki-content-table\">\n<tr>\n<td>quoted<\/td>\n<\/tr>\n<tr>\n<td>row<\/td>\n<\/tr>\n<\/table><\/blockquote>\n<p>x<\/p>\n\n"}

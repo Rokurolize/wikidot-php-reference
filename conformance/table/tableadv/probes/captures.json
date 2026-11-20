@@ -1,0 +1,202 @@
+{
+ "adv01-single-cell": {
+  "fullname": "muse-probe-r2table-adv-adv01-single-cell",
+  "html": "<table>\n<tr>\n<td>X</td>\n</tr>\n</table>",
+  "html_sha256": "b2d1deaa37ec13ca09c3f51edba4b4314735c5d7dec113d224c705341073345b",
+  "source": "[[table]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "486712ceb94fd6459ad33257c1d616ff27a792506a0f4f62895f681936e3517a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv02-two-rows": {
+  "fullname": "muse-probe-r2table-adv-adv02-two-rows",
+  "html": "<table>\n<tr>\n<td>A</td>\n<td>B</td>\n</tr>\n<tr>\n<td>C</td>\n</tr>\n</table>",
+  "html_sha256": "435f0ae2ad5928514d1e580658f62d43774f58c4d3bedb4f73ac8f0eb715993b",
+  "source": "[[table]]\n[[row]]\n[[cell]]A[[/cell]]\n[[cell]]B[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]C[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "00167db7ef1022ccb1bfb2906750b6b53fcc52e260ca06057027a5dbe3367d34",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv11-empty-cell": {
+  "fullname": "muse-probe-r2table-adv-adv11-empty-cell",
+  "html": "<table>\n<tr>\n<td></td>\n</tr>\n</table>",
+  "html_sha256": "ce0230039a7948867bf4ae3edebb245ac76d6e7d4be3467b0b392f93d66f2acf",
+  "source": "[[table]]\n[[row]]\n[[cell]][[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "55860a72f8566378bb40ec0b708548656c4f4d4701c009e4220548dda0fcfb09",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv14-header-row": {
+  "fullname": "muse-probe-r2table-adv-adv14-header-row",
+  "html": "<table>\n<tr>\n<th>A</th>\n<th>B</th>\n</tr>\n<tr>\n<td>1</td>\n<td>2</td>\n</tr>\n</table>",
+  "html_sha256": "444a4fb03880261b1c7f408bfe7ed072ddaa23b712b27cc784b6eaa5f8ea8e5d",
+  "source": "[[table]]\n[[row]]\n[[hcell]]A[[/hcell]]\n[[hcell]]B[[/hcell]]\n[[/row]]\n[[row]]\n[[cell]]1[[/cell]]\n[[cell]]2[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "cc27abc07fecefc70218f9407e39b645fe465928f33af026353a552ae3ba7e5a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv15-hcell-cell-closer": {
+  "fullname": "muse-probe-r2table-adv-adv15-hcell-cell-closer",
+  "html": "<table>\n<tr>\n<td>Heading</td>\n</tr>\n</table>",
+  "html_sha256": "583831c711a7e77a377266fdf98476123dd2cc824257b9209f8d03c7bf30618c",
+  "source": "[[table]]\n[[row]]\n[[hcell]]Heading[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "74783f2407960255d7ba9a75b5f04373952089c86a7602d2c1d674a0a1d063a1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv19-colspan": {
+  "fullname": "muse-probe-r2table-adv-adv19-colspan",
+  "html": "<table>\n<tr>\n<td colspan=\"3\">Three</td>\n<td rowspan=\"2\">Two</td>\n</tr>\n</table>",
+  "html_sha256": "cf5ddf9505d57dab08b397e2f370c33b8592497fe11de4ac33eb584a74053737",
+  "source": "[[table]]\n[[row]]\n[[cell colspan=\"3\"]]Three[[/cell]]\n[[cell rowspan=\"2\"]]Two[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "97999c908e4db5a70e160b4017d21a9436d5dd164875da264cb4c6b592740900",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv21-colspan-zero": {
+  "fullname": "muse-probe-r2table-adv-adv21-colspan-zero",
+  "html": "<table>\n<tr>\n<td data-name=\"zero\">Zero</td>\n</tr>\n</table>",
+  "html_sha256": "618c08dd103ac8c68e7748e06065ad20752a8b02fcd9b7807ed2e3b94c15ca01",
+  "source": "[[table]]\n[[row]]\n[[cell colspan=\"0\" data-name=\"zero\"]]Zero[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "b9279d48c2e68f058963f357d4f1d2c6f6fc29473d75798c586a85cd6d76da8a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv23-colspan-bad": {
+  "fullname": "muse-probe-r2table-adv-adv23-colspan-bad",
+  "html": "<table>\n<tr>\n<td data-name=\"bad\" colspan=\"abc\">Bad</td>\n<th colspan=\"2\">Good</th>\n</tr>\n</table>",
+  "html_sha256": "84f51557d3ea3010ed1dcd916cf28c813f5758ed2c5ea94d781dfb633922c9fe",
+  "source": "[[table]]\n[[row]]\n[[cell colspan=\"abc\" data-name=\"bad\"]]Bad[[/cell]]\n[[hcell colspan=\"2\"]]Good[[/hcell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "49c77a93f92bc11d36e21b7bfb9ebe090b5441bedf97caa0faf372d2ec824d60",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv26-table-attrs": {
+  "fullname": "muse-probe-r2table-adv-adv26-table-attrs",
+  "html": "<table class=\"grid\" style=\"color: red\">\n<tr>\n<td>X</td>\n</tr>\n</table>",
+  "html_sha256": "22014249c122f136795166be020115c54bf5e03c9eb7bce51d982c59864806cd",
+  "source": "[[table class=\"grid\" style=\"color: red\"]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "b9df70f2eb0c29dbe698ec7e4492558834303cd5e284c5be630312b7e7758567",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv27-table-id": {
+  "fullname": "muse-probe-r2table-adv-adv27-table-id",
+  "html": "<table id=\"u-fruit\">\n<tr>\n<td>X</td>\n</tr>\n</table>",
+  "html_sha256": "7892348011b5f10b91e8f4f15111a7a32319ea78586f43d07cefba53d54e70e0",
+  "source": "[[table id=\"fruit\"]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "a99442f5116c6b6411c2d58b54a7b217fab578dc1a22a27e9e203e1a0feb922b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv28-row-attrs": {
+  "fullname": "muse-probe-r2table-adv-adv28-row-attrs",
+  "html": "<table>\n<tr class=\"top\" data-id=\"r1\">\n<td>X</td>\n</tr>\n</table>",
+  "html_sha256": "22387d4f51998f095d0c603cdd92f188b6712dce00c6010d9388dbdeb8c7578e",
+  "source": "[[table]]\n[[row data-id=\"r1\" class=\"top\"]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "9cd04e439715ebb292dad94d23633067360be10bf33c761144178adda508241a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv29-cell-attrs": {
+  "fullname": "muse-probe-r2table-adv-adv29-cell-attrs",
+  "html": "<table>\n<tr>\n<td class=\"c\" data-sort=\"number\">X</td>\n</tr>\n</table>",
+  "html_sha256": "2ef0c7e6f5ae629823fa2f6efc4fa98721cbbf7cfa31c1cad65ba13e4083f6f3",
+  "source": "[[table]]\n[[row]]\n[[cell data-sort=\"number\" class=\"c\"]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "f36147fc6ecedd9b4c05eda567a516499f97c6b110ae9d9bff133860c76f041b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv30-unknown-attrs": {
+  "fullname": "muse-probe-r2table-adv-adv30-unknown-attrs",
+  "html": "<table>\n<tr>\n<td>X</td>\n</tr>\n</table>",
+  "html_sha256": "b2d1deaa37ec13ca09c3f51edba4b4314735c5d7dec113d224c705341073345b",
+  "source": "[[table foo=\"2\"]]\n[[row]]\n[[cell foo=\"1\" aria-label=\"l\"]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "326acb14c6303156a474d0e6646674dab0dad2f1ab595d9918e7548a1a0c7da2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv31-uppercase-attrs": {
+  "fullname": "muse-probe-r2table-adv-adv31-uppercase-attrs",
+  "html": "<table>\n<tr>\n<td>X</td>\n</tr>\n</table>",
+  "html_sha256": "b2d1deaa37ec13ca09c3f51edba4b4314735c5d7dec113d224c705341073345b",
+  "source": "[[table CLASS=\"g\"]]\n[[row]]\n[[cell CLASS=\"c\" DATA-X=\"1\"]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "4518770e8f51a25d25cd577b4ec085b7be8c63b94379a50c21a180ac2c53bfae",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv39-align-center": {
+  "fullname": "muse-probe-r2table-adv-adv39-align-center",
+  "html": "<table>\n<tr>\n<td>C</td>\n<td style=\"text-align: right;\">R</td>\n</tr>\n</table>",
+  "html_sha256": "bdf43649cccaccb600a5aa3fec09d7959af1a3015ec105068ed6c33545cdeea9",
+  "source": "[[table]]\n[[row]]\n[[cell align=\"center\"]]C[[/cell]]\n[[cell style=\"text-align: right;\"]]R[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "ade0fd394a6cac73b096c4d73f06268cc1a8b2fea9d4bb258d9cc0adc960bb7e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv41-inline-markup": {
+  "fullname": "muse-probe-r2table-adv-adv41-inline-markup",
+  "html": "<table>\n<tr>\n<td><strong>bold</strong> and <em>italic</em></td>\n</tr>\n</table>",
+  "html_sha256": "52e79658e666ae890a36826120f4b02ad319b89c7ac551c217f017950459af4a",
+  "source": "[[table]]\n[[row]]\n[[cell]]**bold** and //italic//[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "00cadec6cd00e171e348e960a46ca8d9ec60663bf67add1ddc461c73a5052d03",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv42-paragraph-cell": {
+  "fullname": "muse-probe-r2table-adv-adv42-paragraph-cell",
+  "html": "<table>\n<tr>\n<td>\n<p>Apple</p>\n</td>\n</tr>\n</table>",
+  "html_sha256": "39e06e964140a39edd393cf61819e14398a2b1047110bd7918ae830286b2f829",
+  "source": "[[table]]\n[[row]]\n[[cell]]\n\nApple\n\n[[/cell]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "463f7345344a76a638350f67921b16f23432ddfdb4957eed8b60645bbc1260e8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv48-nested-inline": {
+  "fullname": "muse-probe-r2table-adv-adv48-nested-inline",
+  "html": "<table>\n<tr>\n<td>\n<table>\n<tr>\n<td>.</td>\n</tr>\n</table>\n</td>\n</tr>\n</table>",
+  "html_sha256": "3096754a75a2708274b2d73679fd133a050f97d423c6c434aa244268c3347ef5",
+  "source": "[[table]][[row]][[cell]][[table]][[row]][[cell]].[[/cell]][[/row]][[/table]][[/cell]][[/row]][[/table]]",
+  "source_sha256": "de4905b591305df31bdf41c6deac3ef04f824c2350aec365cb2ecff650cc892c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv09-empty-table-literal": {
+  "fullname": "muse-probe-r2table-adv-adv09-empty-table-literal",
+  "html": "<p>[[table]]<br />\n[[/table]]</p>",
+  "html_sha256": "29fe827d6b2cc891cf57adff56b43655edb3346ad93880de8f79bcbee6e8b10a",
+  "source": "[[table]]\n[[/table]]",
+  "source_sha256": "707eabffe91f70983fbc63c7c712363cb4234223950c21084f820cccea3d687d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adv10-empty-row-literal": {
+  "fullname": "muse-probe-r2table-adv-adv10-empty-row-literal",
+  "html": "<p>[[table]]<br />\n[[row]]<br />\n[[/row]]<br />\n[[/table]]</p>",
+  "html_sha256": "8ee2ad90f1914ead9deeab7952fd26d53175ad032454ecf67b7843e2595c366a",
+  "source": "[[table]]\n[[row]]\n[[/row]]\n[[/table]]",
+  "source_sha256": "7a0f3155ff9de953c8027bb4aaeca8916225e0d3a8a6d4b831636b3ae86fd9bf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

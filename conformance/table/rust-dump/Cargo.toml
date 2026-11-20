@@ -1,0 +1,10 @@
+[package]
+name = "r2table-rust-dump"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ftml = { path = "/home/roku/src/Rokurolize/ftml" }
+serde_json = "1"
+
+[workspace]

@@ -1,0 +1,20 @@
+{"id": "adv01-single-cell", "source": "[[table]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv02-two-rows", "source": "[[table]]\n[[row]]\n[[cell]]A[[/cell]]\n[[cell]]B[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]C[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv11-empty-cell", "source": "[[table]]\n[[row]]\n[[cell]][[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv14-header-row", "source": "[[table]]\n[[row]]\n[[hcell]]A[[/hcell]]\n[[hcell]]B[[/hcell]]\n[[/row]]\n[[row]]\n[[cell]]1[[/cell]]\n[[cell]]2[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv15-hcell-cell-closer", "source": "[[table]]\n[[row]]\n[[hcell]]Heading[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv19-colspan", "source": "[[table]]\n[[row]]\n[[cell colspan=\"3\"]]Three[[/cell]]\n[[cell rowspan=\"2\"]]Two[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv21-colspan-zero", "source": "[[table]]\n[[row]]\n[[cell colspan=\"0\" data-name=\"zero\"]]Zero[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv23-colspan-bad", "source": "[[table]]\n[[row]]\n[[cell colspan=\"abc\" data-name=\"bad\"]]Bad[[/cell]]\n[[hcell colspan=\"2\"]]Good[[/hcell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv26-table-attrs", "source": "[[table class=\"grid\" style=\"color: red\"]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv27-table-id", "source": "[[table id=\"fruit\"]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv28-row-attrs", "source": "[[table]]\n[[row data-id=\"r1\" class=\"top\"]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv29-cell-attrs", "source": "[[table]]\n[[row]]\n[[cell data-sort=\"number\" class=\"c\"]]X[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv30-unknown-attrs", "source": "[[table foo=\"2\"]]\n[[row]]\n[[cell foo=\"1\" aria-label=\"l\"]]X[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv31-uppercase-attrs", "source": "[[table CLASS=\"g\"]]\n[[row]]\n[[cell CLASS=\"c\" DATA-X=\"1\"]]X[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv39-align-center", "source": "[[table]]\n[[row]]\n[[cell align=\"center\"]]C[[/cell]]\n[[cell style=\"text-align: right;\"]]R[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv41-inline-markup", "source": "[[table]]\n[[row]]\n[[cell]]**bold** and //italic//[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv42-paragraph-cell", "source": "[[table]]\n[[row]]\n[[cell]]\n\nApple\n\n[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "adv48-nested-inline", "source": "[[table]][[row]][[cell]][[table]][[row]][[cell]].[[/cell]][[/row]][[/table]][[/cell]][[/row]][[/table]]"}
+{"id": "adv09-empty-table-literal", "source": "[[table]]\n[[/table]]"}
+{"id": "adv10-empty-row-literal", "source": "[[table]]\n[[row]]\n[[/row]]\n[[/table]]"}

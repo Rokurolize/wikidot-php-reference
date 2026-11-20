@@ -1,0 +1,21 @@
+probes=20 valid=20 ref_live_match=15 ftml_live_match=15 ref_disagreements=5
+=== adv23-colspan-bad
+  ref: '<table>\n<tr>\n<td colspan="abc" data-name="bad">Bad</td>\n<th colspan="2">Good</th>\n</tr>\n</table>'
+  ftm: '<table>\n<tr>\n<td colspan="abc" data-name="bad">Bad</td>\n<th colspan="2">Good</th>\n</tr>\n</table>'
+  live:'<table>\n<tr>\n<td data-name="bad" colspan="abc">Bad</td>\n<th colspan="2">Good</th>\n</tr>\n</table>'
+=== adv30-unknown-attrs
+  ref: '<table>\n<tr>\n<td aria-label="l">X</td>\n</tr>\n</table>'
+  ftm: '<table>\n<tr>\n<td aria-label="l">X</td>\n</tr>\n</table>'
+  live:'<table>\n<tr>\n<td>X</td>\n</tr>\n</table>'
+=== adv39-align-center
+  ref: '<table>\n<tr>\n<td align="center">C</td>\n<td style="text-align: right;">R</td>\n</tr>\n</table>'
+  ftm: '<table>\n<tr>\n<td align="center">C</td>\n<td style="text-align: right;">R</td>\n</tr>\n</table>'
+  live:'<table>\n<tr>\n<td>C</td>\n<td style="text-align: right;">R</td>\n</tr>\n</table>'
+=== adv42-paragraph-cell
+  ref: '<table>\n<tr>\n<td><p>Apple</p>\n\n</td>\n</tr>\n</table>'
+  ftm: '<table>\n<tr>\n<td><p>Apple</p></td>\n</tr>\n</table>'
+  live:'<table>\n<tr>\n<td>\n<p>Apple</p>\n</td>\n</tr>\n</table>'
+=== adv48-nested-inline
+  ref: '<table>\n<tr>\n<td><table>\n<tr>\n<td>.</td>\n</tr>\n</table></td>\n</tr>\n</table>'
+  ftm: '<table>\n<tr>\n<td><table>\n<tr>\n<td>.</td>\n</tr>\n</table></td>\n</tr>\n</table>'
+  live:'<table>\n<tr>\n<td>\n<table>\n<tr>\n<td>.</td>\n</tr>\n</table>\n</td>\n</tr>\n</table>'

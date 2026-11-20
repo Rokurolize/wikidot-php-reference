@@ -1,0 +1,62 @@
+=== code.txt ===
+
+<div class="code">
+<pre><code>$x = 1;</code></pre></div>
+
+
+
+=== collapsible.txt ===
+<div class="collapsible-block"><div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;show&nbsp;block</a></div><div class="collapsible-block-unfolded" style="display:none"><div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">–&nbsp;hide&nbsp;block</a></div><div class="collapsible-block-content"><p>hidden body</p>
+
+</div></div></div>
+
+=== div.txt ===
+<div  class="x"><p>inside div</p>
+
+</div>
+
+=== footnote.txt ===
+<p>Text with a note<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup> here.</p>
+
+<div class="footnotes-footer"><div class="title">Footnotes</div><div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. the note text</div></div>
+
+=== include.txt ===
+<p>Before</p>
+
+<p>TARGET-CONTENT-START<br />
+Value is {$marker}.<br />
+TARGET-CONTENT-END</p>
+
+<p>After</p>
+
+
+
+=== link.txt ===
+<p>A <a class="newpage" href="/some-page">link text</a> and <a class="newpage" href="/missing-page">missing-page</a> here.</p>
+
+
+
+=== math.txt ===
+<p>Math $x^2$ inline and:</p>
+
+<div class="error-block">The equation has not been processed correctly. Most prabably it has syntax error(s).</div>
+
+=== quote.txt ===
+<blockquote><p>quoted line<br />
+more quote</p>
+
+</blockquote>
+
+
+=== table.txt ===
+<table class="wiki-content-table">
+<tr>
+<th>cell1</th>
+<th>cell2</th>
+</tr>
+<tr>
+<td>a</td>
+<td>b</td>
+</tr>
+</table>
+

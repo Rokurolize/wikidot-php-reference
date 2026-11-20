@@ -1,0 +1,157 @@
+vs ftml: total=60 shaped_same=8 byte_same=0 diff=52
+=== adv01-single-cell
+  ref: '<table><tr><td>X</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>X</td>\n</tr>\n</table>'
+=== adv02-two-rows
+  ref: '<table><tr><td>A</td><td>B</td></tr><tr><td>C</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>A</td>\n<td>B</td>\n</tr>\n<tr>\n<td>C</td>\n</tr>\n</table>'
+=== adv03-three-cells
+  ref: '<table><tr><td>A</td><td>B</td><td>C</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>A</td>\n<td>B</td>\n<td>C</td>\n</tr>\n</table>'
+=== adv04-two-tables
+  ref: '<table><tr><td>A</td></tr></table><table><tr><td>B</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>A</td>\n</tr>\n</table><table>\n<tr>\n<td>B</td>\n</tr>\n</table>'
+=== adv05-inline-form
+  ref: '<table> <tr><td>Apple</td> </tr> </table>'
+  ftml: '<table>\n<tr>\n<td>Apple</td>\n</tr>\n</table>'
+=== adv06-midline-table
+  ref: '<p>intro</p>\n\n<table><tr><td>X</td></tr></table><p>tail</p>\n\n'
+  ftml: '<p>intro</p><table>\n<tr>\n<td>X</td>\n</tr>\n</table><p>tail</p>'
+=== adv07-after-heading
+  ref: '<p style="text-align: center;">Heading =</p><table><tr><td>X</td></tr></table>'
+  ftml: '<p style="text-align: center;">Heading =</p><table>\n<tr>\n<td>X</td>\n</tr>\n</table>'
+=== adv08-table-then-paragraph
+  ref: '<table><tr><td>X</td></tr></table><p>after</p>\n\n'
+  ftml: '<table>\n<tr>\n<td>X</td>\n</tr>\n</table><p>after</p>'
+=== adv11-empty-cell
+  ref: '<table><tr><td></td></tr></table>'
+  ftml: '<table>\n<tr>\n<td></td>\n</tr>\n</table>'
+=== adv12-empty-plus-content
+  ref: '<table><tr><td></td><td>B</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td></td>\n<td>B</td>\n</tr>\n</table>'
+=== adv14-header-row
+  ref: '<p>[[table]]<br />\n[[row]]<br />\n[[hcell]]A[[/hcell]]<br />\n[[hcell]]B[[/hcell]]<br />\n[[/row]]<br />\n[[row]]<br />\n[[cell]]1[[/cell]]<br />\n[[cell]]2[[/cell]]<br />\n[[/row]]<br />\n[[/table]]</p>\n\n'
+  ftml: '<table>\n<tr>\n<th>A</th>\n<th>B</th>\n</tr>\n<tr>\n<td>1</td>\n<td>2</td>\n</tr>\n</table>'
+=== adv15-hcell-cell-closer
+  ref: '<p>[[table]]<br />\n[[row]]<br />\n[[hcell]]Heading[[/cell]]<br />\n[[/row]]<br />\n[[/table]]</p>\n\n'
+  ftml: '<table>\n<tr>\n<td>Heading</td>\n</tr>\n</table>'
+=== adv16-cell-hcell-closer
+  ref: '<p>[[table]]<br />\n[[row]]<br />\n[[cell]]Heading[[/hcell]]<br />\n[[/row]]<br />\n[[/table]]</p>\n\n'
+  ftml: '<table>\n<tr>\n<th>Heading</th>\n</tr>\n</table>'
+=== adv17-header-attrs
+  ref: '<p>[[table]]<br />\n[[row]]<br />\n[[hcell colspan=&quot;2&quot; class=&quot;heading&quot;]]Group[[/hcell]]<br />\n[[/row]]<br />\n[[/table]]</p>\n\n'
+  ftml: '<table>\n<tr>\n<th class="heading" colspan="2">Group</th>\n</tr>\n</table>'
+=== adv18-mixed-header-body
+  ref: '<p>[[table]]<br />\n[[row]]<br />\n[[hcell]]H[[/hcell]]<br />\n[[/row]]<br />\n[[row]]<br />\n[[cell]]D[[/cell]]<br />\n[[/row]]<br />\n[[/table]]</p>\n\n'
+  ftml: '<table>\n<tr>\n<th>H</th>\n</tr>\n<tr>\n<td>D</td>\n</tr>\n</table>'
+=== adv19-colspan
+  ref: '<table><tr><td>Three</td><td>Two</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td colspan="3">Three</td>\n<td rowspan="2">Two</td>\n</tr>\n</table>'
+=== adv20-rowspan
+  ref: '<table><tr><td>Two</td></tr><tr><td>A</td><td>B</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td rowspan="2">Two</td>\n</tr>\n<tr>\n<td>A</td>\n<td>B</td>\n</tr>\n</table>'
+=== adv21-colspan-zero
+  ref: '<table><tr><td>Zero</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td data-name="zero">Zero</td>\n</tr>\n</table>'
+=== adv22-rowspan-zero
+  ref: '<table><tr><td>Zero</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>Zero</td>\n</tr>\n</table>'
+=== adv23-colspan-bad
+  ref: '<p>[[table]]<br />\n[[row]]<br />\n[[cell colspan=&quot;abc&quot; data-name=&quot;bad&quot;]]Bad[[/cell]]<br />\n[[hcell colspan=&quot;2&quot;]]Good[[/hcell]]<br />\n[[/row]]<br />\n[[/table]]</p>\n\n'
+  ftml: '<table>\n<tr>\n<td colspan="abc" data-name="bad">Bad</td>\n<th colspan="2">Good</th>\n</tr>\n</table>'
+=== adv24-colspan-big
+  ref: '<table><tr><td>Wide</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td colspan="10" rowspan="2">Wide</td>\n</tr>\n</table>'
+=== adv25-header-colspan
+  ref: '<p>[[table]]<br />\n[[row]]<br />\n[[hcell colspan=&quot;2&quot;]]Group[[/hcell]]<br />\n[[/row]]<br />\n[[row]]<br />\n[[cell]]A[[/cell]]<br />\n[[cell]]B[[/cell]]<br />\n[[/row]]<br />\n[[/table]]</p>\n\n'
+  ftml: '<table>\n<tr>\n<th colspan="2">Group</th>\n</tr>\n<tr>\n<td>A</td>\n<td>B</td>\n</tr>\n</table>'
+=== adv26-table-attrs
+  ref: '<table class="grid" style="color: red"><tr><td>X</td></tr></table>'
+  ftml: '<table class="grid" style="color: red">\n<tr>\n<td>X</td>\n</tr>\n</table>'
+=== adv27-table-id
+  ref: '<table><tr><td>X</td></tr></table>'
+  ftml: '<table id="u-fruit">\n<tr>\n<td>X</td>\n</tr>\n</table>'
+=== adv28-row-attrs
+  ref: '<table><tr class="top"><td>X</td></tr></table>'
+  ftml: '<table>\n<tr class="top" data-id="r1">\n<td>X</td>\n</tr>\n</table>'
+=== adv29-cell-attrs
+  ref: '<table><tr><td class="c">X</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td class="c" data-sort="number">X</td>\n</tr>\n</table>'
+=== adv30-unknown-attrs
+  ref: '<table><tr><td>X</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td aria-label="l">X</td>\n</tr>\n</table>'
+=== adv31-uppercase-attrs
+  ref: '<table><tr><td>X</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>X</td>\n</tr>\n</table>'
+=== adv32-quoted-close-bracket
+  ref: '<table class="a]]b"><tr><td>x</td></tr></table>'
+  ftml: '<table class="a]]b">\n<tr>\n<td>x</td>\n</tr>\n</table>'
+=== adv33-empty-attr-values
+  ref: '<table><tr><td>X</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>X</td>\n</tr>\n</table>'
+=== adv34-title-attr
+  ref: '<table><tr><td>X</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>X</td>\n</tr>\n</table>'
+=== adv35-many-attrs
+  ref: '<table class="a" style="color:red"><tr><td class="c">X</td></tr></table>'
+  ftml: '<table class="a" id="u-x" style="color:red">\n<tr>\n<td class="c">X</td>\n</tr>\n</table>'
+=== adv36-dup-attr
+  ref: '<table><tr><td class="b">X</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td class="b">X</td>\n</tr>\n</table>'
+=== adv37-id-prefixed
+  ref: '<table><tr><td>X</td></tr></table>'
+  ftml: '<table id="u-foo">\n<tr>\n<td id="u-bar">X</td>\n</tr>\n</table>'
+=== adv38-unquoted-attrs
+  ref: '<table><tr><td>X</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>X</td>\n</tr>\n</table>'
+=== adv39-align-center
+  ref: '<table><tr><td>C</td><td style="text-align: right;">R</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td align="center">C</td>\n<td style="text-align: right;">R</td>\n</tr>\n</table>'
+=== adv40-valign-dropped
+  ref: '<table><tr><td>X</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>X</td>\n</tr>\n</table>'
+=== adv41-inline-markup
+  ref: '<table><tr><td><strong>bold</strong> and <em>italic</em></td></tr></table>'
+  ftml: '<table>\n<tr>\n<td><strong>bold</strong> and <em>italic</em></td>\n</tr>\n</table>'
+=== adv42-paragraph-cell
+  ref: '<table><tr><td><p>Apple</p>\n\n</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td><p>Apple</p></td>\n</tr>\n</table>'
+=== adv43-two-paragraph-cell
+  ref: '<table><tr><td><p>Apple</p>\n\n<p>Pear</p>\n\n</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td><p>Apple</p><p>Pear</p></td>\n</tr>\n</table>'
+=== adv44-list-in-cell
+  ref: '<table><tr><td><ul>\n<li>one</li>\n<li>two</li>\n</ul></td></tr></table>'
+  ftml: '<table>\n<tr>\n<td><ul>\n<li>one</li>\n<li>two</li>\n</ul></td>\n</tr>\n</table>'
+=== adv45-heading-in-cell
+  ref: '<table><tr><td>= Inner =</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>Inner =</td>\n</tr>\n</table>'
+=== adv46-quote-in-cell
+  ref: '<table><tr><td><blockquote><p>quoted</p>\n\n</blockquote>\n</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td><blockquote><p>quoted</p></blockquote></td>\n</tr>\n</table>'
+=== adv47-space-junk
+  ref: '<table>   <br />\n <tr><td>A</td>  </tr> <br />\n</table>'
+  ftml: '<table>\n<tr>\n<td>A</td>\n</tr>\n</table>'
+=== adv48-nested-inline
+  ref: '<table><tr><td><table><tr><td>.</td></tr></table></td></tr></table>'
+  ftml: '<table>\n<tr>\n<td><table>\n<tr>\n<td>.</td>\n</tr>\n</table></td>\n</tr>\n</table>'
+=== adv49-nested-paragraph
+  ref: '<table><tr><td><p>1</p>\n\n<table><tr><td><p>2</p>\n\n</td></tr></table></td></tr></table>'
+  ftml: '<table>\n<tr>\n<td><p>1</p><table>\n<tr>\n<td><p>2</p></td>\n</tr>\n</table></td>\n</tr>\n</table>'
+=== adv50-nested-deep
+  ref: '<table><tr><td><table><tr><td><table><tr><td>deep</td></tr></table></td></tr></table></td></tr></table>'
+  ftml: '<table>\n<tr>\n<td><table>\n<tr>\n<td><table>\n<tr>\n<td>deep</td>\n</tr>\n</table></td>\n</tr>\n</table></td>\n</tr>\n</table>'
+=== adv55-naked-row-cell
+  ref: '<p>[[row]] naked [[/row]]</p>\n\n<p>[[cell]] naked [[/cell]]</p>\n\n<p>[[hcell]] naked [[/hcell]]</p>\n\n'
+  ftml: '<p>[[row]] naked [[/row]]</p><p>[[cell]] naked [[/cell]]</p><p>[[hcell]] naked [[/hcell]]</p>'
+=== adv56-col-alias
+  ref: '<table><tr><td>X</td></tr></table>'
+  ftml: '<p>[[table]]<br>\n[[row]]<br>\n[[col]]X[[/col]]<br>\n[[/row]]<br>\n[[/table]]</p>'
+=== adv57-fused-close
+  ref: '<table><tr><td>x</td></tr></table><p>]<br />\nafter</p>\n\n'
+  ftml: '<table>\n<tr>\n<td>x</td>\n</tr>\n</table><p>]<br>\nafter</p>'
+=== adv58-table-in-div
+  ref: '<div ><table><tr><td>X</td></tr></table></div>'
+  ftml: '<div><table>\n<tr>\n<td>X</td>\n</tr>\n</table></div>'
+=== adv59-malformed-args
+  ref: '<table><tr><td>x</td></tr></table>'
+  ftml: '<table>\n<tr>\n<td>x</td>\n</tr>\n</table>'

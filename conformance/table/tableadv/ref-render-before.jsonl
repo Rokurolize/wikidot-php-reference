@@ -1,0 +1,60 @@
+{"id":"adv01-single-cell","output":"<table><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv02-two-rows","output":"<table><tr><td>A<\/td><td>B<\/td><\/tr><tr><td>C<\/td><\/tr><\/table>"}
+{"id":"adv03-three-cells","output":"<table><tr><td>A<\/td><td>B<\/td><td>C<\/td><\/tr><\/table>"}
+{"id":"adv04-two-tables","output":"<table><tr><td>A<\/td><\/tr><\/table><table><tr><td>B<\/td><\/tr><\/table>"}
+{"id":"adv05-inline-form","output":"<table> <tr><td>Apple<\/td> <\/tr> <\/table>"}
+{"id":"adv06-midline-table","output":"<p>intro<\/p>\n\n<table><tr><td>X<\/td><\/tr><\/table><p>tail<\/p>\n\n"}
+{"id":"adv07-after-heading","output":"<p style=\"text-align: center;\">Heading =<\/p><table><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv08-table-then-paragraph","output":"<table><tr><td>X<\/td><\/tr><\/table><p>after<\/p>\n\n"}
+{"id":"adv09-empty-table-literal","output":"<p>[[table]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv10-empty-row-literal","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv11-empty-cell","output":"<table><tr><td><\/td><\/tr><\/table>"}
+{"id":"adv12-empty-plus-content","output":"<table><tr><td><\/td><td>B<\/td><\/tr><\/table>"}
+{"id":"adv13-empty-row-then-full-row","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[\/row]]<br \/>\n[[row]]<br \/>\n[[cell]]X[[\/cell]]<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv14-header-row","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[hcell]]A[[\/hcell]]<br \/>\n[[hcell]]B[[\/hcell]]<br \/>\n[[\/row]]<br \/>\n[[row]]<br \/>\n[[cell]]1[[\/cell]]<br \/>\n[[cell]]2[[\/cell]]<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv15-hcell-cell-closer","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[hcell]]Heading[[\/cell]]<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv16-cell-hcell-closer","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[cell]]Heading[[\/hcell]]<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv17-header-attrs","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[hcell colspan=&quot;2&quot; class=&quot;heading&quot;]]Group[[\/hcell]]<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv18-mixed-header-body","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[hcell]]H[[\/hcell]]<br \/>\n[[\/row]]<br \/>\n[[row]]<br \/>\n[[cell]]D[[\/cell]]<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv19-colspan","output":"<table><tr><td>Three<\/td><td>Two<\/td><\/tr><\/table>"}
+{"id":"adv20-rowspan","output":"<table><tr><td>Two<\/td><\/tr><tr><td>A<\/td><td>B<\/td><\/tr><\/table>"}
+{"id":"adv21-colspan-zero","output":"<table><tr><td>Zero<\/td><\/tr><\/table>"}
+{"id":"adv22-rowspan-zero","output":"<table><tr><td>Zero<\/td><\/tr><\/table>"}
+{"id":"adv23-colspan-bad","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[cell colspan=&quot;abc&quot; data-name=&quot;bad&quot;]]Bad[[\/cell]]<br \/>\n[[hcell colspan=&quot;2&quot;]]Good[[\/hcell]]<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv24-colspan-big","output":"<table><tr><td>Wide<\/td><\/tr><\/table>"}
+{"id":"adv25-header-colspan","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[hcell colspan=&quot;2&quot;]]Group[[\/hcell]]<br \/>\n[[\/row]]<br \/>\n[[row]]<br \/>\n[[cell]]A[[\/cell]]<br \/>\n[[cell]]B[[\/cell]]<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv26-table-attrs","output":"<table class=\"grid\" style=\"color: red\"><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv27-table-id","output":"<table><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv28-row-attrs","output":"<table><tr class=\"top\"><td>X<\/td><\/tr><\/table>"}
+{"id":"adv29-cell-attrs","output":"<table><tr><td class=\"c\">X<\/td><\/tr><\/table>"}
+{"id":"adv30-unknown-attrs","output":"<table><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv31-uppercase-attrs","output":"<table><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv32-quoted-close-bracket","output":"<table class=\"a]]b\"><tr><td>x<\/td><\/tr><\/table>"}
+{"id":"adv33-empty-attr-values","output":"<table><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv34-title-attr","output":"<table><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv35-many-attrs","output":"<table class=\"a\" style=\"color:red\"><tr><td class=\"c\">X<\/td><\/tr><\/table>"}
+{"id":"adv36-dup-attr","output":"<table><tr><td class=\"b\">X<\/td><\/tr><\/table>"}
+{"id":"adv37-id-prefixed","output":"<table><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv38-unquoted-attrs","output":"<table><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv39-align-center","output":"<table><tr><td>C<\/td><td style=\"text-align: right;\">R<\/td><\/tr><\/table>"}
+{"id":"adv40-valign-dropped","output":"<table><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv41-inline-markup","output":"<table><tr><td><strong>bold<\/strong> and <em>italic<\/em><\/td><\/tr><\/table>"}
+{"id":"adv42-paragraph-cell","output":"<table><tr><td><p>Apple<\/p>\n\n<\/td><\/tr><\/table>"}
+{"id":"adv43-two-paragraph-cell","output":"<table><tr><td><p>Apple<\/p>\n\n<p>Pear<\/p>\n\n<\/td><\/tr><\/table>"}
+{"id":"adv44-list-in-cell","output":"<table><tr><td><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><\/td><\/tr><\/table>"}
+{"id":"adv45-heading-in-cell","output":"<table><tr><td>= Inner =<\/td><\/tr><\/table>"}
+{"id":"adv46-quote-in-cell","output":"<table><tr><td><blockquote><p>quoted<\/p>\n\n<\/blockquote>\n<\/td><\/tr><\/table>"}
+{"id":"adv47-space-junk","output":"<table>   <br \/>\n <tr><td>A<\/td>  <\/tr> <br \/>\n<\/table>"}
+{"id":"adv48-nested-inline","output":"<table><tr><td><table><tr><td>.<\/td><\/tr><\/table><\/td><\/tr><\/table>"}
+{"id":"adv49-nested-paragraph","output":"<table><tr><td><p>1<\/p>\n\n<table><tr><td><p>2<\/p>\n\n<\/td><\/tr><\/table><\/td><\/tr><\/table>"}
+{"id":"adv50-nested-deep","output":"<table><tr><td><table><tr><td><table><tr><td>deep<\/td><\/tr><\/table><\/td><\/tr><\/table><\/td><\/tr><\/table>"}
+{"id":"adv51-junk-in-table","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[cell]]X[[\/cell]]<br \/>\n[[\/row]]<br \/>\njunk<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv52-junk-in-row","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[cell]]X[[\/cell]]<br \/>\njunk<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv53-unterminated-table","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[cell]]X[[\/cell]]<br \/>\n[[\/row]]<\/p>\n\n"}
+{"id":"adv54-unterminated-cell","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[cell]]X<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv55-naked-row-cell","output":"<p>[[row]] naked [[\/row]]<\/p>\n\n<p>[[cell]] naked [[\/cell]]<\/p>\n\n<p>[[hcell]] naked [[\/hcell]]<\/p>\n\n"}
+{"id":"adv56-col-alias","output":"<table><tr><td>X<\/td><\/tr><\/table>"}
+{"id":"adv57-fused-close","output":"<table><tr><td>x<\/td><\/tr><\/table><p>]<br \/>\nafter<\/p>\n\n"}
+{"id":"adv58-table-in-div","output":"<div ><table><tr><td>X<\/td><\/tr><\/table><\/div>"}
+{"id":"adv59-malformed-args","output":"<table><tr><td>x<\/td><\/tr><\/table>"}
+{"id":"adv60-cell-quoted-bracket","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[cell class=&quot;a]b&quot;]]x[[\/cell]]<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}

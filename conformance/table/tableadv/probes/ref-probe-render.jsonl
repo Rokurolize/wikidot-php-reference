@@ -1,0 +1,20 @@
+{"id":"adv01-single-cell","output":"<table>\n<tr>\n<td>X<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv02-two-rows","output":"<table>\n<tr>\n<td>A<\/td>\n<td>B<\/td>\n<\/tr>\n<tr>\n<td>C<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv11-empty-cell","output":"<table>\n<tr>\n<td><\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv14-header-row","output":"<table>\n<tr>\n<th>A<\/th>\n<th>B<\/th>\n<\/tr>\n<tr>\n<td>1<\/td>\n<td>2<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv15-hcell-cell-closer","output":"<table>\n<tr>\n<td>Heading<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv19-colspan","output":"<table>\n<tr>\n<td colspan=\"3\">Three<\/td>\n<td rowspan=\"2\">Two<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv21-colspan-zero","output":"<table>\n<tr>\n<td data-name=\"zero\">Zero<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv23-colspan-bad","output":"<table>\n<tr>\n<td colspan=\"abc\" data-name=\"bad\">Bad<\/td>\n<th colspan=\"2\">Good<\/th>\n<\/tr>\n<\/table>"}
+{"id":"adv26-table-attrs","output":"<table class=\"grid\" style=\"color: red\">\n<tr>\n<td>X<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv27-table-id","output":"<table id=\"u-fruit\">\n<tr>\n<td>X<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv28-row-attrs","output":"<table>\n<tr class=\"top\" data-id=\"r1\">\n<td>X<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv29-cell-attrs","output":"<table>\n<tr>\n<td class=\"c\" data-sort=\"number\">X<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv30-unknown-attrs","output":"<table>\n<tr>\n<td aria-label=\"l\">X<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv31-uppercase-attrs","output":"<table>\n<tr>\n<td>X<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv39-align-center","output":"<table>\n<tr>\n<td align=\"center\">C<\/td>\n<td style=\"text-align: right;\">R<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv41-inline-markup","output":"<table>\n<tr>\n<td><strong>bold<\/strong> and <em>italic<\/em><\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv42-paragraph-cell","output":"<table>\n<tr>\n<td><p>Apple<\/p>\n\n<\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv48-nested-inline","output":"<table>\n<tr>\n<td><table>\n<tr>\n<td>.<\/td>\n<\/tr>\n<\/table><\/td>\n<\/tr>\n<\/table>"}
+{"id":"adv09-empty-table-literal","output":"<p>[[table]]<br \/>\n[[\/table]]<\/p>\n\n"}
+{"id":"adv10-empty-row-literal","output":"<p>[[table]]<br \/>\n[[row]]<br \/>\n[[\/row]]<br \/>\n[[\/table]]<\/p>\n\n"}

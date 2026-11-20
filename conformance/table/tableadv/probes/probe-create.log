@@ -1,0 +1,123 @@
+adv01-single-cell -> muse-probe-r2table-adv-adv01-single-cell (created)
+adv02-two-rows -> muse-probe-r2table-adv-adv02-two-rows (created)
+adv11-empty-cell -> muse-probe-r2table-adv-adv11-empty-cell (created)
+adv14-header-row -> muse-probe-r2table-adv-adv14-header-row (created)
+adv15-hcell-cell-closer -> muse-probe-r2table-adv-adv15-hcell-cell-closer (created)
+adv19-colspan -> muse-probe-r2table-adv-adv19-colspan (created)
+adv21-colspan-zero -> muse-probe-r2table-adv-adv21-colspan-zero (created)
+adv23-colspan-bad -> muse-probe-r2table-adv-adv23-colspan-bad (created)
+adv26-table-attrs -> muse-probe-r2table-adv-adv26-table-attrs (created)
+adv27-table-id -> muse-probe-r2table-adv-adv27-table-id (created)
+adv28-row-attrs -> muse-probe-r2table-adv-adv28-row-attrs (created)
+adv29-cell-attrs -> muse-probe-r2table-adv-adv29-cell-attrs (created)
+adv30-unknown-attrs -> muse-probe-r2table-adv-adv30-unknown-attrs (created)
+adv31-uppercase-attrs -> muse-probe-r2table-adv-adv31-uppercase-attrs (created)
+adv39-align-center -> muse-probe-r2table-adv-adv39-align-center (created)
+adv41-inline-markup -> muse-probe-r2table-adv-adv41-inline-markup (created)
+adv42-paragraph-cell -> muse-probe-r2table-adv-adv42-paragraph-cell (created)
+adv48-nested-inline -> muse-probe-r2table-adv-adv48-nested-inline (created)
+adv09-empty-table-literal -> muse-probe-r2table-adv-adv09-empty-table-literal (created)
+adv10-empty-row-literal -> muse-probe-r2table-adv-adv10-empty-row-literal (created)
+20 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "adv01-single-cell": {
+  "fullname": "muse-probe-r2table-adv-adv01-single-cell",
+  "source": "[[table]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv02-two-rows": {
+  "fullname": "muse-probe-r2table-adv-adv02-two-rows",
+  "source": "[[table]]\n[[row]]\n[[cell]]A[[/cell]]\n[[cell]]B[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]C[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv11-empty-cell": {
+  "fullname": "muse-probe-r2table-adv-adv11-empty-cell",
+  "source": "[[table]]\n[[row]]\n[[cell]][[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv14-header-row": {
+  "fullname": "muse-probe-r2table-adv-adv14-header-row",
+  "source": "[[table]]\n[[row]]\n[[hcell]]A[[/hcell]]\n[[hcell]]B[[/hcell]]\n[[/row]]\n[[row]]\n[[cell]]1[[/cell]]\n[[cell]]2[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv15-hcell-cell-closer": {
+  "fullname": "muse-probe-r2table-adv-adv15-hcell-cell-closer",
+  "source": "[[table]]\n[[row]]\n[[hcell]]Heading[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv19-colspan": {
+  "fullname": "muse-probe-r2table-adv-adv19-colspan",
+  "source": "[[table]]\n[[row]]\n[[cell colspan=\"3\"]]Three[[/cell]]\n[[cell rowspan=\"2\"]]Two[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv21-colspan-zero": {
+  "fullname": "muse-probe-r2table-adv-adv21-colspan-zero",
+  "source": "[[table]]\n[[row]]\n[[cell colspan=\"0\" data-name=\"zero\"]]Zero[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv23-colspan-bad": {
+  "fullname": "muse-probe-r2table-adv-adv23-colspan-bad",
+  "source": "[[table]]\n[[row]]\n[[cell colspan=\"abc\" data-name=\"bad\"]]Bad[[/cell]]\n[[hcell colspan=\"2\"]]Good[[/hcell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv26-table-attrs": {
+  "fullname": "muse-probe-r2table-adv-adv26-table-attrs",
+  "source": "[[table class=\"grid\" style=\"color: red\"]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv27-table-id": {
+  "fullname": "muse-probe-r2table-adv-adv27-table-id",
+  "source": "[[table id=\"fruit\"]]\n[[row]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv28-row-attrs": {
+  "fullname": "muse-probe-r2table-adv-adv28-row-attrs",
+  "source": "[[table]]\n[[row data-id=\"r1\" class=\"top\"]]\n[[cell]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv29-cell-attrs": {
+  "fullname": "muse-probe-r2table-adv-adv29-cell-attrs",
+  "source": "[[table]]\n[[row]]\n[[cell data-sort=\"number\" class=\"c\"]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv30-unknown-attrs": {
+  "fullname": "muse-probe-r2table-adv-adv30-unknown-attrs",
+  "source": "[[table foo=\"2\"]]\n[[row]]\n[[cell foo=\"1\" aria-label=\"l\"]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv31-uppercase-attrs": {
+  "fullname": "muse-probe-r2table-adv-adv31-uppercase-attrs",
+  "source": "[[table CLASS=\"g\"]]\n[[row]]\n[[cell CLASS=\"c\" DATA-X=\"1\"]]X[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv39-align-center": {
+  "fullname": "muse-probe-r2table-adv-adv39-align-center",
+  "source": "[[table]]\n[[row]]\n[[cell align=\"center\"]]C[[/cell]]\n[[cell style=\"text-align: right;\"]]R[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv41-inline-markup": {
+  "fullname": "muse-probe-r2table-adv-adv41-inline-markup",
+  "source": "[[table]]\n[[row]]\n[[cell]]**bold** and //italic//[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv42-paragraph-cell": {
+  "fullname": "muse-probe-r2table-adv-adv42-paragraph-cell",
+  "source": "[[table]]\n[[row]]\n[[cell]]\n\nApple\n\n[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv48-nested-inline": {
+  "fullname": "muse-probe-r2table-adv-adv48-nested-inline",
+  "source": "[[table]][[row]][[cell]][[table]][[row]][[cell]].[[/cell]][[/row]][[/table]][[/cell]][[/row]][[/table]]",
+  "action": "created"
+ },
+ "adv09-empty-table-literal": {
+  "fullname": "muse-probe-r2table-adv-adv09-empty-table-literal",
+  "source": "[[table]]\n[[/table]]",
+  "action": "created"
+ },
+ "adv10-empty-row-literal": {
+  "fullname": "muse-probe-r2table-adv-adv10-empty-row-literal",
+  "source": "[[table]]\n[[row]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ }
+}

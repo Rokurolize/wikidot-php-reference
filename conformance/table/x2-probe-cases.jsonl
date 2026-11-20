@@ -1,0 +1,10 @@
+{"id": "y01-bold-crosses-cell", "source": "|| **A1 || B2** || C3 ||\nx"}
+{"id": "y02-italic-crosses-cell", "source": "|| ''A1 || B2'' || C3 ||\nx"}
+{"id": "y03-ul-in-simple-cell", "source": "||[[ul]]\n* one\n* two\n[[/ul]] ||\n|| after ||\nx"}
+{"id": "y04-ol-in-simple-cell", "source": "||[[ol]]\n* one\n* two\n[[/ol]] ||\n|| after ||\nx"}
+{"id": "y05-div-in-simple-cell", "source": "||[[div class=\"x\"]]\ninside\n[[/div]] ||\n|| after ||\nx"}
+{"id": "y06-collapsible-in-simple-cell", "source": "||[[collapsible]]\ninside\n[[/collapsible]] ||\n|| after ||\nx"}
+{"id": "y07-note-crosses-cell", "source": "|| a[[footnote]]note || b[[/footnote]] || c ||\nx\n\n[[footnoteblock]]"}
+{"id": "y08-adv-div-in-cell", "source": "[[table]][[row]][[cell]][[div class=\"x\"]]\ninside\n[[/div]][[/cell]][[/row]][[/table]]\nx"}
+{"id": "y09-adv-ul-in-cell", "source": "[[table]][[row]][[cell]][[ul]]\n* one\n* two\n[[/ul]][[/cell]][[/row]][[/table]]\nx"}
+{"id": "y10-bold-crosses-adv-cells", "source": "[[table]][[row]][[cell]]**A1[[/cell]][[cell]]B2**[[/cell]][[/row]][[/table]]\nx"}

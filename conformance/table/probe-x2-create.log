@@ -1,0 +1,63 @@
+y01-bold-crosses-cell -> muse-probe-r2table-x-y01-bold-crosses-cell (created)
+y02-italic-crosses-cell -> muse-probe-r2table-x-y02-italic-crosses-cell (created)
+y03-ul-in-simple-cell -> muse-probe-r2table-x-y03-ul-in-simple-cell (created)
+y04-ol-in-simple-cell -> muse-probe-r2table-x-y04-ol-in-simple-cell (created)
+y05-div-in-simple-cell -> muse-probe-r2table-x-y05-div-in-simple-cell (created)
+y06-collapsible-in-simple-cell -> muse-probe-r2table-x-y06-collapsible-in-simple-cell (created)
+y07-note-crosses-cell -> muse-probe-r2table-x-y07-note-crosses-cell (created)
+y08-adv-div-in-cell -> muse-probe-r2table-x-y08-adv-div-in-cell (created)
+y09-adv-ul-in-cell -> muse-probe-r2table-x-y09-adv-ul-in-cell (created)
+y10-bold-crosses-adv-cells -> muse-probe-r2table-x-y10-bold-crosses-adv-cells (created)
+10 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "y01-bold-crosses-cell": {
+  "fullname": "muse-probe-r2table-x-y01-bold-crosses-cell",
+  "source": "|| **A1 || B2** || C3 ||\nx",
+  "action": "created"
+ },
+ "y02-italic-crosses-cell": {
+  "fullname": "muse-probe-r2table-x-y02-italic-crosses-cell",
+  "source": "|| ''A1 || B2'' || C3 ||\nx",
+  "action": "created"
+ },
+ "y03-ul-in-simple-cell": {
+  "fullname": "muse-probe-r2table-x-y03-ul-in-simple-cell",
+  "source": "||[[ul]]\n* one\n* two\n[[/ul]] ||\n|| after ||\nx",
+  "action": "created"
+ },
+ "y04-ol-in-simple-cell": {
+  "fullname": "muse-probe-r2table-x-y04-ol-in-simple-cell",
+  "source": "||[[ol]]\n* one\n* two\n[[/ol]] ||\n|| after ||\nx",
+  "action": "created"
+ },
+ "y05-div-in-simple-cell": {
+  "fullname": "muse-probe-r2table-x-y05-div-in-simple-cell",
+  "source": "||[[div class=\"x\"]]\ninside\n[[/div]] ||\n|| after ||\nx",
+  "action": "created"
+ },
+ "y06-collapsible-in-simple-cell": {
+  "fullname": "muse-probe-r2table-x-y06-collapsible-in-simple-cell",
+  "source": "||[[collapsible]]\ninside\n[[/collapsible]] ||\n|| after ||\nx",
+  "action": "created"
+ },
+ "y07-note-crosses-cell": {
+  "fullname": "muse-probe-r2table-x-y07-note-crosses-cell",
+  "source": "|| a[[footnote]]note || b[[/footnote]] || c ||\nx\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "y08-adv-div-in-cell": {
+  "fullname": "muse-probe-r2table-x-y08-adv-div-in-cell",
+  "source": "[[table]][[row]][[cell]][[div class=\"x\"]]\ninside\n[[/div]][[/cell]][[/row]][[/table]]\nx",
+  "action": "created"
+ },
+ "y09-adv-ul-in-cell": {
+  "fullname": "muse-probe-r2table-x-y09-adv-ul-in-cell",
+  "source": "[[table]][[row]][[cell]][[ul]]\n* one\n* two\n[[/ul]][[/cell]][[/row]][[/table]]\nx",
+  "action": "created"
+ },
+ "y10-bold-crosses-adv-cells": {
+  "fullname": "muse-probe-r2table-x-y10-bold-crosses-adv-cells",
+  "source": "[[table]][[row]][[cell]]**A1[[/cell]][[cell]]B2**[[/cell]][[/row]][[/table]]\nx",
+  "action": "created"
+ }
+}

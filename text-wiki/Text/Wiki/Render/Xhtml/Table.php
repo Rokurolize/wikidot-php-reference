@@ -52,20 +52,26 @@ class Text_Wiki_Render_Xhtml_Table extends Text_Wiki_Render {
         $span = $rowspan = 1;
         extract($options);
 
-        // free format
-        $format = isset($format) ? ' '. $format : '';
+        // Free format is an optional caller-supplied attribute fragment; when
+        // absent it contributes nothing. R2-Table correction C1: the fossil
+        // wrote a bare space before '>' on every cell tag and pretty-printed
+        // tables with four/eight-space indents and blank lines around the
+        // whole table. Live Wikidot and the pinned wikidot.html corpus emit
+        // no indent, no surrounding blank lines, and no stray attribute
+        // space, so those fossil-era artifacts are removed here. The newline
+        // after cell_end is live truth and is kept.
 
-        $pad = '    ';
+        $format = isset($format) ? ' '. $format : '';
 
         switch ($type) {
 
         case 'table_start':
             $css = $this->formatConf(' class="%s"', 'css_table');
-            return "\n\n<table$css$format>\n";
+            return "<table$css$format>\n";
             break;
 
         case 'table_end':
-            return "</table>\n\n";
+            return "</table>";
             break;
 
         case 'caption_start':
@@ -79,17 +85,17 @@ class Text_Wiki_Render_Xhtml_Table extends Text_Wiki_Render {
 
         case 'row_start':
             $css = $this->formatConf(' class="%s"', 'css_tr');
-            return "$pad<tr$css$format>\n";
+            return "<tr$css$format>\n";
             break;
 
         case 'row_end':
-            return "$pad</tr>\n";
+            return "</tr>\n";
             break;
 
         case 'cell_start':
 
             // base html
-            $html = $pad . $pad;
+            $html = '';
 
             // is this a TH or TD cell?
             if ($attr == 'header') {
@@ -118,7 +124,7 @@ class Text_Wiki_Render_Xhtml_Table extends Text_Wiki_Render {
             }
 
             // done!
-            $html .= " $format>";
+            $html .= "$format>";
             return $html;
             break;
 

@@ -10,78 +10,48 @@
  */
 
 /**
- * Advanced table.
+ * Advanced table renderer, corrected against live Wikidot behavior.
  *
- * @category   Text
- * @package    Text_Wiki
- * @author     Michal Frackowiak
- * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    Release: @package_version@
- * @link       http://pear.php.net/package/Text_Wiki
+ * The advanced table form carries no automatic css class; only authored
+ * attributes are emitted, sorted by name. Tag bodies are laid out with the
+ * newlines live uses, and a header cell close is determined by the token's
+ * header flag set from the authored closer name.
  */
 class Text_Wiki_Render_Xhtml_Tableadv extends Text_Wiki_Render {
-    
+
     public $conf = array();
 
-    /**
-     *
-     * Renders a token into text matching the requested format.
-     *
-     * @access public
-     *
-     * @param array $options The "options" portion of the token (second
-     * element).
-     *
-     * @return string The text rendered from the token options.
-     *
-     */
-    
     function token($options) {
-        
-        if ($options['type'] == 'start') {
-            $class = '';
-            $style = '';
-            if ($options['class']) {
-                $class = ' class="' . $options['class'] . '"';
-            }
-            if ($options['style']) {
-                $style = ' style="' . $options['style'] . '"';
-            }
-            $out = '<table' . $class . $style . '>';
-            return $out;
+        $type = isset($options['type']) ? $options['type'] : '';
+        $attrs = isset($options['attrs']) && is_array($options['attrs'])
+            ? $options['attrs'] : array();
+        $rendered = '';
+        foreach ($attrs as $key => $value) {
+            $rendered .= ' ' . $key . '="'
+                . htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')
+                . '"';
         }
-        
-        if ($options['type'] == 'rowStart') {
-            $class = '';
-            $style = '';
-            if ($options['class']) {
-                $class = ' class="' . $options['class'] . '"';
-            }
-            if ($options['style']) {
-                $style = ' style="' . $options['style'] . '"';
-            }
-            return '<tr' . $class . $style . '>';
+        $header = !empty($options['header']);
+        $tag = $header ? 'th' : 'td';
+
+        if ($type === 'start') {
+            return '<table' . $rendered . ">\n";
         }
-        if ($options['type'] == 'cellStart') {
-            $class = '';
-            $style = '';
-            if ($options['class']) {
-                $class = ' class="' . $options['class'] . '"';
-            }
-            if ($options['style']) {
-                $style = ' style="' . $options['style'] . '"';
-            }
-            return '<td' . $class . $style . '>';
+        if ($type === 'rowStart') {
+            return '<tr' . $rendered . ">\n";
         }
-        if ($options['type'] == 'cellEnd') {
-            return '</td>';
+        if ($type === 'cellStart') {
+            return '<' . $tag . $rendered . '>';
         }
-        if ($options['type'] == 'rowEnd') {
-            return '</tr>';
+        if ($type === 'cellEnd') {
+            return '</' . $tag . ">\n";
         }
-        if ($options['type'] == 'end') {
+        if ($type === 'rowEnd') {
+            return "</tr>\n";
+        }
+        if ($type === 'end') {
             return '</table>';
         }
-    
+        return '';
     }
 }

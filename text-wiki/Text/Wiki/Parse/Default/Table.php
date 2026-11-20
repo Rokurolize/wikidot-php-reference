@@ -92,6 +92,14 @@ class Text_Wiki_Parse_Table extends Text_Wiki_Parse {
         
         // the number of rows in the table
         $num_rows = 0;
+
+        // R2-Table correction C2: a row that produces no content cell still
+        // owns one empty cell. Live probe p03 shows that this empty cell has
+        // span one even when the row is made of several bare pipe pairs, so
+        // the span accumulated from those pairs is deliberately not carried
+        // into the empty cell. Spans from empty cells are still carried into
+        // a following content cell, which pins such as simple and
+        // simple-aligned-colspan require.
         
         // rows are separated by newlines in the matched text
         $rows = explode("\n", $matches[1]);
@@ -123,6 +131,9 @@ class Text_Wiki_Parse_Table extends Text_Wiki_Parse {
             
             // by default, cells span only one column (their own)
             $span = 1;
+
+            // whether any content cell was emitted in this row
+            $has_cell = false;
             
             // ignore cell zero, and ignore the "last" cell; cell zero
             // is before the first double-pipe, and the "last" cell is
@@ -141,6 +152,7 @@ class Text_Wiki_Parse_Table extends Text_Wiki_Parse {
                 } else {
                     
                     // this cell has content.
+                    $has_cell = true;
                     
                     // find any special "attr"ibute cell markers
                     if (substr($cell[$i], 0, 2) == '> ') {
@@ -189,6 +201,29 @@ class Text_Wiki_Parse_Table extends Text_Wiki_Parse {
                     $span = 1;
                 }
                     
+            }
+
+            // R2-Table correction C2 continued: a row whose cells were all
+            // empty, or whose only text sat after the final unmatched pipe,
+            // still owns one empty cell on live and in pins such as fail and
+            // simple-unterminated-row-opener-only.
+            if (! $has_cell) {
+                $return .= $this->wiki->addToken(
+                    $this->rule,
+                    array(
+                        'type' => 'cell_start',
+                        'attr' => null,
+                        'span' => 1
+                    )
+                );
+                $return .= $this->wiki->addToken(
+                    $this->rule,
+                    array(
+                        'type' => 'cell_end',
+                        'attr' => null,
+                        'span' => 1
+                    )
+                );
             }
             
             // end the row

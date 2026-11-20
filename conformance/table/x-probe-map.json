@@ -1,0 +1,232 @@
+{
+ "x01-table-in-div": {
+  "fullname": "muse-probe-r2table-x-x01-table-in-div",
+  "source": "[[div class=\"box\"]]\n|| a || b ||\n|| c || d ||\n[[/div]]",
+  "action": "created"
+ },
+ "x02-table-in-div-attr": {
+  "fullname": "muse-probe-r2table-x-x02-table-in-div-attr",
+  "source": "[[div id=\"d\" style=\"color:red\"]]\n|| a || b ||\n|| c || d ||\n[[/div]]",
+  "action": "created"
+ },
+ "x03-table-in-collapsible": {
+  "fullname": "muse-probe-r2table-x-x03-table-in-collapsible",
+  "source": "[[collapsible]]\n|| a || b ||\n|| c || d ||\n[[/collapsible]]",
+  "action": "created"
+ },
+ "x04-table-in-collapsible-closed": {
+  "fullname": "muse-probe-r2table-x-x04-table-in-collapsible-closed",
+  "source": "[[collapsible show=\"open\" hide=\"close\"]]\n|| a || b ||\n|| c || d ||\n[[/collapsible]]",
+  "action": "created"
+ },
+ "x05-table-in-quote": {
+  "fullname": "muse-probe-r2table-x-x05-table-in-quote",
+  "source": "> || a || b ||\n> || c || d ||",
+  "action": "created"
+ },
+ "x06-table-in-quote-head": {
+  "fullname": "muse-probe-r2table-x-x06-table-in-quote-head",
+  "source": "> intro\n> || a || b ||\n> || c || d ||",
+  "action": "created"
+ },
+ "x07-adv-in-div": {
+  "fullname": "muse-probe-r2table-x-x07-adv-in-div",
+  "source": "[[div class=\"box\"]]\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]c[[/cell]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]\n[[/div]]",
+  "action": "created"
+ },
+ "x08-adv-in-collapsible": {
+  "fullname": "muse-probe-r2table-x-x08-adv-in-collapsible",
+  "source": "[[collapsible]]\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]c[[/cell]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]\n[[/collapsible]]",
+  "action": "created"
+ },
+ "x09-table-in-quote-in-div": {
+  "fullname": "muse-probe-r2table-x-x09-table-in-quote-in-div",
+  "source": "[[div]]\n> || a || b ||\n> || c || d ||\n[[/div]]",
+  "action": "created"
+ },
+ "x10-simple-then-adv": {
+  "fullname": "muse-probe-r2table-x-x10-simple-then-adv",
+  "source": "|| a || b ||\n|| c || d ||\n\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]c[[/cell]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "x11-adv-then-simple": {
+  "fullname": "muse-probe-r2table-x-x11-adv-then-simple",
+  "source": "[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]c[[/cell]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]\n\n|| a || b ||\n|| c || d ||",
+  "action": "created"
+ },
+ "x12-simple-adv-no-blank": {
+  "fullname": "muse-probe-r2table-x-x12-simple-adv-no-blank",
+  "source": "|| a || b ||\n|| c || d ||\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]c[[/cell]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "x13-adv-in-simple-cell": {
+  "fullname": "muse-probe-r2table-x-x13-adv-in-simple-cell",
+  "source": "|| [[table]][[row]][[cell]]in[[/cell]][[/row]][[/table]] || b ||",
+  "action": "created"
+ },
+ "x14-simple-in-adv-cell": {
+  "fullname": "muse-probe-r2table-x-x14-simple-in-adv-cell",
+  "source": "[[table]][[row]][[cell]]|| x || y ||[[/cell]][[/row]][[/table]]",
+  "action": "created"
+ },
+ "x15-adv-in-adv-cell": {
+  "fullname": "muse-probe-r2table-x-x15-adv-in-adv-cell",
+  "source": "[[table]][[row]][[cell]]\n[[table]][[row]][[cell]]inner[[/cell]][[/row]][[/table]]\n[[/cell]][[/row]][[/table]]",
+  "action": "created"
+ },
+ "x16-two-adv-adjacent": {
+  "fullname": "muse-probe-r2table-x-x16-two-adv-adjacent",
+  "source": "[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]c[[/cell]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]c[[/cell]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "x17-simple-adv-simple": {
+  "fullname": "muse-probe-r2table-x-x17-simple-adv-simple",
+  "source": "|| a || b ||\n|| c || d ||\n\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]c[[/cell]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]\n\n|| a || b ||\n|| c || d ||",
+  "action": "created"
+ },
+ "x18-cell-with-span": {
+  "fullname": "muse-probe-r2table-x-x18-cell-with-span",
+  "source": "|| [[span class=\"x\"]]spanned[[/span]] || b ||",
+  "action": "created"
+ },
+ "x19-cell-with-size": {
+  "fullname": "muse-probe-r2table-x-x19-cell-with-size",
+  "source": "|| [[size 120%]]big[[/size]] || b ||",
+  "action": "created"
+ },
+ "x20-cell-with-color": {
+  "fullname": "muse-probe-r2table-x-x20-cell-with-color",
+  "source": "|| [[color red]]red[[/color]] || b ||",
+  "action": "created"
+ },
+ "x21-cell-with-bold": {
+  "fullname": "muse-probe-r2table-x-x21-cell-with-bold",
+  "source": "|| **strong** || ''em'' ||",
+  "action": "created"
+ },
+ "x22-cell-with-footnote": {
+  "fullname": "muse-probe-r2table-x-x22-cell-with-footnote",
+  "source": "|| a[[footnote]]note[[/footnote]] || b ||\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x23-cell-with-triple-link": {
+  "fullname": "muse-probe-r2table-x-x23-cell-with-triple-link",
+  "source": "|| [[[some-page|link]]] || b ||",
+  "action": "created"
+ },
+ "x24-cell-with-url-pipe": {
+  "fullname": "muse-probe-r2table-x-x24-cell-with-url-pipe",
+  "source": "|| [[https://example.com|Example]] || b ||",
+  "action": "created"
+ },
+ "x25-cell-with-url-pipe-cell2": {
+  "fullname": "muse-probe-r2table-x-x25-cell-with-url-pipe-cell2",
+  "source": "|| a || [[http://example.com|link]] ||",
+  "action": "created"
+ },
+ "x26-cell-with-raw": {
+  "fullname": "muse-probe-r2table-x-x26-cell-with-raw",
+  "source": "|| @@raw@@ || b ||",
+  "action": "created"
+ },
+ "x27-adv-cell-with-span": {
+  "fullname": "muse-probe-r2table-x-x27-adv-cell-with-span",
+  "source": "[[table]][[row]][[cell]][[span class=\"x\"]]s[[/span]][[/cell]][[/row]][[/table]]",
+  "action": "created"
+ },
+ "x28-adv-cell-with-url-pipe": {
+  "fullname": "muse-probe-r2table-x-x28-adv-cell-with-url-pipe",
+  "source": "[[table]][[row]][[cell]][[https://example.com|E]][[/cell]][[/row]][[/table]]",
+  "action": "created"
+ },
+ "x29-cell-with-div": {
+  "fullname": "muse-probe-r2table-x-x29-cell-with-div",
+  "source": "|| [[div]]inside[[/div]] || b ||",
+  "action": "created"
+ },
+ "x30-cell-with-collapsible": {
+  "fullname": "muse-probe-r2table-x-x30-cell-with-collapsible",
+  "source": "|| [[collapsible]]hidden[[/collapsible]] || b ||",
+  "action": "created"
+ },
+ "x31-table-heading-table": {
+  "fullname": "muse-probe-r2table-x-x31-table-heading-table",
+  "source": "|| a || b ||\n= Heading =\n|| c || d ||",
+  "action": "created"
+ },
+ "x32-table-toc-table": {
+  "fullname": "muse-probe-r2table-x-x32-table-toc-table",
+  "source": "|| a || b ||\n[[toc]]\n|| c || d ||",
+  "action": "created"
+ },
+ "x33-table-list-table": {
+  "fullname": "muse-probe-r2table-x-x33-table-list-table",
+  "source": "|| a || b ||\n* item\n|| c || d ||",
+  "action": "created"
+ },
+ "x34-table-deflist-table": {
+  "fullname": "muse-probe-r2table-x-x34-table-deflist-table",
+  "source": "|| a || b ||\n: term : definition\n|| c || d ||",
+  "action": "created"
+ },
+ "x35-table-hr-table": {
+  "fullname": "muse-probe-r2table-x-x35-table-hr-table",
+  "source": "|| a || b ||\n----\n|| c || d ||",
+  "action": "created"
+ },
+ "x36-table-code-table": {
+  "fullname": "muse-probe-r2table-x-x36-table-code-table",
+  "source": "|| a || b ||\n[[code]]\nx\n[[/code]]\n|| c || d ||",
+  "action": "created"
+ },
+ "x37-heading-then-table": {
+  "fullname": "muse-probe-r2table-x-x37-heading-then-table",
+  "source": "= Heading =\n|| a || b ||\n|| c || d ||",
+  "action": "created"
+ },
+ "x38-list-then-table": {
+  "fullname": "muse-probe-r2table-x-x38-list-then-table",
+  "source": "* item\n|| a || b ||\n|| c || d ||",
+  "action": "created"
+ },
+ "x39-adv-heading-adv": {
+  "fullname": "muse-probe-r2table-x-x39-adv-heading-adv",
+  "source": "[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]c[[/cell]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]\n= Heading =\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]c[[/cell]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "x40-adv-colspan-rowspan": {
+  "fullname": "muse-probe-r2table-x-x40-adv-colspan-rowspan",
+  "source": "[[table]]\n[[row]]\n[[cell colspan=\"2\"]]wide[[/cell]]\n[[/row]]\n[[row]]\n[[cell rowspan=\"2\"]]tall[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]",
+  "action": "created"
+ },
+ "x41-simple-trailing-empty-span": {
+  "fullname": "muse-probe-r2table-x-x41-simple-trailing-empty-span",
+  "source": "|| a || || || b ||\n|| c || d ||",
+  "action": "created"
+ },
+ "x42-simple-header-mix": {
+  "fullname": "muse-probe-r2table-x-x42-simple-header-mix",
+  "source": "||~ H || = C || > R ||\n|| a || b ||",
+  "action": "created"
+ },
+ "x43-adv-empty-cells": {
+  "fullname": "muse-probe-r2table-x-x43-adv-empty-cells",
+  "source": "[[table]][[row]][[cell]][[/cell]][[cell]]b[[/cell]][[/row]][[/table]]",
+  "action": "created"
+ },
+ "x44-malformed-adv-opener": {
+  "fullname": "muse-probe-r2table-x-x44-malformed-adv-opener",
+  "source": "[[table]]\n[[row]]\n[[cell]]unclosed\n|| a || b ||\n|| c || d ||",
+  "action": "created"
+ },
+ "x45-table-then-literal-brackets": {
+  "fullname": "muse-probe-r2table-x-x45-table-then-literal-brackets",
+  "source": "|| a || b ||\n|| c || d ||\n[[table]]not closed",
+  "action": "created"
+ },
+ "x46-div-simple-collapsible-adv": {
+  "fullname": "muse-probe-r2table-x-x46-div-simple-collapsible-adv",
+  "source": "[[div]]\n|| a || b ||\n|| c || d ||\n[[/div]]\n\n[[collapsible]]\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[row]]\n[[cell]]c[[/cell]]\n[[cell]]d[[/cell]]\n[[/row]]\n[[/table]]\n[[/collapsible]]",
+  "action": "created"
+ }
+}
