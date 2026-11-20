@@ -1,0 +1,12 @@
+{"id":"x-concat-code-inside","output":"\n<div class=\"code\">\n<pre><code>a\\\nb<\/code><\/pre><\/div>\n\n"}
+{"id":"x-concat-raw-inside","output":"<p>[[raw]]<br \/>\nab<br \/>\n[[\/raw]]<\/p>\n\n"}
+{"id":"x-concat-comment-inside","output":"<p>tail<\/p>\n\n"}
+{"id":"x-concat-freelink-join","output":"<p><a href=\"\/muse-probe-r2link-free-exists\">sometext<\/a><\/p>\n\n"}
+{"id":"x-concat-eref-join","output":"<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"><\/a><\/p>\n\n"}
+{"id":"x-free-math-label","output":"<p>[[math <a href=\"\/muse-probe-r2link-free-exists\">muse-probe-r2link-free-exists<\/a>]]<br \/>\nx<br \/>\n[[\/math]]<br \/>\n<a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"><\/a><\/p>\n\n"}
+{"id":"x-free-inside-code","output":"\n<div class=\"code\">\n<pre><code>[[[muse-probe-r2link-free-exists]]]<\/code><\/pre><\/div>\n\n"}
+{"id":"x-free-inside-comment","output":"<p>tail<\/p>\n\n"}
+{"id":"x-eref-backward","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1<\/a><\/p>\n\n"}
+{"id":"x-eref-forward","output":"<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1<\/a><\/p>\n\n<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"x-eref-duplicate","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-2')\">2<\/a><\/p>\n\n"}
+{"id":"x-eref-undefined","output":"<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"><\/a><\/p>\n\n"}

@@ -1,0 +1,342 @@
+{
+ "p-exist-labeled": {
+  "fullname": "muse-probe-r2link-free-p-exist-labeled",
+  "html": "<p><a href=\"/muse-probe-r2link-free-exists\">shown</a></p>",
+  "html_sha256": "3ddc00960239d0e634fa3461679cd4247acceedc7aa960053839cb1c46c5cf6d",
+  "source": "[[[muse-probe-r2link-free-exists|shown]]]",
+  "source_sha256": "667652b5cacb8102effca564b3a675c7449c882cd9628ba4e007f3140a8486b7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-exist-bare": {
+  "fullname": "muse-probe-r2link-free-p-exist-bare",
+  "html": "<p><a href=\"/muse-probe-r2link-free-exists\">muse-probe-r2link-free-exists</a></p>",
+  "html_sha256": "ab6a3aa8e92142e2e1115401059dcf503543ea7def4602dbcf01e7c5cb772614",
+  "source": "[[[muse-probe-r2link-free-exists]]]",
+  "source_sha256": "9155f2a8077de5dc46c2344aab9477359340f139f44639df231a93d138af1da7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-exist2-empty-label": {
+  "fullname": "muse-probe-r2link-free-p-exist2-empty-label",
+  "html": "<p><a href=\"/muse-probe-r2link-free-exists2\">probe exists2</a></p>",
+  "html_sha256": "6fbd07b51a8169d20664ec67ee078020e7e6baa7b2e3fe16d084d651c947e4aa",
+  "source": "[[[muse-probe-r2link-free-exists2|]]]",
+  "source_sha256": "23d6cccb197846c507e1e6edc8ecb71e8851071a1f104f4ce42a2290a2fe9fa3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-new-labeled": {
+  "fullname": "muse-probe-r2link-free-p-new-labeled",
+  "html": "<p><a class=\"newpage\" href=\"/muse-probe-r2link-free-new-page\">Wanted</a></p>",
+  "html_sha256": "42532d9a08937fe98431321c009cf66db3a58e1e2e8120cef6b8459bfa62462f",
+  "source": "[[[muse-probe-r2link-free-new-page|Wanted]]]",
+  "source_sha256": "9860383daff298002976325ca48fb55a288d06d9698eb87bd3e5518bc42a1a37",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-case-upper-exist": {
+  "fullname": "muse-probe-r2link-free-p-case-upper-exist",
+  "html": "<p><a href=\"/muse-probe-r2link-free-exists\">shown</a></p>",
+  "html_sha256": "3ddc00960239d0e634fa3461679cd4247acceedc7aa960053839cb1c46c5cf6d",
+  "source": "[[[MUSE-PROBE-R2LINK-FREE-EXISTS|shown]]]",
+  "source_sha256": "cf79299bbd5da6e3e52ab9caca63d2c4f3c3572be2b76a34adc226dbc720e4c1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-anchor-digit": {
+  "fullname": "muse-probe-r2link-free-p-anchor-digit",
+  "html": "<p><a class=\"newpage\" href=\"/scp-series#001\">SCP-001 to SCP-099</a></p>",
+  "html_sha256": "bae4251359a2435220f84195e9b8bac9d0399b0ba59ed82b0411c869bcf20a37",
+  "source": "[[[scp-series#001|SCP-001 to SCP-099]]]",
+  "source_sha256": "2f3033c113c67425e5863c9127af49458fb3f75742ca0ee51a995e3391a520af",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-anchor-alpha": {
+  "fullname": "muse-probe-r2link-free-p-anchor-alpha",
+  "html": "<p><a class=\"newpage\" href=\"/scp-series#section\">Label</a></p>",
+  "html_sha256": "fe8a795044ddf60737b02e46a0155e83cd1240945f7cfade1e4606066c53c1e6",
+  "source": "[[[scp-series#section|Label]]]",
+  "source_sha256": "f7cfa1ba475363c8cf04fe426d24546c10a423ffb50406374194809f862627a8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-anchor-dash": {
+  "fullname": "muse-probe-r2link-free-p-anchor-dash",
+  "html": "<p><a class=\"newpage\" href=\"/scp-series#sec-1\">Label</a></p>",
+  "html_sha256": "9324330884598ad812484e49bf5f6ea68ee6aca1b881c60c93861bd5da6aaad7",
+  "source": "[[[scp-series#sec-1|Label]]]",
+  "source_sha256": "e4ada0e7e01b93410610345ae2239d96b59d1ea36c9f854148d7eb48b9cde102",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-anchor-underscore": {
+  "fullname": "muse-probe-r2link-free-p-anchor-underscore",
+  "html": "<p><a class=\"newpage\" href=\"/scp-series#sec_1\">Label</a></p>",
+  "html_sha256": "a1dd065710ffbefafd8b32e2a7a12cd5cbb7d67b3fc178b45d0fdb24550fe3a0",
+  "source": "[[[scp-series#sec_1|Label]]]",
+  "source_sha256": "56ba14f1cce4f1afecda7a112a76c0c3f8b9fd3c30ce9905ef04789856393a1d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-anchor-colon": {
+  "fullname": "muse-probe-r2link-free-p-anchor-colon",
+  "html": "<p><a class=\"newpage\" href=\"/scp-series#sec:1\">Label</a></p>",
+  "html_sha256": "58181b39bc377812549409c31a74ab3e4b4542f196ffa4538eb58c9a7483c808",
+  "source": "[[[scp-series#sec:1|Label]]]",
+  "source_sha256": "727a8a7f9afb8f0c23fa3d384620de24c953316f32ec2f04c278f8c410210ddd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-anchor-label-only-space": {
+  "fullname": "muse-probe-r2link-free-p-anchor-label-only-space",
+  "html": "<p><a class=\"newpage\" href=\"/#my-anchor\">Label</a></p>",
+  "html_sha256": "02f58faf7b5ff3a9e0a782d79e33883234e72db02432a0a02e0a0ca0494ba668",
+  "source": "[[[ #my-anchor | Label ]]]",
+  "source_sha256": "25273d767998bd6652b6bf2c47cf9194c24a601c39d059bddea4810bed08c4c2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-anchor-plain": {
+  "fullname": "muse-probe-r2link-free-p-anchor-plain",
+  "html": "<p><a class=\"newpage\" href=\"/scp-series#001\">scp-series</a></p>",
+  "html_sha256": "b781f6d33f35cbaa3fc702d49fc880e3bc512efe29ba053b0c0cf49b2b9ed00f",
+  "source": "[[[scp-series#001]]]",
+  "source_sha256": "3f822e9b01f295994b14aa11ba02033b8063a671412f64c471fdbf6ca03d1953",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-triple-hash": {
+  "fullname": "muse-probe-r2link-free-p-triple-hash",
+  "html": "<p>[[[home###|Home]]]</p>",
+  "html_sha256": "7f36692026ecbb3f0caffe40ca370f3649033e7c5f5046a7d67f641faeab64d9",
+  "source": "[[[home###|Home]]]",
+  "source_sha256": "e81837d8310c011891cec1ce4c881c5b9eed6926e1b31d87e6c71439dcae8e75",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-dup-pipes": {
+  "fullname": "muse-probe-r2link-free-p-dup-pipes",
+  "html": "<p><a class=\"newpage\" href=\"/page-slug\">A|B|C</a></p>",
+  "html_sha256": "7f8b3f164e1437f6d185b1cd1167fee6c798ae6bac1ef1f41ca1b5fbccb18d3c",
+  "source": "[[[page-slug|A|B|C]]]",
+  "source_sha256": "16418f43424536504b1fb87f60547867a9f9ee8b953efed6aaf8f843a67133e1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-dup-pipes-spaced": {
+  "fullname": "muse-probe-r2link-free-p-dup-pipes-spaced",
+  "html": "<p><a class=\"newpage\" href=\"/page-slug\">A | B | C</a></p>",
+  "html_sha256": "cfa473501a8793acc7c1a21d0acbf6efc92424fae3d370ccbf1cfb438eb562f7",
+  "source": "[[[ page-slug | A | B | C ]]]",
+  "source_sha256": "8c1aebb4f903d7ba09bc3101df37ea37bddca1caa8a1cebe83cf3addcce3dcf0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-empty-target": {
+  "fullname": "muse-probe-r2link-free-p-empty-target",
+  "html": "<p>[[[|Label]]]</p>",
+  "html_sha256": "b51c496c6e6fcf1faed5e2223ae9c420bcfb2ccd07de5acb6f10a9a08cc7fce9",
+  "source": "[[[|Label]]]",
+  "source_sha256": "4c940011b5a5916d74f319ed4522a6cbc5a1e9ba736b7055ae57635eebb7530a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-whitespace-target": {
+  "fullname": "muse-probe-r2link-free-p-whitespace-target",
+  "html": "<p><a class=\"newpage\" href=\"/\">Label</a></p>",
+  "html_sha256": "1eddea92dde6b3b2256079a26e267cc5556e96bb515a7db7d1c21414b8ffec5d",
+  "source": "[[[   |Label]]]",
+  "source_sha256": "137ea0ab1994a67eaf5f10435061c9863844e3d01b0413cecbe49000c866c88d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-empty-label": {
+  "fullname": "muse-probe-r2link-free-p-empty-label",
+  "html": "<p><a class=\"newpage\" href=\"/some-page\">some-page</a></p>",
+  "html_sha256": "c3aa4192a431f70f5c350d459bae3c048be5eb563b6a1947bd2202d6922d7fdb",
+  "source": "[[[some-page|]]]",
+  "source_sha256": "0f7805663a736b990805ca5c5ce0f257cb8403c3c662252aae5f104f1972466c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-quad": {
+  "fullname": "muse-probe-r2link-free-p-quad",
+  "html": "<p>[<a class=\"newpage\" href=\"/scp-001-ex\">SCP-001-EX</a>]</p>",
+  "html_sha256": "ae764b96a56cacf6e274f14af1ec3fb2415bcfc0227fa625f2896d5c63bb4b9f",
+  "source": "[[[[SCP-001-EX]]]]",
+  "source_sha256": "4ee70e683536e54a94a4f3fe9dbc5018d63fe7c0e8b940b02e8b164fd1c34324",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-quint": {
+  "fullname": "muse-probe-r2link-free-p-quint",
+  "html": "<p>[[<a class=\"newpage\" href=\"/scp-001-ex\">SCP-001-EX</a>]]</p>",
+  "html_sha256": "d6018ce9d96a54f4909cf40ec921c7cfd2556420c819eeadac697d0d4d5581bf",
+  "source": "[[[[[SCP-001-EX]]]]]",
+  "source_sha256": "01dbaad383efc2eafe6217840f65559b9dc7c4033fade8c63dbb7faf331fda8b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-cross-colon": {
+  "fullname": "muse-probe-r2link-free-p-cross-colon",
+  "html": "<p><a class=\"newpage\" href=\"/scp-wiki:component:theme\">Sigma-9 Theme</a></p>",
+  "html_sha256": "f1ff38dc54664a76fe9007fa6f9b8fb2c68fcf73dc75666f8e295a90e0e450c6",
+  "source": "[[[:scp-wiki:component:theme|Sigma-9 Theme]]]",
+  "source_sha256": "3988a127ee869ceed637fcbc1740b2a0dc8cba9554acd4f4ab61637440fa1383",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-fossil-cross": {
+  "fullname": "muse-probe-r2link-free-p-fossil-cross",
+  "html": "<p><a class=\"newpage\" href=\"/site:page\">Label</a></p>",
+  "html_sha256": "f34241992ff69f1f61e82a7a98b75f2186a6f56d23960f70659b6c859a24d3ac",
+  "source": "[[[site::page|Label]]]",
+  "source_sha256": "9064ff885e35cf1c6283c124ffc1d944425bd8df80ce3d7eb8eab4b710a6efba",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-category": {
+  "fullname": "muse-probe-r2link-free-p-category",
+  "html": "<p><a href=\"/system:recent-changes\">Recent Changes</a></p>",
+  "html_sha256": "0870b9858d12444e1d221dc9b6d35f333b5d2d67339bce44ea35f4345bf2cc63",
+  "source": "[[[system:Recent Changes]]]",
+  "source_sha256": "32a30e018c243b27dae91e780012b60afde3e1d21b152246398069d7743de8d1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-default-category": {
+  "fullname": "muse-probe-r2link-free-p-default-category",
+  "html": "<p><a class=\"newpage\" href=\"/a\">Label</a></p>",
+  "html_sha256": "81dc487c2f2ba80f3fb579bd6b0de2af59156ca64027f2b1f7dced1e51d108aa",
+  "source": "[[[_default:a|Label]]]",
+  "source_sha256": "4a04922f986f20d9cd5ef92e5f627a3064aa6f32a9e2e3d31d1692fdacf11358",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-multi-colon-empty": {
+  "fullname": "muse-probe-r2link-free-p-multi-colon-empty",
+  "html": "<p><a class=\"newpage\" href=\"/a:b:c\">a:b:c</a></p>",
+  "html_sha256": "d07d0d70b12d6277b87b3136441f185479f4181e515e56bc694736ba3dca205b",
+  "source": "[[[a:b:c|]]]",
+  "source_sha256": "25a4b1bb468891f10164c0ee11e95facb6013eaa9014e003428ad6b04f878e13",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-url-plain": {
+  "fullname": "muse-probe-r2link-free-p-url-plain",
+  "html": "<p><a href=\"https://example.com/\">Example</a></p>",
+  "html_sha256": "901b6ab6fe926f55df8da443983cd322916e9392ee60bca3835bf451e9df7e07",
+  "source": "[[[https://example.com/|Example]]]",
+  "source_sha256": "7379c4402ba0f0464d0a49a2ba54dd39197bb5e3db2b6b03efeace8cb410a259",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-url-leading-space": {
+  "fullname": "muse-probe-r2link-free-p-url-leading-space",
+  "html": "<p><a class=\"newpage\" href=\"/https:example-com\">Example</a></p>",
+  "html_sha256": "1de5dd245171d607933802c55c32401d0589762af2148fa9bfbcc2cade45b05b",
+  "source": "[[[ https://example.com/ | Example ]]]",
+  "source_sha256": "7a9a6999763947ae600d26a5611b61d9cbe4bfe46e8561db65d7254cafbc1896",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-url-trailing-space": {
+  "fullname": "muse-probe-r2link-free-p-url-trailing-space",
+  "html": "<p><a href=\"https://example.com\">Trailing</a></p>",
+  "html_sha256": "5a0f3176a72fd4aa465dfa28b7f821c4b2a9114f0c2db977ccbb6f438789e9c4",
+  "source": "[[[https://example.com | Trailing]]]",
+  "source_sha256": "4160d48b2272fd5b9716d33f17ab83fcb8550298c6d5d3eed424c100ed86af98",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-url-hash-route": {
+  "fullname": "muse-probe-r2link-free-p-url-hash-route",
+  "html": "<p><a class=\"newpage\" href=\"/main#/page\">Hash routing</a></p>",
+  "html_sha256": "f579a74f31451647149541c67bef7d8dd9e375b7bd3c3907eacd47da052b7820",
+  "source": "[[[MAIN/#/page|Hash routing]]]",
+  "source_sha256": "d304fd3adb4292d317f3439955bfae58e1e1710989258344ae34c7d06791544b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-star": {
+  "fullname": "muse-probe-r2link-free-p-star",
+  "html": "<p><a class=\"newpage\" href=\"/scp-001\">*SCP-001</a></p>",
+  "html_sha256": "1aa4b715355d60b6a15de184b09f2893c401c3c01954d295edd23e751ebe2797",
+  "source": "[[[*SCP-001]]]",
+  "source_sha256": "1a8f236d880208e8b27e02091f6a3951466ebbf0c3a7ee9918381ec0727f0e35",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-underscore": {
+  "fullname": "muse-probe-r2link-free-p-underscore",
+  "html": "<p><a class=\"newpage\" href=\"/_some-page\">Label</a></p>",
+  "html_sha256": "d8ce2534134a025092923877fc197a2b3adeef6338755acce65a1384d2e44b2a",
+  "source": "[[[_some-page|Label]]]",
+  "source_sha256": "faeeec5ca5ad1d18a6376e8da46955f735ba0513064445ec352cc5f6aea2384a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-cyrillic": {
+  "fullname": "muse-probe-r2link-free-p-cyrillic",
+  "html": "<p><a class=\"newpage\" href=\"/dokument\">документ</a></p>",
+  "html_sha256": "9b271b1837579fb67f27490da4a0372ac5e628a5a85a456ac0b3f17623091b80",
+  "source": "[[[документ]]]",
+  "source_sha256": "e92f3a9d5b940feea1b80aee9ddf3bdeb8bc2ee29596963933c6a0205c71a3bf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-midline": {
+  "fullname": "muse-probe-r2link-free-p-midline",
+  "html": "<p>text before <a class=\"newpage\" href=\"/some-page\">Mid line</a> text after</p>",
+  "html_sha256": "6cb1f9783eb7fe27eef2da07ad98fd656cf53d024187cc9bb46b78c7cd29a853",
+  "source": "text before [[[some-page|Mid line]]] text after",
+  "source_sha256": "48949fd60383fbab6cd4870a92b0c2401ddb6c15f00e391c7d87b18a4aa679a4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-noline-start": {
+  "fullname": "muse-probe-r2link-free-p-noline-start",
+  "html": "<p>first line<br />\n<a class=\"newpage\" href=\"/some-page\">Second line</a></p>",
+  "html_sha256": "3e602db61edb9614817634ba5d884a6aa41c4a488b64de752f55d9c767063b79",
+  "source": "first line\n[[[some-page|Second line]]]",
+  "source_sha256": "ce5a7c9d72be2b623f32f152ef3110f6127f04d1a10a4e21a0a037d2f54dbfd4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

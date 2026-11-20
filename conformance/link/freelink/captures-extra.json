@@ -1,0 +1,12 @@
+{
+ "p-cross-colon-spaced": {
+  "fullname": "muse-probe-r2link-free-p-cross-colon-spaced",
+  "html": "<p><a class=\"newpage\" href=\"/scp-wiki:system:recent-changes\">:scp-wiki : system : Recent Changes</a></p>",
+  "html_sha256": "4880c426cea46d6b239567bdf0d0f7f4c90877ddb766c874f7f1708130ae157d",
+  "source": "[[[:scp-wiki : system : Recent Changes]]]",
+  "source_sha256": "f206b94005e128d642df1687e27fb28670824b1bc52741bc97ae01d313079c08",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

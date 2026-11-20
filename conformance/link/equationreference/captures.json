@@ -1,0 +1,262 @@
+{
+ "p-undefined": {
+  "fullname": "muse-probe-r2link-eref-p-undefined",
+  "html": "<p>X<a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a>Y</p>",
+  "html_sha256": "5ac2d7b670831176eb815fcf66cdaa9c727a8dd20e3def83c5508457582816aa",
+  "source": "X[[eref missing]]Y",
+  "source_sha256": "b7917170f52b329dded8acae786ef675f2da8f291896c1e37ab0de722f14b2a0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-defined": {
+  "fullname": "muse-probe-r2link-eref-p-defined",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>",
+  "html_sha256": "7608ee6cad1e764f837e43d9df7ee8d13021df5aec0d8a922efd39c763153ec8",
+  "source": "[[math a]]\nx\n[[/math]]\n[[eref a]]",
+  "source_sha256": "675e699f82e2f1d6918970ac9390a40936a41450594b12af2ca2bda4e84e6f5e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-forward": {
+  "fullname": "muse-probe-r2link-eref-p-forward",
+  "html": "<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>\n<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>",
+  "html_sha256": "a2b122f9ea3c6b2c15178f233a5949bf88d3bbdd747b898bd0eb50146fa7b031",
+  "source": "[[eref a]]\n[[math a]]\nx\n[[/math]]",
+  "source_sha256": "2876041dda06ad981f7a816ce7dda8a6bb78566ec9dc62de759b31dcdb269b0a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-two": {
+  "fullname": "muse-probe-r2link-eref-p-two",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<span class=\"equation-number\">(2)</span>\n<div class=\"math-equation\" id=\"equation-2\">\\begin{equation} y \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a> <a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-2')\">2</a></p>",
+  "html_sha256": "71c229ebea7a01d50c808cbd3d2f85593cbd17f5d73ffd2ffedd347cdbcbd210",
+  "source": "[[math a]]\nx\n[[/math]]\n[[math b]]\ny\n[[/math]]\n[[eref a]] [[eref b]]",
+  "source_sha256": "1ac466d1c0bf362678c45b31759468a0002ceb695a76842c188e407e81471970",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-dup": {
+  "fullname": "muse-probe-r2link-eref-p-dup",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<span class=\"equation-number\">(2)</span>\n<div class=\"math-equation\" id=\"equation-2\">\\begin{equation} y \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-2')\">2</a></p>",
+  "html_sha256": "d37177c704e7603b06cb3973a4e238d4ba1d4af9b3c234153cdc4cadcc495503",
+  "source": "[[math a]]\nx\n[[/math]]\n[[math a]]\ny\n[[/math]]\n[[eref a]]",
+  "source_sha256": "35d484e80d3cb24584ba1de138fd663965283cc17201ec0b80de1d08c9609d09",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-empty-arg": {
+  "fullname": "muse-probe-r2link-eref-p-empty-arg",
+  "html": "<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a></p>",
+  "html_sha256": "f81c317bcd79abc4882ca415327ddf5633aa6dcd0bc1e8da40bd821f3eaf7966",
+  "source": "[[eref ]]",
+  "source_sha256": "fbd3dff30e6eed0becab192767c22c4dc9d9ddac01d6d12eff4a1136ffe6b944",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-no-arg": {
+  "fullname": "muse-probe-r2link-eref-p-no-arg",
+  "html": "<p>[[eref]]</p>",
+  "html_sha256": "1912984e8d78bda3581d40ec37120cc0767ff975f63b49bf2c24286afe4e6b06",
+  "source": "[[eref]]",
+  "source_sha256": "44da902eb0d3792a9008e9d850ee9369bc4aed502c6cbfffd49a1f8df9afe61f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-tab": {
+  "fullname": "muse-probe-r2link-eref-p-tab",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>",
+  "html_sha256": "7608ee6cad1e764f837e43d9df7ee8d13021df5aec0d8a922efd39c763153ec8",
+  "source": "[[math a]]\nx\n[[/math]]\n[[eref\ta]]",
+  "source_sha256": "be90397701678d3b46652aedc9dd0beea0fb6832c8932c36696d1891fa93d96f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-two-spaces": {
+  "fullname": "muse-probe-r2link-eref-p-two-spaces",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>",
+  "html_sha256": "7608ee6cad1e764f837e43d9df7ee8d13021df5aec0d8a922efd39c763153ec8",
+  "source": "[[math a]]\nx\n[[/math]]\n[[eref  a]]",
+  "source_sha256": "b5041617184063d93e26fd7a3f32c9712ba06a1e1e54cc070d8b6290cd2b1f68",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-uppercase": {
+  "fullname": "muse-probe-r2link-eref-p-uppercase",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p>[[EREF a]]</p>",
+  "html_sha256": "e94d6aaeacd584c84996a232148f4c2e882e44a7beb2091db29d45f6135ebf45",
+  "source": "[[math a]]\nx\n[[/math]]\n[[EREF a]]",
+  "source_sha256": "a2e5b75bb0ac5b81bc7a6c917c3cec380514a496721c92e20065e629a6324445",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-equation-name": {
+  "fullname": "muse-probe-r2link-eref-p-equation-name",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p>[[equation a]]</p>",
+  "html_sha256": "e0e85c422d5a59ac470f03e4583756db7d77fbee8ec30bb2b31d0141ab44d771",
+  "source": "[[math a]]\nx\n[[/math]]\n[[equation a]]",
+  "source_sha256": "c769912e6e8c0b094547437821ebe372a603a7de56f6ebb0757d654f9dd00bab",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-eqref-name": {
+  "fullname": "muse-probe-r2link-eref-p-eqref-name",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p>[[eqref a]]</p>",
+  "html_sha256": "c92bab2bbc50a4f759e5863b240e17a0f2b579cef6386cdecbd0b2776d6a13f6",
+  "source": "[[math a]]\nx\n[[/math]]\n[[eqref a]]",
+  "source_sha256": "6aa9bfdf553a694a813648b24151d6b3f2605911e88234394bf6fe7b988b4d8e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-case-label": {
+  "fullname": "muse-probe-r2link-eref-p-case-label",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a></p>",
+  "html_sha256": "a44e8475d536804ca39ff167e5f1abc35da3f97e87726dd0d2a65effef664b4d",
+  "source": "[[math a]]\nx\n[[/math]]\n[[eref A]]",
+  "source_sha256": "401e6aa57a5beb645cfebe70e0a3aa9d4db6e74c0b2b845d4e3490ac076a094b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-multiword": {
+  "fullname": "muse-probe-r2link-eref-p-multiword",
+  "html": "<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a></p>",
+  "html_sha256": "f81c317bcd79abc4882ca415327ddf5633aa6dcd0bc1e8da40bd821f3eaf7966",
+  "source": "[[eref a b]]",
+  "source_sha256": "cec325185791e780df3552a5ff3fc69cfea3f31a72b73477f9b6216da1f0b9a6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-pipe": {
+  "fullname": "muse-probe-r2link-eref-p-pipe",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a></p>",
+  "html_sha256": "a44e8475d536804ca39ff167e5f1abc35da3f97e87726dd0d2a65effef664b4d",
+  "source": "[[math a]]\nx\n[[/math]]\n[[eref a|text]]",
+  "source_sha256": "4bd1006b41c060b21ffb19e8c58cfb76392eb1300c115d49e04d53bea1f25cec",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-underscore-label": {
+  "fullname": "muse-probe-r2link-eref-p-underscore-label",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>",
+  "html_sha256": "7608ee6cad1e764f837e43d9df7ee8d13021df5aec0d8a922efd39c763153ec8",
+  "source": "[[math a_b]]\nx\n[[/math]]\n[[eref a_b]]",
+  "source_sha256": "848b53620ed8f2b451896965f38a7bf68c6991f6650678720878ec7563a58b1b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-adjacent": {
+  "fullname": "muse-probe-r2link-eref-p-adjacent",
+  "html": "<p>[[math a]]<br />\nx<br />\n[[/math]]<a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a></p>",
+  "html_sha256": "52102e0553f6a090a19a0c742ed36f7ed5b106c68b7039fa11cc7e2902338019",
+  "source": "[[math a]]\nx\n[[/math]][[eref a]]",
+  "source_sha256": "fbb3db08d6d094784b57b7a19c95b0b60e012e2e47ac1310f269397d17210254",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-space-adjacent": {
+  "fullname": "muse-probe-r2link-eref-p-space-adjacent",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>",
+  "html_sha256": "7608ee6cad1e764f837e43d9df7ee8d13021df5aec0d8a922efd39c763153ec8",
+  "source": "[[math a]]\nx\n[[/math]] [[eref a]]",
+  "source_sha256": "7003217bbb5251cdb69a721b30c3ae14af4db7d7b5c16292b1aa37fae9717b7b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-midline": {
+  "fullname": "muse-probe-r2link-eref-p-midline",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p>Hello <a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a> world.</p>",
+  "html_sha256": "fc2199cfb01b203ef52e702a56232b4267e146416dc3fcf7a3cc7df80e6fe3e9",
+  "source": "[[math a]]\nx\n[[/math]]\nHello [[eref a]] world.",
+  "source_sha256": "180de3af763b4178a6e3b63a59a34cf6f816bf87b48b17b7146f7c2a9d4d909a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-div": {
+  "fullname": "muse-probe-r2link-eref-p-div",
+  "html": "<div><span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>\n</div>",
+  "html_sha256": "6883f49194cd0b254f4d5c9b51657ca3ddb63035b0a3a6191fbf8153a9e8875a",
+  "source": "[[div]]\n[[math a]]\nx\n[[/math]]\n[[eref a]]\n[[/div]]",
+  "source_sha256": "5041b818f3b1d5aeaaa1383930a032099aa0a10a105bd5b8b01427c969f3ea43",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-quote": {
+  "fullname": "muse-probe-r2link-eref-p-quote",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<blockquote>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>\n</blockquote>",
+  "html_sha256": "808568106c484e645c1844e355f8b3a0d0a44401024f2e1fc9dd157aa28fcbb3",
+  "source": "[[math a]]\nx\n[[/math]]\n> [[eref a]]",
+  "source_sha256": "289204fd543e83fcf8e3857dcd3dec16eb5a234b1997bb4401007feecf4c9b99",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-bold": {
+  "fullname": "muse-probe-r2link-eref-p-bold",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><strong><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></strong></p>",
+  "html_sha256": "f866964edab01cb96e1c1688cd25d0aff3334683776054613052c96b01040b78",
+  "source": "[[math a]]\nx\n[[/math]]\n**[[eref a]]**",
+  "source_sha256": "01a1145019a9b1bbcc4dd0e2349dc9d664e6a4443269f00fe0e24a9cf68f7326",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-triple-close": {
+  "fullname": "muse-probe-r2link-eref-p-triple-close",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a>]</p>",
+  "html_sha256": "491a974617b0dd1271acd6d12e387a5bda4aa39ace9aafdfef3ba5e4b079eab1",
+  "source": "[[math a]]\nx\n[[/math]]\n[[eref a]]]",
+  "source_sha256": "50599485d02b1793c05c0777d4636ddfbf481184ccb89c94e0a74706c6022171",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-two-refs-one-eq": {
+  "fullname": "muse-probe-r2link-eref-p-two-refs-one-eq",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a> and <a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>",
+  "html_sha256": "1bb92b01323588c712252a3e73d9b9edce2d7918b5c33a0cf01b4c1b605be7e2",
+  "source": "[[math a]]\nx\n[[/math]]\n[[eref a]] and [[eref a]]",
+  "source_sha256": "f0bcd4f4c58e3445194b029b15967d23facdd90b07cbf2631d205762e605a80f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-unterminated": {
+  "fullname": "muse-probe-r2link-eref-p-unterminated",
+  "html": "<p>[[eref a</p>",
+  "html_sha256": "c1b559cdec6946b6b0b9a7b6ab7d665c894e138b3bdb120c9138a07582d03339",
+  "source": "[[eref a",
+  "source_sha256": "31c718e3550c06344ffd6562698f100a271f282f0931461fce41d372f4e4736a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-whitespace-label": {
+  "fullname": "muse-probe-r2link-eref-p-whitespace-label",
+  "html": "<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a></p>",
+  "html_sha256": "f81c317bcd79abc4882ca415327ddf5633aa6dcd0bc1e8da40bd821f3eaf7966",
+  "source": "[[eref   ]]",
+  "source_sha256": "4c4d96a3f9518ac0faf7793458ba4117e1bbce2df607a0f3efb2097b236d3d09",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

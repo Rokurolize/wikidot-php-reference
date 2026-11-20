@@ -1,0 +1,72 @@
+{
+ "multi-cont": {
+  "fullname": "muse-probe-r2link-concat-multi-cont",
+  "html": "<p>abc</p>",
+  "html_sha256": "25d0f020f6881a92742eadf0dda2a864025b35ec0008886497ed1d21efe99d20",
+  "source": "a\\\nb\\\nc",
+  "source_sha256": "ab697495f1ab1fe1b30bde19df0b7a93801ac2f40df890565d04d51e23b6c022",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "backslash-space-newline": {
+  "fullname": "muse-probe-r2link-concat-backslash-space-newline",
+  "html": "<p>a\\<br />\nb</p>",
+  "html_sha256": "b5486fd590147d1f8ddfddb3df21b06f6e58f3834e9f5c3c2c99ce0918fce571",
+  "source": "a\\ \nb",
+  "source_sha256": "90657cfa15fcd4f4b28d8d687f43564b414912b56b742a3e38abea8d3ee3cb79",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "backslash-tab-newline": {
+  "fullname": "muse-probe-r2link-concat-backslash-tab-newline",
+  "html": "<p>a\\<br />\nb</p>",
+  "html_sha256": "b5486fd590147d1f8ddfddb3df21b06f6e58f3834e9f5c3c2c99ce0918fce571",
+  "source": "a\\\t\nb",
+  "source_sha256": "f12f7f63aa855b2137af91f8d19fa90c821c8263a5826e52e3943e6bf60e83bc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "space-backslash-newline": {
+  "fullname": "muse-probe-r2link-concat-space-backslash-newline",
+  "html": "<p>a b</p>",
+  "html_sha256": "c0404946a2faae16136c44e6f88d6fd7c6093a745921b2848695b0c564e1aa1f",
+  "source": "a \\\nb",
+  "source_sha256": "7ee92a17dfe7223d62a7500f4f78b3d68a41111a3d9e0d4066f3e6706344ecd0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "backslash-at-eof": {
+  "fullname": "muse-probe-r2link-concat-backslash-at-eof",
+  "html": "a<br />",
+  "html_sha256": "2e57ede8da980334be9fbd152e601ec9b977ece38a3488be676564bfe08dea07",
+  "source": "a\\",
+  "source_sha256": "56c154237f4f1298407bee0ab17f5d2de4298f253d5748388b64c2d4e45a8f46",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "code-block-upper": {
+  "fullname": "muse-probe-r2link-concat-code-block-upper",
+  "html": "<div class=\"code\">\n<pre><code>x\\\ny</code></pre></div>",
+  "html_sha256": "60e3b2c8b4169caedfc23c0dab386669a3a2803b03431a5613bf5b38f8cea3a8",
+  "source": "[[CODE]]\nx\\\ny\n[[/CODE]]",
+  "source_sha256": "d32775b08ff2fd7ec609d713c563d348ad25d11d1c2573d7a47a4b3f67e0ffe2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "inline-code": {
+  "fullname": "muse-probe-r2link-concat-inline-code",
+  "html": "<div class=\"code\">\n<pre><code>x\\\ny</code></pre></div>",
+  "html_sha256": "60e3b2c8b4169caedfc23c0dab386669a3a2803b03431a5613bf5b38f8cea3a8",
+  "source": "[[code]]x\\\ny[[/code]]",
+  "source_sha256": "478dc01b57a4278830fd5f2276afe941477004fa4da63db13f69611e134c20e4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

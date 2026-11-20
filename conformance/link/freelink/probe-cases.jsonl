@@ -1,0 +1,34 @@
+{"id": "p-exist-labeled", "source": "[[[muse-probe-r2link-free-exists|shown]]]"}
+{"id": "p-exist-bare", "source": "[[[muse-probe-r2link-free-exists]]]"}
+{"id": "p-exist2-empty-label", "source": "[[[muse-probe-r2link-free-exists2|]]]"}
+{"id": "p-new-labeled", "source": "[[[muse-probe-r2link-free-new-page|Wanted]]]"}
+{"id": "p-case-upper-exist", "source": "[[[MUSE-PROBE-R2LINK-FREE-EXISTS|shown]]]"}
+{"id": "p-anchor-digit", "source": "[[[scp-series#001|SCP-001 to SCP-099]]]"}
+{"id": "p-anchor-alpha", "source": "[[[scp-series#section|Label]]]"}
+{"id": "p-anchor-dash", "source": "[[[scp-series#sec-1|Label]]]"}
+{"id": "p-anchor-underscore", "source": "[[[scp-series#sec_1|Label]]]"}
+{"id": "p-anchor-colon", "source": "[[[scp-series#sec:1|Label]]]"}
+{"id": "p-anchor-label-only-space", "source": "[[[ #my-anchor | Label ]]]"}
+{"id": "p-anchor-plain", "source": "[[[scp-series#001]]]"}
+{"id": "p-triple-hash", "source": "[[[home###|Home]]]"}
+{"id": "p-dup-pipes", "source": "[[[page-slug|A|B|C]]]"}
+{"id": "p-dup-pipes-spaced", "source": "[[[ page-slug | A | B | C ]]]"}
+{"id": "p-empty-target", "source": "[[[|Label]]]"}
+{"id": "p-whitespace-target", "source": "[[[   |Label]]]"}
+{"id": "p-empty-label", "source": "[[[some-page|]]]"}
+{"id": "p-quad", "source": "[[[[SCP-001-EX]]]]"}
+{"id": "p-quint", "source": "[[[[[SCP-001-EX]]]]]"}
+{"id": "p-cross-colon", "source": "[[[:scp-wiki:component:theme|Sigma-9 Theme]]]"}
+{"id": "p-fossil-cross", "source": "[[[site::page|Label]]]"}
+{"id": "p-category", "source": "[[[system:Recent Changes]]]"}
+{"id": "p-default-category", "source": "[[[_default:a|Label]]]"}
+{"id": "p-multi-colon-empty", "source": "[[[a:b:c|]]]"}
+{"id": "p-url-plain", "source": "[[[https://example.com/|Example]]]"}
+{"id": "p-url-leading-space", "source": "[[[ https://example.com/ | Example ]]]"}
+{"id": "p-url-trailing-space", "source": "[[[https://example.com | Trailing]]]"}
+{"id": "p-url-hash-route", "source": "[[[MAIN/#/page|Hash routing]]]"}
+{"id": "p-star", "source": "[[[*SCP-001]]]"}
+{"id": "p-underscore", "source": "[[[_some-page|Label]]]"}
+{"id": "p-cyrillic", "source": "[[[документ]]]"}
+{"id": "p-midline", "source": "text before [[[some-page|Mid line]]] text after"}
+{"id": "p-noline-start", "source": "first line\n[[[some-page|Second line]]]"}

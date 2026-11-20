@@ -1,0 +1,4 @@
+{"id":"x-free-iftags-keep","output":"<p><a href=\"\/muse-probe-r2link-free-exists\">muse-probe-r2link-free-exists<\/a><\/p>\n\n"}
+{"id":"x-free-iftags-drop","output":""}
+{"id":"x-eref-kept-math","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1<\/a><\/p>\n\n"}
+{"id":"x-eref-suppressed-math","output":"<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"><\/a><\/p>\n\n"}

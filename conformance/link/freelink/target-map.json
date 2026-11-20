@@ -1,0 +1,12 @@
+{
+ "exists": {
+  "fullname": "muse-probe-r2link-free-exists",
+  "source": "FREELINK TARGET ONE",
+  "action": "created"
+ },
+ "exists2": {
+  "fullname": "muse-probe-r2link-free-exists2",
+  "source": "FREELINK TARGET TWO",
+  "action": "created"
+ }
+}

@@ -1,0 +1,75 @@
+x-concat-code-inside -> muse-probe-r2link-x-x-concat-code-inside (exists)
+x-concat-raw-inside -> muse-probe-r2link-x-x-concat-raw-inside (created)
+x-concat-comment-inside -> muse-probe-r2link-x-x-concat-comment-inside (created)
+x-concat-freelink-join -> muse-probe-r2link-x-x-concat-freelink-join (created)
+x-concat-eref-join -> muse-probe-r2link-x-x-concat-eref-join (created)
+x-free-math-label -> muse-probe-r2link-x-x-free-math-label (created)
+x-free-inside-code -> muse-probe-r2link-x-x-free-inside-code (created)
+x-free-inside-comment -> muse-probe-r2link-x-x-free-inside-comment (created)
+x-eref-backward -> muse-probe-r2link-x-x-eref-backward (created)
+x-eref-forward -> muse-probe-r2link-x-x-eref-forward (created)
+x-eref-duplicate -> muse-probe-r2link-x-x-eref-duplicate (created)
+x-eref-undefined -> muse-probe-r2link-x-x-eref-undefined (created)
+12 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "x-concat-code-inside": {
+  "fullname": "muse-probe-r2link-x-x-concat-code-inside",
+  "source": "[[code]]\na\\\nb\n[[/code]]",
+  "action": "exists"
+ },
+ "x-concat-raw-inside": {
+  "fullname": "muse-probe-r2link-x-x-concat-raw-inside",
+  "source": "[[raw]]\na\\\nb\n[[/raw]]",
+  "action": "created"
+ },
+ "x-concat-comment-inside": {
+  "fullname": "muse-probe-r2link-x-x-concat-comment-inside",
+  "source": "[!-- a\\\nb --]tail",
+  "action": "created"
+ },
+ "x-concat-freelink-join": {
+  "fullname": "muse-probe-r2link-x-x-concat-freelink-join",
+  "source": "[[[muse-probe-r2link-free-exists|some\\\ntext]]]",
+  "action": "created"
+ },
+ "x-concat-eref-join": {
+  "fullname": "muse-probe-r2link-x-x-concat-eref-join",
+  "source": "[[eref la\\\nbel]]",
+  "action": "created"
+ },
+ "x-free-math-label": {
+  "fullname": "muse-probe-r2link-x-x-free-math-label",
+  "source": "[[math [[[muse-probe-r2link-free-exists]]]]]\nx\n[[/math]]\n[[eref [[[muse-probe-r2link-free-exists]]]]]",
+  "action": "created"
+ },
+ "x-free-inside-code": {
+  "fullname": "muse-probe-r2link-x-x-free-inside-code",
+  "source": "[[code]]\n[[[muse-probe-r2link-free-exists]]]\n[[/code]]",
+  "action": "created"
+ },
+ "x-free-inside-comment": {
+  "fullname": "muse-probe-r2link-x-x-free-inside-comment",
+  "source": "[!-- [[[muse-probe-r2link-free-exists]]] --]tail",
+  "action": "created"
+ },
+ "x-eref-backward": {
+  "fullname": "muse-probe-r2link-x-x-eref-backward",
+  "source": "[[math E]]\nx\n[[/math]]\n[[eref E]]",
+  "action": "created"
+ },
+ "x-eref-forward": {
+  "fullname": "muse-probe-r2link-x-x-eref-forward",
+  "source": "[[eref E]]\n[[math E]]\nx\n[[/math]]",
+  "action": "created"
+ },
+ "x-eref-duplicate": {
+  "fullname": "muse-probe-r2link-x-x-eref-duplicate",
+  "source": "[[math E]]\nx\n[[/math]]\n[[math E]]\ny\n[[/math]]\n[[eref E]]",
+  "action": "created"
+ },
+ "x-eref-undefined": {
+  "fullname": "muse-probe-r2link-x-x-eref-undefined",
+  "source": "[[eref NO_SUCH_LABEL]]",
+  "action": "created"
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "div-opener-upper": {
+  "fullname": "muse-probe-r2link-concat-div-opener-upper",
+  "html": "a\n<div>\n<p>x</p>\n</div>",
+  "html_sha256": "6fa35da04844710fa2d32b25b22b196d3bf82399d76e941db76fd77f0866a618",
+  "source": "a\\\n[[DIV]]\nx\n[[/DIV]]",
+  "source_sha256": "fc270d6347a9a719099d3f903c67aa4c93da8de911929a3db7aac5490614361f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "div-opener-tab": {
+  "fullname": "muse-probe-r2link-concat-div-opener-tab",
+  "html": "a\n<div class=\"box\">\n<p>x</p>\n</div>",
+  "html_sha256": "6e90e33d000889c76dff0ead90bfb148426819a7a823d647d9b470e0d97e514c",
+  "source": "a\\\n[[div\tclass=\"box\"]]\nx\n[[/div]]",
+  "source_sha256": "cb25e24349deeffd245175a6967341c1cb9dd18ffb10779facd47e1af5e67410",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "div-opener-underscore": {
+  "fullname": "muse-probe-r2link-concat-div-opener-underscore",
+  "html": "a\n<div>x</div>",
+  "html_sha256": "ad52fc706d0bb49a99727671a1922d0a88037e2db9fa3b126d056841eb1fa1de",
+  "source": "a\\\n[[div_]]\nx\n[[/div]]",
+  "source_sha256": "738efd84f68bae8dbd45a1662f15d14267f6961d5e22e9e63d21270f8d97ee7e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "malformed-division": {
+  "fullname": "muse-probe-r2link-concat-malformed-division",
+  "html": "<p>alpha[[division]]</p>",
+  "html_sha256": "ce3e97eae7f1f758666edce9d83bd982d08b04a7232521289e8452790395727a",
+  "source": "alpha\\\n[[division]]",
+  "source_sha256": "c2fea7b606e57bf820185e373a7675a4bddb22ceb75a20f5567da4e294b75ddb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "span-opener-attr": {
+  "fullname": "muse-probe-r2link-concat-span-opener-attr",
+  "html": "<p>a<span style=\"color:red\">x</span></p>",
+  "html_sha256": "1fe2aa831fdab1dda1949d445a0e1de509ada1a5df249f1286450fecb2a48722",
+  "source": "a\\\n[[span style=\"color:red\"]]x[[/span]]",
+  "source_sha256": "5404e560eab3481b014a20c13255ba8880aa6810d4c1bc3681a1b7e05b3e8d99",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "freelink-cont": {
+  "fullname": "muse-probe-r2link-concat-freelink-cont",
+  "html": "<p><a class=\"newpage\" href=\"/target\">target</a></p>",
+  "html_sha256": "ce5e029e0803b3e6ff5cae7c085767971a0e9669f91b5d8db4aed5559f054ef5",
+  "source": "[[[tar\\\nget]]]",
+  "source_sha256": "94ee3076147c142ec15bea162f64f11d57df21f51f233e6bb4578b918b8526e4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "freelink-cont-space": {
+  "fullname": "muse-probe-r2link-concat-freelink-cont-space",
+  "html": "<p><a class=\"newpage\" href=\"/tar-get\">label</a></p>",
+  "html_sha256": "ea05652b627c751c434038b14e51e86881bbccda1aa0eaaa177307880da43862",
+  "source": "[[[tar\\\n get|label]]]",
+  "source_sha256": "b07a2fee3cca579b93086d83bf68e5502baef3186904d385ea187c0eb4275fc1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

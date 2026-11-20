@@ -1,0 +1,62 @@
+{
+ "eref-cont": {
+  "fullname": "muse-probe-r2link-concat-eref-cont",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x=1 \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>",
+  "html_sha256": "76d2cdf71dd62d2ae168a68dc269cf05ee5da8d95095b54993849aa79931b0f3",
+  "source": "[[math E]]\nx=1\n[[/math]]\n[[eref \\\nE]]",
+  "source_sha256": "029bb3d5607c1b06c1a8f78a58bf29f27738cfa63bbd63ba1026402b3ca2c505",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "iframe-src-cont": {
+  "fullname": "muse-probe-r2link-concat-iframe-src-cont",
+  "html": "<p><iframe src=\"http://exa/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>",
+  "html_sha256": "b2c46d9a86bf6580cfbbe0e3ed92f1bacda09b9e61c1fccd87603f449770f9b5",
+  "source": "[[iframe http://exa\\\nmple.com]]",
+  "source_sha256": "e6f65be1d9922abc6f9cbbe1ce5a7e8da9372187947de8fddece75eaa94df71a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "date-cont": {
+  "fullname": "muse-probe-r2link-concat-date-cont",
+  "html": "<p>[[date 12345]]</p>",
+  "html_sha256": "1ec8b8fac8c589f09853ae4761f000062ea454600a463d565aaa75e51ad19ac0",
+  "source": "[[date 12345\\\n]]",
+  "source_sha256": "609d8889954a106218c6dcc9191c98cf12a0b5460857f4c33c3cd5b9ada23c14",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mathinline-cont": {
+  "fullname": "muse-probe-r2link-concat-mathinline-cont",
+  "html": "<p>[[mathinline]]xy[[/mathinline]]</p>",
+  "html_sha256": "b02132f2b2ed90e5791481fafa1afd7d15ba9644b76faa6012e3bde16a91d7a2",
+  "source": "[[mathinline]]x\\\ny[[/mathinline]]",
+  "source_sha256": "fdba2f9fb0f6bf9bf1d8533400fba570c7767b4f7798a66ab611b95fe37fc7e1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "url-cont": {
+  "fullname": "muse-probe-r2link-concat-url-cont",
+  "html": "<p>[[<a href=\"http://example.com\">http://example.com</a>]]</p>",
+  "html_sha256": "12a716fd27802b1a7f213bacf398ea82e62edece2057b3d3bce97744fe5c1f8e",
+  "source": "[[http://exa\\\nmple.com]]",
+  "source_sha256": "c271d5f0e32c10373e8e3a5dae0668099cf9c170ff7bfc3af57702b5aad13797",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unicode-cont": {
+  "fullname": "muse-probe-r2link-concat-unicode-cont",
+  "html": "<p>éü</p>",
+  "html_sha256": "27ec0fe380fb997ee957399067b7330cb2a9b76e97cf53101b1ed6e6d8b9b337",
+  "source": "é\\\nü",
+  "source_sha256": "e729c359613088d5aaaee67c8d55b209a1c17476c83559873ffccf30b29aa12f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

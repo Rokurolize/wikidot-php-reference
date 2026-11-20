@@ -1,0 +1,36 @@
+{"id": "x-concat-code-inside", "source": "[[code]]\na\\\nb\n[[/code]]\n"}
+{"id": "x-concat-code-outside", "source": "before\\\nafter [[code]]x[[/code]]\n"}
+{"id": "x-concat-code-before-open", "source": "a\\\n[[code]]\nx\n[[/code]]\n"}
+{"id": "x-concat-code-after-close", "source": "[[code]]\nx\n[[/code]]\\\ntail\n"}
+{"id": "x-concat-raw-inside", "source": "[[raw]]\na\\\nb\n[[/raw]]\n"}
+{"id": "x-concat-raw-before-open", "source": "a\\\n[[raw]]\nx\n[[/raw]]\n"}
+{"id": "x-concat-rawold-inside", "source": "[[rawold]]\na\\\nb\n[[/rawold]]\n"}
+{"id": "x-concat-comment-inside", "source": "[!-- a\\\nb --]tail\n"}
+{"id": "x-concat-comment-before", "source": "a\\\n[!-- hidden --]tail\n"}
+{"id": "x-concat-comment-after", "source": "[!-- hidden --]\\\ntail\n"}
+{"id": "x-concat-math-inside", "source": "[[math E]]\nx\\\ny\n[[/math]]\n"}
+{"id": "x-concat-freelink-join", "source": "[[[muse-probe-r2link-free-exists|some\\\ntext]]]\n"}
+{"id": "x-concat-eref-join", "source": "[[eref la\\\nbel]]\n"}
+{"id": "x-free-iftags-keep", "source": "[[iftags +alpha]]\n[[[muse-probe-r2link-free-exists]]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-free-iftags-drop", "source": "[[iftags +beta]]\n[[[muse-probe-r2link-free-exists]]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-free-iftags-keep-new", "source": "[[iftags +alpha]]\n[[[muse-probe-r2link-x-absent-page]]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-free-iftags-drop-new", "source": "[[iftags +beta]]\n[[[muse-probe-r2link-x-absent-page]]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-free-math-label", "source": "[[math [[[muse-probe-r2link-free-exists]]]]]\nx\n[[/math]]\n[[eref [[[muse-probe-r2link-free-exists]]]]]\n"}
+{"id": "x-free-math-body", "source": "[[math E]]\n[[[muse-probe-r2link-free-exists]]]\n[[/math]]\n"}
+{"id": "x-free-inside-code", "source": "[[code]]\n[[[muse-probe-r2link-free-exists]]]\n[[/code]]\n"}
+{"id": "x-free-inside-raw", "source": "[[raw]]\n[[[muse-probe-r2link-free-exists]]]\n[[/raw]]\n"}
+{"id": "x-free-inside-comment", "source": "[!-- [[[muse-probe-r2link-free-exists]]] --]tail\n"}
+{"id": "x-free-next-to-math", "source": "[[[muse-probe-r2link-free-exists]]][[math E]]x[[/math]]\n"}
+{"id": "x-eref-backward", "source": "[[math E]]\nx\n[[/math]]\n[[eref E]]\n"}
+{"id": "x-eref-forward", "source": "[[eref E]]\n[[math E]]\nx\n[[/math]]\n"}
+{"id": "x-eref-duplicate", "source": "[[math E]]\nx\n[[/math]]\n[[math E]]\ny\n[[/math]]\n[[eref E]]\n"}
+{"id": "x-eref-duplicate-forward", "source": "[[math E]]\nx\n[[/math]]\n[[eref E]]\n[[math E]]\ny\n[[/math]]\n"}
+{"id": "x-eref-suppressed-math", "source": "[[iftags -alpha]]\n[[math E]]\nx\n[[/math]]\n[[/iftags]]\n[[eref E]]\n", "tags": ["alpha"]}
+{"id": "x-eref-in-suppressed-body", "source": "[[math E]]\nx\n[[/math]]\n[[iftags -alpha]]\n[[eref E]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-eref-kept-math", "source": "[[iftags +alpha]]\n[[math E]]\nx\n[[/math]]\n[[/iftags]]\n[[eref E]]\n", "tags": ["alpha"]}
+{"id": "x-eref-inside-code", "source": "[[code]]\n[[eref E]]\n[[/code]]\n"}
+{"id": "x-eref-inside-raw", "source": "[[raw]]\n[[eref E]]\n[[/raw]]\n"}
+{"id": "x-eref-inside-comment", "source": "[!-- [[eref E]] --]tail\n"}
+{"id": "x-eref-two-labels", "source": "[[math A]]\na\n[[/math]]\n[[math B]]\nb\n[[/math]]\n[[eref A]] [[eref B]]\n"}
+{"id": "x-eref-nested-freelink", "source": "[[math E]]\nx\n[[/math]]\n[[eref [[[muse-probe-r2link-free-exists]]]]]\n"}
+{"id": "x-eref-undefined", "source": "[[eref NO_SUCH_LABEL]]\n"}

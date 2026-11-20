@@ -1,0 +1,134 @@
+x-concat-code-inside -> muse-probe-r2link-x-x-concat-code-inside stable=True saved_source_matches=True valid=True
+x-concat-raw-inside -> muse-probe-r2link-x-x-concat-raw-inside stable=True saved_source_matches=True valid=True
+x-concat-comment-inside -> muse-probe-r2link-x-x-concat-comment-inside stable=True saved_source_matches=True valid=True
+x-concat-freelink-join -> muse-probe-r2link-x-x-concat-freelink-join stable=True saved_source_matches=True valid=True
+x-concat-eref-join -> muse-probe-r2link-x-x-concat-eref-join stable=True saved_source_matches=True valid=True
+x-free-math-label -> muse-probe-r2link-x-x-free-math-label stable=True saved_source_matches=True valid=True
+x-free-inside-code -> muse-probe-r2link-x-x-free-inside-code stable=True saved_source_matches=True valid=True
+x-free-inside-comment -> muse-probe-r2link-x-x-free-inside-comment stable=True saved_source_matches=True valid=True
+x-eref-backward -> muse-probe-r2link-x-x-eref-backward stable=True saved_source_matches=True valid=True
+x-eref-forward -> muse-probe-r2link-x-x-eref-forward stable=True saved_source_matches=True valid=True
+x-eref-duplicate -> muse-probe-r2link-x-x-eref-duplicate stable=True saved_source_matches=True valid=True
+x-eref-undefined -> muse-probe-r2link-x-x-eref-undefined stable=True saved_source_matches=True valid=True
+{
+ "x-concat-code-inside": {
+  "fullname": "muse-probe-r2link-x-x-concat-code-inside",
+  "html": "<div class=\"code\">\n<pre><code>a\\\nb</code></pre></div>",
+  "html_sha256": "9a6327b7429b4f29fb6a7fbad31b787ad2fa651fcaba132818342c96abb4e383",
+  "source": "[[code]]\na\\\nb\n[[/code]]",
+  "source_sha256": "94ae572ea30aea4bf24fcba4f047dec51cfdb7dadefd8025323694682bc07b0f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-concat-raw-inside": {
+  "fullname": "muse-probe-r2link-x-x-concat-raw-inside",
+  "html": "<p>[[raw]]<br />\nab<br />\n[[/raw]]</p>",
+  "html_sha256": "f85ac41612f57af182a771a6a814266588565b9e2804e371dded9b3f335ebe32",
+  "source": "[[raw]]\na\\\nb\n[[/raw]]",
+  "source_sha256": "3843d3647323b2aeba7342ecd39d7469836f5b42a936928e00a7fb7def974247",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-concat-comment-inside": {
+  "fullname": "muse-probe-r2link-x-x-concat-comment-inside",
+  "html": "<p>tail</p>",
+  "html_sha256": "57ee65e6cf56ba6cfc16362c3e1aad896bd038ce4041215ba2489e33439d1f04",
+  "source": "[!-- a\\\nb --]tail",
+  "source_sha256": "d309208c2dd0425cafdc19ad9a93a066f8534e3f47b02214d36a1f141f488d89",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-concat-freelink-join": {
+  "fullname": "muse-probe-r2link-x-x-concat-freelink-join",
+  "html": "<p><a href=\"/muse-probe-r2link-free-exists\">sometext</a></p>",
+  "html_sha256": "d6d66c137e0e311105d156515322b92e134c6fd12ef4a63342e589200805d51f",
+  "source": "[[[muse-probe-r2link-free-exists|some\\\ntext]]]",
+  "source_sha256": "d931d92ea25336bd7c4c42f7ff865951c03981c76e05242838a9cc95190d1310",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-concat-eref-join": {
+  "fullname": "muse-probe-r2link-x-x-concat-eref-join",
+  "html": "<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a></p>",
+  "html_sha256": "f81c317bcd79abc4882ca415327ddf5633aa6dcd0bc1e8da40bd821f3eaf7966",
+  "source": "[[eref la\\\nbel]]",
+  "source_sha256": "66646c925ad8cc02fe840412780344524b15385bff1216f33f4011cca063b2f4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-free-math-label": {
+  "fullname": "muse-probe-r2link-x-x-free-math-label",
+  "html": "<p>[[math <a href=\"/muse-probe-r2link-free-exists\">muse-probe-r2link-free-exists</a>]]<br />\nx<br />\n[[/math]]<br />\n<a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a></p>",
+  "html_sha256": "2c0bb35084e29a7201be338d6a10b134485f4ebf321ed22f721e81b5f7df59b4",
+  "source": "[[math [[[muse-probe-r2link-free-exists]]]]]\nx\n[[/math]]\n[[eref [[[muse-probe-r2link-free-exists]]]]]",
+  "source_sha256": "a04239c5c4648539d11c2bb7b070a47cdd7a8a8ef4c4cb70ac29963f549ed6ab",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-free-inside-code": {
+  "fullname": "muse-probe-r2link-x-x-free-inside-code",
+  "html": "<div class=\"code\">\n<pre><code>[[[muse-probe-r2link-free-exists]]]</code></pre></div>",
+  "html_sha256": "d09333799ce135c82cba18acc2d572ae6b7f662b0e764c3bf8bd201309679efa",
+  "source": "[[code]]\n[[[muse-probe-r2link-free-exists]]]\n[[/code]]",
+  "source_sha256": "6979fe06f3b260a76da6976af60d87eb031ed228adf3fe1cb5009ee73157abc0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-free-inside-comment": {
+  "fullname": "muse-probe-r2link-x-x-free-inside-comment",
+  "html": "<p>tail</p>",
+  "html_sha256": "57ee65e6cf56ba6cfc16362c3e1aad896bd038ce4041215ba2489e33439d1f04",
+  "source": "[!-- [[[muse-probe-r2link-free-exists]]] --]tail",
+  "source_sha256": "cb65d4337d7b2e78ff399bb819e5d4e99b06041ee9463f37712bca56ed09b60b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-eref-backward": {
+  "fullname": "muse-probe-r2link-x-x-eref-backward",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>",
+  "html_sha256": "7608ee6cad1e764f837e43d9df7ee8d13021df5aec0d8a922efd39c763153ec8",
+  "source": "[[math E]]\nx\n[[/math]]\n[[eref E]]",
+  "source_sha256": "34eb48a5a1c82fe14395408e226a6d3191a7780978c3b2c18120e5bddf440af7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-eref-forward": {
+  "fullname": "muse-probe-r2link-x-x-eref-forward",
+  "html": "<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>\n<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>",
+  "html_sha256": "a2b122f9ea3c6b2c15178f233a5949bf88d3bbdd747b898bd0eb50146fa7b031",
+  "source": "[[eref E]]\n[[math E]]\nx\n[[/math]]",
+  "source_sha256": "3b7191d465d0848235f6972b66824e405ffefd4e8f221e8e0b59ce23c6b7d2cc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-eref-duplicate": {
+  "fullname": "muse-probe-r2link-x-x-eref-duplicate",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<span class=\"equation-number\">(2)</span>\n<div class=\"math-equation\" id=\"equation-2\">\\begin{equation} y \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-2')\">2</a></p>",
+  "html_sha256": "d37177c704e7603b06cb3973a4e238d4ba1d4af9b3c234153cdc4cadcc495503",
+  "source": "[[math E]]\nx\n[[/math]]\n[[math E]]\ny\n[[/math]]\n[[eref E]]",
+  "source_sha256": "817622f841f181d23a2eaf93340e294817eb5e742372d9445ab65efc19d43e33",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-eref-undefined": {
+  "fullname": "muse-probe-r2link-x-x-eref-undefined",
+  "html": "<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a></p>",
+  "html_sha256": "f81c317bcd79abc4882ca415327ddf5633aa6dcd0bc1e8da40bd821f3eaf7966",
+  "source": "[[eref NO_SUCH_LABEL]]",
+  "source_sha256": "0aa52e1a56164dce05a3f848ef65eb2101bf683b1bbb60288798e8a13213fef3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

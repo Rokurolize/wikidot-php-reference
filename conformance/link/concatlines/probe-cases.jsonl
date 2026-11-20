@@ -1,0 +1,34 @@
+{"id": "basic", "source": "a\\\nb"}
+{"id": "two-backslash-one-nl", "source": "a\\\\\nb"}
+{"id": "one-backslash-two-nl", "source": "a\\\n\nb"}
+{"id": "two-backslash-two-nl", "source": "a\\\\\n\nb"}
+{"id": "three-backslash-three-nl", "source": "a\\\\\\\n\n\nb"}
+{"id": "four-backslash-two-nl", "source": "a\\\\\\\\\n\nb"}
+{"id": "backslash-newline-pair", "source": "a\\\n\\\nb"}
+{"id": "multi-cont", "source": "a\\\nb\\\nc"}
+{"id": "backslash-space-newline", "source": "a\\ \nb"}
+{"id": "backslash-tab-newline", "source": "a\\\t\nb"}
+{"id": "space-backslash-newline", "source": "a \\\nb"}
+{"id": "backslash-at-eof", "source": "a\\"}
+{"id": "code-block-upper", "source": "[[CODE]]\nx\\\ny\n[[/CODE]]"}
+{"id": "inline-code", "source": "[[code]]x\\\ny[[/code]]"}
+{"id": "raw-block", "source": "[[raw]]\nx\\\ny\n[[/raw]]"}
+{"id": "math-block-labeled", "source": "[[math E]]\nx\\\ny\n[[/math]]"}
+{"id": "comment-inner-cont", "source": "[!-- a\\\nb --]\nC"}
+{"id": "cont-into-code", "source": "a\\\n[[code]]\nx\n[[/code]]"}
+{"id": "cont-into-math", "source": "a\\\n[[math]]\nx\n[[/math]]"}
+{"id": "div-opener", "source": "a\\\n[[div]]\nx\n[[/div]]"}
+{"id": "div-opener-attrs", "source": "a\\\n[[div class=\"box\"]]\nx\n[[/div]]"}
+{"id": "div-opener-upper", "source": "a\\\n[[DIV]]\nx\n[[/DIV]]"}
+{"id": "div-opener-tab", "source": "a\\\n[[div\tclass=\"box\"]]\nx\n[[/div]]"}
+{"id": "div-opener-underscore", "source": "a\\\n[[div_]]\nx\n[[/div]]"}
+{"id": "malformed-division", "source": "alpha\\\n[[division]]"}
+{"id": "span-opener-attr", "source": "a\\\n[[span style=\"color:red\"]]x[[/span]]"}
+{"id": "freelink-cont", "source": "[[[tar\\\nget]]]"}
+{"id": "freelink-cont-space", "source": "[[[tar\\\n get|label]]]"}
+{"id": "eref-cont", "source": "[[math E]]\nx=1\n[[/math]]\n[[eref \\\nE]]"}
+{"id": "iframe-src-cont", "source": "[[iframe http://exa\\\nmple.com]]"}
+{"id": "date-cont", "source": "[[date 12345\\\n]]"}
+{"id": "mathinline-cont", "source": "[[mathinline]]x\\\ny[[/mathinline]]"}
+{"id": "url-cont", "source": "[[http://exa\\\nmple.com]]"}
+{"id": "unicode-cont", "source": "é\\\nü"}

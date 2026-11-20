@@ -1,0 +1,4 @@
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists\">muse-probe-r2link-free-exists</a></p>","id":"x-free-iftags-keep"}
+{"errors":[],"html":"","id":"x-free-iftags-drop"}
+{"errors":[],"html":"<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div><p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;equation-1&#39;)\">1</a></p>","id":"x-eref-kept-math"}
+{"errors":[],"html":"<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;equation-&#39;)\"></a></p>","id":"x-eref-suppressed-math"}

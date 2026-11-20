@@ -1,0 +1,58 @@
+e01	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e02	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e03	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e04	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e05	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e06	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"], ["2", "2"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"], ["2", "2"]], "literal_eref": 0}
+e07	raw=0	canon=0	shape=1	ref={"anchors": [["2", "2"]], "literal_eref": 0}	ftml={"anchors": [["2", "2"]], "literal_eref": 0}
+e08	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"], ["2", "2"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"], ["2", "2"]], "literal_eref": 0}
+e09	raw=0	canon=1	shape=1	ref={"anchors": [], "literal_eref": 1}	ftml={"anchors": [], "literal_eref": 1}
+e10	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e11	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e12	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e13	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e14	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e15	raw=0	canon=1	shape=1	ref={"anchors": [], "literal_eref": 0}	ftml={"anchors": [], "literal_eref": 0}
+e16	raw=0	canon=1	shape=1	ref={"anchors": [], "literal_eref": 0}	ftml={"anchors": [], "literal_eref": 0}
+e17	raw=0	canon=1	shape=1	ref={"anchors": [], "literal_eref": 0}	ftml={"anchors": [], "literal_eref": 0}
+e18	raw=0	canon=1	shape=1	ref={"anchors": [], "literal_eref": 0}	ftml={"anchors": [], "literal_eref": 0}
+e19	raw=0	canon=1	shape=1	ref={"anchors": [], "literal_eref": 1}	ftml={"anchors": [], "literal_eref": 1}
+e20	raw=0	canon=1	shape=1	ref={"anchors": [], "literal_eref": 1}	ftml={"anchors": [], "literal_eref": 1}
+e21	raw=0	canon=1	shape=1	ref={"anchors": [], "literal_eref": 1}	ftml={"anchors": [], "literal_eref": 1}
+e22	raw=0	canon=1	shape=1	ref={"anchors": [], "literal_eref": 0}	ftml={"anchors": [], "literal_eref": 0}
+e23	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e24	raw=0	canon=0	shape=1	ref={"anchors": [], "literal_eref": 0}	ftml={"anchors": [], "literal_eref": 0}
+e25	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e26	raw=0	canon=1	shape=1	ref={"anchors": [["", ""], ["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""], ["", ""]], "literal_eref": 0}
+e27	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 1}	ftml={"anchors": [["", ""]], "literal_eref": 1}
+e28	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 1}	ftml={"anchors": [["", ""]], "literal_eref": 1}
+e29	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e30	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e31	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e32	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e33	raw=0	canon=0	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e34	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e35	raw=0	canon=0	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e36	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"], ["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"], ["1", "1"]], "literal_eref": 0}
+e38	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e39	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e40	raw=0	canon=0	shape=1	ref={"anchors": [], "literal_eref": 1}	ftml={"anchors": [], "literal_eref": 1}
+e41	raw=0	canon=0	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e42	raw=0	canon=0	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e43	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e44	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e45	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e46	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e47	raw=0	canon=0	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e48	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e49	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e50	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"], ["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"], ["1", "1"]], "literal_eref": 0}
+e51	raw=0	canon=0	shape=1	ref={"anchors": [["2", "2"]], "literal_eref": 0}	ftml={"anchors": [["2", "2"]], "literal_eref": 0}
+e52	raw=0	canon=0	shape=1	ref={"anchors": [["2", "2"]], "literal_eref": 0}	ftml={"anchors": [["2", "2"]], "literal_eref": 0}
+e53	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e54	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+e55	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e56	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e57	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+e58	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+TOTAL cases=57 raw=0 canonical=31 shape=57 substantive=0

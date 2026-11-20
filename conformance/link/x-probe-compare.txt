@@ -1,0 +1,86 @@
+==============================================================================
+CASE x-concat-code-inside  source='[[code]]\na\\\nb\n[[/code]]'
+  REF : '\n<div class="code">\n<pre><code>a\\\nb</code></pre></div>\n\n'
+  FTML: '<div class="code"><pre><code>a\\\nb</code></pre></div>'
+  LIVE: valid=True stable=True src_match=True
+        '<div class="code">\n<pre><code>a\\\nb</code></pre></div>'
+  VERDICT: ALL3
+==============================================================================
+CASE x-concat-raw-inside  source='[[raw]]\na\\\nb\n[[/raw]]'
+  REF : '<p>[[raw]]<br />\nab<br />\n[[/raw]]</p>\n\n'
+  FTML: '<p>[[raw]]<br>\nab<br>\n[[/raw]]</p>'
+  LIVE: valid=True stable=True src_match=True
+        '<p>[[raw]]<br />\nab<br />\n[[/raw]]</p>'
+  VERDICT: ALL3
+==============================================================================
+CASE x-concat-comment-inside  source='[!-- a\\\nb --]tail'
+  REF : '<p>tail</p>\n\n'
+  FTML: '<p>tail</p>'
+  LIVE: valid=True stable=True src_match=True
+        '<p>tail</p>'
+  VERDICT: ALL3
+==============================================================================
+CASE x-concat-freelink-join  source='[[[muse-probe-r2link-free-exists|some\\\ntext]]]'
+  REF : '<p><a href="/muse-probe-r2link-free-exists">sometext</a></p>\n\n'
+  FTML: '<p><a href="/muse-probe-r2link-free-exists">sometext</a></p>'
+  LIVE: valid=True stable=True src_match=True
+        '<p><a href="/muse-probe-r2link-free-exists">sometext</a></p>'
+  VERDICT: ALL3
+==============================================================================
+CASE x-concat-eref-join  source='[[eref la\\\nbel]]'
+  REF : '<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-\')"></a></p>\n\n'
+  FTML: '<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(&#39;equation-&#39;)"></a></p>'
+  LIVE: valid=True stable=True src_match=True
+        '<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-\')"></a></p>'
+  VERDICT: ALL3
+==============================================================================
+CASE x-free-math-label  source='[[math [[[muse-probe-r2link-free-exists]]]]]\nx\n[[/math]]\n[[eref [[[muse-probe-r2link-free-exists]]]]]'
+  REF : '<p>[[math <a href="/muse-probe-r2link-free-exists">muse-probe-r2link-free-exists</a>]]<br />\nx<br />\n[[/math]]<br />\n<a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-\')"></a></p>\n\n'
+  FTML: '<p>[[math <a href="/muse-probe-r2link-free-exists">muse-probe-r2link-free-exists</a>]]<br>\nx<br>\n[[/math]]<br>\n[[eref <a href="/muse-probe-r2link-free-exists">muse-probe-r2link-free-exists</a>]]</p>'
+  LIVE: valid=True stable=True src_match=True
+        '<p>[[math <a href="/muse-probe-r2link-free-exists">muse-probe-r2link-free-exists</a>]]<br />\nx<br />\n[[/math]]<br />\n<a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-\')"></a></p>'
+  VERDICT: REF+LIVE vs FTML
+==============================================================================
+CASE x-free-inside-code  source='[[code]]\n[[[muse-probe-r2link-free-exists]]]\n[[/code]]'
+  REF : '\n<div class="code">\n<pre><code>[[[muse-probe-r2link-free-exists]]]</code></pre></div>\n\n'
+  FTML: '<div class="code"><pre><code>[[[muse-probe-r2link-free-exists]]]</code></pre></div>'
+  LIVE: valid=True stable=True src_match=True
+        '<div class="code">\n<pre><code>[[[muse-probe-r2link-free-exists]]]</code></pre></div>'
+  VERDICT: ALL3
+==============================================================================
+CASE x-free-inside-comment  source='[!-- [[[muse-probe-r2link-free-exists]]] --]tail'
+  REF : '<p>tail</p>\n\n'
+  FTML: '<p>tail</p>'
+  LIVE: valid=True stable=True src_match=True
+        '<p>tail</p>'
+  VERDICT: ALL3
+==============================================================================
+CASE x-eref-backward  source='[[math E]]\nx\n[[/math]]\n[[eref E]]'
+  REF : '<div class="error-block">The equation has not been processed correctly. Most prabably it has syntax error(s).</div><p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-1\')">1</a></p>\n\n'
+  FTML: '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{equation} x \\end{equation}</div><p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(&#39;equation-1&#39;)">1</a></p>'
+  LIVE: valid=True stable=True src_match=True
+        '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{equation} x \\end{equation}</div>\n<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-1\')">1</a></p>'
+  VERDICT: ALL3
+==============================================================================
+CASE x-eref-forward  source='[[eref E]]\n[[math E]]\nx\n[[/math]]'
+  REF : '<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-1\')">1</a></p>\n\n<div class="error-block">The equation has not been processed correctly. Most prabably it has syntax error(s).</div>'
+  FTML: '<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(&#39;equation-1&#39;)">1</a></p><span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{equation} x \\end{equation}</div>'
+  LIVE: valid=True stable=True src_match=True
+        '<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-1\')">1</a></p>\n<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{equation} x \\end{equation}</div>'
+  VERDICT: ALL3
+==============================================================================
+CASE x-eref-duplicate  source='[[math E]]\nx\n[[/math]]\n[[math E]]\ny\n[[/math]]\n[[eref E]]'
+  REF : '<div class="error-block">The equation has not been processed correctly. Most prabably it has syntax error(s).</div><div class="error-block">The equation has not been processed correctly. Most prabably it has syntax error(s).</div><p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-2\')">2</a></p>\n\n'
+  FTML: '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{equation} x \\end{equation}</div><span class="equation-number">(2)</span>\n<div class="math-equation" id="equation-2">\\begin{equation} y \\end{equation}</div><p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(&#39;equation-2&#39;)">2</a></p>'
+  LIVE: valid=True stable=True src_match=True
+        '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{equation} x \\end{equation}</div>\n<span class="equation-number">(2)</span>\n<div class="math-equation" id="equation-2">\\begin{equation} y \\end{equation}</div>\n<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-2\')">2</a></p>'
+  VERDICT: ALL3
+==============================================================================
+CASE x-eref-undefined  source='[[eref NO_SUCH_LABEL]]'
+  REF : '<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-\')"></a></p>\n\n'
+  FTML: '<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(&#39;equation-&#39;)"></a></p>'
+  LIVE: valid=True stable=True src_match=True
+        '<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-\')"></a></p>'
+  VERDICT: ALL3
+==============================================================================
+VERDICTS: {'all3': 11, 'ref_live': 1, 'ftml_live': 0, 'all_diff': 0, 'no_live': 0}

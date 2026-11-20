@@ -1,0 +1,35 @@
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists\">shown</a></p>","id":"p-exist-labeled"}
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists\">muse-probe-r2link-free-exists</a></p>","id":"p-exist-bare"}
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists2\">muse-probe-r2link-free-exists2</a></p>","id":"p-exist2-empty-label"}
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-new-page\">Wanted</a></p>","id":"p-new-labeled"}
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists\">shown</a></p>","id":"p-case-upper-exist"}
+{"errors":[],"html":"<p><a href=\"/scp-series#001\">SCP-001 to SCP-099</a></p>","id":"p-anchor-digit"}
+{"errors":[],"html":"<p><a href=\"/scp-series#section\">Label</a></p>","id":"p-anchor-alpha"}
+{"errors":[],"html":"<p><a href=\"/scp-series#sec-1\">Label</a></p>","id":"p-anchor-dash"}
+{"errors":[],"html":"<p><a href=\"/scp-series#sec_1\">Label</a></p>","id":"p-anchor-underscore"}
+{"errors":[],"html":"<p><a href=\"/scp-series#sec:1\">Label</a></p>","id":"p-anchor-colon"}
+{"errors":[],"html":"<p><a class=\"newpage\" href=\"/#my-anchor\">Label</a></p>","id":"p-anchor-label-only-space"}
+{"errors":[],"html":"<p><a href=\"/scp-series#001\">scp-series</a></p>","id":"p-anchor-plain"}
+{"errors":[],"html":"<p>[[[home###|Home]]]</p>","id":"p-triple-hash"}
+{"errors":[],"html":"<p><a href=\"/page-slug\">A|B|C</a></p>","id":"p-dup-pipes"}
+{"errors":[],"html":"<p><a href=\"/page-slug\">A | B | C</a></p>","id":"p-dup-pipes-spaced"}
+{"errors":["ParseError { token: Identifier, rule: \"link-triple\", span: 4..9, kind: RuleFailed }","ParseError { token: LeftLink, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightLink, rule: \"fallback\", span: 9..12, kind: NoRulesMatch }"],"html":"<p>[[[|Label]]]</p>","id":"p-empty-target"}
+{"errors":["ParseError { token: Identifier, rule: \"link-triple\", span: 7..12, kind: RuleFailed }","ParseError { token: LeftLink, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightLink, rule: \"fallback\", span: 12..15, kind: NoRulesMatch }"],"html":"<p>[[[ |Label]]]</p>","id":"p-whitespace-target"}
+{"errors":[],"html":"<p><a href=\"/some-page\">some-page</a></p>","id":"p-empty-label"}
+{"errors":[],"html":"<p>[<a href=\"/scp-001-ex\">SCP-001-EX</a>]</p>","id":"p-quad"}
+{"errors":[],"html":"<p>[<a href=\"/scp-001-ex\">[SCP-001-EX</a>]]</p>","id":"p-quint"}
+{"errors":[],"html":"<p><a href=\"/scp-wiki:component:theme\">Sigma-9 Theme</a></p>","id":"p-cross-colon"}
+{"errors":[],"html":"<p><a href=\"/site:page\">Label</a></p>","id":"p-fossil-cross"}
+{"errors":[],"html":"<p><a href=\"/system:recent-changes\">Recent Changes</a></p>","id":"p-category"}
+{"errors":[],"html":"<p><a href=\"/a\">Label</a></p>","id":"p-default-category"}
+{"errors":[],"html":"<p><a href=\"/a:b:c\">a:b:c</a></p>","id":"p-multi-colon-empty"}
+{"errors":[],"html":"<p><a href=\"https://example.com/\">Example</a></p>","id":"p-url-plain"}
+{"errors":[],"html":"<p><a href=\"/https:example-com\">Example</a></p>","id":"p-url-leading-space"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">Trailing</a></p>","id":"p-url-trailing-space"}
+{"errors":[],"html":"<p><a href=\"/main#/page\">Hash routing</a></p>","id":"p-url-hash-route"}
+{"errors":[],"html":"<p><a href=\"/scp-001\">*SCP-001</a></p>","id":"p-star"}
+{"errors":[],"html":"<p><a href=\"/_some-page\">Label</a></p>","id":"p-underscore"}
+{"errors":[],"html":"<p><a href=\"/dokument\">документ</a></p>","id":"p-cyrillic"}
+{"errors":[],"html":"<p>text before <a href=\"/some-page\">Mid line</a> text after</p>","id":"p-midline"}
+{"errors":[],"html":"<p>first line<br>\n<a href=\"/some-page\">Second line</a></p>","id":"p-noline-start"}
+{"errors": [], "html": "<p><a href=\"/scp-wiki:system:recent-changes\">:scp-wiki : system : Recent Changes</a></p>", "id": "p-cross-colon-spaced"}

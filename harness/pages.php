@@ -14,5 +14,13 @@ function ref_page_map() {
         ':sandbox:other-page' => "SITE-PAGE-CONTENT",
         'muse-probe-g14b-target' =>
             "A is {\$a}.\nB is {\$b}.\nM is {\$marker}.\nTARGET-END",
+        // R2-link stage: the two sandbox pages created under the Freelink
+        // prefix muse-probe-r2link-free- whose existence the reference's
+        // wikiPageExists() callback must mirror. Adding them to this map
+        // also makes them includable, which is harmless; the map keys are
+        // already unix-normalized (verified with WDStringUtils::toUnixName).
+        // Root-owned stub, disclosed in conformance-refphp/R2-LINK.md.
+        'muse-probe-r2link-free-exists' => "FREELINK TARGET ONE",
+        'muse-probe-r2link-free-exists2' => "FREELINK TARGET TWO",
     );
 }

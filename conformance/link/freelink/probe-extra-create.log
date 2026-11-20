@@ -1,0 +1,9 @@
+p-cross-colon-spaced -> muse-probe-r2link-free-p-cross-colon-spaced (created)
+1 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p-cross-colon-spaced": {
+  "fullname": "muse-probe-r2link-free-p-cross-colon-spaced",
+  "source": "[[[:scp-wiki : system : Recent Changes]]]",
+  "action": "created"
+ }
+}

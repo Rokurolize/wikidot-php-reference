@@ -1,0 +1,46 @@
+x-free-iftags-keep -> muse-probe-r2link-x-x-free-iftags-keep stable=True saved_source_matches=True valid=True
+x-free-iftags-drop -> muse-probe-r2link-x-x-free-iftags-drop stable=True saved_source_matches=True valid=True
+x-eref-kept-math -> muse-probe-r2link-x-x-eref-kept-math stable=True saved_source_matches=True valid=True
+x-eref-suppressed-math -> muse-probe-r2link-x-x-eref-suppressed-math stable=True saved_source_matches=True valid=True
+{
+ "x-free-iftags-keep": {
+  "fullname": "muse-probe-r2link-x-x-free-iftags-keep",
+  "html": "<p><a href=\"/muse-probe-r2link-free-exists\">muse-probe-r2link-free-exists</a></p>",
+  "html_sha256": "ab6a3aa8e92142e2e1115401059dcf503543ea7def4602dbcf01e7c5cb772614",
+  "source": "[[iftags +alpha]]\n[[[muse-probe-r2link-free-exists]]]\n[[/iftags]]",
+  "source_sha256": "366c1f234df6919bdab3aded1d7614cae445db14b1a3d9d740759435883ab1d2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-free-iftags-drop": {
+  "fullname": "muse-probe-r2link-x-x-free-iftags-drop",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[iftags +beta]]\n[[[muse-probe-r2link-free-exists]]]\n[[/iftags]]",
+  "source_sha256": "a62620ba43d001ac6902864ce7d04843f408ed6600aef5bd6b345bfc3c69ef0e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-eref-kept-math": {
+  "fullname": "muse-probe-r2link-x-x-eref-kept-math",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>",
+  "html_sha256": "7608ee6cad1e764f837e43d9df7ee8d13021df5aec0d8a922efd39c763153ec8",
+  "source": "[[iftags +alpha]]\n[[math E]]\nx\n[[/math]]\n[[/iftags]]\n[[eref E]]",
+  "source_sha256": "edc3af0b7f53431fdadbba75e4fc17e6cdbb3850c050709fff57c2381852c804",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-eref-suppressed-math": {
+  "fullname": "muse-probe-r2link-x-x-eref-suppressed-math",
+  "html": "<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a></p>",
+  "html_sha256": "f81c317bcd79abc4882ca415327ddf5633aa6dcd0bc1e8da40bd821f3eaf7966",
+  "source": "[[iftags -alpha]]\n[[math E]]\nx\n[[/math]]\n[[/iftags]]\n[[eref E]]",
+  "source_sha256": "516e36534a23298ddefd330b4330facb36eeed1beaf11d79f35a0a2fea7935fb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

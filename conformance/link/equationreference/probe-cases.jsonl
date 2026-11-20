@@ -1,0 +1,26 @@
+{"id": "p-undefined", "source": "X[[eref missing]]Y"}
+{"id": "p-defined", "source": "[[math a]]\nx\n[[/math]]\n[[eref a]]"}
+{"id": "p-forward", "source": "[[eref a]]\n[[math a]]\nx\n[[/math]]"}
+{"id": "p-two", "source": "[[math a]]\nx\n[[/math]]\n[[math b]]\ny\n[[/math]]\n[[eref a]] [[eref b]]"}
+{"id": "p-dup", "source": "[[math a]]\nx\n[[/math]]\n[[math a]]\ny\n[[/math]]\n[[eref a]]"}
+{"id": "p-empty-arg", "source": "[[eref ]]"}
+{"id": "p-no-arg", "source": "[[eref]]"}
+{"id": "p-tab", "source": "[[math a]]\nx\n[[/math]]\n[[eref\ta]]"}
+{"id": "p-two-spaces", "source": "[[math a]]\nx\n[[/math]]\n[[eref  a]]"}
+{"id": "p-uppercase", "source": "[[math a]]\nx\n[[/math]]\n[[EREF a]]"}
+{"id": "p-equation-name", "source": "[[math a]]\nx\n[[/math]]\n[[equation a]]"}
+{"id": "p-eqref-name", "source": "[[math a]]\nx\n[[/math]]\n[[eqref a]]"}
+{"id": "p-case-label", "source": "[[math a]]\nx\n[[/math]]\n[[eref A]]"}
+{"id": "p-multiword", "source": "[[eref a b]]"}
+{"id": "p-pipe", "source": "[[math a]]\nx\n[[/math]]\n[[eref a|text]]"}
+{"id": "p-underscore-label", "source": "[[math a_b]]\nx\n[[/math]]\n[[eref a_b]]"}
+{"id": "p-adjacent", "source": "[[math a]]\nx\n[[/math]][[eref a]]"}
+{"id": "p-space-adjacent", "source": "[[math a]]\nx\n[[/math]] [[eref a]]"}
+{"id": "p-midline", "source": "[[math a]]\nx\n[[/math]]\nHello [[eref a]] world."}
+{"id": "p-div", "source": "[[div]]\n[[math a]]\nx\n[[/math]]\n[[eref a]]\n[[/div]]"}
+{"id": "p-quote", "source": "[[math a]]\nx\n[[/math]]\n> [[eref a]]"}
+{"id": "p-bold", "source": "[[math a]]\nx\n[[/math]]\n**[[eref a]]**"}
+{"id": "p-triple-close", "source": "[[math a]]\nx\n[[/math]]\n[[eref a]]]"}
+{"id": "p-two-refs-one-eq", "source": "[[math a]]\nx\n[[/math]]\n[[eref a]] and [[eref a]]"}
+{"id": "p-unterminated", "source": "[[eref a"}
+{"id": "p-whitespace-label", "source": "[[eref   ]]"}

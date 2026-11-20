@@ -1,0 +1,5 @@
+x-free-iftags-keep -> muse-probe-r2link-x-x-free-iftags-keep source_match= True
+x-free-iftags-drop -> muse-probe-r2link-x-x-free-iftags-drop source_match= True
+x-eref-kept-math -> muse-probe-r2link-x-x-eref-kept-math source_match= True
+x-eref-suppressed-math -> muse-probe-r2link-x-x-eref-suppressed-math source_match= True
+wrote 4 tagged probe pages

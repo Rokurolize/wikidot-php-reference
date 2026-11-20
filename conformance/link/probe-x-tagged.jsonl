@@ -1,0 +1,4 @@
+{"id": "x-free-iftags-keep", "source": "[[iftags +alpha]]\n[[[muse-probe-r2link-free-exists]]]\n[[/iftags]]", "tags": ["alpha"]}
+{"id": "x-free-iftags-drop", "source": "[[iftags +beta]]\n[[[muse-probe-r2link-free-exists]]]\n[[/iftags]]", "tags": ["alpha"]}
+{"id": "x-eref-kept-math", "source": "[[iftags +alpha]]\n[[math E]]\nx\n[[/math]]\n[[/iftags]]\n[[eref E]]", "tags": ["alpha"]}
+{"id": "x-eref-suppressed-math", "source": "[[iftags -alpha]]\n[[math E]]\nx\n[[/math]]\n[[/iftags]]\n[[eref E]]", "tags": ["alpha"]}

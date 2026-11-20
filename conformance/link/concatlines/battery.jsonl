@@ -1,0 +1,59 @@
+{"id": "basic", "source": "a\\\nb"}
+{"id": "mid-word", "source": "hel\\\nlo"}
+{"id": "line-start-backslash", "source": "\\\na"}
+{"id": "backslash-only", "source": "\\"}
+{"id": "backslash-at-eof", "source": "a\\"}
+{"id": "two-backslash-one-nl", "source": "a\\\\\nb"}
+{"id": "three-backslash-one-nl", "source": "a\\\\\\\nb"}
+{"id": "one-backslash-two-nl", "source": "a\\\n\nb"}
+{"id": "two-backslash-two-nl", "source": "a\\\\\n\nb"}
+{"id": "three-backslash-three-nl", "source": "a\\\\\\\n\n\nb"}
+{"id": "four-backslash-two-nl", "source": "a\\\\\\\\\n\nb"}
+{"id": "backslash-newline-pair", "source": "a\\\n\\\nb"}
+{"id": "multi-cont", "source": "a\\\nb\\\nc"}
+{"id": "two-cont-lines", "source": "a\\\nb\nc\\\nd"}
+{"id": "blank-lines-around", "source": "\na\\\nb\n"}
+{"id": "backslash-space-newline", "source": "a\\ \nb"}
+{"id": "backslash-tab-newline", "source": "a\\\t\nb"}
+{"id": "space-backslash-newline", "source": "a \\\nb"}
+{"id": "tab-backslash-newline", "source": "a\t\\\nb"}
+{"id": "backslash-two-spaces-newline", "source": "a\\  \nb"}
+{"id": "backslash-crlf", "source": "a\\\r\nb"}
+{"id": "backslash-lone-cr", "source": "a\\\rb"}
+{"id": "backslash-blank-space-line", "source": "a\\\n \nb"}
+{"id": "backslash-trailing-spaces-eof", "source": "a\\   "}
+{"id": "code-block", "source": "[[code]]\nx\\\ny\n[[/code]]"}
+{"id": "code-block-upper", "source": "[[CODE]]\nx\\\ny\n[[/CODE]]"}
+{"id": "inline-code", "source": "[[code]]x\\\ny[[/code]]"}
+{"id": "code-then-cont", "source": "[[code]]\nx\n[[/code]]\ny\\\nz"}
+{"id": "cont-into-code", "source": "a\\\n[[code]]\nx\n[[/code]]"}
+{"id": "raw-block", "source": "[[raw]]\nx\\\ny\n[[/raw]]"}
+{"id": "math-block", "source": "[[math]]\nx\\\ny\n[[/math]]"}
+{"id": "math-block-labeled", "source": "[[math E]]\nx\\\ny\n[[/math]]"}
+{"id": "math-two-cont", "source": "[[math]]\nx \\\ny \\\n[[/math]]"}
+{"id": "comment-join", "source": "A\\[!--x--]\nB"}
+{"id": "comment-inner-cont", "source": "[!-- a\\\nb --]\nC"}
+{"id": "cont-into-math", "source": "a\\\n[[math]]\nx\n[[/math]]"}
+{"id": "div-opener", "source": "a\\\n[[div]]\nx\n[[/div]]"}
+{"id": "div-opener-attrs", "source": "a\\\n[[div class=\"box\"]]\nx\n[[/div]]"}
+{"id": "div-opener-upper", "source": "a\\\n[[DIV]]\nx\n[[/DIV]]"}
+{"id": "div-opener-tab", "source": "a\\\n[[div\tclass=\"box\"]]\nx\n[[/div]]"}
+{"id": "div-opener-underscore", "source": "a\\\n[[div_]]\nx\n[[/div]]"}
+{"id": "malformed-division", "source": "alpha\\\n[[division]]"}
+{"id": "malformed-divx", "source": "alpha\\\n[[divx]]"}
+{"id": "span-opener", "source": "a\\\n[[span]]x[[/span]]"}
+{"id": "span-opener-attr", "source": "a\\\n[[span style=\"color:red\"]]x[[/span]]"}
+{"id": "freelink-cont", "source": "[[[tar\\\nget]]]"}
+{"id": "freelink-cont-space", "source": "[[[tar\\\n get|label]]]"}
+{"id": "eref-cont", "source": "[[math E]]\nx=1\n[[/math]]\n[[eref \\\nE]]"}
+{"id": "iframe-src-cont", "source": "[[iframe http://exa\\\nmple.com]]"}
+{"id": "date-cont", "source": "[[date 12345\\\n]]"}
+{"id": "iftags-cont", "source": "[[iftags +alpha]]\nx\\\ny\n[[/iftags]]"}
+{"id": "mathinline-cont", "source": "[[mathinline]]x\\\ny[[/mathinline]]"}
+{"id": "url-cont", "source": "[[http://exa\\\nmple.com]]"}
+{"id": "heading-cont", "source": "= head\\\nline"}
+{"id": "quote-cont", "source": "> quote\\\nline"}
+{"id": "unicode-cont", "source": "é\\\nü"}
+{"id": "fullwidth-cont", "source": "ａ\\\nｂ"}
+{"id": "mixed-case-code", "source": "[[CoDe]]\nx\\\ny\n[[/cOdE]]"}
+{"id": "upper-continuation-word", "source": "A\\\nB\\\nC"}

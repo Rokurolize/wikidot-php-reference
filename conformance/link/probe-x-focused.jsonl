@@ -1,0 +1,4 @@
+{"id": "x-concat-code-before-open", "source": "a\\\n[[code]]\nx\n[[/code]]"}
+{"id": "x-eref-duplicate-forward", "source": "[[math E]]\nx\n[[/math]]\n[[eref E]]\n[[math E]]\ny\n[[/math]]"}
+{"id": "x-free-iftags-drop-untagged", "source": "[[iftags +beta]]\n[[[muse-probe-r2link-free-exists]]]\n[[/iftags]]"}
+{"id": "x-concat-math-inside", "source": "[[math E]]\nx\\\ny\n[[/math]]"}

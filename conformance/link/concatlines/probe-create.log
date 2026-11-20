@@ -1,0 +1,207 @@
+basic -> muse-probe-r2link-concat-basic (exists)
+two-backslash-one-nl -> muse-probe-r2link-concat-two-backslash-one-nl (exists)
+one-backslash-two-nl -> muse-probe-r2link-concat-one-backslash-two-nl (exists)
+two-backslash-two-nl -> muse-probe-r2link-concat-two-backslash-two-nl (exists)
+three-backslash-three-nl -> muse-probe-r2link-concat-three-backslash-three-nl (exists)
+four-backslash-two-nl -> muse-probe-r2link-concat-four-backslash-two-nl (exists)
+backslash-newline-pair -> muse-probe-r2link-concat-backslash-newline-pair (exists)
+multi-cont -> muse-probe-r2link-concat-multi-cont (exists)
+backslash-space-newline -> muse-probe-r2link-concat-backslash-space-newline (exists)
+backslash-tab-newline -> muse-probe-r2link-concat-backslash-tab-newline (exists)
+space-backslash-newline -> muse-probe-r2link-concat-space-backslash-newline (exists)
+backslash-at-eof -> muse-probe-r2link-concat-backslash-at-eof (created)
+code-block-upper -> muse-probe-r2link-concat-code-block-upper (created)
+inline-code -> muse-probe-r2link-concat-inline-code (created)
+raw-block -> muse-probe-r2link-concat-raw-block (created)
+math-block-labeled -> muse-probe-r2link-concat-math-block-labeled (created)
+comment-inner-cont -> muse-probe-r2link-concat-comment-inner-cont (created)
+cont-into-code -> muse-probe-r2link-concat-cont-into-code (created)
+cont-into-math -> muse-probe-r2link-concat-cont-into-math (created)
+div-opener -> muse-probe-r2link-concat-div-opener (created)
+div-opener-attrs -> muse-probe-r2link-concat-div-opener-attrs (created)
+div-opener-upper -> muse-probe-r2link-concat-div-opener-upper (created)
+div-opener-tab -> muse-probe-r2link-concat-div-opener-tab (created)
+div-opener-underscore -> muse-probe-r2link-concat-div-opener-underscore (created)
+malformed-division -> muse-probe-r2link-concat-malformed-division (created)
+span-opener-attr -> muse-probe-r2link-concat-span-opener-attr (created)
+freelink-cont -> muse-probe-r2link-concat-freelink-cont (created)
+freelink-cont-space -> muse-probe-r2link-concat-freelink-cont-space (created)
+eref-cont -> muse-probe-r2link-concat-eref-cont (created)
+iframe-src-cont -> muse-probe-r2link-concat-iframe-src-cont (created)
+date-cont -> muse-probe-r2link-concat-date-cont (created)
+mathinline-cont -> muse-probe-r2link-concat-mathinline-cont (created)
+url-cont -> muse-probe-r2link-concat-url-cont (created)
+unicode-cont -> muse-probe-r2link-concat-unicode-cont (created)
+34 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "basic": {
+  "fullname": "muse-probe-r2link-concat-basic",
+  "source": "a\\\nb",
+  "action": "exists"
+ },
+ "two-backslash-one-nl": {
+  "fullname": "muse-probe-r2link-concat-two-backslash-one-nl",
+  "source": "a\\\\\nb",
+  "action": "exists"
+ },
+ "one-backslash-two-nl": {
+  "fullname": "muse-probe-r2link-concat-one-backslash-two-nl",
+  "source": "a\\\n\nb",
+  "action": "exists"
+ },
+ "two-backslash-two-nl": {
+  "fullname": "muse-probe-r2link-concat-two-backslash-two-nl",
+  "source": "a\\\\\n\nb",
+  "action": "exists"
+ },
+ "three-backslash-three-nl": {
+  "fullname": "muse-probe-r2link-concat-three-backslash-three-nl",
+  "source": "a\\\\\\\n\n\nb",
+  "action": "exists"
+ },
+ "four-backslash-two-nl": {
+  "fullname": "muse-probe-r2link-concat-four-backslash-two-nl",
+  "source": "a\\\\\\\\\n\nb",
+  "action": "exists"
+ },
+ "backslash-newline-pair": {
+  "fullname": "muse-probe-r2link-concat-backslash-newline-pair",
+  "source": "a\\\n\\\nb",
+  "action": "exists"
+ },
+ "multi-cont": {
+  "fullname": "muse-probe-r2link-concat-multi-cont",
+  "source": "a\\\nb\\\nc",
+  "action": "exists"
+ },
+ "backslash-space-newline": {
+  "fullname": "muse-probe-r2link-concat-backslash-space-newline",
+  "source": "a\\ \nb",
+  "action": "exists"
+ },
+ "backslash-tab-newline": {
+  "fullname": "muse-probe-r2link-concat-backslash-tab-newline",
+  "source": "a\\\t\nb",
+  "action": "exists"
+ },
+ "space-backslash-newline": {
+  "fullname": "muse-probe-r2link-concat-space-backslash-newline",
+  "source": "a \\\nb",
+  "action": "exists"
+ },
+ "backslash-at-eof": {
+  "fullname": "muse-probe-r2link-concat-backslash-at-eof",
+  "source": "a\\",
+  "action": "created"
+ },
+ "code-block-upper": {
+  "fullname": "muse-probe-r2link-concat-code-block-upper",
+  "source": "[[CODE]]\nx\\\ny\n[[/CODE]]",
+  "action": "created"
+ },
+ "inline-code": {
+  "fullname": "muse-probe-r2link-concat-inline-code",
+  "source": "[[code]]x\\\ny[[/code]]",
+  "action": "created"
+ },
+ "raw-block": {
+  "fullname": "muse-probe-r2link-concat-raw-block",
+  "source": "[[raw]]\nx\\\ny\n[[/raw]]",
+  "action": "created"
+ },
+ "math-block-labeled": {
+  "fullname": "muse-probe-r2link-concat-math-block-labeled",
+  "source": "[[math E]]\nx\\\ny\n[[/math]]",
+  "action": "created"
+ },
+ "comment-inner-cont": {
+  "fullname": "muse-probe-r2link-concat-comment-inner-cont",
+  "source": "[!-- a\\\nb --]\nC",
+  "action": "created"
+ },
+ "cont-into-code": {
+  "fullname": "muse-probe-r2link-concat-cont-into-code",
+  "source": "a\\\n[[code]]\nx\n[[/code]]",
+  "action": "created"
+ },
+ "cont-into-math": {
+  "fullname": "muse-probe-r2link-concat-cont-into-math",
+  "source": "a\\\n[[math]]\nx\n[[/math]]",
+  "action": "created"
+ },
+ "div-opener": {
+  "fullname": "muse-probe-r2link-concat-div-opener",
+  "source": "a\\\n[[div]]\nx\n[[/div]]",
+  "action": "created"
+ },
+ "div-opener-attrs": {
+  "fullname": "muse-probe-r2link-concat-div-opener-attrs",
+  "source": "a\\\n[[div class=\"box\"]]\nx\n[[/div]]",
+  "action": "created"
+ },
+ "div-opener-upper": {
+  "fullname": "muse-probe-r2link-concat-div-opener-upper",
+  "source": "a\\\n[[DIV]]\nx\n[[/DIV]]",
+  "action": "created"
+ },
+ "div-opener-tab": {
+  "fullname": "muse-probe-r2link-concat-div-opener-tab",
+  "source": "a\\\n[[div\tclass=\"box\"]]\nx\n[[/div]]",
+  "action": "created"
+ },
+ "div-opener-underscore": {
+  "fullname": "muse-probe-r2link-concat-div-opener-underscore",
+  "source": "a\\\n[[div_]]\nx\n[[/div]]",
+  "action": "created"
+ },
+ "malformed-division": {
+  "fullname": "muse-probe-r2link-concat-malformed-division",
+  "source": "alpha\\\n[[division]]",
+  "action": "created"
+ },
+ "span-opener-attr": {
+  "fullname": "muse-probe-r2link-concat-span-opener-attr",
+  "source": "a\\\n[[span style=\"color:red\"]]x[[/span]]",
+  "action": "created"
+ },
+ "freelink-cont": {
+  "fullname": "muse-probe-r2link-concat-freelink-cont",
+  "source": "[[[tar\\\nget]]]",
+  "action": "created"
+ },
+ "freelink-cont-space": {
+  "fullname": "muse-probe-r2link-concat-freelink-cont-space",
+  "source": "[[[tar\\\n get|label]]]",
+  "action": "created"
+ },
+ "eref-cont": {
+  "fullname": "muse-probe-r2link-concat-eref-cont",
+  "source": "[[math E]]\nx=1\n[[/math]]\n[[eref \\\nE]]",
+  "action": "created"
+ },
+ "iframe-src-cont": {
+  "fullname": "muse-probe-r2link-concat-iframe-src-cont",
+  "source": "[[iframe http://exa\\\nmple.com]]",
+  "action": "created"
+ },
+ "date-cont": {
+  "fullname": "muse-probe-r2link-concat-date-cont",
+  "source": "[[date 12345\\\n]]",
+  "action": "created"
+ },
+ "mathinline-cont": {
+  "fullname": "muse-probe-r2link-concat-mathinline-cont",
+  "source": "[[mathinline]]x\\\ny[[/mathinline]]",
+  "action": "created"
+ },
+ "url-cont": {
+  "fullname": "muse-probe-r2link-concat-url-cont",
+  "source": "[[http://exa\\\nmple.com]]",
+  "action": "created"
+ },
+ "unicode-cont": {
+  "fullname": "muse-probe-r2link-concat-unicode-cont",
+  "source": "é\\\nü",
+  "action": "created"
+ }
+}

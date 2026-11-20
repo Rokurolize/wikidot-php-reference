@@ -1,0 +1,12 @@
+{"id": "x-concat-code-inside", "source": "[[code]]\na\\\nb\n[[/code]]"}
+{"id": "x-concat-raw-inside", "source": "[[raw]]\na\\\nb\n[[/raw]]"}
+{"id": "x-concat-comment-inside", "source": "[!-- a\\\nb --]tail"}
+{"id": "x-concat-freelink-join", "source": "[[[muse-probe-r2link-free-exists|some\\\ntext]]]"}
+{"id": "x-concat-eref-join", "source": "[[eref la\\\nbel]]"}
+{"id": "x-free-math-label", "source": "[[math [[[muse-probe-r2link-free-exists]]]]]\nx\n[[/math]]\n[[eref [[[muse-probe-r2link-free-exists]]]]]"}
+{"id": "x-free-inside-code", "source": "[[code]]\n[[[muse-probe-r2link-free-exists]]]\n[[/code]]"}
+{"id": "x-free-inside-comment", "source": "[!-- [[[muse-probe-r2link-free-exists]]] --]tail"}
+{"id": "x-eref-backward", "source": "[[math E]]\nx\n[[/math]]\n[[eref E]]"}
+{"id": "x-eref-forward", "source": "[[eref E]]\n[[math E]]\nx\n[[/math]]"}
+{"id": "x-eref-duplicate", "source": "[[math E]]\nx\n[[/math]]\n[[math E]]\ny\n[[/math]]\n[[eref E]]"}
+{"id": "x-eref-undefined", "source": "[[eref NO_SUCH_LABEL]]"}

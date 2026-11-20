@@ -1,0 +1,274 @@
+R2 Concatlines three-way compare report
+
+Battery: 59 cases, reference before/after render and tokens against the
+shared ftml dumper at HEAD 97bed049ddeadc54981f6d9577bd78fcb212abd9.
+Normalized agreement before: 48/59; after: 48/59.
+Exact-after-<br>-normalization agreement before: 29/59; after: 29/59.
+Render records changed by correction: 5 (div-opener, div-opener-attrs, div-opener-upper, div-opener-tab, div-opener-underscore).
+Token records changed by correction: 19 (div-opener-underscore, malformed-division, malformed-divx, span-opener, span-opener-attr, freelink-cont, freelink-cont-space, eref-cont, iframe-src-cont, date-cont, iftags-cont, mathinline-cont, url-cont, heading-cont, quote-cont, unicode-cont, fullwidth-cont, mixed-case-code, upper-continuation-word).
+
+Battery cases whose normalized reference and ftml shapes differ after correction:
+  two-backslash-two-nl         REF 'a\\\nb' | FTML 'ab'
+  three-backslash-three-nl     REF 'a\\\\\nb' | FTML 'a\\b'
+  four-backslash-two-nl        REF 'a\\\\\\\nb' | FTML 'a\\\\b'
+  cont-into-code               REF 'a\nx' | FTML 'a[[code]]\nx\n[[/code]]'
+  math-block                   REF 'The equation has not been processed correctly. Most prabably it has syntax error(s).' | FTML '(1)\n\\begin{align} x\\ y \\end{align}'
+  math-block-labeled           REF 'The equation has not been processed correctly. Most prabably it has syntax error(s).' | FTML '(1)\n\\begin{align} x\\ y \\end{align}'
+  math-two-cont                REF 'The equation has not been processed correctly. Most prabably it has syntax error(s).' | FTML '(1)\n\\begin{align} x \\ y \\ \\end{align}'
+  cont-into-math               REF 'a\nThe equation has not been processed correctly. Most prabably it has syntax error(s).' | FTML 'a[[math]]\nx\n[[/math]]'
+  div-opener-underscore        REF 'a\n[[div_]]\nx\n[[/div]]' | FTML 'a\nx'
+  eref-cont                    REF 'The equation has not been processed correctly. Most prabably it has syntax error(s).\n1' | FTML '(1)\n\\begin{equation} x=1 \\end{equation}\n1'
+  date-cont                    REF '[[date 12345]]' | FTML '01 Jan 1970 03:25'
+Total: 11
+
+Live probes: 34 cases under prefix muse-probe-r2link-concat-.
+  basic                        all-three              valid=True stable=True source=True
+      REF  'ab'
+      FTML 'ab'
+      LIVE 'ab'
+      RAW REF  '<p>ab</p>\n\n'
+      RAW FTML '<p>ab</p>'
+      RAW LIVE '<p>ab</p>'
+  two-backslash-one-nl         all-three              valid=True stable=True source=True
+      REF  'a\\b'
+      FTML 'a\\b'
+      LIVE 'a\\b'
+      RAW REF  '<p>a\\b</p>\n\n'
+      RAW FTML '<p>a\\b</p>'
+      RAW LIVE '<p>a\\b</p>'
+  one-backslash-two-nl         all-three              valid=True stable=True source=True
+      REF  'a\nb'
+      FTML 'a\nb'
+      LIVE 'a\nb'
+      RAW REF  '<p>a<br />\nb</p>\n\n'
+      RAW FTML '<p>a<br>\nb</p>'
+      RAW LIVE '<p>a<br />\nb</p>'
+  two-backslash-two-nl         ref+live-vs-ftml       valid=True stable=True source=True
+      REF  'a\\\nb'
+      FTML 'ab'
+      LIVE 'a\\\nb'
+      RAW REF  '<p>a\\<br />\nb</p>\n\n'
+      RAW FTML '<p>ab</p>'
+      RAW LIVE '<p>a\\<br />\nb</p>'
+  three-backslash-three-nl     ref+live-vs-ftml       valid=True stable=True source=True
+      REF  'a\\\\\nb'
+      FTML 'a\\b'
+      LIVE 'a\\\\\nb'
+      RAW REF  '<p>a\\\\<br />\nb</p>\n\n'
+      RAW FTML '<p>a\\b</p>'
+      RAW LIVE '<p>a\\\\<br />\nb</p>'
+  four-backslash-two-nl        ref+live-vs-ftml       valid=True stable=True source=True
+      REF  'a\\\\\\\nb'
+      FTML 'a\\\\b'
+      LIVE 'a\\\\\\\nb'
+      RAW REF  '<p>a\\\\\\<br />\nb</p>\n\n'
+      RAW FTML '<p>a\\\\b</p>'
+      RAW LIVE '<p>a\\\\\\<br />\nb</p>'
+  backslash-newline-pair       all-three              valid=True stable=True source=True
+      REF  'ab'
+      FTML 'ab'
+      LIVE 'ab'
+      RAW REF  '<p>ab</p>\n\n'
+      RAW FTML '<p>ab</p>'
+      RAW LIVE '<p>ab</p>'
+  multi-cont                   all-three              valid=True stable=True source=True
+      REF  'abc'
+      FTML 'abc'
+      LIVE 'abc'
+      RAW REF  '<p>abc</p>\n\n'
+      RAW FTML '<p>abc</p>'
+      RAW LIVE '<p>abc</p>'
+  backslash-space-newline      all-three              valid=True stable=True source=True
+      REF  'a\\\nb'
+      FTML 'a\\\nb'
+      LIVE 'a\\\nb'
+      RAW REF  '<p>a\\ <br />\nb</p>\n\n'
+      RAW FTML '<p>a\\<br>\nb</p>'
+      RAW LIVE '<p>a\\<br />\nb</p>'
+  backslash-tab-newline        all-three              valid=True stable=True source=True
+      REF  'a\\\nb'
+      FTML 'a\\\nb'
+      LIVE 'a\\\nb'
+      RAW REF  '<p>a\\    <br />\nb</p>\n\n'
+      RAW FTML '<p>a\\<br>\nb</p>'
+      RAW LIVE '<p>a\\<br />\nb</p>'
+  space-backslash-newline      all-three              valid=True stable=True source=True
+      REF  'a b'
+      FTML 'a b'
+      LIVE 'a b'
+      RAW REF  '<p>a b</p>\n\n'
+      RAW FTML '<p>a b</p>'
+      RAW LIVE '<p>a b</p>'
+  backslash-at-eof             all-three              valid=True stable=True source=True
+      REF  'a'
+      FTML 'a'
+      LIVE 'a'
+      RAW REF  'a<br />\n'
+      RAW FTML '\n\na<br>\n'
+      RAW LIVE 'a<br />'
+  code-block-upper             all-three              valid=True stable=True source=True
+      REF  'x\\\ny'
+      FTML 'x\\\ny'
+      LIVE 'x\\\ny'
+      RAW REF  '\n<div class="code">\n<pre><code>x\\\ny</code></pre></div>\n\n'
+      RAW FTML '<div class="code"><pre><code>x\\\ny</code></pre></div>'
+      RAW LIVE '<div class="code">\n<pre><code>x\\\ny</code></pre></div>'
+  inline-code                  all-three              valid=True stable=True source=True
+      REF  'x\\\ny'
+      FTML 'x\\\ny'
+      LIVE 'x\\\ny'
+      RAW REF  '\n<div class="code">\n<pre><code>x\\\ny</code></pre></div>\n\n'
+      RAW FTML '<div class="code"><pre><code>x\\\ny</code></pre></div>'
+      RAW LIVE '<div class="code">\n<pre><code>x\\\ny</code></pre></div>'
+  raw-block                    all-three              valid=True stable=True source=True
+      REF  '[[raw]]\nxy\n[[/raw]]'
+      FTML '[[raw]]\nxy\n[[/raw]]'
+      LIVE '[[raw]]\nxy\n[[/raw]]'
+      RAW REF  '<p>[[raw]]<br />\nxy<br />\n[[/raw]]</p>\n\n'
+      RAW FTML '<p>[[raw]]<br>\nxy<br>\n[[/raw]]</p>'
+      RAW LIVE '<p>[[raw]]<br />\nxy<br />\n[[/raw]]</p>'
+  math-block-labeled           ftml+live-vs-ref       valid=True stable=True source=True
+      REF  'The equation has not been processed correctly. Most prabably it has syntax error(s).'
+      FTML '(1)\n\\begin{align} x\\ y \\end{align}'
+      LIVE '(1)\n\\begin{align} x\\ y \\end{align}'
+      RAW REF  '<div class="error-block">The equation has not been processed correctly. Most prabably it has syntax error(s).</div>'
+      RAW FTML '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{align} x\\ y \\end{align}</div>'
+      RAW LIVE '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{align} x\\ y \\end{align}</div>'
+  comment-inner-cont           all-three              valid=True stable=True source=True
+      REF  'C'
+      FTML 'C'
+      LIVE 'C'
+      RAW REF  '<p>C</p>\n\n'
+      RAW FTML '<p>C</p>'
+      RAW LIVE '<p>C</p>'
+  cont-into-code               ref+live-vs-ftml       valid=True stable=True source=True
+      REF  'a\nx'
+      FTML 'a[[code]]\nx\n[[/code]]'
+      LIVE 'a\nx'
+      RAW REF  '<p>a</p>\n\n\n<div class="code">\n<pre><code>x</code></pre></div>\n\n'
+      RAW FTML '<p>a[[code]]<br>\nx<br>\n[[/code]]</p>'
+      RAW LIVE '<p>a</p>\n<div class="code">\n<pre><code>x</code></pre></div>'
+  cont-into-math               all-disagree           valid=True stable=True source=True
+      REF  'a\nThe equation has not been processed correctly. Most prabably it has syntax error(s).'
+      FTML 'a[[math]]\nx\n[[/math]]'
+      LIVE 'a\n(1)\n\\begin{equation} x \\end{equation}'
+      RAW REF  '<p>a</p>\n\n<div class="error-block">The equation has not been processed correctly. Most prabably it has syntax error(s).</div>'
+      RAW FTML '<p>a[[math]]<br>\nx<br>\n[[/math]]</p>'
+      RAW LIVE '<p>a</p>\n<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{equation} x \\end{equation}</div>'
+  div-opener                   all-three              valid=True stable=True source=True
+      REF  'a\nx'
+      FTML 'a\nx'
+      LIVE 'a\nx'
+      RAW REF  '<p>a</p>\n\n<div ><p>x</p>\n\n</div>'
+      RAW FTML 'a\n<div><p>x</p></div>'
+      RAW LIVE 'a\n<div>\n<p>x</p>\n</div>'
+  div-opener-attrs             all-three              valid=True stable=True source=True
+      REF  'a\nx'
+      FTML 'a\nx'
+      LIVE 'a\nx'
+      RAW REF  '<p>a</p>\n\n<div  class="box"><p>x</p>\n\n</div>'
+      RAW FTML 'a\n<div class="box"><p>x</p></div>'
+      RAW LIVE 'a\n<div class="box">\n<p>x</p>\n</div>'
+  div-opener-upper             all-three              valid=True stable=True source=True
+      REF  'a\nx'
+      FTML 'a\nx'
+      LIVE 'a\nx'
+      RAW REF  '<p>a</p>\n\n<div ><p>x</p>\n\n</div>'
+      RAW FTML 'a\n<div><p>x</p></div>'
+      RAW LIVE 'a\n<div>\n<p>x</p>\n</div>'
+  div-opener-tab               all-three              valid=True stable=True source=True
+      REF  'a\nx'
+      FTML 'a\nx'
+      LIVE 'a\nx'
+      RAW REF  '<p>a</p>\n\n<div  class="box"><p>x</p>\n\n</div>'
+      RAW FTML 'a\n<div class="box"><p>x</p></div>'
+      RAW LIVE 'a\n<div class="box">\n<p>x</p>\n</div>'
+  div-opener-underscore        ftml+live-vs-ref       valid=True stable=True source=True
+      REF  'a\n[[div_]]\nx\n[[/div]]'
+      FTML 'a\nx'
+      LIVE 'a\nx'
+      RAW REF  '<p>a<br />\n[[div_]]<br />\nx<br />\n[[/div]]</p>\n\n'
+      RAW FTML 'a\n<div>x</div>'
+      RAW LIVE 'a\n<div>x</div>'
+  malformed-division           all-three              valid=True stable=True source=True
+      REF  'alpha[[division]]'
+      FTML 'alpha[[division]]'
+      LIVE 'alpha[[division]]'
+      RAW REF  '<p>alpha[[division]]</p>\n\n'
+      RAW FTML '<p>alpha[[division]]</p>'
+      RAW LIVE '<p>alpha[[division]]</p>'
+  span-opener-attr             all-three              valid=True stable=True source=True
+      REF  'ax'
+      FTML 'ax'
+      LIVE 'ax'
+      RAW REF  '<p>a<span  style="color:red">x</span></p>\n\n'
+      RAW FTML '<p>a<span style="color:red">x</span></p>'
+      RAW LIVE '<p>a<span style="color:red">x</span></p>'
+  freelink-cont                all-three              valid=True stable=True source=True
+      REF  'target'
+      FTML 'target'
+      LIVE 'target'
+      RAW REF  '<p><a class="newpage" href="/target">target</a></p>\n\n'
+      RAW FTML '<p><a href="/target">target</a></p>'
+      RAW LIVE '<p><a class="newpage" href="/target">target</a></p>'
+  freelink-cont-space          all-three              valid=True stable=True source=True
+      REF  'label'
+      FTML 'label'
+      LIVE 'label'
+      RAW REF  '<p><a class="newpage" href="/tar-get">label</a></p>\n\n'
+      RAW FTML '<p><a href="/tar-get">label</a></p>'
+      RAW LIVE '<p><a class="newpage" href="/tar-get">label</a></p>'
+  eref-cont                    ftml+live-vs-ref       valid=True stable=True source=True
+      REF  'The equation has not been processed correctly. Most prabably it has syntax error(s).\n1'
+      FTML '(1)\n\\begin{equation} x=1 \\end{equation}\n1'
+      LIVE '(1)\n\\begin{equation} x=1 \\end{equation}\n1'
+      RAW REF  '<div class="error-block">The equation has not been processed correctly. Most prabably it has syntax error(s).</div><p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('
+      RAW FTML '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{equation} x=1 \\end{equation}</div><p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollTo'
+      RAW LIVE '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{equation} x=1 \\end{equation}</div>\n<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollT'
+  iframe-src-cont              all-three              valid=True stable=True source=True
+      REF  ''
+      FTML ''
+      LIVE ''
+      RAW REF  '<p><iframe src="http://exa\\" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>\n\n'
+      RAW FTML '<p><iframe src="http://example.com" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>'
+      RAW LIVE '<p><iframe src="http://exa/" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>'
+  date-cont                    ref+live-vs-ftml       valid=True stable=True source=True
+      REF  '[[date 12345]]'
+      FTML '01 Jan 1970 03:25'
+      LIVE '[[date 12345]]'
+      RAW REF  '<p>[[date 12345]]</p>\n\n'
+      RAW FTML '<p><span class="odate time_12345">01 Jan 1970 03:25</span></p>'
+      RAW LIVE '<p>[[date 12345]]</p>'
+  mathinline-cont              all-three              valid=True stable=True source=True
+      REF  '[[mathinline]]xy[[/mathinline]]'
+      FTML '[[mathinline]]xy[[/mathinline]]'
+      LIVE '[[mathinline]]xy[[/mathinline]]'
+      RAW REF  '<p>[[mathinline]]xy[[/mathinline]]</p>\n\n'
+      RAW FTML '<p>[[mathinline]]xy[[/mathinline]]</p>'
+      RAW LIVE '<p>[[mathinline]]xy[[/mathinline]]</p>'
+  url-cont                     all-three              valid=True stable=True source=True
+      REF  '[[http://example.com]]'
+      FTML '[[http://example.com]]'
+      LIVE '[[http://example.com]]'
+      RAW REF  '<p>[[<a href="http://example.com">http://example.com</a>]]</p>\n\n'
+      RAW FTML '<p>[[<a href="http://example.com">http://example.com</a>]]</p>'
+      RAW LIVE '<p>[[<a href="http://example.com">http://example.com</a>]]</p>'
+  unicode-cont                 all-three              valid=True stable=True source=True
+      REF  'éü'
+      FTML 'éü'
+      LIVE 'éü'
+      RAW REF  '<p>éü</p>\n\n'
+      RAW FTML '<p>éü</p>'
+      RAW LIVE '<p>éü</p>'
+Counts: valid=34 stable=34 source-matched=34
+  all-disagree: 1
+  all-three: 25
+  ftml+live-vs-ref: 3
+  ref+live-vs-ftml: 5
+
+Probe records whose reference shape changed with correction:
+  div-opener: 'a\nx' -> 'a\nx'
+  div-opener-attrs: 'a\nx' -> 'a\nx'
+  div-opener-upper: 'a\nx' -> 'a\nx'
+  div-opener-tab: 'a\nx' -> 'a\nx'
+  div-opener-underscore: 'a[[div_]]\nx\n[[/div]]' -> 'a\n[[div_]]\nx\n[[/div]]'

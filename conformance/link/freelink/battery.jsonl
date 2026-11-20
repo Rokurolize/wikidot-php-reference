@@ -1,0 +1,60 @@
+{"id": "exist-target-labeled", "source": "[[[muse-probe-r2link-free-exists|shown]]]"}
+{"id": "exist2-target-labeled", "source": "[[[muse-probe-r2link-free-exists2|Second]]]"}
+{"id": "exist-target-bare", "source": "[[[muse-probe-r2link-free-exists]]]"}
+{"id": "exist2-empty-label", "source": "[[[muse-probe-r2link-free-exists2|]]]"}
+{"id": "new-target-labeled", "source": "[[[missing-page|Wanted]]]"}
+{"id": "new-target-bare", "source": "[[[missing-page]]]"}
+{"id": "new-target-empty-label", "source": "[[[missing-page|]]]"}
+{"id": "case-upper-exists", "source": "[[[MUSE-PROBE-R2LINK-FREE-EXISTS|shown]]]"}
+{"id": "case-mixed-exists", "source": "[[[MuSe-PrObE-r2LiNk-free-ExIsTs|shown]]]"}
+{"id": "exist-target-anchor", "source": "[[[muse-probe-r2link-free-exists#sec|shown]]]"}
+{"id": "double-bracket", "source": "[[some-page]]"}
+{"id": "triple-quad", "source": "[[[[SCP-001-EX]]]]"}
+{"id": "triple-quint", "source": "[[[[[SCP-001-EX]]]]]"}
+{"id": "triple-short-closer", "source": "[[[some-page]]"}
+{"id": "triple-no-closer", "source": "[[[some-page"}
+{"id": "triple-closer-junk", "source": "[[[some-page]]]junk"}
+{"id": "triple-extra-close", "source": "[[[some-page]]]]"}
+{"id": "triple-space-opener", "source": "[[[ some-page | Label ]]]"}
+{"id": "double-open-triple-close", "source": "[[some-page|Label]]]"}
+{"id": "triple-open-double-close", "source": "[[[some-page|Label]]"}
+{"id": "empty-target", "source": "[[[|Label]]]"}
+{"id": "whitespace-target", "source": "[[[   |Label]]]"}
+{"id": "empty-label", "source": "[[[some-page|]]]"}
+{"id": "dup-pipes", "source": "[[[page-slug|A|B|C]]]"}
+{"id": "dup-pipes-spaced", "source": "[[[ page-slug | A | B | C ]]]"}
+{"id": "triple-hash", "source": "[[[home###|Home]]]"}
+{"id": "double-hash", "source": "[[[a##b]]]"}
+{"id": "hash-route", "source": "[[[MAIN/##/page#toc1|Hash routing]]]"}
+{"id": "anchor-digit", "source": "[[[scp-series#001|SCP-001 to SCP-099]]]"}
+{"id": "anchor-alpha", "source": "[[[scp-series#section|Label]]]"}
+{"id": "anchor-label-only", "source": "[[[#my-anchor|Label]]]"}
+{"id": "anchor-label-only-space", "source": "[[[ #my-anchor | Label ]]]"}
+{"id": "anchor-empty-first", "source": "[[[#my-anchor]]]"}
+{"id": "anchor-dash", "source": "[[[scp-series#sec-1|Label]]]"}
+{"id": "anchor-underscore", "source": "[[[scp-series#sec_1|Label]]]"}
+{"id": "anchor-colon", "source": "[[[scp-series#sec:1|Label]]]"}
+{"id": "cross-site-colon", "source": "[[[:scp-wiki:component:theme|Sigma-9 Theme]]]"}
+{"id": "cross-site-colon-spaced", "source": "[[[:scp-wiki : system : Recent Changes]]]"}
+{"id": "fossil-cross-site", "source": "[[[site::page|Label]]]"}
+{"id": "fossil-cross-site-no-page", "source": "[[[site::|Label]]]"}
+{"id": "category", "source": "[[[system:Recent Changes]]]"}
+{"id": "category-spaced", "source": "[[[system: Recent Changes]]]"}
+{"id": "multi-colon-empty", "source": "[[[a:b:c|]]]"}
+{"id": "default-category", "source": "[[[_default:a|Label]]]"}
+{"id": "url-plain", "source": "[[[https://example.com/|Example]]]"}
+{"id": "url-leading-space", "source": "[[[ https://example.com/ | Example ]]]"}
+{"id": "url-trailing-space", "source": "[[[https://example.com | Trailing]]]"}
+{"id": "url-no-scheme", "source": "[[[example.com|Example]]]"}
+{"id": "url-subpath", "source": "[[[example/edit|Edit page]]]"}
+{"id": "url-hash-route", "source": "[[[MAIN/#/page|Hash routing]]]"}
+{"id": "line-start", "source": "[[[some-page|Line start]]]"}
+{"id": "mid-line", "source": "text before [[[some-page|Mid line]]] text after"}
+{"id": "second-line", "source": "first line\n[[[some-page|Second line]]]"}
+{"id": "inline-two", "source": "[[[a|A]]] and [[[b|B]]]"}
+{"id": "adjacent-freelinks", "source": "[[[a|A]]][[[b|B]]]"}
+{"id": "star-target", "source": "[[[*SCP-001]]]"}
+{"id": "star-labeled", "source": "[[[*some-page|Label]]]"}
+{"id": "underscore-target", "source": "[[[_some-page|Label]]]"}
+{"id": "unicode-cyrillic", "source": "[[[документ]]]"}
+{"id": "unicode-cjk", "source": "[[[日本語|Label]]]"}

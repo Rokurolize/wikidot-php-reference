@@ -1,0 +1,27 @@
+p-adjacent	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+p-bold	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+p-case-label	raw=0	canon=0	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+p-defined	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+p-div	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+p-dup	raw=0	canon=0	shape=1	ref={"anchors": [["2", "2"]], "literal_eref": 0}	ftml={"anchors": [["2", "2"]], "literal_eref": 0}
+p-empty-arg	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+p-eqref-name	raw=0	canon=0	shape=1	ref={"anchors": [], "literal_eref": 0}	ftml={"anchors": [], "literal_eref": 0}
+p-equation-name	raw=0	canon=0	shape=1	ref={"anchors": [], "literal_eref": 0}	ftml={"anchors": [], "literal_eref": 0}
+p-forward	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+p-midline	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+p-multiword	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+p-no-arg	raw=0	canon=1	shape=1	ref={"anchors": [], "literal_eref": 1}	ftml={"anchors": [], "literal_eref": 1}
+p-pipe	raw=0	canon=0	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+p-quote	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+p-space-adjacent	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+p-tab	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+p-triple-close	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+p-two	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"], ["2", "2"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"], ["2", "2"]], "literal_eref": 0}
+p-two-refs-one-eq	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"], ["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"], ["1", "1"]], "literal_eref": 0}
+p-two-spaces	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+p-undefined	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+p-underscore-label	raw=0	canon=0	shape=1	ref={"anchors": [["1", "1"]], "literal_eref": 0}	ftml={"anchors": [["1", "1"]], "literal_eref": 0}
+p-unterminated	raw=0	canon=1	shape=1	ref={"anchors": [], "literal_eref": 1}	ftml={"anchors": [], "literal_eref": 1}
+p-uppercase	raw=0	canon=0	shape=1	ref={"anchors": [], "literal_eref": 0}	ftml={"anchors": [], "literal_eref": 0}
+p-whitespace-label	raw=0	canon=1	shape=1	ref={"anchors": [["", ""]], "literal_eref": 0}	ftml={"anchors": [["", ""]], "literal_eref": 0}
+TOTAL cases=26 raw=0 canonical=7 shape=26 substantive=0

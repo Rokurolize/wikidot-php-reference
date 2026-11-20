@@ -1,0 +1,72 @@
+{
+ "basic": {
+  "fullname": "muse-probe-r2link-concat-basic",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a\\\nb",
+  "source_sha256": "fa0d314bc95d3681ba54e109b11dbf548aaa4b2fbeb2efb7d91e6822041f5799",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "two-backslash-one-nl": {
+  "fullname": "muse-probe-r2link-concat-two-backslash-one-nl",
+  "html": "<p>a\\b</p>",
+  "html_sha256": "4928e8999c4168654c47d10a31e9a07e51d96d894256c01e5f8ac9bc9f548bcf",
+  "source": "a\\\\\nb",
+  "source_sha256": "488dc3b4c5bcdb3cfd752fbdc732c29431a69365dc705383cd9577b09f56faae",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "one-backslash-two-nl": {
+  "fullname": "muse-probe-r2link-concat-one-backslash-two-nl",
+  "html": "<p>a<br />\nb</p>",
+  "html_sha256": "a9cbfe60373c4c33a399fbc904966ca82bc750eed50beb32adf283236c9a9dfa",
+  "source": "a\\\n\nb",
+  "source_sha256": "ae3182a4c22fd04e121dbb56f45632652c24edc4bfff4685e256a344f2928ae0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "two-backslash-two-nl": {
+  "fullname": "muse-probe-r2link-concat-two-backslash-two-nl",
+  "html": "<p>a\\<br />\nb</p>",
+  "html_sha256": "b5486fd590147d1f8ddfddb3df21b06f6e58f3834e9f5c3c2c99ce0918fce571",
+  "source": "a\\\\\n\nb",
+  "source_sha256": "2e8e5bb3c3a1044dcaf9586ed35190ed64b07bc7e3197712c1527089be10d03a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "three-backslash-three-nl": {
+  "fullname": "muse-probe-r2link-concat-three-backslash-three-nl",
+  "html": "<p>a\\\\<br />\nb</p>",
+  "html_sha256": "8ddea878b493780c02986155a1e74be4a3433f60a2b55c07149076970385bfca",
+  "source": "a\\\\\\\n\n\nb",
+  "source_sha256": "fc4e98c1781081e43baff966cc9c08dc98f1944cc6b04d60f4934f395e9b7a2d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "four-backslash-two-nl": {
+  "fullname": "muse-probe-r2link-concat-four-backslash-two-nl",
+  "html": "<p>a\\\\\\<br />\nb</p>",
+  "html_sha256": "45c4967b3e1ad79e0b0e52faa0d5810ecf91ca4a786300625a8977bad3195546",
+  "source": "a\\\\\\\\\n\nb",
+  "source_sha256": "d78fea826c5442c11beaaba7af08c65ff8cf019a809e86097165213233bb4892",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "backslash-newline-pair": {
+  "fullname": "muse-probe-r2link-concat-backslash-newline-pair",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a\\\n\\\nb",
+  "source_sha256": "8a2dc7d192f62956d95a422752f5c07b9ee95f829d8f48246ae0cc062a469cf8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

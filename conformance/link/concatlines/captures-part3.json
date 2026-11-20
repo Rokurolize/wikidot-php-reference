@@ -1,0 +1,72 @@
+{
+ "raw-block": {
+  "fullname": "muse-probe-r2link-concat-raw-block",
+  "html": "<p>[[raw]]<br />\nxy<br />\n[[/raw]]</p>",
+  "html_sha256": "57744a981d2688016293ffa15866fa5cbe54a6becb9d7f7eb78d1d8a9d9ba84f",
+  "source": "[[raw]]\nx\\\ny\n[[/raw]]",
+  "source_sha256": "19fe0301e0295e10964ee59f5618b7a8464b8f97c589953cba29b3a41a017013",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "math-block-labeled": {
+  "fullname": "muse-probe-r2link-concat-math-block-labeled",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{align} x\\ y \\end{align}</div>",
+  "html_sha256": "097ffbb92bc993951f5d3bc44b8a9b2ee71ce127b64283bfd91c13aff714ea07",
+  "source": "[[math E]]\nx\\\ny\n[[/math]]",
+  "source_sha256": "ad67d4062a2c29b2e9f2cd65cabb05c18c4485adf7820cb58f9ad6e306977dd2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "comment-inner-cont": {
+  "fullname": "muse-probe-r2link-concat-comment-inner-cont",
+  "html": "<p>C</p>",
+  "html_sha256": "cd377b7f07c838d8db1303e966fb539b185a1c72556278168734f3ff517a9ce5",
+  "source": "[!-- a\\\nb --]\nC",
+  "source_sha256": "31f9774efd256720d3508b2b65def00a12016e5cea0a801f772e0fa7538e971e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "cont-into-code": {
+  "fullname": "muse-probe-r2link-concat-cont-into-code",
+  "html": "<p>a</p>\n<div class=\"code\">\n<pre><code>x</code></pre></div>",
+  "html_sha256": "794bca89ba24c1790802f1b6a025e0f6db72a2a3a42565319b8c251555e1e1a3",
+  "source": "a\\\n[[code]]\nx\n[[/code]]",
+  "source_sha256": "ea56db861f2f844bbe12c46b06dbc9b249915d8738e96152c228d79c02069d0f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "cont-into-math": {
+  "fullname": "muse-probe-r2link-concat-cont-into-math",
+  "html": "<p>a</p>\n<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>",
+  "html_sha256": "873de8390c86bf3ee6fe6a8a17b9b13a03f161ce9a78cec7977d77fc72cb31b1",
+  "source": "a\\\n[[math]]\nx\n[[/math]]",
+  "source_sha256": "46bec2d54cedeeb61bf4240afac4baf490fc31fb57de070a6f3bf41121586568",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "div-opener": {
+  "fullname": "muse-probe-r2link-concat-div-opener",
+  "html": "a\n<div>\n<p>x</p>\n</div>",
+  "html_sha256": "6fa35da04844710fa2d32b25b22b196d3bf82399d76e941db76fd77f0866a618",
+  "source": "a\\\n[[div]]\nx\n[[/div]]",
+  "source_sha256": "e9d23308876417494a0b8624ac8f1e3588ca49832eac30f232d3f047370d1ea1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "div-opener-attrs": {
+  "fullname": "muse-probe-r2link-concat-div-opener-attrs",
+  "html": "a\n<div class=\"box\">\n<p>x</p>\n</div>",
+  "html_sha256": "6e90e33d000889c76dff0ead90bfb148426819a7a823d647d9b470e0d97e514c",
+  "source": "a\\\n[[div class=\"box\"]]\nx\n[[/div]]",
+  "source_sha256": "3f94aa566a86e0649ecb4227660476ed3064be2ef43115f04852a26484ce35b7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

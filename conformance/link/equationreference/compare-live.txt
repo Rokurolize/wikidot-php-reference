@@ -1,0 +1,27 @@
+p-undefined              all_three    valid=True ref={"anchors": [["", ""]], "literal_eref": 0} ftml={"anchors": [["", ""]], "literal_eref": 0} live={"anchors": [["", ""]], "literal_eref": 0}
+p-defined                all_three    valid=True ref={"anchors": [["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"]], "literal_eref": 0}
+p-forward                all_three    valid=True ref={"anchors": [["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"]], "literal_eref": 0}
+p-two                    all_three    valid=True ref={"anchors": [["1", "1"], ["2", "2"]], "literal_eref": 0} ftml={"anchors": [["1", "1"], ["2", "2"]], "literal_eref": 0} live={"anchors": [["1", "1"], ["2", "2"]], "literal_eref": 0}
+p-dup                    all_three    valid=True ref={"anchors": [["2", "2"]], "literal_eref": 0} ftml={"anchors": [["2", "2"]], "literal_eref": 0} live={"anchors": [["2", "2"]], "literal_eref": 0}
+p-empty-arg              all_three    valid=True ref={"anchors": [["", ""]], "literal_eref": 0} ftml={"anchors": [["", ""]], "literal_eref": 0} live={"anchors": [["", ""]], "literal_eref": 0}
+p-no-arg                 all_three    valid=True ref={"anchors": [], "literal_eref": 1} ftml={"anchors": [], "literal_eref": 1} live={"anchors": [], "literal_eref": 1}
+p-tab                    all_three    valid=True ref={"anchors": [["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"]], "literal_eref": 0}
+p-two-spaces             all_three    valid=True ref={"anchors": [["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"]], "literal_eref": 0}
+p-uppercase              all_three    valid=True ref={"anchors": [], "literal_eref": 0} ftml={"anchors": [], "literal_eref": 0} live={"anchors": [], "literal_eref": 0}
+p-equation-name          all_three    valid=True ref={"anchors": [], "literal_eref": 0} ftml={"anchors": [], "literal_eref": 0} live={"anchors": [], "literal_eref": 0}
+p-eqref-name             all_three    valid=True ref={"anchors": [], "literal_eref": 0} ftml={"anchors": [], "literal_eref": 0} live={"anchors": [], "literal_eref": 0}
+p-case-label             all_three    valid=True ref={"anchors": [["", ""]], "literal_eref": 0} ftml={"anchors": [["", ""]], "literal_eref": 0} live={"anchors": [["", ""]], "literal_eref": 0}
+p-multiword              all_three    valid=True ref={"anchors": [["", ""]], "literal_eref": 0} ftml={"anchors": [["", ""]], "literal_eref": 0} live={"anchors": [["", ""]], "literal_eref": 0}
+p-pipe                   all_three    valid=True ref={"anchors": [["", ""]], "literal_eref": 0} ftml={"anchors": [["", ""]], "literal_eref": 0} live={"anchors": [["", ""]], "literal_eref": 0}
+p-underscore-label       all_three    valid=True ref={"anchors": [["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"]], "literal_eref": 0}
+p-adjacent               all_three    valid=True ref={"anchors": [["", ""]], "literal_eref": 0} ftml={"anchors": [["", ""]], "literal_eref": 0} live={"anchors": [["", ""]], "literal_eref": 0}
+p-space-adjacent         all_three    valid=True ref={"anchors": [["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"]], "literal_eref": 0}
+p-midline                all_three    valid=True ref={"anchors": [["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"]], "literal_eref": 0}
+p-div                    all_three    valid=True ref={"anchors": [["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"]], "literal_eref": 0}
+p-quote                  all_three    valid=True ref={"anchors": [["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"]], "literal_eref": 0}
+p-bold                   all_three    valid=True ref={"anchors": [["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"]], "literal_eref": 0}
+p-triple-close           all_three    valid=True ref={"anchors": [["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"]], "literal_eref": 0}
+p-two-refs-one-eq        all_three    valid=True ref={"anchors": [["1", "1"], ["1", "1"]], "literal_eref": 0} ftml={"anchors": [["1", "1"], ["1", "1"]], "literal_eref": 0} live={"anchors": [["1", "1"], ["1", "1"]], "literal_eref": 0}
+p-unterminated           all_three    valid=True ref={"anchors": [], "literal_eref": 1} ftml={"anchors": [], "literal_eref": 1} live={"anchors": [], "literal_eref": 1}
+p-whitespace-label       all_three    valid=True ref={"anchors": [["", ""]], "literal_eref": 0} ftml={"anchors": [["", ""]], "literal_eref": 0} live={"anchors": [["", ""]], "literal_eref": 0}
+TOTAL {"all_three": 26, "ref_live": 0, "ftml_live": 0, "all_disagree": 0, "invalid": 0}

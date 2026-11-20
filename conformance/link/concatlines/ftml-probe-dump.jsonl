@@ -1,0 +1,34 @@
+{"errors":[],"html":"<p>ab</p>","id":"basic"}
+{"errors":[],"html":"<p>a\\b</p>","id":"two-backslash-one-nl"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"one-backslash-two-nl"}
+{"errors":[],"html":"<p>ab</p>","id":"two-backslash-two-nl"}
+{"errors":[],"html":"<p>a\\b</p>","id":"three-backslash-three-nl"}
+{"errors":[],"html":"<p>a\\\\b</p>","id":"four-backslash-two-nl"}
+{"errors":[],"html":"<p>ab</p>","id":"backslash-newline-pair"}
+{"errors":[],"html":"<p>abc</p>","id":"multi-cont"}
+{"errors":[],"html":"<p>a\\<br>\nb</p>","id":"backslash-space-newline"}
+{"errors":[],"html":"<p>a\\<br>\nb</p>","id":"backslash-tab-newline"}
+{"errors":[],"html":"<p>a b</p>","id":"space-backslash-newline"}
+{"errors":[],"html":"\n\na<br>\n","id":"backslash-at-eof"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>x\\\ny</code></pre></div>","id":"code-block-upper"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>x\\\ny</code></pre></div>","id":"inline-code"}
+{"errors":["ParseError { token: LineBreak, rule: \"block-raw\", span: 7..8, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 11..14, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<p>[[raw]]<br>\nxy<br>\n[[/raw]]</p>","id":"raw-block"}
+{"errors":[],"html":"<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{align} x\\ y \\end{align}</div>","id":"math-block-labeled"}
+{"errors":[],"html":"<p>C</p>","id":"comment-inner-cont"}
+{"errors":["ParseError { token: LineBreak, rule: \"block\", span: 9..10, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 1..3, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 12..15, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 19..21, kind: NoRulesMatch }"],"html":"<p>a[[code]]<br>\nx<br>\n[[/code]]</p>","id":"cont-into-code"}
+{"errors":["ParseError { token: LineBreak, rule: \"block\", span: 9..10, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 1..3, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 12..15, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 19..21, kind: NoRulesMatch }"],"html":"<p>a[[math]]<br>\nx<br>\n[[/math]]</p>","id":"cont-into-math"}
+{"errors":[],"html":"a\n<div><p>x</p></div>","id":"div-opener"}
+{"errors":[],"html":"a\n<div class=\"box\"><p>x</p></div>","id":"div-opener-attrs"}
+{"errors":[],"html":"a\n<div><p>x</p></div>","id":"div-opener-upper"}
+{"errors":[],"html":"a\n<div class=\"box\"><p>x</p></div>","id":"div-opener-tab"}
+{"errors":[],"html":"a\n<div>x</div>","id":"div-opener-underscore"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 17..17, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>alpha[[division]]</p>","id":"malformed-division"}
+{"errors":[],"html":"<p>a<span style=\"color:red\">x</span></p>","id":"span-opener-attr"}
+{"errors":[],"html":"<p><a href=\"/target\">target</a></p>","id":"freelink-cont"}
+{"errors":[],"html":"<p><a href=\"/tar-get\">label</a></p>","id":"freelink-cont-space"}
+{"errors":[],"html":"<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x=1 \\end{equation}</div><p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;equation-1&#39;)\">1</a></p>","id":"eref-cont"}
+{"errors":[],"html":"<p><iframe src=\"http://example.com\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>","id":"iframe-src-cont"}
+{"errors":[],"html":"<p><span class=\"odate time_12345\">01 Jan 1970 03:25</span></p>","id":"date-cont"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 14..16, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 12..14, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 16..19, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 29..31, kind: NoRulesMatch }"],"html":"<p>[[mathinline]]xy[[/mathinline]]</p>","id":"mathinline-cont"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 22..22, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 20..22, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://example.com\">http://example.com</a>]]</p>","id":"url-cont"}
+{"errors":[],"html":"<p>éü</p>","id":"unicode-cont"}

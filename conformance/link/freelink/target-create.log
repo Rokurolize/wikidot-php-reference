@@ -1,0 +1,15 @@
+exists -> muse-probe-r2link-free-exists (created)
+exists2 -> muse-probe-r2link-free-exists2 (created)
+2 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "exists": {
+  "fullname": "muse-probe-r2link-free-exists",
+  "source": "FREELINK TARGET ONE",
+  "action": "created"
+ },
+ "exists2": {
+  "fullname": "muse-probe-r2link-free-exists2",
+  "source": "FREELINK TARGET TWO",
+  "action": "created"
+ }
+}

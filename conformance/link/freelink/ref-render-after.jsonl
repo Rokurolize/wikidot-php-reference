@@ -1,0 +1,60 @@
+{"id":"exist-target-labeled","output":"<p><a href=\"\/muse-probe-r2link-free-exists\">shown<\/a><\/p>\n\n"}
+{"id":"exist2-target-labeled","output":"<p><a href=\"\/muse-probe-r2link-free-exists2\">Second<\/a><\/p>\n\n"}
+{"id":"exist-target-bare","output":"<p><a href=\"\/muse-probe-r2link-free-exists\">muse-probe-r2link-free-exists<\/a><\/p>\n\n"}
+{"id":"exist2-empty-label","error":"Error: Call to undefined method DB_PagePeer::selectByPrimaryKey()"}
+{"id":"new-target-labeled","output":"<p><a class=\"newpage\" href=\"\/missing-page\">Wanted<\/a><\/p>\n\n"}
+{"id":"new-target-bare","output":"<p><a class=\"newpage\" href=\"\/missing-page\">missing-page<\/a><\/p>\n\n"}
+{"id":"new-target-empty-label","output":"<p><a class=\"newpage\" href=\"\/missing-page\">missing-page<\/a><\/p>\n\n"}
+{"id":"case-upper-exists","output":"<p><a href=\"\/muse-probe-r2link-free-exists\">shown<\/a><\/p>\n\n"}
+{"id":"case-mixed-exists","output":"<p><a href=\"\/muse-probe-r2link-free-exists\">shown<\/a><\/p>\n\n"}
+{"id":"exist-target-anchor","output":"<p><a href=\"\/muse-probe-r2link-free-exists#sec\">shown<\/a><\/p>\n\n"}
+{"id":"double-bracket","output":"<p>[[some-page]]<\/p>\n\n"}
+{"id":"triple-quad","output":"<p>[<a class=\"newpage\" href=\"\/scp-001-ex\">SCP-001-EX<\/a>]<\/p>\n\n"}
+{"id":"triple-quint","output":"<p>[[<a class=\"newpage\" href=\"\/scp-001-ex\">SCP-001-EX<\/a>]]<\/p>\n\n"}
+{"id":"triple-short-closer","output":"<p>[[[some-page]]<\/p>\n\n"}
+{"id":"triple-no-closer","output":"<p>[[[some-page<\/p>\n\n"}
+{"id":"triple-closer-junk","output":"<p><a class=\"newpage\" href=\"\/some-page\">some-page<\/a>junk<\/p>\n\n"}
+{"id":"triple-extra-close","output":"<p><a class=\"newpage\" href=\"\/some-page\">some-page<\/a>]<\/p>\n\n"}
+{"id":"triple-space-opener","output":"<p><a class=\"newpage\" href=\"\/some-page\">Label<\/a><\/p>\n\n"}
+{"id":"double-open-triple-close","output":"<p>[[some-page|Label]]]<\/p>\n\n"}
+{"id":"triple-open-double-close","output":"<p>[[[some-page|Label]]<\/p>\n\n"}
+{"id":"empty-target","output":"<p>[[[|Label]]]<\/p>\n\n"}
+{"id":"whitespace-target","output":"<p><a class=\"newpage\" href=\"\/\">Label<\/a><\/p>\n\n"}
+{"id":"empty-label","output":"<p><a class=\"newpage\" href=\"\/some-page\">some-page<\/a><\/p>\n\n"}
+{"id":"dup-pipes","output":"<p><a class=\"newpage\" href=\"\/page-slug\">A|B|C<\/a><\/p>\n\n"}
+{"id":"dup-pipes-spaced","output":"<p><a class=\"newpage\" href=\"\/page-slug\">A | B | C<\/a><\/p>\n\n"}
+{"id":"triple-hash","output":"<p>[[[home###|Home]]]<\/p>\n\n"}
+{"id":"double-hash","output":"<p>[[[a##b]]]<\/p>\n\n"}
+{"id":"hash-route","output":"<p>[[[MAIN\/##\/page#toc1|Hash routing]]]<\/p>\n\n"}
+{"id":"anchor-digit","output":"<p><a class=\"newpage\" href=\"\/scp-series#001\">SCP-001 to SCP-099<\/a><\/p>\n\n"}
+{"id":"anchor-alpha","output":"<p><a class=\"newpage\" href=\"\/scp-series#section\">Label<\/a><\/p>\n\n"}
+{"id":"anchor-label-only","output":"<p>[[[#my-anchor|Label]]]<\/p>\n\n"}
+{"id":"anchor-label-only-space","output":"<p><a class=\"newpage\" href=\"\/#my-anchor\">Label<\/a><\/p>\n\n"}
+{"id":"anchor-empty-first","output":"<p>[[[#my-anchor]]]<\/p>\n\n"}
+{"id":"anchor-dash","output":"<p><a class=\"newpage\" href=\"\/scp-series#sec-1\">Label<\/a><\/p>\n\n"}
+{"id":"anchor-underscore","output":"<p><a class=\"newpage\" href=\"\/scp-series#sec_1\">Label<\/a><\/p>\n\n"}
+{"id":"anchor-colon","output":"<p><a class=\"newpage\" href=\"\/scp-series#sec:1\">Label<\/a><\/p>\n\n"}
+{"id":"cross-site-colon","output":"<p><a class=\"newpage\" href=\"\/scp-wiki:component:theme\">Sigma-9 Theme<\/a><\/p>\n\n"}
+{"id":"cross-site-colon-spaced","output":"<p><a class=\"newpage\" href=\"\/scp-wiki:system:recent-changes\">:scp-wiki : system : Recent Changes<\/a><\/p>\n\n"}
+{"id":"fossil-cross-site","output":"<p><a class=\"newpage\" href=\"\/site:page\">Label<\/a><\/p>\n\n"}
+{"id":"fossil-cross-site-no-page","output":"<p><a class=\"newpage\" href=\"\/site\">Label<\/a><\/p>\n\n"}
+{"id":"category","output":"<p><a class=\"newpage\" href=\"\/system:recent-changes\">Recent Changes<\/a><\/p>\n\n"}
+{"id":"category-spaced","output":"<p><a class=\"newpage\" href=\"\/system:recent-changes\">Recent Changes<\/a><\/p>\n\n"}
+{"id":"multi-colon-empty","output":"<p><a class=\"newpage\" href=\"\/a:b:c\">a:b:c<\/a><\/p>\n\n"}
+{"id":"default-category","output":"<p><a class=\"newpage\" href=\"\/a\">Label<\/a><\/p>\n\n"}
+{"id":"url-plain","output":"<p><a href=\"https:\/\/example.com\/\">Example<\/a><\/p>\n\n"}
+{"id":"url-leading-space","output":"<p><a class=\"newpage\" href=\"\/https:example-com\">Example<\/a><\/p>\n\n"}
+{"id":"url-trailing-space","output":"<p><a href=\"https:\/\/example.com\">Trailing<\/a><\/p>\n\n"}
+{"id":"url-no-scheme","output":"<p><a class=\"newpage\" href=\"\/example-com\">Example<\/a><\/p>\n\n"}
+{"id":"url-subpath","output":"<p><a class=\"newpage\" href=\"\/example-edit\">Edit page<\/a><\/p>\n\n"}
+{"id":"url-hash-route","output":"<p><a class=\"newpage\" href=\"\/main#\/page\">Hash routing<\/a><\/p>\n\n"}
+{"id":"line-start","output":"<p><a class=\"newpage\" href=\"\/some-page\">Line start<\/a><\/p>\n\n"}
+{"id":"mid-line","output":"<p>text before <a class=\"newpage\" href=\"\/some-page\">Mid line<\/a> text after<\/p>\n\n"}
+{"id":"second-line","output":"<p>first line<br \/>\n<a class=\"newpage\" href=\"\/some-page\">Second line<\/a><\/p>\n\n"}
+{"id":"inline-two","output":"<p><a class=\"newpage\" href=\"\/a\">A<\/a> and <a class=\"newpage\" href=\"\/b\">B<\/a><\/p>\n\n"}
+{"id":"adjacent-freelinks","output":"<p><a class=\"newpage\" href=\"\/a\">A<\/a><a class=\"newpage\" href=\"\/b\">B<\/a><\/p>\n\n"}
+{"id":"star-target","output":"<p><a class=\"newpage\" href=\"\/scp-001\">*SCP-001<\/a><\/p>\n\n"}
+{"id":"star-labeled","output":"<p><a class=\"newpage\" href=\"\/some-page\">Label<\/a><\/p>\n\n"}
+{"id":"underscore-target","output":"<p><a class=\"newpage\" href=\"\/_some-page\">Label<\/a><\/p>\n\n"}
+{"id":"unicode-cyrillic","output":"<p><a class=\"newpage\" href=\"\/dokument\">\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442<\/a><\/p>\n\n"}
+{"id":"unicode-cjk","output":"<p><a class=\"newpage\" href=\"\/\">Label<\/a><\/p>\n\n"}

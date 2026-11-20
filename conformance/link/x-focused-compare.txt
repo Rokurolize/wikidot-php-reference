@@ -1,0 +1,30 @@
+==============================================================================
+CASE x-concat-code-before-open  source='a\\\n[[code]]\nx\n[[/code]]'
+  REF : '<p>a</p>\n\n\n<div class="code">\n<pre><code>x</code></pre></div>\n\n'
+  FTML: '<p>a[[code]]<br>\nx<br>\n[[/code]]</p>'
+  LIVE: valid=True stable=True src_match=True
+        '<p>a</p>\n<div class="code">\n<pre><code>x</code></pre></div>'
+  VERDICT: REF+LIVE vs FTML
+==============================================================================
+CASE x-eref-duplicate-forward  source='[[math E]]\nx\n[[/math]]\n[[eref E]]\n[[math E]]\ny\n[[/math]]'
+  REF : '<div class="error-block">The equation has not been processed correctly. Most prabably it has syntax error(s).</div><p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-2\')">2</a></p>\n\n<div class="error-block">The equation has not been processed correctly. Most prabably it has syntax error(s).</div>'
+  FTML: '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{equation} x \\end{equation}</div><p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(&#39;equation-1&#39;)">1</a></p><span class="equation-number">(2)</span>\n<div class="math-equation" id="equation-2">\\begin{equation} y \\end{equation}</div>'
+  LIVE: valid=True stable=True src_match=True
+        '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{equation} x \\end{equation}</div>\n<p><a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-2\')">2</a></p>\n<span class="equation-number">(2)</span>\n<div class="math-equation" id="equation-2">\\begin{equation} y \\end{equation}</div>'
+  VERDICT: REF+LIVE vs FTML
+==============================================================================
+CASE x-free-iftags-drop-untagged  source='[[iftags +beta]]\n[[[muse-probe-r2link-free-exists]]]\n[[/iftags]]'
+  REF : ''
+  FTML: ''
+  LIVE: valid=True stable=True src_match=True
+        ''
+  VERDICT: ALL3
+==============================================================================
+CASE x-concat-math-inside  source='[[math E]]\nx\\\ny\n[[/math]]'
+  REF : '<div class="error-block">The equation has not been processed correctly. Most prabably it has syntax error(s).</div>'
+  FTML: '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{align} x\\ y \\end{align}</div>'
+  LIVE: valid=True stable=True src_match=True
+        '<span class="equation-number">(1)</span>\n<div class="math-equation" id="equation-1">\\begin{align} x\\ y \\end{align}</div>'
+  VERDICT: ALL3
+==============================================================================
+VERDICTS: {'all3': 2, 'ref_live': 2, 'ftml_live': 0, 'all_diff': 0, 'no_live': 0}

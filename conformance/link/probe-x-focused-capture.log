@@ -1,0 +1,46 @@
+x-concat-code-before-open -> muse-probe-r2link-x-x-concat-code-before-open stable=True saved_source_matches=True valid=True
+x-eref-duplicate-forward -> muse-probe-r2link-x-x-eref-duplicate-forward stable=True saved_source_matches=True valid=True
+x-free-iftags-drop-untagged -> muse-probe-r2link-x-x-free-iftags-drop-untagged stable=True saved_source_matches=True valid=True
+x-concat-math-inside -> muse-probe-r2link-x-x-concat-math-inside stable=True saved_source_matches=True valid=True
+{
+ "x-concat-code-before-open": {
+  "fullname": "muse-probe-r2link-x-x-concat-code-before-open",
+  "html": "<p>a</p>\n<div class=\"code\">\n<pre><code>x</code></pre></div>",
+  "html_sha256": "794bca89ba24c1790802f1b6a025e0f6db72a2a3a42565319b8c251555e1e1a3",
+  "source": "a\\\n[[code]]\nx\n[[/code]]",
+  "source_sha256": "ea56db861f2f844bbe12c46b06dbc9b249915d8738e96152c228d79c02069d0f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-eref-duplicate-forward": {
+  "fullname": "muse-probe-r2link-x-x-eref-duplicate-forward",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-2')\">2</a></p>\n<span class=\"equation-number\">(2)</span>\n<div class=\"math-equation\" id=\"equation-2\">\\begin{equation} y \\end{equation}</div>",
+  "html_sha256": "00241ed8038a14fbd9dab74cba5043aaeab29a4b87fc874de28711eea804123f",
+  "source": "[[math E]]\nx\n[[/math]]\n[[eref E]]\n[[math E]]\ny\n[[/math]]",
+  "source_sha256": "ac9af9e8b28ec74d7ee97b4dd7cac8e8af872beee69e1a7fdec59567e082140c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-free-iftags-drop-untagged": {
+  "fullname": "muse-probe-r2link-x-x-free-iftags-drop-untagged",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[iftags +beta]]\n[[[muse-probe-r2link-free-exists]]]\n[[/iftags]]",
+  "source_sha256": "a62620ba43d001ac6902864ce7d04843f408ed6600aef5bd6b345bfc3c69ef0e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-concat-math-inside": {
+  "fullname": "muse-probe-r2link-x-x-concat-math-inside",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{align} x\\ y \\end{align}</div>",
+  "html_sha256": "097ffbb92bc993951f5d3bc44b8a9b2ee71ce127b64283bfd91c13aff714ea07",
+  "source": "[[math E]]\nx\\\ny\n[[/math]]",
+  "source_sha256": "ad67d4062a2c29b2e9f2cd65cabb05c18c4485adf7820cb58f9ad6e306977dd2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

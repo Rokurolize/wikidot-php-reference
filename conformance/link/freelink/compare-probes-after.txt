@@ -1,0 +1,177 @@
+reference file: ref-probe-render-after.jsonl
+[ALL3] p-exist-labeled
+  src : '[[[muse-probe-r2link-free-exists|shown]]]'
+  REF : '<p><a href="/muse-probe-r2link-free-exists">shown</a></p>\n\n'
+  FTML: '<p><a href="/muse-probe-r2link-free-exists">shown</a></p>'
+  LIVE: '<p><a href="/muse-probe-r2link-free-exists">shown</a></p>'
+[ALL3] p-exist-bare
+  src : '[[[muse-probe-r2link-free-exists]]]'
+  REF : '<p><a href="/muse-probe-r2link-free-exists">muse-probe-r2link-free-exists</a></p>\n\n'
+  FTML: '<p><a href="/muse-probe-r2link-free-exists">muse-probe-r2link-free-exists</a></p>'
+  LIVE: '<p><a href="/muse-probe-r2link-free-exists">muse-probe-r2link-free-exists</a></p>'
+[ALL-DIFF] p-exist2-empty-label
+  src : '[[[muse-probe-r2link-free-exists2|]]]'
+  REF : 'Error: Call to undefined method DB_PagePeer::selectByPrimaryKey()'
+  FTML: '<p><a href="/muse-probe-r2link-free-exists2">muse-probe-r2link-free-exists2</a></p>'
+  LIVE: '<p><a href="/muse-probe-r2link-free-exists2">probe exists2</a></p>'
+[ALL3] p-new-labeled
+  src : '[[[muse-probe-r2link-free-new-page|Wanted]]]'
+  REF : '<p><a class="newpage" href="/muse-probe-r2link-free-new-page">Wanted</a></p>\n\n'
+  FTML: '<p><a href="/muse-probe-r2link-free-new-page">Wanted</a></p>'
+  LIVE: '<p><a class="newpage" href="/muse-probe-r2link-free-new-page">Wanted</a></p>'
+[ALL3] p-case-upper-exist
+  src : '[[[MUSE-PROBE-R2LINK-FREE-EXISTS|shown]]]'
+  REF : '<p><a href="/muse-probe-r2link-free-exists">shown</a></p>\n\n'
+  FTML: '<p><a href="/muse-probe-r2link-free-exists">shown</a></p>'
+  LIVE: '<p><a href="/muse-probe-r2link-free-exists">shown</a></p>'
+[ALL3] p-anchor-digit
+  src : '[[[scp-series#001|SCP-001 to SCP-099]]]'
+  REF : '<p><a class="newpage" href="/scp-series#001">SCP-001 to SCP-099</a></p>\n\n'
+  FTML: '<p><a href="/scp-series#001">SCP-001 to SCP-099</a></p>'
+  LIVE: '<p><a class="newpage" href="/scp-series#001">SCP-001 to SCP-099</a></p>'
+[ALL3] p-anchor-alpha
+  src : '[[[scp-series#section|Label]]]'
+  REF : '<p><a class="newpage" href="/scp-series#section">Label</a></p>\n\n'
+  FTML: '<p><a href="/scp-series#section">Label</a></p>'
+  LIVE: '<p><a class="newpage" href="/scp-series#section">Label</a></p>'
+[ALL3] p-anchor-dash
+  src : '[[[scp-series#sec-1|Label]]]'
+  REF : '<p><a class="newpage" href="/scp-series#sec-1">Label</a></p>\n\n'
+  FTML: '<p><a href="/scp-series#sec-1">Label</a></p>'
+  LIVE: '<p><a class="newpage" href="/scp-series#sec-1">Label</a></p>'
+[ALL3] p-anchor-underscore
+  src : '[[[scp-series#sec_1|Label]]]'
+  REF : '<p><a class="newpage" href="/scp-series#sec_1">Label</a></p>\n\n'
+  FTML: '<p><a href="/scp-series#sec_1">Label</a></p>'
+  LIVE: '<p><a class="newpage" href="/scp-series#sec_1">Label</a></p>'
+[ALL3] p-anchor-colon
+  src : '[[[scp-series#sec:1|Label]]]'
+  REF : '<p><a class="newpage" href="/scp-series#sec:1">Label</a></p>\n\n'
+  FTML: '<p><a href="/scp-series#sec:1">Label</a></p>'
+  LIVE: '<p><a class="newpage" href="/scp-series#sec:1">Label</a></p>'
+[ALL3] p-anchor-label-only-space
+  src : '[[[ #my-anchor | Label ]]]'
+  REF : '<p><a class="newpage" href="/#my-anchor">Label</a></p>\n\n'
+  FTML: '<p><a class="newpage" href="/#my-anchor">Label</a></p>'
+  LIVE: '<p><a class="newpage" href="/#my-anchor">Label</a></p>'
+[ALL3] p-anchor-plain
+  src : '[[[scp-series#001]]]'
+  REF : '<p><a class="newpage" href="/scp-series#001">scp-series</a></p>\n\n'
+  FTML: '<p><a href="/scp-series#001">scp-series</a></p>'
+  LIVE: '<p><a class="newpage" href="/scp-series#001">scp-series</a></p>'
+[ALL3] p-triple-hash
+  src : '[[[home###|Home]]]'
+  REF : '<p>[[[home###|Home]]]</p>\n\n'
+  FTML: '<p>[[[home###|Home]]]</p>'
+  LIVE: '<p>[[[home###|Home]]]</p>'
+[ALL3] p-dup-pipes
+  src : '[[[page-slug|A|B|C]]]'
+  REF : '<p><a class="newpage" href="/page-slug">A|B|C</a></p>\n\n'
+  FTML: '<p><a href="/page-slug">A|B|C</a></p>'
+  LIVE: '<p><a class="newpage" href="/page-slug">A|B|C</a></p>'
+[ALL3] p-dup-pipes-spaced
+  src : '[[[ page-slug | A | B | C ]]]'
+  REF : '<p><a class="newpage" href="/page-slug">A | B | C</a></p>\n\n'
+  FTML: '<p><a href="/page-slug">A | B | C</a></p>'
+  LIVE: '<p><a class="newpage" href="/page-slug">A | B | C</a></p>'
+[ALL3] p-empty-target
+  src : '[[[|Label]]]'
+  REF : '<p>[[[|Label]]]</p>\n\n'
+  FTML: '<p>[[[|Label]]]</p>'
+  LIVE: '<p>[[[|Label]]]</p>'
+[REF+LIVE] p-whitespace-target
+  src : '[[[   |Label]]]'
+  REF : '<p><a class="newpage" href="/">Label</a></p>\n\n'
+  FTML: '<p>[[[ |Label]]]</p>'
+  LIVE: '<p><a class="newpage" href="/">Label</a></p>'
+[ALL3] p-empty-label
+  src : '[[[some-page|]]]'
+  REF : '<p><a class="newpage" href="/some-page">some-page</a></p>\n\n'
+  FTML: '<p><a href="/some-page">some-page</a></p>'
+  LIVE: '<p><a class="newpage" href="/some-page">some-page</a></p>'
+[ALL3] p-quad
+  src : '[[[[SCP-001-EX]]]]'
+  REF : '<p>[<a class="newpage" href="/scp-001-ex">SCP-001-EX</a>]</p>\n\n'
+  FTML: '<p>[<a href="/scp-001-ex">SCP-001-EX</a>]</p>'
+  LIVE: '<p>[<a class="newpage" href="/scp-001-ex">SCP-001-EX</a>]</p>'
+[REF+LIVE] p-quint
+  src : '[[[[[SCP-001-EX]]]]]'
+  REF : '<p>[[<a class="newpage" href="/scp-001-ex">SCP-001-EX</a>]]</p>\n\n'
+  FTML: '<p>[<a href="/scp-001-ex">[SCP-001-EX</a>]]</p>'
+  LIVE: '<p>[[<a class="newpage" href="/scp-001-ex">SCP-001-EX</a>]]</p>'
+[ALL3] p-cross-colon
+  src : '[[[:scp-wiki:component:theme|Sigma-9 Theme]]]'
+  REF : '<p><a class="newpage" href="/scp-wiki:component:theme">Sigma-9 Theme</a></p>\n\n'
+  FTML: '<p><a href="/scp-wiki:component:theme">Sigma-9 Theme</a></p>'
+  LIVE: '<p><a class="newpage" href="/scp-wiki:component:theme">Sigma-9 Theme</a></p>'
+[ALL3] p-fossil-cross
+  src : '[[[site::page|Label]]]'
+  REF : '<p><a class="newpage" href="/site:page">Label</a></p>\n\n'
+  FTML: '<p><a href="/site:page">Label</a></p>'
+  LIVE: '<p><a class="newpage" href="/site:page">Label</a></p>'
+[ALL3] p-category
+  src : '[[[system:Recent Changes]]]'
+  REF : '<p><a class="newpage" href="/system:recent-changes">Recent Changes</a></p>\n\n'
+  FTML: '<p><a href="/system:recent-changes">Recent Changes</a></p>'
+  LIVE: '<p><a href="/system:recent-changes">Recent Changes</a></p>'
+[ALL3] p-default-category
+  src : '[[[_default:a|Label]]]'
+  REF : '<p><a class="newpage" href="/a">Label</a></p>\n\n'
+  FTML: '<p><a href="/a">Label</a></p>'
+  LIVE: '<p><a class="newpage" href="/a">Label</a></p>'
+[ALL3] p-multi-colon-empty
+  src : '[[[a:b:c|]]]'
+  REF : '<p><a class="newpage" href="/a:b:c">a:b:c</a></p>\n\n'
+  FTML: '<p><a href="/a:b:c">a:b:c</a></p>'
+  LIVE: '<p><a class="newpage" href="/a:b:c">a:b:c</a></p>'
+[ALL3] p-url-plain
+  src : '[[[https://example.com/|Example]]]'
+  REF : '<p><a href="https://example.com/">Example</a></p>\n\n'
+  FTML: '<p><a href="https://example.com/">Example</a></p>'
+  LIVE: '<p><a href="https://example.com/">Example</a></p>'
+[ALL3] p-url-leading-space
+  src : '[[[ https://example.com/ | Example ]]]'
+  REF : '<p><a class="newpage" href="/https:example-com">Example</a></p>\n\n'
+  FTML: '<p><a href="/https:example-com">Example</a></p>'
+  LIVE: '<p><a class="newpage" href="/https:example-com">Example</a></p>'
+[ALL3] p-url-trailing-space
+  src : '[[[https://example.com | Trailing]]]'
+  REF : '<p><a href="https://example.com">Trailing</a></p>\n\n'
+  FTML: '<p><a href="https://example.com">Trailing</a></p>'
+  LIVE: '<p><a href="https://example.com">Trailing</a></p>'
+[ALL3] p-url-hash-route
+  src : '[[[MAIN/#/page|Hash routing]]]'
+  REF : '<p><a class="newpage" href="/main#/page">Hash routing</a></p>\n\n'
+  FTML: '<p><a href="/main#/page">Hash routing</a></p>'
+  LIVE: '<p><a class="newpage" href="/main#/page">Hash routing</a></p>'
+[ALL3] p-star
+  src : '[[[*SCP-001]]]'
+  REF : '<p><a class="newpage" href="/scp-001">*SCP-001</a></p>\n\n'
+  FTML: '<p><a href="/scp-001">*SCP-001</a></p>'
+  LIVE: '<p><a class="newpage" href="/scp-001">*SCP-001</a></p>'
+[ALL3] p-underscore
+  src : '[[[_some-page|Label]]]'
+  REF : '<p><a class="newpage" href="/_some-page">Label</a></p>\n\n'
+  FTML: '<p><a href="/_some-page">Label</a></p>'
+  LIVE: '<p><a class="newpage" href="/_some-page">Label</a></p>'
+[ALL3] p-cyrillic
+  src : '[[[документ]]]'
+  REF : '<p><a class="newpage" href="/dokument">документ</a></p>\n\n'
+  FTML: '<p><a href="/dokument">документ</a></p>'
+  LIVE: '<p><a class="newpage" href="/dokument">документ</a></p>'
+[ALL3] p-midline
+  src : 'text before [[[some-page|Mid line]]] text after'
+  REF : '<p>text before <a class="newpage" href="/some-page">Mid line</a> text after</p>\n\n'
+  FTML: '<p>text before <a href="/some-page">Mid line</a> text after</p>'
+  LIVE: '<p>text before <a class="newpage" href="/some-page">Mid line</a> text after</p>'
+[ALL3] p-noline-start
+  src : 'first line\n[[[some-page|Second line]]]'
+  REF : '<p>first line<br />\n<a class="newpage" href="/some-page">Second line</a></p>\n\n'
+  FTML: '<p>first line<br>\n<a href="/some-page">Second line</a></p>'
+  LIVE: '<p>first line<br />\n<a class="newpage" href="/some-page">Second line</a></p>'
+[ALL3] p-cross-colon-spaced
+  src : '[[[:scp-wiki : system : Recent Changes]]]'
+  REF : '<p><a class="newpage" href="/scp-wiki:system:recent-changes">:scp-wiki : system : Recent Changes</a></p>\n\n'
+  FTML: '<p><a href="/scp-wiki:system:recent-changes">:scp-wiki : system : Recent Changes</a></p>'
+  LIVE: '<p><a class="newpage" href="/scp-wiki:system:recent-changes">:scp-wiki : system : Recent Changes</a></p>'
+SUMMARY {'all3': 32, 'ref_live': 2, 'ftml_live': 0, 'all_diff': 1}  total=35

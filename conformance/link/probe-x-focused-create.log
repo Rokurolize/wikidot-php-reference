@@ -1,0 +1,27 @@
+x-concat-code-before-open -> muse-probe-r2link-x-x-concat-code-before-open (created)
+x-eref-duplicate-forward -> muse-probe-r2link-x-x-eref-duplicate-forward (created)
+x-free-iftags-drop-untagged -> muse-probe-r2link-x-x-free-iftags-drop-untagged (created)
+x-concat-math-inside -> muse-probe-r2link-x-x-concat-math-inside (created)
+4 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "x-concat-code-before-open": {
+  "fullname": "muse-probe-r2link-x-x-concat-code-before-open",
+  "source": "a\\\n[[code]]\nx\n[[/code]]",
+  "action": "created"
+ },
+ "x-eref-duplicate-forward": {
+  "fullname": "muse-probe-r2link-x-x-eref-duplicate-forward",
+  "source": "[[math E]]\nx\n[[/math]]\n[[eref E]]\n[[math E]]\ny\n[[/math]]",
+  "action": "created"
+ },
+ "x-free-iftags-drop-untagged": {
+  "fullname": "muse-probe-r2link-x-x-free-iftags-drop-untagged",
+  "source": "[[iftags +beta]]\n[[[muse-probe-r2link-free-exists]]]\n[[/iftags]]",
+  "action": "created"
+ },
+ "x-concat-math-inside": {
+  "fullname": "muse-probe-r2link-x-x-concat-math-inside",
+  "source": "[[math E]]\nx\\\ny\n[[/math]]",
+  "action": "created"
+ }
+}

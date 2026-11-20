@@ -19,6 +19,7 @@ ini_set('include_path', $root . PATH_SEPARATOR
 require_once dirname(__DIR__) . '/wikidot-root/lib/WDStringUtils.php';
 require_once __DIR__ . '/ozone-stubs.php';
 require_once $root . '/Text/Wiki.php';
+require_once $root . '/Text/Wiki/Parse/Default/Math.php';
 require_once __DIR__ . '/wiki-config.php';
 require_once __DIR__ . '/pages.php';
 
@@ -32,6 +33,14 @@ while (($line = fgets(STDIN)) !== false) {
     $case = json_decode($line, true);
     $id = $case['id'];
     $src = $case['source'];
+    // R2-link: equation labels are document-local on live Wikidot. The
+    // fossil's Text_Wiki_Parse_Math::$equationsArray is static and would
+    // otherwise leak labels and numbers between independent batch cases,
+    // which corrupts eref differentials (a label defined in one case would
+    // resolve in a later case that has no such equation). Reset it per case.
+    // Root-owned harness matter, disclosed in conformance-refphp/R2-LINK.md;
+    // transform.php is unaffected because it renders one document per run.
+    Text_Wiki_Parse_Math::$equationsArray = array();
     // R2-next: optional per-case page tags for the Iftags rule. When a case
     // declares "tags", the reference gets a deterministic tagged page exactly
     // as the shared ftml dumper does through PageInfo.tags; absent tags means

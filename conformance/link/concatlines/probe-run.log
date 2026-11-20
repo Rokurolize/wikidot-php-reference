@@ -1,0 +1,7 @@
+create start 2026-11-20T12:42:08+09:00
+create exit=0 2026-11-20T12:48:06+09:00
+capture exit=1 2026-11-20T12:51:53+09:00
+DONE
+capture retry start 2026-11-20T12:52:16+09:00
+capture retry exit=1 2026-11-20T12:55:23+09:00
+DONE

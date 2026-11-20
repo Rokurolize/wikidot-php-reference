@@ -1,0 +1,57 @@
+{"id": "e01", "source": "[[eref a]]"}
+{"id": "e02", "source": "[[math a]]\nx\n[[/math]]\n[[eref a]]"}
+{"id": "e03", "source": "[[eref a]]\n[[math a]]\nx\n[[/math]]"}
+{"id": "e04", "source": "X[[eref a]]Y"}
+{"id": "e05", "source": "[[math a]]\nx\n[[/math]]\nX[[eref a]]Y"}
+{"id": "e06", "source": "[[math a]]\nx\n[[/math]]\n[[math b]]\ny\n[[/math]]\n[[eref a]] [[eref b]]"}
+{"id": "e07", "source": "[[math a]]\nx\n[[/math]]\n[[math a]]\ny\n[[/math]]\n[[eref a]]"}
+{"id": "e08", "source": "[[math a]]\nx\n[[/math]]\n[[eref a]]\n[[math b]]\ny\n[[/math]]\n[[eref b]]"}
+{"id": "e51", "source": "[[math a]]\nx\n[[/math]]\n[[math b]]\ny\n[[/math]]\n[[eref b]]"}
+{"id": "e52", "source": "[[math]]\nx\n[[/math]]\n[[math a]]\ny\n[[/math]]\n[[eref a]]"}
+{"id": "e09", "source": "[[eref]]"}
+{"id": "e10", "source": "[[eref ]]"}
+{"id": "e11", "source": "[[eref  a]]"}
+{"id": "e12", "source": "[[eref\ta]]"}
+{"id": "e13", "source": "[[eref a ]]"}
+{"id": "e14", "source": "[[eref  a  ]]"}
+{"id": "e15", "source": "[[EREF a]]"}
+{"id": "e16", "source": "[[Eref a]]"}
+{"id": "e17", "source": "[[equation a]]"}
+{"id": "e18", "source": "[[eqref a]]"}
+{"id": "e19", "source": "[[eref_a]]"}
+{"id": "e20", "source": "[[eref-a]]"}
+{"id": "e21", "source": "[[eref a"}
+{"id": "e22", "source": "[eref a]"}
+{"id": "e23", "source": "[[eref a]]]"}
+{"id": "e24", "source": "[[[eref a]]]"}
+{"id": "e25", "source": "[[eref a]]]tail"}
+{"id": "e26", "source": "[[eref a]]\n[[eref b]]"}
+{"id": "e27", "source": "[[eref]] [[eref a]]"}
+{"id": "e28", "source": "[[eref a]] [[eref]]"}
+{"id": "e29", "source": "[[eref   ]]"}
+{"id": "e30", "source": "[[eref a b]]"}
+{"id": "e31", "source": "[[eref a-b]]"}
+{"id": "e32", "source": "[[eref a_b]]"}
+{"id": "e33", "source": "[[math a]]\nx\n[[/math]]\n[[eref A]]"}
+{"id": "e34", "source": "[[math A]]\nx\n[[/math]]\n[[eref A]]"}
+{"id": "e35", "source": "[[math a]]\nx\n[[/math]]\n[[eref a|text]]"}
+{"id": "e36", "source": "[[math a]]\nx\n[[/math]]\n[[eref a]] and [[eref a]] again"}
+{"id": "e38", "source": "[[math a type=\"align\"]]\nx\n[[/math]]\n[[eref a]]"}
+{"id": "e55", "source": "[[math a:b]]\nx\n[[/math]]\n[[eref a:b]]"}
+{"id": "e57", "source": "[[eref a]]\nafter"}
+{"id": "e58", "source": "[[math a=b]]\nx\n[[/math]]\n[[eref a=b]]"}
+{"id": "e39", "source": "[[math a]]\nx\n[[/math]]\n\n[[eref a]]\n"}
+{"id": "e40", "source": "[[code]]\n[[eref a]]\n[[/code]]"}
+{"id": "e41", "source": "[[div]]\n[[eref a]]\n[[/div]]"}
+{"id": "e42", "source": "[[collapsible]]\n[[eref a]]\n[[/collapsible]]"}
+{"id": "e43", "source": "text[[footnote]]\n[[math a]]\nx\n[[/math]]\n[[eref a]]\n[[/footnote]]"}
+{"id": "e44", "source": "[[math a]]\nx\n[[/math]]\n[[$ y $]] [[eref a]]"}
+{"id": "e45", "source": "[[math a]]\nx\n[[/math]][[eref a]]"}
+{"id": "e46", "source": "[[math a]]\nx\n[[/math]] [[eref a]]"}
+{"id": "e47", "source": "> [[eref a]]"}
+{"id": "e48", "source": "**[[eref a]]**"}
+{"id": "e49", "source": "[[eref b]] [[math a]]\nx\n[[/math]]\n[[math b]]\ny\n[[/math]]"}
+{"id": "e50", "source": "[[math a]]\nx\n[[/math]]\n[[eref a]]b[[eref a]]"}
+{"id": "e54", "source": "[[math a]]\n\\begin{align}\nx \\\\ y\n\\end{align}\n[[/math]]\n[[eref a]]"}
+{"id": "e56", "source": "[[eref long-label-with-digits-123]]"}
+{"id": "e53", "source": "[[math a]]\n\\alpha + \\beta\n[[/math]]\n[[eref a]]"}

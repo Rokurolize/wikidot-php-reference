@@ -1,0 +1,208 @@
+p-exist-labeled -> muse-probe-r2link-free-p-exist-labeled (created)
+p-exist-bare -> muse-probe-r2link-free-p-exist-bare (created)
+p-exist2-empty-label -> muse-probe-r2link-free-p-exist2-empty-label (created)
+p-new-labeled -> muse-probe-r2link-free-p-new-labeled (created)
+p-case-upper-exist -> muse-probe-r2link-free-p-case-upper-exist (created)
+p-anchor-digit -> muse-probe-r2link-free-p-anchor-digit (created)
+p-anchor-alpha -> muse-probe-r2link-free-p-anchor-alpha (created)
+p-anchor-dash -> muse-probe-r2link-free-p-anchor-dash (created)
+p-anchor-underscore -> muse-probe-r2link-free-p-anchor-underscore (created)
+p-anchor-colon -> muse-probe-r2link-free-p-anchor-colon (created)
+p-anchor-label-only-space -> muse-probe-r2link-free-p-anchor-label-only-space (created)
+p-anchor-plain -> muse-probe-r2link-free-p-anchor-plain (created)
+p-triple-hash -> muse-probe-r2link-free-p-triple-hash (created)
+p-dup-pipes -> muse-probe-r2link-free-p-dup-pipes (created)
+p-dup-pipes-spaced -> muse-probe-r2link-free-p-dup-pipes-spaced (created)
+p-empty-target -> muse-probe-r2link-free-p-empty-target (created)
+p-whitespace-target -> muse-probe-r2link-free-p-whitespace-target (created)
+p-empty-label -> muse-probe-r2link-free-p-empty-label (created)
+2026-11-20 12:43:17,453 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85344074', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2link-free-p-quad', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p-quad -> muse-probe-r2link-free-p-quad (created)
+p-quint -> muse-probe-r2link-free-p-quint (created)
+p-cross-colon -> muse-probe-r2link-free-p-cross-colon (created)
+p-fossil-cross -> muse-probe-r2link-free-p-fossil-cross (created)
+p-category -> muse-probe-r2link-free-p-category (created)
+p-default-category -> muse-probe-r2link-free-p-default-category (created)
+p-multi-colon-empty -> muse-probe-r2link-free-p-multi-colon-empty (created)
+p-url-plain -> muse-probe-r2link-free-p-url-plain (created)
+p-url-leading-space -> muse-probe-r2link-free-p-url-leading-space (created)
+p-url-trailing-space -> muse-probe-r2link-free-p-url-trailing-space (created)
+p-url-hash-route -> muse-probe-r2link-free-p-url-hash-route (created)
+p-star -> muse-probe-r2link-free-p-star (created)
+p-underscore -> muse-probe-r2link-free-p-underscore (created)
+p-cyrillic -> muse-probe-r2link-free-p-cyrillic (created)
+p-midline -> muse-probe-r2link-free-p-midline (created)
+p-noline-start -> muse-probe-r2link-free-p-noline-start (created)
+34 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p-exist-labeled": {
+  "fullname": "muse-probe-r2link-free-p-exist-labeled",
+  "source": "[[[muse-probe-r2link-free-exists|shown]]]",
+  "action": "created"
+ },
+ "p-exist-bare": {
+  "fullname": "muse-probe-r2link-free-p-exist-bare",
+  "source": "[[[muse-probe-r2link-free-exists]]]",
+  "action": "created"
+ },
+ "p-exist2-empty-label": {
+  "fullname": "muse-probe-r2link-free-p-exist2-empty-label",
+  "source": "[[[muse-probe-r2link-free-exists2|]]]",
+  "action": "created"
+ },
+ "p-new-labeled": {
+  "fullname": "muse-probe-r2link-free-p-new-labeled",
+  "source": "[[[muse-probe-r2link-free-new-page|Wanted]]]",
+  "action": "created"
+ },
+ "p-case-upper-exist": {
+  "fullname": "muse-probe-r2link-free-p-case-upper-exist",
+  "source": "[[[MUSE-PROBE-R2LINK-FREE-EXISTS|shown]]]",
+  "action": "created"
+ },
+ "p-anchor-digit": {
+  "fullname": "muse-probe-r2link-free-p-anchor-digit",
+  "source": "[[[scp-series#001|SCP-001 to SCP-099]]]",
+  "action": "created"
+ },
+ "p-anchor-alpha": {
+  "fullname": "muse-probe-r2link-free-p-anchor-alpha",
+  "source": "[[[scp-series#section|Label]]]",
+  "action": "created"
+ },
+ "p-anchor-dash": {
+  "fullname": "muse-probe-r2link-free-p-anchor-dash",
+  "source": "[[[scp-series#sec-1|Label]]]",
+  "action": "created"
+ },
+ "p-anchor-underscore": {
+  "fullname": "muse-probe-r2link-free-p-anchor-underscore",
+  "source": "[[[scp-series#sec_1|Label]]]",
+  "action": "created"
+ },
+ "p-anchor-colon": {
+  "fullname": "muse-probe-r2link-free-p-anchor-colon",
+  "source": "[[[scp-series#sec:1|Label]]]",
+  "action": "created"
+ },
+ "p-anchor-label-only-space": {
+  "fullname": "muse-probe-r2link-free-p-anchor-label-only-space",
+  "source": "[[[ #my-anchor | Label ]]]",
+  "action": "created"
+ },
+ "p-anchor-plain": {
+  "fullname": "muse-probe-r2link-free-p-anchor-plain",
+  "source": "[[[scp-series#001]]]",
+  "action": "created"
+ },
+ "p-triple-hash": {
+  "fullname": "muse-probe-r2link-free-p-triple-hash",
+  "source": "[[[home###|Home]]]",
+  "action": "created"
+ },
+ "p-dup-pipes": {
+  "fullname": "muse-probe-r2link-free-p-dup-pipes",
+  "source": "[[[page-slug|A|B|C]]]",
+  "action": "created"
+ },
+ "p-dup-pipes-spaced": {
+  "fullname": "muse-probe-r2link-free-p-dup-pipes-spaced",
+  "source": "[[[ page-slug | A | B | C ]]]",
+  "action": "created"
+ },
+ "p-empty-target": {
+  "fullname": "muse-probe-r2link-free-p-empty-target",
+  "source": "[[[|Label]]]",
+  "action": "created"
+ },
+ "p-whitespace-target": {
+  "fullname": "muse-probe-r2link-free-p-whitespace-target",
+  "source": "[[[   |Label]]]",
+  "action": "created"
+ },
+ "p-empty-label": {
+  "fullname": "muse-probe-r2link-free-p-empty-label",
+  "source": "[[[some-page|]]]",
+  "action": "created"
+ },
+ "p-quad": {
+  "fullname": "muse-probe-r2link-free-p-quad",
+  "source": "[[[[SCP-001-EX]]]]",
+  "action": "created"
+ },
+ "p-quint": {
+  "fullname": "muse-probe-r2link-free-p-quint",
+  "source": "[[[[[SCP-001-EX]]]]]",
+  "action": "created"
+ },
+ "p-cross-colon": {
+  "fullname": "muse-probe-r2link-free-p-cross-colon",
+  "source": "[[[:scp-wiki:component:theme|Sigma-9 Theme]]]",
+  "action": "created"
+ },
+ "p-fossil-cross": {
+  "fullname": "muse-probe-r2link-free-p-fossil-cross",
+  "source": "[[[site::page|Label]]]",
+  "action": "created"
+ },
+ "p-category": {
+  "fullname": "muse-probe-r2link-free-p-category",
+  "source": "[[[system:Recent Changes]]]",
+  "action": "created"
+ },
+ "p-default-category": {
+  "fullname": "muse-probe-r2link-free-p-default-category",
+  "source": "[[[_default:a|Label]]]",
+  "action": "created"
+ },
+ "p-multi-colon-empty": {
+  "fullname": "muse-probe-r2link-free-p-multi-colon-empty",
+  "source": "[[[a:b:c|]]]",
+  "action": "created"
+ },
+ "p-url-plain": {
+  "fullname": "muse-probe-r2link-free-p-url-plain",
+  "source": "[[[https://example.com/|Example]]]",
+  "action": "created"
+ },
+ "p-url-leading-space": {
+  "fullname": "muse-probe-r2link-free-p-url-leading-space",
+  "source": "[[[ https://example.com/ | Example ]]]",
+  "action": "created"
+ },
+ "p-url-trailing-space": {
+  "fullname": "muse-probe-r2link-free-p-url-trailing-space",
+  "source": "[[[https://example.com | Trailing]]]",
+  "action": "created"
+ },
+ "p-url-hash-route": {
+  "fullname": "muse-probe-r2link-free-p-url-hash-route",
+  "source": "[[[MAIN/#/page|Hash routing]]]",
+  "action": "created"
+ },
+ "p-star": {
+  "fullname": "muse-probe-r2link-free-p-star",
+  "source": "[[[*SCP-001]]]",
+  "action": "created"
+ },
+ "p-underscore": {
+  "fullname": "muse-probe-r2link-free-p-underscore",
+  "source": "[[[_some-page|Label]]]",
+  "action": "created"
+ },
+ "p-cyrillic": {
+  "fullname": "muse-probe-r2link-free-p-cyrillic",
+  "source": "[[[документ]]]",
+  "action": "created"
+ },
+ "p-midline": {
+  "fullname": "muse-probe-r2link-free-p-midline",
+  "source": "text before [[[some-page|Mid line]]] text after",
+  "action": "created"
+ },
+ "p-noline-start": {
+  "fullname": "muse-probe-r2link-free-p-noline-start",
+  "source": "first line\n[[[some-page|Second line]]]",
+  "action": "created"
+ }
+}

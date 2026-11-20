@@ -1,0 +1,60 @@
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists\">shown</a></p>","id":"exist-target-labeled"}
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists2\">Second</a></p>","id":"exist2-target-labeled"}
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists\">muse-probe-r2link-free-exists</a></p>","id":"exist-target-bare"}
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists2\">muse-probe-r2link-free-exists2</a></p>","id":"exist2-empty-label"}
+{"errors":[],"html":"<p><a href=\"/missing-page\">Wanted</a></p>","id":"new-target-labeled"}
+{"errors":[],"html":"<p><a href=\"/missing-page\">missing-page</a></p>","id":"new-target-bare"}
+{"errors":[],"html":"<p><a href=\"/missing-page\">missing-page</a></p>","id":"new-target-empty-label"}
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists\">shown</a></p>","id":"case-upper-exists"}
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists\">shown</a></p>","id":"case-mixed-exists"}
+{"errors":[],"html":"<p><a href=\"/muse-probe-r2link-free-exists#sec\">shown</a></p>","id":"exist-target-anchor"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 13..13, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 11..13, kind: NoRulesMatch }"],"html":"<p>[[some-page]]</p>","id":"double-bracket"}
+{"errors":[],"html":"<p>[<a href=\"/scp-001-ex\">SCP-001-EX</a>]</p>","id":"triple-quad"}
+{"errors":[],"html":"<p>[<a href=\"/scp-001-ex\">[SCP-001-EX</a>]]</p>","id":"triple-quint"}
+{"errors":["ParseError { token: InputEnd, rule: \"link-triple\", span: 14..14, kind: EndOfInput }","ParseError { token: LeftLink, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 12..14, kind: NoRulesMatch }"],"html":"<p>[[[some-page]]</p>","id":"triple-short-closer"}
+{"errors":["ParseError { token: InputEnd, rule: \"link-triple\", span: 12..12, kind: EndOfInput }","ParseError { token: LeftLink, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }"],"html":"<p>[[[some-page</p>","id":"triple-no-closer"}
+{"errors":[],"html":"<p><a href=\"/some-page\">some-page</a>junk</p>","id":"triple-closer-junk"}
+{"errors":[],"html":"<p><a href=\"/some-page\">some-page</a>]</p>","id":"triple-extra-close"}
+{"errors":[],"html":"<p><a href=\"/some-page\">Label</a></p>","id":"triple-space-opener"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 20..20, kind: EndOfInput }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightLink, rule: \"fallback\", span: 17..20, kind: NoRulesMatch }"],"html":"<p>[[some-page|Label]]]</p>","id":"double-open-triple-close"}
+{"errors":["ParseError { token: RightBlock, rule: \"link-triple\", span: 18..20, kind: RuleFailed }","ParseError { token: LeftLink, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[[some-page|Label]]</p>","id":"triple-open-double-close"}
+{"errors":["ParseError { token: Identifier, rule: \"link-triple\", span: 4..9, kind: RuleFailed }","ParseError { token: LeftLink, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightLink, rule: \"fallback\", span: 9..12, kind: NoRulesMatch }"],"html":"<p>[[[|Label]]]</p>","id":"empty-target"}
+{"errors":["ParseError { token: Identifier, rule: \"link-triple\", span: 7..12, kind: RuleFailed }","ParseError { token: LeftLink, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightLink, rule: \"fallback\", span: 12..15, kind: NoRulesMatch }"],"html":"<p>[[[ |Label]]]</p>","id":"whitespace-target"}
+{"errors":[],"html":"<p><a href=\"/some-page\">some-page</a></p>","id":"empty-label"}
+{"errors":[],"html":"<p><a href=\"/page-slug\">A|B|C</a></p>","id":"dup-pipes"}
+{"errors":[],"html":"<p><a href=\"/page-slug\">A | B | C</a></p>","id":"dup-pipes-spaced"}
+{"errors":[],"html":"<p>[[[home###|Home]]]</p>","id":"triple-hash"}
+{"errors":["ParseError { token: InputEnd, rule: \"link-triple\", span: 10..10, kind: RuleFailed }","ParseError { token: LeftLink, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 10..10, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }","ParseError { token: RightLink, rule: \"fallback\", span: 7..10, kind: NoRulesMatch }"],"html":"<p>[[[a##b]]]</p>","id":"double-hash"}
+{"errors":[],"html":"<p>[[[MAIN/##/page#toc1|Hash routing]]]</p>","id":"hash-route"}
+{"errors":[],"html":"<p><a href=\"/scp-series#001\">SCP-001 to SCP-099</a></p>","id":"anchor-digit"}
+{"errors":[],"html":"<p><a href=\"/scp-series#section\">Label</a></p>","id":"anchor-alpha"}
+{"errors":["ParseError { token: Identifier, rule: \"link-triple\", span: 14..19, kind: RuleFailed }","ParseError { token: LeftLink, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightLink, rule: \"fallback\", span: 19..22, kind: NoRulesMatch }"],"html":"<p>[[[#my-anchor|Label]]]</p>","id":"anchor-label-only"}
+{"errors":[],"html":"<p><a class=\"newpage\" href=\"/#my-anchor\">Label</a></p>","id":"anchor-label-only-space"}
+{"errors":["ParseError { token: InputEnd, rule: \"link-triple\", span: 16..16, kind: RuleFailed }","ParseError { token: LeftLink, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightLink, rule: \"fallback\", span: 13..16, kind: NoRulesMatch }"],"html":"<p>[[[#my-anchor]]]</p>","id":"anchor-empty-first"}
+{"errors":[],"html":"<p><a href=\"/scp-series#sec-1\">Label</a></p>","id":"anchor-dash"}
+{"errors":[],"html":"<p><a href=\"/scp-series#sec_1\">Label</a></p>","id":"anchor-underscore"}
+{"errors":[],"html":"<p><a href=\"/scp-series#sec:1\">Label</a></p>","id":"anchor-colon"}
+{"errors":[],"html":"<p><a href=\"/scp-wiki:component:theme\">Sigma-9 Theme</a></p>","id":"cross-site-colon"}
+{"errors":[],"html":"<p><a href=\"/scp-wiki:system:recent-changes\">:scp-wiki : system : Recent Changes</a></p>","id":"cross-site-colon-spaced"}
+{"errors":[],"html":"<p><a href=\"/site:page\">Label</a></p>","id":"fossil-cross-site"}
+{"errors":[],"html":"<p><a href=\"/site\">Label</a></p>","id":"fossil-cross-site-no-page"}
+{"errors":[],"html":"<p><a href=\"/system:recent-changes\">Recent Changes</a></p>","id":"category"}
+{"errors":[],"html":"<p><a href=\"/system:recent-changes\">Recent Changes</a></p>","id":"category-spaced"}
+{"errors":[],"html":"<p><a href=\"/a:b:c\">a:b:c</a></p>","id":"multi-colon-empty"}
+{"errors":[],"html":"<p><a href=\"/a\">Label</a></p>","id":"default-category"}
+{"errors":[],"html":"<p><a href=\"https://example.com/\">Example</a></p>","id":"url-plain"}
+{"errors":[],"html":"<p><a href=\"/https:example-com\">Example</a></p>","id":"url-leading-space"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">Trailing</a></p>","id":"url-trailing-space"}
+{"errors":[],"html":"<p><a href=\"/example-com\">Example</a></p>","id":"url-no-scheme"}
+{"errors":[],"html":"<p><a href=\"/example-edit\">Edit page</a></p>","id":"url-subpath"}
+{"errors":[],"html":"<p><a href=\"/main#/page\">Hash routing</a></p>","id":"url-hash-route"}
+{"errors":[],"html":"<p><a href=\"/some-page\">Line start</a></p>","id":"line-start"}
+{"errors":[],"html":"<p>text before <a href=\"/some-page\">Mid line</a> text after</p>","id":"mid-line"}
+{"errors":[],"html":"<p>first line<br>\n<a href=\"/some-page\">Second line</a></p>","id":"second-line"}
+{"errors":[],"html":"<p><a href=\"/a\">A</a> and <a href=\"/b\">B</a></p>","id":"inline-two"}
+{"errors":[],"html":"<p><a href=\"/a\">A</a><a href=\"/b\">B</a></p>","id":"adjacent-freelinks"}
+{"errors":[],"html":"<p><a href=\"/scp-001\">*SCP-001</a></p>","id":"star-target"}
+{"errors":[],"html":"<p><a href=\"/some-page\">Label</a></p>","id":"star-labeled"}
+{"errors":[],"html":"<p><a href=\"/_some-page\">Label</a></p>","id":"underscore-target"}
+{"errors":[],"html":"<p><a href=\"/dokument\">документ</a></p>","id":"unicode-cyrillic"}
+{"errors":[],"html":"<p><a class=\"newpage\" href=\"/\">Label</a></p>","id":"unicode-cjk"}
