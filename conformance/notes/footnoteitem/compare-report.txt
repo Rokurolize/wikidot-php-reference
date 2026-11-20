@@ -1,0 +1,27 @@
+Footnoteitem R2 differential compare report
+==================================================================
+battery cases: 50; live captures: 22 (valid/stable/source-matching: 22); captures with a footnote footer: 21
+
+BEFORE battery vs ftml:
+  whole-string raw agreement:            1/50
+  whole-string canonical agreement:      6/50
+  cases with footers on both sides:      43/50
+  footer-list raw agreement:             7/50
+  footer-list entity/newline canonical:  42/50
+  live==reference footer-list raw:       17/21
+  live==ftml footer-list raw:            0/21
+  live==ftml after &#39;->' canonical:    18/21
+
+AFTER battery vs ftml:
+  whole-string raw agreement:            1/50
+  whole-string canonical agreement:      6/50
+  cases with footers on both sides:      43/50
+  footer-list raw agreement:             7/50
+  footer-list entity/newline canonical:  46/50
+  live==reference footer-list raw:       19/21
+  live==ftml footer-list raw:            0/21
+  live==ftml after &#39;->' canonical:    18/21
+
+Live-settled Footnoteitem questions:
+  Q1 onclick quote: raw ' = 25 footers, &#39; entity = 0 footers
+  Q2 empty-body separator: '. ' with trailing space = 0, '.' without = 2

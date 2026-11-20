@@ -1,0 +1,25 @@
+R2-notes root cross-rule interaction: three-way family-shape comparison
+valid probes: 22; counts: {'all3': 22, 'ref_live': 0, 'ftm_live': 0, 'ref_ftm': 0, 'all_disagree': 0}
+
+x-fn-in-div                  ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-fn-in-collapsible          ALL3           canon(ref==ftml)=False canon(ref==live)=False canon(ftml==live)=True
+x-fn-in-code                 ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-fn-in-quote                ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-fn-in-list                 ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-fn-block-before            ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-fn-block-between           ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-fn-block-multiple          ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-fn-block-none              ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-fn-block-title             ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bib-def-order              ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bib-unordered-labels       ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bib-cite-before            ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bib-dup-label              ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bib-undefined              ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-mix-fn-bib                 ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-mix-fn-in-bib              ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-mix-bibcite-in-fn          ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-fn-unterminated            ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bib-unterminated           ALL3           canon(ref==ftml)=False canon(ref==live)=False canon(ftml==live)=True
+x-fn-in-iftags-drop          ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-fn-in-iftags-keep          ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True

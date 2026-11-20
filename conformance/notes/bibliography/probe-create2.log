@@ -1,0 +1,15 @@
+p17-two-residual -> muse-probe-r2notes-bib-p17-two-residual (created)
+p18-residual-only -> muse-probe-r2notes-bib-p18-residual-only (created)
+2 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p17-two-residual": {
+  "fullname": "muse-probe-r2notes-bib-p17-two-residual",
+  "source": "[[bibliography]]\n: a : A\nplain line one\nplain line two\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p18-residual-only": {
+  "fullname": "muse-probe-r2notes-bib-p18-residual-only",
+  "source": "[[bibliography]]\nfirst prose\nsecond prose\n[[/bibliography]]",
+  "action": "created"
+ }
+}

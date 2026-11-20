@@ -1,0 +1,24 @@
+p17-two-residual -> muse-probe-r2notes-bib-p17-two-residual stable=True saved_source_matches=True valid=True
+p18-residual-only -> muse-probe-r2notes-bib-p18-residual-only stable=True saved_source_matches=True valid=True
+{
+ "p17-two-residual": {
+  "fullname": "muse-probe-r2notes-bib-p17-two-residual",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\nplain line one plain line two</div>",
+  "html_sha256": "f6d4de4c01463259c97cdc25ab6e9b08234579e2a96a865ed36cbe47814b3808",
+  "source": "[[bibliography]]\n: a : A\nplain line one\nplain line two\n[[/bibliography]]",
+  "source_sha256": "5ab5063da5c0b7e3f0df10250f7f23534458af03a65d98806d8ed9d031607994",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18-residual-only": {
+  "fullname": "muse-probe-r2notes-bib-p18-residual-only",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\nfirst prose second prose</div>",
+  "html_sha256": "8efeb9242b20ec8938ff542ff2a3915b9c24143f3072613077002d52b303a7c1",
+  "source": "[[bibliography]]\nfirst prose\nsecond prose\n[[/bibliography]]",
+  "source_sha256": "cfd50b8f40fc465926700fb408583e6d51b46911312cf36d5ab4373ef9f55a63",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

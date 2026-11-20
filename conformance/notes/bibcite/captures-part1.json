@@ -1,0 +1,52 @@
+{
+ "p-id-defined": {
+  "fullname": "muse-probe-r2notes-bibc-p-id-defined",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha source</div>\n</div>\n<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-82730a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>",
+  "html_sha256": "e34371aa7fa2edc704583a79af6499390ccff7a78af37dc7b426924db64bf871",
+  "source": "[[bibliography]]\n: alpha : Alpha source\n[[/bibliography]]\n\n((bibcite alpha))",
+  "source_sha256": "2a0b527af8f69a0b31fab5b048f3a8617987b2f3f77f1eac42226144d7e1dc68",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-id-two-cites": {
+  "fullname": "muse-probe-r2notes-bibc-p-id-two-cites",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-73487a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a> and <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2-67729a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A source</div>\n<div class=\"bibitem\" id=\"bibitem-2\">2. B source</div>\n</div>",
+  "html_sha256": "f94b7d156edaf82b252a23808ce371609ab50c25f7faa4a5926e3ec901791d49",
+  "source": "((bibcite alpha)) and ((bibcite beta))\n\n[[bibliography]]\n: alpha : A source\n: beta : B source\n[[/bibliography]]",
+  "source_sha256": "59303fad580b59fb76e08a3b3c1d248323450a142cef7c91104170a84fb5d345",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-id-forward": {
+  "fullname": "muse-probe-r2notes-bibc-p-id-forward",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-81110a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha source</div>\n</div>",
+  "html_sha256": "ed571d2e62b1585f6c3709fdba8822ed68f009f0cc6e467e6313022009928baa",
+  "source": "((bibcite alpha))\n\n[[bibliography]]\n: alpha : Alpha source\n[[/bibliography]]",
+  "source_sha256": "4d4b152a32f1aaf18528a0e4d0925d4804a84e6a6ea0672af3e4856e81338b9b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-undef": {
+  "fullname": "muse-probe-r2notes-bibc-p-undef",
+  "html": "<p>A<span class=\"error-inline\">Bibliography item <em>alpha</em> not found.</span>B</p>",
+  "html_sha256": "fc656b33d92640351d1c0ea64acf9677bf4e77d1491d58a24353c7bd9987897c",
+  "source": "A((bibcite alpha))B",
+  "source_sha256": "b0c479db62d4585a0f650fea2574ef52d222f3953d27fccc9984875ca89cae95",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-two-space": {
+  "fullname": "muse-probe-r2notes-bibc-p-two-space",
+  "html": "<p>((bibcite alpha))</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>",
+  "html_sha256": "087454148d693f2b690e3e7f3e7b8a8220c1874f53b90646a1104d4420b23c46",
+  "source": "((bibcite  alpha))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "source_sha256": "9b778b8ef156309f89f62346c0c6eeba177ce4e994135da976e4ace622364965",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

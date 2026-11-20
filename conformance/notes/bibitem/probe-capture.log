@@ -1,0 +1,222 @@
+p-empty-body -> muse-probe-r2notes-bibi-p-empty-body stable=True saved_source_matches=True valid=True
+p-empty-then-entry -> muse-probe-r2notes-bibi-p-empty-then-entry stable=True saved_source_matches=True valid=True
+p-empty-blank-entry -> muse-probe-r2notes-bibi-p-empty-blank-entry stable=True saved_source_matches=True valid=True
+p-two-empty -> muse-probe-r2notes-bibi-p-two-empty stable=True saved_source_matches=True valid=True
+p-dup -> muse-probe-r2notes-bibi-p-dup stable=True saved_source_matches=True valid=True
+p-nested-markup -> muse-probe-r2notes-bibi-p-nested-markup stable=True saved_source_matches=True valid=True
+p-self-cite -> muse-probe-r2notes-bibi-p-self-cite stable=True saved_source_matches=True valid=True
+p-nested-footnote -> muse-probe-r2notes-bibi-p-nested-footnote stable=True saved_source_matches=True valid=True
+p-uppercase-label -> muse-probe-r2notes-bibi-p-uppercase-label stable=True saved_source_matches=True valid=True
+p-digit-label -> muse-probe-r2notes-bibi-p-digit-label stable=True saved_source_matches=True valid=True
+p-hyphen-label -> muse-probe-r2notes-bibi-p-hyphen-label stable=True saved_source_matches=True valid=True
+p-two-spaces-before-colon -> muse-probe-r2notes-bibi-p-two-spaces-before-colon stable=True saved_source_matches=True valid=True
+p-no-space-after-colon -> muse-probe-r2notes-bibi-p-no-space-after-colon stable=True saved_source_matches=True valid=True
+p-title-option -> muse-probe-r2notes-bibi-p-title-option stable=True saved_source_matches=True valid=True
+p-hide-option -> muse-probe-r2notes-bibi-p-hide-option stable=True saved_source_matches=True valid=True
+p-forward-cite -> muse-probe-r2notes-bibi-p-forward-cite stable=True saved_source_matches=True valid=True
+p-special-chars -> muse-probe-r2notes-bibi-p-special-chars stable=True saved_source_matches=True valid=True
+p-span-inline -> muse-probe-r2notes-bibi-p-span-inline stable=True saved_source_matches=True valid=True
+p-mixed-lines -> muse-probe-r2notes-bibi-p-mixed-lines stable=True saved_source_matches=True valid=True
+p-trim-body -> muse-probe-r2notes-bibi-p-trim-body stable=True saved_source_matches=True valid=True
+{
+ "p-empty-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-empty-body",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1.</div>\n</div>",
+  "html_sha256": "6af1459e22cb0f72b700ca96831adf263a789ebb79fa294cca08c8d8e5d09a7f",
+  "source": "[[bibliography]]\n: a :\n[[/bibliography]]",
+  "source_sha256": "3dac323b31eb0f4898875c03cd0509f7cebf63b75be866f061cf0f4ddc219aa7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-empty-then-entry": {
+  "fullname": "muse-probe-r2notes-bibi-p-empty-then-entry",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. : b : Bravo.</div>\n</div>",
+  "html_sha256": "ed1204a1235b709ee5d111ab1809d26271bcc36a3402f57cc5c2913da812426c",
+  "source": "[[bibliography]]\n: a :\n: b : Bravo.\n[[/bibliography]]",
+  "source_sha256": "18d0479fa7fc639d9d9d609bac88a155c98935b5c389ac076201a0836e9f1e45",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-empty-blank-entry": {
+  "fullname": "muse-probe-r2notes-bibi-p-empty-blank-entry",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1.</div>\n<div class=\"bibitem\" id=\"bibitem-2\">2. Bravo.</div>\n</div>",
+  "html_sha256": "052e5b8350c3478a5de1f96210a523dabed99c4effbca2c2d8e45ba8cc66583b",
+  "source": "[[bibliography]]\n: a :\n\n: b : Bravo.\n[[/bibliography]]",
+  "source_sha256": "ce35dd853925ddc0a636897e8bfcc93941a1f893a43313badb80cc7976f76420",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-two-empty": {
+  "fullname": "muse-probe-r2notes-bibi-p-two-empty",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. : b :</div>\n</div>",
+  "html_sha256": "1add0d2906c38e39f1ac87ab431ce8a89a101f07f0620809fa30c8cd49202a80",
+  "source": "[[bibliography]]\n: a :\n: b :\n[[/bibliography]]",
+  "source_sha256": "e832b8612f4525c90c812c8c8df52b79933332ba7923ff7337ecc901d07d7a6b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-dup": {
+  "fullname": "muse-probe-r2notes-bibi-p-dup",
+  "html": "<p>Cite <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2-64504a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2</a>.</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. First bell.</div>\n<div class=\"bibitem\" id=\"bibitem-2\">2. Second bell.</div>\n<div class=\"bibitem\" id=\"bibitem-2\">2. Guy.</div>\n</div>",
+  "html_sha256": "4cdfab95a3924a07c23acd4b0a73128bb2156850a1e23a3eeebb567548ab0387",
+  "source": "Cite ((bibcite bell)).\n\n[[bibliography]]\n: bell : First bell.\n: bell : Second bell.\n: guy : Guy.\n[[/bibliography]]",
+  "source_sha256": "3f404566d879bfcb8709c8abf56caa25e7345f8e3eb9c86f6f11dd704d31341d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-nested-markup": {
+  "fullname": "muse-probe-r2notes-bibi-p-nested-markup",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. aa <strong>bold</strong> <em>ital</em> <tt>code</tt> end.</div>\n</div>",
+  "html_sha256": "51a241d1842170625b3776b9cb75533ad8682bc9efa7d313fd34c6d4c7a153cc",
+  "source": "[[bibliography]]\n: a : aa **bold** //ital// {{code}} end.\n[[/bibliography]]",
+  "source_sha256": "10829eb1844dd96acb4474bfc72ae6337967691efe76cff72c582d56b6bc0226",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-self-cite": {
+  "fullname": "muse-probe-r2notes-bibi-p-self-cite",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. See also <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-64576a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a>.</div>\n</div>",
+  "html_sha256": "37ef0e54ff2253c3ac83a2b39fc791a5a835dc61e413c9fd089049ac1bfe0030",
+  "source": "[[bibliography]]\n: a : See also ((bibcite a)).\n[[/bibliography]]",
+  "source_sha256": "e47a7c191c27ace67d7c91ab4efc45e725e95f5bf1ea45b9495477e3e3f11055",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-nested-footnote": {
+  "fullname": "muse-probe-r2notes-bibi-p-nested-footnote",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Source with a note<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup>.</div>\n</div>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. the note</div>\n</div>",
+  "html_sha256": "acea11669fc2820e76e76d00180a69cbfa7507d510037903ad52ea476e5766a9",
+  "source": "[[bibliography]]\n: a : Source with a note[[footnote]]the note[[/footnote]].\n[[/bibliography]]",
+  "source_sha256": "d60bc3e005b90e98754708054556ccd452636a7b569218cf5a8c389c447e153c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-uppercase-label": {
+  "fullname": "muse-probe-r2notes-bibi-p-uppercase-label",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Uppercase label.</div>\n</div>",
+  "html_sha256": "3d85627ac33cfefd60ff2f8ecd5ccb6ddfa4cbd9ed7158bae5c2ae90b334cbe9",
+  "source": "[[bibliography]]\n: Alpha : Uppercase label.\n[[/bibliography]]",
+  "source_sha256": "f98c82198c14d5bd376de1aeaf5f01ad5fa32754fd29e58e3fcbc1dce67b654e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-digit-label": {
+  "fullname": "muse-probe-r2notes-bibi-p-digit-label",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Digit-leading label.</div>\n</div>",
+  "html_sha256": "9498e692cae1e6f456dca4bf75c8c7a3510c6b1da23af12f414e61073bb5ad27",
+  "source": "[[bibliography]]\n: 2b : Digit-leading label.\n[[/bibliography]]",
+  "source_sha256": "0194d6767f009b512188470b64b16ec724f3ca435133c49067a634b4e1136776",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-hyphen-label": {
+  "fullname": "muse-probe-r2notes-bibi-p-hyphen-label",
+  "html": "<p>((bibcite smith-2020))</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n: smith-2020 : Never registered.</div>",
+  "html_sha256": "042bed8e2eaf60b11b53e0c359d143628ef6f84592c3e65e6a8c1968230959c4",
+  "source": "((bibcite smith-2020))\n\n[[bibliography]]\n: smith-2020 : Never registered.\n[[/bibliography]]",
+  "source_sha256": "0350b1e9aa9485ffa89f310a0200941a8fcf4cf5d7abf0e8dc49bf02690715f6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-two-spaces-before-colon": {
+  "fullname": "muse-probe-r2notes-bibi-p-two-spaces-before-colon",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n: a : Alpha.</div>",
+  "html_sha256": "19ccc221a4b282b56a906eee3dff42bd963ce616482af51b57835504f82e1209",
+  "source": "[[bibliography]]\n: a  : Alpha.\n[[/bibliography]]",
+  "source_sha256": "ec5f097a67854a023942bd5d4ba8166cf47028b5a6f75fa3fbbcd91e491dd061",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-no-space-after-colon": {
+  "fullname": "muse-probe-r2notes-bibi-p-no-space-after-colon",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n: a :Bravo.</div>",
+  "html_sha256": "65d25cb43b200bf2d2540e49f1ecbcac60bdfd26fa0f17ad1ba6114ae3b6caed",
+  "source": "[[bibliography]]\n: a :Bravo.\n[[/bibliography]]",
+  "source_sha256": "f2d935949a2869fc363f6bc9dc33eb318bc4c5124c08e4178a7a24309565ad67",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-title-option": {
+  "fullname": "muse-probe-r2notes-bibi-p-title-option",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Works Cited</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha.</div>\n</div>",
+  "html_sha256": "4fc86c43d22195b7b22670cdc0ec18ff39516456a3dfe021927edf645bb10d15",
+  "source": "[[bibliography title=\"Works Cited\"]]\n: a : Alpha.\n[[/bibliography]]",
+  "source_sha256": "1c3a107fbcebe091a52aeafdaef5391ec75eef1f14197b3f1c77e128613e2bf1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-hide-option": {
+  "fullname": "muse-probe-r2notes-bibi-p-hide-option",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha.</div>\n</div>",
+  "html_sha256": "16ac9392b434f5c57fb75f22c2578967f193d1f553a57908a656146019a3de43",
+  "source": "[[bibliography hide=\"true\"]]\n: a : Alpha.\n[[/bibliography]]",
+  "source_sha256": "d7e903639852861429629dae14d3bca2a62ab4de589d52f627e2a412aa5d4368",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-forward-cite": {
+  "fullname": "muse-probe-r2notes-bibi-p-forward-cite",
+  "html": "<p>See <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-11170a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a>.</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha.</div>\n</div>",
+  "html_sha256": "89e2b5cb02b012a78d2434a7389bf52b1b8062517be561ce4d7d13751e0aa124",
+  "source": "See ((bibcite a)).\n\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]",
+  "source_sha256": "bcaa9adf8e8a5bb1a18639f3760d7975a945a8525be607a7c84b18cb69e399b7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-special-chars": {
+  "fullname": "muse-probe-r2notes-bibi-p-special-chars",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A &amp; B &lt; C &gt; D &quot;q&quot; 's'.</div>\n</div>",
+  "html_sha256": "755320a63e40c9523a46c788b410fda5f320cb659087c3702e002e9a3d2190a1",
+  "source": "[[bibliography]]\n: a : A & B < C > D \"q\" 's'.\n[[/bibliography]]",
+  "source_sha256": "0b5ac12a1e583a06aa4f6c51be33c6e987462562c121f4132b1e470ff1d9d65b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-span-inline": {
+  "fullname": "muse-probe-r2notes-bibi-p-span-inline",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. aa <span>bb</span> cc</div>\n</div>",
+  "html_sha256": "4488253472eea1952959b79d5de287be06ab97c164e006414fa0d2fb0c070170",
+  "source": "[[bibliography]]\n: a : aa [[span]]bb[[/span]] cc\n[[/bibliography]]",
+  "source_sha256": "54f661c025fb0469e3e245fe7c61858112d69b38714975089cb0c798bbeba2ed",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-mixed-lines": {
+  "fullname": "muse-probe-r2notes-bibi-p-mixed-lines",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha.</div>\n: b :Bravo.\n<div class=\"bibitem\" id=\"bibitem-2\">2. Charlie.</div>\n</div>",
+  "html_sha256": "cc6f47ff566aeb931313e7178adfb9f1e2d7cb46b7e458d11b57a4ff95681414",
+  "source": "[[bibliography]]\n: a : Alpha.\n: b :Bravo.\n: c : Charlie.\n[[/bibliography]]",
+  "source_sha256": "7883733ace7074948e2e3edb81a866f14f1723a1142b79affce9fab757ea0f35",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-trim-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-trim-body",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha source.</div>\n</div>",
+  "html_sha256": "bb73dc2141c249d7f2bb9a301e45223d19fcf1a389f6f3207689e1e4cbdff5cc",
+  "source": "[[bibliography]]\n: a :    Alpha source.   \n[[/bibliography]]",
+  "source_sha256": "84a92a1687d34c143625cbc19cb85d4c1e5416a22b1ea60b077692b06378f3c5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "p-three-space": {
+  "fullname": "muse-probe-r2notes-bibc-p-three-space",
+  "html": "<p>((bibcite A9))</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A9 source</div>\n</div>",
+  "html_sha256": "498706724208bb8edfe3fdf9f75dbf518754d0ba931909c51d4d3a30b81e6b76",
+  "source": "((bibcite   A9))\n\n[[bibliography]]\n: A9 : A9 source\n[[/bibliography]]",
+  "source_sha256": "84c4b27cd6cd4d61dd37209996db89df97101c4fbd931bb65984af8bcffb4ef3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-tab-sep": {
+  "fullname": "muse-probe-r2notes-bibc-p-tab-sep",
+  "html": "<p>((bibcite Tabbed))</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. T</div>\n</div>",
+  "html_sha256": "2b4a0281e6dc884bf3092e15bff6046e6bb340eb5ff240f8536f8ebb07e7aa71",
+  "source": "((bibcite\tTabbed))\n\n[[bibliography]]\n: Tabbed : T\n[[/bibliography]]",
+  "source_sha256": "80b072d53dadacb48474a020a3f07e53e67187d1839c31df517b47c1da2da8fc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-newline-sep": {
+  "fullname": "muse-probe-r2notes-bibc-p-newline-sep",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-12625a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>",
+  "html_sha256": "9a318ea79e339180563e47485548ddca9f7c2be30a140fafd35513f8146f631b",
+  "source": "((bibcite\nalpha))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "source_sha256": "db4545b166f4eb5ae80995549db6ba30541ec69b6d0bdb9149d89fa13b306a66",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-dup-label": {
+  "fullname": "muse-probe-r2notes-bibc-p-dup-label",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2-94473a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2</a> <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2-57516a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. first bell</div>\n<div class=\"bibitem\" id=\"bibitem-2\">2. second bell</div>\n<div class=\"bibitem\" id=\"bibitem-2\">2. a guy</div>\n</div>",
+  "html_sha256": "54be697c4760a37c147aa9e68b38793239f84e2d314d4490ef8dd8a6a92614db",
+  "source": "((bibcite bell)) ((bibcite guy))\n\n[[bibliography]]\n: bell : first bell\n: bell : second bell\n: guy : a guy\n[[/bibliography]]",
+  "source_sha256": "df8389f062697963da8132d7b41f016731b27f3f6dfb77a2f96a04a6c87a0da8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-case-mismatch": {
+  "fullname": "muse-probe-r2notes-bibc-p-case-mismatch",
+  "html": "<p><span class=\"error-inline\">Bibliography item <em>ALPHA</em> not found.</span></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>",
+  "html_sha256": "16525d9c08df7f8da5f31dfa53efea0d2ae182d203f3b7f349e4967a19fc4ce8",
+  "source": "((bibcite ALPHA))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "source_sha256": "61bc7ebbfa8b17d59cf064a68f42b07882fe12ce53c2688431b84710018d6cae",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

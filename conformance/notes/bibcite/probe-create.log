@@ -1,0 +1,111 @@
+p-id-defined -> muse-probe-r2notes-bibc-p-id-defined (created)
+p-id-two-cites -> muse-probe-r2notes-bibc-p-id-two-cites (created)
+p-id-forward -> muse-probe-r2notes-bibc-p-id-forward (created)
+p-undef -> muse-probe-r2notes-bibc-p-undef (created)
+p-two-space -> muse-probe-r2notes-bibc-p-two-space (created)
+p-three-space -> muse-probe-r2notes-bibc-p-three-space (created)
+p-tab-sep -> muse-probe-r2notes-bibc-p-tab-sep (created)
+p-newline-sep -> muse-probe-r2notes-bibc-p-newline-sep (created)
+p-dup-label -> muse-probe-r2notes-bibc-p-dup-label (created)
+p-case-mismatch -> muse-probe-r2notes-bibc-p-case-mismatch (created)
+p-block-defined -> muse-probe-r2notes-bibc-p-block-defined (created)
+p-block-score-defined -> muse-probe-r2notes-bibc-p-block-score-defined (created)
+p-comment-label -> muse-probe-r2notes-bibc-p-comment-label (created)
+p-empty-label -> muse-probe-r2notes-bibc-p-empty-label (created)
+p-raw-owner -> muse-probe-r2notes-bibc-p-raw-owner (created)
+p-anchor -> muse-probe-r2notes-bibc-p-anchor (created)
+p-footnote -> muse-probe-r2notes-bibc-p-footnote (created)
+p-malformed -> muse-probe-r2notes-bibc-p-malformed (created)
+18 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p-id-defined": {
+  "fullname": "muse-probe-r2notes-bibc-p-id-defined",
+  "source": "[[bibliography]]\n: alpha : Alpha source\n[[/bibliography]]\n\n((bibcite alpha))",
+  "action": "created"
+ },
+ "p-id-two-cites": {
+  "fullname": "muse-probe-r2notes-bibc-p-id-two-cites",
+  "source": "((bibcite alpha)) and ((bibcite beta))\n\n[[bibliography]]\n: alpha : A source\n: beta : B source\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-id-forward": {
+  "fullname": "muse-probe-r2notes-bibc-p-id-forward",
+  "source": "((bibcite alpha))\n\n[[bibliography]]\n: alpha : Alpha source\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-undef": {
+  "fullname": "muse-probe-r2notes-bibc-p-undef",
+  "source": "A((bibcite alpha))B",
+  "action": "created"
+ },
+ "p-two-space": {
+  "fullname": "muse-probe-r2notes-bibc-p-two-space",
+  "source": "((bibcite  alpha))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-three-space": {
+  "fullname": "muse-probe-r2notes-bibc-p-three-space",
+  "source": "((bibcite   A9))\n\n[[bibliography]]\n: A9 : A9 source\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-tab-sep": {
+  "fullname": "muse-probe-r2notes-bibc-p-tab-sep",
+  "source": "((bibcite\tTabbed))\n\n[[bibliography]]\n: Tabbed : T\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-newline-sep": {
+  "fullname": "muse-probe-r2notes-bibc-p-newline-sep",
+  "source": "((bibcite\nalpha))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-dup-label": {
+  "fullname": "muse-probe-r2notes-bibc-p-dup-label",
+  "source": "((bibcite bell)) ((bibcite guy))\n\n[[bibliography]]\n: bell : first bell\n: bell : second bell\n: guy : a guy\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-case-mismatch": {
+  "fullname": "muse-probe-r2notes-bibc-p-case-mismatch",
+  "source": "((bibcite ALPHA))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-block-defined": {
+  "fullname": "muse-probe-r2notes-bibc-p-block-defined",
+  "source": "[[bibcite alpha]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-block-score-defined": {
+  "fullname": "muse-probe-r2notes-bibc-p-block-score-defined",
+  "source": "[[bibcite_ alpha]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-comment-label": {
+  "fullname": "muse-probe-r2notes-bibc-p-comment-label",
+  "source": "[[bibliography]]\n: key : def\n[[/bibliography]]\n\n((bibcite k[!--x--]ey))",
+  "action": "created"
+ },
+ "p-empty-label": {
+  "fullname": "muse-probe-r2notes-bibc-p-empty-label",
+  "source": "X((bibcite ))Y",
+  "action": "created"
+ },
+ "p-raw-owner": {
+  "fullname": "muse-probe-r2notes-bibc-p-raw-owner",
+  "source": "@@((bibcite alpha))@@",
+  "action": "created"
+ },
+ "p-anchor": {
+  "fullname": "muse-probe-r2notes-bibc-p-anchor",
+  "source": "[[a href=\"/A\"]]x((bibcite b1))y[[/a]]\n\n[[bibliography]]\n: b1 : Title\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-footnote": {
+  "fullname": "muse-probe-r2notes-bibc-p-footnote",
+  "source": "[[footnote]]A note[[/footnote]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]\n\n((bibcite alpha))",
+  "action": "created"
+ },
+ "p-malformed": {
+  "fullname": "muse-probe-r2notes-bibc-p-malformed",
+  "source": "((bibcite alpha beta)) ((bibcite alpha\n\nbeta)) ((bibcite",
+  "action": "created"
+ }
+}

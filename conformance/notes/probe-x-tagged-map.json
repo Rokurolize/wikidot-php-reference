@@ -1,0 +1,18 @@
+{
+ "x-fn-in-iftags-drop": {
+  "fullname": "muse-probe-r2notes-x-x-fn-in-iftags-drop",
+  "source": "[[iftags -alpha]]\n[[footnote]]suppressed[[/footnote]]\n[[/iftags]]\n[[footnote]]kept[[/footnote]]\n[[footnoteblock]]",
+  "action": "publish-tags",
+  "tags": [
+   "alpha"
+  ]
+ },
+ "x-fn-in-iftags-keep": {
+  "fullname": "muse-probe-r2notes-x-x-fn-in-iftags-keep",
+  "source": "[[iftags +alpha]]\n[[footnote]]kept inside[[/footnote]]\n[[/iftags]]\n[[footnote]]outside[[/footnote]]\n[[footnoteblock]]",
+  "action": "publish-tags",
+  "tags": [
+   "alpha"
+  ]
+ }
+}

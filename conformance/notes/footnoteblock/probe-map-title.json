@@ -1,0 +1,12 @@
+{
+ "title-apostrophe": {
+  "fullname": "muse-probe-r2notes-fnb-title-apostrophe",
+  "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"It's fine\"]]",
+  "action": "created"
+ },
+ "title-special": {
+  "fullname": "muse-probe-r2notes-fnb-title-special",
+  "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"A & B <C> \\\"Q\\\"\"]]",
+  "action": "created"
+ }
+}

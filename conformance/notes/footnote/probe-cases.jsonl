@@ -1,0 +1,12 @@
+{"id":"case-close","source":"A[[footnote]]two[[/FootNote]] B[[footnote]]three[[/footnote]]\n\n[[footnoteblock]]"}
+{"id":"case-open","source":"A[[FootNote]]up[[/FootNote]] B[[footnote]]low[[/footnote]]\n\n[[footnoteblock]]"}
+{"id":"mixed-case","source":"A[[FootNote]]mix[[/footnote]] B[[footnote]]two[[/FootNote]]\n\n[[footnoteblock]]"}
+{"id":"uppercase","source":"A[[FOOTNOTE]]up[[/FOOTNOTE]] B[[footnote]]low[[/footnote]]\n\n[[footnoteblock]]"}
+{"id":"numbering","source":"A[[footnote]]alpha[[/footnote]]\n[[footnoteblock]]\nB[[footnote]]beta[[/footnote]] C[[footnote]]gamma[[/footnote]]"}
+{"id":"unterminated","source":"A[[footnote]]never closed B[[footnote]]also open\n\n[[footnoteblock]]"}
+{"id":"empty-body","source":"A[[footnote]][[/footnote]] B[[footnote]] x [[/footnote]]\n\n[[footnoteblock]]"}
+{"id":"nested","source":"before[[footnote]]outer [[footnote]]inner[[/footnote]] after[[/footnote]]\n\n[[footnoteblock]]"}
+{"id":"fused-close","source":"x [[footnote]]note[[/footnote]]] y\n\n[[footnoteblock]]"}
+{"id":"space-opener","source":"A[[footnote ]]sp[[/footnote]] B[[footnote]]two[[/footnote]]\n\n[[footnoteblock]]"}
+{"id":"quote-encoding","source":"A[[footnote]]note[[/footnote]]\n\n[[footnoteblock]]"}
+{"id":"block-title","source":"Apple[[footnote]]Banana[[/footnote]]\n\n[[footnoteblock title=\"The feet-noten\"]]"}

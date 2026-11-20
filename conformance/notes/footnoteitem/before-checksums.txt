@@ -1,0 +1,2 @@
+7297c549ca82b008f4844ec5adcc447a3f80221f83de32310c1923088c095e57  ref-php/text-wiki/Text/Wiki/Render/Xhtml/Footnoteitem.php
+6360b50d6349074f7cf8e10f37c2af4d160dc9fd7250f3aa6302cbd54c1a2770  ref-php/text-wiki/Text/Wiki/Parse/Default/Footnoteitem.php

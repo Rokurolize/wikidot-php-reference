@@ -47,7 +47,14 @@ class Text_Wiki_Render_Xhtml_Footnoteblock extends Text_Wiki_Render {
             }
             $out = '<div class="footnotes-footer">';
             if ($title !== "") {
-                $out .= '<div class="title">' . htmlspecialchars($title) . '</div>';
+                // R2-notes fnb correction (PHP-version artifact): live Wikidot
+                // emits an apostrophe in the block title as a raw "'", while
+                // PHP 8.1+ changed htmlspecialchars()'s default flags from
+                // ENT_COMPAT to ENT_QUOTES|ENT_SUBSTITUTE, which would turn it
+                // into &#039;. ENT_COMPAT restores the live shape (probe
+                // muse-probe-r2notes-fnb-title-apostrophe); &, <, > and " stay
+                // escaped, matching muse-probe-r2notes-fnb-title-special.
+                $out .= '<div class="title">' . htmlspecialchars($title, ENT_COMPAT) . '</div>';
             }
             return $out;
         }

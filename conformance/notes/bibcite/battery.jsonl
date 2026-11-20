@@ -1,0 +1,60 @@
+{"id": "bibc-01-undef-basic", "source": "A((bibcite alpha))B"}
+{"id": "bibc-02-undef-adjacent", "source": "((bibcite a))((bibcite b))"}
+{"id": "bibc-03-undef-multi", "source": "See ((bibcite alpha)) and ((bibcite beta))."}
+{"id": "bibc-04-def-backward", "source": "[[bibliography]]\n: alpha : Alpha source\n[[/bibliography]]\n((bibcite alpha))"}
+{"id": "bibc-05-def-forward", "source": "((bibcite alpha))\n\n[[bibliography]]\n: alpha : Alpha source\n[[/bibliography]]"}
+{"id": "bibc-06-def-two-cites-forward", "source": "((bibcite alpha)) and ((bibcite beta))\n\n[[bibliography]]\n: alpha : A source\n: beta : B source\n[[/bibliography]]"}
+{"id": "bibc-07-def-two-cites-backward", "source": "[[bibliography]]\n: alpha : A source\n: beta : B source\n[[/bibliography]]\n((bibcite alpha)) and ((bibcite beta))"}
+{"id": "bibc-08-def-dup-label", "source": "((bibcite bell)) ((bibcite guy))\n\n[[bibliography]]\n: bell : first bell\n: bell : second bell\n: guy : a guy\n[[/bibliography]]"}
+{"id": "bibc-09-def-same-label-twice", "source": "((bibcite alpha)) ((bibcite alpha))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]"}
+{"id": "bibc-10-def-case-mismatch", "source": "((bibcite ALPHA))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]"}
+{"id": "bibc-11-def-mixed-case-label", "source": "((bibcite A9))\n\n[[bibliography]]\n: A9 : A9 source\n[[/bibliography]]"}
+{"id": "bibc-12-def-tabbed-cite", "source": "((bibcite\tTabbed))\n\n[[bibliography]]\n: Tabbed : T\n[[/bibliography]]"}
+{"id": "bibc-13-def-two-space", "source": "((bibcite  alpha))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]"}
+{"id": "bibc-14-empty-body-bib", "source": "((bibcite alpha))\n\n[[bibliography]]\n: alpha : \n[[/bibliography]]"}
+{"id": "bibc-15-empty-bibliography", "source": "((bibcite alpha))\n\n[[bibliography]]\n[[/bibliography]]"}
+{"id": "bibc-16-no-bibliography", "source": "Just ((bibcite alpha)) text."}
+{"id": "bibc-17-two-bibliographies", "source": "[[bibliography]]\n: alpha : A\n[[/bibliography]]\n\n[[bibliography]]\n: beta : B\n[[/bibliography]]\n\n((bibcite alpha)) ((bibcite beta))"}
+{"id": "bibc-18-cite-inside-bibliography", "source": "[[bibliography]]\n: alpha : See ((bibcite beta)) in body\n: beta : B source\n[[/bibliography]]"}
+{"id": "bibc-19-undef-empty-label", "source": "((bibcite ))"}
+{"id": "bibc-20-undef-no-space", "source": "((bibcitealpha))"}
+{"id": "bibc-21-undef-missing-close", "source": "((bibcite alpha"}
+{"id": "bibc-22-undef-closer-only", "source": "alpha))"}
+{"id": "bibc-23-undef-extra-word", "source": "((bibcite alpha beta))"}
+{"id": "bibc-24-undef-unicode", "source": "((bibcite 日本語🙂))"}
+{"id": "bibc-25-undef-hyphen", "source": "((bibcite smith-2020))"}
+{"id": "bibc-26-undef-underscore", "source": "((bibcite alpha_2))"}
+{"id": "bibc-27-undef-upper-marker", "source": "((BIBCITE alpha))"}
+{"id": "bibc-28-undef-bibcite-word", "source": "((bibcite bibcite alpha))"}
+{"id": "bibc-29-undef-pipe", "source": "((bibcite alpha|beta))"}
+{"id": "bibc-30-undef-bold", "source": "((bibcite **alpha**))"}
+{"id": "bibc-31-undef-paragraph-break", "source": "((bibcite alpha\n\nbeta))"}
+{"id": "bibc-32-undef-single-newline", "source": "((bibcite alpha\nbeta))"}
+{"id": "bibc-33-undef-newline-after-bibcite", "source": "((bibcite\nalpha))"}
+{"id": "bibc-34-comment-in-label", "source": "[[bibliography]]\n: key : def\n[[/bibliography]]\n((bibcite k[!--x--]ey))"}
+{"id": "bibc-35-comment-tag-in-label", "source": "((bibcite alp[!--hidden--]ha))"}
+{"id": "bibc-36-code-owner", "source": "[[code]]\n((bibcite alpha))\n[[/code]]"}
+{"id": "bibc-37-raw-owner", "source": "@@((bibcite alpha))@@"}
+{"id": "bibc-38-heading-owner", "source": "+ ((bibcite alpha))"}
+{"id": "bibc-39-list-owner", "source": "* ((bibcite alpha))"}
+{"id": "bibc-40-table-owner", "source": "|| ((bibcite alpha)) ||"}
+{"id": "bibc-41-external-link-label", "source": "[https://example.com ((bibcite alpha))]"}
+{"id": "bibc-42-internal-link-label", "source": "[[[scp-002|((bibcite alpha))]]]"}
+{"id": "bibc-43-escaped-cite", "source": "\\((bibcite alpha))"}
+{"id": "bibc-44-span-attr-owner", "source": "[[span title=\"((bibcite alpha))\"]]X[[/span]]"}
+{"id": "bibc-45-footnote-adjacency", "source": "[[footnote]]A note[[/footnote]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]\n\n((bibcite alpha))"}
+{"id": "bibc-46-footnoteitem-adjacency", "source": "((bibcite alpha))\n\n[[footnoteitem]]item[[/footnoteitem]]\n\n[[footnoteblock]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]"}
+{"id": "bibc-47-iftags-seam-off", "source": "((bibcite alp[[iftags -zzz]][[/iftags]]ha))", "tags": []}
+{"id": "bibc-48-iftags-seam-on", "source": "((bibcite alp[[iftags -zzz]][[/iftags]]ha))", "tags": ["zzz"]}
+{"id": "bibc-49-block-undef", "source": "[[bibcite alpha]]"}
+{"id": "bibc-50-block-score-undef", "source": "[[bibcite_ alpha]]"}
+{"id": "bibc-51-block-defined", "source": "[[bibcite alpha]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]"}
+{"id": "bibc-52-anchor-adjacency", "source": "[[a href=\"/A\"]]x((bibcite b1))y[[/a]]\n\n[[bibliography]]\n: b1 : Title\n[[/bibliography]]"}
+{"id": "bibc-53-div-adjacency", "source": "[[div class=\"x\"]]\n((bibcite alpha))\n[[/div]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]"}
+{"id": "bibc-54-nested-in-note", "source": "[[footnote]]See ((bibcite alpha))[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "bibc-55-cite-in-bib-body", "source": "[[footnote]]x[[/footnote]]\n\n[[bibliography]]\n: alpha : A ((bibcite alpha))\n[[/bibliography]]"}
+{"id": "bibc-56-html-escape-label", "source": "((bibcite <script>alert_1</script>))"}
+{"id": "bibc-57-residual-para", "source": "[[bibliography]]\n: alpha : A\n\nresidual text\n[[/bibliography]]\n((bibcite alpha))"}
+{"id": "bibc-58-typography-adjacency", "source": "((bibcite alpha)) -- ''em'' and **bold**"}
+{"id": "bibc-59-colon-in-body", "source": "[[bibliography]]\n: alpha : A: with colon\n[[/bibliography]]\n((bibcite alpha))"}
+{"id": "bibc-60-multi-paragraph", "source": "First ((bibcite alpha)).\n\nSecond ((bibcite beta))."}

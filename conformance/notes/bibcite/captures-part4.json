@@ -1,0 +1,32 @@
+{
+ "p-anchor": {
+  "fullname": "muse-probe-r2notes-bibc-p-anchor",
+  "html": "<p><a href=\"/A\">x</a><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-31494a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a>y</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Title</div>\n</div>",
+  "html_sha256": "2bff445894133dd8c9f747b6576b5c0cebaa78fc159155901dd3a8c0e9cd004f",
+  "source": "[[a href=\"/A\"]]x((bibcite b1))y[[/a]]\n\n[[bibliography]]\n: b1 : Title\n[[/bibliography]]",
+  "source_sha256": "113f3e869f7347e522e0b62a752e0e4ec35c7361dc6c69a54f17e96c35e87f19",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-footnote": {
+  "fullname": "muse-probe-r2notes-bibc-p-footnote",
+  "html": "<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>\n<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-28856a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. A note</div>\n</div>",
+  "html_sha256": "eaf63aefd53bbc8d532e5278193ed8a30d69a9100faf3d244117c91023943a3c",
+  "source": "[[footnote]]A note[[/footnote]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]\n\n((bibcite alpha))",
+  "source_sha256": "e95e6b673dac6af5c174589fd65ee014f35fa2e72ac3c1068964b5f57a0db76f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-malformed": {
+  "fullname": "muse-probe-r2notes-bibc-p-malformed",
+  "html": "<p>((bibcite alpha beta)) ((bibcite alpha</p>\n<p>beta)) ((bibcite</p>",
+  "html_sha256": "7d15bb0021a0ad0755890e8ef6f16a86f54b9d2c25563ea429563868f152e348",
+  "source": "((bibcite alpha beta)) ((bibcite alpha\n\nbeta)) ((bibcite",
+  "source_sha256": "8067e80a77559b6b6cab956bc02fa8feac3da7981b7191fcd05c196ea3aac410",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

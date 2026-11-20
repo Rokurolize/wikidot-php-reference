@@ -1,0 +1,22 @@
+{
+ "inc-src": {
+  "fullname": "muse-probe-r2notes-x-inc-src",
+  "html": "<p>included<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup> text</p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. from include</div>\n</div>",
+  "html_sha256": "29fc9e38aa6b04c652187b5585d96344959fa77fc2fc6fa5a93d8a80ec2faded",
+  "source": "included [[footnote]]from include[[/footnote]] text",
+  "source_sha256": "1907b6b04cbf1561e1fe68f03834d8e9e4d4f053f43880260fa90ee9e9a14683",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "inc-holder": {
+  "fullname": "muse-probe-r2notes-x-inc-holder",
+  "html": "<p>before<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<p>included<sup class=\"footnoteref\"><a id=\"footnoteref-2\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-2')\">2</a></sup> text</p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. local</div>\n<div class=\"footnote-footer\" id=\"footnote-2\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-2')\">2</a>. from include</div>\n</div>",
+  "html_sha256": "bbb8a8b5c7d818a7f549803769ca9c3821607ac84910d0bd21a3ddd53d09237c",
+  "source": "before [[footnote]]local[[/footnote]]\n[[include muse-probe-r2notes-x-inc-src]]\n[[footnoteblock]]",
+  "source_sha256": "bd4ef93c59a5610413bc5f0dc0b59a73244f0aca4e573b5f4dfba6bbc2fb178c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

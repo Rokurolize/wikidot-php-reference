@@ -1,0 +1,4 @@
+b06eb5771fe248f856a38c9c2b827d3632a2f9791caf0c5bd3a8d0bd9e07d2d1  ref-php/text-wiki/Text/Wiki/Parse/Default/Bibliography.php
+df7a89594c2deb0bd77f14455945806c97980aaea98d9e7af950df312f156949  ref-php/text-wiki/Text/Wiki/Render/Xhtml/Bibliography.php
+b06eb5771fe248f856a38c9c2b827d3632a2f9791caf0c5bd3a8d0bd9e07d2d1  conformance-refphp/notes/bibliography/Bibliography.php.before.php
+df7a89594c2deb0bd77f14455945806c97980aaea98d9e7af950df312f156949  conformance-refphp/notes/bibliography/Bibliography.render.php.before.php

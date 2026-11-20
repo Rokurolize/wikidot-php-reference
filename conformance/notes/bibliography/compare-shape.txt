@@ -1,0 +1,70 @@
+OK  bib01-canonical-two                    ref(w=1,t=['Bibliography'],n=2) ftml(w=1,t=['Bibliography'],n=2)
+OK  bib02-cite-after                       ref(w=1,t=['Bibliography'],n=2) ftml(w=1,t=['Bibliography'],n=2)
+OK  bib03-cite-both-sides                  ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib04-duplicate-label                  ref(w=1,t=['Bibliography'],n=3) ftml(w=1,t=['Bibliography'],n=3)
+OK  bib05-empty-block                      ref(w=1,t=['Bibliography'],n=0) ftml(w=1,t=['Bibliography'],n=0)
+OK  bib06-body-only-no-cite                ref(w=1,t=['Bibliography'],n=2) ftml(w=1,t=['Bibliography'],n=2)
+OK  bib07-alphabetical-order               ref(w=1,t=['Bibliography'],n=3) ftml(w=1,t=['Bibliography'],n=3)
+OK  bib08-citation-order                   ref(w=1,t=['Bibliography'],n=3) ftml(w=1,t=['Bibliography'],n=3)
+OK  bib09-definition-order                 ref(w=1,t=['Bibliography'],n=3) ftml(w=1,t=['Bibliography'],n=3)
+OK  bib10-two-blocks                       ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib11-first-empty-second-full          ref(w=1,t=['Bibliography'],n=0) ftml(w=1,t=['Bibliography'],n=0)
+OK  bib12-three-blocks                     ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib13-title-double-quoted              ref(w=1,t=['Works Cited'],n=1) ftml(w=1,t=['Works Cited'],n=1)
+OK  bib14-title-single-quoted              ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+DIFF bib15-title-empty                      ref(w=1,t=[],n=1) ftml(w=1,t=[''],n=1)
+      ref items=[('1', '1', 'Entry A.')]
+      ftl items=[('1', '1', 'Entry A.')]
+OK  bib16-title-special-chars              ref(w=1,t=['&lt;Works &amp; Sources&gt;'],n=1) ftml(w=1,t=['&lt;Works &amp; Sources&gt;'],n=1)
+OK  bib17-hide-yes                         ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib18-hide-short-t                     ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib19-unknown-args                     ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib20-title-and-hide                   ref(w=1,t=['Works'],n=1) ftml(w=1,t=['Works'],n=1)
+OK  bib21-unterminated                     ref(w=0,t=[],n=0) ftml(w=0,t=[],n=0)
+OK  bib22-unterminated-empty               ref(w=0,t=[],n=0) ftml(w=0,t=[],n=0)
+OK  bib23-name-case-uppercase              ref(w=0,t=[],n=0) ftml(w=0,t=[],n=0)
+OK  bib24-name-case-title                  ref(w=0,t=[],n=0) ftml(w=0,t=[],n=0)
+OK  bib25-closer-uppercase                 ref(w=0,t=[],n=0) ftml(w=0,t=[],n=0)
+OK  bib26-opener-leading-space             ref(w=0,t=[],n=0) ftml(w=0,t=[],n=0)
+OK  bib27-opener-extra-close               ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib28-closer-trailing-spaces           ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib29-closer-trailing-tab              ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib30-closer-trailing-text             ref(w=0,t=[],n=0) ftml(w=0,t=[],n=0)
+OK  bib31-nested-bibliography              ref(w=1,t=['Bibliography'],n=0) ftml(w=1,t=['Bibliography'],n=0)
+OK  bib32-overlap-bold-closer              ref(w=0,t=[],n=0) ftml(w=0,t=[],n=0)
+OK  bib33-inline-strong-em                 ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+DIFF bib34-inline-size-span                 ref(w=1,t=['Bibliography'],n=2) ftml(w=1,t=['Bibliography'],n=2)
+      ref items=[('1', '1', 'aa <span style="font-size:150%;">bb</span> cc'), ('2', '2', 'aa <span  style="">bb</span> cc')]
+      ftl items=[('1', '1', 'aa <span style="font-size:150%;">bb</span> cc'), ('2', '2', 'aa <span>bb</span> cc')]
+OK  bib35-line-anchored-list               ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib36-line-anchored-heading            ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+DIFF bib37-bibcite-in-value                 ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+      ref items=[('1', '1', '<a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a> self')]
+      ftl items=[('1', '1', '<a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a> self')]
+OK  bib38-definition-separators            ref(w=1,t=['Bibliography'],n=5) ftml(w=1,t=['Bibliography'],n=5)
+OK  bib39-label-charset                    ref(w=1,t=['Bibliography'],n=2) ftml(w=1,t=['Bibliography'],n=2)
+OK  bib40-tab-prefix-label                 ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib41-next-line-value                  ref(w=1,t=['Bibliography'],n=3) ftml(w=1,t=['Bibliography'],n=3)
+OK  bib42-invalid-line-residual            ref(w=1,t=['Bibliography'],n=2) ftml(w=1,t=['Bibliography'],n=2)
+OK  bib43-label-only-crossing              ref(w=1,t=['Bibliography'],n=2) ftml(w=1,t=['Bibliography'],n=2)
+OK  bib44-whitespace-body                  ref(w=1,t=['Bibliography'],n=0) ftml(w=1,t=['Bibliography'],n=0)
+OK  bib45-footnote-then-bibliography       ref(w=1,t=['Bibliography', 'Footnotes'],n=1) ftml(w=1,t=['Bibliography', 'Footnotes'],n=1)
+OK  bib46-bibliography-then-footnote       ref(w=1,t=['Bibliography', 'Footnotes'],n=1) ftml(w=1,t=['Bibliography', 'Footnotes'],n=1)
+OK  bib47-bibliography-inside-footnote     ref(w=0,t=['Footnotes'],n=0) ftml(w=0,t=['Footnotes'],n=0)
+DIFF bib48-footnote-opened-in-bib-body      ref(w=1,t=['Bibliography', 'Footnotes'],n=1) ftml(w=1,t=['Bibliography', 'Footnotes'],n=1)
+      ref items=[('1', '1', 'A<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference(\'footnote-1\')">1</a></sup>')]
+      ftl items=[('1', '1', 'A<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference(&#39;footnote-1&#39;)">1</a></sup>')]
+OK  bib49-bibliography-inside-list         ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib50-item-inside-table                ref(w=1,t=['Bibliography'],n=3) ftml(w=1,t=['Bibliography'],n=3)
+DIFF bib51-iftags-kept                      ref(w=0,t=[],n=0) ftml(w=1,t=['Bibliography'],n=1)
+      ref items=[]
+      ftl items=[('1', '1', 'A')]
+DIFF bib52-iftags-closer-inside             ref(w=0,t=[],n=0) ftml(w=1,t=['Bibliography'],n=1)
+      ref items=[]
+      ftl items=[('1', '1', 'ab')]
+OK  bib53-tabview-residue                  ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+OK  bib54-trailing-paragraph               ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+DIFF bib55-dashes-typography                ref(w=1,t=['Bibliography'],n=1) ftml(w=1,t=['Bibliography'],n=1)
+      ref items=[('1', '1', 'aa &#8212; bb &#8212;- cc &#8230; dd')]
+      ftl items=[('1', '1', 'aa — bb —- cc … dd')]
+OK  bib56-no-bibliography                  ref(w=0,t=[],n=0) ftml(w=0,t=[],n=0)

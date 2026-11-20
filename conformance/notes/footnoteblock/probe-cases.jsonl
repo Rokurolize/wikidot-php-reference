@@ -1,0 +1,20 @@
+{"id": "after-notes", "source": "Intro[[footnote]]first note[[/footnote]] middle[[footnote]]second note[[/footnote]] out.\n\n[[footnoteblock]]"}
+{"id": "before-notes", "source": "[[footnoteblock]]\n\nIntro[[footnote]]first note[[/footnote]] middle[[footnote]]second note[[/footnote]] out."}
+{"id": "autoappend", "source": "Alpha[[footnote]]the only note[[/footnote]] beta. No explicit block anywhere."}
+{"id": "empty-block", "source": "Just text, no footnotes.\n\n[[footnoteblock]]"}
+{"id": "two-blocks", "source": "Alpha[[footnote]]note one[[/footnote]]\n\n[[footnoteblock]]\n\nBeta[[footnote]]note two[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "title", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"References\"]]"}
+{"id": "title-empty", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"\"]]"}
+{"id": "hide", "source": "Apple[[footnote]]Banana[[/footnote]]\n\n[[footnoteblock hide=\"true\"]]"}
+{"id": "bogus", "source": "Apple[[footnote]]Banana[[/footnote]]\n\n[[footnoteblock bogus=\"true\"]]"}
+{"id": "quote-block", "source": "A[[footnote]]n[[/footnote]]\n\n> [[footnoteblock]]"}
+{"id": "list-block", "source": "A[[footnote]]n[[/footnote]]\n\n* [[footnoteblock]]"}
+{"id": "div-block", "source": "A[[footnote]]n[[/footnote]]\n\n[[div]]\n[[footnoteblock]]\n[[/div]]"}
+{"id": "inline-block", "source": "prefix [[footnoteblock]] suffix A[[footnote]]n[[/footnote]]"}
+{"id": "uppercase", "source": "A[[footnote]]n[[/footnote]]\n\n[[FOOTNOTEBLOCK]]"}
+{"id": "malformed", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock"}
+{"id": "nested-bold", "source": "Claim[[footnote]]a **bold** and //italic// bit[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "quote-empty-line", "source": "> \n\nText[[footnote]]n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "list-empty-line", "source": "* \n\nText[[footnote]]n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "title-apostrophe", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"It's fine\"]]"}
+{"id": "title-special", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"A & B <C> \\\"Q\\\"\"]]"}

@@ -1,0 +1,12 @@
+{
+ "quote-empty-line": {
+  "fullname": "muse-probe-r2notes-fnb-quote-empty-line",
+  "source": "> \n\nText[[footnote]]n[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "list-empty-line": {
+  "fullname": "muse-probe-r2notes-fnb-list-empty-line",
+  "source": "* \n\nText[[footnote]]n[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ }
+}

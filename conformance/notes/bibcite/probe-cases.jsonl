@@ -1,0 +1,18 @@
+{"id": "p-id-defined", "source": "[[bibliography]]\n: alpha : Alpha source\n[[/bibliography]]\n\n((bibcite alpha))"}
+{"id": "p-id-two-cites", "source": "((bibcite alpha)) and ((bibcite beta))\n\n[[bibliography]]\n: alpha : A source\n: beta : B source\n[[/bibliography]]"}
+{"id": "p-id-forward", "source": "((bibcite alpha))\n\n[[bibliography]]\n: alpha : Alpha source\n[[/bibliography]]"}
+{"id": "p-undef", "source": "A((bibcite alpha))B"}
+{"id": "p-two-space", "source": "((bibcite  alpha))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]"}
+{"id": "p-three-space", "source": "((bibcite   A9))\n\n[[bibliography]]\n: A9 : A9 source\n[[/bibliography]]"}
+{"id": "p-tab-sep", "source": "((bibcite\tTabbed))\n\n[[bibliography]]\n: Tabbed : T\n[[/bibliography]]"}
+{"id": "p-newline-sep", "source": "((bibcite\nalpha))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]"}
+{"id": "p-dup-label", "source": "((bibcite bell)) ((bibcite guy))\n\n[[bibliography]]\n: bell : first bell\n: bell : second bell\n: guy : a guy\n[[/bibliography]]"}
+{"id": "p-case-mismatch", "source": "((bibcite ALPHA))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]"}
+{"id": "p-block-defined", "source": "[[bibcite alpha]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]"}
+{"id": "p-block-score-defined", "source": "[[bibcite_ alpha]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]"}
+{"id": "p-comment-label", "source": "[[bibliography]]\n: key : def\n[[/bibliography]]\n\n((bibcite k[!--x--]ey))"}
+{"id": "p-empty-label", "source": "X((bibcite ))Y"}
+{"id": "p-raw-owner", "source": "@@((bibcite alpha))@@"}
+{"id": "p-anchor", "source": "[[a href=\"/A\"]]x((bibcite b1))y[[/a]]\n\n[[bibliography]]\n: b1 : Title\n[[/bibliography]]"}
+{"id": "p-footnote", "source": "[[footnote]]A note[[/footnote]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]\n\n((bibcite alpha))"}
+{"id": "p-malformed", "source": "((bibcite alpha beta)) ((bibcite alpha\n\nbeta)) ((bibcite"}

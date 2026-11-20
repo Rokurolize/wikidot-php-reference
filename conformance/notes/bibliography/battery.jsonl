@@ -1,0 +1,56 @@
+{"id": "bib01-canonical-two", "source": "The first pulsar was observed by J. Bell and A. Hewish ((bibcite bell)).\nAnother reference [see ((bibcite guy))].\n\n[[bibliography]]\n: bell : Bell, J.; Hewish, A. //Observation of a Rapidly Pulsating Radio Source.// Nature 217, 709, 1968.\n: guy : Guy, R. K. //Modular Difference Sets.// Springer, 1994.\n[[/bibliography]]\n"}
+{"id": "bib02-cite-after", "source": "[[bibliography]]\n: alpha : Alpha reference.\n: beta : Beta reference.\n[[/bibliography]]\n\nSee ((bibcite alpha)) and ((bibcite beta)).\n"}
+{"id": "bib03-cite-both-sides", "source": "Before ((bibcite a)).\n\n[[bibliography]]\n: a : Entry A.\n[[/bibliography]]\n\nAfter ((bibcite a)).\n"}
+{"id": "bib04-duplicate-label", "source": "Cite ((bibcite bell)).\n\n[[bibliography]]\n: bell : First bell entry.\n: bell : Second bell entry.\n: guy : Guy entry.\n[[/bibliography]]\n"}
+{"id": "bib05-empty-block", "source": "Cite ((bibcite bell)).\n\n[[bibliography]]\n[[/bibliography]]\n"}
+{"id": "bib06-body-only-no-cite", "source": "[[bibliography]]\n: a : Entry A text.\n: b : Entry B text.\n[[/bibliography]]\n"}
+{"id": "bib07-alphabetical-order", "source": "((bibcite zeta)) ((bibcite alpha)) ((bibcite mu))\n\n[[bibliography]]\n: alpha : Alpha.\n: mu : Mu.\n: zeta : Zeta.\n[[/bibliography]]\n"}
+{"id": "bib08-citation-order", "source": "((bibcite c)) ((bibcite a)) ((bibcite b))\n\n[[bibliography]]\n: c : See C.\n: a : See A.\n: b : See B.\n[[/bibliography]]\n"}
+{"id": "bib09-definition-order", "source": "[[bibliography]]\n: z : Zed.\n: y : Why.\n: x : Ex.\n[[/bibliography]]\n\n((bibcite x)) ((bibcite y)) ((bibcite z))\n"}
+{"id": "bib10-two-blocks", "source": "Cite ((bibcite a)) and ((bibcite b)).\n\n[[bibliography]]\n: a : Entry A.\n[[/bibliography]]\n\nMiddle text.\n\n[[bibliography]]\n: b : Entry B.\n[[/bibliography]]\n"}
+{"id": "bib11-first-empty-second-full", "source": "[[bibliography]]\n[[/bibliography]]\n\n[[bibliography]]\n: a : Entry A.\n[[/bibliography]]\n"}
+{"id": "bib12-three-blocks", "source": "[[bibliography]]\n: a : A.\n[[/bibliography]]\n[[bibliography]]\n: b : B.\n[[/bibliography]]\n[[bibliography]]\n: c : C.\n[[/bibliography]]\n"}
+{"id": "bib13-title-double-quoted", "source": "[[bibliography title=\"Works Cited\"]]\n: a : Entry A.\n[[/bibliography]]\n"}
+{"id": "bib14-title-single-quoted", "source": "[[bibliography title='Works']]\n: a : Entry A.\n[[/bibliography]]\n"}
+{"id": "bib15-title-empty", "source": "[[bibliography title=\"\"]]\n: a : Entry A.\n[[/bibliography]]\n"}
+{"id": "bib16-title-special-chars", "source": "[[bibliography title=\"<Works & Sources>\"]]\n: a : A & B\n[[/bibliography]]\n"}
+{"id": "bib17-hide-yes", "source": "[[bibliography hide=\"yes\"]]\n: key : value\n[[/bibliography]]\n"}
+{"id": "bib18-hide-short-t", "source": "[[bibliography hide=\"t\"]]\n: k : V\n[[/bibliography]]\n"}
+{"id": "bib19-unknown-args", "source": "[[bibliography class=\"probe\" stray v7arg=\"one\"]]\n: a : Entry A.\n[[/bibliography]]\n"}
+{"id": "bib20-title-and-hide", "source": "[[bibliography title=\"Works\" hide=\"true\"]]\n: a : A\n[[/bibliography]]\n"}
+{"id": "bib21-unterminated", "source": "Before.\n\n[[bibliography]]\n: a : Entry A.\n"}
+{"id": "bib22-unterminated-empty", "source": "[[bibliography]]\n"}
+{"id": "bib23-name-case-uppercase", "source": "[[BIBLIOGRAPHY]]\n: a : A\n[[/BIBLIOGRAPHY]]\n"}
+{"id": "bib24-name-case-title", "source": "[[Bibliography]]\n: a : A\n[[/Bibliography]]\n"}
+{"id": "bib25-closer-uppercase", "source": "[[bibliography]]\n: a : A\n[[/BIBLIOGRAPHY]]\n"}
+{"id": "bib26-opener-leading-space", "source": "[[ bibliography]]\n: a : A\n[[/bibliography]]\n"}
+{"id": "bib27-opener-extra-close", "source": "[[bibliography]]]\n: a : A\n[[/bibliography]]\n"}
+{"id": "bib28-closer-trailing-spaces", "source": "[[bibliography]]\n: a : A\n[[/bibliography]]   \n\nafter\n"}
+{"id": "bib29-closer-trailing-tab", "source": "[[bibliography]]\n: a : A\n[[/bibliography]]\t\nafter\n"}
+{"id": "bib30-closer-trailing-text", "source": "start-[[bibliography]]\n: a : A\n[[/bibliography]]-middle\n"}
+{"id": "bib31-nested-bibliography", "source": "[[bibliography]]\n[[bibliography]]\nnested\n[[/bibliography]]\n[[/bibliography]]\n"}
+{"id": "bib32-overlap-bold-closer", "source": "[[bibliography]]\nouter [[bold]]inner\n[[/bibliography]][[/bold]]\n"}
+{"id": "bib33-inline-strong-em", "source": "((bibcite k))\n\n[[bibliography]]\n: k : aa **bold** and //italic// text\n[[/bibliography]]\n"}
+{"id": "bib34-inline-size-span", "source": "((bibcite k1)) ((bibcite k2))\n\n[[bibliography]]\n: k1 : aa [[size 150%]]bb[[/size]] cc\n: k2 : aa [[span]]bb[[/span]] cc\n[[/bibliography]]\n"}
+{"id": "bib35-line-anchored-list", "source": "[[bibliography]]\n: a : A\n* item one\n* item two\n[[/bibliography]]\n"}
+{"id": "bib36-line-anchored-heading", "source": "[[bibliography]]\n: a : A\n+ Heading\n[[/bibliography]]\n"}
+{"id": "bib37-bibcite-in-value", "source": "[[bibliography]]\n: alpha : ((bibcite alpha)) self\n[[/bibliography]]\n((bibcite alpha))\n"}
+{"id": "bib38-definition-separators", "source": "((bibcite a)) ((bibcite b)) ((bibcite c)) ((bibcite d)) ((bibcite e)) ((bibcite g)) ((bibcite h)) ((bibcite i))\n\n[[bibliography]]\n: a: Alpha.\n: b :Bravo.\n: c:  Charlie.\n: d :\tDelta.\n: i  : India.\n: e :\n\n: g: Golf.\n: h :Hotel.\n[[/bibliography]]\n"}
+{"id": "bib39-label-charset", "source": "((bibcite smith2020)) ((bibcite smith-2020)) ((bibcite alpha_2)) ((bibcite 2b))\n\n[[bibliography]]\n: smith2020 : Smith 2020.\n: smith-2020 : Never registered.\n: alpha_2 : Never registered.\n: 2b : Or not to be.\n[[/bibliography]]\n"}
+{"id": "bib40-tab-prefix-label", "source": "((bibcite alpha)) ((bibcite bell))\n\n[[bibliography]]\n: alpha : Alpha text.\n:\tbell : Bell text.\n[[/bibliography]]\n"}
+{"id": "bib41-next-line-value", "source": "((bibcite a)) ((bibcite b)) ((bibcite c)) ((bibcite d))\n\n[[bibliography]]\n: a:\nValue on next line.\n: b:\n: c : See text.\n: d:\n+ Not a heading.\n[[/bibliography]]\n"}
+{"id": "bib42-invalid-line-residual", "source": "((bibcite alpha)) ((bibcite omega))\n\n[[bibliography]]\n: bad-first : Bad first.\n: alpha : Alpha text.\n: bad-label : **bold** bad.\n: omega : Omega text.\ntrailing prose\n[[/bibliography]]\n"}
+{"id": "bib43-label-only-crossing", "source": "((bibcite alpha)) ((bibcite bell)) ((bibcite omega))\n\n[[bibliography]]\n: alpha : Alpha text.\n: bell\n: omega : Omega text.\n: solo\n[[/bibliography]]\n"}
+{"id": "bib44-whitespace-body", "source": "[[bibliography]]\n   \n\t\n[[/bibliography]]\n"}
+{"id": "bib45-footnote-then-bibliography", "source": "A claim[[footnote]]with a note[[/footnote]].\n\n[[bibliography]]\n: a : A\n[[/bibliography]]\n"}
+{"id": "bib46-bibliography-then-footnote", "source": "[[bibliography]]\n: a : A\n[[/bibliography]]\n\nA claim[[footnote]]with a note[[/footnote]].\n"}
+{"id": "bib47-bibliography-inside-footnote", "source": "[[footnote]]\n[[bibliography]]\n: a : A\n[[/bibliography]]\n[[/footnote]]\nafter\n"}
+{"id": "bib48-footnote-opened-in-bib-body", "source": "[[bibliography]]\n: a : A\n[[footnote]]\n: b : B\n[[/bibliography]]\n[[/footnote]]\nafter\n"}
+{"id": "bib49-bibliography-inside-list", "source": "[[ul]]\n[[li]]\n[[bibliography]]\n: a : A\n[[/bibliography]]\n[[/li]]\n[[/ul]]\nafter\n"}
+{"id": "bib50-item-inside-table", "source": "[[bibliography]]\n: a : A\n[[table]]\n[[row]]\n[[cell]]\n: b : B\n[[/cell]]\n[[/row]]\n[[/table]]\n: c : C\n[[/bibliography]]\nafter\n"}
+{"id": "bib51-iftags-kept", "source": "[[iftags -zzz]]\n[[bibliography]]\n: a : A\n[[/bibliography]]\n[[/iftags]]\nafter\n"}
+{"id": "bib52-iftags-closer-inside", "source": "[[bibliography]]\n: key : a[[iftags -zzz]]b\n[[/bibliography]]\nc[[/iftags]]d\n"}
+{"id": "bib53-tabview-residue", "source": "[[bibliography]]\n: key : Value\n[[tabview]]\n[[tab One]]\nBody one\n[[/tab]]\n[[/tabview]]\n[[/bibliography]]\n"}
+{"id": "bib54-trailing-paragraph", "source": "[[bibliography]]\n: key1 : Some reference\n\nafter para\n[[/bibliography]]\n"}
+{"id": "bib55-dashes-typography", "source": "((bibcite key1))\n\n[[bibliography]]\n: key1 : aa -- bb --- cc ... dd\n[[/bibliography]]\n"}
+{"id": "bib56-no-bibliography", "source": "Just a plain document with ((bibcite ghost)) and no bibliography block.\n"}

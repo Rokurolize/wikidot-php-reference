@@ -38,6 +38,12 @@ class Text_Wiki_Render_Xhtml_Bibliography extends Text_Wiki_Render {
      */
     
     function token($options) {
+        // The parse rule lays out opaque newline tokens around residual
+        // bibliography lines. They keep later line-anchored rules from
+        // forming in the joined body while still rendering as line breaks.
+        if ($options['type'] == 'nl') {
+            return "\n";
+        }
         //if(count($bibitems) == 0){return '';} // render nothing if no footnotes.
         if ($options['type'] == 'start') {
             $title = $options['title'];

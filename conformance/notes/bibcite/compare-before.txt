@@ -1,0 +1,10 @@
+=== before ===
+cases: ref=60 ftml=60 live=0
+bibc-12-def-tabbed-cite | ref=- | ftml=<a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a>
+bibc-13-def-two-space | ref=- | ftml=<a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a>
+bibc-33-undef-newline-after-bibcite | ref=<span class="error-inline">Bibliography item <em>alpha</em> not found.</span> | ftml=-
+raw whole-string equal: 0/60
+canonicalized whole-html equal: 28/60
+bibcite-shape equal after quote decode + suffix mask: 57/60
+bibcite-shape raw equal: 39/60
+anon bibcite anchor fragments in ref: 22; error spans: 23

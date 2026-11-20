@@ -1,0 +1,34 @@
+Bibcite three-side compare report, 2026-11-20. All numbers below are produced by compare.py from the cached JSONL files in this directory; the two compare files are reproduced verbatim after the summary. The ftml side is the shared dumper at HEAD 6a029bf416651e0d68408f7c977b4cae30ebec55. "Bibcite shape" means the ordered sequence of bibcite anchor fragments and undefined-label error spans in a render, with the random numeric id suffix removed and &#39; decoded to a literal quote before comparison; raw shape comparison does neither normalization.
+
+Battery (60 whole documents): raw whole-string reference-vs-ftml agreement 0/60; canonicalized whole-html agreement 28/60; raw bibcite-shape agreement 39/60; bibcite-shape agreement after quote decode and suffix removal 57/60, the 3 disagreements being bibc-12-def-tabbed-cite, bibc-13-def-two-space and bibc-33-undef-newline-after-bibcite; the reference emits 22 bibcite anchors and 23 undefined-label error spans across the battery; token mode has 59 usable records (bibc-38 token output is the harness json_encode false noted to root), 37 cases with a Bibcite token and 45 Bibcite tokens in total, identical before and after because no rule file was changed; all four stderr sidecars are empty.
+
+Live probes (18 saved-page views on sandbox-for-codex.wikidot.com, prefix muse-probe-r2notes-bibc-): 18/18 valid, 18/18 stable across two anonymous fetches, 18/18 saved-source matching; reference-vs-live bibcite-shape agreement 18/18; ftml-vs-live bibcite-shape agreement 14/18, the 4 disagreements being p-two-space, p-three-space, p-tab-sep and p-newline-sep; reference-vs-ftml raw shape agreement 7/18 and canonicalized shape agreement 14/18; token mode has 18 usable records, 10 cases with a Bibcite token and 12 Bibcite tokens in total; raw whole-string agreement 0/18 and canonicalized whole-html agreement 5/18 because live and ftml share frame surface the fossil serializer does not produce. Of the 18 probes, 8 produce a resolved citation on live, 2 produce only an undefined-label error span and 8 produce only literal text; the anchored live ids are per-save random (for example 82730a, 81110a, 73487a and 67729a) while ftml uses its fixed 81349a seed and the reference omits the suffix, classified as serving-layer scope S1.
+
+Corrections: none. Both Bibcite files are byte-identical to their preserved before-bytes; ref-render-after.jsonl and ref-tokens-after.jsonl are byte-identical copies of the before snapshots, verified with cmp.
+
+=== before ===
+cases: ref=60 ftml=60 live=0
+bibc-12-def-tabbed-cite | ref=- | ftml=<a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a>
+bibc-13-def-two-space | ref=- | ftml=<a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a>
+bibc-33-undef-newline-after-bibcite | ref=<span class="error-inline">Bibliography item <em>alpha</em> not found.</span> | ftml=-
+raw whole-string equal: 0/60
+canonicalized whole-html equal: 28/60
+bibcite-shape equal after quote decode + suffix mask: 57/60
+bibcite-shape raw equal: 39/60
+anon bibcite anchor fragments in ref: 22; error spans: 23
+
+
+=== probe-before ===
+cases: ref=18 ftml=18 live=18
+p-two-space | ref=- | ftml=<a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a> | live=
+p-three-space | ref=- | ftml=<a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a> | live=
+p-tab-sep | ref=- | ftml=<a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a> | live=
+p-newline-sep | ref=<a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference('bibitem-1')">1</a> | ftml=- | live=<a href="javascript:;" class="bibcite" id="bibcite-1-12625a" onclick="WIKIDOT.page.utils.scrollToReference('bibitem-1')">1</a>
+raw whole-string equal: 0/18
+canonicalized whole-html equal: 5/18
+bibcite-shape equal after quote decode + suffix mask: 14/18
+bibcite-shape raw equal: 7/18
+anon bibcite anchor fragments in ref: 10; error spans: 2
+live captures: 18 valid, 18 stable, 18 source-matching
+ref-vs-live bibcite-shape equal: 18/18
+ftml-vs-live bibcite-shape equal: 14/18

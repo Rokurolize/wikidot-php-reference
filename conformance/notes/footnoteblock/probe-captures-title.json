@@ -1,0 +1,22 @@
+{
+ "title-apostrophe": {
+  "fullname": "muse-probe-r2notes-fnb-title-apostrophe",
+  "html": "<p>A<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">It's fine</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. n</div>\n</div>",
+  "html_sha256": "f799b2a6608917a91bed290b0d74c558c4e44742f269c1b8107edccea9eef405",
+  "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"It's fine\"]]",
+  "source_sha256": "efd3f518b17ec20ecd86eacac39c1e6ddef1b58bc02afbe030a52554b387cbd4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "title-special": {
+  "fullname": "muse-probe-r2notes-fnb-title-special",
+  "html": "<p>A<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">A &amp; B &lt;C&gt; &quot;Q&quot;</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. n</div>\n</div>",
+  "html_sha256": "5686486aaaf9fcfebc77b65294ec2afeea1af406a3a039b13023f3a5a8adf838",
+  "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"A & B <C> \\\"Q\\\"\"]]",
+  "source_sha256": "a2da5212b0ad0959a9f804dd490d26c07010ad7ac2731dcc5532c59b90eedbb8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

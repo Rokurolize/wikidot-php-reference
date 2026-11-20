@@ -1,0 +1,226 @@
+[
+ {
+  "id": "bib01-canonical-two",
+  "note": "two entries, citations before the block (forward references)"
+ },
+ {
+  "id": "bib02-cite-after",
+  "note": "citations after the block (backward references)"
+ },
+ {
+  "id": "bib03-cite-both-sides",
+  "note": "same label cited before and after the block"
+ },
+ {
+  "id": "bib04-duplicate-label",
+  "note": "duplicate label: live numbers 1.,2.,2. and cites resolve to last"
+ },
+ {
+  "id": "bib05-empty-block",
+  "note": "empty body still emits the wrapper and title"
+ },
+ {
+  "id": "bib06-body-only-no-cite",
+  "note": "no citations at all"
+ },
+ {
+  "id": "bib07-alphabetical-order",
+  "note": "entries in alphabetical order, cited out of order"
+ },
+ {
+  "id": "bib08-citation-order",
+  "note": "definition order is citation order"
+ },
+ {
+  "id": "bib09-definition-order",
+  "note": "reverse-alphabetical definition order"
+ },
+ {
+  "id": "bib10-two-blocks",
+  "note": "second block stays literal, its label undefined"
+ },
+ {
+  "id": "bib11-first-empty-second-full",
+  "note": "first empty block consumes the single match"
+ },
+ {
+  "id": "bib12-three-blocks",
+  "note": "only first of three forms"
+ },
+ {
+  "id": "bib13-title-double-quoted",
+  "note": "title option with double quotes"
+ },
+ {
+  "id": "bib14-title-single-quoted",
+  "note": "title option with single quotes"
+ },
+ {
+  "id": "bib15-title-empty",
+  "note": "explicit empty title suppresses the title div"
+ },
+ {
+  "id": "bib16-title-special-chars",
+  "note": "title HTML-escaped in the render"
+ },
+ {
+  "id": "bib17-hide-yes",
+  "note": "live ignores hide; default title still shown"
+ },
+ {
+  "id": "bib18-hide-short-t",
+  "note": "live ignores hide=t"
+ },
+ {
+  "id": "bib19-unknown-args",
+  "note": "unknown arguments ignored for title"
+ },
+ {
+  "id": "bib20-title-and-hide",
+  "note": "title wins, hide ignored"
+ },
+ {
+  "id": "bib21-unterminated",
+  "note": "no closer: opener and deflist stay literal"
+ },
+ {
+  "id": "bib22-unterminated-empty",
+  "note": "bare opener stays literal"
+ },
+ {
+  "id": "bib23-name-case-uppercase",
+  "note": "uppercase name does not form; deflist parses"
+ },
+ {
+  "id": "bib24-name-case-title",
+  "note": "mixed-case name does not form"
+ },
+ {
+  "id": "bib25-closer-uppercase",
+  "note": "opener lower, closer uppercase: no match"
+ },
+ {
+  "id": "bib26-opener-leading-space",
+  "note": "leading space inside opener brackets: no match"
+ },
+ {
+  "id": "bib27-opener-extra-close",
+  "note": "extra ] in opener head: no match"
+ },
+ {
+  "id": "bib28-closer-trailing-spaces",
+  "note": "trailing spaces after closer are allowed"
+ },
+ {
+  "id": "bib29-closer-trailing-tab",
+  "note": "trailing tab after closer: live accepts, fossil regex uses [ ]*"
+ },
+ {
+  "id": "bib30-closer-trailing-text",
+  "note": "text before opener and after closer: neither forms"
+ },
+ {
+  "id": "bib31-nested-bibliography",
+  "note": "nested opener is literal inside the joined body"
+ },
+ {
+  "id": "bib32-overlap-bold-closer",
+  "note": "closer not at EOL: whole thing literal"
+ },
+ {
+  "id": "bib33-inline-strong-em",
+  "note": "unanchored inline markup forms in the joined body"
+ },
+ {
+  "id": "bib34-inline-size-span",
+  "note": "size/span are AfterJoinUnanchored"
+ },
+ {
+  "id": "bib35-line-anchored-list",
+  "note": "list lines cannot form in the joined body; become residual"
+ },
+ {
+  "id": "bib36-line-anchored-heading",
+  "note": "heading line cannot form in joined body"
+ },
+ {
+  "id": "bib37-bibcite-in-value",
+  "note": "self citation inside the joined value (Bibcite runs after join)"
+ },
+ {
+  "id": "bib38-definition-separators",
+  "note": "separator spacing and tabs around the label colon"
+ },
+ {
+  "id": "bib39-label-charset",
+  "note": "label charset: only [a-z0-9]+ registers"
+ },
+ {
+  "id": "bib40-tab-prefix-label",
+  "note": "tab immediately after first colon"
+ },
+ {
+  "id": "bib41-next-line-value",
+  "note": "value starting on the following line after join"
+ },
+ {
+  "id": "bib42-invalid-line-residual",
+  "note": "non-definition line becomes residual inside the wrapper"
+ },
+ {
+  "id": "bib43-label-only-crossing",
+  "note": "label-only lines crossing into the next definition"
+ },
+ {
+  "id": "bib44-whitespace-body",
+  "note": "whitespace-only body"
+ },
+ {
+  "id": "bib45-footnote-then-bibliography",
+  "note": "footnote before the bibliography in one document"
+ },
+ {
+  "id": "bib46-bibliography-then-footnote",
+  "note": "footnote after the bibliography in one document"
+ },
+ {
+  "id": "bib47-bibliography-inside-footnote",
+  "note": "bibliography does not form inside a footnote body"
+ },
+ {
+  "id": "bib48-footnote-opened-in-bib-body",
+  "note": "footnote opened inside bibliography body keeps tail inside"
+ },
+ {
+  "id": "bib49-bibliography-inside-list",
+  "note": "bibliography forms inside a list item"
+ },
+ {
+  "id": "bib50-item-inside-table",
+  "note": "Bibitem ran before join so nested cell definition becomes an entry"
+ },
+ {
+  "id": "bib51-iftags-kept",
+  "note": "iftags gate keeps the bibliography"
+ },
+ {
+  "id": "bib52-iftags-closer-inside",
+  "note": "iftags gate crosses the bibliography closer"
+ },
+ {
+  "id": "bib53-tabview-residue",
+  "note": "tabview is line-anchored and cannot form in the joined body"
+ },
+ {
+  "id": "bib54-trailing-paragraph",
+  "note": "trailing paragraph inside the body becomes residual"
+ },
+ {
+  "id": "bib55-dashes-typography",
+  "note": "typography pass runs after join, unanchored"
+ },
+ {
+  "id": "bib56-no-bibliography",
+  "note": "control: undefined cite with no block at all"
+ }
+]

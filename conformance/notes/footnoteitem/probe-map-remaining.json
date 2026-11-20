@@ -1,0 +1,12 @@
+{
+  "p-with-bib": {
+    "fullname": "muse-probe-r2notes-fni-p-with-bib",
+    "source": "A[[footnote]]note[[/footnote]] [[bibcite alpha]]\n\n[[bibliography]]\n[[bibitem alpha]]Entry[[/bibitem]]\n[[/bibliography]]\n\n[[footnoteblock]]",
+    "action": "created"
+  },
+  "p-unterminated": {
+    "fullname": "muse-probe-r2notes-fni-p-unterminated",
+    "source": "X[[footnote]]bad no close\n\n[[footnoteblock]]",
+    "action": "created"
+  }
+}

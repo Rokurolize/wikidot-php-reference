@@ -1,0 +1,6 @@
+{"id": "bib51-iftags-kept", "source": "[[iftags -zzz]]\n[[bibliography]]\n: a : A\n[[/bibliography]]\n[[/iftags]]\nafter\n"}
+{"id": "bib51-iftags-kept-unrelated", "source": "[[iftags -zzz]]\n[[bibliography]]\n: a : A\n[[/bibliography]]\n[[/iftags]]\nafter\n", "tags": ["unrelated"]}
+{"id": "bib51-iftags-kept-untagged-empty", "source": "[[iftags -zzz]]\n[[bibliography]]\n: a : A\n[[/bibliography]]\n[[/iftags]]\nafter\n", "tags": []}
+{"id": "bib52-iftags-closer-inside", "source": "[[bibliography]]\n: key : a[[iftags -zzz]]b\n[[/bibliography]]\nc[[/iftags]]d\n"}
+{"id": "bib52-iftags-closer-inside-unrelated", "source": "[[bibliography]]\n: key : a[[iftags -zzz]]b\n[[/bibliography]]\nc[[/iftags]]d\n", "tags": ["unrelated"]}
+{"id": "bib52-iftags-closer-inside-untagged-empty", "source": "[[bibliography]]\n: key : a[[iftags -zzz]]b\n[[/bibliography]]\nc[[/iftags]]d\n", "tags": []}

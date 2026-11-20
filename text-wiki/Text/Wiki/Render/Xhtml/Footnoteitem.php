@@ -37,11 +37,24 @@ class Text_Wiki_Render_Xhtml_Footnoteitem extends Text_Wiki_Render {
     
     function token($options) {
         if ($options['type'] == 'start') {
-            
+
             $idPrefix = $this->wiki->getRenderConf('xhtml', 'footnote', 'id_prefix');
             $id = $options['id'];
             $out = '<div class="footnote-footer" id="footnote-' . $idPrefix . $id . '">';
-            $out .= '<a href="javascript:;" ' . 'onclick="WIKIDOT.page.utils.scrollToReference(\'footnoteref-' . $idPrefix . $id . '\')">' . $id . '</a>. ';
+            $out .= '<a href="javascript:;" ' . 'onclick="WIKIDOT.page.utils.scrollToReference(\'footnoteref-' . $idPrefix . $id . '\')">' . $id . '</a>.';
+            // Live emits a separator space after the back-reference only when
+            // the collected note body is non-empty. The fossil appended it
+            // unconditionally, leaving a stray space before </div> on an empty
+            // note; live settles this on muse-probe-r2notes-fni-p-empty and
+            // -p-empty-ws (both fold a whitespace-only body to empty because
+            // Footnote::process trims the collected content). Footnote::process
+            // stores the trimmed body at vars['footnotes'][id - 1], so the same
+            // state the block render reads is available here.
+            $footnotes = $this->wiki->vars['footnotes'] ?? array();
+            $body = $footnotes[$id - 1] ?? '';
+            if ($body !== '') {
+                $out .= ' ';
+            }
             return $out;
         }
         if ($options['type'] == 'end') {

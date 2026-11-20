@@ -1,0 +1,22 @@
+{"id": "p-one", "source": "A[[footnote]]Alpha[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-two", "source": "A[[footnote]]one[[/footnote]] B[[footnote]]two[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-empty", "source": "A[[footnote]][[/footnote]] B[[footnote]]plain[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-empty-ws", "source": "A[[footnote]]   [[/footnote]] B\n\n[[footnoteblock]]"}
+{"id": "p-bold", "source": "X[[footnote]]**bold** and //italic//[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-multiline", "source": "X[[footnote]]\nline one\nline two\n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-nested", "source": "X[[footnote]]outer[[footnote]]inner[[/footnote]]tail[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-block-first", "source": "[[footnoteblock]]\n\nA[[footnote]]note A[[/footnote]]"}
+{"id": "p-block-middle", "source": "A[[footnote]]note A[[/footnote]]\n\n[[footnoteblock]]\n\nB[[footnote]]note B[[/footnote]]"}
+{"id": "p-no-block", "source": "A[[footnote]]note A[[/footnote]] and no block."}
+{"id": "p-two-blocks", "source": "A[[footnote]]A[[/footnote]]\n[[footnoteblock]]\n\nB[[footnote]]B[[/footnote]]\n[[footnoteblock]]"}
+{"id": "p-title", "source": "A[[footnote]]note[[/footnote]]\n\n[[footnoteblock title=\"My Notes\"]]"}
+{"id": "p-title-empty", "source": "A[[footnote]]note[[/footnote]]\n\n[[footnoteblock title=\"\"]]"}
+{"id": "p-list-body", "source": "X[[footnote]]\n* one\n* two\n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-quote-body", "source": "X[[footnote]]\n> quoted\n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-html-special", "source": "X[[footnote]]A \" B ' C & D < E > F[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-unicode", "source": "Café[[footnote]]résumé 日本語 🎯[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-link", "source": "X[[footnote]][http://example.com link][[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-with-bib", "source": "A[[footnote]]note[[/footnote]] [[bibcite alpha]]\n\n[[bibliography]]\n[[bibitem alpha]]Entry[[/bibitem]]\n[[/bibliography]]\n\n[[footnoteblock]]"}
+{"id": "p-unterminated", "source": "X[[footnote]]bad no close\n\n[[footnoteblock]]"}
+{"id": "p-comment-body", "source": "X[[footnote]][[comment]]hidden[[/comment]][[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "p-div-first", "source": "X[[footnote]]\n[[div]]\nblock body\n[[/div]]\n[[/footnote]]\n\n[[footnoteblock]]"}

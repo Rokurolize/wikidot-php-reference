@@ -1,0 +1,24 @@
+p-space-only-body -> muse-probe-r2notes-bibi-p-space-only-body stable=True saved_source_matches=True valid=True
+p-tab-only-body -> muse-probe-r2notes-bibi-p-tab-only-body stable=True saved_source_matches=True valid=True
+{
+ "p-space-only-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-space-only-body",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1.</div>\n</div>",
+  "html_sha256": "6af1459e22cb0f72b700ca96831adf263a789ebb79fa294cca08c8d8e5d09a7f",
+  "source": "[[bibliography]]\n: a :   \n[[/bibliography]]",
+  "source_sha256": "c4d67807f758e3367e940ed244bf183854d67243413c313f49f84dfc485251d3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-tab-only-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-tab-only-body",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1.</div>\n</div>",
+  "html_sha256": "6af1459e22cb0f72b700ca96831adf263a789ebb79fa294cca08c8d8e5d09a7f",
+  "source": "[[bibliography]]\n: a :\t\n[[/bibliography]]",
+  "source_sha256": "d53a475cadd71c7ab46f24bae8b7f0d4429bb83da856d8012a10517ca47d4d09",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

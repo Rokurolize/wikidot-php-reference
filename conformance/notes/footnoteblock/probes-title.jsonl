@@ -1,0 +1,2 @@
+{"id": "title-apostrophe", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"It's fine\"]]"}
+{"id": "title-special", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"A & B <C> \\\"Q\\\"\"]]"}

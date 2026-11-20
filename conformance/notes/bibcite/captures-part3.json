@@ -1,0 +1,52 @@
+{
+ "p-block-defined": {
+  "fullname": "muse-probe-r2notes-bibc-p-block-defined",
+  "html": "<p>[[bibcite alpha]]</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>",
+  "html_sha256": "f920af58b6972c583650c2608d21e3decf03de74006e3dc4c60741e761faa175",
+  "source": "[[bibcite alpha]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "source_sha256": "9b0ca84c0110f9edffaf7fcf5b047e0bf2081471d9fa65f8bf1392ee1904d811",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-block-score-defined": {
+  "fullname": "muse-probe-r2notes-bibc-p-block-score-defined",
+  "html": "<p>[[bibcite_ alpha]]</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>",
+  "html_sha256": "cbdd8c93a41cdbab92f1f5e35d18fed71ce2b3180cd541b61bdb01acb439f414",
+  "source": "[[bibcite_ alpha]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "source_sha256": "cc9759b4565a1820dc49b53129aeab86f7a58a5c4d360e4bfce7a21870ed368a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-comment-label": {
+  "fullname": "muse-probe-r2notes-bibc-p-comment-label",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. def</div>\n</div>\n<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-87687a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>",
+  "html_sha256": "b5942de9f05b41c90831645b64240ac46f19144c6117103c009d4fa5bf84ac03",
+  "source": "[[bibliography]]\n: key : def\n[[/bibliography]]\n\n((bibcite k[!--x--]ey))",
+  "source_sha256": "742d089e65a44ee32ca25a8b27793435620ab8334165f052830bf04e3325826c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-empty-label": {
+  "fullname": "muse-probe-r2notes-bibc-p-empty-label",
+  "html": "<p>X((bibcite ))Y</p>",
+  "html_sha256": "f2d07d66fabcab1a26796bc063034e1a615561d7315c9d5da9b3a5381f09bd9e",
+  "source": "X((bibcite ))Y",
+  "source_sha256": "b298b96c9591897b0313a2550c5b7c5a18f5f2e957da0a7905ac674d8ca7c58f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-raw-owner": {
+  "fullname": "muse-probe-r2notes-bibc-p-raw-owner",
+  "html": "<p><span style=\"white-space: pre-wrap;\">((bibcite&#32;alpha))</span></p>",
+  "html_sha256": "1959051c90f70f0934adc63e07215a3592d7337002faaacf4a67cfda7b8c33ee",
+  "source": "@@((bibcite alpha))@@",
+  "source_sha256": "0834697c9b4d314034afce48b530342ad70f88482f43c905d25b8287869a7e89",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

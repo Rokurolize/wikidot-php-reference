@@ -48,11 +48,14 @@ class Text_Wiki_Parse_Bibitem extends Text_Wiki_Parse {
         $this->wiki->vars['bibitems'][$label] = $content;
         $id = count($this->wiki->vars['bibitemIds']) + 1;
         $this->wiki->vars['bibitemIds'][$label] = $id;
+        // R2-notes: live renders an empty entry as "N." with no trailing
+        // space, so tell the render rule whether the trimmed body is empty.
         return $this->wiki->addToken($this->rule, 
                 array(
                     'label' => $label, 
                     'id' => $id, 
-                    'type' => 'start')) .
+                    'type' => 'start',
+                    'empty' => ($content === ''))) .
                  $content . $this->wiki->addToken(
                         $this->rule, 
                         array(

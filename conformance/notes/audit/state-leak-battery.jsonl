@@ -1,0 +1,7 @@
+{"id": "a-fn-define", "source": "Alpha [[footnote]]note one[[/footnote]] body.\n[[footnoteblock]]"}
+{"id": "b-fn-empty-block", "source": "Bravo has no notes.\n[[footnoteblock]]"}
+{"id": "c-fn-new-number", "source": "Charlie [[footnote]]fresh note[[/footnote]] body.\n[[footnoteblock]]"}
+{"id": "d-bib-define", "source": "[[bibliography]]\n: keyone : Entry One text\n[[/bibliography]]\nDelta cites ((bibcite keyone))."}
+{"id": "e-bib-cite-alone", "source": "Echo cites ((bibcite keyone)) with no bibliography."}
+{"id": "f-bib-new", "source": "[[bibliography]]\n: keytwo : Entry Two text\n[[/bibliography]]\nFoxtrot cites ((bibcite keytwo))."}
+{"id": "g-fn-bib-both", "source": "Golf [[footnote]]golf note[[/footnote]] and ((bibcite keyone)).\n[[footnoteblock]]"}

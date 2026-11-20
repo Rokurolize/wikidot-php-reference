@@ -1,0 +1,102 @@
+{
+ "x-fn-in-div": {
+  "fullname": "muse-probe-r2notes-x-x-fn-in-div",
+  "source": "[[div]]\nfirst [[footnote]]in div[[/footnote]] text\n[[/div]]\nsecond [[footnote]]outside[[/footnote]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x-fn-in-collapsible": {
+  "fullname": "muse-probe-r2notes-x-x-fn-in-collapsible",
+  "source": "[[collapsible]]\n[[footnote]]in collapsible[[/footnote]]\n[[/collapsible]]\n[[footnote]]outside[[/footnote]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x-fn-in-code": {
+  "fullname": "muse-probe-r2notes-x-x-fn-in-code",
+  "source": "[[code]]\n[[footnote]]literal[[/footnote]]\n[[/code]]\nreal [[footnote]]note[[/footnote]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x-fn-in-quote": {
+  "fullname": "muse-probe-r2notes-x-x-fn-in-quote",
+  "source": "> quoted [[footnote]]in quote[[/footnote]]\nplain [[footnote]]outside[[/footnote]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x-fn-in-list": {
+  "fullname": "muse-probe-r2notes-x-x-fn-in-list",
+  "source": "* item [[footnote]]in list[[/footnote]]\n* second\nplain [[footnote]]outside[[/footnote]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x-fn-block-before": {
+  "fullname": "muse-probe-r2notes-x-x-fn-block-before",
+  "source": "[[footnoteblock]]\nfirst [[footnote]]one[[/footnote]]\nsecond [[footnote]]two[[/footnote]]",
+  "action": "created"
+ },
+ "x-fn-block-between": {
+  "fullname": "muse-probe-r2notes-x-x-fn-block-between",
+  "source": "first [[footnote]]one[[/footnote]]\n[[footnoteblock]]\nsecond [[footnote]]two[[/footnote]]",
+  "action": "created"
+ },
+ "x-fn-block-multiple": {
+  "fullname": "muse-probe-r2notes-x-x-fn-block-multiple",
+  "source": "first [[footnote]]one[[/footnote]]\n[[footnoteblock]]\nsecond [[footnote]]two[[/footnote]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x-fn-block-none": {
+  "fullname": "muse-probe-r2notes-x-x-fn-block-none",
+  "source": "first [[footnote]]one[[/footnote]]\nsecond [[footnote]]two[[/footnote]]",
+  "action": "created"
+ },
+ "x-fn-block-title": {
+  "fullname": "muse-probe-r2notes-x-x-fn-block-title",
+  "source": "[[footnote]]one[[/footnote]]\n[[footnoteblock title=\"Custom\"]]",
+  "action": "created"
+ },
+ "x-bib-def-order": {
+  "fullname": "muse-probe-r2notes-x-x-bib-def-order",
+  "source": "[[bibliography]]\n: alpha : Alpha text\n: beta : Beta text\n: gamma : Gamma text\n[[/bibliography]]\nCite ((bibcite gamma)) and ((bibcite alpha)).",
+  "action": "created"
+ },
+ "x-bib-unordered-labels": {
+  "fullname": "muse-probe-r2notes-x-x-bib-unordered-labels",
+  "source": "[[bibliography]]\n: zeta : Zeta text\n: alpha : Alpha text\n: mu : Mu text\n[[/bibliography]]\nCite ((bibcite mu)) and ((bibcite zeta)).",
+  "action": "created"
+ },
+ "x-bib-cite-before": {
+  "fullname": "muse-probe-r2notes-x-x-bib-cite-before",
+  "source": "Cite ((bibcite gamma)) then ((bibcite alpha)) then ((bibcite beta)).\n[[bibliography]]\n: alpha : Alpha text\n: beta : Beta text\n: gamma : Gamma text\n[[/bibliography]]",
+  "action": "created"
+ },
+ "x-bib-dup-label": {
+  "fullname": "muse-probe-r2notes-x-x-bib-dup-label",
+  "source": "[[bibliography]]\n: k : First k\n: k : Second k\n[[/bibliography]]\nCite ((bibcite k)).",
+  "action": "created"
+ },
+ "x-bib-undefined": {
+  "fullname": "muse-probe-r2notes-x-x-bib-undefined",
+  "source": "Cite ((bibcite missing)) with no such entry.\n[[bibliography]]\n: k : A real entry\n[[/bibliography]]",
+  "action": "created"
+ },
+ "x-mix-fn-bib": {
+  "fullname": "muse-probe-r2notes-x-x-mix-fn-bib",
+  "source": "[[footnote]]note one[[/footnote]] and ((bibcite k)).\n[[bibliography]]\n: k : Entry k\n[[/bibliography]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x-mix-fn-in-bib": {
+  "fullname": "muse-probe-r2notes-x-x-mix-fn-in-bib",
+  "source": "[[bibliography]]\n: k : Entry with [[footnote]]nested note[[/footnote]]\n[[/bibliography]]\nCite ((bibcite k)).\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x-mix-bibcite-in-fn": {
+  "fullname": "muse-probe-r2notes-x-x-mix-bibcite-in-fn",
+  "source": "[[footnote]]see ((bibcite k))[[/footnote]]\n[[bibliography]]\n: k : Entry k\n[[/bibliography]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x-fn-unterminated": {
+  "fullname": "muse-probe-r2notes-x-x-fn-unterminated",
+  "source": "[[footnote]]no closing tag\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x-bib-unterminated": {
+  "fullname": "muse-probe-r2notes-x-x-bib-unterminated",
+  "source": "[[bibliography]]\n: k : no closing tag",
+  "action": "created"
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "inc-src": {
+  "fullname": "muse-probe-r2notes-x-inc-src",
+  "source": "included [[footnote]]from include[[/footnote]] text",
+  "action": "created"
+ },
+ "inc-holder": {
+  "fullname": "muse-probe-r2notes-x-inc-holder",
+  "source": "before [[footnote]]local[[/footnote]]\n[[include muse-probe-r2notes-x-inc-src]]\n[[footnoteblock]]",
+  "action": "created"
+ }
+}

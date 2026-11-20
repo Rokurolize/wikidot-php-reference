@@ -1,0 +1,42 @@
+{
+ "inline-block": {
+  "fullname": "muse-probe-r2notes-fnb-inline-block",
+  "html": "prefix<br />\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. n</div>\n</div>\n<br />\nsuffix A<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup>",
+  "html_sha256": "476db052d020490e83b68f96e01ca8d95e9d930cd3819ab57a6c3858ad9013db",
+  "source": "prefix [[footnoteblock]] suffix A[[footnote]]n[[/footnote]]",
+  "source_sha256": "a9d25f970140d1ad24e7cc586420d29681742a36e5262dc71dc515b6a53e17b1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "uppercase": {
+  "fullname": "muse-probe-r2notes-fnb-uppercase",
+  "html": "<p>A<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<p>[[FOOTNOTEBLOCK]]</p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. n</div>\n</div>",
+  "html_sha256": "3b6085573fe5daed9e4deb31250bfef95fbad0cf78089296be1fed7f22c1e6cc",
+  "source": "A[[footnote]]n[[/footnote]]\n\n[[FOOTNOTEBLOCK]]",
+  "source_sha256": "0b8fda551d17ef311bd640e5eb68d76c105420c4e1d7573261a2b0ce0e0f802a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "malformed": {
+  "fullname": "muse-probe-r2notes-fnb-malformed",
+  "html": "<p>A<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<p>[[footnoteblock</p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. n</div>\n</div>",
+  "html_sha256": "0f50e14a9db9b6201841b1ec3891282eade6d5fa9c26e45848d5a3265c33a13d",
+  "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock",
+  "source_sha256": "251f4848cb770bcad51f9867db3e7160543d4896f02ddc86597cc0c71afd20e4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nested-bold": {
+  "fullname": "muse-probe-r2notes-fnb-nested-bold",
+  "html": "<p>Claim<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. a <strong>bold</strong> and <em>italic</em> bit</div>\n</div>",
+  "html_sha256": "8e944a208b912303af07e30f8e3cea3d1aa09463d125d6a87c9ad2c1979005a0",
+  "source": "Claim[[footnote]]a **bold** and //italic// bit[[/footnote]]\n\n[[footnoteblock]]",
+  "source_sha256": "ab71b51af5d4356b94d50dee512775b79948fa0ef0a3d2735223deddb08a908a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,125 @@
+p-empty-body -> muse-probe-r2notes-bibi-p-empty-body (created)
+p-empty-then-entry -> muse-probe-r2notes-bibi-p-empty-then-entry (created)
+2026-11-20 13:23:32,760 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85344504', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2notes-bibi-p-empty-blank-entry', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p-empty-blank-entry -> muse-probe-r2notes-bibi-p-empty-blank-entry (created)
+p-two-empty -> muse-probe-r2notes-bibi-p-two-empty (created)
+p-dup -> muse-probe-r2notes-bibi-p-dup (created)
+p-nested-markup -> muse-probe-r2notes-bibi-p-nested-markup (created)
+p-self-cite -> muse-probe-r2notes-bibi-p-self-cite (created)
+2026-11-20 13:25:46,092 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85344559', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2notes-bibi-p-nested-footnote', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p-nested-footnote -> muse-probe-r2notes-bibi-p-nested-footnote (created)
+p-uppercase-label -> muse-probe-r2notes-bibi-p-uppercase-label (created)
+p-digit-label -> muse-probe-r2notes-bibi-p-digit-label (created)
+p-hyphen-label -> muse-probe-r2notes-bibi-p-hyphen-label (created)
+p-two-spaces-before-colon -> muse-probe-r2notes-bibi-p-two-spaces-before-colon (created)
+p-no-space-after-colon -> muse-probe-r2notes-bibi-p-no-space-after-colon (created)
+p-title-option -> muse-probe-r2notes-bibi-p-title-option (created)
+p-hide-option -> muse-probe-r2notes-bibi-p-hide-option (created)
+p-forward-cite -> muse-probe-r2notes-bibi-p-forward-cite (created)
+p-special-chars -> muse-probe-r2notes-bibi-p-special-chars (created)
+p-span-inline -> muse-probe-r2notes-bibi-p-span-inline (created)
+p-mixed-lines -> muse-probe-r2notes-bibi-p-mixed-lines (created)
+p-trim-body -> muse-probe-r2notes-bibi-p-trim-body (created)
+20 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p-empty-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-empty-body",
+  "source": "[[bibliography]]\n: a :\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-empty-then-entry": {
+  "fullname": "muse-probe-r2notes-bibi-p-empty-then-entry",
+  "source": "[[bibliography]]\n: a :\n: b : Bravo.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-empty-blank-entry": {
+  "fullname": "muse-probe-r2notes-bibi-p-empty-blank-entry",
+  "source": "[[bibliography]]\n: a :\n\n: b : Bravo.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-two-empty": {
+  "fullname": "muse-probe-r2notes-bibi-p-two-empty",
+  "source": "[[bibliography]]\n: a :\n: b :\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-dup": {
+  "fullname": "muse-probe-r2notes-bibi-p-dup",
+  "source": "Cite ((bibcite bell)).\n\n[[bibliography]]\n: bell : First bell.\n: bell : Second bell.\n: guy : Guy.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-nested-markup": {
+  "fullname": "muse-probe-r2notes-bibi-p-nested-markup",
+  "source": "[[bibliography]]\n: a : aa **bold** //ital// {{code}} end.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-self-cite": {
+  "fullname": "muse-probe-r2notes-bibi-p-self-cite",
+  "source": "[[bibliography]]\n: a : See also ((bibcite a)).\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-nested-footnote": {
+  "fullname": "muse-probe-r2notes-bibi-p-nested-footnote",
+  "source": "[[bibliography]]\n: a : Source with a note[[footnote]]the note[[/footnote]].\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-uppercase-label": {
+  "fullname": "muse-probe-r2notes-bibi-p-uppercase-label",
+  "source": "[[bibliography]]\n: Alpha : Uppercase label.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-digit-label": {
+  "fullname": "muse-probe-r2notes-bibi-p-digit-label",
+  "source": "[[bibliography]]\n: 2b : Digit-leading label.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-hyphen-label": {
+  "fullname": "muse-probe-r2notes-bibi-p-hyphen-label",
+  "source": "((bibcite smith-2020))\n\n[[bibliography]]\n: smith-2020 : Never registered.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-two-spaces-before-colon": {
+  "fullname": "muse-probe-r2notes-bibi-p-two-spaces-before-colon",
+  "source": "[[bibliography]]\n: a  : Alpha.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-no-space-after-colon": {
+  "fullname": "muse-probe-r2notes-bibi-p-no-space-after-colon",
+  "source": "[[bibliography]]\n: a :Bravo.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-title-option": {
+  "fullname": "muse-probe-r2notes-bibi-p-title-option",
+  "source": "[[bibliography title=\"Works Cited\"]]\n: a : Alpha.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-hide-option": {
+  "fullname": "muse-probe-r2notes-bibi-p-hide-option",
+  "source": "[[bibliography hide=\"true\"]]\n: a : Alpha.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-forward-cite": {
+  "fullname": "muse-probe-r2notes-bibi-p-forward-cite",
+  "source": "See ((bibcite a)).\n\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-special-chars": {
+  "fullname": "muse-probe-r2notes-bibi-p-special-chars",
+  "source": "[[bibliography]]\n: a : A & B < C > D \"q\" 's'.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-span-inline": {
+  "fullname": "muse-probe-r2notes-bibi-p-span-inline",
+  "source": "[[bibliography]]\n: a : aa [[span]]bb[[/span]] cc\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-mixed-lines": {
+  "fullname": "muse-probe-r2notes-bibi-p-mixed-lines",
+  "source": "[[bibliography]]\n: a : Alpha.\n: b :Bravo.\n: c : Charlie.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-trim-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-trim-body",
+  "source": "[[bibliography]]\n: a :    Alpha source.   \n[[/bibliography]]",
+  "action": "created"
+ }
+}

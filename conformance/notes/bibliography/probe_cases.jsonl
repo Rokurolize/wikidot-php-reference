@@ -1,0 +1,16 @@
+{"id": "p01-canonical", "source": "The first pulsar was observed by J. Bell and A. Hewish ((bibcite bell)).\nAnother reference [see ((bibcite guy))].\n\n[[bibliography]]\n: bell : Bell, J.; Hewish, A. //Observation of a Rapidly Pulsating Radio Source.// Nature 217, 709, 1968.\n: guy : Guy, R. K. //Modular Difference Sets.// Springer, 1994.\n[[/bibliography]]"}
+{"id": "p02-duplicate", "source": "Cite ((bibcite bell)).\n\n[[bibliography]]\n: bell : First bell entry.\n: bell : Second bell entry.\n: guy : Guy entry.\n[[/bibliography]]"}
+{"id": "p03-title-empty", "source": "[[bibliography title=\"\"]]\n: a : Entry A.\n[[/bibliography]]"}
+{"id": "p04-title-special", "source": "[[bibliography title=\"<Works & Sources>\"]]\n: a : A & B\n[[/bibliography]]"}
+{"id": "p05-residual", "source": "((bibcite alpha)) ((bibcite omega))\n\n[[bibliography]]\n: bad-first : Bad first.\n: alpha : Alpha text.\n: bad-label : **bold** bad.\n: omega : Omega text.\ntrailing prose\n[[/bibliography]]"}
+{"id": "p06-separators", "source": "((bibcite a)) ((bibcite b)) ((bibcite c)) ((bibcite d)) ((bibcite e)) ((bibcite g)) ((bibcite h)) ((bibcite i))\n\n[[bibliography]]\n: a: Alpha.\n: b :Bravo.\n: c:  Charlie.\n: d :\tDelta.\n: i  : India.\n: e :\n\n: g: Golf.\n: h :Hotel.\n[[/bibliography]]"}
+{"id": "p07-tab-prefix", "source": "((bibcite alpha)) ((bibcite bell))\n\n[[bibliography]]\n: alpha : Alpha text.\n:\tbell : Bell text.\n[[/bibliography]]"}
+{"id": "p08-closer-tab", "source": "[[bibliography]]\n: a : A\n[[/bibliography]]\t\nafter"}
+{"id": "p09-opener-extra-close", "source": "[[bibliography]]]\n: a : A\n[[/bibliography]]"}
+{"id": "p10-nested", "source": "[[bibliography]]\n[[bibliography]]\nnested\n[[/bibliography]]\n[[/bibliography]]"}
+{"id": "p11-iftags-kept", "source": "[[iftags -zzz]]\n[[bibliography]]\n: a : A\n[[/bibliography]]\n[[/iftags]]\nafter"}
+{"id": "p12-iftags-cross", "source": "[[bibliography]]\n: key : a[[iftags -zzz]]b\n[[/bibliography]]\nc[[/iftags]]d"}
+{"id": "p13-footnote-open", "source": "[[bibliography]]\n: a : A\n[[footnote]]\n: b : B\n[[/bibliography]]\n[[/footnote]]\nafter"}
+{"id": "p14-item-table", "source": "[[bibliography]]\n: a : A\n[[table]]\n[[row]]\n[[cell]]\n: b : B\n[[/cell]]\n[[/row]]\n[[/table]]\n: c : C\n[[/bibliography]]\nafter"}
+{"id": "p15-two-blocks", "source": "Cite ((bibcite a)) and ((bibcite b)).\n\n[[bibliography]]\n: a : Entry A.\n[[/bibliography]]\n\nMiddle text.\n\n[[bibliography]]\n: b : Entry B.\n[[/bibliography]]"}
+{"id": "p16-hide", "source": "[[bibliography hide=\"yes\"]]\n: key : value\n[[/bibliography]]"}

@@ -1,0 +1,52 @@
+{"id": "b01-single", "source": "[[bibliography]]\n: a : Alpha source.\n[[/bibliography]]"}
+{"id": "b02-two", "source": "[[bibliography]]\n: a : Alpha source.\n: b : Bravo source.\n[[/bibliography]]"}
+{"id": "b03-three", "source": "[[bibliography]]\n: a : A.\n: b : B.\n: c : C.\n[[/bibliography]]"}
+{"id": "b04-dup-adjacent", "source": "[[bibliography]]\n: a : First A.\n: a : Second A.\n[[/bibliography]]"}
+{"id": "b05-dup-separated", "source": "[[bibliography]]\n: a : First A.\n: b : B.\n: a : Second A.\n[[/bibliography]]"}
+{"id": "b06-dup-then-third", "source": "Cite ((bibcite bell)).\n\n[[bibliography]]\n: bell : First bell.\n: bell : Second bell.\n: guy : Guy.\n[[/bibliography]]"}
+{"id": "b07-empty-body", "source": "[[bibliography]]\n: a :\n[[/bibliography]]"}
+{"id": "b08-two-empty", "source": "[[bibliography]]\n: a :\n: b :\n[[/bibliography]]"}
+{"id": "b09-empty-then-value", "source": "[[bibliography]]\n: a :\n: b : Bravo.\n[[/bibliography]]"}
+{"id": "b10-italic", "source": "[[bibliography]]\n: a : //Observation// of a source.\n[[/bibliography]]"}
+{"id": "b11-bold", "source": "[[bibliography]]\n: a : A **bold** source.\n[[/bibliography]]"}
+{"id": "b12-link", "source": "[[bibliography]]\n: a : See [http://example.com example].\n[[/bibliography]]"}
+{"id": "b13-self-cite", "source": "[[bibliography]]\n: a : See also ((bibcite a)).\n[[/bibliography]]"}
+{"id": "b14-nested-footnote", "source": "[[bibliography]]\n: a : Source with a note[[footnote]]the note[[/footnote]].\n[[/bibliography]]"}
+{"id": "b15-nested-code", "source": "[[bibliography]]\n: a : Source {{code here}} end.\n[[/bibliography]]"}
+{"id": "b16-forward-cite", "source": "See ((bibcite a)).\n\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]"}
+{"id": "b17-backward-cite", "source": "[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n\nSee ((bibcite a))."}
+{"id": "b18-undefined-cite", "source": "See ((bibcite zzz)).\n\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]"}
+{"id": "b19-cite-only", "source": "No bibliography here, only ((bibcite a))."}
+{"id": "b20-block-only", "source": "[[bibliography]]\n: a : Alpha.\n[[/bibliography]]"}
+{"id": "b21-title", "source": "[[bibliography title=\"Works Cited\"]]\n: a : Alpha.\n[[/bibliography]]"}
+{"id": "b22-hide", "source": "[[bibliography hide=\"true\"]]\n: a : Alpha.\n[[/bibliography]]"}
+{"id": "b23-title-hide", "source": "[[bibliography title=\"Refs\" hide=\"true\"]]\n: a : Alpha.\n: b : Bravo.\n[[/bibliography]]"}
+{"id": "b24-label-hyphen", "source": "((bibcite smith-2020))\n\n[[bibliography]]\n: smith-2020 : Never registered.\n[[/bibliography]]"}
+{"id": "b25-label-underscore", "source": "((bibcite alpha_2))\n\n[[bibliography]]\n: alpha_2 : Never registered.\n[[/bibliography]]"}
+{"id": "b26-no-space-before-colon", "source": "[[bibliography]]\n: a: Alpha.\n[[/bibliography]]"}
+{"id": "b27-two-spaces-before-colon", "source": "[[bibliography]]\n: a  : Alpha.\n[[/bibliography]]"}
+{"id": "b28-no-space-after-colon", "source": "[[bibliography]]\n: a :Bravo.\n[[/bibliography]]"}
+{"id": "b29-unterminated", "source": "[[bibliography]]\n: a : Alpha.\n"}
+{"id": "b30-no-entries", "source": "Intro text.\n\n[[bibliography]]\nnot a definition\n[[/bibliography]]\n\nOutro."}
+{"id": "b31-mixed-valid-invalid", "source": "[[bibliography]]\n: a : Alpha.\n: b :Bravo.\n: c : Charlie.\n[[/bibliography]]"}
+{"id": "b32-tab-separators", "source": "[[bibliography]]\n: a :\tAlpha.\n: b\t: Bravo.\n[[/bibliography]]"}
+{"id": "b33-uppercase-label", "source": "[[bibliography]]\n: Alpha : Uppercase label.\n[[/bibliography]]"}
+{"id": "b34-digit-label", "source": "[[bibliography]]\n: 2b : Digit-leading label.\n[[/bibliography]]"}
+{"id": "b35-in-div", "source": "[[div]]\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n[[/div]]"}
+{"id": "b36-in-collapsible", "source": "[[collapsible]]\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n[[/collapsible]]"}
+{"id": "b37-in-table", "source": "[[table]]\n[[row]]\n[[cell]]\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "b38-adjacent-footnoteblock", "source": "Text[[footnote]]note[[/footnote]].\n\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n\n[[footnoteblock]]"}
+{"id": "b39-adjacent-footnote", "source": "[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n\nText[[footnote]]note[[/footnote]]."}
+{"id": "b40-two-blocks", "source": "Cite ((bibcite a)) and ((bibcite b)).\n\n[[bibliography]]\n: a : Entry A.\n[[/bibliography]]\n\nMiddle.\n\n[[bibliography]]\n: b : Entry B.\n[[/bibliography]]"}
+{"id": "b41-mixed-markup", "source": "[[bibliography]]\n: a : aa **bold** //ital// {{code}} end.\n[[/bibliography]]"}
+{"id": "b42-special-chars", "source": "[[bibliography]]\n: a : A & B < C > D \"q\" 's'.\n[[/bibliography]]"}
+{"id": "b43-multiple-cites", "source": "((bibcite a)) and ((bibcite a)) and ((bibcite b)).\n\n[[bibliography]]\n: a : Alpha.\n: b : Bravo.\n[[/bibliography]]"}
+{"id": "b44-leading-trailing-space", "source": "[[bibliography]]\n: a :    Alpha source.   \n[[/bibliography]]"}
+{"id": "b45-colon-in-body", "source": "[[bibliography]]\n: a : See http://example.com:8080/x now.\n[[/bibliography]]"}
+{"id": "b46-long-label", "source": "((bibcite abcdefghij1234))\n\n[[bibliography]]\n: abcdefghij1234 : Long label.\n[[/bibliography]]"}
+{"id": "b47-dup-nested-markup", "source": "[[bibliography]]\n: a : //First//.\n: a : **Second**.\n: b : Third.\n[[/bibliography]]"}
+{"id": "b48-empty-block-cite", "source": "Cite ((bibcite bell)).\n\n[[bibliography]]\n[[/bibliography]]"}
+{"id": "b49-span-inline", "source": "[[bibliography]]\n: a : aa [[span]]bb[[/span]] cc\n[[/bibliography]]"}
+{"id": "b50-size-inline", "source": "[[bibliography]]\n: a : aa [[size 150%]]bb[[/size]] cc\n[[/bibliography]]"}
+{"id": "b51-blank-lines", "source": "[[bibliography]]\n: a : Alpha.\n\n: b : Bravo.\n\n[[/bibliography]]"}
+{"id": "b52-title-empty", "source": "[[bibliography title=\"\"]]\n: a : Alpha.\n[[/bibliography]]"}

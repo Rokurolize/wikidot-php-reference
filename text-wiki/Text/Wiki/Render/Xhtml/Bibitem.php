@@ -42,7 +42,11 @@ class Text_Wiki_Render_Xhtml_Bibitem extends Text_Wiki_Render {
             $idPrefix = $this->getConf("id_prefix");
             $label = $options['label'];
             $id = $options['id'];
-            $out = '<div class="bibitem" id="bibitem-' . $idPrefix . $id . '">' . $id . '. ';
+            // R2-notes: live omits the space after the period when the
+            // entry body is empty (saved-page probes p-empty-body,
+            // p-empty-blank-entry, p-space-only-body, p-tab-only-body).
+            $separator = empty($options['empty']) ? ' ' : '';
+            $out = '<div class="bibitem" id="bibitem-' . $idPrefix . $id . '">' . $id . '.' . $separator;
             return $out;
         }
         if ($options['type'] == "end") {

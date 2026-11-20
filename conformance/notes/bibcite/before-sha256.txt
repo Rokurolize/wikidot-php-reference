@@ -1,0 +1,4 @@
+7ac06082bcc29162df265d87cc05f2c33538f3c3b06b8b862d67948dfd983cb0  ref-php/text-wiki/Text/Wiki/Parse/Default/Bibcite.php
+bd8c1fb65cd425fc837dba0db4a937087e01df3a971af5657abf217983273fdc  ref-php/text-wiki/Text/Wiki/Render/Xhtml/Bibcite.php
+7ac06082bcc29162df265d87cc05f2c33538f3c3b06b8b862d67948dfd983cb0  conformance-refphp/notes/bibcite/BibciteParse.php.before.php
+bd8c1fb65cd425fc837dba0db4a937087e01df3a971af5657abf217983273fdc  conformance-refphp/notes/bibcite/BibciteRender.php.before.php

@@ -1,0 +1,77 @@
+2026-11-20 13:21:54,254 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85344466', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2notes-fn-case-close', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+case-close -> muse-probe-r2notes-fn-case-close (created)
+case-open -> muse-probe-r2notes-fn-case-open (created)
+mixed-case -> muse-probe-r2notes-fn-mixed-case (created)
+uppercase -> muse-probe-r2notes-fn-uppercase (created)
+numbering -> muse-probe-r2notes-fn-numbering (created)
+2026-11-20 13:23:28,155 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85344501', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2notes-fn-unterminated', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+unterminated -> muse-probe-r2notes-fn-unterminated (created)
+empty-body -> muse-probe-r2notes-fn-empty-body (created)
+nested -> muse-probe-r2notes-fn-nested (created)
+fused-close -> muse-probe-r2notes-fn-fused-close (created)
+space-opener -> muse-probe-r2notes-fn-space-opener (created)
+quote-encoding -> muse-probe-r2notes-fn-quote-encoding (created)
+block-title -> muse-probe-r2notes-fn-block-title (created)
+12 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "case-close": {
+  "fullname": "muse-probe-r2notes-fn-case-close",
+  "source": "A[[footnote]]two[[/FootNote]] B[[footnote]]three[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "case-open": {
+  "fullname": "muse-probe-r2notes-fn-case-open",
+  "source": "A[[FootNote]]up[[/FootNote]] B[[footnote]]low[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "mixed-case": {
+  "fullname": "muse-probe-r2notes-fn-mixed-case",
+  "source": "A[[FootNote]]mix[[/footnote]] B[[footnote]]two[[/FootNote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "uppercase": {
+  "fullname": "muse-probe-r2notes-fn-uppercase",
+  "source": "A[[FOOTNOTE]]up[[/FOOTNOTE]] B[[footnote]]low[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "numbering": {
+  "fullname": "muse-probe-r2notes-fn-numbering",
+  "source": "A[[footnote]]alpha[[/footnote]]\n[[footnoteblock]]\nB[[footnote]]beta[[/footnote]] C[[footnote]]gamma[[/footnote]]",
+  "action": "created"
+ },
+ "unterminated": {
+  "fullname": "muse-probe-r2notes-fn-unterminated",
+  "source": "A[[footnote]]never closed B[[footnote]]also open\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "empty-body": {
+  "fullname": "muse-probe-r2notes-fn-empty-body",
+  "source": "A[[footnote]][[/footnote]] B[[footnote]] x [[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "nested": {
+  "fullname": "muse-probe-r2notes-fn-nested",
+  "source": "before[[footnote]]outer [[footnote]]inner[[/footnote]] after[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "fused-close": {
+  "fullname": "muse-probe-r2notes-fn-fused-close",
+  "source": "x [[footnote]]note[[/footnote]]] y\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "space-opener": {
+  "fullname": "muse-probe-r2notes-fn-space-opener",
+  "source": "A[[footnote ]]sp[[/footnote]] B[[footnote]]two[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "quote-encoding": {
+  "fullname": "muse-probe-r2notes-fn-quote-encoding",
+  "source": "A[[footnote]]note[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "block-title": {
+  "fullname": "muse-probe-r2notes-fn-block-title",
+  "source": "Apple[[footnote]]Banana[[/footnote]]\n\n[[footnoteblock title=\"The feet-noten\"]]",
+  "action": "created"
+ }
+}

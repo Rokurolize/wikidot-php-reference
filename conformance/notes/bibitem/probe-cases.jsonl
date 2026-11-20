@@ -1,0 +1,22 @@
+{"id": "p-empty-body", "source": "[[bibliography]]\n: a :\n[[/bibliography]]"}
+{"id": "p-empty-then-entry", "source": "[[bibliography]]\n: a :\n: b : Bravo.\n[[/bibliography]]"}
+{"id": "p-empty-blank-entry", "source": "[[bibliography]]\n: a :\n\n: b : Bravo.\n[[/bibliography]]"}
+{"id": "p-two-empty", "source": "[[bibliography]]\n: a :\n: b :\n[[/bibliography]]"}
+{"id": "p-dup", "source": "Cite ((bibcite bell)).\n\n[[bibliography]]\n: bell : First bell.\n: bell : Second bell.\n: guy : Guy.\n[[/bibliography]]"}
+{"id": "p-nested-markup", "source": "[[bibliography]]\n: a : aa **bold** //ital// {{code}} end.\n[[/bibliography]]"}
+{"id": "p-self-cite", "source": "[[bibliography]]\n: a : See also ((bibcite a)).\n[[/bibliography]]"}
+{"id": "p-nested-footnote", "source": "[[bibliography]]\n: a : Source with a note[[footnote]]the note[[/footnote]].\n[[/bibliography]]"}
+{"id": "p-uppercase-label", "source": "[[bibliography]]\n: Alpha : Uppercase label.\n[[/bibliography]]"}
+{"id": "p-digit-label", "source": "[[bibliography]]\n: 2b : Digit-leading label.\n[[/bibliography]]"}
+{"id": "p-hyphen-label", "source": "((bibcite smith-2020))\n\n[[bibliography]]\n: smith-2020 : Never registered.\n[[/bibliography]]"}
+{"id": "p-two-spaces-before-colon", "source": "[[bibliography]]\n: a  : Alpha.\n[[/bibliography]]"}
+{"id": "p-no-space-after-colon", "source": "[[bibliography]]\n: a :Bravo.\n[[/bibliography]]"}
+{"id": "p-title-option", "source": "[[bibliography title=\"Works Cited\"]]\n: a : Alpha.\n[[/bibliography]]"}
+{"id": "p-hide-option", "source": "[[bibliography hide=\"true\"]]\n: a : Alpha.\n[[/bibliography]]"}
+{"id": "p-forward-cite", "source": "See ((bibcite a)).\n\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]"}
+{"id": "p-special-chars", "source": "[[bibliography]]\n: a : A & B < C > D \"q\" 's'.\n[[/bibliography]]"}
+{"id": "p-span-inline", "source": "[[bibliography]]\n: a : aa [[span]]bb[[/span]] cc\n[[/bibliography]]"}
+{"id": "p-mixed-lines", "source": "[[bibliography]]\n: a : Alpha.\n: b :Bravo.\n: c : Charlie.\n[[/bibliography]]"}
+{"id": "p-trim-body", "source": "[[bibliography]]\n: a :    Alpha source.   \n[[/bibliography]]"}
+{"id": "p-space-only-body", "source": "[[bibliography]]\n: a :   \n[[/bibliography]]"}
+{"id": "p-tab-only-body", "source": "[[bibliography]]\n: a :\t\n[[/bibliography]]"}

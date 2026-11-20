@@ -1,0 +1,112 @@
+{
+ "p-empty-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-empty-body",
+  "source": "[[bibliography]]\n: a :\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-empty-then-entry": {
+  "fullname": "muse-probe-r2notes-bibi-p-empty-then-entry",
+  "source": "[[bibliography]]\n: a :\n: b : Bravo.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-empty-blank-entry": {
+  "fullname": "muse-probe-r2notes-bibi-p-empty-blank-entry",
+  "source": "[[bibliography]]\n: a :\n\n: b : Bravo.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-two-empty": {
+  "fullname": "muse-probe-r2notes-bibi-p-two-empty",
+  "source": "[[bibliography]]\n: a :\n: b :\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-dup": {
+  "fullname": "muse-probe-r2notes-bibi-p-dup",
+  "source": "Cite ((bibcite bell)).\n\n[[bibliography]]\n: bell : First bell.\n: bell : Second bell.\n: guy : Guy.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-nested-markup": {
+  "fullname": "muse-probe-r2notes-bibi-p-nested-markup",
+  "source": "[[bibliography]]\n: a : aa **bold** //ital// {{code}} end.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-self-cite": {
+  "fullname": "muse-probe-r2notes-bibi-p-self-cite",
+  "source": "[[bibliography]]\n: a : See also ((bibcite a)).\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-nested-footnote": {
+  "fullname": "muse-probe-r2notes-bibi-p-nested-footnote",
+  "source": "[[bibliography]]\n: a : Source with a note[[footnote]]the note[[/footnote]].\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-uppercase-label": {
+  "fullname": "muse-probe-r2notes-bibi-p-uppercase-label",
+  "source": "[[bibliography]]\n: Alpha : Uppercase label.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-digit-label": {
+  "fullname": "muse-probe-r2notes-bibi-p-digit-label",
+  "source": "[[bibliography]]\n: 2b : Digit-leading label.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-hyphen-label": {
+  "fullname": "muse-probe-r2notes-bibi-p-hyphen-label",
+  "source": "((bibcite smith-2020))\n\n[[bibliography]]\n: smith-2020 : Never registered.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-two-spaces-before-colon": {
+  "fullname": "muse-probe-r2notes-bibi-p-two-spaces-before-colon",
+  "source": "[[bibliography]]\n: a  : Alpha.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-no-space-after-colon": {
+  "fullname": "muse-probe-r2notes-bibi-p-no-space-after-colon",
+  "source": "[[bibliography]]\n: a :Bravo.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-title-option": {
+  "fullname": "muse-probe-r2notes-bibi-p-title-option",
+  "source": "[[bibliography title=\"Works Cited\"]]\n: a : Alpha.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-hide-option": {
+  "fullname": "muse-probe-r2notes-bibi-p-hide-option",
+  "source": "[[bibliography hide=\"true\"]]\n: a : Alpha.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-forward-cite": {
+  "fullname": "muse-probe-r2notes-bibi-p-forward-cite",
+  "source": "See ((bibcite a)).\n\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-special-chars": {
+  "fullname": "muse-probe-r2notes-bibi-p-special-chars",
+  "source": "[[bibliography]]\n: a : A & B < C > D \"q\" 's'.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-span-inline": {
+  "fullname": "muse-probe-r2notes-bibi-p-span-inline",
+  "source": "[[bibliography]]\n: a : aa [[span]]bb[[/span]] cc\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-mixed-lines": {
+  "fullname": "muse-probe-r2notes-bibi-p-mixed-lines",
+  "source": "[[bibliography]]\n: a : Alpha.\n: b :Bravo.\n: c : Charlie.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-trim-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-trim-body",
+  "source": "[[bibliography]]\n: a :    Alpha source.   \n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-space-only-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-space-only-body",
+  "source": "[[bibliography]]\n: a :   \n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-tab-only-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-tab-only-body",
+  "source": "[[bibliography]]\n: a :\t\n[[/bibliography]]",
+  "action": "created"
+ }
+}

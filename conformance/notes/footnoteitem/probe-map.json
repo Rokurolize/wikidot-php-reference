@@ -1,0 +1,102 @@
+{
+ "p-one": {
+  "fullname": "muse-probe-r2notes-fni-p-one",
+  "source": "A[[footnote]]Alpha[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-two": {
+  "fullname": "muse-probe-r2notes-fni-p-two",
+  "source": "A[[footnote]]one[[/footnote]] B[[footnote]]two[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-empty": {
+  "fullname": "muse-probe-r2notes-fni-p-empty",
+  "source": "A[[footnote]][[/footnote]] B[[footnote]]plain[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-empty-ws": {
+  "fullname": "muse-probe-r2notes-fni-p-empty-ws",
+  "source": "A[[footnote]]   [[/footnote]] B\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-bold": {
+  "fullname": "muse-probe-r2notes-fni-p-bold",
+  "source": "X[[footnote]]**bold** and //italic//[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-multiline": {
+  "fullname": "muse-probe-r2notes-fni-p-multiline",
+  "source": "X[[footnote]]\nline one\nline two\n[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-nested": {
+  "fullname": "muse-probe-r2notes-fni-p-nested",
+  "source": "X[[footnote]]outer[[footnote]]inner[[/footnote]]tail[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-block-first": {
+  "fullname": "muse-probe-r2notes-fni-p-block-first",
+  "source": "[[footnoteblock]]\n\nA[[footnote]]note A[[/footnote]]",
+  "action": "created"
+ },
+ "p-block-middle": {
+  "fullname": "muse-probe-r2notes-fni-p-block-middle",
+  "source": "A[[footnote]]note A[[/footnote]]\n\n[[footnoteblock]]\n\nB[[footnote]]note B[[/footnote]]",
+  "action": "created"
+ },
+ "p-no-block": {
+  "fullname": "muse-probe-r2notes-fni-p-no-block",
+  "source": "A[[footnote]]note A[[/footnote]] and no block.",
+  "action": "created"
+ },
+ "p-two-blocks": {
+  "fullname": "muse-probe-r2notes-fni-p-two-blocks",
+  "source": "A[[footnote]]A[[/footnote]]\n[[footnoteblock]]\n\nB[[footnote]]B[[/footnote]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-title": {
+  "fullname": "muse-probe-r2notes-fni-p-title",
+  "source": "A[[footnote]]note[[/footnote]]\n\n[[footnoteblock title=\"My Notes\"]]",
+  "action": "created"
+ },
+ "p-title-empty": {
+  "fullname": "muse-probe-r2notes-fni-p-title-empty",
+  "source": "A[[footnote]]note[[/footnote]]\n\n[[footnoteblock title=\"\"]]",
+  "action": "created"
+ },
+ "p-list-body": {
+  "fullname": "muse-probe-r2notes-fni-p-list-body",
+  "source": "X[[footnote]]\n* one\n* two\n[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-quote-body": {
+  "fullname": "muse-probe-r2notes-fni-p-quote-body",
+  "source": "X[[footnote]]\n> quoted\n[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-html-special": {
+  "fullname": "muse-probe-r2notes-fni-p-html-special",
+  "source": "X[[footnote]]A \" B ' C & D < E > F[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-unicode": {
+  "fullname": "muse-probe-r2notes-fni-p-unicode",
+  "source": "Café[[footnote]]résumé 日本語 🎯[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-link": {
+  "fullname": "muse-probe-r2notes-fni-p-link",
+  "source": "X[[footnote]][http://example.com link][[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-with-bib": {
+  "fullname": "muse-probe-r2notes-fni-p-with-bib",
+  "source": "A[[footnote]]note[[/footnote]] [[bibcite alpha]]\n\n[[bibliography]]\n[[bibitem alpha]]Entry[[/bibitem]]\n[[/bibliography]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-unterminated": {
+  "fullname": "muse-probe-r2notes-fni-p-unterminated",
+  "source": "X[[footnote]]bad no close\n\n[[footnoteblock]]",
+  "action": "created"
+ }
+}

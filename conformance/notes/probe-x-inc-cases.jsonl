@@ -1,0 +1,2 @@
+{"id": "inc-src", "source": "included [[footnote]]from include[[/footnote]] text"}
+{"id": "inc-holder", "source": "before [[footnote]]local[[/footnote]]\n[[include muse-probe-r2notes-x-inc-src]]\n[[footnoteblock]]"}

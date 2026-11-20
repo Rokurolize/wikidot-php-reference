@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+"""Emit the Bibitem R2-notes differential battery as JSONL (whole documents)."""
+import json
+
+C = [
+    ("b01-single", "[[bibliography]]\n: a : Alpha source.\n[[/bibliography]]"),
+    ("b02-two", "[[bibliography]]\n: a : Alpha source.\n: b : Bravo source.\n[[/bibliography]]"),
+    ("b03-three", "[[bibliography]]\n: a : A.\n: b : B.\n: c : C.\n[[/bibliography]]"),
+    ("b04-dup-adjacent", "[[bibliography]]\n: a : First A.\n: a : Second A.\n[[/bibliography]]"),
+    ("b05-dup-separated", "[[bibliography]]\n: a : First A.\n: b : B.\n: a : Second A.\n[[/bibliography]]"),
+    ("b06-dup-then-third", "Cite ((bibcite bell)).\n\n[[bibliography]]\n: bell : First bell.\n: bell : Second bell.\n: guy : Guy.\n[[/bibliography]]"),
+    ("b07-empty-body", "[[bibliography]]\n: a :\n[[/bibliography]]"),
+    ("b08-two-empty", "[[bibliography]]\n: a :\n: b :\n[[/bibliography]]"),
+    ("b09-empty-then-value", "[[bibliography]]\n: a :\n: b : Bravo.\n[[/bibliography]]"),
+    ("b10-italic", "[[bibliography]]\n: a : //Observation// of a source.\n[[/bibliography]]"),
+    ("b11-bold", "[[bibliography]]\n: a : A **bold** source.\n[[/bibliography]]"),
+    ("b12-link", "[[bibliography]]\n: a : See [http://example.com example].\n[[/bibliography]]"),
+    ("b13-self-cite", "[[bibliography]]\n: a : See also ((bibcite a)).\n[[/bibliography]]"),
+    ("b14-nested-footnote", "[[bibliography]]\n: a : Source with a note[[footnote]]the note[[/footnote]].\n[[/bibliography]]"),
+    ("b15-nested-code", "[[bibliography]]\n: a : Source {{code here}} end.\n[[/bibliography]]"),
+    ("b16-forward-cite", "See ((bibcite a)).\n\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]"),
+    ("b17-backward-cite", "[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n\nSee ((bibcite a))."),
+    ("b18-undefined-cite", "See ((bibcite zzz)).\n\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]"),
+    ("b19-cite-only", "No bibliography here, only ((bibcite a))."),
+    ("b20-block-only", "[[bibliography]]\n: a : Alpha.\n[[/bibliography]]"),
+    ("b21-title", "[[bibliography title=\"Works Cited\"]]\n: a : Alpha.\n[[/bibliography]]"),
+    ("b22-hide", "[[bibliography hide=\"true\"]]\n: a : Alpha.\n[[/bibliography]]"),
+    ("b23-title-hide", "[[bibliography title=\"Refs\" hide=\"true\"]]\n: a : Alpha.\n: b : Bravo.\n[[/bibliography]]"),
+    ("b24-label-hyphen", "((bibcite smith-2020))\n\n[[bibliography]]\n: smith-2020 : Never registered.\n[[/bibliography]]"),
+    ("b25-label-underscore", "((bibcite alpha_2))\n\n[[bibliography]]\n: alpha_2 : Never registered.\n[[/bibliography]]"),
+    ("b26-no-space-before-colon", "[[bibliography]]\n: a: Alpha.\n[[/bibliography]]"),
+    ("b27-two-spaces-before-colon", "[[bibliography]]\n: a  : Alpha.\n[[/bibliography]]"),
+    ("b28-no-space-after-colon", "[[bibliography]]\n: a :Bravo.\n[[/bibliography]]"),
+    ("b29-unterminated", "[[bibliography]]\n: a : Alpha.\n"),
+    ("b30-no-entries", "Intro text.\n\n[[bibliography]]\nnot a definition\n[[/bibliography]]\n\nOutro."),
+    ("b31-mixed-valid-invalid", "[[bibliography]]\n: a : Alpha.\n: b :Bravo.\n: c : Charlie.\n[[/bibliography]]"),
+    ("b32-tab-separators", "[[bibliography]]\n: a :\tAlpha.\n: b\t: Bravo.\n[[/bibliography]]"),
+    ("b33-uppercase-label", "[[bibliography]]\n: Alpha : Uppercase label.\n[[/bibliography]]"),
+    ("b34-digit-label", "[[bibliography]]\n: 2b : Digit-leading label.\n[[/bibliography]]"),
+    ("b35-in-div", "[[div]]\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n[[/div]]"),
+    ("b36-in-collapsible", "[[collapsible]]\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n[[/collapsible]]"),
+    ("b37-in-table", "[[table]]\n[[row]]\n[[cell]]\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n[[/cell]]\n[[/row]]\n[[/table]]"),
+    ("b38-adjacent-footnoteblock", "Text[[footnote]]note[[/footnote]].\n\n[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n\n[[footnoteblock]]"),
+    ("b39-adjacent-footnote", "[[bibliography]]\n: a : Alpha.\n[[/bibliography]]\n\nText[[footnote]]note[[/footnote]]."),
+    ("b40-two-blocks", "Cite ((bibcite a)) and ((bibcite b)).\n\n[[bibliography]]\n: a : Entry A.\n[[/bibliography]]\n\nMiddle.\n\n[[bibliography]]\n: b : Entry B.\n[[/bibliography]]"),
+    ("b41-mixed-markup", "[[bibliography]]\n: a : aa **bold** //ital// {{code}} end.\n[[/bibliography]]"),
+    ("b42-special-chars", "[[bibliography]]\n: a : A & B < C > D \"q\" 's'.\n[[/bibliography]]"),
+    ("b43-multiple-cites", "((bibcite a)) and ((bibcite a)) and ((bibcite b)).\n\n[[bibliography]]\n: a : Alpha.\n: b : Bravo.\n[[/bibliography]]"),
+    ("b44-leading-trailing-space", "[[bibliography]]\n: a :    Alpha source.   \n[[/bibliography]]"),
+    ("b45-colon-in-body", "[[bibliography]]\n: a : See http://example.com:8080/x now.\n[[/bibliography]]"),
+    ("b46-long-label", "((bibcite abcdefghij1234))\n\n[[bibliography]]\n: abcdefghij1234 : Long label.\n[[/bibliography]]"),
+    ("b47-dup-nested-markup", "[[bibliography]]\n: a : //First//.\n: a : **Second**.\n: b : Third.\n[[/bibliography]]"),
+    ("b48-empty-block-cite", "Cite ((bibcite bell)).\n\n[[bibliography]]\n[[/bibliography]]"),
+    ("b49-span-inline", "[[bibliography]]\n: a : aa [[span]]bb[[/span]] cc\n[[/bibliography]]"),
+    ("b50-size-inline", "[[bibliography]]\n: a : aa [[size 150%]]bb[[/size]] cc\n[[/bibliography]]"),
+    ("b51-blank-lines", "[[bibliography]]\n: a : Alpha.\n\n: b : Bravo.\n\n[[/bibliography]]"),
+    ("b52-title-empty", "[[bibliography title=\"\"]]\n: a : Alpha.\n[[/bibliography]]"),
+]
+
+with open("battery.jsonl", "w", encoding="utf-8") as fh:
+    for cid, source in C:
+        fh.write(json.dumps({"id": cid, "source": source}, ensure_ascii=False) + "\n")
+print(f"wrote {len(C)} battery cases")

@@ -1,0 +1,99 @@
+p01-canonical -> muse-probe-r2notes-bib-p01-canonical (exists)
+p02-duplicate -> muse-probe-r2notes-bib-p02-duplicate (created)
+p03-title-empty -> muse-probe-r2notes-bib-p03-title-empty (created)
+p04-title-special -> muse-probe-r2notes-bib-p04-title-special (created)
+p05-residual -> muse-probe-r2notes-bib-p05-residual (created)
+p06-separators -> muse-probe-r2notes-bib-p06-separators (created)
+p07-tab-prefix -> muse-probe-r2notes-bib-p07-tab-prefix (created)
+p08-closer-tab -> muse-probe-r2notes-bib-p08-closer-tab (created)
+p09-opener-extra-close -> muse-probe-r2notes-bib-p09-opener-extra-close (created)
+p10-nested -> muse-probe-r2notes-bib-p10-nested (created)
+p11-iftags-kept -> muse-probe-r2notes-bib-p11-iftags-kept (created)
+p12-iftags-cross -> muse-probe-r2notes-bib-p12-iftags-cross (created)
+p13-footnote-open -> muse-probe-r2notes-bib-p13-footnote-open (created)
+p14-item-table -> muse-probe-r2notes-bib-p14-item-table (created)
+p15-two-blocks -> muse-probe-r2notes-bib-p15-two-blocks (created)
+p16-hide -> muse-probe-r2notes-bib-p16-hide (created)
+16 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01-canonical": {
+  "fullname": "muse-probe-r2notes-bib-p01-canonical",
+  "source": "The first pulsar was observed by J. Bell and A. Hewish ((bibcite bell)).\nAnother reference [see ((bibcite guy))].\n\n[[bibliography]]\n: bell : Bell, J.; Hewish, A. //Observation of a Rapidly Pulsating Radio Source.// Nature 217, 709, 1968.\n: guy : Guy, R. K. //Modular Difference Sets.// Springer, 1994.\n[[/bibliography]]",
+  "action": "exists"
+ },
+ "p02-duplicate": {
+  "fullname": "muse-probe-r2notes-bib-p02-duplicate",
+  "source": "Cite ((bibcite bell)).\n\n[[bibliography]]\n: bell : First bell entry.\n: bell : Second bell entry.\n: guy : Guy entry.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p03-title-empty": {
+  "fullname": "muse-probe-r2notes-bib-p03-title-empty",
+  "source": "[[bibliography title=\"\"]]\n: a : Entry A.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p04-title-special": {
+  "fullname": "muse-probe-r2notes-bib-p04-title-special",
+  "source": "[[bibliography title=\"<Works & Sources>\"]]\n: a : A & B\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p05-residual": {
+  "fullname": "muse-probe-r2notes-bib-p05-residual",
+  "source": "((bibcite alpha)) ((bibcite omega))\n\n[[bibliography]]\n: bad-first : Bad first.\n: alpha : Alpha text.\n: bad-label : **bold** bad.\n: omega : Omega text.\ntrailing prose\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p06-separators": {
+  "fullname": "muse-probe-r2notes-bib-p06-separators",
+  "source": "((bibcite a)) ((bibcite b)) ((bibcite c)) ((bibcite d)) ((bibcite e)) ((bibcite g)) ((bibcite h)) ((bibcite i))\n\n[[bibliography]]\n: a: Alpha.\n: b :Bravo.\n: c:  Charlie.\n: d :\tDelta.\n: i  : India.\n: e :\n\n: g: Golf.\n: h :Hotel.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p07-tab-prefix": {
+  "fullname": "muse-probe-r2notes-bib-p07-tab-prefix",
+  "source": "((bibcite alpha)) ((bibcite bell))\n\n[[bibliography]]\n: alpha : Alpha text.\n:\tbell : Bell text.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p08-closer-tab": {
+  "fullname": "muse-probe-r2notes-bib-p08-closer-tab",
+  "source": "[[bibliography]]\n: a : A\n[[/bibliography]]\t\nafter",
+  "action": "created"
+ },
+ "p09-opener-extra-close": {
+  "fullname": "muse-probe-r2notes-bib-p09-opener-extra-close",
+  "source": "[[bibliography]]]\n: a : A\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p10-nested": {
+  "fullname": "muse-probe-r2notes-bib-p10-nested",
+  "source": "[[bibliography]]\n[[bibliography]]\nnested\n[[/bibliography]]\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p11-iftags-kept": {
+  "fullname": "muse-probe-r2notes-bib-p11-iftags-kept",
+  "source": "[[iftags -zzz]]\n[[bibliography]]\n: a : A\n[[/bibliography]]\n[[/iftags]]\nafter",
+  "action": "created"
+ },
+ "p12-iftags-cross": {
+  "fullname": "muse-probe-r2notes-bib-p12-iftags-cross",
+  "source": "[[bibliography]]\n: key : a[[iftags -zzz]]b\n[[/bibliography]]\nc[[/iftags]]d",
+  "action": "created"
+ },
+ "p13-footnote-open": {
+  "fullname": "muse-probe-r2notes-bib-p13-footnote-open",
+  "source": "[[bibliography]]\n: a : A\n[[footnote]]\n: b : B\n[[/bibliography]]\n[[/footnote]]\nafter",
+  "action": "created"
+ },
+ "p14-item-table": {
+  "fullname": "muse-probe-r2notes-bib-p14-item-table",
+  "source": "[[bibliography]]\n: a : A\n[[table]]\n[[row]]\n[[cell]]\n: b : B\n[[/cell]]\n[[/row]]\n[[/table]]\n: c : C\n[[/bibliography]]\nafter",
+  "action": "created"
+ },
+ "p15-two-blocks": {
+  "fullname": "muse-probe-r2notes-bib-p15-two-blocks",
+  "source": "Cite ((bibcite a)) and ((bibcite b)).\n\n[[bibliography]]\n: a : Entry A.\n[[/bibliography]]\n\nMiddle text.\n\n[[bibliography]]\n: b : Entry B.\n[[/bibliography]]",
+  "action": "created"
+ },
+ "p16-hide": {
+  "fullname": "muse-probe-r2notes-bib-p16-hide",
+  "source": "[[bibliography hide=\"yes\"]]\n: key : value\n[[/bibliography]]",
+  "action": "created"
+ }
+}

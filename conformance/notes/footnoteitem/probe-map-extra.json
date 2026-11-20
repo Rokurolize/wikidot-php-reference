@@ -1,0 +1,12 @@
+{
+ "p-comment-body": {
+  "fullname": "muse-probe-r2notes-fni-p-comment-body",
+  "source": "X[[footnote]][[comment]]hidden[[/comment]][[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p-div-first": {
+  "fullname": "muse-probe-r2notes-fni-p-div-first",
+  "source": "X[[footnote]]\n[[div]]\nblock body\n[[/div]]\n[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ }
+}

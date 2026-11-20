@@ -41,10 +41,13 @@ while (($line = fgets(STDIN)) !== false) {
     // Root-owned harness matter, disclosed in conformance-refphp/R2-LINK.md;
     // transform.php is unaffected because it renders one document per run.
     Text_Wiki_Parse_Math::$equationsArray = array();
-    // R2-next: optional per-case page tags for the Iftags rule. When a case
-    // declares "tags", the reference gets a deterministic tagged page exactly
-    // as the shared ftml dumper does through PageInfo.tags; absent tags means
-    // an untagged page. Root-owned stub, disclosed in R2-NEXT.md.
+    // R2-next: optional per-case page tags for the Iftags rule, R2-notes:
+    // always inject a page object, with an empty tag set when the case has no
+    // "tags" array. The Iftags parse rule drops its whole body when vars['page']
+    // is unset, so an absent page is NOT an untagged page; the earlier
+    // if ($caseTags) guard mis-modelled live's untagged pages and was corrected
+    // on the Bibliography owner's evidence (bib51/bib52, probes p11/p12),
+    // disclosed in conformance-refphp/R2-NOTES.md. Root-owned stub.
     $caseTags = (isset($case['tags']) && is_array($case['tags'])) ? $case['tags'] : array();
     // Input stage: line-ending normalization (R2-INCLUDE.md C1).
     $src = str_replace("\r\n", "\n", $src);
@@ -55,19 +58,34 @@ while (($line = fgets(STDIN)) !== false) {
     try {
         if ($mode === 'expand') {
             $wiki = new Text_Wiki(array('Include'));
-            if ($caseTags) { $wiki->vars['page'] = new RefPage('', 0, $caseTags); }
+            $wiki->vars['page'] = new RefPage('', 0, $caseTags);
             $wiki->parse($src);
             $out = $wiki->source;
             echo json_encode(array('id' => $id, 'output' => $out)), "\n";
         } elseif ($mode === 'tokens') {
             $wiki = ref_configure_wiki(new Text_Wiki());
-            if ($caseTags) { $wiki->vars['page'] = new RefPage('', 0, $caseTags); }
+            // R2-notes: defensive per-case reset of footnote/bibliography
+            // document state. Text_Wiki::$vars is an instance property and
+            // each case gets a fresh Text_Wiki, so no leak was observed; the
+            // only process-static in this family's path is Math's label array
+            // (reset above, and also read by the Footnote render rule). These
+            // lines are behaviour-neutral insurance and are disclosed in
+            // conformance-refphp/R2-NOTES.md.
+            $wiki->vars['footnotes'] = array();
+            $wiki->vars['bibitems'] = array();
+            $wiki->vars['bibitemIds'] = array();
+            $wiki->vars['page'] = new RefPage('', 0, $caseTags);
             $wiki->parse($src);
             echo json_encode(array('id' => $id,
                 'output' => json_encode($wiki->tokens))), "\n";
         } else {
             $wiki = ref_configure_wiki(new Text_Wiki());
-            if ($caseTags) { $wiki->vars['page'] = new RefPage('', 0, $caseTags); }
+            // R2-notes defensive per-case footnote/bibliography state reset
+            // (see the tokens branch above and R2-NOTES.md for the audit).
+            $wiki->vars['footnotes'] = array();
+            $wiki->vars['bibitems'] = array();
+            $wiki->vars['bibitemIds'] = array();
+            $wiki->vars['page'] = new RefPage('', 0, $caseTags);
             $out = $wiki->transform($src, 'Xhtml');
             echo json_encode(array('id' => $id, 'output' => $out)), "\n";
         }

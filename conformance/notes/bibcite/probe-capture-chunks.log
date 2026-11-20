@@ -1,0 +1,214 @@
+chunk 1 attempt 1 2026-11-20T13:28:23+09:00
+p-id-defined -> muse-probe-r2notes-bibc-p-id-defined stable=True saved_source_matches=True valid=True
+p-id-two-cites -> muse-probe-r2notes-bibc-p-id-two-cites stable=True saved_source_matches=True valid=True
+p-id-forward -> muse-probe-r2notes-bibc-p-id-forward stable=True saved_source_matches=True valid=True
+p-undef -> muse-probe-r2notes-bibc-p-undef stable=True saved_source_matches=True valid=True
+p-two-space -> muse-probe-r2notes-bibc-p-two-space stable=True saved_source_matches=True valid=True
+{
+ "p-id-defined": {
+  "fullname": "muse-probe-r2notes-bibc-p-id-defined",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha source</div>\n</div>\n<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-82730a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>",
+  "html_sha256": "e34371aa7fa2edc704583a79af6499390ccff7a78af37dc7b426924db64bf871",
+  "source": "[[bibliography]]\n: alpha : Alpha source\n[[/bibliography]]\n\n((bibcite alpha))",
+  "source_sha256": "2a0b527af8f69a0b31fab5b048f3a8617987b2f3f77f1eac42226144d7e1dc68",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-id-two-cites": {
+  "fullname": "muse-probe-r2notes-bibc-p-id-two-cites",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-73487a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a> and <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2-67729a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A source</div>\n<div class=\"bibitem\" id=\"bibitem-2\">2. B source</div>\n</div>",
+  "html_sha256": "f94b7d156edaf82b252a23808ce371609ab50c25f7faa4a5926e3ec901791d49",
+  "source": "((bibcite alpha)) and ((bibcite beta))\n\n[[bibliography]]\n: alpha : A source\n: beta : B source\n[[/bibliography]]",
+  "source_sha256": "59303fad580b59fb76e08a3b3c1d248323450a142cef7c91104170a84fb5d345",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-id-forward": {
+  "fullname": "muse-probe-r2notes-bibc-p-id-forward",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-81110a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha source</div>\n</div>",
+  "html_sha256": "ed571d2e62b1585f6c3709fdba8822ed68f009f0cc6e467e6313022009928baa",
+  "source": "((bibcite alpha))\n\n[[bibliography]]\n: alpha : Alpha source\n[[/bibliography]]",
+  "source_sha256": "4d4b152a32f1aaf18528a0e4d0925d4804a84e6a6ea0672af3e4856e81338b9b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-undef": {
+  "fullname": "muse-probe-r2notes-bibc-p-undef",
+  "html": "<p>A<span class=\"error-inline\">Bibliography item <em>alpha</em> not found.</span>B</p>",
+  "html_sha256": "fc656b33d92640351d1c0ea64acf9677bf4e77d1491d58a24353c7bd9987897c",
+  "source": "A((bibcite alpha))B",
+  "source_sha256": "b0c479db62d4585a0f650fea2574ef52d222f3953d27fccc9984875ca89cae95",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-two-space": {
+  "fullname": "muse-probe-r2notes-bibc-p-two-space",
+  "html": "<p>((bibcite alpha))</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>",
+  "html_sha256": "087454148d693f2b690e3e7f3e7b8a8220c1874f53b90646a1104d4420b23c46",
+  "source": "((bibcite  alpha))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "source_sha256": "9b778b8ef156309f89f62346c0c6eeba177ce4e994135da976e4ace622364965",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
+chunk 1 OK 2026-11-20T13:29:00+09:00
+chunk 2 attempt 1 2026-11-20T13:29:00+09:00
+p-three-space -> muse-probe-r2notes-bibc-p-three-space stable=True saved_source_matches=True valid=True
+p-tab-sep -> muse-probe-r2notes-bibc-p-tab-sep stable=True saved_source_matches=True valid=True
+p-newline-sep -> muse-probe-r2notes-bibc-p-newline-sep stable=True saved_source_matches=True valid=True
+p-dup-label -> muse-probe-r2notes-bibc-p-dup-label stable=True saved_source_matches=True valid=True
+p-case-mismatch -> muse-probe-r2notes-bibc-p-case-mismatch stable=True saved_source_matches=True valid=True
+{
+ "p-three-space": {
+  "fullname": "muse-probe-r2notes-bibc-p-three-space",
+  "html": "<p>((bibcite A9))</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A9 source</div>\n</div>",
+  "html_sha256": "498706724208bb8edfe3fdf9f75dbf518754d0ba931909c51d4d3a30b81e6b76",
+  "source": "((bibcite   A9))\n\n[[bibliography]]\n: A9 : A9 source\n[[/bibliography]]",
+  "source_sha256": "84c4b27cd6cd4d61dd37209996db89df97101c4fbd931bb65984af8bcffb4ef3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-tab-sep": {
+  "fullname": "muse-probe-r2notes-bibc-p-tab-sep",
+  "html": "<p>((bibcite Tabbed))</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. T</div>\n</div>",
+  "html_sha256": "2b4a0281e6dc884bf3092e15bff6046e6bb340eb5ff240f8536f8ebb07e7aa71",
+  "source": "((bibcite\tTabbed))\n\n[[bibliography]]\n: Tabbed : T\n[[/bibliography]]",
+  "source_sha256": "80b072d53dadacb48474a020a3f07e53e67187d1839c31df517b47c1da2da8fc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-newline-sep": {
+  "fullname": "muse-probe-r2notes-bibc-p-newline-sep",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-12625a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>",
+  "html_sha256": "9a318ea79e339180563e47485548ddca9f7c2be30a140fafd35513f8146f631b",
+  "source": "((bibcite\nalpha))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "source_sha256": "db4545b166f4eb5ae80995549db6ba30541ec69b6d0bdb9149d89fa13b306a66",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-dup-label": {
+  "fullname": "muse-probe-r2notes-bibc-p-dup-label",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2-94473a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2</a> <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2-57516a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. first bell</div>\n<div class=\"bibitem\" id=\"bibitem-2\">2. second bell</div>\n<div class=\"bibitem\" id=\"bibitem-2\">2. a guy</div>\n</div>",
+  "html_sha256": "54be697c4760a37c147aa9e68b38793239f84e2d314d4490ef8dd8a6a92614db",
+  "source": "((bibcite bell)) ((bibcite guy))\n\n[[bibliography]]\n: bell : first bell\n: bell : second bell\n: guy : a guy\n[[/bibliography]]",
+  "source_sha256": "df8389f062697963da8132d7b41f016731b27f3f6dfb77a2f96a04a6c87a0da8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-case-mismatch": {
+  "fullname": "muse-probe-r2notes-bibc-p-case-mismatch",
+  "html": "<p><span class=\"error-inline\">Bibliography item <em>ALPHA</em> not found.</span></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>",
+  "html_sha256": "16525d9c08df7f8da5f31dfa53efea0d2ae182d203f3b7f349e4967a19fc4ce8",
+  "source": "((bibcite ALPHA))\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "source_sha256": "61bc7ebbfa8b17d59cf064a68f42b07882fe12ce53c2688431b84710018d6cae",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
+chunk 2 OK 2026-11-20T13:29:32+09:00
+chunk 3 attempt 1 2026-11-20T13:29:32+09:00
+p-block-defined -> muse-probe-r2notes-bibc-p-block-defined stable=True saved_source_matches=True valid=True
+p-block-score-defined -> muse-probe-r2notes-bibc-p-block-score-defined stable=True saved_source_matches=True valid=True
+p-comment-label -> muse-probe-r2notes-bibc-p-comment-label stable=True saved_source_matches=True valid=True
+p-empty-label -> muse-probe-r2notes-bibc-p-empty-label stable=True saved_source_matches=True valid=True
+p-raw-owner -> muse-probe-r2notes-bibc-p-raw-owner stable=True saved_source_matches=True valid=True
+{
+ "p-block-defined": {
+  "fullname": "muse-probe-r2notes-bibc-p-block-defined",
+  "html": "<p>[[bibcite alpha]]</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>",
+  "html_sha256": "f920af58b6972c583650c2608d21e3decf03de74006e3dc4c60741e761faa175",
+  "source": "[[bibcite alpha]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "source_sha256": "9b0ca84c0110f9edffaf7fcf5b047e0bf2081471d9fa65f8bf1392ee1904d811",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-block-score-defined": {
+  "fullname": "muse-probe-r2notes-bibc-p-block-score-defined",
+  "html": "<p>[[bibcite_ alpha]]</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>",
+  "html_sha256": "cbdd8c93a41cdbab92f1f5e35d18fed71ce2b3180cd541b61bdb01acb439f414",
+  "source": "[[bibcite_ alpha]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]",
+  "source_sha256": "cc9759b4565a1820dc49b53129aeab86f7a58a5c4d360e4bfce7a21870ed368a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-comment-label": {
+  "fullname": "muse-probe-r2notes-bibc-p-comment-label",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. def</div>\n</div>\n<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-87687a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>",
+  "html_sha256": "b5942de9f05b41c90831645b64240ac46f19144c6117103c009d4fa5bf84ac03",
+  "source": "[[bibliography]]\n: key : def\n[[/bibliography]]\n\n((bibcite k[!--x--]ey))",
+  "source_sha256": "742d089e65a44ee32ca25a8b27793435620ab8334165f052830bf04e3325826c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-empty-label": {
+  "fullname": "muse-probe-r2notes-bibc-p-empty-label",
+  "html": "<p>X((bibcite ))Y</p>",
+  "html_sha256": "f2d07d66fabcab1a26796bc063034e1a615561d7315c9d5da9b3a5381f09bd9e",
+  "source": "X((bibcite ))Y",
+  "source_sha256": "b298b96c9591897b0313a2550c5b7c5a18f5f2e957da0a7905ac674d8ca7c58f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-raw-owner": {
+  "fullname": "muse-probe-r2notes-bibc-p-raw-owner",
+  "html": "<p><span style=\"white-space: pre-wrap;\">((bibcite&#32;alpha))</span></p>",
+  "html_sha256": "1959051c90f70f0934adc63e07215a3592d7337002faaacf4a67cfda7b8c33ee",
+  "source": "@@((bibcite alpha))@@",
+  "source_sha256": "0834697c9b4d314034afce48b530342ad70f88482f43c905d25b8287869a7e89",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
+chunk 3 OK 2026-11-20T13:30:05+09:00
+chunk 4 attempt 1 2026-11-20T13:30:05+09:00
+p-anchor -> muse-probe-r2notes-bibc-p-anchor stable=True saved_source_matches=True valid=True
+p-footnote -> muse-probe-r2notes-bibc-p-footnote stable=True saved_source_matches=True valid=True
+p-malformed -> muse-probe-r2notes-bibc-p-malformed stable=True saved_source_matches=True valid=True
+{
+ "p-anchor": {
+  "fullname": "muse-probe-r2notes-bibc-p-anchor",
+  "html": "<p><a href=\"/A\">x</a><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-31494a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a>y</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Title</div>\n</div>",
+  "html_sha256": "2bff445894133dd8c9f747b6576b5c0cebaa78fc159155901dd3a8c0e9cd004f",
+  "source": "[[a href=\"/A\"]]x((bibcite b1))y[[/a]]\n\n[[bibliography]]\n: b1 : Title\n[[/bibliography]]",
+  "source_sha256": "113f3e869f7347e522e0b62a752e0e4ec35c7361dc6c69a54f17e96c35e87f19",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-footnote": {
+  "fullname": "muse-probe-r2notes-bibc-p-footnote",
+  "html": "<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. A</div>\n</div>\n<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-28856a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. A note</div>\n</div>",
+  "html_sha256": "eaf63aefd53bbc8d532e5278193ed8a30d69a9100faf3d244117c91023943a3c",
+  "source": "[[footnote]]A note[[/footnote]]\n\n[[bibliography]]\n: alpha : A\n[[/bibliography]]\n\n((bibcite alpha))",
+  "source_sha256": "e95e6b673dac6af5c174589fd65ee014f35fa2e72ac3c1068964b5f57a0db76f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-malformed": {
+  "fullname": "muse-probe-r2notes-bibc-p-malformed",
+  "html": "<p>((bibcite alpha beta)) ((bibcite alpha</p>\n<p>beta)) ((bibcite</p>",
+  "html_sha256": "7d15bb0021a0ad0755890e8ef6f16a86f54b9d2c25563ea429563868f152e348",
+  "source": "((bibcite alpha beta)) ((bibcite alpha\n\nbeta)) ((bibcite",
+  "source_sha256": "8067e80a77559b6b6cab956bc02fa8feac3da7981b7191fcd05c196ea3aac410",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
+chunk 4 OK 2026-11-20T13:30:25+09:00

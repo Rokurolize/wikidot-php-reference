@@ -1,0 +1,6 @@
+ftml checkout: /home/roku/src/Rokurolize/ftml
+HEAD: 6a029bf416651e0d68408f7c977b4cae30ebec55
+short: 6a029bf41
+branch: HEAD
+HEAD subject: fix(preproc): keep indented quote-like lines as literal text (#1532)
+note: recorded at R2-notes dumper build time. The checkout had advanced from the R2-LINK stage's recorded 97bed049ddeadc54981f6d9577bd78fcb212abd9 by two commits: 6ba506ab3 "fix(raw): match live raw-family behavior (#1533)" and 6a029bf41 "fix(preproc): keep indented quote-like lines as literal text (#1532)". The dumper binary is built and every stage differential is produced at the recorded HEAD above; no later checkout change is re-run during this stage.

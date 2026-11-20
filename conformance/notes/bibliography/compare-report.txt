@@ -1,0 +1,84 @@
+R2-notes Bibliography: differential compare report
+
+Battery: 56 whole-document cases.
+Reference harness render/tokens: 56 outputs each, before and after, zero errors.
+Shared ftml dumper (HEAD 6a029bf41): 56 outputs, zero errors, zero error arrays for these cases.
+
+Normalization removes only surfaces owned by other rules or the frame/serving layer:
+bibcite id random suffix and quote escaping (Bibcite owner), typography numeric entities (Typography),
+empty span style attribute (Span), <br /> vs <br> and blank lines between block elements (frame).
+
+The whole-document counts are dominated by paragraph/deflist wrapper surfaces owned by later
+rules; the bibliography-surface counts below are the rule-relevant measure.
+Exact normalized match with ftml dumper, BEFORE correction: 0/56
+Exact normalized match with ftml dumper, AFTER correction:  28/56
+
+Cases changed from mismatch to match by this rule's correction:
+  bib01-canonical-two
+  bib04-duplicate-label
+  bib05-empty-block
+  bib06-body-only-no-cite
+  bib07-alphabetical-order
+  bib08-citation-order
+  bib13-title-double-quoted
+  bib14-title-single-quoted
+  bib16-title-special-chars
+  bib17-hide-yes
+  bib18-hide-short-t
+  bib19-unknown-args
+  bib20-title-and-hide
+  bib27-opener-extra-close
+  bib33-inline-strong-em
+  bib34-inline-size-span
+  bib36-line-anchored-heading
+  bib39-label-charset
+  bib40-tab-prefix-label
+  bib41-next-line-value
+  bib42-invalid-line-residual
+  bib43-label-only-crossing
+  bib44-whitespace-body
+  bib45-footnote-then-bibliography
+  bib46-bibliography-then-footnote
+  bib53-tabview-residue
+  bib54-trailing-paragraph
+  bib55-dashes-typography
+
+Remaining mismatches after correction and their dispositions:
+  bib02-cite-after: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib03-cite-both-sides: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib09-definition-order: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib10-two-blocks: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib11-first-empty-second-full: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib12-three-blocks: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib15-title-empty: Candidate ftml divergence BIB-F1: live probe p03 shows live omits the title div for title=""; ftml emits an empty one. Reference is live-correct, no change.
+  bib21-unterminated: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib22-unterminated-empty: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib23-name-case-uppercase: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib24-name-case-title: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib25-closer-uppercase: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib26-opener-leading-space: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib28-closer-trailing-spaces: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib29-closer-trailing-tab: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib30-closer-trailing-text: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib31-nested-bibliography: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib32-overlap-bold-closer: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib35-line-anchored-list: Candidate ftml divergence BIB-F2: live probes p17/p18 and the tab-gap pin join consecutive residual lines with one space; ftml drops the separator. Reference is live-correct.
+  bib37-bibcite-in-value: Frame/other-rule surface: apostrophe escaping in the bibcite onclick attribute; Bibcite render owner.
+  bib38-definition-separators: Bibitem render (another rule owner): empty value prints '4. ' in the fossil reference but live and ftml print '4.'; routed to root.
+  bib47-bibliography-inside-footnote: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib48-footnote-opened-in-bib-body: Frame/other-rule surface: apostrophe escaping in footnoteref onclick; Footnote render owner.
+  bib49-bibliography-inside-list: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+  bib50-item-inside-table: Frame/other-rule surface: whitespace inside the rendered <table> markup; live probe p14 agrees on all three sides after frame normalization.
+  bib51-iftags-kept: Harness matter routed to root: batch.php sets vars['page'] only when case tags are non-empty, so untagged iftags-gated bodies are dropped before Bibliography runs. Live probe p11 confirms the block forms.
+  bib52-iftags-closer-inside: Same harness matter as bib51; live probe p12 confirms the block forms.
+  bib56-no-bibliography: Frame-level surface outside this rule: paragraph/deflist wrapper and newline differences in text before or after the bibitems region; the bibliography region itself matches and live probes confirm the shape.
+
+Bibliography-surface only (<div class="bibitems"> region), exact match with ftml:
+  BEFORE correction 10/56, AFTER correction 49/56.
+
+Live probes: 18 run-owned pages under prefix muse-probe-r2notes-bib-, double-fetched anonymously,
+all 18 stable=true, saved_source_matches=true, valid=true. Normalized bibitems region:
+  13/18 live==reference==ftml; p03 and p13 live==reference with ftml divergent;
+  p06 and p11/p12 live==ftml with the reference divergent for routed non-Bibliography reasons;
+  p17 and p18 settle consecutive-residual spacing as live==reference with ftml divergent.
+See probe-compare.txt, probe-captures.json and probe-captures2.json for the per-probe strings and cached evidence.

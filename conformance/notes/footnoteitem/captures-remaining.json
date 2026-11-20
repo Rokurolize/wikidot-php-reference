@@ -1,0 +1,22 @@
+{
+ "p-with-bib": {
+  "fullname": "muse-probe-r2notes-fni-p-with-bib",
+  "html": "<p>A<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup> [[bibcite alpha]]</p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n[[bibitem alpha]]Entry[[/bibitem]]</div>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. note</div>\n</div>",
+  "html_sha256": "e333952817d2bcb05f1b211563ad006da8b393c47b4c942e3948b06a1f0196e3",
+  "source": "A[[footnote]]note[[/footnote]] [[bibcite alpha]]\n\n[[bibliography]]\n[[bibitem alpha]]Entry[[/bibitem]]\n[[/bibliography]]\n\n[[footnoteblock]]",
+  "source_sha256": "fc776726fd163e47479a278853253144f0c79c1d76dba708f2a828c7699c33d1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-unterminated": {
+  "fullname": "muse-probe-r2notes-fni-p-unterminated",
+  "html": "<p>X[[footnote]]bad no close</p>",
+  "html_sha256": "8722572c66a9df85d77b9b36c5b18205c35170751befefa37fa36788b6251c93",
+  "source": "X[[footnote]]bad no close\n\n[[footnoteblock]]",
+  "source_sha256": "8ab2368045a8bcfae3c1daa35261a7178385706be6511f016ff27aea604cc911",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

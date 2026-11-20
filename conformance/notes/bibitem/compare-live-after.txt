@@ -1,0 +1,35 @@
+=== live comparison after ===
+probes: 22 (all valid/stable/source-matching)
+all-three agree at shape: 18/22
+live==reference shape: 20/22
+live==ftml shape: 19/22
+reference==ftml shape: 18/22
+both-differ-from-live: 1/22
+--- per-probe ---
+ALL3 p-digit-label: live=['<div class="bibitem" id="bibitem-1">1. Digit-leading label.</div>']
+ALL3 p-dup: live=['<div class="bibitem" id="bibitem-1">1. First bell.</div>', '<div class="bibitem" id="bibitem-2">2. Second bell.</div>', '<div class="bibitem" id="bibitem-2">2. Guy.</div>']
+ALL3 p-empty-blank-entry: live=['<div class="bibitem" id="bibitem-1">1.</div>', '<div class="bibitem" id="bibitem-2">2. Bravo.</div>']
+ALL3 p-empty-body: live=['<div class="bibitem" id="bibitem-1">1.</div>']
+ALL3 p-empty-then-entry: live=['<div class="bibitem" id="bibitem-1">1. : b : Bravo.</div>']
+ALL3 p-forward-cite: live=['<div class="bibitem" id="bibitem-1">1. Alpha.</div>']
+ALL3 p-hide-option: live=['<div class="bibitem" id="bibitem-1">1. Alpha.</div>']
+ALL3 p-hyphen-label: live=[]
+ALL3 p-mixed-lines: live=['<div class="bibitem" id="bibitem-1">1. Alpha.</div>', '<div class="bibitem" id="bibitem-2">2. Charlie.</div>']
+L+R  p-nested-footnote: live=['<div class="bibitem" id="bibitem-1">1. Source with a note<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference(\'footnote-1\')">1</a></sup>.</div>']
+     ftml=['<div class="bibitem" id="bibitem-1">1. Source with a note<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference(&#39;footnote-1&#39;)">1</a></sup>.</div>']
+ALL3 p-nested-markup: live=['<div class="bibitem" id="bibitem-1">1. aa <strong>bold</strong> <em>ital</em> <tt>code</tt> end.</div>']
+ALL3 p-no-space-after-colon: live=[]
+DIFF p-self-cite: live=['<div class="bibitem" id="bibitem-1">1. See also <a href="javascript:;" class="bibcite" id="bibcite-1-64576a" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a>.</div>']
+     ref =['<div class="bibitem" id="bibitem-1">1. See also <a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a>.</div>']
+     ftml=['<div class="bibitem" id="bibitem-1">1. See also <a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a>.</div>']
+ALL3 p-space-only-body: live=['<div class="bibitem" id="bibitem-1">1.</div>']
+L+F  p-span-inline: live=['<div class="bibitem" id="bibitem-1">1. aa <span>bb</span> cc</div>']
+     ref =['<div class="bibitem" id="bibitem-1">1. aa <span style="">bb</span> cc</div>']
+L+R  p-special-chars: live=['<div class="bibitem" id="bibitem-1">1. A &amp; B &lt; C &gt; D &quot;q&quot; \'s\'.</div>']
+     ftml=['<div class="bibitem" id="bibitem-1">1. A &amp; B &lt; C &gt; D &quot;q&quot; &#39;s&#39;.</div>']
+ALL3 p-tab-only-body: live=['<div class="bibitem" id="bibitem-1">1.</div>']
+ALL3 p-title-option: live=['<div class="bibitem" id="bibitem-1">1. Alpha.</div>']
+ALL3 p-trim-body: live=['<div class="bibitem" id="bibitem-1">1. Alpha source.</div>']
+ALL3 p-two-empty: live=['<div class="bibitem" id="bibitem-1">1. : b :</div>']
+ALL3 p-two-spaces-before-colon: live=[]
+ALL3 p-uppercase-label: live=['<div class="bibitem" id="bibitem-1">1. Uppercase label.</div>']

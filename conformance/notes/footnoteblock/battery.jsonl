@@ -1,0 +1,48 @@
+{"id": "fnb-01-block-after-notes", "source": "Intro[[footnote]]first note[[/footnote]] middle[[footnote]]second note[[/footnote]] out.\n\n[[footnoteblock]]"}
+{"id": "fnb-02-block-before-notes", "source": "[[footnoteblock]]\n\nIntro[[footnote]]first note[[/footnote]] middle[[footnote]]second note[[/footnote]] out."}
+{"id": "fnb-03-block-between-notes", "source": "A[[footnote]]note A[[/footnote]]\n\n[[footnoteblock]]\n\nB[[footnote]]note B[[/footnote]]"}
+{"id": "fnb-04-no-block-autoappend", "source": "Alpha[[footnote]]the only note[[/footnote]] beta. No explicit block anywhere."}
+{"id": "fnb-05-block-only-no-notes", "source": "Just text, no footnotes.\n\n[[footnoteblock]]"}
+{"id": "fnb-06-no-notes-no-block", "source": "Plain document with no footnotes and no block at all."}
+{"id": "fnb-07-two-blocks", "source": "Alpha[[footnote]]note one[[/footnote]]\n\n[[footnoteblock]]\n\nBeta[[footnote]]note two[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fnb-08-two-blocks-titles", "source": "A[[footnote]]n1[[/footnote]]\n\n[[footnoteblock title=\"First\"]]\n\nB[[footnote]]n2[[/footnote]]\n\n[[footnoteblock title=\"Second\"]]"}
+{"id": "fnb-09-two-blocks-empty-first", "source": "[[footnoteblock]]\n\nA[[footnote]]n1[[/footnote]]\n\n[[footnoteblock title=\"End\"]]"}
+{"id": "fnb-10-title-simple", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"References\"]]"}
+{"id": "fnb-11-title-empty", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"\"]]"}
+{"id": "fnb-12-title-spaces", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"  Padded  \"]]"}
+{"id": "fnb-13-title-htmlspecial", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"A & B <C> \\\"Q\\\"\"]]"}
+{"id": "fnb-14-title-singlequote", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"It's fine\"]]"}
+{"id": "fnb-15-title-unicode", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"脚注 – Notas\"]]"}
+{"id": "fnb-16-hide-true", "source": "Apple[[footnote]]Banana[[/footnote]]\n\n[[footnoteblock hide=\"true\"]]"}
+{"id": "fnb-17-hide-false", "source": "Apple[[footnote]]Banana[[/footnote]]\n\n[[footnoteblock hide=\"false\"]]"}
+{"id": "fnb-18-bogus-attr", "source": "Apple[[footnote]]Banana[[/footnote]]\n\n[[footnoteblock bogus=\"true\"]]"}
+{"id": "fnb-19-title-and-hide", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"T\" hide=\"true\"]]"}
+{"id": "fnb-20-attr-singlequoted", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title='T']]"}
+{"id": "fnb-21-note-bold", "source": "Claim[[footnote]]a **bold** and //italic// bit[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fnb-22-note-link", "source": "Claim[[footnote]]see [http://example.com Example][[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fnb-23-note-multiline", "source": "Claim[[footnote]]first line\nsecond line\nthird line[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fnb-24-note-paragraphs", "source": "Claim[[footnote]]first para\n\nsecond para[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fnb-25-note-list", "source": "Claim[[footnote]]* one\n* two[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fnb-26-note-code", "source": "Claim[[footnote]]some [[code]]x = 1;[[/code]] here[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fnb-27-note-nested-div", "source": "[[div]]\ninside a div x[[footnote]]note in div[[/footnote]]\n[[/div]]\n\n[[footnoteblock]]"}
+{"id": "fnb-28-empty-note-body", "source": "A[[footnote]][[/footnote]] B\n\n[[footnoteblock]]"}
+{"id": "fnb-29-whitespace-note-body", "source": "A[[footnote]]   \n  [[/footnote]] B\n\n[[footnoteblock]]"}
+{"id": "fnb-30-unterminated-block", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock"}
+{"id": "fnb-31-block-no-close-bracket", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"T\"]"}
+{"id": "fnb-32-lowercase-variants-ignored", "source": "A[[footnote]]n[[/footnote]]\n\n[[Footnoteblock]]"}
+{"id": "fnb-33-uppercase-block", "source": "A[[footnote]]n[[/footnote]]\n\n[[FOOTNOTEBLOCK]]"}
+{"id": "fnb-34-block-extra-spaces", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock   ]]"}
+{"id": "fnb-35-block-leading-space", "source": "A[[footnote]]n[[/footnote]]\n\n  [[footnoteblock]]"}
+{"id": "fnb-36-adjacent-bibitem", "source": "A[[footnote]]note[[/footnote]]\n\n[[bibitem key]]Entry[[/bibitem]]\n\n[[footnoteblock]]"}
+{"id": "fnb-37-adjacent-bibliography", "source": "A[[footnote]]note[[/footnote]]\n\n[[bibliography]]\n[[bibitem key]]Entry[[/bibitem]]\n[[/bibliography]]\n\n[[footnoteblock]]"}
+{"id": "fnb-38-adjacent-bibcite", "source": "A[[footnote]]note[[/footnote]] [[bibcite key]]\n\n[[footnoteblock]]"}
+{"id": "fnb-39-literal-footnoteitem", "source": "[[footnoteitem]]\n\nA[[footnote]]n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fnb-40-block-then-bibcite-before-def", "source": "[[footnoteblock]]\n\nA[[footnote]]n[[/footnote]] cites [[bibcite k]] defined [[bibitem k]]E[[/bibitem]]."}
+{"id": "fnb-41-block-in-div", "source": "A[[footnote]]n[[/footnote]]\n\n[[div]]\n[[footnoteblock]]\n[[/div]]"}
+{"id": "fnb-42-block-in-quote", "source": "A[[footnote]]n[[/footnote]]\n\n> [[footnoteblock]]"}
+{"id": "fnb-43-block-in-list", "source": "A[[footnote]]n[[/footnote]]\n\n* [[footnoteblock]]"}
+{"id": "fnb-44-block-inline", "source": "prefix [[footnoteblock]] suffix A[[footnote]]n[[/footnote]]"}
+{"id": "fnb-45-block-tight", "source": "A[[footnote]]n[[/footnote]] [[footnoteblock]]"}
+{"id": "fnb-46-many-notes", "source": "N1[[footnote]]body 1[[/footnote]] N2[[footnote]]body 2[[/footnote]] N3[[footnote]]body 3[[/footnote]] N4[[footnote]]body 4[[/footnote]] N5[[footnote]]body 5[[/footnote]] N6[[footnote]]body 6[[/footnote]] N7[[footnote]]body 7[[/footnote]] \n\n[[footnoteblock]]"}
+{"id": "fnb-47-block-then-note-then-title-block", "source": "[[footnoteblock title=\"A\"]]\n\nX[[footnote]]x[[/footnote]]\n\n[[footnoteblock title=\"B\"]]"}
+{"id": "fnb-48-block-with-newline-attr", "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"Line1\nLine2\"]]"}

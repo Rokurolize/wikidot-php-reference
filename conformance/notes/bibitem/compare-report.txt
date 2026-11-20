@@ -1,0 +1,45 @@
+Bibitem R2-notes consolidated compare report (2026-11-20).
+Three reference snapshots are compared: 'before' is the original tree at the start of
+this rule (original Bibitem and original Bibliography), 'controlled-before' is every
+teammate's CURRENT file with only my two Bibitem files restored to their pre-correction
+bytes, and 'after' is the current tree with my correction in place. The controlled pair
+isolates my correction from the Bibliography owner's concurrent edit at 13:25-13:26,
+which removed inter-div whitespace and moved raw whole-string agreement from 0/52 to
+29/52 all by itself. I do not claim that jump for Bibitem.
+
+=== Battery (52 whole-document cases) ===
+before: raw whole-string ref==ftml 0/52; bibitem-family shape 41/52; bibitem div 47/52
+controlled-before: raw whole-string ref==ftml 28/52; bibitem-family shape 41/52; bibitem div 47/52
+after: raw whole-string ref==ftml 29/52; bibitem-family shape 42/52; bibitem div 48/52
+
+=== Live probes (22 pages, all valid / stable / source-matching) ===
+before: live==reference 16/22; live==ftml 19/22; all-three 14/22
+controlled-before: live==reference 16/22; live==ftml 19/22; all-three 14/22
+after: live==reference 20/22; live==ftml 19/22; all-three 18/22
+
+=== Isolated effect of the Bibitem correction (controlled-before -> after) ===
+ref-render: 1/52 cases changed: b07-empty-body
+ref-tokens: 44/52 cases changed: b01-single, b02-two, b03-three, b04-dup-adjacent, b05-dup-separated, b06-dup-then-third, b07-empty-body, b08-two-empty, b09-empty-then-value, b10-italic, b11-bold, b12-link, b13-self-cite, b14-nested-footnote, b15-nested-code, b16-forward-cite, b17-backward-cite, b18-undefined-cite, b20-block-only, b21-title, b22-hide, b23-title-hide, b26-no-space-before-colon, b31-mixed-valid-invalid, b32-tab-separators, b33-uppercase-label, b34-digit-label, b35-in-div, b36-in-collapsible, b37-in-table, b38-adjacent-footnoteblock, b39-adjacent-footnote, b40-two-blocks, b41-mixed-markup, b42-special-chars, b43-multiple-cites, b44-leading-trailing-space, b45-colon-in-body, b46-long-label, b47-dup-nested-markup, b49-span-inline, b50-size-inline, b51-blank-lines, b52-title-empty
+ref-probe-render: 4/22 cases changed: p-empty-body, p-empty-blank-entry, p-space-only-body, p-tab-only-body
+ref-probe-tokens: 19/22 cases changed: p-empty-body, p-empty-then-entry, p-empty-blank-entry, p-two-empty, p-dup, p-nested-markup, p-self-cite, p-nested-footnote, p-uppercase-label, p-digit-label, p-title-option, p-hide-option, p-forward-cite, p-special-chars, p-span-inline, p-mixed-lines, p-trim-body, p-space-only-body, p-tab-only-body
+The four probe render changes are exactly p-empty-body, p-empty-blank-entry,
+p-space-only-body and p-tab-only-body, each only 'N. ' -> 'N.'. The one battery
+render change is b07-empty-body, also 'N. ' -> 'N.'. Token-mode changes are only
+the added boolean 'empty' option on Bibitem start tokens; no rule, label, id or
+content changed. The corrected tree has empty PHP stderr on every run.
+
+=== Remaining disagreements after correction ===
+Live==reference disagrees on 2/22 probes: p-self-cite (Bibcite's id suffix and
+Bibcite's quote spelling, Bibcite owner's surface) and p-span-inline (reference
+<span style=""> versus live and ftml <span>, Span rule frame surface). Both are
+outside Bibitem's two files. Live==ftml disagrees on 3/22 probes: p-self-cite,
+p-nested-footnote and p-special-chars, all solely the ftml &#39; quote-entity
+spelling against live's raw apostrophe in onclick attributes and in text.
+The battery's 4 remaining bibitem-div shape disagreements are the same four
+surfaces (b13 Bibcite, b14 Footnote quote, b42 text quote, b49 Span).
+All other battery differences are frame-level whitespace and wrapper padding.
+
+Coverage: no candidate ftml divergence in Bibitem's own div wrapper, numbering,
+emptiness or label handling was found; the ftml quote-entity cases are routed as
+candidate findings F1/F2 for the coordinator because they surface inside a
+bibliography entry but belong to ftml's HtmlContext escaping, not to Bibitem.

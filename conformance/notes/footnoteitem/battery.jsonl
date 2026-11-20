@@ -1,0 +1,50 @@
+{"id": "fni-01-one", "source": "Apple[[footnote]]Alpha[[/footnote]] banana.\n\n[[footnoteblock]]"}
+{"id": "fni-02-two", "source": "A[[footnote]]one[[/footnote]] B[[footnote]]two[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-03-three", "source": "a[[footnote]]first[[/footnote]] b[[footnote]]second[[/footnote]] c[[footnote]]third[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-04-four", "source": "w[[footnote]]W[[/footnote]] x[[footnote]]X[[/footnote]] y[[footnote]]Y[[/footnote]] z[[footnote]]Z[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-05-empty-one", "source": "A[[footnote]][[/footnote]] B\n\n[[footnoteblock]]"}
+{"id": "fni-06-empty-mixed", "source": "A[[footnote]][[/footnote]] B[[footnote]]plain[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-07-empty-ws", "source": "A[[footnote]]   [[/footnote]] B[[footnote]]\n\t\n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-08-all-empty", "source": "A[[footnote]][[/footnote]] B[[footnote]][[/footnote]] C[[footnote]][[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-09-bold-italic", "source": "X[[footnote]]This has **bold** and //italics// and ##mono##.[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-10-link", "source": "X[[footnote]]See [http://example.com the example] and [[wiki page]].[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-11-multiline", "source": "X[[footnote]]\nThis note spans two lines.\nAnd a third.\n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-12-paragraphs", "source": "X[[footnote]]First paragraph.\n\nSecond paragraph after a blank line.\n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-13-list-body", "source": "X[[footnote]]\n* one\n* two\n* three\n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-14-blockquote-body", "source": "X[[footnote]]\n> quoted note body\n> second line\n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-15-div-body", "source": "X[[footnote]]\n[[div class=\"note-body\"]]\nInside a div.\n[[/div]]\n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-16-code-body", "source": "X[[footnote]]A code span ``some <code> & raw`` inside.[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-17-html-special", "source": "X[[footnote]]Quotes \" and ' and amp & and < > tags.[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-18-nested-footnote", "source": "X[[footnote]]outer note[[footnote]]inner note[[/footnote]] tail[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-19-block-first", "source": "[[footnoteblock]]\n\nAlpha[[footnote]]note A[[/footnote]]\n\nBeta[[footnote]]note B[[/footnote]]"}
+{"id": "fni-20-block-middle", "source": "Alpha[[footnote]]note A[[/footnote]]\n\n[[footnoteblock]]\n\nBeta[[footnote]]note B[[/footnote]]"}
+{"id": "fni-21-block-last", "source": "Alpha[[footnote]]note A[[/footnote]]\n\nBeta[[footnote]]note B[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-22-two-blocks", "source": "Alpha[[footnote]]A[[/footnote]]\n[[footnoteblock]]\n\nBeta[[footnote]]B[[/footnote]]\n[[footnoteblock]]"}
+{"id": "fni-23-block-with-tail", "source": "Alpha[[footnote]]A[[/footnote]]\n\n[[footnoteblock]]\n\nTrailing paragraph after the block."}
+{"id": "fni-24-no-block", "source": "Alpha[[footnote]]note A[[/footnote]] and Beta[[footnote]]note B[[/footnote]] but no block."}
+{"id": "fni-25-empty-block", "source": "No notes at all here.\n\n[[footnoteblock]]"}
+{"id": "fni-26-empty-block-bare", "source": "[[footnoteblock]]"}
+{"id": "fni-27-two-empty-blocks", "source": "No notes.\n\n[[footnoteblock]]\n\n[[footnoteblock]]"}
+{"id": "fni-28-title", "source": "X[[footnote]]note[[/footnote]]\n\n[[footnoteblock title=\"My Notes\"]]"}
+{"id": "fni-29-title-empty", "source": "X[[footnote]]note[[/footnote]]\n\n[[footnoteblock title=\"\"]]"}
+{"id": "fni-30-title-special", "source": "X[[footnote]]note[[/footnote]]\n\n[[footnoteblock title=\"A & B's <notes>\"]]"}
+{"id": "fni-31-hide", "source": "X[[footnote]]note[[/footnote]]\n\n[[footnoteblock hide=\"true\"]]"}
+{"id": "fni-32-title-unquoted", "source": "X[[footnote]]note[[/footnote]]\n\n[[footnoteblock title=Custom]]"}
+{"id": "fni-33-unterminated-note", "source": "X[[footnote]]note with no close\n\n[[footnoteblock]]"}
+{"id": "fni-34-stray-close", "source": "X note with only a close[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-35-unterminated-then-good", "source": "X[[footnote]]bad no close\nY[[footnote]]good[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-36-fused-close", "source": "X[[footnote]]note A[[/footnote]][[footnote]]note B[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-37-malformed-block", "source": "X[[footnote]]note[[/footnote]]\n\n[[footnoteblock"}
+{"id": "fni-38-malformed-opener", "source": "X[[footnote ]]note[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-39-uppercase", "source": "X[[FOOTNOTE]]note[[/FOOTNOTE]]\n\n[[footnoteblock]]"}
+{"id": "fni-40-with-bib", "source": "A[[footnote]]note[[/footnote]] [[bibitem alpha]]Entry A[[/bibitem]]\n\n[[bibliography]]\n[[bibcite alpha]]\n[[/bibliography]]\n\n[[footnoteblock]]"}
+{"id": "fni-41-bibcite-before", "source": "A[[footnote]]note[[/footnote]] see [[bibcite alpha]].\n\n[[bibliography]]\n[[bibitem alpha]]Entry A[[/bibitem]]\n[[/bibliography]]\n\n[[footnoteblock]]"}
+{"id": "fni-42-undefined-bibcite", "source": "A[[footnote]]note[[/footnote]] see [[bibcite missing]].\n\n[[footnoteblock]]"}
+{"id": "fni-43-dup-biblabel", "source": "A[[footnote]]note[[/footnote]]\n\n[[bibliography]]\n[[bibitem alpha]]One[[/bibitem]]\n[[bibitem alpha]]Two[[/bibitem]]\n[[bibcite alpha]]\n[[/bibliography]]\n\n[[footnoteblock]]"}
+{"id": "fni-44-note-in-div", "source": "[[div]]\nInside[[footnote]]note in div[[/footnote]]\n[[/div]]\n\n[[footnoteblock]]"}
+{"id": "fni-45-note-in-quote", "source": "> Quoted[[footnote]]note in quote[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-46-note-in-list", "source": "* item[[footnote]]note in list[[/footnote]]\n* second\n\n[[footnoteblock]]"}
+{"id": "fni-47-note-in-collapsible", "source": "[[collapsible show=\"open\"]]\nInside[[footnote]]note in collapsible[[/footnote]]\n[[/collapsible]]\n\n[[footnoteblock]]"}
+{"id": "fni-48-unicode", "source": "Café[[footnote]] naïve résumé — 日本語 漢字 🎯[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-49-repeated-marker", "source": "Same[[footnote]]shared note[[/footnote]] and again[[footnote]]shared note[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "fni-50-block-in-div", "source": "[[div]]\nA[[footnote]]note[[/footnote]]\n[[footnoteblock]]\n[[/div]]"}

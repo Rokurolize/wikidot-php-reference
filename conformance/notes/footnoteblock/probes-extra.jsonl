@@ -1,0 +1,2 @@
+{"id": "quote-empty-line", "source": "> \n\nText[[footnote]]n[[/footnote]]\n\n[[footnoteblock]]"}
+{"id": "list-empty-line", "source": "* \n\nText[[footnote]]n[[/footnote]]\n\n[[footnoteblock]]"}

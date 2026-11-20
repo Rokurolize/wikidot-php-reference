@@ -1,0 +1,82 @@
+{
+ "after-notes": {
+  "fullname": "muse-probe-r2notes-fnb-after-notes",
+  "source": "Intro[[footnote]]first note[[/footnote]] middle[[footnote]]second note[[/footnote]] out.\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "before-notes": {
+  "fullname": "muse-probe-r2notes-fnb-before-notes",
+  "source": "[[footnoteblock]]\n\nIntro[[footnote]]first note[[/footnote]] middle[[footnote]]second note[[/footnote]] out.",
+  "action": "created"
+ },
+ "autoappend": {
+  "fullname": "muse-probe-r2notes-fnb-autoappend",
+  "source": "Alpha[[footnote]]the only note[[/footnote]] beta. No explicit block anywhere.",
+  "action": "created"
+ },
+ "empty-block": {
+  "fullname": "muse-probe-r2notes-fnb-empty-block",
+  "source": "Just text, no footnotes.\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "two-blocks": {
+  "fullname": "muse-probe-r2notes-fnb-two-blocks",
+  "source": "Alpha[[footnote]]note one[[/footnote]]\n\n[[footnoteblock]]\n\nBeta[[footnote]]note two[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "title": {
+  "fullname": "muse-probe-r2notes-fnb-title",
+  "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"References\"]]",
+  "action": "created"
+ },
+ "title-empty": {
+  "fullname": "muse-probe-r2notes-fnb-title-empty",
+  "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock title=\"\"]]",
+  "action": "created"
+ },
+ "hide": {
+  "fullname": "muse-probe-r2notes-fnb-hide",
+  "source": "Apple[[footnote]]Banana[[/footnote]]\n\n[[footnoteblock hide=\"true\"]]",
+  "action": "created"
+ },
+ "bogus": {
+  "fullname": "muse-probe-r2notes-fnb-bogus",
+  "source": "Apple[[footnote]]Banana[[/footnote]]\n\n[[footnoteblock bogus=\"true\"]]",
+  "action": "created"
+ },
+ "quote-block": {
+  "fullname": "muse-probe-r2notes-fnb-quote-block",
+  "source": "A[[footnote]]n[[/footnote]]\n\n> [[footnoteblock]]",
+  "action": "created"
+ },
+ "list-block": {
+  "fullname": "muse-probe-r2notes-fnb-list-block",
+  "source": "A[[footnote]]n[[/footnote]]\n\n* [[footnoteblock]]",
+  "action": "created"
+ },
+ "div-block": {
+  "fullname": "muse-probe-r2notes-fnb-div-block",
+  "source": "A[[footnote]]n[[/footnote]]\n\n[[div]]\n[[footnoteblock]]\n[[/div]]",
+  "action": "created"
+ },
+ "inline-block": {
+  "fullname": "muse-probe-r2notes-fnb-inline-block",
+  "source": "prefix [[footnoteblock]] suffix A[[footnote]]n[[/footnote]]",
+  "action": "created"
+ },
+ "uppercase": {
+  "fullname": "muse-probe-r2notes-fnb-uppercase",
+  "source": "A[[footnote]]n[[/footnote]]\n\n[[FOOTNOTEBLOCK]]",
+  "action": "created"
+ },
+ "malformed": {
+  "fullname": "muse-probe-r2notes-fnb-malformed",
+  "source": "A[[footnote]]n[[/footnote]]\n\n[[footnoteblock",
+  "action": "created"
+ },
+ "nested-bold": {
+  "fullname": "muse-probe-r2notes-fnb-nested-bold",
+  "source": "Claim[[footnote]]a **bold** and //italic// bit[[/footnote]]\n\n[[footnoteblock]]",
+  "action": "created"
+ }
+}

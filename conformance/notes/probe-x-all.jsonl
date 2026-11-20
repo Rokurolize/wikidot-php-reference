@@ -1,0 +1,22 @@
+{"id": "x-fn-in-div", "source": "[[div]]\nfirst [[footnote]]in div[[/footnote]] text\n[[/div]]\nsecond [[footnote]]outside[[/footnote]]\n[[footnoteblock]]"}
+{"id": "x-fn-in-collapsible", "source": "[[collapsible]]\n[[footnote]]in collapsible[[/footnote]]\n[[/collapsible]]\n[[footnote]]outside[[/footnote]]\n[[footnoteblock]]"}
+{"id": "x-fn-in-code", "source": "[[code]]\n[[footnote]]literal[[/footnote]]\n[[/code]]\nreal [[footnote]]note[[/footnote]]\n[[footnoteblock]]"}
+{"id": "x-fn-in-quote", "source": "> quoted [[footnote]]in quote[[/footnote]]\nplain [[footnote]]outside[[/footnote]]\n[[footnoteblock]]"}
+{"id": "x-fn-in-list", "source": "* item [[footnote]]in list[[/footnote]]\n* second\nplain [[footnote]]outside[[/footnote]]\n[[footnoteblock]]"}
+{"id": "x-fn-block-before", "source": "[[footnoteblock]]\nfirst [[footnote]]one[[/footnote]]\nsecond [[footnote]]two[[/footnote]]"}
+{"id": "x-fn-block-between", "source": "first [[footnote]]one[[/footnote]]\n[[footnoteblock]]\nsecond [[footnote]]two[[/footnote]]"}
+{"id": "x-fn-block-multiple", "source": "first [[footnote]]one[[/footnote]]\n[[footnoteblock]]\nsecond [[footnote]]two[[/footnote]]\n[[footnoteblock]]"}
+{"id": "x-fn-block-none", "source": "first [[footnote]]one[[/footnote]]\nsecond [[footnote]]two[[/footnote]]"}
+{"id": "x-fn-block-title", "source": "[[footnote]]one[[/footnote]]\n[[footnoteblock title=\"Custom\"]]"}
+{"id": "x-bib-def-order", "source": "[[bibliography]]\n: alpha : Alpha text\n: beta : Beta text\n: gamma : Gamma text\n[[/bibliography]]\nCite ((bibcite gamma)) and ((bibcite alpha))."}
+{"id": "x-bib-unordered-labels", "source": "[[bibliography]]\n: zeta : Zeta text\n: alpha : Alpha text\n: mu : Mu text\n[[/bibliography]]\nCite ((bibcite mu)) and ((bibcite zeta))."}
+{"id": "x-bib-cite-before", "source": "Cite ((bibcite gamma)) then ((bibcite alpha)) then ((bibcite beta)).\n[[bibliography]]\n: alpha : Alpha text\n: beta : Beta text\n: gamma : Gamma text\n[[/bibliography]]"}
+{"id": "x-bib-dup-label", "source": "[[bibliography]]\n: k : First k\n: k : Second k\n[[/bibliography]]\nCite ((bibcite k))."}
+{"id": "x-bib-undefined", "source": "Cite ((bibcite missing)) with no such entry.\n[[bibliography]]\n: k : A real entry\n[[/bibliography]]"}
+{"id": "x-mix-fn-bib", "source": "[[footnote]]note one[[/footnote]] and ((bibcite k)).\n[[bibliography]]\n: k : Entry k\n[[/bibliography]]\n[[footnoteblock]]"}
+{"id": "x-mix-fn-in-bib", "source": "[[bibliography]]\n: k : Entry with [[footnote]]nested note[[/footnote]]\n[[/bibliography]]\nCite ((bibcite k)).\n[[footnoteblock]]"}
+{"id": "x-mix-bibcite-in-fn", "source": "[[footnote]]see ((bibcite k))[[/footnote]]\n[[bibliography]]\n: k : Entry k\n[[/bibliography]]\n[[footnoteblock]]"}
+{"id": "x-fn-unterminated", "source": "[[footnote]]no closing tag\n[[footnoteblock]]"}
+{"id": "x-bib-unterminated", "source": "[[bibliography]]\n: k : no closing tag"}
+{"id": "x-fn-in-iftags-drop", "source": "[[iftags -alpha]]\n[[footnote]]suppressed[[/footnote]]\n[[/iftags]]\n[[footnote]]kept[[/footnote]]\n[[footnoteblock]]", "tags": ["alpha"]}
+{"id": "x-fn-in-iftags-keep", "source": "[[iftags +alpha]]\n[[footnote]]kept inside[[/footnote]]\n[[/iftags]]\n[[footnote]]outside[[/footnote]]\n[[footnoteblock]]", "tags": ["alpha"]}

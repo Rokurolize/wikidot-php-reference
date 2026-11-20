@@ -1,0 +1,15 @@
+p-space-only-body -> muse-probe-r2notes-bibi-p-space-only-body (created)
+p-tab-only-body -> muse-probe-r2notes-bibi-p-tab-only-body (created)
+2 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p-space-only-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-space-only-body",
+  "source": "[[bibliography]]\n: a :   \n[[/bibliography]]",
+  "action": "created"
+ },
+ "p-tab-only-body": {
+  "fullname": "muse-probe-r2notes-bibi-p-tab-only-body",
+  "source": "[[bibliography]]\n: a :\t\n[[/bibliography]]",
+  "action": "created"
+ }
+}

@@ -22,5 +22,13 @@ function ref_page_map() {
         // Root-owned stub, disclosed in conformance-refphp/R2-LINK.md.
         'muse-probe-r2link-free-exists' => "FREELINK TARGET ONE",
         'muse-probe-r2link-free-exists2' => "FREELINK TARGET TWO",
+        // R2-notes stage: the run-owned include target used by root's focused
+        // include-content probe (muse-probe-r2notes-x-inc-holder). Its source is
+        // byte-identical to the live sandbox page muse-probe-r2notes-x-inc-src,
+        // so the reference's Include rule sees the same footnote body live does
+        // and the document-order numbering seam can be compared. Root-owned
+        // stub, disclosed in conformance-refphp/R2-NOTES.md.
+        'muse-probe-r2notes-x-inc-src' =>
+            "included [[footnote]]from include[[/footnote]] text",
     );
 }

@@ -1,0 +1,96 @@
+===== p01-canonical (bib01-canonical-two) =====
+live: <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Bell, J.; Hewish, A. <em>Observation of a Rapidly Pulsating Radio Source.</em> Nature 217, 709, 1968.</div><div class="bibitem" id="bibitem-2">2. Guy, R. K. <em>Modular Difference Sets.</em> Springer, 1994.</div></div>
+ref : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Bell, J.; Hewish, A. <em>Observation of a Rapidly Pulsating Radio Source.</em> Nature 217, 709, 1968.</div><div class="bibitem" id="bibitem-2">2. Guy, R. K. <em>Modular Difference Sets.</em> Springer, 1994.</div></div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Bell, J.; Hewish, A. <em>Observation of a Rapidly Pulsating Radio Source.</em> Nature 217, 709, 1968.</div><div class="bibitem" id="bibitem-2">2. Guy, R. K. <em>Modular Difference Sets.</em> Springer, 1994.</div></div>
+live==ref: True live==ftl: True ref==ftl: True
+
+===== p02-duplicate (bib04-duplicate-label) =====
+live: <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. First bell entry.</div><div class="bibitem" id="bibitem-2">2. Second bell entry.</div><div class="bibitem" id="bibitem-2">2. Guy entry.</div></div>
+ref : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. First bell entry.</div><div class="bibitem" id="bibitem-2">2. Second bell entry.</div><div class="bibitem" id="bibitem-2">2. Guy entry.</div></div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. First bell entry.</div><div class="bibitem" id="bibitem-2">2. Second bell entry.</div><div class="bibitem" id="bibitem-2">2. Guy entry.</div></div>
+live==ref: True live==ftl: True ref==ftl: True
+
+===== p03-title-empty (bib15-title-empty) =====
+live: <div class="bibitems"><div class="bibitem" id="bibitem-1">1. Entry A.</div></div>
+ref : <div class="bibitems"><div class="bibitem" id="bibitem-1">1. Entry A.</div></div>
+ftl : <div class="bibitems"><div class="title"></div><div class="bibitem" id="bibitem-1">1. Entry A.</div></div>
+live==ref: True live==ftl: False ref==ftl: False
+
+===== p04-title-special (bib16-title-special-chars) =====
+live: <div class="bibitems"><div class="title">&lt;Works &amp; Sources&gt;</div><div class="bibitem" id="bibitem-1">1. A &amp; B</div></div>
+ref : <div class="bibitems"><div class="title">&lt;Works &amp; Sources&gt;</div><div class="bibitem" id="bibitem-1">1. A &amp; B</div></div>
+ftl : <div class="bibitems"><div class="title">&lt;Works &amp; Sources&gt;</div><div class="bibitem" id="bibitem-1">1. A &amp; B</div></div>
+live==ref: True live==ftl: True ref==ftl: True
+
+===== p05-residual (bib42-invalid-line-residual) =====
+live: <div class="bibitems"><div class="title">Bibliography</div> : bad-first : Bad first. <div class="bibitem" id="bibitem-1">1. Alpha text.</div> : bad-label : <strong>bold</strong> bad. <div class="bibitem" id="bibitem-2">2. Omega text.</div> trailing prose</div>
+ref : <div class="bibitems"><div class="title">Bibliography</div> : bad-first : Bad first. <div class="bibitem" id="bibitem-1">1. Alpha text.</div> : bad-label : <strong>bold</strong> bad. <div class="bibitem" id="bibitem-2">2. Omega text.</div> trailing prose</div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div> : bad-first : Bad first. <div class="bibitem" id="bibitem-1">1. Alpha text.</div> : bad-label : <strong>bold</strong> bad. <div class="bibitem" id="bibitem-2">2. Omega text.</div> trailing prose</div>
+live==ref: True live==ftl: True ref==ftl: True
+
+===== p06-separators (bib38-definition-separators) =====
+live: <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha.</div> : b :Bravo. <div class="bibitem" id="bibitem-2">2. Charlie.</div><div class="bibitem" id="bibitem-3">3. Delta.</div> : i : India. <div class="bibitem" id="bibitem-4">4.</div><div class="bibitem" id="bibitem-5">5. Golf.</div> : h :Hotel.</div>
+ref : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha.</div> : b :Bravo. <div class="bibitem" id="bibitem-2">2. Charlie.</div><div class="bibitem" id="bibitem-3">3. Delta.</div> : i : India. <div class="bibitem" id="bibitem-4">4. </div><div class="bibitem" id="bibitem-5">5. Golf.</div> : h :Hotel.</div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha.</div> : b :Bravo. <div class="bibitem" id="bibitem-2">2. Charlie.</div><div class="bibitem" id="bibitem-3">3. Delta.</div> : i : India. <div class="bibitem" id="bibitem-4">4.</div><div class="bibitem" id="bibitem-5">5. Golf.</div> : h :Hotel.</div>
+live==ref: False live==ftl: True ref==ftl: False
+
+===== p07-tab-prefix (bib40-tab-prefix-label) =====
+live: <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha text.</div> : bell : Bell text.</div>
+ref : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha text.</div> : bell : Bell text.</div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha text.</div> : bell : Bell text.</div>
+live==ref: True live==ftl: True ref==ftl: True
+
+===== p08-closer-tab (bib29-closer-trailing-tab) =====
+live: <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A</div></div>
+ref : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A</div></div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A</div></div>
+live==ref: True live==ftl: True ref==ftl: True
+
+===== p09-opener-extra-close (bib27-opener-extra-close) =====
+live: <div class="bibitems"><div class="title">Bibliography</div> ] <div class="bibitem" id="bibitem-1">1. A</div></div>
+ref : <div class="bibitems"><div class="title">Bibliography</div> ] <div class="bibitem" id="bibitem-1">1. A</div></div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div> ] <div class="bibitem" id="bibitem-1">1. A</div></div>
+live==ref: True live==ftl: True ref==ftl: True
+
+===== p10-nested (bib31-nested-bibliography) =====
+live: <div class="bibitems"><div class="title">Bibliography</div> [[bibliography]] nested</div>
+ref : <div class="bibitems"><div class="title">Bibliography</div> [[bibliography]] nested</div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div> [[bibliography]] nested</div>
+live==ref: True live==ftl: True ref==ftl: True
+
+===== p11-iftags-kept (bib51-iftags-kept) =====
+live: <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A</div></div>
+ref : 
+ftl : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A</div></div>
+live==ref: False live==ftl: True ref==ftl: False
+
+===== p12-iftags-cross (bib52-iftags-closer-inside) =====
+live: <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. ab</div></div>
+ref : 
+ftl : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. ab</div></div>
+live==ref: False live==ftl: True ref==ftl: False
+
+===== p13-footnote-open (bib48-footnote-opened-in-bib-body) =====
+live: <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup></div> after <div class="footnotes-footer"><div class="title">Footnotes</div><div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. : b : B</div></div></div>
+ref : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup></div> after <div class="footnotes-footer"><div class="title">Footnotes</div><div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. : b : B</div></div></div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup></div> after<div class="footnotes-footer"><div class="title">Footnotes</div><div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. : b : B</div></div></div>
+live==ref: True live==ftl: False ref==ftl: False
+
+===== p14-item-table (bib50-item-inside-table) =====
+live: <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A</div><table><tr><td><div class="bibitem" id="bibitem-2">2. B</div></td></tr></table><div class="bibitem" id="bibitem-3">3. C</div></div>
+ref : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A</div><table><tr><td><div class="bibitem" id="bibitem-2">2. B</div></td></tr></table><div class="bibitem" id="bibitem-3">3. C</div></div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A</div><table><tr><td><div class="bibitem" id="bibitem-2">2. B</div></td></tr></table><div class="bibitem" id="bibitem-3">3. C</div></div>
+live==ref: True live==ftl: True ref==ftl: True
+
+===== p15-two-blocks (bib10-two-blocks) =====
+live: <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Entry A.</div></div>
+ref : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Entry A.</div></div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Entry A.</div></div>
+live==ref: True live==ftl: True ref==ftl: True
+
+===== p16-hide (bib17-hide-yes) =====
+live: <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. value</div></div>
+ref : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. value</div></div>
+ftl : <div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. value</div></div>
+live==ref: True live==ftl: True ref==ftl: True
+
