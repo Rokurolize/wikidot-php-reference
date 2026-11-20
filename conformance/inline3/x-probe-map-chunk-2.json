@@ -1,0 +1,47 @@
+{
+ "x10": {
+  "fullname": "muse-probe-r2in3-x-x10",
+  "source": "{{a//ab//ba}}",
+  "action": "created"
+ },
+ "x11": {
+  "fullname": "muse-probe-r2in3-x-x11",
+  "source": "//a{{ab//ba}}",
+  "action": "created"
+ },
+ "x12": {
+  "fullname": "muse-probe-r2in3-x-x12",
+  "source": "//a{{ab}}ba//",
+  "action": "created"
+ },
+ "x13": {
+  "fullname": "muse-probe-r2in3-x-x13",
+  "source": "{{a__ab}}ba__",
+  "action": "created"
+ },
+ "x14": {
+  "fullname": "muse-probe-r2in3-x-x14",
+  "source": "{{a__ab__ba}}",
+  "action": "created"
+ },
+ "x15": {
+  "fullname": "muse-probe-r2in3-x-x15",
+  "source": "__a{{ab__ba}}",
+  "action": "created"
+ },
+ "x16": {
+  "fullname": "muse-probe-r2in3-x-x16",
+  "source": "__a{{ab}}ba__",
+  "action": "created"
+ },
+ "x17": {
+  "fullname": "muse-probe-r2in3-x-x17",
+  "source": "{{a--ab}}ba--",
+  "action": "created"
+ },
+ "x18": {
+  "fullname": "muse-probe-r2in3-x-x18",
+  "source": "{{a--ab--ba}}",
+  "action": "created"
+ }
+}

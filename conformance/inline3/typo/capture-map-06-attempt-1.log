@@ -1,0 +1,57 @@
+typo78 -> muse-probe-r2in3-typo-typo78 stable=True saved_source_matches=True valid=True
+typo81 -> muse-probe-r2in3-typo-typo81 stable=True saved_source_matches=True valid=True
+typo82 -> muse-probe-r2in3-typo-typo82 stable=True saved_source_matches=True valid=True
+typo83 -> muse-probe-r2in3-typo-typo83 stable=True saved_source_matches=True valid=True
+typo85 -> muse-probe-r2in3-typo-typo85 stable=True saved_source_matches=True valid=True
+{
+ "typo78": {
+  "fullname": "muse-probe-r2in3-typo-typo78",
+  "html": "<p><sub>a<span style=\"text-decoration: line-through;\">b</span></sub><span style=\"text-decoration: line-through;\">c</span><br />\nx</p>",
+  "html_sha256": "8142efc711b189763bc731b04f560bac25a724e2efb9bb4732853777272ccb60",
+  "source": ",,a--b,,c--\nx",
+  "source_sha256": "b97611e0b838452979524e0c8f8fdfeaca6355f9ed5afefdced83a8e1146a5d0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo81": {
+  "fullname": "muse-probe-r2in3-typo-typo81",
+  "html": "<p>a<span style=\"text-decoration: line-through;\">b<br />\nc</span>d<br />\nx</p>",
+  "html_sha256": "b52d396bd4d7e3a55951882bfed607c9717057c4104dba5b4d58b0ec75cec66f",
+  "source": "a--b\nc--d\nx",
+  "source_sha256": "60dd91534c6916aa75101ac889239050bd0c42fc19cf5ecea29d1d0a69037352",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo82": {
+  "fullname": "muse-probe-r2in3-typo-typo82",
+  "html": "<p>a&#8212;b</p>\n<p>c&#8212;d<br />\nx</p>",
+  "html_sha256": "97f486d37bc3bddfa1cafeab20ea6e50e9bc63bedb61972555ec5b2800371378",
+  "source": "a--b\n\nc--d\nx",
+  "source_sha256": "ff18b214bd98d24578d525cd3406725da89ad35b6b889a34177996f172649c03",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo83": {
+  "fullname": "muse-probe-r2in3-typo-typo83",
+  "html": "<p style=\"text-align: center;\">Heading &#8212; &#8230; =</p>\n<p>x</p>",
+  "html_sha256": "eaae463b8495e39353c8ea0c7a820dc755b66d5ea7241ed3db3007bac96c2d0c",
+  "source": "= Heading -- ... =\nx",
+  "source_sha256": "b241198155d0a88f0c0034e78ddebbf51f3d21134ccbda43e89e8a108fcbedcc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo85": {
+  "fullname": "muse-probe-r2in3-typo-typo85",
+  "html": "<ul>\n<li>item &#8212; &#8230;</li>\n<li>item2</li>\n</ul>\n<p>x</p>",
+  "html_sha256": "91066310bf5b21e766646bd5f7d3701c2c7944c894d8632e0e59df38a0886fd4",
+  "source": "* item -- ...\n* item2\nx",
+  "source_sha256": "4b1675faa997d69f5baa9ee4113c8a4c273344f594ef13baf049ed3eeed493cf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "typo69": {
+  "fullname": "muse-probe-r2in3-typo-typo69",
+  "html": "<p><a href=\"http://x/a--b\">label</a><br />\nx</p>",
+  "html_sha256": "63e720e135456c4eb1947e240a960cee3d53cd9975ba4ab0da1c08a6d7521cda",
+  "source": "[[a href=\"http://x/a--b\"]]label[[/a]]\nx",
+  "source_sha256": "aa50cccbe3ee64b9a6b9b5ac86031df6b5be6dd6d3811028450aed3906bfbb9e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo76": {
+  "fullname": "muse-probe-r2in3-typo-typo76",
+  "html": "<p><tt>a<span style=\"text-decoration: line-through;\">b</span></tt><span style=\"text-decoration: line-through;\">c</span><br />\nx</p>",
+  "html_sha256": "057a8d51428903d0efe02de9133906895a94b9cdf879e2fb8d965e232890e998",
+  "source": "{{a--b}}c--\nx",
+  "source_sha256": "1d16eb63eaac490e9375b5ccbfb422f2ce60cfb315de9dc26e0e9342fe7db3b7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo90": {
+  "fullname": "muse-probe-r2in3-typo-typo90",
+  "html": "<p>5&#160;&amp;micro;m<br />\nx</p>",
+  "html_sha256": "283a2cabaf4b1314562a7f14b4b5fb7eea58fdfb625e9b0a755b4dc58b8d89f5",
+  "source": "5 &micro;m\nx",
+  "source_sha256": "18dd0fa8d032086ffe6a8921c2a52fe7cfeb9ba4a1f61d5736cf49a65fa783b1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

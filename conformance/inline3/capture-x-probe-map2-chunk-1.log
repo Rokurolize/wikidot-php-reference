@@ -1,0 +1,101 @@
+x61 -> muse-probe-r2in3-x-x61 stable=True saved_source_matches=True valid=True
+x63 -> muse-probe-r2in3-x-x63 stable=True saved_source_matches=True valid=True
+x65 -> muse-probe-r2in3-x-x65 stable=True saved_source_matches=True valid=True
+x67 -> muse-probe-r2in3-x-x67 stable=True saved_source_matches=True valid=True
+x69 -> muse-probe-r2in3-x-x69 stable=True saved_source_matches=True valid=True
+x71 -> muse-probe-r2in3-x-x71 stable=True saved_source_matches=True valid=True
+x73 -> muse-probe-r2in3-x-x73 stable=True saved_source_matches=True valid=True
+x74 -> muse-probe-r2in3-x-x74 stable=True saved_source_matches=True valid=True
+x75 -> muse-probe-r2in3-x-x75 stable=True saved_source_matches=True valid=True
+{
+ "x61": {
+  "fullname": "muse-probe-r2in3-x-x61",
+  "html": "<p><tt>a<sup>ab</sup></tt><sup>ba</sup></p>",
+  "html_sha256": "13b9b2eaa47ffd9d64ed8d5ea26d8887ada5ae57f0d571c3978e8745d7558398",
+  "source": "{{a^^ab}}ba^^",
+  "source_sha256": "b117e7d3294d93a61efbdcaab89f6a9f5be6f7a2fa67b4d0246b861cdd94391a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x63": {
+  "fullname": "muse-probe-r2in3-x-x63",
+  "html": "<p><sup>a<tt>ab</tt></sup><tt>ba</tt></p>",
+  "html_sha256": "cace63a42a93e319d393ad2a083f80055d206eefa9a73644899f99b3b9c5a10d",
+  "source": "^^a{{ab^^ba}}",
+  "source_sha256": "84a3fc6f43e6c33d4960fba7f66458306aedcd11e51cb7f87c5f020787502554",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x65": {
+  "fullname": "muse-probe-r2in3-x-x65",
+  "html": "<p><tt>a<sub>ab</sub></tt><sub>ba</sub></p>",
+  "html_sha256": "9959c315a9298ba8d72e8ff41630bc27c5ccae136ac2cb541286d52d4b295184",
+  "source": "{{a,,ab}}ba,,",
+  "source_sha256": "10478a855b8ed13af85b91f1b04dd2476a57122f8004c9a96d7a468e520b7ecc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x67": {
+  "fullname": "muse-probe-r2in3-x-x67",
+  "html": "<p><sub>a<tt>ab</tt></sub><tt>ba</tt></p>",
+  "html_sha256": "4f7ae7902ad484dec4e32e3c02db4c272f458990fcdf47d0b6d7b3ed2ab4546b",
+  "source": ",,a{{ab,,ba}}",
+  "source_sha256": "ac5e7410d75216b4e658f883247303537e063f9f739bda0fac03ef48c89777f9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x69": {
+  "fullname": "muse-probe-r2in3-x-x69",
+  "html": "<p><sup>a<sub>ab</sub></sup><sub>ba</sub></p>",
+  "html_sha256": "e6217e098bebf5c4bc5886e3b540827d25c6263995aeabd513b7fb7b0d3a8a89",
+  "source": "^^a,,ab^^ba,,",
+  "source_sha256": "c5540d57c896f6eda4e159a53bbb013be8b18f833f764d762cf90f21a9421ed3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x71": {
+  "fullname": "muse-probe-r2in3-x-x71",
+  "html": "<p><sub>a<sup>ab</sup></sub><sup>ba</sup></p>",
+  "html_sha256": "aa6faa51d66c92c8d6d0b7ad1884f897d266f980cc09a1458424fd47cfd4b1d4",
+  "source": ",,a^^ab,,ba^^",
+  "source_sha256": "b4b37119931174a6f71de8eed95d6b22549b2ce8f1019318ca9d551c63de8cdd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x73": {
+  "fullname": "muse-probe-r2in3-x-x73",
+  "html": "<p><span style=\"white-space: pre-wrap;\">skip</span> <tt><strong>b</strong> <em>i</em> <span style=\"text-decoration: underline;\">u</span> <span style=\"text-decoration: line-through;\">s</span> <sup>p</sup> <sub>s</sub> <span style=\"color: red\">c</span></tt></p>",
+  "html_sha256": "2a1411aa77e27318aa8502e63ddc91b1e290d8a28fc9728f29cff99cd4b18d79",
+  "source": "@@skip@@ {{**b** //i// __u__ --s-- ^^p^^ ,,s,, ##red|c##}}",
+  "source_sha256": "8d96194d265d4a253124e01de7f9a1f95826c6b6613b6c2bc9708da7a2bf3a57",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x74": {
+  "fullname": "muse-probe-r2in3-x-x74",
+  "html": "<p><tt>a &#8212;- b &#8230; c &#8220;d&#8221; &#8216;e&#8217; &#171;f&#187; 12&#160;34</tt></p>",
+  "html_sha256": "b7d4750ef32df2293eee19b176ab1bc7ab08a3e28a6acc5737343c26fa2a7bd5",
+  "source": "{{a --- b ... c ``d'' `e' <<f>> 12 34}}",
+  "source_sha256": "7e9377ad51720768db124984cb815ea2f83f56f620828e3f717c7d5ee01e57fa",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x75": {
+  "fullname": "muse-probe-r2in3-x-x75",
+  "html": "<p><tt>see //example.com/path and <a href=\"http://x//y\">http://x//y</a></tt></p>",
+  "html_sha256": "ea8ddd53077933745d9dcf40d3b7bfc98f1b7724dfe1a21bc7513e4bdff660e8",
+  "source": "{{see //example.com/path and http://x//y}}",
+  "source_sha256": "f19a4a35ec907057618041a7670b96c63ee0ebb6f06ffa9a0e90787f2013bc00",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

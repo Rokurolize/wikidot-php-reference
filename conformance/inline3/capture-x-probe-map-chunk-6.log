@@ -1,0 +1,22 @@
+x46 -> muse-probe-r2in3-x-x46 stable=True saved_source_matches=True valid=True
+x47 -> muse-probe-r2in3-x-x47 stable=True saved_source_matches=True valid=True
+x48 -> muse-probe-r2in3-x-x48 stable=True saved_source_matches=True valid=True
+x49 -> muse-probe-r2in3-x-x49 stable=True saved_source_matches=True valid=True
+x50 -> muse-probe-r2in3-x-x50 stable=True saved_source_matches=True valid=True
+Traceback (most recent call last):
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 312, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 308, in main
+    return args.func(args)
+           ~~~~~~~~~^^^^^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 201, in cmd_capture
+    first = extract_page_content(fetch_rendered(args.site, fullname))
+                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 184, in fetch_rendered
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'https://sandbox-for-codex.wikidot.com/muse-probe-r2in3-x-x51'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404

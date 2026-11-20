@@ -1,0 +1,55 @@
+{"id":"tt01","output":"<p><tt>mono<\/tt><\/p>\n\n"}
+{"id":"tt02","output":"<p>abc <tt>mono<\/tt> def<\/p>\n\n"}
+{"id":"tt03","output":"<p>ab<tt>mono<\/tt>cd<\/p>\n\n"}
+{"id":"tt04","output":"<p><tt>a<\/tt> <tt>b<\/tt><\/p>\n\n"}
+{"id":"tt05","output":"<p><tt>a<\/tt><tt>b<\/tt><\/p>\n\n"}
+{"id":"tt06","output":"<p>before <tt>x<\/tt> after <tt>y<\/tt> tail<\/p>\n\n"}
+{"id":"tt07","output":"<p><tt> <em>code literal<\/em> <\/tt><\/p>\n\n"}
+{"id":"tt08","output":"<p><tt> text<\/tt><\/p>\n\n"}
+{"id":"tt09","output":"<p><tt>text <\/tt><\/p>\n\n"}
+{"id":"tt10","output":"<p><tt> text <\/tt><\/p>\n\n"}
+{"id":"tt11","output":"<p>before <tt>   a  <strong>b<\/strong>  c   <\/tt> after<\/p>\n\n"}
+{"id":"tt12","output":"<p><tt>x <\/tt><tt> y<\/tt><\/p>\n\n"}
+{"id":"tt13","output":"<p>before<tt> x<\/tt>after<\/p>\n\n"}
+{"id":"tt14","output":"<p><tt>    text<\/tt><\/p>\n\n"}
+{"id":"tt15","output":"<p><tt>text    <\/tt><\/p>\n\n"}
+{"id":"tt16","output":"<p><tt> x <\/tt>after<\/p>\n\n"}
+{"id":"tt17","output":"<p><tt><\/tt><\/p>\n\n"}
+{"id":"tt18","output":"<p><tt> <\/tt><\/p>\n\n"}
+{"id":"tt19","output":"<p><tt>   <\/tt><\/p>\n\n"}
+{"id":"tt20","output":"<p><tt>0<\/tt><\/p>\n\n"}
+{"id":"tt21","output":"<p>A<tt>0<\/tt>B<\/p>\n\n"}
+{"id":"tt22","output":"<p><tt>00<\/tt><\/p>\n\n"}
+{"id":"tt23","output":"<p><tt>-0<\/tt><\/p>\n\n"}
+{"id":"tt24","output":"<p><tt>0.0<\/tt><\/p>\n\n"}
+{"id":"tt25","output":"<p><tt>x}}<\/tt>tail<\/p>\n\n"}
+{"id":"tt26","output":"<p><tt>x }}<\/tt>tail<\/p>\n\n"}
+{"id":"tt27","output":"<p><tt>x}}}}<\/tt>tail<\/p>\n\n"}
+{"id":"tt28","output":"<p><tt>outer {{ inner <\/tt> tail}}<\/p>\n\n"}
+{"id":"tt29","output":"<p><tt>a {{b<\/tt> c}} <tt>d<\/tt><\/p>\n\n"}
+{"id":"tt30","output":"<p><tt><strong>bold<\/strong><\/tt><\/p>\n\n"}
+{"id":"tt31","output":"<p><strong><tt>mono<\/tt><\/strong><\/p>\n\n"}
+{"id":"tt32","output":"<p><tt><em>italic<\/em><\/tt><\/p>\n\n"}
+{"id":"tt33","output":"<p><tt><span style=\"text-decoration: underline;\">under<\/span><\/tt><\/p>\n\n"}
+{"id":"tt34","output":"<p><tt><span style=\"text-decoration: line-through;\">strike<\/span><\/tt><\/p>\n\n"}
+{"id":"tt35","output":"<p><tt><span style=\"color: red\">color<\/span><\/tt><\/p>\n\n"}
+{"id":"tt36","output":"<p><span style=\"color: red\"><tt>mono<\/tt><\/span><\/p>\n\n"}
+{"id":"tt37","output":"<p><tt>a <strong>b<\/strong> c<\/tt><\/p>\n\n"}
+{"id":"tt38","output":"<p>{{mono<\/p>\n\n"}
+{"id":"tt39","output":"<p>mono}}<\/p>\n\n"}
+{"id":"tt40","output":"<p><tt>{mono}<\/tt><\/p>\n\n"}
+{"id":"tt41","output":"<p>{{ x<\/p>\n\n"}
+{"id":"tt42","output":"<p>{{ x }<\/p>\n\n"}
+{"id":"tt43","output":"<p>}}Fail<br \/>\n{{Fail<\/p>\n\n<p>paragraph? }}<\/p>\n\n"}
+{"id":"tt44","output":"<p><tt>a<br \/>\nb<\/tt><\/p>\n\n"}
+{"id":"tt45","output":"<p>{{a<\/p>\n\n<p>b}}<\/p>\n\n"}
+{"id":"tt46","output":"<p><tt>a<br \/>\nb<br \/>\nc<\/tt><\/p>\n\n"}
+{"id":"tt47","output":"<p><tt>a<\/tt><br \/>\n<tt>b<\/tt><\/p>\n\n"}
+{"id":"tt48","output":"<blockquote><p><tt>quoted<\/tt><\/p>\n\n<\/blockquote>\n"}
+{"id":"tt49","output":"<p>{{a<\/p>\n\n<ul>\n<li>item<\/li>\n<\/ul><p>b}}<\/p>\n\n"}
+{"id":"tt50","output":"<div ><p><tt>a<\/tt><\/p>\n\n<\/div>"}
+{"id":"tt51","output":"<p style=\"text-align: center;\"><tt>heading<\/tt><\/p>"}
+{"id":"tt52","output":"\n<div class=\"code\">\n<pre><code>{{not mono}}<\/code><\/pre><\/div>\n\n"}
+{"id":"tt53","output":"<p>[[raw]]<tt>not mono<\/tt>[[\/raw]]<\/p>\n\n"}
+{"id":"tt54","output":"<p><tt><span class=\"wiki-email\">noitadnuof.pcs|nosrep#noitadnuof.pcs|nosrep<\/span><\/tt><\/p>\n\n"}
+{"id":"tt55","output":"<p>See <tt><a href=\"https:\/\/example.com\/a\">https:\/\/example.com\/a<\/a><\/tt>. end<\/p>\n\n"}

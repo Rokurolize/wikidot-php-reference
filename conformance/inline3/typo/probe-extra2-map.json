@@ -1,0 +1,17 @@
+{
+ "typo69": {
+  "fullname": "muse-probe-r2in3-typo-typo69",
+  "source": "[[a href=\"http://x/a--b\"]]label[[/a]]\nx",
+  "action": "created"
+ },
+ "typo76": {
+  "fullname": "muse-probe-r2in3-typo-typo76",
+  "source": "{{a--b}}c--\nx",
+  "action": "created"
+ },
+ "typo90": {
+  "fullname": "muse-probe-r2in3-typo-typo90",
+  "source": "5 &micro;m\nx",
+  "action": "exists"
+ }
+}

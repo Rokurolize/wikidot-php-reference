@@ -1,0 +1,9 @@
+wrote 4 second-pass capture chunks
+x-probe-map2-chunk-1 attempt 1 failed; retrying
+x-probe-map2-chunk-1 attempt 2 OK
+x-probe-map2-chunk-2 attempt 1 failed; retrying
+x-probe-map2-chunk-2 attempt 2 OK
+x-probe-map2-chunk-3 attempt 1 OK
+x-probe-map2-chunk-4 attempt 1 OK
+merged 33 valid second-pass captures into captures-x-2.json
+second probe campaign complete

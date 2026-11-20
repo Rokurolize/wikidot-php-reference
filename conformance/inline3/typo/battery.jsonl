@@ -1,0 +1,92 @@
+{"id": "typo01", "source": "-"}
+{"id": "typo02", "source": "a - b\nx"}
+{"id": "typo03", "source": "a-b\nx"}
+{"id": "typo04", "source": "--\nx"}
+{"id": "typo05", "source": "a--b\nx"}
+{"id": "typo06", "source": "---\nx"}
+{"id": "typo07", "source": "a---b\nx"}
+{"id": "typo08", "source": "----\nx"}
+{"id": "typo09", "source": "a----b\nx"}
+{"id": "typo10", "source": "-----\nx"}
+{"id": "typo11", "source": "a-----b\nx"}
+{"id": "typo12", "source": "------\nx"}
+{"id": "typo13", "source": "a------b\nx"}
+{"id": "typo14", "source": "-------\nx"}
+{"id": "typo15", "source": "a-------b\nx"}
+{"id": "typo16", "source": "--------\nx"}
+{"id": "typo17", "source": "a--------b\nx"}
+{"id": "typo18", "source": "----------\nx"}
+{"id": "typo19", "source": "a----------b\nx"}
+{"id": "typo20", "source": "word-- --word\nx"}
+{"id": "typo21", "source": "wait... what"}
+{"id": "typo22", "source": "wait. . . what"}
+{"id": "typo23", "source": "...leading"}
+{"id": "typo24", "source": "trailing..."}
+{"id": "typo25", "source": "....."}
+{"id": "typo26", "source": "......"}
+{"id": "typo27", "source": "... . . . . . ."}
+{"id": "typo28", "source": ". . .. ...."}
+{"id": "typo29", "source": "x... ...y. . . z"}
+{"id": "typo30", "source": "word ... word\nx"}
+{"id": "typo31", "source": "``double''\nx"}
+{"id": "typo32", "source": "`single'\nx"}
+{"id": "typo33", "source": ",,low''\nx"}
+{"id": "typo34", "source": "``outer ``inner'' outer''\nx"}
+{"id": "typo35", "source": "`one\nline'\nx"}
+{"id": "typo36", "source": "`one\n\nline'\nx"}
+{"id": "typo37", "source": "a``b''c\nx"}
+{"id": "typo38", "source": ",,lower'' and ``upper''\nx"}
+{"id": "typo39", "source": "unpaired`` and ''\nx"}
+{"id": "typo40", "source": "``multi\nline''\nx"}
+{"id": "typo41", "source": "a ' b ` c\nx"}
+{"id": "typo42", "source": "``a''b''c''\nx"}
+{"id": "typo43", "source": "<<French quotes>>\nx"}
+{"id": "typo44", "source": "<<open only\nx"}
+{"id": "typo45", "source": "close only>>\nx"}
+{"id": "typo46", "source": "a >> b\nx"}
+{"id": "typo47", "source": ">> quoted line\nx"}
+{"id": "typo48", "source": "<<<triple>>>\nx"}
+{"id": "typo49", "source": "1 234 567\nx"}
+{"id": "typo50", "source": "12 kg\nx"}
+{"id": "typo51", "source": "12 m\nx"}
+{"id": "typo52", "source": "12 Mpx\nx"}
+{"id": "typo53", "source": "12 foo\nx"}
+{"id": "typo54", "source": "12 kgx\nx"}
+{"id": "typo55", "source": "3.5 kg\nx"}
+{"id": "typo56", "source": "1 2 3 kg 4\nx"}
+{"id": "typo57", "source": "10 %\nx"}
+{"id": "typo58", "source": "100 °C\nx"}
+{"id": "typo59", "source": "5 km/h\nx"}
+{"id": "typo60", "source": "-12 34 and -7 kg\nx"}
+{"id": "typo61", "source": "http://example.com/a--b?x=1 2\nx"}
+{"id": "typo62", "source": "[https://example.com Label ... --]\nx"}
+{"id": "typo63", "source": "[[code]]\na--b...12 kg\n[[/code]]\nx"}
+{"id": "typo64", "source": "[[raw]]a--b...12 kg[[/raw]]\nx"}
+{"id": "typo65", "source": "$a--b...12 kg$\nx"}
+{"id": "typo66", "source": "[!-- a--b...12 kg --]\nx"}
+{"id": "typo67", "source": "{{a--b...12 kg}}\nx"}
+{"id": "typo68", "source": "[[div style=\"a--b...12 kg\"]]x[[/div]]\nx"}
+{"id": "typo69", "source": "[[a href=\"http://x/a--b\"]]label[[/a]]\nx"}
+{"id": "typo70", "source": "[[date 123 45]]\nx"}
+{"id": "typo71", "source": "**a--b**c--\nx"}
+{"id": "typo72", "source": "//a--b//c--\nx"}
+{"id": "typo73", "source": "__a--b__c--\nx"}
+{"id": "typo74", "source": "--a...b--\nx"}
+{"id": "typo75", "source": "##c00|a--b...12 kg##\nx"}
+{"id": "typo76", "source": "{{a--b}}c--\nx"}
+{"id": "typo77", "source": "^^a--b^^c--\nx"}
+{"id": "typo78", "source": ",,a--b,,c--\nx"}
+{"id": "typo79", "source": ",,OUTER ...INNER,, TAIL...\nx"}
+{"id": "typo80", "source": "a--b^^c...d,,e''\nx"}
+{"id": "typo81", "source": "a--b\nc--d\nx"}
+{"id": "typo82", "source": "a--b\n\nc--d\nx"}
+{"id": "typo83", "source": "= Heading -- ... =\nx"}
+{"id": "typo84", "source": "before\n----\nafter...\nx"}
+{"id": "typo85", "source": "* item -- ...\n* item2\nx"}
+{"id": "typo86", "source": "|| cell--cell || ... ||\nx"}
+{"id": "typo87", "source": "a--b\n> quote--tail\nx"}
+{"id": "typo88", "source": "[[footnote]]a--b...12 kg[[/footnote]]\nx"}
+{"id": "typo89", "source": "12 &euro;\nx"}
+{"id": "typo90", "source": "5 &micro;m\nx"}
+{"id": "typo91", "source": "9 Ω and 3 Ohm\nx"}
+{"id": "typo92", "source": "20 &deg;C\nx"}

@@ -1,0 +1,10 @@
+{"id": "adh01", "source": "{{{a  b}}}"}
+{"id": "adh02", "source": "[[code]]a  b[[/code]]"}
+{"id": "adh03", "source": "a\t b"}
+{"id": "adh04", "source": "##  red  |  A  ##"}
+{"id": "adh05", "source": "||  head  ||"}
+{"id": "adh06", "source": ">  quote"}
+{"id": "adh07", "source": "a   \n   b"}
+{"id": "adh08", "source": "**a   b**"}
+{"id": "adh09", "source": "http://x  y"}
+{"id": "adh10", "source": "[[span]]  A  [[/span]]"}

@@ -1,0 +1,288 @@
+total=55 valid=55 buckets={'all-three': 33, 'ftml+live': 16, 'ref+live': 3, 'all-differ': 3} pairwise_live_ref=36 pairwise_live_ftml=49 pairwise_ref_ftml=33
+case | valid | stable | srcmatch | bucket | L==R | L==F | R==F
+tt01 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>mono</tt></p>'
+  REF (raw): '<p><tt>mono</tt></p>\n\n'
+  FTML(raw): '<p><tt>mono</tt></p>'
+tt02 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p>abc <tt>mono</tt> def</p>'
+  REF (raw): '<p>abc <tt>mono</tt> def</p>\n\n'
+  FTML(raw): '<p>abc <tt>mono</tt> def</p>'
+tt03 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p>ab<tt>mono</tt>cd</p>'
+  REF (raw): '<p>ab<tt>mono</tt>cd</p>\n\n'
+  FTML(raw): '<p>ab<tt>mono</tt>cd</p>'
+tt04 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>a</tt> <tt>b</tt></p>'
+  REF (raw): '<p><tt>a</tt> <tt>b</tt></p>\n\n'
+  FTML(raw): '<p><tt>a</tt> <tt>b</tt></p>'
+tt05 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>a</tt><tt>b</tt></p>'
+  REF (raw): '<p><tt>a</tt><tt>b</tt></p>\n\n'
+  FTML(raw): '<p><tt>a</tt><tt>b</tt></p>'
+tt06 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p>before <tt>x</tt> after <tt>y</tt> tail</p>'
+  REF (raw): '<p>before <tt>x</tt> after <tt>y</tt> tail</p>\n\n'
+  FTML(raw): '<p>before <tt>x</tt> after <tt>y</tt> tail</p>'
+tt07 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p><tt><em>code literal</em></tt></p>'
+  REF (raw): '<p><tt> <em>code literal</em> </tt></p>\n\n'
+  FTML(raw): '<p><tt><em>code literal</em></tt></p>'
+  LIVE(norm): '<p><tt><em>code literal</em></tt></p>'
+  REF (norm): '<p><tt> <em>code literal</em> </tt></p>'
+  FTML(norm): '<p><tt><em>code literal</em></tt></p>'
+tt08 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p><tt>text</tt></p>'
+  REF (raw): '<p><tt> text</tt></p>\n\n'
+  FTML(raw): '<p><tt>text</tt></p>'
+  LIVE(norm): '<p><tt>text</tt></p>'
+  REF (norm): '<p><tt> text</tt></p>'
+  FTML(norm): '<p><tt>text</tt></p>'
+tt09 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p><tt>text</tt></p>'
+  REF (raw): '<p><tt>text </tt></p>\n\n'
+  FTML(raw): '<p><tt>text</tt></p>'
+  LIVE(norm): '<p><tt>text</tt></p>'
+  REF (norm): '<p><tt>text </tt></p>'
+  FTML(norm): '<p><tt>text</tt></p>'
+tt10 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p><tt>text</tt></p>'
+  REF (raw): '<p><tt> text </tt></p>\n\n'
+  FTML(raw): '<p><tt>text</tt></p>'
+  LIVE(norm): '<p><tt>text</tt></p>'
+  REF (norm): '<p><tt> text </tt></p>'
+  FTML(norm): '<p><tt>text</tt></p>'
+tt11 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p>before <tt>a <strong>b</strong> c</tt> after</p>'
+  REF (raw): '<p>before <tt>   a  <strong>b</strong>  c   </tt> after</p>\n\n'
+  FTML(raw): '<p>before <tt>a <strong>b</strong> c</tt> after</p>'
+  LIVE(norm): '<p>before <tt>a <strong>b</strong> c</tt> after</p>'
+  REF (norm): '<p>before <tt> a <strong>b</strong> c </tt> after</p>'
+  FTML(norm): '<p>before <tt>a <strong>b</strong> c</tt> after</p>'
+tt12 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p><tt>x</tt> <tt>y</tt></p>'
+  REF (raw): '<p><tt>x </tt><tt> y</tt></p>\n\n'
+  FTML(raw): '<p><tt>x</tt> <tt>y</tt></p>'
+  LIVE(norm): '<p><tt>x</tt> <tt>y</tt></p>'
+  REF (norm): '<p><tt>x </tt><tt> y</tt></p>'
+  FTML(norm): '<p><tt>x</tt> <tt>y</tt></p>'
+tt13 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p>before <tt>x</tt>after</p>'
+  REF (raw): '<p>before<tt> x</tt>after</p>\n\n'
+  FTML(raw): '<p>before <tt>x</tt>after</p>'
+  LIVE(norm): '<p>before <tt>x</tt>after</p>'
+  REF (norm): '<p>before<tt> x</tt>after</p>'
+  FTML(norm): '<p>before <tt>x</tt>after</p>'
+tt14 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p><tt>text</tt></p>'
+  REF (raw): '<p><tt>    text</tt></p>\n\n'
+  FTML(raw): '<p><tt>text</tt></p>'
+  LIVE(norm): '<p><tt>text</tt></p>'
+  REF (norm): '<p><tt> text</tt></p>'
+  FTML(norm): '<p><tt>text</tt></p>'
+tt15 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p><tt>text</tt></p>'
+  REF (raw): '<p><tt>text    </tt></p>\n\n'
+  FTML(raw): '<p><tt>text</tt></p>'
+  LIVE(norm): '<p><tt>text</tt></p>'
+  REF (norm): '<p><tt>text </tt></p>'
+  FTML(norm): '<p><tt>text</tt></p>'
+tt16 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p><tt>x</tt> after</p>'
+  REF (raw): '<p><tt> x </tt>after</p>\n\n'
+  FTML(raw): '<p><tt>x</tt> after</p>'
+  LIVE(norm): '<p><tt>x</tt> after</p>'
+  REF (norm): '<p><tt> x </tt>after</p>'
+  FTML(norm): '<p><tt>x</tt> after</p>'
+tt17 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): ''
+  REF (raw): '<p><tt></tt></p>\n\n'
+  FTML(raw): ''
+  LIVE(norm): ''
+  REF (norm): '<p><tt></tt></p>'
+  FTML(norm): ''
+tt18 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): ''
+  REF (raw): '<p><tt> </tt></p>\n\n'
+  FTML(raw): ''
+  LIVE(norm): ''
+  REF (norm): '<p><tt> </tt></p>'
+  FTML(norm): ''
+tt19 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): ''
+  REF (raw): '<p><tt>   </tt></p>\n\n'
+  FTML(raw): ''
+  LIVE(norm): ''
+  REF (norm): '<p><tt> </tt></p>'
+  FTML(norm): ''
+tt20 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): ''
+  REF (raw): '<p><tt>0</tt></p>\n\n'
+  FTML(raw): ''
+  LIVE(norm): ''
+  REF (norm): '<p><tt>0</tt></p>'
+  FTML(norm): ''
+tt21 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p>AB</p>'
+  REF (raw): '<p>A<tt>0</tt>B</p>\n\n'
+  FTML(raw): '<p>AB</p>'
+  LIVE(norm): '<p>AB</p>'
+  REF (norm): '<p>A<tt>0</tt>B</p>'
+  FTML(norm): '<p>AB</p>'
+tt22 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>00</tt></p>'
+  REF (raw): '<p><tt>00</tt></p>\n\n'
+  FTML(raw): '<p><tt>00</tt></p>'
+tt23 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>-0</tt></p>'
+  REF (raw): '<p><tt>-0</tt></p>\n\n'
+  FTML(raw): '<p><tt>-0</tt></p>'
+tt24 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>0.0</tt></p>'
+  REF (raw): '<p><tt>0.0</tt></p>\n\n'
+  FTML(raw): '<p><tt>0.0</tt></p>'
+tt25 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>x}}</tt>tail</p>'
+  REF (raw): '<p><tt>x}}</tt>tail</p>\n\n'
+  FTML(raw): '<p><tt>x}}</tt>tail</p>'
+tt26 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>x }}</tt>tail</p>'
+  REF (raw): '<p><tt>x }}</tt>tail</p>\n\n'
+  FTML(raw): '<p><tt>x }}</tt>tail</p>'
+tt27 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>x}}}}</tt>tail</p>'
+  REF (raw): '<p><tt>x}}}}</tt>tail</p>\n\n'
+  FTML(raw): '<p><tt>x}}}}</tt>tail</p>'
+tt28 | True | True | True | ftml+live | False | False | True
+  LIVE(raw): '<p><tt>outer {{ inner</tt> tail}}</p>'
+  REF (raw): '<p><tt>outer {{ inner </tt> tail}}</p>\n\n'
+  FTML(raw): '<p><tt>outer {{ inner</tt> tail}}</p>'
+  LIVE(norm): '<p><tt>outer {{ inner</tt> tail}}</p>'
+  REF (norm): '<p><tt>outer {{ inner </tt> tail}}</p>'
+  FTML(norm): '<p><tt>outer {{ inner</tt> tail}}</p>'
+tt29 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>a {{b</tt> c}} <tt>d</tt></p>'
+  REF (raw): '<p><tt>a {{b</tt> c}} <tt>d</tt></p>\n\n'
+  FTML(raw): '<p><tt>a {{b</tt> c}} <tt>d</tt></p>'
+tt30 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt><strong>bold</strong></tt></p>'
+  REF (raw): '<p><tt><strong>bold</strong></tt></p>\n\n'
+  FTML(raw): '<p><tt><strong>bold</strong></tt></p>'
+tt31 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><strong><tt>mono</tt></strong></p>'
+  REF (raw): '<p><strong><tt>mono</tt></strong></p>\n\n'
+  FTML(raw): '<p><strong><tt>mono</tt></strong></p>'
+tt32 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt><em>italic</em></tt></p>'
+  REF (raw): '<p><tt><em>italic</em></tt></p>\n\n'
+  FTML(raw): '<p><tt><em>italic</em></tt></p>'
+tt33 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt><span style="text-decoration: underline;">under</span></tt></p>'
+  REF (raw): '<p><tt><span style="text-decoration: underline;">under</span></tt></p>\n\n'
+  FTML(raw): '<p><tt><span style="text-decoration: underline;">under</span></tt></p>'
+tt34 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt><span style="text-decoration: line-through;">strike</span></tt></p>'
+  REF (raw): '<p><tt><span style="text-decoration: line-through;">strike</span></tt></p>\n\n'
+  FTML(raw): '<p><tt><span style="text-decoration: line-through;">strike</span></tt></p>'
+tt35 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt><span style="color: red">color</span></tt></p>'
+  REF (raw): '<p><tt><span style="color: red">color</span></tt></p>\n\n'
+  FTML(raw): '<p><tt><span style="color: red">color</span></tt></p>'
+tt36 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><span style="color: red"><tt>mono</tt></span></p>'
+  REF (raw): '<p><span style="color: red"><tt>mono</tt></span></p>\n\n'
+  FTML(raw): '<p><span style="color: red"><tt>mono</tt></span></p>'
+tt37 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>a <strong>b</strong> c</tt></p>'
+  REF (raw): '<p><tt>a <strong>b</strong> c</tt></p>\n\n'
+  FTML(raw): '<p><tt>a <strong>b</strong> c</tt></p>'
+tt38 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p>{{mono</p>'
+  REF (raw): '<p>{{mono</p>\n\n'
+  FTML(raw): '<p>{{mono</p>'
+tt39 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p>mono}}</p>'
+  REF (raw): '<p>mono}}</p>\n\n'
+  FTML(raw): '<p>mono}}</p>'
+tt40 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>{mono}</tt></p>'
+  REF (raw): '<p><tt>{mono}</tt></p>\n\n'
+  FTML(raw): '<p><tt>{mono}</tt></p>'
+tt41 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p>{{ x</p>'
+  REF (raw): '<p>{{ x</p>\n\n'
+  FTML(raw): '<p>{{ x</p>'
+tt42 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p>{{ x }</p>'
+  REF (raw): '<p>{{ x }</p>\n\n'
+  FTML(raw): '<p>{{ x }</p>'
+tt43 | True | True | True | ref+live | True | False | False
+  LIVE(raw): '<p>}}Fail<br />\n{{Fail</p>\n<p>paragraph? }}</p>'
+  REF (raw): '<p>}}Fail<br />\n{{Fail</p>\n\n<p>paragraph? }}</p>\n\n'
+  FTML(raw): '<p>}}Fail<br>\n{{Fail</p><p>paragraph? }}</p>'
+  LIVE(norm): '<p>}}Fail<br> {{Fail</p> <p>paragraph? }}</p>'
+  REF (norm): '<p>}}Fail<br> {{Fail</p> <p>paragraph? }}</p>'
+  FTML(norm): '<p>}}Fail<br> {{Fail</p><p>paragraph? }}</p>'
+tt44 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>a<br />\nb</tt></p>'
+  REF (raw): '<p><tt>a<br />\nb</tt></p>\n\n'
+  FTML(raw): '<p><tt>a<br>\nb</tt></p>'
+tt45 | True | True | True | ref+live | True | False | False
+  LIVE(raw): '<p>{{a</p>\n<p>b}}</p>'
+  REF (raw): '<p>{{a</p>\n\n<p>b}}</p>\n\n'
+  FTML(raw): '<p>{{a</p><p>b}}</p>'
+  LIVE(norm): '<p>{{a</p> <p>b}}</p>'
+  REF (norm): '<p>{{a</p> <p>b}}</p>'
+  FTML(norm): '<p>{{a</p><p>b}}</p>'
+tt46 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>a<br />\nb<br />\nc</tt></p>'
+  REF (raw): '<p><tt>a<br />\nb<br />\nc</tt></p>\n\n'
+  FTML(raw): '<p><tt>a<br>\nb<br>\nc</tt></p>'
+tt47 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt>a</tt><br />\n<tt>b</tt></p>'
+  REF (raw): '<p><tt>a</tt><br />\n<tt>b</tt></p>\n\n'
+  FTML(raw): '<p><tt>a</tt><br>\n<tt>b</tt></p>'
+tt48 | True | True | True | all-differ | False | False | False
+  LIVE(raw): '<blockquote>\n<p><tt>quoted</tt></p>\n</blockquote>'
+  REF (raw): '<blockquote><p><tt>quoted</tt></p>\n\n</blockquote>\n'
+  FTML(raw): '<blockquote><p><tt>quoted</tt></p></blockquote>'
+  LIVE(norm): '<blockquote> <p><tt>quoted</tt></p> </blockquote>'
+  REF (norm): '<blockquote><p><tt>quoted</tt></p> </blockquote>'
+  FTML(norm): '<blockquote><p><tt>quoted</tt></p></blockquote>'
+tt49 | True | True | True | all-differ | False | False | False
+  LIVE(raw): '<p>{{a</p>\n<ul>\n<li>item</li>\n</ul>\n<p>b}}</p>'
+  REF (raw): '<p>{{a</p>\n\n<ul>\n<li>item</li>\n</ul><p>b}}</p>\n\n'
+  FTML(raw): '<p>{{a</p><ul>\n<li>item</li>\n</ul><p>b}}</p>'
+  LIVE(norm): '<p>{{a</p> <ul> <li>item</li> </ul> <p>b}}</p>'
+  REF (norm): '<p>{{a</p> <ul> <li>item</li> </ul><p>b}}</p>'
+  FTML(norm): '<p>{{a</p><ul> <li>item</li> </ul><p>b}}</p>'
+tt50 | True | True | True | all-differ | False | False | False
+  LIVE(raw): '<div>\n<p><tt>a</tt></p>\n</div>'
+  REF (raw): '<div ><p><tt>a</tt></p>\n\n</div>'
+  FTML(raw): '<div><p><tt>a</tt></p></div>'
+  LIVE(norm): '<div> <p><tt>a</tt></p> </div>'
+  REF (norm): '<div><p><tt>a</tt></p> </div>'
+  FTML(norm): '<div><p><tt>a</tt></p></div>'
+tt51 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p style="text-align: center;"><tt>heading</tt></p>'
+  REF (raw): '<p style="text-align: center;"><tt>heading</tt></p>'
+  FTML(raw): '<p style="text-align: center;"><tt>heading</tt></p>'
+tt52 | True | True | True | ref+live | True | False | False
+  LIVE(raw): '<div class="code">\n<pre><code>{{not mono}}</code></pre></div>'
+  REF (raw): '\n<div class="code">\n<pre><code>{{not mono}}</code></pre></div>\n\n'
+  FTML(raw): '<div class="code"><pre><code>{{not mono}}</code></pre></div>'
+  LIVE(norm): '<div class="code"> <pre><code>{{not mono}}</code></pre></div>'
+  REF (norm): '<div class="code"> <pre><code>{{not mono}}</code></pre></div>'
+  FTML(norm): '<div class="code"><pre><code>{{not mono}}</code></pre></div>'
+tt53 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p>[[raw]]<tt>not mono</tt>[[/raw]]</p>'
+  REF (raw): '<p>[[raw]]<tt>not mono</tt>[[/raw]]</p>\n\n'
+  FTML(raw): '<p>[[raw]]<tt>not mono</tt>[[/raw]]</p>'
+tt54 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p><tt><span class="wiki-email">noitadnuof.pcs|nosrep#noitadnuof.pcs|nosrep</span></tt></p>'
+  REF (raw): '<p><tt><span class="wiki-email">noitadnuof.pcs|nosrep#noitadnuof.pcs|nosrep</span></tt></p>\n\n'
+  FTML(raw): '<p><tt><span class="wiki-email">noitadnuof.pcs|nosrep#noitadnuof.pcs|nosrep</span></tt></p>'
+tt55 | True | True | True | all-three | True | True | True
+  LIVE(raw): '<p>See <tt><a href="https://example.com/a">https://example.com/a</a></tt>. end</p>'
+  REF (raw): '<p>See <tt><a href="https://example.com/a">https://example.com/a</a></tt>. end</p>\n\n'
+  FTML(raw): '<p>See <tt><a href="https://example.com/a">https://example.com/a</a></tt>. end</p>'

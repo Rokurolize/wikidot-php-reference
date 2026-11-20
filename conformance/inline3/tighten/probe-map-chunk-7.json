@@ -1,0 +1,37 @@
+{
+ "tighten57": {
+  "fullname": "muse-probe-r2in3-tighten-tighten57",
+  "source": "para one\n\npara two",
+  "action": "created"
+ },
+ "tighten58": {
+  "fullname": "muse-probe-r2in3-tighten-tighten58",
+  "source": "* item one\n* item two",
+  "action": "created"
+ },
+ "tighten59": {
+  "fullname": "muse-probe-r2in3-tighten-tighten59",
+  "source": "+++ heading\nafter",
+  "action": "created"
+ },
+ "tighten60": {
+  "fullname": "muse-probe-r2in3-tighten-tighten60",
+  "source": "[[code]]a\nb[[/code]]",
+  "action": "created"
+ },
+ "tighten61": {
+  "fullname": "muse-probe-r2in3-tighten-tighten61",
+  "source": "{{{a\nb}}}",
+  "action": "created"
+ },
+ "tighten62": {
+  "fullname": "muse-probe-r2in3-tighten-tighten62",
+  "source": "> quoted one\n> quoted two",
+  "action": "created"
+ },
+ "tighten63": {
+  "fullname": "muse-probe-r2in3-tighten-tighten63",
+  "source": "|| head ||\n|| cell ||",
+  "action": "created"
+ }
+}

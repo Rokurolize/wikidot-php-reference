@@ -1,0 +1,92 @@
+{"id":"typo01","output":"<p>-<\/p>\n\n"}
+{"id":"typo02","output":"<p>a - b<br \/>\nx<\/p>\n\n"}
+{"id":"typo03","output":"<p>a-b<br \/>\nx<\/p>\n\n"}
+{"id":"typo04","output":"<p>&#8212;<br \/>\nx<\/p>\n\n"}
+{"id":"typo05","output":"<p>a&#8212;b<br \/>\nx<\/p>\n\n"}
+{"id":"typo06","output":"<p>&#8212;-<br \/>\nx<\/p>\n\n"}
+{"id":"typo07","output":"<p>a&#8212;-b<br \/>\nx<\/p>\n\n"}
+{"id":"typo08","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo09","output":"<p>a&#8212;&#8212;b<br \/>\nx<\/p>\n\n"}
+{"id":"typo10","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo11","output":"<p>a<span style=\"text-decoration: line-through;\">-<\/span>b<br \/>\nx<\/p>\n\n"}
+{"id":"typo12","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo13","output":"<p>a<span style=\"text-decoration: line-through;\">-<\/span>-b<br \/>\nx<\/p>\n\n"}
+{"id":"typo14","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo15","output":"<p>a<span style=\"text-decoration: line-through;\">-<\/span>&#8212;b<br \/>\nx<\/p>\n\n"}
+{"id":"typo16","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo17","output":"<p>a<span style=\"text-decoration: line-through;\">-<\/span>&#8212;-b<br \/>\nx<\/p>\n\n"}
+{"id":"typo18","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo19","output":"<p>a<span style=\"text-decoration: line-through;\">-<\/span><span style=\"text-decoration: line-through;\">-<\/span>b<br \/>\nx<\/p>\n\n"}
+{"id":"typo20","output":"<p>word&#8212; &#8212;word<br \/>\nx<\/p>\n\n"}
+{"id":"typo21","output":"<p>wait&#8230; what<\/p>\n\n"}
+{"id":"typo22","output":"<p>wait&#8230; what<\/p>\n\n"}
+{"id":"typo23","output":"<p>&#8230;leading<\/p>\n\n"}
+{"id":"typo24","output":"<p>trailing&#8230;<\/p>\n\n"}
+{"id":"typo25","output":"<p>&#8230;..<\/p>\n\n"}
+{"id":"typo26","output":"<p>&#8230;&#8230;<\/p>\n\n"}
+{"id":"typo27","output":"<p>&#8230; &#8230; &#8230;<\/p>\n\n"}
+{"id":"typo28","output":"<p>&#8230;. &#8230;.<\/p>\n\n"}
+{"id":"typo29","output":"<p>x&#8230; &#8230;y&#8230; z<\/p>\n\n"}
+{"id":"typo30","output":"<p>word &#8230; word<br \/>\nx<\/p>\n\n"}
+{"id":"typo31","output":"<p>&#8220;double&#8221;<br \/>\nx<\/p>\n\n"}
+{"id":"typo32","output":"<p>&#8216;single&#8217;<br \/>\nx<\/p>\n\n"}
+{"id":"typo33","output":"<p>&#8222;low&#8221;<br \/>\nx<\/p>\n\n"}
+{"id":"typo34","output":"<p>outer inner'' outer''<br \/>\nx<\/p>\n\n"}
+{"id":"typo35","output":"<p>&#8216;one<br \/>\nline&#8217;<br \/>\nx<\/p>\n\n"}
+{"id":"typo36","output":"<p>`one<\/p>\n\n<p>line'<br \/>\nx<\/p>\n\n"}
+{"id":"typo37","output":"<p>a&#8220;b&#8221;c<br \/>\nx<\/p>\n\n"}
+{"id":"typo38","output":"<p>&#8222;lower&#8221; and &#8220;upper&#8221;<br \/>\nx<\/p>\n\n"}
+{"id":"typo39","output":"<p>unpaired&#8220; and &#8221;<br \/>\nx<\/p>\n\n"}
+{"id":"typo40","output":"<p>&#8220;multi<br \/>\nline&#8221;<br \/>\nx<\/p>\n\n"}
+{"id":"typo41","output":"<p>a ' b ` c<br \/>\nx<\/p>\n\n"}
+{"id":"typo42","output":"<p>&#8220;a&#8221;b''c''<br \/>\nx<\/p>\n\n"}
+{"id":"typo43","output":"<p>&#171;French quotes&#187;<br \/>\nx<\/p>\n\n"}
+{"id":"typo44","output":"<p>&#171;open only<br \/>\nx<\/p>\n\n"}
+{"id":"typo45","output":"<p>close only&#187;<br \/>\nx<\/p>\n\n"}
+{"id":"typo46","output":"<p>a &#187; b<br \/>\nx<\/p>\n\n"}
+{"id":"typo47","output":"<blockquote><blockquote><p>quoted line<\/p>\n\n<\/blockquote>\n<\/blockquote>\n<p>x<\/p>\n\n"}
+{"id":"typo48","output":"<p>&#171;&lt;triple&#187;&gt;<br \/>\nx<\/p>\n\n"}
+{"id":"typo49","output":"<p>1&#160;234&#160;567<br \/>\nx<\/p>\n\n"}
+{"id":"typo50","output":"<p>12&#160;kg<br \/>\nx<\/p>\n\n"}
+{"id":"typo51","output":"<p>12&#160;m<br \/>\nx<\/p>\n\n"}
+{"id":"typo52","output":"<p>12&#160;Mpx<br \/>\nx<\/p>\n\n"}
+{"id":"typo53","output":"<p>12 foo<br \/>\nx<\/p>\n\n"}
+{"id":"typo54","output":"<p>12 kgx<br \/>\nx<\/p>\n\n"}
+{"id":"typo55","output":"<p>3.5&#160;kg<br \/>\nx<\/p>\n\n"}
+{"id":"typo56","output":"<p>1&#160;2&#160;3&#160;kg 4<br \/>\nx<\/p>\n\n"}
+{"id":"typo57","output":"<p>10&#160;%<br \/>\nx<\/p>\n\n"}
+{"id":"typo58","output":"<p>100&#160;\u00b0C<br \/>\nx<\/p>\n\n"}
+{"id":"typo59","output":"<p>5&#160;km\/h<br \/>\nx<\/p>\n\n"}
+{"id":"typo60","output":"<p>-12&#160;34 and -7&#160;kg<br \/>\nx<\/p>\n\n"}
+{"id":"typo61","output":"<p><a href=\"http:\/\/example.com\/a--b?x=1\">http:\/\/example.com\/a--b?x=1<\/a> 2<br \/>\nx<\/p>\n\n"}
+{"id":"typo62","output":"<p><a href=\"https:\/\/example.com\">Label ... --<\/a><br \/>\nx<\/p>\n\n"}
+{"id":"typo63","output":"\n<div class=\"code\">\n<pre><code>a--b...12 kg<\/code><\/pre><\/div>\n\n<br \/>\nx"}
+{"id":"typo64","output":"<p>[[raw]]a&#8212;b&#8230;12&#160;kg[[\/raw]]<br \/>\nx<\/p>\n\n"}
+{"id":"typo65","output":"<p>$a&#8212;b&#8230;12&#160;kg$<br \/>\nx<\/p>\n\n"}
+{"id":"typo66","output":"<p>x<\/p>\n\n"}
+{"id":"typo67","output":"<p><tt>a&#8212;b&#8230;12&#160;kg<\/tt><br \/>\nx<\/p>\n\n"}
+{"id":"typo68","output":"<p>[[div style=&quot;a&#8212;b&#8230;12&#160;kg&quot;]]x[[\/div]]<br \/>\nx<\/p>\n\n"}
+{"id":"typo69","output":"<p>[[a href=&quot;<a href=\"http:\/\/x\/a--b\">http:\/\/x\/a--b<\/a>&quot;]]label[[\/a]]<br \/>\nx<\/p>\n\n"}
+{"id":"typo70","output":"<p><span class=\"odate time_123\">01 Jan 1970 00:02<\/span><br \/>\nx<\/p>\n\n"}
+{"id":"typo71","output":"<p><strong>a<span style=\"text-decoration: line-through;\">b<\/strong>c<\/span><br \/>\nx<\/p>\n\n"}
+{"id":"typo72","output":"<p><em>a<span style=\"text-decoration: line-through;\">b<\/em>c<\/span><br \/>\nx<\/p>\n\n"}
+{"id":"typo73","output":"<p><span style=\"text-decoration: underline;\">a<span style=\"text-decoration: line-through;\">b<\/span>c<\/span><br \/>\nx<\/p>\n\n"}
+{"id":"typo74","output":"<p><span style=\"text-decoration: line-through;\">a&#8230;b<\/span><br \/>\nx<\/p>\n\n"}
+{"id":"typo75","output":"<p><span style=\"color: #c00\">a&#8212;b&#8230;12&#160;kg<\/span><br \/>\nx<\/p>\n\n"}
+{"id":"typo76","output":"<p><tt>a<span style=\"text-decoration: line-through;\">b<\/tt>c<\/span><br \/>\nx<\/p>\n\n"}
+{"id":"typo77","output":"<p><sup>a<span style=\"text-decoration: line-through;\">b<\/sup>c<\/span><br \/>\nx<\/p>\n\n"}
+{"id":"typo78","output":"<p><sub>a<span style=\"text-decoration: line-through;\">b<\/sub>c<\/span><br \/>\nx<\/p>\n\n"}
+{"id":"typo79","output":"<p><sub>OUTER &#8230;INNER<\/sub> TAIL&#8230;<br \/>\nx<\/p>\n\n"}
+{"id":"typo80","output":"<p>a&#8212;b^^c&#8230;d&#8222;e&#8221;<br \/>\nx<\/p>\n\n"}
+{"id":"typo81","output":"<p>a<span style=\"text-decoration: line-through;\">b<br \/>\nc<\/span>d<br \/>\nx<\/p>\n\n"}
+{"id":"typo82","output":"<p>a&#8212;b<\/p>\n\n<p>c&#8212;d<br \/>\nx<\/p>\n\n"}
+{"id":"typo83","output":"<p style=\"text-align: center;\">Heading &#8212; &#8230; =<\/p><p>x<\/p>\n\n"}
+{"id":"typo84","output":"<p>before<\/p>\n\n<hr \/>\n<p>after&#8230;<br \/>\nx<\/p>\n\n"}
+{"id":"typo85","output":"<ul>\n<li>item &#8212; &#8230;<\/li>\n<li>item2<\/li>\n<\/ul><p>x<\/p>\n\n"}
+{"id":"typo86","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>cell&#8212;cell<\/td>\n<td>&#8230;<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"typo87","output":"<p>a&#8212;b<\/p>\n\n<blockquote><p>quote&#8212;tail<\/p>\n\n<\/blockquote>\n<p>x<\/p>\n\n"}
+{"id":"typo88","output":"<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1<\/a><\/sup><br \/>\nx<\/p>\n\n<div class=\"footnotes-footer\"><div class=\"title\">Footnotes<\/div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1<\/a>. a&#8212;b&#8230;12&#160;kg<\/div><\/div>"}
+{"id":"typo89","output":"<p>12&#160;&amp;euro;<br \/>\nx<\/p>\n\n"}
+{"id":"typo90","output":"<p>5&#160;&amp;micro;m<br \/>\nx<\/p>\n\n"}
+{"id":"typo91","output":"<p>9&#160;\u03a9 and 3&#160;Ohm<br \/>\nx<\/p>\n\n"}
+{"id":"typo92","output":"<p>20&#160;&amp;deg;C<br \/>\nx<\/p>\n\n"}

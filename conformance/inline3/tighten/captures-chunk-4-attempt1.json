@@ -1,0 +1,72 @@
+{
+ "tighten33": {
+  "fullname": "muse-probe-r2in3-tighten-tighten33",
+  "html": "<p><span style=\"text-decoration: line-through;\">s</span><br />\na</p>",
+  "html_sha256": "4df4942155b844df5f84d2f6441319d7acb3b9296a9517dca3436a8be13950c7",
+  "source": "--s--\na",
+  "source_sha256": "b9a76e9e252819cfc97a0edfc98f4c6930f7402b3ec6ac2950117bde647d6a91",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten34": {
+  "fullname": "muse-probe-r2in3-tighten-tighten34",
+  "html": "<p>a<br />\n<tt>tt</tt></p>",
+  "html_sha256": "75eea346eeeaf234aabcb76b8d47cd7fb6ea8c6f3de1582d55dbe6ef7e4139d4",
+  "source": "a\n{{tt}}",
+  "source_sha256": "b22e2b738cd0a585b80aabf8b3b6ff483e3cd9ec701b0db48b5f57a1bee656d1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten35": {
+  "fullname": "muse-probe-r2in3-tighten-tighten35",
+  "html": "<p><tt>tt</tt><br />\na</p>",
+  "html_sha256": "473eef999e7f09c917cfefa7011fb96fc6bc1d5735f4aa2701acdbfd050c23af",
+  "source": "{{tt}}\na",
+  "source_sha256": "d9150b0132cb523cc90e71f1d62c24c038e8f5d36531cd460b47ac556a505108",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten36": {
+  "fullname": "muse-probe-r2in3-tighten-tighten36",
+  "html": "<p>a<br />\n<sup>sup</sup></p>",
+  "html_sha256": "4316ecf6b8b6995abc386bc61b9d141d5ebc4b0cc3573ff0b6a0d99f8585875d",
+  "source": "a\n^^sup^^",
+  "source_sha256": "988063999b9d2d99c1b2d979c382d408a2caee90723f0bb27e7c06b08119f1be",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten37": {
+  "fullname": "muse-probe-r2in3-tighten-tighten37",
+  "html": "<p><sup>sup</sup><br />\na</p>",
+  "html_sha256": "34a48b95933e99d2a3b520ea585a880dac44bdaad9214cd03c15970665980069",
+  "source": "^^sup^^\na",
+  "source_sha256": "a7c886de05b8152f7281a3b5ad26ce8193a66cbdf0f79105b94f2268fa88ee8e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten38": {
+  "fullname": "muse-probe-r2in3-tighten-tighten38",
+  "html": "<p>a<br />\n<sub>sub</sub></p>",
+  "html_sha256": "f9a3e2bc328d4460ee3f02d48e5396fb1ae7179e37c75a24ca1f3d044720e59e",
+  "source": "a\n,,sub,,",
+  "source_sha256": "3f254d751e660a08d7b98ca19d7371f0a9e4bc0de313016f6956baacb6636c8e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten39": {
+  "fullname": "muse-probe-r2in3-tighten-tighten39",
+  "html": "<p><sub>sub</sub><br />\na</p>",
+  "html_sha256": "028b0293e838d544bcd1f1e50c156ea9a1ab6ee9800e8f7e515e4bcc93d01328",
+  "source": ",,sub,,\na",
+  "source_sha256": "02405f230ab3fa7ec9bdf8d031a2276c79dc284c4147315631e391e519c593d2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

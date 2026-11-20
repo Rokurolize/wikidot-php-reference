@@ -1,0 +1,36 @@
+captures 55 valid 55 invalid/unstable/source-mismatch 0: 
+valid 55  all3 47  ref==live 51  ftml==live 51
+ref!=live: typo71,typo72,typo77,typo78
+ftml!=live: typo34,typo61,typo64,typo68
+--- typo34  [muse-probe-r2in3-typo-typo34]
+ LIVE: "<p>outer inner'' outer''<br />\nx</p>"
+ REF : "<p>outer inner'' outer''<br />\nx</p>\n\n"
+ FTML: '<p>“outer ‘`inner” outer’&#39;<br>\nx</p>'
+--- typo61  [muse-probe-r2in3-typo-typo61]
+ LIVE: '<p><a href="http://example.com/a--b?x=1">http://example.com/a--b?x=1</a> 2<br />\nx</p>'
+ REF : '<p><a href="http://example.com/a--b?x=1">http://example.com/a--b?x=1</a> 2<br />\nx</p>\n\n'
+ FTML: '<p><a href="http://example.com/a--b?x=1%C2%A02">http://example.com/a--b?x=1\xa02</a><br>\nx</p>'
+--- typo64  [muse-probe-r2in3-typo-typo64]
+ LIVE: '<p>[[raw]]a&#8212;b&#8230;12&#160;kg[[/raw]]<br />\nx</p>'
+ REF : '<p>[[raw]]a&#8212;b&#8230;12&#160;kg[[/raw]]<br />\nx</p>\n\n'
+ FTML: '<p>[[raw]]a—b...12\xa0kg[[/raw]]<br>\nx</p>'
+--- typo68  [muse-probe-r2in3-typo-typo68]
+ LIVE: '<p>[[div style=&quot;a&#8212;b&#8230;12&#160;kg&quot;]]x[[/div]]<br />\nx</p>'
+ REF : '<p>[[div style=&quot;a&#8212;b&#8230;12&#160;kg&quot;]]x[[/div]]<br />\nx</p>\n\n'
+ FTML: '<p>[[div style=&quot;a—b...12\xa0kg&quot;]]x[[/div]]<br>\nx</p>'
+--- typo71  [muse-probe-r2in3-typo-typo71]
+ LIVE: '<p><strong>a<span style="text-decoration: line-through;">b</span></strong><span style="text-decoration: line-through;">c</span><br />\nx</p>'
+ REF : '<p><strong>a<span style="text-decoration: line-through;">b</strong>c</span><br />\nx</p>\n\n'
+ FTML: '<p><strong>a<span style="text-decoration: line-through;">b</span></strong><span style="text-decoration: line-through;">c</span><br>\nx</p>'
+--- typo72  [muse-probe-r2in3-typo-typo72]
+ LIVE: '<p><em>a<span style="text-decoration: line-through;">b</span></em><span style="text-decoration: line-through;">c</span><br />\nx</p>'
+ REF : '<p><em>a<span style="text-decoration: line-through;">b</em>c</span><br />\nx</p>\n\n'
+ FTML: '<p><em>a<span style="text-decoration: line-through;">b</span></em><span style="text-decoration: line-through;">c</span><br>\nx</p>'
+--- typo77  [muse-probe-r2in3-typo-typo77]
+ LIVE: '<p><sup>a<span style="text-decoration: line-through;">b</span></sup><span style="text-decoration: line-through;">c</span><br />\nx</p>'
+ REF : '<p><sup>a<span style="text-decoration: line-through;">b</sup>c</span><br />\nx</p>\n\n'
+ FTML: '<p><sup>a<span style="text-decoration: line-through;">b</span></sup><span style="text-decoration: line-through;">c</span><br>\nx</p>'
+--- typo78  [muse-probe-r2in3-typo-typo78]
+ LIVE: '<p><sub>a<span style="text-decoration: line-through;">b</span></sub><span style="text-decoration: line-through;">c</span><br />\nx</p>'
+ REF : '<p><sub>a<span style="text-decoration: line-through;">b</sub>c</span><br />\nx</p>\n\n'
+ FTML: '<p><sub>a<span style="text-decoration: line-through;">b</span></sub><span style="text-decoration: line-through;">c</span><br>\nx</p>'

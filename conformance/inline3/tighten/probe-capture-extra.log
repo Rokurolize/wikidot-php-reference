@@ -1,0 +1,35 @@
+tighten41 -> muse-probe-r2in3-tighten-tighten41 stable=True saved_source_matches=True valid=True
+tighten42 -> muse-probe-r2in3-tighten-tighten42 stable=True saved_source_matches=True valid=True
+tighten51 -> muse-probe-r2in3-tighten-tighten51 stable=True saved_source_matches=True valid=True
+{
+ "tighten41": {
+  "fullname": "muse-probe-r2in3-tighten-tighten41",
+  "html": "<p><span style=\"color: red\">A</span></p>",
+  "html_sha256": "627ac70007d464d8fe289f81d02a22d95b69e24bc3f48e8b17fff5c1a267b70c",
+  "source": "##red|A ##",
+  "source_sha256": "ada1a9b407359a8ee0d0bd2c99414a00c3c3469f441c460c6fdc488adb741810",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten42": {
+  "fullname": "muse-probe-r2in3-tighten-tighten42",
+  "html": "<p><span style=\"color: red\">A</span></p>",
+  "html_sha256": "627ac70007d464d8fe289f81d02a22d95b69e24bc3f48e8b17fff5c1a267b70c",
+  "source": "##red| A ##",
+  "source_sha256": "b04b9932cc25781eb3b7773f67baa16460fe1b5c62dd7967621dccb087fad6a4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten51": {
+  "fullname": "muse-probe-r2in3-tighten-tighten51",
+  "html": "<p>Empty</p>",
+  "html_sha256": "12e931809c117b92d600e65c55051bc2286c7c9e4bcee9ecce82e52b7d86cfb9",
+  "source": "Empty ____",
+  "source_sha256": "646ffa8a55cb42e0567ebf9a9f5780fa7da551c41110555cbf0d220ce2c41d11",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

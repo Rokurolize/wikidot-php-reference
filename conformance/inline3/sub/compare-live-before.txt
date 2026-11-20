@@ -1,0 +1,75 @@
+=== SUB-BEFORE agreement counts over 55 cases ===
+RAW (only trailing newlines removed): {'ref_live': 42, 'ftml_live': 43, 'ref_ftml': 39, 'all3': 38, 'no_live': 0}
+FRAME-NORMALIZED: {'ref_live': 43, 'ftml_live': 46, 'ref_ftml': 40, 'all3': 39, 'no_live': 0}
+--- frame-normalized three-way buckets ---
+all3           39: sub01 sub02 sub03 sub04 sub05 sub06 sub07 sub08 sub09 sub10 sub11 sub12 sub14 sub16 sub17 sub18 sub21 sub22 sub23 sub24 sub25 sub26 sub27 sub28 sub29 sub31 sub32 sub33 sub34 sub35 sub37 sub38 sub44 sub46 sub47 sub52 sub53 sub54 sub55
+ref+live        4: sub15 sub36 sub48 sub51
+ftml+live       7: sub19 sub20 sub39 sub40 sub41 sub42 sub43
+ref+ftml        1: sub13
+all_disagree    4: sub30 sub45 sub49 sub50
+no_live         0: 
+--- per-case detail (frame-normalized) ---
+### sub13
+  REF : '<p><sub>,,four</sub>,,</p>'
+  FTML: '<p><sub>,,four</sub>,,</p>'
+  LIVE: '<p>four</p>'
+### sub15
+  REF : '<p><sub>,a</sub></p>'
+  FTML: '<p>,,,a,,</p>'
+  LIVE: '<p><sub>,a</sub></p>'
+### sub19
+  REF : '<p>,,,,</p>'
+  FTML: ''
+  LIVE: ''
+### sub20
+  REF : '<p>A,,,,B</p>'
+  FTML: '<p>AB</p>'
+  LIVE: '<p>AB</p>'
+### sub30
+  REF : '<p><sub>,</sub>five<sub>,</sub></p>'
+  FTML: '<p><sub>,,,five</sub>,,,</p>'
+  LIVE: '<p>,five,</p>'
+### sub36
+  REF : '<p><sub><span style="text-decoration: underline;">underline sub</span></sub>,</p>'
+  FTML: '<p>,,<span style="text-decoration: underline;">underline sub</span>,,,</p>'
+  LIVE: '<p><sub><span style="text-decoration: underline;">underline sub</span></sub>,</p>'
+### sub39
+  REF : '<p><sub>OUTER <sup>INNER</sub> TAIL</sup></p>'
+  FTML: '<p><sub>OUTER <sup>INNER</sup></sub> <sup>TAIL</sup></p>'
+  LIVE: '<p><sub>OUTER <sup>INNER</sup></sub> <sup>TAIL</sup></p>'
+### sub40
+  REF : '<p><sub>A <strong>B</sub> X</strong> Y</p>'
+  FTML: '<p><sub>A <strong>B</strong></sub> <strong>X</strong> Y</p>'
+  LIVE: '<p><sub>A <strong>B</strong></sub> <strong>X</strong> Y</p>'
+### sub41
+  REF : '<p><span style="text-decoration: line-through;">OUTER <sub>INNER</span> TAIL</sub></p>'
+  FTML: '<p><span style="text-decoration: line-through;">OUTER <sub>INNER</sub></span> <sub>TAIL</sub></p>'
+  LIVE: '<p><span style="text-decoration: line-through;">OUTER <sub>INNER</sub></span> <sub>TAIL</sub></p>'
+### sub42
+  REF : '<p>a<sub>x<br>\n</sub>.b</p>'
+  FTML: '<p>a<sub>x<br></sub> .b</p>'
+  LIVE: '<p>a<sub>x<br></sub> .b</p>'
+### sub43
+  REF : '<p>x<sub>a<br>\n</sub>y</p>'
+  FTML: '<p>x<sub>a<br></sub> y</p>'
+  LIVE: '<p>x<sub>a<br></sub> y</p>'
+### sub45
+  REF : '<p>,,line one</p>\n\n<p>line two,,</p>'
+  FTML: '<p>,,line one</p><p>line two,,</p>'
+  LIVE: '<p>,,line one</p>\n<p>line two,,</p>'
+### sub48
+  REF : '<div class="code">\n<pre><code>,,raw sub,,</code></pre></div>'
+  FTML: '<div class="code"><pre><code>,,raw sub,,</code></pre></div>'
+  LIVE: '<div class="code">\n<pre><code>,,raw sub,,</code></pre></div>'
+### sub49
+  REF : '<div ><p><sub>block sub</sub></p>\n\n</div>'
+  FTML: '<div><p><sub>block sub</sub></p></div>'
+  LIVE: '<div>\n<p><sub>block sub</sub></p>\n</div>'
+### sub50
+  REF : '<blockquote><p><sub>quote sub</sub></p>\n\n</blockquote>'
+  FTML: '<blockquote><p><sub>quote sub</sub></p></blockquote>'
+  LIVE: '<blockquote>\n<p><sub>quote sub</sub></p>\n</blockquote>'
+### sub51
+  REF : '<p>[[<a href="http://example.com|,,label">http://example.com|,,label</a>,,]]</p>'
+  FTML: '<p>[[<a href="http://example.com">http://example.com</a>|<sub>label</sub>]]</p>'
+  LIVE: '<p>[[<a href="http://example.com|,,label">http://example.com|,,label</a>,,]]</p>'

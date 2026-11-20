@@ -1,0 +1,47 @@
+{
+ "x76": {
+  "fullname": "muse-probe-r2in3-x-x76",
+  "source": "{{a // b}} and {{c ,, d}}",
+  "action": "created"
+ },
+ "x77": {
+  "fullname": "muse-probe-r2in3-x-x77",
+  "source": "pre{{mid}}post and {{ spaced }} and a{{}}b",
+  "action": "created"
+ },
+ "x78": {
+  "fullname": "muse-probe-r2in3-x-x78",
+  "source": "a -- b --- c ... d",
+  "action": "created"
+ },
+ "x79": {
+  "fullname": "muse-probe-r2in3-x-x79",
+  "source": "**a -- b** //c --- d// __e ... f__",
+  "action": "created"
+ },
+ "x80": {
+  "fullname": "muse-probe-r2in3-x-x80",
+  "source": "^^a -- b^^ ,,c --- d,, {{e ... f}}",
+  "action": "created"
+ },
+ "x81": {
+  "fullname": "muse-probe-r2in3-x-x81",
+  "source": "**a ---b--- c** and ^^d ---e--- f^^",
+  "action": "created"
+ },
+ "x82": {
+  "fullname": "muse-probe-r2in3-x-x82",
+  "source": "**``a''** ^^`b'^^ ,,<<c>>,,",
+  "action": "created"
+ },
+ "x83": {
+  "fullname": "muse-probe-r2in3-x-x83",
+  "source": "{{10 kg and 2 3 and 5px}}",
+  "action": "created"
+ },
+ "x84": {
+  "fullname": "muse-probe-r2in3-x-x84",
+  "source": "[https://example.com a -- b ... c]",
+  "action": "created"
+ }
+}

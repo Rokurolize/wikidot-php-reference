@@ -1,0 +1,112 @@
+typo01 -> muse-probe-r2in3-typo-typo01 stable=True saved_source_matches=True valid=True
+typo02 -> muse-probe-r2in3-typo-typo02 stable=True saved_source_matches=True valid=True
+typo03 -> muse-probe-r2in3-typo-typo03 stable=True saved_source_matches=True valid=True
+typo04 -> muse-probe-r2in3-typo-typo04 stable=True saved_source_matches=True valid=True
+typo05 -> muse-probe-r2in3-typo-typo05 stable=True saved_source_matches=True valid=True
+typo06 -> muse-probe-r2in3-typo-typo06 stable=True saved_source_matches=True valid=True
+typo07 -> muse-probe-r2in3-typo-typo07 stable=True saved_source_matches=True valid=True
+typo09 -> muse-probe-r2in3-typo-typo09 stable=True saved_source_matches=True valid=True
+typo11 -> muse-probe-r2in3-typo-typo11 stable=True saved_source_matches=True valid=True
+typo13 -> muse-probe-r2in3-typo-typo13 stable=True saved_source_matches=True valid=True
+{
+ "typo01": {
+  "fullname": "muse-probe-r2in3-typo-typo01",
+  "html": "<p>-</p>",
+  "html_sha256": "b02b7f399c9ce0b8c01c47c0ca128bb653e89e178cf92adc1ddcf83774bb101d",
+  "source": "-",
+  "source_sha256": "3973e022e93220f9212c18d0d0c543ae7c309e46640da93a4a0314de999f5112",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo02": {
+  "fullname": "muse-probe-r2in3-typo-typo02",
+  "html": "<p>a - b<br />\nx</p>",
+  "html_sha256": "149cdfe7fe43f6abf89ba5714d8d0646d278a3a617f26fd0cb3d915f38552437",
+  "source": "a - b\nx",
+  "source_sha256": "29840f1d2d343afebb6e5b1a7504559b5754821dd61b674b8aad1a299fd664de",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo03": {
+  "fullname": "muse-probe-r2in3-typo-typo03",
+  "html": "<p>a-b<br />\nx</p>",
+  "html_sha256": "15762718117415269a89de461aea3a56de8a6e40798063cc0bbe7f9993c24f35",
+  "source": "a-b\nx",
+  "source_sha256": "1cc6ca9de054d70b322d0ca002b5dbbe0bcaa19c336636dd253f0e777873e6a3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo04": {
+  "fullname": "muse-probe-r2in3-typo-typo04",
+  "html": "<p>&#8212;<br />\nx</p>",
+  "html_sha256": "9700264d09d2927c6e78656b4d8ac69feedcf2f3906f0031eb314bc8fdd4773b",
+  "source": "--\nx",
+  "source_sha256": "c668742913e762c1585382e1c3f1995dc2fba474ec35a76b4e5b531bf1a5920d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo05": {
+  "fullname": "muse-probe-r2in3-typo-typo05",
+  "html": "<p>a&#8212;b<br />\nx</p>",
+  "html_sha256": "c5eafba8b306d6aef1e176a04bf39d7cd37b4e0a6240134a98657dcaece89344",
+  "source": "a--b\nx",
+  "source_sha256": "e252c130199bc06c43bb26cb3e0903e68f5926f91d599235beef1c2c272ad364",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo06": {
+  "fullname": "muse-probe-r2in3-typo-typo06",
+  "html": "<p>&#8212;-<br />\nx</p>",
+  "html_sha256": "07a4b4653cc054fbef29daddceb4dbe21245ebd3392708685f7d85117eda345a",
+  "source": "---\nx",
+  "source_sha256": "10b73a10dd300610891af207a867a9f29693bbc1f6a88875936478cd68223ac3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo07": {
+  "fullname": "muse-probe-r2in3-typo-typo07",
+  "html": "<p>a&#8212;-b<br />\nx</p>",
+  "html_sha256": "fd7d076a21e23d23f0bb52bf3ca6d33d393cddca004002f26c369e84768ce720",
+  "source": "a---b\nx",
+  "source_sha256": "d92c8184034320847c694ea4b5d8f21c906839553aa27c9ae7321223ea1d3f37",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo09": {
+  "fullname": "muse-probe-r2in3-typo-typo09",
+  "html": "<p>a&#8212;&#8212;b<br />\nx</p>",
+  "html_sha256": "6a6c6f8345842d95fec9b3e47ad501fcc1bca13d2d38dc7870522f57bd8ab6de",
+  "source": "a----b\nx",
+  "source_sha256": "6c5e89f29da8e28535c7f7e6b581c8ba06da904048a8552e9dd6dc5d52e1ab06",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo11": {
+  "fullname": "muse-probe-r2in3-typo-typo11",
+  "html": "<p>a<span style=\"text-decoration: line-through;\">-</span>b<br />\nx</p>",
+  "html_sha256": "8d974d77f415f90a5af251a703126cc2fcc217fbdf3cb7b00ce159e3be479db8",
+  "source": "a-----b\nx",
+  "source_sha256": "eb017eaabfb1e4818a3ae49e8880675a1a63f293b7c23a661bf00de9dbcc578e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo13": {
+  "fullname": "muse-probe-r2in3-typo-typo13",
+  "html": "<p>a<span style=\"text-decoration: line-through;\">-</span>-b<br />\nx</p>",
+  "html_sha256": "73fa8aa0ba489003e80ed91f75f3717c43b4ef461791783d9814228f626ae41c",
+  "source": "a------b\nx",
+  "source_sha256": "1e3bb4a3f0c1cc47ac0e05da956883a7576a766211c2cde5066b8123fd24d255",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

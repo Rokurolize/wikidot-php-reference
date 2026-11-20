@@ -1,0 +1,10 @@
+{"errors":[],"html":"<p><tt>{a b}</tt></p>","id":"adh01"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>a  b</code></pre></div>","id":"adh02"}
+{"errors":[],"html":"<p>a b</p>","id":"adh03"}
+{"errors":[],"html":"<p><span style=\"color: red\">A</span></p>","id":"adh04"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>head</td>\n</tr>\n</table>","id":"adh05"}
+{"errors":[],"html":"<blockquote><p>quote</p></blockquote>","id":"adh06"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"adh07"}
+{"errors":[],"html":"<p><strong>a b</strong></p>","id":"adh08"}
+{"errors":[],"html":"<p><a href=\"http://x\">http://x</a> y</p>","id":"adh09"}
+{"errors":[],"html":"<p><span>A</span></p>","id":"adh10"}

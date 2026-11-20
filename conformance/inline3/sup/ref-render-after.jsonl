@@ -1,0 +1,66 @@
+{"id":"sup01","output":"<p><sup>sup<\/sup><\/p>\n\n"}
+{"id":"sup02","output":"<p>before <sup>sup<\/sup> after<\/p>\n\n"}
+{"id":"sup03","output":"<p><sup>one<\/sup> <sup>two<\/sup><\/p>\n\n"}
+{"id":"sup04","output":"<p><sup>a<\/sup>b<sup>c<\/sup><\/p>\n\n"}
+{"id":"sup05","output":"<p>wor<sup>d<\/sup>in<\/p>\n\n"}
+{"id":"sup06","output":"<p><sup>two words<\/sup><\/p>\n\n"}
+{"id":"sup07","output":"<p>^^ sup ^^<\/p>\n\n"}
+{"id":"sup08","output":"<p>^^sup ^^<\/p>\n\n"}
+{"id":"sup09","output":"<p>^^ sup^^<\/p>\n\n"}
+{"id":"sup10","output":"<p><sup>a b<\/sup><\/p>\n\n"}
+{"id":"sup11","output":"<p>^^ a<sup>b<\/sup> ^^<\/p>\n\n"}
+{"id":"sup12","output":"<p><sup>a<\/sup> ^^ b ^^ <sup>c<\/sup><\/p>\n\n"}
+{"id":"sup13","output":"<p>^^unpaired<\/p>\n\n"}
+{"id":"sup14","output":"<p>unpaired^^<\/p>\n\n"}
+{"id":"sup15","output":"<p><sup>^triple<\/sup>^<\/p>\n\n"}
+{"id":"sup16","output":"<p><sup>a<\/sup>^<\/p>\n\n"}
+{"id":"sup17","output":"<p><sup>^a<\/sup><\/p>\n\n"}
+{"id":"sup18","output":"<p><\/p>\n\n"}
+{"id":"sup19","output":"<p>^^ ^^<\/p>\n\n"}
+{"id":"sup20","output":"<p><sup>a<\/sup><sup>b<\/sup><\/p>\n\n"}
+{"id":"sup21","output":"<p><sup><em>em<\/em><\/sup><\/p>\n\n"}
+{"id":"sup22","output":"<p><em><sup>sup<\/sup><\/em><\/p>\n\n"}
+{"id":"sup23","output":"<p><sup><span style=\"text-decoration: underline;\">u<\/span><\/sup><\/p>\n\n"}
+{"id":"sup24","output":"<p><sup><span style=\"text-decoration: line-through;\">s<\/span><\/sup><\/p>\n\n"}
+{"id":"sup25","output":"<p><span style=\"color: #c00\"><sup>red<\/sup><\/span><\/p>\n\n"}
+{"id":"sup26","output":"<p><sup><span style=\"color: #c00\">red<\/span><\/sup><\/p>\n\n"}
+{"id":"sup27","output":"<p><sup><tt>mono<\/tt><\/sup><\/p>\n\n"}
+{"id":"sup28","output":"<p><tt><sup>mono<\/sup><\/tt><\/p>\n\n"}
+{"id":"sup29","output":"<p><sup><sub>sub<\/sub><\/sup><\/p>\n\n"}
+{"id":"sup30","output":"<p><sub>OUTER <sup>INNER<\/sub> TAIL<\/sup><\/p>\n\n"}
+{"id":"sup31","output":"<p><sup>a<br \/>\nb<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"sup32","output":"<p>^^a<\/p>\n\n<p>b^^<br \/>\nx<\/p>\n\n"}
+{"id":"sup33","output":"<p>^^a<\/p>\n\n<hr \/>\n<p>b^^<br \/>\nx<\/p>\n\n"}
+{"id":"sup34","output":"<p><sup>a<br \/>\nb<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"sup35","output":"<p><sup>a<br \/>\nb<\/sup><\/p>\n\n<p>x<\/p>\n\n"}
+{"id":"sup36","output":"<p>^^a<\/p>\n\n<blockquote><p>quote<\/p>\n\n<\/blockquote>\n<p>b^^<br \/>\nx<\/p>\n\n"}
+{"id":"sup37","output":"<p><sup>[[div]]inside[[\/div]]<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"sup38","output":"<p>^^a<\/p>\n\n<ul>\n<li>list<\/li>\n<\/ul><p>b^^<br \/>\nx<\/p>\n\n"}
+{"id":"sup39","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><sup>A<\/sup><\/td>\n<td>B<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"sup40","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><sup>A<\/td>\n<td>B<\/sup><\/td>\n<td>C<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"sup41","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td><sup>b<\/sup><\/td>\n<td>c<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"sup42","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>^^ A ^^<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"sup43","output":"<table class=\"wiki-content-table\">\n<tr>\n<td colspan=\"2\"><sup>span<\/sup><\/td>\n<td colspan=\"2\">x<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"sup44","output":"<p style=\"text-align: center;\"><sup>Head<\/sup> =<\/p><p>x<\/p>\n\n"}
+{"id":"sup45","output":"<p><sup>= Head =<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"sup46","output":"<p>[[<sup>label<\/sup>|target]]<\/p>\n\n"}
+{"id":"sup47","output":"<p>[[target|<sup>label<\/sup>]]<\/p>\n\n"}
+{"id":"sup48","output":"<p>[[<sup>page<\/sup>]]<\/p>\n\n"}
+{"id":"sup49","output":"<p>[code]<sup>sup<\/sup>[\/code]<\/p>\n\n"}
+{"id":"sup50","output":"<p><tt><sup>mono<\/sup><\/tt><\/p>\n\n"}
+{"id":"sup51","output":"<p>[[raw]]<sup>x<\/sup>[[\/raw]]<\/p>\n\n"}
+{"id":"sup52","output":"<p>`<sup>code<\/sup>`<\/p>\n\n"}
+{"id":"sup53","output":"<p>[code]<br \/>\n<sup>sup<\/sup><br \/>\n[\/code]<\/p>\n\n"}
+{"id":"sup54","output":"<p><sup>a[code]x[\/code]b<\/sup><\/p>\n\n"}
+{"id":"sup55","output":"\n<div class=\"code\">\n<pre><code>^^sup^^<\/code><\/pre><\/div>\n\n"}
+{"id":"sup56","output":"<p>^^a<\/p>\n\n<div ><p>b<\/p>\n\n<\/div><br \/>\nc^^<br \/>\nx"}
+{"id":"sup57","output":"<p><a class=\"newpage\" href=\"\/caption\">target<\/a><br \/>\nx<\/p>\n\n"}
+{"id":"sup58","output":"<p><a class=\"newpage\" href=\"\/target\">^^caption^^<\/a><br \/>\nx<\/p>\n\n"}
+{"id":"sup59","output":"<p>[[a href=&quot;<a href=\"https:\/\/example.com\">https:\/\/example.com<\/a>&quot;]]<sup>label<\/sup>[[\/a]]<br \/>\nx<\/p>\n\n"}
+{"id":"sup60","output":"<p><a class=\"newpage\" href=\"\/page\">^^page^^<\/a><br \/>\nx<\/p>\n\n"}
+{"id":"sup61","output":"<p><sup>A ^^B<\/sup> C^^<br \/>\nx<\/p>\n\n"}
+{"id":"sup62","output":"<p><sup>A<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"sup63","output":"<p><sup>OUTER <tt>INNER<\/sup> TAIL<\/tt><br \/>\nx<\/p>\n\n"}
+{"id":"sup64","output":"<p><sup>A <tt>B <span style=\"text-decoration: line-through;\">C<\/sup> X<\/tt> Y<\/span><br \/>\nx<\/p>\n\n"}
+{"id":"sup65","output":"<p><em>A <sup>B <span style=\"text-decoration: underline;\">C<\/em> X<\/sup> Y<\/span><br \/>\nx<\/p>\n\n"}
+{"id":"sup66","output":"<p>[[sup]]X[[\/sup]]<br \/>\nx<\/p>\n\n"}

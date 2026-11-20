@@ -1,0 +1,108 @@
+{"id": "x01", "source": "{{a##red|ab}}ba##"}
+{"id": "x02", "source": "{{a##red|ab##ba}}"}
+{"id": "x03", "source": "##red|a{{ab##ba}}"}
+{"id": "x04", "source": "##red|a{{ab}}ba##"}
+{"id": "x05", "source": "{{a**ab}}ba**"}
+{"id": "x06", "source": "{{a**ab**ba}}"}
+{"id": "x07", "source": "**a{{ab**ba}}"}
+{"id": "x08", "source": "**a{{ab}}ba**"}
+{"id": "x09", "source": "{{a//ab}}ba//"}
+{"id": "x10", "source": "{{a//ab//ba}}"}
+{"id": "x11", "source": "//a{{ab//ba}}"}
+{"id": "x12", "source": "//a{{ab}}ba//"}
+{"id": "x13", "source": "{{a__ab}}ba__"}
+{"id": "x14", "source": "{{a__ab__ba}}"}
+{"id": "x15", "source": "__a{{ab__ba}}"}
+{"id": "x16", "source": "__a{{ab}}ba__"}
+{"id": "x17", "source": "{{a--ab}}ba--"}
+{"id": "x18", "source": "{{a--ab--ba}}"}
+{"id": "x19", "source": "--a{{ab--ba}}"}
+{"id": "x20", "source": "--a{{ab}}ba--"}
+{"id": "x21", "source": "^^a##red|ab^^ba##"}
+{"id": "x22", "source": "^^a##red|ab##ba^^"}
+{"id": "x23", "source": "##red|a^^ab##ba^^"}
+{"id": "x24", "source": "##red|a^^ab^^ba##"}
+{"id": "x25", "source": "^^a**ab^^ba**"}
+{"id": "x26", "source": "^^a**ab**ba^^"}
+{"id": "x27", "source": "**a^^ab**ba^^"}
+{"id": "x28", "source": "**a^^ab^^ba**"}
+{"id": "x29", "source": "^^a//ab^^ba//"}
+{"id": "x30", "source": "^^a//ab//ba^^"}
+{"id": "x31", "source": "//a^^ab//ba^^"}
+{"id": "x32", "source": "//a^^ab^^ba//"}
+{"id": "x33", "source": "^^a__ab^^ba__"}
+{"id": "x34", "source": "^^a__ab__ba^^"}
+{"id": "x35", "source": "__a^^ab__ba^^"}
+{"id": "x36", "source": "__a^^ab^^ba__"}
+{"id": "x37", "source": "^^a--ab^^ba--"}
+{"id": "x38", "source": "^^a--ab--ba^^"}
+{"id": "x39", "source": "--a^^ab--ba^^"}
+{"id": "x40", "source": "--a^^ab^^ba--"}
+{"id": "x41", "source": ",,a##red|ab,,ba##"}
+{"id": "x42", "source": ",,a##red|ab##ba,,"}
+{"id": "x43", "source": "##red|a,,ab##ba,,"}
+{"id": "x44", "source": "##red|a,,ab,,ba##"}
+{"id": "x45", "source": ",,a**ab,,ba**"}
+{"id": "x46", "source": ",,a**ab**ba,,"}
+{"id": "x47", "source": "**a,,ab**ba,,"}
+{"id": "x48", "source": "**a,,ab,,ba**"}
+{"id": "x49", "source": ",,a//ab,,ba//"}
+{"id": "x50", "source": ",,a//ab//ba,,"}
+{"id": "x51", "source": "//a,,ab//ba,,"}
+{"id": "x52", "source": "//a,,ab,,ba//"}
+{"id": "x53", "source": ",,a__ab,,ba__"}
+{"id": "x54", "source": ",,a__ab__ba,,"}
+{"id": "x55", "source": "__a,,ab__ba,,"}
+{"id": "x56", "source": "__a,,ab,,ba__"}
+{"id": "x57", "source": ",,a--ab,,ba--"}
+{"id": "x58", "source": ",,a--ab--ba,,"}
+{"id": "x59", "source": "--a,,ab--ba,,"}
+{"id": "x60", "source": "--a,,ab,,ba--"}
+{"id": "x61", "source": "{{a^^ab}}ba^^"}
+{"id": "x62", "source": "{{a^^ab^^ba}}"}
+{"id": "x63", "source": "^^a{{ab^^ba}}"}
+{"id": "x64", "source": "^^a{{ab}}ba^^"}
+{"id": "x65", "source": "{{a,,ab}}ba,,"}
+{"id": "x66", "source": "{{a,,ab,,ba}}"}
+{"id": "x67", "source": ",,a{{ab,,ba}}"}
+{"id": "x68", "source": ",,a{{ab}}ba,,"}
+{"id": "x69", "source": "^^a,,ab^^ba,,"}
+{"id": "x70", "source": "^^a,,ab,,ba^^"}
+{"id": "x71", "source": ",,a^^ab,,ba^^"}
+{"id": "x72", "source": ",,a^^ab^^ba,,"}
+{"id": "x73", "source": "@@skip@@ {{**b** //i// __u__ --s-- ^^p^^ ,,s,, ##red|c##}}"}
+{"id": "x74", "source": "{{a --- b ... c ``d'' `e' <<f>> 12 34}}"}
+{"id": "x75", "source": "{{see //example.com/path and http://x//y}}"}
+{"id": "x76", "source": "{{a // b}} and {{c ,, d}}"}
+{"id": "x77", "source": "pre{{mid}}post and {{ spaced }} and a{{}}b"}
+{"id": "x78", "source": "a -- b --- c ... d"}
+{"id": "x79", "source": "**a -- b** //c --- d// __e ... f__"}
+{"id": "x80", "source": "^^a -- b^^ ,,c --- d,, {{e ... f}}"}
+{"id": "x81", "source": "**a ---b--- c** and ^^d ---e--- f^^"}
+{"id": "x82", "source": "**``a''** ^^`b'^^ ,,<<c>>,,"}
+{"id": "x83", "source": "{{10 kg and 2 3 and 5px}}"}
+{"id": "x84", "source": "[https://example.com a -- b ... c]"}
+{"id": "x85", "source": "^^a **b** c^^ and **^^a^^**"}
+{"id": "x86", "source": ",,a {{b}} c,, and {{,,a,,}}"}
+{"id": "x87", "source": "^^ a ^^ ,, b ,, ^^^^ ,,,, ^^x^^^^ ,,,,y,,,,"}
+{"id": "x88", "source": "^^a\nb^^ and ^^c\n\nd^^"}
+{"id": "x89", "source": "a, b, c,,sub,, d, e and ,,a, b,, c"}
+{"id": "x90", "source": "a\nb\n\n**c**\n,,d,,\n{{e}}\n^^f^^"}
+{"id": "x91", "source": "a ^^b^^ c ,,d,, e {{f}} g **h** i ##red|j## k"}
+{"id": "x92", "source": "##red|a\n\nb## and {{c\n\nd}}"}
+{"id": "x93", "source": "^^a\nb^^ ,,c\nd,, **e\nf**"}
+{"id": "x94", "source": "a____b and __ __ and __a__   b"}
+{"id": "x95", "source": "##red|  lead## ##red|trail  ## ##red| both ##"}
+{"id": "x96", "source": "##red|C**B//I__U--S{{T}}^^P^^,,R,,--S__U//I**B##C"}
+{"id": "x97", "source": ",,R,,^^P^^{{T}}--S__U//I**B##red|C##"}
+{"id": "x98", "source": "**b ^^p ,,s {{t}},, ^^ ** and //i {{a ^^b^^ c}} //"}
+{"id": "x99", "source": "##red|c## **b** //i// __u__ --s-- {{t}} ^^p^^ ,,r,,"}
+{"id": "x100", "source": "a ##red| b ** c // d __ e -- f {{ g ^^ h ,, i"}
+{"id": "x101", "source": "{{a[[div]]b}}c[[/div]] and ^^d[[div]]e^^f[[/div]]"}
+{"id": "x102", "source": "* ^^a\n* b^^ c\n* d and * {{e\n* f}} g"}
+{"id": "x103", "source": "|| h || h ||\n| ^^a^^ | {{b}} |\n| ,,c,, | d |"}
+{"id": "x104", "source": "^^a[[footnote]]b^^c[[/footnote]]"}
+{"id": "x105", "source": "[https://example.com ^^a^^ {{b}} ,,c,,]"}
+{"id": "x106", "source": "= ^^a^^ {{b}} ,,c,, ="}
+{"id": "x107", "source": "[[code]]^^a^^ {{b}} ,,c,,[[/code]]"}
+{"id": "x108", "source": "^^a[[include:foo]]b^^c"}

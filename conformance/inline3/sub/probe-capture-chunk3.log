@@ -1,0 +1,112 @@
+sub35 -> muse-probe-r2in3-sub-sub35 stable=True saved_source_matches=True valid=True
+sub36 -> muse-probe-r2in3-sub-sub36 stable=True saved_source_matches=True valid=True
+sub37 -> muse-probe-r2in3-sub-sub37 stable=True saved_source_matches=True valid=True
+sub38 -> muse-probe-r2in3-sub-sub38 stable=True saved_source_matches=True valid=True
+sub39 -> muse-probe-r2in3-sub-sub39 stable=True saved_source_matches=True valid=True
+sub40 -> muse-probe-r2in3-sub-sub40 stable=True saved_source_matches=True valid=True
+sub41 -> muse-probe-r2in3-sub-sub41 stable=True saved_source_matches=True valid=True
+sub42 -> muse-probe-r2in3-sub-sub42 stable=True saved_source_matches=True valid=True
+sub43 -> muse-probe-r2in3-sub-sub43 stable=True saved_source_matches=True valid=True
+sub44 -> muse-probe-r2in3-sub-sub44 stable=True saved_source_matches=True valid=True
+{
+ "sub35": {
+  "fullname": "muse-probe-r2in3-sub-sub35",
+  "html": "<p><sub><span style=\"color: red\">colored sub</span></sub></p>",
+  "html_sha256": "43416c72e119736feb45a1d7ad12a13b49684594025a999f72c25f9214d5a08f",
+  "source": ",,##red|colored sub##,,",
+  "source_sha256": "1f51f716b16845bf2abdf5e05daf88c9619cc76fec17ff382328ee4241a6a3d9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "sub36": {
+  "fullname": "muse-probe-r2in3-sub-sub36",
+  "html": "<p><sub><span style=\"text-decoration: underline;\">underline sub</span></sub>,</p>",
+  "html_sha256": "02281e6b3739a80cbd145e63b8653379b8db469b6325c84c482c5650870815f6",
+  "source": ",,__underline sub__,,,",
+  "source_sha256": "7be47d11d1c3cd702a473898455470a64109d1a1d1a10dde886524cc7ac4db1b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "sub37": {
+  "fullname": "muse-probe-r2in3-sub-sub37",
+  "html": "<p><sub><span style=\"text-decoration: line-through;\">strike sub</span></sub></p>",
+  "html_sha256": "71d6d07f1eef58516092e630512de35a82998eea0ffebc0ed96112381b538025",
+  "source": ",,--strike sub--,,",
+  "source_sha256": "3073bbc4fc6886717b4a5a8b44f43f0ed129f03bfd1340ba70a0a80bfaff9776",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "sub38": {
+  "fullname": "muse-probe-r2in3-sub-sub38",
+  "html": "<p><sub><tt>mono sub</tt></sub></p>",
+  "html_sha256": "8d2277cb50fbe314942100e3c26a491be8931f8a0e09467b48e9cf75548b6b7a",
+  "source": ",,{{mono sub}},,",
+  "source_sha256": "30ea2870022d4d6cf104c6d7c911d8a86aebb46f0c238799b45f878384aff420",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "sub39": {
+  "fullname": "muse-probe-r2in3-sub-sub39",
+  "html": "<p><sub>OUTER <sup>INNER</sup></sub> <sup>TAIL</sup></p>",
+  "html_sha256": "269169f41ea3e7108e2bf83e679b332b95314dbe8b47fa8d04d8bf4eeefcf22b",
+  "source": ",,OUTER ^^INNER,, TAIL^^",
+  "source_sha256": "4132d1b817af8b41f7b640ff28b246cc39cdb792261ce4a22a0134430cc28c3e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "sub40": {
+  "fullname": "muse-probe-r2in3-sub-sub40",
+  "html": "<p><sub>A <strong>B</strong></sub> <strong>X</strong> Y</p>",
+  "html_sha256": "1d0dacca09567251f3cebd15ff13179a8d70b9d4fd925736daa2c6639e4cf76a",
+  "source": ",,A **B,, X** Y",
+  "source_sha256": "3f9c2697b06d246ba877401670cd0a76e0b76eeb039e4042a4966974f36c0dcf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "sub41": {
+  "fullname": "muse-probe-r2in3-sub-sub41",
+  "html": "<p><span style=\"text-decoration: line-through;\">OUTER <sub>INNER</sub></span> <sub>TAIL</sub></p>",
+  "html_sha256": "6610cd7fc8bd22d26dd818ab60a87052a1162ebb0387a8a07339ef99a5b20f95",
+  "source": "--OUTER ,,INNER-- TAIL,,",
+  "source_sha256": "022835210885798193af8e8db416e86ab29057d34dd80a5d99d92de111c98199",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "sub42": {
+  "fullname": "muse-probe-r2in3-sub-sub42",
+  "html": "<p>a<sub>x<br /></sub> .b</p>",
+  "html_sha256": "c7d78ff11340ad1e417ad922743c220a4f015e10cad90ecce43e401f0fb3a308",
+  "source": "a,,x\n,,.b",
+  "source_sha256": "8db11cad01734027c3e7c9cef6f8cf488952061e49c6dff5e915f7e2ca4c0103",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "sub43": {
+  "fullname": "muse-probe-r2in3-sub-sub43",
+  "html": "<p>x<sub>a<br /></sub> y</p>",
+  "html_sha256": "6d0f998e08f8ea53f109d9a1b16bd2fe792bf3c02e79e34151bccd6d04ad0953",
+  "source": "x,,a\n,,y",
+  "source_sha256": "09ba4ae5c33b8a8bf4ff0e511fe348b46004a323f82cf38ec5dd7e53176418e0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "sub44": {
+  "fullname": "muse-probe-r2in3-sub-sub44",
+  "html": "<p><sub>line one<br />\nline two</sub></p>",
+  "html_sha256": "ccb0f75e9b7d4c3c27b405676816a2757f81cd3f572eb5494d72908ecd980ba3",
+  "source": ",,line one\nline two,,",
+  "source_sha256": "e6ec147d465b245eee696e2432fdf3278d400a3a87c9fdfcdd07fe9629487970",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

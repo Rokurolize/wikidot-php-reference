@@ -1,0 +1,6 @@
+{"id":"v01","output":"<p><span style=\"color: red\">A<\/span> blue|B## C##<\/p>\n\n"}
+{"id":"v02","output":"<p>x <span style=\"color: red\">A<\/span>y<\/p>\n\n"}
+{"id":"v03","output":"<p><span style=\"color: red\">A<\/span><\/p>\n\n"}
+{"id":"v04","output":"<p>a <span style=\"color: red\">A<\/span> b<\/p>\n\n"}
+{"id":"v05","output":"<p><span style=\"color: red\">A<\/span><\/p>\n\n"}
+{"id":"v06","output":"<p><span style=\"color: red\">A<\/span><\/p>\n\n"}

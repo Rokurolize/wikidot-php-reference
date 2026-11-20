@@ -1,0 +1,108 @@
+{"id":"x01","output":"<p><tt>a<span style=\"color: red\">ab<\/tt>ba<\/span><\/p>\n\n"}
+{"id":"x02","output":"<p><tt>a<span style=\"color: red\">ab<\/span>ba<\/tt><\/p>\n\n"}
+{"id":"x03","output":"<p><span style=\"color: red\">a<tt>ab<\/span>ba<\/tt><\/p>\n\n"}
+{"id":"x04","output":"<p><span style=\"color: red\">a<tt>ab<\/tt>ba<\/span><\/p>\n\n"}
+{"id":"x05","output":"<p><tt>a<strong>ab<\/tt>ba<\/strong><\/p>\n\n"}
+{"id":"x06","output":"<p><tt>a<strong>ab<\/strong>ba<\/tt><\/p>\n\n"}
+{"id":"x07","output":"<p><strong>a<tt>ab<\/strong>ba<\/tt><\/p>\n\n"}
+{"id":"x08","output":"<p><strong>a<tt>ab<\/tt>ba<\/strong><\/p>\n\n"}
+{"id":"x09","output":"<p><tt>a<em>ab<\/tt>ba<\/em><\/p>\n\n"}
+{"id":"x10","output":"<p><tt>a<em>ab<\/em>ba<\/tt><\/p>\n\n"}
+{"id":"x11","output":"<p><em>a<tt>ab<\/em>ba<\/tt><\/p>\n\n"}
+{"id":"x12","output":"<p><em>a<tt>ab<\/tt>ba<\/em><\/p>\n\n"}
+{"id":"x13","output":"<p><tt>a<span style=\"text-decoration: underline;\">ab<\/tt>ba<\/span><\/p>\n\n"}
+{"id":"x14","output":"<p><tt>a<span style=\"text-decoration: underline;\">ab<\/span>ba<\/tt><\/p>\n\n"}
+{"id":"x15","output":"<p><span style=\"text-decoration: underline;\">a<tt>ab<\/span>ba<\/tt><\/p>\n\n"}
+{"id":"x16","output":"<p><span style=\"text-decoration: underline;\">a<tt>ab<\/tt>ba<\/span><\/p>\n\n"}
+{"id":"x17","output":"<p><tt>a<span style=\"text-decoration: line-through;\">ab<\/tt>ba<\/span><\/p>\n\n"}
+{"id":"x18","output":"<p><tt>a<span style=\"text-decoration: line-through;\">ab<\/span>ba<\/tt><\/p>\n\n"}
+{"id":"x19","output":"<p><span style=\"text-decoration: line-through;\">a<tt>ab<\/span>ba<\/tt><\/p>\n\n"}
+{"id":"x20","output":"<p><span style=\"text-decoration: line-through;\">a<tt>ab<\/tt>ba<\/span><\/p>\n\n"}
+{"id":"x21","output":"<p><sup>a<span style=\"color: red\">ab<\/sup>ba<\/span><\/p>\n\n"}
+{"id":"x22","output":"<p><sup>a<span style=\"color: red\">ab<\/span>ba<\/sup><\/p>\n\n"}
+{"id":"x23","output":"<p><span style=\"color: red\">a<sup>ab<\/span>ba<\/sup><\/p>\n\n"}
+{"id":"x24","output":"<p><span style=\"color: red\">a<sup>ab<\/sup>ba<\/span><\/p>\n\n"}
+{"id":"x25","output":"<p><sup>a<strong>ab<\/sup>ba<\/strong><\/p>\n\n"}
+{"id":"x26","output":"<p><sup>a<strong>ab<\/strong>ba<\/sup><\/p>\n\n"}
+{"id":"x27","output":"<p><strong>a<sup>ab<\/strong>ba<\/sup><\/p>\n\n"}
+{"id":"x28","output":"<p><strong>a<sup>ab<\/sup>ba<\/strong><\/p>\n\n"}
+{"id":"x29","output":"<p><sup>a<em>ab<\/sup>ba<\/em><\/p>\n\n"}
+{"id":"x30","output":"<p><sup>a<em>ab<\/em>ba<\/sup><\/p>\n\n"}
+{"id":"x31","output":"<p><em>a<sup>ab<\/em>ba<\/sup><\/p>\n\n"}
+{"id":"x32","output":"<p><em>a<sup>ab<\/sup>ba<\/em><\/p>\n\n"}
+{"id":"x33","output":"<p><sup>a<span style=\"text-decoration: underline;\">ab<\/sup>ba<\/span><\/p>\n\n"}
+{"id":"x34","output":"<p><sup>a<span style=\"text-decoration: underline;\">ab<\/span>ba<\/sup><\/p>\n\n"}
+{"id":"x35","output":"<p><span style=\"text-decoration: underline;\">a<sup>ab<\/span>ba<\/sup><\/p>\n\n"}
+{"id":"x36","output":"<p><span style=\"text-decoration: underline;\">a<sup>ab<\/sup>ba<\/span><\/p>\n\n"}
+{"id":"x37","output":"<p><sup>a<span style=\"text-decoration: line-through;\">ab<\/sup>ba<\/span><\/p>\n\n"}
+{"id":"x38","output":"<p><sup>a<span style=\"text-decoration: line-through;\">ab<\/span>ba<\/sup><\/p>\n\n"}
+{"id":"x39","output":"<p><span style=\"text-decoration: line-through;\">a<sup>ab<\/span>ba<\/sup><\/p>\n\n"}
+{"id":"x40","output":"<p><span style=\"text-decoration: line-through;\">a<sup>ab<\/sup>ba<\/span><\/p>\n\n"}
+{"id":"x41","output":"<p><sub>a<span style=\"color: red\">ab<\/sub>ba<\/span><\/p>\n\n"}
+{"id":"x42","output":"<p><sub>a<span style=\"color: red\">ab<\/span>ba<\/sub><\/p>\n\n"}
+{"id":"x43","output":"<p><span style=\"color: red\">a<sub>ab<\/span>ba<\/sub><\/p>\n\n"}
+{"id":"x44","output":"<p><span style=\"color: red\">a<sub>ab<\/sub>ba<\/span><\/p>\n\n"}
+{"id":"x45","output":"<p><sub>a<strong>ab<\/sub>ba<\/strong><\/p>\n\n"}
+{"id":"x46","output":"<p><sub>a<strong>ab<\/strong>ba<\/sub><\/p>\n\n"}
+{"id":"x47","output":"<p><strong>a<sub>ab<\/strong>ba<\/sub><\/p>\n\n"}
+{"id":"x48","output":"<p><strong>a<sub>ab<\/sub>ba<\/strong><\/p>\n\n"}
+{"id":"x49","output":"<p><sub>a<em>ab<\/sub>ba<\/em><\/p>\n\n"}
+{"id":"x50","output":"<p><sub>a<em>ab<\/em>ba<\/sub><\/p>\n\n"}
+{"id":"x51","output":"<p><em>a<sub>ab<\/em>ba<\/sub><\/p>\n\n"}
+{"id":"x52","output":"<p><em>a<sub>ab<\/sub>ba<\/em><\/p>\n\n"}
+{"id":"x53","output":"<p><sub>a<span style=\"text-decoration: underline;\">ab<\/sub>ba<\/span><\/p>\n\n"}
+{"id":"x54","output":"<p><sub>a<span style=\"text-decoration: underline;\">ab<\/span>ba<\/sub><\/p>\n\n"}
+{"id":"x55","output":"<p><span style=\"text-decoration: underline;\">a<sub>ab<\/span>ba<\/sub><\/p>\n\n"}
+{"id":"x56","output":"<p><span style=\"text-decoration: underline;\">a<sub>ab<\/sub>ba<\/span><\/p>\n\n"}
+{"id":"x57","output":"<p><sub>a<span style=\"text-decoration: line-through;\">ab<\/sub>ba<\/span><\/p>\n\n"}
+{"id":"x58","output":"<p><sub>a<span style=\"text-decoration: line-through;\">ab<\/span>ba<\/sub><\/p>\n\n"}
+{"id":"x59","output":"<p><span style=\"text-decoration: line-through;\">a<sub>ab<\/span>ba<\/sub><\/p>\n\n"}
+{"id":"x60","output":"<p><span style=\"text-decoration: line-through;\">a<sub>ab<\/sub>ba<\/span><\/p>\n\n"}
+{"id":"x61","output":"<p><tt>a<sup>ab<\/tt>ba<\/sup><\/p>\n\n"}
+{"id":"x62","output":"<p><tt>a<sup>ab<\/sup>ba<\/tt><\/p>\n\n"}
+{"id":"x63","output":"<p><sup>a<tt>ab<\/sup>ba<\/tt><\/p>\n\n"}
+{"id":"x64","output":"<p><sup>a<tt>ab<\/tt>ba<\/sup><\/p>\n\n"}
+{"id":"x65","output":"<p><tt>a<sub>ab<\/tt>ba<\/sub><\/p>\n\n"}
+{"id":"x66","output":"<p><tt>a<sub>ab<\/sub>ba<\/tt><\/p>\n\n"}
+{"id":"x67","output":"<p><sub>a<tt>ab<\/sub>ba<\/tt><\/p>\n\n"}
+{"id":"x68","output":"<p><sub>a<tt>ab<\/tt>ba<\/sub><\/p>\n\n"}
+{"id":"x69","output":"<p><sup>a<sub>ab<\/sup>ba<\/sub><\/p>\n\n"}
+{"id":"x70","output":"<p><sup>a<sub>ab<\/sub>ba<\/sup><\/p>\n\n"}
+{"id":"x71","output":"<p><sub>a<sup>ab<\/sub>ba<\/sup><\/p>\n\n"}
+{"id":"x72","output":"<p><sub>a<sup>ab<\/sup>ba<\/sub><\/p>\n\n"}
+{"id":"x73","output":"<p><span style=\"white-space: pre-wrap;\">skip<\/span> <tt><strong>b<\/strong> <em>i<\/em> <span style=\"text-decoration: underline;\">u<\/span> <span style=\"text-decoration: line-through;\">s<\/span> <sup>p<\/sup> <sub>s<\/sub> <span style=\"color: red\">c<\/span><\/tt><\/p>\n\n"}
+{"id":"x74","output":"<p><tt>a &#8212;- b &#8230; c &#8220;d&#8221; &#8216;e&#8217; &#171;f&#187; 12&#160;34<\/tt><\/p>\n\n"}
+{"id":"x75","output":"<p><tt>see \/\/example.com\/path and <a href=\"http:\/\/x\/\/y\">http:\/\/x\/\/y<\/a><\/tt><\/p>\n\n"}
+{"id":"x76","output":"<p><tt>a \/\/ b<\/tt> and <tt>c ,, d<\/tt><\/p>\n\n"}
+{"id":"x77","output":"<p>pre<tt>mid<\/tt>post and <tt>spaced<\/tt> and ab<\/p>\n\n"}
+{"id":"x78","output":"<p>a &#8212; b &#8212;- c &#8230; d<\/p>\n\n"}
+{"id":"x79","output":"<p><strong>a &#8212; b<\/strong> <em>c &#8212;- d<\/em> <span style=\"text-decoration: underline;\">e &#8230; f<\/span><\/p>\n\n"}
+{"id":"x80","output":"<p><sup>a &#8212; b<\/sup> <sub>c &#8212;- d<\/sub> <tt>e &#8230; f<\/tt><\/p>\n\n"}
+{"id":"x81","output":"<p><strong>a <span style=\"text-decoration: line-through;\">-b<\/span>- c<\/strong> and <sup>d <span style=\"text-decoration: line-through;\">-e<\/span>- f<\/sup><\/p>\n\n"}
+{"id":"x82","output":"<p><strong>&#8220;a&#8221;<\/strong> <sup>&#8216;b&#8217;<\/sup> <sub>&#171;c&#187;<\/sub><\/p>\n\n"}
+{"id":"x83","output":"<p><tt>10&#160;kg and 2&#160;3 and 5px<\/tt><\/p>\n\n"}
+{"id":"x84","output":"<p><a href=\"https:\/\/example.com\">a -- b ... c<\/a><\/p>\n\n"}
+{"id":"x85","output":"<p><sup>a <strong>b<\/strong> c<\/sup> and <strong><sup>a<\/sup><\/strong><\/p>\n\n"}
+{"id":"x86","output":"<p><sub>a <tt>b<\/tt> c<\/sub> and <tt><sub>a<\/sub><\/tt><\/p>\n\n"}
+{"id":"x87","output":"<p>^^ a ^^ ,, b ,, <sup>^^ ^^x<\/sup>^^ y<\/p>\n\n"}
+{"id":"x88","output":"<p><sup>a<br \/>\nb<\/sup> and ^^c<\/p>\n\n<p>d^^<\/p>\n\n"}
+{"id":"x89","output":"<p>a, b, c<sub>sub<\/sub> d, e and <sub>a, b<\/sub> c<\/p>\n\n"}
+{"id":"x90","output":"<p>a<br \/>\nb<\/p>\n\n<p><strong>c<\/strong><br \/>\n<sub>d<\/sub><br \/>\n<tt>e<\/tt><br \/>\n<sup>f<\/sup><\/p>\n\n"}
+{"id":"x91","output":"<p>a <sup>b<\/sup> c <sub>d<\/sub> e <tt>f<\/tt> g <strong>h<\/strong> i <span style=\"color: red\">j<\/span> k<\/p>\n\n"}
+{"id":"x92","output":"<p>##red|a<\/p>\n\n<p>b## and {{c<\/p>\n\n<p>d}}<\/p>\n\n"}
+{"id":"x93","output":"<p><sup>a<br \/>\nb<\/sup> <sub>c<br \/>\nd<\/sub> <strong>e<br \/>\nf<\/strong><\/p>\n\n"}
+{"id":"x94","output":"<p>ab and __ __ and <span style=\"text-decoration: underline;\">a<\/span> b<\/p>\n\n"}
+{"id":"x95","output":"<p><span style=\"color: red\">lead<\/span> <span style=\"color: red\">trail<\/span> <span style=\"color: red\">both<\/span><\/p>\n\n"}
+{"id":"x96","output":"<p><span style=\"color: red\">C<strong>B<em>I<span style=\"text-decoration: underline;\">U<span style=\"text-decoration: line-through;\">S<tt>T<\/tt><sup>P<\/sup><sub>R<\/sub><\/span>S<\/span>U<\/em>I<\/strong>B<\/span>C<\/p>\n\n"}
+{"id":"x97","output":"<p><sub>R<\/sub><sup>P<\/sup><tt>T<\/tt>&#8212;S__U\/\/I**B<span style=\"color: red\">C<\/span><\/p>\n\n"}
+{"id":"x98","output":"<p>**b <sup>p <sub>s <tt>t<\/tt><\/sub> ^^ ** and \/\/i <tt>a ^^b<\/sup> c<\/tt> \/\/<\/p>\n\n"}
+{"id":"x99","output":"<p><span style=\"color: red\">c<\/span> <strong>b<\/strong> <em>i<\/em> <span style=\"text-decoration: underline;\">u<\/span> <span style=\"text-decoration: line-through;\">s<\/span> <tt>t<\/tt> <sup>p<\/sup> <sub>r<\/sub><\/p>\n\n"}
+{"id":"x100","output":"<p>a ##red| b ** c \/\/ d __ e &#8212; f {{ g ^^ h ,, i<\/p>\n\n"}
+{"id":"x101","output":"<p><tt>a[[div]]b<\/tt>c[<a href=\"\/div]]\">and ^^d[[div<\/a>]e^^f[[\/div]]<\/p>\n\n"}
+{"id":"x102","output":"<ul>\n<li><sup>a<\/li>\n<li>b<\/sup> c<\/li>\n<li>d and * <tt>e<\/li>\n<li>f<\/tt> g<\/li>\n<\/ul>"}
+{"id":"x103","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>h<\/td>\n<td>h<\/td>\n<\/tr>\n<\/table><p>| <sup>a<\/sup> | <tt>b<\/tt> |<br \/>\n| <sub>c<\/sub> | d |<\/p>\n\n"}
+{"id":"x104","output":"<p>^^a<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1<\/a><\/sup><\/p>\n\n<div class=\"footnotes-footer\"><div class=\"title\">Footnotes<\/div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1<\/a>. b^^c<\/div><\/div>"}
+{"id":"x105","output":"<p><a href=\"https:\/\/example.com\">^^a^^ {{b}} ,,c,,<\/a><\/p>\n\n"}
+{"id":"x106","output":"<p style=\"text-align: center;\"><sup>a<\/sup> <tt>b<\/tt> <sub>c<\/sub> =<\/p>"}
+{"id":"x107","output":"\n<div class=\"code\">\n<pre><code>^^a^^ {{b}} ,,c,,<\/code><\/pre><\/div>\n\n"}
+{"id":"x108","output":"<p><sup>a[[include:foo]]b<\/sup>c<\/p>\n\n"}

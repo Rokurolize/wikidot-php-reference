@@ -45,7 +45,20 @@ class Text_Wiki_Parse_Subscript extends Text_Wiki_Parse {
      * 
      */
     
-    public $regex = "/,,([^\s](?:.*[^\s])?),,/U";
+    // R2-INLINE3 C1 (fossil-era artifact, Stage-1 empty-pair drop):
+    // the fossil pattern requires a non-whitespace body, so an adjacent
+    // pair of markers (,,,,) never matched and was left as literal text.
+    // Live Wikidot pairs adjacent markers first-fit and drops the empty
+    // pair: the frozen pin test/subscript/basic renders ",,,," as
+    // <p>Then empty subscript:</p>, and live probe
+    // muse-probe-r2in3-sub-sub13 renders ",,,,four,,,," as <p>four</p>,
+    // so a four-comma run is consumed as an empty pair before a longer
+    // body can claim its markers. The empty-pair branch is therefore
+    // placed FIRST; the original non-empty branch is otherwise verbatim,
+    // preserving the comma-run collision forms live already agrees on
+    // (,,,a,,, -> <sub>,a</sub>, and ,,a ,, b,, -> <sub>a ,, b</sub>,
+    // confirmed by probes sub12 and sub11).
+    public $regex = "/,,,,|,,([^\s](?:.*[^\s])?),,/U";
 
     /**
      * 
@@ -64,12 +77,20 @@ class Text_Wiki_Parse_Subscript extends Text_Wiki_Parse {
      */
     
     function process($matches) {
+        // R2-INLINE3 C1: the ,,,, alternation has no body group; returning ''
+        // consumes both markers and emits no token pair, which is the
+        // empty-pair drop live performs. A non-empty body keeps the fossil
+        // token pair unchanged.
+        $body = isset($matches[1]) ? $matches[1] : '';
+        if ($body === '') {
+            return '';
+        }
         $start = $this->wiki->addToken($this->rule, array(
             'type' => 'start'));
         
         $end = $this->wiki->addToken($this->rule, array(
             'type' => 'end'));
         
-        return $start . $matches[1] . $end;
+        return $start . $body . $end;
     }
 }

@@ -1,0 +1,6 @@
+v01: color owner c53: ejected trailing space must stay | '##red|A ##blue|B## C##'
+v02: leading space hoists out when preceding output has no space | 'x##red| A##y'
+v03: multi-space color edges collapsed then trimmed | '##red|  A  ##'
+v04: both edges with surrounding text | 'a ##red| A ## b'
+v05: trailing edge at paragraph end | '##red|A ##'
+v06: leading edge at paragraph start | '##red| A##'

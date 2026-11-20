@@ -1,0 +1,92 @@
+{"errors":[],"html":"<p>-</p>","id":"typo01"}
+{"errors":[],"html":"<p>a - b<br>\nx</p>","id":"typo02"}
+{"errors":[],"html":"<p>a-b<br>\nx</p>","id":"typo03"}
+{"errors":[],"html":"<p>—<br>\nx</p>","id":"typo04"}
+{"errors":[],"html":"<p>a—b<br>\nx</p>","id":"typo05"}
+{"errors":[],"html":"<p>—-<br>\nx</p>","id":"typo06"}
+{"errors":[],"html":"<p>a—-b<br>\nx</p>","id":"typo07"}
+{"errors":[],"html":"<hr><p>x</p>","id":"typo08"}
+{"errors":[],"html":"<p>a——b<br>\nx</p>","id":"typo09"}
+{"errors":[],"html":"<hr><p>x</p>","id":"typo10"}
+{"errors":[],"html":"<p>a<span style=\"text-decoration: line-through;\">-</span>b<br>\nx</p>","id":"typo11"}
+{"errors":[],"html":"<hr><p>x</p>","id":"typo12"}
+{"errors":[],"html":"<p>a<span style=\"text-decoration: line-through;\">-</span>-b<br>\nx</p>","id":"typo13"}
+{"errors":[],"html":"<hr><p>x</p>","id":"typo14"}
+{"errors":[],"html":"<p>a<span style=\"text-decoration: line-through;\">-</span>—b<br>\nx</p>","id":"typo15"}
+{"errors":[],"html":"<hr><p>x</p>","id":"typo16"}
+{"errors":[],"html":"<p>a<span style=\"text-decoration: line-through;\">-</span>—-b<br>\nx</p>","id":"typo17"}
+{"errors":[],"html":"<hr><p>x</p>","id":"typo18"}
+{"errors":[],"html":"<p>a<span style=\"text-decoration: line-through;\">-</span><span style=\"text-decoration: line-through;\">-</span>b<br>\nx</p>","id":"typo19"}
+{"errors":[],"html":"<p>word— —word<br>\nx</p>","id":"typo20"}
+{"errors":[],"html":"<p>wait… what</p>","id":"typo21"}
+{"errors":[],"html":"<p>wait… what</p>","id":"typo22"}
+{"errors":[],"html":"<p>…leading</p>","id":"typo23"}
+{"errors":[],"html":"<p>trailing…</p>","id":"typo24"}
+{"errors":[],"html":"<p>…..</p>","id":"typo25"}
+{"errors":[],"html":"<p>……</p>","id":"typo26"}
+{"errors":[],"html":"<p>… … …</p>","id":"typo27"}
+{"errors":[],"html":"<p>…. ….</p>","id":"typo28"}
+{"errors":[],"html":"<p>x… …y… z</p>","id":"typo29"}
+{"errors":[],"html":"<p>word … word<br>\nx</p>","id":"typo30"}
+{"errors":[],"html":"<p>“double”<br>\nx</p>","id":"typo31"}
+{"errors":[],"html":"<p>‘single’<br>\nx</p>","id":"typo32"}
+{"errors":[],"html":"<p>„low”<br>\nx</p>","id":"typo33"}
+{"errors":[],"html":"<p>“outer ‘`inner” outer’&#39;<br>\nx</p>","id":"typo34"}
+{"errors":[],"html":"<p>‘one<br>\nline’<br>\nx</p>","id":"typo35"}
+{"errors":[],"html":"<p>`one</p><p>line&#39;<br>\nx</p>","id":"typo36"}
+{"errors":[],"html":"<p>a“b”c<br>\nx</p>","id":"typo37"}
+{"errors":[],"html":"<p>„lower” and “upper”<br>\nx</p>","id":"typo38"}
+{"errors":[],"html":"<p>unpaired“ and ”<br>\nx</p>","id":"typo39"}
+{"errors":[],"html":"<p>“multi<br>\nline”<br>\nx</p>","id":"typo40"}
+{"errors":[],"html":"<p>a &#39; b ` c<br>\nx</p>","id":"typo41"}
+{"errors":[],"html":"<p>“a”b&#39;&#39;c&#39;&#39;<br>\nx</p>","id":"typo42"}
+{"errors":[],"html":"<p>«French quotes»<br>\nx</p>","id":"typo43"}
+{"errors":[],"html":"<p>«open only<br>\nx</p>","id":"typo44"}
+{"errors":[],"html":"<p>close only»<br>\nx</p>","id":"typo45"}
+{"errors":[],"html":"<p>a » b<br>\nx</p>","id":"typo46"}
+{"errors":[],"html":"<blockquote><blockquote><p>quoted line</p></blockquote></blockquote><p>x</p>","id":"typo47"}
+{"errors":[],"html":"<p>«&lt;triple»&gt;<br>\nx</p>","id":"typo48"}
+{"errors":[],"html":"<p>1 234 567<br>\nx</p>","id":"typo49"}
+{"errors":[],"html":"<p>12 kg<br>\nx</p>","id":"typo50"}
+{"errors":[],"html":"<p>12 m<br>\nx</p>","id":"typo51"}
+{"errors":[],"html":"<p>12 Mpx<br>\nx</p>","id":"typo52"}
+{"errors":[],"html":"<p>12 foo<br>\nx</p>","id":"typo53"}
+{"errors":[],"html":"<p>12 kgx<br>\nx</p>","id":"typo54"}
+{"errors":[],"html":"<p>3.5 kg<br>\nx</p>","id":"typo55"}
+{"errors":[],"html":"<p>1 2 3 kg 4<br>\nx</p>","id":"typo56"}
+{"errors":[],"html":"<p>10 %<br>\nx</p>","id":"typo57"}
+{"errors":[],"html":"<p>100 °C<br>\nx</p>","id":"typo58"}
+{"errors":[],"html":"<p>5 km/h<br>\nx</p>","id":"typo59"}
+{"errors":[],"html":"<p>-12 34 and -7 kg<br>\nx</p>","id":"typo60"}
+{"errors":[],"html":"<p><a href=\"http://example.com/a--b?x=1%C2%A02\">http://example.com/a--b?x=1 2</a><br>\nx</p>","id":"typo61"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">Label ... --</a><br>\nx</p>","id":"typo62"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>a--b...12 kg</code></pre></div><br>\nx","id":"typo63"}
+{"errors":["ParseError { token: Identifier, rule: \"block-raw\", span: 7..8, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 19..22, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 25..27, kind: NoRulesMatch }"],"html":"<p>[[raw]]a—b...12 kg[[/raw]]<br>\nx</p>","id":"typo64"}
+{"errors":[],"html":"<p>$a—b…12 kg$<br>\nx</p>","id":"typo65"}
+{"errors":[],"html":"<p>x</p>","id":"typo66"}
+{"errors":[],"html":"<p><tt>a—b…12 kg</tt><br>\nx</p>","id":"typo67"}
+{"errors":["ParseError { token: Identifier, rule: \"block-div\", span: 28..29, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 26..28, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 29..32, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 35..37, kind: NoRulesMatch }"],"html":"<p>[[div style=&quot;a—b...12 kg&quot;]]x[[/div]]<br>\nx</p>","id":"typo68"}
+{"errors":[],"html":"<p><a href=\"http://x/a--b\">label</a><br>\nx</p>","id":"typo69"}
+{"errors":[],"html":"<p><span class=\"odate time_123\">01 Jan 1970 00:02</span><br>\nx</p>","id":"typo70"}
+{"errors":[],"html":"<p><strong>a<span style=\"text-decoration: line-through;\">b</span></strong><span style=\"text-decoration: line-through;\">c</span><br>\nx</p>","id":"typo71"}
+{"errors":[],"html":"<p><em>a<span style=\"text-decoration: line-through;\">b</span></em><span style=\"text-decoration: line-through;\">c</span><br>\nx</p>","id":"typo72"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<span style=\"text-decoration: line-through;\">b</span>c</span><br>\nx</p>","id":"typo73"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a…b</span><br>\nx</p>","id":"typo74"}
+{"errors":[],"html":"<p><span style=\"color: #c00\">a—b…12 kg</span><br>\nx</p>","id":"typo75"}
+{"errors":[],"html":"<p><tt>a<span style=\"text-decoration: line-through;\">b</span></tt><span style=\"text-decoration: line-through;\">c</span><br>\nx</p>","id":"typo76"}
+{"errors":[],"html":"<p><sup>a<span style=\"text-decoration: line-through;\">b</span></sup><span style=\"text-decoration: line-through;\">c</span><br>\nx</p>","id":"typo77"}
+{"errors":[],"html":"<p><sub>a<span style=\"text-decoration: line-through;\">b</span></sub><span style=\"text-decoration: line-through;\">c</span><br>\nx</p>","id":"typo78"}
+{"errors":[],"html":"<p><sub>OUTER …INNER</sub> TAIL…<br>\nx</p>","id":"typo79"}
+{"errors":["ParseError { token: Superscript, rule: \"superscript\", span: 4..6, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }"],"html":"<p>a—b^^c…d„e”<br>\nx</p>","id":"typo80"}
+{"errors":[],"html":"<p>a<span style=\"text-decoration: line-through;\">b<br>\nc</span>d<br>\nx</p>","id":"typo81"}
+{"errors":[],"html":"<p>a—b</p><p>c—d<br>\nx</p>","id":"typo82"}
+{"errors":[],"html":"<p style=\"text-align: center;\">Heading — … =</p><p>x</p>","id":"typo83"}
+{"errors":[],"html":"<p>before</p><hr><p>after…<br>\nx</p>","id":"typo84"}
+{"errors":[],"html":"<ul>\n<li>item — …</li>\n<li>item2</li>\n</ul><p>x</p>","id":"typo85"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>cell—cell</td>\n<td>…</td>\n</tr>\n</table><p>x</p>","id":"typo86"}
+{"errors":[],"html":"<p>a—b</p><blockquote><p>quote—tail</p></blockquote><p>x</p>","id":"typo87"}
+{"errors":[],"html":"<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnote-1&#39;)\">1</a></sup><br>\nx</p><div class=\"footnotes-footer\"><div class=\"title\">Footnotes</div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnoteref-1&#39;)\">1</a>. a—b…12 kg</div></div>","id":"typo88"}
+{"errors":[],"html":"<p>12 &amp;euro;<br>\nx</p>","id":"typo89"}
+{"errors":[],"html":"<p>5 &amp;micro;m<br>\nx</p>","id":"typo90"}
+{"errors":[],"html":"<p>9 Ω and 3 Ohm<br>\nx</p>","id":"typo91"}
+{"errors":[],"html":"<p>20 &amp;deg;C<br>\nx</p>","id":"typo92"}

@@ -1,0 +1,37 @@
+{
+ "tighten01": {
+  "fullname": "muse-probe-r2in3-tighten-tighten01",
+  "source": "one line only",
+  "action": "exists"
+ },
+ "tighten02": {
+  "fullname": "muse-probe-r2in3-tighten-tighten02",
+  "source": "a\nb",
+  "action": "exists"
+ },
+ "tighten03": {
+  "fullname": "muse-probe-r2in3-tighten-tighten03",
+  "source": "a\nb\nc",
+  "action": "exists"
+ },
+ "tighten04": {
+  "fullname": "muse-probe-r2in3-tighten-tighten04",
+  "source": "a\n\nb",
+  "action": "exists"
+ },
+ "tighten05": {
+  "fullname": "muse-probe-r2in3-tighten-tighten05",
+  "source": "a\n\n\nb",
+  "action": "exists"
+ },
+ "tighten06": {
+  "fullname": "muse-probe-r2in3-tighten-tighten06",
+  "source": "a\n\n\n\nb",
+  "action": "exists"
+ },
+ "tighten07": {
+  "fullname": "muse-probe-r2in3-tighten-tighten07",
+  "source": "a\n\n\n\n\n\nb",
+  "action": "exists"
+ }
+}

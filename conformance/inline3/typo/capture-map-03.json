@@ -1,0 +1,102 @@
+{
+ "typo31": {
+  "fullname": "muse-probe-r2in3-typo-typo31",
+  "html": "<p>&#8220;double&#8221;<br />\nx</p>",
+  "html_sha256": "917a39083611a6b4b74adff112af37dcdd4ff9cb5c7d6f056272fbb668495fce",
+  "source": "``double''\nx",
+  "source_sha256": "9e2e861d759c2d32741585415fd99eb9083e55e597ee5c59b563493520409b8a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo32": {
+  "fullname": "muse-probe-r2in3-typo-typo32",
+  "html": "<p>&#8216;single&#8217;<br />\nx</p>",
+  "html_sha256": "31730205a52c09d92dff033dc3ea4443175bcf12481c756bee5dfa18b91742e1",
+  "source": "`single'\nx",
+  "source_sha256": "797ba49ab6cc781b9e8b87d6302c114fd3b2af28e270a75f8e7b29b0f64b13e4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo33": {
+  "fullname": "muse-probe-r2in3-typo-typo33",
+  "html": "<p>&#8222;low&#8221;<br />\nx</p>",
+  "html_sha256": "300cc91961cbf10206c3bd066d3fe01d8bb3943429de9f70127764b1b3b9b566",
+  "source": ",,low''\nx",
+  "source_sha256": "38b51e9ea14e5c0a01345965a39a60dfc215508df53db0e8f9a7c92fc2a1a82a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo34": {
+  "fullname": "muse-probe-r2in3-typo-typo34",
+  "html": "<p>outer inner'' outer''<br />\nx</p>",
+  "html_sha256": "5a1af111eb5c58b38bb09a27b7cc5f52dc26c3c8ed16f29ff9db6d392ed0aa8e",
+  "source": "``outer ``inner'' outer''\nx",
+  "source_sha256": "16fa048ded38a8ebba682603fcd273d224416620bbb685ed207a19a409828745",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo35": {
+  "fullname": "muse-probe-r2in3-typo-typo35",
+  "html": "<p>&#8216;one<br />\nline&#8217;<br />\nx</p>",
+  "html_sha256": "73bc4930b3a467b18170eb2563a7dbd20c9ac4e566276767eae36c31446bf21f",
+  "source": "`one\nline'\nx",
+  "source_sha256": "3f1e32c7242d8c37d845e38e76b752d4556aac2708e9885ee666ea7697fb144b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo36": {
+  "fullname": "muse-probe-r2in3-typo-typo36",
+  "html": "<p>`one</p>\n<p>line'<br />\nx</p>",
+  "html_sha256": "81c697d7117bf2ebeb2d2096bbc10c6e1139279070916d4352c26fac9343a47a",
+  "source": "`one\n\nline'\nx",
+  "source_sha256": "931ea601e4cf4ec4eed5cbdb66732f5ede742e9f1aa0db339bab83a565db40c7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo38": {
+  "fullname": "muse-probe-r2in3-typo-typo38",
+  "html": "<p>&#8222;lower&#8221; and &#8220;upper&#8221;<br />\nx</p>",
+  "html_sha256": "a895ad06fa6d0c373cb7125cf5dfa0bcb090d380a31907d5fb938f88be95bd29",
+  "source": ",,lower'' and ``upper''\nx",
+  "source_sha256": "e8ef2d0c3faf28fbc4504f1c0e335e58c530c1fbbb551487cea1b4befc871419",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo43": {
+  "fullname": "muse-probe-r2in3-typo-typo43",
+  "html": "<p>&#171;French quotes&#187;<br />\nx</p>",
+  "html_sha256": "2b1c0b9e60a6d4a90cac449e28e5f38939daa2b1e223c3a1e6e10a88c333b9b7",
+  "source": "<<French quotes>>\nx",
+  "source_sha256": "aa67430ce506b259169acd35aa1a7d6ad6ba89e096a4f80a39900e5caa024b9a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo44": {
+  "fullname": "muse-probe-r2in3-typo-typo44",
+  "html": "<p>&#171;open only<br />\nx</p>",
+  "html_sha256": "b778af8cb6c50aee4295ef3904936c88c3e72545a3d7b1b2db29b80407851e6a",
+  "source": "<<open only\nx",
+  "source_sha256": "dae37bf335fee1a74619e278d46d63aaacb9343675ff61db7d7a7304adb9f591",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo45": {
+  "fullname": "muse-probe-r2in3-typo-typo45",
+  "html": "<p>close only&#187;<br />\nx</p>",
+  "html_sha256": "f893f8f3e97c55520dbe1fa4c3f5655b6b80dc2c9a1453ceb9564130503b0fd9",
+  "source": "close only>>\nx",
+  "source_sha256": "47b2a094207122dfb80600f2d03923a8133c8b8dd408c51774d8d53f61530b56",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

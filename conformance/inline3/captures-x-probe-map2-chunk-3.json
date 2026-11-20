@@ -1,0 +1,92 @@
+{
+ "x87": {
+  "fullname": "muse-probe-r2in3-x-x87",
+  "html": "<p>^^ a ^^ ,, b ,, <sup>x</sup>^^ y</p>",
+  "html_sha256": "41c25ffb8623bd70ca77b8ab03a4f05caa0490c81e8b448d0cfc5ee8b8f0bf43",
+  "source": "^^ a ^^ ,, b ,, ^^^^ ,,,, ^^x^^^^ ,,,,y,,,,",
+  "source_sha256": "45720807c33631b8f31d3a0169a9a14869494105db10e6b0191e4a7ef4b23686",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x89": {
+  "fullname": "muse-probe-r2in3-x-x89",
+  "html": "<p>a, b, c<sub>sub</sub> d, e and <sub>a, b</sub> c</p>",
+  "html_sha256": "48fefd153af360e2b3bb061d37de93e58278d59e5e72f2c40314de74c8782c3f",
+  "source": "a, b, c,,sub,, d, e and ,,a, b,, c",
+  "source_sha256": "656b11a7839468c60aee9f29706a1130756ebdc7d7c25bbd9a4abbf6dd163fbf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x91": {
+  "fullname": "muse-probe-r2in3-x-x91",
+  "html": "<p>a <sup>b</sup> c <sub>d</sub> e <tt>f</tt> g <strong>h</strong> i <span style=\"color: red\">j</span> k</p>",
+  "html_sha256": "507291dc8637ba38de302f876120a2bbeff6a3d19a0e28f7e039b502186caa8b",
+  "source": "a ^^b^^ c ,,d,, e {{f}} g **h** i ##red|j## k",
+  "source_sha256": "f0ed537f98e4d1b136b00a3b9b37dd1d26f297334be68733fd40f54796d094fa",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x94": {
+  "fullname": "muse-probe-r2in3-x-x94",
+  "html": "<p>ab and __ __ and <span style=\"text-decoration: underline;\">a</span> b</p>",
+  "html_sha256": "388fb943b5c6ea3230b3ff707cbb0f1f42d0e120725eb5f16ed159c6a06e2c95",
+  "source": "a____b and __ __ and __a__   b",
+  "source_sha256": "08cbccee1efec5f84fa0e9c172669560ef4b1d2a06f80fc8a56e648a929a2e91",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x95": {
+  "fullname": "muse-probe-r2in3-x-x95",
+  "html": "<p><span style=\"color: red\">lead</span> <span style=\"color: red\">trail</span> <span style=\"color: red\">both</span></p>",
+  "html_sha256": "f649ed91945689c0da88b9124771dadd6a216c5606eb41dc6fcde06d651d9f0b",
+  "source": "##red|  lead## ##red|trail  ## ##red| both ##",
+  "source_sha256": "82e87e8988603cd85755366eda272719c3c9452bf1ab5b20558a4db2e9be4506",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x96": {
+  "fullname": "muse-probe-r2in3-x-x96",
+  "html": "<p><span style=\"color: red\">C<strong>B<em>I<span style=\"text-decoration: underline;\">U<span style=\"text-decoration: line-through;\">S<tt>T</tt><sup>P</sup><sub>R</sub></span>S</span>U</em>I</strong>B</span>C</p>",
+  "html_sha256": "0038746a5e1f77e092c68878f7322caa27d38f34b7759186e3a97ca2c4471723",
+  "source": "##red|C**B//I__U--S{{T}}^^P^^,,R,,--S__U//I**B##C",
+  "source_sha256": "37203240c052ce6165c578ff55ef4967a04ea4106ea12551d02fbb42669642df",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x97": {
+  "fullname": "muse-probe-r2in3-x-x97",
+  "html": "<p><sub>R</sub><sup>P</sup><tt>T</tt>&#8212;S__U//I**B<span style=\"color: red\">C</span></p>",
+  "html_sha256": "33f0ccb857554193dfc2b56474cf62d37bac4d0bba0734361ed697539fe92fe5",
+  "source": ",,R,,^^P^^{{T}}--S__U//I**B##red|C##",
+  "source_sha256": "7ab48b6bdc12acca7e47dc7c4802365c62a6815cd66632f23cca5ce5c3323b80",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x98": {
+  "fullname": "muse-probe-r2in3-x-x98",
+  "html": "<p>**b <sup>p <sub>s <tt>t</tt></sub> ^^ ** and //i <tt>a ^^b</tt></sup> <tt>c</tt> //</p>",
+  "html_sha256": "2e94f06e3584b4cbdceaeca57e9c9ba27f8aef19d3c70b0f56156a2d2c2898ba",
+  "source": "**b ^^p ,,s {{t}},, ^^ ** and //i {{a ^^b^^ c}} //",
+  "source_sha256": "56eb329d579e0f9a7699f257979e834743385ca61ede2ea9e6bb57182f1bec32",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x99": {
+  "fullname": "muse-probe-r2in3-x-x99",
+  "html": "<p><span style=\"color: red\">c</span> <strong>b</strong> <em>i</em> <span style=\"text-decoration: underline;\">u</span> <span style=\"text-decoration: line-through;\">s</span> <tt>t</tt> <sup>p</sup> <sub>r</sub></p>",
+  "html_sha256": "30556fea1e0c984cbd82e136c6f29120014a4ff3c2f035b8c8c946b5f2f75138",
+  "source": "##red|c## **b** //i// __u__ --s-- {{t}} ^^p^^ ,,r,,",
+  "source_sha256": "1acd6b2a5ad713265ac1749643dffe490370d8368112bf71c774d2e951fd57d8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

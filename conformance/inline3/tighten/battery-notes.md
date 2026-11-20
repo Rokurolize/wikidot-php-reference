@@ -1,0 +1,74 @@
+# R2-inline3 Tighten battery notes
+
+dumper-only cases are shapes that live cannot settle because Wikidot normalizes leading/trailing whitespace and blank lines on save; they are compared only between the reference and the ftml dumper.
+
+- tighten01: plain text, no newline | source: `one line only`
+- tighten02: single soft break | source: `a\nb`
+- tighten03: two soft breaks | source: `a\nb\nc`
+- tighten04: one blank line (paragraph break) | source: `a\n\nb`
+- tighten05: two blank lines (three newlines) | source: `a\n\n\nb`
+- tighten06: three blank lines (four newlines) | source: `a\n\n\n\nb`
+- tighten07: six consecutive newlines | source: `a\n\n\n\n\n\nb`
+- tighten08 [DUMPER-ONLY]: newline at very start of source (save-normalized) | source: `\nleading newline`
+- tighten09 [DUMPER-ONLY]: two newlines at very start (save-normalized) | source: `\n\nleading blank line`
+- tighten10 [DUMPER-ONLY]: single trailing newline (save-normalized) | source: `trailing newline\n`
+- tighten11 [DUMPER-ONLY]: two trailing newlines (save-normalized) | source: `trailing blank line\n\n`
+- tighten12 [DUMPER-ONLY]: source is a single newline (save-normalized) | source: `\n`
+- tighten13 [DUMPER-ONLY]: source is three newlines (save-normalized) | source: `\n\n\n`
+- tighten14: newline then a leading space on next line | source: `a\n b`
+- tighten15 [DUMPER-ONLY]: space before a soft break (pure trailing space at line end) | source: `a \nb`
+- tighten16 [DUMPER-ONLY]: space on both sides of a soft break (pre-break space save-normalized) | source: `a \n b`
+- tighten17 [DUMPER-ONLY]: two spaces before a paragraph break | source: `a  \n\n b`
+- tighten18: two spaces inside a line | source: `a  b`
+- tighten19: three spaces inside a line | source: `a   b`
+- tighten20 [DUMPER-ONLY]: leading spaces at start (save-normalized) | source: `  leading spaces`
+- tighten21 [DUMPER-ONLY]: pure trailing spaces at end | source: `trailing spaces  `
+- tighten22: interior tab run | source: `a		b`
+- tighten23: mixed space/tab run | source: `a 	 b`
+- tighten24: newline immediately before strong | source: `a\n**bold**`
+- tighten25: newline immediately after strong | source: `**bold**\na`
+- tighten26: newline before emphasis | source: `a\n//em//`
+- tighten27: newline after emphasis | source: `//em//\na`
+- tighten28: newline before color span | source: `a\n##red|x##`
+- tighten29: newline after color span | source: `##red|x##\na`
+- tighten30: newline before underline | source: `a\n__u__`
+- tighten31: newline after underline | source: `__u__\na`
+- tighten32: newline before strike | source: `a\n--s--`
+- tighten33: newline after strike | source: `--s--\na`
+- tighten34: newline before monospace | source: `a\n{{tt}}`
+- tighten35: newline after monospace | source: `{{tt}}\na`
+- tighten36: newline before superscript | source: `a\n^^sup^^`
+- tighten37: newline after superscript | source: `^^sup^^\na`
+- tighten38: newline before subscript | source: `a\n,,sub,,`
+- tighten39: newline after subscript | source: `,,sub,,\na`
+- tighten40: leading space inside color span | source: `##red| A##`
+- tighten41: trailing space inside color span (probed in follow-up campaign) | source: `##red|A ##`
+- tighten42: both edges inside color span (probed in follow-up campaign) | source: `##red| A ##`
+- tighten43: leading-space color span embedded in text | source: `x ##red| A## y`
+- tighten44: trailing-space color span embedded in text | source: `x ##red|A ## y`
+- tighten45: leading/trailing space in anchor label | source: `[[#x| A ]]`
+- tighten46: spaces just inside strong markers | source: `** A **`
+- tighten47: spaces just inside emphasis markers | source: `// A //`
+- tighten48: spaces just inside underline markers | source: `__ A __`
+- tighten49: spaces just inside strike markers | source: `-- A --`
+- tighten50: color span with clean surrounding spaces | source: `A ##red|B## C`
+- tighten51: empty underline pair at end of line (p02 shape; probed in follow-up) | source: `Empty ____`
+- tighten52: empty pair between spaces (ftml collapses to x y) | source: `x ____ y`
+- tighten53: empty pair before space and text | source: `____ x`
+- tighten54: empty pair directly after text | source: `x____`
+- tighten55: two empty pairs with spaces | source: `a ____ b ____ c`
+- tighten56: empty pair at line end followed by soft break | source: `Empty ____\nnext`
+- tighten57: paragraph seam | source: `para one\n\npara two`
+- tighten58: native list lines | source: `* item one\n* item two`
+- tighten59: heading then soft break | source: `+++ heading\nafter`
+- tighten60: newline inside code block | source: `[[code]]a\nb[[/code]]`
+- tighten61: newline inside raw block | source: `{{{a\nb}}}`
+- tighten62: blockquote lines | source: `> quoted one\n> quoted two`
+- tighten63: table rows | source: `|| head ||\n|| cell ||`
+- tighten64: typography dash then soft break | source: `a -- b\nc`
+- tighten65: typography ellipsis then soft break | source: `...\nnext`
+- tighten66: explicit line break then soft break | source: `a\\\\b\nc`
+- tighten67: color pair crossing a soft break | source: `##red|A\nB##`
+- tighten68: strong pair crossing a soft break | source: `**A\nB**`
+- tighten69: div block with blank-line seams | source: `a\n\n[[div]]x[[/div]]\n\nb`
+- tighten70 [DUMPER-ONLY]: blank-line seams with trailing spaces | source: `a  \n\nb  \n\nc`

@@ -1,0 +1,10 @@
+wrote 6 capture chunks
+x-probe-map-chunk-1 attempt 1 OK
+x-probe-map-chunk-2 attempt 1 OK
+x-probe-map-chunk-3 attempt 1 OK
+x-probe-map-chunk-4 attempt 1 OK
+x-probe-map-chunk-5 attempt 1 OK
+x-probe-map-chunk-6 attempt 1 failed; retrying
+x-probe-map-chunk-6 attempt 2 failed; retrying
+x-probe-map-chunk-6 attempt 3 failed; retrying
+merged 45 valid captures into captures-x.json

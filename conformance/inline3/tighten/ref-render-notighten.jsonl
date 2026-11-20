@@ -1,0 +1,70 @@
+{"id":"tighten01","output":"\n<p>one line only<\/p>\n\n\n\n"}
+{"id":"tighten02","output":"\n<p>a<br \/>\nb<\/p>\n\n\n\n"}
+{"id":"tighten03","output":"\n<p>a<br \/>\nb<br \/>\nc<\/p>\n\n\n\n"}
+{"id":"tighten04","output":"\n<p>a<\/p>\n\n\n\n<p>b<\/p>\n\n\n\n"}
+{"id":"tighten05","output":"\n<p>a<\/p>\n\n\n\n<p>b<\/p>\n\n\n\n"}
+{"id":"tighten06","output":"\n<p>a<\/p>\n\n\n\n<p>b<\/p>\n\n\n\n"}
+{"id":"tighten07","output":"\n<p>a<\/p>\n\n\n\n<p>b<\/p>\n\n\n\n"}
+{"id":"tighten08","output":"<p>leading newline<\/p>\n\n\n\n"}
+{"id":"tighten09","output":"<p>leading blank line<\/p>\n\n\n\n"}
+{"id":"tighten10","output":"\n<p>trailing newline<\/p>\n\n\n\n"}
+{"id":"tighten11","output":"\n<p>trailing blank line<\/p>\n\n\n\n"}
+{"id":"tighten12","output":""}
+{"id":"tighten13","output":""}
+{"id":"tighten14","output":"\n<p>a<br \/>\n b<\/p>\n\n\n\n"}
+{"id":"tighten15","output":"\n<p>a <br \/>\nb<\/p>\n\n\n\n"}
+{"id":"tighten16","output":"\n<p>a <br \/>\n b<\/p>\n\n\n\n"}
+{"id":"tighten17","output":"\n<p>a<\/p>\n\n\n\n<p>b<\/p>\n\n\n\n"}
+{"id":"tighten18","output":"\n<p>a  b<\/p>\n\n\n\n"}
+{"id":"tighten19","output":"\n<p>a   b<\/p>\n\n\n\n"}
+{"id":"tighten20","output":"\n<p>leading spaces<\/p>\n\n\n\n"}
+{"id":"tighten21","output":"\n<p>trailing spaces<\/p>\n\n\n\n"}
+{"id":"tighten22","output":"\n<p>a        b<\/p>\n\n\n\n"}
+{"id":"tighten23","output":"\n<p>a      b<\/p>\n\n\n\n"}
+{"id":"tighten24","output":"\n<p>a<br \/>\n<strong>bold<\/strong><\/p>\n\n\n\n"}
+{"id":"tighten25","output":"\n<p><strong>bold<\/strong><br \/>\na<\/p>\n\n\n\n"}
+{"id":"tighten26","output":"\n<p>a<br \/>\n<em>em<\/em><\/p>\n\n\n\n"}
+{"id":"tighten27","output":"\n<p><em>em<\/em><br \/>\na<\/p>\n\n\n\n"}
+{"id":"tighten28","output":"\n<p>a<br \/>\n<span style=\"color: red\">x<\/span><\/p>\n\n\n\n"}
+{"id":"tighten29","output":"\n<p><span style=\"color: red\">x<\/span><br \/>\na<\/p>\n\n\n\n"}
+{"id":"tighten30","output":"\n<p>a<br \/>\n<span style=\"text-decoration: underline;\">u<\/span><\/p>\n\n\n\n"}
+{"id":"tighten31","output":"\n<p><span style=\"text-decoration: underline;\">u<\/span><br \/>\na<\/p>\n\n\n\n"}
+{"id":"tighten32","output":"\n<p>a<br \/>\n<span style=\"text-decoration: line-through;\">s<\/span><\/p>\n\n\n\n"}
+{"id":"tighten33","output":"\n<p><span style=\"text-decoration: line-through;\">s<\/span><br \/>\na<\/p>\n\n\n\n"}
+{"id":"tighten34","output":"\n<p>a<br \/>\n<tt>tt<\/tt><\/p>\n\n\n\n"}
+{"id":"tighten35","output":"\n<p><tt>tt<\/tt><br \/>\na<\/p>\n\n\n\n"}
+{"id":"tighten36","output":"\n<p>a<br \/>\n<sup>sup<\/sup><\/p>\n\n\n\n"}
+{"id":"tighten37","output":"\n<p><sup>sup<\/sup><br \/>\na<\/p>\n\n\n\n"}
+{"id":"tighten38","output":"\n<p>a<br \/>\n<sub>sub<\/sub><\/p>\n\n\n\n"}
+{"id":"tighten39","output":"\n<p><sub>sub<\/sub><br \/>\na<\/p>\n\n\n\n"}
+{"id":"tighten40","output":"\n<p><span style=\"color: red\"> A<\/span><\/p>\n\n\n\n"}
+{"id":"tighten41","output":"\n<p><span style=\"color: red\">A <\/span><\/p>\n\n\n\n"}
+{"id":"tighten42","output":"\n<p><span style=\"color: red\"> A <\/span><\/p>\n\n\n\n"}
+{"id":"tighten43","output":"\n<p>x <span style=\"color: red\"> A<\/span> y<\/p>\n\n\n\n"}
+{"id":"tighten44","output":"\n<p>x <span style=\"color: red\">A <\/span> y<\/p>\n\n\n\n"}
+{"id":"tighten45","output":"\n<p>[[#x| A ]]<\/p>\n\n\n\n"}
+{"id":"tighten46","output":"\n<p>** A **<\/p>\n\n\n\n"}
+{"id":"tighten47","output":"\n<p>\/\/ A \/\/<\/p>\n\n\n\n"}
+{"id":"tighten48","output":"\n<p>__ A __<\/p>\n\n\n\n"}
+{"id":"tighten49","output":"\n<p>&#8212; A &#8212;<\/p>\n\n\n\n"}
+{"id":"tighten50","output":"\n<p>A <span style=\"color: red\">B<\/span> C<\/p>\n\n\n\n"}
+{"id":"tighten51","output":"\n<p>Empty <\/p>\n\n\n\n"}
+{"id":"tighten52","output":"\n<p>x  y<\/p>\n\n\n\n"}
+{"id":"tighten53","output":"\n<p> x<\/p>\n\n\n\n"}
+{"id":"tighten54","output":"\n<p>x<\/p>\n\n\n\n"}
+{"id":"tighten55","output":"\n<p>a  b  c<\/p>\n\n\n\n"}
+{"id":"tighten56","output":"\n<p>Empty <br \/>\nnext<\/p>\n\n\n\n"}
+{"id":"tighten57","output":"\n<p>para one<\/p>\n\n\n\n<p>para two<\/p>\n\n\n\n"}
+{"id":"tighten58","output":"\n<ul>\n<li>item one<\/li>\n<li>item two<\/li>\n<\/ul>\n\n\n"}
+{"id":"tighten59","output":"\n<h3 id=\"toc0\"><span>heading<\/span><\/h3>\n\n\n\n<p>after<\/p>\n\n\n\n"}
+{"id":"tighten60","output":"\n\n<div class=\"code\">\n<pre><code>a\nb<\/code><\/pre><\/div>\n\n\n\n"}
+{"id":"tighten61","output":"\n<p><tt>{a<br \/>\nb}<\/tt><\/p>\n\n\n\n"}
+{"id":"tighten62","output":"<blockquote>\n\n<p>quoted one<br \/>\nquoted two<\/p>\n\n\n\n<\/blockquote>\n\n\n\n"}
+{"id":"tighten63","output":"\n<table class=\"wiki-content-table\">\n<tr>\n<td>head<\/td>\n<\/tr>\n<tr>\n<td>cell<\/td>\n<\/tr>\n<\/table>\n\n\n"}
+{"id":"tighten64","output":"\n<p>a &#8212; b<br \/>\nc<\/p>\n\n\n\n"}
+{"id":"tighten65","output":"\n<p>&#8230;<br \/>\nnext<\/p>\n\n\n\n"}
+{"id":"tighten66","output":"\n<p>a\\\\b<br \/>\nc<\/p>\n\n\n\n"}
+{"id":"tighten67","output":"\n<p><span style=\"color: red\">A<br \/>\nB<\/span><\/p>\n\n\n\n"}
+{"id":"tighten68","output":"\n<p><strong>A<br \/>\nB<\/strong><\/p>\n\n\n\n"}
+{"id":"tighten69","output":"\n<p>a<\/p>\n\n\n\n<p>[[div]]x[[\/div]]<\/p>\n\n\n\n<p>b<\/p>\n\n\n\n"}
+{"id":"tighten70","output":"\n<p>a<\/p>\n\n\n\n<p>b<\/p>\n\n\n\n<p>c<\/p>\n\n\n\n"}

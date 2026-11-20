@@ -1,0 +1,66 @@
+{"id": "sup01", "source": "^^sup^^"}
+{"id": "sup02", "source": "before ^^sup^^ after"}
+{"id": "sup03", "source": "^^one^^ ^^two^^"}
+{"id": "sup04", "source": "^^a^^b^^c^^"}
+{"id": "sup05", "source": "wor^^d^^in"}
+{"id": "sup06", "source": "^^two words^^"}
+{"id": "sup07", "source": "^^ sup ^^"}
+{"id": "sup08", "source": "^^sup ^^"}
+{"id": "sup09", "source": "^^ sup^^"}
+{"id": "sup10", "source": "^^a b^^"}
+{"id": "sup11", "source": "^^ a^^b^^ ^^"}
+{"id": "sup12", "source": "^^a^^ ^^ b ^^ ^^c^^"}
+{"id": "sup13", "source": "^^unpaired"}
+{"id": "sup14", "source": "unpaired^^"}
+{"id": "sup15", "source": "^^^triple^^^"}
+{"id": "sup16", "source": "^^a^^^"}
+{"id": "sup17", "source": "^^^a^^"}
+{"id": "sup18", "source": "^^^^"}
+{"id": "sup19", "source": "^^ ^^"}
+{"id": "sup20", "source": "^^a^^^^b^^"}
+{"id": "sup21", "source": "^^//em//^^"}
+{"id": "sup22", "source": "//^^sup^^//"}
+{"id": "sup23", "source": "^^__u__^^"}
+{"id": "sup24", "source": "^^--s--^^"}
+{"id": "sup25", "source": "##c00|^^red^^##"}
+{"id": "sup26", "source": "^^##c00|red##^^"}
+{"id": "sup27", "source": "^^{{mono}}^^"}
+{"id": "sup28", "source": "{{^^mono^^}}"}
+{"id": "sup29", "source": "^^,,sub,,^^"}
+{"id": "sup30", "source": ",,OUTER ^^INNER,, TAIL^^"}
+{"id": "sup31", "source": "^^a\nb^^\nx"}
+{"id": "sup32", "source": "^^a\n\nb^^\nx"}
+{"id": "sup33", "source": "^^a\n----\nb^^\nx"}
+{"id": "sup34", "source": "^^a\n[!-- c --]\nb^^\nx"}
+{"id": "sup35", "source": "^^a\nb^^\n\nx"}
+{"id": "sup36", "source": "^^a\n> quote\nb^^\nx"}
+{"id": "sup37", "source": "^^[[div]]inside[[/div]]^^\nx"}
+{"id": "sup38", "source": "^^a\n* list\nb^^\nx"}
+{"id": "sup39", "source": "|| ^^A^^ || B ||\nx"}
+{"id": "sup40", "source": "|| ^^A || B^^ || C ||\nx"}
+{"id": "sup41", "source": "||a||^^b^^||c||\nx"}
+{"id": "sup42", "source": "|| ^^ A ^^ ||\nx"}
+{"id": "sup43", "source": "|||| ^^span^^ |||| x ||\nx"}
+{"id": "sup44", "source": "= ^^Head^^ =\nx"}
+{"id": "sup45", "source": "^^= Head =^^\nx"}
+{"id": "sup46", "source": "[[^^label^^|target]]"}
+{"id": "sup47", "source": "[[target|^^label^^]]"}
+{"id": "sup48", "source": "[[^^page^^]]"}
+{"id": "sup49", "source": "[code]^^sup^^[/code]"}
+{"id": "sup50", "source": "{{^^mono^^}}"}
+{"id": "sup51", "source": "[[raw]]^^x^^[[/raw]]"}
+{"id": "sup52", "source": "`^^code^^`"}
+{"id": "sup53", "source": "[code]\n^^sup^^\n[/code]"}
+{"id": "sup54", "source": "^^a[code]x[/code]b^^"}
+{"id": "sup55", "source": "[[code]]^^sup^^[[/code]]"}
+{"id": "sup56", "source": "^^a\n[[div]]\nb\n[[/div]]\nc^^\nx"}
+{"id": "sup57", "source": "[[[^^caption^^|target]]]\nx"}
+{"id": "sup58", "source": "[[[target|^^caption^^]]]\nx"}
+{"id": "sup59", "source": "[[a href=\"https://example.com\"]]^^label^^[[/a]]\nx"}
+{"id": "sup60", "source": "[[[^^page^^]]]\nx"}
+{"id": "sup61", "source": "^^A ^^B^^ C^^\nx"}
+{"id": "sup62", "source": "^[!--x--]^A^^\nx"}
+{"id": "sup63", "source": "^^OUTER {{INNER^^ TAIL}}\nx"}
+{"id": "sup64", "source": "^^A {{B --C^^ X}} Y--\nx"}
+{"id": "sup65", "source": "//A ^^B __C// X^^ Y__\nx"}
+{"id": "sup66", "source": "[[sup]]X[[/sup]]\nx"}

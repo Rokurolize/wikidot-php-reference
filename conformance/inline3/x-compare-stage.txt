@@ -1,0 +1,118 @@
+R2-inline3 root cross-rule interaction: three-way comparison (stage)
+valid probes: 45; signature counts: {'all3': 22, 'ref_live': 0, 'ftm_live': 23, 'ref_ftm': 0, 'all_disagree': 0}
+canon counts: ref==ftml 22, ref==live 22, ftml==live 45
+
+x01    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'tt': ['aab'], 'color:': [('color: red', 'abba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'tt': ['aab'], 'color:': [('color: red', 'ab'), ('color: red', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'tt': ['aab'], 'color:': [('color: red', 'ab'), ('color: red', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x02    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x03    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'tt': ['abba'], 'color:': [('color: red', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'tt': ['ab', 'ba'], 'color:': [('color: red', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'tt': ['ab', 'ba'], 'color:': [('color: red', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x04    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x05    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'strong': ['abba'], 'tt': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'strong': ['ab', 'ba'], 'tt': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'strong': ['ab', 'ba'], 'tt': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x06    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x07    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'strong': ['aab'], 'tt': ['abba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'strong': ['aab'], 'tt': ['ab', 'ba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'strong': ['aab'], 'tt': ['ab', 'ba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x08    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x09    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'em': ['abba'], 'tt': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'em': ['ab', 'ba'], 'tt': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'em': ['ab', 'ba'], 'tt': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x10    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x11    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'em': ['aab'], 'tt': ['abba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'em': ['aab'], 'tt': ['ab', 'ba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'em': ['aab'], 'tt': ['ab', 'ba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x12    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x13    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'tt': ['aab'], 'text-decoration: underline': [('text-decoration: underline;', 'abba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'tt': ['aab'], 'text-decoration: underline': [('text-decoration: underline;', 'ab'), ('text-decoration: underline;', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'tt': ['aab'], 'text-decoration: underline': [('text-decoration: underline;', 'ab'), ('text-decoration: underline;', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x14    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x15    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'tt': ['abba'], 'text-decoration: underline': [('text-decoration: underline;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'tt': ['ab', 'ba'], 'text-decoration: underline': [('text-decoration: underline;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'tt': ['ab', 'ba'], 'text-decoration: underline': [('text-decoration: underline;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x16    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x17    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'tt': ['aab'], 'text-decoration: line-through': [('text-decoration: line-through;', 'abba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'tt': ['aab'], 'text-decoration: line-through': [('text-decoration: line-through;', 'ab'), ('text-decoration: line-through;', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'tt': ['aab'], 'text-decoration: line-through': [('text-decoration: line-through;', 'ab'), ('text-decoration: line-through;', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x18    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x19    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'tt': ['abba'], 'text-decoration: line-through': [('text-decoration: line-through;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'tt': ['ab', 'ba'], 'text-decoration: line-through': [('text-decoration: line-through;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'tt': ['ab', 'ba'], 'text-decoration: line-through': [('text-decoration: line-through;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x20    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x21    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'sup': ['aab'], 'color:': [('color: red', 'abba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'sup': ['aab'], 'color:': [('color: red', 'ab'), ('color: red', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'sup': ['aab'], 'color:': [('color: red', 'ab'), ('color: red', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x22    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x23    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'sup': ['abba'], 'color:': [('color: red', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'sup': ['ab', 'ba'], 'color:': [('color: red', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'sup': ['ab', 'ba'], 'color:': [('color: red', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x24    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x25    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'strong': ['abba'], 'sup': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'strong': ['ab', 'ba'], 'sup': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'strong': ['ab', 'ba'], 'sup': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x26    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x27    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'strong': ['aab'], 'sup': ['abba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'strong': ['aab'], 'sup': ['ab', 'ba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'strong': ['aab'], 'sup': ['ab', 'ba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x28    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x29    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'em': ['abba'], 'sup': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'em': ['ab', 'ba'], 'sup': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'em': ['ab', 'ba'], 'sup': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x30    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x31    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'em': ['aab'], 'sup': ['abba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'em': ['aab'], 'sup': ['ab', 'ba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'em': ['aab'], 'sup': ['ab', 'ba']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x32    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x33    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'sup': ['aab'], 'text-decoration: underline': [('text-decoration: underline;', 'abba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'sup': ['aab'], 'text-decoration: underline': [('text-decoration: underline;', 'ab'), ('text-decoration: underline;', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'sup': ['aab'], 'text-decoration: underline': [('text-decoration: underline;', 'ab'), ('text-decoration: underline;', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x34    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x35    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'sup': ['abba'], 'text-decoration: underline': [('text-decoration: underline;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'sup': ['ab', 'ba'], 'text-decoration: underline': [('text-decoration: underline;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'sup': ['ab', 'ba'], 'text-decoration: underline': [('text-decoration: underline;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x36    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x37    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'sup': ['aab'], 'text-decoration: line-through': [('text-decoration: line-through;', 'abba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'sup': ['aab'], 'text-decoration: line-through': [('text-decoration: line-through;', 'ab'), ('text-decoration: line-through;', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'sup': ['aab'], 'text-decoration: line-through': [('text-decoration: line-through;', 'ab'), ('text-decoration: line-through;', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x38    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x39    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'sup': ['abba'], 'text-decoration: line-through': [('text-decoration: line-through;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'sup': ['ab', 'ba'], 'text-decoration: line-through': [('text-decoration: line-through;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'sup': ['ab', 'ba'], 'text-decoration: line-through': [('text-decoration: line-through;', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x40    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x41    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'sub': ['aab'], 'color:': [('color: red', 'abba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'sub': ['aab'], 'color:': [('color: red', 'ab'), ('color: red', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'sub': ['aab'], 'color:': [('color: red', 'ab'), ('color: red', 'ba')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x42    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x43    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'sub': ['abba'], 'color:': [('color: red', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'sub': ['ab', 'ba'], 'color:': [('color: red', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'sub': ['ab', 'ba'], 'color:': [('color: red', 'aab')]}, 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+x44    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x45    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'marks': {'strong': ['abba'], 'sub': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  ftml: {'links': [], 'marks': {'strong': ['ab', 'ba'], 'sub': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}
+  live: {'links': [], 'marks': {'strong': ['ab', 'ba'], 'sub': ['aab']}, 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'a ab ba'}

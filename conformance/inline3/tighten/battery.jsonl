@@ -1,0 +1,70 @@
+{"id": "tighten01", "source": "one line only"}
+{"id": "tighten02", "source": "a\nb"}
+{"id": "tighten03", "source": "a\nb\nc"}
+{"id": "tighten04", "source": "a\n\nb"}
+{"id": "tighten05", "source": "a\n\n\nb"}
+{"id": "tighten06", "source": "a\n\n\n\nb"}
+{"id": "tighten07", "source": "a\n\n\n\n\n\nb"}
+{"id": "tighten08", "source": "\nleading newline"}
+{"id": "tighten09", "source": "\n\nleading blank line"}
+{"id": "tighten10", "source": "trailing newline\n"}
+{"id": "tighten11", "source": "trailing blank line\n\n"}
+{"id": "tighten12", "source": "\n"}
+{"id": "tighten13", "source": "\n\n\n"}
+{"id": "tighten14", "source": "a\n b"}
+{"id": "tighten15", "source": "a \nb"}
+{"id": "tighten16", "source": "a \n b"}
+{"id": "tighten17", "source": "a  \n\n b"}
+{"id": "tighten18", "source": "a  b"}
+{"id": "tighten19", "source": "a   b"}
+{"id": "tighten20", "source": "  leading spaces"}
+{"id": "tighten21", "source": "trailing spaces  "}
+{"id": "tighten22", "source": "a\t\tb"}
+{"id": "tighten23", "source": "a \t b"}
+{"id": "tighten24", "source": "a\n**bold**"}
+{"id": "tighten25", "source": "**bold**\na"}
+{"id": "tighten26", "source": "a\n//em//"}
+{"id": "tighten27", "source": "//em//\na"}
+{"id": "tighten28", "source": "a\n##red|x##"}
+{"id": "tighten29", "source": "##red|x##\na"}
+{"id": "tighten30", "source": "a\n__u__"}
+{"id": "tighten31", "source": "__u__\na"}
+{"id": "tighten32", "source": "a\n--s--"}
+{"id": "tighten33", "source": "--s--\na"}
+{"id": "tighten34", "source": "a\n{{tt}}"}
+{"id": "tighten35", "source": "{{tt}}\na"}
+{"id": "tighten36", "source": "a\n^^sup^^"}
+{"id": "tighten37", "source": "^^sup^^\na"}
+{"id": "tighten38", "source": "a\n,,sub,,"}
+{"id": "tighten39", "source": ",,sub,,\na"}
+{"id": "tighten40", "source": "##red| A##"}
+{"id": "tighten41", "source": "##red|A ##"}
+{"id": "tighten42", "source": "##red| A ##"}
+{"id": "tighten43", "source": "x ##red| A## y"}
+{"id": "tighten44", "source": "x ##red|A ## y"}
+{"id": "tighten45", "source": "[[#x| A ]]"}
+{"id": "tighten46", "source": "** A **"}
+{"id": "tighten47", "source": "// A //"}
+{"id": "tighten48", "source": "__ A __"}
+{"id": "tighten49", "source": "-- A --"}
+{"id": "tighten50", "source": "A ##red|B## C"}
+{"id": "tighten51", "source": "Empty ____"}
+{"id": "tighten52", "source": "x ____ y"}
+{"id": "tighten53", "source": "____ x"}
+{"id": "tighten54", "source": "x____"}
+{"id": "tighten55", "source": "a ____ b ____ c"}
+{"id": "tighten56", "source": "Empty ____\nnext"}
+{"id": "tighten57", "source": "para one\n\npara two"}
+{"id": "tighten58", "source": "* item one\n* item two"}
+{"id": "tighten59", "source": "+++ heading\nafter"}
+{"id": "tighten60", "source": "[[code]]a\nb[[/code]]"}
+{"id": "tighten61", "source": "{{{a\nb}}}"}
+{"id": "tighten62", "source": "> quoted one\n> quoted two"}
+{"id": "tighten63", "source": "|| head ||\n|| cell ||"}
+{"id": "tighten64", "source": "a -- b\nc"}
+{"id": "tighten65", "source": "...\nnext"}
+{"id": "tighten66", "source": "a\\\\b\nc"}
+{"id": "tighten67", "source": "##red|A\nB##"}
+{"id": "tighten68", "source": "**A\nB**"}
+{"id": "tighten69", "source": "a\n\n[[div]]x[[/div]]\n\nb"}
+{"id": "tighten70", "source": "a  \n\nb  \n\nc"}

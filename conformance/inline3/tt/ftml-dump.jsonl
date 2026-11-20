@@ -1,0 +1,55 @@
+{"errors":[],"html":"<p><tt>mono</tt></p>","id":"tt01"}
+{"errors":[],"html":"<p>abc <tt>mono</tt> def</p>","id":"tt02"}
+{"errors":[],"html":"<p>ab<tt>mono</tt>cd</p>","id":"tt03"}
+{"errors":[],"html":"<p><tt>a</tt> <tt>b</tt></p>","id":"tt04"}
+{"errors":[],"html":"<p><tt>a</tt><tt>b</tt></p>","id":"tt05"}
+{"errors":[],"html":"<p>before <tt>x</tt> after <tt>y</tt> tail</p>","id":"tt06"}
+{"errors":[],"html":"<p><tt><em>code literal</em></tt></p>","id":"tt07"}
+{"errors":[],"html":"<p><tt>text</tt></p>","id":"tt08"}
+{"errors":[],"html":"<p><tt>text</tt></p>","id":"tt09"}
+{"errors":[],"html":"<p><tt>text</tt></p>","id":"tt10"}
+{"errors":[],"html":"<p>before <tt>a <strong>b</strong> c</tt> after</p>","id":"tt11"}
+{"errors":[],"html":"<p><tt>x</tt> <tt>y</tt></p>","id":"tt12"}
+{"errors":[],"html":"<p>before <tt>x</tt>after</p>","id":"tt13"}
+{"errors":[],"html":"<p><tt>text</tt></p>","id":"tt14"}
+{"errors":[],"html":"<p><tt>text</tt></p>","id":"tt15"}
+{"errors":[],"html":"<p><tt>x</tt> after</p>","id":"tt16"}
+{"errors":[],"html":"","id":"tt17"}
+{"errors":[],"html":"","id":"tt18"}
+{"errors":[],"html":"","id":"tt19"}
+{"errors":[],"html":"","id":"tt20"}
+{"errors":[],"html":"<p>AB</p>","id":"tt21"}
+{"errors":[],"html":"<p><tt>00</tt></p>","id":"tt22"}
+{"errors":[],"html":"<p><tt>-0</tt></p>","id":"tt23"}
+{"errors":[],"html":"<p><tt>0.0</tt></p>","id":"tt24"}
+{"errors":[],"html":"<p><tt>x}}</tt>tail</p>","id":"tt25"}
+{"errors":[],"html":"<p><tt>x }}</tt>tail</p>","id":"tt26"}
+{"errors":[],"html":"<p><tt>x}}}}</tt>tail</p>","id":"tt27"}
+{"errors":["ParseError { token: RightMonospace, rule: \"fallback\", span: 24..26, kind: NoRulesMatch }"],"html":"<p><tt>outer {{ inner</tt> tail}}</p>","id":"tt28"}
+{"errors":["ParseError { token: RightMonospace, rule: \"fallback\", span: 11..13, kind: NoRulesMatch }"],"html":"<p><tt>a {{b</tt> c}} <tt>d</tt></p>","id":"tt29"}
+{"errors":[],"html":"<p><tt><strong>bold</strong></tt></p>","id":"tt30"}
+{"errors":[],"html":"<p><strong><tt>mono</tt></strong></p>","id":"tt31"}
+{"errors":[],"html":"<p><tt><em>italic</em></tt></p>","id":"tt32"}
+{"errors":[],"html":"<p><tt><span style=\"text-decoration: underline;\">under</span></tt></p>","id":"tt33"}
+{"errors":[],"html":"<p><tt><span style=\"text-decoration: line-through;\">strike</span></tt></p>","id":"tt34"}
+{"errors":[],"html":"<p><tt><span style=\"color: red\">color</span></tt></p>","id":"tt35"}
+{"errors":[],"html":"<p><span style=\"color: red\"><tt>mono</tt></span></p>","id":"tt36"}
+{"errors":[],"html":"<p><tt>a <strong>b</strong> c</tt></p>","id":"tt37"}
+{"errors":["ParseError { token: LeftMonospace, rule: \"monospace\", span: 0..2, kind: EndOfInput }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>{{mono</p>","id":"tt38"}
+{"errors":["ParseError { token: RightMonospace, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }"],"html":"<p>mono}}</p>","id":"tt39"}
+{"errors":[],"html":"<p><tt>{mono}</tt></p>","id":"tt40"}
+{"errors":["ParseError { token: LeftMonospace, rule: \"monospace\", span: 0..2, kind: EndOfInput }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>{{ x</p>","id":"tt41"}
+{"errors":["ParseError { token: LeftMonospace, rule: \"monospace\", span: 0..2, kind: EndOfInput }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>{{ x }</p>","id":"tt42"}
+{"errors":["ParseError { token: RightMonospace, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: LeftMonospace, rule: \"monospace\", span: 7..9, kind: RuleFailed }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }","ParseError { token: RightMonospace, rule: \"fallback\", span: 26..28, kind: NoRulesMatch }"],"html":"<p>}}Fail<br>\n{{Fail</p><p>paragraph? }}</p>","id":"tt43"}
+{"errors":[],"html":"<p><tt>a<br>\nb</tt></p>","id":"tt44"}
+{"errors":["ParseError { token: LeftMonospace, rule: \"monospace\", span: 0..2, kind: RuleFailed }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightMonospace, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>{{a</p><p>b}}</p>","id":"tt45"}
+{"errors":[],"html":"<p><tt>a<br>\nb<br>\nc</tt></p>","id":"tt46"}
+{"errors":[],"html":"<p><tt>a</tt><br>\n<tt>b</tt></p>","id":"tt47"}
+{"errors":[],"html":"<blockquote><p><tt>quoted</tt></p></blockquote>","id":"tt48"}
+{"errors":["ParseError { token: LineBreak, rule: \"monospace\", span: 3..4, kind: RuleFailed }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightMonospace, rule: \"fallback\", span: 12..14, kind: NoRulesMatch }"],"html":"<p>{{a</p><ul>\n<li>item</li>\n</ul><p>b}}</p>","id":"tt49"}
+{"errors":[],"html":"<div><p><tt>a</tt></p></div>","id":"tt50"}
+{"errors":[],"html":"<p style=\"text-align: center;\"><tt>heading</tt></p>","id":"tt51"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>{{not mono}}</code></pre></div>","id":"tt52"}
+{"errors":["ParseError { token: LeftMonospace, rule: \"block-raw\", span: 7..9, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 19..22, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 25..27, kind: NoRulesMatch }"],"html":"<p>[[raw]]<tt>not mono</tt>[[/raw]]</p>","id":"tt53"}
+{"errors":[],"html":"<p><tt><span class=\"wiki-email\">noitadnuof.pcs|nosrep#noitadnuof.pcs|nosrep</span></tt></p>","id":"tt54"}
+{"errors":["ParseError { token: LeftMonospace, rule: \"monospace\", span: 4..6, kind: EndOfInput }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }"],"html":"<p>See <tt><a href=\"https://example.com/a\">https://example.com/a</a></tt>. end</p>","id":"tt55"}

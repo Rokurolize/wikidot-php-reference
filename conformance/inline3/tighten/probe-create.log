@@ -1,0 +1,336 @@
+tighten01 -> muse-probe-r2in3-tighten-tighten01 (exists)
+tighten02 -> muse-probe-r2in3-tighten-tighten02 (exists)
+tighten03 -> muse-probe-r2in3-tighten-tighten03 (exists)
+tighten04 -> muse-probe-r2in3-tighten-tighten04 (exists)
+tighten05 -> muse-probe-r2in3-tighten-tighten05 (exists)
+tighten06 -> muse-probe-r2in3-tighten-tighten06 (exists)
+tighten07 -> muse-probe-r2in3-tighten-tighten07 (exists)
+2026-11-20 19:10:03,626 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85348126', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in3-tighten-tighten14', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+tighten14 -> muse-probe-r2in3-tighten-tighten14 (created)
+tighten18 -> muse-probe-r2in3-tighten-tighten18 (created)
+tighten19 -> muse-probe-r2in3-tighten-tighten19 (created)
+tighten22 -> muse-probe-r2in3-tighten-tighten22 (created)
+tighten23 -> muse-probe-r2in3-tighten-tighten23 (created)
+tighten24 -> muse-probe-r2in3-tighten-tighten24 (created)
+tighten25 -> muse-probe-r2in3-tighten-tighten25 (created)
+tighten26 -> muse-probe-r2in3-tighten-tighten26 (created)
+tighten27 -> muse-probe-r2in3-tighten-tighten27 (created)
+tighten28 -> muse-probe-r2in3-tighten-tighten28 (created)
+2026-11-20 19:12:37,905 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85348199', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in3-tighten-tighten29', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+tighten29 -> muse-probe-r2in3-tighten-tighten29 (created)
+tighten30 -> muse-probe-r2in3-tighten-tighten30 (created)
+tighten31 -> muse-probe-r2in3-tighten-tighten31 (created)
+tighten32 -> muse-probe-r2in3-tighten-tighten32 (created)
+tighten33 -> muse-probe-r2in3-tighten-tighten33 (created)
+tighten34 -> muse-probe-r2in3-tighten-tighten34 (created)
+2026-11-20 19:14:59,385 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85348265', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in3-tighten-tighten35', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+tighten35 -> muse-probe-r2in3-tighten-tighten35 (created)
+tighten36 -> muse-probe-r2in3-tighten-tighten36 (created)
+tighten37 -> muse-probe-r2in3-tighten-tighten37 (created)
+tighten38 -> muse-probe-r2in3-tighten-tighten38 (created)
+tighten39 -> muse-probe-r2in3-tighten-tighten39 (created)
+tighten40 -> muse-probe-r2in3-tighten-tighten40 (created)
+tighten43 -> muse-probe-r2in3-tighten-tighten43 (created)
+tighten44 -> muse-probe-r2in3-tighten-tighten44 (created)
+tighten45 -> muse-probe-r2in3-tighten-tighten45 (created)
+tighten46 -> muse-probe-r2in3-tighten-tighten46 (created)
+tighten47 -> muse-probe-r2in3-tighten-tighten47 (created)
+tighten48 -> muse-probe-r2in3-tighten-tighten48 (created)
+tighten49 -> muse-probe-r2in3-tighten-tighten49 (created)
+tighten50 -> muse-probe-r2in3-tighten-tighten50 (created)
+tighten52 -> muse-probe-r2in3-tighten-tighten52 (created)
+tighten53 -> muse-probe-r2in3-tighten-tighten53 (created)
+tighten54 -> muse-probe-r2in3-tighten-tighten54 (created)
+tighten55 -> muse-probe-r2in3-tighten-tighten55 (created)
+tighten56 -> muse-probe-r2in3-tighten-tighten56 (created)
+tighten57 -> muse-probe-r2in3-tighten-tighten57 (created)
+tighten58 -> muse-probe-r2in3-tighten-tighten58 (created)
+tighten59 -> muse-probe-r2in3-tighten-tighten59 (created)
+tighten60 -> muse-probe-r2in3-tighten-tighten60 (created)
+tighten61 -> muse-probe-r2in3-tighten-tighten61 (created)
+tighten62 -> muse-probe-r2in3-tighten-tighten62 (created)
+tighten63 -> muse-probe-r2in3-tighten-tighten63 (created)
+tighten64 -> muse-probe-r2in3-tighten-tighten64 (created)
+tighten65 -> muse-probe-r2in3-tighten-tighten65 (created)
+tighten66 -> muse-probe-r2in3-tighten-tighten66 (created)
+tighten67 -> muse-probe-r2in3-tighten-tighten67 (created)
+tighten68 -> muse-probe-r2in3-tighten-tighten68 (created)
+tighten69 -> muse-probe-r2in3-tighten-tighten69 (created)
+55 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "tighten01": {
+  "fullname": "muse-probe-r2in3-tighten-tighten01",
+  "source": "one line only",
+  "action": "exists"
+ },
+ "tighten02": {
+  "fullname": "muse-probe-r2in3-tighten-tighten02",
+  "source": "a\nb",
+  "action": "exists"
+ },
+ "tighten03": {
+  "fullname": "muse-probe-r2in3-tighten-tighten03",
+  "source": "a\nb\nc",
+  "action": "exists"
+ },
+ "tighten04": {
+  "fullname": "muse-probe-r2in3-tighten-tighten04",
+  "source": "a\n\nb",
+  "action": "exists"
+ },
+ "tighten05": {
+  "fullname": "muse-probe-r2in3-tighten-tighten05",
+  "source": "a\n\n\nb",
+  "action": "exists"
+ },
+ "tighten06": {
+  "fullname": "muse-probe-r2in3-tighten-tighten06",
+  "source": "a\n\n\n\nb",
+  "action": "exists"
+ },
+ "tighten07": {
+  "fullname": "muse-probe-r2in3-tighten-tighten07",
+  "source": "a\n\n\n\n\n\nb",
+  "action": "exists"
+ },
+ "tighten14": {
+  "fullname": "muse-probe-r2in3-tighten-tighten14",
+  "source": "a\n b",
+  "action": "created"
+ },
+ "tighten18": {
+  "fullname": "muse-probe-r2in3-tighten-tighten18",
+  "source": "a  b",
+  "action": "created"
+ },
+ "tighten19": {
+  "fullname": "muse-probe-r2in3-tighten-tighten19",
+  "source": "a   b",
+  "action": "created"
+ },
+ "tighten22": {
+  "fullname": "muse-probe-r2in3-tighten-tighten22",
+  "source": "a\t\tb",
+  "action": "created"
+ },
+ "tighten23": {
+  "fullname": "muse-probe-r2in3-tighten-tighten23",
+  "source": "a \t b",
+  "action": "created"
+ },
+ "tighten24": {
+  "fullname": "muse-probe-r2in3-tighten-tighten24",
+  "source": "a\n**bold**",
+  "action": "created"
+ },
+ "tighten25": {
+  "fullname": "muse-probe-r2in3-tighten-tighten25",
+  "source": "**bold**\na",
+  "action": "created"
+ },
+ "tighten26": {
+  "fullname": "muse-probe-r2in3-tighten-tighten26",
+  "source": "a\n//em//",
+  "action": "created"
+ },
+ "tighten27": {
+  "fullname": "muse-probe-r2in3-tighten-tighten27",
+  "source": "//em//\na",
+  "action": "created"
+ },
+ "tighten28": {
+  "fullname": "muse-probe-r2in3-tighten-tighten28",
+  "source": "a\n##red|x##",
+  "action": "created"
+ },
+ "tighten29": {
+  "fullname": "muse-probe-r2in3-tighten-tighten29",
+  "source": "##red|x##\na",
+  "action": "created"
+ },
+ "tighten30": {
+  "fullname": "muse-probe-r2in3-tighten-tighten30",
+  "source": "a\n__u__",
+  "action": "created"
+ },
+ "tighten31": {
+  "fullname": "muse-probe-r2in3-tighten-tighten31",
+  "source": "__u__\na",
+  "action": "created"
+ },
+ "tighten32": {
+  "fullname": "muse-probe-r2in3-tighten-tighten32",
+  "source": "a\n--s--",
+  "action": "created"
+ },
+ "tighten33": {
+  "fullname": "muse-probe-r2in3-tighten-tighten33",
+  "source": "--s--\na",
+  "action": "created"
+ },
+ "tighten34": {
+  "fullname": "muse-probe-r2in3-tighten-tighten34",
+  "source": "a\n{{tt}}",
+  "action": "created"
+ },
+ "tighten35": {
+  "fullname": "muse-probe-r2in3-tighten-tighten35",
+  "source": "{{tt}}\na",
+  "action": "created"
+ },
+ "tighten36": {
+  "fullname": "muse-probe-r2in3-tighten-tighten36",
+  "source": "a\n^^sup^^",
+  "action": "created"
+ },
+ "tighten37": {
+  "fullname": "muse-probe-r2in3-tighten-tighten37",
+  "source": "^^sup^^\na",
+  "action": "created"
+ },
+ "tighten38": {
+  "fullname": "muse-probe-r2in3-tighten-tighten38",
+  "source": "a\n,,sub,,",
+  "action": "created"
+ },
+ "tighten39": {
+  "fullname": "muse-probe-r2in3-tighten-tighten39",
+  "source": ",,sub,,\na",
+  "action": "created"
+ },
+ "tighten40": {
+  "fullname": "muse-probe-r2in3-tighten-tighten40",
+  "source": "##red| A##",
+  "action": "created"
+ },
+ "tighten43": {
+  "fullname": "muse-probe-r2in3-tighten-tighten43",
+  "source": "x ##red| A## y",
+  "action": "created"
+ },
+ "tighten44": {
+  "fullname": "muse-probe-r2in3-tighten-tighten44",
+  "source": "x ##red|A ## y",
+  "action": "created"
+ },
+ "tighten45": {
+  "fullname": "muse-probe-r2in3-tighten-tighten45",
+  "source": "[[#x| A ]]",
+  "action": "created"
+ },
+ "tighten46": {
+  "fullname": "muse-probe-r2in3-tighten-tighten46",
+  "source": "** A **",
+  "action": "created"
+ },
+ "tighten47": {
+  "fullname": "muse-probe-r2in3-tighten-tighten47",
+  "source": "// A //",
+  "action": "created"
+ },
+ "tighten48": {
+  "fullname": "muse-probe-r2in3-tighten-tighten48",
+  "source": "__ A __",
+  "action": "created"
+ },
+ "tighten49": {
+  "fullname": "muse-probe-r2in3-tighten-tighten49",
+  "source": "-- A --",
+  "action": "created"
+ },
+ "tighten50": {
+  "fullname": "muse-probe-r2in3-tighten-tighten50",
+  "source": "A ##red|B## C",
+  "action": "created"
+ },
+ "tighten52": {
+  "fullname": "muse-probe-r2in3-tighten-tighten52",
+  "source": "x ____ y",
+  "action": "created"
+ },
+ "tighten53": {
+  "fullname": "muse-probe-r2in3-tighten-tighten53",
+  "source": "____ x",
+  "action": "created"
+ },
+ "tighten54": {
+  "fullname": "muse-probe-r2in3-tighten-tighten54",
+  "source": "x____",
+  "action": "created"
+ },
+ "tighten55": {
+  "fullname": "muse-probe-r2in3-tighten-tighten55",
+  "source": "a ____ b ____ c",
+  "action": "created"
+ },
+ "tighten56": {
+  "fullname": "muse-probe-r2in3-tighten-tighten56",
+  "source": "Empty ____\nnext",
+  "action": "created"
+ },
+ "tighten57": {
+  "fullname": "muse-probe-r2in3-tighten-tighten57",
+  "source": "para one\n\npara two",
+  "action": "created"
+ },
+ "tighten58": {
+  "fullname": "muse-probe-r2in3-tighten-tighten58",
+  "source": "* item one\n* item two",
+  "action": "created"
+ },
+ "tighten59": {
+  "fullname": "muse-probe-r2in3-tighten-tighten59",
+  "source": "+++ heading\nafter",
+  "action": "created"
+ },
+ "tighten60": {
+  "fullname": "muse-probe-r2in3-tighten-tighten60",
+  "source": "[[code]]a\nb[[/code]]",
+  "action": "created"
+ },
+ "tighten61": {
+  "fullname": "muse-probe-r2in3-tighten-tighten61",
+  "source": "{{{a\nb}}}",
+  "action": "created"
+ },
+ "tighten62": {
+  "fullname": "muse-probe-r2in3-tighten-tighten62",
+  "source": "> quoted one\n> quoted two",
+  "action": "created"
+ },
+ "tighten63": {
+  "fullname": "muse-probe-r2in3-tighten-tighten63",
+  "source": "|| head ||\n|| cell ||",
+  "action": "created"
+ },
+ "tighten64": {
+  "fullname": "muse-probe-r2in3-tighten-tighten64",
+  "source": "a -- b\nc",
+  "action": "created"
+ },
+ "tighten65": {
+  "fullname": "muse-probe-r2in3-tighten-tighten65",
+  "source": "...\nnext",
+  "action": "created"
+ },
+ "tighten66": {
+  "fullname": "muse-probe-r2in3-tighten-tighten66",
+  "source": "a\\\\b\nc",
+  "action": "created"
+ },
+ "tighten67": {
+  "fullname": "muse-probe-r2in3-tighten-tighten67",
+  "source": "##red|A\nB##",
+  "action": "created"
+ },
+ "tighten68": {
+  "fullname": "muse-probe-r2in3-tighten-tighten68",
+  "source": "**A\nB**",
+  "action": "created"
+ },
+ "tighten69": {
+  "fullname": "muse-probe-r2in3-tighten-tighten69",
+  "source": "a\n\n[[div]]x[[/div]]\n\nb",
+  "action": "created"
+ }
+}

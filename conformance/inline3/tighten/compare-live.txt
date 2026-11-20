@@ -1,0 +1,219 @@
+ref-render-before.jsonl tighten01 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten02 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten03 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten04 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>a</p>\n<p>b</p>"
+  REF : "<p>a</p>\n\n<p>b</p>\n\n"
+  FTML: "<p>a</p><p>b</p>"
+ref-render-before.jsonl tighten05 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>a</p>\n<p>b</p>"
+  REF : "<p>a</p>\n\n<p>b</p>\n\n"
+  FTML: "<p>a</p><p>b</p>"
+ref-render-before.jsonl tighten06 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>a</p>\n<p>b</p>"
+  REF : "<p>a</p>\n\n<p>b</p>\n\n"
+  FTML: "<p>a</p><p>b</p>"
+ref-render-before.jsonl tighten07 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>a</p>\n<p>b</p>"
+  REF : "<p>a</p>\n\n<p>b</p>\n\n"
+  FTML: "<p>a</p><p>b</p>"
+ref-render-before.jsonl tighten14 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+  LIVE: "<p>a<br />\nb</p>"
+  REF : "<p>a<br />\n b</p>\n\n"
+  FTML: "<p>a<br>\nb</p>"
+ref-render-before.jsonl tighten18 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+  LIVE: "<p>a b</p>"
+  REF : "<p>a  b</p>\n\n"
+  FTML: "<p>a b</p>"
+ref-render-before.jsonl tighten19 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+  LIVE: "<p>a b</p>"
+  REF : "<p>a   b</p>\n\n"
+  FTML: "<p>a b</p>"
+ref-render-before.jsonl tighten22 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+  LIVE: "<p>a b</p>"
+  REF : "<p>a        b</p>\n\n"
+  FTML: "<p>a b</p>"
+ref-render-before.jsonl tighten23 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+  LIVE: "<p>a b</p>"
+  REF : "<p>a      b</p>\n\n"
+  FTML: "<p>a b</p>"
+ref-render-before.jsonl tighten24 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten25 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten26 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten27 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten28 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten29 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten30 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten31 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten32 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten33 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten34 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten35 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten36 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten37 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten38 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten39 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten40 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=False norm(live==ftml)=True
+  LIVE: "<p><span style=\"color: red\">A</span></p>"
+  REF : "<p><span style=\"color: red\"> A</span></p>\n\n"
+  FTML: "<p><span style=\"color: red\">A</span></p>"
+ref-render-before.jsonl tighten43 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=False norm(live==ftml)=True
+  LIVE: "<p>x <span style=\"color: red\">A</span> y</p>"
+  REF : "<p>x <span style=\"color: red\"> A</span> y</p>\n\n"
+  FTML: "<p>x <span style=\"color: red\">A</span> y</p>"
+ref-render-before.jsonl tighten44 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=False norm(live==ftml)=True
+  LIVE: "<p>x <span style=\"color: red\">A</span> y</p>"
+  REF : "<p>x <span style=\"color: red\">A </span> y</p>\n\n"
+  FTML: "<p>x <span style=\"color: red\">A</span> y</p>"
+ref-render-before.jsonl tighten45 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten46 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten47 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten48 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten49 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten50 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten52 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+  LIVE: "<p>x y</p>"
+  REF : "<p>x  y</p>\n\n"
+  FTML: "<p>x y</p>"
+ref-render-before.jsonl tighten53 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=False norm(live==ftml)=True
+  LIVE: "<p>x</p>"
+  REF : "<p> x</p>\n\n"
+  FTML: "<p>x</p>"
+ref-render-before.jsonl tighten54 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten55 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+  LIVE: "<p>a b c</p>"
+  REF : "<p>a  b  c</p>\n\n"
+  FTML: "<p>a b c</p>"
+ref-render-before.jsonl tighten56 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=False norm(live==ftml)=True
+  LIVE: "<p>Empty<br />\nnext</p>"
+  REF : "<p>Empty <br />\nnext</p>\n\n"
+  FTML: "<p>Empty<br>\nnext</p>"
+ref-render-before.jsonl tighten57 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>para one</p>\n<p>para two</p>"
+  REF : "<p>para one</p>\n\n<p>para two</p>\n\n"
+  FTML: "<p>para one</p><p>para two</p>"
+ref-render-before.jsonl tighten58 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten59 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<h3 id=\"toc0\"><span>heading</span></h3>\n<p>after</p>"
+  REF : "\n<h3 id=\"toc0\"><span>heading</span></h3>\n<p>after</p>\n\n"
+  FTML: "<h3 id=\"toc0\"><span>heading</span></h3><p>after</p>"
+ref-render-before.jsonl tighten60 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<div class=\"code\">\n<pre><code>a\nb</code></pre></div>"
+  REF : "\n<div class=\"code\">\n<pre><code>a\nb</code></pre></div>\n\n"
+  FTML: "<div class=\"code\"><pre><code>a\nb</code></pre></div>"
+ref-render-before.jsonl tighten61 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten62 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=False | norm(live==ref)=False norm(live==ftml)=False
+  LIVE: "<blockquote>\n<p>quoted one<br />\nquoted two</p>\n</blockquote>"
+  REF : "<blockquote><p>quoted one<br />\nquoted two</p>\n\n</blockquote>\n"
+  FTML: "<blockquote><p>quoted one<br>\nquoted two</p></blockquote>"
+ref-render-before.jsonl tighten63 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten64 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten65 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten66 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten67 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten68 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-before.jsonl tighten69 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>a</p>\n<p>[[div]]x[[/div]]</p>\n<p>b</p>"
+  REF : "<p>a</p>\n\n<p>[[div]]x[[/div]]</p>\n\n<p>b</p>\n\n"
+  FTML: "<p>a</p><p>[[div]]x[[/div]]\n</p><p>b</p>"
+ref-render-before.jsonl tighten41 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=False norm(live==ftml)=True
+  LIVE: "<p><span style=\"color: red\">A</span></p>"
+  REF : "<p><span style=\"color: red\">A </span></p>\n\n"
+  FTML: "<p><span style=\"color: red\">A</span></p>"
+ref-render-before.jsonl tighten42 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=False norm(live==ftml)=True
+  LIVE: "<p><span style=\"color: red\">A</span></p>"
+  REF : "<p><span style=\"color: red\"> A </span></p>\n\n"
+  FTML: "<p><span style=\"color: red\">A</span></p>"
+ref-render-before.jsonl tighten51 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=True | norm(live==ref)=False norm(live==ftml)=True
+  LIVE: "<p>Empty</p>"
+  REF : "<p>Empty </p>\n\n"
+  FTML: "<p>Empty</p>"
+SUMMARY ref-render-before.jsonl: {'total': 58, 'valid': 58, 'lref_ws': 42, 'lftm_ws': 49, 'lref_norm': 49, 'lftm_norm': 49}
+
+ref-render-after.jsonl tighten01 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten02 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten03 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten04 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>a</p>\n<p>b</p>"
+  REF : "<p>a</p>\n\n<p>b</p>\n\n"
+  FTML: "<p>a</p><p>b</p>"
+ref-render-after.jsonl tighten05 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>a</p>\n<p>b</p>"
+  REF : "<p>a</p>\n\n<p>b</p>\n\n"
+  FTML: "<p>a</p><p>b</p>"
+ref-render-after.jsonl tighten06 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>a</p>\n<p>b</p>"
+  REF : "<p>a</p>\n\n<p>b</p>\n\n"
+  FTML: "<p>a</p><p>b</p>"
+ref-render-after.jsonl tighten07 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>a</p>\n<p>b</p>"
+  REF : "<p>a</p>\n\n<p>b</p>\n\n"
+  FTML: "<p>a</p><p>b</p>"
+ref-render-after.jsonl tighten14 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten18 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten19 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten22 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten23 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten24 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten25 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten26 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten27 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten28 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten29 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten30 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten31 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten32 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten33 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten34 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten35 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten36 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten37 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten38 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten39 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten40 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten43 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten44 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten45 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten46 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten47 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten48 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten49 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten50 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten52 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten53 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten54 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten55 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten56 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten57 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>para one</p>\n<p>para two</p>"
+  REF : "<p>para one</p>\n\n<p>para two</p>\n\n"
+  FTML: "<p>para one</p><p>para two</p>"
+ref-render-after.jsonl tighten58 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten59 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<h3 id=\"toc0\"><span>heading</span></h3>\n<p>after</p>"
+  REF : "\n<h3 id=\"toc0\"><span>heading</span></h3>\n<p>after</p>\n\n"
+  FTML: "<h3 id=\"toc0\"><span>heading</span></h3><p>after</p>"
+ref-render-after.jsonl tighten60 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<div class=\"code\">\n<pre><code>a\nb</code></pre></div>"
+  REF : "\n<div class=\"code\">\n<pre><code>a\nb</code></pre></div>\n\n"
+  FTML: "<div class=\"code\"><pre><code>a\nb</code></pre></div>"
+ref-render-after.jsonl tighten61 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten62 | valid=True stable=True srcmatch=True | ws(live==ref)=False ws(live==ftml)=False | norm(live==ref)=False norm(live==ftml)=False
+  LIVE: "<blockquote>\n<p>quoted one<br />\nquoted two</p>\n</blockquote>"
+  REF : "<blockquote><p>quoted one<br />\nquoted two</p>\n\n</blockquote>\n"
+  FTML: "<blockquote><p>quoted one<br>\nquoted two</p></blockquote>"
+ref-render-after.jsonl tighten63 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten64 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten65 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten66 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten67 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten68 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten69 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=False | norm(live==ref)=True norm(live==ftml)=False
+  LIVE: "<p>a</p>\n<p>[[div]]x[[/div]]</p>\n<p>b</p>"
+  REF : "<p>a</p>\n\n<p>[[div]]x[[/div]]</p>\n\n<p>b</p>\n\n"
+  FTML: "<p>a</p><p>[[div]]x[[/div]]\n</p><p>b</p>"
+ref-render-after.jsonl tighten41 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten42 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+ref-render-after.jsonl tighten51 | valid=True stable=True srcmatch=True | ws(live==ref)=True ws(live==ftml)=True | norm(live==ref)=True norm(live==ftml)=True
+SUMMARY ref-render-after.jsonl: {'total': 58, 'valid': 58, 'lref_ws': 57, 'lftm_ws': 49, 'lref_norm': 57, 'lftm_norm': 49}
+

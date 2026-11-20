@@ -1,0 +1,55 @@
+{"id": "tt01", "source": "{{mono}}"}
+{"id": "tt02", "source": "abc {{mono}} def"}
+{"id": "tt03", "source": "ab{{mono}}cd"}
+{"id": "tt04", "source": "{{a}} {{b}}"}
+{"id": "tt05", "source": "{{a}}{{b}}"}
+{"id": "tt06", "source": "before {{x}} after {{y}} tail"}
+{"id": "tt07", "source": "{{ //code literal// }}"}
+{"id": "tt08", "source": "{{ text}}"}
+{"id": "tt09", "source": "{{text }}"}
+{"id": "tt10", "source": "{{ text }}"}
+{"id": "tt11", "source": "before {{   a  **b**  c   }} after"}
+{"id": "tt12", "source": "{{x }}{{ y}}"}
+{"id": "tt13", "source": "before{{ x}}after"}
+{"id": "tt14", "source": "{{\ttext}}"}
+{"id": "tt15", "source": "{{text\t}}"}
+{"id": "tt16", "source": "{{ x }}after"}
+{"id": "tt17", "source": "{{}}"}
+{"id": "tt18", "source": "{{ }}"}
+{"id": "tt19", "source": "{{   }}"}
+{"id": "tt20", "source": "{{0}}"}
+{"id": "tt21", "source": "A{{0}}B"}
+{"id": "tt22", "source": "{{00}}"}
+{"id": "tt23", "source": "{{-0}}"}
+{"id": "tt24", "source": "{{0.0}}"}
+{"id": "tt25", "source": "{{x}}}}tail"}
+{"id": "tt26", "source": "{{x }}}}tail"}
+{"id": "tt27", "source": "{{x}}}}}}tail"}
+{"id": "tt28", "source": "{{outer {{ inner }} tail}}"}
+{"id": "tt29", "source": "{{a {{b}} c}} {{d}}"}
+{"id": "tt30", "source": "{{**bold**}}"}
+{"id": "tt31", "source": "**{{mono}}**"}
+{"id": "tt32", "source": "{{//italic//}}"}
+{"id": "tt33", "source": "{{__under__}}"}
+{"id": "tt34", "source": "{{--strike--}}"}
+{"id": "tt35", "source": "{{##red|color##}}"}
+{"id": "tt36", "source": "##red|{{mono}}##"}
+{"id": "tt37", "source": "{{a **b** c}}"}
+{"id": "tt38", "source": "{{mono"}
+{"id": "tt39", "source": "mono}}"}
+{"id": "tt40", "source": "{{{mono}}}"}
+{"id": "tt41", "source": "{{ x"}
+{"id": "tt42", "source": "{{ x }"}
+{"id": "tt43", "source": "}}Fail\n{{Fail\n\nparagraph? }}"}
+{"id": "tt44", "source": "{{a\nb}}"}
+{"id": "tt45", "source": "{{a\n\nb}}"}
+{"id": "tt46", "source": "{{a\nb\nc}}"}
+{"id": "tt47", "source": "{{a}}\n{{b}}"}
+{"id": "tt48", "source": "> {{quoted}}"}
+{"id": "tt49", "source": "{{a\n* item\nb}}"}
+{"id": "tt50", "source": "[[div]]\n{{a}}\n[[/div]]"}
+{"id": "tt51", "source": "= {{heading}}"}
+{"id": "tt52", "source": "[[code]]\n{{not mono}}\n[[/code]]"}
+{"id": "tt53", "source": "[[raw]]{{not mono}}[[/raw]]"}
+{"id": "tt54", "source": "{{person@scp.foundation}}"}
+{"id": "tt55", "source": "See {{https://example.com/a}}. end"}

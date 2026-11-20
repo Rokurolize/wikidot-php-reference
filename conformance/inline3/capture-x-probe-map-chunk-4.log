@@ -1,0 +1,101 @@
+x28 -> muse-probe-r2in3-x-x28 stable=True saved_source_matches=True valid=True
+x29 -> muse-probe-r2in3-x-x29 stable=True saved_source_matches=True valid=True
+x30 -> muse-probe-r2in3-x-x30 stable=True saved_source_matches=True valid=True
+x31 -> muse-probe-r2in3-x-x31 stable=True saved_source_matches=True valid=True
+x32 -> muse-probe-r2in3-x-x32 stable=True saved_source_matches=True valid=True
+x33 -> muse-probe-r2in3-x-x33 stable=True saved_source_matches=True valid=True
+x34 -> muse-probe-r2in3-x-x34 stable=True saved_source_matches=True valid=True
+x35 -> muse-probe-r2in3-x-x35 stable=True saved_source_matches=True valid=True
+x36 -> muse-probe-r2in3-x-x36 stable=True saved_source_matches=True valid=True
+{
+ "x28": {
+  "fullname": "muse-probe-r2in3-x-x28",
+  "html": "<p><strong>a<sup>ab</sup>ba</strong></p>",
+  "html_sha256": "50c9d883103fd9cc4d82979cba99c3356750975ae3f8bf083d0a4579dd4a17db",
+  "source": "**a^^ab^^ba**",
+  "source_sha256": "4372908021097e6c0e16fe66bf3272513f6afee92a91e21b612642138e666fbf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x29": {
+  "fullname": "muse-probe-r2in3-x-x29",
+  "html": "<p><sup>a<em>ab</em></sup><em>ba</em></p>",
+  "html_sha256": "c23b15fd86a12b1545995030c47be7a408a0c031a0876f3b5ee9bb48fc494ec2",
+  "source": "^^a//ab^^ba//",
+  "source_sha256": "51b9751ee0fa89c97bd4417171cc71247885f826d5973f6cdb34439148f28b96",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x30": {
+  "fullname": "muse-probe-r2in3-x-x30",
+  "html": "<p><sup>a<em>ab</em>ba</sup></p>",
+  "html_sha256": "5d314ff3a06387d9695d0db1a5a6502d47645d141e3ee2a056ed3ea4fe5c80a2",
+  "source": "^^a//ab//ba^^",
+  "source_sha256": "ecc77e885cf43b6fc0f756f842f712092c5a64a2b637479a8096f4dcaf484fa7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x31": {
+  "fullname": "muse-probe-r2in3-x-x31",
+  "html": "<p><em>a<sup>ab</sup></em><sup>ba</sup></p>",
+  "html_sha256": "1f6fbe56e757a3a04e4df8c16d04e8265303d828ce0a1f895f04e7e0b5ea223c",
+  "source": "//a^^ab//ba^^",
+  "source_sha256": "96387590f77b0c3fc4ad6dcb7e5319d1a761fd0100c91c5b1ce3a9463d2a47f3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x32": {
+  "fullname": "muse-probe-r2in3-x-x32",
+  "html": "<p><em>a<sup>ab</sup>ba</em></p>",
+  "html_sha256": "a4662b4de4d4d331c678335413ae96a880c49b9d3fda43b91fee185dcb57c2c8",
+  "source": "//a^^ab^^ba//",
+  "source_sha256": "58aba375d897f65f685278aa1aeddf087f865af707185df2b6752080c739c7a0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x33": {
+  "fullname": "muse-probe-r2in3-x-x33",
+  "html": "<p><sup>a<span style=\"text-decoration: underline;\">ab</span></sup><span style=\"text-decoration: underline;\">ba</span></p>",
+  "html_sha256": "89d4ebeaf424e3d74c7ed12efe42a9d9d62aac517ffe47e6d07db0b987baa58c",
+  "source": "^^a__ab^^ba__",
+  "source_sha256": "f4902550bcca6098cbb2ae9300a1de549699f47fb69e3f518ca7e0028dfab4e3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x34": {
+  "fullname": "muse-probe-r2in3-x-x34",
+  "html": "<p><sup>a<span style=\"text-decoration: underline;\">ab</span>ba</sup></p>",
+  "html_sha256": "9be62aec662723fd925e19991516210c988ccfb665fdae85693c07cad64cdc61",
+  "source": "^^a__ab__ba^^",
+  "source_sha256": "cc5e9679c5ae44eb93ed7d4311561596db71efe1218f36caace7de4ef10f4eec",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x35": {
+  "fullname": "muse-probe-r2in3-x-x35",
+  "html": "<p><span style=\"text-decoration: underline;\">a<sup>ab</sup></span><sup>ba</sup></p>",
+  "html_sha256": "4cd0321cc2282d80e23b1851ed8126fbcdac4176a8d9317265cd724f6e769ec5",
+  "source": "__a^^ab__ba^^",
+  "source_sha256": "6054e44c9bc2cf645bd7caafc507a3f4f13f19092fb63e445edce1da8fb5273c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x36": {
+  "fullname": "muse-probe-r2in3-x-x36",
+  "html": "<p><span style=\"text-decoration: underline;\">a<sup>ab</sup>ba</span></p>",
+  "html_sha256": "b96b516f847f921db32b4050442854205d0a0da4464d95f7de972ffa689053a3",
+  "source": "__a^^ab^^ba__",
+  "source_sha256": "4586d9e4a7b0f5cbb3ce44bd48dea3764ce5d9deee4901e91ecfa76af7f85479",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

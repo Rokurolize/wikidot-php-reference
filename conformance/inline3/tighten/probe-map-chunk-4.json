@@ -1,0 +1,37 @@
+{
+ "tighten33": {
+  "fullname": "muse-probe-r2in3-tighten-tighten33",
+  "source": "--s--\na",
+  "action": "created"
+ },
+ "tighten34": {
+  "fullname": "muse-probe-r2in3-tighten-tighten34",
+  "source": "a\n{{tt}}",
+  "action": "created"
+ },
+ "tighten35": {
+  "fullname": "muse-probe-r2in3-tighten-tighten35",
+  "source": "{{tt}}\na",
+  "action": "created"
+ },
+ "tighten36": {
+  "fullname": "muse-probe-r2in3-tighten-tighten36",
+  "source": "a\n^^sup^^",
+  "action": "created"
+ },
+ "tighten37": {
+  "fullname": "muse-probe-r2in3-tighten-tighten37",
+  "source": "^^sup^^\na",
+  "action": "created"
+ },
+ "tighten38": {
+  "fullname": "muse-probe-r2in3-tighten-tighten38",
+  "source": "a\n,,sub,,",
+  "action": "created"
+ },
+ "tighten39": {
+  "fullname": "muse-probe-r2in3-tighten-tighten39",
+  "source": ",,sub,,\na",
+  "action": "created"
+ }
+}

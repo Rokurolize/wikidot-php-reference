@@ -1,0 +1,80 @@
+<?php
+
+/**
+*
+* The rule removes all remaining newlines and normalizes horizontal
+* whitespace runs in the residual source text.
+*
+* @category Text
+*
+* @package Text_Wiki
+*
+* @author Paul M. Jones <pmjones@php.net>
+*
+* @license LGPL
+*
+* @version $Id$
+*
+*/
+
+/**
+*
+* The rule removes all remaining newlines and normalizes horizontal
+* whitespace runs in the residual source text.
+*
+* @category Text
+*
+* @package Text_Wiki
+*
+* @author Paul M. Jones <pmjones@php.net>
+*
+* @license LGPL
+*
+*/
+
+class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
+
+    /**
+    *
+    * Apply tightening directly to the source text.
+    *
+    * Stage 1 of this pipeline has already turned every construct's own
+    * content into a token placeholder by the time this last parse rule
+    * runs. Two output-shaping operations are still owed to the final pass.
+    *
+    * First, the fossil rule's newline removal stays: it drops the
+    * framework's leading/trailing padding newlines so the rendered body is
+    * tight. Block renderers emit their own inter-block newlines afterwards,
+    * so removing source newlines here cannot erase a paragraph or a break.
+    *
+    * Second, live's WikiTransformation::purifyHtml (the libtidy pass) folds
+    * a horizontal whitespace run to one space in rendered text. The fossil
+    * rule omitted that fold, so runs of spaces, runs of tabs and mixed
+    * space/tab runs survived into the HTML where live emits a single space.
+    * Live probes muse-probe-r2in3-tighten-tighten18, -tighten19,
+    * -tighten22 and -tighten23 (a  b, a   b, a\t\tb and a \t b) each render
+    * as <p>a b</p> on the saved page, and ftml's legacy-layout dumper
+    * agrees. Because every earlier rule has already tokenized its own
+    * body, this fold reaches only residual ordinary text: a tab or double
+    * space inside [[code]]/[[/code]] lives inside a token placeholder and
+    * is deliberately preserved, matching live and ftml (adhoc case adh02).
+    *
+    * @access public
+    *
+    */
+
+    function parse()
+    {
+        $source = $this->wiki->source;
+
+        // Remove all remaining newlines (fossil behavior, preserved).
+        $source = str_replace("\n", '', $source);
+
+        // Fold residual horizontal whitespace runs to one space. Token
+        // delimiters contain no spaces or tabs, so tokenized bodies are
+        // untouched; only ordinary source text is shaped here.
+        $source = preg_replace('/[ \t]+/', ' ', $source);
+
+        $this->wiki->source = $source;
+    }
+}

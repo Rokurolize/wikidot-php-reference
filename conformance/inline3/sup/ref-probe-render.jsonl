@@ -1,0 +1,33 @@
+{"id":"p01","output":"<p><sup>sup<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"p02","output":"<p><sup>a<\/sup>b<sup>c<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"p03","output":"<p><sup>^triple<\/sup>^<br \/>\nx<\/p>\n\n"}
+{"id":"p04","output":"<p><sup>a<\/sup>^<br \/>\nx<\/p>\n\n"}
+{"id":"p05","output":"<p><br \/>\nx<\/p>\n\n"}
+{"id":"p06","output":"<p> x<\/p>\n\n"}
+{"id":"p07","output":"<p>^^ ^^ x<\/p>\n\n"}
+{"id":"p08","output":"<p>^^ sup ^^<br \/>\nx<\/p>\n\n"}
+{"id":"p09","output":"<p>^^sup ^^<br \/>\nx<\/p>\n\n"}
+{"id":"p10","output":"<p>^^ sup^^<br \/>\nx<\/p>\n\n"}
+{"id":"p11","output":"<p>wor<sup>d<\/sup>in<br \/>\nx<\/p>\n\n"}
+{"id":"p12","output":"<p><sup>A ^^B<\/sup> C^^<br \/>\nx<\/p>\n\n"}
+{"id":"p13","output":"<p><sup>a<br \/>\nb<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"p14","output":"<p>^^a<\/p>\n\n<p>b^^<br \/>\nx<\/p>\n\n"}
+{"id":"p15","output":"<p><sup>A<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"p16","output":"<p><sup>OUTER <tt>INNER<\/sup> TAIL<\/tt><br \/>\nx<\/p>\n\n"}
+{"id":"p17","output":"<p><sub>OUTER <sup>INNER<\/sub> TAIL<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"p18","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><sup>A<\/td>\n<td>B<\/sup><\/td>\n<td>C<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p19","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><sup>A<\/sup><\/td>\n<td>B<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p20","output":"<p style=\"text-align: center;\"><sup>Head<\/sup> =<\/p><p>x<\/p>\n\n"}
+{"id":"p21","output":"<p>[[<sup>label<\/sup>|target]]<br \/>\nx<\/p>\n\n"}
+{"id":"p22","output":"<p><a class=\"newpage\" href=\"\/caption\">target<\/a><br \/>\nx<\/p>\n\n"}
+{"id":"p23","output":"<p>[code]<sup>sup<\/sup>[\/code]<br \/>\nx<\/p>\n\n"}
+{"id":"p24","output":"<p>[[raw]]<sup>x<\/sup>[[\/raw]]<br \/>\nx<\/p>\n\n"}
+{"id":"p25","output":"<p><tt><sup>mono<\/sup><\/tt><br \/>\nx<\/p>\n\n"}
+{"id":"p26","output":"<p><sup><em>em<\/em><\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"p27","output":"<p><sup><span style=\"color: #c00\">red<\/span><\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"p28","output":"<p>^^unpaired<br \/>\nx<\/p>\n\n"}
+{"id":"p29","output":"<p><sup>a b<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"p30","output":"<p>ab<br \/>\nx<\/p>\n\n"}
+{"id":"p31","output":"<p><sup>sup<\/sup> <sup>more<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"p32","output":"<p><sup>a<\/sup><sup>b<\/sup><br \/>\nx<\/p>\n\n"}
+{"id":"p33","output":"<p><\/p>\n\n"}

@@ -1,0 +1,9 @@
+capture-map-01.json attempt 1 failed rc=1; log retained: capture-map-01-attempt-1.log
+capture-map-01.json ok on attempt 2
+capture-map-02.json ok on attempt 1
+capture-map-03.json ok on attempt 1
+capture-map-04.json ok on attempt 1
+capture-map-05.json ok on attempt 1
+capture-map-06.json ok on attempt 1
+merged valid stable source-matched records: 0
+rejected: []

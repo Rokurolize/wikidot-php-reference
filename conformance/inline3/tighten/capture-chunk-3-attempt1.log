@@ -1,0 +1,79 @@
+tighten26 -> muse-probe-r2in3-tighten-tighten26 stable=True saved_source_matches=True valid=True
+tighten27 -> muse-probe-r2in3-tighten-tighten27 stable=True saved_source_matches=True valid=True
+tighten28 -> muse-probe-r2in3-tighten-tighten28 stable=True saved_source_matches=True valid=True
+tighten29 -> muse-probe-r2in3-tighten-tighten29 stable=True saved_source_matches=True valid=True
+tighten30 -> muse-probe-r2in3-tighten-tighten30 stable=True saved_source_matches=True valid=True
+tighten31 -> muse-probe-r2in3-tighten-tighten31 stable=True saved_source_matches=True valid=True
+tighten32 -> muse-probe-r2in3-tighten-tighten32 stable=True saved_source_matches=True valid=True
+{
+ "tighten26": {
+  "fullname": "muse-probe-r2in3-tighten-tighten26",
+  "html": "<p>a<br />\n<em>em</em></p>",
+  "html_sha256": "4c962cd36f462e9ccda14274308b6560707ed038ab77dfed6508bf973c944bfb",
+  "source": "a\n//em//",
+  "source_sha256": "bcd8f6e7fc165bcb1978295f15507db5899757e31821184a20f01891cc3b368c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten27": {
+  "fullname": "muse-probe-r2in3-tighten-tighten27",
+  "html": "<p><em>em</em><br />\na</p>",
+  "html_sha256": "64c0f169d4364db66735aae01d91be284820d178bac70c5640b7f2b4bccedb93",
+  "source": "//em//\na",
+  "source_sha256": "16dd933a613308fecf1f39e453f9574da45bdf9c59b31c19e0f1228ad9a13573",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten28": {
+  "fullname": "muse-probe-r2in3-tighten-tighten28",
+  "html": "<p>a<br />\n<span style=\"color: red\">x</span></p>",
+  "html_sha256": "855015b651430311b96aa1b3f016fdaca3b0de4cf45b7f85e2bbe392acdcf7d6",
+  "source": "a\n##red|x##",
+  "source_sha256": "477308d0a3278f881795670aa78b503ddcefddd55e29a59bf3b6672d60d6395c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten29": {
+  "fullname": "muse-probe-r2in3-tighten-tighten29",
+  "html": "<p><span style=\"color: red\">x</span><br />\na</p>",
+  "html_sha256": "f8d591ba68ca4f51927e76924dbefa996a0923f328a94917bd527d75b4d9d2eb",
+  "source": "##red|x##\na",
+  "source_sha256": "57cd3d7c2b208e2f05fdf9241395614b28056d5f132592be832c90a3437cfaa2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten30": {
+  "fullname": "muse-probe-r2in3-tighten-tighten30",
+  "html": "<p>a<br />\n<span style=\"text-decoration: underline;\">u</span></p>",
+  "html_sha256": "05781b4a46890c4b7d2871f04539052010aa6d0b471350f7bd37f74317641675",
+  "source": "a\n__u__",
+  "source_sha256": "36fdc15dbec0ef1e2d9c0ac3e46440abfdd5accc9217d3339adb03b7f3bf6293",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten31": {
+  "fullname": "muse-probe-r2in3-tighten-tighten31",
+  "html": "<p><span style=\"text-decoration: underline;\">u</span><br />\na</p>",
+  "html_sha256": "2be06b467c01b5b87ffbe6e03b6f008e8badd2ca7a88242046cbc599bc3efbdc",
+  "source": "__u__\na",
+  "source_sha256": "85ab9ff886049f7c6e06ae0f6097104abea354875bbf96cb96a05d3cce46d4d2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten32": {
+  "fullname": "muse-probe-r2in3-tighten-tighten32",
+  "html": "<p>a<br />\n<span style=\"text-decoration: line-through;\">s</span></p>",
+  "html_sha256": "dad57e8e323e8dcffe290efd770ca4d96b87cdf23f484a3a48b58d3ae9feab27",
+  "source": "a\n--s--",
+  "source_sha256": "ca312c651fdd707702a3a9fe8050f039acc4f6e6c7e3ac987ee648210d34090f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

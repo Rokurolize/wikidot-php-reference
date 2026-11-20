@@ -1,0 +1,220 @@
+total=55 exact_equal=1 rstrip_equal=42 norm_equal=46
+=== tt01 ===
+REF : '<p><tt>mono</tt></p>\n\n'
+FTML: '<p><tt>mono</tt></p>'
+DIFF
+=== tt02 ===
+REF : '<p>abc <tt>mono</tt> def</p>\n\n'
+FTML: '<p>abc <tt>mono</tt> def</p>'
+DIFF
+=== tt03 ===
+REF : '<p>ab<tt>mono</tt>cd</p>\n\n'
+FTML: '<p>ab<tt>mono</tt>cd</p>'
+DIFF
+=== tt04 ===
+REF : '<p><tt>a</tt> <tt>b</tt></p>\n\n'
+FTML: '<p><tt>a</tt> <tt>b</tt></p>'
+DIFF
+=== tt05 ===
+REF : '<p><tt>a</tt><tt>b</tt></p>\n\n'
+FTML: '<p><tt>a</tt><tt>b</tt></p>'
+DIFF
+=== tt06 ===
+REF : '<p>before <tt>x</tt> after <tt>y</tt> tail</p>\n\n'
+FTML: '<p>before <tt>x</tt> after <tt>y</tt> tail</p>'
+DIFF
+=== tt07 ===
+REF : '<p><tt><em>code literal</em></tt></p>\n\n'
+FTML: '<p><tt><em>code literal</em></tt></p>'
+DIFF
+=== tt08 ===
+REF : '<p><tt>text</tt></p>\n\n'
+FTML: '<p><tt>text</tt></p>'
+DIFF
+=== tt09 ===
+REF : '<p><tt>text</tt></p>\n\n'
+FTML: '<p><tt>text</tt></p>'
+DIFF
+=== tt10 ===
+REF : '<p><tt>text</tt></p>\n\n'
+FTML: '<p><tt>text</tt></p>'
+DIFF
+=== tt11 ===
+REF : '<p>before <tt>a <strong>b</strong> c</tt> after</p>\n\n'
+FTML: '<p>before <tt>a <strong>b</strong> c</tt> after</p>'
+DIFF
+=== tt12 ===
+REF : '<p><tt>x</tt> <tt>y</tt></p>\n\n'
+FTML: '<p><tt>x</tt> <tt>y</tt></p>'
+DIFF
+=== tt13 ===
+REF : '<p>before <tt>x</tt>after</p>\n\n'
+FTML: '<p>before <tt>x</tt>after</p>'
+DIFF
+=== tt14 ===
+REF : '<p><tt>text</tt></p>\n\n'
+FTML: '<p><tt>text</tt></p>'
+DIFF
+=== tt15 ===
+REF : '<p><tt>text</tt></p>\n\n'
+FTML: '<p><tt>text</tt></p>'
+DIFF
+=== tt16 ===
+REF : '<p><tt>x</tt> after</p>\n\n'
+FTML: '<p><tt>x</tt> after</p>'
+DIFF
+=== tt17 ===
+REF : '<p></p>\n\n'
+FTML: ''
+DIFF
+=== tt18 ===
+REF : '<p></p>\n\n'
+FTML: ''
+DIFF
+=== tt19 ===
+REF : '<p></p>\n\n'
+FTML: ''
+DIFF
+=== tt20 ===
+REF : '<p></p>\n\n'
+FTML: ''
+DIFF
+=== tt21 ===
+REF : '<p>AB</p>\n\n'
+FTML: '<p>AB</p>'
+DIFF
+=== tt22 ===
+REF : '<p><tt>00</tt></p>\n\n'
+FTML: '<p><tt>00</tt></p>'
+DIFF
+=== tt23 ===
+REF : '<p><tt>-0</tt></p>\n\n'
+FTML: '<p><tt>-0</tt></p>'
+DIFF
+=== tt24 ===
+REF : '<p><tt>0.0</tt></p>\n\n'
+FTML: '<p><tt>0.0</tt></p>'
+DIFF
+=== tt25 ===
+REF : '<p><tt>x}}</tt>tail</p>\n\n'
+FTML: '<p><tt>x}}</tt>tail</p>'
+DIFF
+=== tt26 ===
+REF : '<p><tt>x }}</tt>tail</p>\n\n'
+FTML: '<p><tt>x }}</tt>tail</p>'
+DIFF
+=== tt27 ===
+REF : '<p><tt>x}}}}</tt>tail</p>\n\n'
+FTML: '<p><tt>x}}}}</tt>tail</p>'
+DIFF
+=== tt28 ===
+REF : '<p><tt>outer {{ inner</tt> tail}}</p>\n\n'
+FTML: '<p><tt>outer {{ inner</tt> tail}}</p>'
+DIFF
+=== tt29 ===
+REF : '<p><tt>a {{b</tt> c}} <tt>d</tt></p>\n\n'
+FTML: '<p><tt>a {{b</tt> c}} <tt>d</tt></p>'
+DIFF
+=== tt30 ===
+REF : '<p><tt><strong>bold</strong></tt></p>\n\n'
+FTML: '<p><tt><strong>bold</strong></tt></p>'
+DIFF
+=== tt31 ===
+REF : '<p><strong><tt>mono</tt></strong></p>\n\n'
+FTML: '<p><strong><tt>mono</tt></strong></p>'
+DIFF
+=== tt32 ===
+REF : '<p><tt><em>italic</em></tt></p>\n\n'
+FTML: '<p><tt><em>italic</em></tt></p>'
+DIFF
+=== tt33 ===
+REF : '<p><tt><span style="text-decoration: underline;">under</span></tt></p>\n\n'
+FTML: '<p><tt><span style="text-decoration: underline;">under</span></tt></p>'
+DIFF
+=== tt34 ===
+REF : '<p><tt><span style="text-decoration: line-through;">strike</span></tt></p>\n\n'
+FTML: '<p><tt><span style="text-decoration: line-through;">strike</span></tt></p>'
+DIFF
+=== tt35 ===
+REF : '<p><tt><span style="color: red">color</span></tt></p>\n\n'
+FTML: '<p><tt><span style="color: red">color</span></tt></p>'
+DIFF
+=== tt36 ===
+REF : '<p><span style="color: red"><tt>mono</tt></span></p>\n\n'
+FTML: '<p><span style="color: red"><tt>mono</tt></span></p>'
+DIFF
+=== tt37 ===
+REF : '<p><tt>a <strong>b</strong> c</tt></p>\n\n'
+FTML: '<p><tt>a <strong>b</strong> c</tt></p>'
+DIFF
+=== tt38 ===
+REF : '<p>{{mono</p>\n\n'
+FTML: '<p>{{mono</p>'
+DIFF
+=== tt39 ===
+REF : '<p>mono}}</p>\n\n'
+FTML: '<p>mono}}</p>'
+DIFF
+=== tt40 ===
+REF : '<p><tt>{mono}</tt></p>\n\n'
+FTML: '<p><tt>{mono}</tt></p>'
+DIFF
+=== tt41 ===
+REF : '<p>{{ x</p>\n\n'
+FTML: '<p>{{ x</p>'
+DIFF
+=== tt42 ===
+REF : '<p>{{ x }</p>\n\n'
+FTML: '<p>{{ x }</p>'
+DIFF
+=== tt43 ===
+REF : '<p>}}Fail<br />\n{{Fail</p>\n\n<p>paragraph? }}</p>\n\n'
+FTML: '<p>}}Fail<br>\n{{Fail</p><p>paragraph? }}</p>'
+DIFF+NORM
+=== tt44 ===
+REF : '<p><tt>a<br />\nb</tt></p>\n\n'
+FTML: '<p><tt>a<br>\nb</tt></p>'
+DIFF+NORM
+=== tt45 ===
+REF : '<p>{{a</p>\n\n<p>b}}</p>\n\n'
+FTML: '<p>{{a</p><p>b}}</p>'
+DIFF+NORM
+=== tt46 ===
+REF : '<p><tt>a<br />\nb<br />\nc</tt></p>\n\n'
+FTML: '<p><tt>a<br>\nb<br>\nc</tt></p>'
+DIFF+NORM
+=== tt47 ===
+REF : '<p><tt>a</tt><br />\n<tt>b</tt></p>\n\n'
+FTML: '<p><tt>a</tt><br>\n<tt>b</tt></p>'
+DIFF+NORM
+=== tt48 ===
+REF : '<blockquote><p><tt>quoted</tt></p>\n\n</blockquote>\n'
+FTML: '<blockquote><p><tt>quoted</tt></p></blockquote>'
+DIFF+NORM
+=== tt49 ===
+REF : '<p>{{a</p>\n\n<ul>\n<li>item</li>\n</ul><p>b}}</p>\n\n'
+FTML: '<p>{{a</p><ul>\n<li>item</li>\n</ul><p>b}}</p>'
+DIFF+NORM
+=== tt50 ===
+REF : '<div ><p><tt>a</tt></p>\n\n</div>'
+FTML: '<div><p><tt>a</tt></p></div>'
+DIFF+NORM
+=== tt51 ===
+REF : '<p style="text-align: center;"><tt>heading</tt></p>'
+FTML: '<p style="text-align: center;"><tt>heading</tt></p>'
+=== tt52 ===
+REF : '\n<div class="code">\n<pre><code>{{not mono}}</code></pre></div>\n\n'
+FTML: '<div class="code"><pre><code>{{not mono}}</code></pre></div>'
+DIFF+NORM
+=== tt53 ===
+REF : '<p>[[raw]]<tt>not mono</tt>[[/raw]]</p>\n\n'
+FTML: '<p>[[raw]]<tt>not mono</tt>[[/raw]]</p>'
+DIFF
+=== tt54 ===
+REF : '<p><tt><span class="wiki-email">noitadnuof.pcs|nosrep#noitadnuof.pcs|nosrep</span></tt></p>\n\n'
+FTML: '<p><tt><span class="wiki-email">noitadnuof.pcs|nosrep#noitadnuof.pcs|nosrep</span></tt></p>'
+DIFF
+=== tt55 ===
+REF : '<p>See <tt><a href="https://example.com/a">https://example.com/a</a></tt>. end</p>\n\n'
+FTML: '<p>See <tt><a href="https://example.com/a">https://example.com/a</a></tt>. end</p>'
+DIFF

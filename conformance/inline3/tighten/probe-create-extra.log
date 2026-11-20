@@ -1,0 +1,21 @@
+tighten41 -> muse-probe-r2in3-tighten-tighten41 (created)
+tighten42 -> muse-probe-r2in3-tighten-tighten42 (created)
+tighten51 -> muse-probe-r2in3-tighten-tighten51 (created)
+3 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "tighten41": {
+  "fullname": "muse-probe-r2in3-tighten-tighten41",
+  "source": "##red|A ##",
+  "action": "created"
+ },
+ "tighten42": {
+  "fullname": "muse-probe-r2in3-tighten-tighten42",
+  "source": "##red| A ##",
+  "action": "created"
+ },
+ "tighten51": {
+  "fullname": "muse-probe-r2in3-tighten-tighten51",
+  "source": "Empty ____",
+  "action": "created"
+ }
+}

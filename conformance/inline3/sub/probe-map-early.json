@@ -1,0 +1,97 @@
+{
+ "sub01": {
+  "fullname": "muse-probe-r2in3-sub-sub01",
+  "source": ",,simple,,",
+  "action": "created"
+ },
+ "sub02": {
+  "fullname": "muse-probe-r2in3-sub-sub02",
+  "source": "before ,,subscript,, after",
+  "action": "created"
+ },
+ "sub03": {
+  "fullname": "muse-probe-r2in3-sub-sub03",
+  "source": "word,,inside,,word",
+  "action": "created"
+ },
+ "sub04": {
+  "fullname": "muse-probe-r2in3-sub-sub04",
+  "source": "a,,b,,c",
+  "action": "created"
+ },
+ "sub05": {
+  "fullname": "muse-probe-r2in3-sub-sub05",
+  "source": "x ,,one,, y ,,two,, z",
+  "action": "created"
+ },
+ "sub06": {
+  "fullname": "muse-probe-r2in3-sub-sub06",
+  "source": ",,two words inside,,",
+  "action": "created"
+ },
+ "sub07": {
+  "fullname": "muse-probe-r2in3-sub-sub07",
+  "source": "one, two, three",
+  "action": "created"
+ },
+ "sub08": {
+  "fullname": "muse-probe-r2in3-sub-sub08",
+  "source": "word,, word,, word",
+  "action": "created"
+ },
+ "sub09": {
+  "fullname": "muse-probe-r2in3-sub-sub09",
+  "source": "a,, b",
+  "action": "created"
+ },
+ "sub10": {
+  "fullname": "muse-probe-r2in3-sub-sub10",
+  "source": "a,,b,, c",
+  "action": "created"
+ },
+ "sub11": {
+  "fullname": "muse-probe-r2in3-sub-sub11",
+  "source": ",,a ,, b,,",
+  "action": "created"
+ },
+ "sub12": {
+  "fullname": "muse-probe-r2in3-sub-sub12",
+  "source": ",,,a,,,",
+  "action": "created"
+ },
+ "sub13": {
+  "fullname": "muse-probe-r2in3-sub-sub13",
+  "source": ",,,,four,,,,",
+  "action": "created"
+ },
+ "sub14": {
+  "fullname": "muse-probe-r2in3-sub-sub14",
+  "source": "a,,b,,,",
+  "action": "created"
+ },
+ "sub15": {
+  "fullname": "muse-probe-r2in3-sub-sub15",
+  "source": ",,,a,,",
+  "action": "created"
+ },
+ "sub16": {
+  "fullname": "muse-probe-r2in3-sub-sub16",
+  "source": "Smith,, Jones,, and Doe",
+  "action": "created"
+ },
+ "sub17": {
+  "fullname": "muse-probe-r2in3-sub-sub17",
+  "source": "list: a, b,, c, d",
+  "action": "created"
+ },
+ "sub18": {
+  "fullname": "muse-probe-r2in3-sub-sub18",
+  "source": "a, ,,b,, c",
+  "action": "created"
+ },
+ "sub19": {
+  "fullname": "muse-probe-r2in3-sub-sub19",
+  "source": ",,,,",
+  "action": "created"
+ }
+}

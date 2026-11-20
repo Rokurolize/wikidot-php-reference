@@ -1,0 +1,52 @@
+{
+ "sub35": {
+  "fullname": "muse-probe-r2in3-sub-sub35",
+  "source": ",,##red|colored sub##,,",
+  "action": "created"
+ },
+ "sub36": {
+  "fullname": "muse-probe-r2in3-sub-sub36",
+  "source": ",,__underline sub__,,,",
+  "action": "created"
+ },
+ "sub37": {
+  "fullname": "muse-probe-r2in3-sub-sub37",
+  "source": ",,--strike sub--,,",
+  "action": "created"
+ },
+ "sub38": {
+  "fullname": "muse-probe-r2in3-sub-sub38",
+  "source": ",,{{mono sub}},,",
+  "action": "created"
+ },
+ "sub39": {
+  "fullname": "muse-probe-r2in3-sub-sub39",
+  "source": ",,OUTER ^^INNER,, TAIL^^",
+  "action": "created"
+ },
+ "sub40": {
+  "fullname": "muse-probe-r2in3-sub-sub40",
+  "source": ",,A **B,, X** Y",
+  "action": "created"
+ },
+ "sub41": {
+  "fullname": "muse-probe-r2in3-sub-sub41",
+  "source": "--OUTER ,,INNER-- TAIL,,",
+  "action": "created"
+ },
+ "sub42": {
+  "fullname": "muse-probe-r2in3-sub-sub42",
+  "source": "a,,x\n,,.b",
+  "action": "created"
+ },
+ "sub43": {
+  "fullname": "muse-probe-r2in3-sub-sub43",
+  "source": "x,,a\n,,y",
+  "action": "created"
+ },
+ "sub44": {
+  "fullname": "muse-probe-r2in3-sub-sub44",
+  "source": ",,line one\nline two,,",
+  "action": "created"
+ }
+}

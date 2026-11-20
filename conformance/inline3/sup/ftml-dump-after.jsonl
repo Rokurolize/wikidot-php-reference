@@ -1,0 +1,66 @@
+{"errors":[],"html":"<p><sup>sup</sup></p>","id":"sup01"}
+{"errors":[],"html":"<p>before <sup>sup</sup> after</p>","id":"sup02"}
+{"errors":[],"html":"<p><sup>one</sup> <sup>two</sup></p>","id":"sup03"}
+{"errors":[],"html":"<p><sup>a</sup>b<sup>c</sup></p>","id":"sup04"}
+{"errors":[],"html":"<p>wor<sup>d</sup>in</p>","id":"sup05"}
+{"errors":[],"html":"<p><sup>two words</sup></p>","id":"sup06"}
+{"errors":["ParseError { token: Superscript, rule: \"superscript\", span: 7..9, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }"],"html":"<p>^^ sup ^^</p>","id":"sup07"}
+{"errors":["ParseError { token: Whitespace, rule: \"superscript\", span: 5..6, kind: RuleFailed }","ParseError { token: Superscript, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Superscript, rule: \"superscript\", span: 6..8, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>^^sup ^^</p>","id":"sup08"}
+{"errors":["ParseError { token: Superscript, rule: \"superscript\", span: 6..8, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>^^ sup^^</p>","id":"sup09"}
+{"errors":[],"html":"<p><sup>a b</sup></p>","id":"sup10"}
+{"errors":["ParseError { token: Superscript, rule: \"superscript\", span: 10..12, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>^^ a<sup>b</sup> ^^</p>","id":"sup11"}
+{"errors":[],"html":"<p><sup>a</sup> ^^ b ^^ <sup>c</sup></p>","id":"sup12"}
+{"errors":["ParseError { token: Superscript, rule: \"superscript\", span: 0..2, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>^^unpaired</p>","id":"sup13"}
+{"errors":["ParseError { token: Superscript, rule: \"superscript\", span: 8..10, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>unpaired^^</p>","id":"sup14"}
+{"errors":[],"html":"<p><sup>^triple</sup>^</p>","id":"sup15"}
+{"errors":[],"html":"<p><sup>a</sup>^</p>","id":"sup16"}
+{"errors":[],"html":"<p><sup>^a</sup></p>","id":"sup17"}
+{"errors":[],"html":"","id":"sup18"}
+{"errors":["ParseError { token: Superscript, rule: \"superscript\", span: 3..5, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 3..5, kind: NoRulesMatch }"],"html":"<p>^^ ^^</p>","id":"sup19"}
+{"errors":[],"html":"<p><sup>a</sup><sup>b</sup></p>","id":"sup20"}
+{"errors":[],"html":"<p><sup><em>em</em></sup></p>","id":"sup21"}
+{"errors":[],"html":"<p><em><sup>sup</sup></em></p>","id":"sup22"}
+{"errors":[],"html":"<p><sup><span style=\"text-decoration: underline;\">u</span></sup></p>","id":"sup23"}
+{"errors":[],"html":"<p><sup><span style=\"text-decoration: line-through;\">s</span></sup></p>","id":"sup24"}
+{"errors":[],"html":"<p><span style=\"color: #c00\"><sup>red</sup></span></p>","id":"sup25"}
+{"errors":[],"html":"<p><sup><span style=\"color: #c00\">red</span></sup></p>","id":"sup26"}
+{"errors":[],"html":"<p><sup><tt>mono</tt></sup></p>","id":"sup27"}
+{"errors":[],"html":"<p><tt><sup>mono</sup></tt></p>","id":"sup28"}
+{"errors":[],"html":"<p><sup><sub>sub</sub></sup></p>","id":"sup29"}
+{"errors":[],"html":"<p><sub>OUTER <sup>INNER</sup></sub> <sup>TAIL</sup></p>","id":"sup30"}
+{"errors":[],"html":"<p><sup>a<br>\nb</sup><br>\nx</p>","id":"sup31"}
+{"errors":["ParseError { token: Superscript, rule: \"superscript\", span: 0..2, kind: RuleFailed }","ParseError { token: Superscript, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Superscript, rule: \"superscript\", span: 6..8, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>^^a</p><p>b^^<br>\nx</p>","id":"sup32"}
+{"errors":["ParseError { token: LineBreak, rule: \"superscript\", span: 3..4, kind: RuleFailed }","ParseError { token: Superscript, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Superscript, rule: \"superscript\", span: 10..12, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>^^a</p><hr><p>b^^<br>\nx</p>","id":"sup33"}
+{"errors":[],"html":"<p><sup>a<br>\nb</sup><br>\nx</p>","id":"sup34"}
+{"errors":[],"html":"<p><sup>a<br>\nb</sup></p><p>x</p>","id":"sup35"}
+{"errors":["ParseError { token: LineBreak, rule: \"superscript\", span: 3..4, kind: RuleFailed }","ParseError { token: Superscript, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Superscript, rule: \"superscript\", span: 13..15, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 13..15, kind: NoRulesMatch }"],"html":"<p>^^a</p><blockquote><p>quote</p></blockquote><p>b^^<br>\nx</p>","id":"sup36"}
+{"errors":[],"html":"<p><sup>[[div]]inside[[/div]]</sup><br>\nx</p>","id":"sup37"}
+{"errors":["ParseError { token: LineBreak, rule: \"superscript\", span: 3..4, kind: RuleFailed }","ParseError { token: Superscript, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Superscript, rule: \"superscript\", span: 12..14, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 12..14, kind: NoRulesMatch }"],"html":"<p>^^a</p><ul>\n<li>list</li>\n</ul><p>b^^<br>\nx</p>","id":"sup38"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td><sup>A</sup></td>\n<td>B</td>\n</tr>\n</table><p>x</p>","id":"sup39"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td><sup>A</sup></td>\n<td>B</td>\n<td>C</td>\n</tr>\n</table><p>x</p>","id":"sup40"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td><sup>b</sup></td>\n<td>c</td>\n</tr>\n</table><p>x</p>","id":"sup41"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>^^ A ^^</td>\n</tr>\n</table><p>x</p>","id":"sup42"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td colspan=\"2\"><sup>span</sup></td>\n<td colspan=\"2\">x</td>\n</tr>\n</table><p>x</p>","id":"sup43"}
+{"errors":[],"html":"<p style=\"text-align: center;\"><sup>Head</sup> =</p><p>x</p>","id":"sup44"}
+{"errors":[],"html":"<p><sup>= Head =</sup><br>\nx</p>","id":"sup45"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 20..20, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[<sup>label</sup>|target]]</p>","id":"sup46"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 20..20, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[target|<sup>label</sup>]]</p>","id":"sup47"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 12..12, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>[[<sup>page</sup>]]</p>","id":"sup48"}
+{"errors":[],"html":"<p>[code]<sup>sup</sup>[/code]</p>","id":"sup49"}
+{"errors":[],"html":"<p><tt><sup>mono</sup></tt></p>","id":"sup50"}
+{"errors":["ParseError { token: Superscript, rule: \"block-raw\", span: 7..9, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 12..15, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[raw]]<sup>x</sup>[[/raw]]</p>","id":"sup51"}
+{"errors":[],"html":"<p>`<sup>code</sup>`</p>","id":"sup52"}
+{"errors":[],"html":"<p>[code]<br>\n<sup>sup</sup><br>\n[/code]</p>","id":"sup53"}
+{"errors":[],"html":"<p><sup>a[code]x[/code]b</sup></p>","id":"sup54"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>^^sup^^</code></pre></div>","id":"sup55"}
+{"errors":[],"html":"<p>^^</p>\na<div><p>b</p></div><br>\nc^^<p>x</p>","id":"sup56"}
+{"errors":[],"html":"<p><a href=\"/caption\">target</a><br>\nx</p>","id":"sup57"}
+{"errors":[],"html":"<p><a href=\"/target\">^^caption^^</a><br>\nx</p>","id":"sup58"}
+{"errors":[],"html":"<p><a href=\"https://example.com\"><sup>label</sup></a><br>\nx</p>","id":"sup59"}
+{"errors":[],"html":"<p><a href=\"/page\">^^page^^</a><br>\nx</p>","id":"sup60"}
+{"errors":["ParseError { token: Whitespace, rule: \"superscript\", span: 3..4, kind: RuleFailed }","ParseError { token: Superscript, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Superscript, rule: \"superscript\", span: 11..13, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 11..13, kind: NoRulesMatch }"],"html":"<p><sup>A ^^B</sup> C^^<br>\nx</p>","id":"sup61"}
+{"errors":[],"html":"<p><sup>A</sup><br>\nx</p>","id":"sup62"}
+{"errors":[],"html":"<p><sup>OUTER <tt>INNER</tt></sup> <tt>TAIL</tt><br>\nx</p>","id":"sup63"}
+{"errors":[],"html":"<p><sup>A <tt>B <span style=\"text-decoration: line-through;\">C</span></tt> <span style=\"text-decoration: line-through;\"><tt>X</tt> Y</span><br>\nx</sup></p>","id":"sup64"}
+{"errors":[],"html":"<p><em>A <sup>B <span style=\"text-decoration: underline;\">C</span></sup> <span style=\"text-decoration: underline;\"><sup>X</sup> Y</span><br>\nx</em></p>","id":"sup65"}
+{"errors":["ParseError { token: Identifier, rule: \"block-superscript\", span: 7..8, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 8..11, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 14..16, kind: NoRulesMatch }"],"html":"<p>[[sup]]X[[/sup]]<br>\nx</p>","id":"sup66"}

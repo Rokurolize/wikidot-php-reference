@@ -1,0 +1,6 @@
+{"errors":["ParseError { token: InputEnd, rule: \"color\", span: 22..22, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 16..18, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 22..22, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 20..22, kind: NoRulesMatch }"],"html":"<p><span style=\"color: red\">A</span> blue|B## C##</p>","id":"v01"}
+{"errors":[],"html":"<p>x <span style=\"color: red\">A</span>y</p>","id":"v02"}
+{"errors":[],"html":"<p><span style=\"color: red\">A</span></p>","id":"v03"}
+{"errors":[],"html":"<p>a <span style=\"color: red\">A</span> b</p>","id":"v04"}
+{"errors":[],"html":"<p><span style=\"color: red\">A</span></p>","id":"v05"}
+{"errors":[],"html":"<p><span style=\"color: red\">A</span></p>","id":"v06"}

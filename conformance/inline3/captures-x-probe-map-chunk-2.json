@@ -1,0 +1,92 @@
+{
+ "x10": {
+  "fullname": "muse-probe-r2in3-x-x10",
+  "html": "<p><tt>a<em>ab</em>ba</tt></p>",
+  "html_sha256": "394826acd170bef03a4c6bfa1fd016f0a5e66fb447b4fa0e08675ab2bc5b6771",
+  "source": "{{a//ab//ba}}",
+  "source_sha256": "77e581a77c59bb3d4cb190edf4cee2481ec30509f0c71f1a3e0813706b253d00",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x11": {
+  "fullname": "muse-probe-r2in3-x-x11",
+  "html": "<p><em>a<tt>ab</tt></em><tt>ba</tt></p>",
+  "html_sha256": "0acd4a32770cb33c707a11a06013b445919b208f63674bb4c6b219988666820d",
+  "source": "//a{{ab//ba}}",
+  "source_sha256": "6c35594bdbb5e4f3bbff0496dbd922ba9b3fa7d833aa621ec766401cc52c191b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x12": {
+  "fullname": "muse-probe-r2in3-x-x12",
+  "html": "<p><em>a<tt>ab</tt>ba</em></p>",
+  "html_sha256": "ec66932f156f5f9da98e6cbd1b84257e3afba8a83704c6066ec9c454dbf314a1",
+  "source": "//a{{ab}}ba//",
+  "source_sha256": "98672021139bfed95d66c87c6685057ee83fe319e2acb23b3d3f172c5a0b63a3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x13": {
+  "fullname": "muse-probe-r2in3-x-x13",
+  "html": "<p><tt>a<span style=\"text-decoration: underline;\">ab</span></tt><span style=\"text-decoration: underline;\">ba</span></p>",
+  "html_sha256": "1f7d9ee89df15f9b964dd2e5a4f56478c369c486a60f2a44d26b1101049b1459",
+  "source": "{{a__ab}}ba__",
+  "source_sha256": "f90e18497451c6cb716e5124f6568480b7ed5932f191222848bafcf04a27729c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x14": {
+  "fullname": "muse-probe-r2in3-x-x14",
+  "html": "<p><tt>a<span style=\"text-decoration: underline;\">ab</span>ba</tt></p>",
+  "html_sha256": "7892f49098d2612538a708390a2f6275eb3a03fcc13afd9e9ae6185b5a7d0f16",
+  "source": "{{a__ab__ba}}",
+  "source_sha256": "20cff9f7a57fde45b6ee0fedd291906782a3c3302e8589e92573f910e414f2a4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x15": {
+  "fullname": "muse-probe-r2in3-x-x15",
+  "html": "<p><span style=\"text-decoration: underline;\">a<tt>ab</tt></span><tt>ba</tt></p>",
+  "html_sha256": "a39bacb3e0255cf074f48fe2cdb1c096bc0c89db89aaa39260005bd38cc80af6",
+  "source": "__a{{ab__ba}}",
+  "source_sha256": "a934e85e5006900445c7e8e93065fa548dc6ebba82188326acee46a9c5695ec8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x16": {
+  "fullname": "muse-probe-r2in3-x-x16",
+  "html": "<p><span style=\"text-decoration: underline;\">a<tt>ab</tt>ba</span></p>",
+  "html_sha256": "0dc41e33ecf7d876cb9c2e2392bd3928b803c2583bfeba885cc1295688a74a95",
+  "source": "__a{{ab}}ba__",
+  "source_sha256": "6aa2424ea748b88e0dd0d83679f2b456417a44ba1709a117369002a994dab259",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x17": {
+  "fullname": "muse-probe-r2in3-x-x17",
+  "html": "<p><tt>a<span style=\"text-decoration: line-through;\">ab</span></tt><span style=\"text-decoration: line-through;\">ba</span></p>",
+  "html_sha256": "e3cbab5b943182b836ca78ed477208e3e2ced02c87394749c29b8ca32b14d516",
+  "source": "{{a--ab}}ba--",
+  "source_sha256": "462b0eddd7fd93c63e8d64b9cd0e4b627d4a29ccf176e3cc77abfd703de827ca",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x18": {
+  "fullname": "muse-probe-r2in3-x-x18",
+  "html": "<p><tt>a<span style=\"text-decoration: line-through;\">ab</span>ba</tt></p>",
+  "html_sha256": "08cc0241b1a6e1f37470bf10649159298eaccea7744163efd781c43117e999a6",
+  "source": "{{a--ab--ba}}",
+  "source_sha256": "b1eacdafd80bccdd46ef9f59e0aaf29388a7f5ee7c2df198fac7e2ca11c06625",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

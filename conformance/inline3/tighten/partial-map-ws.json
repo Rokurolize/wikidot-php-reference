@@ -1,0 +1,22 @@
+{
+ "tighten18": {
+  "fullname": "muse-probe-r2in3-tighten-tighten18",
+  "source": "a  b",
+  "action": "created"
+ },
+ "tighten19": {
+  "fullname": "muse-probe-r2in3-tighten-tighten19",
+  "source": "a   b",
+  "action": "created"
+ },
+ "tighten22": {
+  "fullname": "muse-probe-r2in3-tighten-tighten22",
+  "source": "a\t\tb",
+  "action": "created"
+ },
+ "tighten23": {
+  "fullname": "muse-probe-r2in3-tighten-tighten23",
+  "source": "a \t b",
+  "action": "created"
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "tighten40": {
+  "fullname": "muse-probe-r2in3-tighten-tighten40",
+  "html": "<p><span style=\"color: red\">A</span></p>",
+  "html_sha256": "627ac70007d464d8fe289f81d02a22d95b69e24bc3f48e8b17fff5c1a267b70c",
+  "source": "##red| A##",
+  "source_sha256": "2753f45b422ce75dc482d63493119224a33a30a5eb9e1342234cdcfe725814ea",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten43": {
+  "fullname": "muse-probe-r2in3-tighten-tighten43",
+  "html": "<p>x <span style=\"color: red\">A</span> y</p>",
+  "html_sha256": "be033f8f83fa97ef2c29b23fdd2bf07d2267e5876d80969eedd47519a6d1cb45",
+  "source": "x ##red| A## y",
+  "source_sha256": "df72f8a4e4af7b3cbc6aad82a8ff336b806922a607ab5848eb97e984182dae6b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten44": {
+  "fullname": "muse-probe-r2in3-tighten-tighten44",
+  "html": "<p>x <span style=\"color: red\">A</span> y</p>",
+  "html_sha256": "be033f8f83fa97ef2c29b23fdd2bf07d2267e5876d80969eedd47519a6d1cb45",
+  "source": "x ##red|A ## y",
+  "source_sha256": "7c018f33e10cce2b5d23895e85ca19cd0e24a0a372bc40dacb79aba2339cd190",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten49": {
+  "fullname": "muse-probe-r2in3-tighten-tighten49",
+  "html": "<p>&#8212; A &#8212;</p>",
+  "html_sha256": "5763f866709634339abcff89c72b76720a3dc8d6c6660c58596ff6b2079bf8b3",
+  "source": "-- A --",
+  "source_sha256": "9e52c6fff6288e98d22981566374735e7e591e542f08c1639e5f285d37a9bf24",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tighten52": {
+  "fullname": "muse-probe-r2in3-tighten-tighten52",
+  "html": "<p>x y</p>",
+  "html_sha256": "e3d074e60546fa7ebc0539ef65467b64007fd1a7466fb8b0024facfb4df8cc5e",
+  "source": "x ____ y",
+  "source_sha256": "c4625f7b9b5636e820852d619b3b65274ec84a42a41a0324eabcdb5216bfa104",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

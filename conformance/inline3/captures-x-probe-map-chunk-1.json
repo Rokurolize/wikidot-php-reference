@@ -1,0 +1,92 @@
+{
+ "x01": {
+  "fullname": "muse-probe-r2in3-x-x01",
+  "html": "<p><tt>a<span style=\"color: red\">ab</span></tt><span style=\"color: red\">ba</span></p>",
+  "html_sha256": "391a5d3eecc94c4c3d6190e453b835d50eb51e054861563c8442fb449970b784",
+  "source": "{{a##red|ab}}ba##",
+  "source_sha256": "92a6adc5969525d229499c42c7e78465867c1146283a2adda1721f9e9a18062d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x02": {
+  "fullname": "muse-probe-r2in3-x-x02",
+  "html": "<p><tt>a<span style=\"color: red\">ab</span>ba</tt></p>",
+  "html_sha256": "59998e4d1d74befa474eb48772faf3c24bf3ae2ff3e580bbe758b24b59f549b8",
+  "source": "{{a##red|ab##ba}}",
+  "source_sha256": "596aba9cf25eeaf03c701c0ff71f3aaca2efbb51ced4543e3a979c457c9a64f9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x03": {
+  "fullname": "muse-probe-r2in3-x-x03",
+  "html": "<p><span style=\"color: red\">a<tt>ab</tt></span><tt>ba</tt></p>",
+  "html_sha256": "f73998cf187fe4190e3c4a57e8d7a1a5c2d4af28d7558a1c232ce9a3fa75ca77",
+  "source": "##red|a{{ab##ba}}",
+  "source_sha256": "0d783b0b943bc035d29f96ca005eccff04d35385f2599fbf81d03d4a49c8f910",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x04": {
+  "fullname": "muse-probe-r2in3-x-x04",
+  "html": "<p><span style=\"color: red\">a<tt>ab</tt>ba</span></p>",
+  "html_sha256": "e5e624871edccbbc9447262f387fe914274cdf9ceb16ff11c812b01f9f5ca63f",
+  "source": "##red|a{{ab}}ba##",
+  "source_sha256": "806b340d6b4968e50f67d2aec687965ebdb7469b505d20c1bbfc6e0a02b9ecaa",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x05": {
+  "fullname": "muse-probe-r2in3-x-x05",
+  "html": "<p><tt>a<strong>ab</strong></tt><strong>ba</strong></p>",
+  "html_sha256": "e071fb0c0b11257dcb071645a4760f28eee0efb0112578999418e3b862e296f5",
+  "source": "{{a**ab}}ba**",
+  "source_sha256": "79d3b061f3f01beab68c66610bc8162be154040d8ec4f4572e610ada171d740d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x06": {
+  "fullname": "muse-probe-r2in3-x-x06",
+  "html": "<p><tt>a<strong>ab</strong>ba</tt></p>",
+  "html_sha256": "59b8a1535df2edd9cacf67b9690d4be99caf98ddbdcf82f5221530b648c525a4",
+  "source": "{{a**ab**ba}}",
+  "source_sha256": "80468011c09acdc3e5cd82a841f474b2df2e3636ee613c2d717010519e33ad6a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x07": {
+  "fullname": "muse-probe-r2in3-x-x07",
+  "html": "<p><strong>a<tt>ab</tt></strong><tt>ba</tt></p>",
+  "html_sha256": "b5cd8d3e266e0180a7115b1a221431537519980d378eedd89619d7dfc75d4826",
+  "source": "**a{{ab**ba}}",
+  "source_sha256": "761ccf61b5c85e3d82705e435902f7c8557e0dd6e4a425a3ba59985866facd98",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x08": {
+  "fullname": "muse-probe-r2in3-x-x08",
+  "html": "<p><strong>a<tt>ab</tt>ba</strong></p>",
+  "html_sha256": "417ff76c8564803d91cd157781f337887f66569de765b13c7465f6c0c5998dce",
+  "source": "**a{{ab}}ba**",
+  "source_sha256": "d39d4bc9f9edaeac1a157704e76e3ec4b5525b7e1c720b8d0dad06c44ca3566f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x09": {
+  "fullname": "muse-probe-r2in3-x-x09",
+  "html": "<p><tt>a<em>ab</em></tt><em>ba</em></p>",
+  "html_sha256": "fd7651d3d8759d4cc27d43b507f106a9d9510078dcae896c6d283265914edf6b",
+  "source": "{{a//ab}}ba//",
+  "source_sha256": "ee8ba913c57763e468bbac9465f129deea66073f3bba094fce356b1dc0348c16",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

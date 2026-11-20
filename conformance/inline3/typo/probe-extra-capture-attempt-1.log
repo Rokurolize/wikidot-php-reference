@@ -1,0 +1,46 @@
+typo89 -> muse-probe-r2in3-typo-typo89 stable=True saved_source_matches=True valid=True
+typo90 -> muse-probe-r2in3-typo-typo90 stable=True saved_source_matches=True valid=True
+typo91 -> muse-probe-r2in3-typo-typo91 stable=True saved_source_matches=True valid=True
+typo92 -> muse-probe-r2in3-typo-typo92 stable=True saved_source_matches=True valid=True
+{
+ "typo89": {
+  "fullname": "muse-probe-r2in3-typo-typo89",
+  "html": "<p>12&#160;&amp;euro;<br />\nx</p>",
+  "html_sha256": "95c7046895f6d84da3041aef9a5bb3a0c039acf2ef262f6c80c702d76e4ee72c",
+  "source": "12 &euro;\nx",
+  "source_sha256": "a4ed37c11640fbe7fd8281e1de6eae07ece450cab571414eb66a28f895ae079a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo90": {
+  "fullname": "muse-probe-r2in3-typo-typo90",
+  "html": "<p>5&#160;&amp;micro;m<br />\nx</p>",
+  "html_sha256": "283a2cabaf4b1314562a7f14b4b5fb7eea58fdfb625e9b0a755b4dc58b8d89f5",
+  "source": "5 &micro;m\nx",
+  "source_sha256": "18dd0fa8d032086ffe6a8921c2a52fe7cfeb9ba4a1f61d5736cf49a65fa783b1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo91": {
+  "fullname": "muse-probe-r2in3-typo-typo91",
+  "html": "<p>9&#160;Ω and 3&#160;Ohm<br />\nx</p>",
+  "html_sha256": "21db6660627d75d909c77c3e8ddd0dd2c9e3a0e3fdbc58fbc32a4e1b493c8fd9",
+  "source": "9 Ω and 3 Ohm\nx",
+  "source_sha256": "91fbbaad88e97da06c490b6bdcaed3346bf827051129d955362ea2f40d11c7f7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "typo92": {
+  "fullname": "muse-probe-r2in3-typo-typo92",
+  "html": "<p>20&#160;&amp;deg;C<br />\nx</p>",
+  "html_sha256": "2901a1ac0635ff75ea620b3dd4fc9709ecc4846d5c8c9eed7b0002122b99499f",
+  "source": "20 &deg;C\nx",
+  "source_sha256": "18b436c3161e69a74467abb50ffae3e704996a610a5ede9c5f788d2cbb7b3ba7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

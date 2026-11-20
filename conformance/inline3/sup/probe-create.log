@@ -1,0 +1,198 @@
+p01 -> muse-probe-r2in3-sup-p01 (created)
+p02 -> muse-probe-r2in3-sup-p02 (created)
+p03 -> muse-probe-r2in3-sup-p03 (created)
+p04 -> muse-probe-r2in3-sup-p04 (created)
+p05 -> muse-probe-r2in3-sup-p05 (created)
+p06 -> muse-probe-r2in3-sup-p06 (created)
+p07 -> muse-probe-r2in3-sup-p07 (created)
+p08 -> muse-probe-r2in3-sup-p08 (created)
+p09 -> muse-probe-r2in3-sup-p09 (created)
+p10 -> muse-probe-r2in3-sup-p10 (created)
+p11 -> muse-probe-r2in3-sup-p11 (created)
+p12 -> muse-probe-r2in3-sup-p12 (created)
+p13 -> muse-probe-r2in3-sup-p13 (created)
+p14 -> muse-probe-r2in3-sup-p14 (created)
+p15 -> muse-probe-r2in3-sup-p15 (created)
+p16 -> muse-probe-r2in3-sup-p16 (created)
+p17 -> muse-probe-r2in3-sup-p17 (created)
+p18 -> muse-probe-r2in3-sup-p18 (created)
+p19 -> muse-probe-r2in3-sup-p19 (created)
+p20 -> muse-probe-r2in3-sup-p20 (created)
+p21 -> muse-probe-r2in3-sup-p21 (created)
+p22 -> muse-probe-r2in3-sup-p22 (created)
+2026-11-20 19:10:37,698 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85348142', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in3-sup-p23', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p23 -> muse-probe-r2in3-sup-p23 (created)
+p24 -> muse-probe-r2in3-sup-p24 (created)
+p25 -> muse-probe-r2in3-sup-p25 (created)
+2026-11-20 19:11:39,980 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85348174', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in3-sup-p26', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p26 -> muse-probe-r2in3-sup-p26 (created)
+2026-11-20 19:12:17,911 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85348192', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in3-sup-p27', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p27 -> muse-probe-r2in3-sup-p27 (created)
+p28 -> muse-probe-r2in3-sup-p28 (created)
+p29 -> muse-probe-r2in3-sup-p29 (created)
+p30 -> muse-probe-r2in3-sup-p30 (created)
+p31 -> muse-probe-r2in3-sup-p31 (created)
+p32 -> muse-probe-r2in3-sup-p32 (created)
+32 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01": {
+  "fullname": "muse-probe-r2in3-sup-p01",
+  "source": "^^sup^^\nx",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-r2in3-sup-p02",
+  "source": "^^a^^b^^c^^\nx",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-r2in3-sup-p03",
+  "source": "^^^triple^^^\nx",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-r2in3-sup-p04",
+  "source": "^^a^^^\nx",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-r2in3-sup-p05",
+  "source": "^^^^\nx",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-r2in3-sup-p06",
+  "source": "^^^^ x",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-r2in3-sup-p07",
+  "source": "^^ ^^ x",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-r2in3-sup-p08",
+  "source": "^^ sup ^^\nx",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-r2in3-sup-p09",
+  "source": "^^sup ^^\nx",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-r2in3-sup-p10",
+  "source": "^^ sup^^\nx",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-r2in3-sup-p11",
+  "source": "wor^^d^^in\nx",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-r2in3-sup-p12",
+  "source": "^^A ^^B^^ C^^\nx",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-r2in3-sup-p13",
+  "source": "^^a\nb^^\nx",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-r2in3-sup-p14",
+  "source": "^^a\n\nb^^\nx",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-r2in3-sup-p15",
+  "source": "^[!--x--]^A^^\nx",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-r2in3-sup-p16",
+  "source": "^^OUTER {{INNER^^ TAIL}}\nx",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-r2in3-sup-p17",
+  "source": ",,OUTER ^^INNER,, TAIL^^\nx",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-r2in3-sup-p18",
+  "source": "|| ^^A || B^^ || C ||\nx",
+  "action": "created"
+ },
+ "p19": {
+  "fullname": "muse-probe-r2in3-sup-p19",
+  "source": "|| ^^A^^ || B ||\nx",
+  "action": "created"
+ },
+ "p20": {
+  "fullname": "muse-probe-r2in3-sup-p20",
+  "source": "= ^^Head^^ =\nx",
+  "action": "created"
+ },
+ "p21": {
+  "fullname": "muse-probe-r2in3-sup-p21",
+  "source": "[[^^label^^|target]]\nx",
+  "action": "created"
+ },
+ "p22": {
+  "fullname": "muse-probe-r2in3-sup-p22",
+  "source": "[[[^^caption^^|target]]]\nx",
+  "action": "created"
+ },
+ "p23": {
+  "fullname": "muse-probe-r2in3-sup-p23",
+  "source": "[code]^^sup^^[/code]\nx",
+  "action": "created"
+ },
+ "p24": {
+  "fullname": "muse-probe-r2in3-sup-p24",
+  "source": "[[raw]]^^x^^[[/raw]]\nx",
+  "action": "created"
+ },
+ "p25": {
+  "fullname": "muse-probe-r2in3-sup-p25",
+  "source": "{{^^mono^^}}\nx",
+  "action": "created"
+ },
+ "p26": {
+  "fullname": "muse-probe-r2in3-sup-p26",
+  "source": "^^//em//^^\nx",
+  "action": "created"
+ },
+ "p27": {
+  "fullname": "muse-probe-r2in3-sup-p27",
+  "source": "^^##c00|red##^^\nx",
+  "action": "created"
+ },
+ "p28": {
+  "fullname": "muse-probe-r2in3-sup-p28",
+  "source": "^^unpaired\nx",
+  "action": "created"
+ },
+ "p29": {
+  "fullname": "muse-probe-r2in3-sup-p29",
+  "source": "^^a b^^\nx",
+  "action": "created"
+ },
+ "p30": {
+  "fullname": "muse-probe-r2in3-sup-p30",
+  "source": "a^^^^b\nx",
+  "action": "created"
+ },
+ "p31": {
+  "fullname": "muse-probe-r2in3-sup-p31",
+  "source": "^^sup^^ ^^more^^\nx",
+  "action": "created"
+ },
+ "p32": {
+  "fullname": "muse-probe-r2in3-sup-p32",
+  "source": "^^a^^^^b^^\nx",
+  "action": "created"
+ }
+}

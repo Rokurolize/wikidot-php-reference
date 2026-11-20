@@ -1,0 +1,5 @@
+ftml checkout: /home/roku/src/Rokurolize/ftml
+HEAD: 751e34491193374e771142632720e17ac32e2864
+short: 751e34491
+branch: HEAD
+note: recorded at R2-inline3 dumper build time from the read-only ftml checkout. This is the one shared dumper for all five rule owners and root for the final R2 stage, and every stage differential is produced at this recorded HEAD; no later checkout change is re-run during this stage. The checkout is read-only; no ftml file was edited.

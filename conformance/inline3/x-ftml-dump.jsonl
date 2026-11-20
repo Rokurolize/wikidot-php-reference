@@ -1,0 +1,108 @@
+{"errors":[],"html":"<p><tt>a<span style=\"color: red\">ab</span></tt><span style=\"color: red\">ba</span></p>","id":"x01"}
+{"errors":[],"html":"<p><tt>a<span style=\"color: red\">ab</span>ba</tt></p>","id":"x02"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<tt>ab</tt></span><tt>ba</tt></p>","id":"x03"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<tt>ab</tt>ba</span></p>","id":"x04"}
+{"errors":[],"html":"<p><tt>a<strong>ab</strong></tt><strong>ba</strong></p>","id":"x05"}
+{"errors":[],"html":"<p><tt>a<strong>ab</strong>ba</tt></p>","id":"x06"}
+{"errors":[],"html":"<p><strong>a<tt>ab</tt></strong><tt>ba</tt></p>","id":"x07"}
+{"errors":[],"html":"<p><strong>a<tt>ab</tt>ba</strong></p>","id":"x08"}
+{"errors":[],"html":"<p><tt>a<em>ab</em></tt><em>ba</em></p>","id":"x09"}
+{"errors":[],"html":"<p><tt>a<em>ab</em>ba</tt></p>","id":"x10"}
+{"errors":[],"html":"<p><em>a<tt>ab</tt></em><tt>ba</tt></p>","id":"x11"}
+{"errors":[],"html":"<p><em>a<tt>ab</tt>ba</em></p>","id":"x12"}
+{"errors":[],"html":"<p><tt>a<span style=\"text-decoration: underline;\">ab</span></tt><span style=\"text-decoration: underline;\">ba</span></p>","id":"x13"}
+{"errors":[],"html":"<p><tt>a<span style=\"text-decoration: underline;\">ab</span>ba</tt></p>","id":"x14"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<tt>ab</tt></span><tt>ba</tt></p>","id":"x15"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<tt>ab</tt>ba</span></p>","id":"x16"}
+{"errors":[],"html":"<p><tt>a<span style=\"text-decoration: line-through;\">ab</span></tt><span style=\"text-decoration: line-through;\">ba</span></p>","id":"x17"}
+{"errors":[],"html":"<p><tt>a<span style=\"text-decoration: line-through;\">ab</span>ba</tt></p>","id":"x18"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<tt>ab</tt></span><tt>ba</tt></p>","id":"x19"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<tt>ab</tt>ba</span></p>","id":"x20"}
+{"errors":[],"html":"<p><sup>a<span style=\"color: red\">ab</span></sup><span style=\"color: red\">ba</span></p>","id":"x21"}
+{"errors":[],"html":"<p><sup>a<span style=\"color: red\">ab</span>ba</sup></p>","id":"x22"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<sup>ab</sup></span><sup>ba</sup></p>","id":"x23"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<sup>ab</sup>ba</span></p>","id":"x24"}
+{"errors":[],"html":"<p><sup>a<strong>ab</strong></sup><strong>ba</strong></p>","id":"x25"}
+{"errors":[],"html":"<p><sup>a<strong>ab</strong>ba</sup></p>","id":"x26"}
+{"errors":[],"html":"<p><strong>a<sup>ab</sup></strong><sup>ba</sup></p>","id":"x27"}
+{"errors":[],"html":"<p><strong>a<sup>ab</sup>ba</strong></p>","id":"x28"}
+{"errors":[],"html":"<p><sup>a<em>ab</em></sup><em>ba</em></p>","id":"x29"}
+{"errors":[],"html":"<p><sup>a<em>ab</em>ba</sup></p>","id":"x30"}
+{"errors":[],"html":"<p><em>a<sup>ab</sup></em><sup>ba</sup></p>","id":"x31"}
+{"errors":[],"html":"<p><em>a<sup>ab</sup>ba</em></p>","id":"x32"}
+{"errors":[],"html":"<p><sup>a<span style=\"text-decoration: underline;\">ab</span></sup><span style=\"text-decoration: underline;\">ba</span></p>","id":"x33"}
+{"errors":[],"html":"<p><sup>a<span style=\"text-decoration: underline;\">ab</span>ba</sup></p>","id":"x34"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<sup>ab</sup></span><sup>ba</sup></p>","id":"x35"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<sup>ab</sup>ba</span></p>","id":"x36"}
+{"errors":[],"html":"<p><sup>a<span style=\"text-decoration: line-through;\">ab</span></sup><span style=\"text-decoration: line-through;\">ba</span></p>","id":"x37"}
+{"errors":[],"html":"<p><sup>a<span style=\"text-decoration: line-through;\">ab</span>ba</sup></p>","id":"x38"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<sup>ab</sup></span><sup>ba</sup></p>","id":"x39"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<sup>ab</sup>ba</span></p>","id":"x40"}
+{"errors":[],"html":"<p><sub>a<span style=\"color: red\">ab</span></sub><span style=\"color: red\">ba</span></p>","id":"x41"}
+{"errors":[],"html":"<p><sub>a<span style=\"color: red\">ab</span>ba</sub></p>","id":"x42"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<sub>ab</sub></span><sub>ba</sub></p>","id":"x43"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<sub>ab</sub>ba</span></p>","id":"x44"}
+{"errors":[],"html":"<p><sub>a<strong>ab</strong></sub><strong>ba</strong></p>","id":"x45"}
+{"errors":[],"html":"<p><sub>a<strong>ab</strong>ba</sub></p>","id":"x46"}
+{"errors":[],"html":"<p><strong>a<sub>ab</sub></strong><sub>ba</sub></p>","id":"x47"}
+{"errors":[],"html":"<p><strong>a<sub>ab</sub>ba</strong></p>","id":"x48"}
+{"errors":[],"html":"<p><sub>a<em>ab</em></sub><em>ba</em></p>","id":"x49"}
+{"errors":[],"html":"<p><sub>a<em>ab</em>ba</sub></p>","id":"x50"}
+{"errors":[],"html":"<p><em>a<sub>ab</sub></em><sub>ba</sub></p>","id":"x51"}
+{"errors":[],"html":"<p><em>a<sub>ab</sub>ba</em></p>","id":"x52"}
+{"errors":[],"html":"<p><sub>a<span style=\"text-decoration: underline;\">ab</span></sub><span style=\"text-decoration: underline;\">ba</span></p>","id":"x53"}
+{"errors":[],"html":"<p><sub>a<span style=\"text-decoration: underline;\">ab</span>ba</sub></p>","id":"x54"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<sub>ab</sub></span><sub>ba</sub></p>","id":"x55"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<sub>ab</sub>ba</span></p>","id":"x56"}
+{"errors":[],"html":"<p><sub>a<span style=\"text-decoration: line-through;\">ab</span></sub><span style=\"text-decoration: line-through;\">ba</span></p>","id":"x57"}
+{"errors":[],"html":"<p><sub>a<span style=\"text-decoration: line-through;\">ab</span>ba</sub></p>","id":"x58"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<sub>ab</sub></span><sub>ba</sub></p>","id":"x59"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<sub>ab</sub>ba</span></p>","id":"x60"}
+{"errors":[],"html":"<p><tt>a<sup>ab</sup></tt><sup>ba</sup></p>","id":"x61"}
+{"errors":[],"html":"<p><tt>a<sup>ab</sup>ba</tt></p>","id":"x62"}
+{"errors":[],"html":"<p><sup>a<tt>ab</tt></sup><tt>ba</tt></p>","id":"x63"}
+{"errors":[],"html":"<p><sup>a<tt>ab</tt>ba</sup></p>","id":"x64"}
+{"errors":[],"html":"<p><tt>a<sub>ab</sub></tt><sub>ba</sub></p>","id":"x65"}
+{"errors":[],"html":"<p><tt>a<sub>ab</sub>ba</tt></p>","id":"x66"}
+{"errors":[],"html":"<p><sub>a<tt>ab</tt></sub><tt>ba</tt></p>","id":"x67"}
+{"errors":[],"html":"<p><sub>a<tt>ab</tt>ba</sub></p>","id":"x68"}
+{"errors":[],"html":"<p><sup>a<sub>ab</sub></sup><sub>ba</sub></p>","id":"x69"}
+{"errors":[],"html":"<p><sup>a<sub>ab</sub>ba</sup></p>","id":"x70"}
+{"errors":[],"html":"<p><sub>a<sup>ab</sup></sub><sup>ba</sup></p>","id":"x71"}
+{"errors":[],"html":"<p><sub>a<sup>ab</sup>ba</sub></p>","id":"x72"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">skip</span> <tt><strong>b</strong> <em>i</em> <span style=\"text-decoration: underline;\">u</span> <span style=\"text-decoration: line-through;\">s</span> <sup>p</sup> <sub>s</sub> <span style=\"color: red\">c</span></tt></p>","id":"x73"}
+{"errors":[],"html":"<p><tt>a —- b … c “d” ‘e’ «f» 12 34</tt></p>","id":"x74"}
+{"errors":["ParseError { token: LeftMonospace, rule: \"monospace\", span: 0..2, kind: EndOfInput }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Italics, rule: \"italics\", span: 6..8, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p><tt>see //example.com/path and <a href=\"http://x//y\">http://x//y</a></tt></p>","id":"x75"}
+{"errors":[],"html":"<p><tt>a // b</tt> and <tt>c ,, d</tt></p>","id":"x76"}
+{"errors":[],"html":"<p>pre<tt>mid</tt>post and <tt>spaced</tt> and ab</p>","id":"x77"}
+{"errors":[],"html":"<p>a — b —- c … d</p>","id":"x78"}
+{"errors":[],"html":"<p><strong>a — b</strong> <em>c —- d</em> <span style=\"text-decoration: underline;\">e … f</span></p>","id":"x79"}
+{"errors":[],"html":"<p><sup>a — b</sup> <sub>c —- d</sub> <tt>e … f</tt></p>","id":"x80"}
+{"errors":[],"html":"<p><strong>a <span style=\"text-decoration: line-through;\">-b</span>- c</strong> and <sup>d <span style=\"text-decoration: line-through;\">-e</span>- f</sup></p>","id":"x81"}
+{"errors":[],"html":"<p><strong>“a”</strong> <sup>‘b’</sup> <sub>«c»</sub></p>","id":"x82"}
+{"errors":[],"html":"<p><tt>10 kg and 2 3 and 5px</tt></p>","id":"x83"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">a -- b ... c</a></p>","id":"x84"}
+{"errors":[],"html":"<p><sup>a <strong>b</strong> c</sup> and <strong><sup>a</sup></strong></p>","id":"x85"}
+{"errors":[],"html":"<p><sub>a <tt>b</tt> c</sub> and <tt><sub>a</sub></tt></p>","id":"x86"}
+{"errors":[],"html":"<p>^^ a ^^ ,, b ,, <sub>,, <sup>x</sup>^^ </sub>,,y</p>","id":"x87"}
+{"errors":["ParseError { token: Superscript, rule: \"superscript\", span: 12..14, kind: RuleFailed }","ParseError { token: Superscript, rule: \"fallback\", span: 12..14, kind: NoRulesMatch }","ParseError { token: Superscript, rule: \"superscript\", span: 18..20, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p><sup>a<br>\nb</sup> and ^^c</p><p>d^^</p>","id":"x88"}
+{"errors":[],"html":"<p>a, b, c<sub>sub</sub> d, e and <sub>a, b</sub> c</p>","id":"x89"}
+{"errors":[],"html":"<p>a<br>\nb</p><p><strong>c</strong><br>\n<sub>d</sub><br>\n<tt>e</tt><br>\n<sup>f</sup></p>","id":"x90"}
+{"errors":[],"html":"<p>a <sup>b</sup> c <sub>d</sub> e <tt>f</tt> g <strong>h</strong> i <span style=\"color: red\">j</span> k</p>","id":"x91"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 6..7, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: ParagraphBreak, rule: \"color\", span: 20..22, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }","ParseError { token: LeftMonospace, rule: \"monospace\", span: 17..19, kind: RuleFailed }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }","ParseError { token: RightMonospace, rule: \"fallback\", span: 23..25, kind: NoRulesMatch }"],"html":"<p>##red|a</p><p>b## and {{c</p><p>d}}</p>","id":"x92"}
+{"errors":[],"html":"<p><sup>a<br>\nb</sup> <sub>c<br>\nd</sub> <strong>e<br>\nf</strong></p>","id":"x93"}
+{"errors":[],"html":"<p>ab and __ __ and <span style=\"text-decoration: underline;\">a</span> b</p>","id":"x94"}
+{"errors":[],"html":"<p><span style=\"color: red\">lead</span> <span style=\"color: red\">trail</span> <span style=\"color: red\">both</span></p>","id":"x95"}
+{"errors":[],"html":"<p><span style=\"color: red\">C<strong>B<em>I<span style=\"text-decoration: underline;\">U<span style=\"text-decoration: line-through;\">S<tt>T</tt><sup>P</sup><sub>R</sub></span>S</span>U</em>I</strong>B</span>C</p>","id":"x96"}
+{"errors":[],"html":"<p><sub>R</sub><sup>P</sup><tt>T</tt>—S__U//I**B<span style=\"color: red\">C</span></p>","id":"x97"}
+{"errors":[],"html":"<p>**b <sup>p <sub>s <tt>t</tt></sub> ^^ ** and //i <tt>a ^^b</tt></sup> <tt>c</tt> //</p>","id":"x98"}
+{"errors":[],"html":"<p><span style=\"color: red\">c</span> <strong>b</strong> <em>i</em> <span style=\"text-decoration: underline;\">u</span> <span style=\"text-decoration: line-through;\">s</span> <tt>t</tt> <sup>p</sup> <sub>r</sub></p>","id":"x99"}
+{"errors":["ParseError { token: Whitespace, rule: \"color\", span: 8..9, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 2..4, kind: NoRulesMatch }","ParseError { token: LeftMonospace, rule: \"monospace\", span: 31..33, kind: EndOfInput }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 31..33, kind: NoRulesMatch }"],"html":"<p>a ##red| b ** c // d __ e — f {{ g ^^ h ,, i</p>","id":"x100"}
+{"errors":["ParseError { token: InputEnd, rule: \"monospace\", span: 49..49, kind: EndOfInput }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"{{a\n<div><p>and </p><sup>de</sup><p>f</p></div>","id":"x101"}
+{"errors":["ParseError { token: LineBreak, rule: \"superscript\", span: 5..6, kind: RuleFailed }","ParseError { token: Superscript, rule: \"fallback\", span: 2..4, kind: NoRulesMatch }","ParseError { token: LineBreak, rule: \"monospace\", span: 27..28, kind: RuleFailed }","ParseError { token: LeftMonospace, rule: \"fallback\", span: 24..26, kind: NoRulesMatch }","ParseError { token: RightMonospace, rule: \"fallback\", span: 31..33, kind: NoRulesMatch }"],"html":"<ul>\n<li><sup>a</sup></li>\n<li><sup>b</sup> c</li>\n<li>d and * <tt>e</tt></li>\n<li><tt>f</tt> g</li>\n</ul>","id":"x102"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>h</td>\n<td>h</td>\n</tr>\n</table><p>| <sup>a</sup> | <tt>b</tt> |<br>\n| <sub>c</sub> | d |</p>","id":"x103"}
+{"errors":["ParseError { token: InputEnd, rule: \"superscript\", span: 32..32, kind: EndOfInput }","ParseError { token: Superscript, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Superscript, rule: \"superscript\", span: 16..18, kind: RuleFailed }","ParseError { token: Superscript, rule: \"fallback\", span: 16..18, kind: NoRulesMatch }"],"html":"<p>^^a<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnote-1&#39;)\">1</a></sup></p><div class=\"footnotes-footer\"><div class=\"title\">Footnotes</div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnoteref-1&#39;)\">1</a>. b^^c</div></div>","id":"x104"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">^^a^^ {{b}} ,,c,,</a></p>","id":"x105"}
+{"errors":[],"html":"<p style=\"text-align: center;\"><sup>a</sup> <tt>b</tt> <sub>c</sub> =</p>","id":"x106"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>^^a^^ {{b}} ,,c,,</code></pre></div>","id":"x107"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 18..19, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 3..5, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 16..18, kind: NoRulesMatch }"],"html":"<p><sup>a[[include:foo]]b</sup>c</p>","id":"x108"}

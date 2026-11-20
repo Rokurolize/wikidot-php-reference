@@ -1,0 +1,37 @@
+{
+ "tighten26": {
+  "fullname": "muse-probe-r2in3-tighten-tighten26",
+  "source": "a\n//em//",
+  "action": "created"
+ },
+ "tighten27": {
+  "fullname": "muse-probe-r2in3-tighten-tighten27",
+  "source": "//em//\na",
+  "action": "created"
+ },
+ "tighten28": {
+  "fullname": "muse-probe-r2in3-tighten-tighten28",
+  "source": "a\n##red|x##",
+  "action": "created"
+ },
+ "tighten29": {
+  "fullname": "muse-probe-r2in3-tighten-tighten29",
+  "source": "##red|x##\na",
+  "action": "created"
+ },
+ "tighten30": {
+  "fullname": "muse-probe-r2in3-tighten-tighten30",
+  "source": "a\n__u__",
+  "action": "created"
+ },
+ "tighten31": {
+  "fullname": "muse-probe-r2in3-tighten-tighten31",
+  "source": "__u__\na",
+  "action": "created"
+ },
+ "tighten32": {
+  "fullname": "muse-probe-r2in3-tighten-tighten32",
+  "source": "a\n--s--",
+  "action": "created"
+ }
+}
