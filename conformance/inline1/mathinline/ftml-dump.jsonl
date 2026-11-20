@@ -1,0 +1,56 @@
+{"errors":[],"html":"<p>A <span class=\"math-inline\">$x^2$</span> B</p>","id":"basic"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$x^2$</span></p>","id":"no-spaces"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$x$</span></p>","id":"left-space-only"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$x$</span></p>","id":"right-space-only"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$x$</span></p>","id":"tabs-around"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$$</span></p>","id":"empty"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$$</span></p>","id":"spaces-only"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$a$</span> and <span class=\"math-inline\">$b$</span></p>","id":"multiple-line"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$a$</span><span class=\"math-inline\">$b$</span></p>","id":"adjacent"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$a$b$</span></p>","id":"dollar-in-content"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$&lt;b&gt;x&lt;/b&gt;$</span></p>","id":"html-content"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$a &amp;amp; b$</span></p>","id":"entities-content"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$α + β$</span></p>","id":"unicode-content"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$label=x$</span></p>","id":"label-like-word"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$[foo]$</span></p>","id":"label-like-brackets"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$type=&quot;align&quot;$</span></p>","id":"attr-like"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$a|b$</span></p>","id":"pipe-in-content"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$\\alpha + \\beta$</span></p>","id":"backslash-commands"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$a...b$</span></p>","id":"typography-dots"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$a--b$</span></p>","id":"typography-dashes"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$$</span></p>","id":"comment-markers"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$$</span></p>","id":"single-newline"}
+{"errors":["ParseError { token: ParagraphBreak, rule: \"math\", span: 7..9, kind: RuleFailed }","ParseError { token: LeftMath, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightMath, rule: \"fallback\", span: 14..17, kind: NoRulesMatch }"],"html":"<p>[[$ E =</p><p>mc^2 $]]</p>","id":"blank-line-inside"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$$</span></p>","id":"newline-after-opener"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$$</span></p>","id":"newline-before-closer"}
+{"errors":["ParseError { token: InputEnd, rule: \"math\", span: 5..5, kind: EndOfInput }","ParseError { token: LeftMath, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }"],"html":"<p>[[$ x</p>","id":"unterminated"}
+{"errors":["ParseError { token: InputEnd, rule: \"math\", span: 3..3, kind: EndOfInput }","ParseError { token: LeftMath, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }"],"html":"<p>[[$</p>","id":"unterminated-empty"}
+{"errors":["ParseError { token: RightMath, rule: \"fallback\", span: 2..5, kind: NoRulesMatch }"],"html":"<p>x $]]</p>","id":"stray-closer"}
+{"errors":["ParseError { token: RightMath, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }"],"html":"<p>$]] <span class=\"math-inline\">$x$</span></p>","id":"close-first"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$x$</span>]</p>","id":"triple-close"}
+{"errors":["ParseError { token: RightBlock, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }"],"html":"<p><span class=\"math-inline\">$x$</span>]]</p>","id":"quad-close"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$$x$</span></p>","id":"double-dollar-open"}
+{"errors":["ParseError { token: InputEnd, rule: \"math\", span: 8..8, kind: EndOfInput }","ParseError { token: LeftMath, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }"],"html":"<p>[[$ x $]</p>","id":"shifted-close"}
+{"errors":["ParseError { token: RightMath, rule: \"fallback\", span: 5..8, kind: NoRulesMatch }"],"html":"<p>[$ x $]]</p>","id":"shifted-open"}
+{"errors":[],"html":"<p><span class=\"x\"><span class=\"math-inline\">$y$</span></span></p>","id":"in-span"}
+{"errors":[],"html":"<span><span class=\"math-inline\">$y$</span></span>","id":"in-scored-span"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span><span class=\"math-inline\">$x$</span></span></h1>","id":"in-heading1"}
+{"errors":[],"html":"<h2 id=\"toc0\"><span>Heading <span class=\"math-inline\">$x$</span></span></h2>","id":"in-heading2"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td><span class=\"math-inline\">$a$</span></td>\n<td><span class=\"math-inline\">$b$</span></td>\n</tr>\n</table>","id":"in-table-cell"}
+{"errors":[],"html":"<ul>\n<li><span class=\"math-inline\">$x$</span></li>\n</ul>","id":"in-list"}
+{"errors":[],"html":"<blockquote><p><span class=\"math-inline\">$x$</span></p></blockquote>","id":"in-blockquote"}
+{"errors":[],"html":"<div><p><span class=\"math-inline\">$x$</span></p></div>","id":"in-div"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>[[$ x $]]</code></pre></div>","id":"in-code"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">&#32;[[$&#32;x&#32;$]]&#32;</span></p>","id":"in-raw"}
+{"errors":[],"html":"","id":"in-comment"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$x$</span></p><h1 id=\"toc0\"><span>Head</span></h1>","id":"before-heading"}
+{"errors":[],"html":"<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div><p><span class=\"math-inline\">$y$</span></p>","id":"math-block-then-inline"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$y$</span></p><span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>","id":"inline-then-math-block"}
+{"errors":[],"html":"<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnote-1&#39;)\">1</a></sup></p><div class=\"footnotes-footer\"><div class=\"title\">Footnotes</div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnoteref-1&#39;)\">1</a>. <span class=\"math-inline\">$x$</span></div></div>","id":"in-footnote"}
+{"errors":[],"html":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div><div class=\"collapsible-block-content\"><p><span class=\"math-inline\">$x$</span></p></div></div></div>","id":"in-collapsible"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$ab$</span></p>","id":"comment-inside"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$a$</span></p>","id":"comment-joined-close-1"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$a$</span>]</p>","id":"comment-joined-close-2"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$$</span></p>","id":"raw-inside"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$x$</span><br>\n<span class=\"math-inline\">$y$</span></p>","id":"crlf"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$x$</span></p>","id":"trailing-newline"}

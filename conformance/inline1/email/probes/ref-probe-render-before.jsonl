@@ -1,0 +1,28 @@
+{"id":"elp-p01-bare","output":"<p><span class=\"wiki-email\">moc.elpmaxe|cba#moc.elpmaxe|cba<\/span><\/p>\n\n"}
+{"id":"elp-p02-prose","output":"<p>Contact us: <span class=\"wiki-email\">ten.elpmaxe|ofni#ten.elpmaxe|ofni<\/span><\/p>\n\n"}
+{"id":"elp-p03-plus","output":"<p>user+<span class=\"wiki-email\">moc.elpmaxe|gat#moc.elpmaxe|gat<\/span><\/p>\n\n"}
+{"id":"elp-p04-described","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#su tcatnoC<\/span><\/p>\n\n"}
+{"id":"elp-p05-described-words","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#ereh maet selas ehT<\/span><\/p>\n\n"}
+{"id":"elp-p06-described-upper","output":"<p><span class=\"wiki-email\">MOC.ELPMAXE|RESU#esaC dexiM<\/span><\/p>\n\n"}
+{"id":"elp-p07-described-doublegap","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#pag elbuoD <\/span><\/p>\n\n"}
+{"id":"elp-p08-bracket-bare","output":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>]<\/p>\n\n"}
+{"id":"elp-p09-angle","output":"<p>&lt;<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>&gt;<\/p>\n\n"}
+{"id":"elp-p10-doublebracket","output":"<p>[[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>]]<\/p>\n\n"}
+{"id":"elp-p11-bracket-mailto","output":"<p>[<a href=\"mailto:user@example.com\">mailto:user@example.com<\/a>]<\/p>\n\n"}
+{"id":"elp-p12-mailto-pipe","output":"<p><a href=\"mailto:user@example.com|Mail\">mailto:user@example.com|Mail<\/a> me<\/p>\n\n"}
+{"id":"elp-p13-http-userinfo","output":"<p>see <a href=\"http:\/\/user@example.com\/path\">http:\/\/user@example.com\/path<\/a> here<\/p>\n\n"}
+{"id":"elp-p14-trailing-dot","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>.<\/p>\n\n"}
+{"id":"elp-p15-double-dot","output":"<p>user@example..com<\/p>\n\n"}
+{"id":"elp-p16-underscore-domain","output":"<p>user@example_com.net<\/p>\n\n"}
+{"id":"elp-p17-paren","output":"<p>(<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>)<\/p>\n\n"}
+{"id":"elp-p18-comment-inside","output":"<p><span class=\"wiki-email\">moc.todikiw|troppus#moc.todikiw|troppus<\/span><\/p>\n\n"}
+{"id":"elp-p19-bold","output":"<p><strong><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span><\/strong><\/p>\n\n"}
+{"id":"elp-p20-raw","output":"<p><span style=\"white-space: pre-wrap;\">user@example.com<\/span><\/p>\n\n"}
+{"id":"elp-p21-code","output":"\n<div class=\"code\">\n<pre><code>user@example.com<\/code><\/pre><\/div>\n\n"}
+{"id":"elp-p22-table","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span><\/td>\n<td><span class=\"wiki-email\">ten.elpmaxe|rehto#ten.elpmaxe|rehto<\/span><\/td>\n<\/tr>\n<\/table>"}
+{"id":"elp-p23-double-at","output":"<p>user@@example.com<\/p>\n\n"}
+{"id":"elp-p24-mailto-bare","output":"<p><a href=\"mailto:user@example.com\">mailto:user@example.com<\/a><\/p>\n\n"}
+{"id":"elp-p25-dash-domain","output":"<p><span class=\"wiki-email\">moc.elpmaxe-|resu#moc.elpmaxe-|resu<\/span><\/p>\n\n"}
+{"id":"elp-p26-described-empty","output":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span> ]<\/p>\n\n"}
+{"id":"elp-p27-described-no-close","output":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span> Label<\/p>\n\n"}
+{"id":"elp-p28-subdomain","output":"<p><span class=\"wiki-email\">ku.oc.elpmaxe.bus.liam|resu#ku.oc.elpmaxe.bus.liam|resu<\/span><\/p>\n\n"}

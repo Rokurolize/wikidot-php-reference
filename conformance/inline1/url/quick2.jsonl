@@ -1,0 +1,26 @@
+{"id":"r01-ssh","source":"Go ssh://example.com/a here"}
+{"id":"r02-git","source":"Go git://example.com/b here"}
+{"id":"r03-sftp","source":"Go sftp://example.com/c here"}
+{"id":"r04-svn","source":"Go svn://example.com/d here"}
+{"id":"r05-telnet","source":"Go telnet://example.com/e here"}
+{"id":"r06-cvs","source":"Go cvs://example.com/f here"}
+{"id":"r07-upper","source":"HTTPS://EXAMPLE.COM/P here"}
+{"id":"r08-glued-digit","source":"See 9https://example.com/a here"}
+{"id":"r09-double-pipe-multi","source":"[[http://x/|a|b]]"}
+{"id":"r10-bracket-no-label","source":"[http://x/]"}
+{"id":"r11-star-bracket-no-label","source":"[*http://x/]"}
+{"id":"r12-bold-star","source":"bold **http://example.com/b** end"}
+{"id":"r13-raw-adj","source":"https://example.com/a@@b end"}
+{"id":"r14-nonascii","source":"http://example.com/pageです here"}
+{"id":"r15-bracket-balanced","source":"[https://example.com/a] here"}
+{"id":"r16-double-no-close","source":"[[http://x/|label here"}
+{"id":"r17-schemeless","source":"example.com/path here"}
+{"id":"r18-bare-scheme","source":"http:// here"}
+{"id":"r19-double-space-label","source":"[https://example.com  Label Here]"}
+{"id":"r20-quote-in-url","source":"https://example.com/aa``bb''cc here"}
+{"id":"r21-hash-label","source":"[#anchor My Label]"}
+{"id":"r22-path-label","source":"[/start Go Home]"}
+{"id":"r23-plus-query","source":"https://example.com/search?q=free+wiki here"}
+{"id":"r24-pct","source":"https://example.com/a%20b here"}
+{"id":"r25-at","source":"mailto:User@example.com|END next"}
+{"id":"r26-pipe-plain","source":"http://example.com/path|END next"}

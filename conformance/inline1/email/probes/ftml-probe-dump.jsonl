@@ -1,0 +1,28 @@
+{"errors":[],"html":"<p><span class=\"wiki-email\">moc.elpmaxe|cba#moc.elpmaxe|cba</span></p>","id":"elp-p01-bare"}
+{"errors":[],"html":"<p>Contact us: <span class=\"wiki-email\">ten.elpmaxe|ofni#ten.elpmaxe|ofni</span></p>","id":"elp-p02-prose"}
+{"errors":[],"html":"<p>user+<span class=\"wiki-email\">moc.elpmaxe|gat#moc.elpmaxe|gat</span></p>","id":"elp-p03-plus"}
+{"errors":[],"html":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span> Contact us]</p>","id":"elp-p04-described"}
+{"errors":[],"html":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span> The sales team here]</p>","id":"elp-p05-described-words"}
+{"errors":[],"html":"<p>[<span class=\"wiki-email\">MOC.ELPMAXE|RESU#MOC.ELPMAXE|RESU</span> Mixed Case]</p>","id":"elp-p06-described-upper"}
+{"errors":[],"html":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span> Double gap]</p>","id":"elp-p07-described-doublegap"}
+{"errors":[],"html":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span>]</p>","id":"elp-p08-bracket-bare"}
+{"errors":[],"html":"<p>&lt;<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span>&gt;</p>","id":"elp-p09-angle"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 20..20, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span>]]</p>","id":"elp-p10-doublebracket"}
+{"errors":[],"html":"<p>[<a href=\"mailto:user@example.com\">mailto:user@example.com</a>]</p>","id":"elp-p11-bracket-mailto"}
+{"errors":[],"html":"<p><a href=\"mailto:user@example.com|Mail\">mailto:user@example.com|Mail</a> me</p>","id":"elp-p12-mailto-pipe"}
+{"errors":[],"html":"<p>see <a href=\"http://user@example.com/path\">http://user@example.com/path</a> here</p>","id":"elp-p13-http-userinfo"}
+{"errors":[],"html":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span>.</p>","id":"elp-p14-trailing-dot"}
+{"errors":[],"html":"<p>user@example..com</p>","id":"elp-p15-double-dot"}
+{"errors":[],"html":"<p>user@example_com.net</p>","id":"elp-p16-underscore-domain"}
+{"errors":[],"html":"<p>(<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span>)</p>","id":"elp-p17-paren"}
+{"errors":[],"html":"<p><span class=\"wiki-email\">moc.todikiw|troppus#moc.todikiw|troppus</span></p>","id":"elp-p18-comment-inside"}
+{"errors":[],"html":"<p><strong><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span></strong></p>","id":"elp-p19-bold"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">user@example.com</span></p>","id":"elp-p20-raw"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>user@example.com</code></pre></div>","id":"elp-p21-code"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span></td>\n<td><span class=\"wiki-email\">ten.elpmaxe|rehto#ten.elpmaxe|rehto</span></td>\n</tr>\n</table>","id":"elp-p22-table"}
+{"errors":["ParseError { token: InputEnd, rule: \"raw\", span: 17..17, kind: EndOfInput }","ParseError { token: Raw, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }"],"html":"<p>user@@example.com</p>","id":"elp-p23-double-at"}
+{"errors":[],"html":"<p><a href=\"mailto:user@example.com\">mailto:user@example.com</a></p>","id":"elp-p24-mailto-bare"}
+{"errors":[],"html":"<p><span class=\"wiki-email\">moc.elpmaxe-|resu#moc.elpmaxe-|resu</span></p>","id":"elp-p25-dash-domain"}
+{"errors":[],"html":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span> ]</p>","id":"elp-p26-described-empty"}
+{"errors":[],"html":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span> Label</p>","id":"elp-p27-described-no-close"}
+{"errors":[],"html":"<p><span class=\"wiki-email\">ku.oc.elpmaxe.bus.liam|resu#ku.oc.elpmaxe.bus.liam|resu</span></p>","id":"elp-p28-subdomain"}

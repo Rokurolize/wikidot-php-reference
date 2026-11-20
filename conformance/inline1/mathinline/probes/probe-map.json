@@ -1,0 +1,137 @@
+{
+ "basic": {
+  "fullname": "muse-probe-r2in1-mi-basic",
+  "source": "[[$ x^2 $]]",
+  "action": "created"
+ },
+ "trim": {
+  "fullname": "muse-probe-r2in1-mi-trim",
+  "source": "[[$  x  $]]",
+  "action": "created"
+ },
+ "multiple": {
+  "fullname": "muse-probe-r2in1-mi-multiple",
+  "source": "[[$ a $]] and [[$ b $]]",
+  "action": "created"
+ },
+ "empty": {
+  "fullname": "muse-probe-r2in1-mi-empty",
+  "source": "[[$$]]",
+  "action": "created"
+ },
+ "html-chars": {
+  "fullname": "muse-probe-r2in1-mi-html-chars",
+  "source": "[[$ a & b < c $]]",
+  "action": "created"
+ },
+ "unicode": {
+  "fullname": "muse-probe-r2in1-mi-unicode",
+  "source": "[[$ α $]]",
+  "action": "created"
+ },
+ "label-like": {
+  "fullname": "muse-probe-r2in1-mi-label-like",
+  "source": "[[$ label=x $]]",
+  "action": "created"
+ },
+ "adjacent": {
+  "fullname": "muse-probe-r2in1-mi-adjacent",
+  "source": "[[$a$]][[$b$]]",
+  "action": "created"
+ },
+ "single-newline": {
+  "fullname": "muse-probe-r2in1-mi-single-newline",
+  "source": "[[$ E =\nmc^2 $]]",
+  "action": "created"
+ },
+ "newline-after-opener": {
+  "fullname": "muse-probe-r2in1-mi-newline-after-opener",
+  "source": "[[$\nx$]]",
+  "action": "created"
+ },
+ "newline-before-closer": {
+  "fullname": "muse-probe-r2in1-mi-newline-before-closer",
+  "source": "[[$x\n$]]",
+  "action": "created"
+ },
+ "blank-line-inside": {
+  "fullname": "muse-probe-r2in1-mi-blank-line-inside",
+  "source": "[[$ E =\n\nmc^2 $]]",
+  "action": "created"
+ },
+ "raw-inside": {
+  "fullname": "muse-probe-r2in1-mi-raw-inside",
+  "source": "[[$ a@@raw@@b $]]",
+  "action": "created"
+ },
+ "comment-inside": {
+  "fullname": "muse-probe-r2in1-mi-comment-inside",
+  "source": "[[$ a[!--c--]b $]]",
+  "action": "created"
+ },
+ "triple-close": {
+  "fullname": "muse-probe-r2in1-mi-triple-close",
+  "source": "[[$x$]]]",
+  "action": "created"
+ },
+ "unterminated": {
+  "fullname": "muse-probe-r2in1-mi-unterminated",
+  "source": "[[$ x",
+  "action": "created"
+ },
+ "stray-closer": {
+  "fullname": "muse-probe-r2in1-mi-stray-closer",
+  "source": "x $]]",
+  "action": "created"
+ },
+ "in-span": {
+  "fullname": "muse-probe-r2in1-mi-in-span",
+  "source": "[[span class=\"x\"]][[$ y $]][[/span]]",
+  "action": "created"
+ },
+ "in-heading": {
+  "fullname": "muse-probe-r2in1-mi-in-heading",
+  "source": "+ [[$ x $]]",
+  "action": "created"
+ },
+ "in-table-cell": {
+  "fullname": "muse-probe-r2in1-mi-in-table-cell",
+  "source": "|| [[$ a $]] || [[$ b $]] ||",
+  "action": "created"
+ },
+ "in-div": {
+  "fullname": "muse-probe-r2in1-mi-in-div",
+  "source": "[[div]]\n[[$ x $]]\n[[/div]]",
+  "action": "created"
+ },
+ "in-list": {
+  "fullname": "muse-probe-r2in1-mi-in-list",
+  "source": "* [[$ x $]]",
+  "action": "created"
+ },
+ "in-code": {
+  "fullname": "muse-probe-r2in1-mi-in-code",
+  "source": "[[code]][[$ x $]][[/code]]",
+  "action": "created"
+ },
+ "in-raw": {
+  "fullname": "muse-probe-r2in1-mi-in-raw",
+  "source": "@@ [[$ x $]] @@",
+  "action": "created"
+ },
+ "in-comment": {
+  "fullname": "muse-probe-r2in1-mi-in-comment",
+  "source": "[!-- [[$ x $]] --]",
+  "action": "created"
+ },
+ "before-heading": {
+  "fullname": "muse-probe-r2in1-mi-before-heading",
+  "source": "[[$ x $]]\n+ Head",
+  "action": "created"
+ },
+ "math-block-then-inline": {
+  "fullname": "muse-probe-r2in1-mi-math-block-then-inline",
+  "source": "[[math]]\nx\n[[/math]]\n[[$ y $]]",
+  "action": "created"
+ }
+}

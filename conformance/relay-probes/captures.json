@@ -1,0 +1,12 @@
+{
+ "dbc-head": {
+  "fullname": "muse-probe-req-dbc-head",
+  "html": "<p>[]</p>\n\n\n\n<p>Body paragraph here.</p>",
+  "html_sha256": "8206a63ed994177867ed16dda33e633521fd2eb6844aa7e66ec29fdc3f4a8e78",
+  "source": "[[!-- a comment --]]\n[[module CSS]]\n.x { color: red; }\n[[/module]]\nBody paragraph here.",
+  "source_sha256": "0bab7878dfa6660afe90aa71fb66867f1563f55cde8ae881136eef66274fe494",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

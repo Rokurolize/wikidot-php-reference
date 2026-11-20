@@ -1,0 +1,6 @@
+ftml checkout: /home/roku/src/Rokurolize/ftml
+HEAD: f9dc0e41086de31f2be6d42d4e7e5f085bcb8220
+short: f9dc0e410
+branch: HEAD
+HEAD subject: fix(module): match live Wikidot module-family behavior (#1540)
+note: recorded at R2-inline1 dumper build time. This is the same checkout HEAD the R2-para stage pinned; the dumper is built once at the recorded HEAD above and is the one shared dumper for all four rule owners and root, and every stage differential is produced at that HEAD. No later checkout change is re-run during this stage. The checkout is read-only; no ftml file was edited. At final verification the shared checkout had advanced to 751e34491193374e771142632720e17ac32e2864 with one commit, "Match live Wikidot iftags and comment seams (#1542)", which touches no Url, Email, Mathinline or Interwiki source or pin; every stage differential remains at the recorded HEAD f9dc0e410.

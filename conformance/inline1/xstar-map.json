@@ -1,0 +1,7 @@
+{
+ "xstar": {
+  "fullname": "muse-probe-r2in1-x-xstar",
+  "source": "*https://example.com/star-target",
+  "action": "created"
+ }
+}

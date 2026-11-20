@@ -1,0 +1,32 @@
+{"errors":[],"html":"<p><a href=\"https://example.com/newtab\" target=\"_blank\">https://example.com/newtab</a></p>","id":"p01-star-bare"}
+{"errors":[],"html":"<p><a href=\"https://example.com\" target=\"_blank\">Label</a></p>","id":"p02-star-described"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 17..17, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|raw]]</p>","id":"p03-double-pipe"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 21..21, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 19..21, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|<span style=\"white-space: pre-wrap;\">raw</span>]]</p>","id":"p04-double-pipe-raw"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 17..17, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|a|b]]</p>","id":"p05-double-pipe-multi"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 24..24, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 22..24, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"https://example.com/\">https://example.com/</a>]]</p>","id":"p06-double-bare"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 18..22, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|label here</p>","id":"p07-double-pipe-unterminated"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">Label Here</a></p>","id":"p08-double-space-label"}
+{"errors":[],"html":"<p>Go <a href=\"ssh://example.com/a\">ssh://example.com/a</a> here</p>","id":"p09-ssh"}
+{"errors":[],"html":"<p>Go <a href=\"git://example.com/b\">git://example.com/b</a> here</p>","id":"p10-git"}
+{"errors":[],"html":"<p>Go <a href=\"sftp://example.com/c\">sftp://example.com/c</a> here</p>","id":"p11-sftp"}
+{"errors":[],"html":"<p>Go <a href=\"svn://example.com/d\">svn://example.com/d</a> here</p>","id":"p12-svn"}
+{"errors":[],"html":"<p>Go <a href=\"telnet://example.com/e\">telnet://example.com/e</a> here</p>","id":"p13-telnet"}
+{"errors":[],"html":"<p>Go <a href=\"cvs://example.com/f\">cvs://example.com/f</a> here</p>","id":"p14-cvs"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a.png%C2%A0width=\">https://example.com/a.png width=</a> next</p>","id":"p15-nbsp-in-url"}
+{"errors":[],"html":"<p><a href=\"https://example.com/aa``bb\">https://example.com/aa``bb</a>&#39;&#39;cc here</p>","id":"p16-quote-pair"}
+{"errors":[],"html":"<p>See <a href=\"https://example.com/a_(b\">https://example.com/a_(b</a>) here</p>","id":"p17-paren-in-url"}
+{"errors":[],"html":"<p>Visit <a href=\"https://example.com/test\">https://example.com/test</a>. next</p>","id":"p18-terminal-period"}
+{"errors":[],"html":"<p>See <a href=\"https://example.com/a[b]c\">https://example.com/a[b]c</a> here</p>","id":"p19-bracket-in-url"}
+{"errors":[],"html":"<p>See <a href=\"https://example.com/a\">https://example.com/a</a>!;:) next and <a href=\"https://example.com/b\">https://example.com/b</a># here</p>","id":"p20-trailing-suite"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 6..8, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>HTTPS://EXAMPLE.COM/P here</p>","id":"p21-upper-scheme"}
+{"errors":[],"html":"<p>9<a href=\"https://example.com/a\">https://example.com/a</a> here</p>","id":"p22-glued-digit"}
+{"errors":[],"html":"<p><a href=\"mailto:user@example.com\">mailto:user@example.com</a> here</p>","id":"p23-mailto"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a.png\">https://example.com/a.png</a> here</p>","id":"p24-image-ext"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">Example Description</a></p>","id":"p25-described"}
+{"errors":[],"html":"<p>[<a href=\"http://x/\">http://x/</a>]</p>","id":"p26-bracket-no-label"}
+{"errors":[],"html":"<p><a href=\"http://example.com/page\">http://example.com/page</a>ここ here</p>","id":"p27-nonascii-path"}
+{"errors":[],"html":"<p>[<a href=\"https://example.com/target\">https://example.com/target</a> <span class=\"math-inline\">$x$</span>]</p>","id":"p28-described-math-label"}
+{"errors":[],"html":"<p>[<a href=\"https://example.com\">https://example.com</a> <span class=\"math-inline\">$x$</span>]</p>","id":"p29-described-math-label-pin"}
+{"errors":[],"html":"<p>bold *<a href=\"http://example.com/b\" target=\"_blank\">http://example.com/b</a>** end</p>","id":"p30-bold-star"}
+{"errors":[],"html":"<p><a href=\"http://example.com/path|END\">http://example.com/path|END</a> next</p>","id":"p31-pipe-plain"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a@@b\">https://example.com/a@@b</a> end</p>","id":"p32-raw-adjacency"}

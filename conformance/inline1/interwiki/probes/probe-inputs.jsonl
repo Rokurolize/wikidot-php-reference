@@ -1,0 +1,40 @@
+{"id": "p01-wiki-labeled", "source": "[wikipedia:Albert_Einstein Albert]"}
+{"id": "p02-wiki-unlabeled", "source": "[wikipedia:Albert_Einstein]"}
+{"id": "p03-wiki-upper-labeled", "source": "[WIKIPEDIA:Albert_Einstein Upper]"}
+{"id": "p04-wiki-upper-unlabeled", "source": "[WIKIPEDIA:Albert_Einstein]"}
+{"id": "p05-wikipedia-pl-labeled", "source": "[wikipedia.pl:Test Polski]"}
+{"id": "p06-wikipedia-pl-unlabeled", "source": "[wikipedia.pl:Test]"}
+{"id": "p07-pl-wikipedia-labeled", "source": "[pl.wikipedia:Test Pol]"}
+{"id": "p08-pl-wikipedia-unlabeled", "source": "[pl.wikipedia:Test]"}
+{"id": "p09-google-unlabeled", "source": "[google:free+wiki]"}
+{"id": "p10-dictionary-labeled", "source": "[dictionary:wiki Dictionary]"}
+{"id": "p11-unknown-labeled", "source": "[nosuchwiki:Mallard The duck]"}
+{"id": "p12-unknown-unlabeled", "source": "[nosuchwiki:Mallard]"}
+{"id": "p13-wp-labeled", "source": "[wp:SCP_Foundation WP]"}
+{"id": "p14-commons-labeled", "source": "[commons:File:SCP-682.jpg Commons]"}
+{"id": "p15-two-spaces-label", "source": "[wikipedia:Albert_Einstein  Two spaces]"}
+{"id": "p16-tab-label", "source": "[wikipedia:Albert_Einstein\tTab label]"}
+{"id": "p17-empty-label-one-space", "source": "[wikipedia:Albert_Einstein ]"}
+{"id": "p18-empty-label-two-spaces", "source": "[wikipedia:Albert_Einstein  ]"}
+{"id": "p19-label-trailing-space", "source": "[wikipedia:Albert_Einstein Label ]"}
+{"id": "p20-label-url", "source": "[wikipedia:X http://example.com/a]"}
+{"id": "p21-path-colon", "source": "[wikipedia:it:Albert_Einstein Italiano]"}
+{"id": "p22-path-percent", "source": "[wikipedia:Albert%20Einstein Percent]"}
+{"id": "p23-path-nonascii", "source": "[wikipedia:Älbert NonAscii]"}
+{"id": "p24-double-bracket", "source": "[[wikipedia:Albert_Einstein]]"}
+{"id": "p25-include-site-pair", "source": "[[include :wikipedia:Albert_Einstein]]"}
+{"id": "p26-unterminated", "source": "[wikipedia:Albert_Einstein"}
+{"id": "p27-prefix-leading-digit", "source": "[1wiki:Page label]"}
+{"id": "p28-prefix-underscore", "source": "[_wiki:Page label]"}
+{"id": "p29-star-form", "source": "[*wikipedia:Albert_Einstein Star]"}
+{"id": "p30-direct-url", "source": "[https://example.com/ Control]"}
+{"id": "p31-slash-target", "source": "[/path Relative]"}
+{"id": "p32-multiple-on-line", "source": "[wikipedia:A First] and [google:g Second] and [nosuchwiki:N Third]"}
+{"id": "p33-label-with-pipe", "source": "[wikipedia:Albert_Einstein a|b]"}
+{"id": "p34-label-with-brackets", "source": "[wikipedia:Albert_Einstein [x] label]"}
+{"id": "p35-dotted-upper-labeled", "source": "[WIKIPEDIA.PL:Test UpperDot]"}
+{"id": "p36-google-mixed-labeled", "source": "[GoOgLe:free+wiki MixedCase]"}
+{"id": "p37-empty-path", "source": "[wikipedia:]"}
+{"id": "p38-double-colon-path", "source": "[wikipedia::Page DoubleColon]"}
+{"id": "p39-inside-span", "source": "[[span]][wikipedia:Albert_Einstein Lab][[/span]]"}
+{"id": "p40-inline-in-text", "source": "before [wikipedia:Albert_Einstein Albert] after"}

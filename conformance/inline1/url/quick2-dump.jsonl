@@ -1,0 +1,26 @@
+{"errors":[],"html":"<p>Go <a href=\"ssh://example.com/a\">ssh://example.com/a</a> here</p>","id":"r01-ssh"}
+{"errors":[],"html":"<p>Go <a href=\"git://example.com/b\">git://example.com/b</a> here</p>","id":"r02-git"}
+{"errors":[],"html":"<p>Go <a href=\"sftp://example.com/c\">sftp://example.com/c</a> here</p>","id":"r03-sftp"}
+{"errors":[],"html":"<p>Go <a href=\"svn://example.com/d\">svn://example.com/d</a> here</p>","id":"r04-svn"}
+{"errors":[],"html":"<p>Go <a href=\"telnet://example.com/e\">telnet://example.com/e</a> here</p>","id":"r05-telnet"}
+{"errors":[],"html":"<p>Go <a href=\"cvs://example.com/f\">cvs://example.com/f</a> here</p>","id":"r06-cvs"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 6..8, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>HTTPS://EXAMPLE.COM/P here</p>","id":"r07-upper"}
+{"errors":[],"html":"<p>See 9<a href=\"https://example.com/a\">https://example.com/a</a> here</p>","id":"r08-glued-digit"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 17..17, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|a|b]]</p>","id":"r09-double-pipe-multi"}
+{"errors":[],"html":"<p>[<a href=\"http://x/\">http://x/</a>]</p>","id":"r10-bracket-no-label"}
+{"errors":[],"html":"<p>[<a href=\"http://x/\" target=\"_blank\">http://x/</a>]</p>","id":"r11-star-bracket-no-label"}
+{"errors":[],"html":"<p>bold *<a href=\"http://example.com/b\" target=\"_blank\">http://example.com/b</a>** end</p>","id":"r12-bold-star"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a@@b\">https://example.com/a@@b</a> end</p>","id":"r13-raw-adj"}
+{"errors":[],"html":"<p><a href=\"http://example.com/page\">http://example.com/page</a>です here</p>","id":"r14-nonascii"}
+{"errors":[],"html":"<p>[<a href=\"https://example.com/a\">https://example.com/a</a>] here</p>","id":"r15-bracket-balanced"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 18..22, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|label here</p>","id":"r16-double-no-close"}
+{"errors":[],"html":"<p>example.com/path here</p>","id":"r17-schemeless"}
+{"errors":[],"html":"<p>http:// here</p>","id":"r18-bare-scheme"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">Label Here</a></p>","id":"r19-double-space-label"}
+{"errors":[],"html":"<p><a href=\"https://example.com/aa``bb\">https://example.com/aa``bb</a>&#39;&#39;cc here</p>","id":"r20-quote-in-url"}
+{"errors":[],"html":"<p><a href=\"#anchor\">My Label</a></p>","id":"r21-hash-label"}
+{"errors":[],"html":"<p><a href=\"/start\">Go Home</a></p>","id":"r22-path-label"}
+{"errors":[],"html":"<p><a href=\"https://example.com/search?q=free+wiki\">https://example.com/search?q=free+wiki</a> here</p>","id":"r23-plus-query"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a%20b\">https://example.com/a%20b</a> here</p>","id":"r24-pct"}
+{"errors":[],"html":"<p><a href=\"mailto:User@example.com|END\">mailto:User@example.com|END</a> next</p>","id":"r25-at"}
+{"errors":[],"html":"<p><a href=\"http://example.com/path|END\">http://example.com/path|END</a> next</p>","id":"r26-pipe-plain"}

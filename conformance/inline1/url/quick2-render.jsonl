@@ -1,0 +1,26 @@
+{"id":"r01-ssh","output":"<p>Go ssh:\/\/example.com\/a here<\/p>\n\n"}
+{"id":"r02-git","output":"<p>Go git:\/\/example.com\/b here<\/p>\n\n"}
+{"id":"r03-sftp","output":"<p>Go sftp:\/\/example.com\/c here<\/p>\n\n"}
+{"id":"r04-svn","output":"<p>Go svn:\/\/example.com\/d here<\/p>\n\n"}
+{"id":"r05-telnet","output":"<p>Go telnet:\/\/example.com\/e here<\/p>\n\n"}
+{"id":"r06-cvs","output":"<p>Go cvs:\/\/example.com\/f here<\/p>\n\n"}
+{"id":"r07-upper","output":"<p>HTTPS:\/\/EXAMPLE.COM\/P here<\/p>\n\n"}
+{"id":"r08-glued-digit","output":"<p>See 9<a href=\"https:\/\/example.com\/a\">https:\/\/example.com\/a<\/a> here<\/p>\n\n"}
+{"id":"r09-double-pipe-multi","output":"<p>[[<a href=\"http:\/\/x\/|a|b\">http:\/\/x\/|a|b<\/a>]]<\/p>\n\n"}
+{"id":"r10-bracket-no-label","output":"<p>[<a href=\"http:\/\/x\/\">http:\/\/x\/<\/a>]<\/p>\n\n"}
+{"id":"r11-star-bracket-no-label","output":"<p>[<a href=\"http:\/\/x\/\" onclick=\"window.open(this.href, '_blank'); return false;\">http:\/\/x\/<\/a>]<\/p>\n\n"}
+{"id":"r12-bold-star","output":"<p>bold *<a href=\"http:\/\/example.com\/b\" onclick=\"window.open(this.href, '_blank'); return false;\">http:\/\/example.com\/b<\/a>** end<\/p>\n\n"}
+{"id":"r13-raw-adj","output":"<p><a href=\"https:\/\/example.com\/a@@b\">https:\/\/example.com\/a@@b<\/a> end<\/p>\n\n"}
+{"id":"r14-nonascii","output":"<p><a href=\"http:\/\/example.com\/page\">http:\/\/example.com\/page<\/a>\u3067\u3059 here<\/p>\n\n"}
+{"id":"r15-bracket-balanced","output":"<p>[<a href=\"https:\/\/example.com\/a\">https:\/\/example.com\/a<\/a>] here<\/p>\n\n"}
+{"id":"r16-double-no-close","output":"<p>[[<a href=\"http:\/\/x\/|label\">http:\/\/x\/|label<\/a> here<\/p>\n\n"}
+{"id":"r17-schemeless","output":"<p>example.com\/path here<\/p>\n\n"}
+{"id":"r18-bare-scheme","output":"<p>http:\/\/ here<\/p>\n\n"}
+{"id":"r19-double-space-label","output":"<p><a href=\"https:\/\/example.com\"> Label Here<\/a><\/p>\n\n"}
+{"id":"r20-quote-in-url","output":"<p><a href=\"https:\/\/example.com\/aa``bb\">https:\/\/example.com\/aa``bb<\/a>''cc here<\/p>\n\n"}
+{"id":"r21-hash-label","output":"<p><a href=\"#anchor\">My Label<\/a><\/p>\n\n"}
+{"id":"r22-path-label","output":"<p><a href=\"\/start\">Go Home<\/a><\/p>\n\n"}
+{"id":"r23-plus-query","output":"<p><a href=\"https:\/\/example.com\/search?q=free+wiki\">https:\/\/example.com\/search?q=free+wiki<\/a> here<\/p>\n\n"}
+{"id":"r24-pct","output":"<p><a href=\"https:\/\/example.com\/a%20b\">https:\/\/example.com\/a%20b<\/a> here<\/p>\n\n"}
+{"id":"r25-at","output":"<p><a href=\"mailto:User@example.com|END\">mailto:User@example.com|END<\/a> next<\/p>\n\n"}
+{"id":"r26-pipe-plain","output":"<p><a href=\"http:\/\/example.com\/path|END\">http:\/\/example.com\/path|END<\/a> next<\/p>\n\n"}

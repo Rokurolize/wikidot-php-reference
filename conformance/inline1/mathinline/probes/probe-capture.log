@@ -1,0 +1,299 @@
+basic -> muse-probe-r2in1-mi-basic stable=True saved_source_matches=True valid=True
+trim -> muse-probe-r2in1-mi-trim stable=True saved_source_matches=True valid=True
+multiple -> muse-probe-r2in1-mi-multiple stable=True saved_source_matches=True valid=True
+empty -> muse-probe-r2in1-mi-empty stable=True saved_source_matches=True valid=True
+html-chars -> muse-probe-r2in1-mi-html-chars stable=True saved_source_matches=True valid=True
+unicode -> muse-probe-r2in1-mi-unicode stable=True saved_source_matches=True valid=True
+label-like -> muse-probe-r2in1-mi-label-like stable=True saved_source_matches=True valid=True
+adjacent -> muse-probe-r2in1-mi-adjacent stable=True saved_source_matches=True valid=True
+single-newline -> muse-probe-r2in1-mi-single-newline stable=True saved_source_matches=True valid=True
+newline-after-opener -> muse-probe-r2in1-mi-newline-after-opener stable=True saved_source_matches=True valid=True
+newline-before-closer -> muse-probe-r2in1-mi-newline-before-closer stable=True saved_source_matches=True valid=True
+blank-line-inside -> muse-probe-r2in1-mi-blank-line-inside stable=True saved_source_matches=True valid=True
+raw-inside -> muse-probe-r2in1-mi-raw-inside stable=True saved_source_matches=True valid=True
+comment-inside -> muse-probe-r2in1-mi-comment-inside stable=True saved_source_matches=True valid=True
+triple-close -> muse-probe-r2in1-mi-triple-close stable=True saved_source_matches=True valid=True
+unterminated -> muse-probe-r2in1-mi-unterminated stable=True saved_source_matches=True valid=True
+stray-closer -> muse-probe-r2in1-mi-stray-closer stable=True saved_source_matches=True valid=True
+in-span -> muse-probe-r2in1-mi-in-span stable=True saved_source_matches=True valid=True
+in-heading -> muse-probe-r2in1-mi-in-heading stable=True saved_source_matches=True valid=True
+in-table-cell -> muse-probe-r2in1-mi-in-table-cell stable=True saved_source_matches=True valid=True
+in-div -> muse-probe-r2in1-mi-in-div stable=True saved_source_matches=True valid=True
+in-list -> muse-probe-r2in1-mi-in-list stable=True saved_source_matches=True valid=True
+in-code -> muse-probe-r2in1-mi-in-code stable=True saved_source_matches=True valid=True
+in-raw -> muse-probe-r2in1-mi-in-raw stable=True saved_source_matches=True valid=True
+in-comment -> muse-probe-r2in1-mi-in-comment stable=True saved_source_matches=True valid=True
+before-heading -> muse-probe-r2in1-mi-before-heading stable=True saved_source_matches=True valid=True
+math-block-then-inline -> muse-probe-r2in1-mi-math-block-then-inline stable=True saved_source_matches=True valid=True
+{
+ "basic": {
+  "fullname": "muse-probe-r2in1-mi-basic",
+  "html": "<p><span class=\"math-inline\">$x^2$</span></p>",
+  "html_sha256": "d726eb93503b33aa700cad75efe7971df7132c5de4458f05762b973ec31b8b67",
+  "source": "[[$ x^2 $]]",
+  "source_sha256": "f10a2f4894f17fb75f4482f2be59207b373d099ec9e4ef2e9b5ad4476678aa24",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "trim": {
+  "fullname": "muse-probe-r2in1-mi-trim",
+  "html": "<p><span class=\"math-inline\">$x$</span></p>",
+  "html_sha256": "f6e225ff3c0407b887694bf64e288b7d5f3534c8609426b8b1eef9d8089b520f",
+  "source": "[[$  x  $]]",
+  "source_sha256": "4161c4eb0bbf47365715a8690169fadef8ca8a9fa44a6bfece1dd9db47a87e25",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "multiple": {
+  "fullname": "muse-probe-r2in1-mi-multiple",
+  "html": "<p><span class=\"math-inline\">$a$</span> and <span class=\"math-inline\">$b$</span></p>",
+  "html_sha256": "a991063d9a0abb03c232b7c0b4d0017a3c174bf0376eaf3569c8fd2ac957e794",
+  "source": "[[$ a $]] and [[$ b $]]",
+  "source_sha256": "b16efa19bc68d0c6827c4a01788a0b5f9cd7ab4b4bc2f377431853a8ee42b844",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "empty": {
+  "fullname": "muse-probe-r2in1-mi-empty",
+  "html": "<p><span class=\"math-inline\">$$</span></p>",
+  "html_sha256": "8119dd8e254d13e759b9ee65895322c26e3e6e9fd2c600c47fb9e0ed1270506a",
+  "source": "[[$$]]",
+  "source_sha256": "ff249fb56adfb3c5e635f8835e282cea0c20c6310fb3a086c5b761ba82ee9311",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "html-chars": {
+  "fullname": "muse-probe-r2in1-mi-html-chars",
+  "html": "<p><span class=\"math-inline\">$a &amp; b &lt; c$</span></p>",
+  "html_sha256": "5339599ac3f1e591de8ee22f0ef2a05cbef2fd871254da81ab63885d3459eae8",
+  "source": "[[$ a & b < c $]]",
+  "source_sha256": "46c876ba47cdaa5bd933b3070833312fee2f727b0186e3641fa7f1d1347ced9a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unicode": {
+  "fullname": "muse-probe-r2in1-mi-unicode",
+  "html": "<p><span class=\"math-inline\">$α$</span></p>",
+  "html_sha256": "f76278bba3406c6e26492122c61c7937b9ed8c818b4a0412ade42581e3b7ded8",
+  "source": "[[$ α $]]",
+  "source_sha256": "f8d7b066b6cc2d8324b5785a3f8a848b64c0d900a62a7b9347ce93373ffe1c5d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "label-like": {
+  "fullname": "muse-probe-r2in1-mi-label-like",
+  "html": "<p><span class=\"math-inline\">$label=x$</span></p>",
+  "html_sha256": "aa30bbf17a89119393dad635d9f8ccccd4d3883d266611d326b5b67ca7cde744",
+  "source": "[[$ label=x $]]",
+  "source_sha256": "45719776ce6052b546b87f6409e1db8e1c9e7ea0401babe36db740dbab0c8c2c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adjacent": {
+  "fullname": "muse-probe-r2in1-mi-adjacent",
+  "html": "<p><span class=\"math-inline\">$a$</span><span class=\"math-inline\">$b$</span></p>",
+  "html_sha256": "a5fce2cb840dcbef915babfc8d51ac7ce2ee645302ed88e7e56c0fde97d7b564",
+  "source": "[[$a$]][[$b$]]",
+  "source_sha256": "345c97bbfa18aae8fd417187e9ab5c833291a182ac5ca909f85fc50579f0610f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "single-newline": {
+  "fullname": "muse-probe-r2in1-mi-single-newline",
+  "html": "<p><span class=\"math-inline\">$$</span></p>",
+  "html_sha256": "8119dd8e254d13e759b9ee65895322c26e3e6e9fd2c600c47fb9e0ed1270506a",
+  "source": "[[$ E =\nmc^2 $]]",
+  "source_sha256": "e2b665b31fa8e168ed050a1325e9dafc760c2967bec94c195029223e270a99b7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "newline-after-opener": {
+  "fullname": "muse-probe-r2in1-mi-newline-after-opener",
+  "html": "<p><span class=\"math-inline\">$$</span></p>",
+  "html_sha256": "8119dd8e254d13e759b9ee65895322c26e3e6e9fd2c600c47fb9e0ed1270506a",
+  "source": "[[$\nx$]]",
+  "source_sha256": "01e9512a6dad0ade7f273616b8e3b637716de9c81ff55a329d63ba3fcc8a47eb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "newline-before-closer": {
+  "fullname": "muse-probe-r2in1-mi-newline-before-closer",
+  "html": "<p><span class=\"math-inline\">$$</span></p>",
+  "html_sha256": "8119dd8e254d13e759b9ee65895322c26e3e6e9fd2c600c47fb9e0ed1270506a",
+  "source": "[[$x\n$]]",
+  "source_sha256": "b91999a3fc90b6b21b8e7d34829f07746f22375bf699fba55895b9b88c080d95",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "blank-line-inside": {
+  "fullname": "muse-probe-r2in1-mi-blank-line-inside",
+  "html": "<p>[[$ E =</p>\n<p>mc^2 $]]</p>",
+  "html_sha256": "5a690bd1434d3e3e0952c150036c678f4cba030bee45074e3d8cf9a28681ce97",
+  "source": "[[$ E =\n\nmc^2 $]]",
+  "source_sha256": "a579475638a849729c64351b1d42994fae802a439e7abeda24184a648e5f79ac",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-inside": {
+  "fullname": "muse-probe-r2in1-mi-raw-inside",
+  "html": "<p><span class=\"math-inline\">$$</span></p>",
+  "html_sha256": "8119dd8e254d13e759b9ee65895322c26e3e6e9fd2c600c47fb9e0ed1270506a",
+  "source": "[[$ a@@raw@@b $]]",
+  "source_sha256": "3a42529a71dd4098ca6ef221b0948f9628e0c19fa15a18b762c343c64005a5b5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "comment-inside": {
+  "fullname": "muse-probe-r2in1-mi-comment-inside",
+  "html": "<p><span class=\"math-inline\">$ab$</span></p>",
+  "html_sha256": "c8272dedef0224d269fdd2fc98cf7b10fde2790ce5a42d90c80d2c5505706837",
+  "source": "[[$ a[!--c--]b $]]",
+  "source_sha256": "484f58c49d1bb1de61e3d0a4922651c900c7bc6507329adcefc9ae301c9879dd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "triple-close": {
+  "fullname": "muse-probe-r2in1-mi-triple-close",
+  "html": "<p><span class=\"math-inline\">$x$</span>]</p>",
+  "html_sha256": "aca568b0b267df3a635b45251f7beaf6980d6aac92a1270c39ba57dbd8e32b7d",
+  "source": "[[$x$]]]",
+  "source_sha256": "670339c51236a4658af95327c547750b312d65634e168a82305781d6bb0c6f76",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unterminated": {
+  "fullname": "muse-probe-r2in1-mi-unterminated",
+  "html": "<p>[[$ x</p>",
+  "html_sha256": "dd3cf7cff5a3eff352b1fa1e5ebb40461a04edaba6b4c5b0bcf512a678fb5d94",
+  "source": "[[$ x",
+  "source_sha256": "58c50b146054af96d6bed170c05d9306ac720bb5519f125ba0ba37b735e812ce",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "stray-closer": {
+  "fullname": "muse-probe-r2in1-mi-stray-closer",
+  "html": "<p>x $]]</p>",
+  "html_sha256": "ae75e14e655115cf45afca1eb1e23ad8ec824ecaa300f9da88bee3e931e47239",
+  "source": "x $]]",
+  "source_sha256": "eaacc846e2d2469c6cbcfd20f3c31b9339b6856e51ed2bdeb0c87f77cbdfa2bb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "in-span": {
+  "fullname": "muse-probe-r2in1-mi-in-span",
+  "html": "<p><span class=\"x\"><span class=\"math-inline\">$y$</span></span></p>",
+  "html_sha256": "182a149c0b46ceaae735c7ebf6262860619f91fe5b1c4fe5f51680ed8a7ee260",
+  "source": "[[span class=\"x\"]][[$ y $]][[/span]]",
+  "source_sha256": "232377446e596c130d707e6f518e1c98574ee9f2f604db824d98aae760551311",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "in-heading": {
+  "fullname": "muse-probe-r2in1-mi-in-heading",
+  "html": "<h1 id=\"toc0\"><span><span class=\"math-inline\">$x$</span></span></h1>",
+  "html_sha256": "d8b0edacdb84b988b6f4fd27253b9edbdf380420a4b2f7cabdbda54d6cc746dc",
+  "source": "+ [[$ x $]]",
+  "source_sha256": "79c2a9b4490f08c6309232c448ccc2ec99ff3cfd1e92f54b54fe28b673fb6c05",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "in-table-cell": {
+  "fullname": "muse-probe-r2in1-mi-in-table-cell",
+  "html": "<table class=\"wiki-content-table\">\n<tr>\n<td><span class=\"math-inline\">$a$</span></td>\n<td><span class=\"math-inline\">$b$</span></td>\n</tr>\n</table>",
+  "html_sha256": "687bbaacb93246e6e840574e29335dc68ef7a1c4f4be24630adc127a805a9a39",
+  "source": "|| [[$ a $]] || [[$ b $]] ||",
+  "source_sha256": "c0c6b493271d1ddbea594441ee2bba1c77ad8452395cfd31e3cbef3c70feb3a0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "in-div": {
+  "fullname": "muse-probe-r2in1-mi-in-div",
+  "html": "<div>\n<p><span class=\"math-inline\">$x$</span></p>\n</div>",
+  "html_sha256": "7abf19dd9dff85f233503ba212694eeabdf9622f74b418481db0f8259d85123a",
+  "source": "[[div]]\n[[$ x $]]\n[[/div]]",
+  "source_sha256": "953bb041da43b569dd53924c5314158a14711394a07c5aeb1c2a7a2c70f80e86",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "in-list": {
+  "fullname": "muse-probe-r2in1-mi-in-list",
+  "html": "<ul>\n<li><span class=\"math-inline\">$x$</span></li>\n</ul>",
+  "html_sha256": "72df7d2e6edee6400bcd0b7db284068ca8e741241a7db1fb5c2c5898658e48dd",
+  "source": "* [[$ x $]]",
+  "source_sha256": "feddaec306ca7177dbc161214edfb3abf7554987b86f22dc26c3bf8751ee4de3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "in-code": {
+  "fullname": "muse-probe-r2in1-mi-in-code",
+  "html": "<div class=\"code\">\n<pre><code>[[$ x $]]</code></pre></div>",
+  "html_sha256": "a44c2b7b4da81012ef81358013c62a02e008dd4403479c191104215660618d1a",
+  "source": "[[code]][[$ x $]][[/code]]",
+  "source_sha256": "d4b98c0cb593fdd7bb0039427c1a3e8951b304692bdc868811348f7da15138bd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "in-raw": {
+  "fullname": "muse-probe-r2in1-mi-in-raw",
+  "html": "<p><span style=\"white-space: pre-wrap;\">&#32;[[$&#32;x&#32;$]]&#32;</span></p>",
+  "html_sha256": "865cd92a6a095b29459ece6174e8a2c25dc30cd9b6eee4ef5453edc6802c980c",
+  "source": "@@ [[$ x $]] @@",
+  "source_sha256": "05387e61967688908e6ac5862e6fd66f4532e38b31a1c94ed988ef95802bc071",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "in-comment": {
+  "fullname": "muse-probe-r2in1-mi-in-comment",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[!-- [[$ x $]] --]",
+  "source_sha256": "0dc7e105219a10707894fa23dad5ee20541b4ec49d35d176b2f9bc55c743bb74",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "before-heading": {
+  "fullname": "muse-probe-r2in1-mi-before-heading",
+  "html": "<p><span class=\"math-inline\">$x$</span></p>\n<h1 id=\"toc0\"><span>Head</span></h1>",
+  "html_sha256": "d8839e2882ca3be937387c1faa8568a34b7dd492d89a2d07e879df22f2bf4d03",
+  "source": "[[$ x $]]\n+ Head",
+  "source_sha256": "94f8794c0942d8a19dce6c15db39db1abaa6224c3193eeca042040bac2bea836",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "math-block-then-inline": {
+  "fullname": "muse-probe-r2in1-mi-math-block-then-inline",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><span class=\"math-inline\">$y$</span></p>",
+  "html_sha256": "08cb32829492e2f676c97c0995654598c7694b306c32c795bfba6e11527972d5",
+  "source": "[[math]]\nx\n[[/math]]\n[[$ y $]]",
+  "source_sha256": "eddd688c9b333af51f5673bc3be7a5c87316fd13cc4039746c7aa79aa4f99b33",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

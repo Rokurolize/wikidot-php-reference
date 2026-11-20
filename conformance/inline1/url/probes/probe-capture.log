@@ -1,0 +1,115 @@
+p01-star-bare -> muse-probe-r2in1-url-p01-star-bare stable=True saved_source_matches=True valid=True
+p02-star-described -> muse-probe-r2in1-url-p02-star-described stable=True saved_source_matches=True valid=True
+p03-double-pipe -> muse-probe-r2in1-url-p03-double-pipe stable=True saved_source_matches=True valid=True
+p04-double-pipe-raw -> muse-probe-r2in1-url-p04-double-pipe-raw stable=True saved_source_matches=True valid=True
+p05-double-pipe-multi -> muse-probe-r2in1-url-p05-double-pipe-multi stable=True saved_source_matches=True valid=True
+p06-double-bare -> muse-probe-r2in1-url-p06-double-bare stable=True saved_source_matches=True valid=True
+p07-double-pipe-unterminated -> muse-probe-r2in1-url-p07-double-pipe-unterminated stable=True saved_source_matches=True valid=True
+p08-double-space-label -> muse-probe-r2in1-url-p08-double-space-label stable=True saved_source_matches=True valid=True
+p09-ssh -> muse-probe-r2in1-url-p09-ssh stable=True saved_source_matches=True valid=True
+p10-git -> muse-probe-r2in1-url-p10-git stable=True saved_source_matches=True valid=True
+p11-sftp -> muse-probe-r2in1-url-p11-sftp stable=True saved_source_matches=True valid=True
+p12-svn -> muse-probe-r2in1-url-p12-svn stable=True saved_source_matches=True valid=True
+p13-telnet -> muse-probe-r2in1-url-p13-telnet stable=True saved_source_matches=True valid=True
+p14-cvs -> muse-probe-r2in1-url-p14-cvs stable=True saved_source_matches=True valid=True
+p15-nbsp-in-url -> muse-probe-r2in1-url-p15-nbsp-in-url stable=True saved_source_matches=True valid=True
+p16-quote-pair -> muse-probe-r2in1-url-p16-quote-pair stable=True saved_source_matches=True valid=True
+p17-paren-in-url -> muse-probe-r2in1-url-p17-paren-in-url stable=True saved_source_matches=True valid=True
+p18-terminal-period -> muse-probe-r2in1-url-p18-terminal-period stable=True saved_source_matches=True valid=True
+p19-bracket-in-url -> muse-probe-r2in1-url-p19-bracket-in-url stable=True saved_source_matches=True valid=True
+p20-trailing-suite -> muse-probe-r2in1-url-p20-trailing-suite stable=True saved_source_matches=True valid=True
+p21-upper-scheme -> muse-probe-r2in1-url-p21-upper-scheme stable=True saved_source_matches=True valid=True
+p22-glued-digit -> muse-probe-r2in1-url-p22-glued-digit stable=True saved_source_matches=True valid=True
+p23-mailto -> muse-probe-r2in1-url-p23-mailto stable=True saved_source_matches=True valid=True
+p24-image-ext -> muse-probe-r2in1-url-p24-image-ext stable=True saved_source_matches=True valid=True
+p25-described -> muse-probe-r2in1-url-p25-described stable=True saved_source_matches=True valid=True
+p26-bracket-no-label -> muse-probe-r2in1-url-p26-bracket-no-label stable=True saved_source_matches=True valid=True
+p27-nonascii-path -> muse-probe-r2in1-url-p27-nonascii-path stable=True saved_source_matches=True valid=True
+p28-described-math-label -> muse-probe-r2in1-url-p28-described-math-label stable=True saved_source_matches=True valid=True
+p29-described-math-label-pin -> muse-probe-r2in1-url-p29-described-math-label-pin stable=True saved_source_matches=True valid=True
+Traceback (most recent call last):
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/roku/.local/share/uv/python/cpython-3.13.13-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 312, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 308, in main
+    return args.func(args)
+           ~~~~~~~~~^^^^^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 201, in cmd_capture
+    first = extract_page_content(fetch_rendered(args.site, fullname))
+                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 182, in fetch_rendered
+    response = httpx.get(url, headers={"User-Agent": USER_AGENT}, timeout=60,
+                         follow_redirects=True)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_api.py", line 195, in get
+    return request(
+        "GET",
+    ...<9 lines>...
+        trust_env=trust_env,
+    )
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_api.py", line 109, in request
+    return client.request(
+           ~~~~~~~~~~~~~~^
+        method=method,
+        ^^^^^^^^^^^^^^
+    ...<8 lines>...
+        follow_redirects=follow_redirects,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/roku/.local/share/uv/python/cpython-3.13.13-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out

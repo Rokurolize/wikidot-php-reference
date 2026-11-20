@@ -1,0 +1,27 @@
+{"id": "basic", "source": "[[$ x^2 $]]"}
+{"id": "trim", "source": "[[$  x  $]]"}
+{"id": "multiple", "source": "[[$ a $]] and [[$ b $]]"}
+{"id": "empty", "source": "[[$$]]"}
+{"id": "html-chars", "source": "[[$ a & b < c $]]"}
+{"id": "unicode", "source": "[[$ α $]]"}
+{"id": "label-like", "source": "[[$ label=x $]]"}
+{"id": "adjacent", "source": "[[$a$]][[$b$]]"}
+{"id": "single-newline", "source": "[[$ E =\nmc^2 $]]"}
+{"id": "newline-after-opener", "source": "[[$\nx$]]"}
+{"id": "newline-before-closer", "source": "[[$x\n$]]"}
+{"id": "blank-line-inside", "source": "[[$ E =\n\nmc^2 $]]"}
+{"id": "raw-inside", "source": "[[$ a@@raw@@b $]]"}
+{"id": "comment-inside", "source": "[[$ a[!--c--]b $]]"}
+{"id": "triple-close", "source": "[[$x$]]]"}
+{"id": "unterminated", "source": "[[$ x"}
+{"id": "stray-closer", "source": "x $]]"}
+{"id": "in-span", "source": "[[span class=\"x\"]][[$ y $]][[/span]]"}
+{"id": "in-heading", "source": "+ [[$ x $]]"}
+{"id": "in-table-cell", "source": "|| [[$ a $]] || [[$ b $]] ||"}
+{"id": "in-div", "source": "[[div]]\n[[$ x $]]\n[[/div]]"}
+{"id": "in-list", "source": "* [[$ x $]]"}
+{"id": "in-code", "source": "[[code]][[$ x $]][[/code]]"}
+{"id": "in-raw", "source": "@@ [[$ x $]] @@"}
+{"id": "in-comment", "source": "[!-- [[$ x $]] --]"}
+{"id": "before-heading", "source": "[[$ x $]]\n+ Head"}
+{"id": "math-block-then-inline", "source": "[[math]]\nx\n[[/math]]\n[[$ y $]]"}

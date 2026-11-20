@@ -80,15 +80,15 @@ class Text_Wiki_Render_Xhtml_Url extends Text_Wiki_Render {
 
         } else {
 
-            // should we build a target clause?
+            // R2-inline1 C3: live's Wikidot renderer spells the new-tab clause
+            // as target="_blank" (corpus pin
+            // test/link/star-killed-autolink-fallback/wikidot.html); the fossil
+            // emitted an onclick window.open fragment. The authored target is
+            // suppressed on on-page anchors and mailto: links, as before.
+            $target = isset($options['target']) ? $options['target'] : $this->getConf('target');
             if ($href[0] == '#' ||
             	strtolower(substr($href, 0, 7)) == 'mailto:') {
-            	// targets not allowed for on-page anchors
-            	// and mailto: links.
                 $target = '';
-            } else {
-				// allow targets on non-anchor non-mailto links
-                $target = $this->getConf('target');
             }
 
             // generate a regular link (not an image)
@@ -96,14 +96,9 @@ class Text_Wiki_Render_Xhtml_Url extends Text_Wiki_Render {
             $css = $this->formatConf(' class="%s"', "css_$type");
             $output = "<a$css href=\"$href\"";
 
-			$target = $options['target'];
-
             if ($target) {
-                // use a "popup" window.  this is XHTML compliant, suggested by
-                // Aaron Kalin.  uses the $target as the new window name.
                 $target = htmlspecialchars($target);
-                $output .= " onclick=\"window.open(this.href, '$target');";
-                $output .= " return false;\"";
+                $output .= " target=\"$target\"";
             }
 
             // finish up output

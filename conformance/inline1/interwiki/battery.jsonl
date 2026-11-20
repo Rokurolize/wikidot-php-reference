@@ -1,0 +1,70 @@
+{"id": "iw43-01-wikipedia-labeled", "source": "[wikipedia:Albert_Einstein Albert]"}
+{"id": "iw43-02-wikipedia-unlabeled", "source": "[wikipedia:Albert_Einstein]"}
+{"id": "iw43-03-wikipedia-upper-labeled", "source": "[WIKIPEDIA:Albert_Einstein Upper]"}
+{"id": "iw43-04-wikipedia-upper-unlabeled", "source": "[WIKIPEDIA:Albert_Einstein]"}
+{"id": "iw43-05-wikipedia-mixed-labeled", "source": "[Wikipedia:Albert_Einstein Mixed]"}
+{"id": "iw43-06-wikipedia-pl-labeled", "source": "[wikipedia.pl:Test Polski]"}
+{"id": "iw43-07-wikipedia-pl-unlabeled", "source": "[wikipedia.pl:Test]"}
+{"id": "iw43-08-pl-wikipedia-labeled", "source": "[pl.wikipedia:Test Pol]"}
+{"id": "iw43-09-pl-wikipedia-unlabeled", "source": "[pl.wikipedia:Test]"}
+{"id": "iw43-10-google-labeled", "source": "[google:free+wiki Google]"}
+{"id": "iw43-11-google-unlabeled", "source": "[google:free+wiki]"}
+{"id": "iw43-12-dictionary-labeled", "source": "[dictionary:wiki Dictionary]"}
+{"id": "iw43-13-dictionary-unlabeled", "source": "[dictionary:wiki]"}
+{"id": "iw43-14-google-upper-labeled", "source": "[GOOGLE:free+wiki Upper]"}
+{"id": "iw43-15-dictionary-upper-unlabeled", "source": "[DICTIONARY:wiki]"}
+{"id": "iw43-16-wp-labeled", "source": "[wp:SCP_Foundation WP]"}
+{"id": "iw43-17-wp-unlabeled", "source": "[wp:SCP_Foundation]"}
+{"id": "iw43-18-commons-labeled", "source": "[commons:File:SCP-682.jpg Commons]"}
+{"id": "iw43-19-nosuchwiki-labeled", "source": "[nosuchwiki:Mallard The duck]"}
+{"id": "iw43-20-nosuchwiki-unlabeled", "source": "[nosuchwiki:Mallard]"}
+{"id": "iw43-21-banana-labeled", "source": "[banana:fruit-salad Banana]"}
+{"id": "iw43-22-thesaurus-unlabeled", "source": "[thesaurus:oak]"}
+{"id": "iw43-23-ddg-labeled", "source": "[ddg:oak Duck]"}
+{"id": "iw43-24-wikipedia-com-labeled", "source": "[wikipedia.com:Test Near]"}
+{"id": "iw43-25-wiki-labeled", "source": "[wiki:Test Plain]"}
+{"id": "iw43-26-wikipedia-pl-upper-labeled", "source": "[WIKIPEDIA.PL:Test UpperDot]"}
+{"id": "iw43-27-pl-wikipedia-upper-unlabeled", "source": "[PL.WIKIPEDIA:Test]"}
+{"id": "iw43-28-wikipedia-pl-mixed-labeled", "source": "[Wikipedia.pl:Test MixedDot]"}
+{"id": "iw43-29-google-mixed-labeled", "source": "[GoOgLe:free+wiki MixedCase]"}
+{"id": "iw43-30-dictionary-mixed-unlabeled", "source": "[Dictionary:wiki]"}
+{"id": "iw43-31-multiword-label", "source": "[wikipedia:Albert_Einstein The great physicist]"}
+{"id": "iw43-32-two-spaces-label", "source": "[wikipedia:Albert_Einstein  Two spaces]"}
+{"id": "iw43-33-tab-label", "source": "[wikipedia:Albert_Einstein\tTab label]"}
+{"id": "iw43-34-empty-label-one-space", "source": "[wikipedia:Albert_Einstein ]"}
+{"id": "iw43-35-empty-label-two-spaces", "source": "[wikipedia:Albert_Einstein  ]"}
+{"id": "iw43-36-label-with-colon", "source": "[wikipedia:Albert_Einstein See: Einstein]"}
+{"id": "iw43-37-label-with-brackets", "source": "[wikipedia:Albert_Einstein [x] label]"}
+{"id": "iw43-38-label-with-pipe", "source": "[wikipedia:Albert_Einstein a|b]"}
+{"id": "iw43-39-label-trailing-space", "source": "[wikipedia:Albert_Einstein Label ]"}
+{"id": "iw43-40-label-leading-and-trailing", "source": "[wikipedia:Albert_Einstein  Padded  ]"}
+{"id": "iw43-41-path-colon", "source": "[wikipedia:it:Albert_Einstein Italiano]"}
+{"id": "iw43-42-path-plus", "source": "[google:free+wiki]"}
+{"id": "iw43-43-path-underscore-hyphen-dot-slash", "source": "[wikipedia:a_b-c.d/e Pathy]"}
+{"id": "iw43-44-path-visible-special", "source": "[wikipedia:a#b&c(d)e+f-g.h:i;j=k~l Specials]"}
+{"id": "iw43-45-path-percent", "source": "[wikipedia:Albert%20Einstein Percent]"}
+{"id": "iw43-46-path-nonascii", "source": "[wikipedia:Älbert NonAscii]"}
+{"id": "iw43-47-path-question", "source": "[google:what?query Question]"}
+{"id": "iw43-48-path-quote", "source": "[wikipedia:it's Quote]"}
+{"id": "iw43-49-empty-path", "source": "[wikipedia:]"}
+{"id": "iw43-50-double-colon-path", "source": "[wikipedia::Page DoubleColon]"}
+{"id": "iw43-51-unterminated-unlabeled", "source": "[wikipedia:Albert_Einstein"}
+{"id": "iw43-52-unterminated-labeled", "source": "[wikipedia:Albert_Einstein Some label"}
+{"id": "iw43-53-prefix-leading-digit", "source": "[1wiki:Page label]"}
+{"id": "iw43-54-prefix-underscore", "source": "[_wiki:Page label]"}
+{"id": "iw43-55-prefix-digit-unlabeled", "source": "[1wiki:Page]"}
+{"id": "iw43-56-space-after-open", "source": "[ wikipedia:Page label]"}
+{"id": "iw43-57-empty-prefix", "source": "[:Page label]"}
+{"id": "iw43-58-star-form", "source": "[*wikipedia:Albert_Einstein Star]"}
+{"id": "iw43-59-label-only-spaces", "source": "[wikipedia:Albert_Einstein    ]"}
+{"id": "iw43-60-double-bracket", "source": "[[wikipedia:Albert_Einstein]]"}
+{"id": "iw43-61-include-site-pair", "source": "[[include :wikipedia:Albert_Einstein]]"}
+{"id": "iw43-62-triple-bracket", "source": "[[[wikipedia:Albert_Einstein]]]"}
+{"id": "iw43-63-in-paragraphs", "source": "before\n\n[wikipedia:Albert_Einstein Albert]\n\nafter"}
+{"id": "iw43-64-multiple-on-line", "source": "[wikipedia:A First] and [google:g Second] and [nosuchwiki:N Third]"}
+{"id": "iw43-65-inside-span", "source": "[[span]][wikipedia:Albert_Einstein Lab][[/span]]"}
+{"id": "iw43-66-inside-code", "source": "[[code]][wikipedia:Albert_Einstein Lab][[/code]]"}
+{"id": "iw43-67-data-scheme", "source": "[data:text/plain,Hello Data]"}
+{"id": "iw43-68-direct-url", "source": "[https://example.com/ Control]"}
+{"id": "iw43-69-slash-target", "source": "[/path Relative]"}
+{"id": "iw43-70-interwiki-in-heading", "source": "= Heading [wikipedia:Albert_Einstein Albert]"}

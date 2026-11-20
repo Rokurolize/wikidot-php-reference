@@ -1,0 +1,171 @@
+p01-bare -> muse-probe-r2in1-mail-p01-bare (created)
+p02-prose -> muse-probe-r2in1-mail-p02-prose (created)
+p03-plus -> muse-probe-r2in1-mail-p03-plus (created)
+p04-described -> muse-probe-r2in1-mail-p04-described (created)
+p05-described-words -> muse-probe-r2in1-mail-p05-described-words (created)
+p06-described-upper -> muse-probe-r2in1-mail-p06-described-upper (created)
+p07-described-doublegap -> muse-probe-r2in1-mail-p07-described-doublegap (created)
+p08-bracket-bare -> muse-probe-r2in1-mail-p08-bracket-bare (created)
+p09-angle -> muse-probe-r2in1-mail-p09-angle (created)
+p10-doublebracket -> muse-probe-r2in1-mail-p10-doublebracket (created)
+p11-bracket-mailto -> muse-probe-r2in1-mail-p11-bracket-mailto (created)
+p12-mailto-pipe -> muse-probe-r2in1-mail-p12-mailto-pipe (created)
+p13-http-userinfo -> muse-probe-r2in1-mail-p13-http-userinfo (created)
+p14-trailing-dot -> muse-probe-r2in1-mail-p14-trailing-dot (created)
+p15-double-dot -> muse-probe-r2in1-mail-p15-double-dot (created)
+p16-underscore-domain -> muse-probe-r2in1-mail-p16-underscore-domain (created)
+p17-paren -> muse-probe-r2in1-mail-p17-paren (created)
+p18-comment-inside -> muse-probe-r2in1-mail-p18-comment-inside (created)
+p19-bold -> muse-probe-r2in1-mail-p19-bold (created)
+p20-raw -> muse-probe-r2in1-mail-p20-raw (created)
+p21-code -> muse-probe-r2in1-mail-p21-code (created)
+p22-table -> muse-probe-r2in1-mail-p22-table (created)
+p23-double-at -> muse-probe-r2in1-mail-p23-double-at (created)
+p24-mailto-bare -> muse-probe-r2in1-mail-p24-mailto-bare (created)
+p25-dash-domain -> muse-probe-r2in1-mail-p25-dash-domain (created)
+p26-described-empty -> muse-probe-r2in1-mail-p26-described-empty (created)
+p27-described-no-close -> muse-probe-r2in1-mail-p27-described-no-close (created)
+p28-subdomain -> muse-probe-r2in1-mail-p28-subdomain (created)
+28 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01-bare": {
+  "fullname": "muse-probe-r2in1-mail-p01-bare",
+  "source": "abc@example.com",
+  "action": "created"
+ },
+ "p02-prose": {
+  "fullname": "muse-probe-r2in1-mail-p02-prose",
+  "source": "Contact us: info@example.net",
+  "action": "created"
+ },
+ "p03-plus": {
+  "fullname": "muse-probe-r2in1-mail-p03-plus",
+  "source": "user+tag@example.com",
+  "action": "created"
+ },
+ "p04-described": {
+  "fullname": "muse-probe-r2in1-mail-p04-described",
+  "source": "[user@example.com Contact us]",
+  "action": "created"
+ },
+ "p05-described-words": {
+  "fullname": "muse-probe-r2in1-mail-p05-described-words",
+  "source": "[user@example.com The sales team here]",
+  "action": "created"
+ },
+ "p06-described-upper": {
+  "fullname": "muse-probe-r2in1-mail-p06-described-upper",
+  "source": "[USER@EXAMPLE.COM Mixed Case]",
+  "action": "created"
+ },
+ "p07-described-doublegap": {
+  "fullname": "muse-probe-r2in1-mail-p07-described-doublegap",
+  "source": "[user@example.com  Double gap]",
+  "action": "created"
+ },
+ "p08-bracket-bare": {
+  "fullname": "muse-probe-r2in1-mail-p08-bracket-bare",
+  "source": "[user@example.com]",
+  "action": "created"
+ },
+ "p09-angle": {
+  "fullname": "muse-probe-r2in1-mail-p09-angle",
+  "source": "<user@example.com>",
+  "action": "created"
+ },
+ "p10-doublebracket": {
+  "fullname": "muse-probe-r2in1-mail-p10-doublebracket",
+  "source": "[[user@example.com]]",
+  "action": "created"
+ },
+ "p11-bracket-mailto": {
+  "fullname": "muse-probe-r2in1-mail-p11-bracket-mailto",
+  "source": "[mailto:user@example.com]",
+  "action": "created"
+ },
+ "p12-mailto-pipe": {
+  "fullname": "muse-probe-r2in1-mail-p12-mailto-pipe",
+  "source": "mailto:user@example.com|Mail me",
+  "action": "created"
+ },
+ "p13-http-userinfo": {
+  "fullname": "muse-probe-r2in1-mail-p13-http-userinfo",
+  "source": "see http://user@example.com/path here",
+  "action": "created"
+ },
+ "p14-trailing-dot": {
+  "fullname": "muse-probe-r2in1-mail-p14-trailing-dot",
+  "source": "user@example.com.",
+  "action": "created"
+ },
+ "p15-double-dot": {
+  "fullname": "muse-probe-r2in1-mail-p15-double-dot",
+  "source": "user@example..com",
+  "action": "created"
+ },
+ "p16-underscore-domain": {
+  "fullname": "muse-probe-r2in1-mail-p16-underscore-domain",
+  "source": "user@example_com.net",
+  "action": "created"
+ },
+ "p17-paren": {
+  "fullname": "muse-probe-r2in1-mail-p17-paren",
+  "source": "(user@example.com)",
+  "action": "created"
+ },
+ "p18-comment-inside": {
+  "fullname": "muse-probe-r2in1-mail-p18-comment-inside",
+  "source": "support[!--x--]@wikidot.com",
+  "action": "created"
+ },
+ "p19-bold": {
+  "fullname": "muse-probe-r2in1-mail-p19-bold",
+  "source": "**user@example.com**",
+  "action": "created"
+ },
+ "p20-raw": {
+  "fullname": "muse-probe-r2in1-mail-p20-raw",
+  "source": "@@user@example.com@@",
+  "action": "created"
+ },
+ "p21-code": {
+  "fullname": "muse-probe-r2in1-mail-p21-code",
+  "source": "[[code]]\nuser@example.com\n[[/code]]",
+  "action": "created"
+ },
+ "p22-table": {
+  "fullname": "muse-probe-r2in1-mail-p22-table",
+  "source": "|| user@example.com || other@example.net ||",
+  "action": "created"
+ },
+ "p23-double-at": {
+  "fullname": "muse-probe-r2in1-mail-p23-double-at",
+  "source": "user@@example.com",
+  "action": "created"
+ },
+ "p24-mailto-bare": {
+  "fullname": "muse-probe-r2in1-mail-p24-mailto-bare",
+  "source": "mailto:user@example.com",
+  "action": "created"
+ },
+ "p25-dash-domain": {
+  "fullname": "muse-probe-r2in1-mail-p25-dash-domain",
+  "source": "user@-example.com",
+  "action": "created"
+ },
+ "p26-described-empty": {
+  "fullname": "muse-probe-r2in1-mail-p26-described-empty",
+  "source": "[user@example.com ]",
+  "action": "created"
+ },
+ "p27-described-no-close": {
+  "fullname": "muse-probe-r2in1-mail-p27-described-no-close",
+  "source": "[user@example.com Label",
+  "action": "created"
+ },
+ "p28-subdomain": {
+  "fullname": "muse-probe-r2in1-mail-p28-subdomain",
+  "source": "user@mail.sub.example.co.uk",
+  "action": "created"
+ }
+}

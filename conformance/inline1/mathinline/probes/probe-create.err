@@ -1,0 +1,2 @@
+2026-11-20 17:05:19,247 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85346739', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in1-mi-label-like', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+27 probe pages left in place on sandbox-for-codex; the tool never deletes pages.

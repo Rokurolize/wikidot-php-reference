@@ -1,0 +1,32 @@
+{"id": "p01-star-bare", "source": "*https://example.com/newtab"}
+{"id": "p02-star-described", "source": "[*https://example.com Label]"}
+{"id": "p03-double-pipe", "source": "[[http://x/|raw]]"}
+{"id": "p04-double-pipe-raw", "source": "[[http://x/|@@raw@@]]"}
+{"id": "p05-double-pipe-multi", "source": "[[http://x/|a|b]]"}
+{"id": "p06-double-bare", "source": "[[https://example.com/]]"}
+{"id": "p07-double-pipe-unterminated", "source": "[[http://x/|label here"}
+{"id": "p08-double-space-label", "source": "[https://example.com  Label Here]"}
+{"id": "p09-ssh", "source": "Go ssh://example.com/a here"}
+{"id": "p10-git", "source": "Go git://example.com/b here"}
+{"id": "p11-sftp", "source": "Go sftp://example.com/c here"}
+{"id": "p12-svn", "source": "Go svn://example.com/d here"}
+{"id": "p13-telnet", "source": "Go telnet://example.com/e here"}
+{"id": "p14-cvs", "source": "Go cvs://example.com/f here"}
+{"id": "p15-nbsp-in-url", "source": "https://example.com/a.png width= next"}
+{"id": "p16-quote-pair", "source": "https://example.com/aa``bb''cc here"}
+{"id": "p17-paren-in-url", "source": "See https://example.com/a_(b) here"}
+{"id": "p18-terminal-period", "source": "Visit https://example.com/test. next"}
+{"id": "p19-bracket-in-url", "source": "See https://example.com/a[b]c here"}
+{"id": "p20-trailing-suite", "source": "See https://example.com/a!;:) next and https://example.com/b# here"}
+{"id": "p21-upper-scheme", "source": "HTTPS://EXAMPLE.COM/P here"}
+{"id": "p22-glued-digit", "source": "9https://example.com/a here"}
+{"id": "p23-mailto", "source": "mailto:user@example.com here"}
+{"id": "p24-image-ext", "source": "https://example.com/a.png here"}
+{"id": "p25-described", "source": "[https://example.com Example Description]"}
+{"id": "p26-bracket-no-label", "source": "[http://x/]"}
+{"id": "p27-nonascii-path", "source": "http://example.com/pageここ here"}
+{"id": "p28-described-math-label", "source": "[https://example.com/target [[$x$]]]"}
+{"id": "p29-described-math-label-pin", "source": "[https://example.com [[$x$]]]"}
+{"id": "p30-bold-star", "source": "bold **http://example.com/b** end"}
+{"id": "p31-pipe-plain", "source": "http://example.com/path|END next"}
+{"id": "p32-raw-adjacency", "source": "https://example.com/a@@b end"}

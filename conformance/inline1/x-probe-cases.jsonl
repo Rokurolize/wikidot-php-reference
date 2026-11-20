@@ -1,0 +1,46 @@
+{"id": "x01", "source": "[https://example.com/target https://example.com/label]"}
+{"id": "x02", "source": "[https://example.com/target [[$x$]]]"}
+{"id": "x03", "source": "[https://example.com/target mailto:a@b.com]"}
+{"id": "x04", "source": "[[http://example.com|link]]"}
+{"id": "x05", "source": "[[http://example.com|https://example.com/other]]"}
+{"id": "x06", "source": "[[http://example.com/a?b=1&c=2|label]]"}
+{"id": "x07", "source": "https://example.com/mailto:a@b.com"}
+{"id": "x08", "source": "[mailto:a@b.com mail]"}
+{"id": "x09", "source": "[[mailto:a@b.com|mail]]"}
+{"id": "x10", "source": "https://user:pass@example.com/path"}
+{"id": "x11", "source": "[[span]]before [[$x$]] after[[/span]]"}
+{"id": "x12", "source": "+ heading [[$x$]] tail"}
+{"id": "x13", "source": "|| [[$x$]] || y ||"}
+{"id": "x14", "source": "||a||[[$x$]]||"}
+{"id": "x15", "source": "@@[[$x$]]@@"}
+{"id": "x16", "source": "[[code]]\n[[$x$]]\n[[/code]]"}
+{"id": "x17", "source": "--[[$x$]]--"}
+{"id": "x18", "source": "**[[$x$]]**"}
+{"id": "x19", "source": "{{[[$x$]]}}"}
+{"id": "x20", "source": "[[[$x$]]]"}
+{"id": "x21", "source": "[wikipedia:Albert_Einstein]"}
+{"id": "x22", "source": "[wikipedia:Albert_Einstein Einstein]"}
+{"id": "x23", "source": "[WIKIPEDIA:Albert_Einstein Einstein]"}
+{"id": "x24", "source": "[pl.wikipedia:Kot kot]"}
+{"id": "x25", "source": "[google:free+wiki G]"}
+{"id": "x26", "source": "[banana:fruit-salad B]"}
+{"id": "x27", "source": "[[wikipedia:Albert_Einstein]]"}
+{"id": "x28", "source": "[[[wikipedia:Albert_Einstein]]]"}
+{"id": "x29", "source": "[wikipedia:Albert_Einstein|label]"}
+{"id": "x30", "source": "[[include wikipedia:Albert_Einstein]]"}
+{"id": "x31", "source": "[[include :sandbox:other-page]]"}
+{"id": "x32", "source": "[[code]]\nhttp://example.com/a\n[[/code]]"}
+{"id": "x33", "source": "@@http://example.com/a@@"}
+{"id": "x34", "source": "[[code]]\n[wikipedia:X]\n[[/code]]"}
+{"id": "x35", "source": "@@[wikipedia:X]@@"}
+{"id": "x36", "source": "[[code]]\na@b.com\n[[/code]]"}
+{"id": "x37", "source": "@@a@b.com@@"}
+{"id": "x38", "source": "[[code]]\n[[http://x|y]]\n[[/code]]"}
+{"id": "x39", "source": "http://example.com/a@b.com"}
+{"id": "x40", "source": "a@b.com/path"}
+{"id": "x41", "source": "[http://example.com/a https://x] more http://y.com"}
+{"id": "x42", "source": "[[$http://example.com/a$]]"}
+{"id": "x43", "source": "[[$[wikipedia:X]$]]"}
+{"id": "x44", "source": "[wikipedia:X http://example.com/a]"}
+{"id": "x45", "source": "[[http://x|[[$y$]]]]"}
+{"id": "x46", "source": "[[span]][http://example.com/a L][[/span]]"}

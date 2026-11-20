@@ -1,0 +1,22 @@
+{"errors":[],"html":"<p>See <a href=\"http://example.com\">http://example.com</a> here</p>","id":"q01-bare-http"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a/b?x=1&amp;y=2\">https://example.com/a/b?x=1&amp;y=2</a></p>","id":"q02-https"}
+{"errors":[],"html":"<p><a href=\"ftp://example.com/file.txt\">ftp://example.com/file.txt</a></p>","id":"q03-ftp"}
+{"errors":[],"html":"<p>www.example.com here</p>","id":"q04-www"}
+{"errors":[],"html":"<p>Visit <a href=\"https://example.com/test\">https://example.com/test</a>. next</p>","id":"q05-period"}
+{"errors":[],"html":"<p>See <a href=\"https://example.com/a\">https://example.com/a</a>!;:) next</p>","id":"q06-exclaim"}
+{"errors":[],"html":"<p>See <a href=\"https://example.com/a_(b\">https://example.com/a_(b</a>) here</p>","id":"q07-paren"}
+{"errors":[],"html":"<p>(<a href=\"https://example.com/a\">https://example.com/a</a>) here</p>","id":"q08-paren-wrap"}
+{"errors":[],"html":"<p>See <a href=\"https://example.com/a[b]c\">https://example.com/a[b]c</a> here</p>","id":"q09-bracket"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">Example Description</a></p>","id":"q10-described"}
+{"errors":[],"html":"<p><a href=\"https://example.com/newtab\" target=\"_blank\">https://example.com/newtab</a></p>","id":"q11-star-bare"}
+{"errors":[],"html":"<p><a href=\"https://example.com\" target=\"_blank\">Label</a></p>","id":"q12-star-described"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 17..17, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|raw]]</p>","id":"q13-double-bracket-pipe"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 24..24, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 22..24, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"https://example.com/\">https://example.com/</a>]]</p>","id":"q14-double-bracket-bare"}
+{"errors":[],"html":"<p><a href=\"gopher://example.com/g\">gopher://example.com/g</a> here</p>","id":"q15-gopher"}
+{"errors":[],"html":"<p><a href=\"mms://example.com/m\">mms://example.com/m</a> here</p>","id":"q16-mms"}
+{"errors":[],"html":"<p><a href=\"mailto:user@example.com\">mailto:user@example.com</a> here</p>","id":"q17-mailto"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a.png\">https://example.com/a.png</a> here</p>","id":"q18-image-ext"}
+{"errors":[],"html":"<p><a href=\"https://example.com/b\">https://example.com/b</a># here</p>","id":"q19-hash"}
+{"errors":[],"html":"<p>[<a href=\"https://example.com\">https://example.com</a> label</p>","id":"q20-unterminated"}
+{"errors":[],"html":"<p><a href=\"http://example.com/page\">http://example.com/page</a>, mid</p>","id":"q21-trailing-comma"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a.png%C2%A0width=\">https://example.com/a.png width=</a> next</p>","id":"q22-nbsp"}

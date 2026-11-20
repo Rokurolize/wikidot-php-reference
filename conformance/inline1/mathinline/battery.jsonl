@@ -1,0 +1,56 @@
+{"id": "basic", "source": "A [[$ x^2 $]] B"}
+{"id": "no-spaces", "source": "[[$x^2$]]"}
+{"id": "left-space-only", "source": "[[$ x$]]"}
+{"id": "right-space-only", "source": "[[$x $]]"}
+{"id": "tabs-around", "source": "[[$\tx\t$]]"}
+{"id": "empty", "source": "[[$$]]"}
+{"id": "spaces-only", "source": "[[$   $]]"}
+{"id": "multiple-line", "source": "[[$ a $]] and [[$ b $]]"}
+{"id": "adjacent", "source": "[[$a$]][[$b$]]"}
+{"id": "dollar-in-content", "source": "[[$ a$b $]]"}
+{"id": "html-content", "source": "[[$ <b>x</b> $]]"}
+{"id": "entities-content", "source": "[[$ a &amp; b $]]"}
+{"id": "unicode-content", "source": "[[$ α + β $]]"}
+{"id": "label-like-word", "source": "[[$ label=x $]]"}
+{"id": "label-like-brackets", "source": "[[$ [foo] $]]"}
+{"id": "attr-like", "source": "[[$ type=\"align\" $]]"}
+{"id": "pipe-in-content", "source": "[[$ a|b $]]"}
+{"id": "backslash-commands", "source": "[[$ \\alpha + \\beta $]]"}
+{"id": "typography-dots", "source": "[[$ a...b $]]"}
+{"id": "typography-dashes", "source": "[[$ a--b $]]"}
+{"id": "comment-markers", "source": "[[$ [!-- c --] $]]"}
+{"id": "single-newline", "source": "[[$ E =\nmc^2 $]]"}
+{"id": "blank-line-inside", "source": "[[$ E =\n\nmc^2 $]]"}
+{"id": "newline-after-opener", "source": "[[$\nx$]]"}
+{"id": "newline-before-closer", "source": "[[$x\n$]]"}
+{"id": "unterminated", "source": "[[$ x"}
+{"id": "unterminated-empty", "source": "[[$"}
+{"id": "stray-closer", "source": "x $]]"}
+{"id": "close-first", "source": "$]] [[$ x $]]"}
+{"id": "triple-close", "source": "[[$x$]]]"}
+{"id": "quad-close", "source": "[[$x$]]]]"}
+{"id": "double-dollar-open", "source": "[[$$x$]]"}
+{"id": "shifted-close", "source": "[[$ x $]"}
+{"id": "shifted-open", "source": "[$ x $]]"}
+{"id": "in-span", "source": "[[span class=\"x\"]][[$ y $]][[/span]]"}
+{"id": "in-scored-span", "source": "[[span_]] [[$ y $]] [[/span]]"}
+{"id": "in-heading1", "source": "+ [[$ x $]]"}
+{"id": "in-heading2", "source": "++ Heading [[$ x $]]"}
+{"id": "in-table-cell", "source": "|| [[$ a $]] || [[$ b $]] ||"}
+{"id": "in-list", "source": "* [[$ x $]]"}
+{"id": "in-blockquote", "source": "> [[$ x $]]"}
+{"id": "in-div", "source": "[[div]]\n[[$ x $]]\n[[/div]]"}
+{"id": "in-code", "source": "[[code]][[$ x $]][[/code]]"}
+{"id": "in-raw", "source": "@@ [[$ x $]] @@"}
+{"id": "in-comment", "source": "[!-- [[$ x $]] --]"}
+{"id": "before-heading", "source": "[[$ x $]]\n+ Head"}
+{"id": "math-block-then-inline", "source": "[[math]]\nx\n[[/math]]\n[[$ y $]]"}
+{"id": "inline-then-math-block", "source": "[[$ y $]]\n[[math]]\nx\n[[/math]]"}
+{"id": "in-footnote", "source": "[[footnote]][[$ x $]][[/footnote]]"}
+{"id": "in-collapsible", "source": "[[collapsible]][[$ x $]][[/collapsible]]"}
+{"id": "comment-inside", "source": "[[$ a[!--c--]b $]]"}
+{"id": "comment-joined-close-1", "source": "[[$ a $[!--c--]]]"}
+{"id": "comment-joined-close-2", "source": "[[$ a $][!--c--]]]"}
+{"id": "raw-inside", "source": "[[$ a@@raw@@b $]]"}
+{"id": "crlf", "source": "[[$ x $]]\r\n[[$ y $]]\r\n"}
+{"id": "trailing-newline", "source": "[[$ x $]]\n"}

@@ -1,0 +1,75 @@
+{"id": "u01-http", "source": "See http://example.com here"}
+{"id": "u02-https", "source": "https://example.com/a/b?x=1&y=2"}
+{"id": "u03-ftp", "source": "ftp://example.com/file.txt here"}
+{"id": "u04-gopher", "source": "gopher://example.com/g here"}
+{"id": "u05-news", "source": "news://example.com/n here"}
+{"id": "u06-mms", "source": "mms://example.com/m here"}
+{"id": "u07-mailto", "source": "mailto:user@example.com here"}
+{"id": "u08-ssh", "source": "Go ssh://example.com/a here"}
+{"id": "u09-git", "source": "Go git://example.com/b here"}
+{"id": "u10-sftp", "source": "Go sftp://example.com/c here"}
+{"id": "u11-svn", "source": "Go svn://example.com/d here"}
+{"id": "u12-telnet", "source": "Go telnet://example.com/e here"}
+{"id": "u13-cvs", "source": "Go cvs://example.com/f here"}
+{"id": "u14-www-schemeless", "source": "www.example.com and example.com/path here"}
+{"id": "u15-upper-scheme", "source": "HTTPS://EXAMPLE.COM/P here"}
+{"id": "u16-mixed-scheme", "source": "HtTpS://example.com/p here"}
+{"id": "u17-glued-digit", "source": "See 9https://example.com/a and x9gopher://example.com/b here"}
+{"id": "u18-bare-scheme", "source": "http:// here"}
+{"id": "u19-scheme-no-host", "source": "https:// here"}
+{"id": "u20-trailing-slash", "source": "https://example.com/ here"}
+{"id": "u21-query-fragment", "source": "https://example.com/search?q=free+wiki&lang=en#top here"}
+{"id": "u22-percent-encode", "source": "https://example.com/a%20b here"}
+{"id": "u23-port", "source": "http://example.com:8080/path here"}
+{"id": "u24-ip-host", "source": "http://127.0.0.1/index here"}
+{"id": "u25-subdomain", "source": "https://deep.sub.example.co.uk/page here"}
+{"id": "u26-inner-dot", "source": "https://example.com/a.b/c next"}
+{"id": "u27-tilde-underscore", "source": "https://example.com/a~b_c here"}
+{"id": "u28-plus-path", "source": "https://example.com/a+b here"}
+{"id": "u29-at-in-path", "source": "http://example.com/user@name here"}
+{"id": "u30-nonascii-path", "source": "http://example.com/pageここ here"}
+{"id": "u31-nbsp-in-url", "source": "https://example.com/a.png width= next"}
+{"id": "u32-terminal-period", "source": "Visit https://example.com/test. next"}
+{"id": "u33-period-eoi", "source": "Visit https://example.com/test."}
+{"id": "u34-period-linebreak", "source": "https://snippets.wikidot.com/code:collapsible-block-unleashed.\n"}
+{"id": "u35-exclaim-suite", "source": "See https://example.com/a!;:) next"}
+{"id": "u36-hash-tail", "source": "See https://example.com/b# here"}
+{"id": "u37-comma-tail", "source": "http://example.com/page, mid"}
+{"id": "u38-comma-inner", "source": "http://example.com/a,b next"}
+{"id": "u39-star-tail", "source": "http://example.com/b** end"}
+{"id": "u40-dash-tail", "source": "http://example.com/a-- next"}
+{"id": "u41-dash-inner", "source": "http://example.com/a--b next"}
+{"id": "u42-brace-tail", "source": "http://example.com/a}} next"}
+{"id": "u43-paren-open-close", "source": "(https://example.com/a) here"}
+{"id": "u44-paren-in-url", "source": "See https://example.com/a_(b) here"}
+{"id": "u45-bracket-in-url", "source": "See https://example.com/a[b]c here"}
+{"id": "u46-quote-pair", "source": "https://example.com/aa``bb''cc here"}
+{"id": "u47-described", "source": "[https://example.com Example Description]"}
+{"id": "u48-described-spaces", "source": "[https://example.com/example A label with many words]"}
+{"id": "u49-described-double-space", "source": "[https://example.com  Label Here]"}
+{"id": "u50-described-star", "source": "[*https://example.com Label]"}
+{"id": "u51-described-hash", "source": "[#anchor My Label]"}
+{"id": "u52-described-path", "source": "[/start Go Home]"}
+{"id": "u53-described-no-label", "source": "[http://x/]"}
+{"id": "u54-described-unterminated", "source": "[https://example.com label"}
+{"id": "u55-described-midline", "source": "Before [https://example.com Described] after"}
+{"id": "u56-double-bare", "source": "[[https://example.com/]]"}
+{"id": "u57-double-pipe", "source": "[[http://x/|raw]]"}
+{"id": "u58-double-pipe-raw", "source": "[[http://x/|@@raw@@]]"}
+{"id": "u59-double-pipe-multi", "source": "[[http://x/|a|b]]"}
+{"id": "u60-double-pipe-unterminated", "source": "[[http://x/|label here"}
+{"id": "u61-double-bare-midline", "source": "See [[http://x/]] and text"}
+{"id": "u62-double-pipe-midline", "source": "See [[http://x/|Label]] and text"}
+{"id": "u63-star-bare", "source": "*https://example.com/newtab"}
+{"id": "u64-star-mid", "source": "star mid *http://example.com/star-mid x"}
+{"id": "u65-bold-star", "source": "bold **http://example.com/b** end"}
+{"id": "u66-star-killed-fallback", "source": "[*https://a.example @@x@@ https://b.example]"}
+{"id": "u67-raw-adjacency", "source": "https://example.com/a@@b end"}
+{"id": "u68-raw-alt-terminates", "source": "https://example.com/@<x>@ end"}
+{"id": "u69-nonascii-terminates", "source": "http://example.com/pageす here"}
+{"id": "u70-block-syntax-stops", "source": "https://example.com/video[[/embedvideo]]"}
+{"id": "u71-empty-after-scheme", "source": "[# Label]"}
+{"id": "u72-tagged-pipe-url", "source": "[https://example.com Label|With Pipe]"}
+{"id": "u73-described-math-label", "source": "[https://example.com/target [[$x$]]]"}
+{"id": "u74-described-math-label-pin", "source": "[https://example.com [[$x$]]]"}
+{"id": "u75-double-pipe-many", "source": "[[http://x/|a|b|c]]"}

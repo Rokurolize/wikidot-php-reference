@@ -1,0 +1,71 @@
+R2-inline1 Mathinline three-side comparison report
+
+Battery cases: 56. Live captures: 0.
+
+The parse-shape columns compare the Mathinline token/element contents (reference tokens, ftml math-inline spans, live math-inline img alt). The render column is raw exact bytes; the canonical column factors out the stubbed LaTeX serving surface and frame whitespace, and is the only render comparison with cross-side meaning here.
+
+id | ref-content (before -> after) | ftml | live | shape | raw | canon
+--- | --- | --- | --- | --- | --- | ---
+basic | ['x^2'] -> ['x^2'] | ['x^2'] | [] | Y | N | Y
+no-spaces | ['x^2'] -> ['x^2'] | ['x^2'] | [] | Y | N | Y
+left-space-only | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+right-space-only | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+tabs-around | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+empty | [''] -> [''] | [''] | [] | Y | N | Y
+spaces-only | [''] -> [''] | [''] | [] | Y | N | Y
+multiple-line | ['a', 'b'] -> ['a', 'b'] | ['a', 'b'] | [] | Y | N | Y
+adjacent | ['a', 'b'] -> ['a', 'b'] | ['a', 'b'] | [] | Y | N | Y
+dollar-in-content | ['a$b'] -> ['a$b'] | ['a$b'] | [] | Y | N | Y
+html-content | ['<b>x</b>'] -> ['<b>x</b>'] | ['<b>x</b>'] | [] | Y | N | Y
+entities-content | ['a &amp; b'] -> ['a &amp; b'] | ['a &amp; b'] | [] | Y | N | Y
+unicode-content | ['α + β'] -> ['α + β'] | ['α + β'] | [] | Y | N | Y
+label-like-word | ['label=x'] -> ['label=x'] | ['label=x'] | [] | Y | N | Y
+label-like-brackets | ['[foo]'] -> ['[foo]'] | ['[foo]'] | [] | Y | N | Y
+attr-like | ['type="align"'] -> ['type="align"'] | ['type="align"'] | [] | Y | N | Y
+pipe-in-content | ['a|b'] -> ['a|b'] | ['a|b'] | [] | Y | N | Y
+backslash-commands | ['\\alpha + \\beta'] -> ['\\alpha + \\beta'] | ['\\alpha + \\beta'] | [] | Y | N | Y
+typography-dots | ['a...b'] -> ['a...b'] | ['a...b'] | [] | Y | N | Y
+typography-dashes | ['a--b'] -> ['a--b'] | ['a--b'] | [] | Y | N | Y
+comment-markers | [''] -> [''] | [''] | [] | Y | N | Y
+single-newline | ['E =�338�mc^2'] -> [''] | [''] | [] | Y | N | Y
+blank-line-inside | [] -> [] | [] | [] | Y | N | Y
+newline-after-opener | ['�372�x'] -> [''] | [''] | [] | Y | N | Y
+newline-before-closer | ['x�389�'] -> [''] | [''] | [] | Y | N | Y
+unterminated | [] -> [] | [] | [] | Y | N | Y
+unterminated-empty | [] -> [] | [] | [] | Y | N | Y
+stray-closer | [] -> [] | [] | [] | Y | N | Y
+close-first | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+triple-close | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+quad-close | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+double-dollar-open | ['$x'] -> ['$x'] | ['$x'] | [] | Y | N | Y
+shifted-close | [] -> [] | [] | [] | Y | N | Y
+shifted-open | [] -> [] | [] | [] | Y | N | Y
+in-span | ['y'] -> ['y'] | ['y'] | [] | Y | N | Y
+in-scored-span | ['y'] -> ['y'] | ['y'] | [] | Y | Y | Y
+in-heading1 | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+in-heading2 | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+in-table-cell | ['a', 'b'] -> ['a', 'b'] | ['a', 'b'] | [] | Y | Y | Y
+in-list | ['x'] -> ['x'] | ['x'] | [] | Y | Y | Y
+in-blockquote | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+in-div | ['x'] -> ['x'] | ['x'] | [] | Y | N | N
+in-code | [] -> [] | [] | [] | Y | N | Y
+in-raw | [] -> [] | [] | [] | Y | N | Y
+in-comment | [] -> [] | [] | [] | Y | Y | Y
+before-heading | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+math-block-then-inline | ['y'] -> ['y'] | ['y'] | [] | Y | N | N
+inline-then-math-block | ['y'] -> ['y'] | ['y'] | [] | Y | N | N
+in-footnote | ['x'] -> ['x'] | ['x'] | [] | Y | N | N
+in-collapsible | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+comment-inside | ['ab'] -> ['ab'] | ['ab'] | [] | Y | N | Y
+comment-joined-close-1 | ['a'] -> ['a'] | ['a'] | [] | Y | N | Y
+comment-joined-close-2 | ['a'] -> ['a'] | ['a'] | [] | Y | N | Y
+raw-inside | ['a�870�b'] -> [''] | [''] | [] | Y | N | Y
+crlf | ['x', 'y'] -> ['x', 'y'] | ['x', 'y'] | [] | Y | N | Y
+trailing-newline | ['x'] -> ['x'] | ['x'] | [] | Y | N | Y
+
+Parse-shape agreement reference-before vs ftml: 52/56
+Parse-shape agreement reference-after vs ftml: 56/56
+Raw render exact-byte agreement reference-after vs ftml: 4/56
+Canonical render agreement across reference-after, ftml and valid live: 52/56
+Cases whose reference Mathinline token content changed: ['single-newline', 'newline-after-opener', 'newline-before-closer', 'raw-inside']
+

@@ -1,0 +1,122 @@
+R2-inline1 root cross-rule interaction: three-way comparison (stage)
+valid probes: 46; signature counts: {'all3': 22, 'ref_live': 4, 'ftm_live': 14, 'ref_ftm': 0, 'all_disagree': 6}
+canon counts: ref==ftml 22, ref==live 26, ftml==live 36
+
+x01    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x02    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [('h=https://example.com/target', 't=[[$x$', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[[$': 1, ']]': 1}, 'text': '[[$x$ ]]'}
+  ftml: {'links': [('h=https://example.com/target', 't=https://example.com/target', '', '')], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': '[ https://example.com/target $x$ ]'}
+  live: {'links': [('h=https://example.com/target', 't=https://example.com/target', '', '')], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': '[ https://example.com/target $x$ ]'}
+x03    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x04    REF+LIVE       canon(r=f)=False canon(r=l)=True canon(f=l)=False
+  ref : {'links': [('h=http://example.com|link', 't=http://example.com|link', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ http://example.com|link ]]'}
+  ftml: {'links': [('h=http://example.com', 't=http://example.com', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ http://example.com |link]]'}
+  live: {'links': [('h=http://example.com|link', 't=http://example.com|link', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ http://example.com|link ]]'}
+x05    REF+LIVE       canon(r=f)=False canon(r=l)=True canon(f=l)=False
+  ref : {'links': [('h=http://example.com|https://example.com/other', 't=http://example.com|https://example.com/other', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ http://example.com|https://example.com/other ]]'}
+  ftml: {'links': [('h=http://example.com', 't=http://example.com', '', ''), ('h=https://example.com/other', 't=https://example.com/other', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ http://example.com | https://example.com/other ]]'}
+  live: {'links': [('h=http://example.com|https://example.com/other', 't=http://example.com|https://example.com/other', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ http://example.com|https://example.com/other ]]'}
+x06    REF+LIVE       canon(r=f)=False canon(r=l)=True canon(f=l)=False
+  ref : {'links': [('h=http://example.com/a?b=1&amp;c=2|label', 't=http://example.com/a?b=1&amp;c=2|label', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ http://example.com/a?b=1&amp;c=2|label ]]'}
+  ftml: {'links': [('h=http://example.com/a?b=1&amp;c=2', 't=http://example.com/a?b=1&amp;c=2', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ http://example.com/a?b=1&amp;c=2 |label]]'}
+  live: {'links': [('h=http://example.com/a?b=1&amp;c=2|label', 't=http://example.com/a?b=1&amp;c=2|label', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ http://example.com/a?b=1&amp;c=2|label ]]'}
+x07    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x08    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x09    REF+LIVE       canon(r=f)=False canon(r=l)=True canon(f=l)=False
+  ref : {'links': [('h=mailto:a@b.com|mail', 't=mailto:a@b.com|mail', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ mailto:a@b.com|mail ]]'}
+  ftml: {'links': [('h=mailto:a@b.com', 't=mailto:a@b.com', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ mailto:a@b.com |mail]]'}
+  live: {'links': [('h=mailto:a@b.com|mail', 't=mailto:a@b.com|mail', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ mailto:a@b.com|mail ]]'}
+x10    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x11    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('', 'span'), ('', 'span'), ('/', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'before The equation has not been processed correctly. Most prabably it has syntax error(s). after'}
+  ftml: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'p'), ('', 'span'), ('', 'span'), ('/', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'before $x$ after'}
+  live: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'p'), ('', 'span'), ('', 'span'), ('/', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'before $x$ after'}
+x12    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'h1'), ('', 'span'), ('', 'span'), ('/', 'span'), ('/', 'span'), ('/', 'h1')], 'lit': {}, 'text': 'heading The equation has not been processed correctly. Most prabably it has syntax error(s). tail'}
+  ftml: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'h1'), ('', 'span'), ('', 'span'), ('/', 'span'), ('/', 'span'), ('/', 'h1')], 'lit': {}, 'text': 'heading $x$ tail'}
+  live: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'h1'), ('', 'span'), ('', 'span'), ('/', 'span'), ('/', 'span'), ('/', 'h1')], 'lit': {}, 'text': 'heading $x$ tail'}
+x13    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'span'), ('/', 'span')], 'lit': {}, 'text': 'The equation has not been processed correctly. Most prabably it has syntax error(s). y'}
+  ftml: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'span'), ('/', 'span')], 'lit': {}, 'text': '$x$ y'}
+  live: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'span'), ('/', 'span')], 'lit': {}, 'text': '$x$ y'}
+x14    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'span'), ('/', 'span')], 'lit': {}, 'text': 'a The equation has not been processed correctly. Most prabably it has syntax error(s).'}
+  ftml: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'span'), ('/', 'span')], 'lit': {}, 'text': 'a $x$'}
+  live: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'span'), ('/', 'span')], 'lit': {}, 'text': 'a $x$'}
+x15    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x16    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x17    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('', 'span'), ('', 'span'), ('/', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'The equation has not been processed correctly. Most prabably it has syntax error(s).'}
+  ftml: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'p'), ('', 'span'), ('', 'span'), ('/', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': '$x$'}
+  live: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'p'), ('', 'span'), ('', 'span'), ('/', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': '$x$'}
+x18    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'The equation has not been processed correctly. Most prabably it has syntax error(s).'}
+  ftml: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': '$x$'}
+  live: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': '$x$'}
+x19    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('', 'tt'), ('', 'span'), ('/', 'span'), ('/', 'tt'), ('/', 'p')], 'lit': {}, 'text': 'The equation has not been processed correctly. Most prabably it has syntax error(s).'}
+  ftml: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'p'), ('', 'tt'), ('', 'span'), ('/', 'span'), ('/', 'tt'), ('/', 'p')], 'lit': {}, 'text': '$x$'}
+  live: {'links': [], 'emails': [], 'math': ['$x$'], 'blocks': [('', 'p'), ('', 'tt'), ('', 'span'), ('/', 'span'), ('/', 'tt'), ('/', 'p')], 'lit': {}, 'text': '$x$'}
+x20    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x21    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [('h=http://en.wikipedia.org/wiki/Albert_Einstein', 't=Albert_Einstein', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'Albert_Einstein'}
+  ftml: {'links': [('h=https://en.wikipedia.org/wiki/Albert_Einstein', 't=Albert_Einstein', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'Albert_Einstein'}
+  live: {'links': [('h=https://en.wikipedia.org/wiki/Albert_Einstein', 't=Albert_Einstein', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'Albert_Einstein'}
+x22    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [('h=http://en.wikipedia.org/wiki/Albert_Einstein', 't=Einstein', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'Einstein'}
+  ftml: {'links': [('h=https://en.wikipedia.org/wiki/Albert_Einstein', 't=Einstein', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'Einstein'}
+  live: {'links': [('h=https://en.wikipedia.org/wiki/Albert_Einstein', 't=Einstein', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'Einstein'}
+x23    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [('h=http://en.wikipedia.org/wiki/Albert_Einstein', 't=Einstein', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'Einstein'}
+  ftml: {'links': [('h=https://en.wikipedia.org/wiki/Albert_Einstein', 't=Einstein', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'Einstein'}
+  live: {'links': [('h=https://en.wikipedia.org/wiki/Albert_Einstein', 't=Einstein', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'Einstein'}
+x24    ALL-DISAGREE   canon(r=f)=False canon(r=l)=False canon(f=l)=False
+  ref : {'links': [('h=http://pl.wikipedia.org/wiki/Kot', 't=kot', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'kot'}
+  ftml: {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'kot'}
+  live: {'links': [('h=https://pl.wikipedia.org/wiki/Kot', 't=kot', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'kot'}
+x25    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [('h=http://www.google.com/search?q=free+wiki', 't=G', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'G'}
+  ftml: {'links': [('h=https://www.google.com/search?q=free+wiki', 't=G', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'G'}
+  live: {'links': [('h=https://www.google.com/search?q=free+wiki', 't=G', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'G'}
+x26    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x27    ALL-DISAGREE   canon(r=f)=False canon(r=l)=False canon(f=l)=False
+  ref : {'links': [('h=http://en.wikipedia.org/wiki/Albert_Einstein', 't=Albert_Einstein', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': '[ Albert_Einstein ]'}
+  ftml: {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[[wikipedia': 1, ']]': 1, '[wikipedia': 1}, 'text': '[[wikipedia:Albert_Einstein]]'}
+  live: {'links': [('h=https://en.wikipedia.org/wiki/Albert_Einstein', 't=Albert_Einstein', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': '[ Albert_Einstein ]'}
+x28    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x29    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x30    ALL-DISAGREE   canon(r=f)=False canon(r=l)=False canon(f=l)=False
+  ref : {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'div'), ('', 'p'), ('/', 'p'), ('/', 'div')], 'lit': {}, 'text': 'Page to be included wikipedia:albert-einstein can not be found!'}
+  ftml: {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[[include': 1, ']]': 1}, 'text': '[[include wikipedia:Albert_Einstein]]'}
+  live: {'links': [('h=/wikipedia:albert-einstein/edit/true', 't=create it now', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'div'), ('', 'p'), ('/', 'p'), ('/', 'div')], 'lit': {}, 'text': 'Included page &quot;wikipedia:albert-einstein&quot; does not exist ( create it now )'}
+x31    ALL-DISAGREE   canon(r=f)=False canon(r=l)=False canon(f=l)=False
+  ref : {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'SITE-PAGE-CONTENT'}
+  ftml: {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[[include': 1, ']]': 1}, 'text': '[[include :sandbox:other-page]]'}
+  live: {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'div'), ('', 'p'), ('/', 'p'), ('/', 'div')], 'lit': {}, 'text': 'Site sandbox is private and you cannot include pages from it.'}
+x32    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x33    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x34    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x35    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x36    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x37    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x38    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x39    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x40    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x41    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x42    ALL-DISAGREE   canon(r=f)=False canon(r=l)=False canon(f=l)=False
+  ref : {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'The equation has not been processed correctly. Most prabably it has syntax error(s).'}
+  ftml: {'links': [('h=http://example.com/a$', 't=http://example.com/a$', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[[$': 1, ']]': 1}, 'text': '[[$ http://example.com/a$ ]]'}
+  live: {'links': [], 'emails': [], 'math': ['$http://example.com/a$'], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': '$http://example.com/a$'}
+x43    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {}, 'text': 'The equation has not been processed correctly. Most prabably it has syntax error(s).'}
+  ftml: {'links': [], 'emails': [], 'math': ['$[wikipedia:X]$'], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {'[wikipedia': 1}, 'text': '$[wikipedia:X]$'}
+  live: {'links': [], 'emails': [], 'math': ['$[wikipedia:X]$'], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {'[wikipedia': 1}, 'text': '$[wikipedia:X]$'}
+x44    ALL-DISAGREE   canon(r=f)=False canon(r=l)=False canon(f=l)=False
+  ref : {'links': [('h=http://en.wikipedia.org/wiki/X', 't=�701�', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': '�701�'}
+  ftml: {'links': [('h=https://en.wikipedia.org/wiki/X', 't=http://example.com/a', '', 'onclick')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'http://example.com/a'}
+  live: {'links': [('h=http://example.com/a', 't=http://example.com/a', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[wikipedia': 1}, 'text': '[wikipedia:X http://example.com/a ]'}
+x45    FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'links': [('h=http://x|[[$y', 't=http://x|[[$y', '', '')], 'emails': [], 'math': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[[$': 2, ']]': 2}, 'text': '[[ http://x|[[$y $]]]]'}
+  ftml: {'links': [('h=http://x', 't=http://x', '', '')], 'emails': [], 'math': ['$y$'], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ http://x | $y$ ]]'}
+  live: {'links': [('h=http://x', 't=http://x', '', '')], 'emails': [], 'math': ['$y$'], 'blocks': [('', 'p'), ('', 'span'), ('/', 'span'), ('/', 'p')], 'lit': {']]': 1}, 'text': '[[ http://x | $y$ ]]'}
+x46    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True

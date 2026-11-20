@@ -1,0 +1,402 @@
+{
+ "p01-wiki-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p01-wiki-labeled",
+  "html": "<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Albert</a></p>",
+  "html_sha256": "c012c650bb548c4c3cccf9522c2f1a4813091ddeefcdf40fc1a989716befffc2",
+  "source": "[wikipedia:Albert_Einstein Albert]",
+  "source_sha256": "f805ff61a7394ed40af6d9cb65878c977632577c29658890c3878e0fe3d5d4e0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02-wiki-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p02-wiki-unlabeled",
+  "html": "<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Albert_Einstein</a></p>",
+  "html_sha256": "09019ac32d9e3b99e37af179ef3c5111ba6b05a2505afd6b22f39eb4836f1073",
+  "source": "[wikipedia:Albert_Einstein]",
+  "source_sha256": "d7a41f0e3d9b5d81c01f86617afce5fe965aef5fce621e604d618f980f724eb4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03-wiki-upper-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p03-wiki-upper-labeled",
+  "html": "<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Upper</a></p>",
+  "html_sha256": "38b51c3725655bce418d459191544261f4c867b288035beada5ae7a6b3227d28",
+  "source": "[WIKIPEDIA:Albert_Einstein Upper]",
+  "source_sha256": "6d0236cb1cdd301de8cff027539e590ae09e71adb5bb42b676c6e53f7e6ae9d7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04-wiki-upper-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p04-wiki-upper-unlabeled",
+  "html": "<p>[WIKIPEDIA:Albert_Einstein]</p>",
+  "html_sha256": "e85107edb2a01f3e510002f52109d49566da85a70563b8041995912eaa5f5d1c",
+  "source": "[WIKIPEDIA:Albert_Einstein]",
+  "source_sha256": "a9a9ff48a264c7d299a47e9308e150a8dd7cf5aca7b6ed03dfaf2658f64833f4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05-wikipedia-pl-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p05-wikipedia-pl-labeled",
+  "html": "<p><a href=\"https://pl.wikipedia.org/wiki/Test\" onclick=\"window.open(this.href, '_blank'); return false;\">Polski</a></p>",
+  "html_sha256": "f09452fea4b91f07c476c0bcecf8ac51a6d8a3449d777a52f73009b18e217aed",
+  "source": "[wikipedia.pl:Test Polski]",
+  "source_sha256": "d23528fdeb6da03825dca3a6e70b1a60d81b773963c022d456f005657de39a9d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06-wikipedia-pl-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p06-wikipedia-pl-unlabeled",
+  "html": "<p><a href=\"https://pl.wikipedia.org/wiki/Test\" onclick=\"window.open(this.href, '_blank'); return false;\">Test</a></p>",
+  "html_sha256": "311c24000c94abafaea2a1c8085c55d75db94846eacee6a39606f5e362663592",
+  "source": "[wikipedia.pl:Test]",
+  "source_sha256": "9fd997827d28c6764a4b89040d10e45e31d0fb3470033deddfdd5db13a36d003",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07-pl-wikipedia-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p07-pl-wikipedia-labeled",
+  "html": "<p><a href=\"https://pl.wikipedia.org/wiki/Test\" onclick=\"window.open(this.href, '_blank'); return false;\">Pol</a></p>",
+  "html_sha256": "e243fc3b3267b90bef35c999ba7e2cbc48f21cf2335cc0cc344ea3c24e7eaf24",
+  "source": "[pl.wikipedia:Test Pol]",
+  "source_sha256": "131e1611baea63e0a2fe5d23c1de6c4ac1b20f4e3abf7c3afb0a8ae7a1ff9fdb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08-pl-wikipedia-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p08-pl-wikipedia-unlabeled",
+  "html": "<p><a href=\"https://pl.wikipedia.org/wiki/Test\" onclick=\"window.open(this.href, '_blank'); return false;\">Test</a></p>",
+  "html_sha256": "311c24000c94abafaea2a1c8085c55d75db94846eacee6a39606f5e362663592",
+  "source": "[pl.wikipedia:Test]",
+  "source_sha256": "6b2f9c789a56dbd2d1765156eed07fc7cebf1f018215a408c2250dac6c0ae002",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09-google-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p09-google-unlabeled",
+  "html": "<p><a href=\"https://www.google.com/search?q=free+wiki\" onclick=\"window.open(this.href, '_blank'); return false;\">free+wiki</a></p>",
+  "html_sha256": "bff44fc7d13f1be6e9c2811994e92520490f8875a70fe4340932c013a663c51c",
+  "source": "[google:free+wiki]",
+  "source_sha256": "35d251e4b9b798360cdcc356ab4f1941edfad8f3da6ffda2de739e4679b321ed",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10-dictionary-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p10-dictionary-labeled",
+  "html": "<p><a href=\"https://dictionary.reference.com/browse/wiki\" onclick=\"window.open(this.href, '_blank'); return false;\">Dictionary</a></p>",
+  "html_sha256": "1fe1739b7677e1f98f1693c4b1642a2b870ae2bc87766da4eccc1c5319613915",
+  "source": "[dictionary:wiki Dictionary]",
+  "source_sha256": "32dfb4de3f5d6f93cb1fb16851c0b5796f659fe8a22417c570fd18eefe041a40",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11-unknown-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p11-unknown-labeled",
+  "html": "<p>The duck</p>",
+  "html_sha256": "15bfca82e2ee756d569a4d35201d231914792a2e5557f50d11d2260d355a093d",
+  "source": "[nosuchwiki:Mallard The duck]",
+  "source_sha256": "f38272d66ef638a758820f581b81a406eab463f3f02da8aed6ed87628fc89ef9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12-unknown-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p12-unknown-unlabeled",
+  "html": "<p>[nosuchwiki:Mallard]</p>",
+  "html_sha256": "f203bc12b4c2a197c27a9ad136b1da75ab29df62a1aa6b329c37a23282365b49",
+  "source": "[nosuchwiki:Mallard]",
+  "source_sha256": "b941d5463573dd3d2cd4d4a8d0ae9aebe8aac1309028207744eb7ffef5d57592",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13-wp-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p13-wp-labeled",
+  "html": "<p>WP</p>",
+  "html_sha256": "affdcc9a4c13bbe0a5c7bedea8c69e038dc91d3fc9165ddbf27916faf5b4bffa",
+  "source": "[wp:SCP_Foundation WP]",
+  "source_sha256": "3e705db38d7b5daee4e7efc103487d7b3917f8ed033b3fbd22bfb55f44883c0a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14-commons-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p14-commons-labeled",
+  "html": "<p>Commons</p>",
+  "html_sha256": "addfcde9da2edb9d5cf9b961a2c1607b77dec0586d3532836b643ef3ce13ba51",
+  "source": "[commons:File:SCP-682.jpg Commons]",
+  "source_sha256": "3a589c20e380735f687f9fb5902b8cf5d0a9a9dd2879f6ce790f472d36d89265",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15-two-spaces-label": {
+  "fullname": "muse-probe-r2in1-iw-p15-two-spaces-label",
+  "html": "<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Two spaces</a></p>",
+  "html_sha256": "88d49e813ef77d979dc080c8c989bc5700576d5612ec335519f4800a6c4664d5",
+  "source": "[wikipedia:Albert_Einstein  Two spaces]",
+  "source_sha256": "2e511b9431053dc177b731e93761785e774ab7f212b04f4fdd4e10617d636c0c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16-tab-label": {
+  "fullname": "muse-probe-r2in1-iw-p16-tab-label",
+  "html": "<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Tab label</a></p>",
+  "html_sha256": "1fec684abc6fcb6a3d478b023d43ce7a9159071560cc6ec2d0fed48a3b36f3e0",
+  "source": "[wikipedia:Albert_Einstein\tTab label]",
+  "source_sha256": "ec8772ee91c397b4b19c8196583ce3f849fd4f7e8bf89c3359c837345e97095b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17-empty-label-one-space": {
+  "fullname": "muse-probe-r2in1-iw-p17-empty-label-one-space",
+  "html": "<p>[wikipedia:Albert_Einstein ]</p>",
+  "html_sha256": "dfe17ce4b5bd366678056ce6eb3e7e775bf35ec63d0ee9a94d9ee2958e3af615",
+  "source": "[wikipedia:Albert_Einstein ]",
+  "source_sha256": "dd703c54c56e8b7a5dfc5b0c4abb5659c56e525bc3de9b692fcc1b0021465c96",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18-empty-label-two-spaces": {
+  "fullname": "muse-probe-r2in1-iw-p18-empty-label-two-spaces",
+  "html": "<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\"></a></p>",
+  "html_sha256": "f57827b1caf191e7b183119d5e5a1b5e9c965f57337025333ef952b7f0352329",
+  "source": "[wikipedia:Albert_Einstein  ]",
+  "source_sha256": "120cc2d946be4090c8cca74fe3353071e9c6a5be68a7b7c358a838250327968e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p19-label-trailing-space": {
+  "fullname": "muse-probe-r2in1-iw-p19-label-trailing-space",
+  "html": "<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Label</a></p>",
+  "html_sha256": "bd3158a1536ebac7be4d784c5ebc672aa6df28347bf5850cc7e8491e59bdacbc",
+  "source": "[wikipedia:Albert_Einstein Label ]",
+  "source_sha256": "a21fee5cfd4fbcd15823cc293d79c1276691bd808df422360fe978cac14553e8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p20-label-url": {
+  "fullname": "muse-probe-r2in1-iw-p20-label-url",
+  "html": "<p>[wikipedia:X <a href=\"http://example.com/a\">http://example.com/a</a>]</p>",
+  "html_sha256": "273402e2ac7921cc289152d9bfd75433ea5f13b2694293572dacfe14366d58ef",
+  "source": "[wikipedia:X http://example.com/a]",
+  "source_sha256": "e9a72b9335a344a24f63cd32fe3a0f0a406ed5416417e242585efcc73ea54baf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p21-path-colon": {
+  "fullname": "muse-probe-r2in1-iw-p21-path-colon",
+  "html": "<p><a href=\"https://en.wikipedia.org/wiki/it:Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Italiano</a></p>",
+  "html_sha256": "62141d4f13f1485131f0546cb3701001df55140ee9b289794e3c08ff11dcd233",
+  "source": "[wikipedia:it:Albert_Einstein Italiano]",
+  "source_sha256": "1df2d084e57e569aafccaa36d3819cb34e6d6a064c69faedf4ee70bd1a535de3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p22-path-percent": {
+  "fullname": "muse-probe-r2in1-iw-p22-path-percent",
+  "html": "<p>[wikipedia:Albert%20Einstein Percent]</p>",
+  "html_sha256": "798070791bfa44159195e1aa82a6b4c7eb8fa9da90a65f3118668ef16347c721",
+  "source": "[wikipedia:Albert%20Einstein Percent]",
+  "source_sha256": "c933fc3520df3ca6d465410e81d4d1d97e547c1d927899c11e2fa132b1084204",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p23-path-nonascii": {
+  "fullname": "muse-probe-r2in1-iw-p23-path-nonascii",
+  "html": "<p>[wikipedia:Älbert NonAscii]</p>",
+  "html_sha256": "46f5016a4d25b630c58e8f36bfb5cba6562700a82d11913ba7c4fb1e0192431c",
+  "source": "[wikipedia:Älbert NonAscii]",
+  "source_sha256": "d22855fef278d3a68e67c5802231214e700f5e929c25b0b2923ca8684240129e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p24-double-bracket": {
+  "fullname": "muse-probe-r2in1-iw-p24-double-bracket",
+  "html": "<p>[<a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Albert_Einstein</a>]</p>",
+  "html_sha256": "fda658f48274ec73ce45dd13614e7ba8c3e944aa6aeb375b358b0907bd51584a",
+  "source": "[[wikipedia:Albert_Einstein]]",
+  "source_sha256": "ba6cce96b9f91eee2bca423a20d4436c8df09106068edc741ec9753bfa239120",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p25-include-site-pair": {
+  "fullname": "muse-probe-r2in1-iw-p25-include-site-pair",
+  "html": "<div class=\"error-block\">\n<p>Included page &quot;albert-einstein&quot; does not exist (<a href=\"https://wikipedia.wikidot.com/albert-einstein/edit/true\">create it now</a>)</p>\n</div>",
+  "html_sha256": "277ee047b2214924fc106c1963d749fed8ce2c17bad6709654f33d4dfe961303",
+  "source": "[[include :wikipedia:Albert_Einstein]]",
+  "source_sha256": "1143253c5dfd7e848c53d6e5e44ea0b9d23e30cc17c0a8791b22e96dbf089b70",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p26-unterminated": {
+  "fullname": "muse-probe-r2in1-iw-p26-unterminated",
+  "html": "<p>[wikipedia:Albert_Einstein</p>",
+  "html_sha256": "4e9dc82d39fe793e1b45db5745acdf5d8f69c95ff8997765f1c25ff7ebe083c2",
+  "source": "[wikipedia:Albert_Einstein",
+  "source_sha256": "2c1907022ece95c4dee07478474188991cd173ee389ace20fe5ecb19604ba996",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p27-prefix-leading-digit": {
+  "fullname": "muse-probe-r2in1-iw-p27-prefix-leading-digit",
+  "html": "<p>label</p>",
+  "html_sha256": "e05f29d15a0c0761be26a730eb5ef78a72c1dda4489db82e22af40e4a83dce33",
+  "source": "[1wiki:Page label]",
+  "source_sha256": "1b2f4bbeb4023bce147490113c19a1eb39ff606004c8d54b728eca36254f1674",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p28-prefix-underscore": {
+  "fullname": "muse-probe-r2in1-iw-p28-prefix-underscore",
+  "html": "<p>label</p>",
+  "html_sha256": "e05f29d15a0c0761be26a730eb5ef78a72c1dda4489db82e22af40e4a83dce33",
+  "source": "[_wiki:Page label]",
+  "source_sha256": "cba4577d64323f1d41fa3c6dee72bb1970de1a1d90391b5f85e11044e78f423f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p29-star-form": {
+  "fullname": "muse-probe-r2in1-iw-p29-star-form",
+  "html": "<p>[*wikipedia:Albert_Einstein Star]</p>",
+  "html_sha256": "84bca09bed7eda14a98aed0ad1e0f0aa00d3469470aa4be5d757529b72db7405",
+  "source": "[*wikipedia:Albert_Einstein Star]",
+  "source_sha256": "3f996ccce95bfb66391f9e8b6ff51fa47bb5ed319adaf5087841e35facd6d822",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p30-direct-url": {
+  "fullname": "muse-probe-r2in1-iw-p30-direct-url",
+  "html": "<p><a href=\"https://example.com/\">Control</a></p>",
+  "html_sha256": "71b6be40caa311649fd3ff5c77edb6d098ebbe6b9eab6095f77e1e686a9e26ba",
+  "source": "[https://example.com/ Control]",
+  "source_sha256": "a50f651b5394282e3b516f42b79cd831e91e3e150f66b2f3965a9dff0b7f9159",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p31-slash-target": {
+  "fullname": "muse-probe-r2in1-iw-p31-slash-target",
+  "html": "<p><a href=\"/path\">Relative</a></p>",
+  "html_sha256": "15db200cbe6956fdf3268dda198bbdce6447e06123f8e8d14a2fe3879744a04d",
+  "source": "[/path Relative]",
+  "source_sha256": "3208aa21328cc0028acd3d7357b29553eea97249908438ff1add9c74b39f989c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p32-multiple-on-line": {
+  "fullname": "muse-probe-r2in1-iw-p32-multiple-on-line",
+  "html": "<p><a href=\"https://en.wikipedia.org/wiki/A\" onclick=\"window.open(this.href, '_blank'); return false;\">First</a> and <a href=\"https://www.google.com/search?q=g\" onclick=\"window.open(this.href, '_blank'); return false;\">Second</a> and Third</p>",
+  "html_sha256": "2a62f44611be17253da0e90b3962349823e4654f6b6c785f3c9c8db3ce32ee18",
+  "source": "[wikipedia:A First] and [google:g Second] and [nosuchwiki:N Third]",
+  "source_sha256": "e47cb96bcd2e708b0f7583e52e7ffbd6328198736758b5f4e3867214569a62dd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p33-label-with-pipe": {
+  "fullname": "muse-probe-r2in1-iw-p33-label-with-pipe",
+  "html": "<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">a|b</a></p>",
+  "html_sha256": "25fd7b9b6939678060c989c158f362059480c03d8d082c3ee9c58bc1bb1cb3d8",
+  "source": "[wikipedia:Albert_Einstein a|b]",
+  "source_sha256": "ceb02bb479110dbb87f9faee4df7ed7aa5679f0ecce3134d2979502ab4a4276b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p34-label-with-brackets": {
+  "fullname": "muse-probe-r2in1-iw-p34-label-with-brackets",
+  "html": "<p>[wikipedia:Albert_Einstein [x] label]</p>",
+  "html_sha256": "9f3b22c7ce556beba687db43447b6debf7f594d4e5ce838707f81e58edea5bfd",
+  "source": "[wikipedia:Albert_Einstein [x] label]",
+  "source_sha256": "d4e5bbd332bf9ae06b5d07bbff31de6cd867aba5c7b783a3f65b0797744fec92",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p35-dotted-upper-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p35-dotted-upper-labeled",
+  "html": "<p><a href=\"https://pl.wikipedia.org/wiki/Test\" onclick=\"window.open(this.href, '_blank'); return false;\">UpperDot</a></p>",
+  "html_sha256": "bced21a288903456419225e598fe6512cda0c637cc8c545457e12d3fda33ed2e",
+  "source": "[WIKIPEDIA.PL:Test UpperDot]",
+  "source_sha256": "8e53333e313e1944f540a40116d11290aa082462a8184295968a002e0ffddea0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p36-google-mixed-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p36-google-mixed-labeled",
+  "html": "<p><a href=\"https://www.google.com/search?q=free+wiki\" onclick=\"window.open(this.href, '_blank'); return false;\">MixedCase</a></p>",
+  "html_sha256": "6cda32e3f87cf1f88d799e455f5d924d7011662e1d6f0f6b349c1b33a7a4997a",
+  "source": "[GoOgLe:free+wiki MixedCase]",
+  "source_sha256": "8b192ee596624ce27207d2d6ac3ea4e8a7ed0e73dac0445bb8cbb4df65ac31a5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p37-empty-path": {
+  "fullname": "muse-probe-r2in1-iw-p37-empty-path",
+  "html": "<p>[wikipedia:]</p>",
+  "html_sha256": "2826381ff01dadc899233f62a3e9829ae134418e12354da074a855857e37de9f",
+  "source": "[wikipedia:]",
+  "source_sha256": "ae5588e188b5fcb853c2681eeebb9b7531374299e29028f42303b9f076b14b33",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p38-double-colon-path": {
+  "fullname": "muse-probe-r2in1-iw-p38-double-colon-path",
+  "html": "<p>[wikipedia::Page DoubleColon]</p>",
+  "html_sha256": "da55314fdf113445ec00cab1d9f5daabc3e9153fbca34f61e82169cc698b2a21",
+  "source": "[wikipedia::Page DoubleColon]",
+  "source_sha256": "0bece137cf8bcd3dec59bbc693d87189676e0cf4b557adc38871a73e112e529e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p39-inside-span": {
+  "fullname": "muse-probe-r2in1-iw-p39-inside-span",
+  "html": "<p><span><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Lab</a></span></p>",
+  "html_sha256": "c82a170d979e4288231b7399023593ecf9d8c7468d632003b6cd33b7292c8345",
+  "source": "[[span]][wikipedia:Albert_Einstein Lab][[/span]]",
+  "source_sha256": "2973495fc8421f6697da50ecae49e1a1f18598c8e64e85ba34733f6e14af118e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p40-inline-in-text": {
+  "fullname": "muse-probe-r2in1-iw-p40-inline-in-text",
+  "html": "<p>before <a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Albert</a> after</p>",
+  "html_sha256": "4f6041602c40c53732b0555ff016cff431a528ae3163bf81c9f6214e641c04b3",
+  "source": "before [wikipedia:Albert_Einstein Albert] after",
+  "source_sha256": "d90ff411d49f9119509422ec4270fa8fc7947aa5a23393e8178d7936d060efce",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

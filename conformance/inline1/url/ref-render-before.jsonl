@@ -1,0 +1,75 @@
+{"id":"u01-http","output":"<p>See <a href=\"http:\/\/example.com\">http:\/\/example.com<\/a> here<\/p>\n\n"}
+{"id":"u02-https","output":"<p><a href=\"https:\/\/example.com\/a\/b?x=1&amp;y=2\">https:\/\/example.com\/a\/b?x=1&amp;y=2<\/a><\/p>\n\n"}
+{"id":"u03-ftp","output":"<p><a href=\"ftp:\/\/example.com\/file.txt\">ftp:\/\/example.com\/file.txt<\/a> here<\/p>\n\n"}
+{"id":"u04-gopher","output":"<p><a href=\"gopher:\/\/example.com\/g\">gopher:\/\/example.com\/g<\/a> here<\/p>\n\n"}
+{"id":"u05-news","output":"<p><a href=\"news:\/\/example.com\/n\">news:\/\/example.com\/n<\/a> here<\/p>\n\n"}
+{"id":"u06-mms","output":"<p><a href=\"mms:\/\/example.com\/m\">mms:\/\/example.com\/m<\/a> here<\/p>\n\n"}
+{"id":"u07-mailto","output":"<p><a href=\"mailto:user@example.com\">mailto:user@example.com<\/a> here<\/p>\n\n"}
+{"id":"u08-ssh","output":"<p>Go ssh:\/\/example.com\/a here<\/p>\n\n"}
+{"id":"u09-git","output":"<p>Go git:\/\/example.com\/b here<\/p>\n\n"}
+{"id":"u10-sftp","output":"<p>Go sftp:\/\/example.com\/c here<\/p>\n\n"}
+{"id":"u11-svn","output":"<p>Go svn:\/\/example.com\/d here<\/p>\n\n"}
+{"id":"u12-telnet","output":"<p>Go telnet:\/\/example.com\/e here<\/p>\n\n"}
+{"id":"u13-cvs","output":"<p>Go cvs:\/\/example.com\/f here<\/p>\n\n"}
+{"id":"u14-www-schemeless","output":"<p>www.example.com and example.com\/path here<\/p>\n\n"}
+{"id":"u15-upper-scheme","output":"<p>HTTPS:\/\/EXAMPLE.COM\/P here<\/p>\n\n"}
+{"id":"u16-mixed-scheme","output":"<p>HtTpS:\/\/example.com\/p here<\/p>\n\n"}
+{"id":"u17-glued-digit","output":"<p>See 9<a href=\"https:\/\/example.com\/a\">https:\/\/example.com\/a<\/a> and x9<a href=\"gopher:\/\/example.com\/b\">gopher:\/\/example.com\/b<\/a> here<\/p>\n\n"}
+{"id":"u18-bare-scheme","output":"<p>http:\/\/ here<\/p>\n\n"}
+{"id":"u19-scheme-no-host","output":"<p>https:\/\/ here<\/p>\n\n"}
+{"id":"u20-trailing-slash","output":"<p><a href=\"https:\/\/example.com\/\">https:\/\/example.com\/<\/a> here<\/p>\n\n"}
+{"id":"u21-query-fragment","output":"<p><a href=\"https:\/\/example.com\/search?q=free+wiki&amp;lang=en#top\">https:\/\/example.com\/search?q=free+wiki&amp;lang=en#top<\/a> here<\/p>\n\n"}
+{"id":"u22-percent-encode","output":"<p><a href=\"https:\/\/example.com\/a%20b\">https:\/\/example.com\/a%20b<\/a> here<\/p>\n\n"}
+{"id":"u23-port","output":"<p><a href=\"http:\/\/example.com:8080\/path\">http:\/\/example.com:8080\/path<\/a> here<\/p>\n\n"}
+{"id":"u24-ip-host","output":"<p><a href=\"http:\/\/127.0.0.1\/index\">http:\/\/127.0.0.1\/index<\/a> here<\/p>\n\n"}
+{"id":"u25-subdomain","output":"<p><a href=\"https:\/\/deep.sub.example.co.uk\/page\">https:\/\/deep.sub.example.co.uk\/page<\/a> here<\/p>\n\n"}
+{"id":"u26-inner-dot","output":"<p><a href=\"https:\/\/example.com\/a.b\/c\">https:\/\/example.com\/a.b\/c<\/a> next<\/p>\n\n"}
+{"id":"u27-tilde-underscore","output":"<p><a href=\"https:\/\/example.com\/a~b_c\">https:\/\/example.com\/a~b_c<\/a> here<\/p>\n\n"}
+{"id":"u28-plus-path","output":"<p><a href=\"https:\/\/example.com\/a+b\">https:\/\/example.com\/a+b<\/a> here<\/p>\n\n"}
+{"id":"u29-at-in-path","output":"<p><a href=\"http:\/\/example.com\/user@name\">http:\/\/example.com\/user@name<\/a> here<\/p>\n\n"}
+{"id":"u30-nonascii-path","output":"<p><a href=\"http:\/\/example.com\/page\">http:\/\/example.com\/page<\/a>\u3053\u3053 here<\/p>\n\n"}
+{"id":"u31-nbsp-in-url","output":"<p><a href=\"https:\/\/example.com\/a.png\u00a0width=\">https:\/\/example.com\/a.png\u00a0width=<\/a> next<\/p>\n\n"}
+{"id":"u32-terminal-period","output":"<p>Visit <a href=\"https:\/\/example.com\/test\">https:\/\/example.com\/test<\/a>. next<\/p>\n\n"}
+{"id":"u33-period-eoi","output":"<p>Visit <a href=\"https:\/\/example.com\/test\">https:\/\/example.com\/test<\/a>.<\/p>\n\n"}
+{"id":"u34-period-linebreak","output":"<p><a href=\"https:\/\/snippets.wikidot.com\/code:collapsible-block-unleashed\">https:\/\/snippets.wikidot.com\/code:collapsible-block-unleashed<\/a>.<\/p>\n\n"}
+{"id":"u35-exclaim-suite","output":"<p>See <a href=\"https:\/\/example.com\/a\">https:\/\/example.com\/a<\/a>!;:) next<\/p>\n\n"}
+{"id":"u36-hash-tail","output":"<p>See <a href=\"https:\/\/example.com\/b\">https:\/\/example.com\/b<\/a># here<\/p>\n\n"}
+{"id":"u37-comma-tail","output":"<p><a href=\"http:\/\/example.com\/page\">http:\/\/example.com\/page<\/a>, mid<\/p>\n\n"}
+{"id":"u38-comma-inner","output":"<p><a href=\"http:\/\/example.com\/a,b\">http:\/\/example.com\/a,b<\/a> next<\/p>\n\n"}
+{"id":"u39-star-tail","output":"<p><a href=\"http:\/\/example.com\/b\">http:\/\/example.com\/b<\/a>** end<\/p>\n\n"}
+{"id":"u40-dash-tail","output":"<p><a href=\"http:\/\/example.com\/a\">http:\/\/example.com\/a<\/a>&#8212; next<\/p>\n\n"}
+{"id":"u41-dash-inner","output":"<p><a href=\"http:\/\/example.com\/a--b\">http:\/\/example.com\/a--b<\/a> next<\/p>\n\n"}
+{"id":"u42-brace-tail","output":"<p><a href=\"http:\/\/example.com\/a\">http:\/\/example.com\/a<\/a>}} next<\/p>\n\n"}
+{"id":"u43-paren-open-close","output":"<p>(<a href=\"https:\/\/example.com\/a\">https:\/\/example.com\/a<\/a>) here<\/p>\n\n"}
+{"id":"u44-paren-in-url","output":"<p>See <a href=\"https:\/\/example.com\/a_(b\">https:\/\/example.com\/a_(b<\/a>) here<\/p>\n\n"}
+{"id":"u45-bracket-in-url","output":"<p>See <a href=\"https:\/\/example.com\/a[b]c\">https:\/\/example.com\/a[b]c<\/a> here<\/p>\n\n"}
+{"id":"u46-quote-pair","output":"<p><a href=\"https:\/\/example.com\/aa``bb\">https:\/\/example.com\/aa``bb<\/a>''cc here<\/p>\n\n"}
+{"id":"u47-described","output":"<p><a href=\"https:\/\/example.com\">Example Description<\/a><\/p>\n\n"}
+{"id":"u48-described-spaces","output":"<p><a href=\"https:\/\/example.com\/example\">A label with many words<\/a><\/p>\n\n"}
+{"id":"u49-described-double-space","output":"<p><a href=\"https:\/\/example.com\"> Label Here<\/a><\/p>\n\n"}
+{"id":"u50-described-star","output":"<p><a href=\"https:\/\/example.com\" onclick=\"window.open(this.href, '_blank'); return false;\">Label<\/a><\/p>\n\n"}
+{"id":"u51-described-hash","output":"<p><a href=\"#anchor\">My Label<\/a><\/p>\n\n"}
+{"id":"u52-described-path","output":"<p><a href=\"\/start\">Go Home<\/a><\/p>\n\n"}
+{"id":"u53-described-no-label","output":"<p>[<a href=\"http:\/\/x\/\">http:\/\/x\/<\/a>]<\/p>\n\n"}
+{"id":"u54-described-unterminated","output":"<p>[<a href=\"https:\/\/example.com\">https:\/\/example.com<\/a> label<\/p>\n\n"}
+{"id":"u55-described-midline","output":"<p>Before <a href=\"https:\/\/example.com\">Described<\/a> after<\/p>\n\n"}
+{"id":"u56-double-bare","output":"<p>[[<a href=\"https:\/\/example.com\/\">https:\/\/example.com\/<\/a>]]<\/p>\n\n"}
+{"id":"u57-double-pipe","output":"<p>[[<a href=\"http:\/\/x\/|raw\">http:\/\/x\/|raw<\/a>]]<\/p>\n\n"}
+{"id":"u58-double-pipe-raw","output":"<p>[[<a href=\"http:\/\/x\/\">http:\/\/x\/<\/a>|<span style=\"white-space: pre-wrap;\">raw<\/span>]]<\/p>\n\n"}
+{"id":"u59-double-pipe-multi","output":"<p>[[<a href=\"http:\/\/x\/|a|b\">http:\/\/x\/|a|b<\/a>]]<\/p>\n\n"}
+{"id":"u60-double-pipe-unterminated","output":"<p>[[<a href=\"http:\/\/x\/|label\">http:\/\/x\/|label<\/a> here<\/p>\n\n"}
+{"id":"u61-double-bare-midline","output":"<p>See [[<a href=\"http:\/\/x\/\">http:\/\/x\/<\/a>]] and text<\/p>\n\n"}
+{"id":"u62-double-pipe-midline","output":"<p>See [[<a href=\"http:\/\/x\/|Label\">http:\/\/x\/|Label<\/a>]] and text<\/p>\n\n"}
+{"id":"u63-star-bare","output":"<p><a href=\"https:\/\/example.com\/newtab\" onclick=\"window.open(this.href, '_blank'); return false;\">https:\/\/example.com\/newtab<\/a><\/p>\n\n"}
+{"id":"u64-star-mid","output":"<p>star mid <a href=\"http:\/\/example.com\/star-mid\" onclick=\"window.open(this.href, '_blank'); return false;\">http:\/\/example.com\/star-mid<\/a> x<\/p>\n\n"}
+{"id":"u65-bold-star","output":"<p>bold *<a href=\"http:\/\/example.com\/b\" onclick=\"window.open(this.href, '_blank'); return false;\">http:\/\/example.com\/b<\/a>** end<\/p>\n\n"}
+{"id":"u66-star-killed-fallback","output":"<p>[<a href=\"https:\/\/a.example\" onclick=\"window.open(this.href, '_blank'); return false;\">https:\/\/a.example<\/a> <span style=\"white-space: pre-wrap;\">x<\/span> <a href=\"https:\/\/b.example\">https:\/\/b.example<\/a>]<\/p>\n\n"}
+{"id":"u67-raw-adjacency","output":"<p><a href=\"https:\/\/example.com\/a@@b\">https:\/\/example.com\/a@@b<\/a> end<\/p>\n\n"}
+{"id":"u68-raw-alt-terminates","output":"<p><a href=\"https:\/\/example.com\/@&lt;x\">https:\/\/example.com\/@&lt;x<\/a>&gt;@ end<\/p>\n\n"}
+{"id":"u69-nonascii-terminates","output":"<p><a href=\"http:\/\/example.com\/page\">http:\/\/example.com\/page<\/a>\u3059 here<\/p>\n\n"}
+{"id":"u70-block-syntax-stops","output":"<p><a href=\"https:\/\/example.com\/video[[\/embedvideo\">https:\/\/example.com\/video[[\/embedvideo<\/a>]]<\/p>\n\n"}
+{"id":"u71-empty-after-scheme","output":"<p><a href=\"javascript:;\">Label<\/a><\/p>\n\n"}
+{"id":"u72-tagged-pipe-url","output":"<p><a href=\"https:\/\/example.com\">Label|With Pipe<\/a><\/p>\n\n"}
+{"id":"u73-described-math-label","output":"<p><a href=\"https:\/\/example.com\/target\">[[$x$<\/a>]]<\/p>\n\n"}
+{"id":"u74-described-math-label-pin","output":"<p><a href=\"https:\/\/example.com\">[[$x$<\/a>]]<\/p>\n\n"}
+{"id":"u75-double-pipe-many","output":"<p>[[<a href=\"http:\/\/x\/|a|b|c\">http:\/\/x\/|a|b|c<\/a>]]<\/p>\n\n"}

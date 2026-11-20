@@ -1,0 +1,97 @@
+[BYTE] u01-http
+[BYTE] u02-https
+[BYTE] u03-ftp
+[BYTE] u04-gopher
+[BYTE] u05-news
+[BYTE] u06-mms
+[BYTE] u07-mailto
+[BYTE] u08-ssh
+[BYTE] u09-git
+[BYTE] u10-sftp
+[BYTE] u11-svn
+[BYTE] u12-telnet
+[BYTE] u13-cvs
+[BYTE] u14-www-schemeless
+[BYTE] u15-upper-scheme
+[BYTE] u16-mixed-scheme
+[BYTE] u17-glued-digit
+[BYTE] u18-bare-scheme
+[BYTE] u19-scheme-no-host
+[BYTE] u20-trailing-slash
+[BYTE] u21-query-fragment
+[BYTE] u22-percent-encode
+[BYTE] u23-port
+[BYTE] u24-ip-host
+[BYTE] u25-subdomain
+[BYTE] u26-inner-dot
+[BYTE] u27-tilde-underscore
+[BYTE] u28-plus-path
+[BYTE] u29-at-in-path
+[BYTE] u30-nonascii-path
+[DIFF] u31-nbsp-in-url
+  src : 'https://example.com/a.png\xa0width= next'
+  REF : '<p><a href="https://example.com/a.png\xa0width=">https://example.com/a.png\xa0width=</a> next</p>\n\n'
+  FTML: '<p><a href="https://example.com/a.png%C2%A0width=">https://example.com/a.png\xa0width=</a> next</p>'
+[BYTE] u32-terminal-period
+[BYTE] u33-period-eoi
+[BYTE] u34-period-linebreak
+[BYTE] u35-exclaim-suite
+[BYTE] u36-hash-tail
+[BYTE] u37-comma-tail
+[BYTE] u38-comma-inner
+[BYTE] u39-star-tail
+[DIFF] u40-dash-tail
+  src : 'http://example.com/a-- next'
+  REF : '<p><a href="http://example.com/a">http://example.com/a</a>&#8212; next</p>\n\n'
+  FTML: '<p><a href="http://example.com/a">http://example.com/a</a>— next</p>'
+[BYTE] u41-dash-inner
+[BYTE] u42-brace-tail
+[BYTE] u43-paren-open-close
+[BYTE] u44-paren-in-url
+[BYTE] u45-bracket-in-url
+[FRAME] u46-quote-pair
+[BYTE] u47-described
+[BYTE] u48-described-spaces
+[DIFF] u49-described-double-space
+  src : '[https://example.com  Label Here]'
+  REF : '<p><a href="https://example.com"> Label Here</a></p>\n\n'
+  FTML: '<p><a href="https://example.com">Label Here</a></p>'
+[BYTE] u50-described-star
+[BYTE] u51-described-hash
+[BYTE] u52-described-path
+[BYTE] u53-described-no-label
+[BYTE] u54-described-unterminated
+[BYTE] u55-described-midline
+[BYTE] u56-double-bare
+[BYTE] u57-double-pipe
+[BYTE] u58-double-pipe-raw
+[BYTE] u59-double-pipe-multi
+[BYTE] u60-double-pipe-unterminated
+[BYTE] u61-double-bare-midline
+[BYTE] u62-double-pipe-midline
+[BYTE] u63-star-bare
+[BYTE] u64-star-mid
+[BYTE] u65-bold-star
+[BYTE] u66-star-killed-fallback
+[BYTE] u67-raw-adjacency
+[DIFF] u68-raw-alt-terminates
+  src : 'https://example.com/@<x>@ end'
+  REF : '<p><a href="https://example.com/@&lt;x">https://example.com/@&lt;x</a>&gt;@ end</p>\n\n'
+  FTML: '<p><a href="https://example.com/">https://example.com/</a><span style="white-space: pre-wrap;">x</span> end</p>'
+[BYTE] u69-nonascii-terminates
+[DIFF] u70-block-syntax-stops
+  src : 'https://example.com/video[[/embedvideo]]'
+  REF : '<p><a href="https://example.com/video[[/embedvideo">https://example.com/video[[/embedvideo</a>]]</p>\n\n'
+  FTML: '<p><a href="https://example.com/video">https://example.com/video</a>[[/embedvideo]]</p>'
+[BYTE] u71-empty-after-scheme
+[BYTE] u72-tagged-pipe-url
+[DIFF] u73-described-math-label
+  src : '[https://example.com/target [[$x$]]]'
+  REF : '<p><a href="https://example.com/target">[[$x$</a>]]</p>\n\n'
+  FTML: '<p>[<a href="https://example.com/target">https://example.com/target</a> <span class="math-inline">$x$</span>]</p>'
+[DIFF] u74-described-math-label-pin
+  src : '[https://example.com [[$x$]]]'
+  REF : '<p><a href="https://example.com">[[$x$</a>]]</p>\n\n'
+  FTML: '<p>[<a href="https://example.com">https://example.com</a> <span class="math-inline">$x$</span>]</p>'
+[BYTE] u75-double-pipe-many
+BATTERY 75 cases: byte-identical 67, frame-normalized 68

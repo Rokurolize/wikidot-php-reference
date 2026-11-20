@@ -1,0 +1,70 @@
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Albert</a></p>","id":"iw43-01-wikipedia-labeled"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Albert_Einstein</a></p>","id":"iw43-02-wikipedia-unlabeled"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Upper</a></p>","id":"iw43-03-wikipedia-upper-labeled"}
+{"errors":[],"html":"<p>[WIKIPEDIA:Albert_Einstein]</p>","id":"iw43-04-wikipedia-upper-unlabeled"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Mixed</a></p>","id":"iw43-05-wikipedia-mixed-labeled"}
+{"errors":[],"html":"<p>Polski</p>","id":"iw43-06-wikipedia-pl-labeled"}
+{"errors":[],"html":"<p>[wikipedia.pl:Test]</p>","id":"iw43-07-wikipedia-pl-unlabeled"}
+{"errors":[],"html":"<p>Pol</p>","id":"iw43-08-pl-wikipedia-labeled"}
+{"errors":[],"html":"<p>[pl.wikipedia:Test]</p>","id":"iw43-09-pl-wikipedia-unlabeled"}
+{"errors":[],"html":"<p><a href=\"https://www.google.com/search?q=free+wiki\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Google</a></p>","id":"iw43-10-google-labeled"}
+{"errors":[],"html":"<p><a href=\"https://www.google.com/search?q=free+wiki\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">free+wiki</a></p>","id":"iw43-11-google-unlabeled"}
+{"errors":[],"html":"<p><a href=\"https://dictionary.reference.com/browse/wiki\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Dictionary</a></p>","id":"iw43-12-dictionary-labeled"}
+{"errors":[],"html":"<p><a href=\"https://dictionary.reference.com/browse/wiki\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">wiki</a></p>","id":"iw43-13-dictionary-unlabeled"}
+{"errors":[],"html":"<p><a href=\"https://www.google.com/search?q=free+wiki\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Upper</a></p>","id":"iw43-14-google-upper-labeled"}
+{"errors":[],"html":"<p>[DICTIONARY:wiki]</p>","id":"iw43-15-dictionary-upper-unlabeled"}
+{"errors":[],"html":"<p>WP</p>","id":"iw43-16-wp-labeled"}
+{"errors":[],"html":"<p>[wp:SCP_Foundation]</p>","id":"iw43-17-wp-unlabeled"}
+{"errors":[],"html":"<p>Commons</p>","id":"iw43-18-commons-labeled"}
+{"errors":[],"html":"<p>The duck</p>","id":"iw43-19-nosuchwiki-labeled"}
+{"errors":[],"html":"<p>[nosuchwiki:Mallard]</p>","id":"iw43-20-nosuchwiki-unlabeled"}
+{"errors":[],"html":"<p>Banana</p>","id":"iw43-21-banana-labeled"}
+{"errors":[],"html":"<p>[thesaurus:oak]</p>","id":"iw43-22-thesaurus-unlabeled"}
+{"errors":[],"html":"<p>Duck</p>","id":"iw43-23-ddg-labeled"}
+{"errors":[],"html":"<p>Near</p>","id":"iw43-24-wikipedia-com-labeled"}
+{"errors":[],"html":"<p>Plain</p>","id":"iw43-25-wiki-labeled"}
+{"errors":[],"html":"<p>UpperDot</p>","id":"iw43-26-wikipedia-pl-upper-labeled"}
+{"errors":[],"html":"<p>[PL.WIKIPEDIA:Test]</p>","id":"iw43-27-pl-wikipedia-upper-unlabeled"}
+{"errors":[],"html":"<p>MixedDot</p>","id":"iw43-28-wikipedia-pl-mixed-labeled"}
+{"errors":[],"html":"<p><a href=\"https://www.google.com/search?q=free+wiki\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">MixedCase</a></p>","id":"iw43-29-google-mixed-labeled"}
+{"errors":[],"html":"<p>[Dictionary:wiki]</p>","id":"iw43-30-dictionary-mixed-unlabeled"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">The great physicist</a></p>","id":"iw43-31-multiword-label"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Two spaces</a></p>","id":"iw43-32-two-spaces-label"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Tab label</a></p>","id":"iw43-33-tab-label"}
+{"errors":[],"html":"<p>[wikipedia:Albert_Einstein ]</p>","id":"iw43-34-empty-label-one-space"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\"></a></p>","id":"iw43-35-empty-label-two-spaces"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">See: Einstein</a></p>","id":"iw43-36-label-with-colon"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">[x</a> label]</p>","id":"iw43-37-label-with-brackets"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">a|b</a></p>","id":"iw43-38-label-with-pipe"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Label</a></p>","id":"iw43-39-label-trailing-space"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Padded</a></p>","id":"iw43-40-label-leading-and-trailing"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/it:Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Italiano</a></p>","id":"iw43-41-path-colon"}
+{"errors":[],"html":"<p><a href=\"https://www.google.com/search?q=free+wiki\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">free+wiki</a></p>","id":"iw43-42-path-plus"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/a_b-c.d/e\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Pathy</a></p>","id":"iw43-43-path-underscore-hyphen-dot-slash"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/a#b&amp;c(d)e+f-g.h:i;j=k~l\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Specials</a></p>","id":"iw43-44-path-visible-special"}
+{"errors":[],"html":"<p>[wikipedia:Albert%20Einstein Percent]</p>","id":"iw43-45-path-percent"}
+{"errors":[],"html":"<p>[wikipedia:Älbert NonAscii]</p>","id":"iw43-46-path-nonascii"}
+{"errors":[],"html":"<p>[google:what?query Question]</p>","id":"iw43-47-path-question"}
+{"errors":[],"html":"<p>[wikipedia:it&#39;s Quote]</p>","id":"iw43-48-path-quote"}
+{"errors":[],"html":"<p>[wikipedia:]</p>","id":"iw43-49-empty-path"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/:Page\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">DoubleColon</a></p>","id":"iw43-50-double-colon-path"}
+{"errors":[],"html":"<p>[wikipedia:Albert_Einstein</p>","id":"iw43-51-unterminated-unlabeled"}
+{"errors":[],"html":"<p>[wikipedia:Albert_Einstein Some label</p>","id":"iw43-52-unterminated-labeled"}
+{"errors":[],"html":"<p>[1wiki:Page label]</p>","id":"iw43-53-prefix-leading-digit"}
+{"errors":[],"html":"<p>[_wiki:Page label]</p>","id":"iw43-54-prefix-underscore"}
+{"errors":[],"html":"<p>[1wiki:Page]</p>","id":"iw43-55-prefix-digit-unlabeled"}
+{"errors":[],"html":"<p>[ wikipedia:Page label]</p>","id":"iw43-56-space-after-open"}
+{"errors":[],"html":"<p>[:Page label]</p>","id":"iw43-57-empty-prefix"}
+{"errors":["ParseError { token: Identifier, rule: \"link-single-new-tab\", span: 28..32, kind: InvalidUrl }","ParseError { token: LeftBracketStar, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>[*wikipedia:Albert_Einstein Star]</p>","id":"iw43-58-star-form"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\"></a></p>","id":"iw43-59-label-only-spaces"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 29..29, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 27..29, kind: NoRulesMatch }"],"html":"<p>[[wikipedia:Albert_Einstein]]</p>","id":"iw43-60-double-bracket"}
+{"errors":["ParseError { token: Colon, rule: \"block-include\", span: 10..11, kind: InvalidInclude }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 36..38, kind: NoRulesMatch }"],"html":"<p>[[include :wikipedia:Albert_Einstein]]</p>","id":"iw43-61-include-site-pair"}
+{"errors":[],"html":"<p><a href=\"/wikipedia:albert-einstein\">Albert_Einstein</a></p>","id":"iw43-62-triple-bracket"}
+{"errors":[],"html":"<p>before</p><p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Albert</a></p><p>after</p>","id":"iw43-63-in-paragraphs"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/A\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">First</a> and <a href=\"https://www.google.com/search?q=g\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Second</a> and Third</p>","id":"iw43-64-multiple-on-line"}
+{"errors":[],"html":"<p><span><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Lab</a></span></p>","id":"iw43-65-inside-span"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>[wikipedia:Albert_Einstein Lab]</code></pre></div>","id":"iw43-66-inside-code"}
+{"errors":[],"html":"<p>[data:text/plain,Hello Data]</p>","id":"iw43-67-data-scheme"}
+{"errors":[],"html":"<p><a href=\"https://example.com/\">Control</a></p>","id":"iw43-68-direct-url"}
+{"errors":[],"html":"<p><a href=\"/path\">Relative</a></p>","id":"iw43-69-slash-target"}
+{"errors":[],"html":"<p style=\"text-align: center;\">Heading <a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Albert</a></p>","id":"iw43-70-interwiki-in-heading"}

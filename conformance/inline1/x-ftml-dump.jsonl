@@ -1,0 +1,46 @@
+{"errors":[],"html":"<p><a href=\"https://example.com/target\">https://example.com/label</a></p>","id":"x01"}
+{"errors":[],"html":"<p>[<a href=\"https://example.com/target\">https://example.com/target</a> <span class=\"math-inline\">$x$</span>]</p>","id":"x02"}
+{"errors":[],"html":"<p><a href=\"https://example.com/target\">mailto:a@b.com</a></p>","id":"x03"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 27..27, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 25..27, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://example.com\">http://example.com</a>|link]]</p>","id":"x04"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 48..48, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 46..48, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://example.com\">http://example.com</a>|<a href=\"https://example.com/other\">https://example.com/other</a>]]</p>","id":"x05"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 38..38, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 36..38, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://example.com/a?b=1&amp;c=2\">http://example.com/a?b=1&amp;c=2</a>|label]]</p>","id":"x06"}
+{"errors":[],"html":"<p><a href=\"https://example.com/mailto:a@b.com\">https://example.com/mailto:a@b.com</a></p>","id":"x07"}
+{"errors":[],"html":"<p><a href=\"mailto:a@b.com\">mail</a></p>","id":"x08"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 23..23, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 21..23, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"mailto:a@b.com\">mailto:a@b.com</a>|mail]]</p>","id":"x09"}
+{"errors":[],"html":"<p><a href=\"https://user:pass@example.com/path\">https://user:pass@example.com/path</a></p>","id":"x10"}
+{"errors":[],"html":"<p><span>before <span class=\"math-inline\">$x$</span> after</span></p>","id":"x11"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span>heading <span class=\"math-inline\">$x$</span> tail</span></h1>","id":"x12"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td><span class=\"math-inline\">$x$</span></td>\n<td>y</td>\n</tr>\n</table>","id":"x13"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td><span class=\"math-inline\">$x$</span></td>\n</tr>\n</table>","id":"x14"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">[[$x$]]</span></p>","id":"x15"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>[[$x$]]</code></pre></div>","id":"x16"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\"><span class=\"math-inline\">$x$</span></span></p>","id":"x17"}
+{"errors":[],"html":"<p><strong><span class=\"math-inline\">$x$</span></strong></p>","id":"x18"}
+{"errors":[],"html":"<p><tt><span class=\"math-inline\">$x$</span></tt></p>","id":"x19"}
+{"errors":[],"html":"<p><a href=\"/x\">$x$</a></p>","id":"x20"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Albert_Einstein</a></p>","id":"x21"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Einstein</a></p>","id":"x22"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/Albert_Einstein\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">Einstein</a></p>","id":"x23"}
+{"errors":[],"html":"<p>kot</p>","id":"x24"}
+{"errors":[],"html":"<p><a href=\"https://www.google.com/search?q=free+wiki\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">G</a></p>","id":"x25"}
+{"errors":[],"html":"<p>B</p>","id":"x26"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 29..29, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 27..29, kind: NoRulesMatch }"],"html":"<p>[[wikipedia:Albert_Einstein]]</p>","id":"x27"}
+{"errors":[],"html":"<p><a href=\"/wikipedia:albert-einstein\">Albert_Einstein</a></p>","id":"x28"}
+{"errors":[],"html":"<p>[wikipedia:Albert_Einstein|label]</p>","id":"x29"}
+{"errors":["ParseError { token: Identifier, rule: \"block-include\", span: 10..19, kind: InvalidInclude }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 35..37, kind: NoRulesMatch }"],"html":"<p>[[include wikipedia:Albert_Einstein]]</p>","id":"x30"}
+{"errors":["ParseError { token: Colon, rule: \"block-include\", span: 10..11, kind: InvalidInclude }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 29..31, kind: NoRulesMatch }"],"html":"<p>[[include :sandbox:other-page]]</p>","id":"x31"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>http://example.com/a</code></pre></div>","id":"x32"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">http://example.com/a</span></p>","id":"x33"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>[wikipedia:X]</code></pre></div>","id":"x34"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">[wikipedia:X]</span></p>","id":"x35"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>a@b.com</code></pre></div>","id":"x36"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">a@b.com</span></p>","id":"x37"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>[[http://x|y]]</code></pre></div>","id":"x38"}
+{"errors":[],"html":"<p><a href=\"http://example.com/a@b.com\">http://example.com/a@b.com</a></p>","id":"x39"}
+{"errors":[],"html":"<p><span class=\"wiki-email\">moc.b|a#moc.b|a</span>/path</p>","id":"x40"}
+{"errors":[],"html":"<p><a href=\"http://example.com/a\">https://x</a> more <a href=\"http://y.com\">http://y.com</a></p>","id":"x41"}
+{"errors":["ParseError { token: InputEnd, rule: \"math\", span: 26..26, kind: EndOfInput }","ParseError { token: LeftMath, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 24..26, kind: NoRulesMatch }"],"html":"<p>[[$<a href=\"http://example.com/a$\">http://example.com/a$</a>]]</p>","id":"x42"}
+{"errors":[],"html":"<p><span class=\"math-inline\">$[wikipedia:X]$</span></p>","id":"x43"}
+{"errors":[],"html":"<p><a href=\"https://en.wikipedia.org/wiki/X\" onclick=\"window.open(this.href, &#39;_blank&#39;); return false;\">http://example.com/a</a></p>","id":"x44"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 20..20, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x\">http://x</a>|<span class=\"math-inline\">$y$</span>]]</p>","id":"x45"}
+{"errors":[],"html":"<p><span><a href=\"http://example.com/a\">L</a></span></p>","id":"x46"}

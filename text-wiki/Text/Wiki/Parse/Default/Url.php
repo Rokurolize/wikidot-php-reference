@@ -81,7 +81,17 @@ class Text_Wiki_Parse_Url extends Text_Wiki_Parse {
             'gopher://',
             'news://',
             'mailto:',
-            'mms://'
+            'mms://',
+            // R2-inlined: live Wikidot autolinks these additional schemes
+            // (ftml URL rule WIKIDOT_ONLY_AUTOLINK_SCHEMES plus the corpus pin
+            // test/link/autolink-wikidot-schemes/wikidot.html). The fossil list
+            // predates them; this is a fossil-era artifact correction (C1).
+            'ssh://',
+            'git://',
+            'sftp://',
+            'svn://',
+            'telnet://',
+            'cvs://'
         )
     );
 
@@ -197,18 +207,43 @@ class Text_Wiki_Parse_Url extends Text_Wiki_Parse {
     
     function process($matches)
     {
+        // R2-inline1: the fossil's bare-URL matching is preserved here. An
+        // earlier owner attempt split a double-bracket URL target at a pipe,
+        // following ftml; the coordinator's live probe
+        // muse-probe-r2in1-x-x04 shows live keeps the pipe inside the target,
+        // reproducing the PRE-correction reference byte-for-byte and confirming
+        // the standing F-R2-44 finding. That split was therefore reverted; the
+        // pipe-in-target mismatch is a candidate ftml divergence, not a
+        // reference correction.
+        // C4 (reference bug, live-settled by muse-probe-r2in1-x-x45): an
+        // inline-math opener is a boundary for a bare URL, as ftml's
+        // wikidot_automatic_url_end stops at '[['. Stop the automatic URL
+        // there and leave the opener for the Mathinline rule rather than
+        // swallowing it into the href. This does not touch pipe handling.
+        $url = $matches[3];
+        $trailing = isset($matches[6]) ? $matches[6] : '';
+        $math = strpos($url, '[[');
+        if ($math !== false) {
+            // A pipe immediately before the opener belongs to the label
+            // surface, not the target, when the opener follows it.
+            if ($math > 0 && $url[$math - 1] === '|') {
+                $math -= 1;
+            }
+            $trailing = substr($url, $math) . $trailing;
+            $url = substr($url, 0, $math);
+        }
         // set options
         $options = array(
             'type' => 'inline',
-            'href' => $matches[3],
-            'text' => $matches[3]
+            'href' => $url,
+            'text' => $url
         );
-        
+
         if($matches[2] == '*'){
         		$options['target']='_blank';
         }
         // tokenize
-        return $matches[1] . $this->wiki->addToken($this->rule, $options) . $matches[6];
+        return $matches[1] . $this->wiki->addToken($this->rule, $options) . $trailing;
     }
 
     /**
@@ -233,6 +268,14 @@ class Text_Wiki_Parse_Url extends Text_Wiki_Parse {
     
     function processDescr(&$matches)
     {
+        // C5 (reference bug, live-settled by muse-probe-r2in1-x-x02): a
+        // described URL whose label contains an inline-math opener is not
+        // claimed by Url; ftml and live leave the described form to be split
+        // into a bare autolink plus a Mathinline span. Yield the whole match
+        // so the later rules can claim their shapes.
+        if (isset($matches[3]) && strpos($matches[3], '[[$') !== false) {
+            return $matches[0];
+        }
         // set options
         $options = array(
             'type' => 'descr',

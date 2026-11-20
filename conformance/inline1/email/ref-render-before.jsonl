@@ -1,0 +1,62 @@
+{"id":"e41-01-bare-simple","output":"<p><span class=\"wiki-email\">moc.elpmaxe|cba#moc.elpmaxe|cba<\/span><\/p>\n\n"}
+{"id":"e41-02-bare-in-prose","output":"<p>Contact us: <span class=\"wiki-email\">ten.elpmaxe|ofni#ten.elpmaxe|ofni<\/span><\/p>\n\n"}
+{"id":"e41-03-bare-two-in-line","output":"<p><span class=\"wiki-email\">moc.eno|a#moc.eno|a<\/span> and <span class=\"wiki-email\">gro.owt|b#gro.owt|b<\/span><\/p>\n\n"}
+{"id":"e41-04-bare-uppercase","output":"<p><span class=\"wiki-email\">MOC.elpmaxE|emaN.resU#MOC.elpmaxE|emaN.resU<\/span><\/p>\n\n"}
+{"id":"e41-05-bare-one-char","output":"<p><span class=\"wiki-email\">oi.y|x#oi.y|x<\/span><\/p>\n\n"}
+{"id":"e41-06-bare-plus","output":"<p>user+<span class=\"wiki-email\">moc.elpmaxe|gat#moc.elpmaxe|gat<\/span><\/p>\n\n"}
+{"id":"e41-07-bare-underscore","output":"<p><span class=\"wiki-email\">moc.elpmaxe|tsal_tsrif#moc.elpmaxe|tsal_tsrif<\/span><\/p>\n\n"}
+{"id":"e41-08-bare-dash-local","output":"<p><span class=\"wiki-email\">moc.elpmaxe|tsal-tsrif#moc.elpmaxe|tsal-tsrif<\/span><\/p>\n\n"}
+{"id":"e41-09-bare-dotted-local","output":"<p><span class=\"wiki-email\">moc.elpmaxe|tsal.elddim.tsrif#moc.elpmaxe|tsal.elddim.tsrif<\/span><\/p>\n\n"}
+{"id":"e41-10-bare-digits","output":"<p><span class=\"wiki-email\">moc.654|321#moc.654|321<\/span><\/p>\n\n"}
+{"id":"e41-11-subdomain","output":"<p><span class=\"wiki-email\">ku.oc.elpmaxe.bus.liam|resu#ku.oc.elpmaxe.bus.liam|resu<\/span><\/p>\n\n"}
+{"id":"e41-12-domain-dash","output":"<p><span class=\"wiki-email\">moc.elpmaxe.niamod-emos|resu#moc.elpmaxe.niamod-emos|resu<\/span><\/p>\n\n"}
+{"id":"e41-13-domain-numeric-label","output":"<p><span class=\"wiki-email\">elpmaxe.321|resu#elpmaxe.321|resu<\/span><\/p>\n\n"}
+{"id":"e41-14-single-label-host","output":"<p>user@localhost<\/p>\n\n"}
+{"id":"e41-15-trailing-dot","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>.<\/p>\n\n"}
+{"id":"e41-16-double-dot-domain","output":"<p>user@example..com<\/p>\n\n"}
+{"id":"e41-17-leading-dash-domain","output":"<p><span class=\"wiki-email\">moc.elpmaxe-|resu#moc.elpmaxe-|resu<\/span><\/p>\n\n"}
+{"id":"e41-18-trailing-dash-domain","output":"<p><span class=\"wiki-email\">moc.-elpmaxe|resu#moc.-elpmaxe|resu<\/span><\/p>\n\n"}
+{"id":"e41-19-underscore-domain","output":"<p>user@example_com.net<\/p>\n\n"}
+{"id":"e41-20-domain-close-paren","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>)<\/p>\n\n"}
+{"id":"e41-21-described","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#su tcatnoC<\/span><\/p>\n\n"}
+{"id":"e41-22-described-multiword","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#ereh maet selas ehT<\/span><\/p>\n\n"}
+{"id":"e41-23-described-upper","output":"<p><span class=\"wiki-email\">MOC.ELPMAXE|RESU#esaC dexiM<\/span><\/p>\n\n"}
+{"id":"e41-24-described-two-spaces","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#pag elbuoD <\/span><\/p>\n\n"}
+{"id":"e41-25-described-no-space","output":"<p>[<span class=\"wiki-email\">tcatnoCmoc.elpmaxe|resu#tcatnoCmoc.elpmaxe|resu<\/span>]<\/p>\n\n"}
+{"id":"e41-26-described-empty-label","output":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span> ]<\/p>\n\n"}
+{"id":"e41-27-described-unterminated","output":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span> Label<\/p>\n\n"}
+{"id":"e41-28-bracketed-bare","output":"<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>]<\/p>\n\n"}
+{"id":"e41-29-angle-bracketed","output":"<p>&lt;<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>&gt;<\/p>\n\n"}
+{"id":"e41-30-double-bracketed","output":"<p>[[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>]]<\/p>\n\n"}
+{"id":"e41-31-bracketed-mailto","output":"<p>[<a href=\"mailto:user@example.com\">mailto:user@example.com<\/a>]<\/p>\n\n"}
+{"id":"e41-32-bracketed-mailto-label","output":"<p><a href=\"mailto:user@example.com\">Mail me<\/a><\/p>\n\n"}
+{"id":"e41-33-mailto-bare","output":"<p><a href=\"mailto:user@example.com\">mailto:user@example.com<\/a><\/p>\n\n"}
+{"id":"e41-34-mailto-upper-scheme","output":"<p>MAILTO:<span class=\"wiki-email\">MOC.elpmaxE|resU#MOC.elpmaxE|resU<\/span><\/p>\n\n"}
+{"id":"e41-35-mailto-pipe-label","output":"<p><a href=\"mailto:user@example.com|Mail\">mailto:user@example.com|Mail<\/a> me<\/p>\n\n"}
+{"id":"e41-36-http-userinfo","output":"<p>see <a href=\"http:\/\/user@example.com\/path\">http:\/\/user@example.com\/path<\/a> here<\/p>\n\n"}
+{"id":"e41-37-https-with-email-in-path","output":"<p><a href=\"https:\/\/example.com\/a\/user@x.org\/z\">https:\/\/example.com\/a\/user@x.org\/z<\/a><\/p>\n\n"}
+{"id":"e41-38-url-then-email","output":"<p><a href=\"http:\/\/example.com\">http:\/\/example.com<\/a> and <span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span><\/p>\n\n"}
+{"id":"e41-39-comma","output":"<p>Write to <span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>, please<\/p>\n\n"}
+{"id":"e41-40-semicolon-and-bang","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>; and <span class=\"wiki-email\">ten.elpmaxe|rehto#ten.elpmaxe|rehto<\/span>!<\/p>\n\n"}
+{"id":"e41-41-parenthesized","output":"<p>(<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>)<\/p>\n\n"}
+{"id":"e41-42-question-and-colon","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>? next: <span class=\"wiki-email\">oc.b|a#oc.b|a<\/span><\/p>\n\n"}
+{"id":"e41-43-quote-wrapped","output":"<p>&quot;<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>&quot;<\/p>\n\n"}
+{"id":"e41-44-apostrophe-after","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>'s mailbox<\/p>\n\n"}
+{"id":"e41-45-exclamation-attached","output":"<p>Hi <span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span>!<\/p>\n\n"}
+{"id":"e41-46-no-at","output":"<p>user.example.com<\/p>\n\n"}
+{"id":"e41-47-no-domain-dot","output":"<p>user@example<\/p>\n\n"}
+{"id":"e41-48-double-at","output":"<p>user@@example.com<\/p>\n\n"}
+{"id":"e41-49-empty-local","output":"<p>@example.com<\/p>\n\n"}
+{"id":"e41-50-empty-domain","output":"<p>user@<\/p>\n\n"}
+{"id":"e41-51-local-space","output":"<p>user <span class=\"wiki-email\">moc.elpmaxe|eman#moc.elpmaxe|eman<\/span><\/p>\n\n"}
+{"id":"e41-52-plus-only","output":"<p>user+@example.com<\/p>\n\n"}
+{"id":"e41-53-dot-start-local","output":"<p>.<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span><\/p>\n\n"}
+{"id":"e41-54-trailing-underscore-local","output":"<p><span class=\"wiki-email\">moc.elpmaxe|_resu#moc.elpmaxe|_resu<\/span><\/p>\n\n"}
+{"id":"e41-55-cjk-local","output":"<p>u\u017c<span class=\"wiki-email\">moc.elpmaxe|kinwokty#moc.elpmaxe|kinwokty<\/span><\/p>\n\n"}
+{"id":"e41-56-in-bold","output":"<p><strong><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span><\/strong><\/p>\n\n"}
+{"id":"e41-57-in-raw","output":"<p><span style=\"white-space: pre-wrap;\">user@example.com<\/span><\/p>\n\n"}
+{"id":"e41-58-in-code","output":"\n<div class=\"code\">\n<pre><code>user@example.com<\/code><\/pre><\/div>\n\n"}
+{"id":"e41-59-in-table-cell","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span><\/td>\n<td><span class=\"wiki-email\">ten.elpmaxe|rehto#ten.elpmaxe|rehto<\/span><\/td>\n<\/tr>\n<\/table>"}
+{"id":"e41-60-comment-inside","output":"<p><span class=\"wiki-email\">moc.todikiw|troppus#moc.todikiw|troppus<\/span><\/p>\n\n"}
+{"id":"e41-61-email-then-comment","output":"<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu<\/span> tail<\/p>\n\n"}
+{"id":"e41-62-mixed-document","output":"<p>Reach <strong><span class=\"wiki-email\">moc.elpmaxe|selas#moc.elpmaxe|selas<\/span><\/strong> or <a href=\"mailto:help@example.net\">Help<\/a> today.<\/p>\n\n"}

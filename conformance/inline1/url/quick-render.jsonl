@@ -1,0 +1,22 @@
+{"id":"q01-bare-http","output":"<p>See <a href=\"http:\/\/example.com\">http:\/\/example.com<\/a> here<\/p>\n\n"}
+{"id":"q02-https","output":"<p><a href=\"https:\/\/example.com\/a\/b?x=1&amp;y=2\">https:\/\/example.com\/a\/b?x=1&amp;y=2<\/a><\/p>\n\n"}
+{"id":"q03-ftp","output":"<p><a href=\"ftp:\/\/example.com\/file.txt\">ftp:\/\/example.com\/file.txt<\/a><\/p>\n\n"}
+{"id":"q04-www","output":"<p>www.example.com here<\/p>\n\n"}
+{"id":"q05-period","output":"<p>Visit <a href=\"https:\/\/example.com\/test\">https:\/\/example.com\/test<\/a>. next<\/p>\n\n"}
+{"id":"q06-exclaim","output":"<p>See <a href=\"https:\/\/example.com\/a\">https:\/\/example.com\/a<\/a>!;:) next<\/p>\n\n"}
+{"id":"q07-paren","output":"<p>See <a href=\"https:\/\/example.com\/a_(b\">https:\/\/example.com\/a_(b<\/a>) here<\/p>\n\n"}
+{"id":"q08-paren-wrap","output":"<p>(<a href=\"https:\/\/example.com\/a\">https:\/\/example.com\/a<\/a>) here<\/p>\n\n"}
+{"id":"q09-bracket","output":"<p>See <a href=\"https:\/\/example.com\/a[b]c\">https:\/\/example.com\/a[b]c<\/a> here<\/p>\n\n"}
+{"id":"q10-described","output":"<p><a href=\"https:\/\/example.com\">Example Description<\/a><\/p>\n\n"}
+{"id":"q11-star-bare","output":"<p><a href=\"https:\/\/example.com\/newtab\" onclick=\"window.open(this.href, '_blank'); return false;\">https:\/\/example.com\/newtab<\/a><\/p>\n\n"}
+{"id":"q12-star-described","output":"<p><a href=\"https:\/\/example.com\" onclick=\"window.open(this.href, '_blank'); return false;\">Label<\/a><\/p>\n\n"}
+{"id":"q13-double-bracket-pipe","output":"<p>[[<a href=\"http:\/\/x\/|raw\">http:\/\/x\/|raw<\/a>]]<\/p>\n\n"}
+{"id":"q14-double-bracket-bare","output":"<p>[[<a href=\"https:\/\/example.com\/\">https:\/\/example.com\/<\/a>]]<\/p>\n\n"}
+{"id":"q15-gopher","output":"<p><a href=\"gopher:\/\/example.com\/g\">gopher:\/\/example.com\/g<\/a> here<\/p>\n\n"}
+{"id":"q16-mms","output":"<p><a href=\"mms:\/\/example.com\/m\">mms:\/\/example.com\/m<\/a> here<\/p>\n\n"}
+{"id":"q17-mailto","output":"<p><a href=\"mailto:user@example.com\">mailto:user@example.com<\/a> here<\/p>\n\n"}
+{"id":"q18-image-ext","output":"<p><a href=\"https:\/\/example.com\/a.png\">https:\/\/example.com\/a.png<\/a> here<\/p>\n\n"}
+{"id":"q19-hash","output":"<p><a href=\"https:\/\/example.com\/b\">https:\/\/example.com\/b<\/a># here<\/p>\n\n"}
+{"id":"q20-unterminated","output":"<p>[<a href=\"https:\/\/example.com\">https:\/\/example.com<\/a> label<\/p>\n\n"}
+{"id":"q21-trailing-comma","output":"<p><a href=\"http:\/\/example.com\/page\">http:\/\/example.com\/page<\/a>, mid<\/p>\n\n"}
+{"id":"q22-nbsp","output":"<p><a href=\"https:\/\/example.com\/a.png\u00a0width=\">https:\/\/example.com\/a.png\u00a0width=<\/a> next<\/p>\n\n"}

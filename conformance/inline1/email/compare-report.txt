@@ -1,0 +1,38 @@
+VARIANT before: total=62 exact_agree=1 normalized_agree=56 case_errors=2
+  DIFF e41-21-described
+    src="[user@example.com Contact us]"
+    ref="<p><span class=\"wiki-email\">moc.elpmaxe|resu#su tcatnoC</span></p>\n\n"
+    ftm="<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span> Contact us]</p>"
+    nrf="<p><span class=\"wiki-email\">moc.elpmaxe|resu#su tcatnoC</span></p>"
+    nft="<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span> Contact us]</p>"
+  DIFF e41-22-described-multiword
+    src="[user@example.com The sales team here]"
+    ref="<p><span class=\"wiki-email\">moc.elpmaxe|resu#ereh maet selas ehT</span></p>\n\n"
+    ftm="<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span> The sales team here]</p>"
+    nrf="<p><span class=\"wiki-email\">moc.elpmaxe|resu#ereh maet selas ehT</span></p>"
+    nft="<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span> The sales team here]</p>"
+  DIFF e41-23-described-upper
+    src="[USER@EXAMPLE.COM Mixed Case]"
+    ref="<p><span class=\"wiki-email\">MOC.ELPMAXE|RESU#esaC dexiM</span></p>\n\n"
+    ftm="<p>[<span class=\"wiki-email\">MOC.ELPMAXE|RESU#MOC.ELPMAXE|RESU</span> Mixed Case]</p>"
+    nrf="<p><span class=\"wiki-email\">MOC.ELPMAXE|RESU#esaC dexiM</span></p>"
+    nft="<p>[<span class=\"wiki-email\">MOC.ELPMAXE|RESU#MOC.ELPMAXE|RESU</span> Mixed Case]</p>"
+  DIFF e41-24-described-two-spaces
+    src="[user@example.com  Double gap]"
+    ref="<p><span class=\"wiki-email\">moc.elpmaxe|resu#pag elbuoD </span></p>\n\n"
+    ftm="<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span> Double gap]</p>"
+    nrf="<p><span class=\"wiki-email\">moc.elpmaxe|resu#pag elbuoD </span></p>"
+    nft="<p>[<span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span> Double gap]</p>"
+  DIFF e41-44-apostrophe-after
+    src="user@example.com's mailbox"
+    ref="<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span>'s mailbox</p>\n\n"
+    ftm="<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span>&#39;s mailbox</p>"
+    nrf="<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span>'s mailbox</p>"
+    nft="<p><span class=\"wiki-email\">moc.elpmaxe|resu#moc.elpmaxe|resu</span>&#39;s mailbox</p>"
+  DIFF e41-58-in-code
+    src="[[code]]\nuser@example.com\n[[/code]]"
+    ref="\n<div class=\"code\">\n<pre><code>user@example.com</code></pre></div>\n\n"
+    ftm="<div class=\"code\"><pre><code>user@example.com</code></pre></div>"
+    nrf="<div class=\"code\">\n<pre><code>user@example.com</code></pre></div>"
+    nft="<div class=\"code\"><pre><code>user@example.com</code></pre></div>"
+

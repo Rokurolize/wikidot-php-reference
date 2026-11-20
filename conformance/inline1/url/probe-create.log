@@ -1,0 +1,195 @@
+p01-star-bare -> muse-probe-r2in1-url-p01-star-bare (created)
+p02-star-described -> muse-probe-r2in1-url-p02-star-described (created)
+p03-double-pipe -> muse-probe-r2in1-url-p03-double-pipe (created)
+p04-double-pipe-raw -> muse-probe-r2in1-url-p04-double-pipe-raw (created)
+p05-double-pipe-multi -> muse-probe-r2in1-url-p05-double-pipe-multi (created)
+p06-double-bare -> muse-probe-r2in1-url-p06-double-bare (created)
+p07-double-pipe-unterminated -> muse-probe-r2in1-url-p07-double-pipe-unterminated (created)
+p08-double-space-label -> muse-probe-r2in1-url-p08-double-space-label (created)
+p09-ssh -> muse-probe-r2in1-url-p09-ssh (created)
+p10-git -> muse-probe-r2in1-url-p10-git (created)
+p11-sftp -> muse-probe-r2in1-url-p11-sftp (created)
+p12-svn -> muse-probe-r2in1-url-p12-svn (created)
+p13-telnet -> muse-probe-r2in1-url-p13-telnet (created)
+p14-cvs -> muse-probe-r2in1-url-p14-cvs (created)
+p15-nbsp-in-url -> muse-probe-r2in1-url-p15-nbsp-in-url (created)
+p16-quote-pair -> muse-probe-r2in1-url-p16-quote-pair (created)
+p17-paren-in-url -> muse-probe-r2in1-url-p17-paren-in-url (created)
+p18-terminal-period -> muse-probe-r2in1-url-p18-terminal-period (created)
+p19-bracket-in-url -> muse-probe-r2in1-url-p19-bracket-in-url (created)
+p20-trailing-suite -> muse-probe-r2in1-url-p20-trailing-suite (created)
+p21-upper-scheme -> muse-probe-r2in1-url-p21-upper-scheme (created)
+p22-glued-digit -> muse-probe-r2in1-url-p22-glued-digit (created)
+p23-mailto -> muse-probe-r2in1-url-p23-mailto (created)
+p24-image-ext -> muse-probe-r2in1-url-p24-image-ext (created)
+p25-described -> muse-probe-r2in1-url-p25-described (created)
+p26-bracket-no-label -> muse-probe-r2in1-url-p26-bracket-no-label (created)
+p27-nonascii-path -> muse-probe-r2in1-url-p27-nonascii-path (created)
+p28-described-math-label -> muse-probe-r2in1-url-p28-described-math-label (created)
+p29-described-math-label-pin -> muse-probe-r2in1-url-p29-described-math-label-pin (created)
+p30-bold-star -> muse-probe-r2in1-url-p30-bold-star (created)
+p31-pipe-plain -> muse-probe-r2in1-url-p31-pipe-plain (created)
+p32-raw-adjacency -> muse-probe-r2in1-url-p32-raw-adjacency (created)
+32 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01-star-bare": {
+  "fullname": "muse-probe-r2in1-url-p01-star-bare",
+  "source": "*https://example.com/newtab",
+  "action": "created"
+ },
+ "p02-star-described": {
+  "fullname": "muse-probe-r2in1-url-p02-star-described",
+  "source": "[*https://example.com Label]",
+  "action": "created"
+ },
+ "p03-double-pipe": {
+  "fullname": "muse-probe-r2in1-url-p03-double-pipe",
+  "source": "[[http://x/|raw]]",
+  "action": "created"
+ },
+ "p04-double-pipe-raw": {
+  "fullname": "muse-probe-r2in1-url-p04-double-pipe-raw",
+  "source": "[[http://x/|@@raw@@]]",
+  "action": "created"
+ },
+ "p05-double-pipe-multi": {
+  "fullname": "muse-probe-r2in1-url-p05-double-pipe-multi",
+  "source": "[[http://x/|a|b]]",
+  "action": "created"
+ },
+ "p06-double-bare": {
+  "fullname": "muse-probe-r2in1-url-p06-double-bare",
+  "source": "[[https://example.com/]]",
+  "action": "created"
+ },
+ "p07-double-pipe-unterminated": {
+  "fullname": "muse-probe-r2in1-url-p07-double-pipe-unterminated",
+  "source": "[[http://x/|label here",
+  "action": "created"
+ },
+ "p08-double-space-label": {
+  "fullname": "muse-probe-r2in1-url-p08-double-space-label",
+  "source": "[https://example.com  Label Here]",
+  "action": "created"
+ },
+ "p09-ssh": {
+  "fullname": "muse-probe-r2in1-url-p09-ssh",
+  "source": "Go ssh://example.com/a here",
+  "action": "created"
+ },
+ "p10-git": {
+  "fullname": "muse-probe-r2in1-url-p10-git",
+  "source": "Go git://example.com/b here",
+  "action": "created"
+ },
+ "p11-sftp": {
+  "fullname": "muse-probe-r2in1-url-p11-sftp",
+  "source": "Go sftp://example.com/c here",
+  "action": "created"
+ },
+ "p12-svn": {
+  "fullname": "muse-probe-r2in1-url-p12-svn",
+  "source": "Go svn://example.com/d here",
+  "action": "created"
+ },
+ "p13-telnet": {
+  "fullname": "muse-probe-r2in1-url-p13-telnet",
+  "source": "Go telnet://example.com/e here",
+  "action": "created"
+ },
+ "p14-cvs": {
+  "fullname": "muse-probe-r2in1-url-p14-cvs",
+  "source": "Go cvs://example.com/f here",
+  "action": "created"
+ },
+ "p15-nbsp-in-url": {
+  "fullname": "muse-probe-r2in1-url-p15-nbsp-in-url",
+  "source": "https://example.com/a.png width= next",
+  "action": "created"
+ },
+ "p16-quote-pair": {
+  "fullname": "muse-probe-r2in1-url-p16-quote-pair",
+  "source": "https://example.com/aa``bb''cc here",
+  "action": "created"
+ },
+ "p17-paren-in-url": {
+  "fullname": "muse-probe-r2in1-url-p17-paren-in-url",
+  "source": "See https://example.com/a_(b) here",
+  "action": "created"
+ },
+ "p18-terminal-period": {
+  "fullname": "muse-probe-r2in1-url-p18-terminal-period",
+  "source": "Visit https://example.com/test. next",
+  "action": "created"
+ },
+ "p19-bracket-in-url": {
+  "fullname": "muse-probe-r2in1-url-p19-bracket-in-url",
+  "source": "See https://example.com/a[b]c here",
+  "action": "created"
+ },
+ "p20-trailing-suite": {
+  "fullname": "muse-probe-r2in1-url-p20-trailing-suite",
+  "source": "See https://example.com/a!;:) next and https://example.com/b# here",
+  "action": "created"
+ },
+ "p21-upper-scheme": {
+  "fullname": "muse-probe-r2in1-url-p21-upper-scheme",
+  "source": "HTTPS://EXAMPLE.COM/P here",
+  "action": "created"
+ },
+ "p22-glued-digit": {
+  "fullname": "muse-probe-r2in1-url-p22-glued-digit",
+  "source": "9https://example.com/a here",
+  "action": "created"
+ },
+ "p23-mailto": {
+  "fullname": "muse-probe-r2in1-url-p23-mailto",
+  "source": "mailto:user@example.com here",
+  "action": "created"
+ },
+ "p24-image-ext": {
+  "fullname": "muse-probe-r2in1-url-p24-image-ext",
+  "source": "https://example.com/a.png here",
+  "action": "created"
+ },
+ "p25-described": {
+  "fullname": "muse-probe-r2in1-url-p25-described",
+  "source": "[https://example.com Example Description]",
+  "action": "created"
+ },
+ "p26-bracket-no-label": {
+  "fullname": "muse-probe-r2in1-url-p26-bracket-no-label",
+  "source": "[http://x/]",
+  "action": "created"
+ },
+ "p27-nonascii-path": {
+  "fullname": "muse-probe-r2in1-url-p27-nonascii-path",
+  "source": "http://example.com/pageここ here",
+  "action": "created"
+ },
+ "p28-described-math-label": {
+  "fullname": "muse-probe-r2in1-url-p28-described-math-label",
+  "source": "[https://example.com/target [[$x$]]]",
+  "action": "created"
+ },
+ "p29-described-math-label-pin": {
+  "fullname": "muse-probe-r2in1-url-p29-described-math-label-pin",
+  "source": "[https://example.com [[$x$]]]",
+  "action": "created"
+ },
+ "p30-bold-star": {
+  "fullname": "muse-probe-r2in1-url-p30-bold-star",
+  "source": "bold **http://example.com/b** end",
+  "action": "created"
+ },
+ "p31-pipe-plain": {
+  "fullname": "muse-probe-r2in1-url-p31-pipe-plain",
+  "source": "http://example.com/path|END next",
+  "action": "created"
+ },
+ "p32-raw-adjacency": {
+  "fullname": "muse-probe-r2in1-url-p32-raw-adjacency",
+  "source": "https://example.com/a@@b end",
+  "action": "created"
+ }
+}

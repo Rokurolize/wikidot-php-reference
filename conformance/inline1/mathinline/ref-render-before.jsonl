@@ -1,0 +1,56 @@
+{"id":"basic","output":"<p>A <span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span> B<\/p>\n\n"}
+{"id":"no-spaces","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"left-space-only","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"right-space-only","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"tabs-around","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"empty","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"spaces-only","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"multiple-line","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span> and <span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"adjacent","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"dollar-in-content","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"html-content","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"entities-content","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"unicode-content","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"label-like-word","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"label-like-brackets","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"attr-like","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"pipe-in-content","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"backslash-commands","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"typography-dots","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"typography-dashes","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"comment-markers","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"single-newline","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"blank-line-inside","output":"<p>[[$ E =<\/p>\n\n<p>mc^2 $]]<\/p>\n\n"}
+{"id":"newline-after-opener","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"newline-before-closer","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"unterminated","output":"<p>[[$ x<\/p>\n\n"}
+{"id":"unterminated-empty","output":"<p>[[$<\/p>\n\n"}
+{"id":"stray-closer","output":"<p>x $]]<\/p>\n\n"}
+{"id":"close-first","output":"<p>$]] <span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"triple-close","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span>]<\/p>\n\n"}
+{"id":"quad-close","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span>]]<\/p>\n\n"}
+{"id":"double-dollar-open","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"shifted-close","output":"<p>[[$ x $]<\/p>\n\n"}
+{"id":"shifted-open","output":"<p>[$ x $]]<\/p>\n\n"}
+{"id":"in-span","output":"<p><span class=\"x\"><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/span><\/p>\n\n"}
+{"id":"in-scored-span","output":"<span><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/span>"}
+{"id":"in-heading1","output":"\n<h1 id=\"toc0\"><span><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/span><\/h1>\n"}
+{"id":"in-heading2","output":"\n<h2 id=\"toc0\"><span>Heading <span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/span><\/h2>\n"}
+{"id":"in-table-cell","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/td>\n<td><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/td>\n<\/tr>\n<\/table>"}
+{"id":"in-list","output":"<ul>\n<li><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/li>\n<\/ul>"}
+{"id":"in-blockquote","output":"<blockquote><p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n<\/blockquote>\n"}
+{"id":"in-div","output":"<div ><p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n<\/div>"}
+{"id":"in-code","output":"\n<div class=\"code\">\n<pre><code>[[$ x $]]<\/code><\/pre><\/div>\n\n"}
+{"id":"in-raw","output":"<p><span style=\"white-space: pre-wrap;\">&#32;[[$&#32;x&#32;$]]&#32;<\/span><\/p>\n\n"}
+{"id":"in-comment","output":""}
+{"id":"before-heading","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n\n<h1 id=\"toc0\"><span>Head<\/span><\/h1>\n"}
+{"id":"math-block-then-inline","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"inline-then-math-block","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"in-footnote","output":"<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1<\/a><\/sup><\/p>\n\n<div class=\"footnotes-footer\"><div class=\"title\">Footnotes<\/div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1<\/a>. <span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/div><\/div>"}
+{"id":"in-collapsible","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n<\/div><\/div><\/div>"}
+{"id":"comment-inside","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"comment-joined-close-1","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"comment-joined-close-2","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span>]<\/p>\n\n"}
+{"id":"raw-inside","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"crlf","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><br \/>\n<span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}
+{"id":"trailing-newline","output":"<p><span class=\"error-inline\">The equation has not been processed correctly. Most prabably it has syntax error(s).\t<\/span><\/p>\n\n"}

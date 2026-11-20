@@ -19,7 +19,7 @@
  * @link       http://pear.php.net/package/Text_Wiki
  */
 class Text_Wiki_Render_Xhtml_Mathinline extends Text_Wiki_Render {
-    
+     
     public $conf = array();
 
     /**
@@ -34,54 +34,23 @@ class Text_Wiki_Render_Xhtml_Mathinline extends Text_Wiki_Render {
      * @return string The text rendered from the token options.
      *
      */
-    
+     
     function token($options) {
-        $content = $options['content'];
-        $hashcode = md5($content);
-        $runData = Ozone::getRunData();
-        $site = $runData->getTemp('site');
-        $dir = $site->getLocalFilesPath() . '/math/inline';
-        if (!file_exists($dir)) {
-            mkdirfull($dir);
-        }
-        
-        $tmpDir = WIKIDOT_ROOT . '/tmp/math';
-        if (!file_exists($tmpDir)) {
-            mkdirfull($tmpDir);
-        }
-        
-        $imgFile = $hashcode . '.png';
-        if (!file_exists($dir . '/' . $imgFile)) {
-            $renderer = new LatexRenderer();
-            $renderer->setTmpDir($tmpDir);
-            $renderer->setOutputDir($dir);
-            $renderer->setDensity(110);
-            $content2 = '$' . $content . '$';
-            $renderer->render($content2, $hashcode);
-        }
-        if (!file_exists($dir . '/' . $imgFile)) {
-            return '<span class="error-inline">' . _('The equation has not been processed correctly. Most prabably it has syntax error(s).') . '	</span>';
-        }
-        
-        $out = '<img class="math-inline" src="/local--math/inline/' . $imgFile . '" alt="' . htmlentities($content) . '" />';
-        
-        return $out;
-        
-        $content = $options['content'];
-        $hashcode = md5($content);
-        $runData = Ozone::getRunData();
-        $site = $runData->getTemp('site');
-        $dir = $site->getLocalFilesPath() . '/math/inline';
-        if (!file_exists($dir)) {
-            mkdirfull($dir);
-        }
-        
-        $imgFile = $hashcode . '.png';
-        
-        $imgFile = $hashcode . '.png';
-        $out = '<img src="http://' . $site->getDomain() . '/local--math/inline/' . $imgFile . '" alt="' . htmlentities($content) . '" />';
-        
-        return $out;
-    
+        // Live Wikidot's saved-page shape for [[$ ... $]] is a span holding
+        // the trimmed source between literal dollar signs; the observable
+        // HTML contains no generated image. The fossil's md5-named PNG path
+        // and its no-PNG error span are an obsolete serving mechanism, so
+        // both are replaced here. Escape as the legacy HtmlRender does:
+        // ampersand, both angle brackets, double quote and apostrophe; all
+        // other characters (including non-ASCII) pass through verbatim.
+        $escaped = strtr($options['content'], array(
+            '&' => '&amp;',
+            '<' => '&lt;',
+            '>' => '&gt;',
+            '"' => '&quot;',
+            "'" => '&#39;',
+            "\0" => ' ',
+        ));
+        return '<span class="math-inline">$' . $escaped . '$</span>';
     }
 }

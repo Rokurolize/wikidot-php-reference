@@ -1,0 +1,9 @@
+xstar -> muse-probe-r2in1-x-xstar (created)
+1 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "xstar": {
+  "fullname": "muse-probe-r2in1-x-xstar",
+  "source": "*https://example.com/star-target",
+  "action": "created"
+ }
+}

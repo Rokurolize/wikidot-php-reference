@@ -1,0 +1,28 @@
+{"id": "p01-bare", "source": "abc@example.com"}
+{"id": "p02-prose", "source": "Contact us: info@example.net"}
+{"id": "p03-plus", "source": "user+tag@example.com"}
+{"id": "p04-described", "source": "[user@example.com Contact us]"}
+{"id": "p05-described-words", "source": "[user@example.com The sales team here]"}
+{"id": "p06-described-upper", "source": "[USER@EXAMPLE.COM Mixed Case]"}
+{"id": "p07-described-doublegap", "source": "[user@example.com  Double gap]"}
+{"id": "p08-bracket-bare", "source": "[user@example.com]"}
+{"id": "p09-angle", "source": "<user@example.com>"}
+{"id": "p10-doublebracket", "source": "[[user@example.com]]"}
+{"id": "p11-bracket-mailto", "source": "[mailto:user@example.com]"}
+{"id": "p12-mailto-pipe", "source": "mailto:user@example.com|Mail me"}
+{"id": "p13-http-userinfo", "source": "see http://user@example.com/path here"}
+{"id": "p14-trailing-dot", "source": "user@example.com."}
+{"id": "p15-double-dot", "source": "user@example..com"}
+{"id": "p16-underscore-domain", "source": "user@example_com.net"}
+{"id": "p17-paren", "source": "(user@example.com)"}
+{"id": "p18-comment-inside", "source": "support[!--x--]@wikidot.com"}
+{"id": "p19-bold", "source": "**user@example.com**"}
+{"id": "p20-raw", "source": "@@user@example.com@@"}
+{"id": "p21-code", "source": "[[code]]\nuser@example.com\n[[/code]]"}
+{"id": "p22-table", "source": "|| user@example.com || other@example.net ||"}
+{"id": "p23-double-at", "source": "user@@example.com"}
+{"id": "p24-mailto-bare", "source": "mailto:user@example.com"}
+{"id": "p25-dash-domain", "source": "user@-example.com"}
+{"id": "p26-described-empty", "source": "[user@example.com ]"}
+{"id": "p27-described-no-close", "source": "[user@example.com Label"}
+{"id": "p28-subdomain", "source": "user@mail.sub.example.co.uk"}

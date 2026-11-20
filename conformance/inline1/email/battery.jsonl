@@ -1,0 +1,62 @@
+{"id": "e41-01-bare-simple", "source": "abc@example.com"}
+{"id": "e41-02-bare-in-prose", "source": "Contact us: info@example.net"}
+{"id": "e41-03-bare-two-in-line", "source": "a@one.com and b@two.org"}
+{"id": "e41-04-bare-uppercase", "source": "User.Name@Example.COM"}
+{"id": "e41-05-bare-one-char", "source": "x@y.io"}
+{"id": "e41-06-bare-plus", "source": "user+tag@example.com"}
+{"id": "e41-07-bare-underscore", "source": "first_last@example.com"}
+{"id": "e41-08-bare-dash-local", "source": "first-last@example.com"}
+{"id": "e41-09-bare-dotted-local", "source": "first.middle.last@example.com"}
+{"id": "e41-10-bare-digits", "source": "123@456.com"}
+{"id": "e41-11-subdomain", "source": "user@mail.sub.example.co.uk"}
+{"id": "e41-12-domain-dash", "source": "user@some-domain.example.com"}
+{"id": "e41-13-domain-numeric-label", "source": "user@123.example"}
+{"id": "e41-14-single-label-host", "source": "user@localhost"}
+{"id": "e41-15-trailing-dot", "source": "user@example.com."}
+{"id": "e41-16-double-dot-domain", "source": "user@example..com"}
+{"id": "e41-17-leading-dash-domain", "source": "user@-example.com"}
+{"id": "e41-18-trailing-dash-domain", "source": "user@example-.com"}
+{"id": "e41-19-underscore-domain", "source": "user@example_com.net"}
+{"id": "e41-20-domain-close-paren", "source": "user@example.com)"}
+{"id": "e41-21-described", "source": "[user@example.com Contact us]"}
+{"id": "e41-22-described-multiword", "source": "[user@example.com The sales team here]"}
+{"id": "e41-23-described-upper", "source": "[USER@EXAMPLE.COM Mixed Case]"}
+{"id": "e41-24-described-two-spaces", "source": "[user@example.com  Double gap]"}
+{"id": "e41-25-described-no-space", "source": "[user@example.comContact]"}
+{"id": "e41-26-described-empty-label", "source": "[user@example.com ]"}
+{"id": "e41-27-described-unterminated", "source": "[user@example.com Label"}
+{"id": "e41-28-bracketed-bare", "source": "[user@example.com]"}
+{"id": "e41-29-angle-bracketed", "source": "<user@example.com>"}
+{"id": "e41-30-double-bracketed", "source": "[[user@example.com]]"}
+{"id": "e41-31-bracketed-mailto", "source": "[mailto:user@example.com]"}
+{"id": "e41-32-bracketed-mailto-label", "source": "[mailto:user@example.com Mail me]"}
+{"id": "e41-33-mailto-bare", "source": "mailto:user@example.com"}
+{"id": "e41-34-mailto-upper-scheme", "source": "MAILTO:User@Example.COM"}
+{"id": "e41-35-mailto-pipe-label", "source": "mailto:user@example.com|Mail me"}
+{"id": "e41-36-http-userinfo", "source": "see http://user@example.com/path here"}
+{"id": "e41-37-https-with-email-in-path", "source": "https://example.com/a/user@x.org/z"}
+{"id": "e41-38-url-then-email", "source": "http://example.com and user@example.com"}
+{"id": "e41-39-comma", "source": "Write to user@example.com, please"}
+{"id": "e41-40-semicolon-and-bang", "source": "user@example.com; and other@example.net!"}
+{"id": "e41-41-parenthesized", "source": "(user@example.com)"}
+{"id": "e41-42-question-and-colon", "source": "user@example.com? next: a@b.co"}
+{"id": "e41-43-quote-wrapped", "source": "\"user@example.com\""}
+{"id": "e41-44-apostrophe-after", "source": "user@example.com's mailbox"}
+{"id": "e41-45-exclamation-attached", "source": "Hi user@example.com!"}
+{"id": "e41-46-no-at", "source": "user.example.com"}
+{"id": "e41-47-no-domain-dot", "source": "user@example"}
+{"id": "e41-48-double-at", "source": "user@@example.com"}
+{"id": "e41-49-empty-local", "source": "@example.com"}
+{"id": "e41-50-empty-domain", "source": "user@"}
+{"id": "e41-51-local-space", "source": "user name@example.com"}
+{"id": "e41-52-plus-only", "source": "user+@example.com"}
+{"id": "e41-53-dot-start-local", "source": ".user@example.com"}
+{"id": "e41-54-trailing-underscore-local", "source": "user_@example.com"}
+{"id": "e41-55-cjk-local", "source": " użytkownik@example.com"}
+{"id": "e41-56-in-bold", "source": "**user@example.com**"}
+{"id": "e41-57-in-raw", "source": "@@user@example.com@@"}
+{"id": "e41-58-in-code", "source": "[[code]]\nuser@example.com\n[[/code]]"}
+{"id": "e41-59-in-table-cell", "source": "|| user@example.com || other@example.net ||"}
+{"id": "e41-60-comment-inside", "source": "support[!--x--]@wikidot.com"}
+{"id": "e41-61-email-then-comment", "source": "user@example.com[!--x--] tail"}
+{"id": "e41-62-mixed-document", "source": "Reach **sales@example.com** or [mailto:help@example.net Help] today."}

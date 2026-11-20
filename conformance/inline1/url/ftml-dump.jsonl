@@ -1,0 +1,75 @@
+{"errors":[],"html":"<p>See <a href=\"http://example.com\">http://example.com</a> here</p>","id":"u01-http"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a/b?x=1&amp;y=2\">https://example.com/a/b?x=1&amp;y=2</a></p>","id":"u02-https"}
+{"errors":[],"html":"<p><a href=\"ftp://example.com/file.txt\">ftp://example.com/file.txt</a> here</p>","id":"u03-ftp"}
+{"errors":[],"html":"<p><a href=\"gopher://example.com/g\">gopher://example.com/g</a> here</p>","id":"u04-gopher"}
+{"errors":[],"html":"<p><a href=\"news://example.com/n\">news://example.com/n</a> here</p>","id":"u05-news"}
+{"errors":[],"html":"<p><a href=\"mms://example.com/m\">mms://example.com/m</a> here</p>","id":"u06-mms"}
+{"errors":[],"html":"<p><a href=\"mailto:user@example.com\">mailto:user@example.com</a> here</p>","id":"u07-mailto"}
+{"errors":[],"html":"<p>Go <a href=\"ssh://example.com/a\">ssh://example.com/a</a> here</p>","id":"u08-ssh"}
+{"errors":[],"html":"<p>Go <a href=\"git://example.com/b\">git://example.com/b</a> here</p>","id":"u09-git"}
+{"errors":[],"html":"<p>Go <a href=\"sftp://example.com/c\">sftp://example.com/c</a> here</p>","id":"u10-sftp"}
+{"errors":[],"html":"<p>Go <a href=\"svn://example.com/d\">svn://example.com/d</a> here</p>","id":"u11-svn"}
+{"errors":[],"html":"<p>Go <a href=\"telnet://example.com/e\">telnet://example.com/e</a> here</p>","id":"u12-telnet"}
+{"errors":[],"html":"<p>Go <a href=\"cvs://example.com/f\">cvs://example.com/f</a> here</p>","id":"u13-cvs"}
+{"errors":[],"html":"<p>www.example.com and example.com/path here</p>","id":"u14-www-schemeless"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 6..8, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>HTTPS://EXAMPLE.COM/P here</p>","id":"u15-upper-scheme"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 6..8, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>HtTpS://example.com/p here</p>","id":"u16-mixed-scheme"}
+{"errors":[],"html":"<p>See 9<a href=\"https://example.com/a\">https://example.com/a</a> and x9<a href=\"gopher://example.com/b\">gopher://example.com/b</a> here</p>","id":"u17-glued-digit"}
+{"errors":[],"html":"<p>http:// here</p>","id":"u18-bare-scheme"}
+{"errors":[],"html":"<p>https:// here</p>","id":"u19-scheme-no-host"}
+{"errors":[],"html":"<p><a href=\"https://example.com/\">https://example.com/</a> here</p>","id":"u20-trailing-slash"}
+{"errors":[],"html":"<p><a href=\"https://example.com/search?q=free+wiki&amp;lang=en#top\">https://example.com/search?q=free+wiki&amp;lang=en#top</a> here</p>","id":"u21-query-fragment"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a%20b\">https://example.com/a%20b</a> here</p>","id":"u22-percent-encode"}
+{"errors":[],"html":"<p><a href=\"http://example.com:8080/path\">http://example.com:8080/path</a> here</p>","id":"u23-port"}
+{"errors":[],"html":"<p><a href=\"http://127.0.0.1/index\">http://127.0.0.1/index</a> here</p>","id":"u24-ip-host"}
+{"errors":[],"html":"<p><a href=\"https://deep.sub.example.co.uk/page\">https://deep.sub.example.co.uk/page</a> here</p>","id":"u25-subdomain"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a.b/c\">https://example.com/a.b/c</a> next</p>","id":"u26-inner-dot"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a~b_c\">https://example.com/a~b_c</a> here</p>","id":"u27-tilde-underscore"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a+b\">https://example.com/a+b</a> here</p>","id":"u28-plus-path"}
+{"errors":[],"html":"<p><a href=\"http://example.com/user@name\">http://example.com/user@name</a> here</p>","id":"u29-at-in-path"}
+{"errors":[],"html":"<p><a href=\"http://example.com/page\">http://example.com/page</a>ここ here</p>","id":"u30-nonascii-path"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a.png%C2%A0width=\">https://example.com/a.png width=</a> next</p>","id":"u31-nbsp-in-url"}
+{"errors":[],"html":"<p>Visit <a href=\"https://example.com/test\">https://example.com/test</a>. next</p>","id":"u32-terminal-period"}
+{"errors":[],"html":"<p>Visit <a href=\"https://example.com/test\">https://example.com/test</a>.</p>","id":"u33-period-eoi"}
+{"errors":[],"html":"<p><a href=\"https://snippets.wikidot.com/code:collapsible-block-unleashed\">https://snippets.wikidot.com/code:collapsible-block-unleashed</a>.</p>","id":"u34-period-linebreak"}
+{"errors":[],"html":"<p>See <a href=\"https://example.com/a\">https://example.com/a</a>!;:) next</p>","id":"u35-exclaim-suite"}
+{"errors":[],"html":"<p>See <a href=\"https://example.com/b\">https://example.com/b</a># here</p>","id":"u36-hash-tail"}
+{"errors":[],"html":"<p><a href=\"http://example.com/page\">http://example.com/page</a>, mid</p>","id":"u37-comma-tail"}
+{"errors":[],"html":"<p><a href=\"http://example.com/a,b\">http://example.com/a,b</a> next</p>","id":"u38-comma-inner"}
+{"errors":[],"html":"<p><a href=\"http://example.com/b\">http://example.com/b</a>** end</p>","id":"u39-star-tail"}
+{"errors":[],"html":"<p><a href=\"http://example.com/a\">http://example.com/a</a>— next</p>","id":"u40-dash-tail"}
+{"errors":[],"html":"<p><a href=\"http://example.com/a--b\">http://example.com/a--b</a> next</p>","id":"u41-dash-inner"}
+{"errors":[],"html":"<p><a href=\"http://example.com/a\">http://example.com/a</a>}} next</p>","id":"u42-brace-tail"}
+{"errors":[],"html":"<p>(<a href=\"https://example.com/a\">https://example.com/a</a>) here</p>","id":"u43-paren-open-close"}
+{"errors":[],"html":"<p>See <a href=\"https://example.com/a_(b\">https://example.com/a_(b</a>) here</p>","id":"u44-paren-in-url"}
+{"errors":[],"html":"<p>See <a href=\"https://example.com/a[b]c\">https://example.com/a[b]c</a> here</p>","id":"u45-bracket-in-url"}
+{"errors":[],"html":"<p><a href=\"https://example.com/aa``bb\">https://example.com/aa``bb</a>&#39;&#39;cc here</p>","id":"u46-quote-pair"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">Example Description</a></p>","id":"u47-described"}
+{"errors":[],"html":"<p><a href=\"https://example.com/example\">A label with many words</a></p>","id":"u48-described-spaces"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">Label Here</a></p>","id":"u49-described-double-space"}
+{"errors":[],"html":"<p><a href=\"https://example.com\" target=\"_blank\">Label</a></p>","id":"u50-described-star"}
+{"errors":[],"html":"<p><a href=\"#anchor\">My Label</a></p>","id":"u51-described-hash"}
+{"errors":[],"html":"<p><a href=\"/start\">Go Home</a></p>","id":"u52-described-path"}
+{"errors":[],"html":"<p>[<a href=\"http://x/\">http://x/</a>]</p>","id":"u53-described-no-label"}
+{"errors":[],"html":"<p>[<a href=\"https://example.com\">https://example.com</a> label</p>","id":"u54-described-unterminated"}
+{"errors":[],"html":"<p>Before <a href=\"https://example.com\">Described</a> after</p>","id":"u55-described-midline"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 24..24, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 22..24, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"https://example.com/\">https://example.com/</a>]]</p>","id":"u56-double-bare"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 17..17, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|raw]]</p>","id":"u57-double-pipe"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 21..21, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 19..21, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|<span style=\"white-space: pre-wrap;\">raw</span>]]</p>","id":"u58-double-pipe-raw"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 17..17, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|a|b]]</p>","id":"u59-double-pipe-multi"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 18..22, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|label here</p>","id":"u60-double-pipe-unterminated"}
+{"errors":["ParseError { token: Whitespace, rule: \"block\", span: 17..18, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>See [[<a href=\"http://x/\">http://x/</a>]] and text</p>","id":"u61-double-bare-midline"}
+{"errors":["ParseError { token: Whitespace, rule: \"block\", span: 23..24, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 21..23, kind: NoRulesMatch }"],"html":"<p>See [[<a href=\"http://x/\">http://x/</a>|Label]] and text</p>","id":"u62-double-pipe-midline"}
+{"errors":[],"html":"<p><a href=\"https://example.com/newtab\" target=\"_blank\">https://example.com/newtab</a></p>","id":"u63-star-bare"}
+{"errors":[],"html":"<p>star mid <a href=\"http://example.com/star-mid\" target=\"_blank\">http://example.com/star-mid</a> x</p>","id":"u64-star-mid"}
+{"errors":[],"html":"<p>bold *<a href=\"http://example.com/b\" target=\"_blank\">http://example.com/b</a>** end</p>","id":"u65-bold-star"}
+{"errors":[],"html":"<p>[<a href=\"https://a.example\" target=\"_blank\">https://a.example</a> <span style=\"white-space: pre-wrap;\">x</span> <a href=\"https://b.example\">https://b.example</a>]</p>","id":"u66-star-killed-fallback"}
+{"errors":[],"html":"<p><a href=\"https://example.com/a@@b\">https://example.com/a@@b</a> end</p>","id":"u67-raw-adjacency"}
+{"errors":[],"html":"<p><a href=\"https://example.com/\">https://example.com/</a><span style=\"white-space: pre-wrap;\">x</span> end</p>","id":"u68-raw-alt-terminates"}
+{"errors":[],"html":"<p><a href=\"http://example.com/page\">http://example.com/page</a>す here</p>","id":"u69-nonascii-terminates"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 25..28, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 38..40, kind: NoRulesMatch }"],"html":"<p><a href=\"https://example.com/video\">https://example.com/video</a>[[/embedvideo]]</p>","id":"u70-block-syntax-stops"}
+{"errors":[],"html":"<p><a href=\"javascript:;\">Label</a></p>","id":"u71-empty-after-scheme"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">Label|With Pipe</a></p>","id":"u72-tagged-pipe-url"}
+{"errors":[],"html":"<p>[<a href=\"https://example.com/target\">https://example.com/target</a> <span class=\"math-inline\">$x$</span>]</p>","id":"u73-described-math-label"}
+{"errors":[],"html":"<p>[<a href=\"https://example.com\">https://example.com</a> <span class=\"math-inline\">$x$</span>]</p>","id":"u74-described-math-label-pin"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 19..19, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://x/\">http://x/</a>|a|b|c]]</p>","id":"u75-double-pipe-many"}

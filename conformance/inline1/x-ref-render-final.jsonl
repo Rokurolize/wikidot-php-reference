@@ -1,0 +1,46 @@
+{"id":"x01","output":"<p><a href=\"https:\/\/example.com\/target\">https:\/\/example.com\/label<\/a><\/p>\n\n"}
+{"id":"x02","output":"<p>[<a href=\"https:\/\/example.com\/target\">https:\/\/example.com\/target<\/a> <span class=\"math-inline\">$x$<\/span>]<\/p>\n\n"}
+{"id":"x03","output":"<p><a href=\"https:\/\/example.com\/target\">mailto:a@b.com<\/a><\/p>\n\n"}
+{"id":"x04","output":"<p>[[<a href=\"http:\/\/example.com|link\">http:\/\/example.com|link<\/a>]]<\/p>\n\n"}
+{"id":"x05","output":"<p>[[<a href=\"http:\/\/example.com|https:\/\/example.com\/other\">http:\/\/example.com|https:\/\/example.com\/other<\/a>]]<\/p>\n\n"}
+{"id":"x06","output":"<p>[[<a href=\"http:\/\/example.com\/a?b=1&amp;c=2|label\">http:\/\/example.com\/a?b=1&amp;c=2|label<\/a>]]<\/p>\n\n"}
+{"id":"x07","output":"<p><a href=\"https:\/\/example.com\/mailto:a@b.com\">https:\/\/example.com\/mailto:a@b.com<\/a><\/p>\n\n"}
+{"id":"x08","output":"<p><a href=\"mailto:a@b.com\">mail<\/a><\/p>\n\n"}
+{"id":"x09","output":"<p>[[<a href=\"mailto:a@b.com|mail\">mailto:a@b.com|mail<\/a>]]<\/p>\n\n"}
+{"id":"x10","output":"<p><a href=\"https:\/\/user:pass@example.com\/path\">https:\/\/user:pass@example.com\/path<\/a><\/p>\n\n"}
+{"id":"x11","output":"<p><span>before <span class=\"math-inline\">$x$<\/span> after<\/span><\/p>\n\n"}
+{"id":"x12","output":"\n<h1 id=\"toc0\"><span>heading <span class=\"math-inline\">$x$<\/span> tail<\/span><\/h1>\n"}
+{"id":"x13","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><span class=\"math-inline\">$x$<\/span><\/td>\n<td>y<\/td>\n<\/tr>\n<\/table>"}
+{"id":"x14","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td><span class=\"math-inline\">$x$<\/span><\/td>\n<\/tr>\n<\/table>"}
+{"id":"x15","output":"<p><span style=\"white-space: pre-wrap;\">[[$x$]]<\/span><\/p>\n\n"}
+{"id":"x16","output":"\n<div class=\"code\">\n<pre><code>[[$x$]]<\/code><\/pre><\/div>\n\n"}
+{"id":"x17","output":"<p><span style=\"text-decoration: line-through;\"><span class=\"math-inline\">$x$<\/span><\/span><\/p>\n\n"}
+{"id":"x18","output":"<p><strong><span class=\"math-inline\">$x$<\/span><\/strong><\/p>\n\n"}
+{"id":"x19","output":"<p><tt><span class=\"math-inline\">$x$<\/span><\/tt><\/p>\n\n"}
+{"id":"x20","output":"<p><a class=\"newpage\" href=\"\/x\">$x$<\/a><\/p>\n\n"}
+{"id":"x21","output":"<p><a href=\"https:\/\/en.wikipedia.org\/wiki\/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Albert_Einstein<\/a><\/p>\n\n"}
+{"id":"x22","output":"<p><a href=\"https:\/\/en.wikipedia.org\/wiki\/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Einstein<\/a><\/p>\n\n"}
+{"id":"x23","output":"<p><a href=\"https:\/\/en.wikipedia.org\/wiki\/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Einstein<\/a><\/p>\n\n"}
+{"id":"x24","output":"<p><a href=\"https:\/\/pl.wikipedia.org\/wiki\/Kot\" onclick=\"window.open(this.href, '_blank'); return false;\">kot<\/a><\/p>\n\n"}
+{"id":"x25","output":"<p><a href=\"https:\/\/www.google.com\/search?q=free+wiki\" onclick=\"window.open(this.href, '_blank'); return false;\">G<\/a><\/p>\n\n"}
+{"id":"x26","output":"<p>B<\/p>\n\n"}
+{"id":"x27","output":"<p>[<a href=\"https:\/\/en.wikipedia.org\/wiki\/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Albert_Einstein<\/a>]<\/p>\n\n"}
+{"id":"x28","output":"<p><a class=\"newpage\" href=\"\/wikipedia:albert-einstein\">Albert_Einstein<\/a><\/p>\n\n"}
+{"id":"x29","output":"<p>[wikipedia:Albert_Einstein|label]<\/p>\n\n"}
+{"id":"x30","output":"<div  class=\"error-block\"><p>Page to be included wikipedia:albert-einstein can not be found!<\/p>\n\n<\/div>"}
+{"id":"x31","output":"<p>SITE-PAGE-CONTENT<\/p>\n\n"}
+{"id":"x32","output":"\n<div class=\"code\">\n<pre><code>http:\/\/example.com\/a<\/code><\/pre><\/div>\n\n"}
+{"id":"x33","output":"<p><span style=\"white-space: pre-wrap;\">http:\/\/example.com\/a<\/span><\/p>\n\n"}
+{"id":"x34","output":"\n<div class=\"code\">\n<pre><code>[wikipedia:X]<\/code><\/pre><\/div>\n\n"}
+{"id":"x35","output":"<p><span style=\"white-space: pre-wrap;\">[wikipedia:X]<\/span><\/p>\n\n"}
+{"id":"x36","output":"\n<div class=\"code\">\n<pre><code>a@b.com<\/code><\/pre><\/div>\n\n"}
+{"id":"x37","output":"<p><span style=\"white-space: pre-wrap;\">a@b.com<\/span><\/p>\n\n"}
+{"id":"x38","output":"\n<div class=\"code\">\n<pre><code>[[http:\/\/x|y]]<\/code><\/pre><\/div>\n\n"}
+{"id":"x39","output":"<p><a href=\"http:\/\/example.com\/a@b.com\">http:\/\/example.com\/a@b.com<\/a><\/p>\n\n"}
+{"id":"x40","output":"<p><span class=\"wiki-email\">moc.b|a#moc.b|a<\/span>\/path<\/p>\n\n"}
+{"id":"x41","output":"<p><a href=\"http:\/\/example.com\/a\">https:\/\/x<\/a> more <a href=\"http:\/\/y.com\">http:\/\/y.com<\/a><\/p>\n\n"}
+{"id":"x42","output":"<p><span class=\"math-inline\">$http:\/\/example.com\/a$<\/span><\/p>\n\n"}
+{"id":"x43","output":"<p><span class=\"math-inline\">$[wikipedia:X]$<\/span><\/p>\n\n"}
+{"id":"x44","output":"<p><a href=\"https:\/\/en.wikipedia.org\/wiki\/X\" onclick=\"window.open(this.href, '_blank'); return false;\">\ufffd702\ufffd<\/a><\/p>\n\n"}
+{"id":"x45","output":"<p>[[<a href=\"http:\/\/x\">http:\/\/x<\/a>|<span class=\"math-inline\">$y$<\/span>]]<\/p>\n\n"}
+{"id":"x46","output":"<p><span><a href=\"http:\/\/example.com\/a\">L<\/a><\/span><\/p>\n\n"}

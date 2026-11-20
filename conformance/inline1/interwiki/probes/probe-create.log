@@ -1,0 +1,245 @@
+p01-wiki-labeled -> muse-probe-r2in1-iw-p01-wiki-labeled (created)
+p02-wiki-unlabeled -> muse-probe-r2in1-iw-p02-wiki-unlabeled (created)
+p03-wiki-upper-labeled -> muse-probe-r2in1-iw-p03-wiki-upper-labeled (created)
+p04-wiki-upper-unlabeled -> muse-probe-r2in1-iw-p04-wiki-upper-unlabeled (created)
+p05-wikipedia-pl-labeled -> muse-probe-r2in1-iw-p05-wikipedia-pl-labeled (created)
+p06-wikipedia-pl-unlabeled -> muse-probe-r2in1-iw-p06-wikipedia-pl-unlabeled (created)
+p07-pl-wikipedia-labeled -> muse-probe-r2in1-iw-p07-pl-wikipedia-labeled (created)
+p08-pl-wikipedia-unlabeled -> muse-probe-r2in1-iw-p08-pl-wikipedia-unlabeled (created)
+p09-google-unlabeled -> muse-probe-r2in1-iw-p09-google-unlabeled (created)
+p10-dictionary-labeled -> muse-probe-r2in1-iw-p10-dictionary-labeled (created)
+p11-unknown-labeled -> muse-probe-r2in1-iw-p11-unknown-labeled (created)
+p12-unknown-unlabeled -> muse-probe-r2in1-iw-p12-unknown-unlabeled (created)
+p13-wp-labeled -> muse-probe-r2in1-iw-p13-wp-labeled (created)
+p14-commons-labeled -> muse-probe-r2in1-iw-p14-commons-labeled (created)
+p15-two-spaces-label -> muse-probe-r2in1-iw-p15-two-spaces-label (created)
+p16-tab-label -> muse-probe-r2in1-iw-p16-tab-label (created)
+p17-empty-label-one-space -> muse-probe-r2in1-iw-p17-empty-label-one-space (created)
+p18-empty-label-two-spaces -> muse-probe-r2in1-iw-p18-empty-label-two-spaces (created)
+p19-label-trailing-space -> muse-probe-r2in1-iw-p19-label-trailing-space (created)
+2026-11-20 17:08:43,010 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85346823', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in1-iw-p20-label-url', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p20-label-url -> muse-probe-r2in1-iw-p20-label-url (created)
+p21-path-colon -> muse-probe-r2in1-iw-p21-path-colon (created)
+p22-path-percent -> muse-probe-r2in1-iw-p22-path-percent (created)
+p23-path-nonascii -> muse-probe-r2in1-iw-p23-path-nonascii (created)
+p24-double-bracket -> muse-probe-r2in1-iw-p24-double-bracket (created)
+p25-include-site-pair -> muse-probe-r2in1-iw-p25-include-site-pair (created)
+p26-unterminated -> muse-probe-r2in1-iw-p26-unterminated (created)
+p27-prefix-leading-digit -> muse-probe-r2in1-iw-p27-prefix-leading-digit (created)
+p28-prefix-underscore -> muse-probe-r2in1-iw-p28-prefix-underscore (created)
+2026-11-20 17:11:13,848 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85346881', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in1-iw-p29-star-form', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p29-star-form -> muse-probe-r2in1-iw-p29-star-form (created)
+p30-direct-url -> muse-probe-r2in1-iw-p30-direct-url (created)
+p31-slash-target -> muse-probe-r2in1-iw-p31-slash-target (created)
+p32-multiple-on-line -> muse-probe-r2in1-iw-p32-multiple-on-line (created)
+p33-label-with-pipe -> muse-probe-r2in1-iw-p33-label-with-pipe (created)
+p34-label-with-brackets -> muse-probe-r2in1-iw-p34-label-with-brackets (created)
+p35-dotted-upper-labeled -> muse-probe-r2in1-iw-p35-dotted-upper-labeled (created)
+p36-google-mixed-labeled -> muse-probe-r2in1-iw-p36-google-mixed-labeled (created)
+p37-empty-path -> muse-probe-r2in1-iw-p37-empty-path (created)
+p38-double-colon-path -> muse-probe-r2in1-iw-p38-double-colon-path (created)
+p39-inside-span -> muse-probe-r2in1-iw-p39-inside-span (created)
+p40-inline-in-text -> muse-probe-r2in1-iw-p40-inline-in-text (created)
+40 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01-wiki-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p01-wiki-labeled",
+  "source": "[wikipedia:Albert_Einstein Albert]",
+  "action": "created"
+ },
+ "p02-wiki-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p02-wiki-unlabeled",
+  "source": "[wikipedia:Albert_Einstein]",
+  "action": "created"
+ },
+ "p03-wiki-upper-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p03-wiki-upper-labeled",
+  "source": "[WIKIPEDIA:Albert_Einstein Upper]",
+  "action": "created"
+ },
+ "p04-wiki-upper-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p04-wiki-upper-unlabeled",
+  "source": "[WIKIPEDIA:Albert_Einstein]",
+  "action": "created"
+ },
+ "p05-wikipedia-pl-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p05-wikipedia-pl-labeled",
+  "source": "[wikipedia.pl:Test Polski]",
+  "action": "created"
+ },
+ "p06-wikipedia-pl-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p06-wikipedia-pl-unlabeled",
+  "source": "[wikipedia.pl:Test]",
+  "action": "created"
+ },
+ "p07-pl-wikipedia-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p07-pl-wikipedia-labeled",
+  "source": "[pl.wikipedia:Test Pol]",
+  "action": "created"
+ },
+ "p08-pl-wikipedia-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p08-pl-wikipedia-unlabeled",
+  "source": "[pl.wikipedia:Test]",
+  "action": "created"
+ },
+ "p09-google-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p09-google-unlabeled",
+  "source": "[google:free+wiki]",
+  "action": "created"
+ },
+ "p10-dictionary-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p10-dictionary-labeled",
+  "source": "[dictionary:wiki Dictionary]",
+  "action": "created"
+ },
+ "p11-unknown-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p11-unknown-labeled",
+  "source": "[nosuchwiki:Mallard The duck]",
+  "action": "created"
+ },
+ "p12-unknown-unlabeled": {
+  "fullname": "muse-probe-r2in1-iw-p12-unknown-unlabeled",
+  "source": "[nosuchwiki:Mallard]",
+  "action": "created"
+ },
+ "p13-wp-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p13-wp-labeled",
+  "source": "[wp:SCP_Foundation WP]",
+  "action": "created"
+ },
+ "p14-commons-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p14-commons-labeled",
+  "source": "[commons:File:SCP-682.jpg Commons]",
+  "action": "created"
+ },
+ "p15-two-spaces-label": {
+  "fullname": "muse-probe-r2in1-iw-p15-two-spaces-label",
+  "source": "[wikipedia:Albert_Einstein  Two spaces]",
+  "action": "created"
+ },
+ "p16-tab-label": {
+  "fullname": "muse-probe-r2in1-iw-p16-tab-label",
+  "source": "[wikipedia:Albert_Einstein\tTab label]",
+  "action": "created"
+ },
+ "p17-empty-label-one-space": {
+  "fullname": "muse-probe-r2in1-iw-p17-empty-label-one-space",
+  "source": "[wikipedia:Albert_Einstein ]",
+  "action": "created"
+ },
+ "p18-empty-label-two-spaces": {
+  "fullname": "muse-probe-r2in1-iw-p18-empty-label-two-spaces",
+  "source": "[wikipedia:Albert_Einstein  ]",
+  "action": "created"
+ },
+ "p19-label-trailing-space": {
+  "fullname": "muse-probe-r2in1-iw-p19-label-trailing-space",
+  "source": "[wikipedia:Albert_Einstein Label ]",
+  "action": "created"
+ },
+ "p20-label-url": {
+  "fullname": "muse-probe-r2in1-iw-p20-label-url",
+  "source": "[wikipedia:X http://example.com/a]",
+  "action": "created"
+ },
+ "p21-path-colon": {
+  "fullname": "muse-probe-r2in1-iw-p21-path-colon",
+  "source": "[wikipedia:it:Albert_Einstein Italiano]",
+  "action": "created"
+ },
+ "p22-path-percent": {
+  "fullname": "muse-probe-r2in1-iw-p22-path-percent",
+  "source": "[wikipedia:Albert%20Einstein Percent]",
+  "action": "created"
+ },
+ "p23-path-nonascii": {
+  "fullname": "muse-probe-r2in1-iw-p23-path-nonascii",
+  "source": "[wikipedia:Älbert NonAscii]",
+  "action": "created"
+ },
+ "p24-double-bracket": {
+  "fullname": "muse-probe-r2in1-iw-p24-double-bracket",
+  "source": "[[wikipedia:Albert_Einstein]]",
+  "action": "created"
+ },
+ "p25-include-site-pair": {
+  "fullname": "muse-probe-r2in1-iw-p25-include-site-pair",
+  "source": "[[include :wikipedia:Albert_Einstein]]",
+  "action": "created"
+ },
+ "p26-unterminated": {
+  "fullname": "muse-probe-r2in1-iw-p26-unterminated",
+  "source": "[wikipedia:Albert_Einstein",
+  "action": "created"
+ },
+ "p27-prefix-leading-digit": {
+  "fullname": "muse-probe-r2in1-iw-p27-prefix-leading-digit",
+  "source": "[1wiki:Page label]",
+  "action": "created"
+ },
+ "p28-prefix-underscore": {
+  "fullname": "muse-probe-r2in1-iw-p28-prefix-underscore",
+  "source": "[_wiki:Page label]",
+  "action": "created"
+ },
+ "p29-star-form": {
+  "fullname": "muse-probe-r2in1-iw-p29-star-form",
+  "source": "[*wikipedia:Albert_Einstein Star]",
+  "action": "created"
+ },
+ "p30-direct-url": {
+  "fullname": "muse-probe-r2in1-iw-p30-direct-url",
+  "source": "[https://example.com/ Control]",
+  "action": "created"
+ },
+ "p31-slash-target": {
+  "fullname": "muse-probe-r2in1-iw-p31-slash-target",
+  "source": "[/path Relative]",
+  "action": "created"
+ },
+ "p32-multiple-on-line": {
+  "fullname": "muse-probe-r2in1-iw-p32-multiple-on-line",
+  "source": "[wikipedia:A First] and [google:g Second] and [nosuchwiki:N Third]",
+  "action": "created"
+ },
+ "p33-label-with-pipe": {
+  "fullname": "muse-probe-r2in1-iw-p33-label-with-pipe",
+  "source": "[wikipedia:Albert_Einstein a|b]",
+  "action": "created"
+ },
+ "p34-label-with-brackets": {
+  "fullname": "muse-probe-r2in1-iw-p34-label-with-brackets",
+  "source": "[wikipedia:Albert_Einstein [x] label]",
+  "action": "created"
+ },
+ "p35-dotted-upper-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p35-dotted-upper-labeled",
+  "source": "[WIKIPEDIA.PL:Test UpperDot]",
+  "action": "created"
+ },
+ "p36-google-mixed-labeled": {
+  "fullname": "muse-probe-r2in1-iw-p36-google-mixed-labeled",
+  "source": "[GoOgLe:free+wiki MixedCase]",
+  "action": "created"
+ },
+ "p37-empty-path": {
+  "fullname": "muse-probe-r2in1-iw-p37-empty-path",
+  "source": "[wikipedia:]",
+  "action": "created"
+ },
+ "p38-double-colon-path": {
+  "fullname": "muse-probe-r2in1-iw-p38-double-colon-path",
+  "source": "[wikipedia::Page DoubleColon]",
+  "action": "created"
+ },
+ "p39-inside-span": {
+  "fullname": "muse-probe-r2in1-iw-p39-inside-span",
+  "source": "[[span]][wikipedia:Albert_Einstein Lab][[/span]]",
+  "action": "created"
+ },
+ "p40-inline-in-text": {
+  "fullname": "muse-probe-r2in1-iw-p40-inline-in-text",
+  "source": "before [wikipedia:Albert_Einstein Albert] after",
+  "action": "created"
+ }
+}
