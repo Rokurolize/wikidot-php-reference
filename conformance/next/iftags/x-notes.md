@@ -1,0 +1,9 @@
+# Cross-rule notes from the Iftags owner for root integration
+
+The false gate inside a math body is the seam you flagged. Live probe muse-probe-r2next-iftags-p-math-contains-false (source `[[math]]\nx [[iftags +beta]]HIDDEN[[/iftags]] y\n[[/math]]`) renders the equation with `x y`; the gate span is elided on all three sides. The only difference is serving-layer: ftml and live render a real equation, while the reference Math render takes the stubbed LaTeX failure error-block path. I did not change Iftags for it. Please own the math x-iftags seam in the catalog as serving-layer scope plus a confirmed gate agreement; battery case math-contains-false-iftags is the local replica, and the ftml pin you cited is test/iftags/false-gate-math-body-literal/wikidot.html.
+
+The converse seam, a math block inside a kept or suppressed iftags body, is battery body-math and false-hides-math. Gate ownership agrees; the reference error block versus the ftml/live equation is again the Math serving-layer stub. No Iftags change.
+
+Comment seams are owned by the Comment rule. A complete comment inside the spec falls to literal on all three sides (p-spec-comment-tagged, ftml pin spec-comment-complete-literal), but the reference leaves two spaces where ftml and live leave one after the comment is stripped; that is Comment's whitespace surface, not a gate divergence. The fused head-close comment case p-spec-comment-straddle is routed as my F4 candidate ftml divergence and does not need a cross-rule owner.
+
+Neighbor surfaces: p-adjacent-div and after-block-div differ only by the Div wrapper's attribute and newline shaping; body-span-seam differs only by Span's empty style attribute; body-iframe and body-date differ only by Iframe and Date serving-layer output. None changes the Iftags gate polarity, and none was corrected here.

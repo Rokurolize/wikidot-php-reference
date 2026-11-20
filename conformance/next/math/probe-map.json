@@ -1,0 +1,127 @@
+{
+ "basic": {
+  "fullname": "muse-probe-r2next-math-basic",
+  "source": "[[math E]]\nx=1\n[[/math]]",
+  "action": "exists"
+ },
+ "opener-midline": {
+  "fullname": "muse-probe-r2next-math-opener-midline",
+  "source": "prefix [[math]]\nx\n[[/math]]",
+  "action": "exists"
+ },
+ "label-upper": {
+  "fullname": "muse-probe-r2next-math-label-upper",
+  "source": "[[MATH Upper]]\nx\n[[/MATH]]",
+  "action": "exists"
+ },
+ "label-hyphen": {
+  "fullname": "muse-probe-r2next-math-label-hyphen",
+  "source": "[[math a-b]]\nx\n[[/math]]",
+  "action": "exists"
+ },
+ "label-empty-spaces": {
+  "fullname": "muse-probe-r2next-math-label-empty-spaces",
+  "source": "[[math   ]]\nx\n[[/math]]",
+  "action": "exists"
+ },
+ "type-eqnarray": {
+  "fullname": "muse-probe-r2next-math-type-eqnarray",
+  "source": "[[math type=\"eqnarray\"]]\nx\n[[/math]]",
+  "action": "exists"
+ },
+ "type-align": {
+  "fullname": "muse-probe-r2next-math-type-align",
+  "source": "[[math type=\"align\"]]\nx\n[[/math]]",
+  "action": "exists"
+ },
+ "type-unquoted": {
+  "fullname": "muse-probe-r2next-math-type-unquoted",
+  "source": "[[math type=align]]\nx\n[[/math]]",
+  "action": "exists"
+ },
+ "type-uppercase": {
+  "fullname": "muse-probe-r2next-math-type-uppercase",
+  "source": "[[math type=\"ALIGN\"]]\nx\n[[/math]]",
+  "action": "exists"
+ },
+ "attr-unknown": {
+  "fullname": "muse-probe-r2next-math-attr-unknown",
+  "source": "[[math foo=\"bar\"]]\nx\n[[/math]]",
+  "action": "exists"
+ },
+ "attr-hyphen-key": {
+  "fullname": "muse-probe-r2next-math-attr-hyphen-key",
+  "source": "[[math foo-bar=\"x\"]]\nx\n[[/math]]",
+  "action": "exists"
+ },
+ "attr-underscore-key": {
+  "fullname": "muse-probe-r2next-math-attr-underscore-key",
+  "source": "[[math foo_bar=\"x\"]]\nx\n[[/math]]",
+  "action": "exists"
+ },
+ "body-empty": {
+  "fullname": "muse-probe-r2next-math-body-empty",
+  "source": "[[math]]\n[[/math]]",
+  "action": "exists"
+ },
+ "closer-tail-text": {
+  "fullname": "muse-probe-r2next-math-closer-tail-text",
+  "source": "[[math]]\nx\n[[/math]] tail",
+  "action": "exists"
+ },
+ "closer-inline": {
+  "fullname": "muse-probe-r2next-math-closer-inline",
+  "source": "[[math]]x[[/math]]",
+  "action": "exists"
+ },
+ "nested-two": {
+  "fullname": "muse-probe-r2next-math-nested-two",
+  "source": "[[math]]\n[[math]]\nx\n[[/math]]\n[[/math]]",
+  "action": "exists"
+ },
+ "nested-outer-tail": {
+  "fullname": "muse-probe-r2next-math-nested-outer-tail",
+  "source": "[[math]]\n[[math]]\nx\n[[/math]] tail\n[[/math]]",
+  "action": "exists"
+ },
+ "adjacent-two-blocks": {
+  "fullname": "muse-probe-r2next-math-adjacent-two-blocks",
+  "source": "[[math]]\nx\n[[/math]]\n[[math]]\ny\n[[/math]]",
+  "action": "exists"
+ },
+ "unterminated": {
+  "fullname": "muse-probe-r2next-math-unterminated",
+  "source": "[[math]]\nx",
+  "action": "exists"
+ },
+ "eref-after": {
+  "fullname": "muse-probe-r2next-math-eref-after",
+  "source": "[[math E]]\nx\n[[/math]]\n[[eref E]]",
+  "action": "created"
+ },
+ "comment-in-body": {
+  "fullname": "muse-probe-r2next-math-comment-in-body",
+  "source": "[[math]]\n[!-- [[/math]] --]\nx\n[[/math]]",
+  "action": "created"
+ },
+ "in-div": {
+  "fullname": "muse-probe-r2next-math-in-div",
+  "source": "[[div class=\"box\"]]\n[[math]]\nx\n[[/math]]\n[[/div]]",
+  "action": "created"
+ },
+ "in-collapsible": {
+  "fullname": "muse-probe-r2next-math-in-collapsible",
+  "source": "[[collapsible]]\n[[math]]\nx\n[[/math]]\n[[/collapsible]]",
+  "action": "created"
+ },
+ "after-date": {
+  "fullname": "muse-probe-r2next-math-after-date",
+  "source": "[[date 1216153821]]\n[[math]]\nx\n[[/math]]",
+  "action": "created"
+ },
+ "attr-quoted-close-bracket": {
+  "fullname": "muse-probe-r2next-math-attr-quoted-close-bracket",
+  "source": "[[math a=\"x]]y\"]\nz\n[[/math]]",
+  "action": "created"
+ }
+}

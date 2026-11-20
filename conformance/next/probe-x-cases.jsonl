@@ -1,0 +1,12 @@
+{"id": "x-comment-hides-iftags-open", "source": "[!-- [[iftags +alpha]] --]body[[/iftags]]"}
+{"id": "x-comment-hides-iftags-close", "source": "[[iftags +alpha]]body[!-- [[/iftags]] --]tail"}
+{"id": "x-comment-hides-math-open", "source": "before[!-- [[math E]] --]\nx=1\n[[/math]]\nafter"}
+{"id": "x-comment-hides-math-close", "source": "[[math E]]\nx=1\n[!-- [[/math]] --]\ny=2\n[[/math]]\nafter"}
+{"id": "x-comment-inside-iframe-attr", "source": "[[iframe https://example.com/a width=[!-- 100 --]200]]"}
+{"id": "x-comment-inside-date-attr", "source": "[[date 1216153821 format=[!-- x --]\"%Y\"]]"}
+{"id": "x-comment-inside-math-body", "source": "[[math E]]\nx[!-- hidden --]=1\n[[/math]]"}
+{"id": "x-iftags-drop-module", "source": "[[iftags +alpha]]\n[[module UnknownModuleX]]\nbody\n[[/module]]\n[[/iftags]]"}
+{"id": "x-iftags-drop-math", "source": "[[iftags +alpha]]\n[[math E]]\nx=1\n[[/math]]\n[[/iftags]]"}
+{"id": "x-iframe-then-url", "source": "[[iframe https://example.com/a]]\n[[https://example.com/b]]"}
+{"id": "x-iframe-url-sameline", "source": "[[iframe https://example.com/a]][[https://example.com/b]]"}
+{"id": "x-iframe-url-in-attr", "source": "[[iframe https://example.com/a style=\"background:url(https://example.com/i.png)\"]]"}

@@ -1,0 +1,60 @@
+{"id":"d01-basic","output":"<p><span class=\"odate\">1216153821<\/span><\/p>\n\n"}
+{"id":"d02-basic-format","output":"<p><span class=\"odate\">1216153821|%Y<\/span><\/p>\n\n"}
+{"id":"d03-leading-zeros","output":"<p><span class=\"odate\">00001216153821|%Y<\/span><\/p>\n\n"}
+{"id":"d04-zero","output":"<p><span class=\"odate\">0<\/span><\/p>\n\n"}
+{"id":"d05-one","output":"<p><span class=\"odate\">1<\/span><\/p>\n\n"}
+{"id":"d06-negative","output":"<p>[[date -1000]]<\/p>\n\n"}
+{"id":"d07-negative-one","output":"<p>[[date -1]]<\/p>\n\n"}
+{"id":"d08-huge-14","output":"<p><span class=\"odate\">99999999999999<\/span><\/p>\n\n"}
+{"id":"d09-huge-20","output":"<p><span class=\"odate\">99999999999999999999<\/span><\/p>\n\n"}
+{"id":"d10-huge-42","output":"<p><span class=\"odate\">999999999999999999999999999999999999999999<\/span><\/p>\n\n"}
+{"id":"d11-neg-huge-14","output":"<p>[[date -99999999999999]]<\/p>\n\n"}
+{"id":"d12-neg-huge-42","output":"<p>[[date -999999999999999999999999999999999999999999]]<\/p>\n\n"}
+{"id":"d13-plus","output":"<p>[[date +1216153821 format=&quot;%Y&quot;]]<\/p>\n\n"}
+{"id":"d14-iso-date","output":"<p>[[date 2009-12-25]]<\/p>\n\n"}
+{"id":"d15-iso-datetime","output":"<p>[[date 2009-12-25T08:18:05+02:00]]<\/p>\n\n"}
+{"id":"d16-rfc3339-z","output":"<p>[[date 2007-05-12T09:34:51Z]]<\/p>\n\n"}
+{"id":"d17-now","output":"<p>[[date now]]<\/p>\n\n"}
+{"id":"d18-NOW","output":"<p>[[date NOW]]<\/p>\n\n"}
+{"id":"d19-dot","output":"<p>[[date .]]<\/p>\n\n"}
+{"id":"d20-blank","output":"<p>[[date  ]]<\/p>\n\n"}
+{"id":"d21-blank-with-format","output":"<p>[[date  format=&quot;%Y&quot;]]<\/p>\n\n"}
+{"id":"d22-no-value","output":"<p>[[date]]<\/p>\n\n"}
+{"id":"d23-nonnumeric","output":"<p>[[date foobar]]<\/p>\n\n"}
+{"id":"d24-partial-date","output":"<p>[[date 2001-09]]<\/p>\n\n"}
+{"id":"d25-quoted-number","output":"<p>[[date &quot;1216153821&quot;]]<\/p>\n\n"}
+{"id":"d26-leading-tab","output":"<p>[[    date 1216153821]]<\/p>\n\n"}
+{"id":"d27-decimal","output":"<p>[[date 1216153821.5]]<\/p>\n\n"}
+{"id":"d28-hex","output":"<p>[[date 0x10]]<\/p>\n\n"}
+{"id":"d29-unquoted-format","output":"<p><span class=\"odate\">1216153821<\/span><\/p>\n\n"}
+{"id":"d30-single-quoted-format","output":"<p><span class=\"odate\">1216153821<\/span><\/p>\n\n"}
+{"id":"d31-duplicate-format","output":"<p><span class=\"odate\">1216153821|%m<\/span><\/p>\n\n"}
+{"id":"d32-unknown-attr","output":"<p><span class=\"odate\">1216153821<\/span><\/p>\n\n"}
+{"id":"d33-empty-format","output":"<p><span class=\"odate\">1216153821<\/span><\/p>\n\n"}
+{"id":"d34-agohover","output":"<p><span class=\"odate\">1216153821|%Y|agohover<\/span><\/p>\n\n"}
+{"id":"d35-g-format","output":"<p><span class=\"odate\">1216153821|%g<\/span><\/p>\n\n"}
+{"id":"d36-spaced-format","output":"<p><span class=\"odate\">1216153821|%d. %m. %Y<\/span><\/p>\n\n"}
+{"id":"d37-html-format","output":"<p><span class=\"odate\">1216153821|<b>&<\/span><\/p>\n\n"}
+{"id":"d38-tz-attr","output":"<p><span class=\"odate\">1216153821|%Y<\/span><\/p>\n\n"}
+{"id":"d39-hover","output":"<p><span class=\"odate\">1216153821<\/span><\/p>\n\n"}
+
+{"id":"d41-case-DATE","output":"<p>[[DATE 1216153821]]<\/p>\n\n"}
+{"id":"d42-case-Date","output":"<p>[[Date 1216153821]]<\/p>\n\n"}
+{"id":"d43-case-dAtE","output":"<p>[[dAtE 1216153821]]<\/p>\n\n"}
+{"id":"d44-midline","output":"<p>before <span class=\"odate\">1216153821<\/span> after<\/p>\n\n"}
+{"id":"d45-line-start","output":"<p><span class=\"odate\">1216153821<\/span><br \/>\ntail<\/p>\n\n"}
+{"id":"d46-indented","output":"<p><span class=\"odate\">1216153821<\/span><\/p>\n\n"}
+{"id":"d47-two-same-line","output":"<p><span class=\"odate\">1<\/span> and <span class=\"odate\">2<\/span><\/p>\n\n"}
+{"id":"d48-trailing-tail","output":"<p><span class=\"odate\">1216153821<\/span>tail<\/p>\n\n"}
+{"id":"d49-unterminated","output":"<p>[[date 1216153821<\/p>\n\n"}
+{"id":"d50-unterminated-attr","output":"<p>[[date 1216153821 format=&quot;%Y&quot;<\/p>\n\n"}
+{"id":"d51-extra-bracket","output":"<p><span class=\"odate\">1216153821<\/span>]<\/p>\n\n"}
+{"id":"d52-spaced-brackets","output":"<p>[[ date 1216153821 ]]<\/p>\n\n"}
+{"id":"d53-no-space","output":"<p>[[date1216153821]]<\/p>\n\n"}
+{"id":"d54-newline-in-opener","output":"<p><span class=\"odate\">1216153821<\/span><\/p>\n\n"}
+{"id":"d55-iframe-then-date","output":"<p><iframe src=\"https:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\" ><\/iframe><br \/>\n<span class=\"odate\">1216153821<\/span><\/p>\n\n"}
+{"id":"d56-date-then-math","output":"<p><span class=\"odate\">1216153821<\/span><\/p>\n\n<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"d57-comment-hides-date","output":"<p>beforeafter<\/p>\n\n"}
+{"id":"d58-comment-in-format","output":"<p><span class=\"odate\">1216153821|%Y<\/span><\/p>\n\n"}
+{"id":"d59-iftags-date","output":""}
+{"id":"d60-date-in-code","output":"\n<div class=\"code\">\n<pre><code>[[date 1216153821]]<\/code><\/pre><\/div>\n\n"}

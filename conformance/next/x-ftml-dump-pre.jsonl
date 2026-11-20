@@ -1,0 +1,33 @@
+{"errors":[],"html":"<p>beforeafter</p>","id":"x-comment-hides-iframe"}
+{"errors":[],"html":"<p>beforeafter</p>","id":"x-comment-hides-date"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 11..14, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>before<br>\nx=1<br>\n[[/math]]<br>\nafter</p>","id":"x-comment-hides-math-open"}
+{"errors":[],"html":"<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x=1 y=2 \\end{equation}</div><p>after</p>","id":"x-comment-hides-math-close"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 30..33, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 39..41, kind: NoRulesMatch }"],"html":"<p>body[[/iftags]]</p>","id":"x-comment-hides-iftags-open"}
+{"errors":[],"html":"<p>bodytail</p>","id":"x-comment-hides-iftags-close"}
+{"errors":[],"html":"<p><iframe src=\"https://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>","id":"x-comment-inside-iframe-attr"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30</span></p>","id":"x-comment-inside-date-attr"}
+{"errors":[],"html":"<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x=1 \\end{equation}</div>","id":"x-comment-inside-math-body"}
+{"errors":[],"html":"<p>ab</p>","id":"x-comment-multiline-hides-math"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\" rel=\"noopener noreferrer\">check available modules</a> and fix this page.</div>","id":"x-iftags-keep-module"}
+{"errors":[],"html":"","id":"x-iftags-drop-module"}
+{"errors":[],"html":"<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x=1 \\end{equation}</div>","id":"x-iftags-keep-math"}
+{"errors":[],"html":"","id":"x-iftags-drop-math"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>","id":"x-iftags-keep-date"}
+{"errors":[],"html":"","id":"x-iftags-drop-date"}
+{"errors":[],"html":"<p><iframe src=\"https://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>","id":"x-iftags-keep-iframe"}
+{"errors":[],"html":"","id":"x-iftags-drop-iframe"}
+{"errors":[],"html":"","id":"x-iftags-drop-nested-math-iftags"}
+{"errors":[],"html":"","id":"x-iftags-untagged-any"}
+{"errors":[],"html":"","id":"x-iftags-comment-spec"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\" rel=\"noopener noreferrer\">check available modules</a> and fix this page.</div>","id":"x-module-body-math"}
+{"errors":[],"html":"<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\" rel=\"noopener noreferrer\">check available modules</a> and fix this page.</div>","id":"x-module-body-date"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>[[math E]]\nx=1\n[[/math]]</code></pre></div>","id":"x-code-body-math"}
+{"errors":["ParseError { token: LineBreak, rule: \"block-raw\", span: 7..8, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 28..31, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 34..36, kind: NoRulesMatch }"],"html":"<p>[[raw]]<br>\n<span class=\"odate time_1216153821\">15 Jul 2008 20:30</span><br>\n[[/raw]]</p>","id":"x-raw-body-date"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 58..58, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 33..35, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 56..58, kind: NoRulesMatch }"],"html":"<p><iframe src=\"https://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe><br>\n[[<a href=\"https://example.com/b\">https://example.com/b</a>]]</p>","id":"x-iframe-then-url"}
+{"errors":[],"html":"<p><iframe src=\"https://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"background:url(https://example.com/i.png)\"></iframe></p>","id":"x-url-in-iframe-attr"}
+{"errors":[],"html":"<p><iframe src=\"mailto:someone@example.com\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>","id":"x-iframe-mailto"}
+{"errors":[],"html":"<p><iframe src=\"HTTPS://EXAMPLE.COM/A\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>","id":"x-iframe-url-scheme-case"}
+{"errors":[],"html":"<p><iframe src=\"https://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe><br>\n<span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>","id":"x-iframe-adjacent-date"}
+{"errors":[],"html":"<p><iframe src=\"https://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p><span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x=1 \\end{equation}</div>","id":"x-iframe-adjacent-math"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 88..89, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 81..83, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 89..91, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 96..99, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 103..105, kind: NoRulesMatch }"],"html":"<p>ab<iframe src=\"https://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe><span class=\"odate time_1216153821\">15 Jul 2008 20:30</span>[[math E]]<br>\nx=1<br>\n[[/math]]</p>","id":"x-iftags-comment-iframe-date-math"}
+{"errors":[],"html":"<p>body</p>","id":"x-comment-then-iftags"}

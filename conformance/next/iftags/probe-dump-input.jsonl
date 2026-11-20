@@ -1,0 +1,25 @@
+{"id": "p-basic-plus-hit", "source": "A [[iftags +alpha]]KEEP[[/iftags]] B", "tags": ["alpha"]}
+{"id": "p-basic-minus-hit", "source": "A [[iftags -alpha]]KEEP[[/iftags]] B", "tags": ["beta"]}
+{"id": "p-case-plus-spec", "source": "A [[iftags +ALPHA]]KEEP[[/iftags]] B", "tags": ["alpha"]}
+{"id": "p-case-bare", "source": "A [[iftags ALPHA]]KEEP[[/iftags]] B", "tags": ["alpha"]}
+{"id": "p-case-minus", "source": "A [[iftags -BETA]]KEEP[[/iftags]] B", "tags": ["alpha", "beta"]}
+{"id": "p-comma-plus-both", "source": "A [[iftags +alpha,+beta]]KEEP[[/iftags]] B", "tags": ["alpha", "beta"]}
+{"id": "p-comma-plus-one", "source": "A [[iftags +alpha,+beta]]KEEP[[/iftags]] B", "tags": ["alpha"]}
+{"id": "p-comma-bare", "source": "A [[iftags alpha,beta]]KEEP[[/iftags]] B", "tags": ["beta"]}
+{"id": "p-comma-space-mixed", "source": "A [[iftags +alpha, -beta gamma]]KEEP[[/iftags]] B", "tags": ["alpha", "gamma"]}
+{"id": "p-bare-minus", "source": "A [[iftags -]]KEEP[[/iftags]] B", "tags": ["alpha"]}
+{"id": "p-bare-plus", "source": "A [[iftags +]]KEEP[[/iftags]] B", "tags": ["alpha"]}
+{"id": "p-empty-spec-tagged", "source": "A [[iftags]]KEEP[[/iftags]] B", "tags": ["alpha"]}
+{"id": "p-unicode-tag", "source": "A [[iftags +テーマ]]KEEP[[/iftags]] B", "tags": ["テーマ"]}
+{"id": "p-spec-comment-tagged", "source": "A [[iftags +alpha [!--x--] -beta]]KEEP[[/iftags]] B", "tags": ["alpha"]}
+{"id": "p-nested-inner-false", "source": "A [[iftags +alpha]]OUT[[iftags +beta]]IN[[/iftags]]TAIL[[/iftags]] B", "tags": ["alpha"]}
+{"id": "p-nested-both-true", "source": "A [[iftags +alpha]]OUT[[iftags +alpha]]IN[[/iftags]]TAIL[[/iftags]] B", "tags": ["alpha"]}
+{"id": "p-unterminated", "source": "A [[iftags +alpha]]KEEP-no-closer B"}
+{"id": "p-stray-closer", "source": "A[[/iftags]]B"}
+{"id": "p-newline-in-spec", "source": "[[iftags +alpha\n+beta]]KEEP[[/iftags]]"}
+{"id": "p-spec-comment-straddle", "source": "[[iftags +alpha [!--x--]]KEEP[[/iftags]]"}
+{"id": "p-spec-comment-untagged", "source": "[[iftags +alpha [!--x--] -beta]]KEEP[[/iftags]]"}
+{"id": "p-false-gate-lines", "source": "A\n[[iftags +beta]]HIDDEN[[/iftags]]\nB"}
+{"id": "p-body-comment", "source": "A [[iftags +beta]]X[!-- c --]Y[[/iftags]] B"}
+{"id": "p-math-contains-false", "source": "[[math]]\nx [[iftags +beta]]HIDDEN[[/iftags]] y\n[[/math]]"}
+{"id": "p-adjacent-div", "source": "[[iftags +beta]]KEEP[[/iftags]]\n[[div]]\nD\n[[/div]]"}

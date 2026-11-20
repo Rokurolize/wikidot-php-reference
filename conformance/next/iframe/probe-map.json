@@ -1,0 +1,82 @@
+{
+ "p-basic": {
+  "fullname": "muse-probe-r2next-iframe-p-basic",
+  "source": "[[iframe https://example.com/a]]",
+  "action": "created"
+ },
+ "p-utf8": {
+  "fullname": "muse-probe-r2next-iframe-p-utf8",
+  "source": "[[iframe http://example.com/日本語]]",
+  "action": "created"
+ },
+ "p-sq-final": {
+  "fullname": "muse-probe-r2next-iframe-p-sq-final",
+  "source": "[[iframe http://example.com/a'b]]",
+  "action": "created"
+ },
+ "p-sq-mid": {
+  "fullname": "muse-probe-r2next-iframe-p-sq-mid",
+  "source": "[[iframe http://example.com/a'b/c]]",
+  "action": "created"
+ },
+ "p-dq": {
+  "fullname": "muse-probe-r2next-iframe-p-dq",
+  "source": "[[iframe http://example.com/a\"b]]",
+  "action": "created"
+ },
+ "p-attrs-spaced": {
+  "fullname": "muse-probe-r2next-iframe-p-attrs-spaced",
+  "source": "[[iframe http://example.com/ id = \"my-example\" class=\"iframe\" width = \"90%\"]]",
+  "action": "created"
+ },
+ "p-attrs-quoted": {
+  "fullname": "muse-probe-r2next-iframe-p-attrs-quoted",
+  "source": "[[iframe http://example.com/ style=\"color:red\" width=\"5\" scrolling=\"auto\" align=\"right\" frameborder=\"1\" height=\"7\" class=\"z\"]]",
+  "action": "created"
+ },
+ "p-tail-closer": {
+  "fullname": "muse-probe-r2next-iframe-p-tail-closer",
+  "source": "[[iframe http://e.com/]]\n[[/div]]",
+  "action": "created"
+ },
+ "p-tail-args": {
+  "fullname": "muse-probe-r2next-iframe-p-tail-args",
+  "source": "[[iframe http://e.com/ width=\"1\"]]\n[[/div]]",
+  "action": "created"
+ },
+ "p-schemes": {
+  "fullname": "muse-probe-r2next-iframe-p-schemes",
+  "source": "[[iframe news://example.com/a]]\n[[iframe mms://example.com/a]]",
+  "action": "created"
+ },
+ "p-iftags-seam": {
+  "fullname": "muse-probe-r2next-iframe-p-iftags-seam",
+  "source": "[[ifr[[iftags -zzz]][[/iftags]]ame http://example.com/]]",
+  "action": "created"
+ },
+ "p-comment-in-url": {
+  "fullname": "muse-probe-r2next-iframe-p-comment-in-url",
+  "source": "[[iframe https://exam[!--x--]ple.com/]]",
+  "action": "created"
+ },
+ "p-freelink-tail": {
+  "fullname": "muse-probe-r2next-iframe-p-freelink-tail",
+  "source": "[[iframe https://example.com/a]]\n[[https://example.com/b]]",
+  "action": "created"
+ },
+ "p-git": {
+  "fullname": "muse-probe-r2next-iframe-p-git",
+  "source": "[[iframe git://example.com/a]]",
+  "action": "created"
+ },
+ "p-midline": {
+  "fullname": "muse-probe-r2next-iframe-p-midline",
+  "source": "before [[iframe http://example.com/]] after",
+  "action": "created"
+ },
+ "p-unterminated": {
+  "fullname": "muse-probe-r2next-iframe-p-unterminated",
+  "source": "[[iframe http://example.com/",
+  "action": "created"
+ }
+}

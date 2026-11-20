@@ -1,0 +1,197 @@
+{
+  "after-iframe": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-after-iframe",
+    "source": "[[iframe https://example.com/a]]\n[[date 1216153821]]"
+  },
+  "agohover": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-agohover",
+    "source": "[[date 1216153821 format=\"%Y|agohover\"]]"
+  },
+  "basic": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-basic",
+    "source": "[[date 1216153821]]"
+  },
+  "blank": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-blank",
+    "source": "[[date  ]]"
+  },
+  "blank-attr-single": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-blank-attr-single",
+    "source": "[[date format=\"%Y\"]]"
+  },
+  "blank-format": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-blank-format",
+    "source": "[[date  format=\"%Y\"]]"
+  },
+  "blank-single": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-blank-single",
+    "source": "[[date ]]"
+  },
+  "blank-two-attrs": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-blank-two-attrs",
+    "source": "[[date  format=\"%Y\" tz=\"+8\"]]"
+  },
+  "blank-unknown-attr": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-blank-unknown-attr",
+    "source": "[[date  foo=\"bar\"]]"
+  },
+  "blank-unquoted-attr": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-blank-unquoted-attr",
+    "source": "[[date  format=%Y]]"
+  },
+  "case-upper": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-case-upper",
+    "source": "[[DATE 1216153821]]"
+  },
+  "comment-in-attr": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-comment-in-attr",
+    "source": "[[date 1216153821 format=[!-- x --]\"%Y\"]]"
+  },
+  "comment-in-value": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-comment-in-value",
+    "source": "[[date 1234[!--x--]567890]]"
+  },
+  "dot": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-dot",
+    "source": "[[date .]]"
+  },
+  "duplicate-format": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-duplicate-format",
+    "source": "[[date 1216153821 format=\"%Y\" format=\"%m\"]]"
+  },
+  "empty-format": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-empty-format",
+    "source": "[[date 1216153821 format=\"\"]]"
+  },
+  "format-year": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-format-year",
+    "source": "[[date 1216153821 format=\"%Y\"]]"
+  },
+  "g-format": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-g-format",
+    "source": "[[date 1216153821 format=\"%g\"]]"
+  },
+  "html-format": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-html-format",
+    "source": "[[date 1216153821 format=\"<b>&\"]]"
+  },
+  "huge-14": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-huge-14",
+    "source": "[[date 99999999999999]]"
+  },
+  "huge-20": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-huge-20",
+    "source": "[[date 99999999999999999999]]"
+  },
+  "in-code": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-in-code",
+    "source": "[[code]]\n[[date 1216153821]]\n[[/code]]"
+  },
+  "iso-date": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-iso-date",
+    "source": "[[date 2009-12-25]]"
+  },
+  "leading-zeros": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-leading-zeros",
+    "source": "[[date 00001216153821 format=\"%Y\"]]"
+  },
+  "midline": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-midline",
+    "source": "before [[date 1216153821]] after"
+  },
+  "neg-huge": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-neg-huge",
+    "source": "[[date -99999999999999]]"
+  },
+  "negative": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-negative",
+    "source": "[[date -1000]]"
+  },
+  "now": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-now",
+    "source": "[[date now]]"
+  },
+  "plus-value": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-plus-value",
+    "source": "[[date +1216153821 format=\"%Y\"]]"
+  },
+  "raw-format": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-raw-format",
+    "source": "[[date 0 format=\"@@a@@\"]]"
+  },
+  "raw-preceded": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-raw-preceded",
+    "source": "@@x@@\n[[date 0 format=\"@@a@@\"]]"
+  },
+  "raw-two-dates": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-raw-two-dates",
+    "source": "[[date 0 format=\"@@a@@\"]]\n[[date 0 format=\"@@b@@\"]]"
+  },
+  "spaced-format": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-spaced-format",
+    "source": "[[date 1216153821 format=\"%d. %m. %Y\"]]"
+  },
+  "two-dates": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-two-dates",
+    "source": "[[date 1]] and [[date 2]]"
+  },
+  "tz-attr": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-tz-attr",
+    "source": "[[date 1216153821 format=\"%Y\" tz=\"+8\"]]"
+  },
+  "unknown-attr": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-unknown-attr",
+    "source": "[[date 1216153821 foo=\"bar\"]]"
+  },
+  "unquoted-format": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-unquoted-format",
+    "source": "[[date 1216153821 format=%Y]]"
+  },
+  "unterminated": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-unterminated",
+    "source": "[[date 1216153821"
+  },
+  "zero": {
+    "action": "created",
+    "fullname": "muse-probe-r2next-date-zero",
+    "source": "[[date 0]]"
+  }
+}

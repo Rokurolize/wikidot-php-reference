@@ -1,0 +1,33 @@
+{"id": "x-comment-hides-iframe", "source": "before[!-- [[iframe https://example.com/a]] --]after\n"}
+{"id": "x-comment-hides-date", "source": "before[!-- [[date 1216153821]] --]after\n"}
+{"id": "x-comment-hides-math-open", "source": "before[!-- [[math E]] --]\nx=1\n[[/math]]\nafter\n"}
+{"id": "x-comment-hides-math-close", "source": "[[math E]]\nx=1\n[!-- [[/math]] --]\ny=2\n[[/math]]\nafter\n"}
+{"id": "x-comment-hides-iftags-open", "source": "[!-- [[iftags +alpha]] --]body[[/iftags]]\n"}
+{"id": "x-comment-hides-iftags-close", "source": "[[iftags +alpha]]body[!-- [[/iftags]] --]tail\n", "tags": ["alpha"]}
+{"id": "x-comment-inside-iframe-attr", "source": "[[iframe https://example.com/a width=[!-- 100 --]200]]\n"}
+{"id": "x-comment-inside-date-attr", "source": "[[date 1216153821 format=[!-- x --]\"%Y\"]]\n"}
+{"id": "x-comment-inside-math-body", "source": "[[math E]]\nx[!-- hidden --]=1\n[[/math]]\n"}
+{"id": "x-comment-multiline-hides-math", "source": "a[!--\n[[math E]]\nx=1\n[[/math]]\n--]b\n"}
+{"id": "x-iftags-keep-module", "source": "[[iftags +alpha]]\n[[module UnknownModuleX]]\nbody\n[[/module]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-iftags-drop-module", "source": "[[iftags +beta]]\n[[module UnknownModuleX]]\nbody\n[[/module]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-iftags-keep-math", "source": "[[iftags +alpha]]\n[[math E]]\nx=1\n[[/math]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-iftags-drop-math", "source": "[[iftags +beta]]\n[[math E]]\nx=1\n[[/math]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-iftags-keep-date", "source": "[[iftags +alpha]]\n[[date 1216153821]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-iftags-drop-date", "source": "[[iftags +beta]]\n[[date 1216153821]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-iftags-keep-iframe", "source": "[[iftags +alpha]]\n[[iframe https://example.com/a]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-iftags-drop-iframe", "source": "[[iftags +beta]]\n[[iframe https://example.com/a]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-iftags-drop-nested-math-iftags", "source": "[[iftags -alpha]]\n[[iftags +alpha]]\n[[math E]]\nx=1\n[[/math]]\n[[/iftags]]\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-iftags-untagged-any", "source": "[[iftags alpha]]kept-or-dropped[[/iftags]]\n"}
+{"id": "x-iftags-comment-spec", "source": "[[iftags +alpha[!-- c --]]]\nbody\n[[/iftags]]\n", "tags": ["alpha"]}
+{"id": "x-module-body-math", "source": "[[module UnknownModuleX]]\n[[math E]]\nx=1\n[[/math]]\n[[/module]]\n"}
+{"id": "x-module-body-date", "source": "[[module UnknownModuleX]]\n[[date 1216153821]]\n[[/module]]\n"}
+{"id": "x-code-body-math", "source": "[[code]]\n[[math E]]\nx=1\n[[/math]]\n[[/code]]\n"}
+{"id": "x-raw-body-date", "source": "[[raw]]\n[[date 1216153821]]\n[[/raw]]\n"}
+{"id": "x-iframe-then-url", "source": "[[iframe https://example.com/a]]\n[[https://example.com/b]]\n"}
+{"id": "x-url-in-iframe-attr", "source": "[[iframe https://example.com/a style=\"background:url(https://example.com/i.png)\"]]\n"}
+{"id": "x-iframe-mailto", "source": "[[iframe mailto:someone@example.com]]\n"}
+{"id": "x-iframe-url-scheme-case", "source": "[[iframe HTTPS://EXAMPLE.COM/A]]\n"}
+{"id": "x-iframe-adjacent-date", "source": "[[iframe https://example.com/a]]\n[[date 1216153821]]\n"}
+{"id": "x-iframe-adjacent-math", "source": "[[iframe https://example.com/a]]\n[[math E]]\nx=1\n[[/math]]\n"}
+{"id": "x-iftags-comment-iframe-date-math", "source": "[[iftags +alpha]]a[!-- c --]b[[/iftags]][[iframe https://example.com/a]][[date 1216153821]][[math E]]\nx=1\n[[/math]]\n", "tags": ["alpha"]}
+{"id": "x-comment-then-iftags", "source": "[!-- hidden --]\n[[iftags +alpha]]body[[/iftags]]\n", "tags": ["alpha"]}

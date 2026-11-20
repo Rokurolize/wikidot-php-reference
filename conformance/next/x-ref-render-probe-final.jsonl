@@ -1,0 +1,12 @@
+{"id":"x-comment-hides-iftags-open","output":"<p>[!&#8212;<\/p>\n\n"}
+{"id":"x-comment-hides-iftags-close","output":"<p>&#8212;]tail<\/p>\n\n"}
+{"id":"x-comment-hides-math-open","output":"<p>before<br \/>\nx=1<br \/>\n[[\/math]]<br \/>\nafter<\/p>\n\n"}
+{"id":"x-comment-hides-math-close","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><p>after<\/p>\n\n"}
+{"id":"x-comment-inside-iframe-attr","output":"<p><iframe src=\"https:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"x-comment-inside-date-attr","output":"<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"x-comment-inside-math-body","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"x-iftags-drop-module","output":""}
+{"id":"x-iftags-drop-math","output":""}
+{"id":"x-iframe-then-url","output":"<p><iframe src=\"https:\/\/example.com\/a]][[https:\/\/example.com\/b\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"x-iframe-url-sameline","output":"<p><iframe src=\"https:\/\/example.com\/a]][[https:\/\/example.com\/b\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"x-iframe-url-in-attr","output":"<p><iframe src=\"https:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"background:url(https:\/\/example.com\/i.png)\"><\/iframe><\/p>\n\n"}

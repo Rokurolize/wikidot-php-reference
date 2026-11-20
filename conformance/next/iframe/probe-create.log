@@ -1,0 +1,101 @@
+p-basic -> muse-probe-r2next-iframe-p-basic (created)
+p-utf8 -> muse-probe-r2next-iframe-p-utf8 (created)
+p-sq-final -> muse-probe-r2next-iframe-p-sq-final (created)
+2026-11-20 12:01:40,254 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85343579', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2next-iframe-p-sq-mid', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p-sq-mid -> muse-probe-r2next-iframe-p-sq-mid (created)
+p-dq -> muse-probe-r2next-iframe-p-dq (created)
+p-attrs-spaced -> muse-probe-r2next-iframe-p-attrs-spaced (created)
+2026-11-20 12:03:16,243 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85343617', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2next-iframe-p-attrs-quoted', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p-attrs-quoted -> muse-probe-r2next-iframe-p-attrs-quoted (created)
+p-tail-closer -> muse-probe-r2next-iframe-p-tail-closer (created)
+p-tail-args -> muse-probe-r2next-iframe-p-tail-args (created)
+p-schemes -> muse-probe-r2next-iframe-p-schemes (created)
+p-iftags-seam -> muse-probe-r2next-iframe-p-iftags-seam (created)
+p-comment-in-url -> muse-probe-r2next-iframe-p-comment-in-url (created)
+p-freelink-tail -> muse-probe-r2next-iframe-p-freelink-tail (created)
+p-git -> muse-probe-r2next-iframe-p-git (created)
+p-midline -> muse-probe-r2next-iframe-p-midline (created)
+p-unterminated -> muse-probe-r2next-iframe-p-unterminated (created)
+16 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p-basic": {
+  "fullname": "muse-probe-r2next-iframe-p-basic",
+  "source": "[[iframe https://example.com/a]]",
+  "action": "created"
+ },
+ "p-utf8": {
+  "fullname": "muse-probe-r2next-iframe-p-utf8",
+  "source": "[[iframe http://example.com/日本語]]",
+  "action": "created"
+ },
+ "p-sq-final": {
+  "fullname": "muse-probe-r2next-iframe-p-sq-final",
+  "source": "[[iframe http://example.com/a'b]]",
+  "action": "created"
+ },
+ "p-sq-mid": {
+  "fullname": "muse-probe-r2next-iframe-p-sq-mid",
+  "source": "[[iframe http://example.com/a'b/c]]",
+  "action": "created"
+ },
+ "p-dq": {
+  "fullname": "muse-probe-r2next-iframe-p-dq",
+  "source": "[[iframe http://example.com/a\"b]]",
+  "action": "created"
+ },
+ "p-attrs-spaced": {
+  "fullname": "muse-probe-r2next-iframe-p-attrs-spaced",
+  "source": "[[iframe http://example.com/ id = \"my-example\" class=\"iframe\" width = \"90%\"]]",
+  "action": "created"
+ },
+ "p-attrs-quoted": {
+  "fullname": "muse-probe-r2next-iframe-p-attrs-quoted",
+  "source": "[[iframe http://example.com/ style=\"color:red\" width=\"5\" scrolling=\"auto\" align=\"right\" frameborder=\"1\" height=\"7\" class=\"z\"]]",
+  "action": "created"
+ },
+ "p-tail-closer": {
+  "fullname": "muse-probe-r2next-iframe-p-tail-closer",
+  "source": "[[iframe http://e.com/]]\n[[/div]]",
+  "action": "created"
+ },
+ "p-tail-args": {
+  "fullname": "muse-probe-r2next-iframe-p-tail-args",
+  "source": "[[iframe http://e.com/ width=\"1\"]]\n[[/div]]",
+  "action": "created"
+ },
+ "p-schemes": {
+  "fullname": "muse-probe-r2next-iframe-p-schemes",
+  "source": "[[iframe news://example.com/a]]\n[[iframe mms://example.com/a]]",
+  "action": "created"
+ },
+ "p-iftags-seam": {
+  "fullname": "muse-probe-r2next-iframe-p-iftags-seam",
+  "source": "[[ifr[[iftags -zzz]][[/iftags]]ame http://example.com/]]",
+  "action": "created"
+ },
+ "p-comment-in-url": {
+  "fullname": "muse-probe-r2next-iframe-p-comment-in-url",
+  "source": "[[iframe https://exam[!--x--]ple.com/]]",
+  "action": "created"
+ },
+ "p-freelink-tail": {
+  "fullname": "muse-probe-r2next-iframe-p-freelink-tail",
+  "source": "[[iframe https://example.com/a]]\n[[https://example.com/b]]",
+  "action": "created"
+ },
+ "p-git": {
+  "fullname": "muse-probe-r2next-iframe-p-git",
+  "source": "[[iframe git://example.com/a]]",
+  "action": "created"
+ },
+ "p-midline": {
+  "fullname": "muse-probe-r2next-iframe-p-midline",
+  "source": "before [[iframe http://example.com/]] after",
+  "action": "created"
+ },
+ "p-unterminated": {
+  "fullname": "muse-probe-r2next-iframe-p-unterminated",
+  "source": "[[iframe http://example.com/",
+  "action": "created"
+ }
+}

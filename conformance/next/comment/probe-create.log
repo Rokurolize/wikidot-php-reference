@@ -1,0 +1,172 @@
+op-basic-inline -> muse-probe-r2next-comment-op-basic-inline (created)
+op-basic-line-start -> muse-probe-r2next-comment-op-basic-line-start (created)
+op-basic-line-end -> muse-probe-r2next-comment-op-basic-line-end (created)
+op-empty -> muse-probe-r2next-comment-op-empty (created)
+op-no-space -> muse-probe-r2next-comment-op-no-space (created)
+op-close-three-hyphens -> muse-probe-r2next-comment-op-close-three-hyphens (created)
+op-close-five-hyphens -> muse-probe-r2next-comment-op-close-five-hyphens (created)
+op-unmatched-closer -> muse-probe-r2next-comment-op-unmatched-closer (created)
+op-unterminated -> muse-probe-r2next-comment-op-unterminated (created)
+nl-leading-one -> muse-probe-r2next-comment-nl-leading-one (created)
+nl-comment-only-line -> muse-probe-r2next-comment-nl-comment-only-line (created)
+nl-comment-only-blank-around -> muse-probe-r2next-comment-nl-comment-only-blank-around (created)
+nl-comment-at-start-tail -> muse-probe-r2next-comment-nl-comment-at-start-tail (created)
+nl-indented-spaces -> muse-probe-r2next-comment-nl-indented-spaces (created)
+ml-body -> muse-probe-r2next-comment-ml-body (created)
+ml-nested -> muse-probe-r2next-comment-ml-nested (created)
+ml-adjacent -> muse-probe-r2next-comment-ml-adjacent (created)
+case-upper-body -> muse-probe-r2next-comment-case-upper-body (created)
+adj-before-iframe -> muse-probe-r2next-comment-adj-before-iframe (created)
+adj-hide-iframe -> muse-probe-r2next-comment-adj-hide-iframe (created)
+adj-before-heading -> muse-probe-r2next-comment-adj-before-heading (created)
+adj-before-list -> muse-probe-r2next-comment-adj-before-list (created)
+adj-inside-code -> muse-probe-r2next-comment-adj-inside-code (created)
+adj-inside-raw -> muse-probe-r2next-comment-adj-inside-raw (created)
+pin-double-bracket-head -> muse-probe-r2next-comment-pin-double-bracket-head (created)
+2026-11-20 12:03:29,075 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85343626', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2next-comment-pin-double-bracket-inline', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+pin-double-bracket-inline -> muse-probe-r2next-comment-pin-double-bracket-inline (created)
+pin-double-bracket-only-line -> muse-probe-r2next-comment-pin-double-bracket-only-line (created)
+pin-paragraph-single-break -> muse-probe-r2next-comment-pin-paragraph-single-break (created)
+28 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "op-basic-inline": {
+  "fullname": "muse-probe-r2next-comment-op-basic-inline",
+  "source": "a[!-- hidden --]b",
+  "action": "created"
+ },
+ "op-basic-line-start": {
+  "fullname": "muse-probe-r2next-comment-op-basic-line-start",
+  "source": "[!-- hidden --]\nvisible",
+  "action": "created"
+ },
+ "op-basic-line-end": {
+  "fullname": "muse-probe-r2next-comment-op-basic-line-end",
+  "source": "visible\n[!-- hidden --]",
+  "action": "created"
+ },
+ "op-empty": {
+  "fullname": "muse-probe-r2next-comment-op-empty",
+  "source": "a[!-- --]b",
+  "action": "created"
+ },
+ "op-no-space": {
+  "fullname": "muse-probe-r2next-comment-op-no-space",
+  "source": "a[!--x--]b",
+  "action": "created"
+ },
+ "op-close-three-hyphens": {
+  "fullname": "muse-probe-r2next-comment-op-close-three-hyphens",
+  "source": "a[!-- hidden ---]b",
+  "action": "created"
+ },
+ "op-close-five-hyphens": {
+  "fullname": "muse-probe-r2next-comment-op-close-five-hyphens",
+  "source": "a[!-- hidden -----]b",
+  "action": "created"
+ },
+ "op-unmatched-closer": {
+  "fullname": "muse-probe-r2next-comment-op-unmatched-closer",
+  "source": "a--]b",
+  "action": "created"
+ },
+ "op-unterminated": {
+  "fullname": "muse-probe-r2next-comment-op-unterminated",
+  "source": "a[!-- hidden b",
+  "action": "created"
+ },
+ "nl-leading-one": {
+  "fullname": "muse-probe-r2next-comment-nl-leading-one",
+  "source": "a\n[!-- c --]b",
+  "action": "created"
+ },
+ "nl-comment-only-line": {
+  "fullname": "muse-probe-r2next-comment-nl-comment-only-line",
+  "source": "a\n[!-- c --]\nb",
+  "action": "created"
+ },
+ "nl-comment-only-blank-around": {
+  "fullname": "muse-probe-r2next-comment-nl-comment-only-blank-around",
+  "source": "a\n\n[!-- c --]\n\nb",
+  "action": "created"
+ },
+ "nl-comment-at-start-tail": {
+  "fullname": "muse-probe-r2next-comment-nl-comment-at-start-tail",
+  "source": "[!-- c --] z",
+  "action": "created"
+ },
+ "nl-indented-spaces": {
+  "fullname": "muse-probe-r2next-comment-nl-indented-spaces",
+  "source": "a\n  [!-- c --]\nb",
+  "action": "created"
+ },
+ "ml-body": {
+  "fullname": "muse-probe-r2next-comment-ml-body",
+  "source": "a[!-- line1\nline2 --]b",
+  "action": "created"
+ },
+ "ml-nested": {
+  "fullname": "muse-probe-r2next-comment-ml-nested",
+  "source": "a[!-- outer [!-- inner --] tail --]b",
+  "action": "created"
+ },
+ "ml-adjacent": {
+  "fullname": "muse-probe-r2next-comment-ml-adjacent",
+  "source": "a[!-- one --][!-- two --]b",
+  "action": "created"
+ },
+ "case-upper-body": {
+  "fullname": "muse-probe-r2next-comment-case-upper-body",
+  "source": "a[!-- HIDDEN --]b",
+  "action": "created"
+ },
+ "adj-before-iframe": {
+  "fullname": "muse-probe-r2next-comment-adj-before-iframe",
+  "source": "[!-- hide --]\n[[iframe https://example.com]]",
+  "action": "created"
+ },
+ "adj-hide-iframe": {
+  "fullname": "muse-probe-r2next-comment-adj-hide-iframe",
+  "source": "a[!-- [[iframe https://example.com]] --]b",
+  "action": "created"
+ },
+ "adj-before-heading": {
+  "fullname": "muse-probe-r2next-comment-adj-before-heading",
+  "source": "[!-- c --]\n= Heading =",
+  "action": "created"
+ },
+ "adj-before-list": {
+  "fullname": "muse-probe-r2next-comment-adj-before-list",
+  "source": "[!-- c --]\n* item",
+  "action": "created"
+ },
+ "adj-inside-code": {
+  "fullname": "muse-probe-r2next-comment-adj-inside-code",
+  "source": "[[code]]\nA[!-- c --]B\n[[/code]]",
+  "action": "created"
+ },
+ "adj-inside-raw": {
+  "fullname": "muse-probe-r2next-comment-adj-inside-raw",
+  "source": "@@A[!-- c --]B@@",
+  "action": "created"
+ },
+ "pin-double-bracket-head": {
+  "fullname": "muse-probe-r2next-comment-pin-double-bracket-head",
+  "source": "[[!-- Theme Lab candidate port header. --]]\nBody paragraph.",
+  "action": "created"
+ },
+ "pin-double-bracket-inline": {
+  "fullname": "muse-probe-r2next-comment-pin-double-bracket-inline",
+  "source": "Before [[!-- note --]] after.",
+  "action": "created"
+ },
+ "pin-double-bracket-only-line": {
+  "fullname": "muse-probe-r2next-comment-pin-double-bracket-only-line",
+  "source": "Line one\n[[!-- note --]]\nLine two",
+  "action": "created"
+ },
+ "pin-paragraph-single-break": {
+  "fullname": "muse-probe-r2next-comment-pin-paragraph-single-break",
+  "source": "A\n[!-- x --]\nB",
+  "action": "created"
+ }
+}

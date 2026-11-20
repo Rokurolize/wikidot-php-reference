@@ -1,0 +1,17 @@
+p-basic-plus-hit -> muse-probe-r2next-iftags-p-basic-plus-hit tags= ['alpha'] source_match= True
+p-basic-minus-hit -> muse-probe-r2next-iftags-p-basic-minus-hit tags= ['beta'] source_match= True
+p-case-plus-spec -> muse-probe-r2next-iftags-p-case-plus-spec tags= ['alpha'] source_match= True
+p-case-bare -> muse-probe-r2next-iftags-p-case-bare tags= ['alpha'] source_match= True
+p-case-minus -> muse-probe-r2next-iftags-p-case-minus tags= ['alpha', 'beta'] source_match= True
+p-comma-plus-both -> muse-probe-r2next-iftags-p-comma-plus-both tags= ['alpha', 'beta'] source_match= True
+p-comma-plus-one -> muse-probe-r2next-iftags-p-comma-plus-one tags= ['alpha'] source_match= True
+p-comma-bare -> muse-probe-r2next-iftags-p-comma-bare tags= ['beta'] source_match= True
+p-comma-space-mixed -> muse-probe-r2next-iftags-p-comma-space-mixed tags= ['alpha', 'gamma'] source_match= True
+p-bare-minus -> muse-probe-r2next-iftags-p-bare-minus tags= ['alpha'] source_match= True
+p-bare-plus -> muse-probe-r2next-iftags-p-bare-plus tags= ['alpha'] source_match= True
+p-empty-spec-tagged -> muse-probe-r2next-iftags-p-empty-spec-tagged tags= ['alpha'] source_match= True
+p-unicode-tag -> muse-probe-r2next-iftags-p-unicode-tag tags= ['テーマ'] source_match= True
+p-spec-comment-tagged -> muse-probe-r2next-iftags-p-spec-comment-tagged tags= ['alpha'] source_match= True
+p-nested-inner-false -> muse-probe-r2next-iftags-p-nested-inner-false tags= ['alpha'] source_match= True
+p-nested-both-true -> muse-probe-r2next-iftags-p-nested-both-true tags= ['alpha'] source_match= True
+wrote 16 tagged probe pages

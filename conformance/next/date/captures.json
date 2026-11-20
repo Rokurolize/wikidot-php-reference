@@ -1,0 +1,392 @@
+{
+  "after-iframe": {
+    "fullname": "muse-probe-r2next-date-after-iframe",
+    "html": "<p><iframe src=\"https://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe><br />\n<span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "95867d1f8033f83088358460757f64f13cf438648f5b0a016fc822b0a1f7e2a1",
+    "saved_source_matches": true,
+    "source": "[[iframe https://example.com/a]]\n[[date 1216153821]]",
+    "source_sha256": "b1463fdbc46700d74802278276bc8045a595c06f91fe361227b1eac261908db0",
+    "stable": true,
+    "valid": true
+  },
+  "agohover": {
+    "fullname": "muse-probe-r2next-date-agohover",
+    "html": "<p><span class=\"odate time_1216153821 format_%25Y%7Cagohover\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "35f19ddbba7711339265697897f4f6f25c25f0c222404d4825767be522f60797",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821 format=\"%Y|agohover\"]]",
+    "source_sha256": "7a6e697aa20acae010a9ef7401ee3f309982b6ec9189550064f43daa0686dbe8",
+    "stable": true,
+    "valid": true
+  },
+  "basic": {
+    "fullname": "muse-probe-r2next-date-basic",
+    "html": "<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "6e58924c7d698c13d357eb17315f472665fbf4166b3cc5baceca3571717c0769",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821]]",
+    "source_sha256": "fba7c599f74c6ea41754866b5b684a6bf273fd74ccfe1edaa0bde556aed757ac",
+    "stable": true,
+    "valid": true
+  },
+  "blank": {
+    "fullname": "muse-probe-r2next-date-blank",
+    "html": "",
+    "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "saved_source_matches": true,
+    "source": "[[date  ]]",
+    "source_sha256": "22d04e87565f66c98d767f80a4e21eaece73273ec58c4044eda657243d30afc0",
+    "stable": true,
+    "valid": true
+  },
+  "blank-attr-single": {
+    "fullname": "muse-probe-r2next-date-blank-attr-single",
+    "html": "<p>[[date format=&quot;%Y&quot;]]</p>",
+    "html_sha256": "b032185c9bf8f70169206476e8ac73fe73ce53b4f2a60493fe2dc1236dfa5e59",
+    "saved_source_matches": true,
+    "source": "[[date format=\"%Y\"]]",
+    "source_sha256": "9f41373917bc0a247c095a896f943c82748c0882a360b3c4831d2e6b3ab5a148",
+    "stable": true,
+    "valid": true
+  },
+  "blank-format": {
+    "fullname": "muse-probe-r2next-date-blank-format",
+    "html": "",
+    "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "saved_source_matches": true,
+    "source": "[[date  format=\"%Y\"]]",
+    "source_sha256": "c61d7d29676647e36d246d6e56701018a7a9bc98af134da6e679aed2f99affa2",
+    "stable": true,
+    "valid": true
+  },
+  "blank-single": {
+    "fullname": "muse-probe-r2next-date-blank-single",
+    "html": "",
+    "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "saved_source_matches": true,
+    "source": "[[date ]]",
+    "source_sha256": "c671e025c42a790361085b0609478e7d051ade95fe3c77c20a2f18198a4b3be7",
+    "stable": true,
+    "valid": true
+  },
+  "blank-two-attrs": {
+    "fullname": "muse-probe-r2next-date-blank-two-attrs",
+    "html": "",
+    "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "saved_source_matches": true,
+    "source": "[[date  format=\"%Y\" tz=\"+8\"]]",
+    "source_sha256": "3540c2d4d474fcf4211c7d05150c83c5b8aac655d99316c2d8c910a222ce079b",
+    "stable": true,
+    "valid": true
+  },
+  "blank-unknown-attr": {
+    "fullname": "muse-probe-r2next-date-blank-unknown-attr",
+    "html": "",
+    "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "saved_source_matches": true,
+    "source": "[[date  foo=\"bar\"]]",
+    "source_sha256": "215faca54494589eb2f5d55c09206dc0544debcf954658d30524d3553f6efca3",
+    "stable": true,
+    "valid": true
+  },
+  "blank-unquoted-attr": {
+    "fullname": "muse-probe-r2next-date-blank-unquoted-attr",
+    "html": "",
+    "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "saved_source_matches": true,
+    "source": "[[date  format=%Y]]",
+    "source_sha256": "3907ed406cc531359a830cba0f6a064cb9764134101057ffa55fdfd9b72dedbc",
+    "stable": true,
+    "valid": true
+  },
+  "case-upper": {
+    "fullname": "muse-probe-r2next-date-case-upper",
+    "html": "<p>[[DATE 1216153821]]</p>",
+    "html_sha256": "6c8aab6eb3282342057a9de7f422ddf3bc0306e206ff814774d194bb4bb6e241",
+    "saved_source_matches": true,
+    "source": "[[DATE 1216153821]]",
+    "source_sha256": "463bbe61034331c6b3d8720f448de6f566a885cb826438ed65157d194953e01a",
+    "stable": true,
+    "valid": true
+  },
+  "comment-in-attr": {
+    "fullname": "muse-probe-r2next-date-comment-in-attr",
+    "html": "<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "89610a4a0bf00fdc94892c96b6e6bb87b111bc512ca2e57eac316c26f2e51cd0",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821 format=[!-- x --]\"%Y\"]]",
+    "source_sha256": "4ec96040860fd644fd8298ce71de84327fdd1289e7897b27e5ec654f5f9b2876",
+    "stable": true,
+    "valid": true
+  },
+  "comment-in-value": {
+    "fullname": "muse-probe-r2next-date-comment-in-value",
+    "html": "<p><span class=\"odate time_1234567890\">13 Feb 2009 23:31</span></p>",
+    "html_sha256": "5b22db0b0c6a56b3ee77c84b042c542b565381cbe2d7ade02e064b19e2f3c420",
+    "saved_source_matches": true,
+    "source": "[[date 1234[!--x--]567890]]",
+    "source_sha256": "1ca9bbfe57012a02c72954b2b8cbf1ea881e23bc5d0869f3adec0514bb8be705",
+    "stable": true,
+    "valid": true
+  },
+  "dot": {
+    "fullname": "muse-probe-r2next-date-dot",
+    "html": "<p>[[date .]]</p>",
+    "html_sha256": "f6198c0f16510a9a0ab51a61782ec000bf5316c4a55a3e2e2064e9a4e8904603",
+    "saved_source_matches": true,
+    "source": "[[date .]]",
+    "source_sha256": "73bb8c0684d050329e0580c830a64d48d3b14c50aaf89c21b0293eef2901dbc1",
+    "stable": true,
+    "valid": true
+  },
+  "duplicate-format": {
+    "fullname": "muse-probe-r2next-date-duplicate-format",
+    "html": "<p><span class=\"odate time_1216153821 format_%25m\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "d5c928c6d43e22196410129ec3d6c965962dead854b31baf57a8e64dff55a6b9",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821 format=\"%Y\" format=\"%m\"]]",
+    "source_sha256": "bef784484fb77001dba7904219f72896a3d7ffcad595f0f4c09278b4ef804bf4",
+    "stable": true,
+    "valid": true
+  },
+  "empty-format": {
+    "fullname": "muse-probe-r2next-date-empty-format",
+    "html": "<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "6e58924c7d698c13d357eb17315f472665fbf4166b3cc5baceca3571717c0769",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821 format=\"\"]]",
+    "source_sha256": "264410f633846fa1dc43c3b6adfd6f0f1b0abde331f5bc2f40b80f34817e9d58",
+    "stable": true,
+    "valid": true
+  },
+  "format-year": {
+    "fullname": "muse-probe-r2next-date-format-year",
+    "html": "<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "89610a4a0bf00fdc94892c96b6e6bb87b111bc512ca2e57eac316c26f2e51cd0",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821 format=\"%Y\"]]",
+    "source_sha256": "34cc6586f507937f3ff1174f54978a9dfd44d61c541e3133c0f35ece953db5ef",
+    "stable": true,
+    "valid": true
+  },
+  "g-format": {
+    "fullname": "muse-probe-r2next-date-g-format",
+    "html": "<p><span class=\"odate time_1216153821 format_ago\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "fb07166e56f68e4e7a3b38562618a794a98449144e20b016e5e8e7827480c108",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821 format=\"%g\"]]",
+    "source_sha256": "fe52b0f48438ef57b14388830debca246a7af6ce1ea0a2d4fe89a12f739d10e5",
+    "stable": true,
+    "valid": true
+  },
+  "html-format": {
+    "fullname": "muse-probe-r2next-date-html-format",
+    "html": "<p><span class=\"odate time_1216153821 format_%3Cb%3E%26\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "228e91317c776699199e71102b04b8248c8dd041951962f05da2504cfd6ce42b",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821 format=\"<b>&\"]]",
+    "source_sha256": "96992dccdedc0e0ec8c9bc518c9b7b15ee56bce1d0ce68f25eab41c86aa1352b",
+    "stable": true,
+    "valid": true
+  },
+  "huge-14": {
+    "fullname": "muse-probe-r2next-date-huge-14",
+    "html": "<p><span class=\"odate time_99999999999999\">07 Nov 3170843 09:46</span></p>",
+    "html_sha256": "fff3cf73dd57bf40e765e39e3c23b10a90974df96ee948f18e38968ab5fdbb03",
+    "saved_source_matches": true,
+    "source": "[[date 99999999999999]]",
+    "source_sha256": "fa6fee0423750ddb2212b89bdb8c2a98d280e0c9acf5cf9054d42f0b1e00268e",
+    "stable": true,
+    "valid": true
+  },
+  "huge-20": {
+    "fullname": "muse-probe-r2next-date-huge-20",
+    "html": "<p><span class=\"odate time_9223372036854775807\">04 Dec 292277026596 15:30</span></p>",
+    "html_sha256": "34cb5bcfbb8d6a907073505f6cbd07da072305c0b99c36f145c6be89c9d02f65",
+    "saved_source_matches": true,
+    "source": "[[date 99999999999999999999]]",
+    "source_sha256": "3b41f70896a1673f81f154fb47ec6b81479ade403716462bb2acf49e83b1bea4",
+    "stable": true,
+    "valid": true
+  },
+  "in-code": {
+    "fullname": "muse-probe-r2next-date-in-code",
+    "html": "<div class=\"code\">\n<pre><code>[[date 1216153821]]</code></pre></div>",
+    "html_sha256": "a5bf158ea1e944d5d9ade9c68521e59692914131356ed7186fca916cdc93bbf1",
+    "saved_source_matches": true,
+    "source": "[[code]]\n[[date 1216153821]]\n[[/code]]",
+    "source_sha256": "9b5dde94af0e342a19e36f25283859e78d6eb43605de00c1ea67fbccd47e9947",
+    "stable": true,
+    "valid": true
+  },
+  "iso-date": {
+    "fullname": "muse-probe-r2next-date-iso-date",
+    "html": "<p>[[date 2009-12-25]]</p>",
+    "html_sha256": "2a5fcbb041bb4b761440529ea8c97d48716193080e4eed6e8b9e182e9be74ca1",
+    "saved_source_matches": true,
+    "source": "[[date 2009-12-25]]",
+    "source_sha256": "1900a9cd9dd9eb32b2ef65ed002c2dd7125b0b32a27e0f3289a97163c74875d1",
+    "stable": true,
+    "valid": true
+  },
+  "leading-zeros": {
+    "fullname": "muse-probe-r2next-date-leading-zeros",
+    "html": "<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "89610a4a0bf00fdc94892c96b6e6bb87b111bc512ca2e57eac316c26f2e51cd0",
+    "saved_source_matches": true,
+    "source": "[[date 00001216153821 format=\"%Y\"]]",
+    "source_sha256": "29c860e30ddfea10c0f26960634eea56764cb66393d66d3029f0ded6ec54e804",
+    "stable": true,
+    "valid": true
+  },
+  "midline": {
+    "fullname": "muse-probe-r2next-date-midline",
+    "html": "<p>before <span class=\"odate time_1216153821\">15 Jul 2008 20:30</span> after</p>",
+    "html_sha256": "64c1ff91678cd573e30f179e4646a7a17aea9ccf5dd51c87c8a5b836e07f239c",
+    "saved_source_matches": true,
+    "source": "before [[date 1216153821]] after",
+    "source_sha256": "a95120f8b6816fc0c40feeee13624e34bc3c72ea4f1c10467e0db5cc87a0a996",
+    "stable": true,
+    "valid": true
+  },
+  "neg-huge": {
+    "fullname": "muse-probe-r2next-date-neg-huge",
+    "html": "<p><span class=\"odate time_-99999999999999\">24 Feb -3166904 14:13</span></p>",
+    "html_sha256": "d9d49a10cf9428271d4efe9f4ca088e5509c15e47a3efe31c8dad36f94266685",
+    "saved_source_matches": true,
+    "source": "[[date -99999999999999]]",
+    "source_sha256": "46185a7280a490d3a0b3a99c8d15d63f09068d2ea72a832cba62f6a60af580c1",
+    "stable": true,
+    "valid": true
+  },
+  "negative": {
+    "fullname": "muse-probe-r2next-date-negative",
+    "html": "<p><span class=\"odate time_-1000\">31 Dec 1969 23:43</span></p>",
+    "html_sha256": "914ea073831027afb2dd241f9a2467a631c0fc70393edd75cda37ddd00f92240",
+    "saved_source_matches": true,
+    "source": "[[date -1000]]",
+    "source_sha256": "ffe852b50cd7b73d63d4127296d1e79f6600dbfeeac84038628aa043f46c627f",
+    "stable": true,
+    "valid": true
+  },
+  "now": {
+    "fullname": "muse-probe-r2next-date-now",
+    "html": "<p>[[date now]]</p>",
+    "html_sha256": "65dfbb4f2f03a901086fa1ff4288301a8250b84fd99e88026e1ed631e8b2716b",
+    "saved_source_matches": true,
+    "source": "[[date now]]",
+    "source_sha256": "a36c628736a5fa5dcd5db2e5eda425ffb70026d589dc521a7933ea5b9561b861",
+    "stable": true,
+    "valid": true
+  },
+  "plus-value": {
+    "fullname": "muse-probe-r2next-date-plus-value",
+    "html": "<p>[[date +1216153821 format=&quot;%Y&quot;]]</p>",
+    "html_sha256": "cbcc43ed6f34fce727a623f9d772c08e9e1ec7b79288d62703f7418846f537ba",
+    "saved_source_matches": true,
+    "source": "[[date +1216153821 format=\"%Y\"]]",
+    "source_sha256": "5293918d82ada3c709b9d81887e5e1c3228f913d717b10ffd84060038bcf166e",
+    "stable": true,
+    "valid": true
+  },
+  "raw-format": {
+    "fullname": "muse-probe-r2next-date-raw-format",
+    "html": "<p><span class=\"odate time_0 format_%FF1%FF\">01 Jan 1970 00:00</span></p>",
+    "html_sha256": "c2712634dd7bfc6b8deb4e6e31e2ef0a6060d48c57862564d452f7c8ceba149a",
+    "saved_source_matches": true,
+    "source": "[[date 0 format=\"@@a@@\"]]",
+    "source_sha256": "98fcd2ec25d72626b79032f24c552ecc5d4810ca094596a2d5f9b97a26c772ef",
+    "stable": true,
+    "valid": true
+  },
+  "raw-preceded": {
+    "fullname": "muse-probe-r2next-date-raw-preceded",
+    "html": "<p><span style=\"white-space: pre-wrap;\">x</span><br />\n<span class=\"odate time_0 format_%FF2%FF\">01 Jan 1970 00:00</span></p>",
+    "html_sha256": "cb835d9ca181f559e4e7145b6f9c5631e284d679c9dda94577c109ead932d681",
+    "saved_source_matches": true,
+    "source": "@@x@@\n[[date 0 format=\"@@a@@\"]]",
+    "source_sha256": "f4a66e4b4fbd52efdb7ec79ed327d57fdab46bd24186a3e62e62c753e6c934dd",
+    "stable": true,
+    "valid": true
+  },
+  "raw-two-dates": {
+    "fullname": "muse-probe-r2next-date-raw-two-dates",
+    "html": "<p><span class=\"odate time_0 format_%FF1%FF\">01 Jan 1970 00:00</span><br />\n<span class=\"odate time_0 format_%FF2%FF\">01 Jan 1970 00:00</span></p>",
+    "html_sha256": "1743a70eefa40feeb1afb91268a2af2c272d0c69e41a5ea1523f6921d5c58757",
+    "saved_source_matches": true,
+    "source": "[[date 0 format=\"@@a@@\"]]\n[[date 0 format=\"@@b@@\"]]",
+    "source_sha256": "02a7824e5733b46bf386836acc757df68d2d71e43be021392680881eb2ef66bb",
+    "stable": true,
+    "valid": true
+  },
+  "spaced-format": {
+    "fullname": "muse-probe-r2next-date-spaced-format",
+    "html": "<p><span class=\"odate time_1216153821 format_%25d.%20%25m.%20%25Y\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "2942acd2c90eb39a0e4c43f8d3e66c7eb522864fc9a21a9cc122a04f76cf505d",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821 format=\"%d. %m. %Y\"]]",
+    "source_sha256": "a078a6b7858db3fbcd59e08847755f3dc9c21a06faa29cb7b39adb2922efdc8f",
+    "stable": true,
+    "valid": true
+  },
+  "two-dates": {
+    "fullname": "muse-probe-r2next-date-two-dates",
+    "html": "<p><span class=\"odate time_1\">01 Jan 1970 00:00</span> and <span class=\"odate time_2\">01 Jan 1970 00:00</span></p>",
+    "html_sha256": "d043e0444f4aa912b8f1731ffb59020a873585dbc4987dfc65a595b02bd6fb2f",
+    "saved_source_matches": true,
+    "source": "[[date 1]] and [[date 2]]",
+    "source_sha256": "f09ca1e5b5be6c0b85527a79854cccda1c6900a72f87c75133c6cd65ed11e40d",
+    "stable": true,
+    "valid": true
+  },
+  "tz-attr": {
+    "fullname": "muse-probe-r2next-date-tz-attr",
+    "html": "<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "89610a4a0bf00fdc94892c96b6e6bb87b111bc512ca2e57eac316c26f2e51cd0",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821 format=\"%Y\" tz=\"+8\"]]",
+    "source_sha256": "6dadca2a79db9ae6da11661700a637a7626c9548582dd20fd676495a8118d2f1",
+    "stable": true,
+    "valid": true
+  },
+  "unknown-attr": {
+    "fullname": "muse-probe-r2next-date-unknown-attr",
+    "html": "<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "6e58924c7d698c13d357eb17315f472665fbf4166b3cc5baceca3571717c0769",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821 foo=\"bar\"]]",
+    "source_sha256": "90947e03eb16680379017b42b6da949f8c8a62b74584a3dc40ce03a5eee2cf24",
+    "stable": true,
+    "valid": true
+  },
+  "unquoted-format": {
+    "fullname": "muse-probe-r2next-date-unquoted-format",
+    "html": "<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>",
+    "html_sha256": "6e58924c7d698c13d357eb17315f472665fbf4166b3cc5baceca3571717c0769",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821 format=%Y]]",
+    "source_sha256": "f9f6bd45bea0a468cbf14291603cc43923407d7246a8898cf63df62a6c7f2ad7",
+    "stable": true,
+    "valid": true
+  },
+  "unterminated": {
+    "fullname": "muse-probe-r2next-date-unterminated",
+    "html": "<p>[[date 1216153821</p>",
+    "html_sha256": "f9b9030dead5dcf1cd70396cb8505421a6903fc7c47b5f34849e3b4f5d08bb64",
+    "saved_source_matches": true,
+    "source": "[[date 1216153821",
+    "source_sha256": "6cc1d4c408e4415003a612513e351d16ef1b6af1ec7ae2ae4ec32d8c3d31ba1f",
+    "stable": true,
+    "valid": true
+  },
+  "zero": {
+    "fullname": "muse-probe-r2next-date-zero",
+    "html": "<p><span class=\"odate time_0\">01 Jan 1970 00:00</span></p>",
+    "html_sha256": "896351582a382c98425b675b12ff8310d5389351d584ee68bbd6f5f723d20d65",
+    "saved_source_matches": true,
+    "source": "[[date 0]]",
+    "source_sha256": "75fb7b96288c6a0b56e555dea1e70ef7489a2dfd0b6e460606e18ec09fae5b8c",
+    "stable": true,
+    "valid": true
+  }
+}

@@ -82,7 +82,8 @@ class Text_Wiki_Parse_Iframe extends Text_Wiki_Parse {
     {
     	
     	$options = array();
-    	$options['src'] = $matches[1];
+        // The greedy tail keeps newlines in the matched URL but live drops them from src, so strip them here.
+    	$options['src'] = str_replace(array("\r", "\n"), '', $matches[1]);
     	
     	$attr = $this->getAttrs(trim($matches[2]));
     	

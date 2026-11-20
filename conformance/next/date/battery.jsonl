@@ -1,0 +1,60 @@
+{"id": "d01-basic", "source": "[[date 1216153821]]"}
+{"id": "d02-basic-format", "source": "[[date 1216153821 format=\"%Y\"]]"}
+{"id": "d03-leading-zeros", "source": "[[date 00001216153821 format=\"%Y\"]]"}
+{"id": "d04-zero", "source": "[[date 0]]"}
+{"id": "d05-one", "source": "[[date 1]]"}
+{"id": "d06-negative", "source": "[[date -1000]]"}
+{"id": "d07-negative-one", "source": "[[date -1]]"}
+{"id": "d08-huge-14", "source": "[[date 99999999999999]]"}
+{"id": "d09-huge-20", "source": "[[date 99999999999999999999]]"}
+{"id": "d10-huge-42", "source": "[[date 999999999999999999999999999999999999999999]]"}
+{"id": "d11-neg-huge-14", "source": "[[date -99999999999999]]"}
+{"id": "d12-neg-huge-42", "source": "[[date -999999999999999999999999999999999999999999]]"}
+{"id": "d13-plus", "source": "[[date +1216153821 format=\"%Y\"]]"}
+{"id": "d14-iso-date", "source": "[[date 2009-12-25]]"}
+{"id": "d15-iso-datetime", "source": "[[date 2009-12-25T08:18:05+02:00]]"}
+{"id": "d16-rfc3339-z", "source": "[[date 2007-05-12T09:34:51Z]]"}
+{"id": "d17-now", "source": "[[date now]]"}
+{"id": "d18-NOW", "source": "[[date NOW]]"}
+{"id": "d19-dot", "source": "[[date .]]"}
+{"id": "d20-blank", "source": "[[date  ]]"}
+{"id": "d21-blank-with-format", "source": "[[date  format=\"%Y\"]]"}
+{"id": "d22-no-value", "source": "[[date]]"}
+{"id": "d23-nonnumeric", "source": "[[date foobar]]"}
+{"id": "d24-partial-date", "source": "[[date 2001-09]]"}
+{"id": "d25-quoted-number", "source": "[[date \"1216153821\"]]"}
+{"id": "d26-leading-tab", "source": "[[\tdate 1216153821]]"}
+{"id": "d27-decimal", "source": "[[date 1216153821.5]]"}
+{"id": "d28-hex", "source": "[[date 0x10]]"}
+{"id": "d29-unquoted-format", "source": "[[date 1216153821 format=%Y]]"}
+{"id": "d30-single-quoted-format", "source": "[[date 1216153821 format='%Y']]"}
+{"id": "d31-duplicate-format", "source": "[[date 1216153821 format=\"%Y\" format=\"%m\"]]"}
+{"id": "d32-unknown-attr", "source": "[[date 1216153821 foo=\"bar\"]]"}
+{"id": "d33-empty-format", "source": "[[date 1216153821 format=\"\"]]"}
+{"id": "d34-agohover", "source": "[[date 1216153821 format=\"%Y|agohover\"]]"}
+{"id": "d35-g-format", "source": "[[date 1216153821 format=\"%g\"]]"}
+{"id": "d36-spaced-format", "source": "[[date 1216153821 format=\"%d. %m. %Y\"]]"}
+{"id": "d37-html-format", "source": "[[date 1216153821 format=\"<b>&\"]]"}
+{"id": "d38-tz-attr", "source": "[[date 1216153821 format=\"%Y\" tz=\"+8\"]]"}
+{"id": "d39-hover", "source": "[[date 1216153821 hover=\"true\"]]"}
+{"id": "d40-raw-format", "source": "[[date 0 format=\"@@a@@\"]]"}
+{"id": "d41-case-DATE", "source": "[[DATE 1216153821]]"}
+{"id": "d42-case-Date", "source": "[[Date 1216153821]]"}
+{"id": "d43-case-dAtE", "source": "[[dAtE 1216153821]]"}
+{"id": "d44-midline", "source": "before [[date 1216153821]] after"}
+{"id": "d45-line-start", "source": "[[date 1216153821]]\ntail"}
+{"id": "d46-indented", "source": "  [[date 1216153821]]"}
+{"id": "d47-two-same-line", "source": "[[date 1]] and [[date 2]]"}
+{"id": "d48-trailing-tail", "source": "[[date 1216153821]]tail"}
+{"id": "d49-unterminated", "source": "[[date 1216153821"}
+{"id": "d50-unterminated-attr", "source": "[[date 1216153821 format=\"%Y\""}
+{"id": "d51-extra-bracket", "source": "[[date 1216153821]]]"}
+{"id": "d52-spaced-brackets", "source": "[[ date 1216153821 ]]"}
+{"id": "d53-no-space", "source": "[[date1216153821]]"}
+{"id": "d54-newline-in-opener", "source": "[[date\n1216153821]]"}
+{"id": "d55-iframe-then-date", "source": "[[iframe https://example.com/a]]\n[[date 1216153821]]"}
+{"id": "d56-date-then-math", "source": "[[date 1216153821]]\n[[math E]]\nx=1\n[[/math]]"}
+{"id": "d57-comment-hides-date", "source": "before[!-- [[date 1216153821]] --]after"}
+{"id": "d58-comment-in-format", "source": "[[date 1216153821 format=[!-- x --]\"%Y\"]]"}
+{"id": "d59-iftags-date", "source": "[[iftags +alpha]]\n[[date 1216153821]]\n[[/iftags]]"}
+{"id": "d60-date-in-code", "source": "[[code]]\n[[date 1216153821]]\n[[/code]]"}

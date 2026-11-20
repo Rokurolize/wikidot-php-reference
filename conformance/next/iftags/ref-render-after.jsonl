@@ -1,0 +1,80 @@
+{"id":"basic-plus-hit","output":"<p>KEEP<\/p>\n\n"}
+{"id":"basic-plus-miss","output":""}
+{"id":"basic-minus-hit","output":"<p>KEEP<\/p>\n\n"}
+{"id":"basic-minus-miss","output":""}
+{"id":"bare-hit","output":"<p>KEEP<\/p>\n\n"}
+{"id":"bare-miss","output":""}
+{"id":"mixed-plus-minus-hit","output":"<p>KEEP<\/p>\n\n"}
+{"id":"mixed-plus-minus-miss-forbidden","output":""}
+{"id":"mixed-plus-minus-miss-any","output":""}
+{"id":"opener-upper","output":"<p>KEEP<\/p>\n\n"}
+{"id":"opener-mixed","output":"<p>KEEP<\/p>\n\n"}
+{"id":"closer-upper","output":"<p>KEEP<\/p>\n\n"}
+{"id":"opener-and-closer-upper","output":"<p>KEEP<\/p>\n\n"}
+{"id":"no-space-after-name","output":"<p>[[iftags+alpha]]KEEP[[\/iftags]]<\/p>\n\n"}
+{"id":"space-before-name","output":"<p>[[ iftags +alpha]]KEEP[[\/iftags]]<\/p>\n\n"}
+{"id":"extra-spaces-spec","output":"<p>KEEP<\/p>\n\n"}
+{"id":"empty-spec-tagged","output":""}
+{"id":"empty-spec-spaces-tagged","output":""}
+{"id":"empty-spec-untagged","output":""}
+{"id":"plus-untagged","output":""}
+{"id":"case-plus-spec-upper","output":"<p>KEEP<\/p>\n\n"}
+{"id":"case-plus-tag-upper","output":"<p>KEEP<\/p>\n\n"}
+{"id":"case-bare","output":"<p>KEEP<\/p>\n\n"}
+{"id":"case-minus-spec","output":""}
+{"id":"case-minus-tag","output":""}
+{"id":"comma-plus-both","output":"<p>KEEP<\/p>\n\n"}
+{"id":"comma-plus-one","output":""}
+{"id":"comma-minus","output":"<p>KEEP<\/p>\n\n"}
+{"id":"comma-bare","output":"<p>KEEP<\/p>\n\n"}
+{"id":"comma-space-mixed","output":"<p>KEEP<\/p>\n\n"}
+{"id":"bare-minus-only","output":"<p>KEEP<\/p>\n\n"}
+{"id":"bare-minus-only-untagged","output":""}
+{"id":"bare-plus-only","output":""}
+{"id":"bare-double-bare","output":"<p>KEEP<\/p>\n\n"}
+{"id":"bare-double-bare-miss","output":""}
+{"id":"tag-hyphen","output":"<p>KEEP<\/p>\n\n"}
+{"id":"tag-underscore","output":"<p>KEEP<\/p>\n\n"}
+{"id":"tag-unicode","output":"<p>KEEP<\/p>\n\n"}
+{"id":"nested-both-true","output":"<p>OUT[[iftags +alpha]]IN[[\/iftags]]TAIL<\/p>\n\n"}
+{"id":"nested-inner-false","output":"<p>OUT[[iftags +beta]]IN[[\/iftags]]TAIL<\/p>\n\n"}
+{"id":"nested-outer-false","output":""}
+{"id":"nested-triple","output":"<p>A[[iftags +alpha]]B[[iftags +alpha]]C[[\/iftags]]D[[\/iftags]]E<\/p>\n\n"}
+{"id":"nested-unbalanced-inner","output":"<p>OUT[[iftags +alpha]]INTAIL<\/p>\n\n"}
+{"id":"two-adjacent","output":"<p>AB<\/p>\n\n"}
+{"id":"two-adjacent-second-false","output":"<p>A<\/p>\n\n"}
+{"id":"unterminated-open","output":"<p>[[iftags +alpha]]KEEP-no-closer<\/p>\n\n"}
+{"id":"stray-closer","output":"<p>before[[\/iftags]]after<\/p>\n\n"}
+{"id":"missing-one-bracket","output":"<p>[[iftags +alpha]KEEP[[\/iftags]]<\/p>\n\n"}
+{"id":"triple-close-head","output":"<p>]KEEP<\/p>\n\n"}
+{"id":"closer-first","output":"<p>[[\/iftags]]KEEPTAIL<\/p>\n\n"}
+{"id":"newline-in-spec","output":""}
+{"id":"inline-body","output":"<p>prefix KEEP suffix<\/p>\n\n"}
+{"id":"line-start-body","output":"<p>KEEP<br \/>\nAFTER<\/p>\n\n"}
+{"id":"body-next-line","output":"<p>KEEP<\/p>\n\n<p>AFTER<\/p>\n\n"}
+{"id":"leading-space-opener","output":"<p>KEEP<\/p>\n\n"}
+{"id":"blockquote-opener","output":"<blockquote><p>KEEP<\/p>\n\n<\/blockquote>\n"}
+{"id":"body-paragraph-breaks","output":"<p>A<\/p>\n\n<p>B<\/p>\n\n<p>C<\/p>\n\n"}
+{"id":"whitespace-only-body","output":""}
+{"id":"empty-body","output":""}
+{"id":"false-gate-newlines","output":"<p>A<\/p>\n\n<p>B<\/p>\n\n"}
+{"id":"true-gate-newlines","output":"<p>A<br \/>\nSHOWN<br \/>\nB<\/p>\n\n"}
+{"id":"spec-comment-complete","output":"<p>[[iftags +alpha  -beta]]KEEP[[\/iftags]]<\/p>\n\n"}
+{"id":"spec-comment-straddle","output":""}
+{"id":"spec-comment-closer-inside","output":""}
+{"id":"spec-comment-unterminated","output":""}
+{"id":"star-flag","output":"<p>[[iftags* +alpha]]KEEP[[\/iftags]]<\/p>\n\n"}
+{"id":"score-flag","output":"<p>[[iftags_ +alpha]]KEEP[[\/iftags]]<\/p>\n\n"}
+{"id":"name-suffix","output":"<p>[[iftagsx +alpha]]KEEP[[\/iftags]]<\/p>\n\n"}
+{"id":"name-prefix","output":"<p>[[xiftags +alpha]]KEEP[[\/iftags]]<\/p>\n\n"}
+{"id":"plain-attrs","output":""}
+{"id":"body-comment","output":"<p>AB<\/p>\n\n"}
+{"id":"body-iframe","output":"<p><iframe src=\"https:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"body-date","output":"<p><span class=\"odate time_0\">01 Jan 1970 00:00<\/span><\/p>\n\n"}
+{"id":"body-math","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"false-hides-math","output":""}
+{"id":"false-hides-iframe","output":""}
+{"id":"math-contains-false-iftags","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"body-bold-seam","output":"<p><strong>BOLD<\/strong>KEEP<\/p>\n\n"}
+{"id":"body-span-seam","output":"<p><span  style=\"\">SPAN<\/span>KEEP<\/p>\n\n"}
+{"id":"after-block-div","output":"<p>KEEP<\/p>\n\n<div ><p>D<\/p>\n\n<\/div>"}

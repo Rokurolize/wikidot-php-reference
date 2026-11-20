@@ -1,0 +1,16 @@
+{"id": "p-basic", "source": "[[iframe https://example.com/a]]"}
+{"id": "p-utf8", "source": "[[iframe http://example.com/日本語]]"}
+{"id": "p-sq-final", "source": "[[iframe http://example.com/a'b]]"}
+{"id": "p-sq-mid", "source": "[[iframe http://example.com/a'b/c]]"}
+{"id": "p-dq", "source": "[[iframe http://example.com/a\"b]]"}
+{"id": "p-attrs-spaced", "source": "[[iframe http://example.com/ id = \"my-example\" class=\"iframe\" width = \"90%\"]]"}
+{"id": "p-attrs-quoted", "source": "[[iframe http://example.com/ style=\"color:red\" width=\"5\" scrolling=\"auto\" align=\"right\" frameborder=\"1\" height=\"7\" class=\"z\"]]"}
+{"id": "p-tail-closer", "source": "[[iframe http://e.com/]]\n[[/div]]"}
+{"id": "p-tail-args", "source": "[[iframe http://e.com/ width=\"1\"]]\n[[/div]]"}
+{"id": "p-schemes", "source": "[[iframe news://example.com/a]]\n[[iframe mms://example.com/a]]"}
+{"id": "p-iftags-seam", "source": "[[ifr[[iftags -zzz]][[/iftags]]ame http://example.com/]]"}
+{"id": "p-comment-in-url", "source": "[[iframe https://exam[!--x--]ple.com/]]"}
+{"id": "p-freelink-tail", "source": "[[iframe https://example.com/a]]\n[[https://example.com/b]]"}
+{"id": "p-git", "source": "[[iframe git://example.com/a]]"}
+{"id": "p-midline", "source": "before [[iframe http://example.com/]] after"}
+{"id": "p-unterminated", "source": "[[iframe http://example.com/"}

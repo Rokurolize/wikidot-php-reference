@@ -1,0 +1,56 @@
+p-unterminated -> muse-probe-r2next-iftags-p-unterminated (created)
+p-stray-closer -> muse-probe-r2next-iftags-p-stray-closer (created)
+p-newline-in-spec -> muse-probe-r2next-iftags-p-newline-in-spec (created)
+p-spec-comment-straddle -> muse-probe-r2next-iftags-p-spec-comment-straddle (created)
+p-spec-comment-untagged -> muse-probe-r2next-iftags-p-spec-comment-untagged (created)
+p-false-gate-lines -> muse-probe-r2next-iftags-p-false-gate-lines (created)
+p-body-comment -> muse-probe-r2next-iftags-p-body-comment (created)
+p-math-contains-false -> muse-probe-r2next-iftags-p-math-contains-false (created)
+p-adjacent-div -> muse-probe-r2next-iftags-p-adjacent-div (created)
+{
+ "p-unterminated": {
+  "fullname": "muse-probe-r2next-iftags-p-unterminated",
+  "source": "A [[iftags +alpha]]KEEP-no-closer B",
+  "action": "created"
+ },
+ "p-stray-closer": {
+  "fullname": "muse-probe-r2next-iftags-p-stray-closer",
+  "source": "A[[/iftags]]B",
+  "action": "created"
+ },
+ "p-newline-in-spec": {
+  "fullname": "muse-probe-r2next-iftags-p-newline-in-spec",
+  "source": "[[iftags +alpha\n+beta]]KEEP[[/iftags]]",
+  "action": "created"
+ },
+ "p-spec-comment-straddle": {
+  "fullname": "muse-probe-r2next-iftags-p-spec-comment-straddle",
+  "source": "[[iftags +alpha [!--x--]]KEEP[[/iftags]]",
+  "action": "created"
+ },
+ "p-spec-comment-untagged": {
+  "fullname": "muse-probe-r2next-iftags-p-spec-comment-untagged",
+  "source": "[[iftags +alpha [!--x--] -beta]]KEEP[[/iftags]]",
+  "action": "created"
+ },
+ "p-false-gate-lines": {
+  "fullname": "muse-probe-r2next-iftags-p-false-gate-lines",
+  "source": "A\n[[iftags +beta]]HIDDEN[[/iftags]]\nB",
+  "action": "created"
+ },
+ "p-body-comment": {
+  "fullname": "muse-probe-r2next-iftags-p-body-comment",
+  "source": "A [[iftags +beta]]X[!-- c --]Y[[/iftags]] B",
+  "action": "created"
+ },
+ "p-math-contains-false": {
+  "fullname": "muse-probe-r2next-iftags-p-math-contains-false",
+  "source": "[[math]]\nx [[iftags +beta]]HIDDEN[[/iftags]] y\n[[/math]]",
+  "action": "created"
+ },
+ "p-adjacent-div": {
+  "fullname": "muse-probe-r2next-iftags-p-adjacent-div",
+  "source": "[[iftags +beta]]KEEP[[/iftags]]\n[[div]]\nD\n[[/div]]",
+  "action": "created"
+ }
+}

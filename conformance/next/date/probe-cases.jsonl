@@ -1,0 +1,39 @@
+{"id": "basic", "source": "[[date 1216153821]]"}
+{"id": "format-year", "source": "[[date 1216153821 format=\"%Y\"]]"}
+{"id": "leading-zeros", "source": "[[date 00001216153821 format=\"%Y\"]]"}
+{"id": "zero", "source": "[[date 0]]"}
+{"id": "negative", "source": "[[date -1000]]"}
+{"id": "huge-14", "source": "[[date 99999999999999]]"}
+{"id": "huge-20", "source": "[[date 99999999999999999999]]"}
+{"id": "neg-huge", "source": "[[date -99999999999999]]"}
+{"id": "plus-value", "source": "[[date +1216153821 format=\"%Y\"]]"}
+{"id": "iso-date", "source": "[[date 2009-12-25]]"}
+{"id": "now", "source": "[[date now]]"}
+{"id": "dot", "source": "[[date .]]"}
+{"id": "blank", "source": "[[date  ]]"}
+{"id": "blank-format", "source": "[[date  format=\"%Y\"]]"}
+{"id": "unquoted-format", "source": "[[date 1216153821 format=%Y]]"}
+{"id": "duplicate-format", "source": "[[date 1216153821 format=\"%Y\" format=\"%m\"]]"}
+{"id": "unknown-attr", "source": "[[date 1216153821 foo=\"bar\"]]"}
+{"id": "empty-format", "source": "[[date 1216153821 format=\"\"]]"}
+{"id": "agohover", "source": "[[date 1216153821 format=\"%Y|agohover\"]]"}
+{"id": "g-format", "source": "[[date 1216153821 format=\"%g\"]]"}
+{"id": "spaced-format", "source": "[[date 1216153821 format=\"%d. %m. %Y\"]]"}
+{"id": "html-format", "source": "[[date 1216153821 format=\"<b>&\"]]"}
+{"id": "raw-format", "source": "[[date 0 format=\"@@a@@\"]]"}
+{"id": "case-upper", "source": "[[DATE 1216153821]]"}
+{"id": "midline", "source": "before [[date 1216153821]] after"}
+{"id": "unterminated", "source": "[[date 1216153821"}
+{"id": "comment-in-value", "source": "[[date 1234[!--x--]567890]]"}
+{"id": "comment-in-attr", "source": "[[date 1216153821 format=[!-- x --]\"%Y\"]]"}
+{"id": "tz-attr", "source": "[[date 1216153821 format=\"%Y\" tz=\"+8\"]]"}
+{"id": "two-dates", "source": "[[date 1]] and [[date 2]]"}
+{"id": "in-code", "source": "[[code]]\n[[date 1216153821]]\n[[/code]]"}
+{"id": "after-iframe", "source": "[[iframe https://example.com/a]]\n[[date 1216153821]]"}
+{"id": "blank-single", "source": "[[date ]]"}
+{"id": "blank-attr-single", "source": "[[date format=\"%Y\"]]"}
+{"id": "blank-two-attrs", "source": "[[date  format=\"%Y\" tz=\"+8\"]]"}
+{"id": "blank-unknown-attr", "source": "[[date  foo=\"bar\"]]"}
+{"id": "blank-unquoted-attr", "source": "[[date  format=%Y]]"}
+{"id": "raw-two-dates", "source": "[[date 0 format=\"@@a@@\"]]\n[[date 0 format=\"@@b@@\"]]"}
+{"id": "raw-preceded", "source": "@@x@@\n[[date 0 format=\"@@a@@\"]]"}

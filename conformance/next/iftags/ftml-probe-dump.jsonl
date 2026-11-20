@@ -1,0 +1,25 @@
+{"errors":[],"html":"<p>A KEEP B</p>","id":"p-basic-plus-hit"}
+{"errors":[],"html":"<p>A KEEP B</p>","id":"p-basic-minus-hit"}
+{"errors":[],"html":"<p>A KEEP B</p>","id":"p-case-plus-spec"}
+{"errors":[],"html":"<p>A KEEP B</p>","id":"p-case-bare"}
+{"errors":[],"html":"<p>A B</p>","id":"p-case-minus"}
+{"errors":[],"html":"<p>A B</p>","id":"p-comma-plus-both"}
+{"errors":[],"html":"<p>A B</p>","id":"p-comma-plus-one"}
+{"errors":[],"html":"<p>A B</p>","id":"p-comma-bare"}
+{"errors":[],"html":"<p>A B</p>","id":"p-comma-space-mixed"}
+{"errors":[],"html":"<p>A B</p>","id":"p-bare-minus"}
+{"errors":[],"html":"<p>A B</p>","id":"p-bare-plus"}
+{"errors":[],"html":"<p>A B</p>","id":"p-empty-spec-tagged"}
+{"errors":[],"html":"<p>A KEEP B</p>","id":"p-unicode-tag"}
+{"errors":["ParseError { token: Identifier, rule: \"block-iftags\", span: 34..38, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 2..4, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 32..34, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 38..41, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 47..49, kind: NoRulesMatch }"],"html":"<p>A [[iftags +alpha -beta]]KEEP[[/iftags]] B</p>","id":"p-spec-comment-tagged"}
+{"errors":[],"html":"<p>A OUT[[iftags +beta]]IN[[/iftags]]TAIL B</p>","id":"p-nested-inner-false"}
+{"errors":[],"html":"<p>A OUT[[iftags +alpha]]IN[[/iftags]]TAIL B</p>","id":"p-nested-both-true"}
+{"errors":["ParseError { token: Identifier, rule: \"block-iftags\", span: 19..23, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 2..4, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<p>A [[iftags +alpha]]KEEP-no-closer B</p>","id":"p-unterminated"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 1..4, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>A[[/iftags]]B</p>","id":"p-stray-closer"}
+{"errors":["ParseError { token: LineBreak, rule: \"block-iftags\", span: 15..16, kind: BlockMalformedArguments }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 21..23, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 27..30, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 36..38, kind: NoRulesMatch }"],"html":"<p>[[iftags +alpha<br>\n+beta]]KEEP[[/iftags]]</p>","id":"p-newline-in-spec"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-iftags\", span: 40..40, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 29..32, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 38..40, kind: NoRulesMatch }"],"html":"<p>[[iftags +alpha ]KEEP[[/iftags]]</p>","id":"p-spec-comment-straddle"}
+{"errors":["ParseError { token: Identifier, rule: \"block-iftags\", span: 32..36, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 30..32, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 36..39, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 45..47, kind: NoRulesMatch }"],"html":"<p>[[iftags +alpha -beta]]KEEP[[/iftags]]</p>","id":"p-spec-comment-untagged"}
+{"errors":[],"html":"<p>A</p><p>B</p>","id":"p-false-gate-lines"}
+{"errors":[],"html":"<p>A B</p>","id":"p-body-comment"}
+{"errors":[],"html":"<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x y \\end{equation}</div>","id":"p-math-contains-false"}
+{"errors":[],"html":"<div><p>D</p></div>","id":"p-adjacent-div"}

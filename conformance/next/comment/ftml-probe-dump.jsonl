@@ -1,0 +1,28 @@
+{"errors":[],"html":"<p>ab</p>","id":"op-basic-inline"}
+{"errors":[],"html":"<p>visible</p>","id":"op-basic-line-start"}
+{"errors":[],"html":"<p>visible</p>","id":"op-basic-line-end"}
+{"errors":[],"html":"<p>ab</p>","id":"op-empty"}
+{"errors":[],"html":"<p>ab</p>","id":"op-no-space"}
+{"errors":[],"html":"<p>ab</p>","id":"op-close-three-hyphens"}
+{"errors":[],"html":"<p>ab</p>","id":"op-close-five-hyphens"}
+{"errors":[],"html":"<p>a—]b</p>","id":"op-unmatched-closer"}
+{"errors":[],"html":"<p>a[!— hidden b</p>","id":"op-unterminated"}
+{"errors":[],"html":"<p>ab</p>","id":"nl-leading-one"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"nl-comment-only-line"}
+{"errors":[],"html":"<p>a</p><p>b</p>","id":"nl-comment-only-blank-around"}
+{"errors":[],"html":"<p>z</p>","id":"nl-comment-at-start-tail"}
+{"errors":[],"html":"<p>a<br>\n<br>\nb</p>","id":"nl-indented-spaces"}
+{"errors":[],"html":"<p>ab</p>","id":"ml-body"}
+{"errors":[],"html":"<p>a tail —]b</p>","id":"ml-nested"}
+{"errors":[],"html":"<p>ab</p>","id":"ml-adjacent"}
+{"errors":[],"html":"<p>ab</p>","id":"case-upper-body"}
+{"errors":[],"html":"<p><iframe src=\"https://example.com\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>","id":"adj-before-iframe"}
+{"errors":[],"html":"<p>ab</p>","id":"adj-hide-iframe"}
+{"errors":[],"html":"<p style=\"text-align: center;\">Heading =</p>","id":"adj-before-heading"}
+{"errors":[],"html":"<ul>\n<li>item</li>\n</ul>","id":"adj-before-list"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>A[!-- c --]B</code></pre></div>","id":"adj-inside-code"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">A[!--&#32;c&#32;--]B</span></p>","id":"adj-inside-raw"}
+{"errors":[],"html":"<p>Body paragraph.</p>","id":"pin-double-bracket-head"}
+{"errors":[],"html":"<p>Before after.</p>","id":"pin-double-bracket-inline"}
+{"errors":[],"html":"<p>Line one<br>\nLine two</p>","id":"pin-double-bracket-only-line"}
+{"errors":[],"html":"<p>A<br>\nB</p>","id":"pin-paragraph-single-break"}

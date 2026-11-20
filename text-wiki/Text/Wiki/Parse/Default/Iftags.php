@@ -56,8 +56,9 @@ class Text_Wiki_Parse_Iftags extends Text_Wiki_Parse {
     		return;
     	}
     	
-    	$tag0 = $tags0[0];	
     	$tags = $page->getTagsAsArray();
+    	$hasTag = function($needle) use ($tags) { foreach($tags as $tag) { if (strcasecmp($tag, $needle) === 0) { return true; } } return false; };	
+
     	
     	$tags0 = preg_split(';[, ]+;', trim($matches[1]));
     	
@@ -78,7 +79,7 @@ class Text_Wiki_Parse_Iftags extends Text_Wiki_Parse {
     	if(count($allTags) > 0){
     		foreach($allTags as $t){
     			/* If any of the required tags is not present, return ''. */
-    			if(!in_array($t, $tags)){
+    			if(!$hasTag($t)){
     				return '';
     			}
     		}
@@ -86,7 +87,7 @@ class Text_Wiki_Parse_Iftags extends Text_Wiki_Parse {
    		if(count($noTags) > 0){
     		foreach($noTags as $t){
     			/* If any of the forbidden tags is present, return ''. */
-    			if(in_array($t, $tags)){
+    			if($hasTag($t)){
     				return '';
     			}
     		}
@@ -95,7 +96,7 @@ class Text_Wiki_Parse_Iftags extends Text_Wiki_Parse {
     	if(count($anyTags) > 0){
     		foreach($anyTags as $t){
     			/* If any of the "any" tags is present, return the content. */
-    			if(in_array($t, $tags)){
+    			if($hasTag($t)){
     				return $matches[2];
     			}
     		}

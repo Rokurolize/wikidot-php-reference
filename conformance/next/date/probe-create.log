@@ -1,0 +1,195 @@
+basic -> muse-probe-r2next-date-basic (created)
+format-year -> muse-probe-r2next-date-format-year (created)
+leading-zeros -> muse-probe-r2next-date-leading-zeros (created)
+zero -> muse-probe-r2next-date-zero (created)
+negative -> muse-probe-r2next-date-negative (created)
+huge-14 -> muse-probe-r2next-date-huge-14 (created)
+huge-20 -> muse-probe-r2next-date-huge-20 (created)
+neg-huge -> muse-probe-r2next-date-neg-huge (created)
+plus-value -> muse-probe-r2next-date-plus-value (created)
+iso-date -> muse-probe-r2next-date-iso-date (created)
+now -> muse-probe-r2next-date-now (created)
+dot -> muse-probe-r2next-date-dot (created)
+blank -> muse-probe-r2next-date-blank (created)
+blank-format -> muse-probe-r2next-date-blank-format (created)
+unquoted-format -> muse-probe-r2next-date-unquoted-format (created)
+duplicate-format -> muse-probe-r2next-date-duplicate-format (created)
+unknown-attr -> muse-probe-r2next-date-unknown-attr (created)
+empty-format -> muse-probe-r2next-date-empty-format (created)
+agohover -> muse-probe-r2next-date-agohover (created)
+g-format -> muse-probe-r2next-date-g-format (created)
+spaced-format -> muse-probe-r2next-date-spaced-format (created)
+html-format -> muse-probe-r2next-date-html-format (created)
+raw-format -> muse-probe-r2next-date-raw-format (created)
+case-upper -> muse-probe-r2next-date-case-upper (created)
+midline -> muse-probe-r2next-date-midline (created)
+unterminated -> muse-probe-r2next-date-unterminated (created)
+comment-in-value -> muse-probe-r2next-date-comment-in-value (created)
+comment-in-attr -> muse-probe-r2next-date-comment-in-attr (created)
+tz-attr -> muse-probe-r2next-date-tz-attr (created)
+two-dates -> muse-probe-r2next-date-two-dates (created)
+in-code -> muse-probe-r2next-date-in-code (created)
+after-iframe -> muse-probe-r2next-date-after-iframe (created)
+32 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "basic": {
+  "fullname": "muse-probe-r2next-date-basic",
+  "source": "[[date 1216153821]]",
+  "action": "created"
+ },
+ "format-year": {
+  "fullname": "muse-probe-r2next-date-format-year",
+  "source": "[[date 1216153821 format=\"%Y\"]]",
+  "action": "created"
+ },
+ "leading-zeros": {
+  "fullname": "muse-probe-r2next-date-leading-zeros",
+  "source": "[[date 00001216153821 format=\"%Y\"]]",
+  "action": "created"
+ },
+ "zero": {
+  "fullname": "muse-probe-r2next-date-zero",
+  "source": "[[date 0]]",
+  "action": "created"
+ },
+ "negative": {
+  "fullname": "muse-probe-r2next-date-negative",
+  "source": "[[date -1000]]",
+  "action": "created"
+ },
+ "huge-14": {
+  "fullname": "muse-probe-r2next-date-huge-14",
+  "source": "[[date 99999999999999]]",
+  "action": "created"
+ },
+ "huge-20": {
+  "fullname": "muse-probe-r2next-date-huge-20",
+  "source": "[[date 99999999999999999999]]",
+  "action": "created"
+ },
+ "neg-huge": {
+  "fullname": "muse-probe-r2next-date-neg-huge",
+  "source": "[[date -99999999999999]]",
+  "action": "created"
+ },
+ "plus-value": {
+  "fullname": "muse-probe-r2next-date-plus-value",
+  "source": "[[date +1216153821 format=\"%Y\"]]",
+  "action": "created"
+ },
+ "iso-date": {
+  "fullname": "muse-probe-r2next-date-iso-date",
+  "source": "[[date 2009-12-25]]",
+  "action": "created"
+ },
+ "now": {
+  "fullname": "muse-probe-r2next-date-now",
+  "source": "[[date now]]",
+  "action": "created"
+ },
+ "dot": {
+  "fullname": "muse-probe-r2next-date-dot",
+  "source": "[[date .]]",
+  "action": "created"
+ },
+ "blank": {
+  "fullname": "muse-probe-r2next-date-blank",
+  "source": "[[date  ]]",
+  "action": "created"
+ },
+ "blank-format": {
+  "fullname": "muse-probe-r2next-date-blank-format",
+  "source": "[[date  format=\"%Y\"]]",
+  "action": "created"
+ },
+ "unquoted-format": {
+  "fullname": "muse-probe-r2next-date-unquoted-format",
+  "source": "[[date 1216153821 format=%Y]]",
+  "action": "created"
+ },
+ "duplicate-format": {
+  "fullname": "muse-probe-r2next-date-duplicate-format",
+  "source": "[[date 1216153821 format=\"%Y\" format=\"%m\"]]",
+  "action": "created"
+ },
+ "unknown-attr": {
+  "fullname": "muse-probe-r2next-date-unknown-attr",
+  "source": "[[date 1216153821 foo=\"bar\"]]",
+  "action": "created"
+ },
+ "empty-format": {
+  "fullname": "muse-probe-r2next-date-empty-format",
+  "source": "[[date 1216153821 format=\"\"]]",
+  "action": "created"
+ },
+ "agohover": {
+  "fullname": "muse-probe-r2next-date-agohover",
+  "source": "[[date 1216153821 format=\"%Y|agohover\"]]",
+  "action": "created"
+ },
+ "g-format": {
+  "fullname": "muse-probe-r2next-date-g-format",
+  "source": "[[date 1216153821 format=\"%g\"]]",
+  "action": "created"
+ },
+ "spaced-format": {
+  "fullname": "muse-probe-r2next-date-spaced-format",
+  "source": "[[date 1216153821 format=\"%d. %m. %Y\"]]",
+  "action": "created"
+ },
+ "html-format": {
+  "fullname": "muse-probe-r2next-date-html-format",
+  "source": "[[date 1216153821 format=\"<b>&\"]]",
+  "action": "created"
+ },
+ "raw-format": {
+  "fullname": "muse-probe-r2next-date-raw-format",
+  "source": "[[date 0 format=\"@@a@@\"]]",
+  "action": "created"
+ },
+ "case-upper": {
+  "fullname": "muse-probe-r2next-date-case-upper",
+  "source": "[[DATE 1216153821]]",
+  "action": "created"
+ },
+ "midline": {
+  "fullname": "muse-probe-r2next-date-midline",
+  "source": "before [[date 1216153821]] after",
+  "action": "created"
+ },
+ "unterminated": {
+  "fullname": "muse-probe-r2next-date-unterminated",
+  "source": "[[date 1216153821",
+  "action": "created"
+ },
+ "comment-in-value": {
+  "fullname": "muse-probe-r2next-date-comment-in-value",
+  "source": "[[date 1234[!--x--]567890]]",
+  "action": "created"
+ },
+ "comment-in-attr": {
+  "fullname": "muse-probe-r2next-date-comment-in-attr",
+  "source": "[[date 1216153821 format=[!-- x --]\"%Y\"]]",
+  "action": "created"
+ },
+ "tz-attr": {
+  "fullname": "muse-probe-r2next-date-tz-attr",
+  "source": "[[date 1216153821 format=\"%Y\" tz=\"+8\"]]",
+  "action": "created"
+ },
+ "two-dates": {
+  "fullname": "muse-probe-r2next-date-two-dates",
+  "source": "[[date 1]] and [[date 2]]",
+  "action": "created"
+ },
+ "in-code": {
+  "fullname": "muse-probe-r2next-date-in-code",
+  "source": "[[code]]\n[[date 1216153821]]\n[[/code]]",
+  "action": "created"
+ },
+ "after-iframe": {
+  "fullname": "muse-probe-r2next-date-after-iframe",
+  "source": "[[iframe https://example.com/a]]\n[[date 1216153821]]",
+  "action": "created"
+ }
+}

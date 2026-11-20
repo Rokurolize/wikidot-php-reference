@@ -1,0 +1,25 @@
+{"id": "basic", "source": "[[math E]]\nx=1\n[[/math]]"}
+{"id": "opener-midline", "source": "prefix [[math]]\nx\n[[/math]]"}
+{"id": "label-upper", "source": "[[MATH Upper]]\nx\n[[/MATH]]"}
+{"id": "label-hyphen", "source": "[[math a-b]]\nx\n[[/math]]"}
+{"id": "label-empty-spaces", "source": "[[math   ]]\nx\n[[/math]]"}
+{"id": "type-eqnarray", "source": "[[math type=\"eqnarray\"]]\nx\n[[/math]]"}
+{"id": "type-align", "source": "[[math type=\"align\"]]\nx\n[[/math]]"}
+{"id": "type-unquoted", "source": "[[math type=align]]\nx\n[[/math]]"}
+{"id": "type-uppercase", "source": "[[math type=\"ALIGN\"]]\nx\n[[/math]]"}
+{"id": "attr-unknown", "source": "[[math foo=\"bar\"]]\nx\n[[/math]]"}
+{"id": "attr-hyphen-key", "source": "[[math foo-bar=\"x\"]]\nx\n[[/math]]"}
+{"id": "attr-underscore-key", "source": "[[math foo_bar=\"x\"]]\nx\n[[/math]]"}
+{"id": "body-empty", "source": "[[math]]\n[[/math]]"}
+{"id": "closer-tail-text", "source": "[[math]]\nx\n[[/math]] tail"}
+{"id": "closer-inline", "source": "[[math]]x[[/math]]"}
+{"id": "nested-two", "source": "[[math]]\n[[math]]\nx\n[[/math]]\n[[/math]]"}
+{"id": "nested-outer-tail", "source": "[[math]]\n[[math]]\nx\n[[/math]] tail\n[[/math]]"}
+{"id": "adjacent-two-blocks", "source": "[[math]]\nx\n[[/math]]\n[[math]]\ny\n[[/math]]"}
+{"id": "unterminated", "source": "[[math]]\nx"}
+{"id": "eref-after", "source": "[[math E]]\nx\n[[/math]]\n[[eref E]]"}
+{"id": "comment-in-body", "source": "[[math]]\n[!-- [[/math]] --]\nx\n[[/math]]"}
+{"id": "in-div", "source": "[[div class=\"box\"]]\n[[math]]\nx\n[[/math]]\n[[/div]]"}
+{"id": "in-collapsible", "source": "[[collapsible]]\n[[math]]\nx\n[[/math]]\n[[/collapsible]]"}
+{"id": "after-date", "source": "[[date 1216153821]]\n[[math]]\nx\n[[/math]]"}
+{"id": "attr-quoted-close-bracket", "source": "[[math a=\"x]]y\"]\nz\n[[/math]]"}

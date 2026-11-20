@@ -1,0 +1,39 @@
+{"id":"basic","output":"<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"format-year","output":"<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"leading-zeros","output":"<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"zero","output":"<p><span class=\"odate time_0\">01 Jan 1970 00:00<\/span><\/p>\n\n"}
+{"id":"negative","output":"<p><span class=\"odate time_-1000\">31 Dec 1969 23:43<\/span><\/p>\n\n"}
+{"id":"huge-14","output":"<p><span class=\"odate time_99999999999999\">07 Nov 3170843 09:46<\/span><\/p>\n\n"}
+{"id":"huge-20","output":"<p><span class=\"odate time_9223372036854775807\">04 Dec 292277026596 15:30<\/span><\/p>\n\n"}
+{"id":"neg-huge","output":"<p><span class=\"odate time_-99999999999999\">24 Feb -3166904 14:13<\/span><\/p>\n\n"}
+{"id":"plus-value","output":"<p>[[date +1216153821 format=&quot;%Y&quot;]]<\/p>\n\n"}
+{"id":"iso-date","output":"<p>[[date 2009-12-25]]<\/p>\n\n"}
+{"id":"now","output":"<p>[[date now]]<\/p>\n\n"}
+{"id":"dot","output":"<p>[[date .]]<\/p>\n\n"}
+{"id":"blank","output":"<p><\/p>\n\n"}
+{"id":"blank-format","output":"<p><\/p>\n\n"}
+{"id":"unquoted-format","output":"<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"duplicate-format","output":"<p><span class=\"odate time_1216153821 format_%25m\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"unknown-attr","output":"<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"empty-format","output":"<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"agohover","output":"<p><span class=\"odate time_1216153821 format_%25Y%7Cagohover\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"g-format","output":"<p><span class=\"odate time_1216153821 format_ago\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"spaced-format","output":"<p><span class=\"odate time_1216153821 format_%25d.%20%25m.%20%25Y\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"html-format","output":"<p><span class=\"odate time_1216153821 format_%3Cb%3E%26\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"raw-format","output":"<p><span class=\"odate time_0 format_%FF348%FF\">01 Jan 1970 00:00<\/span><\/p>\n\n"}
+{"id":"case-upper","output":"<p>[[DATE 1216153821]]<\/p>\n\n"}
+{"id":"midline","output":"<p>before <span class=\"odate time_1216153821\">15 Jul 2008 20:30<\/span> after<\/p>\n\n"}
+{"id":"unterminated","output":"<p>[[date 1216153821<\/p>\n\n"}
+{"id":"comment-in-value","output":"<p><span class=\"odate time_1234567890\">13 Feb 2009 23:31<\/span><\/p>\n\n"}
+{"id":"comment-in-attr","output":"<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"tz-attr","output":"<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"two-dates","output":"<p><span class=\"odate time_1\">01 Jan 1970 00:00<\/span> and <span class=\"odate time_2\">01 Jan 1970 00:00<\/span><\/p>\n\n"}
+{"id":"in-code","output":"\n<div class=\"code\">\n<pre><code>[[date 1216153821]]<\/code><\/pre><\/div>\n\n"}
+{"id":"after-iframe","output":"<p><iframe src=\"https:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><br \/>\n<span class=\"odate time_1216153821\">15 Jul 2008 20:30<\/span><\/p>\n\n"}
+{"id":"blank-single","output":"<p><\/p>\n\n"}
+{"id":"blank-attr-single","output":"<p>[[date format=&quot;%Y&quot;]]<\/p>\n\n"}
+{"id":"blank-two-attrs","output":"<p><\/p>\n\n"}
+{"id":"blank-unknown-attr","output":"<p><\/p>\n\n"}
+{"id":"blank-unquoted-attr","output":"<p><\/p>\n\n"}
+{"id":"raw-two-dates","output":"<p><span class=\"odate time_0 format_%FF587%FF\">01 Jan 1970 00:00<\/span><br \/>\n<span class=\"odate time_0 format_%FF588%FF\">01 Jan 1970 00:00<\/span><\/p>\n\n"}
+{"id":"raw-preceded","output":"<p><span style=\"white-space: pre-wrap;\">x<\/span><br \/>\n<span class=\"odate time_0 format_%FF608%FF\">01 Jan 1970 00:00<\/span><\/p>\n\n"}

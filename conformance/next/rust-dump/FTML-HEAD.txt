@@ -1,0 +1,6 @@
+ftml checkout: /home/roku/src/Rokurolize/ftml
+HEAD: 97bed049ddeadc54981f6d9577bd78fcb212abd9
+short: 97bed049d
+branch: HEAD
+HEAD subject: fix(includes): stop consuming quote-prefixed include lines (#1531)
+note: unchanged from the Module stage's recorded HEAD at R2-next build time.

@@ -1,0 +1,82 @@
+{
+ "p-basic-plus-hit": {
+  "fullname": "muse-probe-r2next-iftags-p-basic-plus-hit",
+  "source": "A [[iftags +alpha]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-basic-minus-hit": {
+  "fullname": "muse-probe-r2next-iftags-p-basic-minus-hit",
+  "source": "A [[iftags -alpha]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-case-plus-spec": {
+  "fullname": "muse-probe-r2next-iftags-p-case-plus-spec",
+  "source": "A [[iftags +ALPHA]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-case-bare": {
+  "fullname": "muse-probe-r2next-iftags-p-case-bare",
+  "source": "A [[iftags ALPHA]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-case-minus": {
+  "fullname": "muse-probe-r2next-iftags-p-case-minus",
+  "source": "A [[iftags -BETA]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-comma-plus-both": {
+  "fullname": "muse-probe-r2next-iftags-p-comma-plus-both",
+  "source": "A [[iftags +alpha,+beta]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-comma-plus-one": {
+  "fullname": "muse-probe-r2next-iftags-p-comma-plus-one",
+  "source": "A [[iftags +alpha,+beta]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-comma-bare": {
+  "fullname": "muse-probe-r2next-iftags-p-comma-bare",
+  "source": "A [[iftags alpha,beta]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-comma-space-mixed": {
+  "fullname": "muse-probe-r2next-iftags-p-comma-space-mixed",
+  "source": "A [[iftags +alpha, -beta gamma]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-bare-minus": {
+  "fullname": "muse-probe-r2next-iftags-p-bare-minus",
+  "source": "A [[iftags -]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-bare-plus": {
+  "fullname": "muse-probe-r2next-iftags-p-bare-plus",
+  "source": "A [[iftags +]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-empty-spec-tagged": {
+  "fullname": "muse-probe-r2next-iftags-p-empty-spec-tagged",
+  "source": "A [[iftags]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-unicode-tag": {
+  "fullname": "muse-probe-r2next-iftags-p-unicode-tag",
+  "source": "A [[iftags +テーマ]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-spec-comment-tagged": {
+  "fullname": "muse-probe-r2next-iftags-p-spec-comment-tagged",
+  "source": "A [[iftags +alpha [!--x--] -beta]]KEEP[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-nested-inner-false": {
+  "fullname": "muse-probe-r2next-iftags-p-nested-inner-false",
+  "source": "A [[iftags +alpha]]OUT[[iftags +beta]]IN[[/iftags]]TAIL[[/iftags]] B",
+  "action": "publish-tags"
+ },
+ "p-nested-both-true": {
+  "fullname": "muse-probe-r2next-iftags-p-nested-both-true",
+  "source": "A [[iftags +alpha]]OUT[[iftags +alpha]]IN[[/iftags]]TAIL[[/iftags]] B",
+  "action": "publish-tags"
+ }
+}

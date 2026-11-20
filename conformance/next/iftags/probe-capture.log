@@ -1,0 +1,26 @@
+p-unterminated stable= True matches= True valid= True
+p-stray-closer stable= True matches= True valid= True
+p-newline-in-spec stable= True matches= True valid= True
+p-spec-comment-straddle stable= True matches= True valid= True
+p-spec-comment-untagged stable= True matches= True valid= True
+p-false-gate-lines stable= True matches= True valid= True
+p-body-comment stable= True matches= True valid= True
+p-math-contains-false stable= True matches= True valid= True
+p-adjacent-div stable= True matches= True valid= True
+p-basic-plus-hit stable= True matches= True valid= True
+p-basic-minus-hit stable= True matches= True valid= True
+p-case-plus-spec stable= True matches= True valid= True
+p-case-bare stable= True matches= True valid= True
+p-case-minus stable= True matches= True valid= True
+p-comma-plus-both stable= True matches= True valid= True
+p-comma-plus-one stable= True matches= True valid= True
+p-comma-bare stable= True matches= True valid= True
+p-comma-space-mixed stable= True matches= True valid= True
+p-bare-minus stable= True matches= True valid= True
+p-bare-plus stable= True matches= True valid= True
+p-empty-spec-tagged stable= True matches= True valid= True
+p-unicode-tag stable= True matches= True valid= True
+p-spec-comment-tagged stable= True matches= True valid= True
+p-nested-inner-false stable= True matches= True valid= True
+p-nested-both-true stable= True matches= True valid= True
+captured 25 valid 25

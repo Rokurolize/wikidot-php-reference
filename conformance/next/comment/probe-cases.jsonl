@@ -1,0 +1,28 @@
+{"id": "op-basic-inline", "source": "a[!-- hidden --]b"}
+{"id": "op-basic-line-start", "source": "[!-- hidden --]\nvisible"}
+{"id": "op-basic-line-end", "source": "visible\n[!-- hidden --]"}
+{"id": "op-empty", "source": "a[!-- --]b"}
+{"id": "op-no-space", "source": "a[!--x--]b"}
+{"id": "op-close-three-hyphens", "source": "a[!-- hidden ---]b"}
+{"id": "op-close-five-hyphens", "source": "a[!-- hidden -----]b"}
+{"id": "op-unmatched-closer", "source": "a--]b"}
+{"id": "op-unterminated", "source": "a[!-- hidden b"}
+{"id": "nl-leading-one", "source": "a\n[!-- c --]b"}
+{"id": "nl-comment-only-line", "source": "a\n[!-- c --]\nb"}
+{"id": "nl-comment-only-blank-around", "source": "a\n\n[!-- c --]\n\nb"}
+{"id": "nl-comment-at-start-tail", "source": "[!-- c --] z"}
+{"id": "nl-indented-spaces", "source": "a\n  [!-- c --]\nb"}
+{"id": "ml-body", "source": "a[!-- line1\nline2 --]b"}
+{"id": "ml-nested", "source": "a[!-- outer [!-- inner --] tail --]b"}
+{"id": "ml-adjacent", "source": "a[!-- one --][!-- two --]b"}
+{"id": "case-upper-body", "source": "a[!-- HIDDEN --]b"}
+{"id": "adj-before-iframe", "source": "[!-- hide --]\n[[iframe https://example.com]]"}
+{"id": "adj-hide-iframe", "source": "a[!-- [[iframe https://example.com]] --]b"}
+{"id": "adj-before-heading", "source": "[!-- c --]\n= Heading ="}
+{"id": "adj-before-list", "source": "[!-- c --]\n* item"}
+{"id": "adj-inside-code", "source": "[[code]]\nA[!-- c --]B\n[[/code]]"}
+{"id": "adj-inside-raw", "source": "@@A[!-- c --]B@@"}
+{"id": "pin-double-bracket-head", "source": "[[!-- Theme Lab candidate port header. --]]\nBody paragraph."}
+{"id": "pin-double-bracket-inline", "source": "Before [[!-- note --]] after."}
+{"id": "pin-double-bracket-only-line", "source": "Line one\n[[!-- note --]]\nLine two"}
+{"id": "pin-paragraph-single-break", "source": "A\n[!-- x --]\nB"}

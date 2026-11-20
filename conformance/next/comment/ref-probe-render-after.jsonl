@@ -1,0 +1,28 @@
+{"id":"op-basic-inline","output":"<p>ab<\/p>\n\n"}
+{"id":"op-basic-line-start","output":"<p>visible<\/p>\n\n"}
+{"id":"op-basic-line-end","output":"<p>visible<\/p>\n\n"}
+{"id":"op-empty","output":"<p>ab<\/p>\n\n"}
+{"id":"op-no-space","output":"<p>ab<\/p>\n\n"}
+{"id":"op-close-three-hyphens","output":"<p>ab<\/p>\n\n"}
+{"id":"op-close-five-hyphens","output":"<p>ab<\/p>\n\n"}
+{"id":"op-unmatched-closer","output":"<p>a&#8212;]b<\/p>\n\n"}
+{"id":"op-unterminated","output":"<p>a[!&#8212; hidden b<\/p>\n\n"}
+{"id":"nl-leading-one","output":"<p>ab<\/p>\n\n"}
+{"id":"nl-comment-only-line","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"nl-comment-only-blank-around","output":"<p>a<\/p>\n\n<p>b<\/p>\n\n"}
+{"id":"nl-comment-at-start-tail","output":"<p>z<\/p>\n\n"}
+{"id":"nl-indented-spaces","output":"<p>a<br \/>\n<br \/>\nb<\/p>\n\n"}
+{"id":"ml-body","output":"<p>ab<\/p>\n\n"}
+{"id":"ml-nested","output":"<p>a tail &#8212;]b<\/p>\n\n"}
+{"id":"ml-adjacent","output":"<p>ab<\/p>\n\n"}
+{"id":"case-upper-body","output":"<p>ab<\/p>\n\n"}
+{"id":"adj-before-iframe","output":"<p><iframe src=\"https:\/\/example.com\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\" ><\/iframe><\/p>\n\n"}
+{"id":"adj-hide-iframe","output":"<p>ab<\/p>\n\n"}
+{"id":"adj-before-heading","output":"<p style=\"text-align: center;\">Heading =<\/p>"}
+{"id":"adj-before-list","output":"<ul>\n    <li>item<\/li>\n<\/ul>\n\n"}
+{"id":"adj-inside-code","output":"\n<div class=\"code\">\n<pre><code>A[!-- c --]B<\/code><\/pre><\/div>\n\n"}
+{"id":"adj-inside-raw","output":"<p><span style=\"white-space: pre-wrap;\">A[!--&#32;c&#32;--]B<\/span><\/p>\n\n"}
+{"id":"pin-double-bracket-head","output":"<p>[]<br \/>\nBody paragraph.<\/p>\n\n"}
+{"id":"pin-double-bracket-inline","output":"<p>Before [] after.<\/p>\n\n"}
+{"id":"pin-double-bracket-only-line","output":"<p>Line one<br \/>\n[]<br \/>\nLine two<\/p>\n\n"}
+{"id":"pin-paragraph-single-break","output":"<p>A<br \/>\nB<\/p>\n\n"}

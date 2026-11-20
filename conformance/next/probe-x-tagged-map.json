@@ -1,0 +1,12 @@
+{
+ "x-iftags-keep-math-tagged": {
+  "fullname": "muse-probe-r2next-x-x-iftags-keep-math-tagged",
+  "source": "[[iftags +alpha]]\n[[math E]]\nx=1\n[[/math]]\n[[/iftags]]",
+  "action": "publish-tags"
+ },
+ "x-iftags-keep-module-tagged": {
+  "fullname": "muse-probe-r2next-x-x-iftags-keep-module-tagged",
+  "source": "[[iftags +alpha]]\n[[module UnknownModuleX]]\nbody\n[[/module]]\n[[/iftags]]",
+  "action": "publish-tags"
+ }
+}

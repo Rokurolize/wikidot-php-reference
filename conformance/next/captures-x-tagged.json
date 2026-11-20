@@ -1,0 +1,22 @@
+{
+ "x-iftags-keep-math-tagged": {
+  "fullname": "muse-probe-r2next-x-x-iftags-keep-math-tagged",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x=1 \\end{equation}</div>",
+  "html_sha256": "2bdb9b044fd4145cebbf187dcf9744dbdfe83dd84e0168181365444e54d4653a",
+  "source": "[[iftags +alpha]]\n[[math E]]\nx=1\n[[/math]]\n[[/iftags]]",
+  "source_sha256": "d79a7f971b3e92bf1c9c9c1dae2a0bba5daf0aae5106f07595b5d3a4ccf95a9b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-iftags-keep-module-tagged": {
+  "fullname": "muse-probe-r2next-x-x-iftags-keep-module-tagged",
+  "html": "<div class=\"error-block\">[[module <em>UnknownModuleX</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>",
+  "html_sha256": "4519c092f36652fe5f24804fd3c6845c00a18a45e80c419b785ce84e0abe3101",
+  "source": "[[iftags +alpha]]\n[[module UnknownModuleX]]\nbody\n[[/module]]\n[[/iftags]]",
+  "source_sha256": "b01011c8941660e4fc62c83c802723e5e7ba8d5b46114d8015598d16f42f5da2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

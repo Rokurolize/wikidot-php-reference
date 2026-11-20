@@ -1,0 +1,43 @@
+BATTERY cases=80 strict_agreement_before=21 strict_agreement_after=23
+BATTERY canon_agreement_before=65 canon_agreement_after=71 corrected_outputs=7 corrected_ids=['opener-and-closer-upper', 'case-plus-spec-upper', 'case-plus-tag-upper', 'case-bare', 'case-minus-spec', 'case-minus-tag', 'body-iframe']
+BATTERY canon_disagreements_after=9 ids=['comma-plus-both', 'comma-bare', 'comma-space-mixed', 'bare-minus-only', 'newline-in-spec', 'spec-comment-straddle', 'body-math', 'math-contains-false-iftags', 'body-span-seam']
+  comma-plus-both: ref='<p>KEEP</p>' ftml=''
+  comma-bare: ref='<p>KEEP</p>' ftml=''
+  comma-space-mixed: ref='<p>KEEP</p>' ftml=''
+  bare-minus-only: ref='<p>KEEP</p>' ftml=''
+  newline-in-spec: ref='' ftml='<p>[[iftags +alpha<br> +beta]]KEEP[[/iftags]]</p>'
+  spec-comment-straddle: ref='' ftml='<p>[[iftags +alpha ]KEEP[[/iftags]]</p>'
+  body-math: ref='ERRORBLOCK' ftml=' \\begin{equation} x^2 \\end{equation}'
+  math-contains-false-iftags: ref='ERRORBLOCK' ftml=' \\begin{equation} x y \\end{equation}'
+  body-span-seam: ref='<p><span style="">SPAN</span>KEEP</p>' ftml='<p><span>SPAN</span>KEEP</p>'
+PROBES total=25 valid=25 all3=17 ref+live=6 ftml+live=1 none=1
+  all3: ['p-unterminated', 'p-stray-closer', 'p-spec-comment-untagged', 'p-false-gate-lines', 'p-body-comment', 'p-basic-plus-hit', 'p-basic-minus-hit', 'p-case-plus-spec', 'p-case-bare', 'p-case-minus', 'p-comma-plus-one', 'p-bare-plus', 'p-empty-spec-tagged', 'p-unicode-tag', 'p-spec-comment-tagged', 'p-nested-inner-false', 'p-nested-both-true']
+  ref_live: ['p-newline-in-spec', 'p-spec-comment-straddle', 'p-comma-plus-both', 'p-comma-bare', 'p-comma-space-mixed', 'p-bare-minus']
+  ftml_live: ['p-math-contains-false']
+  none: ['p-adjacent-div']
+PROBE GATE POLARITIES (KEEP present or absent)
+  p-unterminated: ref=True ftml=True live=True
+  p-stray-closer: ref=False ftml=False live=False
+  p-newline-in-spec: ref=False ftml=True live=False
+  p-spec-comment-straddle: ref=False ftml=True live=False
+  p-spec-comment-untagged: ref=True ftml=True live=True
+  p-false-gate-lines: ref=False ftml=False live=False
+  p-body-comment: ref=False ftml=False live=False
+  p-math-contains-false: ref=False ftml=False live=False
+  p-adjacent-div: ref=False ftml=False live=False
+  p-basic-plus-hit: ref=True ftml=True live=True
+  p-basic-minus-hit: ref=True ftml=True live=True
+  p-case-plus-spec: ref=True ftml=True live=True
+  p-case-bare: ref=True ftml=True live=True
+  p-case-minus: ref=False ftml=False live=False
+  p-comma-plus-both: ref=True ftml=False live=True
+  p-comma-plus-one: ref=False ftml=False live=False
+  p-comma-bare: ref=True ftml=False live=True
+  p-comma-space-mixed: ref=True ftml=False live=True
+  p-bare-minus: ref=True ftml=False live=True
+  p-bare-plus: ref=False ftml=False live=False
+  p-empty-spec-tagged: ref=False ftml=False live=False
+  p-unicode-tag: ref=True ftml=True live=True
+  p-spec-comment-tagged: ref=True ftml=True live=True
+  p-nested-inner-false: ref=False ftml=False live=False
+  p-nested-both-true: ref=False ftml=False live=False

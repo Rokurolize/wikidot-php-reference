@@ -1,0 +1,277 @@
+basic -> muse-probe-r2next-math-basic stable=True saved_source_matches=True valid=True
+opener-midline -> muse-probe-r2next-math-opener-midline stable=True saved_source_matches=True valid=True
+label-upper -> muse-probe-r2next-math-label-upper stable=True saved_source_matches=True valid=True
+label-hyphen -> muse-probe-r2next-math-label-hyphen stable=True saved_source_matches=True valid=True
+label-empty-spaces -> muse-probe-r2next-math-label-empty-spaces stable=True saved_source_matches=True valid=True
+type-eqnarray -> muse-probe-r2next-math-type-eqnarray stable=True saved_source_matches=True valid=True
+type-align -> muse-probe-r2next-math-type-align stable=True saved_source_matches=True valid=True
+type-unquoted -> muse-probe-r2next-math-type-unquoted stable=True saved_source_matches=True valid=True
+type-uppercase -> muse-probe-r2next-math-type-uppercase stable=True saved_source_matches=True valid=True
+attr-unknown -> muse-probe-r2next-math-attr-unknown stable=True saved_source_matches=True valid=True
+attr-hyphen-key -> muse-probe-r2next-math-attr-hyphen-key stable=True saved_source_matches=True valid=True
+attr-underscore-key -> muse-probe-r2next-math-attr-underscore-key stable=True saved_source_matches=True valid=True
+body-empty -> muse-probe-r2next-math-body-empty stable=True saved_source_matches=True valid=True
+closer-tail-text -> muse-probe-r2next-math-closer-tail-text stable=True saved_source_matches=True valid=True
+closer-inline -> muse-probe-r2next-math-closer-inline stable=True saved_source_matches=True valid=True
+nested-two -> muse-probe-r2next-math-nested-two stable=True saved_source_matches=True valid=True
+nested-outer-tail -> muse-probe-r2next-math-nested-outer-tail stable=True saved_source_matches=True valid=True
+adjacent-two-blocks -> muse-probe-r2next-math-adjacent-two-blocks stable=True saved_source_matches=True valid=True
+unterminated -> muse-probe-r2next-math-unterminated stable=True saved_source_matches=True valid=True
+eref-after -> muse-probe-r2next-math-eref-after stable=True saved_source_matches=True valid=True
+comment-in-body -> muse-probe-r2next-math-comment-in-body stable=True saved_source_matches=True valid=True
+in-div -> muse-probe-r2next-math-in-div stable=True saved_source_matches=True valid=True
+in-collapsible -> muse-probe-r2next-math-in-collapsible stable=True saved_source_matches=True valid=True
+after-date -> muse-probe-r2next-math-after-date stable=True saved_source_matches=True valid=True
+attr-quoted-close-bracket -> muse-probe-r2next-math-attr-quoted-close-bracket stable=True saved_source_matches=True valid=True
+{
+ "basic": {
+  "fullname": "muse-probe-r2next-math-basic",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x=1 \\end{equation}</div>",
+  "html_sha256": "2bdb9b044fd4145cebbf187dcf9744dbdfe83dd84e0168181365444e54d4653a",
+  "source": "[[math E]]\nx=1\n[[/math]]",
+  "source_sha256": "ae4852c191b5d4cbeca70323fa50f25e50d902c043949bd27c72845a2da54f76",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "opener-midline": {
+  "fullname": "muse-probe-r2next-math-opener-midline",
+  "html": "<p>prefix [[math]]<br />\nx<br />\n[[/math]]</p>",
+  "html_sha256": "07adde06cdf629aca7ba83a1a72973ae7b4872b523b2ca357efc262b6a1248e0",
+  "source": "prefix [[math]]\nx\n[[/math]]",
+  "source_sha256": "022eea9f2139662b047a9db2dd2a298d22c08fca6a9a145fc6695dab72c841a7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "label-upper": {
+  "fullname": "muse-probe-r2next-math-label-upper",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>",
+  "html_sha256": "e504bd63f5c257493a0bd835e3359b4574ca995dfdaf283fa88623fea08d5a1f",
+  "source": "[[MATH Upper]]\nx\n[[/MATH]]",
+  "source_sha256": "ab2c2f92bfc3331f96cd7c2b332f17659d1d56ffdedaca7a9c76f21142eb350e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "label-hyphen": {
+  "fullname": "muse-probe-r2next-math-label-hyphen",
+  "html": "<p>[[math a-b]]<br />\nx<br />\n[[/math]]</p>",
+  "html_sha256": "93ae38ab24b088e2e3438b4aa4d02b8bc98dffd9900ad3d82a56bccf226a1452",
+  "source": "[[math a-b]]\nx\n[[/math]]",
+  "source_sha256": "e944483d1d3b9f5f09d0f1fc52e25ad3242bf2bdb708e3f8ae698cac3df836e9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "label-empty-spaces": {
+  "fullname": "muse-probe-r2next-math-label-empty-spaces",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>",
+  "html_sha256": "e504bd63f5c257493a0bd835e3359b4574ca995dfdaf283fa88623fea08d5a1f",
+  "source": "[[math   ]]\nx\n[[/math]]",
+  "source_sha256": "4636d66407229c71776ff42e2813468ba285aa623da43091a8dd564c9d16ea77",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "type-eqnarray": {
+  "fullname": "muse-probe-r2next-math-type-eqnarray",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{eqnarray} x \\end{eqnarray}</div>",
+  "html_sha256": "228ec2122e46c5bfd0243fa5ce374e6bb93b9b5ce053a5d49b183a7e387b43e2",
+  "source": "[[math type=\"eqnarray\"]]\nx\n[[/math]]",
+  "source_sha256": "0ecedad15cb5c5553f90c859865c1e48c47f7c24414e490d56b6a80a035e64a3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "type-align": {
+  "fullname": "muse-probe-r2next-math-type-align",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{align} x \\end{align}</div>",
+  "html_sha256": "d2ff6a492fc9df7ae6a68927dc59ef71a7ba40629a33ea341a90113cdcf8ee69",
+  "source": "[[math type=\"align\"]]\nx\n[[/math]]",
+  "source_sha256": "f66022b25f149bf4e48336605badfce399d94b2b6c59783b10f6606beca6a2ae",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "type-unquoted": {
+  "fullname": "muse-probe-r2next-math-type-unquoted",
+  "html": "<p>[[math type=align]]<br />\nx<br />\n[[/math]]</p>",
+  "html_sha256": "80d3a0fac9ab27c7fa268df060d87eb98e01a21f86ebeb072317573e2a8dccb8",
+  "source": "[[math type=align]]\nx\n[[/math]]",
+  "source_sha256": "8786e26cf77b13b71a3de19d5831bbb09b52a9575005513daf63f11aa4e3a5b3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "type-uppercase": {
+  "fullname": "muse-probe-r2next-math-type-uppercase",
+  "html": "<div class=\"error-block\">Unsupported math environment \"ALIGN\"</div>",
+  "html_sha256": "3a1c92cadde893ae78f499225f35ac58d14e1a180d6cfd614a9c6d191d49843e",
+  "source": "[[math type=\"ALIGN\"]]\nx\n[[/math]]",
+  "source_sha256": "b3a00c132aa9839f3ccd546250de5d0f8cf2dbb45e2e9542d5f6a181971a05f2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-unknown": {
+  "fullname": "muse-probe-r2next-math-attr-unknown",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>",
+  "html_sha256": "e504bd63f5c257493a0bd835e3359b4574ca995dfdaf283fa88623fea08d5a1f",
+  "source": "[[math foo=\"bar\"]]\nx\n[[/math]]",
+  "source_sha256": "3d145c390fba0e581c9cd947af9de6e881b6fd40c26fa9bd51654ba25cbbf032",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-hyphen-key": {
+  "fullname": "muse-probe-r2next-math-attr-hyphen-key",
+  "html": "<p>[[math foo-bar=&quot;x&quot;]]<br />\nx<br />\n[[/math]]</p>",
+  "html_sha256": "670193b6517174d889deee106a18ee2d9ce0b247b78b4d15d1476000715d75d9",
+  "source": "[[math foo-bar=\"x\"]]\nx\n[[/math]]",
+  "source_sha256": "9d72dfbbb7f87f372bf0692b4c7846e5d2e071ccbd0e072cae736ce4f1a66d98",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-underscore-key": {
+  "fullname": "muse-probe-r2next-math-attr-underscore-key",
+  "html": "<p>[[math foo_bar=&quot;x&quot;]]<br />\nx<br />\n[[/math]]</p>",
+  "html_sha256": "a532c8f490b41876bc2eb699221595817edd94606795a774adc4598dc5c1ab74",
+  "source": "[[math foo_bar=\"x\"]]\nx\n[[/math]]",
+  "source_sha256": "d706c0409db7df7f22c71a33838ac48e6f00c686a5eeca1577015a046a7ee023",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "body-empty": {
+  "fullname": "muse-probe-r2next-math-body-empty",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} \\end{equation}</div>",
+  "html_sha256": "46a86001fc4d3d443464285df0602cd135bbb633a9188cfbd517202fe0cd3e5e",
+  "source": "[[math]]\n[[/math]]",
+  "source_sha256": "b4d145a015d3445e0c56d0f36b6656483e02dcaff47c20a9063e12f94c948d9a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "closer-tail-text": {
+  "fullname": "muse-probe-r2next-math-closer-tail-text",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p>tail</p>",
+  "html_sha256": "1022c23b77e7dfe9db07f747d788eb182dde2a1223cb97c4f71ccd64fc04bc5b",
+  "source": "[[math]]\nx\n[[/math]] tail",
+  "source_sha256": "ed1d0336e5b719af74a85c107ac1e232339b364b252fcba4b69b3f7af93b2861",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "closer-inline": {
+  "fullname": "muse-probe-r2next-math-closer-inline",
+  "html": "<p>[[math]]x[[/math]]</p>",
+  "html_sha256": "ea1016bbb04438548d0115466dc6d40ac4d1b4398dbc41a341a03d1f5a2a46b3",
+  "source": "[[math]]x[[/math]]",
+  "source_sha256": "a5ef75f55cbc8f84225ba14c3e4640fd3ade96e588b1c9df5ba923faf4c4fe5a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nested-two": {
+  "fullname": "muse-probe-r2next-math-nested-two",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} [[math]] x \\end{equation}</div>\n<p>[[/math]]</p>",
+  "html_sha256": "f117bb44f3d0304d74b296c3f47c5fc1a58136a83605c9ed22f0f029ddffe575",
+  "source": "[[math]]\n[[math]]\nx\n[[/math]]\n[[/math]]",
+  "source_sha256": "c1b116ffb17c3a52a99bffd6e050d791c3aa848edde1381d8733390a5b7f68a8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nested-outer-tail": {
+  "fullname": "muse-probe-r2next-math-nested-outer-tail",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} [[math]] x [[/math]] tail \\end{equation}</div>",
+  "html_sha256": "f377a98cdeedee4511b70726967ed546dc20eddc0a0348a0db1d0a3f0560625d",
+  "source": "[[math]]\n[[math]]\nx\n[[/math]] tail\n[[/math]]",
+  "source_sha256": "9e46d67bbf0f48ccf8b600d8f139ec3739f570bb07dad85ee0e77c811912f536",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adjacent-two-blocks": {
+  "fullname": "muse-probe-r2next-math-adjacent-two-blocks",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<span class=\"equation-number\">(2)</span>\n<div class=\"math-equation\" id=\"equation-2\">\\begin{equation} y \\end{equation}</div>",
+  "html_sha256": "42b960d0df981dba10f85878f0fd6c41ce3f5aafc455d5529132c7d1aca3f7d5",
+  "source": "[[math]]\nx\n[[/math]]\n[[math]]\ny\n[[/math]]",
+  "source_sha256": "643ce6a86020e8fbb7cb920a5658d3d28d702c5b798ed87b9cee19c35020a2f6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unterminated": {
+  "fullname": "muse-probe-r2next-math-unterminated",
+  "html": "<p>[[math]]<br />\nx</p>",
+  "html_sha256": "737f02c55a2aa34eb0a3b3b6ad92f2bc04d77dfd021008ab1a7630f09e1b54bf",
+  "source": "[[math]]\nx",
+  "source_sha256": "3adac24ef4655abb03e882144af6d65b6deda0671eedccd2cce73664623ef4db",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "eref-after": {
+  "fullname": "muse-probe-r2next-math-eref-after",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n<p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>",
+  "html_sha256": "7608ee6cad1e764f837e43d9df7ee8d13021df5aec0d8a922efd39c763153ec8",
+  "source": "[[math E]]\nx\n[[/math]]\n[[eref E]]",
+  "source_sha256": "34eb48a5a1c82fe14395408e226a6d3191a7780978c3b2c18120e5bddf440af7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "comment-in-body": {
+  "fullname": "muse-probe-r2next-math-comment-in-body",
+  "html": "<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>",
+  "html_sha256": "e504bd63f5c257493a0bd835e3359b4574ca995dfdaf283fa88623fea08d5a1f",
+  "source": "[[math]]\n[!-- [[/math]] --]\nx\n[[/math]]",
+  "source_sha256": "f9c84fcb36d21b1ff287eee5dcdab16b9a942af9be37fa02177aecfd60bd3292",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "in-div": {
+  "fullname": "muse-probe-r2next-math-in-div",
+  "html": "<div class=\"box\"><span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n</div>",
+  "html_sha256": "ea9810dfcdda2128cbfeba6a4fd517f5113baefe2ceb957236f365f1287497be",
+  "source": "[[div class=\"box\"]]\n[[math]]\nx\n[[/math]]\n[[/div]]",
+  "source_sha256": "a72e79f52ba4c57b03a6f00c7f8f78322418bb0732f412c0b6b8978f2e4df782",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "in-collapsible": {
+  "fullname": "muse-probe-r2next-math-in-collapsible",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\"><span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>\n</div>\n</div>\n</div>",
+  "html_sha256": "3b23f0a17e7b3b8a0a16fb0b6ecbd806d88ccab8e14637197425eb6ab31d0f2d",
+  "source": "[[collapsible]]\n[[math]]\nx\n[[/math]]\n[[/collapsible]]",
+  "source_sha256": "8103d711cdb5dd8fe98efa6dfe4ce52feef02ccb0b5cc96980c60aebed91a6f1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "after-date": {
+  "fullname": "muse-probe-r2next-math-after-date",
+  "html": "<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>\n<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x \\end{equation}</div>",
+  "html_sha256": "0e88dc1916c11e5bab5a01273ceef220e39bb7b865387545084b267150d15eb4",
+  "source": "[[date 1216153821]]\n[[math]]\nx\n[[/math]]",
+  "source_sha256": "a2368a66b17a93221cdbe661e8b8de1aacce96a3bbc3784169abfc47561fef3f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-quoted-close-bracket": {
+  "fullname": "muse-probe-r2next-math-attr-quoted-close-bracket",
+  "html": "<p>[[math a=&quot;x]]y&quot;]<br />\nz<br />\n[[/math]]</p>",
+  "html_sha256": "64ee1bb98369c501d9a9a1b8f4393ca954f462bd88ed2c6d9b05507c202ed665",
+  "source": "[[math a=\"x]]y\"]\nz\n[[/math]]",
+  "source_sha256": "f9361706d037ec1f9903a04ab7fa187096d040018da06b7c2eb8f5c955845ed5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

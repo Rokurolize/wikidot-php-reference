@@ -32,6 +32,11 @@ while (($line = fgets(STDIN)) !== false) {
     $case = json_decode($line, true);
     $id = $case['id'];
     $src = $case['source'];
+    // R2-next: optional per-case page tags for the Iftags rule. When a case
+    // declares "tags", the reference gets a deterministic tagged page exactly
+    // as the shared ftml dumper does through PageInfo.tags; absent tags means
+    // an untagged page. Root-owned stub, disclosed in R2-NEXT.md.
+    $caseTags = (isset($case['tags']) && is_array($case['tags'])) ? $case['tags'] : array();
     // Input stage: line-ending normalization (R2-INCLUDE.md C1).
     $src = str_replace("\r\n", "\n", $src);
     // Lone \r is NOT normalized here: it is still present at the
@@ -41,16 +46,19 @@ while (($line = fgets(STDIN)) !== false) {
     try {
         if ($mode === 'expand') {
             $wiki = new Text_Wiki(array('Include'));
+            if ($caseTags) { $wiki->vars['page'] = new RefPage('', 0, $caseTags); }
             $wiki->parse($src);
             $out = $wiki->source;
             echo json_encode(array('id' => $id, 'output' => $out)), "\n";
         } elseif ($mode === 'tokens') {
             $wiki = ref_configure_wiki(new Text_Wiki());
+            if ($caseTags) { $wiki->vars['page'] = new RefPage('', 0, $caseTags); }
             $wiki->parse($src);
             echo json_encode(array('id' => $id,
                 'output' => json_encode($wiki->tokens))), "\n";
         } else {
             $wiki = ref_configure_wiki(new Text_Wiki());
+            if ($caseTags) { $wiki->vars['page'] = new RefPage('', 0, $caseTags); }
             $out = $wiki->transform($src, 'Xhtml');
             echo json_encode(array('id' => $id, 'output' => $out)), "\n";
         }

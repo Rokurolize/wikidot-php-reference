@@ -1,0 +1,62 @@
+{"id": "op-basic-inline", "source": "a[!-- hidden --]b"}
+{"id": "op-basic-line-start", "source": "[!-- hidden --]\nvisible"}
+{"id": "op-basic-line-end", "source": "visible\n[!-- hidden --]"}
+{"id": "op-empty", "source": "a[!-- --]b"}
+{"id": "op-no-space", "source": "a[!--x--]b"}
+{"id": "op-whitespace-body", "source": "a[!--   \n  --]b"}
+{"id": "op-close-three-hyphens", "source": "a[!-- hidden ---]b"}
+{"id": "op-close-four-hyphens", "source": "a[!-- hidden ----]b"}
+{"id": "op-close-five-hyphens", "source": "a[!-- hidden -----]b"}
+{"id": "op-hyphen-run-open-close", "source": "a[!----\nhidden\n---]\nb"}
+{"id": "op-unmatched-closer", "source": "a--]b"}
+{"id": "op-unterminated", "source": "a[!-- hidden b"}
+{"id": "op-unterminated-line", "source": "a\n[!-- hidden\nb"}
+{"id": "op-two-openers-one-closer", "source": "a[!-- one [!-- two --]b"}
+{"id": "nl-leading-one", "source": "a\n[!-- c --]b"}
+{"id": "nl-leading-two", "source": "a\n\n[!-- c --]b"}
+{"id": "nl-comment-only-line", "source": "a\n[!-- c --]\nb"}
+{"id": "nl-comment-only-blank-around", "source": "a\n\n[!-- c --]\n\nb"}
+{"id": "nl-comment-at-eof", "source": "a\n[!-- c --]"}
+{"id": "nl-comment-at-start-tail", "source": "[!-- c --] z"}
+{"id": "nl-comment-at-start-only", "source": "[!-- c --]"}
+{"id": "nl-indented-spaces", "source": "a\n  [!-- c --]\nb"}
+{"id": "nl-indented-tab", "source": "a\n\t[!-- c --]\nb"}
+{"id": "nl-trailing-newline-local", "source": "a[!-- c --]b\n"}
+{"id": "ml-body", "source": "a[!-- line1\nline2 --]b"}
+{"id": "ml-line-start", "source": "a\n[!-- line1\nline2 --]\nb"}
+{"id": "ml-nested", "source": "a[!-- outer [!-- inner --] tail --]b"}
+{"id": "ml-adjacent", "source": "a[!-- one --][!-- two --]b"}
+{"id": "ml-chained-lines", "source": "[!-- one --]\n[!-- two --]\nb"}
+{"id": "ml-span-with-block-syntax", "source": "a[!-- [[div]]x[[/div]] --]b"}
+{"id": "ml-span-with-module-opener", "source": "a[!-- [[module X]] --]b"}
+{"id": "ml-span-with-math-opener", "source": "a[!-- [[math]] --]\nx"}
+{"id": "case-upper-body", "source": "a[!-- HIDDEN --]b"}
+{"id": "case-mixed-body", "source": "a[!-- HiDdEn --]b"}
+{"id": "case-opener-word", "source": "a[!COMMENT hidden --]b"}
+{"id": "case-close-word", "source": "a[!-- hidden --COMMENT]b"}
+{"id": "crlf-inline", "source": "a[!-- c --]\r\nb"}
+{"id": "crlf-line-start", "source": "a\r\n[!-- c --]\r\nb"}
+{"id": "crlf-multiline-body", "source": "a[!-- x\r\ny --]b"}
+{"id": "cr-only-inline", "source": "a[!-- c --]\rb"}
+{"id": "cr-only-line", "source": "a\r[!-- c --]\rb"}
+{"id": "adj-before-iframe", "source": "[!-- hide --]\n[[iframe https://example.com]]"}
+{"id": "adj-hide-iframe", "source": "a[!-- [[iframe https://example.com]] --]b"}
+{"id": "adj-before-date", "source": "[!-- hide --]\n[[date 0]]"}
+{"id": "adj-before-heading", "source": "[!-- c --]\n= Heading ="}
+{"id": "adj-before-list", "source": "[!-- c --]\n* item"}
+{"id": "adj-before-div", "source": "[!-- c --]\n[[div class=\"x\"]]\nT\n[[/div]]"}
+{"id": "adj-inside-code", "source": "[[code]]\nA[!-- c --]B\n[[/code]]"}
+{"id": "adj-inside-raw", "source": "@@A[!-- c --]B@@"}
+{"id": "adj-inside-span-head", "source": "[[span [!--x--] class=\"c\"]]T[[/span]]"}
+{"id": "adj-span-with-iftags-head", "source": "[!-- [[iftags +x]] --]\nbody"}
+{"id": "pin-double-bracket-head", "source": "[[!-- Theme Lab candidate port header. --]]\nBody paragraph."}
+{"id": "pin-double-bracket-inline", "source": "Before [[!-- note --]] after."}
+{"id": "pin-double-bracket-only-line", "source": "Line one\n[[!-- note --]]\nLine two"}
+{"id": "pin-paragraph-single-break", "source": "A\n[!-- x --]\nB"}
+{"id": "pin-paragraph-line-final", "source": "A\n[!-- x --]"}
+{"id": "pin-comment-line-break-demotion", "source": "x\n\n[!-- c --] \nz"}
+{"id": "pin-comment-line-splice", "source": "x\n[!-- c --] z"}
+{"id": "pin-list-comment-line-start", "source": "[!--x--]* item\n[!--a--][!--b--]# item"}
+{"id": "pin-code-closer-comment-suffix", "source": "[[code]]\nbody\n[[/code]][!-- c --]"}
+{"id": "pin-double-bracket-in-block-head", "source": "a[[span [!-- x --]]] b[[/span]]c"}
+{"id": "pin-double-bracket-before-name", "source": "[[[!--x--]span class=\"c\"]]x[[/span]]"}

@@ -22,15 +22,30 @@ if (!function_exists('mkdirfull')) {
     }
 }
 
+// Iftags page-context stub (R2-next stage, root-owned, disclosed in
+// conformance-refphp/R2-NEXT.md). The harness injects a RefPage into
+// $wiki->vars['page'] for cases that declare a "tags" array, so the fossil
+// Iftags parse rule reads a deterministic tag set instead of dereferencing
+// unset page state. Absent tags means an untagged page.
 class RefPage {
     private $source;
     private $id;
-    public function __construct($source, $id) {
+    private $tags;
+    public function __construct($source, $id, $tags = array()) {
         $this->source = $source;
         $this->id = $id;
+        $this->tags = $tags;
     }
     public function getSource() { return $this->source; }
     public function getPageId() { return $this->id; }
+    public function getTagsAsArray() { return $this->tags; }
+}
+
+// Math parse rule throws this on \include / \input in an equation body; the
+// fossil OZONE class is absent from the vendored snapshot, so the stub lets
+// that branch be observed as a caught reference error rather than a fatal.
+if (!class_exists('ProcessException')) {
+    class ProcessException extends Exception {}
 }
 
 class RefSite {
@@ -93,6 +108,7 @@ class DB_PagePeer {
 class LatexRenderer {
     public function setTmpDir($dir) {}
     public function setOutputDir($dir) {}
+    public function setDensity($density) {}
     public function render($content, $hashcode) {}
 }
 

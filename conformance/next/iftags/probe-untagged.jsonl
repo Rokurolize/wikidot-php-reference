@@ -1,0 +1,9 @@
+{"id": "p-unterminated", "source": "A [[iftags +alpha]]KEEP-no-closer B"}
+{"id": "p-stray-closer", "source": "A[[/iftags]]B"}
+{"id": "p-newline-in-spec", "source": "[[iftags +alpha\n+beta]]KEEP[[/iftags]]"}
+{"id": "p-spec-comment-straddle", "source": "[[iftags +alpha [!--x--]]KEEP[[/iftags]]"}
+{"id": "p-spec-comment-untagged", "source": "[[iftags +alpha [!--x--] -beta]]KEEP[[/iftags]]"}
+{"id": "p-false-gate-lines", "source": "A\n[[iftags +beta]]HIDDEN[[/iftags]]\nB"}
+{"id": "p-body-comment", "source": "A [[iftags +beta]]X[!-- c --]Y[[/iftags]] B"}
+{"id": "p-math-contains-false", "source": "[[math]]\nx [[iftags +beta]]HIDDEN[[/iftags]] y\n[[/math]]"}
+{"id": "p-adjacent-div", "source": "[[iftags +beta]]KEEP[[/iftags]]\n[[div]]\nD\n[[/div]]"}

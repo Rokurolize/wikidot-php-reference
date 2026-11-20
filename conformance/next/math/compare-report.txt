@@ -1,0 +1,114 @@
+id                            ref-before   ref-after    ftml         tokens  note
+basic                        math-block  math-block  math-block  1->1      
+opener-no-label              math-block  math-block  math-block  1->1      
+opener-after-text            math-block  math-block  math-block  1->1      
+opener-midline               literal     literal     literal     0->0      
+opener-leading-space         literal     literal     literal     0->0      
+opener-leading-tab           literal     literal     literal     0->0      
+opener-no-space              literal     literal     literal     0->0      
+opener-trailing-space        math-block  math-block  math-block  1->1      
+opener-spaces-before-nl      math-block  math-block  math-block  1->1      
+opener-tab-before-nl         math-block  math-block  math-block  1->1      
+opener-crlf                  math-block  math-block  math-block  1->1      
+opener-blank-line-before     math-block  math-block  math-block  1->1      
+label-upper                  math-block  math-block  math-block  1->1      
+label-title                  math-block  math-block  math-block  1->1      
+label-digits                 math-block  math-block  math-block  1->1      
+label-underscore             math-block  math-block  math-block  1->1      
+label-mixed-case             math-block  math-block  math-block  1->1      
+label-hyphen                 literal     literal     literal     0->0      
+label-dot                    literal     literal     literal     0->0      
+label-nonascii               literal     literal     literal     0->0      
+label-empty-spaces           math-block  math-block  math-block  1->1      
+label-equals                 literal     literal     literal     0->0      
+label-two-words              literal     literal     literal     0->0      
+label-quoted                 literal     literal     literal     0->0      
+type-equation                math-block  math-block  math-block  1->1      
+type-eqnarray                math-block  math-block  math-block  1->1      
+type-align                   math-block  math-block  math-block  1->1      
+type-gather                  math-block  math-block  math-block  1->1      
+type-not-last                math-block  math-block  math-block  1->1      
+type-uppercase               math-block  math-block  math-block  1->1      
+type-unquoted                literal     literal     literal     0->0      
+type-single-quote            literal     literal     literal     0->0      
+type-spaces-eq               literal     literal     literal     0->0      
+type-empty                   math-block  math-block  math-block  1->1      
+attr-unknown                 math-block  math-block  math-block  1->1      
+attr-hyphen-key              literal     literal     math-block  0->0      DISAGREE
+attr-underscore-key          literal     literal     math-block  0->0      DISAGREE
+attr-label-and-type          math-block  math-block  math-block  1->1      
+attr-quoted-close-bracket    literal     literal     literal     0->0      
+body-leading-blank           math-block  math-block  math-block  1->1      
+body-trailing-blank          math-block  math-block  math-block  1->1      
+body-spaces                  math-block  math-block  math-block  1->1      
+body-multiline               math-block  math-block  math-block  1->1      
+body-empty                   math-block  math-block  math-block  1->1      
+body-whitespace-only         math-block  math-block  math-block  1->1      
+closer-trailing-spaces       math-block  math-block  math-block  1->1      
+closer-trailing-tab          math-block  math-block  math-block  1->1      
+closer-tail-text             math-block  math-block  math-block  1->1      
+closer-eof-no-nl             math-block  math-block  math-block  1->1      
+closer-inline                literal     literal     literal     0->0      
+closer-case-upper            math-block  math-block  math-block  1->1      
+closer-blankline-tail        math-block  math-block  math-block  1->1      
+nested-two                   math-block  math-block  math-block  1->1      CHANGED
+nested-outer-tail            math-block  math-block  math-block  1->1      
+nested-labels                math-block  math-block  math-block  1->1      CHANGED
+adjacent-two-blocks          math-block  math-block  math-block  2->2      
+stray-closer                 other       other       other       0->0      
+unterminated                 literal     literal     literal     0->0      
+unterminated-outer           math-block  math-block  math-block  1->1      
+include-brace                math-block  harness-error math-block  1->0      CHANGED DISAGREE
+input-brace                  math-block  harness-error math-block  1->0      CHANGED DISAGREE
+include-space                math-block  math-block  math-block  1->1      
+input-space                  math-block  math-block  math-block  1->1      
+include-in-word              math-block  harness-error math-block  1->0      CHANGED DISAGREE
+include-uppercase            math-block  harness-error math-block  1->0      CHANGED DISAGREE
+include-in-label-block       math-block  harness-error math-block  1->0      CHANGED DISAGREE
+after-comment                math-block  math-block  math-block  1->1      
+comment-in-body              math-block  math-block  math-block  1->1      
+after-date                   math-block  math-block  math-block  1->1      
+eref-after                   math-block  math-block  math-block  1->1      
+eref-before                  math-block  math-block  math-block  1->1      
+mathinline-after             math-block  math-block  math-block  1->1      
+in-div                       math-block  math-block  math-block  1->1      
+in-blockquote                literal     literal     literal     0->0      
+in-collapsible               math-block  math-block  math-block  1->1      
+in-iftags                    other       other       other       0->0      
+
+battery size: 76
+render outputs changed by corrections: 7 (nested-two, nested-labels, include-brace, input-brace, include-in-word, include-uppercase, include-in-label-block)
+shape agreement before: 74/76; after: 69/76
+of the after-agreements, 50 are math-block surface (rendered shape differs by serving layer)
+shape disagreements after: 7/76
+after render records that are caught reference errors: 5
+
+id                            ref          ftml         live         valid  stable
+basic                        math-block  math-block  math-block  True   True
+opener-midline               literal     literal     literal     True   True
+label-upper                  math-block  math-block  math-block  True   True
+label-hyphen                 literal     literal     literal     True   True
+label-empty-spaces           math-block  math-block  math-block  True   True
+type-eqnarray                math-block  math-block  math-block  True   True
+type-align                   math-block  math-block  math-block  True   True
+type-unquoted                literal     literal     literal     True   True
+type-uppercase               math-block  math-block  math-block  True   True
+attr-unknown                 math-block  math-block  math-block  True   True
+attr-hyphen-key              literal     math-block  literal     True   True
+attr-underscore-key          literal     math-block  literal     True   True
+body-empty                   math-block  math-block  math-block  True   True
+closer-tail-text             math-block  math-block  math-block  True   True
+closer-inline                literal     literal     literal     True   True
+nested-two                   math-block  math-block  math-block  True   True
+nested-outer-tail            math-block  math-block  math-block  True   True
+adjacent-two-blocks          math-block  math-block  math-block  True   True
+unterminated                 literal     literal     literal     True   True
+eref-after                   math-block  math-block  math-block  True   True
+comment-in-body              math-block  math-block  math-block  True   True
+in-div                       math-block  math-block  math-block  True   True
+in-collapsible               math-block  math-block  math-block  True   True
+after-date                   math-block  math-block  math-block  True   True
+attr-quoted-close-bracket    literal     literal     literal     True   True
+
+probe renders changed by corrections: 1 (nested-two)
+valid probes: 25; all three agree: 23; ref+live: 2; ftml+live: 0; all disagree: 0

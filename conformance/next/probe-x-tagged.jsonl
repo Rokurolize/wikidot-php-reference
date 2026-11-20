@@ -1,0 +1,2 @@
+{"id": "x-iftags-keep-math-tagged", "source": "[[iftags +alpha]]\n[[math E]]\nx=1\n[[/math]]\n[[/iftags]]", "tags": ["alpha"]}
+{"id": "x-iftags-keep-module-tagged", "source": "[[iftags +alpha]]\n[[module UnknownModuleX]]\nbody\n[[/module]]\n[[/iftags]]", "tags": ["alpha"]}

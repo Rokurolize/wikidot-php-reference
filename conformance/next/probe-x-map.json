@@ -1,0 +1,62 @@
+{
+ "x-comment-hides-iftags-open": {
+  "fullname": "muse-probe-r2next-x-x-comment-hides-iftags-open",
+  "source": "[!-- [[iftags +alpha]] --]body[[/iftags]]",
+  "action": "created"
+ },
+ "x-comment-hides-iftags-close": {
+  "fullname": "muse-probe-r2next-x-x-comment-hides-iftags-close",
+  "source": "[[iftags +alpha]]body[!-- [[/iftags]] --]tail",
+  "action": "created"
+ },
+ "x-comment-hides-math-open": {
+  "fullname": "muse-probe-r2next-x-x-comment-hides-math-open",
+  "source": "before[!-- [[math E]] --]\nx=1\n[[/math]]\nafter",
+  "action": "created"
+ },
+ "x-comment-hides-math-close": {
+  "fullname": "muse-probe-r2next-x-x-comment-hides-math-close",
+  "source": "[[math E]]\nx=1\n[!-- [[/math]] --]\ny=2\n[[/math]]\nafter",
+  "action": "created"
+ },
+ "x-comment-inside-iframe-attr": {
+  "fullname": "muse-probe-r2next-x-x-comment-inside-iframe-attr",
+  "source": "[[iframe https://example.com/a width=[!-- 100 --]200]]",
+  "action": "created"
+ },
+ "x-comment-inside-date-attr": {
+  "fullname": "muse-probe-r2next-x-x-comment-inside-date-attr",
+  "source": "[[date 1216153821 format=[!-- x --]\"%Y\"]]",
+  "action": "created"
+ },
+ "x-comment-inside-math-body": {
+  "fullname": "muse-probe-r2next-x-x-comment-inside-math-body",
+  "source": "[[math E]]\nx[!-- hidden --]=1\n[[/math]]",
+  "action": "created"
+ },
+ "x-iftags-drop-module": {
+  "fullname": "muse-probe-r2next-x-x-iftags-drop-module",
+  "source": "[[iftags +alpha]]\n[[module UnknownModuleX]]\nbody\n[[/module]]\n[[/iftags]]",
+  "action": "created"
+ },
+ "x-iftags-drop-math": {
+  "fullname": "muse-probe-r2next-x-x-iftags-drop-math",
+  "source": "[[iftags +alpha]]\n[[math E]]\nx=1\n[[/math]]\n[[/iftags]]",
+  "action": "created"
+ },
+ "x-iframe-then-url": {
+  "fullname": "muse-probe-r2next-x-x-iframe-then-url",
+  "source": "[[iframe https://example.com/a]]\n[[https://example.com/b]]",
+  "action": "created"
+ },
+ "x-iframe-url-sameline": {
+  "fullname": "muse-probe-r2next-x-x-iframe-url-sameline",
+  "source": "[[iframe https://example.com/a]][[https://example.com/b]]",
+  "action": "created"
+ },
+ "x-iframe-url-in-attr": {
+  "fullname": "muse-probe-r2next-x-x-iframe-url-in-attr",
+  "source": "[[iframe https://example.com/a style=\"background:url(https://example.com/i.png)\"]]",
+  "action": "created"
+ }
+}

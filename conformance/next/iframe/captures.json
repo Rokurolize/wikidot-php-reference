@@ -1,0 +1,162 @@
+{
+ "p-basic": {
+  "fullname": "muse-probe-r2next-iframe-p-basic",
+  "html": "<p><iframe src=\"https://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>",
+  "html_sha256": "9ae037aadc9fa413225c011706d83738396d20b2f33abcbf92c30dad5db15c2b",
+  "source": "[[iframe https://example.com/a]]",
+  "source_sha256": "8a5b554baa755ddd191b2e323e771a97597507df518bdd5ef23274929b87ff5f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-utf8": {
+  "fullname": "muse-probe-r2next-iframe-p-utf8",
+  "html": "<p><iframe src=\"http://example.com/%E6%97%A5%E6%9C%AC%E8%AA%9E\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>",
+  "html_sha256": "757db42de74cacd2a7a68700837bcc859789cd1cfe75c6763510d7402f868a7b",
+  "source": "[[iframe http://example.com/日本語]]",
+  "source_sha256": "a2750bf9ab01b3e78715b6d71bff406e5654511e5fd768647851f84f7ddf2d2f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-sq-final": {
+  "fullname": "muse-probe-r2next-iframe-p-sq-final",
+  "html": "<p><iframe src=\"http://example.com/a'b\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>",
+  "html_sha256": "89c1ca247acea129cfc680203dd9c15a3a7908fef7111d94a159e141b01d9949",
+  "source": "[[iframe http://example.com/a'b]]",
+  "source_sha256": "0ab23d75bf4ab157e878c6e61746409899eacd53c8c0bddc7a9043bb6cf5912b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-sq-mid": {
+  "fullname": "muse-probe-r2next-iframe-p-sq-mid",
+  "html": "<p>[[iframe <a href=\"http://example.com/a\">http://example.com/a</a>'b/c]]</p>",
+  "html_sha256": "53e304afd00304ee334fbb59a26decdf18fafcfdcd0fa5e20d14da054c58b5c2",
+  "source": "[[iframe http://example.com/a'b/c]]",
+  "source_sha256": "839d0c6b9fe5187895c412ba8ff519d761174f17536c8a54de441c2bf2cee541",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-dq": {
+  "fullname": "muse-probe-r2next-iframe-p-dq",
+  "html": "<p>[[iframe <a href=\"http://example.com/a\">http://example.com/a</a>&quot;b]]</p>",
+  "html_sha256": "f69dbec0d3953fec191ee4fc5a9a04fd7156be4e847fc693a97c29521e703bd5",
+  "source": "[[iframe http://example.com/a\"b]]",
+  "source_sha256": "58a420719622557d9a47c1798238575f53ff52bc4088dd001ba40bbba9f527a4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-attrs-spaced": {
+  "fullname": "muse-probe-r2next-iframe-p-attrs-spaced",
+  "html": "<p><iframe src=\"http://example.com/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>",
+  "html_sha256": "235919a2e40b9ab13eebf179a5f4c9565a6f6332d62bf3fea59f85a39124e7dd",
+  "source": "[[iframe http://example.com/ id = \"my-example\" class=\"iframe\" width = \"90%\"]]",
+  "source_sha256": "bd6806bd6c6ea1bcbd2c00fc779130c390b52d72fe20fd3202ad93694fbf21b4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-attrs-quoted": {
+  "fullname": "muse-probe-r2next-iframe-p-attrs-quoted",
+  "html": "<p><iframe src=\"http://example.com/\" align=\"right\" frameborder=\"1\" height=\"7\" scrolling=\"auto\" width=\"5\" class=\"z\" style=\"color:red\"></iframe></p>",
+  "html_sha256": "12341845cc7a7a2471734033074e9bf6e48f0ddb7ceb005e43c891bffbcc28c4",
+  "source": "[[iframe http://example.com/ style=\"color:red\" width=\"5\" scrolling=\"auto\" align=\"right\" frameborder=\"1\" height=\"7\" class=\"z\"]]",
+  "source_sha256": "463438d2e45a00264c10c3d859026672c156f10019a2ecfb0135ee1e8849f852",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-tail-closer": {
+  "fullname": "muse-probe-r2next-iframe-p-tail-closer",
+  "html": "<p><iframe src=\"http://e.com/]][[/div\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>",
+  "html_sha256": "c938910e01c5f1c644992ee77914ae3194e8161d7b7b7cc9a5c978caecb6c61e",
+  "source": "[[iframe http://e.com/]]\n[[/div]]",
+  "source_sha256": "0cbd471a670950552f5d4a963569ab991615ace39b575d134d0bccab4784e2d1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-tail-args": {
+  "fullname": "muse-probe-r2next-iframe-p-tail-args",
+  "html": "<p><iframe src=\"http://e.com/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"1\" class=\"\" style=\"\"></iframe><br />\n[[/div]]</p>",
+  "html_sha256": "84a949248d0c7ce28febce2a1a6419a8b732fbf437457518d80a5fca935350cd",
+  "source": "[[iframe http://e.com/ width=\"1\"]]\n[[/div]]",
+  "source_sha256": "066c0565113f637ed2e453cb15466d8f80aa55a2f625ff5c9c3d2c96a42af37a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-schemes": {
+  "fullname": "muse-probe-r2next-iframe-p-schemes",
+  "html": "<p><iframe src=\"news://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe><br />\n<iframe src=\"mms://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>",
+  "html_sha256": "76c952f4f4ef504a0894ebce6c1240b8cbfa71f35b044d08516c0476ef82a668",
+  "source": "[[iframe news://example.com/a]]\n[[iframe mms://example.com/a]]",
+  "source_sha256": "9437c6ceee1f0cae1f5a4701d8922395221f0bb9b70c144563cc7b533453e7ba",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-iftags-seam": {
+  "fullname": "muse-probe-r2next-iframe-p-iftags-seam",
+  "html": "<p><iframe src=\"http://example.com/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>",
+  "html_sha256": "235919a2e40b9ab13eebf179a5f4c9565a6f6332d62bf3fea59f85a39124e7dd",
+  "source": "[[ifr[[iftags -zzz]][[/iftags]]ame http://example.com/]]",
+  "source_sha256": "990996565355d2b3ee78fe6621361b5c047e70f7040defd88fab740c57082f6e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-comment-in-url": {
+  "fullname": "muse-probe-r2next-iframe-p-comment-in-url",
+  "html": "<p><iframe src=\"https://example.com/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>",
+  "html_sha256": "2b45595650f9799c2d74c9462a31528224b83f29a790b745442b9b0cb235e32c",
+  "source": "[[iframe https://exam[!--x--]ple.com/]]",
+  "source_sha256": "eeebb4f4c4357dab1260a5fa298f7e904f6f89a945fbc7ad9a779430ede9efb1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-freelink-tail": {
+  "fullname": "muse-probe-r2next-iframe-p-freelink-tail",
+  "html": "<p><iframe src=\"https://example.com/a]][[https://example.com/b\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>",
+  "html_sha256": "4c1ae7cee9294b49fa489a63645471e5ca88a800b8ffa3188d2895c45669cd02",
+  "source": "[[iframe https://example.com/a]]\n[[https://example.com/b]]",
+  "source_sha256": "e521e9923f9af9ddeb69ad07245145cf205ce581c26f9686309a7a2133873dec",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-git": {
+  "fullname": "muse-probe-r2next-iframe-p-git",
+  "html": "<p>[[iframe <a href=\"git://example.com/a\">git://example.com/a</a>]]</p>",
+  "html_sha256": "27c7dd2c280856a2c41480fd33ddf12958d6dedd90e6bb23de7861b5f0c122e0",
+  "source": "[[iframe git://example.com/a]]",
+  "source_sha256": "71317be409fa82a8aea3f4c28d3f31ca5cccf24477073347e9dcfc369093511c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-midline": {
+  "fullname": "muse-probe-r2next-iframe-p-midline",
+  "html": "<p>before <iframe src=\"http://example.com/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe> after</p>",
+  "html_sha256": "e0cde040a7e5c24673587701b48fc1af8a05ed6ac00109ad20570dd99d520595",
+  "source": "before [[iframe http://example.com/]] after",
+  "source_sha256": "76f8091ac8a4f3d9fcf0e90fac19ed46a40c2bed78baa3e85b94f63d009fa3aa",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p-unterminated": {
+  "fullname": "muse-probe-r2next-iframe-p-unterminated",
+  "html": "<p>[[iframe <a href=\"http://example.com/\">http://example.com/</a></p>",
+  "html_sha256": "55fbb0a20ff4e7c48251ea072c67fd14d76fb2095fa04027bf86eff31884b2ee",
+  "source": "[[iframe http://example.com/",
+  "source_sha256": "6ae188c1ec4d01e42c8b337c40ea38c3590eff467b374f076f64f15ea57981cd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

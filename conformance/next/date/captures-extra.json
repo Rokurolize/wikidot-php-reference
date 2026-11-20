@@ -1,0 +1,72 @@
+{
+ "blank-single": {
+  "fullname": "muse-probe-r2next-date-blank-single",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[date ]]",
+  "source_sha256": "c671e025c42a790361085b0609478e7d051ade95fe3c77c20a2f18198a4b3be7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "blank-attr-single": {
+  "fullname": "muse-probe-r2next-date-blank-attr-single",
+  "html": "<p>[[date format=&quot;%Y&quot;]]</p>",
+  "html_sha256": "b032185c9bf8f70169206476e8ac73fe73ce53b4f2a60493fe2dc1236dfa5e59",
+  "source": "[[date format=\"%Y\"]]",
+  "source_sha256": "9f41373917bc0a247c095a896f943c82748c0882a360b3c4831d2e6b3ab5a148",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "blank-two-attrs": {
+  "fullname": "muse-probe-r2next-date-blank-two-attrs",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[date  format=\"%Y\" tz=\"+8\"]]",
+  "source_sha256": "3540c2d4d474fcf4211c7d05150c83c5b8aac655d99316c2d8c910a222ce079b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "blank-unknown-attr": {
+  "fullname": "muse-probe-r2next-date-blank-unknown-attr",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[date  foo=\"bar\"]]",
+  "source_sha256": "215faca54494589eb2f5d55c09206dc0544debcf954658d30524d3553f6efca3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "blank-unquoted-attr": {
+  "fullname": "muse-probe-r2next-date-blank-unquoted-attr",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[date  format=%Y]]",
+  "source_sha256": "3907ed406cc531359a830cba0f6a064cb9764134101057ffa55fdfd9b72dedbc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-two-dates": {
+  "fullname": "muse-probe-r2next-date-raw-two-dates",
+  "html": "<p><span class=\"odate time_0 format_%FF1%FF\">01 Jan 1970 00:00</span><br />\n<span class=\"odate time_0 format_%FF2%FF\">01 Jan 1970 00:00</span></p>",
+  "html_sha256": "1743a70eefa40feeb1afb91268a2af2c272d0c69e41a5ea1523f6921d5c58757",
+  "source": "[[date 0 format=\"@@a@@\"]]\n[[date 0 format=\"@@b@@\"]]",
+  "source_sha256": "02a7824e5733b46bf386836acc757df68d2d71e43be021392680881eb2ef66bb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-preceded": {
+  "fullname": "muse-probe-r2next-date-raw-preceded",
+  "html": "<p><span style=\"white-space: pre-wrap;\">x</span><br />\n<span class=\"odate time_0 format_%FF2%FF\">01 Jan 1970 00:00</span></p>",
+  "html_sha256": "cb835d9ca181f559e4e7145b6f9c5631e284d679c9dda94577c109ead932d681",
+  "source": "@@x@@\n[[date 0 format=\"@@a@@\"]]",
+  "source_sha256": "f4a66e4b4fbd52efdb7ec79ed327d57fdab46bd24186a3e62e62c753e6c934dd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

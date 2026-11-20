@@ -1,0 +1,4 @@
+1c2a34c9c71c80c191212224a6d42c39e977bb3657becef06c9ce66a030463cc  ref-php/text-wiki/Text/Wiki/Parse/Default/Iftags.php
+1c2a34c9c71c80c191212224a6d42c39e977bb3657becef06c9ce66a030463cc  conformance-refphp/next/iftags/Iftags.parse.before.php
+fa76372e46f5e37a76e78b9eb91fad32d975be25cdca36a44c8bb4ac22adcb26  ref-php/text-wiki/Text/Wiki/Render/Xhtml/Iftags.php
+fa76372e46f5e37a76e78b9eb91fad32d975be25cdca36a44c8bb4ac22adcb26  conformance-refphp/next/iftags/Iftags.render.before.php

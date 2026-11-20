@@ -1,0 +1,282 @@
+{
+ "op-basic-inline": {
+  "fullname": "muse-probe-r2next-comment-op-basic-inline",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a[!-- hidden --]b",
+  "source_sha256": "fa3db6a57e2e01cdbdfbc8804cdb64bcb628ae39c7e02625783d204abaccb333",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "op-basic-line-start": {
+  "fullname": "muse-probe-r2next-comment-op-basic-line-start",
+  "html": "<p>visible</p>",
+  "html_sha256": "487a70dfee26569d65df26e32eaf580849b2772b18d76eb1647eec0460cd8ce8",
+  "source": "[!-- hidden --]\nvisible",
+  "source_sha256": "a8ab96aaa7f1e573c3d4ae76feb5313340fef017960401e9ba950203f337721a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "op-basic-line-end": {
+  "fullname": "muse-probe-r2next-comment-op-basic-line-end",
+  "html": "<p>visible</p>",
+  "html_sha256": "487a70dfee26569d65df26e32eaf580849b2772b18d76eb1647eec0460cd8ce8",
+  "source": "visible\n[!-- hidden --]",
+  "source_sha256": "90479961283a43c248e72a3094ab109eafa3ad26f8525aaeff7d2c58f1bac96f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "op-empty": {
+  "fullname": "muse-probe-r2next-comment-op-empty",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a[!-- --]b",
+  "source_sha256": "62a05f304cbeb38f4cd20af6035fff912a7a0bee46460e5a0a7988656bc7c509",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "op-no-space": {
+  "fullname": "muse-probe-r2next-comment-op-no-space",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a[!--x--]b",
+  "source_sha256": "c44afc6661e77483fe115956c2a1ffce96315ecba7732b5a07c53f66ba26204f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "op-close-three-hyphens": {
+  "fullname": "muse-probe-r2next-comment-op-close-three-hyphens",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a[!-- hidden ---]b",
+  "source_sha256": "3ea98d714f21f5cb8f5ed5ff5366112b49091d6185eaf71b4bc7e1766b96a01d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "op-close-five-hyphens": {
+  "fullname": "muse-probe-r2next-comment-op-close-five-hyphens",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a[!-- hidden -----]b",
+  "source_sha256": "78a2582c89cf4b01fed6e30438d7a53d41dcf4ee318bc82273d8f08cac667182",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "op-unmatched-closer": {
+  "fullname": "muse-probe-r2next-comment-op-unmatched-closer",
+  "html": "<p>a&#8212;]b</p>",
+  "html_sha256": "1e6a7fd52f1238dee39c619a4c56a25912f53e32852db5dc7706cfc3649cec7c",
+  "source": "a--]b",
+  "source_sha256": "aeef946710bc9be0ff03d81ebafee750b78d732dda5c29c3caebeb3d7497ca27",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "op-unterminated": {
+  "fullname": "muse-probe-r2next-comment-op-unterminated",
+  "html": "<p>a[!&#8212; hidden b</p>",
+  "html_sha256": "bc71eb3f55a93af16a6f487bb4b30f87a74b0c3549ad956377748185f2dd096f",
+  "source": "a[!-- hidden b",
+  "source_sha256": "f09d009a629530b1fcb478ef8b9509d5883138898a686bda008478182cf374a2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nl-leading-one": {
+  "fullname": "muse-probe-r2next-comment-nl-leading-one",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a\n[!-- c --]b",
+  "source_sha256": "90bed11d7a3dd61de2495ba87f8a5e53a802e98eb830ac720d6139e0ddc6247f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nl-comment-only-line": {
+  "fullname": "muse-probe-r2next-comment-nl-comment-only-line",
+  "html": "<p>a<br />\nb</p>",
+  "html_sha256": "a9cbfe60373c4c33a399fbc904966ca82bc750eed50beb32adf283236c9a9dfa",
+  "source": "a\n[!-- c --]\nb",
+  "source_sha256": "5e440fe48401b403dd121c282fa7354688019786f7370538ffdf47f290800788",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nl-comment-only-blank-around": {
+  "fullname": "muse-probe-r2next-comment-nl-comment-only-blank-around",
+  "html": "<p>a</p>\n<p>b</p>",
+  "html_sha256": "5de5a59361cc476cfde5f0974ca3679ea6d0bf294a35db9c3c556051add5370a",
+  "source": "a\n\n[!-- c --]\n\nb",
+  "source_sha256": "c578b48bce6521f50cf7e4573859f94bdcf5ab1602b58c8e9fc3b1aaf2b6b618",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nl-comment-at-start-tail": {
+  "fullname": "muse-probe-r2next-comment-nl-comment-at-start-tail",
+  "html": "<p>z</p>",
+  "html_sha256": "d67f344fc4439b951b0d7647b17cd6e5cfbd53254f02fd22a98f4359cfa7f710",
+  "source": "[!-- c --] z",
+  "source_sha256": "b53f92784cd4e570c174e8c13e5f67da6bd9b5f3733ccad74844dd5e8e948d6b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nl-indented-spaces": {
+  "fullname": "muse-probe-r2next-comment-nl-indented-spaces",
+  "html": "<p>a<br />\n<br />\nb</p>",
+  "html_sha256": "7ba0211c448c78764a8fc22a469dfc91fd5b155903b28ab59c1f7b2f0fbacf8c",
+  "source": "a\n  [!-- c --]\nb",
+  "source_sha256": "8c21e0da87b7c4885583d6a7e29f99f5973ec7c5c26867047689e70a9f6b8e1d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "ml-body": {
+  "fullname": "muse-probe-r2next-comment-ml-body",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a[!-- line1\nline2 --]b",
+  "source_sha256": "39de044650309efcc4d92f8ce122d83a881b3675b8ea08f2a8fb9ef2f55c5ec7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "ml-nested": {
+  "fullname": "muse-probe-r2next-comment-ml-nested",
+  "html": "<p>a tail &#8212;]b</p>",
+  "html_sha256": "0a43d1900c0438b44d8f2e5a1a6b95248016843bd87b847904b5404f0e840a4a",
+  "source": "a[!-- outer [!-- inner --] tail --]b",
+  "source_sha256": "15d08a58eaa8478a7c9c38f85ee01bcf72176486d324802426c183673647817f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "ml-adjacent": {
+  "fullname": "muse-probe-r2next-comment-ml-adjacent",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a[!-- one --][!-- two --]b",
+  "source_sha256": "ddc545f827615b8c925efa692249667fb6e4a7c9f9b705b22589bbb8c65f2055",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "case-upper-body": {
+  "fullname": "muse-probe-r2next-comment-case-upper-body",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a[!-- HIDDEN --]b",
+  "source_sha256": "2fa941d95df48caa750082b4b3ba31573aec3d8b4f67c20aaca74c14abf7cf73",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adj-before-iframe": {
+  "fullname": "muse-probe-r2next-comment-adj-before-iframe",
+  "html": "<p><iframe src=\"https://example.com\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>",
+  "html_sha256": "379a2af759b824bffde91ad6f088463dea1915b52d2aafbd09c7de48c0025574",
+  "source": "[!-- hide --]\n[[iframe https://example.com]]",
+  "source_sha256": "382de031ad052ea89110ed0e9ba3f43313b861ec4550fe362f152e47ff2ce1e7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adj-hide-iframe": {
+  "fullname": "muse-probe-r2next-comment-adj-hide-iframe",
+  "html": "<p>ab</p>",
+  "html_sha256": "6b8d75974208a43e5c2ddd5916023f1e0996f1ffa8278ffc2451e1c070901b4c",
+  "source": "a[!-- [[iframe https://example.com]] --]b",
+  "source_sha256": "891e1b68f9b270daa955713560f97a6df2c8bbd012e2af572622d288aba0d41c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adj-before-heading": {
+  "fullname": "muse-probe-r2next-comment-adj-before-heading",
+  "html": "<p style=\"text-align: center;\">Heading =</p>",
+  "html_sha256": "37948a3c71144104a07fd52300b0ac3a49128dbdbf69c6cb0fcca3caa04be10c",
+  "source": "[!-- c --]\n= Heading =",
+  "source_sha256": "6a28b595b1f3baa575a1b7c7c101ffb91d4841f7eb4deaaa1a794b83d85aea38",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adj-before-list": {
+  "fullname": "muse-probe-r2next-comment-adj-before-list",
+  "html": "<ul>\n<li>item</li>\n</ul>",
+  "html_sha256": "eda0b2071aa0afbc9bbe0925e04ac13374ea63a8bf512fc6cf7cb9c36d97683f",
+  "source": "[!-- c --]\n* item",
+  "source_sha256": "238eb201f8b4d1cee9b624a631305f71d6eda33884ee3ecfc964445c18b8f07f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adj-inside-code": {
+  "fullname": "muse-probe-r2next-comment-adj-inside-code",
+  "html": "<div class=\"code\">\n<pre><code>A[!-- c --]B</code></pre></div>",
+  "html_sha256": "c9a561b87ecee5970e7f24bc4c605917301525a03d365791f3f6ccc5c5b86b35",
+  "source": "[[code]]\nA[!-- c --]B\n[[/code]]",
+  "source_sha256": "601affaa1f1a6635b15da18fc91f652b29a7e9421bea63557501e0fae1f6ae53",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "adj-inside-raw": {
+  "fullname": "muse-probe-r2next-comment-adj-inside-raw",
+  "html": "<p><span style=\"white-space: pre-wrap;\">A[!--&#32;c&#32;--]B</span></p>",
+  "html_sha256": "00cfb61eaea65df545a3757ab40b159e06825ad0b9a11958347b53e152f341bb",
+  "source": "@@A[!-- c --]B@@",
+  "source_sha256": "ee23e3473ca750217fc2acdd476ebe774e07d6f9255929c88a1e7c813925249f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pin-double-bracket-head": {
+  "fullname": "muse-probe-r2next-comment-pin-double-bracket-head",
+  "html": "<p>[]<br />\nBody paragraph.</p>",
+  "html_sha256": "95ddc24df2706270d73c5835d0b1d0ee8b7fb9f01c3230cff5b01033a176bbca",
+  "source": "[[!-- Theme Lab candidate port header. --]]\nBody paragraph.",
+  "source_sha256": "8b99e49a7653e76407a477fdbb8fcb2cbfbe36e0c265e5a34cffb27fa26a68f2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pin-double-bracket-inline": {
+  "fullname": "muse-probe-r2next-comment-pin-double-bracket-inline",
+  "html": "<p>Before [] after.</p>",
+  "html_sha256": "23bf37f60c469a47ae7a2de3030da9cc06848d77fe8b4ca4261bfd958191f248",
+  "source": "Before [[!-- note --]] after.",
+  "source_sha256": "773d165bb10ae1617cf81f67903d6f8cce06177c2aa321ff0980ff4cc7c5d740",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pin-double-bracket-only-line": {
+  "fullname": "muse-probe-r2next-comment-pin-double-bracket-only-line",
+  "html": "<p>Line one<br />\n[]<br />\nLine two</p>",
+  "html_sha256": "ec85e9d921b73339716018dd891be0a6bc939d583f3446577080c44b9735dac5",
+  "source": "Line one\n[[!-- note --]]\nLine two",
+  "source_sha256": "fba4bce2deca7fa0a489e7a76170dda8e61ca03440c5fc93bb81aef81f2cec10",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pin-paragraph-single-break": {
+  "fullname": "muse-probe-r2next-comment-pin-paragraph-single-break",
+  "html": "<p>A<br />\nB</p>",
+  "html_sha256": "64bd78651d1ba75137bca8b8f9b5be0bdf08c2c17f02a60a805aa797de152fe8",
+  "source": "A\n[!-- x --]\nB",
+  "source_sha256": "d1a2073180debae049a1629e8e0cf253c8e39aef75400cb157264fd6fce7cbfa",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

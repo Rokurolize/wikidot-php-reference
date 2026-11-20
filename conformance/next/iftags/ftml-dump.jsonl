@@ -1,0 +1,80 @@
+{"errors":[],"html":"<p>KEEP</p>","id":"basic-plus-hit"}
+{"errors":[],"html":"","id":"basic-plus-miss"}
+{"errors":[],"html":"<p>KEEP</p>","id":"basic-minus-hit"}
+{"errors":[],"html":"","id":"basic-minus-miss"}
+{"errors":[],"html":"<p>KEEP</p>","id":"bare-hit"}
+{"errors":[],"html":"","id":"bare-miss"}
+{"errors":[],"html":"<p>KEEP</p>","id":"mixed-plus-minus-hit"}
+{"errors":[],"html":"","id":"mixed-plus-minus-miss-forbidden"}
+{"errors":[],"html":"","id":"mixed-plus-minus-miss-any"}
+{"errors":[],"html":"<p>KEEP</p>","id":"opener-upper"}
+{"errors":[],"html":"<p>KEEP</p>","id":"opener-mixed"}
+{"errors":[],"html":"<p>KEEP</p>","id":"closer-upper"}
+{"errors":[],"html":"<p>KEEP</p>","id":"opener-and-closer-upper"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 16..20, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 14..16, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 20..23, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 29..31, kind: NoRulesMatch }"],"html":"<p>[[iftags+alpha]]KEEP[[/iftags]]</p>","id":"no-space-after-name"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 3..9, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 16..18, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 22..25, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 31..33, kind: NoRulesMatch }"],"html":"<p>[[ iftags +alpha]]KEEP[[/iftags]]</p>","id":"space-before-name"}
+{"errors":[],"html":"<p>KEEP</p>","id":"extra-spaces-spec"}
+{"errors":[],"html":"","id":"empty-spec-tagged"}
+{"errors":[],"html":"","id":"empty-spec-spaces-tagged"}
+{"errors":[],"html":"","id":"empty-spec-untagged"}
+{"errors":[],"html":"","id":"plus-untagged"}
+{"errors":[],"html":"<p>KEEP</p>","id":"case-plus-spec-upper"}
+{"errors":[],"html":"<p>KEEP</p>","id":"case-plus-tag-upper"}
+{"errors":[],"html":"<p>KEEP</p>","id":"case-bare"}
+{"errors":[],"html":"","id":"case-minus-spec"}
+{"errors":[],"html":"","id":"case-minus-tag"}
+{"errors":[],"html":"","id":"comma-plus-both"}
+{"errors":[],"html":"","id":"comma-plus-one"}
+{"errors":[],"html":"<p>KEEP</p>","id":"comma-minus"}
+{"errors":[],"html":"","id":"comma-bare"}
+{"errors":[],"html":"","id":"comma-space-mixed"}
+{"errors":[],"html":"","id":"bare-minus-only"}
+{"errors":[],"html":"","id":"bare-minus-only-untagged"}
+{"errors":[],"html":"","id":"bare-plus-only"}
+{"errors":[],"html":"<p>KEEP</p>","id":"bare-double-bare"}
+{"errors":[],"html":"","id":"bare-double-bare-miss"}
+{"errors":[],"html":"<p>KEEP</p>","id":"tag-hyphen"}
+{"errors":[],"html":"<p>KEEP</p>","id":"tag-underscore"}
+{"errors":[],"html":"<p>KEEP</p>","id":"tag-unicode"}
+{"errors":[],"html":"<p>OUT[[iftags +alpha]]IN[[/iftags]]TAIL</p>","id":"nested-both-true"}
+{"errors":[],"html":"<p>OUT[[iftags +beta]]IN[[/iftags]]TAIL</p>","id":"nested-inner-false"}
+{"errors":[],"html":"","id":"nested-outer-false"}
+{"errors":[],"html":"<p>A[[iftags +alpha]]B[[iftags +alpha]]C[[/iftags]]D[[/iftags]]E</p>","id":"nested-triple"}
+{"errors":[],"html":"<p>OUT[[iftags +alpha]]INTAIL</p>","id":"nested-unbalanced-inner"}
+{"errors":[],"html":"<p>AB</p>","id":"two-adjacent"}
+{"errors":[],"html":"<p>A</p>","id":"two-adjacent-second-false"}
+{"errors":["ParseError { token: Identifier, rule: \"block-iftags\", span: 17..21, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>[[iftags +alpha]]KEEP-no-closer</p>","id":"unterminated-open"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 6..9, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>before[[/iftags]]after</p>","id":"stray-closer"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-iftags\", span: 31..31, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 20..23, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 29..31, kind: NoRulesMatch }"],"html":"<p>[[iftags +alpha]KEEP[[/iftags]]</p>","id":"missing-one-bracket"}
+{"errors":[],"html":"<p>]KEEP</p>","id":"triple-close-head"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }"],"html":"<p>[[/iftags]]KEEPTAIL</p>","id":"closer-first"}
+{"errors":["ParseError { token: LineBreak, rule: \"block-iftags\", span: 15..16, kind: BlockMalformedArguments }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 21..23, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 27..30, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 36..38, kind: NoRulesMatch }"],"html":"<p>[[iftags +alpha<br>\n+beta]]KEEP[[/iftags]]</p>","id":"newline-in-spec"}
+{"errors":[],"html":"<p>prefix KEEP suffix</p>","id":"inline-body"}
+{"errors":[],"html":"<p>KEEP<br>\nAFTER</p>","id":"line-start-body"}
+{"errors":[],"html":"<p>KEEP</p><p>AFTER</p>","id":"body-next-line"}
+{"errors":[],"html":"<p>KEEP</p>","id":"leading-space-opener"}
+{"errors":[],"html":"<blockquote><p>KEEP</p></blockquote>","id":"blockquote-opener"}
+{"errors":[],"html":"<p>A</p><p>B</p><p>C</p>","id":"body-paragraph-breaks"}
+{"errors":[],"html":"","id":"whitespace-only-body"}
+{"errors":[],"html":"","id":"empty-body"}
+{"errors":[],"html":"<p>A</p><p>B</p>","id":"false-gate-newlines"}
+{"errors":[],"html":"<p>A<br>\nSHOWN<br>\nB</p>","id":"true-gate-newlines"}
+{"errors":["ParseError { token: Identifier, rule: \"block-iftags\", span: 32..36, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 30..32, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 36..39, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 45..47, kind: NoRulesMatch }"],"html":"<p>[[iftags +alpha -beta]]KEEP[[/iftags]]</p>","id":"spec-comment-complete"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-iftags\", span: 40..40, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 29..32, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 38..40, kind: NoRulesMatch }"],"html":"<p>[[iftags +alpha ]KEEP[[/iftags]]</p>","id":"spec-comment-straddle"}
+{"errors":[],"html":"","id":"spec-comment-closer-inside"}
+{"errors":[],"html":"","id":"spec-comment-unterminated"}
+{"errors":["ParseError { token: Heading, rule: \"block\", span: 10..11, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 16..18, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 22..25, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 31..33, kind: NoRulesMatch }"],"html":"<p>[[iftags* +alpha]]KEEP[[/iftags]]</p>","id":"star-flag"}
+{"errors":["ParseError { token: Heading, rule: \"block-iftags\", span: 10..11, kind: BlockDisallowsScore }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 16..18, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 22..25, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 31..33, kind: NoRulesMatch }"],"html":"<p>[[iftags_ +alpha]]KEEP[[/iftags]]</p>","id":"score-flag"}
+{"errors":["ParseError { token: Heading, rule: \"block\", span: 10..11, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 16..18, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 22..25, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 31..33, kind: NoRulesMatch }"],"html":"<p>[[iftagsx +alpha]]KEEP[[/iftags]]</p>","id":"name-suffix"}
+{"errors":["ParseError { token: Heading, rule: \"block\", span: 10..11, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 16..18, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 22..25, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 31..33, kind: NoRulesMatch }"],"html":"<p>[[xiftags +alpha]]KEEP[[/iftags]]</p>","id":"name-prefix"}
+{"errors":[],"html":"","id":"plain-attrs"}
+{"errors":[],"html":"<p>AB</p>","id":"body-comment"}
+{"errors":[],"html":"<p><iframe src=\"https://example.com/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>","id":"body-iframe"}
+{"errors":[],"html":"<p><span class=\"odate time_0\">01 Jan 1970 00:00</span></p>","id":"body-date"}
+{"errors":[],"html":"<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x^2 \\end{equation}</div>","id":"body-math"}
+{"errors":[],"html":"","id":"false-hides-math"}
+{"errors":[],"html":"","id":"false-hides-iframe"}
+{"errors":[],"html":"<span class=\"equation-number\">(1)</span>\n<div class=\"math-equation\" id=\"equation-1\">\\begin{equation} x y \\end{equation}</div>","id":"math-contains-false-iftags"}
+{"errors":[],"html":"<p><strong>BOLD</strong>KEEP</p>","id":"body-bold-seam"}
+{"errors":[],"html":"<p><span>SPAN</span>KEEP</p>","id":"body-span-seam"}
+{"errors":[],"html":"<p>KEEP</p><div><p>D</p></div>","id":"after-block-div"}

@@ -1,0 +1,9 @@
+# Cross-rule notes from the Date lane (for root)
+
+These are cases in the Date battery whose remaining differences are owned by a neighboring rule, by shared framing or by root's harness, not by Date; none of them was corrected outside the two Date files.
+
+d55-iframe-then-date differs only in the Iframe span's trailing space before `>` and the `<br />` versus `<br>` line break; the Date span itself is identical after correction. d56-date-then-math differs only in the Math side, where this harness has the stubbed LaTeX-failure error block and ftml emits a rendered equation; the Date span is identical, and the LaTeX evaluation path is serving-layer scope owned by Math. d60-date-in-code differs only in the surrounding paragraph and newline framing owned by the Code rule; both sides leave the date call literal inside the code body.
+
+d21-blank-with-format is candidate ftml divergence F1, not a frame-level case: live renders nothing for a blank value followed by attributes, ftml renders a literal paragraph, and the corrected reference follows live. d26-leading-tab and the single-space/double-space blank variants differ only by shared prefilter whitespace normalization; the no-attribute blank case d20 differs only by the empty paragraph wrapper the reference keeps where live and ftml emit no HTML.
+
+d40-raw-format and probes raw-two-dates and raw-preceded are the disclosed harness/frame residual on raw-escape placeholder numbering: live and ftml use document-local %FF<n>%FF numbers while the fossil harness uses global token IDs. Root decided to accept and disclose this in R2-NEXT.md rather than change the shared Raw rule. d57-comment-hides-date, d58-comment-in-format and d59-iftags-date agree on both sides after the correction. The tags-bearing polarity variants of the Iftags/Date seam remain in root's cross-rule interaction battery; this lane did not create tagged Date probes.

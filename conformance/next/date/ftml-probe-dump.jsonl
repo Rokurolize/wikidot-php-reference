@@ -1,0 +1,39 @@
+{"errors":[],"html":"<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>","id":"basic"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30</span></p>","id":"format-year"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30</span></p>","id":"leading-zeros"}
+{"errors":[],"html":"<p><span class=\"odate time_0\">01 Jan 1970 00:00</span></p>","id":"zero"}
+{"errors":[],"html":"<p><span class=\"odate time_-1000\">31 Dec 1969 23:43</span></p>","id":"negative"}
+{"errors":[],"html":"<p><span class=\"odate time_99999999999999\">07 Nov 3170843 09:46</span></p>","id":"huge-14"}
+{"errors":[],"html":"<p><span class=\"odate time_9223372036854775807\">04 Dec 292277026596 15:30</span></p>","id":"huge-20"}
+{"errors":[],"html":"<p><span class=\"odate time_-99999999999999\">24 Feb -3166904 14:13</span></p>","id":"neg-huge"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-date\", span: 32..32, kind: BlockMalformedArguments }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 30..32, kind: NoRulesMatch }"],"html":"<p>[[date +1216153821 format=&quot;%Y&quot;]]</p>","id":"plus-value"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-date\", span: 19..19, kind: BlockMalformedArguments }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<p>[[date 2009-12-25]]</p>","id":"iso-date"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-date\", span: 12..12, kind: BlockMalformedArguments }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>[[date now]]</p>","id":"now"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-date\", span: 10..10, kind: BlockMalformedArguments }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>[[date .]]</p>","id":"dot"}
+{"errors":[],"html":"","id":"blank"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-date\", span: 21..21, kind: BlockMalformedArguments }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 19..21, kind: NoRulesMatch }"],"html":"<p>[[date format=&quot;%Y&quot;]]</p>","id":"blank-format"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>","id":"unquoted-format"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821 format_%25m\">15 Jul 2008 20:30</span></p>","id":"duplicate-format"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>","id":"unknown-attr"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>","id":"empty-format"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821 format_%25Y%7Cagohover\">15 Jul 2008 20:30</span></p>","id":"agohover"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821 format_ago\">15 Jul 2008 20:30</span></p>","id":"g-format"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821 format_%25d.%20%25m.%20%25Y\">15 Jul 2008 20:30</span></p>","id":"spaced-format"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821 format_%3Cb%3E%26\">15 Jul 2008 20:30</span></p>","id":"html-format"}
+{"errors":[],"html":"<p><span class=\"odate time_0 format_%FF1%FF\">01 Jan 1970 00:00</span></p>","id":"raw-format"}
+{"errors":["ParseError { token: Identifier, rule: \"block-date\", span: 7..17, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<p>[[DATE 1216153821]]</p>","id":"case-upper"}
+{"errors":[],"html":"<p>before <span class=\"odate time_1216153821\">15 Jul 2008 20:30</span> after</p>","id":"midline"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-date\", span: 17..17, kind: EndOfInput }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>[[date 1216153821</p>","id":"unterminated"}
+{"errors":[],"html":"<p><span class=\"odate time_1234567890\">13 Feb 2009 23:31</span></p>","id":"comment-in-value"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30</span></p>","id":"comment-in-attr"}
+{"errors":[],"html":"<p><span class=\"odate time_1216153821 format_%25Y\">15 Jul 2008 20:30</span></p>","id":"tz-attr"}
+{"errors":[],"html":"<p><span class=\"odate time_1\">01 Jan 1970 00:00</span> and <span class=\"odate time_2\">01 Jan 1970 00:00</span></p>","id":"two-dates"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>[[date 1216153821]]</code></pre></div>","id":"in-code"}
+{"errors":[],"html":"<p><iframe src=\"https://example.com/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe><br>\n<span class=\"odate time_1216153821\">15 Jul 2008 20:30</span></p>","id":"after-iframe"}
+{"errors":[],"html":"","id":"blank-single"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-date\", span: 20..20, kind: BlockMalformedArguments }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[date format=&quot;%Y&quot;]]</p>","id":"blank-attr-single"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-date\", span: 29..29, kind: BlockMalformedArguments }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 27..29, kind: NoRulesMatch }"],"html":"<p>[[date format=&quot;%Y&quot; tz=&quot;+8&quot;]]</p>","id":"blank-two-attrs"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-date\", span: 19..19, kind: BlockMalformedArguments }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<p>[[date foo=&quot;bar&quot;]]</p>","id":"blank-unknown-attr"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-date\", span: 19..19, kind: BlockMalformedArguments }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<p>[[date format=%Y]]</p>","id":"blank-unquoted-attr"}
+{"errors":[],"html":"<p><span class=\"odate time_0 format_%FF1%FF\">01 Jan 1970 00:00</span><br>\n<span class=\"odate time_0 format_%FF2%FF\">01 Jan 1970 00:00</span></p>","id":"raw-two-dates"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">x</span><br>\n<span class=\"odate time_0 format_%FF2%FF\">01 Jan 1970 00:00</span></p>","id":"raw-preceded"}

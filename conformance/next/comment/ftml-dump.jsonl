@@ -1,0 +1,62 @@
+{"errors":[],"html":"<p>ab</p>","id":"op-basic-inline"}
+{"errors":[],"html":"<p>visible</p>","id":"op-basic-line-start"}
+{"errors":[],"html":"<p>visible</p>","id":"op-basic-line-end"}
+{"errors":[],"html":"<p>ab</p>","id":"op-empty"}
+{"errors":[],"html":"<p>ab</p>","id":"op-no-space"}
+{"errors":[],"html":"<p>ab</p>","id":"op-whitespace-body"}
+{"errors":[],"html":"<p>ab</p>","id":"op-close-three-hyphens"}
+{"errors":[],"html":"<p>ab</p>","id":"op-close-four-hyphens"}
+{"errors":[],"html":"<p>ab</p>","id":"op-close-five-hyphens"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"op-hyphen-run-open-close"}
+{"errors":[],"html":"<p>a—]b</p>","id":"op-unmatched-closer"}
+{"errors":[],"html":"<p>a[!— hidden b</p>","id":"op-unterminated"}
+{"errors":[],"html":"<p>a<br>\n[!— hidden<br>\nb</p>","id":"op-unterminated-line"}
+{"errors":[],"html":"<p>ab</p>","id":"op-two-openers-one-closer"}
+{"errors":[],"html":"<p>ab</p>","id":"nl-leading-one"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"nl-leading-two"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"nl-comment-only-line"}
+{"errors":[],"html":"<p>a</p><p>b</p>","id":"nl-comment-only-blank-around"}
+{"errors":[],"html":"<p>a</p>","id":"nl-comment-at-eof"}
+{"errors":[],"html":"<p>z</p>","id":"nl-comment-at-start-tail"}
+{"errors":[],"html":"","id":"nl-comment-at-start-only"}
+{"errors":[],"html":"<p>a<br>\n<br>\nb</p>","id":"nl-indented-spaces"}
+{"errors":[],"html":"<p>a<br>\n<br>\nb</p>","id":"nl-indented-tab"}
+{"errors":[],"html":"<p>ab</p>","id":"nl-trailing-newline-local"}
+{"errors":[],"html":"<p>ab</p>","id":"ml-body"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"ml-line-start"}
+{"errors":[],"html":"<p>a tail —]b</p>","id":"ml-nested"}
+{"errors":[],"html":"<p>ab</p>","id":"ml-adjacent"}
+{"errors":[],"html":"<p>b</p>","id":"ml-chained-lines"}
+{"errors":[],"html":"<p>ab</p>","id":"ml-span-with-block-syntax"}
+{"errors":[],"html":"<p>ab</p>","id":"ml-span-with-module-opener"}
+{"errors":[],"html":"<p>a<br>\nx</p>","id":"ml-span-with-math-opener"}
+{"errors":[],"html":"<p>ab</p>","id":"case-upper-body"}
+{"errors":[],"html":"<p>ab</p>","id":"case-mixed-body"}
+{"errors":[],"html":"<p>a[!COMMENT hidden —]b</p>","id":"case-opener-word"}
+{"errors":[],"html":"<p>a[!— hidden —COMMENT]b</p>","id":"case-close-word"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"crlf-inline"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"crlf-line-start"}
+{"errors":[],"html":"<p>ab</p>","id":"crlf-multiline-body"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"cr-only-inline"}
+{"errors":[],"html":"<p>a</p><p>b</p>","id":"cr-only-line"}
+{"errors":[],"html":"<p><iframe src=\"https://example.com\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"></iframe></p>","id":"adj-before-iframe"}
+{"errors":[],"html":"<p>ab</p>","id":"adj-hide-iframe"}
+{"errors":[],"html":"<p><span class=\"odate time_0\">01 Jan 1970 00:00</span></p>","id":"adj-before-date"}
+{"errors":[],"html":"<p style=\"text-align: center;\">Heading =</p>","id":"adj-before-heading"}
+{"errors":[],"html":"<ul>\n<li>item</li>\n</ul>","id":"adj-before-list"}
+{"errors":[],"html":"<div class=\"x\"><p>T</p></div>","id":"adj-before-div"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>A[!-- c --]B</code></pre></div>","id":"adj-inside-code"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">A[!--&#32;c&#32;--]B</span></p>","id":"adj-inside-raw"}
+{"errors":[],"html":"<p><span class=\"c\">T</span></p>","id":"adj-inside-span-head"}
+{"errors":[],"html":"<p>body</p>","id":"adj-span-with-iftags-head"}
+{"errors":[],"html":"<p>Body paragraph.</p>","id":"pin-double-bracket-head"}
+{"errors":[],"html":"<p>Before after.</p>","id":"pin-double-bracket-inline"}
+{"errors":[],"html":"<p>Line one<br>\nLine two</p>","id":"pin-double-bracket-only-line"}
+{"errors":[],"html":"<p>A<br>\nB</p>","id":"pin-paragraph-single-break"}
+{"errors":[],"html":"<p>A</p>","id":"pin-paragraph-line-final"}
+{"errors":[],"html":"<p>x<br>\n<br>\nz</p>","id":"pin-comment-line-break-demotion"}
+{"errors":[],"html":"<p>x z</p>","id":"pin-comment-line-splice"}
+{"errors":[],"html":"<ul>\n<li>item# item</li>\n</ul>","id":"pin-list-comment-line-start"}
+{"errors":["ParseError { token: LineBreak, rule: \"block-code\", span: 8..9, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 14..17, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 21..23, kind: NoRulesMatch }"],"html":"<p>[[code]]<br>\nbody<br>\n[[/code]]</p>","id":"pin-code-closer-comment-suffix"}
+{"errors":["ParseError { token: RightBlock, rule: \"block\", span: 8..10, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 1..3, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>a[[span ]] b[[/span]]c</p>","id":"pin-double-bracket-in-block-head"}
+{"errors":[],"html":"<p><span class=\"c\">x</span></p>","id":"pin-double-bracket-before-name"}

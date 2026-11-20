@@ -1,0 +1,33 @@
+{"id":"x-comment-hides-iframe","output":"<p>beforeafter<\/p>\n\n"}
+{"id":"x-comment-hides-date","output":"<p>beforeafter<\/p>\n\n"}
+{"id":"x-comment-hides-math-open","output":"<p>before<br \/>\nx=1<br \/>\n[[\/math]]<br \/>\nafter<\/p>\n\n"}
+{"id":"x-comment-hides-math-close","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><p>after<\/p>\n\n"}
+{"id":"x-comment-hides-iftags-open","output":"<p>[!&#8212;<\/p>\n\n"}
+{"id":"x-comment-hides-iftags-close","output":"<p>bodytail<\/p>\n\n"}
+{"id":"x-comment-inside-iframe-attr","output":"<p><iframe src=\"https:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\" ><\/iframe><\/p>\n\n"}
+{"id":"x-comment-inside-date-attr","output":"<p><span class=\"odate\">1216153821|%Y<\/span><\/p>\n\n"}
+{"id":"x-comment-inside-math-body","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"x-comment-multiline-hides-math","output":"<p>ab<\/p>\n\n"}
+{"id":"x-iftags-keep-module","output":"<div class=\"error-block\">[[module <em>UnknownModuleX<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"x-iftags-drop-module","output":""}
+{"id":"x-iftags-keep-math","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"x-iftags-drop-math","output":""}
+{"id":"x-iftags-keep-date","output":"<p><span class=\"odate\">1216153821<\/span><\/p>\n\n"}
+{"id":"x-iftags-drop-date","output":""}
+{"id":"x-iftags-keep-iframe","output":"<p><iframe src=\"https:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\" ><\/iframe><\/p>\n\n"}
+{"id":"x-iftags-drop-iframe","output":""}
+{"id":"x-iftags-drop-nested-math-iftags","output":""}
+{"id":"x-iftags-untagged-any","output":""}
+{"id":"x-iftags-comment-spec","output":""}
+{"id":"x-module-body-math","output":"<div class=\"error-block\">[[module <em>UnknownModuleX<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"x-module-body-date","output":"<div class=\"error-block\">[[module <em>UnknownModuleX<\/em>]] No such module, please <a href=\"https:\/\/www.wikidot.com\/doc:modules\" target=\"_blank\">check available modules<\/a> and fix this page.<\/div>"}
+{"id":"x-code-body-math","output":"\n<div class=\"code\">\n<pre><code>[[math E]]\nx=1\n[[\/math]]<\/code><\/pre><\/div>\n\n"}
+{"id":"x-raw-body-date","output":"<p>[[raw]]<br \/>\n<span class=\"odate\">1216153821<\/span><br \/>\n[[\/raw]]<\/p>\n\n"}
+{"id":"x-iframe-then-url","output":"<p><iframe src=\"https:\/\/example.com\/a]]\n[[https:\/\/example.com\/b\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\" ><\/iframe><\/p>\n\n"}
+{"id":"x-url-in-iframe-attr","output":"<p><iframe src=\"https:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"background:url(https:\/\/example.com\/i.png)\" ><\/iframe><\/p>\n\n"}
+{"id":"x-iframe-mailto","output":"<p><iframe src=\"mailto:someone@example.com\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\" ><\/iframe><\/p>\n\n"}
+{"id":"x-iframe-url-scheme-case","output":"<p><iframe src=\"HTTPS:\/\/EXAMPLE.COM\/A\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\" ><\/iframe><\/p>\n\n"}
+{"id":"x-iframe-adjacent-date","output":"<p><iframe src=\"https:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\" ><\/iframe><br \/>\n<span class=\"odate\">1216153821<\/span><\/p>\n\n"}
+{"id":"x-iframe-adjacent-math","output":"<p><iframe src=\"https:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\" ><\/iframe><\/p>\n\n<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"x-iftags-comment-iframe-date-math","output":"<p>ab<iframe src=\"https:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\" ><\/iframe><span class=\"odate\">1216153821<\/span>[[math E]]<br \/>\nx=1<br \/>\n[[\/math]]<\/p>\n\n"}
+{"id":"x-comment-then-iftags","output":"<p>body<\/p>\n\n"}

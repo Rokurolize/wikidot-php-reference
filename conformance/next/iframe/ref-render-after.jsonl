@@ -1,0 +1,83 @@
+{"id":"if-scheme-http","output":"<p><iframe src=\"http:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-scheme-https","output":"<p><iframe src=\"https:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-scheme-ftp","output":"<p><iframe src=\"ftp:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-scheme-gopher","output":"<p><iframe src=\"gopher:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-scheme-news","output":"<p><iframe src=\"news:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-scheme-mailto","output":"<p><iframe src=\"mailto:a@example.com\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-scheme-mms","output":"<p><iframe src=\"mms:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-scheme-upper","output":"<p><iframe src=\"HTTPS:\/\/EXAMPLE.COM\/A\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-scheme-mixed","output":"<p><iframe src=\"HtTp:\/\/Example.Com\/MiXeD\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-scheme-news-upper","output":"<p><iframe src=\"NEWS:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-scheme-mms-upper","output":"<p><iframe src=\"MMS:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-scheme-git","output":"<p>[[iframe git:\/\/example.com\/a]]<\/p>\n\n"}
+{"id":"if-scheme-javascript","output":"<p>[[iframe javascript:alert(1)]]<\/p>\n\n"}
+{"id":"if-scheme-data","output":"<p>[[iframe data:text\/html,x]]<\/p>\n\n"}
+{"id":"if-scheme-none","output":"<p>[[iframe example.com\/a]]<\/p>\n\n"}
+{"id":"if-scheme-empty-url","output":"<p>[[iframe ]]<\/p>\n\n"}
+{"id":"if-scheme-no-opener","output":"<p>[[iframe]]<\/p>\n\n"}
+{"id":"if-url-slash-segments","output":"<p><iframe src=\"https:\/\/example.com\/a\/b\/c\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-no-path","output":"<p><iframe src=\"https:\/\/example.com\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-trailing-slash","output":"<p><iframe src=\"https:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-doublequote","output":"<p>[[iframe <a href=\"http:\/\/example.com\/a\">http:\/\/example.com\/a<\/a>&quot;b]]<\/p>\n\n"}
+{"id":"if-url-singlequote-final","output":"<p><iframe src=\"http:\/\/example.com\/a'b\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-singlequote-mid","output":"<p>[[iframe <a href=\"http:\/\/example.com\/a\">http:\/\/example.com\/a<\/a>'b\/c]]<\/p>\n\n"}
+{"id":"if-url-singlequote-two","output":"<p>[[iframe <a href=\"http:\/\/example.com\/a\">http:\/\/example.com\/a<\/a>'b'c\/d]]<\/p>\n\n"}
+{"id":"if-url-space","output":"<p><iframe src=\"http:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-tab","output":"<p><iframe src=\"http:\/\/example.com\/a\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-backslash","output":"<p><iframe src=\"http:\/\/example.com\/a\\b\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-delim-u00ff","output":"<p><iframe src=\"http:\/\/example.com\/%C3%BF\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-percent","output":"<p><iframe src=\"http:\/\/example.com\/%20x\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-query-fragment","output":"<p><iframe src=\"http:\/\/example.com\/?q=1&amp;x=2#frag\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-utf8-path","output":"<p><iframe src=\"http:\/\/example.com\/%E6%97%A5%E6%9C%AC%E8%AA%9E\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-utf8-query","output":"<p><iframe src=\"http:\/\/example.com\/?q=%E6%97%A5%E6%9C%AC%E8%AA%9E#frag%E6%97%A5\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-braces","output":"<p><iframe src=\"http:\/\/example.com\/{a}\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-url-angle","output":"<p><iframe src=\"http:\/\/example.com\/&lt;x&gt;\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-none","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-all-unquoted","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-all-quoted","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"left\" frameborder=\"0\" height=\"7\" scrolling=\"no\" width=\"100\" class=\"z\" style=\"color:red\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-order-shuffled","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"right\" frameborder=\"1\" height=\"7\" scrolling=\"auto\" width=\"5\" class=\"z\" style=\"color:red\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-unknown-filtered","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"auto\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-duplicate","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"2\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-spaced-equals","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-mixed-spaced","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-single-quoted","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-escaped-quote","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"a&quot;b\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-empty-value","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-only-src-space","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-attr-scheme-and-attrs","output":"<p><iframe src=\"https:\/\/example.net\/my-page\" align=\"\" frameborder=\"0\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-bad-unterminated","output":"<p>[[iframe <a href=\"http:\/\/example.com\/\">http:\/\/example.com\/<\/a><\/p>\n\n"}
+{"id":"if-bad-unterminated-attrs","output":"<p>[[iframe <a href=\"http:\/\/example.com\/\">http:\/\/example.com\/<\/a> width=&quot;1&quot;<\/p>\n\n"}
+{"id":"if-bad-extra-brackets","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe>]<\/p>\n\n"}
+{"id":"if-bad-double-opener","output":"<p><iframe src=\"http:\/\/a.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe> <iframe src=\"http:\/\/b.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-bad-closer-only","output":"<p>[[\/iframe]]<\/p>\n\n"}
+{"id":"if-bad-no-space","output":"<p>[[iframehttp:\/\/example.com\/]]<\/p>\n\n"}
+{"id":"if-bad-newline-in-head","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-pos-midline","output":"<p>before <iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe> after<\/p>\n\n"}
+{"id":"if-pos-line-start","output":"<p>text<br \/>\n<iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-pos-leading-space","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-pos-after-blank","output":"<p>a<\/p>\n\n<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-pos-two-lines","output":"<p><iframe src=\"http:\/\/a.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><br \/>\n<iframe src=\"http:\/\/b.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-pos-newline-then-text","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><br \/>\nx ]]<\/p>\n\n"}
+{"id":"if-tail-newline-closer","output":"<p><iframe src=\"http:\/\/e.com\/]][[\/div\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-tail-no-newline-closer","output":"<p><iframe src=\"http:\/\/e.com\/]][[\/div\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-tail-two-closers","output":"<p><iframe src=\"http:\/\/e.com\/]][[\/div]][[\/span\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-tail-text-closer","output":"<p><iframe src=\"http:\/\/e.com\/]]foo[[\/div\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-tail-space-stops","output":"<p><iframe src=\"http:\/\/e.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe> foo]]<\/p>\n\n"}
+{"id":"if-tail-tab-stops","output":"<p><iframe src=\"http:\/\/e.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><br \/>\nfoo    x]]<\/p>\n\n"}
+{"id":"if-tail-blank-span","output":"<p><iframe src=\"http:\/\/e.com\/]][[span]]y[[\/span\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-tail-args-newline-closer","output":"<p><iframe src=\"http:\/\/e.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"1\" class=\"\" style=\"\"><\/iframe><br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"if-tail-surviving-close","output":"<div ><p><iframe src=\"http:\/\/example.com\/]][[\/div\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><br \/>\nspace here<\/p>\n\n<\/div>"}
+{"id":"if-tail-invalidates-div","output":"<p>[[div]]<br \/>\n<iframe src=\"http:\/\/example.com\/]][[\/div\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-tail-keeps-div-after-args","output":"<div ><p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"1\" class=\"\" style=\"\"><\/iframe><\/p>\n\n<\/div>"}
+{"id":"if-adj-iftags-seam-name","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-adj-iftags-seam-url","output":"<p><iframe src=\"http:\/\/a.example\/bc\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-adj-comment-in-url","output":"<p><iframe src=\"https:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-adj-comment-before","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-adj-code-before","output":"\n<div class=\"code\">\n<pre><code>[[iframe http:\/\/example.com\/]]<\/code><\/pre><\/div>\n\n"}
+{"id":"if-adj-greedy-iftags-failing","output":"<p><iframe src=\"http:\/\/e.com\/]][[\/div\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-adj-greedy-iftags-kept","output":"<p><iframe src=\"http:\/\/e.com\/]][[\/div\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-adj-date-after","output":"<p><iframe src=\"http:\/\/example.com\/\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><br \/>\n<span class=\"odate time_0\">01 Jan 1970 00:00<\/span><\/p>\n\n"}
+{"id":"if-adj-math-after","output":"<p><iframe src=\"http:\/\/example.com\/]][[math]]E=mc^2[[\/math\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}
+{"id":"if-adj-anchor-around","output":"<p>[[a href=&quot;\/y&quot;]]<iframe src=\"http:\/\/example.org\/embed\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"1\" class=\"\" style=\"\"><\/iframe>[[\/a]]<\/p>\n\n"}
+{"id":"if-adj-span-around","output":"<p><span  style=\"\"><iframe src=\"http:\/\/example.org\/embed\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"1\" class=\"\" style=\"\"><\/iframe><\/span><\/p>\n\n"}
+{"id":"if-adj-freelink-tail","output":"<p><iframe src=\"https:\/\/example.com\/a]][[https:\/\/example.com\/b\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\"><\/iframe><\/p>\n\n"}

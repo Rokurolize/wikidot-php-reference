@@ -1,0 +1,83 @@
+{"id": "if-scheme-http", "source": "[[iframe http://example.com/a]]"}
+{"id": "if-scheme-https", "source": "[[iframe https://example.com/a]]"}
+{"id": "if-scheme-ftp", "source": "[[iframe ftp://example.com/a]]"}
+{"id": "if-scheme-gopher", "source": "[[iframe gopher://example.com/a]]"}
+{"id": "if-scheme-news", "source": "[[iframe news://example.com/a]]"}
+{"id": "if-scheme-mailto", "source": "[[iframe mailto:a@example.com]]"}
+{"id": "if-scheme-mms", "source": "[[iframe mms://example.com/a]]"}
+{"id": "if-scheme-upper", "source": "[[iframe HTTPS://EXAMPLE.COM/A]]"}
+{"id": "if-scheme-mixed", "source": "[[iframe HtTp://Example.Com/MiXeD]]"}
+{"id": "if-scheme-news-upper", "source": "[[iframe NEWS://example.com/a]]"}
+{"id": "if-scheme-mms-upper", "source": "[[iframe MMS://example.com/a]]"}
+{"id": "if-scheme-git", "source": "[[iframe git://example.com/a]]"}
+{"id": "if-scheme-javascript", "source": "[[iframe javascript:alert(1)]]"}
+{"id": "if-scheme-data", "source": "[[iframe data:text/html,x]]"}
+{"id": "if-scheme-none", "source": "[[iframe example.com/a]]"}
+{"id": "if-scheme-empty-url", "source": "[[iframe ]]"}
+{"id": "if-scheme-no-opener", "source": "[[iframe]]"}
+{"id": "if-url-slash-segments", "source": "[[iframe https://example.com/a/b/c]]"}
+{"id": "if-url-no-path", "source": "[[iframe https://example.com]]"}
+{"id": "if-url-trailing-slash", "source": "[[iframe https://example.com/]]"}
+{"id": "if-url-doublequote", "source": "[[iframe http://example.com/a\"b]]"}
+{"id": "if-url-singlequote-final", "source": "[[iframe http://example.com/a'b]]"}
+{"id": "if-url-singlequote-mid", "source": "[[iframe http://example.com/a'b/c]]"}
+{"id": "if-url-singlequote-two", "source": "[[iframe http://example.com/a'b'c/d]]"}
+{"id": "if-url-space", "source": "[[iframe http://example.com/a b]]"}
+{"id": "if-url-tab", "source": "[[iframe http://example.com/a\tb]]"}
+{"id": "if-url-backslash", "source": "[[iframe http://example.com/a\\b]]"}
+{"id": "if-url-delim-u00ff", "source": "[[iframe http://example.com/ÿ]]"}
+{"id": "if-url-percent", "source": "[[iframe http://example.com/%20x]]"}
+{"id": "if-url-query-fragment", "source": "[[iframe http://example.com/?q=1&x=2#frag]]"}
+{"id": "if-url-utf8-path", "source": "[[iframe http://example.com/日本語]]"}
+{"id": "if-url-utf8-query", "source": "[[iframe http://example.com/?q=日本語#frag日]]"}
+{"id": "if-url-braces", "source": "[[iframe http://example.com/{a}]]"}
+{"id": "if-url-angle", "source": "[[iframe http://example.com/<x>]]"}
+{"id": "if-attr-none", "source": "[[iframe http://example.com/]]"}
+{"id": "if-attr-all-unquoted", "source": "[[iframe http://example.com/ align=left frameborder=0 height=7 scrolling=no width=100 class=z style=color:red]]"}
+{"id": "if-attr-all-quoted", "source": "[[iframe http://example.com/ align=\"left\" frameborder=\"0\" height=\"7\" scrolling=\"no\" width=\"100\" class=\"z\" style=\"color:red\"]]"}
+{"id": "if-attr-order-shuffled", "source": "[[iframe http://example.com/ style=\"color:red\" width=\"5\" scrolling=\"auto\" align=\"right\" frameborder=\"1\" height=\"7\" class=\"z\"]]"}
+{"id": "if-attr-unknown-filtered", "source": "[[iframe http://example.com/ title=\"T\" id=\"i\" data-x=\"1\" allowtransparency=\"true\" scrolling=\"auto\"]]"}
+{"id": "if-attr-duplicate", "source": "[[iframe http://example.com/ width=\"1\" width=\"2\"]]"}
+{"id": "if-attr-spaced-equals", "source": "[[iframe http://example.com/ id = \"my-example\" class=\"iframe\" width = \"90%\"]]"}
+{"id": "if-attr-mixed-spaced", "source": "[[iframe http://example.com/ width = \"1\" height=\"2\"]]"}
+{"id": "if-attr-single-quoted", "source": "[[iframe http://example.com/ width='1' height='2']]"}
+{"id": "if-attr-escaped-quote", "source": "[[iframe http://example.com/ class=\"a\\\"b\"]]"}
+{"id": "if-attr-empty-value", "source": "[[iframe http://example.com/ width=\"\"]]"}
+{"id": "if-attr-only-src-space", "source": "[[iframe http://example.com/   ]]"}
+{"id": "if-attr-scheme-and-attrs", "source": "[[iframe https://example.net/my-page frameborder=\"0\"]]"}
+{"id": "if-bad-unterminated", "source": "[[iframe http://example.com/"}
+{"id": "if-bad-unterminated-attrs", "source": "[[iframe http://example.com/ width=\"1\""}
+{"id": "if-bad-extra-brackets", "source": "[[iframe http://example.com/]]]"}
+{"id": "if-bad-double-opener", "source": "[[iframe http://a.com/]] [[iframe http://b.com/]]"}
+{"id": "if-bad-closer-only", "source": "[[/iframe]]"}
+{"id": "if-bad-no-space", "source": "[[iframehttp://example.com/]]"}
+{"id": "if-bad-newline-in-head", "source": "[[iframe\nhttp://example.com/]]"}
+{"id": "if-pos-midline", "source": "before [[iframe http://example.com/]] after"}
+{"id": "if-pos-line-start", "source": "text\n[[iframe http://example.com/]]"}
+{"id": "if-pos-leading-space", "source": "  [[iframe http://example.com/]]"}
+{"id": "if-pos-after-blank", "source": "a\n\n[[iframe http://example.com/]]"}
+{"id": "if-pos-two-lines", "source": "[[iframe http://a.com/]]\n[[iframe http://b.com/]]"}
+{"id": "if-pos-newline-then-text", "source": "[[iframe http://example.com/]]\nx ]]"}
+{"id": "if-tail-newline-closer", "source": "[[iframe http://e.com/]]\n[[/div]]"}
+{"id": "if-tail-no-newline-closer", "source": "[[iframe http://e.com/]][[/div]]"}
+{"id": "if-tail-two-closers", "source": "[[iframe http://e.com/]]\n[[/div]][[/span]]"}
+{"id": "if-tail-text-closer", "source": "[[iframe http://e.com/]]\nfoo\n[[/div]]"}
+{"id": "if-tail-space-stops", "source": "[[iframe http://e.com/]] foo]]"}
+{"id": "if-tail-tab-stops", "source": "[[iframe http://e.com/]]\nfoo\tx]]"}
+{"id": "if-tail-blank-span", "source": "[[iframe http://e.com/]]\n\n[[span]]y[[/span]]"}
+{"id": "if-tail-args-newline-closer", "source": "[[iframe http://e.com/ width=\"1\"]]\n[[/div]]"}
+{"id": "if-tail-surviving-close", "source": "[[div]]\n[[iframe http://example.com/]]\n[[/div]]\nspace here\n[[/div]]"}
+{"id": "if-tail-invalidates-div", "source": "[[div]]\n[[iframe http://example.com/]]\n[[/div]]"}
+{"id": "if-tail-keeps-div-after-args", "source": "[[div]]\n[[iframe http://example.com/ width=\"1\"]]\n[[/div]]"}
+{"id": "if-adj-iftags-seam-name", "source": "[[ifr[[iftags -zzz]][[/iftags]]ame http://example.com/]]"}
+{"id": "if-adj-iftags-seam-url", "source": "[[iframe http://a.example/b[[iftags -zzz]][[/iftags]]c]]"}
+{"id": "if-adj-comment-in-url", "source": "[[iframe https://exam[!--x--]ple.com/]]"}
+{"id": "if-adj-comment-before", "source": "[!-- hide --]\n[[iframe http://example.com/]]"}
+{"id": "if-adj-code-before", "source": "[[code]]\n[[iframe http://example.com/]]\n[[/code]]"}
+{"id": "if-adj-greedy-iftags-failing", "source": "[[iframe http://e.com/]]\n[[iftags a]]\nx\n[[/iftags]]\n[[/div]]"}
+{"id": "if-adj-greedy-iftags-kept", "source": "[[iframe http://e.com/]]\n[[iftags fruit]]\nx\n[[/iftags]]\n[[/div]]"}
+{"id": "if-adj-date-after", "source": "[[iframe http://example.com/]]\n[[date 0]]"}
+{"id": "if-adj-math-after", "source": "[[iframe http://example.com/]]\n[[math]]\nE=mc^2\n[[/math]]"}
+{"id": "if-adj-anchor-around", "source": "[[a href=\"/y\"]][[iframe http://example.org/embed width=\"1\"]][[/a]]"}
+{"id": "if-adj-span-around", "source": "[[span]][[iframe http://example.org/embed width=\"1\"]][[/span]]"}
+{"id": "if-adj-freelink-tail", "source": "[[iframe https://example.com/a]]\n[[https://example.com/b]]"}

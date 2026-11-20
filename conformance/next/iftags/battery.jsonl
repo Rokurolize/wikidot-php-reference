@@ -1,0 +1,80 @@
+{"id": "basic-plus-hit", "source": "[[iftags +alpha]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "basic-plus-miss", "source": "[[iftags +alpha]]KEEP[[/iftags]]", "tags": ["beta"]}
+{"id": "basic-minus-hit", "source": "[[iftags -alpha]]KEEP[[/iftags]]", "tags": ["beta"]}
+{"id": "basic-minus-miss", "source": "[[iftags -alpha]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "bare-hit", "source": "[[iftags alpha]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "bare-miss", "source": "[[iftags alpha]]KEEP[[/iftags]]", "tags": ["beta"]}
+{"id": "mixed-plus-minus-hit", "source": "[[iftags +alpha -beta gamma]]KEEP[[/iftags]]", "tags": ["alpha", "gamma"]}
+{"id": "mixed-plus-minus-miss-forbidden", "source": "[[iftags +alpha -beta gamma]]KEEP[[/iftags]]", "tags": ["alpha", "beta", "gamma"]}
+{"id": "mixed-plus-minus-miss-any", "source": "[[iftags +alpha -beta gamma]]KEEP[[/iftags]]", "tags": ["alpha", "delta"]}
+{"id": "opener-upper", "source": "[[IFTAGS +alpha]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "opener-mixed", "source": "[[Iftags +alpha]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "closer-upper", "source": "[[iftags +alpha]]KEEP[[/IFTAGS]]", "tags": ["alpha"]}
+{"id": "opener-and-closer-upper", "source": "[[IFTAGS +ALPHA]]KEEP[[/IFTAGS]]", "tags": ["alpha"]}
+{"id": "no-space-after-name", "source": "[[iftags+alpha]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "space-before-name", "source": "[[ iftags +alpha]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "extra-spaces-spec", "source": "[[iftags   +alpha   -beta  ]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "empty-spec-tagged", "source": "[[iftags]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "empty-spec-spaces-tagged", "source": "[[iftags   ]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "empty-spec-untagged", "source": "[[iftags]]KEEP[[/iftags]]"}
+{"id": "plus-untagged", "source": "[[iftags +alpha]]KEEP[[/iftags]]"}
+{"id": "case-plus-spec-upper", "source": "[[iftags +ALPHA]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "case-plus-tag-upper", "source": "[[iftags +alpha]]KEEP[[/iftags]]", "tags": ["ALPHA"]}
+{"id": "case-bare", "source": "[[iftags ALPHA]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "case-minus-spec", "source": "[[iftags -BETA]]KEEP[[/iftags]]", "tags": ["alpha", "beta"]}
+{"id": "case-minus-tag", "source": "[[iftags -beta]]KEEP[[/iftags]]", "tags": ["BETA"]}
+{"id": "comma-plus-both", "source": "[[iftags +alpha,+beta]]KEEP[[/iftags]]", "tags": ["alpha", "beta"]}
+{"id": "comma-plus-one", "source": "[[iftags +alpha,+beta]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "comma-minus", "source": "[[iftags -alpha,-beta]]KEEP[[/iftags]]", "tags": ["gamma"]}
+{"id": "comma-bare", "source": "[[iftags alpha,beta]]KEEP[[/iftags]]", "tags": ["beta"]}
+{"id": "comma-space-mixed", "source": "[[iftags +alpha, -beta gamma]]KEEP[[/iftags]]", "tags": ["alpha", "gamma"]}
+{"id": "bare-minus-only", "source": "[[iftags -]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "bare-minus-only-untagged", "source": "[[iftags -]]KEEP[[/iftags]]"}
+{"id": "bare-plus-only", "source": "[[iftags +]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "bare-double-bare", "source": "[[iftags alpha beta]]KEEP[[/iftags]]", "tags": ["beta"]}
+{"id": "bare-double-bare-miss", "source": "[[iftags alpha beta]]KEEP[[/iftags]]", "tags": ["gamma"]}
+{"id": "tag-hyphen", "source": "[[iftags +some-tag]]KEEP[[/iftags]]", "tags": ["some-tag"]}
+{"id": "tag-underscore", "source": "[[iftags +some_tag]]KEEP[[/iftags]]", "tags": ["some_tag"]}
+{"id": "tag-unicode", "source": "[[iftags +テーマ]]KEEP[[/iftags]]", "tags": ["テーマ"]}
+{"id": "nested-both-true", "source": "[[iftags +alpha]]OUT[[iftags +alpha]]IN[[/iftags]]TAIL[[/iftags]]", "tags": ["alpha"]}
+{"id": "nested-inner-false", "source": "[[iftags +alpha]]OUT[[iftags +beta]]IN[[/iftags]]TAIL[[/iftags]]", "tags": ["alpha"]}
+{"id": "nested-outer-false", "source": "[[iftags +beta]]OUT[[iftags +alpha]]IN[[/iftags]]TAIL[[/iftags]]", "tags": ["alpha"]}
+{"id": "nested-triple", "source": "[[iftags +alpha]]A[[iftags +alpha]]B[[iftags +alpha]]C[[/iftags]]D[[/iftags]]E[[/iftags]]", "tags": ["alpha"]}
+{"id": "nested-unbalanced-inner", "source": "[[iftags +alpha]]OUT[[iftags +alpha]]IN[[/iftags]]TAIL", "tags": ["alpha"]}
+{"id": "two-adjacent", "source": "[[iftags +alpha]]A[[/iftags]][[iftags +alpha]]B[[/iftags]]", "tags": ["alpha"]}
+{"id": "two-adjacent-second-false", "source": "[[iftags +alpha]]A[[/iftags]][[iftags +beta]]B[[/iftags]]", "tags": ["alpha"]}
+{"id": "unterminated-open", "source": "[[iftags +alpha]]KEEP-no-closer", "tags": ["alpha"]}
+{"id": "stray-closer", "source": "before[[/iftags]]after", "tags": ["alpha"]}
+{"id": "missing-one-bracket", "source": "[[iftags +alpha]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "triple-close-head", "source": "[[iftags +alpha]]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "closer-first", "source": "[[/iftags]]KEEP[[iftags +alpha]]TAIL[[/iftags]]", "tags": ["alpha"]}
+{"id": "newline-in-spec", "source": "[[iftags +alpha\n+beta]]KEEP[[/iftags]]", "tags": ["alpha", "beta"]}
+{"id": "inline-body", "source": "prefix [[iftags -beta]]KEEP[[/iftags]] suffix", "tags": ["alpha"]}
+{"id": "line-start-body", "source": "[[iftags -beta]]KEEP[[/iftags]]\nAFTER", "tags": ["alpha"]}
+{"id": "body-next-line", "source": "[[iftags -beta]]\nKEEP\n[[/iftags]]\nAFTER", "tags": ["alpha"]}
+{"id": "leading-space-opener", "source": "  [[iftags -beta]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "blockquote-opener", "source": "> [[iftags -beta]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "body-paragraph-breaks", "source": "[[iftags -beta]]A\n\nB\n\nC[[/iftags]]", "tags": ["alpha"]}
+{"id": "whitespace-only-body", "source": "[[iftags -beta]]   [[/iftags]]", "tags": ["alpha"]}
+{"id": "empty-body", "source": "[[iftags -beta]][[/iftags]]", "tags": ["alpha"]}
+{"id": "false-gate-newlines", "source": "A\n[[iftags +beta]]HIDDEN[[/iftags]]\nB", "tags": ["alpha"]}
+{"id": "true-gate-newlines", "source": "A\n[[iftags +alpha]]SHOWN[[/iftags]]\nB", "tags": ["alpha"]}
+{"id": "spec-comment-complete", "source": "[[iftags +alpha [!--x--] -beta]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "spec-comment-straddle", "source": "[[iftags +alpha [!--x--]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "spec-comment-closer-inside", "source": "[[iftags +alpha [!-- [[/iftags]] --]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "spec-comment-unterminated", "source": "[[iftags +alpha [!--x]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "star-flag", "source": "[[iftags* +alpha]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "score-flag", "source": "[[iftags_ +alpha]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "name-suffix", "source": "[[iftagsx +alpha]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "name-prefix", "source": "[[xiftags +alpha]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "plain-attrs", "source": "[[iftags +alpha class=x]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "body-comment", "source": "[[iftags -beta]]A[!-- c --]B[[/iftags]]", "tags": ["alpha"]}
+{"id": "body-iframe", "source": "[[iftags -beta]]\n[[iframe https://example.com/]]\n[[/iftags]]", "tags": ["alpha"]}
+{"id": "body-date", "source": "[[iftags -beta]]\n[[date 0]]\n[[/iftags]]", "tags": ["alpha"]}
+{"id": "body-math", "source": "[[iftags -beta]]\n[[math]]\nx^2\n[[/math]]\n[[/iftags]]", "tags": ["alpha"]}
+{"id": "false-hides-math", "source": "[[iftags +beta]]\n[[math]]\nx^2\n[[/math]]\n[[/iftags]]", "tags": ["alpha"]}
+{"id": "false-hides-iframe", "source": "[[iftags +beta]]\n[[iframe https://example.com/]]\n[[/iftags]]", "tags": ["alpha"]}
+{"id": "math-contains-false-iftags", "source": "[[math]]\nx [[iftags +beta]]HIDDEN[[/iftags]] y\n[[/math]]", "tags": ["alpha"]}
+{"id": "body-bold-seam", "source": "[[iftags -beta]]**BOLD**KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "body-span-seam", "source": "[[iftags -beta]][[span class=x]]SPAN[[/span]]KEEP[[/iftags]]", "tags": ["alpha"]}
+{"id": "after-block-div", "source": "[[iftags -beta]]KEEP[[/iftags]]\n[[div]]\nD\n[[/div]]", "tags": ["alpha"]}

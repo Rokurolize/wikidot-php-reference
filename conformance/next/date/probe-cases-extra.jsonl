@@ -1,0 +1,7 @@
+{"id": "blank-single", "source": "[[date ]]"}
+{"id": "blank-attr-single", "source": "[[date format=\"%Y\"]]"}
+{"id": "blank-two-attrs", "source": "[[date  format=\"%Y\" tz=\"+8\"]]"}
+{"id": "blank-unknown-attr", "source": "[[date  foo=\"bar\"]]"}
+{"id": "blank-unquoted-attr", "source": "[[date  format=%Y]]"}
+{"id": "raw-two-dates", "source": "[[date 0 format=\"@@a@@\"]]\n[[date 0 format=\"@@b@@\"]]"}
+{"id": "raw-preceded", "source": "@@x@@\n[[date 0 format=\"@@a@@\"]]"}

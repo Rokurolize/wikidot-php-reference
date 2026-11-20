@@ -1,0 +1,25 @@
+{"id":"basic","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"opener-midline","output":"<p>prefix [[math]]<br \/>\nx<br \/>\n[[\/math]]<\/p>\n\n"}
+{"id":"label-upper","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"label-hyphen","output":"<p>[[math a-b]]<br \/>\nx<br \/>\n[[\/math]]<\/p>\n\n"}
+{"id":"label-empty-spaces","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"type-eqnarray","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"type-align","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"type-unquoted","output":"<p>[[math type=align]]<br \/>\nx<br \/>\n[[\/math]]<\/p>\n\n"}
+{"id":"type-uppercase","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"attr-unknown","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"attr-hyphen-key","output":"<p>[[math foo-bar=&quot;x&quot;]]<br \/>\nx<br \/>\n[[\/math]]<\/p>\n\n"}
+{"id":"attr-underscore-key","output":"<p>[[math foo_bar=&quot;x&quot;]]<br \/>\nx<br \/>\n[[\/math]]<\/p>\n\n"}
+{"id":"body-empty","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"closer-tail-text","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><p>tail<\/p>\n\n"}
+{"id":"closer-inline","output":"<p>[[math]]x[[\/math]]<\/p>\n\n"}
+{"id":"nested-two","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><p>[[\/math]]<\/p>\n\n"}
+{"id":"nested-outer-tail","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"adjacent-two-blocks","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"unterminated","output":"<p>[[math]]<br \/>\nx<\/p>\n\n"}
+{"id":"eref-after","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><p><a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1<\/a><\/p>\n\n"}
+{"id":"comment-in-body","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"in-div","output":"<div  class=\"box\"><div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><\/div>"}
+{"id":"in-collapsible","output":"<div class=\"collapsible-block\"><div id=\"collapsible-block-0-folded\" ><a href=\"javascript:;\" onclick=\"$('collapsible-block-0-folded').style.display='none';$('collapsible-block-0-unfolded').style.display='block'; \">+ show block<\/a><\/div><div id=\"collapsible-block-0-unfolded\" style=\"display:none\"><div><a href=\"javascript:;\" onclick=\"$('collapsible-block-0-unfolded').style.display='none';$('collapsible-block-0-folded').style.display='block';\">- hide block<\/a><\/div><div id=\"collapsible-block-0-content\"><div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div><\/div><\/div><\/div>"}
+{"id":"after-date","output":"<p><span class=\"odate time_1216153821\">15 Jul 2008 20:30<\/span><\/p>\n\n<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"attr-quoted-close-bracket","output":"<p>[[math a=&quot;x]]y&quot;]<br \/>\nz<br \/>\n[[\/math]]<\/p>\n\n"}

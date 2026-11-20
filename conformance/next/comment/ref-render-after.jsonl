@@ -1,0 +1,62 @@
+{"id":"op-basic-inline","output":"<p>ab<\/p>\n\n"}
+{"id":"op-basic-line-start","output":"<p>visible<\/p>\n\n"}
+{"id":"op-basic-line-end","output":"<p>visible<\/p>\n\n"}
+{"id":"op-empty","output":"<p>ab<\/p>\n\n"}
+{"id":"op-no-space","output":"<p>ab<\/p>\n\n"}
+{"id":"op-whitespace-body","output":"<p>ab<\/p>\n\n"}
+{"id":"op-close-three-hyphens","output":"<p>ab<\/p>\n\n"}
+{"id":"op-close-four-hyphens","output":"<p>ab<\/p>\n\n"}
+{"id":"op-close-five-hyphens","output":"<p>ab<\/p>\n\n"}
+{"id":"op-hyphen-run-open-close","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"op-unmatched-closer","output":"<p>a&#8212;]b<\/p>\n\n"}
+{"id":"op-unterminated","output":"<p>a[!&#8212; hidden b<\/p>\n\n"}
+{"id":"op-unterminated-line","output":"<p>a<br \/>\n[!&#8212; hidden<br \/>\nb<\/p>\n\n"}
+{"id":"op-two-openers-one-closer","output":"<p>ab<\/p>\n\n"}
+{"id":"nl-leading-one","output":"<p>ab<\/p>\n\n"}
+{"id":"nl-leading-two","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"nl-comment-only-line","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"nl-comment-only-blank-around","output":"<p>a<\/p>\n\n<p>b<\/p>\n\n"}
+{"id":"nl-comment-at-eof","output":"<p>a<\/p>\n\n"}
+{"id":"nl-comment-at-start-tail","output":"<p>z<\/p>\n\n"}
+{"id":"nl-comment-at-start-only","output":""}
+{"id":"nl-indented-spaces","output":"<p>a<br \/>\n<br \/>\nb<\/p>\n\n"}
+{"id":"nl-indented-tab","output":"<p>a<br \/>\n<br \/>\nb<\/p>\n\n"}
+{"id":"nl-trailing-newline-local","output":"<p>ab<\/p>\n\n"}
+{"id":"ml-body","output":"<p>ab<\/p>\n\n"}
+{"id":"ml-line-start","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"ml-nested","output":"<p>a tail &#8212;]b<\/p>\n\n"}
+{"id":"ml-adjacent","output":"<p>ab<\/p>\n\n"}
+{"id":"ml-chained-lines","output":"<p>b<\/p>\n\n"}
+{"id":"ml-span-with-block-syntax","output":"<p>ab<\/p>\n\n"}
+{"id":"ml-span-with-module-opener","output":"<p>ab<\/p>\n\n"}
+{"id":"ml-span-with-math-opener","output":"<p>a<br \/>\nx<\/p>\n\n"}
+{"id":"case-upper-body","output":"<p>ab<\/p>\n\n"}
+{"id":"case-mixed-body","output":"<p>ab<\/p>\n\n"}
+{"id":"case-opener-word","output":"<p>a[!COMMENT hidden &#8212;]b<\/p>\n\n"}
+{"id":"case-close-word","output":"<p>a[!&#8212; hidden &#8212;COMMENT]b<\/p>\n\n"}
+{"id":"crlf-inline","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"crlf-line-start","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"crlf-multiline-body","output":"<p>ab<\/p>\n\n"}
+{"id":"cr-only-inline","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"cr-only-line","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"adj-before-iframe","output":"<p><iframe src=\"https:\/\/example.com\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"\" class=\"\" style=\"\" ><\/iframe><\/p>\n\n"}
+{"id":"adj-hide-iframe","output":"<p>ab<\/p>\n\n"}
+{"id":"adj-before-date","output":"<p><span class=\"odate time_0\">01 Jan 1970 00:00<\/span><\/p>\n\n"}
+{"id":"adj-before-heading","output":"<p style=\"text-align: center;\">Heading =<\/p>"}
+{"id":"adj-before-list","output":"<ul>\n    <li>item<\/li>\n<\/ul>\n\n"}
+{"id":"adj-before-div","output":"<div  class=\"x\"><p>T<\/p>\n\n<\/div>"}
+{"id":"adj-inside-code","output":"\n<div class=\"code\">\n<pre><code>A[!-- c --]B<\/code><\/pre><\/div>\n\n"}
+{"id":"adj-inside-raw","output":"<p><span style=\"white-space: pre-wrap;\">A[!--&#32;c&#32;--]B<\/span><\/p>\n\n"}
+{"id":"adj-inside-span-head","output":"<p><span  class=\"c\" style=\"\">T<\/span><\/p>\n\n"}
+{"id":"adj-span-with-iftags-head","output":"<p>body<\/p>\n\n"}
+{"id":"pin-double-bracket-head","output":"<p>[]<br \/>\nBody paragraph.<\/p>\n\n"}
+{"id":"pin-double-bracket-inline","output":"<p>Before [] after.<\/p>\n\n"}
+{"id":"pin-double-bracket-only-line","output":"<p>Line one<br \/>\n[]<br \/>\nLine two<\/p>\n\n"}
+{"id":"pin-paragraph-single-break","output":"<p>A<br \/>\nB<\/p>\n\n"}
+{"id":"pin-paragraph-line-final","output":"<p>A<\/p>\n\n"}
+{"id":"pin-comment-line-break-demotion","output":"<p>x<br \/>\n <br \/>\nz<\/p>\n\n"}
+{"id":"pin-comment-line-splice","output":"<p>x z<\/p>\n\n"}
+{"id":"pin-list-comment-line-start","output":"<ul>\n    <li>item# item<\/li>\n<\/ul>\n\n"}
+{"id":"pin-code-closer-comment-suffix","output":"<p>[[code]]<br \/>\nbody<br \/>\n[[\/code]]<\/p>\n\n"}
+{"id":"pin-double-bracket-in-block-head","output":"<p>a[[span ]] b[[\/span]]c<\/p>\n\n"}
+{"id":"pin-double-bracket-before-name","output":"<p><span  class=\"c\" style=\"\">x<\/span><\/p>\n\n"}

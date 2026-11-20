@@ -1,0 +1,25 @@
+{"id":"p-basic-plus-hit","output":"<p>A KEEP B<\/p>\n\n"}
+{"id":"p-basic-minus-hit","output":"<p>A KEEP B<\/p>\n\n"}
+{"id":"p-case-plus-spec","output":"<p>A KEEP B<\/p>\n\n"}
+{"id":"p-case-bare","output":"<p>A KEEP B<\/p>\n\n"}
+{"id":"p-case-minus","output":"<p>A  B<\/p>\n\n"}
+{"id":"p-comma-plus-both","output":"<p>A KEEP B<\/p>\n\n"}
+{"id":"p-comma-plus-one","output":"<p>A  B<\/p>\n\n"}
+{"id":"p-comma-bare","output":"<p>A KEEP B<\/p>\n\n"}
+{"id":"p-comma-space-mixed","output":"<p>A KEEP B<\/p>\n\n"}
+{"id":"p-bare-minus","output":"<p>A KEEP B<\/p>\n\n"}
+{"id":"p-bare-plus","output":"<p>A  B<\/p>\n\n"}
+{"id":"p-empty-spec-tagged","output":"<p>A  B<\/p>\n\n"}
+{"id":"p-unicode-tag","output":"<p>A KEEP B<\/p>\n\n"}
+{"id":"p-spec-comment-tagged","output":"<p>A [[iftags +alpha  -beta]]KEEP[[\/iftags]] B<\/p>\n\n"}
+{"id":"p-nested-inner-false","output":"<p>A OUT[[iftags +beta]]IN[[\/iftags]]TAIL B<\/p>\n\n"}
+{"id":"p-nested-both-true","output":"<p>A OUT[[iftags +alpha]]IN[[\/iftags]]TAIL B<\/p>\n\n"}
+{"id":"p-unterminated","output":"<p>A [[iftags +alpha]]KEEP-no-closer B<\/p>\n\n"}
+{"id":"p-stray-closer","output":"<p>A[[\/iftags]]B<\/p>\n\n"}
+{"id":"p-newline-in-spec","output":""}
+{"id":"p-spec-comment-straddle","output":""}
+{"id":"p-spec-comment-untagged","output":"<p>[[iftags +alpha  -beta]]KEEP[[\/iftags]]<\/p>\n\n"}
+{"id":"p-false-gate-lines","output":"<p>A<\/p>\n\n<p>B<\/p>\n\n"}
+{"id":"p-body-comment","output":"<p>A  B<\/p>\n\n"}
+{"id":"p-math-contains-false","output":"<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"p-adjacent-div","output":"<div ><p>D<\/p>\n\n<\/div>"}

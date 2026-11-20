@@ -1,0 +1,45 @@
+blank-single -> muse-probe-r2next-date-blank-single (created)
+blank-attr-single -> muse-probe-r2next-date-blank-attr-single (created)
+blank-two-attrs -> muse-probe-r2next-date-blank-two-attrs (created)
+blank-unknown-attr -> muse-probe-r2next-date-blank-unknown-attr (created)
+blank-unquoted-attr -> muse-probe-r2next-date-blank-unquoted-attr (created)
+raw-two-dates -> muse-probe-r2next-date-raw-two-dates (created)
+raw-preceded -> muse-probe-r2next-date-raw-preceded (created)
+7 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "blank-single": {
+  "fullname": "muse-probe-r2next-date-blank-single",
+  "source": "[[date ]]",
+  "action": "created"
+ },
+ "blank-attr-single": {
+  "fullname": "muse-probe-r2next-date-blank-attr-single",
+  "source": "[[date format=\"%Y\"]]",
+  "action": "created"
+ },
+ "blank-two-attrs": {
+  "fullname": "muse-probe-r2next-date-blank-two-attrs",
+  "source": "[[date  format=\"%Y\" tz=\"+8\"]]",
+  "action": "created"
+ },
+ "blank-unknown-attr": {
+  "fullname": "muse-probe-r2next-date-blank-unknown-attr",
+  "source": "[[date  foo=\"bar\"]]",
+  "action": "created"
+ },
+ "blank-unquoted-attr": {
+  "fullname": "muse-probe-r2next-date-blank-unquoted-attr",
+  "source": "[[date  format=%Y]]",
+  "action": "created"
+ },
+ "raw-two-dates": {
+  "fullname": "muse-probe-r2next-date-raw-two-dates",
+  "source": "[[date 0 format=\"@@a@@\"]]\n[[date 0 format=\"@@b@@\"]]",
+  "action": "created"
+ },
+ "raw-preceded": {
+  "fullname": "muse-probe-r2next-date-raw-preceded",
+  "source": "@@x@@\n[[date 0 format=\"@@a@@\"]]",
+  "action": "created"
+ }
+}
