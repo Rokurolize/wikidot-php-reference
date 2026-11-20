@@ -101,7 +101,19 @@ while (($line = fgets(STDIN)) !== false) {
     // in batch.php and probe-source.php.
     $src = str_replace("\r\n", "\n", $case['source']);
     try {
-        $wiki = new Text_Wiki($rules);
+        // R3.12 disclosed driver change: the wiki is constructed
+        // through ref_configure_wiki exactly as batch.php,
+        // prefix-source.php and probe-source.php construct it,
+        // because Interwiki's parse reads the 'sites' parse
+        // configuration (the only parse-conf key
+        // ref_configure_wiki sets) as its standalone-claim gate;
+        // an unconfigured wiki here would silently drop every
+        // standalone interwiki claim the configured pipeline
+        // makes. No other rule in the pipeline reads a parse-conf
+        // key that ref_configure_wiki sets (each reads its own
+        // class defaults), so earlier stages' slices are
+        // unaffected; the stage's regression runs verify that.
+        $wiki = ref_configure_wiki(new Text_Wiki($rules));
         // R3.4 disclosed driver change: the per-case page is constructed
         // exactly as harness/batch.php constructs it (the case's "tags"
         // array, always injected, empty when the case has none), because
@@ -166,11 +178,28 @@ while (($line = fgets(STDIN)) !== false) {
                 $bibitemIds[] = array((string) $label, $bid);
             }
         }
+        // R3.17 disclosed compared-state extension (third in the
+        // R3.4 pattern): the Anchor rule's scored-anchor registry
+        // joins the compared state, serialized identically on the
+        // Lean side. "scoredAnchors" is vars['scored_anchors'] as
+        // (end placeholder, start placeholder) pairs in insertion
+        // order (Anchor's element pass writes one pair per scored
+        // anchor it claims in the simple path; Paragraph's process
+        // reads the map for its PG-F1 wrapper suppression). A
+        // pipeline in which Anchor never runs leaves the var
+        // unset or empty, matching the model's per-document
+        // initial value (the empty list).
+        $scoredAnchors = array();
+        if (isset($wiki->vars['scored_anchors']) && is_array($wiki->vars['scored_anchors'])) {
+            foreach ($wiki->vars['scored_anchors'] as $endTok => $startTok) {
+                $scoredAnchors[] = array($endTok, $startTok);
+            }
+        }
         $out = ref_wire_encode(array('id' => $id, 'segments' => $segments,
             'tokens' => $wiki->tokens, 'equations' => $equations,
             'mathId' => isset($wiki->vars['math_id']) ? $wiki->vars['math_id'] : null,
             'footnotes' => $footnotes, 'bibitems' => $bibitems,
-            'bibitemIds' => $bibitemIds));
+            'bibitemIds' => $bibitemIds, 'scoredAnchors' => $scoredAnchors));
         $json = json_encode($out);
         if ($json === false) {
             echo json_encode(array('id' => $id,
