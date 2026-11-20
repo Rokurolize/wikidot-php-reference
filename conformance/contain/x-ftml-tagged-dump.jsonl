@@ -1,0 +1,5 @@
+{"errors":[],"html":"<div><p>inside</p></div><p>visible</p>","id":"x12-iftags-suppressed-div-tagged"}
+{"errors":[],"html":"<div><p>inside</p></div><p>visible</p>","id":"x13-iftags-active-div-tagged"}
+{"errors":[],"html":"<p>visible</p>","id":"x14-iftags-suppressed-coll-tagged"}
+{"errors":[],"html":"<p>visible</p>","id":"x15-iftags-active-coll-tagged"}
+{"errors":[],"html":"<br>\n<div id=\"wiki-tabview-cb1b29f812e5161287fa4c26392f9b9a\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li></ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><p>body</p></div></div></div><p>visible</p>","id":"x16-iftags-suppressed-tab-tagged"}

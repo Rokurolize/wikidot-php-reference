@@ -1,0 +1,132 @@
+{
+ "long-px": {
+  "fullname": "muse-probe-r2contain-size-long-px",
+  "source": "[[size 123456px]]X[[/size]]",
+  "action": "created"
+ },
+ "long-pct": {
+  "fullname": "muse-probe-r2contain-size-long-pct",
+  "source": "[[size 1000000%]]X[[/size]]",
+  "action": "created"
+ },
+ "multi-dot": {
+  "fullname": "muse-probe-r2contain-size-multi-dot",
+  "source": "[[size 1.2.3px]]X[[/size]]",
+  "action": "created"
+ },
+ "dot-only": {
+  "fullname": "muse-probe-r2contain-size-dot-only",
+  "source": "[[size .px]]X[[/size]]",
+  "action": "created"
+ },
+ "trailing-dot": {
+  "fullname": "muse-probe-r2contain-size-trailing-dot",
+  "source": "[[size 1.px]]X[[/size]]",
+  "action": "created"
+ },
+ "nbsp-arg": {
+  "fullname": "muse-probe-r2contain-size-nbsp-arg",
+  "source": "[[size  100% ]]X[[/size]]",
+  "action": "created"
+ },
+ "upper-value": {
+  "fullname": "muse-probe-r2contain-size-upper-value",
+  "source": "[[size LARGER]]X[[/size]]",
+  "action": "created"
+ },
+ "upper-unit": {
+  "fullname": "muse-probe-r2contain-size-upper-unit",
+  "source": "[[size 80PX]]X[[/size]]",
+  "action": "created"
+ },
+ "pt-unit": {
+  "fullname": "muse-probe-r2contain-size-pt-unit",
+  "source": "[[size 12pt]]X[[/size]]",
+  "action": "created"
+ },
+ "double-space-head": {
+  "fullname": "muse-probe-r2contain-size-double-space-head",
+  "source": "[[size  100%]]X[[/size]]",
+  "action": "created"
+ },
+ "equals-form": {
+  "fullname": "muse-probe-r2contain-size-equals-form",
+  "source": "[[size=100%]]X[[/size=]]",
+  "action": "created"
+ },
+ "quoted-value": {
+  "fullname": "muse-probe-r2contain-size-quoted-value",
+  "source": "[[size \"100%\"]]X[[/size]]",
+  "action": "created"
+ },
+ "closer-with-space": {
+  "fullname": "muse-probe-r2contain-size-closer-with-space",
+  "source": "[[size 80%]]x[[/size ]]",
+  "action": "created"
+ },
+ "entity-head": {
+  "fullname": "muse-probe-r2contain-size-entity-head",
+  "source": "[[size 100&#37;]]X[[/size]]",
+  "action": "created"
+ },
+ "mixed-case-tag": {
+  "fullname": "muse-probe-r2contain-size-mixed-case-tag",
+  "source": "[[SiZe larger]]X[[/sIzE]]",
+  "action": "created"
+ },
+ "no-arg": {
+  "fullname": "muse-probe-r2contain-size-no-arg",
+  "source": "[[size]]X[[/size]]",
+  "action": "created"
+ },
+ "empty-body": {
+  "fullname": "muse-probe-r2contain-size-empty-body",
+  "source": "[[size 100%]][[/size]]",
+  "action": "created"
+ },
+ "ws-body": {
+  "fullname": "muse-probe-r2contain-size-ws-body",
+  "source": "[[size 100%]]   [[/size]]",
+  "action": "created"
+ },
+ "space-before-close": {
+  "fullname": "muse-probe-r2contain-size-space-before-close",
+  "source": "[[size 120%]]x [[/size]]",
+  "action": "created"
+ },
+ "nested-pair": {
+  "fullname": "muse-probe-r2contain-size-nested-pair",
+  "source": "[[size 80%]]a[[size 90%]]b[[/size]]c[[/size]]",
+  "action": "created"
+ },
+ "crossed-span": {
+  "fullname": "muse-probe-r2contain-size-crossed-span",
+  "source": "[[size 80%]]a[[span class=\"x\"]]b[[/size]]c[[/span]]",
+  "action": "created"
+ },
+ "crossed-color": {
+  "fullname": "muse-probe-r2contain-size-crossed-color",
+  "source": "[[color red]]a[[size 80%]]b[[/color]]c[[/size]]",
+  "action": "created"
+ },
+ "crossed-bold": {
+  "fullname": "muse-probe-r2contain-size-crossed-bold",
+  "source": "**[[size 110%]]OVERWATCH COUNCIL**[[/size]]",
+  "action": "created"
+ },
+ "size-in-div": {
+  "fullname": "muse-probe-r2contain-size-size-in-div",
+  "source": "[[div class=\"d\"]]\n[[size 80%]]x[[/size]]\n[[/div]]",
+  "action": "created"
+ },
+ "list-in-size": {
+  "fullname": "muse-probe-r2contain-size-list-in-size",
+  "source": "[[size 80%]]a\n* x\n* y\n[[/size]]",
+  "action": "created"
+ },
+ "size-crosses-div": {
+  "fullname": "muse-probe-r2contain-size-size-crosses-div",
+  "source": "[[size larger]]\n[[div class=\"outer\"]]\nheader\n[[div class=\"links\"]]\nlink\n[[/div]]\n[[div class=\"content\"]]\n[[/size]]\nbody\n[[/div]]\n[[/div]]",
+  "action": "created"
+ }
+}

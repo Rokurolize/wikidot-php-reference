@@ -1,0 +1,5 @@
+{"id":"x12-iftags-suppressed-div-tagged","output":"<div ><p>inside<\/p>\n\n<\/div><p>visible<\/p>\n\n"}
+{"id":"x13-iftags-active-div-tagged","output":"<div ><p>inside<\/p>\n\n<\/div><p>visible<\/p>\n\n"}
+{"id":"x14-iftags-suppressed-coll-tagged","output":"<p>visible<\/p>\n\n"}
+{"id":"x15-iftags-active-coll-tagged","output":"<p>visible<\/p>\n\n"}
+{"id":"x16-iftags-suppressed-tab-tagged","output":"<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/element-beta-min.js\"><\/script>\n<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/tabview-min.js\"><\/script><div id=\"wiki-tabview-0\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>title=A<\/em><\/a><\/li><\/ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><p>body<\/p>\n\n<\/div><\/div><\/div><script type=\"text\/javascript\">\n(function(){\n\tvar tabView0 = new YAHOO.widget.TabView('wiki-tabview-0');\n})();\n<\/script><p>visible<\/p>\n\n"}

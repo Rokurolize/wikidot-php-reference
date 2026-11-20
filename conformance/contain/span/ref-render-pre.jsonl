@@ -1,0 +1,61 @@
+{"id":"s01-plain","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s02-inline-context","output":"<p>BEGIN|<span  style=\"\">X<\/span>|END<\/p>\n\n"}
+{"id":"s03-empty","output":"<p><span  style=\"\"><\/span><\/p>\n\n"}
+{"id":"s04-empty-spaces","output":"<p>[[span ]]  [[\/span]]<\/p>\n\n"}
+{"id":"s05-multiline","output":"<p><span  style=\"\">line one<br \/>\nline two<\/span><\/p>\n\n"}
+{"id":"s06-uppercase","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s07-two-spans","output":"<p><span  style=\"\">A<\/span> <span  style=\"\">B<\/span><\/p>\n\n"}
+{"id":"s08-leading-trailing","output":"<p>a <span  style=\"\"> X <\/span> b<\/p>\n\n"}
+{"id":"s09-class","output":"<p><span  class=\"c\" style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s10-id","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s11-style","output":"<p><span  style=\"color:red\">X<\/span><\/p>\n\n"}
+{"id":"s12-style-two","output":"<p><span  style=\"color:red; font-size:120%\">X<\/span><\/p>\n\n"}
+{"id":"s13-style-hidden","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s14-style-none","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s15-title","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s16-role","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s17-data","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s18-unknown","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s19-onclick","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s20-class-id-style","output":"<p><span  class=\"c\" style=\"color:red\">X<\/span><\/p>\n\n"}
+{"id":"s21-single-quote","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s22-unquoted","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s23-attr-spaces","output":"<p><span  class=\"c\" style=\"color:red\">X<\/span><\/p>\n\n"}
+{"id":"s24-nested","output":"<p><span  style=\"\">outer <span  style=\"\">inner<\/span><\/span><\/p>\n\n"}
+{"id":"s24b-nested3","output":"<p><span  style=\"\">a<span  style=\"\">b<span  style=\"\">c<\/span><\/span><\/span><\/p>\n\n"}
+{"id":"s25-crossed","output":"<p><span  style=\"\">A <span  style=\"\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"s26-stray-close","output":"<p>X [[\/span]] Y<\/p>\n\n"}
+{"id":"s27-unterminated","output":"<p>[[span]]unterminated<\/p>\n\n"}
+{"id":"s28-close-first","output":"<p>[[\/span]] <span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s29-span-size","output":"<p><span  style=\"\">A <span style=\"font-size:120%;\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"s30-span-color","output":"<p><span  style=\"\">A <span style=\"color: red;\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"s31-span-strike","output":"<p><span  style=\"\">A <span style=\"text-decoration: line-through;\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"s32-size-span","output":"<p><span style=\"font-size:120%;\">A <span  style=\"\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"s33-color-span","output":"<p><span style=\"color: red;\">A <span  style=\"\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"s34-strike-span","output":"<p><span style=\"text-decoration: line-through;\">A <span  style=\"\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"s35-span-size-cross","output":"<p><span  style=\"\">A <span style=\"font-size:120%;\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"s36-span-color-cross","output":"<p><span  style=\"\">A <span style=\"color: red;\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"s37-span-strike-cross","output":"<p><span  style=\"\">A <span style=\"text-decoration: line-through;\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"s38-size-color-strike","output":"<p><span style=\"font-size:120%;\">A <span style=\"color: red;\"><span style=\"text-decoration: line-through;\">B<\/span><\/span> C<\/span><\/p>\n\n"}
+{"id":"s39-span-in-span-block","output":"<p><span  style=\"\">A<br \/>\n<span  style=\"\">B<\/span><br \/>\nC<\/span><\/p>\n\n"}
+{"id":"s40-score-span","output":"<p>[[span_]]X[[\/span]]<\/p>\n\n"}
+{"id":"s41-score-span-extra","output":"<p>[[span_]]]X[[\/span]]<\/p>\n\n"}
+{"id":"s42-percent","output":"<p>%%hidden%%<\/p>\n\n"}
+{"id":"s43-percent-span","output":"<p><span  style=\"\">%%hidden%%<\/span><\/p>\n\n"}
+{"id":"s44-malformed-opener","output":"<p>[[span class=&quot;c&quot;X[[\/span]]<\/p>\n\n"}
+{"id":"s45-missing-space","output":"<p>[[spanclass=&quot;c&quot;]]X[[\/span]]<\/p>\n\n"}
+{"id":"s46-double-open","output":"<p><span  style=\"\">[[span]]X<\/span><\/p>\n\n"}
+{"id":"s47-newline-in-attr","output":"<p><span  class=\"c\" style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s48-span-in-div","output":"<div ><p><span  style=\"\">X<\/span><\/p>\n\n<\/div>"}
+{"id":"s49-div-in-span","output":"<p><span  style=\"\">A [[div]]B[[\/div]] C<\/span><\/p>\n\n"}
+{"id":"s50-span-across-div","output":"<p><span  style=\"\">A<br \/>\n[[div]]B[[\/div]]<br \/>\nC<\/span><\/p>\n\n"}
+{"id":"s51-span-in-collapsible","output":"<div class=\"collapsible-block\"><div id=\"collapsible-block-0-folded\" ><a href=\"javascript:;\" onclick=\"$('collapsible-block-0-folded').style.display='none';$('collapsible-block-0-unfolded').style.display='block'; \">+ show block<\/a><\/div><div id=\"collapsible-block-0-unfolded\" style=\"display:none\"><div><a href=\"javascript:;\" onclick=\"$('collapsible-block-0-unfolded').style.display='none';$('collapsible-block-0-folded').style.display='block';\">- hide block<\/a><\/div><div id=\"collapsible-block-0-content\"><p><span  style=\"\">X<\/span><\/p>\n\n<\/div><\/div><\/div>"}
+{"id":"s52-span-in-heading","output":"\n<h1 id=\"toc0\"><span><span  style=\"\">Head<\/span><\/span><\/h1>\n"}
+{"id":"s53-span-in-quote","output":"<blockquote><p><span  style=\"\">Quoted<\/span><\/p>\n\n<\/blockquote>\n"}
+{"id":"s54-span-in-list","output":"<ul>\n    <li><span  style=\"\">item<\/span><\/li>\n<\/ul>\n\n"}
+{"id":"s55-span-in-code","output":"\n<div class=\"code\">\n<pre><code>[[span]]literal[[\/span]]<\/code><\/pre><\/div>\n\n"}
+{"id":"s56-span-in-iftags","output":"<p><span  style=\"\">kept<\/span><\/p>\n\n"}
+{"id":"s57-span-block-content","output":"<p><span  style=\"\">+ head<\/p>\n\n<ul>\n    <li>list<\/span><\/li>\n<\/ul>\n\n"}
+{"id":"s58-span-attr-entity","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s59-span-class-empty","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}
+{"id":"s60-span-style-empty","output":"<p><span  style=\"\">X<\/span><\/p>\n\n"}

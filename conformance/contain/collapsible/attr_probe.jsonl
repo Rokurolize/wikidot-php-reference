@@ -1,0 +1,5 @@
+{"id": "a1", "source": "[[collapsible id=\"hider\" class=\"myc\" style=\"color: teal\" data-hider=\"ya\"]]\nfoo\n[[/collapsible]]"}
+{"id": "a2", "source": "[[COLLAPSIBLE id=\"hider\" class=\"myc\" style=\"color: teal\" data-hider=\"ya\"]]foo[[/COLLAPSIBLE]]"}
+{"id": "a3", "source": "[[collapsible class=\"myc\"]]\nfoo\n[[/collapsible]]"}
+{"id": "a4", "source": "[[collapsible id=\"hider\"]]\nfoo\n[[/collapsible]]"}
+{"id": "a5", "source": "[[collapsible show=\"OPEN\" hide=\"CLOSE\"]]\nfoo\n[[/collapsible]]"}

@@ -1,0 +1,13 @@
+boundary-5-px -> muse-probe-r2contain-size-boundary-5-px stable=True saved_source_matches=True valid=True
+{
+ "boundary-5-px": {
+  "fullname": "muse-probe-r2contain-size-boundary-5-px",
+  "html": "<p><span style=\"font-size:12345px;\">X</span></p>",
+  "html_sha256": "b26e8e8e237af0c6fd4efd919505e7aca339a985257202ddca8d9c069f01d8fb",
+  "source": "[[size 12345px]]X[[/size]]",
+  "source_sha256": "1d47e86d4a74404d51fd4990f36b52b30d555e6e3f1e410046893081272e74cd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

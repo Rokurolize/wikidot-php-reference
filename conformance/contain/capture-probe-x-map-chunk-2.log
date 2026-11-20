@@ -1,0 +1,68 @@
+x07-span-size-strike-cross -> muse-probe-r2contain-x-x07-span-size-strike-cross stable=True saved_source_matches=True valid=True
+x08-span-nested-same -> muse-probe-r2contain-x-x08-span-nested-same stable=True saved_source_matches=True valid=True
+x09-size-nested-same -> muse-probe-r2contain-x-x09-size-nested-same stable=True saved_source_matches=True valid=True
+x10-span-empty -> muse-probe-r2contain-x-x10-span-empty stable=True saved_source_matches=True valid=True
+x11-span-size-cross-block -> muse-probe-r2contain-x-x11-span-size-cross-block stable=True saved_source_matches=True valid=True
+x12-iftags-suppressed-div -> muse-probe-r2contain-x-x12-iftags-suppressed-div stable=True saved_source_matches=True valid=True
+{
+ "x07-span-size-strike-cross": {
+  "fullname": "muse-probe-r2contain-x-x07-span-size-strike-cross",
+  "html": "<p><span>A<span style=\"font-size:12px;\">B<span style=\"text-decoration: line-through;\">C</span>D</span>E</span></p>",
+  "html_sha256": "3eb3a349c3e44550a2b22f80d75751b53ae073fdb90137ef59fc0adff955553d",
+  "source": "[[span class=a]]A[[size 12px]]B--C[[/span]]D[[/size]]E--",
+  "source_sha256": "8962e194e555f6e12d66ee3df7bdd722fd1f5ad6ed7e9c6de0e6b2ffed8c3cd5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x08-span-nested-same": {
+  "fullname": "muse-probe-r2contain-x-x08-span-nested-same",
+  "html": "<p><span>A<span>B</span>C</span></p>",
+  "html_sha256": "abb4b778cdf5ed6ce905e29ec44e475e0096e74a3b66a155430cc4788e55c1c1",
+  "source": "[[span class=a]]A[[span class=b]]B[[/span]]C[[/span]]",
+  "source_sha256": "d26f06b491f8df88f58ef68bbd37fa0e9e2eb0b01169de186eaf226897296255",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x09-size-nested-same": {
+  "fullname": "muse-probe-r2contain-x-x09-size-nested-same",
+  "html": "<p><span style=\"font-size:12px;\">A<span style=\"font-size:14px;\">B</span>C</span></p>",
+  "html_sha256": "57ef6a8a1820dc8bdc614ce619a7808007c4526de288966d33db3002060f6889",
+  "source": "[[size 12px]]A[[size 14px]]B[[/size]]C[[/size]]",
+  "source_sha256": "fc3a8a2414f57cd85739acb22063aeb96777d2100cc5fb78b997b7d3612d6e14",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x10-span-empty": {
+  "fullname": "muse-probe-r2contain-x-x10-span-empty",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[span]] [[/span]]",
+  "source_sha256": "f6966021f337fe1ac577afe9ae87af28684f3512ad0f5ae4fc6e36fb20a66774",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x11-span-size-cross-block": {
+  "fullname": "muse-probe-r2contain-x-x11-span-size-cross-block",
+  "html": "<div>\n<p><span>A<span style=\"font-size:12px;\">B</span>C</span></p>\n</div>",
+  "html_sha256": "ba45ff82c2bba95e8d4b1db68da29331c82c9a3fea484147602da0632d5c41ee",
+  "source": "[[div class=d]]\n[[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]\n[[/div]]",
+  "source_sha256": "142e2fcef49b19aaf6dc54e08b9a6bbbe9a76d8e42ea09c123678f44e6d40114",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x12-iftags-suppressed-div": {
+  "fullname": "muse-probe-r2contain-x-x12-iftags-suppressed-div",
+  "html": "<p>visible</p>",
+  "html_sha256": "487a70dfee26569d65df26e32eaf580849b2772b18d76eb1647eec0460cd8ce8",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "source_sha256": "0daf9e94392c44785fa9b4509cb9f6abefa43767968fac5194bc380ba263a4a1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

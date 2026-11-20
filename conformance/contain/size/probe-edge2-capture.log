@@ -1,0 +1,13 @@
+internal-space-newline -> muse-probe-r2contain-size-internal-space-newline stable=True saved_source_matches=True valid=True
+{
+ "internal-space-newline": {
+  "fullname": "muse-probe-r2contain-size-internal-space-newline",
+  "html": "<p><span style=\"font-size:120%;\">a<br />\nb</span></p>",
+  "html_sha256": "397c97734d919427830157c765f794515c6f5ce3878d1c73d0129d6ab057b996",
+  "source": "[[size 120%]]a   \nb[[/size]]",
+  "source_sha256": "04fa74c4b951f8f4434831a384e91798867f0c6dc21857ee3dcbfd9bd9ba12e7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

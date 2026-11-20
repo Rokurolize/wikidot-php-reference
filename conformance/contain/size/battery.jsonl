@@ -1,0 +1,80 @@
+{"id": "sz01-pct", "source": "[[size 90%]]Banana[[/size]]"}
+{"id": "sz02-px", "source": "[[size 4px]]Cherry[[/size]]"}
+{"id": "sz03-em-leading-dot", "source": "[[size .5em]]X[[/size]]"}
+{"id": "sz04-em-decimal", "source": "[[size 1.5em]]X[[/size]]"}
+{"id": "sz05-pct-integer", "source": "[[size 100%]]X[[/size]]"}
+{"id": "sz06-named-small", "source": "[[size small]]X[[/size]]"}
+{"id": "sz07-named-xxsmall", "source": "[[size xx-small]]X[[/size]]"}
+{"id": "sz08-named-medium", "source": "[[size medium]]X[[/size]]"}
+{"id": "sz09-named-larger", "source": "[[size larger]]X[[/size]]"}
+{"id": "sz10-named-xxlarge", "source": "[[size xx-large]]X[[/size]]"}
+{"id": "sz11-long-digits-px", "source": "[[size 123456px]]X[[/size]]"}
+{"id": "sz12-long-digits-pct", "source": "[[size 1000000%]]X[[/size]]"}
+{"id": "sz13-multi-dot-px", "source": "[[size 1.2.3px]]X[[/size]]"}
+{"id": "sz14-trailing-dot-px", "source": "[[size 1.px]]X[[/size]]"}
+{"id": "sz15-dot-only-px", "source": "[[size .px]]X[[/size]]"}
+{"id": "sz16-pt-unit", "source": "[[size 12pt]]X[[/size]]"}
+{"id": "sz17-rem-unit", "source": "[[size 1rem]]X[[/size]]"}
+{"id": "sz18-vh-unit", "source": "[[size 2vh]]X[[/size]]"}
+{"id": "sz19-negative-px", "source": "[[size -1px]]X[[/size]]"}
+{"id": "sz20-plus-px", "source": "[[size +1px]]X[[/size]]"}
+{"id": "sz21-exponent-pct", "source": "[[size 1e2%]]X[[/size]]"}
+{"id": "sz22-inf-pct", "source": "[[size inf%]]X[[/size]]"}
+{"id": "sz23-nan-pct", "source": "[[size NaN%]]X[[/size]]"}
+{"id": "sz24-upper-larger", "source": "[[size LARGER]]X[[/size]]"}
+{"id": "sz25-title-larger", "source": "[[size Larger]]X[[/size]]"}
+{"id": "sz26-upper-px", "source": "[[size 80PX]]X[[/size]]"}
+{"id": "sz27-upper-em", "source": "[[size 1EM]]X[[/size]]"}
+{"id": "sz28-upper-small", "source": "[[size SMALL]]X[[/size]]"}
+{"id": "sz29-upper-xlarge", "source": "[[size X-LARGE]]X[[/size]]"}
+{"id": "sz30-nbsp-arg", "source": "[[size  100% ]]X[[/size]]"}
+{"id": "sz31-no-arg", "source": "[[size]]X[[/size]]"}
+{"id": "sz32-junk", "source": "[[size banana]]X[[/size]]"}
+{"id": "sz33-opener-upper", "source": "[[SIZE 100%]]X[[/SIZE]]"}
+{"id": "sz34-opener-title", "source": "[[Size 100%]]X[[/Size]]"}
+{"id": "sz35-opener-mixed-closer", "source": "[[SiZe larger]]X[[/sIzE]]"}
+{"id": "sz36-leading-space-name", "source": "[[ size 100%]]X[[/size]]"}
+{"id": "sz37-double-space", "source": "[[size  100%]]X[[/size]]"}
+{"id": "sz38-tab-separator", "source": "[[size\t100%]]X[[/size]]"}
+{"id": "sz39-newline-in-head", "source": "[[size\n100%]]X[[/size]]"}
+{"id": "sz40-equals-form", "source": "[[size=100%]]X[[/size=]]"}
+{"id": "sz41-quoted-value", "source": "[[size \"100%\"]]X[[/size]]"}
+{"id": "sz42-trailing-head-space", "source": "[[size 100% ]]X[[/size]]"}
+{"id": "sz43-entity-head", "source": "[[size 100&#37;]]X[[/size]]"}
+{"id": "sz44-escaped-head", "source": "[[size 100\\%]]X[[/size]]"}
+{"id": "sz45-extra-close-in-head", "source": "[[size 100%]]]X[[/size]]"}
+{"id": "sz46-attr-like", "source": "[[size 100% class=\"x\"]]X[[/size]]"}
+{"id": "sz47-empty-body", "source": "[[size 100%]][[/size]]"}
+{"id": "sz48-whitespace-body", "source": "[[size 100%]]   [[/size]]"}
+{"id": "sz49-unterminated", "source": "[[size 100%]]text"}
+{"id": "sz50-stray-closer", "source": "text[[/size]]"}
+{"id": "sz51-space-before-close", "source": "[[size 120%]]x [[/size]]"}
+{"id": "sz52-double-close", "source": "[[size 80%]]x[[/size]]y[[/size]]"}
+{"id": "sz53-space-in-closer", "source": "[[size 80%]]x[[/size ]]"}
+{"id": "sz54-unpaired-close-preserved", "source": "[[SIZE]]outer [[size 80%]]valid[[/size]] tail[[/SIZE]] [[size 90%]]later[[/size]]"}
+{"id": "sz55-nested-pair", "source": "[[size 80%]]a[[size 90%]]b[[/size]]c[[/size]]"}
+{"id": "sz56-crossed-pair", "source": "[[size 80%]]a[[size 90%]]b[[/size]]c[[/size]]d"}
+{"id": "sz57-size-in-span", "source": "[[span class=\"x\"]]a[[size 80%]]b[[/size]]c[[/span]]"}
+{"id": "sz58-span-in-size", "source": "[[size 80%]]a[[span class=\"x\"]]b[[/span]]c[[/size]]"}
+{"id": "sz59-cross-size-span", "source": "[[size 80%]]a[[span class=\"x\"]]b[[/size]]c[[/span]]"}
+{"id": "sz60-size-in-color", "source": "[[color red]]a[[size 80%]]b[[/size]]c[[/color]]"}
+{"id": "sz61-color-in-size", "source": "[[color red]]a[[size 80%]]b[[/color]]c[[/size]]"}
+{"id": "sz62-size-in-strike", "source": "[[strikethrough]]a[[size 80%]]b[[/size]]c[[/strikethrough]]"}
+{"id": "sz63-strike-in-size", "source": "[[strikethrough]]a[[size 80%]]b[[/strikethrough]]c[[/size]]"}
+{"id": "sz64-size-in-div", "source": "[[div class=\"d\"]]\n[[size 80%]]x[[/size]]\n[[/div]]"}
+{"id": "sz65-size-in-blockquote", "source": "[[blockquote]]\n[[size 80%]]x[[/size]]\n[[/blockquote]]"}
+{"id": "sz66-size-in-list", "source": "* [[size 80%]]x[[/size]]\n* y"}
+{"id": "sz67-size-in-heading", "source": "+ [[size 80%]]x[[/size]]"}
+{"id": "sz68-div-in-size", "source": "[[size 80%]]a[[div class=\"d\"]]b[[/div]]c[[/size]]"}
+{"id": "sz69-list-in-size", "source": "[[size 80%]]a\n* x\n* y\n[[/size]]"}
+{"id": "sz70-size-crosses-div", "source": "[[size larger]]\n[[div class=\"outer\"]]\nheader\n[[div class=\"links\"]]\nlink\n[[/div]]\n[[div class=\"content\"]]\n[[/size]]\nbody\n[[/div]]\n[[/div]]"}
+{"id": "sz71-stray-close-bridge", "source": "[[size 80%]]a[[/size]][[/size]]b"}
+{"id": "sz72-crossed-closers", "source": "[[size 80%]]a[[size 90%]]b[[/size]]c[[/size]]"}
+{"id": "sz73-code-content-wrapped", "source": "[[size 80%]][[code]]x[[/code]][[/size]]"}
+{"id": "sz74-bold-crossed", "source": "**[[size 110%]]OVERWATCH COUNCIL**[[/size]]"}
+{"id": "sz75-list-bold-close", "source": "[[size 80%]]* **a**\n* b\n[[/size]]"}
+{"id": "sz76-unicode-body", "source": "[[size 80%]]café 日本語[[/size]]"}
+{"id": "sz77-entities-body", "source": "[[size 80%]]&amp; &lt; &#39;[[/size]]"}
+{"id": "sz78-comment-in-head", "source": "[[size [% comment %]80%]]X[[/size]]"}
+{"id": "sz79-nul-body", "source": "[[size 120%]]A\u0000B[[/size]]"}
+{"id": "sz80-multiple-pairs", "source": "[[size 80%]]a[[/size]] [[size 90%]]b[[/size]]"}

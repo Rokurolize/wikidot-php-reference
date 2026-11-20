@@ -1,0 +1,35 @@
+{"id":"basic","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"basic-uppercase","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"basic-two-paras","output":"<div ><p>A<\/p>\n\n<p>B<\/p>\n\n<\/div>"}
+{"id":"attr-id","output":"<div  id=\"u-panel\"><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-id-prefixed","output":"<div  id=\"u-panel\"><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-id-space","output":"<div  id=\"u-\"><p>x<\/p>\n\n<\/div>"}
+{"id":"attr-data-empty-suffix","output":"<div  data-=\"v\"><p>T<\/p>\n\n<\/div>"}
+{"id":"attr-allowlist","output":"<div  class=\"card\" data-bar=\"two\" data-foo=\"one\" id=\"u-panel\" role=\"note\" style=\"color: red\" type=\"t\"><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-allowlist-mixed","output":"<div  data-mixed=\"four\"><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-single-quote","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-unquoted","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-class-space","output":"<div  class=\"a b\"><p>x<\/p>\n\n<\/div>"}
+{"id":"attr-style-hidden-display","output":"<div  style=\"display:none\"><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-style-hidden-vis","output":"<div  style=\"visibility:hidden\"><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-style-hidden-mixed","output":"<div  style=\"display: none; color: red\"><p>hello<\/p>\n\n<\/div>"}
+{"id":"empty-plain","output":"<p>B<\/p>\n\n"}
+{"id":"empty-attr","output":"<div  class=\"k\"><\/div><br \/>\nB"}
+{"id":"unterminated","output":"<p>[[div]]<br \/>\nhello<\/p>\n\n"}
+{"id":"stray","output":"<p>hello<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"closer-first","output":"<div ><p>A<\/p>\n\n<\/div><br \/>\nB<br \/>\n[[\/div]]"}
+{"id":"inline-span","output":"<div ><p><span  style=\"\">egg<\/span><\/p>\n\n<\/div>"}
+{"id":"crossed-span","output":"<p>[[div]]A1<span  style=\"\">B2[[\/div]]C3<\/span>D4<\/p>\n\n"}
+{"id":"nested","output":"<div ><p>A<\/p>\n\n<div ><p>B<\/p>\n\n<\/div><br \/>\nC<\/div>"}
+{"id":"nested-scored","output":"<div >1<br \/>\n<div >2<\/div><br \/>\n3<\/div>"}
+{"id":"div-in-collapsible","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><div ><p>A<\/p>\n\n<\/div><\/div><\/div><\/div>"}
+{"id":"div-in-tabview","output":"<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/element-beta-min.js\"><\/script>\n<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/tabview-min.js\"><\/script><div id=\"wiki-tabview-0\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>T<\/em><\/a><\/li><\/ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><div ><p>A<\/p>\n\n<\/div><\/div><\/div><\/div><script type=\"text\/javascript\">\n(function(){\n\tvar tabView0 = new YAHOO.widget.TabView('wiki-tabview-0');\n})();\n<\/script>"}
+{"id":"malformed-division","output":"<p>[[division]]<br \/>\nA<br \/>\n[[\/division]]<\/p>\n\n"}
+{"id":"score-basic","output":"<div >hello<\/div>"}
+{"id":"score-attr","output":"<div  class=\"strip\">hello<\/div>"}
+{"id":"score-attrs-full","output":"<div  class=\"strip\" data-x=\"y\" role=\"note\">Body<\/div>"}
+{"id":"score-attrs-id","output":"<div  data-z=\"1\" id=\"u-q\" role=\"note\">x<\/div>"}
+{"id":"score-empty","output":"<p>B<\/p>\n\n"}
+{"id":"score-attr-empty","output":"<div  class=\"k\"><\/div><br \/>\nB"}
+{"id":"score-inline","output":"<p>[[div_]]Banana[[\/div]]<\/p>\n\n"}
+{"id":"score-two-lines","output":"<div >apple<br \/>\nbanana<\/div>"}

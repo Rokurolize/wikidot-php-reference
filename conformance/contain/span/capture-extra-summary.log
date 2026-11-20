@@ -1,0 +1,5 @@
+p31-data-case captured (attempt 1): valid=True
+p32-value-amp captured (attempt 1): valid=True
+p33-space-attr captured (attempt 1): valid=True
+p34-escaped-quote captured (attempt 1): valid=True
+wrote 4 captures to /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/span/captures-extra.json

@@ -1,0 +1,12 @@
+{
+ "multi-space-close": {
+  "fullname": "muse-probe-r2contain-size-multi-space-close",
+  "html": "<p><span style=\"font-size:120%;\">x</span></p>",
+  "html_sha256": "06597af84b7bb575ef2e7a99b010f936041b747b7d285517cdb96ae028fbdfb0",
+  "source": "[[size 120%]]x   [[/size]]",
+  "source_sha256": "d3bf881eab8e9453ab9dd2f043f54c16e29c2ff670e8b8be77b206d0361af8c6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

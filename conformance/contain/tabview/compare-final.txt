@@ -1,0 +1,84 @@
+BATTERY reference-vs-ftml (ids normalized for tab/tabview counters; struct also removes frame whitespace, <div >, <br />):
+  before: ids=53 raw=0 norm=11 struct=39
+  after: ids=54 raw=0 norm=11 struct=45
+  common-53 before struct=39/53 after struct=44/53
+  render changed by corrections (norm, excluding counter/whitespace): 6: tv09-attr-then-text, tv16-title-entities, tv17-title-htmlchars, tv23-coll-in-tab, tv24-div-in-coll-in-tab, tv52-title-raw
+
+PROBES before three-way:
+  p01-basic-two: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p02-title-double-space: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p03-title-trailing-space: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p04-title-entity: ftml_live (ref_live=False ftml_live=True ref_ftml=False)
+    LIVE: '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A &amp;amp; B</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+    REF : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A &amp; B</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+    FTL : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A &amp;amp; B</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+  p05-title-htmlchars: ftml_live (ref_live=False ftml_live=True ref_ftml=False)
+    LIVE: '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>&lt;em&gt;x&lt;/em&gt;</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+    REF : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em><em>x</em></em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+    FTL : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>&lt;em&gt;x&lt;/em&gt;</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+  p06-attr-then-text: ftml_live (ref_live=False ftml_live=True ref_ftml=False)
+    LIVE: '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>class=&quot;c&quot; A</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+    REF : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>class="c" A</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+    FTL : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>class=&quot;c&quot; A</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+  p07-raw-title: ftml_live (ref_live=False ftml_live=True ref_ftml=False)
+    LIVE: '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+    REF : 'MISSING'
+    FTL : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+  p08-view-class: ftml_live (ref_live=False ftml_live=True ref_ftml=False)
+    LIVE: 'class=&quot;x&quot; class=&quot;x&quot; <div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+    REF : '<p>class=&quot;x&quot; class=&quot;x&quot; <div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li></ul><div class="yui-content"></p><div id="wiki-tab-X"><p>x</p></div></div></div>'
+    FTL : 'class=&quot;x&quot; class=&quot;x&quot; <div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+  p09-unterminated-view: ref_live (ref_live=True ftml_live=False ref_ftml=False)
+    LIVE: '<p>[[tabview]]<br> [[tab A]]<br> body<br> [[/tab]]</p>'
+    REF : '<p>[[tabview]]<br> [[tab A]]<br> body<br> [[/tab]]</p>'
+    FTL : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>body</p></div></div></div>'
+  p10-unterminated-tab: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p11-prose-between: ref_ftml (ref_live=False ftml_live=False ref_ftml=True)
+    LIVE: '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li><li><a href="javascript:;"><em>B</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>a</p></div> prose<br><div id="wiki-tab-X" style="display:none"><p>b</p></div></div></div>'
+    REF : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li><li><a href="javascript:;"><em>B</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>a</p></div>prose<br><div id="wiki-tab-X" style="display:none"><p>b</p></div></div></div>'
+    FTL : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li><li><a href="javascript:;"><em>B</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>a</p></div>prose<br><div id="wiki-tab-X" style="display:none"><p>b</p></div></div></div>'
+  p12-stray-tab-first: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p13-nested-view: ftml_live (ref_live=False ftml_live=True ref_ftml=False)
+    LIVE: '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>outer</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X">A<br><div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>inner</em></a></li></ul><div class="yui-
+    REF : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>outer</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>A<br><div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>inner</em></a></li></ul><div class="y
+    FTL : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>outer</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X">A<br><div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>inner</em></a></li></ul><div class="yui-
+  p14-untitled: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p15-coll-in-tab: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p16-empty-tab: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  counts: {'all3': 8, 'ref_live': 1, 'ftml_live': 6, 'ref_ftml': 1, 'none': 0}
+
+PROBES after three-way:
+  p01-basic-two: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p02-title-double-space: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p03-title-trailing-space: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p04-title-entity: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p05-title-htmlchars: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p06-attr-then-text: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p07-raw-title: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p08-view-class: ftml_live (ref_live=False ftml_live=True ref_ftml=False)
+    LIVE: 'class=&quot;x&quot; class=&quot;x&quot; <div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+    REF : '<p>class=&quot;x&quot; class=&quot;x&quot; <div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li></ul><div class="yui-content"></p><div id="wiki-tab-X"><p>x</p></div></div></div>'
+    FTL : 'class=&quot;x&quot; class=&quot;x&quot; <div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>x</p></div></div></div>'
+  p09-unterminated-view: ref_live (ref_live=True ftml_live=False ref_ftml=False)
+    LIVE: '<p>[[tabview]]<br> [[tab A]]<br> body<br> [[/tab]]</p>'
+    REF : '<p>[[tabview]]<br> [[tab A]]<br> body<br> [[/tab]]</p>'
+    FTL : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>body</p></div></div></div>'
+  p10-unterminated-tab: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p11-prose-between: ref_ftml (ref_live=False ftml_live=False ref_ftml=True)
+    LIVE: '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li><li><a href="javascript:;"><em>B</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>a</p></div> prose<br><div id="wiki-tab-X" style="display:none"><p>b</p></div></div></div>'
+    REF : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li><li><a href="javascript:;"><em>B</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>a</p></div>prose<br><div id="wiki-tab-X" style="display:none"><p>b</p></div></div></div>'
+    FTL : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>A</em></a></li><li><a href="javascript:;"><em>B</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>a</p></div>prose<br><div id="wiki-tab-X" style="display:none"><p>b</p></div></div></div>'
+  p12-stray-tab-first: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p13-nested-view: ftml_live (ref_live=False ftml_live=True ref_ftml=False)
+    LIVE: '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>outer</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X">A<br><div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>inner</em></a></li></ul><div class="yui-
+    REF : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>outer</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X"><p>A<br><div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>inner</em></a></li></ul><div class="y
+    FTL : '<div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>outer</em></a></li></ul><div class="yui-content"><div id="wiki-tab-X">A<br><div class="yui-navset" id="wiki-tabview-X"><ul class="yui-nav"><li class="selected"><a href="javascript:;"><em>inner</em></a></li></ul><div class="yui-
+  p14-untitled: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p15-coll-in-tab: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  p16-empty-tab: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  counts: {'all3': 12, 'ref_live': 1, 'ftml_live': 2, 'ref_ftml': 1, 'none': 0}
+
+FOLLOW-UP PROBES after three-way:
+  q01-apostrophe-amp: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  q02-title-attr-amp: all3 (ref_live=True ftml_live=True ref_ftml=True)
+  counts: {'all3': 2, 'ref_live': 0, 'ftml_live': 0, 'ref_ftml': 0, 'none': 0}

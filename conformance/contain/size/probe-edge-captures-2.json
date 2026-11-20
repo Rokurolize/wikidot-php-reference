@@ -1,0 +1,12 @@
+{
+ "space-newline-body": {
+  "fullname": "muse-probe-r2contain-size-space-newline-body",
+  "html": "<p><span style=\"font-size:100%;\"><br /></span></p>",
+  "html_sha256": "ecb110a912fd5e3b7fdb3c67e4017d3a55a574724fffb0103b998f5b31d07ba6",
+  "source": "[[size 100%]] \n[[/size]]",
+  "source_sha256": "6766f8439732bb55f5b64312aa8388edc0c7674ef1db6d5a6dc5b5796b51c4b8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

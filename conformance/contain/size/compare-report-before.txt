@@ -1,0 +1,65 @@
+cases=80 raw_same=0 struct_same=64 struct_diff=16
+
+=== sz11-long-digits-px ===
+REF: '<p>[[size 123456px]]X[[/size]]</p>\n\n'
+FTM: '<p><span style="font-size:123456px;">X</span></p>'
+
+=== sz12-long-digits-pct ===
+REF: '<p>[[size 1000000%]]X[[/size]]</p>\n\n'
+FTM: '<p><span style="font-size:1000000%;">X</span></p>'
+
+=== sz13-multi-dot-px ===
+REF: '<p><span style="font-size:1.2.3px;">X</span></p>\n\n'
+FTM: '<p>[[size 1.2.3px]]X[[/size]]</p>'
+
+=== sz15-dot-only-px ===
+REF: '<p><span style="font-size:.px;">X</span></p>\n\n'
+FTM: '<p>[[size .px]]X[[/size]]</p>'
+
+=== sz47-empty-body ===
+REF: '<p><span style="font-size:100%;"></span></p>\n\n'
+FTM: ''
+
+=== sz48-whitespace-body ===
+REF: '<p><span style="font-size:100%;">   </span></p>\n\n'
+FTM: ''
+
+=== sz51-space-before-close ===
+REF: '<p><span style="font-size:120%;">x </span></p>\n\n'
+FTM: '<p><span style="font-size:120%;">x</span></p>'
+
+=== sz57-size-in-span ===
+REF: '<p><span  class="x" style="">a<span style="font-size:80%;">b</span>c</span></p>\n\n'
+FTM: '<p><span class="x">a<span style="font-size:80%;">b</span>c</span></p>'
+
+=== sz58-span-in-size ===
+REF: '<p><span style="font-size:80%;">a<span  class="x" style="">b</span>c</span></p>\n\n'
+FTM: '<p><span style="font-size:80%;">a<span class="x">b</span>c</span></p>'
+
+=== sz59-cross-size-span ===
+REF: '<p><span style="font-size:80%;">a<span  class="x" style="">b</span>c</span></p>\n\n'
+FTM: '<p><span style="font-size:80%;">a<span class="x">b</span>c</span></p>'
+
+=== sz64-size-in-div ===
+REF: '<div  class="d"><p><span style="font-size:80%;">x</span></p>\n\n</div>'
+FTM: '<div class="d"><p><span style="font-size:80%;">x</span></p></div>'
+
+=== sz69-list-in-size ===
+REF: '<p><span style="font-size:80%;">a</p>\n\n<ul>\n    <li>x</li>\n    <li>y</li>\n</ul>\n\n<p></span></p>\n\n'
+FTM: '<p><span style="font-size:80%;">a</span></p><ul>\n<li><span style="font-size:80%;">x</span></li>\n<li><span style="font-size:80%;">y</span></li>\n</ul>'
+
+=== sz70-size-crosses-div ===
+REF: '<p><span style="font-size:larger;"></p>\n\n<div  class="outer"><p>header</p>\n\n<div  class="links"><p>link</p>\n\n</div><div  class="content"><p></span><br />\nbody</p>\n\n</div></div>'
+FTM: '<div class="outer"><p><span style="font-size:larger;">header</span></p><div class="links"><p><span style="font-size:larger;">link</span></p></div><div class="content"><p><br>\nbody</p></div></div>'
+
+=== sz74-bold-crossed ===
+REF: '<p><strong><span style="font-size:110%;">OVERWATCH COUNCIL</strong></span></p>\n\n'
+FTM: '<p><strong><span style="font-size:110%;">OVERWATCH COUNCIL</span></strong></p>'
+
+=== sz75-list-bold-close ===
+REF: '<p><span style="font-size:80%;">* <strong>a</strong></p>\n\n<ul>\n    <li>b</li>\n</ul>\n\n<p></span></p>\n\n'
+FTM: '<p><span style="font-size:80%;">* <strong>a</strong></span></p><ul>\n<li><span style="font-size:80%;">b</span></li>\n</ul>'
+
+=== sz79-nul-body ===
+REF: '<p><span style="font-size:120%;">A\x00B</span></p>\n\n'
+FTM: '<p><span style="font-size:120%;">AB</span></p>'

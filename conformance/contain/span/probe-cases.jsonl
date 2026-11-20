@@ -1,0 +1,30 @@
+{"id":"p01-plain","source":"BEGIN|[[span]]X[[/span]]|END"}
+{"id":"p02-empty","source":"BEGIN|[[span]][[/span]]|END"}
+{"id":"p03-class","source":"BEGIN|[[span class=\"c\"]]X[[/span]]|END"}
+{"id":"p04-id","source":"BEGIN|[[span id=\"i\"]]X[[/span]]|END"}
+{"id":"p05-id-empty","source":"BEGIN|[[span id=\"\"]]X[[/span]]|END"}
+{"id":"p06-style","source":"BEGIN|[[span style=\"color:red\"]]X[[/span]]|END"}
+{"id":"p07-style-hidden","source":"BEGIN|[[span style=\"visibility:hidden\"]]X[[/span]]|END"}
+{"id":"p08-style-none","source":"BEGIN|[[span style=\"display:none\"]]X[[/span]]|END"}
+{"id":"p09-style-empty","source":"BEGIN|[[span style=\"\"]]X[[/span]]|END"}
+{"id":"p10-title","source":"BEGIN|[[span title=\"tip\"]]X[[/span]]|END"}
+{"id":"p11-role","source":"BEGIN|[[span role=\"note\"]]X[[/span]]|END"}
+{"id":"p12-data","source":"BEGIN|[[span data-x=\"value\"]]X[[/span]]|END"}
+{"id":"p13-type","source":"BEGIN|[[span type=\"t\"]]X[[/span]]|END"}
+{"id":"p14-unknown","source":"BEGIN|[[span frobnicate=\"yes\"]]X[[/span]]|END"}
+{"id":"p15-onclick","source":"BEGIN|[[span onclick=\"alert(1)\"]]X[[/span]]|END"}
+{"id":"p16-multi-attr","source":"BEGIN|[[span class=\"c\" id=\"i\" style=\"color:red\" data-d=\"v\"]]X[[/span]]|END"}
+{"id":"p17-single-quote","source":"BEGIN|[[span class='c']]X[[/span]]|END"}
+{"id":"p18-unquoted","source":"BEGIN|[[span class=c]]X[[/span]]|END"}
+{"id":"p19-percent","source":"%%hidden%%"}
+{"id":"p20-score-span","source":"[[span_]]X[[/span]]"}
+{"id":"p21-nested","source":"[[span]]outer [[span]]inner[[/span]][[/span]]"}
+{"id":"p22-crossed","source":"[[span]]A [[span]]B[[/span]] C[[/span]]"}
+{"id":"p23-stray-close","source":"X [[/span]] Y"}
+{"id":"p24-unterminated","source":"[[span]]unterminated"}
+{"id":"p25-span-size","source":"[[span]]A [[size 120%]]B[[/size]] C[[/span]]"}
+{"id":"p26-span-color","source":"[[span]]A ##red|B## C[[/span]]"}
+{"id":"p27-span-strike","source":"[[span]]A --B-- C[[/span]]"}
+{"id":"p28-span-in-div","source":"[[div]]\n[[span]]X[[/span]]\n[[/div]]"}
+{"id":"p29-span-in-heading","source":"+ [[span]]Head[[/span]]"}
+{"id":"p30-class-empty","source":"BEGIN|[[span class=\"\"]]X[[/span]]|END"}

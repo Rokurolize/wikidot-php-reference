@@ -1,0 +1,12 @@
+{
+ "newline-close": {
+  "fullname": "muse-probe-r2contain-size-newline-close",
+  "html": "<p><span style=\"font-size:120%;\">x<br /></span></p>",
+  "html_sha256": "ec87b0ad3af0d378fdab631711927c86aa0d6ee25290b9f8f625615b97b06583",
+  "source": "[[size 120%]]x\n[[/size]]",
+  "source_sha256": "7c0ee935c99760a07ebad48d7618974b02bd8ec3544b03ff8da7311e34a7d474",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

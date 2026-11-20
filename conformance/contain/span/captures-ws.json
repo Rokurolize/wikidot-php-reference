@@ -1,0 +1,22 @@
+{
+ "p35-body-spaces": {
+  "fullname": "muse-probe-r2contain-span-p35-body-spaces",
+  "html": "<p>BEGIN|a <span>X</span> b|END</p>",
+  "html_sha256": "8c88557d19dc25c7ec0df4de10cbceefb4c462a5d6ec7d488d8841214388933d",
+  "source": "BEGIN|a [[span]] X [[/span]] b|END",
+  "source_sha256": "dcbe24d405ea833739bb9549d428082069420ee4390515448101c195b83310c5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p36-body-space-lead": {
+  "fullname": "muse-probe-r2contain-span-p36-body-space-lead",
+  "html": "<p>BEGIN| <span>X</span>|END</p>",
+  "html_sha256": "2d1931a04f7762574b51084a6f756cf8e68cfaa3235d0ef71b304e06994361f2",
+  "source": "BEGIN|[[span]] X[[/span]]|END",
+  "source_sha256": "48cf0015f9ae4efa3d545870a8a0130238a26e6379dec3f0fee09d28e72a0835",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

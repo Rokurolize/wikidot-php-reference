@@ -1,0 +1,72 @@
+{
+ "attr-allowlist": {
+  "fullname": "muse-probe-r2contain-div-attr-allowlist",
+  "html": "<div id=\"u-panel\" class=\"card\" style=\"color: red\" role=\"note\" type=\"t\" data-foo=\"one\" data-bar=\"two\">\n<p>Body</p>\n</div>",
+  "html_sha256": "fde7901e5fc3c3f5e308c26e283e9aaeb6030de494a6c086065ad46de1cef949",
+  "source": "[[div class=\"card\" id=\"panel\" style=\"color: red\" role=\"note\" type=\"t\" title=\"tip\" lang=\"en\" aria-label=\"label\" data-Foo=\"one\" data-bar=\"two\" foo=\"baz\"]]\nBody\n[[/div]]",
+  "source_sha256": "c19e758804ecdc155c67e5c2c9a9b35f0da5283820fbc5d109ace6fd896b4d6d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-allowlist-mixed": {
+  "fullname": "muse-probe-r2contain-div-attr-allowlist-mixed",
+  "html": "<div data-mixed=\"four\">\n<p>Body</p>\n</div>",
+  "html_sha256": "17ada3ebc23223029affa62080a1f51e9d40483c13273bbf79332b25243ae9ef",
+  "source": "[[div CLASS=\"upper\" ID=\"upper\" TYPE=\"u\" DATA-Mixed=\"three\" data-Mixed=\"four\"]]\nBody\n[[/div]]",
+  "source_sha256": "cc0f8e15f6836bea5fbc29e91847bd7ce6ed3f5aa7ef638fd1fb93ce94854eef",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-single-quote": {
+  "fullname": "muse-probe-r2contain-div-attr-single-quote",
+  "html": "<div>\n<p>hello</p>\n</div>",
+  "html_sha256": "57504669bf68b82b41ec9fd4756c4894319941d66d7dd4ba948969de0fea002b",
+  "source": "[[div class='foo']]\nhello\n[[/div]]",
+  "source_sha256": "cc4e9080b831327bd9841ea995b8ff54fd06f31e537f4dac17b93f4c6c2688f2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-unquoted": {
+  "fullname": "muse-probe-r2contain-div-attr-unquoted",
+  "html": "<div>\n<p>hello</p>\n</div>",
+  "html_sha256": "57504669bf68b82b41ec9fd4756c4894319941d66d7dd4ba948969de0fea002b",
+  "source": "[[div class=foo]]\nhello\n[[/div]]",
+  "source_sha256": "d5e3d79a8b54ee71d3029e4db2c8f42ad0bd7ad4612d11849da745ba4dd10532",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-class-space": {
+  "fullname": "muse-probe-r2contain-div-attr-class-space",
+  "html": "<div class=\"a b\">\n<p>x</p>\n</div>",
+  "html_sha256": "a0cad66978dce9ed218c80a23990818182dd38188a50e4fdaabd943a145aa390",
+  "source": "[[div class=\"a  b\"]]\nx\n[[/div]]",
+  "source_sha256": "fa86cc36ee5251e7c195ce4ab435f2d2dd9d23b9206805a9b94b068065ab6a3d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-style-hidden-display": {
+  "fullname": "muse-probe-r2contain-div-attr-style-hidden-display",
+  "html": "<div style=\"display:none\">\n<p>hello</p>\n</div>",
+  "html_sha256": "3bab815e7c6c00ddd7791ce45529af89b5dfa4696a47c3852b4ef756bde6b414",
+  "source": "[[div style=\"display:none\"]]\nhello\n[[/div]]",
+  "source_sha256": "858090390a462bbad2bee131d2b1a163bed7587425f48cdec97b369920264942",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-style-hidden-vis": {
+  "fullname": "muse-probe-r2contain-div-attr-style-hidden-vis",
+  "html": "<div style=\"visibility:hidden\">\n<p>hello</p>\n</div>",
+  "html_sha256": "b6741397f339746407a083a4447c10093e45e359fbcca83e1c34cc4e5e7c6804",
+  "source": "[[div style=\"visibility:hidden\"]]\nhello\n[[/div]]",
+  "source_sha256": "c6372bd2cb643e203ea5beae109e0c85e7b12099ac9c400f10aaee907d2a0079",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "x13-iftags-active-div": {
+  "fullname": "muse-probe-r2contain-x-x13-iftags-active-div",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "action": "created"
+ },
+ "x14-iftags-suppressed-coll": {
+  "fullname": "muse-probe-r2contain-x-x14-iftags-suppressed-coll",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "action": "created"
+ },
+ "x15-iftags-active-coll": {
+  "fullname": "muse-probe-r2contain-x-x15-iftags-active-coll",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "action": "created"
+ },
+ "x16-iftags-suppressed-tab": {
+  "fullname": "muse-probe-r2contain-x-x16-iftags-suppressed-tab",
+  "source": "[[iftags +alpha]]\n[[tabview]]\n[[tab title=A]]\nbody\n[[/tab]]\n[[/tabview]]\n[[/iftags]]\nvisible",
+  "action": "created"
+ },
+ "x17-code-inline-div": {
+  "fullname": "muse-probe-r2contain-x-x17-code-inline-div",
+  "source": "@@[[div class=x]] inside [[/div]]@@",
+  "action": "created"
+ },
+ "x18-code-block-div": {
+  "fullname": "muse-probe-r2contain-x-x18-code-block-div",
+  "source": "[[code]]\n[[div]]\ninside\n[[/div]]\n[[/code]]",
+  "action": "created"
+ }
+}

@@ -1,0 +1,13 @@
+nbsp-close -> muse-probe-r2contain-size-nbsp-close stable=True saved_source_matches=True valid=True
+{
+ "nbsp-close": {
+  "fullname": "muse-probe-r2contain-size-nbsp-close",
+  "html": "<p><span style=\"font-size:120%;\">x&nbsp;</span></p>",
+  "html_sha256": "71cbc570d6453bd0891cf27fed7b951ddb7b58f2fc2301aade33ba8169079b5b",
+  "source": "[[size 120%]]x [[/size]]",
+  "source_sha256": "c33161a80adb7b8a72e68fc0a58c13535d5bcd04bd97f5b2c2555c2079bca087",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

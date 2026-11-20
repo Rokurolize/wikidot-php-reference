@@ -1,0 +1,58 @@
+captures=26 all_valid_stable_srcmatch=True
+
+=== long-px ref_live=True ftml_live=False ===
+LIVE: '<p>[[size 123456px]]X[[/size]]</p>'
+REF : '<p>[[size 123456px]]X[[/size]]</p>'
+FTML: '<p><span style="font-size:123456px;">X</span></p>'
+
+=== long-pct ref_live=True ftml_live=False ===
+LIVE: '<p>[[size 1000000%]]X[[/size]]</p>'
+REF : '<p>[[size 1000000%]]X[[/size]]</p>'
+FTML: '<p><span style="font-size:1000000%;">X</span></p>'
+
+=== multi-dot ref_live=True ftml_live=False ===
+LIVE: '<p><span style="font-size:1.2.3px;">X</span></p>'
+REF : '<p><span style="font-size:1.2.3px;">X</span></p>'
+FTML: '<p>[[size 1.2.3px]]X[[/size]]</p>'
+
+=== dot-only ref_live=True ftml_live=False ===
+LIVE: '<p><span style="font-size:.px;">X</span></p>'
+REF : '<p><span style="font-size:.px;">X</span></p>'
+FTML: '<p>[[size .px]]X[[/size]]</p>'
+
+=== empty-body ref_live=False ftml_live=True ===
+LIVE: ''
+REF : '<p><span style="font-size:100%;"></span></p>'
+FTML: ''
+
+=== ws-body ref_live=False ftml_live=True ===
+LIVE: ''
+REF : '<p><span style="font-size:100%;"></span></p>'
+FTML: ''
+
+=== space-before-close ref_live=False ftml_live=True ===
+LIVE: '<p><span style="font-size:120%;">x</span></p>'
+REF : '<p><span style="font-size:120%;">x </span></p>'
+FTML: '<p><span style="font-size:120%;">x</span></p>'
+
+=== crossed-span ref_live=False ftml_live=True ===
+LIVE: '<p><span style="font-size:80%;">a<span class="x">b</span>c</span></p>'
+REF : '<p><span style="font-size:80%;">a<span class="x" style>b</span>c</span></p>'
+FTML: '<p><span style="font-size:80%;">a<span class="x">b</span>c</span></p>'
+
+=== crossed-bold ref_live=False ftml_live=True ===
+LIVE: '<p><strong><span style="font-size:110%;">OVERWATCH COUNCIL</span></strong></p>'
+REF : '<p><strong><span style="font-size:110%;">OVERWATCH COUNCIL</strong></span></p>'
+FTML: '<p><strong><span style="font-size:110%;">OVERWATCH COUNCIL</span></strong></p>'
+
+=== list-in-size ref_live=False ftml_live=True ===
+LIVE: '<p><span style="font-size:80%;">a</span></p><ul><li><span style="font-size:80%;">x</span></li><li><span style="font-size:80%;">y</span></li></ul>'
+REF : '<p><span style="font-size:80%;">a</p><ul><li>x</li><li>y</li></ul><p></span></p>'
+FTML: '<p><span style="font-size:80%;">a</span></p><ul><li><span style="font-size:80%;">x</span></li><li><span style="font-size:80%;">y</span></li></ul>'
+
+=== size-crosses-div ref_live=False ftml_live=True ===
+LIVE: '<div class="outer"><p><span style="font-size:larger;">header</span></p><div class="links"><p><span style="font-size:larger;">link</span></p></div><div class="content"><p><br> body</p></div></div>'
+REF : '<p><span style="font-size:larger;"></p><div class="outer"><p>header</p><div class="links"><p>link</p></div><div class="content"><p></span><br> body</p></div></div>'
+FTML: '<div class="outer"><p><span style="font-size:larger;">header</span></p><div class="links"><p><span style="font-size:larger;">link</span></p></div><div class="content"><p><br> body</p></div></div>'
+
+ref==live 19/26; ftml==live 22/26; all-three 15/26

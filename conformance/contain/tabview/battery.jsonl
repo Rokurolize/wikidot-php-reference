@@ -1,0 +1,54 @@
+{"id": "tv01-single", "source": "[[tabview]]\n[[tab solo]]\ndata here\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv02-two-tabs", "source": "[[tabview]]\n[[tab One]]\nfirst\n[[/tab]]\n[[tab Two]]\nsecond\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv03-title-double-space", "source": "[[tabview]]\n[[tab A  B]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv04-title-trailing-space", "source": "[[tabview]]\n[[tab A ]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv05-title-attr", "source": "[[tabview]]\n[[tab title=\"A\"]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv06-title-attr-spaces", "source": "[[tabview]]\n[[tab title=\"A B\"]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv07-class-attr", "source": "[[tabview]]\n[[tab class=\"c\"]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv08-foo-attr", "source": "[[tabview]]\n[[tab foo=\"A\"]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv09-attr-then-text", "source": "[[tabview]]\n[[tab class=\"c\" A]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv10-text-then-attr", "source": "[[tabview]]\n[[tab A class=\"c\"]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv11-untitled-bare", "source": "[[tabview]]\n[[tab]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv12-untitled-spaces", "source": "[[tabview]]\n[[tab  ]] x [[/tab]]\n[[/tabview]]"}
+{"id": "tv13-case-insensitive", "source": "[[TABVIEW]]\n[[TaB mixed]]\nx\n[[/tAb]]\n[[/TABVIEW]]"}
+{"id": "tv14-alias-tabs", "source": "[[tabs]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabs]]"}
+{"id": "tv15-mixed-alias", "source": "[[tabview]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabs]]"}
+{"id": "tv16-title-entities", "source": "[[tabview]]\n[[tab A &amp; B]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv17-title-htmlchars", "source": "[[tabview]]\n[[tab <em>x</em>]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv18-nested-view", "source": "[[tabview]]\n[[tab outer]]\nA\n[[tabview]]\n[[tab inner]]\nB\n[[/tab]]\n[[/tabview]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv19-nested-alias", "source": "[[tabview]]\n[[tab 1]]\nA\n[[tabs]]\n[[tab 2]]\nB\n[[/tabs]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv20-nested-deep", "source": "[[tabview]]\n[[tab 1]]\nA\n[[tabs]]\n[[tab 2]]\nB\n[[tabview]]\n[[tab 3]]\nC\n[[/tabview]]\n[[/tabs]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv21-nested-blank", "source": "[[tabview]]\n[[tab 1]]\nA\n\n[[tabview]]\n[[tab 2]]\nB\n[[/tab]]\n[[/tabview]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv22-div-in-tab", "source": "[[tabview]]\n[[tab A]]\n[[div class=x]]\ninner\n[[/div]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv23-coll-in-tab", "source": "[[tabview]]\n[[tab A]]\n[[collapsible]]\ninner\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv24-div-in-coll-in-tab", "source": "[[tabview]]\n[[tab A]]\n[[collapsible show=show]]\n[[div class=x]]\ninner\n[[/div]]\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv25-tab-in-div", "source": "[[div class=a]]\n[[tabview]]\n[[tab A]]\ninner\n[[/tab]]\n[[/tabview]]\n[[/div]]"}
+{"id": "tv26-bold-in-tab", "source": "[[tabview]]\n[[tab A]]\n**bold** and [[B]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv27-span-in-tab", "source": "[[tabview]]\n[[tab A]]\n[[span class=s]]text[[/span]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv28-para-in-tab", "source": "[[tabview]]\n[[tab A]]\none\n\ntwo\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv29-empty-tab", "source": "[[tabview]]\n[[tab A]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv30-empty-body-blank", "source": "[[tabview]]\n[[tab A]]\n\n\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv31-empty-view", "source": "[[tabview]][[/tabview]]"}
+{"id": "tv32-empty-view-newlines", "source": "[[tabview]]\n[[/tabview]]"}
+{"id": "tv33-unterminated-tab", "source": "[[tabview]]\n[[tab A]]\nbody\n[[/tabview]]"}
+{"id": "tv34-unterminated-view", "source": "[[tabview]]\n[[tab A]]\nbody\n[[/tab]]"}
+{"id": "tv35-stray-tab-first", "source": "[[tabview]]\n[[/tab]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv36-stray-view-first", "source": "[[tabview]]\n[[/tabview]]\n[[tab A]]\nx\n[[/tab]]"}
+{"id": "tv37-double-tab-close", "source": "[[tabview]]\n[[tab A]]\nx\n[[/tab]][[/tab]]\n[[/tabview]]"}
+{"id": "tv38-prose-between", "source": "[[tabview]]\n[[tab A]] a [[/tab]]\nprose\n[[tab B]] b [[/tab]]\n[[/tabview]]"}
+{"id": "tv39-prose-before", "source": "[[tabview]]\nprose\n[[tab A]] a [[/tab]]\n[[/tabview]]"}
+{"id": "tv40-prose-after", "source": "[[tabview]]\n[[tab A]] a [[/tab]]\nprose\n[[/tabview]]"}
+{"id": "tv41-inline-one-line", "source": "[[tabview]] [[tab A]] 1 [[/tab]] [[tab B]] 2 [[/tab]] [[/tabview]]"}
+{"id": "tv42-inline-tight", "source": "[[tabview]][[tab A]]1[[/tab]][[/tabview]]"}
+{"id": "tv43-view-class", "source": "[[tabview class=\"x\"]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv44-view-unquoted", "source": "[[tabview class=x]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv45-view-id", "source": "[[tabview id=\"v\"]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv46-view-style", "source": "[[tabview style=\"color:red\"]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv47-view-singlequote", "source": "[[tabview class='c']]\n[[tab A]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv48-view-multiple-attrs", "source": "[[tabview class=\"a\" id=\"b\"]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv49-head-bracket", "source": "[[tabview]]\n[[tab a]b]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv50-head-comment", "source": "[[tabview]]\n[[tab a[!-- c --]]] x [[/tab]]\n[[/tabview]]"}
+{"id": "tv51-head-bold", "source": "[[tabview]]\n[[tab **bold**]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv52-title-raw", "source": "[[tabview]]\n[[tab title=\"@@a@@\"]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv53-head-leading-space", "source": "[[tabview]]\n[[ tab A ]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "tv54-stray-view-end-only", "source": "[[tab A]]\nx\n[[/tab]]\n[[/tabview]]"}

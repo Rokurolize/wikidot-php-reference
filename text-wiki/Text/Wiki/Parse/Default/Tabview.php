@@ -60,7 +60,7 @@ class Text_Wiki_Parse_Tabview extends Text_Wiki_Parse {
         $attr = $this->getAttrs(trim($matches[1]));
         
         $args = array();
-        if ($attr['class']) {
+        if (!empty($attr['class'])) {
             $args['class'] = $attr['class'];
         }
         
@@ -104,6 +104,17 @@ class Text_Wiki_Parse_Tabview extends Text_Wiki_Parse {
         }
     }
 
+    protected function _tabTitle($text) {
+        $text = trim($text);
+        if ($text === '') {
+            return 'untitled';
+        }
+        if (preg_match('/@@.*@@|@<.*>@/s', $text) || strpos($text, "\xFF") !== false) {
+            return '';
+        }
+        return preg_replace('/\s+/', ' ', $text);
+    }
+
     protected function _handleTab($matches) {
         $argString = trim($matches[2]);
         // bad hack - I will forgget how it works in a few minutes
@@ -116,6 +127,11 @@ class Text_Wiki_Parse_Tabview extends Text_Wiki_Parse {
         if (!isset($args['title']) && !$ff) {
             $args['title'] = trim($matches[1]);
         }
+        // Live collapses whitespace runs in a tab label, defaults a missing
+        // label to the literal word "untitled", and renders a label carrying
+        // raw inline markup as an empty anchor; settled by the cached probes
+        // muse-probe-r2contain-tab-p02/p03/p07/p14.
+        $args['title'] = $this->_tabTitle(isset($args['title']) ? $args['title'] : '');
         $this->_tabs[] = array_merge($args, array(
             'tabId' => $this->_tabCounter));
         $content = $matches[3];

@@ -1,0 +1,54 @@
+R2-contain root cross-rule interaction: three-way comparison (final)
+valid probes: 39; signature counts: {'all3': 36, 'ref_live': 1, 'ftm_live': 2, 'ref_ftm': 0, 'all_disagree': 0}
+excluded as tag/source mismatches: x13-iftags-active-div, x14-iftags-suppressed-coll (authored with tags=['alpha'] but created as untagged live pages; their -tagged counterparts are compared)
+
+canon counts: ref==ftml 34, ref==live 35, ftml==live 36
+
+x01-span-size-cross                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x02-size-span-cross                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x03-span-color-nested              FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'spans': [('c=', 's='), ('c=', 's=color: red;')], 'divs': [], 'coll': 0, 'coll_show': False, 'tabs_nav': 0, 'tabs_body': 0, 'fnref': [], 'fnitem': [], 'lit': {}, 'text': 'A B C'}
+  ftml: {'spans': [('c=', 's='), ('c=', 's=color: red')], 'divs': [], 'coll': 0, 'coll_show': False, 'tabs_nav': 0, 'tabs_body': 0, 'fnref': [], 'fnitem': [], 'lit': {}, 'text': 'A B C'}
+  live: {'spans': [('c=', 's='), ('c=', 's=color: red')], 'divs': [], 'coll': 0, 'coll_show': False, 'tabs_nav': 0, 'tabs_body': 0, 'fnref': [], 'fnitem': [], 'lit': {}, 'text': 'A B C'}
+x04-color-span-cross               FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'spans': [('c=', 's=color: red;'), ('c=', 's=')], 'divs': [], 'coll': 0, 'coll_show': False, 'tabs_nav': 0, 'tabs_body': 0, 'fnref': [], 'fnitem': [], 'lit': {}, 'text': 'A B'}
+  ftml: {'spans': [('c=', 's=color: red'), ('c=', 's=')], 'divs': [], 'coll': 0, 'coll_show': False, 'tabs_nav': 0, 'tabs_body': 0, 'fnref': [], 'fnitem': [], 'lit': {}, 'text': 'A B'}
+  live: {'spans': [('c=', 's=color: red'), ('c=', 's=')], 'divs': [], 'coll': 0, 'coll_show': False, 'tabs_nav': 0, 'tabs_body': 0, 'fnref': [], 'fnitem': [], 'lit': {}, 'text': 'A B'}
+x05-strike-span-cross              ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x06-span-strike-nested             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x07-span-size-strike-cross         ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x08-span-nested-same               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x09-size-nested-same               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x10-span-empty                     ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x11-span-size-cross-block          ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x12-iftags-suppressed-div          ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x15-iftags-active-coll             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x16-iftags-suppressed-tab          ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x17-code-inline-div                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x18-code-block-div                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x19-code-inline-coll               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x20-span-code-div                  ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x21-div-in-coll-in-tab             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x22-coll-in-tab                    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x23-div-in-tab                     ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x24-three-nested-divs              REF+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=False
+  ref : {'spans': [], 'divs': [], 'coll': 0, 'coll_show': False, 'tabs_nav': 0, 'tabs_body': 0, 'fnref': [], 'fnitem': [], 'lit': {}, 'text': '[[/div]]'}
+  ftml: {'spans': [], 'divs': [], 'coll': 0, 'coll_show': False, 'tabs_nav': 0, 'tabs_body': 0, 'fnref': [], 'fnitem': [], 'lit': {'[[div': 3}, 'text': '[[div class=a]]A [[div class=b]]B [[div class=c]]C [[/div]] [[/div]] [[/div]]'}
+  live: {'spans': [], 'divs': [], 'coll': 0, 'coll_show': False, 'tabs_nav': 0, 'tabs_body': 0, 'fnref': [], 'fnitem': [], 'lit': {}, 'text': '[[/div]]'}
+x25-tab-in-coll-in-div             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x26-coll-first-closer-wins         ALL3           canon(r=f)=False canon(r=l)=False canon(f=l)=False
+x27-footnote-in-div                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x28-footnote-in-coll               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x29-footnote-in-tab                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x30-div-in-footnote                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x31-span-in-footnote               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x32-div-underscore-basic           ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x33-div-underscore-attrs           ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x34-div-underscore-inline          ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x35-div-underscore-unterminated    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x36-div-normal-control             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x12-iftags-suppressed-div-tagged   ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x13-iftags-active-div-tagged       ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x14-iftags-suppressed-coll-tagged  ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x15-iftags-active-coll-tagged      ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x16-iftags-suppressed-tab-tagged   ALL3           canon(r=f)=False canon(r=l)=True canon(f=l)=False

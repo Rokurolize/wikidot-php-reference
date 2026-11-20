@@ -1,0 +1,50 @@
+boundary-5-px -> muse-probe-r2contain-size-boundary-5-px (created)
+boundary-5-pct -> muse-probe-r2contain-size-boundary-5-pct (created)
+boundary-6-em -> muse-probe-r2contain-size-boundary-6-em (created)
+multi-space-close -> muse-probe-r2contain-size-multi-space-close (created)
+newline-close -> muse-probe-r2contain-size-newline-close (created)
+tab-close -> muse-probe-r2contain-size-tab-close (created)
+nbsp-close -> muse-probe-r2contain-size-nbsp-close (created)
+empty-nested -> muse-probe-r2contain-size-empty-nested (created)
+{
+ "boundary-5-px": {
+  "fullname": "muse-probe-r2contain-size-boundary-5-px",
+  "source": "[[size 12345px]]X[[/size]]",
+  "action": "created"
+ },
+ "boundary-5-pct": {
+  "fullname": "muse-probe-r2contain-size-boundary-5-pct",
+  "source": "[[size 12345%]]X[[/size]]",
+  "action": "created"
+ },
+ "boundary-6-em": {
+  "fullname": "muse-probe-r2contain-size-boundary-6-em",
+  "source": "[[size 123456em]]X[[/size]]",
+  "action": "created"
+ },
+ "multi-space-close": {
+  "fullname": "muse-probe-r2contain-size-multi-space-close",
+  "source": "[[size 120%]]x   [[/size]]",
+  "action": "created"
+ },
+ "newline-close": {
+  "fullname": "muse-probe-r2contain-size-newline-close",
+  "source": "[[size 120%]]x\n[[/size]]",
+  "action": "created"
+ },
+ "tab-close": {
+  "fullname": "muse-probe-r2contain-size-tab-close",
+  "source": "[[size 120%]]x\t[[/size]]",
+  "action": "created"
+ },
+ "nbsp-close": {
+  "fullname": "muse-probe-r2contain-size-nbsp-close",
+  "source": "[[size 120%]]x [[/size]]",
+  "action": "created"
+ },
+ "empty-nested": {
+  "fullname": "muse-probe-r2contain-size-empty-nested",
+  "source": "[[size 100%]][[size 90%]][[/size]][[/size]]",
+  "action": "created"
+ }
+}

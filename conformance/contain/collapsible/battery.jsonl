@@ -1,0 +1,57 @@
+{"id": "c01-basic-line", "source": "[[collapsible]]\nApple\n[[/collapsible]]"}
+{"id": "c02-inline", "source": "[[collapsible]]Banana[[/collapsible]]"}
+{"id": "c03-empty", "source": "[[collapsible]]\n[[/collapsible]]"}
+{"id": "c04-empty-inline", "source": "[[collapsible]][[/collapsible]]"}
+{"id": "c05-leading-text", "source": "Before\n[[collapsible]]\nBody\n[[/collapsible]]\nAfter"}
+{"id": "c06-trailing-space", "source": "[[collapsible]] \nBody\n[[/collapsible]]  "}
+{"id": "c07-uppercase", "source": "[[COLLAPSIBLE id=\"up\" show=\"UPPER\" hide=\"lower\"]]\nBODY\n[[/COLLAPSIBLE]]"}
+{"id": "c08-internal-space", "source": "[[ collapsible show=\"+ S\" hide=\"- H\" ]]\nBODY\n[[/collapsible]]"}
+{"id": "c09-two-blocks", "source": "[[collapsible]]A[[/collapsible]]\n[[collapsible]]B[[/collapsible]]"}
+{"id": "c10-adjacent-inline", "source": "[[collapsible]]A[[/collapsible]][[collapsible]]B[[/collapsible]]"}
+{"id": "c11-show-only", "source": "[[collapsible show=\"+ Expand\"]]B[[/collapsible]]"}
+{"id": "c12-hide-only", "source": "[[collapsible hide=\"- Collapse\"]]B[[/collapsible]]"}
+{"id": "c13-show-hide", "source": "[[collapsible show=\"+ Open\" hide=\"- Close\"]]B[[/collapsible]]"}
+{"id": "c14-showtext", "source": "[[collapsible showText=\"OPEN\" hideText=\"CLOSE\"]]B[[/collapsible]]"}
+{"id": "c15-empty-labels", "source": "[[collapsible show=\"\" hide=\"\"]]B[[/collapsible]]"}
+{"id": "c16-label-nbsp-tab", "source": "[[collapsible show=\"a\tb\" hide=\"x  y\"]]B[[/collapsible]]"}
+{"id": "c17-label-entities", "source": "[[collapsible show=\"A &amp; B &lt;x&gt;\" hide=\"C &quot;d&quot;\"]]B[[/collapsible]]"}
+{"id": "c18-label-newline", "source": "[[collapsible show=\"one\ntwo\"]]B[[/collapsible]]"}
+{"id": "c19-folded-no", "source": "[[collapsible folded=\"no\"]]B[[/collapsible]]"}
+{"id": "c20-folded-false", "source": "[[collapsible folded=\"false\"]]B[[/collapsible]]"}
+{"id": "c21-folded-yes", "source": "[[collapsible folded=\"yes\"]]B[[/collapsible]]"}
+{"id": "c22-hideloc-top", "source": "[[collapsible hideLocation=\"top\"]]B[[/collapsible]]"}
+{"id": "c23-hideloc-bottom", "source": "[[collapsible hideLocation=\"bottom\"]]B[[/collapsible]]"}
+{"id": "c24-hideloc-both", "source": "[[collapsible hideLocation=\"both\"]]B[[/collapsible]]"}
+{"id": "c25-hideloc-neither", "source": "[[collapsible hideLocation=\"neither\"]]B[[/collapsible]]"}
+{"id": "c26-hideloc-unknown", "source": "[[collapsible hideLocation=\"sideways\"]]B[[/collapsible]]"}
+{"id": "c27-class", "source": "[[collapsible class=\"myc\"]]B[[/collapsible]]"}
+{"id": "c28-id", "source": "[[collapsible id=\"hider\"]]B[[/collapsible]]"}
+{"id": "c29-style", "source": "[[collapsible style=\"color: teal\"]]B[[/collapsible]]"}
+{"id": "c30-data-unknown", "source": "[[collapsible data-x=\"ya\" bogus=\"z\"]]B[[/collapsible]]"}
+{"id": "c31-single-quotes", "source": "[[collapsible show='+ SQ' hide='- SQ']]B[[/collapsible]]"}
+{"id": "c32-unquoted-values", "source": "[[collapsible show=OPEN hide=CLOSE]]B[[/collapsible]]"}
+{"id": "c33-duplicate-folded", "source": "[[collapsible folded=\"yes\" folded=\"no\"]]B[[/collapsible]]"}
+{"id": "c34-unknown-key-only", "source": "[[collapsible bananas=\"yes\"]]B[[/collapsible]]"}
+{"id": "c35-nested-same", "source": "[[collapsible show=\"L1\"]]\nA\n[[collapsible show=\"L2\"]]\nB\n[[/collapsible]]\nC\n[[/collapsible]]"}
+{"id": "c36-nested-same-four", "source": "[[collapsible]]\nA\n[[collapsible]]\nB\n[[collapsible]]\nC\n[[/collapsible]]\n[[/collapsible]]\n[[/collapsible]]"}
+{"id": "c37-first-closer-tail", "source": "[[collapsible]]\nA\n[[/collapsible]]\nTAIL\n[[/collapsible]]"}
+{"id": "c38-opener-after-closer", "source": "[[collapsible]]A[[/collapsible]]\n[[collapsible]]B[[/collapsible]]\n[[collapsible]]C[[/collapsible]]"}
+{"id": "c39-cross-div-in", "source": "[[collapsible]]\n[[div class=\"d\"]]\ninside\n[[/div]]\n[[/collapsible]]"}
+{"id": "c40-div-out", "source": "[[div class=\"d\"]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/div]]"}
+{"id": "c41-cross-tab-in", "source": "[[collapsible]]\n[[tabview]]\n[[tab]]One[[/tab]]\n[[/tabview]]\n[[/collapsible]]"}
+{"id": "c42-cross-footnote", "source": "[[collapsible]]\nA footnote [[footnote]]note[[/footnote]] here\n[[/collapsible]]"}
+{"id": "c43-bold-inside", "source": "[[collapsible]]\n**bold** and //italic//\n[[/collapsible]]"}
+{"id": "c44-link-inside", "source": "[[collapsible]]\n[[http://example.com|link]]\n[[/collapsible]]"}
+{"id": "c45-heading-inside", "source": "[[collapsible]]\n= Heading =\nBody\n[[/collapsible]]"}
+{"id": "c46-list-inside", "source": "[[collapsible]]\n* one\n* two\n[[/collapsible]]"}
+{"id": "c47-quote-inside", "source": "[[collapsible]]\n> quoted\n[[/collapsible]]"}
+{"id": "c48-code-inside", "source": "[[collapsible]]\n[[code]]\ncode body\n[[/code]]\n[[/collapsible]]"}
+{"id": "c49-unterminated", "source": "[[collapsible]]\nNever closed\nmore text"}
+{"id": "c50-stray-closer", "source": "text [[/collapsible]] more"}
+{"id": "c51-closer-only-line", "source": "[[/collapsible]]"}
+{"id": "c52-missing-opener", "source": "plain\n[[/collapsible]]\nplain"}
+{"id": "c53-malformed-opener", "source": "[[collapsible show=BROKEN]]B[[/collapsible]]"}
+{"id": "c54-unclosed-inline", "source": "before [[collapsible]] body after"}
+{"id": "c55-wrong-closer", "source": "[[collapsible]]B[[/div]]"}
+{"id": "c56-empty-attr-braces", "source": "[[collapsible ]]B[[/collapsible]]"}
+{"id": "c57-newline-in-head", "source": "[[collapsible\n show=\"+ X\"\n]]\nB\n[[/collapsible]]"}

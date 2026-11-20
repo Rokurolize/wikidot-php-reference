@@ -1,0 +1,72 @@
+{
+ "basic": {
+  "fullname": "muse-probe-r2contain-div-basic",
+  "html": "<div>\n<p>hello</p>\n</div>",
+  "html_sha256": "57504669bf68b82b41ec9fd4756c4894319941d66d7dd4ba948969de0fea002b",
+  "source": "[[div]]\nhello\n[[/div]]",
+  "source_sha256": "a0838300e2097c49faa2c2bc47de84c224399267a2ab89605b07992efdfe9a73",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "basic-uppercase": {
+  "fullname": "muse-probe-r2contain-div-basic-uppercase",
+  "html": "<div>\n<p>hello</p>\n</div>",
+  "html_sha256": "57504669bf68b82b41ec9fd4756c4894319941d66d7dd4ba948969de0fea002b",
+  "source": "[[DIV]]\nhello\n[[/DIV]]",
+  "source_sha256": "d64eb9f6e46a9a7d6c90068f94818978285f38d09943f250f8e8760de30a5826",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "basic-two-paras": {
+  "fullname": "muse-probe-r2contain-div-basic-two-paras",
+  "html": "<div>\n<p>A</p>\n<p>B</p>\n</div>",
+  "html_sha256": "450ba86d2eae08198eda09db07d14a490938a0ccef7d5cf8939d4f42b8bcd871",
+  "source": "[[div]]\nA\n\nB\n[[/div]]",
+  "source_sha256": "bf67ff8f8aef8a495b3734740184638c6b51aebe12001ea346c1fd8521db19a4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-id": {
+  "fullname": "muse-probe-r2contain-div-attr-id",
+  "html": "<div id=\"u-panel\">\n<p>Body</p>\n</div>",
+  "html_sha256": "da9a4305370ea6f772436874f41c331ab2627e6ee290f2c79efd7b2a249cd494",
+  "source": "[[div id=\"panel\"]]\nBody\n[[/div]]",
+  "source_sha256": "4eb842bf606fb03ab6f39ff33c8b056d3da54385137320698d520cb241439003",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-id-prefixed": {
+  "fullname": "muse-probe-r2contain-div-attr-id-prefixed",
+  "html": "<div id=\"u-panel\">\n<p>Body</p>\n</div>",
+  "html_sha256": "da9a4305370ea6f772436874f41c331ab2627e6ee290f2c79efd7b2a249cd494",
+  "source": "[[div id=\"u-panel\"]]\nBody\n[[/div]]",
+  "source_sha256": "d30c7ef8221facc288aec77d6f44f5aa8eee7dc799e1b6b5df06eff5d8f2cca6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-id-space": {
+  "fullname": "muse-probe-r2contain-div-attr-id-space",
+  "html": "<div id=\"u-\">\n<p>x</p>\n</div>",
+  "html_sha256": "ff0e5da5a96adc6acee17a8e1ad3876e6a15bf009e9c8492c58dc877620e1bb8",
+  "source": "[[div id=\" \"]]\nx\n[[/div]]",
+  "source_sha256": "550716b7abef020e8f50c450d11428119820c4e17f2cc619fe3dcea8800b3be1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attr-data-empty-suffix": {
+  "fullname": "muse-probe-r2contain-div-attr-data-empty-suffix",
+  "html": "<div data-=\"v\">\n<p>T</p>\n</div>",
+  "html_sha256": "7da349a743cb1aff87aaf97187fecd2539b027facd5a286c1a5e68a31ab01edb",
+  "source": "[[div data-=\"v\"]]\nT\n[[/div]]",
+  "source_sha256": "60a0d11f1052326ffa65197650bde7beedda1062acab42fb5ac99e753225b858",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

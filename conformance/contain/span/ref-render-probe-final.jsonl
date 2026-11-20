@@ -1,0 +1,30 @@
+{"id":"p01-plain","output":"<p>BEGIN|<span>X<\/span>|END<\/p>\n\n"}
+{"id":"p02-empty","output":"<p>BEGIN||END<\/p>\n\n"}
+{"id":"p03-class","output":"<p>BEGIN|<span class=\"c\">X<\/span>|END<\/p>\n\n"}
+{"id":"p04-id","output":"<p>BEGIN|<span id=\"u-i\">X<\/span>|END<\/p>\n\n"}
+{"id":"p05-id-empty","output":"<p>BEGIN|<span>X<\/span>|END<\/p>\n\n"}
+{"id":"p06-style","output":"<p>BEGIN|<span style=\"color:red\">X<\/span>|END<\/p>\n\n"}
+{"id":"p07-style-hidden","output":"<p>BEGIN|<span style=\"visibility:hidden\">X<\/span>|END<\/p>\n\n"}
+{"id":"p08-style-none","output":"<p>BEGIN|<span style=\"display:none\">X<\/span>|END<\/p>\n\n"}
+{"id":"p09-style-empty","output":"<p>BEGIN|<span>X<\/span>|END<\/p>\n\n"}
+{"id":"p10-title","output":"<p>BEGIN|<span>X<\/span>|END<\/p>\n\n"}
+{"id":"p11-role","output":"<p>BEGIN|<span role=\"note\">X<\/span>|END<\/p>\n\n"}
+{"id":"p12-data","output":"<p>BEGIN|<span data-x=\"value\">X<\/span>|END<\/p>\n\n"}
+{"id":"p13-type","output":"<p>BEGIN|<span type=\"t\">X<\/span>|END<\/p>\n\n"}
+{"id":"p14-unknown","output":"<p>BEGIN|<span>X<\/span>|END<\/p>\n\n"}
+{"id":"p15-onclick","output":"<p>BEGIN|<span>X<\/span>|END<\/p>\n\n"}
+{"id":"p16-multi-attr","output":"<p>BEGIN|<span id=\"u-i\" class=\"c\" style=\"color:red\" data-d=\"v\">X<\/span>|END<\/p>\n\n"}
+{"id":"p17-single-quote","output":"<p>BEGIN|<span>X<\/span>|END<\/p>\n\n"}
+{"id":"p18-unquoted","output":"<p>BEGIN|<span>X<\/span>|END<\/p>\n\n"}
+{"id":"p19-percent","output":"<p>%%hidden%%<\/p>\n\n"}
+{"id":"p20-score-span","output":"<p>[[span_]]X[[\/span]]<\/p>\n\n"}
+{"id":"p21-nested","output":"<p><span>outer <span>inner<\/span><\/span><\/p>\n\n"}
+{"id":"p22-crossed","output":"<p><span>A <span>B<\/span> C<\/span><\/p>\n\n"}
+{"id":"p23-stray-close","output":"<p>X [[\/span]] Y<\/p>\n\n"}
+{"id":"p24-unterminated","output":"<p>[[span]]unterminated<\/p>\n\n"}
+{"id":"p25-span-size","output":"<p><span>A <span style=\"font-size:120%;\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"p26-span-color","output":"<p><span>A <span style=\"color: red;\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"p27-span-strike","output":"<p><span>A <span style=\"text-decoration: line-through;\">B<\/span> C<\/span><\/p>\n\n"}
+{"id":"p28-span-in-div","output":"<div ><p><span>X<\/span><\/p>\n\n<\/div>"}
+{"id":"p29-span-in-heading","output":"\n<h1 id=\"toc0\"><span><span>Head<\/span><\/span><\/h1>\n"}
+{"id":"p30-class-empty","output":"<p>BEGIN|<span>X<\/span>|END<\/p>\n\n"}

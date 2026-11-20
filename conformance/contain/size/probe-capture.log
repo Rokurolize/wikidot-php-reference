@@ -1,0 +1,288 @@
+long-px -> muse-probe-r2contain-size-long-px stable=True saved_source_matches=True valid=True
+long-pct -> muse-probe-r2contain-size-long-pct stable=True saved_source_matches=True valid=True
+multi-dot -> muse-probe-r2contain-size-multi-dot stable=True saved_source_matches=True valid=True
+dot-only -> muse-probe-r2contain-size-dot-only stable=True saved_source_matches=True valid=True
+trailing-dot -> muse-probe-r2contain-size-trailing-dot stable=True saved_source_matches=True valid=True
+nbsp-arg -> muse-probe-r2contain-size-nbsp-arg stable=True saved_source_matches=True valid=True
+upper-value -> muse-probe-r2contain-size-upper-value stable=True saved_source_matches=True valid=True
+upper-unit -> muse-probe-r2contain-size-upper-unit stable=True saved_source_matches=True valid=True
+pt-unit -> muse-probe-r2contain-size-pt-unit stable=True saved_source_matches=True valid=True
+double-space-head -> muse-probe-r2contain-size-double-space-head stable=True saved_source_matches=True valid=True
+equals-form -> muse-probe-r2contain-size-equals-form stable=True saved_source_matches=True valid=True
+quoted-value -> muse-probe-r2contain-size-quoted-value stable=True saved_source_matches=True valid=True
+closer-with-space -> muse-probe-r2contain-size-closer-with-space stable=True saved_source_matches=True valid=True
+entity-head -> muse-probe-r2contain-size-entity-head stable=True saved_source_matches=True valid=True
+mixed-case-tag -> muse-probe-r2contain-size-mixed-case-tag stable=True saved_source_matches=True valid=True
+no-arg -> muse-probe-r2contain-size-no-arg stable=True saved_source_matches=True valid=True
+empty-body -> muse-probe-r2contain-size-empty-body stable=True saved_source_matches=True valid=True
+ws-body -> muse-probe-r2contain-size-ws-body stable=True saved_source_matches=True valid=True
+space-before-close -> muse-probe-r2contain-size-space-before-close stable=True saved_source_matches=True valid=True
+nested-pair -> muse-probe-r2contain-size-nested-pair stable=True saved_source_matches=True valid=True
+crossed-span -> muse-probe-r2contain-size-crossed-span stable=True saved_source_matches=True valid=True
+crossed-color -> muse-probe-r2contain-size-crossed-color stable=True saved_source_matches=True valid=True
+crossed-bold -> muse-probe-r2contain-size-crossed-bold stable=True saved_source_matches=True valid=True
+size-in-div -> muse-probe-r2contain-size-size-in-div stable=True saved_source_matches=True valid=True
+list-in-size -> muse-probe-r2contain-size-list-in-size stable=True saved_source_matches=True valid=True
+size-crosses-div -> muse-probe-r2contain-size-size-crosses-div stable=True saved_source_matches=True valid=True
+{
+ "long-px": {
+  "fullname": "muse-probe-r2contain-size-long-px",
+  "html": "<p>[[size 123456px]]X[[/size]]</p>",
+  "html_sha256": "b016f1db257e68a305ae0206d36a5f2f5daad975774ad54a52cc37bd2c623745",
+  "source": "[[size 123456px]]X[[/size]]",
+  "source_sha256": "c25b5d212e6decd1b1dc239afe500cf93f17eef3089676f7e7e998fba107716a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "long-pct": {
+  "fullname": "muse-probe-r2contain-size-long-pct",
+  "html": "<p>[[size 1000000%]]X[[/size]]</p>",
+  "html_sha256": "1835f4764d10379ce46b91da3059fd28100c6f43cc7fe5a4c149e3a9acfbafa5",
+  "source": "[[size 1000000%]]X[[/size]]",
+  "source_sha256": "9c74f1cf64a95a1c64b3bc4eec283599b4a7487ab322ded742bb1173aeafe807",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "multi-dot": {
+  "fullname": "muse-probe-r2contain-size-multi-dot",
+  "html": "<p><span style=\"font-size:1.2.3px;\">X</span></p>",
+  "html_sha256": "608708d76922477451fc6ca3008010d141aaff92deabd75d7cbe297bf3e73d63",
+  "source": "[[size 1.2.3px]]X[[/size]]",
+  "source_sha256": "e762e5c106e95d5dd595e18991c2bfd206e9c12e6ebd4e8c6547733c7b2264a1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "dot-only": {
+  "fullname": "muse-probe-r2contain-size-dot-only",
+  "html": "<p><span style=\"font-size:.px;\">X</span></p>",
+  "html_sha256": "a5daa849639e036dc9bcf822f7827d0655610a55c11dc87368516d01a0d32f0e",
+  "source": "[[size .px]]X[[/size]]",
+  "source_sha256": "da04be6da0880dac62b5fa6bea60d1afddbf43cb50a8938e823d199390eeba34",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "trailing-dot": {
+  "fullname": "muse-probe-r2contain-size-trailing-dot",
+  "html": "<p><span style=\"font-size:1.px;\">X</span></p>",
+  "html_sha256": "f26993e92cce70af9b58a23d5772f1b5d9a338539ac20693c57ba1f7cc206458",
+  "source": "[[size 1.px]]X[[/size]]",
+  "source_sha256": "272245d39d66f2fc0037d075362ec5c9aad8fc0dee0dfe8d0076a5d8c9b271e4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nbsp-arg": {
+  "fullname": "muse-probe-r2contain-size-nbsp-arg",
+  "html": "<p>[[size &nbsp;100%&nbsp;]]X[[/size]]</p>",
+  "html_sha256": "29c05c51ee6bdda1ee13be7d509807eef219a27bf3b81731b924fcaf6927bd31",
+  "source": "[[size  100% ]]X[[/size]]",
+  "source_sha256": "1c1e4f0d7160c805612e3e67d2f6061bf4ec07c3d890e28bbc9d31fd6d13b0a2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "upper-value": {
+  "fullname": "muse-probe-r2contain-size-upper-value",
+  "html": "<p>[[size LARGER]]X[[/size]]</p>",
+  "html_sha256": "6f3e9045d099e9b3c01ab8aeebe2c80f300e5605bc6c6f12fcc1c3419bc65180",
+  "source": "[[size LARGER]]X[[/size]]",
+  "source_sha256": "c83c1c91b9cfd9fb475b8fdd59127f09ab3bb25b99dfa966669a09089df147e7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "upper-unit": {
+  "fullname": "muse-probe-r2contain-size-upper-unit",
+  "html": "<p>[[size 80PX]]X[[/size]]</p>",
+  "html_sha256": "98a59d5b7dc9f0d3f53d331c30fd0b8aa048982d13d9dec39edf112a9a44b204",
+  "source": "[[size 80PX]]X[[/size]]",
+  "source_sha256": "b7944008f80b0241e0e9c6146bf3c63a4b059f1053c94d4e26981a043f06f834",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pt-unit": {
+  "fullname": "muse-probe-r2contain-size-pt-unit",
+  "html": "<p>[[size 12pt]]X[[/size]]</p>",
+  "html_sha256": "ff55873a25cdb8b6ee260b87a900e42c8170a241defa11974a0a31e520f3651d",
+  "source": "[[size 12pt]]X[[/size]]",
+  "source_sha256": "b6770864e7986c4f47e5b978180af5d46ed3c0f8574b83832a4f93378970bf37",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "double-space-head": {
+  "fullname": "muse-probe-r2contain-size-double-space-head",
+  "html": "<p><span style=\"font-size:100%;\">X</span></p>",
+  "html_sha256": "f6abbe59c33112cf0bb9922caac11733e6198c0bf7a98e6c6ca41727e13d9cef",
+  "source": "[[size  100%]]X[[/size]]",
+  "source_sha256": "d2a80af368d701884b4e3a83fdada75aa690bf552e8e5289bbacf4dd5156414c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "equals-form": {
+  "fullname": "muse-probe-r2contain-size-equals-form",
+  "html": "<p>[[size=100%]]X[[/size=]]</p>",
+  "html_sha256": "4c6c9f54cf50a4d6ee1f57b5d595c8c7f2b635c5cbcfa4fddce449b364e1b8a1",
+  "source": "[[size=100%]]X[[/size=]]",
+  "source_sha256": "085b9d0fe8225a504cc59f0871d7343506d25dbb8f965077772a6a8137a3a121",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "quoted-value": {
+  "fullname": "muse-probe-r2contain-size-quoted-value",
+  "html": "<p>[[size &quot;100%&quot;]]X[[/size]]</p>",
+  "html_sha256": "3baa223936575b8a660151a3ca49533d5bd7c38c35df907d6918cb88472cb0a9",
+  "source": "[[size \"100%\"]]X[[/size]]",
+  "source_sha256": "c863db0938801e68e6f97eb532ee5862c6ea1ec0896543ad362c4aed71b1f75e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "closer-with-space": {
+  "fullname": "muse-probe-r2contain-size-closer-with-space",
+  "html": "<p>[[size 80%]]x[[/size ]]</p>",
+  "html_sha256": "4af2982f96237828a6d17cfebd5f8b1d75015fde0712235799b7ae4b3c8f549d",
+  "source": "[[size 80%]]x[[/size ]]",
+  "source_sha256": "f160c915ccd3123f4230858e99042a5ac77c4fcf680e83e2c618e75a4e403d70",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "entity-head": {
+  "fullname": "muse-probe-r2contain-size-entity-head",
+  "html": "<p>[[size 100&amp;#37;]]X[[/size]]</p>",
+  "html_sha256": "39328f33399c77cf63c04d14c7033562d52381c2554c39140663a62bd67c6f29",
+  "source": "[[size 100&#37;]]X[[/size]]",
+  "source_sha256": "7b27c37e60de1a8e38b8cba7ca803aa2f486dd81da743d64e1c157fd6bf50a99",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "mixed-case-tag": {
+  "fullname": "muse-probe-r2contain-size-mixed-case-tag",
+  "html": "<p><span style=\"font-size:larger;\">X</span></p>",
+  "html_sha256": "02d20623777dffaa6f9c84ae881df853ad99e0a226d1905a48e6f668e3cc30e6",
+  "source": "[[SiZe larger]]X[[/sIzE]]",
+  "source_sha256": "090db990ad914e100923a00d0e071cd068786fa16ae6d6ac18440807693cfe01",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "no-arg": {
+  "fullname": "muse-probe-r2contain-size-no-arg",
+  "html": "<p>[[size]]X[[/size]]</p>",
+  "html_sha256": "cba51e6426546d1f5c6e619b078f6ccb2b6a602d59abce8539489baf4716b556",
+  "source": "[[size]]X[[/size]]",
+  "source_sha256": "16feb17e279a9c8ce7d35c495881a8b4312919e905e8dda61e8282543cd028e3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "empty-body": {
+  "fullname": "muse-probe-r2contain-size-empty-body",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[size 100%]][[/size]]",
+  "source_sha256": "6573f961a40ff0df6304093d6dcc279fceeac039d247c30accf5846026d6f67b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "ws-body": {
+  "fullname": "muse-probe-r2contain-size-ws-body",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[size 100%]]   [[/size]]",
+  "source_sha256": "9aaf37b5949425a0361454c3921486428237403c19525ae2cf1f1ea72815113a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "space-before-close": {
+  "fullname": "muse-probe-r2contain-size-space-before-close",
+  "html": "<p><span style=\"font-size:120%;\">x</span></p>",
+  "html_sha256": "06597af84b7bb575ef2e7a99b010f936041b747b7d285517cdb96ae028fbdfb0",
+  "source": "[[size 120%]]x [[/size]]",
+  "source_sha256": "490f165e1391cd9e78997a73289f11900e5565887b1b12a389eb206059981926",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nested-pair": {
+  "fullname": "muse-probe-r2contain-size-nested-pair",
+  "html": "<p><span style=\"font-size:80%;\">a<span style=\"font-size:90%;\">b</span>c</span></p>",
+  "html_sha256": "c8bfea908fff1554de7ec582e78bc46911db5ecc15e62ed8f56dae62a63d3ad6",
+  "source": "[[size 80%]]a[[size 90%]]b[[/size]]c[[/size]]",
+  "source_sha256": "641404e4549bd85b790877c41d5281276b779a87aad6f7d4e896e4d1d144a23f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "crossed-span": {
+  "fullname": "muse-probe-r2contain-size-crossed-span",
+  "html": "<p><span style=\"font-size:80%;\">a<span class=\"x\">b</span>c</span></p>",
+  "html_sha256": "a4b6a4afb3c927cef1f9e38faa5a31b4297ddfe43104194d916557cb56020ae8",
+  "source": "[[size 80%]]a[[span class=\"x\"]]b[[/size]]c[[/span]]",
+  "source_sha256": "f59f1a02ddceee0cb9f7b90d43949566a6e5b7798746f389961edcb45728d791",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "crossed-color": {
+  "fullname": "muse-probe-r2contain-size-crossed-color",
+  "html": "<p>[[color red]]a<span style=\"font-size:80%;\">b[[/color]]c</span></p>",
+  "html_sha256": "eb0c0125fffc319ba432574232b1d2ff73e9315ca559ea828e01d8e35eff8ba7",
+  "source": "[[color red]]a[[size 80%]]b[[/color]]c[[/size]]",
+  "source_sha256": "a8bd555761fea79f93046640ea82409ee27d96a4334e2f6d778b5c53bc52f7a9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "crossed-bold": {
+  "fullname": "muse-probe-r2contain-size-crossed-bold",
+  "html": "<p><strong><span style=\"font-size:110%;\">OVERWATCH COUNCIL</span></strong></p>",
+  "html_sha256": "73d21db08a13a77cfc41c866d5451178e056a749895eb8fee8df99419e5882e2",
+  "source": "**[[size 110%]]OVERWATCH COUNCIL**[[/size]]",
+  "source_sha256": "b828a3336564f1487287ede1ff35943485f91cce73e9891c2e18e036e182ae92",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "size-in-div": {
+  "fullname": "muse-probe-r2contain-size-size-in-div",
+  "html": "<div class=\"d\">\n<p><span style=\"font-size:80%;\">x</span></p>\n</div>",
+  "html_sha256": "d91914053c02d989461b2989b2e9a752cbfc67fdfdd18466d14e71495f1c3808",
+  "source": "[[div class=\"d\"]]\n[[size 80%]]x[[/size]]\n[[/div]]",
+  "source_sha256": "5b69f90c81db1b98cdf178d274940c09a6f439e4b7ebc4eb155d9610c9f28daf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "list-in-size": {
+  "fullname": "muse-probe-r2contain-size-list-in-size",
+  "html": "<p><span style=\"font-size:80%;\">a</span></p>\n<ul>\n<li><span style=\"font-size:80%;\">x</span></li>\n<li><span style=\"font-size:80%;\">y</span></li>\n</ul>",
+  "html_sha256": "3b0a5a8d8837990b9a73d651cd348e51b9ed8502f671bcd2791e784f8aea0dc8",
+  "source": "[[size 80%]]a\n* x\n* y\n[[/size]]",
+  "source_sha256": "f9b506c435426c354fb241bb26858b20a3182681a395a38e705c85ff009010f2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "size-crosses-div": {
+  "fullname": "muse-probe-r2contain-size-size-crosses-div",
+  "html": "<div class=\"outer\">\n<p><span style=\"font-size:larger;\">header</span></p>\n<div class=\"links\">\n<p><span style=\"font-size:larger;\">link</span></p>\n</div>\n<div class=\"content\">\n<p><br />\nbody</p>\n</div>\n</div>",
+  "html_sha256": "21bd55cd8d56d0b23de86a43391f70944af6eee7e1ef93d8ec4fb005f9b7160c",
+  "source": "[[size larger]]\n[[div class=\"outer\"]]\nheader\n[[div class=\"links\"]]\nlink\n[[/div]]\n[[div class=\"content\"]]\n[[/size]]\nbody\n[[/div]]\n[[/div]]",
+  "source_sha256": "99ab3665f954ebe74dc9e0758b89b4a105087cadca55c6eb810ad4b8e3ea336b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

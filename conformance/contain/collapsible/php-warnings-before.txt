@@ -1,0 +1,12 @@
+PHP Warning:  Undefined array key "folded" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 43
+Warning: Undefined array key "folded" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 43
+PHP Warning:  Undefined array key "folded" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 43
+Warning: Undefined array key "folded" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 43
+PHP Warning:  Undefined array key "show" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 49
+Warning: Undefined array key "show" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 49
+PHP Warning:  Undefined array key "hide" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 55
+Warning: Undefined array key "hide" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 55
+PHP Warning:  Undefined array key "hideLocation" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 61
+Warning: Undefined array key "hideLocation" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 61
+PHP Warning:  Undefined array key "hideLocation" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 63
+Warning: Undefined array key "hideLocation" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-dsh-r2contain/conformance-refphp/contain/collapsible/Collapsible.render.before.php on line 63

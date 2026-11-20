@@ -1,0 +1,68 @@
+x13-iftags-active-div -> muse-probe-r2contain-x-x13-iftags-active-div stable=True saved_source_matches=True valid=True
+x14-iftags-suppressed-coll -> muse-probe-r2contain-x-x14-iftags-suppressed-coll stable=True saved_source_matches=True valid=True
+x15-iftags-active-coll -> muse-probe-r2contain-x-x15-iftags-active-coll stable=True saved_source_matches=True valid=True
+x16-iftags-suppressed-tab -> muse-probe-r2contain-x-x16-iftags-suppressed-tab stable=True saved_source_matches=True valid=True
+x17-code-inline-div -> muse-probe-r2contain-x-x17-code-inline-div stable=True saved_source_matches=True valid=True
+x18-code-block-div -> muse-probe-r2contain-x-x18-code-block-div stable=True saved_source_matches=True valid=True
+{
+ "x13-iftags-active-div": {
+  "fullname": "muse-probe-r2contain-x-x13-iftags-active-div",
+  "html": "<p>visible</p>",
+  "html_sha256": "487a70dfee26569d65df26e32eaf580849b2772b18d76eb1647eec0460cd8ce8",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "source_sha256": "0daf9e94392c44785fa9b4509cb9f6abefa43767968fac5194bc380ba263a4a1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x14-iftags-suppressed-coll": {
+  "fullname": "muse-probe-r2contain-x-x14-iftags-suppressed-coll",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>inside</p>\n</div>\n</div>\n</div>\n<p>visible</p>",
+  "html_sha256": "2e4d49e80cfba206f4bd7d51845e221430df2592c68c3cc75f8e37c978e24cb1",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "source_sha256": "55965bcfba77ab17ca63b8413c813d597150e8ba830d35e1b974feed21580c8e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x15-iftags-active-coll": {
+  "fullname": "muse-probe-r2contain-x-x15-iftags-active-coll",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>inside</p>\n</div>\n</div>\n</div>\n<p>visible</p>",
+  "html_sha256": "2e4d49e80cfba206f4bd7d51845e221430df2592c68c3cc75f8e37c978e24cb1",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "source_sha256": "55965bcfba77ab17ca63b8413c813d597150e8ba830d35e1b974feed21580c8e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x16-iftags-suppressed-tab": {
+  "fullname": "muse-probe-r2contain-x-x16-iftags-suppressed-tab",
+  "html": "<p>visible</p>",
+  "html_sha256": "487a70dfee26569d65df26e32eaf580849b2772b18d76eb1647eec0460cd8ce8",
+  "source": "[[iftags +alpha]]\n[[tabview]]\n[[tab title=A]]\nbody\n[[/tab]]\n[[/tabview]]\n[[/iftags]]\nvisible",
+  "source_sha256": "01b6a0f0369c2450b856f551a9fde555e5f3611863c024f4352480034eea32fd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x17-code-inline-div": {
+  "fullname": "muse-probe-r2contain-x-x17-code-inline-div",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[div&#32;class=x]]&#32;inside&#32;[[/div]]</span></p>",
+  "html_sha256": "7fd1709e20d3e06a449e5bcc534732f3243326bfbcc555d60726ef4b55693e6e",
+  "source": "@@[[div class=x]] inside [[/div]]@@",
+  "source_sha256": "b04784cc1c2c81680941be5a40310455d288792ff0b5ff41e83543dab5a980d1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x18-code-block-div": {
+  "fullname": "muse-probe-r2contain-x-x18-code-block-div",
+  "html": "<div class=\"code\">\n<pre><code>[[div]]\ninside\n[[/div]]</code></pre></div>",
+  "html_sha256": "d338dc79a0bfb7767eb1535a4fa1673722f8adf8c00b75cb15bff392d63f85a9",
+  "source": "[[code]]\n[[div]]\ninside\n[[/div]]\n[[/code]]",
+  "source_sha256": "09ccf7e6e38c5d7280c997028cb4f809ddab84be716cbcb10d5695f0a1f5e83d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

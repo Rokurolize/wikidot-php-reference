@@ -1,0 +1,82 @@
+{
+ "p01-basic-two": {
+  "fullname": "muse-probe-r2contain-tab-p01-basic-two",
+  "source": "[[tabview]]\n[[tab One]]\nfirst\n[[/tab]]\n[[tab Two]]\nsecond\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p02-title-double-space": {
+  "fullname": "muse-probe-r2contain-tab-p02-title-double-space",
+  "source": "[[tabview]]\n[[tab A  B]]\nx\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p03-title-trailing-space": {
+  "fullname": "muse-probe-r2contain-tab-p03-title-trailing-space",
+  "source": "[[tabview]]\n[[tab A ]]\nx\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p04-title-entity": {
+  "fullname": "muse-probe-r2contain-tab-p04-title-entity",
+  "source": "[[tabview]]\n[[tab A &amp; B]]\nx\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p05-title-htmlchars": {
+  "fullname": "muse-probe-r2contain-tab-p05-title-htmlchars",
+  "source": "[[tabview]]\n[[tab <em>x</em>]]\nx\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p06-attr-then-text": {
+  "fullname": "muse-probe-r2contain-tab-p06-attr-then-text",
+  "source": "[[tabview]]\n[[tab class=\"c\" A]]\nx\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p07-raw-title": {
+  "fullname": "muse-probe-r2contain-tab-p07-raw-title",
+  "source": "[[tabview]]\n[[tab title=\"@@a@@\"]]\nx\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p08-view-class": {
+  "fullname": "muse-probe-r2contain-tab-p08-view-class",
+  "source": "[[tabview class=\"x\"]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p09-unterminated-view": {
+  "fullname": "muse-probe-r2contain-tab-p09-unterminated-view",
+  "source": "[[tabview]]\n[[tab A]]\nbody\n[[/tab]]",
+  "action": "created"
+ },
+ "p10-unterminated-tab": {
+  "fullname": "muse-probe-r2contain-tab-p10-unterminated-tab",
+  "source": "[[tabview]]\n[[tab A]]\nbody\n[[/tabview]]",
+  "action": "created"
+ },
+ "p11-prose-between": {
+  "fullname": "muse-probe-r2contain-tab-p11-prose-between",
+  "source": "[[tabview]]\n[[tab A]] a [[/tab]]\nprose\n[[tab B]] b [[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p12-stray-tab-first": {
+  "fullname": "muse-probe-r2contain-tab-p12-stray-tab-first",
+  "source": "[[tabview]]\n[[/tab]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p13-nested-view": {
+  "fullname": "muse-probe-r2contain-tab-p13-nested-view",
+  "source": "[[tabview]]\n[[tab outer]]\nA\n[[tabview]]\n[[tab inner]]\nB\n[[/tab]]\n[[/tabview]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p14-untitled": {
+  "fullname": "muse-probe-r2contain-tab-p14-untitled",
+  "source": "[[tabview]]\n[[tab]]\nx\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p15-coll-in-tab": {
+  "fullname": "muse-probe-r2contain-tab-p15-coll-in-tab",
+  "source": "[[tabview]]\n[[tab A]]\n[[collapsible]]\ninner\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "p16-empty-tab": {
+  "fullname": "muse-probe-r2contain-tab-p16-empty-tab",
+  "source": "[[tabview]]\n[[tab A]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ }
+}

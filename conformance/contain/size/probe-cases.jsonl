@@ -1,0 +1,26 @@
+{"id": "long-px", "source": "[[size 123456px]]X[[/size]]"}
+{"id": "long-pct", "source": "[[size 1000000%]]X[[/size]]"}
+{"id": "multi-dot", "source": "[[size 1.2.3px]]X[[/size]]"}
+{"id": "dot-only", "source": "[[size .px]]X[[/size]]"}
+{"id": "trailing-dot", "source": "[[size 1.px]]X[[/size]]"}
+{"id": "nbsp-arg", "source": "[[size  100% ]]X[[/size]]"}
+{"id": "upper-value", "source": "[[size LARGER]]X[[/size]]"}
+{"id": "upper-unit", "source": "[[size 80PX]]X[[/size]]"}
+{"id": "pt-unit", "source": "[[size 12pt]]X[[/size]]"}
+{"id": "double-space-head", "source": "[[size  100%]]X[[/size]]"}
+{"id": "equals-form", "source": "[[size=100%]]X[[/size=]]"}
+{"id": "quoted-value", "source": "[[size \"100%\"]]X[[/size]]"}
+{"id": "closer-with-space", "source": "[[size 80%]]x[[/size ]]"}
+{"id": "entity-head", "source": "[[size 100&#37;]]X[[/size]]"}
+{"id": "mixed-case-tag", "source": "[[SiZe larger]]X[[/sIzE]]"}
+{"id": "no-arg", "source": "[[size]]X[[/size]]"}
+{"id": "empty-body", "source": "[[size 100%]][[/size]]"}
+{"id": "ws-body", "source": "[[size 100%]]   [[/size]]"}
+{"id": "space-before-close", "source": "[[size 120%]]x [[/size]]"}
+{"id": "nested-pair", "source": "[[size 80%]]a[[size 90%]]b[[/size]]c[[/size]]"}
+{"id": "crossed-span", "source": "[[size 80%]]a[[span class=\"x\"]]b[[/size]]c[[/span]]"}
+{"id": "crossed-color", "source": "[[color red]]a[[size 80%]]b[[/color]]c[[/size]]"}
+{"id": "crossed-bold", "source": "**[[size 110%]]OVERWATCH COUNCIL**[[/size]]"}
+{"id": "size-in-div", "source": "[[div class=\"d\"]]\n[[size 80%]]x[[/size]]\n[[/div]]"}
+{"id": "list-in-size", "source": "[[size 80%]]a\n* x\n* y\n[[/size]]"}
+{"id": "size-crosses-div", "source": "[[size larger]]\n[[div class=\"outer\"]]\nheader\n[[div class=\"links\"]]\nlink\n[[/div]]\n[[div class=\"content\"]]\n[[/size]]\nbody\n[[/div]]\n[[/div]]"}

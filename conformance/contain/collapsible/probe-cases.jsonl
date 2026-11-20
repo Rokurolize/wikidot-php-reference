@@ -1,0 +1,17 @@
+{"id": "basic", "source": "[[collapsible]]\nApple\n[[/collapsible]]"}
+{"id": "inline", "source": "[[collapsible]]Banana[[/collapsible]]"}
+{"id": "empty", "source": "[[collapsible]]\n[[/collapsible]]"}
+{"id": "showhide", "source": "[[collapsible show=\"+ Open\" hide=\"- Close\"]]\nMango\n[[/collapsible]]"}
+{"id": "showtext", "source": "[[collapsible showText=\"OPEN\" hideText=\"CLOSE\"]]\nMango\n[[/collapsible]]"}
+{"id": "attrs", "source": "[[collapsible id=\"hider\" class=\"myc\" style=\"color: teal\" data-hider=\"ya\"]]\nfoo\n[[/collapsible]]"}
+{"id": "folded-no", "source": "[[collapsible folded=\"no\"]]\nBlueberry\n[[/collapsible]]"}
+{"id": "hideloc-both", "source": "[[collapsible hideLocation=\"both\"]]\nPineapple\n[[/collapsible]]"}
+{"id": "hideloc-bottom", "source": "[[collapsible hideLocation=\"bottom\"]]\nRaspberry\n[[/collapsible]]"}
+{"id": "hideloc-neither", "source": "[[collapsible hideLocation=\"neither\"]]\nHidden\n[[/collapsible]]"}
+{"id": "nested-same", "source": "[[collapsible show=\"L1\"]]\nA\n[[collapsible show=\"L2\"]]\nB\n[[/collapsible]]\nC\n[[/collapsible]]"}
+{"id": "uppercase", "source": "[[COLLAPSIBLE id=\"up\" Show=\"UPPER\" hide=\"lower\"]]BODY[[/COLLAPSIBLE]]"}
+{"id": "singlequote", "source": "[[collapsible show='+ SQ' hide='- SQ']]\nBODY\n[[/collapsible]]"}
+{"id": "unquoted", "source": "[[collapsible show=OPEN hide=CLOSE]]\nBODY\n[[/collapsible]]"}
+{"id": "stray-closer", "source": "text [[/collapsible]] more"}
+{"id": "div-inside", "source": "[[collapsible]]\n[[div class=\"d\"]]inside[[/div]]\n[[/collapsible]]"}
+{"id": "coll-inside-div", "source": "[[div class=\"d\"]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/div]]"}

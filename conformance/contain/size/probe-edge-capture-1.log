@@ -1,0 +1,13 @@
+newline-only-body -> muse-probe-r2contain-size-newline-only-body stable=True saved_source_matches=True valid=True
+{
+ "newline-only-body": {
+  "fullname": "muse-probe-r2contain-size-newline-only-body",
+  "html": "<p><span style=\"font-size:100%;\"><br /></span></p>",
+  "html_sha256": "ecb110a912fd5e3b7fdb3c67e4017d3a55a574724fffb0103b998f5b31d07ba6",
+  "source": "[[size 100%]]\n[[/size]]",
+  "source_sha256": "9bce5dc978de69daf81f7f57ecaf7faef39c672873850c376bd9a2bd835a45e1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,13 @@
+boundary-5-pct -> muse-probe-r2contain-size-boundary-5-pct stable=True saved_source_matches=True valid=True
+{
+ "boundary-5-pct": {
+  "fullname": "muse-probe-r2contain-size-boundary-5-pct",
+  "html": "<p><span style=\"font-size:12345%;\">X</span></p>",
+  "html_sha256": "2d20c96780f05a57a4a3678bbe4ef42a5f4e8969e66ddb1d0bb073a316c702fd",
+  "source": "[[size 12345%]]X[[/size]]",
+  "source_sha256": "dba6e512f940a75dd183c2c6d556add5529e5a258602cc1291fa64f8086c8208",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,75 @@
+{"id":"basic","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"basic-uppercase","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"basic-indented","output":"<p><div ><\/p>\n\n<p>hello<\/p>\n\n<\/div>"}
+{"id":"basic-trailing-blank","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"basic-two-paras","output":"<div ><p>A<\/p>\n\n<p>B<\/p>\n\n<\/div>"}
+{"id":"basic-heading","output":"<div >\n<h1 id=\"toc0\"><span>Head<\/span><\/h1>\n<p>text<\/p>\n\n<\/div>"}
+{"id":"attr-class","output":"<div  class=\"card\"><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-id","output":"<div ><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-id-prefixed","output":"<div ><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-id-space","output":"<div ><p>x<\/p>\n\n<\/div>"}
+{"id":"attr-style","output":"<div  style=\"color: red\"><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-style-two","output":"<div  style=\"color: red; background: blue\"><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-role-type","output":"<div ><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-data","output":"<div ><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-data-empty-suffix","output":"<div ><p>T<\/p>\n\n<\/div>"}
+{"id":"attr-unknown","output":"<div ><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-allowlist","output":"<div  class=\"card\" style=\"color: red\"><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-allowlist-mixed","output":"<div ><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-single-quote","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-unquoted","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-dupe-data","output":"<div ><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-class-space","output":"<div  class=\"a  b\"><p>x<\/p>\n\n<\/div>"}
+{"id":"attr-empty-value","output":"<div ><p>x<\/p>\n\n<\/div>"}
+{"id":"attr-style-hidden-display","output":"<div  style=\"\"><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-style-hidden-vis","output":"<div  style=\"\"><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-style-hidden-mixed","output":"<div  style=\" color: red\"><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-style-hidden-space","output":"<div  style=\"display : none\"><p>hello<\/p>\n\n<\/div>"}
+{"id":"empty-plain","output":"<div ><\/div><br \/>\nB"}
+{"id":"empty-attr","output":"<div  class=\"k\"><\/div><br \/>\nB"}
+{"id":"empty-whitespace","output":"<div ><\/div><br \/>\nB"}
+{"id":"empty-at-eof","output":"<div ><\/div>"}
+{"id":"unterminated","output":"<p>[[div]]<br \/>\nhello<\/p>\n\n"}
+{"id":"unterminated-attr","output":"<p>[[div class=&quot;k&quot;]]<br \/>\nhello<\/p>\n\n"}
+{"id":"stray","output":"<p>hello<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"stray-only","output":"<p>[[\/div]]<\/p>\n\n"}
+{"id":"stray-two","output":"<p>[[\/div]]<br \/>\n[[\/div]]<br \/>\nA<\/p>\n\n"}
+{"id":"closer-midline","output":"<p>A [[\/div]] B<\/p>\n\n"}
+{"id":"closer-first","output":"<div ><p>A<\/p>\n\n<\/div><br \/>\nB<br \/>\n[[\/div]]"}
+{"id":"closer-multi","output":"<div ><p>A<\/p>\n\n<\/div><br \/>\nB<br \/>\n[[\/div]]<br \/>\nC<br \/>\n[[\/div]]"}
+{"id":"closer-same-line","output":"<div ><p>A<\/p>\n\n<\/div>B<br \/>\n[[\/div]]"}
+{"id":"closer-upper","output":"<div ><p>A<\/p>\n\n<\/div>"}
+{"id":"inline-bold","output":"<div ><p><strong>bold<\/strong> and <em>ital<\/em><\/p>\n\n<\/div>"}
+{"id":"inline-span","output":"<div ><p><span  style=\"\">egg<\/span><\/p>\n\n<\/div>"}
+{"id":"inline-link","output":"<div ><p><a href=\"http:\/\/example.com\">link<\/a><\/p>\n\n<\/div>"}
+{"id":"inline-code","output":"<div ><p><tt>code<\/tt><\/p>\n\n<\/div>"}
+{"id":"crossed-span","output":"<p>[[div]]A1<span  style=\"\">B2[[\/div]]C3<\/span>D4<\/p>\n\n"}
+{"id":"inline-content-scored","output":"<p>[[div_]]<br \/>\n<strong>bold<\/strong> <span  style=\"\">egg<\/span><br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"nested","output":"<div ><p>A<\/p>\n\n<div ><p>B<\/p>\n\n<\/div><br \/>\nC<\/div>"}
+{"id":"nested-deep","output":"<div ><p>1<\/p>\n\n<div ><p>2<\/p>\n\n<div ><p>3<\/p>\n\n<\/div><br \/>\n2b<\/div><br \/>\n1b<\/div>"}
+{"id":"nested-attr","output":"<div  class=\"outer\"><p>A<\/p>\n\n<div  class=\"inner\"><p>B<\/p>\n\n<\/div><\/div>"}
+{"id":"nested-scored","output":"<p>[[div_]]<br \/>\n1<br \/>\n[[div_]]<br \/>\n2<br \/>\n[[\/div]]<br \/>\n3<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"nested-mixed","output":"<div ><p>A<br \/>\n[[div_]]<br \/>\nB<\/p>\n\n<\/div><br \/>\nC<br \/>\n[[\/div]]"}
+{"id":"div-in-collapsible","output":"<div class=\"collapsible-block\"><div id=\"collapsible-block-0-folded\" ><a href=\"javascript:;\" onclick=\"$('collapsible-block-0-folded').style.display='none';$('collapsible-block-0-unfolded').style.display='block'; \">+ show block<\/a><\/div><div id=\"collapsible-block-0-unfolded\" style=\"display:none\"><div><a href=\"javascript:;\" onclick=\"$('collapsible-block-0-unfolded').style.display='none';$('collapsible-block-0-folded').style.display='block';\">- hide block<\/a><\/div><div id=\"collapsible-block-0-content\"><div ><p>A<\/p>\n\n<\/div><\/div><\/div><\/div>"}
+{"id":"div-in-tabview","output":"<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/element-beta-min.js\"><\/script>\n<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/tabview-min.js\"><\/script><div id=\"wiki-tabview-0\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>T<\/em><\/a><\/li><\/ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><div ><p>A<\/p>\n\n<\/div><\/div><\/div><\/div><script type=\"text\/javascript\">\n(function(){\n\tvar tabView0 = new YAHOO.widget.TabView('wiki-tabview-0');\n})();\n<\/script>"}
+{"id":"scored-in-collapsible","output":"<div class=\"collapsible-block\"><div id=\"collapsible-block-1-folded\" ><a href=\"javascript:;\" onclick=\"$('collapsible-block-1-folded').style.display='none';$('collapsible-block-1-unfolded').style.display='block'; \">+ show block<\/a><\/div><div id=\"collapsible-block-1-unfolded\" style=\"display:none\"><div><a href=\"javascript:;\" onclick=\"$('collapsible-block-1-unfolded').style.display='none';$('collapsible-block-1-folded').style.display='block';\">- hide block<\/a><\/div><div id=\"collapsible-block-1-content\"><p>[[div_]]<br \/>\nA<br \/>\n[[\/div]]<\/p>\n\n<\/div><\/div><\/div>"}
+{"id":"nested-in-tab","output":"<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/element-beta-min.js\"><\/script>\n<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/tabview-min.js\"><\/script><div id=\"wiki-tabview-1\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>T<\/em><\/a><\/li><\/ul><div class=\"yui-content\"><div id=\"wiki-tab-1-0\"><div ><p>A<\/p>\n\n<div ><p>B<\/p>\n\n<\/div><\/div><\/div><\/div><\/div><script type=\"text\/javascript\">\n(function(){\n\tvar tabView1 = new YAHOO.widget.TabView('wiki-tabview-1');\n})();\n<\/script>"}
+{"id":"malformed-division","output":"<p>[[division]]<br \/>\nA<br \/>\n[[\/division]]<\/p>\n\n"}
+{"id":"malformed-divx","output":"<p>[[divx]]<br \/>\nA<br \/>\n[[\/divx]]<\/p>\n\n"}
+{"id":"malformed-open-bracket","output":"<p>[[div<br \/>\nA<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"malformed-close-bracket","output":"<div ><p>A<\/p>\n\n<\/div>]"}
+{"id":"malformed-extra-bracket","output":"<p><a class=\"newpage\" href=\"\/div\">div<\/a><br \/>\nA<br \/>\n<a class=\"newpage\" href=\"\/div\">\/div<\/a><\/p>\n\n"}
+{"id":"malformed-star","output":"<p>[[div*]]<br \/>\nA<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"malformed-empty-args","output":"<div ><p>A<\/p>\n\n<\/div>"}
+{"id":"score-basic","output":"<p>[[div_]]<br \/>\nhello<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"score-attr","output":"<p>[[div_ class=&quot;strip&quot;]]<br \/>\nhello<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"score-attrs-full","output":"<p>[[div_ class=&quot;strip&quot; title=&quot;tip&quot; role=&quot;note&quot; data-x=&quot;y&quot;]]<br \/>\nBody<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"score-attrs-id","output":"<p>[[div_ id=&quot;q&quot; role=&quot;note&quot; data-z=&quot;1&quot;]]<br \/>\nx<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"score-empty","output":"<p>[[div_]]<br \/>\n[[\/div]]<br \/>\nB<\/p>\n\n"}
+{"id":"score-attr-empty","output":"<p>[[div_ class=&quot;k&quot;]]<br \/>\n[[\/div]]<br \/>\nB<\/p>\n\n"}
+{"id":"score-inline","output":"<p>[[div_]]Banana[[\/div]]<\/p>\n\n"}
+{"id":"score-two-lines","output":"<p>[[div_]]<br \/>\napple<br \/>\nbanana<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"score-unterminated","output":"<p>[[div_]]<br \/>\nhello<\/p>\n\n"}
+{"id":"score-stray","output":"<p>[[div_]]<br \/>\nhello<br \/>\n[[\/div]]<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"score-uppercase","output":"<p>[[DIV_]]<br \/>\nhello<br \/>\n[[\/DIV]]<\/p>\n\n"}
+{"id":"score-style-hidden","output":"<p>[[div_ style=&quot;display:none&quot;]]<br \/>\nhello<br \/>\n[[\/div]]<\/p>\n\n"}

@@ -1,0 +1,105 @@
+basic -> muse-probe-r2contain-coll-basic (created)
+inline -> muse-probe-r2contain-coll-inline (created)
+empty -> muse-probe-r2contain-coll-empty (created)
+showhide -> muse-probe-r2contain-coll-showhide (created)
+showtext -> muse-probe-r2contain-coll-showtext (created)
+attrs -> muse-probe-r2contain-coll-attrs (created)
+folded-no -> muse-probe-r2contain-coll-folded-no (created)
+hideloc-both -> muse-probe-r2contain-coll-hideloc-both (created)
+hideloc-bottom -> muse-probe-r2contain-coll-hideloc-bottom (created)
+hideloc-neither -> muse-probe-r2contain-coll-hideloc-neither (created)
+nested-same -> muse-probe-r2contain-coll-nested-same (created)
+uppercase -> muse-probe-r2contain-coll-uppercase (created)
+singlequote -> muse-probe-r2contain-coll-singlequote (created)
+unquoted -> muse-probe-r2contain-coll-unquoted (created)
+stray-closer -> muse-probe-r2contain-coll-stray-closer (created)
+div-inside -> muse-probe-r2contain-coll-div-inside (created)
+coll-inside-div -> muse-probe-r2contain-coll-coll-inside-div (created)
+17 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "basic": {
+  "fullname": "muse-probe-r2contain-coll-basic",
+  "source": "[[collapsible]]\nApple\n[[/collapsible]]",
+  "action": "created"
+ },
+ "inline": {
+  "fullname": "muse-probe-r2contain-coll-inline",
+  "source": "[[collapsible]]Banana[[/collapsible]]",
+  "action": "created"
+ },
+ "empty": {
+  "fullname": "muse-probe-r2contain-coll-empty",
+  "source": "[[collapsible]]\n[[/collapsible]]",
+  "action": "created"
+ },
+ "showhide": {
+  "fullname": "muse-probe-r2contain-coll-showhide",
+  "source": "[[collapsible show=\"+ Open\" hide=\"- Close\"]]\nMango\n[[/collapsible]]",
+  "action": "created"
+ },
+ "showtext": {
+  "fullname": "muse-probe-r2contain-coll-showtext",
+  "source": "[[collapsible showText=\"OPEN\" hideText=\"CLOSE\"]]\nMango\n[[/collapsible]]",
+  "action": "created"
+ },
+ "attrs": {
+  "fullname": "muse-probe-r2contain-coll-attrs",
+  "source": "[[collapsible id=\"hider\" class=\"myc\" style=\"color: teal\" data-hider=\"ya\"]]\nfoo\n[[/collapsible]]",
+  "action": "created"
+ },
+ "folded-no": {
+  "fullname": "muse-probe-r2contain-coll-folded-no",
+  "source": "[[collapsible folded=\"no\"]]\nBlueberry\n[[/collapsible]]",
+  "action": "created"
+ },
+ "hideloc-both": {
+  "fullname": "muse-probe-r2contain-coll-hideloc-both",
+  "source": "[[collapsible hideLocation=\"both\"]]\nPineapple\n[[/collapsible]]",
+  "action": "created"
+ },
+ "hideloc-bottom": {
+  "fullname": "muse-probe-r2contain-coll-hideloc-bottom",
+  "source": "[[collapsible hideLocation=\"bottom\"]]\nRaspberry\n[[/collapsible]]",
+  "action": "created"
+ },
+ "hideloc-neither": {
+  "fullname": "muse-probe-r2contain-coll-hideloc-neither",
+  "source": "[[collapsible hideLocation=\"neither\"]]\nHidden\n[[/collapsible]]",
+  "action": "created"
+ },
+ "nested-same": {
+  "fullname": "muse-probe-r2contain-coll-nested-same",
+  "source": "[[collapsible show=\"L1\"]]\nA\n[[collapsible show=\"L2\"]]\nB\n[[/collapsible]]\nC\n[[/collapsible]]",
+  "action": "created"
+ },
+ "uppercase": {
+  "fullname": "muse-probe-r2contain-coll-uppercase",
+  "source": "[[COLLAPSIBLE id=\"up\" Show=\"UPPER\" hide=\"lower\"]]BODY[[/COLLAPSIBLE]]",
+  "action": "created"
+ },
+ "singlequote": {
+  "fullname": "muse-probe-r2contain-coll-singlequote",
+  "source": "[[collapsible show='+ SQ' hide='- SQ']]\nBODY\n[[/collapsible]]",
+  "action": "created"
+ },
+ "unquoted": {
+  "fullname": "muse-probe-r2contain-coll-unquoted",
+  "source": "[[collapsible show=OPEN hide=CLOSE]]\nBODY\n[[/collapsible]]",
+  "action": "created"
+ },
+ "stray-closer": {
+  "fullname": "muse-probe-r2contain-coll-stray-closer",
+  "source": "text [[/collapsible]] more",
+  "action": "created"
+ },
+ "div-inside": {
+  "fullname": "muse-probe-r2contain-coll-div-inside",
+  "source": "[[collapsible]]\n[[div class=\"d\"]]inside[[/div]]\n[[/collapsible]]",
+  "action": "created"
+ },
+ "coll-inside-div": {
+  "fullname": "muse-probe-r2contain-coll-coll-inside-div",
+  "source": "[[div class=\"d\"]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/div]]",
+  "action": "created"
+ }
+}

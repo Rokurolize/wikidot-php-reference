@@ -1,0 +1,4 @@
+{"id":"p31-data-case","source":"BEGIN|[[span data-Mixed=\"v\" DATA-UPPER=\"x\"]]X[[/span]]|END"}
+{"id":"p32-value-amp","source":"BEGIN|[[span class=\"a&b\" style=\"color:red\"]]X[[/span]]|END"}
+{"id":"p33-space-attr","source":"BEGIN|[[span ]]X[[/span]]|END"}
+{"id":"p34-escaped-quote","source":"BEGIN|[[span class=\"a\\\"b\"]]X[[/span]]|END"}

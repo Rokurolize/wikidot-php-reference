@@ -1,0 +1,22 @@
+{
+ "q01-apostrophe-amp": {
+  "fullname": "muse-probe-r2contain-tab-q01-apostrophe-amp",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-fa583fd7f9c8cbd8f646236123c27dd5\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>It's A &amp; B</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<p>x</p>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabViewfa583fd7f9c8cbd8f646236123c27dd5 = new YAHOO.widget.TabView('wiki-tabview-fa583fd7f9c8cbd8f646236123c27dd5');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "4ebb3b61b9c9437e01c7e9a4cb2c1c784249c33595adb9774320a1461ead591d",
+  "source": "[[tabview]]\n[[tab It's A & B]]\nx\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "57096fa6a3386e9f9a662b65fd1ec98cc7b4f6317349b8b76688817448e9a873",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "q02-title-attr-amp": {
+  "fullname": "muse-probe-r2contain-tab-q02-title-attr-amp",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-b9db7e31e557ab5350078d192ce2688e\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>A &amp; B</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<p>x</p>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabViewb9db7e31e557ab5350078d192ce2688e = new YAHOO.widget.TabView('wiki-tabview-b9db7e31e557ab5350078d192ce2688e');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "eff06371c3ac3121a07b765b05999488edaae839a50f18c4305c541e3b87d9b7",
+  "source": "[[tabview]]\n[[tab title=\"A & B\"]]\nx\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "a3d352608b5069ef928f9dfdd6d314f2049671a36a298b59c7bb887c093bb8dc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

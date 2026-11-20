@@ -1,0 +1,26 @@
+{"id":"long-px","output":"<p>[[size 123456px]]X[[\/size]]<\/p>\n\n"}
+{"id":"long-pct","output":"<p>[[size 1000000%]]X[[\/size]]<\/p>\n\n"}
+{"id":"multi-dot","output":"<p><span style=\"font-size:1.2.3px;\">X<\/span><\/p>\n\n"}
+{"id":"dot-only","output":"<p><span style=\"font-size:.px;\">X<\/span><\/p>\n\n"}
+{"id":"trailing-dot","output":"<p><span style=\"font-size:1.px;\">X<\/span><\/p>\n\n"}
+{"id":"nbsp-arg","output":"<p>[[size \u00a0100%\u00a0]]X[[\/size]]<\/p>\n\n"}
+{"id":"upper-value","output":"<p>[[size LARGER]]X[[\/size]]<\/p>\n\n"}
+{"id":"upper-unit","output":"<p>[[size 80PX]]X[[\/size]]<\/p>\n\n"}
+{"id":"pt-unit","output":"<p>[[size 12pt]]X[[\/size]]<\/p>\n\n"}
+{"id":"double-space-head","output":"<p><span style=\"font-size:100%;\">X<\/span><\/p>\n\n"}
+{"id":"equals-form","output":"<p>[[size=100%]]X[[\/size=]]<\/p>\n\n"}
+{"id":"quoted-value","output":"<p>[[size &quot;100%&quot;]]X[[\/size]]<\/p>\n\n"}
+{"id":"closer-with-space","output":"<p>[[size 80%]]x[[\/size ]]<\/p>\n\n"}
+{"id":"entity-head","output":"<p>[[size 100&amp;#37;]]X[[\/size]]<\/p>\n\n"}
+{"id":"mixed-case-tag","output":"<p><span style=\"font-size:larger;\">X<\/span><\/p>\n\n"}
+{"id":"no-arg","output":"<p>[[size]]X[[\/size]]<\/p>\n\n"}
+{"id":"empty-body","output":""}
+{"id":"ws-body","output":""}
+{"id":"space-before-close","output":"<p><span style=\"font-size:120%;\">x<\/span><\/p>\n\n"}
+{"id":"nested-pair","output":"<p><span style=\"font-size:80%;\">a<span style=\"font-size:90%;\">b<\/span>c<\/span><\/p>\n\n"}
+{"id":"crossed-span","output":"<p><span style=\"font-size:80%;\">a<span  class=\"x\" style=\"\">b<\/span>c<\/span><\/p>\n\n"}
+{"id":"crossed-color","output":"<p>[[color red]]a<span style=\"font-size:80%;\">b[[\/color]]c<\/span><\/p>\n\n"}
+{"id":"crossed-bold","output":"<p><strong><span style=\"font-size:110%;\">OVERWATCH COUNCIL<\/strong><\/span><\/p>\n\n"}
+{"id":"size-in-div","output":"<div  class=\"d\"><p><span style=\"font-size:80%;\">x<\/span><\/p>\n\n<\/div>"}
+{"id":"list-in-size","output":"<p><span style=\"font-size:80%;\">a<\/p>\n\n<ul>\n    <li>x<\/li>\n    <li>y<\/li>\n<\/ul>\n\n<p><\/span><\/p>\n\n"}
+{"id":"size-crosses-div","output":"<p><span style=\"font-size:larger;\"><\/p>\n\n<div  class=\"outer\"><p>header<\/p>\n\n<div  class=\"links\"><p>link<\/p>\n\n<\/div><div  class=\"content\"><p><\/span><br \/>\nbody<\/p>\n\n<\/div><\/div>"}

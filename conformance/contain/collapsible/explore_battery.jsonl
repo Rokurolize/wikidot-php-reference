@@ -1,0 +1,14 @@
+{"id": "x01-basic", "source": "[[collapsible]]\nApple\n[[/collapsible]]"}
+{"id": "x02-inline", "source": "[[collapsible]]Banana[[/collapsible]]"}
+{"id": "x03-empty", "source": "[[collapsible]]\n[[/collapsible]]"}
+{"id": "x04-showhide", "source": "[[collapsible show=\"+ Open\" hide=\"- Close\"]]Mango[[/collapsible]]"}
+{"id": "x05-showtext", "source": "[[collapsible showText=\"OPEN\" hideText=\"CLOSE\"]]Mango[[/collapsible]]"}
+{"id": "x06-folded-no", "source": "[[collapsible folded=\"no\"]]Blueberry[[/collapsible]]"}
+{"id": "x07-hideloc-both", "source": "[[collapsible hideLocation=\"both\"]]Pineapple[[/collapsible]]"}
+{"id": "x08-attrs", "source": "[[collapsible id=\"hider\" class=\"myc\" style=\"color: teal\" data-x=\"ya\"]]foo[[/collapsible]]"}
+{"id": "x09-nested-same", "source": "[[collapsible show=\"L1\"]]\nA\n[[collapsible show=\"L2\"]]\nB\n[[/collapsible]]\nC\n[[/collapsible]]"}
+{"id": "x10-unterminated", "source": "[[collapsible]]\nNever closed\nmore text"}
+{"id": "x11-stray-closer", "source": "text [[/collapsible]] more"}
+{"id": "x12-cross-div", "source": "[[collapsible]]\n[[div class=\"d\"]]inside[[/div]]\n[[/collapsible]]"}
+{"id": "x13-malformed", "source": "[[collapsible show=unquoted]]B[[/collapsible]]"}
+{"id": "x14-double-count", "source": "[[collapsible]]A[[/collapsible]]\n[[collapsible]]B[[/collapsible]]"}

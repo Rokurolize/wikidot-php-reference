@@ -1,0 +1,80 @@
+{"id":"sz01-pct","output":"<p><span style=\"font-size:90%;\">Banana<\/span><\/p>\n\n"}
+{"id":"sz02-px","output":"<p><span style=\"font-size:4px;\">Cherry<\/span><\/p>\n\n"}
+{"id":"sz03-em-leading-dot","output":"<p><span style=\"font-size:.5em;\">X<\/span><\/p>\n\n"}
+{"id":"sz04-em-decimal","output":"<p><span style=\"font-size:1.5em;\">X<\/span><\/p>\n\n"}
+{"id":"sz05-pct-integer","output":"<p><span style=\"font-size:100%;\">X<\/span><\/p>\n\n"}
+{"id":"sz06-named-small","output":"<p><span style=\"font-size:small;\">X<\/span><\/p>\n\n"}
+{"id":"sz07-named-xxsmall","output":"<p><span style=\"font-size:xx-small;\">X<\/span><\/p>\n\n"}
+{"id":"sz08-named-medium","output":"<p><span style=\"font-size:medium;\">X<\/span><\/p>\n\n"}
+{"id":"sz09-named-larger","output":"<p><span style=\"font-size:larger;\">X<\/span><\/p>\n\n"}
+{"id":"sz10-named-xxlarge","output":"<p><span style=\"font-size:xx-large;\">X<\/span><\/p>\n\n"}
+{"id":"sz11-long-digits-px","output":"<p>[[size 123456px]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz12-long-digits-pct","output":"<p>[[size 1000000%]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz13-multi-dot-px","output":"<p><span style=\"font-size:1.2.3px;\">X<\/span><\/p>\n\n"}
+{"id":"sz14-trailing-dot-px","output":"<p><span style=\"font-size:1.px;\">X<\/span><\/p>\n\n"}
+{"id":"sz15-dot-only-px","output":"<p><span style=\"font-size:.px;\">X<\/span><\/p>\n\n"}
+{"id":"sz16-pt-unit","output":"<p>[[size 12pt]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz17-rem-unit","output":"<p>[[size 1rem]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz18-vh-unit","output":"<p>[[size 2vh]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz19-negative-px","output":"<p>[[size -1px]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz20-plus-px","output":"<p>[[size +1px]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz21-exponent-pct","output":"<p>[[size 1e2%]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz22-inf-pct","output":"<p>[[size inf%]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz23-nan-pct","output":"<p>[[size NaN%]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz24-upper-larger","output":"<p>[[size LARGER]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz25-title-larger","output":"<p>[[size Larger]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz26-upper-px","output":"<p>[[size 80PX]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz27-upper-em","output":"<p>[[size 1EM]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz28-upper-small","output":"<p>[[size SMALL]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz29-upper-xlarge","output":"<p>[[size X-LARGE]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz30-nbsp-arg","output":"<p>[[size \u00a0100%\u00a0]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz31-no-arg","output":"<p>[[size]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz32-junk","output":"<p>[[size banana]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz33-opener-upper","output":"<p><span style=\"font-size:100%;\">X<\/span><\/p>\n\n"}
+{"id":"sz34-opener-title","output":"<p><span style=\"font-size:100%;\">X<\/span><\/p>\n\n"}
+{"id":"sz35-opener-mixed-closer","output":"<p><span style=\"font-size:larger;\">X<\/span><\/p>\n\n"}
+{"id":"sz36-leading-space-name","output":"<p>[[ size 100%]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz37-double-space","output":"<p><span style=\"font-size:100%;\">X<\/span><\/p>\n\n"}
+{"id":"sz38-tab-separator","output":"<p><span style=\"font-size:100%;\">X<\/span><\/p>\n\n"}
+{"id":"sz39-newline-in-head","output":"<p><span style=\"font-size:100%;\">X<\/span><\/p>\n\n"}
+{"id":"sz40-equals-form","output":"<p>[[size=100%]]X[[\/size=]]<\/p>\n\n"}
+{"id":"sz41-quoted-value","output":"<p>[[size &quot;100%&quot;]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz42-trailing-head-space","output":"<p><span style=\"font-size:100%;\">X<\/span><\/p>\n\n"}
+{"id":"sz43-entity-head","output":"<p>[[size 100&amp;#37;]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz44-escaped-head","output":"<p>[[size 100\\%]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz45-extra-close-in-head","output":"<p><span style=\"font-size:100%;\">]X<\/span><\/p>\n\n"}
+{"id":"sz46-attr-like","output":"<p>[[size 100% class=&quot;x&quot;]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz47-empty-body","output":"<p><span style=\"font-size:100%;\"><\/span><\/p>\n\n"}
+{"id":"sz48-whitespace-body","output":"<p><span style=\"font-size:100%;\">   <\/span><\/p>\n\n"}
+{"id":"sz49-unterminated","output":"<p>[[size 100%]]text<\/p>\n\n"}
+{"id":"sz50-stray-closer","output":"<p>text[[\/size]]<\/p>\n\n"}
+{"id":"sz51-space-before-close","output":"<p><span style=\"font-size:120%;\">x <\/span><\/p>\n\n"}
+{"id":"sz52-double-close","output":"<p><span style=\"font-size:80%;\">x<\/span>y[[\/size]]<\/p>\n\n"}
+{"id":"sz53-space-in-closer","output":"<p>[[size 80%]]x[[\/size ]]<\/p>\n\n"}
+{"id":"sz54-unpaired-close-preserved","output":"<p>[[SIZE]]outer <span style=\"font-size:80%;\">valid<\/span> tail[[\/SIZE]] <span style=\"font-size:90%;\">later<\/span><\/p>\n\n"}
+{"id":"sz55-nested-pair","output":"<p><span style=\"font-size:80%;\">a<span style=\"font-size:90%;\">b<\/span>c<\/span><\/p>\n\n"}
+{"id":"sz56-crossed-pair","output":"<p><span style=\"font-size:80%;\">a<span style=\"font-size:90%;\">b<\/span>c<\/span>d<\/p>\n\n"}
+{"id":"sz57-size-in-span","output":"<p><span  class=\"x\" style=\"\">a<span style=\"font-size:80%;\">b<\/span>c<\/span><\/p>\n\n"}
+{"id":"sz58-span-in-size","output":"<p><span style=\"font-size:80%;\">a<span  class=\"x\" style=\"\">b<\/span>c<\/span><\/p>\n\n"}
+{"id":"sz59-cross-size-span","output":"<p><span style=\"font-size:80%;\">a<span  class=\"x\" style=\"\">b<\/span>c<\/span><\/p>\n\n"}
+{"id":"sz60-size-in-color","output":"<p>[[color red]]a<span style=\"font-size:80%;\">b<\/span>c[[\/color]]<\/p>\n\n"}
+{"id":"sz61-color-in-size","output":"<p>[[color red]]a<span style=\"font-size:80%;\">b[[\/color]]c<\/span><\/p>\n\n"}
+{"id":"sz62-size-in-strike","output":"<p>[[strikethrough]]a<span style=\"font-size:80%;\">b<\/span>c[[\/strikethrough]]<\/p>\n\n"}
+{"id":"sz63-strike-in-size","output":"<p>[[strikethrough]]a<span style=\"font-size:80%;\">b[[\/strikethrough]]c<\/span><\/p>\n\n"}
+{"id":"sz64-size-in-div","output":"<div  class=\"d\"><p><span style=\"font-size:80%;\">x<\/span><\/p>\n\n<\/div>"}
+{"id":"sz65-size-in-blockquote","output":"<p>[[blockquote]]<br \/>\n<span style=\"font-size:80%;\">x<\/span><br \/>\n[[\/blockquote]]<\/p>\n\n"}
+{"id":"sz66-size-in-list","output":"<ul>\n    <li><span style=\"font-size:80%;\">x<\/span><\/li>\n    <li>y<\/li>\n<\/ul>\n\n"}
+{"id":"sz67-size-in-heading","output":"\n<h1 id=\"toc0\"><span><span style=\"font-size:80%;\">x<\/span><\/span><\/h1>\n"}
+{"id":"sz68-div-in-size","output":"<p><span style=\"font-size:80%;\">a[[div class=&quot;d&quot;]]b[[\/div]]c<\/span><\/p>\n\n"}
+{"id":"sz69-list-in-size","output":"<p><span style=\"font-size:80%;\">a<\/p>\n\n<ul>\n    <li>x<\/li>\n    <li>y<\/li>\n<\/ul>\n\n<p><\/span><\/p>\n\n"}
+{"id":"sz70-size-crosses-div","output":"<p><span style=\"font-size:larger;\"><\/p>\n\n<div  class=\"outer\"><p>header<\/p>\n\n<div  class=\"links\"><p>link<\/p>\n\n<\/div><div  class=\"content\"><p><\/span><br \/>\nbody<\/p>\n\n<\/div><\/div>"}
+{"id":"sz71-stray-close-bridge","output":"<p><span style=\"font-size:80%;\">a<\/span>[[\/size]]b<\/p>\n\n"}
+{"id":"sz72-crossed-closers","output":"<p><span style=\"font-size:80%;\">a<span style=\"font-size:90%;\">b<\/span>c<\/span><\/p>\n\n"}
+{"id":"sz73-code-content-wrapped","output":"<p><span style=\"font-size:80%;\">[[code]]x[[\/code]]<\/span><\/p>\n\n"}
+{"id":"sz74-bold-crossed","output":"<p><strong><span style=\"font-size:110%;\">OVERWATCH COUNCIL<\/strong><\/span><\/p>\n\n"}
+{"id":"sz75-list-bold-close","output":"<p><span style=\"font-size:80%;\">* <strong>a<\/strong><\/p>\n\n<ul>\n    <li>b<\/li>\n<\/ul>\n\n<p><\/span><\/p>\n\n"}
+{"id":"sz76-unicode-body","output":"<p><span style=\"font-size:80%;\">caf\u00e9 \u65e5\u672c\u8a9e<\/span><\/p>\n\n"}
+{"id":"sz77-entities-body","output":"<p><span style=\"font-size:80%;\">&amp;amp; &amp;lt; &amp;#39;<\/span><\/p>\n\n"}
+{"id":"sz78-comment-in-head","output":"<p>[[size [% comment %]80%]]X[[\/size]]<\/p>\n\n"}
+{"id":"sz79-nul-body","output":"<p><span style=\"font-size:120%;\">A\u0000B<\/span><\/p>\n\n"}
+{"id":"sz80-multiple-pairs","output":"<p><span style=\"font-size:80%;\">a<\/span> <span style=\"font-size:90%;\">b<\/span><\/p>\n\n"}

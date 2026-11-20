@@ -1,0 +1,8 @@
+{"id":"boundary-5-px","output":"<p><span style=\"font-size:12345px;\">X<\/span><\/p>\n\n"}
+{"id":"boundary-5-pct","output":"<p><span style=\"font-size:12345%;\">X<\/span><\/p>\n\n"}
+{"id":"boundary-6-em","output":"<p>[[size 123456em]]X[[\/size]]<\/p>\n\n"}
+{"id":"multi-space-close","output":"<p><span style=\"font-size:120%;\">x<\/span><\/p>\n\n"}
+{"id":"newline-close","output":"<p><span style=\"font-size:120%;\">x<br \/>\n<\/span><\/p>\n\n"}
+{"id":"tab-close","output":"<p><span style=\"font-size:120%;\">x<\/span><\/p>\n\n"}
+{"id":"nbsp-close","output":"<p><span style=\"font-size:120%;\">x\u00a0<\/span><\/p>\n\n"}
+{"id":"empty-nested","output":""}

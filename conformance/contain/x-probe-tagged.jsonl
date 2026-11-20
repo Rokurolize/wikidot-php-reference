@@ -1,0 +1,5 @@
+{"id": "x12-iftags-suppressed-div-tagged", "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible", "tags": ["alpha"]}
+{"id": "x13-iftags-active-div-tagged", "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible", "tags": ["alpha"]}
+{"id": "x14-iftags-suppressed-coll-tagged", "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible", "tags": ["alpha"]}
+{"id": "x15-iftags-active-coll-tagged", "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible", "tags": ["alpha"]}
+{"id": "x16-iftags-suppressed-tab-tagged", "source": "[[iftags +alpha]]\n[[tabview]]\n[[tab title=A]]\nbody\n[[/tab]]\n[[/tabview]]\n[[/iftags]]\nvisible", "tags": ["alpha"]}

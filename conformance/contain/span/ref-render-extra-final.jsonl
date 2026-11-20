@@ -1,0 +1,4 @@
+{"id":"p31-data-case","output":"<p>BEGIN|<span data-mixed=\"v\">X<\/span>|END<\/p>\n\n"}
+{"id":"p32-value-amp","output":"<p>BEGIN|<span class=\"a&amp;b\" style=\"color:red\">X<\/span>|END<\/p>\n\n"}
+{"id":"p33-space-attr","output":"<p>BEGIN|[[span ]]X[[\/span]]|END<\/p>\n\n"}
+{"id":"p34-escaped-quote","output":"<p>BEGIN|<span class=\"a&quot;b\">X<\/span>|END<\/p>\n\n"}

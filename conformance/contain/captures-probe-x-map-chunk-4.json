@@ -1,0 +1,62 @@
+{
+ "x19-code-inline-coll": {
+  "fullname": "muse-probe-r2contain-x-x19-code-inline-coll",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[collapsible]]body[[/collapsible]]</span></p>",
+  "html_sha256": "9270622759d7ab967505ec3c7cc9b02eb198dfc5d2d149d52130ab1ba5ec00b6",
+  "source": "@@[[collapsible]]body[[/collapsible]]@@",
+  "source_sha256": "8c23886231f6e978b78dfd42135445563cf55fa00eec7dfbd755586f6c752540",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x20-span-code-div": {
+  "fullname": "muse-probe-r2contain-x-x20-span-code-div",
+  "html": "<p><span>A<span style=\"white-space: pre-wrap;\">[[div]]x[[/div]]</span>B</span></p>",
+  "html_sha256": "a0d1581c5bfebcf32a4d2ae44224a6242e69d387d2b6ce2d95c4f1ea64308264",
+  "source": "[[span class=a]]A@@[[div]]x[[/div]]@@B[[/span]]",
+  "source_sha256": "ed376f01b13646e2a09bd0b87c01dab9eef0f751439066ade97d25b497679438",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x21-div-in-coll-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x21-div-in-coll-in-tab",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-f5fefa850c91c6e37c8fa25fd5e66821\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<div>\n<p>inner</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabViewf5fefa850c91c6e37c8fa25fd5e66821 = new YAHOO.widget.TabView('wiki-tabview-f5fefa850c91c6e37c8fa25fd5e66821');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "e44b8551ea854f9a1b490e7d9b4ad6f222b4a6f37f9511b0322aa0a7b20cd9b0",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[collapsible show=show]]\n[[div class=x]]\ninner\n[[/div]]\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "054caa408aa909071ead1e19000bdddeeeec1502c98eaef62136236950dfef2c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x22-coll-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x22-coll-in-tab",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-116447b40a9044c36e6b42da8dd9f301\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>inner</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabView116447b40a9044c36e6b42da8dd9f301 = new YAHOO.widget.TabView('wiki-tabview-116447b40a9044c36e6b42da8dd9f301');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "3f2e75b2a3123640f345451757db6ae714ed231f0c1437bb23ce8a45fc774a09",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[collapsible]]\ninner\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "ecbe8bcdcd35c8cd34574c93ab7b78cd7affece35a63d5ef1b60b682c6454e58",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x23-div-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x23-div-in-tab",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-ac1b27e4eeccbfd9faab39f6bb25d14e\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<div>\n<p>inner</p>\n</div>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabViewac1b27e4eeccbfd9faab39f6bb25d14e = new YAHOO.widget.TabView('wiki-tabview-ac1b27e4eeccbfd9faab39f6bb25d14e');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "c1cb15479a799b2337de4f6928628fd7aad748c9e784c2738705e197089c4fa5",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[div class=x]]\ninner\n[[/div]]\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "8dc30abb8033b5d906279d29c71bfa7a6fb824b6d0b63d65447656b3f5e9e6a7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x24-three-nested-divs": {
+  "fullname": "muse-probe-r2contain-x-x24-three-nested-divs",
+  "html": "<br />\n[[/div]]",
+  "html_sha256": "4d0484112eeff0ca0154611383d21d5b6a6c4b9d4decc754c774b0560f0acb29",
+  "source": "[[div class=a]]A\n[[div class=b]]B\n[[div class=c]]C\n[[/div]]\n[[/div]]\n[[/div]]",
+  "source_sha256": "04deeea38c253193c968ebbeeeaa6ca397578c69985676c8029df3e37647bcc2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

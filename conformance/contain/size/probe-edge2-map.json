@@ -1,0 +1,7 @@
+{
+ "internal-space-newline": {
+  "fullname": "muse-probe-r2contain-size-internal-space-newline",
+  "source": "[[size 120%]]a   \nb[[/size]]",
+  "action": "created"
+ }
+}

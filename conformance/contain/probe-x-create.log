@@ -1,0 +1,224 @@
+x01-span-size-cross -> muse-probe-r2contain-x-x01-span-size-cross (created)
+x02-size-span-cross -> muse-probe-r2contain-x-x02-size-span-cross (created)
+x03-span-color-nested -> muse-probe-r2contain-x-x03-span-color-nested (created)
+x04-color-span-cross -> muse-probe-r2contain-x-x04-color-span-cross (created)
+x05-strike-span-cross -> muse-probe-r2contain-x-x05-strike-span-cross (created)
+x06-span-strike-nested -> muse-probe-r2contain-x-x06-span-strike-nested (created)
+x07-span-size-strike-cross -> muse-probe-r2contain-x-x07-span-size-strike-cross (created)
+x08-span-nested-same -> muse-probe-r2contain-x-x08-span-nested-same (created)
+x09-size-nested-same -> muse-probe-r2contain-x-x09-size-nested-same (created)
+x10-span-empty -> muse-probe-r2contain-x-x10-span-empty (created)
+x11-span-size-cross-block -> muse-probe-r2contain-x-x11-span-size-cross-block (created)
+x12-iftags-suppressed-div -> muse-probe-r2contain-x-x12-iftags-suppressed-div (created)
+x13-iftags-active-div -> muse-probe-r2contain-x-x13-iftags-active-div (created)
+x14-iftags-suppressed-coll -> muse-probe-r2contain-x-x14-iftags-suppressed-coll (created)
+x15-iftags-active-coll -> muse-probe-r2contain-x-x15-iftags-active-coll (created)
+x16-iftags-suppressed-tab -> muse-probe-r2contain-x-x16-iftags-suppressed-tab (created)
+x17-code-inline-div -> muse-probe-r2contain-x-x17-code-inline-div (created)
+x18-code-block-div -> muse-probe-r2contain-x-x18-code-block-div (created)
+x19-code-inline-coll -> muse-probe-r2contain-x-x19-code-inline-coll (created)
+2026-11-20 14:39:15,845 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85345228', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2contain-x-x20-span-code-div', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+x20-span-code-div -> muse-probe-r2contain-x-x20-span-code-div (created)
+2026-11-20 14:40:36,808 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85345263', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2contain-x-x21-div-in-coll-in-tab', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+x21-div-in-coll-in-tab -> muse-probe-r2contain-x-x21-div-in-coll-in-tab (created)
+x22-coll-in-tab -> muse-probe-r2contain-x-x22-coll-in-tab (created)
+2026-11-20 14:41:33,392 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85345284', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2contain-x-x23-div-in-tab', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+2026-11-20 14:42:18,974 [wikidot/ERROR] AMC request failed:  -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85345292', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2contain-x-x23-div-in-tab', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+x23-div-in-tab -> muse-probe-r2contain-x-x23-div-in-tab (created)
+x24-three-nested-divs -> muse-probe-r2contain-x-x24-three-nested-divs (created)
+x25-tab-in-coll-in-div -> muse-probe-r2contain-x-x25-tab-in-coll-in-div (created)
+x26-coll-first-closer-wins -> muse-probe-r2contain-x-x26-coll-first-closer-wins (created)
+x27-footnote-in-div -> muse-probe-r2contain-x-x27-footnote-in-div (created)
+x28-footnote-in-coll -> muse-probe-r2contain-x-x28-footnote-in-coll (created)
+x29-footnote-in-tab -> muse-probe-r2contain-x-x29-footnote-in-tab (created)
+x30-div-in-footnote -> muse-probe-r2contain-x-x30-div-in-footnote (created)
+x31-span-in-footnote -> muse-probe-r2contain-x-x31-span-in-footnote (created)
+x32-div-underscore-basic -> muse-probe-r2contain-x-x32-div-underscore-basic (created)
+x33-div-underscore-attrs -> muse-probe-r2contain-x-x33-div-underscore-attrs (created)
+x34-div-underscore-inline -> muse-probe-r2contain-x-x34-div-underscore-inline (created)
+x35-div-underscore-unterminated -> muse-probe-r2contain-x-x35-div-underscore-unterminated (created)
+x36-div-normal-control -> muse-probe-r2contain-x-x36-div-normal-control (created)
+36 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "x01-span-size-cross": {
+  "fullname": "muse-probe-r2contain-x-x01-span-size-cross",
+  "source": "[[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]",
+  "action": "created"
+ },
+ "x02-size-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x02-size-span-cross",
+  "source": "[[size 12px]]A[[span class=a]]B[[/size]]C[[/span]]",
+  "action": "created"
+ },
+ "x03-span-color-nested": {
+  "fullname": "muse-probe-r2contain-x-x03-span-color-nested",
+  "source": "[[span class=a]]A##red|B##C[[/span]]",
+  "action": "created"
+ },
+ "x04-color-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x04-color-span-cross",
+  "source": "##red|[[span class=a]]A##B[[/span]]",
+  "action": "created"
+ },
+ "x05-strike-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x05-strike-span-cross",
+  "source": "--A[[span class=a]]B--C[[/span]]",
+  "action": "created"
+ },
+ "x06-span-strike-nested": {
+  "fullname": "muse-probe-r2contain-x-x06-span-strike-nested",
+  "source": "[[span class=a]]A--B--C[[/span]]",
+  "action": "created"
+ },
+ "x07-span-size-strike-cross": {
+  "fullname": "muse-probe-r2contain-x-x07-span-size-strike-cross",
+  "source": "[[span class=a]]A[[size 12px]]B--C[[/span]]D[[/size]]E--",
+  "action": "created"
+ },
+ "x08-span-nested-same": {
+  "fullname": "muse-probe-r2contain-x-x08-span-nested-same",
+  "source": "[[span class=a]]A[[span class=b]]B[[/span]]C[[/span]]",
+  "action": "created"
+ },
+ "x09-size-nested-same": {
+  "fullname": "muse-probe-r2contain-x-x09-size-nested-same",
+  "source": "[[size 12px]]A[[size 14px]]B[[/size]]C[[/size]]",
+  "action": "created"
+ },
+ "x10-span-empty": {
+  "fullname": "muse-probe-r2contain-x-x10-span-empty",
+  "source": "[[span]] [[/span]]",
+  "action": "created"
+ },
+ "x11-span-size-cross-block": {
+  "fullname": "muse-probe-r2contain-x-x11-span-size-cross-block",
+  "source": "[[div class=d]]\n[[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]\n[[/div]]",
+  "action": "created"
+ },
+ "x12-iftags-suppressed-div": {
+  "fullname": "muse-probe-r2contain-x-x12-iftags-suppressed-div",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "action": "created"
+ },
+ "x13-iftags-active-div": {
+  "fullname": "muse-probe-r2contain-x-x13-iftags-active-div",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "action": "created"
+ },
+ "x14-iftags-suppressed-coll": {
+  "fullname": "muse-probe-r2contain-x-x14-iftags-suppressed-coll",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "action": "created"
+ },
+ "x15-iftags-active-coll": {
+  "fullname": "muse-probe-r2contain-x-x15-iftags-active-coll",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "action": "created"
+ },
+ "x16-iftags-suppressed-tab": {
+  "fullname": "muse-probe-r2contain-x-x16-iftags-suppressed-tab",
+  "source": "[[iftags +alpha]]\n[[tabview]]\n[[tab title=A]]\nbody\n[[/tab]]\n[[/tabview]]\n[[/iftags]]\nvisible",
+  "action": "created"
+ },
+ "x17-code-inline-div": {
+  "fullname": "muse-probe-r2contain-x-x17-code-inline-div",
+  "source": "@@[[div class=x]] inside [[/div]]@@",
+  "action": "created"
+ },
+ "x18-code-block-div": {
+  "fullname": "muse-probe-r2contain-x-x18-code-block-div",
+  "source": "[[code]]\n[[div]]\ninside\n[[/div]]\n[[/code]]",
+  "action": "created"
+ },
+ "x19-code-inline-coll": {
+  "fullname": "muse-probe-r2contain-x-x19-code-inline-coll",
+  "source": "@@[[collapsible]]body[[/collapsible]]@@",
+  "action": "created"
+ },
+ "x20-span-code-div": {
+  "fullname": "muse-probe-r2contain-x-x20-span-code-div",
+  "source": "[[span class=a]]A@@[[div]]x[[/div]]@@B[[/span]]",
+  "action": "created"
+ },
+ "x21-div-in-coll-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x21-div-in-coll-in-tab",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[collapsible show=show]]\n[[div class=x]]\ninner\n[[/div]]\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "x22-coll-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x22-coll-in-tab",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[collapsible]]\ninner\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "x23-div-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x23-div-in-tab",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[div class=x]]\ninner\n[[/div]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "x24-three-nested-divs": {
+  "fullname": "muse-probe-r2contain-x-x24-three-nested-divs",
+  "source": "[[div class=a]]A\n[[div class=b]]B\n[[div class=c]]C\n[[/div]]\n[[/div]]\n[[/div]]",
+  "action": "created"
+ },
+ "x25-tab-in-coll-in-div": {
+  "fullname": "muse-probe-r2contain-x-x25-tab-in-coll-in-div",
+  "source": "[[div class=a]]\n[[collapsible]]\n[[tabview]]\n[[tab title=A]]\ninner\n[[/tab]]\n[[/tabview]]\n[[/collapsible]]\n[[/div]]",
+  "action": "created"
+ },
+ "x26-coll-first-closer-wins": {
+  "fullname": "muse-probe-r2contain-x-x26-coll-first-closer-wins",
+  "source": "[[collapsible]]A[[collapsible]]B[[/collapsible]]C[[/collapsible]]",
+  "action": "created"
+ },
+ "x27-footnote-in-div": {
+  "fullname": "muse-probe-r2contain-x-x27-footnote-in-div",
+  "source": "[[div class=x]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/div]]",
+  "action": "created"
+ },
+ "x28-footnote-in-coll": {
+  "fullname": "muse-probe-r2contain-x-x28-footnote-in-coll",
+  "source": "[[collapsible]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/collapsible]]",
+  "action": "created"
+ },
+ "x29-footnote-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x29-footnote-in-tab",
+  "source": "[[tabview]]\n[[tab title=A]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "x30-div-in-footnote": {
+  "fullname": "muse-probe-r2contain-x-x30-div-in-footnote",
+  "source": "[[footnote]]\n[[div]]\ninside\n[[/div]]\n[[/footnote]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x31-span-in-footnote": {
+  "fullname": "muse-probe-r2contain-x-x31-span-in-footnote",
+  "source": "[[footnote]][[span class=a]]S[[/span]][[/footnote]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x32-div-underscore-basic": {
+  "fullname": "muse-probe-r2contain-x-x32-div-underscore-basic",
+  "source": "[[div_]]\nbody\n[[/div]]",
+  "action": "created"
+ },
+ "x33-div-underscore-attrs": {
+  "fullname": "muse-probe-r2contain-x-x33-div-underscore-attrs",
+  "source": "[[div_ class=\"x\"]]\nbody\n[[/div]]",
+  "action": "created"
+ },
+ "x34-div-underscore-inline": {
+  "fullname": "muse-probe-r2contain-x-x34-div-underscore-inline",
+  "source": "before [[div_]] body [[/div]] after",
+  "action": "created"
+ },
+ "x35-div-underscore-unterminated": {
+  "fullname": "muse-probe-r2contain-x-x35-div-underscore-unterminated",
+  "source": "[[div_]]\nbody",
+  "action": "created"
+ },
+ "x36-div-normal-control": {
+  "fullname": "muse-probe-r2contain-x-x36-div-normal-control",
+  "source": "[[div class=x]]\nbody\n[[/div]]",
+  "action": "created"
+ }
+}
+CREATE_RC=0

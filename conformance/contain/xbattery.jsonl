@@ -1,0 +1,36 @@
+{"id": "x01-span-size-cross", "source": "[[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]"}
+{"id": "x02-size-span-cross", "source": "[[size 12px]]A[[span class=a]]B[[/size]]C[[/span]]"}
+{"id": "x03-span-color-nested", "source": "[[span class=a]]A##red|B##C[[/span]]"}
+{"id": "x04-color-span-cross", "source": "##red|[[span class=a]]A##B[[/span]]"}
+{"id": "x05-strike-span-cross", "source": "--A[[span class=a]]B--C[[/span]]"}
+{"id": "x06-span-strike-nested", "source": "[[span class=a]]A--B--C[[/span]]"}
+{"id": "x07-span-size-strike-cross", "source": "[[span class=a]]A[[size 12px]]B--C[[/span]]D[[/size]]E--"}
+{"id": "x08-span-nested-same", "source": "[[span class=a]]A[[span class=b]]B[[/span]]C[[/span]]"}
+{"id": "x09-size-nested-same", "source": "[[size 12px]]A[[size 14px]]B[[/size]]C[[/size]]"}
+{"id": "x10-span-empty", "source": "[[span]] [[/span]]"}
+{"id": "x11-span-size-cross-block", "source": "[[div class=d]]\n[[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]\n[[/div]]"}
+{"id": "x12-iftags-suppressed-div", "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible", "tags": []}
+{"id": "x13-iftags-active-div", "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible", "tags": ["alpha"]}
+{"id": "x14-iftags-suppressed-coll", "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible", "tags": ["alpha"]}
+{"id": "x15-iftags-active-coll", "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible", "tags": []}
+{"id": "x16-iftags-suppressed-tab", "source": "[[iftags +alpha]]\n[[tabview]]\n[[tab title=A]]\nbody\n[[/tab]]\n[[/tabview]]\n[[/iftags]]\nvisible", "tags": []}
+{"id": "x17-code-inline-div", "source": "@@[[div class=x]] inside [[/div]]@@"}
+{"id": "x18-code-block-div", "source": "[[code]]\n[[div]]\ninside\n[[/div]]\n[[/code]]"}
+{"id": "x19-code-inline-coll", "source": "@@[[collapsible]]body[[/collapsible]]@@"}
+{"id": "x20-span-code-div", "source": "[[span class=a]]A@@[[div]]x[[/div]]@@B[[/span]]"}
+{"id": "x21-div-in-coll-in-tab", "source": "[[tabview]]\n[[tab title=A]]\n[[collapsible show=show]]\n[[div class=x]]\ninner\n[[/div]]\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "x22-coll-in-tab", "source": "[[tabview]]\n[[tab title=A]]\n[[collapsible]]\ninner\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "x23-div-in-tab", "source": "[[tabview]]\n[[tab title=A]]\n[[div class=x]]\ninner\n[[/div]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "x24-three-nested-divs", "source": "[[div class=a]]A\n[[div class=b]]B\n[[div class=c]]C\n[[/div]]\n[[/div]]\n[[/div]]"}
+{"id": "x25-tab-in-coll-in-div", "source": "[[div class=a]]\n[[collapsible]]\n[[tabview]]\n[[tab title=A]]\ninner\n[[/tab]]\n[[/tabview]]\n[[/collapsible]]\n[[/div]]"}
+{"id": "x26-coll-first-closer-wins", "source": "[[collapsible]]A[[collapsible]]B[[/collapsible]]C[[/collapsible]]"}
+{"id": "x27-footnote-in-div", "source": "[[div class=x]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/div]]"}
+{"id": "x28-footnote-in-coll", "source": "[[collapsible]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/collapsible]]"}
+{"id": "x29-footnote-in-tab", "source": "[[tabview]]\n[[tab title=A]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "x30-div-in-footnote", "source": "[[footnote]]\n[[div]]\ninside\n[[/div]]\n[[/footnote]]\n[[footnoteblock]]"}
+{"id": "x31-span-in-footnote", "source": "[[footnote]][[span class=a]]S[[/span]][[/footnote]]\n[[footnoteblock]]"}
+{"id": "x32-div-underscore-basic", "source": "[[div_]]\nbody\n[[/div]]"}
+{"id": "x33-div-underscore-attrs", "source": "[[div_ class=\"x\"]]\nbody\n[[/div]]"}
+{"id": "x34-div-underscore-inline", "source": "before [[div_]] body [[/div]] after"}
+{"id": "x35-div-underscore-unterminated", "source": "[[div_]]\nbody"}
+{"id": "x36-div-normal-control", "source": "[[div class=x]]\nbody\n[[/div]]"}

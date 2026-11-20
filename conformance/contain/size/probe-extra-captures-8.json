@@ -1,0 +1,12 @@
+{
+ "empty-nested": {
+  "fullname": "muse-probe-r2contain-size-empty-nested",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[size 100%]][[size 90%]][[/size]][[/size]]",
+  "source_sha256": "3028584f666ebd0829479a07deec10b800a9e73d61846ee977411d3e5fbf6258",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

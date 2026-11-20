@@ -1,0 +1,35 @@
+{"id": "basic", "source": "[[div]]\nhello\n[[/div]]"}
+{"id": "basic-uppercase", "source": "[[DIV]]\nhello\n[[/DIV]]"}
+{"id": "basic-two-paras", "source": "[[div]]\nA\n\nB\n[[/div]]"}
+{"id": "attr-id", "source": "[[div id=\"panel\"]]\nBody\n[[/div]]"}
+{"id": "attr-id-prefixed", "source": "[[div id=\"u-panel\"]]\nBody\n[[/div]]"}
+{"id": "attr-id-space", "source": "[[div id=\" \"]]\nx\n[[/div]]"}
+{"id": "attr-data-empty-suffix", "source": "[[div data-=\"v\"]]\nT\n[[/div]]"}
+{"id": "attr-allowlist", "source": "[[div class=\"card\" id=\"panel\" style=\"color: red\" role=\"note\" type=\"t\" title=\"tip\" lang=\"en\" aria-label=\"label\" data-Foo=\"one\" data-bar=\"two\" foo=\"baz\"]]\nBody\n[[/div]]"}
+{"id": "attr-allowlist-mixed", "source": "[[div CLASS=\"upper\" ID=\"upper\" TYPE=\"u\" DATA-Mixed=\"three\" data-Mixed=\"four\"]]\nBody\n[[/div]]"}
+{"id": "attr-single-quote", "source": "[[div class='foo']]\nhello\n[[/div]]"}
+{"id": "attr-unquoted", "source": "[[div class=foo]]\nhello\n[[/div]]"}
+{"id": "attr-class-space", "source": "[[div class=\"a  b\"]]\nx\n[[/div]]"}
+{"id": "attr-style-hidden-display", "source": "[[div style=\"display:none\"]]\nhello\n[[/div]]"}
+{"id": "attr-style-hidden-vis", "source": "[[div style=\"visibility:hidden\"]]\nhello\n[[/div]]"}
+{"id": "attr-style-hidden-mixed", "source": "[[div style=\"display: none; color: red\"]]\nhello\n[[/div]]"}
+{"id": "empty-plain", "source": "[[div]]\n[[/div]]\nB"}
+{"id": "empty-attr", "source": "[[div class=\"k\"]]\n[[/div]]\nB"}
+{"id": "unterminated", "source": "[[div]]\nhello"}
+{"id": "stray", "source": "hello\n[[/div]]"}
+{"id": "closer-first", "source": "[[div]]\nA\n[[/div]]\nB\n[[/div]]"}
+{"id": "inline-span", "source": "[[div]]\n[[span]]egg[[/span]]\n[[/div]]"}
+{"id": "crossed-span", "source": "[[div]]A1[[span]]B2[[/div]]C3[[/span]]D4"}
+{"id": "nested", "source": "[[div]]\nA\n[[div]]\nB\n[[/div]]\nC\n[[/div]]"}
+{"id": "nested-scored", "source": "[[div_]]\n1\n[[div_]]\n2\n[[/div]]\n3\n[[/div]]"}
+{"id": "div-in-collapsible", "source": "[[collapsible]]\n[[div]]\nA\n[[/div]]\n[[/collapsible]]"}
+{"id": "div-in-tabview", "source": "[[tabview]]\n[[tab T]]\n[[div]]\nA\n[[/div]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "malformed-division", "source": "[[division]]\nA\n[[/division]]"}
+{"id": "score-basic", "source": "[[div_]]\nhello\n[[/div]]"}
+{"id": "score-attr", "source": "[[div_ class=\"strip\"]]\nhello\n[[/div]]"}
+{"id": "score-attrs-full", "source": "[[div_ class=\"strip\" title=\"tip\" role=\"note\" data-x=\"y\"]]\nBody\n[[/div]]"}
+{"id": "score-attrs-id", "source": "[[div_ id=\"q\" role=\"note\" data-z=\"1\"]]\nx\n[[/div]]"}
+{"id": "score-empty", "source": "[[div_]]\n[[/div]]\nB"}
+{"id": "score-attr-empty", "source": "[[div_ class=\"k\"]]\n[[/div]]\nB"}
+{"id": "score-inline", "source": "[[div_]]Banana[[/div]]"}
+{"id": "score-two-lines", "source": "[[div_]]\napple\nbanana\n[[/div]]"}

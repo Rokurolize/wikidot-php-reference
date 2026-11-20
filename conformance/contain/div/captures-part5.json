@@ -1,0 +1,72 @@
+{
+ "score-attr": {
+  "fullname": "muse-probe-r2contain-div-score-attr",
+  "html": "<div class=\"strip\">hello</div>",
+  "html_sha256": "27e11799aeb9fad29b260cd7dbdcd5161049bfb2a0c2c3a4f6bbcc5743ffcbbe",
+  "source": "[[div_ class=\"strip\"]]\nhello\n[[/div]]",
+  "source_sha256": "b4aae9c9081a9ca31d2b5f84954e07c9fad944d9d750b8bba37f786757e826d3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "score-attrs-full": {
+  "fullname": "muse-probe-r2contain-div-score-attrs-full",
+  "html": "<div class=\"strip\" role=\"note\" data-x=\"y\">Body</div>",
+  "html_sha256": "b55dc404b610a9818e127054244320d0f0f635fdbcd4a464d703b198e522f87e",
+  "source": "[[div_ class=\"strip\" title=\"tip\" role=\"note\" data-x=\"y\"]]\nBody\n[[/div]]",
+  "source_sha256": "9b4d2014bd76f758398856c1b6533b1ebbe1c0bfe79edf1ae10cd7ca84d3951e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "score-attrs-id": {
+  "fullname": "muse-probe-r2contain-div-score-attrs-id",
+  "html": "<div id=\"u-q\" role=\"note\" data-z=\"1\">x</div>",
+  "html_sha256": "1d358404cb08bc42e981f13321937c5cec6bb8aa6b6f0bde25ad7e3e6b6cbdb3",
+  "source": "[[div_ id=\"q\" role=\"note\" data-z=\"1\"]]\nx\n[[/div]]",
+  "source_sha256": "3fe8e5365486c625185daaee12d69516296bb8d308afd3a4123592b656339091",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "score-empty": {
+  "fullname": "muse-probe-r2contain-div-score-empty",
+  "html": "<br />\nB",
+  "html_sha256": "032f8251561ed9523763a55bbe08b4251c70ae94c9f197f9056b1cd5c39883ee",
+  "source": "[[div_]]\n[[/div]]\nB",
+  "source_sha256": "8f4d2f230c8064f8d9684a15ea5d7aca881081b0d68a9f8df4e7baff560f8c2a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "score-attr-empty": {
+  "fullname": "muse-probe-r2contain-div-score-attr-empty",
+  "html": "<div class=\"k\"></div>\n<br />\nB",
+  "html_sha256": "baf250244581af4572461fd2130457eca16ffe76a9a2e291f4ba950781096edd",
+  "source": "[[div_ class=\"k\"]]\n[[/div]]\nB",
+  "source_sha256": "3834b27588766d5bf732d9e0711da73fba5e0ff11bcbdf1e92ec25cf6ac8a4c9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "score-inline": {
+  "fullname": "muse-probe-r2contain-div-score-inline",
+  "html": "<p>[[div_]]Banana[[/div]]</p>",
+  "html_sha256": "c7c7c65ed57ef2d6107999379f52f5d2582dd6c87269874b5e3abfe28a6d4138",
+  "source": "[[div_]]Banana[[/div]]",
+  "source_sha256": "308d44cd7d0403cb6b6b3dcdec35164ce631adceec3ca073347a42b5a6ba8ea6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "score-two-lines": {
+  "fullname": "muse-probe-r2contain-div-score-two-lines",
+  "html": "<div>apple<br />\nbanana</div>",
+  "html_sha256": "904be78d4b796b723e6d5926f6b5b64e8fabb462fc0daed23946408f9d76db8f",
+  "source": "[[div_]]\napple\nbanana\n[[/div]]",
+  "source_sha256": "4db84933a8ff89e74176087994db5591b369aa8e3c265e0dedf3406749763ebe",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

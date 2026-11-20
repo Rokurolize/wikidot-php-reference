@@ -1,0 +1,72 @@
+{
+ "crossed-span": {
+  "fullname": "muse-probe-r2contain-div-crossed-span",
+  "html": "<p>[[div]]A1<span>B2[[/div]]C3</span>D4</p>",
+  "html_sha256": "e789350c4018415c1af5672494f1477e3ed1bf1e2f1f2bb4b98301cd180d3d38",
+  "source": "[[div]]A1[[span]]B2[[/div]]C3[[/span]]D4",
+  "source_sha256": "3770eb405a33ea2227489b0384aa5e5df544ebd5ff3f261e8d6e366511e7ebf8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nested": {
+  "fullname": "muse-probe-r2contain-div-nested",
+  "html": "<div>\n<p>A</p>\n<div>\n<p>B</p>\n</div>\n<br />\nC</div>",
+  "html_sha256": "e666cd89d2400e18e8477e8b7d96f005dbde5fe4e0751b589ae47752dddf0969",
+  "source": "[[div]]\nA\n[[div]]\nB\n[[/div]]\nC\n[[/div]]",
+  "source_sha256": "db5e86aca30a5fb5d9e1374243d11642a5d571aa6df7f33dbfb90e52bf29b995",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nested-scored": {
+  "fullname": "muse-probe-r2contain-div-nested-scored",
+  "html": "<div>1\n<div>2</div>\n<br />\n3</div>",
+  "html_sha256": "f6644ca807f3dc0a065cb00b1ed8aa30505dce0a384d9010c8d3b6c2da5e626a",
+  "source": "[[div_]]\n1\n[[div_]]\n2\n[[/div]]\n3\n[[/div]]",
+  "source_sha256": "3acdecd21f3084f4911f9db0b0d7f9aaeceeb659f74b2106cf766a2b2845eb9a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "div-in-collapsible": {
+  "fullname": "muse-probe-r2contain-div-div-in-collapsible",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<div>\n<p>A</p>\n</div>\n</div>\n</div>\n</div>",
+  "html_sha256": "0258362f013c1a5e87e739633efcd3be94f21ae5476fcd0300870e552f52ca38",
+  "source": "[[collapsible]]\n[[div]]\nA\n[[/div]]\n[[/collapsible]]",
+  "source_sha256": "361d9b5d2435ca2e72797023ed3f0a536ef93f2882b461d1ce876ec2bce36b03",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "div-in-tabview": {
+  "fullname": "muse-probe-r2contain-div-div-in-tabview",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-181709f135e53e0bead43b6ef270dec1\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>T</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<div>\n<p>A</p>\n</div>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabView181709f135e53e0bead43b6ef270dec1 = new YAHOO.widget.TabView('wiki-tabview-181709f135e53e0bead43b6ef270dec1');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "8afa6e21539916e40b223c3395e638a12df113ceeb9cce239940ce1f4e88b8f2",
+  "source": "[[tabview]]\n[[tab T]]\n[[div]]\nA\n[[/div]]\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "bc910bc607ed33def937d340eb570aae18fd34f75955098ba87453fa0ff5db38",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "malformed-division": {
+  "fullname": "muse-probe-r2contain-div-malformed-division",
+  "html": "<p>[[division]]<br />\nA<br />\n[[/division]]</p>",
+  "html_sha256": "e37da0c09dc9e116a1abdaad0e00391be206cbf05a4bdb65a0ae362d20d6eb28",
+  "source": "[[division]]\nA\n[[/division]]",
+  "source_sha256": "8cdff6971d088d3b3dbc0414b30f7e6cf7ee443c8ac20bde8e8293a3ad20f4cf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "score-basic": {
+  "fullname": "muse-probe-r2contain-div-score-basic",
+  "html": "<div>hello</div>",
+  "html_sha256": "4745336f4a90d58df31a552e24034fbc734b9525aae435b161fb568b5215dce8",
+  "source": "[[div_]]\nhello\n[[/div]]",
+  "source_sha256": "22bb2dde935c136de1ae7c13f3e2c5b94ccccb9d12702716efadde66ebc96fa2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

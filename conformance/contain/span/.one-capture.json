@@ -1,0 +1,12 @@
+{
+ "p36-body-space-lead": {
+  "fullname": "muse-probe-r2contain-span-p36-body-space-lead",
+  "html": "<p>BEGIN| <span>X</span>|END</p>",
+  "html_sha256": "2d1931a04f7762574b51084a6f756cf8e68cfaa3235d0ef71b304e06994361f2",
+  "source": "BEGIN|[[span]] X[[/span]]|END",
+  "source_sha256": "48cf0015f9ae4efa3d545870a8a0130238a26e6379dec3f0fee09d28e72a0835",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

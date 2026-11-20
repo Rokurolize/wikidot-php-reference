@@ -1,0 +1,32 @@
+{
+ "x07-span-size-strike-cross": {
+  "fullname": "muse-probe-r2contain-x-x07-span-size-strike-cross",
+  "source": "[[span class=a]]A[[size 12px]]B--C[[/span]]D[[/size]]E--",
+  "action": "created"
+ },
+ "x08-span-nested-same": {
+  "fullname": "muse-probe-r2contain-x-x08-span-nested-same",
+  "source": "[[span class=a]]A[[span class=b]]B[[/span]]C[[/span]]",
+  "action": "created"
+ },
+ "x09-size-nested-same": {
+  "fullname": "muse-probe-r2contain-x-x09-size-nested-same",
+  "source": "[[size 12px]]A[[size 14px]]B[[/size]]C[[/size]]",
+  "action": "created"
+ },
+ "x10-span-empty": {
+  "fullname": "muse-probe-r2contain-x-x10-span-empty",
+  "source": "[[span]] [[/span]]",
+  "action": "created"
+ },
+ "x11-span-size-cross-block": {
+  "fullname": "muse-probe-r2contain-x-x11-span-size-cross-block",
+  "source": "[[div class=d]]\n[[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]\n[[/div]]",
+  "action": "created"
+ },
+ "x12-iftags-suppressed-div": {
+  "fullname": "muse-probe-r2contain-x-x12-iftags-suppressed-div",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "action": "created"
+ }
+}

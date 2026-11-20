@@ -1,0 +1,77 @@
+R2-contain Span three-way comparison
+ftml HEAD a61ae005d9e837171a3d2b91cf8fc2df7a3d8ae8 (shared dumper)
+
+== battery (final reference) ==
+  DIFF s04-empty-spaces
+    ref : <p>[[span ]]  [[/span]]</p>
+    ftml: <p>[[span ]] [[/span]]</p>
+  DIFF s20-class-id-style
+    ref : <p><span id="u-i" class="c" style="color:red">X</span></p>
+    ftml: <p><span class="c" id="u-i" style="color:red">X</span></p>
+  DIFF s30-span-color
+    ref : <p><span>A <span style="color: red;">B</span> C</span></p>
+    ftml: <p><span>A <span style="color: red">B</span> C</span></p>
+  DIFF s33-color-span
+    ref : <p><span style="color: red;">A <span>B</span> C</span></p>
+    ftml: <p><span style="color: red">A <span>B</span> C</span></p>
+  DIFF s36-span-color-cross
+    ref : <p><span>A <span style="color: red;">B</span> C</span></p>
+    ftml: <p><span>A <span style="color: red">B</span> C</span></p>
+  DIFF s38-size-color-strike
+    ref : <p><span style="font-size:120%;">A <span style="color: red;"><span style="text-decoration: line-through;">B</span></span> C</span></p>
+    ftml: <p><span style="font-size:120%;">A <span style="color: red"><span style="text-decoration: line-through;">B</span></span> C</span></p>
+  DIFF s40-score-span
+    ref : <p>[[span_]]X[[/span]]</p>
+    ftml: <span>X</span>
+  DIFF s41-score-span-extra
+    ref : <p>[[span_]]]X[[/span]]</p>
+    ftml: <span>]X</span>
+  DIFF s50-span-across-div
+    ref : <p><span>A<br>
+[[div]]B[[/div]]<br>
+C</span></p>
+    ftml: <p><span>A<br>
+[[div]]B[[/div]]
+<br>
+C</span></p>
+  DIFF s57-span-block-content
+    ref : <p><span>+ head</p><ul><li>list</span></li></ul>
+    ftml: <p><span>+ head</span></p><ul><li><span>list</span></li></ul>
+  counts: {"ref_ftml_agree": 51, "disagree": 10}
+
+== probe (final reference) ==
+  signature counts: {"all3": 29, "ref_live": 0, "ftm_live": 1, "ref_ftm": 0, "all_disagree": 0}
+  whole-string canonical: {"ref_ftml": 27, "ref_live": 28, "ftml_live": 29}
+  p01-plain ALL3
+  p02-empty ALL3
+  p03-class ALL3
+  p04-id ALL3
+  p05-id-empty ALL3
+  p06-style ALL3
+  p07-style-hidden ALL3
+  p08-style-none ALL3
+  p09-style-empty ALL3
+  p10-title ALL3
+  p11-role ALL3
+  p12-data ALL3
+  p13-type ALL3
+  p14-unknown ALL3
+  p15-onclick ALL3
+  p16-multi-attr ALL3
+  p17-single-quote ALL3
+  p18-unquoted ALL3
+  p19-percent ALL3
+  p20-score-span FTM+LIVE
+     ref : []
+     ftml: [((), 'X')]
+     live: [((), 'X')]
+  p21-nested ALL3
+  p22-crossed ALL3
+  p23-stray-close ALL3
+  p24-unterminated ALL3
+  p25-span-size ALL3
+  p26-span-color ALL3
+  p27-span-strike ALL3
+  p28-span-in-div ALL3
+  p29-span-in-heading ALL3
+  p30-class-empty ALL3

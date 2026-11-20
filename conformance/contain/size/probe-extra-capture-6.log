@@ -1,0 +1,13 @@
+tab-close -> muse-probe-r2contain-size-tab-close stable=True saved_source_matches=True valid=True
+{
+ "tab-close": {
+  "fullname": "muse-probe-r2contain-size-tab-close",
+  "html": "<p><span style=\"font-size:120%;\">x</span></p>",
+  "html_sha256": "06597af84b7bb575ef2e7a99b010f936041b747b7d285517cdb96ae028fbdfb0",
+  "source": "[[size 120%]]x\t[[/size]]",
+  "source_sha256": "14fe2a179e9353a510eeecb0c46428413ad23d7e2d9c95da7c70506c367a4410",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

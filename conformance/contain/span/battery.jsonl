@@ -1,0 +1,61 @@
+{"id": "s01-plain", "source": "[[span]]X[[/span]]"}
+{"id": "s02-inline-context", "source": "BEGIN|[[span]]X[[/span]]|END"}
+{"id": "s03-empty", "source": "[[span]][[/span]]"}
+{"id": "s04-empty-spaces", "source": "[[span ]]  [[/span]]"}
+{"id": "s05-multiline", "source": "[[span]]line one\nline two[[/span]]"}
+{"id": "s06-uppercase", "source": "[[SPAN]]X[[/SPAN]]"}
+{"id": "s07-two-spans", "source": "[[span]]A[[/span]] [[span]]B[[/span]]"}
+{"id": "s08-leading-trailing", "source": "a [[span]] X [[/span]] b"}
+{"id": "s09-class", "source": "[[span class=\"c\"]]X[[/span]]"}
+{"id": "s10-id", "source": "[[span id=\"i\"]]X[[/span]]"}
+{"id": "s11-style", "source": "[[span style=\"color:red\"]]X[[/span]]"}
+{"id": "s12-style-two", "source": "[[span style=\"color:red; font-size:120%\"]]X[[/span]]"}
+{"id": "s13-style-hidden", "source": "[[span style=\"visibility:hidden\"]]X[[/span]]"}
+{"id": "s14-style-none", "source": "[[span style=\"display:none\"]]X[[/span]]"}
+{"id": "s15-title", "source": "[[span title=\"tip\"]]X[[/span]]"}
+{"id": "s16-role", "source": "[[span role=\"note\"]]X[[/span]]"}
+{"id": "s17-data", "source": "[[span data-x=\"value\"]]X[[/span]]"}
+{"id": "s18-unknown", "source": "[[span frobnicate=\"yes\"]]X[[/span]]"}
+{"id": "s19-onclick", "source": "[[span onclick=\"alert(1)\"]]X[[/span]]"}
+{"id": "s20-class-id-style", "source": "[[span class=\"c\" id=\"i\" style=\"color:red\"]]X[[/span]]"}
+{"id": "s21-single-quote", "source": "[[span class='c']]X[[/span]]"}
+{"id": "s22-unquoted", "source": "[[span class=c]]X[[/span]]"}
+{"id": "s23-attr-spaces", "source": "[[span  class=\"c\"  style=\"color:red\" ]]X[[/span]]"}
+{"id": "s24-nested", "source": "[[span]]outer [[span]]inner[[/span]][[/span]]"}
+{"id": "s24b-nested3", "source": "[[span]]a[[span]]b[[span]]c[[/span]][[/span]][[/span]]"}
+{"id": "s25-crossed", "source": "[[span]]A [[span]]B[[/span]] C[[/span]]"}
+{"id": "s26-stray-close", "source": "X [[/span]] Y"}
+{"id": "s27-unterminated", "source": "[[span]]unterminated"}
+{"id": "s28-close-first", "source": "[[/span]] [[span]]X[[/span]]"}
+{"id": "s29-span-size", "source": "[[span]]A [[size 120%]]B[[/size]] C[[/span]]"}
+{"id": "s30-span-color", "source": "[[span]]A ##red|B## C[[/span]]"}
+{"id": "s31-span-strike", "source": "[[span]]A --B-- C[[/span]]"}
+{"id": "s32-size-span", "source": "[[size 120%]]A [[span]]B[[/span]] C[[/size]]"}
+{"id": "s33-color-span", "source": "##red|A [[span]]B[[/span]] C##"}
+{"id": "s34-strike-span", "source": "--A [[span]]B[[/span]] C--"}
+{"id": "s35-span-size-cross", "source": "[[span]]A [[size 120%]]B[[/span]] C[[/size]]"}
+{"id": "s36-span-color-cross", "source": "[[span]]A ##red|B[[/span]] C##"}
+{"id": "s37-span-strike-cross", "source": "[[span]]A --B[[/span]] C--"}
+{"id": "s38-size-color-strike", "source": "[[size 120%]]A ##red|--B--## C[[/size]]"}
+{"id": "s39-span-in-span-block", "source": "[[span]]A\n[[span]]B[[/span]]\nC[[/span]]"}
+{"id": "s40-score-span", "source": "[[span_]]X[[/span]]"}
+{"id": "s41-score-span-extra", "source": "[[span_]]]X[[/span]]"}
+{"id": "s42-percent", "source": "%%hidden%%"}
+{"id": "s43-percent-span", "source": "[[span]]%%hidden%%[[/span]]"}
+{"id": "s44-malformed-opener", "source": "[[span class=\"c\"X[[/span]]"}
+{"id": "s45-missing-space", "source": "[[spanclass=\"c\"]]X[[/span]]"}
+{"id": "s46-double-open", "source": "[[span]][[span]]X[[/span]]"}
+{"id": "s47-newline-in-attr", "source": "[[span\nclass=\"c\"]]X[[/span]]"}
+{"id": "s48-span-in-div", "source": "[[div]]\n[[span]]X[[/span]]\n[[/div]]"}
+{"id": "s49-div-in-span", "source": "[[span]]A [[div]]B[[/div]] C[[/span]]"}
+{"id": "s50-span-across-div", "source": "[[span]]A\n[[div]]B[[/div]]\nC[[/span]]"}
+{"id": "s51-span-in-collapsible", "source": "[[collapsible]]\n[[span]]X[[/span]]\n[[/collapsible]]"}
+{"id": "s52-span-in-heading", "source": "+ [[span]]Head[[/span]]"}
+{"id": "s53-span-in-quote", "source": "> [[span]]Quoted[[/span]]\n\n"}
+{"id": "s54-span-in-list", "source": "* [[span]]item[[/span]]\n"}
+{"id": "s55-span-in-code", "source": "[[code]]\n[[span]]literal[[/span]]\n[[/code]]"}
+{"id": "s56-span-in-iftags", "source": "[[iftags +alpha]]\n[[span]]kept[[/span]]\n[[/iftags]]", "tags": ["alpha"]}
+{"id": "s57-span-block-content", "source": "[[span]]+ head\n* list[[/span]]"}
+{"id": "s58-span-attr-entity", "source": "[[span title=\"a &amp; b\"]]X[[/span]]"}
+{"id": "s59-span-class-empty", "source": "[[span class=\"\"]]X[[/span]]"}
+{"id": "s60-span-style-empty", "source": "[[span style=\"\"]]X[[/span]]"}

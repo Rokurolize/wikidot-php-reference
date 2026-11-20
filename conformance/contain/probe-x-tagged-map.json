@@ -1,0 +1,42 @@
+{
+ "x12-iftags-suppressed-div-tagged": {
+  "fullname": "muse-probe-r2contain-x-x12-iftags-suppressed-div-tagged",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "action": "publish-tags",
+  "tags": [
+   "alpha"
+  ]
+ },
+ "x13-iftags-active-div-tagged": {
+  "fullname": "muse-probe-r2contain-x-x13-iftags-active-div-tagged",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "action": "publish-tags",
+  "tags": [
+   "alpha"
+  ]
+ },
+ "x14-iftags-suppressed-coll-tagged": {
+  "fullname": "muse-probe-r2contain-x-x14-iftags-suppressed-coll-tagged",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "action": "publish-tags",
+  "tags": [
+   "alpha"
+  ]
+ },
+ "x15-iftags-active-coll-tagged": {
+  "fullname": "muse-probe-r2contain-x-x15-iftags-active-coll-tagged",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "action": "publish-tags",
+  "tags": [
+   "alpha"
+  ]
+ },
+ "x16-iftags-suppressed-tab-tagged": {
+  "fullname": "muse-probe-r2contain-x-x16-iftags-suppressed-tab-tagged",
+  "source": "[[iftags +alpha]]\n[[tabview]]\n[[tab title=A]]\nbody\n[[/tab]]\n[[/tabview]]\n[[/iftags]]\nvisible",
+  "action": "publish-tags",
+  "tags": [
+   "alpha"
+  ]
+ }
+}

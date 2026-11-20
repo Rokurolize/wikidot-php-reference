@@ -1,0 +1,172 @@
+{
+ "basic": {
+  "fullname": "muse-probe-r2contain-coll-basic",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>Apple</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "fed2c34089e0fffc770df1994425946643836053fb074b4f2438767373b6dbcc",
+  "source": "[[collapsible]]\nApple\n[[/collapsible]]",
+  "source_sha256": "2f80426a3a90daa59b3202001fd13bcb490ef0f78db134ab05446de80e354da3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "inline": {
+  "fullname": "muse-probe-r2contain-coll-inline",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>Banana</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "9a2c7a1b09fdf8811f79364b6b70231f1908b2ce18af188c5de82d4002b4a8a4",
+  "source": "[[collapsible]]Banana[[/collapsible]]",
+  "source_sha256": "8a4dc8cbecde612b378cdbedfa2fdb6f8bcc0142dbd12f4e443e22384dfdcc5b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "empty": {
+  "fullname": "muse-probe-r2contain-coll-empty",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\"></div>\n</div>\n</div>",
+  "html_sha256": "34ff361d8f7983c6709eb8bd37c408f5f845bf82d73194954c2759494a576a97",
+  "source": "[[collapsible]]\n[[/collapsible]]",
+  "source_sha256": "ef80c9d44e15b79038f02878764d69efafab19ca862c5c4d204fb97c7824fb66",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "showhide": {
+  "fullname": "muse-probe-r2contain-coll-showhide",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;Open</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">-&nbsp;Close</a></div>\n<div class=\"collapsible-block-content\">\n<p>Mango</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "20b0ce5c86bc421cae5f30edef26808fb7981ec8368c3a8a5b413602ae9262a4",
+  "source": "[[collapsible show=\"+ Open\" hide=\"- Close\"]]\nMango\n[[/collapsible]]",
+  "source_sha256": "a6a13e4b26685e79954171c0be951dea7d4ef815b3d5dbc09f9b2254e7c8fb8a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "showtext": {
+  "fullname": "muse-probe-r2contain-coll-showtext",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>Mango</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "7dbf5e742b42b000857091c8074b7dd6d60b3a3e34820557c6ebdd0bf3169258",
+  "source": "[[collapsible showText=\"OPEN\" hideText=\"CLOSE\"]]\nMango\n[[/collapsible]]",
+  "source_sha256": "5ca3e705453e2b48f4a323d8bbb1748adb8f4ef9d037a32da1b600a11e9e697b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "attrs": {
+  "fullname": "muse-probe-r2contain-coll-attrs",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>foo</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "a93bdf0db31f0f7a4c73ec076f4b56c921f944c6b01a308a1925cf694d500ba6",
+  "source": "[[collapsible id=\"hider\" class=\"myc\" style=\"color: teal\" data-hider=\"ya\"]]\nfoo\n[[/collapsible]]",
+  "source_sha256": "24d94b57bead2757eed5c64a51aa86aac81659e08318bc542e4c2d3fc1374846",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "folded-no": {
+  "fullname": "muse-probe-r2contain-coll-folded-no",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\" style=\"display:none\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>Blueberry</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "479d2d6052a2285a056cded3f2518efacd8afe671728444d23f89cc0d98ccd6a",
+  "source": "[[collapsible folded=\"no\"]]\nBlueberry\n[[/collapsible]]",
+  "source_sha256": "2198e32c2f319b53dab2bf3d410d917cd698e93f2da998fb378913aaaeba9076",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "hideloc-both": {
+  "fullname": "muse-probe-r2contain-coll-hideloc-both",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>Pineapple</p>\n</div>\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n</div>\n</div>",
+  "html_sha256": "d9dd81690b7d3fec7f97fd6f55cb8f553daa57d70b97fef6e69078d7b0042f7e",
+  "source": "[[collapsible hideLocation=\"both\"]]\nPineapple\n[[/collapsible]]",
+  "source_sha256": "26b2eb43b4dea9713326c4bdbe339d8f9f2167795027f7766384acd98913e0fe",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "hideloc-bottom": {
+  "fullname": "muse-probe-r2contain-coll-hideloc-bottom",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-content\">\n<p>Raspberry</p>\n</div>\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n</div>\n</div>",
+  "html_sha256": "6d9e70eb69df13e6ed141bd5dcbb0c2cfa489a184f8f1a0f43e3e9e2e01ed0e8",
+  "source": "[[collapsible hideLocation=\"bottom\"]]\nRaspberry\n[[/collapsible]]",
+  "source_sha256": "123aa6f9d078e609f6e852cbeda5f0e36379f912ffcd8537606558b3133e2451",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "hideloc-neither": {
+  "fullname": "muse-probe-r2contain-coll-hideloc-neither",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>Hidden</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "8b37f09b86edbb6b86488a03a578ff40e22676138a877ba5a34a00f4fa744caa",
+  "source": "[[collapsible hideLocation=\"neither\"]]\nHidden\n[[/collapsible]]",
+  "source_sha256": "b1c0b88cc7977c2afdb7733cd0e26dc009ad612d0f1e2a47f6a04633fcd72902",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nested-same": {
+  "fullname": "muse-probe-r2contain-coll-nested-same",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">L1</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>A<br />\n[[collapsible show=&quot;L2&quot;]]<br />\nB</p>\n</div>\n</div>\n</div>\n<br />\nC<br />\n[[/collapsible]]",
+  "html_sha256": "2803747a9a369daf2da27ad9792abe6bb790082cc04b44204ab503aeffff7044",
+  "source": "[[collapsible show=\"L1\"]]\nA\n[[collapsible show=\"L2\"]]\nB\n[[/collapsible]]\nC\n[[/collapsible]]",
+  "source_sha256": "bbac2fc6f4ba5d32735418ba06b6f9900fcde45fb420c0040a800a220c89ddf7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "uppercase": {
+  "fullname": "muse-probe-r2contain-coll-uppercase",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">lower</a></div>\n<div class=\"collapsible-block-content\">\n<p>BODY</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "f576827fd991d9971a6d175b0cc6d98f697e8f47e8fafef758b538034e2672bc",
+  "source": "[[COLLAPSIBLE id=\"up\" Show=\"UPPER\" hide=\"lower\"]]BODY[[/COLLAPSIBLE]]",
+  "source_sha256": "49b5f287400baefd21e099613837bd6f34cc1ad316097ba0678e8673afdaa309",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "singlequote": {
+  "fullname": "muse-probe-r2contain-coll-singlequote",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>BODY</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "34d2db7a0667d085080bb01cfbda97d4ed54ebc1093965b769d4bfc1091cca5f",
+  "source": "[[collapsible show='+ SQ' hide='- SQ']]\nBODY\n[[/collapsible]]",
+  "source_sha256": "6b2d97c3ae27c2fb6d51937b5adc0e2b820ef87a19b0461075be3ceae2297e87",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unquoted": {
+  "fullname": "muse-probe-r2contain-coll-unquoted",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>BODY</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "34d2db7a0667d085080bb01cfbda97d4ed54ebc1093965b769d4bfc1091cca5f",
+  "source": "[[collapsible show=OPEN hide=CLOSE]]\nBODY\n[[/collapsible]]",
+  "source_sha256": "05c6bb4a4612a7873e402b8aa80e6b0b956462df71974e3cecbca2e00b2e0dd3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "stray-closer": {
+  "fullname": "muse-probe-r2contain-coll-stray-closer",
+  "html": "<p>text [[/collapsible]] more</p>",
+  "html_sha256": "5e23b165da706915b4564b26e933626387f94d93d710ec108102a3cd22495adc",
+  "source": "text [[/collapsible]] more",
+  "source_sha256": "da3ca25250ca1f64aace974acd90e72ddf68cb7872d1fbfce56e7789727ffe26",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "div-inside": {
+  "fullname": "muse-probe-r2contain-coll-div-inside",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>[[div class=&quot;d&quot;]]inside[[/div]]</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "bf8ea0fd93ad951bc272a77bc4589d195ffc20246420c206d8fb64c42664f205",
+  "source": "[[collapsible]]\n[[div class=\"d\"]]inside[[/div]]\n[[/collapsible]]",
+  "source_sha256": "1476e760cfcf5b984b280d4d68eba31cff2b1505a512ac7708946f970503d06c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "coll-inside-div": {
+  "fullname": "muse-probe-r2contain-coll-coll-inside-div",
+  "html": "<div class=\"d\">\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>inside</p>\n</div>\n</div>\n</div>\n</div>",
+  "html_sha256": "d68864ebd7ed139ba3c387757ed536f26730e0f8de054d77338976fdeb99a56e",
+  "source": "[[div class=\"d\"]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/div]]",
+  "source_sha256": "754a3ab1372f78a29d3b170b177282f7e7b6d3b313087c9c346ad8bf40c0a8d4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

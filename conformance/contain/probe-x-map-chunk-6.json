@@ -1,0 +1,32 @@
+{
+ "x31-span-in-footnote": {
+  "fullname": "muse-probe-r2contain-x-x31-span-in-footnote",
+  "source": "[[footnote]][[span class=a]]S[[/span]][[/footnote]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x32-div-underscore-basic": {
+  "fullname": "muse-probe-r2contain-x-x32-div-underscore-basic",
+  "source": "[[div_]]\nbody\n[[/div]]",
+  "action": "created"
+ },
+ "x33-div-underscore-attrs": {
+  "fullname": "muse-probe-r2contain-x-x33-div-underscore-attrs",
+  "source": "[[div_ class=\"x\"]]\nbody\n[[/div]]",
+  "action": "created"
+ },
+ "x34-div-underscore-inline": {
+  "fullname": "muse-probe-r2contain-x-x34-div-underscore-inline",
+  "source": "before [[div_]] body [[/div]] after",
+  "action": "created"
+ },
+ "x35-div-underscore-unterminated": {
+  "fullname": "muse-probe-r2contain-x-x35-div-underscore-unterminated",
+  "source": "[[div_]]\nbody",
+  "action": "created"
+ },
+ "x36-div-normal-control": {
+  "fullname": "muse-probe-r2contain-x-x36-div-normal-control",
+  "source": "[[div class=x]]\nbody\n[[/div]]",
+  "action": "created"
+ }
+}

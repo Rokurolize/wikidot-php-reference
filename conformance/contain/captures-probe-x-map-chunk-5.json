@@ -1,0 +1,62 @@
+{
+ "x25-tab-in-coll-in-div": {
+  "fullname": "muse-probe-r2contain-x-x25-tab-in-coll-in-div",
+  "html": "<div>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-d92e6a486b6e7a5adb5f972f9b7944d9\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<p>inner</p>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabViewd92e6a486b6e7a5adb5f972f9b7944d9 = new YAHOO.widget.TabView('wiki-tabview-d92e6a486b6e7a5adb5f972f9b7944d9');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script></div>\n</div>\n</div>\n</div>",
+  "html_sha256": "7ad3dc8a085e09b181180bfe63ea863ae6f970be4d23cb6919a7eba5a6a895c3",
+  "source": "[[div class=a]]\n[[collapsible]]\n[[tabview]]\n[[tab title=A]]\ninner\n[[/tab]]\n[[/tabview]]\n[[/collapsible]]\n[[/div]]",
+  "source_sha256": "9233d9bbb8a1c51df40ea5bf4e252ee96dd8aa299f6b931819c8bf14ec898ef8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x26-coll-first-closer-wins": {
+  "fullname": "muse-probe-r2contain-x-x26-coll-first-closer-wins",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>A[[collapsible]]B</p>\n</div>\n</div>\n</div>\nC[[/collapsible]]",
+  "html_sha256": "8fbcfdf4be743137d07dd1e86a4db0542969fec66f004e9a71ed021a984815e4",
+  "source": "[[collapsible]]A[[collapsible]]B[[/collapsible]]C[[/collapsible]]",
+  "source_sha256": "6c34ad5a74fa99aef005b9cf78d61993ccdf3c2391e295728df2945d079a1bf5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x27-footnote-in-div": {
+  "fullname": "muse-probe-r2contain-x-x27-footnote-in-div",
+  "html": "<div>\n<p>text<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. note1</div>\n</div>\n</div>",
+  "html_sha256": "b9c5c2de4d899c031f48ef2e4771d5227625404a97959cc6422f0a9058a54238",
+  "source": "[[div class=x]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/div]]",
+  "source_sha256": "4b77c11e028c64de288313ab5a8d230c0cb20d4f9d090e64fd4840332a9931a5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x28-footnote-in-coll": {
+  "fullname": "muse-probe-r2contain-x-x28-footnote-in-coll",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>text<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. note1</div>\n</div>\n</div>\n</div>\n</div>",
+  "html_sha256": "33695cf0202211bd24d517b74c91364c5ba6838901c7f9b57f7b4baec15dc813",
+  "source": "[[collapsible]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/collapsible]]",
+  "source_sha256": "76dd070d482979bae5e15d6f70a9c4fc4340315f2341fe3360cd332344e395be",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x29-footnote-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x29-footnote-in-tab",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-5b08df7fce5d781dda2afb27f4927024\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<p>text<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. note1</div>\n</div>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabView5b08df7fce5d781dda2afb27f4927024 = new YAHOO.widget.TabView('wiki-tabview-5b08df7fce5d781dda2afb27f4927024');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "b8015917d1a4c0328d1dab8b8c23e483f14724a933dfd707269dce486927c05a",
+  "source": "[[tabview]]\n[[tab title=A]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "6544beaf7c92d4daeb3f4738bcd2e7b9e18bf9d7a9bc20db46b4ec4658c98595",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x30-div-in-footnote": {
+  "fullname": "muse-probe-r2contain-x-x30-div-in-footnote",
+  "html": "<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>.\n<div>\n<p>inside</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "b718e66648a9a3b9d7ec95146ae40934ccd1978a07ac0ca12aa9856b81c81ccd",
+  "source": "[[footnote]]\n[[div]]\ninside\n[[/div]]\n[[/footnote]]\n[[footnoteblock]]",
+  "source_sha256": "76da3dd51119aa5e66f46920a26d999d6adf68e3e919e84c37547503f577a88f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

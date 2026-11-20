@@ -1,0 +1,6 @@
+ftml checkout: /home/roku/src/Rokurolize/ftml
+HEAD: a61ae005d9e837171a3d2b91cf8fc2df7a3d8ae8
+short: a61ae005d
+branch: HEAD
+HEAD subject: feat(form): render matched [[form]] blocks as literal source lines (#1535)
+note: recorded at R2-contain dumper build time. The checkout had advanced by one commit from the R2-block stage's recorded HEAD 6a029bf416651e0d68408f7c977b4cae30ebec55 (a form-render change, #1535) between this stage's brief and the dumper build. The dumper binary is built once at the recorded HEAD above and shared by all five rule owners and root; every stage differential is produced at that HEAD, and no later checkout change is re-run during this stage. The container rules are unaffected by the form commit, but all stage evidence is pinned to a61ae005d for consistency.

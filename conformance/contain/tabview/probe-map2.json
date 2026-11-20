@@ -1,0 +1,12 @@
+{
+ "q01-apostrophe-amp": {
+  "fullname": "muse-probe-r2contain-tab-q01-apostrophe-amp",
+  "source": "[[tabview]]\n[[tab It's A & B]]\nx\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "q02-title-attr-amp": {
+  "fullname": "muse-probe-r2contain-tab-q02-title-attr-amp",
+  "source": "[[tabview]]\n[[tab title=\"A & B\"]]\nx\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ }
+}

@@ -1,0 +1,6 @@
+{"id": "p1", "source": "[[collapsible]]\npre\n[[/collapsible]]"}
+{"id": "p2", "source": "[[tabview]]\n[[tab title=P]]\npre\n[[/tab]]\n[[/tabview]]"}
+{"id": "p3", "source": "[[collapsible]]\npre2\n[[/collapsible]]"}
+{"id": "a1", "source": "[[collapsible]]\none\n[[/collapsible]]"}
+{"id": "a2", "source": "[[tabview]]\n[[tab title=A]]\none\n[[/tab]]\n[[/tabview]]"}
+{"id": "a3", "source": "[[div]]\none\n[[/div]]"}

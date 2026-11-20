@@ -1,0 +1,152 @@
+{
+ "p01-plain": {
+  "fullname": "muse-probe-r2contain-span-p01-plain",
+  "source": "BEGIN|[[span]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p02-empty": {
+  "fullname": "muse-probe-r2contain-span-p02-empty",
+  "source": "BEGIN|[[span]][[/span]]|END",
+  "action": "created"
+ },
+ "p03-class": {
+  "fullname": "muse-probe-r2contain-span-p03-class",
+  "source": "BEGIN|[[span class=\"c\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p04-id": {
+  "fullname": "muse-probe-r2contain-span-p04-id",
+  "source": "BEGIN|[[span id=\"i\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p05-id-empty": {
+  "fullname": "muse-probe-r2contain-span-p05-id-empty",
+  "source": "BEGIN|[[span id=\"\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p06-style": {
+  "fullname": "muse-probe-r2contain-span-p06-style",
+  "source": "BEGIN|[[span style=\"color:red\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p07-style-hidden": {
+  "fullname": "muse-probe-r2contain-span-p07-style-hidden",
+  "source": "BEGIN|[[span style=\"visibility:hidden\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p08-style-none": {
+  "fullname": "muse-probe-r2contain-span-p08-style-none",
+  "source": "BEGIN|[[span style=\"display:none\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p09-style-empty": {
+  "fullname": "muse-probe-r2contain-span-p09-style-empty",
+  "source": "BEGIN|[[span style=\"\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p10-title": {
+  "fullname": "muse-probe-r2contain-span-p10-title",
+  "source": "BEGIN|[[span title=\"tip\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p11-role": {
+  "fullname": "muse-probe-r2contain-span-p11-role",
+  "source": "BEGIN|[[span role=\"note\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p12-data": {
+  "fullname": "muse-probe-r2contain-span-p12-data",
+  "source": "BEGIN|[[span data-x=\"value\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p13-type": {
+  "fullname": "muse-probe-r2contain-span-p13-type",
+  "source": "BEGIN|[[span type=\"t\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p14-unknown": {
+  "fullname": "muse-probe-r2contain-span-p14-unknown",
+  "source": "BEGIN|[[span frobnicate=\"yes\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p15-onclick": {
+  "fullname": "muse-probe-r2contain-span-p15-onclick",
+  "source": "BEGIN|[[span onclick=\"alert(1)\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p16-multi-attr": {
+  "fullname": "muse-probe-r2contain-span-p16-multi-attr",
+  "source": "BEGIN|[[span class=\"c\" id=\"i\" style=\"color:red\" data-d=\"v\"]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p17-single-quote": {
+  "fullname": "muse-probe-r2contain-span-p17-single-quote",
+  "source": "BEGIN|[[span class='c']]X[[/span]]|END",
+  "action": "created"
+ },
+ "p18-unquoted": {
+  "fullname": "muse-probe-r2contain-span-p18-unquoted",
+  "source": "BEGIN|[[span class=c]]X[[/span]]|END",
+  "action": "created"
+ },
+ "p19-percent": {
+  "fullname": "muse-probe-r2contain-span-p19-percent",
+  "source": "%%hidden%%",
+  "action": "created"
+ },
+ "p20-score-span": {
+  "fullname": "muse-probe-r2contain-span-p20-score-span",
+  "source": "[[span_]]X[[/span]]",
+  "action": "created"
+ },
+ "p21-nested": {
+  "fullname": "muse-probe-r2contain-span-p21-nested",
+  "source": "[[span]]outer [[span]]inner[[/span]][[/span]]",
+  "action": "created"
+ },
+ "p22-crossed": {
+  "fullname": "muse-probe-r2contain-span-p22-crossed",
+  "source": "[[span]]A [[span]]B[[/span]] C[[/span]]",
+  "action": "created"
+ },
+ "p23-stray-close": {
+  "fullname": "muse-probe-r2contain-span-p23-stray-close",
+  "source": "X [[/span]] Y",
+  "action": "created"
+ },
+ "p24-unterminated": {
+  "fullname": "muse-probe-r2contain-span-p24-unterminated",
+  "source": "[[span]]unterminated",
+  "action": "created"
+ },
+ "p25-span-size": {
+  "fullname": "muse-probe-r2contain-span-p25-span-size",
+  "source": "[[span]]A [[size 120%]]B[[/size]] C[[/span]]",
+  "action": "created"
+ },
+ "p26-span-color": {
+  "fullname": "muse-probe-r2contain-span-p26-span-color",
+  "source": "[[span]]A ##red|B## C[[/span]]",
+  "action": "created"
+ },
+ "p27-span-strike": {
+  "fullname": "muse-probe-r2contain-span-p27-span-strike",
+  "source": "[[span]]A --B-- C[[/span]]",
+  "action": "created"
+ },
+ "p28-span-in-div": {
+  "fullname": "muse-probe-r2contain-span-p28-span-in-div",
+  "source": "[[div]]\n[[span]]X[[/span]]\n[[/div]]",
+  "action": "created"
+ },
+ "p29-span-in-heading": {
+  "fullname": "muse-probe-r2contain-span-p29-span-in-heading",
+  "source": "+ [[span]]Head[[/span]]",
+  "action": "created"
+ },
+ "p30-class-empty": {
+  "fullname": "muse-probe-r2contain-span-p30-class-empty",
+  "source": "BEGIN|[[span class=\"\"]]X[[/span]]|END",
+  "action": "created"
+ }
+}

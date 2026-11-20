@@ -1,0 +1,2 @@
+{"errors":[],"html":"<p>BEGIN|a <span>X</span> b|END</p>","id":"p35-body-spaces"}
+{"errors":[],"html":"<p>BEGIN| <span>X</span>|END</p>","id":"p36-body-space-lead"}

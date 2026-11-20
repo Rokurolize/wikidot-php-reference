@@ -1,0 +1,8 @@
+{"id": "boundary-5-px", "source": "[[size 12345px]]X[[/size]]"}
+{"id": "boundary-5-pct", "source": "[[size 12345%]]X[[/size]]"}
+{"id": "boundary-6-em", "source": "[[size 123456em]]X[[/size]]"}
+{"id": "multi-space-close", "source": "[[size 120%]]x   [[/size]]"}
+{"id": "newline-close", "source": "[[size 120%]]x\n[[/size]]"}
+{"id": "tab-close", "source": "[[size 120%]]x\t[[/size]]"}
+{"id": "nbsp-close", "source": "[[size 120%]]x [[/size]]"}
+{"id": "empty-nested", "source": "[[size 100%]][[size 90%]][[/size]][[/size]]"}

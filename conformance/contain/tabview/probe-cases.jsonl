@@ -1,0 +1,16 @@
+{"id": "p01-basic-two", "source": "[[tabview]]\n[[tab One]]\nfirst\n[[/tab]]\n[[tab Two]]\nsecond\n[[/tab]]\n[[/tabview]]"}
+{"id": "p02-title-double-space", "source": "[[tabview]]\n[[tab A  B]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "p03-title-trailing-space", "source": "[[tabview]]\n[[tab A ]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "p04-title-entity", "source": "[[tabview]]\n[[tab A &amp; B]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "p05-title-htmlchars", "source": "[[tabview]]\n[[tab <em>x</em>]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "p06-attr-then-text", "source": "[[tabview]]\n[[tab class=\"c\" A]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "p07-raw-title", "source": "[[tabview]]\n[[tab title=\"@@a@@\"]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "p08-view-class", "source": "[[tabview class=\"x\"]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "p09-unterminated-view", "source": "[[tabview]]\n[[tab A]]\nbody\n[[/tab]]"}
+{"id": "p10-unterminated-tab", "source": "[[tabview]]\n[[tab A]]\nbody\n[[/tabview]]"}
+{"id": "p11-prose-between", "source": "[[tabview]]\n[[tab A]] a [[/tab]]\nprose\n[[tab B]] b [[/tab]]\n[[/tabview]]"}
+{"id": "p12-stray-tab-first", "source": "[[tabview]]\n[[/tab]]\n[[tab A]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "p13-nested-view", "source": "[[tabview]]\n[[tab outer]]\nA\n[[tabview]]\n[[tab inner]]\nB\n[[/tab]]\n[[/tabview]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "p14-untitled", "source": "[[tabview]]\n[[tab]]\nx\n[[/tab]]\n[[/tabview]]"}
+{"id": "p15-coll-in-tab", "source": "[[tabview]]\n[[tab A]]\n[[collapsible]]\ninner\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]"}
+{"id": "p16-empty-tab", "source": "[[tabview]]\n[[tab A]]\n[[/tab]]\n[[/tabview]]"}

@@ -1,0 +1,35 @@
+{"id":"basic","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"basic-uppercase","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"basic-two-paras","output":"<div ><p>A<\/p>\n\n<p>B<\/p>\n\n<\/div>"}
+{"id":"attr-id","output":"<div ><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-id-prefixed","output":"<div ><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-id-space","output":"<div ><p>x<\/p>\n\n<\/div>"}
+{"id":"attr-data-empty-suffix","output":"<div ><p>T<\/p>\n\n<\/div>"}
+{"id":"attr-allowlist","output":"<div  class=\"card\" style=\"color: red\"><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-allowlist-mixed","output":"<div ><p>Body<\/p>\n\n<\/div>"}
+{"id":"attr-single-quote","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-unquoted","output":"<div ><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-class-space","output":"<div  class=\"a  b\"><p>x<\/p>\n\n<\/div>"}
+{"id":"attr-style-hidden-display","output":"<div  style=\"\"><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-style-hidden-vis","output":"<div  style=\"\"><p>hello<\/p>\n\n<\/div>"}
+{"id":"attr-style-hidden-mixed","output":"<div  style=\" color: red\"><p>hello<\/p>\n\n<\/div>"}
+{"id":"empty-plain","output":"<div ><\/div><br \/>\nB"}
+{"id":"empty-attr","output":"<div  class=\"k\"><\/div><br \/>\nB"}
+{"id":"unterminated","output":"<p>[[div]]<br \/>\nhello<\/p>\n\n"}
+{"id":"stray","output":"<p>hello<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"closer-first","output":"<div ><p>A<\/p>\n\n<\/div><br \/>\nB<br \/>\n[[\/div]]"}
+{"id":"inline-span","output":"<div ><p><span  style=\"\">egg<\/span><\/p>\n\n<\/div>"}
+{"id":"crossed-span","output":"<p>[[div]]A1<span  style=\"\">B2[[\/div]]C3<\/span>D4<\/p>\n\n"}
+{"id":"nested","output":"<div ><p>A<\/p>\n\n<div ><p>B<\/p>\n\n<\/div><br \/>\nC<\/div>"}
+{"id":"nested-scored","output":"<p>[[div_]]<br \/>\n1<br \/>\n[[div_]]<br \/>\n2<br \/>\n[[\/div]]<br \/>\n3<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"div-in-collapsible","output":"<div class=\"collapsible-block\"><div id=\"collapsible-block-0-folded\" ><a href=\"javascript:;\" onclick=\"$('collapsible-block-0-folded').style.display='none';$('collapsible-block-0-unfolded').style.display='block'; \">+ show block<\/a><\/div><div id=\"collapsible-block-0-unfolded\" style=\"display:none\"><div><a href=\"javascript:;\" onclick=\"$('collapsible-block-0-unfolded').style.display='none';$('collapsible-block-0-folded').style.display='block';\">- hide block<\/a><\/div><div id=\"collapsible-block-0-content\"><div ><p>A<\/p>\n\n<\/div><\/div><\/div><\/div>"}
+{"id":"div-in-tabview","output":"<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/element-beta-min.js\"><\/script>\n<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/tabview-min.js\"><\/script><div id=\"wiki-tabview-0\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>T<\/em><\/a><\/li><\/ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><div ><p>A<\/p>\n\n<\/div><\/div><\/div><\/div><script type=\"text\/javascript\">\n(function(){\n\tvar tabView0 = new YAHOO.widget.TabView('wiki-tabview-0');\n})();\n<\/script>"}
+{"id":"malformed-division","output":"<p>[[division]]<br \/>\nA<br \/>\n[[\/division]]<\/p>\n\n"}
+{"id":"score-basic","output":"<p>[[div_]]<br \/>\nhello<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"score-attr","output":"<p>[[div_ class=&quot;strip&quot;]]<br \/>\nhello<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"score-attrs-full","output":"<p>[[div_ class=&quot;strip&quot; title=&quot;tip&quot; role=&quot;note&quot; data-x=&quot;y&quot;]]<br \/>\nBody<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"score-attrs-id","output":"<p>[[div_ id=&quot;q&quot; role=&quot;note&quot; data-z=&quot;1&quot;]]<br \/>\nx<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"score-empty","output":"<p>[[div_]]<br \/>\n[[\/div]]<br \/>\nB<\/p>\n\n"}
+{"id":"score-attr-empty","output":"<p>[[div_ class=&quot;k&quot;]]<br \/>\n[[\/div]]<br \/>\nB<\/p>\n\n"}
+{"id":"score-inline","output":"<p>[[div_]]Banana[[\/div]]<\/p>\n\n"}
+{"id":"score-two-lines","output":"<p>[[div_]]<br \/>\napple<br \/>\nbanana<br \/>\n[[\/div]]<\/p>\n\n"}

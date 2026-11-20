@@ -1,0 +1,56 @@
+p31-data-case -> muse-probe-r2contain-span-p31-data-case stable=True saved_source_matches=True valid=True
+{
+ "p31-data-case": {
+  "fullname": "muse-probe-r2contain-span-p31-data-case",
+  "html": "<p>BEGIN|<span data-mixed=\"v\">X</span>|END</p>",
+  "html_sha256": "b691c0fab660df370aa6ea0078710ae3b55be4192cebcb719b45fe13745bd21f",
+  "source": "BEGIN|[[span data-Mixed=\"v\" DATA-UPPER=\"x\"]]X[[/span]]|END",
+  "source_sha256": "d03a8003eab1ad5f84488b134e47b8cd468160a17fd008be038ad645353b5d12",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
+=== p31-data-case attempt 1 ===
+p32-value-amp -> muse-probe-r2contain-span-p32-value-amp stable=True saved_source_matches=True valid=True
+{
+ "p32-value-amp": {
+  "fullname": "muse-probe-r2contain-span-p32-value-amp",
+  "html": "<p>BEGIN|<span class=\"a&amp;b\" style=\"color:red\">X</span>|END</p>",
+  "html_sha256": "ca00e662057e60c871ad45583552a92bc537906c140d3d8e99a80357de737cfb",
+  "source": "BEGIN|[[span class=\"a&b\" style=\"color:red\"]]X[[/span]]|END",
+  "source_sha256": "b7c825a57181e2a4b0f5681542c505a0a7facbd1e9601451a0f6fc7d47f46252",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
+=== p32-value-amp attempt 1 ===
+p33-space-attr -> muse-probe-r2contain-span-p33-space-attr stable=True saved_source_matches=True valid=True
+{
+ "p33-space-attr": {
+  "fullname": "muse-probe-r2contain-span-p33-space-attr",
+  "html": "<p>BEGIN|[[span ]]X[[/span]]|END</p>",
+  "html_sha256": "01970188ba75e7db93797a1681ec4122d22d68a1806d2f6556847a4408dd4e03",
+  "source": "BEGIN|[[span ]]X[[/span]]|END",
+  "source_sha256": "cafc448d63a86566fd76990eb8cab3c11e66270e947330ce5938b90e8b94ad97",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
+=== p33-space-attr attempt 1 ===
+p34-escaped-quote -> muse-probe-r2contain-span-p34-escaped-quote stable=True saved_source_matches=True valid=True
+{
+ "p34-escaped-quote": {
+  "fullname": "muse-probe-r2contain-span-p34-escaped-quote",
+  "html": "<p>BEGIN|<span class=\"a&quot;b\">X</span>|END</p>",
+  "html_sha256": "f329258cce8bb4fd338d6d5dfacaad73efe01ca84c0a28295c1c6411bf563dd6",
+  "source": "BEGIN|[[span class=\"a\\\"b\"]]X[[/span]]|END",
+  "source_sha256": "ec1df6c241fc91bafe305bf081ed8c822c87655ede11fca9103635c7d99850d5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
+=== p34-escaped-quote attempt 1 ===

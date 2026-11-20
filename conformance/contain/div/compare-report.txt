@@ -1,0 +1,46 @@
+R2-contain Div three-way compare report
+Battery: 75 cases; normalized reference/ftml agreement before 58/75, after 73/75.
+Render records changed by correction: 31; token records changed: 61.
+Changed render ids: attr-id, attr-id-prefixed, attr-id-space, attr-role-type, attr-data, attr-data-empty-suffix, attr-allowlist, attr-allowlist-mixed, attr-dupe-data, attr-class-space, attr-style-hidden-display, attr-style-hidden-vis, attr-style-hidden-mixed, empty-plain, empty-whitespace, empty-at-eof, inline-content-scored, nested-scored, nested-mixed, div-in-collapsible, scored-in-collapsible, score-basic, score-attr, score-attrs-full, score-attrs-id, score-empty, score-attr-empty, score-two-lines, score-stray, score-uppercase, score-style-hidden
+
+Battery cases whose normalized reference and ftml shapes still differ after correction:
+  div-in-tabview             REF "T\nA\n(function(){\nvar tabView0 = new YAHOO.widget.TabView('N');\n})();" | FTML 'T\nA'
+  nested-in-tab              REF "T\nA\nB\n(function(){\nvar tabView1 = new YAHOO.widget.TabView('N');\n})();" | FTML 'T\nA\nB'
+
+  PROBE basic                      all-three            REF 'hello' FTML 'hello' LIVE 'hello'
+  PROBE basic-uppercase            all-three            REF 'hello' FTML 'hello' LIVE 'hello'
+  PROBE basic-two-paras            all-three            REF 'A\nB' FTML 'A\nB' LIVE 'A\nB'
+  PROBE attr-id                    all-three            REF 'Body' FTML 'Body' LIVE 'Body'
+  PROBE attr-id-prefixed           all-three            REF 'Body' FTML 'Body' LIVE 'Body'
+  PROBE attr-id-space              all-three            REF 'x' FTML 'x' LIVE 'x'
+  PROBE attr-data-empty-suffix     all-three            REF 'T' FTML 'T' LIVE 'T'
+  PROBE attr-allowlist             all-three            REF 'Body' FTML 'Body' LIVE 'Body'
+  PROBE attr-allowlist-mixed       all-three            REF 'Body' FTML 'Body' LIVE 'Body'
+  PROBE attr-single-quote          all-three            REF 'hello' FTML 'hello' LIVE 'hello'
+  PROBE attr-unquoted              all-three            REF 'hello' FTML 'hello' LIVE 'hello'
+  PROBE attr-class-space           all-three            REF 'x' FTML 'x' LIVE 'x'
+  PROBE attr-style-hidden-display  all-three            REF 'hello' FTML 'hello' LIVE 'hello'
+  PROBE attr-style-hidden-vis      all-three            REF 'hello' FTML 'hello' LIVE 'hello'
+  PROBE attr-style-hidden-mixed    all-three            REF 'hello' FTML 'hello' LIVE 'hello'
+  PROBE empty-plain                all-three            REF 'B' FTML 'B' LIVE 'B'
+  PROBE empty-attr                 all-three            REF 'B' FTML 'B' LIVE 'B'
+  PROBE unterminated               all-three            REF '[[div]]\nhello' FTML '[[div]]\nhello' LIVE '[[div]]\nhello'
+  PROBE stray                      all-three            REF 'hello\n[[/div]]' FTML 'hello\n[[/div]]' LIVE 'hello\n[[/div]]'
+  PROBE closer-first               all-three            REF 'A\nB\n[[/div]]' FTML 'A\nB\n[[/div]]' LIVE 'A\nB\n[[/div]]'
+  PROBE inline-span                all-three            REF 'egg' FTML 'egg' LIVE 'egg'
+  PROBE crossed-span               all-three            REF '[[div]]A1B2[[/div]]C3D4' FTML '[[div]]A1B2[[/div]]C3D4' LIVE '[[div]]A1B2[[/div]]C3D4'
+  PROBE nested                     all-three            REF 'A\nB\nC' FTML 'A\nB\nC' LIVE 'A\nB\nC'
+  PROBE nested-scored              ref+ftml-vs-live     REF '1\n2\n3' FTML '1\n2\n3' LIVE '1 2\n3'
+  PROBE div-in-collapsible         all-three            REF '+ show block\n– hide block\nA' FTML '+ show block\n– hide block\nA' LIVE '+ show block\n– hide block\nA'
+  PROBE div-in-tabview             ftml+live-vs-ref     REF "T\nA\n(function(){\nvar tabView0 = new YAHOO.widget.TabView('N');\n})();" FTML 'T\nA' LIVE 'T\nA'
+  PROBE malformed-division         all-three            REF '[[division]]\nA\n[[/division]]' FTML '[[division]]\nA\n[[/division]]' LIVE '[[division]]\nA\n[[/division]]'
+  PROBE score-basic                all-three            REF 'hello' FTML 'hello' LIVE 'hello'
+  PROBE score-attr                 all-three            REF 'hello' FTML 'hello' LIVE 'hello'
+  PROBE score-attrs-full           all-three            REF 'Body' FTML 'Body' LIVE 'Body'
+  PROBE score-attrs-id             all-three            REF 'x' FTML 'x' LIVE 'x'
+  PROBE score-empty                all-three            REF 'B' FTML 'B' LIVE 'B'
+  PROBE score-attr-empty           all-three            REF 'B' FTML 'B' LIVE 'B'
+  PROBE score-inline               all-three            REF '[[div_]]Banana[[/div]]' FTML '[[div_]]Banana[[/div]]' LIVE '[[div_]]Banana[[/div]]'
+  PROBE score-two-lines            all-three            REF 'apple\nbanana' FTML 'apple\nbanana' LIVE 'apple\nbanana'
+Valid/stable/source-matching probes: 35/35
+Probe categories: all-three=33, ftml+live-vs-ref=1, ref+ftml-vs-live=1

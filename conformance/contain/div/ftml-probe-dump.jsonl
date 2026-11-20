@@ -1,0 +1,35 @@
+{"errors":[],"html":"<div><p>hello</p></div>","id":"basic"}
+{"errors":[],"html":"<div><p>hello</p></div>","id":"basic-uppercase"}
+{"errors":[],"html":"<div><p>A</p><p>B</p></div>","id":"basic-two-paras"}
+{"errors":[],"html":"<div id=\"u-panel\"><p>Body</p></div>","id":"attr-id"}
+{"errors":[],"html":"<div id=\"u-panel\"><p>Body</p></div>","id":"attr-id-prefixed"}
+{"errors":[],"html":"<div id=\"u-\"><p>x</p></div>","id":"attr-id-space"}
+{"errors":[],"html":"<div data-=\"v\"><p>T</p></div>","id":"attr-data-empty-suffix"}
+{"errors":[],"html":"<div class=\"card\" data-bar=\"two\" data-foo=\"one\" id=\"u-panel\" role=\"note\" style=\"color: red\" type=\"t\"><p>Body</p></div>","id":"attr-allowlist"}
+{"errors":[],"html":"<div data-mixed=\"four\"><p>Body</p></div>","id":"attr-allowlist-mixed"}
+{"errors":[],"html":"<div><p>hello</p></div>","id":"attr-single-quote"}
+{"errors":[],"html":"<div><p>hello</p></div>","id":"attr-unquoted"}
+{"errors":[],"html":"<div class=\"a b\"><p>x</p></div>","id":"attr-class-space"}
+{"errors":[],"html":"<div style=\"display:none\"><p>hello</p></div>","id":"attr-style-hidden-display"}
+{"errors":[],"html":"<div style=\"visibility:hidden\"><p>hello</p></div>","id":"attr-style-hidden-vis"}
+{"errors":[],"html":"<div style=\"display: none; color: red\"><p>hello</p></div>","id":"attr-style-hidden-mixed"}
+{"errors":[],"html":"<br>\nB","id":"empty-plain"}
+{"errors":[],"html":"<div class=\"k\"></div><br>\nB","id":"empty-attr"}
+{"errors":["ParseError { token: Identifier, rule: \"block-div\", span: 8..13, kind: BlockExpectedEnd }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }"],"html":"<p>[[div]]<br>\nhello</p>","id":"unterminated"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 6..9, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 12..14, kind: NoRulesMatch }"],"html":"<p>hello<br>\n[[/div]]</p>","id":"stray"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 21..24, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 27..29, kind: NoRulesMatch }"],"html":"<div><p>A</p></div><br>\nB<br>\n[[/div]]","id":"closer-first"}
+{"errors":[],"html":"<div><p><span>egg</span></p></div>","id":"inline-span"}
+{"errors":[],"html":"<p>[[div]]A1<span>B2[[/div]]C3</span>D4</p>","id":"crossed-span"}
+{"errors":[],"html":"<div><p>A</p><div><p>B</p></div><br>\nC</div>","id":"nested"}
+{"errors":[],"html":"<div>1\n<div>2</div>\n3</div>","id":"nested-scored"}
+{"errors":[],"html":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div><div class=\"collapsible-block-content\"><div><p>A</p></div></div></div></div>","id":"div-in-collapsible"}
+{"errors":[],"html":"<div id=\"wiki-tabview-cb1b29f812e5161287fa4c26392f9b9a\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>T</em></a></li></ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><div><p>A</p></div></div></div></div>","id":"div-in-tabview"}
+{"errors":["ParseError { token: LineBreak, rule: \"block\", span: 12..13, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 15..18, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 26..28, kind: NoRulesMatch }"],"html":"<p>[[division]]<br>\nA<br>\n[[/division]]</p>","id":"malformed-division"}
+{"errors":[],"html":"<div>hello</div>","id":"score-basic"}
+{"errors":[],"html":"<div class=\"strip\">hello</div>","id":"score-attr"}
+{"errors":[],"html":"<div class=\"strip\" data-x=\"y\" role=\"note\">Body</div>","id":"score-attrs-full"}
+{"errors":[],"html":"<div data-z=\"1\" id=\"u-q\" role=\"note\">x</div>","id":"score-attrs-id"}
+{"errors":[],"html":"<br>\nB","id":"score-empty"}
+{"errors":[],"html":"<div class=\"k\"></div><br>\nB","id":"score-attr-empty"}
+{"errors":[],"html":"<p>[[div_]]Banana[[/div]]</p>","id":"score-inline"}
+{"errors":[],"html":"<div>apple<br>\nbanana</div>","id":"score-two-lines"}

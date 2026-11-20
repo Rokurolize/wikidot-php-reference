@@ -1,0 +1,362 @@
+{
+ "x01-span-size-cross": {
+  "fullname": "muse-probe-r2contain-x-x01-span-size-cross",
+  "html": "<p><span>A<span style=\"font-size:12px;\">B</span>C</span></p>",
+  "html_sha256": "345f708cf7f550310163357c207a1b458b961985a4e29ec3bf4382d5fb4d27c4",
+  "source": "[[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]",
+  "source_sha256": "8c11a022574ae545b5e659c8c0618c91949fb0ae120ccbc95b67456643901855",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x02-size-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x02-size-span-cross",
+  "html": "<p><span style=\"font-size:12px;\">A<span>B</span>C</span></p>",
+  "html_sha256": "442eceb8f7360c2127e0a5f756b2d39fc762c4397abefbe66922419467160506",
+  "source": "[[size 12px]]A[[span class=a]]B[[/size]]C[[/span]]",
+  "source_sha256": "d9d997ec0975cb538aabc879ac7ecbbcd65d0a442e28c94617ce7b85a3bad28e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x03-span-color-nested": {
+  "fullname": "muse-probe-r2contain-x-x03-span-color-nested",
+  "html": "<p><span>A<span style=\"color: red\">B</span>C</span></p>",
+  "html_sha256": "aff584db05fc7a2cbb08530acef358a996c1a7fa9f5a6b01bcff4c06632f503b",
+  "source": "[[span class=a]]A##red|B##C[[/span]]",
+  "source_sha256": "f1a1b55d86c731bb4a1e45ef6281061a96cf3c3ac4c1664091d80829b34064e2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x04-color-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x04-color-span-cross",
+  "html": "<p><span style=\"color: red\"><span>A</span>B</span></p>",
+  "html_sha256": "c8a0731894efb97c062677b7f666c25aa93dcc26f25031f3e201fdeaefd9858d",
+  "source": "##red|[[span class=a]]A##B[[/span]]",
+  "source_sha256": "46d60e95dc3fea1bc93e12bb445188ef68398092485762968a5450933161f4f5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x05-strike-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x05-strike-span-cross",
+  "html": "<p><span style=\"text-decoration: line-through;\">A<span>B</span>C</span></p>",
+  "html_sha256": "abe0bf5adc25fa990f478b77391b02ecd82aafdbf41b55ba9c1aa95be9103cf3",
+  "source": "--A[[span class=a]]B--C[[/span]]",
+  "source_sha256": "808abd4a0d4ce095bf81bbb61a1d7bdd2a640c2858abe463b852df387d92e0a7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x06-span-strike-nested": {
+  "fullname": "muse-probe-r2contain-x-x06-span-strike-nested",
+  "html": "<p><span>A<span style=\"text-decoration: line-through;\">B</span>C</span></p>",
+  "html_sha256": "e1238361ba0539c4d7b892272e2561189516a7bd1335dfe9163808e883c4e0b6",
+  "source": "[[span class=a]]A--B--C[[/span]]",
+  "source_sha256": "4c08d7d6cab036deac9f650e8012e738ce3b182ba95c99e447be00a2b561a9ff",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x07-span-size-strike-cross": {
+  "fullname": "muse-probe-r2contain-x-x07-span-size-strike-cross",
+  "html": "<p><span>A<span style=\"font-size:12px;\">B<span style=\"text-decoration: line-through;\">C</span>D</span>E</span></p>",
+  "html_sha256": "3eb3a349c3e44550a2b22f80d75751b53ae073fdb90137ef59fc0adff955553d",
+  "source": "[[span class=a]]A[[size 12px]]B--C[[/span]]D[[/size]]E--",
+  "source_sha256": "8962e194e555f6e12d66ee3df7bdd722fd1f5ad6ed7e9c6de0e6b2ffed8c3cd5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x08-span-nested-same": {
+  "fullname": "muse-probe-r2contain-x-x08-span-nested-same",
+  "html": "<p><span>A<span>B</span>C</span></p>",
+  "html_sha256": "abb4b778cdf5ed6ce905e29ec44e475e0096e74a3b66a155430cc4788e55c1c1",
+  "source": "[[span class=a]]A[[span class=b]]B[[/span]]C[[/span]]",
+  "source_sha256": "d26f06b491f8df88f58ef68bbd37fa0e9e2eb0b01169de186eaf226897296255",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x09-size-nested-same": {
+  "fullname": "muse-probe-r2contain-x-x09-size-nested-same",
+  "html": "<p><span style=\"font-size:12px;\">A<span style=\"font-size:14px;\">B</span>C</span></p>",
+  "html_sha256": "57ef6a8a1820dc8bdc614ce619a7808007c4526de288966d33db3002060f6889",
+  "source": "[[size 12px]]A[[size 14px]]B[[/size]]C[[/size]]",
+  "source_sha256": "fc3a8a2414f57cd85739acb22063aeb96777d2100cc5fb78b997b7d3612d6e14",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x10-span-empty": {
+  "fullname": "muse-probe-r2contain-x-x10-span-empty",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[span]] [[/span]]",
+  "source_sha256": "f6966021f337fe1ac577afe9ae87af28684f3512ad0f5ae4fc6e36fb20a66774",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x11-span-size-cross-block": {
+  "fullname": "muse-probe-r2contain-x-x11-span-size-cross-block",
+  "html": "<div>\n<p><span>A<span style=\"font-size:12px;\">B</span>C</span></p>\n</div>",
+  "html_sha256": "ba45ff82c2bba95e8d4b1db68da29331c82c9a3fea484147602da0632d5c41ee",
+  "source": "[[div class=d]]\n[[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]\n[[/div]]",
+  "source_sha256": "142e2fcef49b19aaf6dc54e08b9a6bbbe9a76d8e42ea09c123678f44e6d40114",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x12-iftags-suppressed-div": {
+  "fullname": "muse-probe-r2contain-x-x12-iftags-suppressed-div",
+  "html": "<p>visible</p>",
+  "html_sha256": "487a70dfee26569d65df26e32eaf580849b2772b18d76eb1647eec0460cd8ce8",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "source_sha256": "0daf9e94392c44785fa9b4509cb9f6abefa43767968fac5194bc380ba263a4a1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x13-iftags-active-div": {
+  "fullname": "muse-probe-r2contain-x-x13-iftags-active-div",
+  "html": "<p>visible</p>",
+  "html_sha256": "487a70dfee26569d65df26e32eaf580849b2772b18d76eb1647eec0460cd8ce8",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "source_sha256": "0daf9e94392c44785fa9b4509cb9f6abefa43767968fac5194bc380ba263a4a1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x14-iftags-suppressed-coll": {
+  "fullname": "muse-probe-r2contain-x-x14-iftags-suppressed-coll",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>inside</p>\n</div>\n</div>\n</div>\n<p>visible</p>",
+  "html_sha256": "2e4d49e80cfba206f4bd7d51845e221430df2592c68c3cc75f8e37c978e24cb1",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "source_sha256": "55965bcfba77ab17ca63b8413c813d597150e8ba830d35e1b974feed21580c8e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x15-iftags-active-coll": {
+  "fullname": "muse-probe-r2contain-x-x15-iftags-active-coll",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>inside</p>\n</div>\n</div>\n</div>\n<p>visible</p>",
+  "html_sha256": "2e4d49e80cfba206f4bd7d51845e221430df2592c68c3cc75f8e37c978e24cb1",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "source_sha256": "55965bcfba77ab17ca63b8413c813d597150e8ba830d35e1b974feed21580c8e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x16-iftags-suppressed-tab": {
+  "fullname": "muse-probe-r2contain-x-x16-iftags-suppressed-tab",
+  "html": "<p>visible</p>",
+  "html_sha256": "487a70dfee26569d65df26e32eaf580849b2772b18d76eb1647eec0460cd8ce8",
+  "source": "[[iftags +alpha]]\n[[tabview]]\n[[tab title=A]]\nbody\n[[/tab]]\n[[/tabview]]\n[[/iftags]]\nvisible",
+  "source_sha256": "01b6a0f0369c2450b856f551a9fde555e5f3611863c024f4352480034eea32fd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x17-code-inline-div": {
+  "fullname": "muse-probe-r2contain-x-x17-code-inline-div",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[div&#32;class=x]]&#32;inside&#32;[[/div]]</span></p>",
+  "html_sha256": "7fd1709e20d3e06a449e5bcc534732f3243326bfbcc555d60726ef4b55693e6e",
+  "source": "@@[[div class=x]] inside [[/div]]@@",
+  "source_sha256": "b04784cc1c2c81680941be5a40310455d288792ff0b5ff41e83543dab5a980d1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x18-code-block-div": {
+  "fullname": "muse-probe-r2contain-x-x18-code-block-div",
+  "html": "<div class=\"code\">\n<pre><code>[[div]]\ninside\n[[/div]]</code></pre></div>",
+  "html_sha256": "d338dc79a0bfb7767eb1535a4fa1673722f8adf8c00b75cb15bff392d63f85a9",
+  "source": "[[code]]\n[[div]]\ninside\n[[/div]]\n[[/code]]",
+  "source_sha256": "09ccf7e6e38c5d7280c997028cb4f809ddab84be716cbcb10d5695f0a1f5e83d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x19-code-inline-coll": {
+  "fullname": "muse-probe-r2contain-x-x19-code-inline-coll",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[collapsible]]body[[/collapsible]]</span></p>",
+  "html_sha256": "9270622759d7ab967505ec3c7cc9b02eb198dfc5d2d149d52130ab1ba5ec00b6",
+  "source": "@@[[collapsible]]body[[/collapsible]]@@",
+  "source_sha256": "8c23886231f6e978b78dfd42135445563cf55fa00eec7dfbd755586f6c752540",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x20-span-code-div": {
+  "fullname": "muse-probe-r2contain-x-x20-span-code-div",
+  "html": "<p><span>A<span style=\"white-space: pre-wrap;\">[[div]]x[[/div]]</span>B</span></p>",
+  "html_sha256": "a0d1581c5bfebcf32a4d2ae44224a6242e69d387d2b6ce2d95c4f1ea64308264",
+  "source": "[[span class=a]]A@@[[div]]x[[/div]]@@B[[/span]]",
+  "source_sha256": "ed376f01b13646e2a09bd0b87c01dab9eef0f751439066ade97d25b497679438",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x21-div-in-coll-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x21-div-in-coll-in-tab",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-f5fefa850c91c6e37c8fa25fd5e66821\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<div>\n<p>inner</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabViewf5fefa850c91c6e37c8fa25fd5e66821 = new YAHOO.widget.TabView('wiki-tabview-f5fefa850c91c6e37c8fa25fd5e66821');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "e44b8551ea854f9a1b490e7d9b4ad6f222b4a6f37f9511b0322aa0a7b20cd9b0",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[collapsible show=show]]\n[[div class=x]]\ninner\n[[/div]]\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "054caa408aa909071ead1e19000bdddeeeec1502c98eaef62136236950dfef2c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x22-coll-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x22-coll-in-tab",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-116447b40a9044c36e6b42da8dd9f301\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>inner</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabView116447b40a9044c36e6b42da8dd9f301 = new YAHOO.widget.TabView('wiki-tabview-116447b40a9044c36e6b42da8dd9f301');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "3f2e75b2a3123640f345451757db6ae714ed231f0c1437bb23ce8a45fc774a09",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[collapsible]]\ninner\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "ecbe8bcdcd35c8cd34574c93ab7b78cd7affece35a63d5ef1b60b682c6454e58",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x23-div-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x23-div-in-tab",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-ac1b27e4eeccbfd9faab39f6bb25d14e\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<div>\n<p>inner</p>\n</div>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabViewac1b27e4eeccbfd9faab39f6bb25d14e = new YAHOO.widget.TabView('wiki-tabview-ac1b27e4eeccbfd9faab39f6bb25d14e');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "c1cb15479a799b2337de4f6928628fd7aad748c9e784c2738705e197089c4fa5",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[div class=x]]\ninner\n[[/div]]\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "8dc30abb8033b5d906279d29c71bfa7a6fb824b6d0b63d65447656b3f5e9e6a7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x24-three-nested-divs": {
+  "fullname": "muse-probe-r2contain-x-x24-three-nested-divs",
+  "html": "<br />\n[[/div]]",
+  "html_sha256": "4d0484112eeff0ca0154611383d21d5b6a6c4b9d4decc754c774b0560f0acb29",
+  "source": "[[div class=a]]A\n[[div class=b]]B\n[[div class=c]]C\n[[/div]]\n[[/div]]\n[[/div]]",
+  "source_sha256": "04deeea38c253193c968ebbeeeaa6ca397578c69985676c8029df3e37647bcc2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x25-tab-in-coll-in-div": {
+  "fullname": "muse-probe-r2contain-x-x25-tab-in-coll-in-div",
+  "html": "<div>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-d92e6a486b6e7a5adb5f972f9b7944d9\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<p>inner</p>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabViewd92e6a486b6e7a5adb5f972f9b7944d9 = new YAHOO.widget.TabView('wiki-tabview-d92e6a486b6e7a5adb5f972f9b7944d9');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script></div>\n</div>\n</div>\n</div>",
+  "html_sha256": "7ad3dc8a085e09b181180bfe63ea863ae6f970be4d23cb6919a7eba5a6a895c3",
+  "source": "[[div class=a]]\n[[collapsible]]\n[[tabview]]\n[[tab title=A]]\ninner\n[[/tab]]\n[[/tabview]]\n[[/collapsible]]\n[[/div]]",
+  "source_sha256": "9233d9bbb8a1c51df40ea5bf4e252ee96dd8aa299f6b931819c8bf14ec898ef8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x26-coll-first-closer-wins": {
+  "fullname": "muse-probe-r2contain-x-x26-coll-first-closer-wins",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>A[[collapsible]]B</p>\n</div>\n</div>\n</div>\nC[[/collapsible]]",
+  "html_sha256": "8fbcfdf4be743137d07dd1e86a4db0542969fec66f004e9a71ed021a984815e4",
+  "source": "[[collapsible]]A[[collapsible]]B[[/collapsible]]C[[/collapsible]]",
+  "source_sha256": "6c34ad5a74fa99aef005b9cf78d61993ccdf3c2391e295728df2945d079a1bf5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x27-footnote-in-div": {
+  "fullname": "muse-probe-r2contain-x-x27-footnote-in-div",
+  "html": "<div>\n<p>text<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. note1</div>\n</div>\n</div>",
+  "html_sha256": "b9c5c2de4d899c031f48ef2e4771d5227625404a97959cc6422f0a9058a54238",
+  "source": "[[div class=x]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/div]]",
+  "source_sha256": "4b77c11e028c64de288313ab5a8d230c0cb20d4f9d090e64fd4840332a9931a5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x28-footnote-in-coll": {
+  "fullname": "muse-probe-r2contain-x-x28-footnote-in-coll",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>text<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. note1</div>\n</div>\n</div>\n</div>\n</div>",
+  "html_sha256": "33695cf0202211bd24d517b74c91364c5ba6838901c7f9b57f7b4baec15dc813",
+  "source": "[[collapsible]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/collapsible]]",
+  "source_sha256": "76dd070d482979bae5e15d6f70a9c4fc4340315f2341fe3360cd332344e395be",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x29-footnote-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x29-footnote-in-tab",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-5b08df7fce5d781dda2afb27f4927024\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<p>text<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. note1</div>\n</div>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabView5b08df7fce5d781dda2afb27f4927024 = new YAHOO.widget.TabView('wiki-tabview-5b08df7fce5d781dda2afb27f4927024');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "b8015917d1a4c0328d1dab8b8c23e483f14724a933dfd707269dce486927c05a",
+  "source": "[[tabview]]\n[[tab title=A]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "6544beaf7c92d4daeb3f4738bcd2e7b9e18bf9d7a9bc20db46b4ec4658c98595",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x30-div-in-footnote": {
+  "fullname": "muse-probe-r2contain-x-x30-div-in-footnote",
+  "html": "<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>.\n<div>\n<p>inside</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "b718e66648a9a3b9d7ec95146ae40934ccd1978a07ac0ca12aa9856b81c81ccd",
+  "source": "[[footnote]]\n[[div]]\ninside\n[[/div]]\n[[/footnote]]\n[[footnoteblock]]",
+  "source_sha256": "76da3dd51119aa5e66f46920a26d999d6adf68e3e919e84c37547503f577a88f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x31-span-in-footnote": {
+  "fullname": "muse-probe-r2contain-x-x31-span-in-footnote",
+  "html": "<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. <span>S</span></div>\n</div>",
+  "html_sha256": "47b770888bfd59bf47fa3befd9fc19d548523d840bee155fa5dd0541780eb13a",
+  "source": "[[footnote]][[span class=a]]S[[/span]][[/footnote]]\n[[footnoteblock]]",
+  "source_sha256": "9d38f5716ef3df39235a5dcfb12ca154f03181935267fffc45a164573129c665",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x32-div-underscore-basic": {
+  "fullname": "muse-probe-r2contain-x-x32-div-underscore-basic",
+  "html": "<div>body</div>",
+  "html_sha256": "28bd839378e75e97ed75130d9549e13f3cf61b1bf93914b9b6a63ef2853b2355",
+  "source": "[[div_]]\nbody\n[[/div]]",
+  "source_sha256": "7d8004c3c33420d77bbc83e24cfa62cfa09697821f7cfa43402f0ffb2f238642",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x33-div-underscore-attrs": {
+  "fullname": "muse-probe-r2contain-x-x33-div-underscore-attrs",
+  "html": "<div class=\"x\">body</div>",
+  "html_sha256": "ee0b8e3d2e06badb6736250011bad943f50f06d0c776d1686126461e3a5b6d34",
+  "source": "[[div_ class=\"x\"]]\nbody\n[[/div]]",
+  "source_sha256": "8a49d14a93b3b2b9f97b739ef64221eb02812739982889bc55917af5ddbfcfb5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x34-div-underscore-inline": {
+  "fullname": "muse-probe-r2contain-x-x34-div-underscore-inline",
+  "html": "<p>before [[div_]] body [[/div]] after</p>",
+  "html_sha256": "0b66b5a8e9537a094ff518eac467155ee2f5d1e32d09dfaae428c4da9b91a5d8",
+  "source": "before [[div_]] body [[/div]] after",
+  "source_sha256": "9d35ad8bc2c434e160cc7893c9a6d1b47926950e5e9aacb1bf0f6c3fa578ff75",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x35-div-underscore-unterminated": {
+  "fullname": "muse-probe-r2contain-x-x35-div-underscore-unterminated",
+  "html": "<p>[[div_]]<br />\nbody</p>",
+  "html_sha256": "dda612957127c8cfe22c7282762b0e1e073536afb280ebf33e0d9328134e5bd5",
+  "source": "[[div_]]\nbody",
+  "source_sha256": "0afada1fe97e80bbbf5ea5a8504a733ef50be9fc03c25acca0eb6a93d0e3508a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x36-div-normal-control": {
+  "fullname": "muse-probe-r2contain-x-x36-div-normal-control",
+  "html": "<div>\n<p>body</p>\n</div>",
+  "html_sha256": "645c24bdde922497c633f6f66cec46c4247335cdcd96530c04dd4a51f97eef0a",
+  "source": "[[div class=x]]\nbody\n[[/div]]",
+  "source_sha256": "ebb5334a90d6db57b3fc6dfb00225efb30cee02022969846a8d9bb07f2f130e4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

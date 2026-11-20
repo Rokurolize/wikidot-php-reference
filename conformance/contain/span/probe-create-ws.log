@@ -1,0 +1,15 @@
+p35-body-spaces -> muse-probe-r2contain-span-p35-body-spaces (created)
+p36-body-space-lead -> muse-probe-r2contain-span-p36-body-space-lead (created)
+2 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p35-body-spaces": {
+  "fullname": "muse-probe-r2contain-span-p35-body-spaces",
+  "source": "BEGIN|a [[span]] X [[/span]] b|END",
+  "action": "created"
+ },
+ "p36-body-space-lead": {
+  "fullname": "muse-probe-r2contain-span-p36-body-space-lead",
+  "source": "BEGIN|[[span]] X[[/span]]|END",
+  "action": "created"
+ }
+}

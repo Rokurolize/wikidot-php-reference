@@ -1,0 +1,32 @@
+{
+ "x19-code-inline-coll": {
+  "fullname": "muse-probe-r2contain-x-x19-code-inline-coll",
+  "source": "@@[[collapsible]]body[[/collapsible]]@@",
+  "action": "created"
+ },
+ "x20-span-code-div": {
+  "fullname": "muse-probe-r2contain-x-x20-span-code-div",
+  "source": "[[span class=a]]A@@[[div]]x[[/div]]@@B[[/span]]",
+  "action": "created"
+ },
+ "x21-div-in-coll-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x21-div-in-coll-in-tab",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[collapsible show=show]]\n[[div class=x]]\ninner\n[[/div]]\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "x22-coll-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x22-coll-in-tab",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[collapsible]]\ninner\n[[/collapsible]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "x23-div-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x23-div-in-tab",
+  "source": "[[tabview]]\n[[tab title=A]]\n[[div class=x]]\ninner\n[[/div]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "x24-three-nested-divs": {
+  "fullname": "muse-probe-r2contain-x-x24-three-nested-divs",
+  "source": "[[div class=a]]A\n[[div class=b]]B\n[[div class=c]]C\n[[/div]]\n[[/div]]\n[[/div]]",
+  "action": "created"
+ }
+}

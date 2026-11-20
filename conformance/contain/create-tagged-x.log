@@ -1,0 +1,7 @@
+x12-iftags-suppressed-div-tagged -> muse-probe-r2contain-x-x12-iftags-suppressed-div-tagged source_match= True
+x13-iftags-active-div-tagged -> muse-probe-r2contain-x-x13-iftags-active-div-tagged source_match= True
+x14-iftags-suppressed-coll-tagged -> muse-probe-r2contain-x-x14-iftags-suppressed-coll-tagged source_match= True
+x15-iftags-active-coll-tagged -> muse-probe-r2contain-x-x15-iftags-active-coll-tagged source_match= True
+x16-iftags-suppressed-tab-tagged -> muse-probe-r2contain-x-x16-iftags-suppressed-tab-tagged source_match= True
+wrote 5 tagged probe pages
+TAGGED_CREATE_RC=0

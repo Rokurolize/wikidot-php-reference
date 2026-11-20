@@ -25,6 +25,28 @@ class Text_Wiki_Render_Xhtml_Collapsible extends Text_Wiki_Render {
     public $conf = array();
 
     /**
+     * Render a Wikidot collapsible link label. Live renders the label text into
+     * the anchor with spaces turned into &nbsp;, tabs into four &nbsp; entities,
+     * line breaks into a plain space, and control characters dropped; the
+     * default show label is "+ show block" and the default hide label uses an
+     * en dash ("– hide block"). See conformance-refphp/contain/collapsible/
+     * SECTION.md and the cached muse-probe-r2contain-coll- probes.
+     */
+    function wikidotLabel($text, $show)
+    {
+        if (!isset($text) || $text === '' || $text === '0') {
+            $text = $show ? '+ show block' : "\xE2\x80\x93 hide block";
+        }
+        $text = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+        $text = str_replace(
+            array(' ', "\t", "\n", "\r"),
+            array('&nbsp;', '&nbsp;&nbsp;&nbsp;&nbsp;', ' ', ''),
+            $text
+        );
+        return preg_replace('/[\x00-\x1F\x7F]/', '', $text);
+    }
+
+    /**
     *
     * Renders a token into text matching the requested format.
     *
@@ -39,61 +61,53 @@ class Text_Wiki_Render_Xhtml_Collapsible extends Text_Wiki_Render {
 
     function token($options)
     {
-    		$args = $options['args'];
-    		if($args['folded'] == 'no' || $args['folded'] == 'false'){
-    			$folded = false;
-    		}else{
-    			$folded = true;
-    		}
-    		
-    		if($args['show']){
-    			$show = $args['show'];
-    		}else{
-    			$show = "+ show block";
-    		}
-    		
-   			if($args['hide']){
-    			$hide = $args['hide'];
-    		}else{
-    			$hide = "- hide block";
-    		}
-    		
-    		if($args['hideLocation'] && $args['hideLocation'] == 'bottom'){
-    			$hideLocation = 'bottom';
-    		}elseif($args['hideLocation'] && $args['hideLocation'] == 'both'){
-    			$hideLocation = 'both';
-    		}else{
-    			$hideLocation = 'top';
-    		}
-    		
-    		$count = $options['count'];
-    		
-    		$hideB = '<div><a href="javascript:;" onclick="$(\'collapsible-block-'.$count.'-unfolded\').style.display=\'none\';$(\'collapsible-block-'.$count.'-folded\').style.display=\'block\';">'.htmlspecialchars($hide).'</a></div>';
+        $args = isset($options['args']) && is_array($options['args'])
+            ? $options['args'] : array();
 
-    	 	if ($options['type'] == 'start') {
-
-    	 		$out  = '<div class="collapsible-block">';
-    	 		$out .= '<div id="collapsible-block-'.$count.'-folded" '.((!$folded)?'style="display:none"':'').'>';
-    	 		$out .= '<a href="javascript:;" onclick="$(\'collapsible-block-'.$count.'-folded\').style.display=\'none\';$(\'collapsible-block-'.$count.'-unfolded\').style.display=\'block\'; ">'.htmlspecialchars($show).'</a>';
-    	 		$out .= '</div>';
-    	 		$out .= '<div id="collapsible-block-'.$count.'-unfolded" '.($folded?'style="display:none"':'').'>';
-    	 		if($hideLocation == 'top' || $hideLocation == 'both'){
-    	 			$out .= $hideB;
-    	 		}
-    	 		$out .= '<div id="collapsible-block-'.$count.'-content">';
-
-            	return $out;
-            	
+        $folded = true;
+        if (isset($args['folded']) &&
+            ($args['folded'] === 'no' || $args['folded'] === 'false')) {
+            $folded = false;
         }
 
-        if ($options['type'] == 'end') {
-            $out =  "</div>";
-            if($hideLocation == 'bottom' || $hideLocation == 'both'){
-            	$out .= $hideB;
+        $show = $this->wikidotLabel(isset($args['show']) ? $args['show'] : null, true);
+        $hide = $this->wikidotLabel(isset($args['hide']) ? $args['hide'] : null, false);
+
+        $hideLocation = 'top';
+        if (isset($args['hideLocation'])) {
+            if ($args['hideLocation'] === 'bottom') {
+                $hideLocation = 'bottom';
+            } elseif ($args['hideLocation'] === 'both') {
+                $hideLocation = 'both';
             }
-            $out .= "</div></div>";
+        }
+
+        $hideB = '<div class="collapsible-block-unfolded-link">'
+            . '<a class="collapsible-block-link" href="javascript:;">' . $hide . '</a>'
+            . '</div>';
+
+        if (isset($options['type']) && $options['type'] === 'start') {
+            $out = '<div class="collapsible-block">';
+            $out .= '<div class="collapsible-block-folded"'
+                . ($folded ? '' : ' style="display:none"') . '>'
+                . '<a class="collapsible-block-link" href="javascript:;">' . $show . '</a>'
+                . '</div>';
+            $out .= '<div class="collapsible-block-unfolded"'
+                . ($folded ? ' style="display:none"' : '') . '>';
+            if ($hideLocation === 'top' || $hideLocation === 'both') {
+                $out .= $hideB;
+            }
+            $out .= '<div class="collapsible-block-content">';
             return $out;
         }
 
+        if (isset($options['type']) && $options['type'] === 'end') {
+            $out = '</div>';
+            if ($hideLocation === 'bottom' || $hideLocation === 'both') {
+                $out .= $hideB;
+            }
+            $out .= '</div></div>';
+            return $out;
+        }
     }
 }

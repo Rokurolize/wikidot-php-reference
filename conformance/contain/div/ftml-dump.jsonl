@@ -1,0 +1,75 @@
+{"errors":[],"html":"<div><p>hello</p></div>","id":"basic"}
+{"errors":[],"html":"<div><p>hello</p></div>","id":"basic-uppercase"}
+{"errors":[],"html":"<div><p>hello</p></div>","id":"basic-indented"}
+{"errors":[],"html":"<div><p>hello</p></div>","id":"basic-trailing-blank"}
+{"errors":[],"html":"<div><p>A</p><p>B</p></div>","id":"basic-two-paras"}
+{"errors":[],"html":"<div><h1 id=\"toc0\"><span>Head</span></h1><p>text</p></div>","id":"basic-heading"}
+{"errors":[],"html":"<div class=\"card\"><p>Body</p></div>","id":"attr-class"}
+{"errors":[],"html":"<div id=\"u-panel\"><p>Body</p></div>","id":"attr-id"}
+{"errors":[],"html":"<div id=\"u-panel\"><p>Body</p></div>","id":"attr-id-prefixed"}
+{"errors":[],"html":"<div id=\"u-\"><p>x</p></div>","id":"attr-id-space"}
+{"errors":[],"html":"<div style=\"color: red\"><p>Body</p></div>","id":"attr-style"}
+{"errors":[],"html":"<div style=\"color: red; background: blue\"><p>Body</p></div>","id":"attr-style-two"}
+{"errors":[],"html":"<div role=\"note\" type=\"tip\"><p>Body</p></div>","id":"attr-role-type"}
+{"errors":[],"html":"<div data-bar=\"two\" data-foo=\"one\"><p>Body</p></div>","id":"attr-data"}
+{"errors":[],"html":"<div data-=\"v\"><p>T</p></div>","id":"attr-data-empty-suffix"}
+{"errors":[],"html":"<div><p>Body</p></div>","id":"attr-unknown"}
+{"errors":[],"html":"<div class=\"card\" data-bar=\"two\" data-foo=\"one\" id=\"u-panel\" role=\"note\" style=\"color: red\" type=\"t\"><p>Body</p></div>","id":"attr-allowlist"}
+{"errors":[],"html":"<div data-mixed=\"four\"><p>Body</p></div>","id":"attr-allowlist-mixed"}
+{"errors":[],"html":"<div><p>hello</p></div>","id":"attr-single-quote"}
+{"errors":[],"html":"<div><p>hello</p></div>","id":"attr-unquoted"}
+{"errors":[],"html":"<div data-mixed=\"three\"><p>Body</p></div>","id":"attr-dupe-data"}
+{"errors":[],"html":"<div class=\"a b\"><p>x</p></div>","id":"attr-class-space"}
+{"errors":[],"html":"<div><p>x</p></div>","id":"attr-empty-value"}
+{"errors":[],"html":"<div style=\"display:none\"><p>hello</p></div>","id":"attr-style-hidden-display"}
+{"errors":[],"html":"<div style=\"visibility:hidden\"><p>hello</p></div>","id":"attr-style-hidden-vis"}
+{"errors":[],"html":"<div style=\"display: none; color: red\"><p>hello</p></div>","id":"attr-style-hidden-mixed"}
+{"errors":[],"html":"<div style=\"display : none\"><p>hello</p></div>","id":"attr-style-hidden-space"}
+{"errors":[],"html":"<br>\nB","id":"empty-plain"}
+{"errors":[],"html":"<div class=\"k\"></div><br>\nB","id":"empty-attr"}
+{"errors":[],"html":"<br>\nB","id":"empty-whitespace"}
+{"errors":[],"html":"","id":"empty-at-eof"}
+{"errors":["ParseError { token: Identifier, rule: \"block-div\", span: 8..13, kind: BlockExpectedEnd }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }"],"html":"<p>[[div]]<br>\nhello</p>","id":"unterminated"}
+{"errors":["ParseError { token: Identifier, rule: \"block-div\", span: 18..23, kind: BlockExpectedEnd }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>[[div class=&quot;k&quot;]]<br>\nhello</p>","id":"unterminated-attr"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 6..9, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 12..14, kind: NoRulesMatch }"],"html":"<p>hello<br>\n[[/div]]</p>","id":"stray"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>[[/div]]</p>","id":"stray-only"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 9..12, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p>[[/div]]<br>\n[[/div]]<br>\nA</p>","id":"stray-two"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 2..5, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>A [[/div]] B</p>","id":"closer-midline"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 21..24, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 27..29, kind: NoRulesMatch }"],"html":"<div><p>A</p></div><br>\nB<br>\n[[/div]]","id":"closer-first"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 21..24, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 27..29, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 32..35, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 38..40, kind: NoRulesMatch }"],"html":"<div><p>A</p></div><br>\nB<br>\n[[/div]]<br>\nC<br>\n[[/div]]","id":"closer-multi"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 19..22, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 25..27, kind: NoRulesMatch }"],"html":"<div><p>A</p></div>\nB<br>\n[[/div]]","id":"closer-same-line"}
+{"errors":[],"html":"<div><p>A</p></div>","id":"closer-upper"}
+{"errors":[],"html":"<div><p><strong>bold</strong> and <em>ital</em></p></div>","id":"inline-bold"}
+{"errors":[],"html":"<div><p><span>egg</span></p></div>","id":"inline-span"}
+{"errors":[],"html":"<div><p><a href=\"http://example.com\">link</a></p></div>","id":"inline-link"}
+{"errors":[],"html":"<div><p><tt>code</tt></p></div>","id":"inline-code"}
+{"errors":[],"html":"<p>[[div]]A1<span>B2[[/div]]C3</span>D4</p>","id":"crossed-span"}
+{"errors":[],"html":"<div><strong>bold</strong> <span>egg</span></div>","id":"inline-content-scored"}
+{"errors":[],"html":"<div><p>A</p><div><p>B</p></div><br>\nC</div>","id":"nested"}
+{"errors":[],"html":"<div><p>1</p><div><p>2</p><div><p>3</p></div><br>\n2b</div><br>\n1b</div>","id":"nested-deep"}
+{"errors":[],"html":"<div class=\"outer\"><p>A</p><div class=\"inner\"><p>B</p></div></div>","id":"nested-attr"}
+{"errors":[],"html":"<div>1\n<div>2</div>\n3</div>","id":"nested-scored"}
+{"errors":[],"html":"<div><p>A</p><div>B</div><br>\nC</div>","id":"nested-mixed"}
+{"errors":[],"html":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div><div class=\"collapsible-block-content\"><div><p>A</p></div></div></div></div>","id":"div-in-collapsible"}
+{"errors":[],"html":"<div id=\"wiki-tabview-cb1b29f812e5161287fa4c26392f9b9a\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>T</em></a></li></ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><div><p>A</p></div></div></div></div>","id":"div-in-tabview"}
+{"errors":[],"html":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div><div class=\"collapsible-block-content\"><div>A</div></div></div></div>","id":"scored-in-collapsible"}
+{"errors":[],"html":"<div id=\"wiki-tabview-cb1b29f812e5161287fa4c26392f9b9a\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>T</em></a></li></ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><div><p>A</p><div><p>B</p></div></div></div></div></div>","id":"nested-in-tab"}
+{"errors":["ParseError { token: LineBreak, rule: \"block\", span: 12..13, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 15..18, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 26..28, kind: NoRulesMatch }"],"html":"<p>[[division]]<br>\nA<br>\n[[/division]]</p>","id":"malformed-division"}
+{"errors":["ParseError { token: LineBreak, rule: \"block\", span: 8..9, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 11..14, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[divx]]<br>\nA<br>\n[[/divx]]</p>","id":"malformed-divx"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-div\", span: 16..16, kind: BlockExpectedEnd }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 8..11, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 14..16, kind: NoRulesMatch }"],"html":"<p>[[div<br>\nA<br>\n[[/div]]</p>","id":"malformed-open-bracket"}
+{"errors":[],"html":"<div><p>A</p></div>\n]","id":"malformed-close-bracket"}
+{"errors":[],"html":"<p><a href=\"/div\">div</a><br>\nA<br>\n<a href=\"/div\">/div</a></p>","id":"malformed-extra-bracket"}
+{"errors":["ParseError { token: LineBreak, rule: \"block\", span: 8..9, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 11..14, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<p>[[div*]]<br>\nA<br>\n[[/div]]</p>","id":"malformed-star"}
+{"errors":[],"html":"<div><p>A</p></div>","id":"malformed-empty-args"}
+{"errors":[],"html":"<div>hello</div>","id":"score-basic"}
+{"errors":[],"html":"<div class=\"strip\">hello</div>","id":"score-attr"}
+{"errors":[],"html":"<div class=\"strip\" data-x=\"y\" role=\"note\">Body</div>","id":"score-attrs-full"}
+{"errors":[],"html":"<div data-z=\"1\" id=\"u-q\" role=\"note\">x</div>","id":"score-attrs-id"}
+{"errors":[],"html":"<br>\nB","id":"score-empty"}
+{"errors":[],"html":"<div class=\"k\"></div><br>\nB","id":"score-attr-empty"}
+{"errors":[],"html":"<p>[[div_]]Banana[[/div]]</p>","id":"score-inline"}
+{"errors":[],"html":"<div>apple<br>\nbanana</div>","id":"score-two-lines"}
+{"errors":["ParseError { token: Identifier, rule: \"block-div\", span: 9..14, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>[[div_]]<br>\nhello</p>","id":"score-unterminated"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 24..27, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 30..32, kind: NoRulesMatch }"],"html":"<div>hello</div><br>\n[[/div]]","id":"score-stray"}
+{"errors":[],"html":"<div>hello</div>","id":"score-uppercase"}
+{"errors":[],"html":"<div style=\"display:none\">hello</div>","id":"score-style-hidden"}

@@ -50,7 +50,16 @@ EOT;
                 if ($tab['tabId'] == 0) {
                     $class = ' class="selected"';
                 }
-                $out .= '<li' . $class . '><a href="javascript:;"><em>' . ($tab['title'] ? $tab['title'] : 'untitled') . '</em></a></li>';
+                // Live HTML-escapes the tab label (&, <, > and " but not ')
+                // and emits a bare anchor when the label resolves to nothing.
+                // ENT_COMPAT is explicit because PHP 8.1 changed the default
+                // to ENT_QUOTES|ENT_SUBSTITUTE (&#039; where live keeps ').
+                $label = isset($tab['title']) ? $tab['title'] : 'untitled';
+                if ($label === '') {
+                    $out .= '<li' . $class . '><a href="javascript:;"></a></li>';
+                } else {
+                    $out .= '<li' . $class . '><a href="javascript:;"><em>' . htmlspecialchars($label, ENT_COMPAT, 'UTF-8') . '</em></a></li>';
+                }
             
             }
             $out .= '</ul>';

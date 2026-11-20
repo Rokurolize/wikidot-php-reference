@@ -1,0 +1,32 @@
+{
+ "x01-span-size-cross": {
+  "fullname": "muse-probe-r2contain-x-x01-span-size-cross",
+  "source": "[[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]",
+  "action": "created"
+ },
+ "x02-size-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x02-size-span-cross",
+  "source": "[[size 12px]]A[[span class=a]]B[[/size]]C[[/span]]",
+  "action": "created"
+ },
+ "x03-span-color-nested": {
+  "fullname": "muse-probe-r2contain-x-x03-span-color-nested",
+  "source": "[[span class=a]]A##red|B##C[[/span]]",
+  "action": "created"
+ },
+ "x04-color-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x04-color-span-cross",
+  "source": "##red|[[span class=a]]A##B[[/span]]",
+  "action": "created"
+ },
+ "x05-strike-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x05-strike-span-cross",
+  "source": "--A[[span class=a]]B--C[[/span]]",
+  "action": "created"
+ },
+ "x06-span-strike-nested": {
+  "fullname": "muse-probe-r2contain-x-x06-span-strike-nested",
+  "source": "[[span class=a]]A--B--C[[/span]]",
+  "action": "created"
+ }
+}

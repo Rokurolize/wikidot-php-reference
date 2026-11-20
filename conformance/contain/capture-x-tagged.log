@@ -1,0 +1,58 @@
+x12-iftags-suppressed-div-tagged -> muse-probe-r2contain-x-x12-iftags-suppressed-div-tagged stable=True saved_source_matches=True valid=True
+x13-iftags-active-div-tagged -> muse-probe-r2contain-x-x13-iftags-active-div-tagged stable=True saved_source_matches=True valid=True
+x14-iftags-suppressed-coll-tagged -> muse-probe-r2contain-x-x14-iftags-suppressed-coll-tagged stable=True saved_source_matches=True valid=True
+x15-iftags-active-coll-tagged -> muse-probe-r2contain-x-x15-iftags-active-coll-tagged stable=True saved_source_matches=True valid=True
+x16-iftags-suppressed-tab-tagged -> muse-probe-r2contain-x-x16-iftags-suppressed-tab-tagged stable=True saved_source_matches=True valid=True
+{
+ "x12-iftags-suppressed-div-tagged": {
+  "fullname": "muse-probe-r2contain-x-x12-iftags-suppressed-div-tagged",
+  "html": "<div>\n<p>inside</p>\n</div>\n<p>visible</p>",
+  "html_sha256": "0472f071d7be38fd7ec5c30f12578665770273d282ab79eee62408e765363038",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "source_sha256": "0daf9e94392c44785fa9b4509cb9f6abefa43767968fac5194bc380ba263a4a1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x13-iftags-active-div-tagged": {
+  "fullname": "muse-probe-r2contain-x-x13-iftags-active-div-tagged",
+  "html": "<div>\n<p>inside</p>\n</div>\n<p>visible</p>",
+  "html_sha256": "0472f071d7be38fd7ec5c30f12578665770273d282ab79eee62408e765363038",
+  "source": "[[iftags +alpha]]\n[[div class=x]]\ninside\n[[/div]]\n[[/iftags]]\nvisible",
+  "source_sha256": "0daf9e94392c44785fa9b4509cb9f6abefa43767968fac5194bc380ba263a4a1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x14-iftags-suppressed-coll-tagged": {
+  "fullname": "muse-probe-r2contain-x-x14-iftags-suppressed-coll-tagged",
+  "html": "<p>visible</p>",
+  "html_sha256": "487a70dfee26569d65df26e32eaf580849b2772b18d76eb1647eec0460cd8ce8",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "source_sha256": "55965bcfba77ab17ca63b8413c813d597150e8ba830d35e1b974feed21580c8e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x15-iftags-active-coll-tagged": {
+  "fullname": "muse-probe-r2contain-x-x15-iftags-active-coll-tagged",
+  "html": "<p>visible</p>",
+  "html_sha256": "487a70dfee26569d65df26e32eaf580849b2772b18d76eb1647eec0460cd8ce8",
+  "source": "[[iftags -alpha]]\n[[collapsible]]\ninside\n[[/collapsible]]\n[[/iftags]]\nvisible",
+  "source_sha256": "55965bcfba77ab17ca63b8413c813d597150e8ba830d35e1b974feed21580c8e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x16-iftags-suppressed-tab-tagged": {
+  "fullname": "muse-probe-r2contain-x-x16-iftags-suppressed-tab-tagged",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-36dcc07dc6623bd37d574fccfb095162\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<p>body</p>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabView36dcc07dc6623bd37d574fccfb095162 = new YAHOO.widget.TabView('wiki-tabview-36dcc07dc6623bd37d574fccfb095162');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>\n<p>visible</p>",
+  "html_sha256": "70619541fa12e6f0d3d0682299185aaffd56aec4677d4880003ce601d43cf071",
+  "source": "[[iftags +alpha]]\n[[tabview]]\n[[tab title=A]]\nbody\n[[/tab]]\n[[/tabview]]\n[[/iftags]]\nvisible",
+  "source_sha256": "01b6a0f0369c2450b856f551a9fde555e5f3611863c024f4352480034eea32fd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
+TAGGED_CAPTURE_RC=0

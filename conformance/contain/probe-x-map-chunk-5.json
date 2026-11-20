@@ -1,0 +1,32 @@
+{
+ "x25-tab-in-coll-in-div": {
+  "fullname": "muse-probe-r2contain-x-x25-tab-in-coll-in-div",
+  "source": "[[div class=a]]\n[[collapsible]]\n[[tabview]]\n[[tab title=A]]\ninner\n[[/tab]]\n[[/tabview]]\n[[/collapsible]]\n[[/div]]",
+  "action": "created"
+ },
+ "x26-coll-first-closer-wins": {
+  "fullname": "muse-probe-r2contain-x-x26-coll-first-closer-wins",
+  "source": "[[collapsible]]A[[collapsible]]B[[/collapsible]]C[[/collapsible]]",
+  "action": "created"
+ },
+ "x27-footnote-in-div": {
+  "fullname": "muse-probe-r2contain-x-x27-footnote-in-div",
+  "source": "[[div class=x]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/div]]",
+  "action": "created"
+ },
+ "x28-footnote-in-coll": {
+  "fullname": "muse-probe-r2contain-x-x28-footnote-in-coll",
+  "source": "[[collapsible]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/collapsible]]",
+  "action": "created"
+ },
+ "x29-footnote-in-tab": {
+  "fullname": "muse-probe-r2contain-x-x29-footnote-in-tab",
+  "source": "[[tabview]]\n[[tab title=A]]\ntext[[footnote]]note1[[/footnote]]\n[[footnoteblock]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "x30-div-in-footnote": {
+  "fullname": "muse-probe-r2contain-x-x30-div-in-footnote",
+  "source": "[[footnote]]\n[[div]]\ninside\n[[/div]]\n[[/footnote]]\n[[footnoteblock]]",
+  "action": "created"
+ }
+}

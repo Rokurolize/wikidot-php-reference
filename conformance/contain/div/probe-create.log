@@ -1,0 +1,213 @@
+basic -> muse-probe-r2contain-div-basic (created)
+basic-uppercase -> muse-probe-r2contain-div-basic-uppercase (created)
+basic-two-paras -> muse-probe-r2contain-div-basic-two-paras (created)
+attr-id -> muse-probe-r2contain-div-attr-id (created)
+attr-id-prefixed -> muse-probe-r2contain-div-attr-id-prefixed (created)
+attr-id-space -> muse-probe-r2contain-div-attr-id-space (created)
+attr-data-empty-suffix -> muse-probe-r2contain-div-attr-data-empty-suffix (created)
+attr-allowlist -> muse-probe-r2contain-div-attr-allowlist (created)
+attr-allowlist-mixed -> muse-probe-r2contain-div-attr-allowlist-mixed (created)
+attr-single-quote -> muse-probe-r2contain-div-attr-single-quote (created)
+attr-unquoted -> muse-probe-r2contain-div-attr-unquoted (created)
+attr-class-space -> muse-probe-r2contain-div-attr-class-space (created)
+attr-style-hidden-display -> muse-probe-r2contain-div-attr-style-hidden-display (created)
+attr-style-hidden-vis -> muse-probe-r2contain-div-attr-style-hidden-vis (created)
+attr-style-hidden-mixed -> muse-probe-r2contain-div-attr-style-hidden-mixed (created)
+empty-plain -> muse-probe-r2contain-div-empty-plain (created)
+empty-attr -> muse-probe-r2contain-div-empty-attr (created)
+unterminated -> muse-probe-r2contain-div-unterminated (created)
+stray -> muse-probe-r2contain-div-stray (created)
+closer-first -> muse-probe-r2contain-div-closer-first (created)
+inline-span -> muse-probe-r2contain-div-inline-span (created)
+crossed-span -> muse-probe-r2contain-div-crossed-span (created)
+nested -> muse-probe-r2contain-div-nested (created)
+nested-scored -> muse-probe-r2contain-div-nested-scored (created)
+div-in-collapsible -> muse-probe-r2contain-div-div-in-collapsible (created)
+div-in-tabview -> muse-probe-r2contain-div-div-in-tabview (created)
+malformed-division -> muse-probe-r2contain-div-malformed-division (created)
+score-basic -> muse-probe-r2contain-div-score-basic (created)
+score-attr -> muse-probe-r2contain-div-score-attr (created)
+score-attrs-full -> muse-probe-r2contain-div-score-attrs-full (created)
+score-attrs-id -> muse-probe-r2contain-div-score-attrs-id (created)
+score-empty -> muse-probe-r2contain-div-score-empty (created)
+score-attr-empty -> muse-probe-r2contain-div-score-attr-empty (created)
+score-inline -> muse-probe-r2contain-div-score-inline (created)
+score-two-lines -> muse-probe-r2contain-div-score-two-lines (created)
+35 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "basic": {
+  "fullname": "muse-probe-r2contain-div-basic",
+  "source": "[[div]]\nhello\n[[/div]]",
+  "action": "created"
+ },
+ "basic-uppercase": {
+  "fullname": "muse-probe-r2contain-div-basic-uppercase",
+  "source": "[[DIV]]\nhello\n[[/DIV]]",
+  "action": "created"
+ },
+ "basic-two-paras": {
+  "fullname": "muse-probe-r2contain-div-basic-two-paras",
+  "source": "[[div]]\nA\n\nB\n[[/div]]",
+  "action": "created"
+ },
+ "attr-id": {
+  "fullname": "muse-probe-r2contain-div-attr-id",
+  "source": "[[div id=\"panel\"]]\nBody\n[[/div]]",
+  "action": "created"
+ },
+ "attr-id-prefixed": {
+  "fullname": "muse-probe-r2contain-div-attr-id-prefixed",
+  "source": "[[div id=\"u-panel\"]]\nBody\n[[/div]]",
+  "action": "created"
+ },
+ "attr-id-space": {
+  "fullname": "muse-probe-r2contain-div-attr-id-space",
+  "source": "[[div id=\" \"]]\nx\n[[/div]]",
+  "action": "created"
+ },
+ "attr-data-empty-suffix": {
+  "fullname": "muse-probe-r2contain-div-attr-data-empty-suffix",
+  "source": "[[div data-=\"v\"]]\nT\n[[/div]]",
+  "action": "created"
+ },
+ "attr-allowlist": {
+  "fullname": "muse-probe-r2contain-div-attr-allowlist",
+  "source": "[[div class=\"card\" id=\"panel\" style=\"color: red\" role=\"note\" type=\"t\" title=\"tip\" lang=\"en\" aria-label=\"label\" data-Foo=\"one\" data-bar=\"two\" foo=\"baz\"]]\nBody\n[[/div]]",
+  "action": "created"
+ },
+ "attr-allowlist-mixed": {
+  "fullname": "muse-probe-r2contain-div-attr-allowlist-mixed",
+  "source": "[[div CLASS=\"upper\" ID=\"upper\" TYPE=\"u\" DATA-Mixed=\"three\" data-Mixed=\"four\"]]\nBody\n[[/div]]",
+  "action": "created"
+ },
+ "attr-single-quote": {
+  "fullname": "muse-probe-r2contain-div-attr-single-quote",
+  "source": "[[div class='foo']]\nhello\n[[/div]]",
+  "action": "created"
+ },
+ "attr-unquoted": {
+  "fullname": "muse-probe-r2contain-div-attr-unquoted",
+  "source": "[[div class=foo]]\nhello\n[[/div]]",
+  "action": "created"
+ },
+ "attr-class-space": {
+  "fullname": "muse-probe-r2contain-div-attr-class-space",
+  "source": "[[div class=\"a  b\"]]\nx\n[[/div]]",
+  "action": "created"
+ },
+ "attr-style-hidden-display": {
+  "fullname": "muse-probe-r2contain-div-attr-style-hidden-display",
+  "source": "[[div style=\"display:none\"]]\nhello\n[[/div]]",
+  "action": "created"
+ },
+ "attr-style-hidden-vis": {
+  "fullname": "muse-probe-r2contain-div-attr-style-hidden-vis",
+  "source": "[[div style=\"visibility:hidden\"]]\nhello\n[[/div]]",
+  "action": "created"
+ },
+ "attr-style-hidden-mixed": {
+  "fullname": "muse-probe-r2contain-div-attr-style-hidden-mixed",
+  "source": "[[div style=\"display: none; color: red\"]]\nhello\n[[/div]]",
+  "action": "created"
+ },
+ "empty-plain": {
+  "fullname": "muse-probe-r2contain-div-empty-plain",
+  "source": "[[div]]\n[[/div]]\nB",
+  "action": "created"
+ },
+ "empty-attr": {
+  "fullname": "muse-probe-r2contain-div-empty-attr",
+  "source": "[[div class=\"k\"]]\n[[/div]]\nB",
+  "action": "created"
+ },
+ "unterminated": {
+  "fullname": "muse-probe-r2contain-div-unterminated",
+  "source": "[[div]]\nhello",
+  "action": "created"
+ },
+ "stray": {
+  "fullname": "muse-probe-r2contain-div-stray",
+  "source": "hello\n[[/div]]",
+  "action": "created"
+ },
+ "closer-first": {
+  "fullname": "muse-probe-r2contain-div-closer-first",
+  "source": "[[div]]\nA\n[[/div]]\nB\n[[/div]]",
+  "action": "created"
+ },
+ "inline-span": {
+  "fullname": "muse-probe-r2contain-div-inline-span",
+  "source": "[[div]]\n[[span]]egg[[/span]]\n[[/div]]",
+  "action": "created"
+ },
+ "crossed-span": {
+  "fullname": "muse-probe-r2contain-div-crossed-span",
+  "source": "[[div]]A1[[span]]B2[[/div]]C3[[/span]]D4",
+  "action": "created"
+ },
+ "nested": {
+  "fullname": "muse-probe-r2contain-div-nested",
+  "source": "[[div]]\nA\n[[div]]\nB\n[[/div]]\nC\n[[/div]]",
+  "action": "created"
+ },
+ "nested-scored": {
+  "fullname": "muse-probe-r2contain-div-nested-scored",
+  "source": "[[div_]]\n1\n[[div_]]\n2\n[[/div]]\n3\n[[/div]]",
+  "action": "created"
+ },
+ "div-in-collapsible": {
+  "fullname": "muse-probe-r2contain-div-div-in-collapsible",
+  "source": "[[collapsible]]\n[[div]]\nA\n[[/div]]\n[[/collapsible]]",
+  "action": "created"
+ },
+ "div-in-tabview": {
+  "fullname": "muse-probe-r2contain-div-div-in-tabview",
+  "source": "[[tabview]]\n[[tab T]]\n[[div]]\nA\n[[/div]]\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "malformed-division": {
+  "fullname": "muse-probe-r2contain-div-malformed-division",
+  "source": "[[division]]\nA\n[[/division]]",
+  "action": "created"
+ },
+ "score-basic": {
+  "fullname": "muse-probe-r2contain-div-score-basic",
+  "source": "[[div_]]\nhello\n[[/div]]",
+  "action": "created"
+ },
+ "score-attr": {
+  "fullname": "muse-probe-r2contain-div-score-attr",
+  "source": "[[div_ class=\"strip\"]]\nhello\n[[/div]]",
+  "action": "created"
+ },
+ "score-attrs-full": {
+  "fullname": "muse-probe-r2contain-div-score-attrs-full",
+  "source": "[[div_ class=\"strip\" title=\"tip\" role=\"note\" data-x=\"y\"]]\nBody\n[[/div]]",
+  "action": "created"
+ },
+ "score-attrs-id": {
+  "fullname": "muse-probe-r2contain-div-score-attrs-id",
+  "source": "[[div_ id=\"q\" role=\"note\" data-z=\"1\"]]\nx\n[[/div]]",
+  "action": "created"
+ },
+ "score-empty": {
+  "fullname": "muse-probe-r2contain-div-score-empty",
+  "source": "[[div_]]\n[[/div]]\nB",
+  "action": "created"
+ },
+ "score-attr-empty": {
+  "fullname": "muse-probe-r2contain-div-score-attr-empty",
+  "source": "[[div_ class=\"k\"]]\n[[/div]]\nB",
+  "action": "created"
+ },
+ "score-inline": {
+  "fullname": "muse-probe-r2contain-div-score-inline",
+  "source": "[[div_]]Banana[[/div]]",
+  "action": "created"
+ },
+ "score-two-lines": {
+  "fullname": "muse-probe-r2contain-div-score-two-lines",
+  "source": "[[div_]]\napple\nbanana\n[[/div]]",
+  "action": "created"
+ }
+}

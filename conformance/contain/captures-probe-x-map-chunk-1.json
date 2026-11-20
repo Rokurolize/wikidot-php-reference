@@ -1,0 +1,62 @@
+{
+ "x01-span-size-cross": {
+  "fullname": "muse-probe-r2contain-x-x01-span-size-cross",
+  "html": "<p><span>A<span style=\"font-size:12px;\">B</span>C</span></p>",
+  "html_sha256": "345f708cf7f550310163357c207a1b458b961985a4e29ec3bf4382d5fb4d27c4",
+  "source": "[[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]",
+  "source_sha256": "8c11a022574ae545b5e659c8c0618c91949fb0ae120ccbc95b67456643901855",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x02-size-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x02-size-span-cross",
+  "html": "<p><span style=\"font-size:12px;\">A<span>B</span>C</span></p>",
+  "html_sha256": "442eceb8f7360c2127e0a5f756b2d39fc762c4397abefbe66922419467160506",
+  "source": "[[size 12px]]A[[span class=a]]B[[/size]]C[[/span]]",
+  "source_sha256": "d9d997ec0975cb538aabc879ac7ecbbcd65d0a442e28c94617ce7b85a3bad28e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x03-span-color-nested": {
+  "fullname": "muse-probe-r2contain-x-x03-span-color-nested",
+  "html": "<p><span>A<span style=\"color: red\">B</span>C</span></p>",
+  "html_sha256": "aff584db05fc7a2cbb08530acef358a996c1a7fa9f5a6b01bcff4c06632f503b",
+  "source": "[[span class=a]]A##red|B##C[[/span]]",
+  "source_sha256": "f1a1b55d86c731bb4a1e45ef6281061a96cf3c3ac4c1664091d80829b34064e2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x04-color-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x04-color-span-cross",
+  "html": "<p><span style=\"color: red\"><span>A</span>B</span></p>",
+  "html_sha256": "c8a0731894efb97c062677b7f666c25aa93dcc26f25031f3e201fdeaefd9858d",
+  "source": "##red|[[span class=a]]A##B[[/span]]",
+  "source_sha256": "46d60e95dc3fea1bc93e12bb445188ef68398092485762968a5450933161f4f5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x05-strike-span-cross": {
+  "fullname": "muse-probe-r2contain-x-x05-strike-span-cross",
+  "html": "<p><span style=\"text-decoration: line-through;\">A<span>B</span>C</span></p>",
+  "html_sha256": "abe0bf5adc25fa990f478b77391b02ecd82aafdbf41b55ba9c1aa95be9103cf3",
+  "source": "--A[[span class=a]]B--C[[/span]]",
+  "source_sha256": "808abd4a0d4ce095bf81bbb61a1d7bdd2a640c2858abe463b852df387d92e0a7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x06-span-strike-nested": {
+  "fullname": "muse-probe-r2contain-x-x06-span-strike-nested",
+  "html": "<p><span>A<span style=\"text-decoration: line-through;\">B</span>C</span></p>",
+  "html_sha256": "e1238361ba0539c4d7b892272e2561189516a7bd1335dfe9163808e883c4e0b6",
+  "source": "[[span class=a]]A--B--C[[/span]]",
+  "source_sha256": "4c08d7d6cab036deac9f650e8012e738ce3b182ba95c99e447be00a2b561a9ff",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
