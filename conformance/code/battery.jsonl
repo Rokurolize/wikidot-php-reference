@@ -1,0 +1,68 @@
+{"id": "basic-line", "source": "BEFORE\n[[code]]\nalpha\nbeta\n[[/code]]\nAFTER"}
+{"id": "basic-inline", "source": "[[code]]alpha[[/code]]"}
+{"id": "basic-no-trailing-nl", "source": "x\n[[code]]\nalpha\n[[/code]]"}
+{"id": "basic-leading-text", "source": "pre [[code]]x[[/code]]\npost"}
+{"id": "basic-two-blocks", "source": "[[code]]a[[/code]]\n[[code]]b[[/code]]"}
+{"id": "basic-in-paragraph", "source": "para before [[code]]mid[[/code]] para after"}
+{"id": "empty", "source": "[[code]][[/code]]"}
+{"id": "empty-lines", "source": "[[code]]\n[[/code]]"}
+{"id": "empty-two-lines", "source": "[[code]]\n\n[[/code]]"}
+{"id": "ws-body-spaces", "source": "[[code]]   [[/code]]"}
+{"id": "ws-body-tabs", "source": "[[code]]\t\t[[/code]]"}
+{"id": "ws-body-blank-lines", "source": "[[code]]\n \n \n[[/code]]"}
+{"id": "body-tab", "source": "[[code]]\n\tx\t\n[[/code]]"}
+{"id": "body-tab-middle", "source": "[[code]]\na\tb\n[[/code]]"}
+{"id": "body-blank-run", "source": "[[code]]\na\n\n\n\nb\n[[/code]]"}
+{"id": "body-leading-blanks", "source": "[[code]]\n\n\nx\n[[/code]]"}
+{"id": "body-trailing-blanks", "source": "[[code]]\nx\n\n\n[[/code]]"}
+{"id": "body-spaces-line", "source": "[[code]]\nx\n   \ny\n[[/code]]"}
+{"id": "body-mid-trailing-spaces", "source": "[[code]]\nx \ny \n[[/code]]"}
+{"id": "body-leading-space-first", "source": "[[code]]  indented\nnext\n[[/code]]"}
+{"id": "body-nbsp", "source": "[[code]]\n x \n[[/code]]"}
+{"id": "body-ideographic", "source": "[[code]]\n　x　\n[[/code]]"}
+{"id": "nested-openers", "source": "[[code]]\n[[code]]\ninner\n[[/code]]\nouter\n[[/code]]"}
+{"id": "nested-one-line", "source": "[[code]]a[[code]]b[[/code]]c[[/code]]"}
+{"id": "stray-closer", "source": "[[/code]]"}
+{"id": "stray-closer-after-text", "source": "before\n[[/code]]\nafter"}
+{"id": "stray-closer-before", "source": "[[/code]]\n[[code]]x[[/code]]"}
+{"id": "unterminated", "source": "[[code]]\nnever closed"}
+{"id": "unterminated-inline", "source": "[[code]]abc"}
+{"id": "unterminated-then-other", "source": "[[code]]\nx\n[[div]]y[[/div]]"}
+{"id": "closer-suffixed", "source": "[[code]]a[[/code]] x"}
+{"id": "closer-trailing-space", "source": "[[code]]a[[/code]] \nNEXT"}
+{"id": "closer-suffix-newline", "source": "[[code]]\na\n[[/code]]\nNEXT"}
+{"id": "arg-type-python", "source": "[[code type=\"python\"]]\nimport antigravity\n[[/code]]"}
+{"id": "arg-type-PYTHON", "source": "[[code type=\"PYTHON\"]]\nimport antigravity\n[[/code]]"}
+{"id": "arg-type-css-inline", "source": "[[code type=\"css\"]]a { display: none; }[[/code]]"}
+{"id": "arg-type-unknown", "source": "[[code type=\"apache\"]]\nSELECT 1;\n[[/code]]"}
+{"id": "arg-type-empty", "source": "[[code type=\"\"]]x[[/code]]"}
+{"id": "arg-name", "source": "[[code name=\"Sample Heading\"]]\nbody\n[[/code]]"}
+{"id": "arg-type-name", "source": "[[code name=\"a\" type=\"java\"]]\nclass A {}\n[[/code]]"}
+{"id": "arg-unknown", "source": "[[code foo=\"bar\"]]\nbody\n[[/code]]"}
+{"id": "arg-unquoted", "source": "[[code type=css]]x[[/code]]"}
+{"id": "arg-half-quote-1", "source": "[[code type=\"css]]x[[/code]]"}
+{"id": "arg-half-quote-2", "source": "[[code type=css\"]]x[[/code]]"}
+{"id": "arg-spaced-name", "source": "[[ code ]]\nNESTED\n[[code]]\n[[/code]]"}
+{"id": "arg-tab-after", "source": "[[code\ttype=\"css\"]]x[[/code]]"}
+{"id": "arg-multi-space", "source": "[[code   type=\"css\"]]x[[/code]]"}
+{"id": "arg-two-attrs", "source": "[[code type=\"python\" name=\"n\"]]x[[/code]]"}
+{"id": "arg-newline-after", "source": "[[code\ntype=\"css\"]]x[[/code]]"}
+{"id": "body-wikitext", "source": "[[code]]\n[[div]]\nnot a div\n[[/div]]\n**not bold**\n[[/code]]"}
+{"id": "body-brackets", "source": "[[code]]\n[[foo]] [[bar baz]] [[]] [[/code]]\n[[/code]]"}
+{"id": "body-quotes", "source": "[[code]]\n\"double\" 'single' &amp; & < >\n[[/code]]"}
+{"id": "body-html", "source": "[[code]]\n<b>bold</b> <script>alert(1)</script>\n[[/code]]"}
+{"id": "body-entities", "source": "[[code]]\n&amp; &lt; &gt; &quot;\n[[/code]]"}
+{"id": "body-code-closer-literal", "source": "[[code]]\n[[/code]] literal\n[[/code]]"}
+{"id": "line-start-opener", "source": "[[code]]x[[/code]]"}
+{"id": "mid-paragraph", "source": "alpha [[code]]beta[[/code]] gamma"}
+{"id": "after-heading", "source": "= H =\n[[code]]x[[/code]]"}
+{"id": "three-blocks", "source": "[[code]]a[[/code]]\n[[code]]b[[/code]]\n[[code]]c[[/code]]"}
+{"id": "block-then-paragraph", "source": "[[code]]x[[/code]]\nparagraph after"}
+{"id": "crlf-basic", "source": "[[code]]\r\nalpha\r\nbeta\r\n[[/code]]\r\n"}
+{"id": "crlf-empty", "source": "[[code]]\r\n[[/code]]\r\n"}
+{"id": "crlf-nested", "source": "[[code]]\r\n[[code]]x[[/code]]\r\n[[/code]]"}
+{"id": "crlf-args", "source": "[[code type=\"python\"]]\r\nx=1\r\n[[/code]]"}
+{"id": "lone-cr-body", "source": "[[code]]\ra\rb\r[[/code]]"}
+{"id": "frame-tab-newlines", "source": "[[code]]\nline1\t\n\n\nline2\n[[/code]]"}
+{"id": "frame-ueue", "source": "[[code]]\nüü\n[[/code]]"}
+{"id": "frame-quoted", "source": ">> [[code]]\n>> QUOTED_LITERAL\n>> [[/code]]"}

@@ -62,71 +62,84 @@ class Text_Wiki_Render_Xhtml_Code extends Text_Wiki_Render {
         $css_html = $this->formatConf(' class="%s"', 'css_html');
         $css_filename = $this->formatConf(' class="%s"', 'css_filename');
 
-		$text = trim($text);
-		
-        if ($type == 'php') {
-        	 	/*if (substr($text, 0, 5) != '<?php') {
-                // PHP code example:
-                // add the PHP tags
-                $text = "<?php\n" . $text . "\n?>"; // <?php
-          	}*/
-        	 	$highlighter = Text_Highlighter::factory('php');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'cpp') {
-            $highlighter = Text_Highlighter::factory('cpp');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'css') {
-            $highlighter = Text_Highlighter::factory('css');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'html' || $type == 'xhtml') {
-            $highlighter = Text_Highlighter::factory('html');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'diff') {
-            $highlighter = Text_Highlighter::factory('diff');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'dtd') {
-            $highlighter = Text_Highlighter::factory('dtd');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'java') {
-            $highlighter = Text_Highlighter::factory('java');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'javascript') {
-            $highlighter = Text_Highlighter::factory('javascript');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'sql') {
-            $highlighter = Text_Highlighter::factory('sql');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'perl') {
-            $highlighter = Text_Highlighter::factory('perl');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'python') {
-            $highlighter = Text_Highlighter::factory('python');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'ruby') {
-            $highlighter = Text_Highlighter::factory('ruby');
-            $text = $highlighter->highlight($text);
-        }elseif ($type == 'sql') {
-            $highlighter = Text_Highlighter::factory('sql');
-            $text = $highlighter->highlight($text);
-        }elseif($type=="xml"){
-       	 	$highlighter = Text_Highlighter::factory('xml');
-            $text = $highlighter->highlight($text);
-        } else {
-            // generic code example:
-            // convert tabs to four spaces,
-            // convert entities.
-            $text = str_replace("\t", "    ", $text);
-            $text = htmlspecialchars($text);
-            $text = "<pre$css><code$css_code>$text</code></pre>";
+        // R2 Code: live trims code bodies by dropping whole leading blank
+        // lines and stripping trailing whitespace, but it KEEPS indentation
+        // on the first content line (ftml corpus code/edge-whitespace pins:
+        // "\n  x  \n" renders as "  x"). PHP's trim() stripped that indent,
+        // so it is replaced by the same line-wise rule ftml uses. NBSP is
+        // served as a regular space on live (same corpus pin); ideographic
+        // space is preserved.
+        $text = $this->wikidotTrimCodeBody($text);
+
+        // R2 Code: the fossil called Text_Highlighter::factory() statically,
+        // which is a fatal error on PHP 8 ("Non-static method ... cannot be
+        // called statically"). Instantiate the factory object and call it on
+        // that instance; factory() returns by reference, so bind with '&'.
+        $langs = array('php', 'cpp', 'css', 'html', 'xhtml', 'diff', 'dtd',
+            'java', 'javascript', 'sql', 'perl', 'python', 'ruby', 'xml');
+        $hl = null;
+        if (in_array($type, $langs, true)) {
+            $factory = new Text_Highlighter();
+            $lang = ($type == 'xhtml') ? 'html' : $type;
+            $hl =& $factory->factory($lang);
         }
-		
-		 $text = "<div class=\"code\">".$text."</div>";
-		
+
+        if ($hl !== null && !PEAR::isError($hl)) {
+            $text = $hl->highlight($text);
+            // The vendored ~2006 highlighter emits empty <span> tokens that
+            // live's current highlighter does not (e.g. after a CSS value).
+            // Strip them so the token stream matches the live-adjudicated
+            // ftml corpus pins (code/highlight-* wikidot.html).
+            $text = preg_replace('/<span class="hl-[a-z]+"><\/span>/', '', $text);
+            // R2 Code FRAME item: live puts a newline after the wrapper's
+            // opening <div> and around the hl-main child. The vendor output
+            // already carries the hl-main div, so insert the newlines inside
+            // it rather than adding a second wrapper.
+            $text = str_replace(
+                array('<div class="hl-main">', '</pre></div>'),
+                array("<div class=\"hl-main\">\n", "</pre></div>\n"),
+                $text
+            );
+            $text = "<div class=\"code\">\n" . $text . "</div>";
+        } elseif (trim($text) === '') {
+            // Empty (or all-whitespace) bodies render as a bare wrapper on
+            // live: <div class="code"></div> (probe muse-probe-r2code-empty-body
+            // and ftml corpus code/basic EMPTY pin).
+            $text = '<div class="code"></div>';
+        } else {
+            // generic code example: keep entity handling at PHP 4/5's
+            // ENT_COMPAT default (double quotes escaped, single quotes
+            // literal); PHP 8's default ENT_QUOTES would emit &#039; where
+            // live emits a bare apostrophe (probe r2code entities-body).
+            $text = str_replace("\t", "    ", $text);
+            $text = htmlspecialchars($text, ENT_COMPAT);
+            $text = "<div class=\"code\">\n<pre$css><code$css_code>$text</code></pre></div>";
+        }
+
         if ($css_filename && isset($attr['filename'])) {
             $text = "<div$css_filename>" .
                 $attr['filename'] . '</div>' . $text;
         }
 
         return "\n$text\n\n";
+    }
+
+    /**
+     * Live code-body trim: drop whole leading blank lines, strip trailing
+     * ASCII whitespace, keep leading indentation on the first content line.
+     */
+    function wikidotTrimCodeBody($body)
+    {
+        $body = str_replace("\r\n", "\n", $body);
+        while (true) {
+            $withoutIndent = ltrim($body, " \t");
+            if (substr($withoutIndent, 0, 1) === "\n") {
+                $body = substr($withoutIndent, 1);
+                continue;
+            }
+            break;
+        }
+        $body = rtrim($body, " \t\n");
+        return str_replace("\u{a0}", ' ', $body);
     }
 }

@@ -1,0 +1,32 @@
+{
+ "jp-plain": {
+  "fullname": "muse-probe-c5i-jp-plain",
+  "html": "<p>J1-START</p>\n<p>[[include ページ]]</p>\n<p>J1-END</p>",
+  "html_sha256": "3d736ef1d8ad0734c8e7b3069019c8b031801db8fc7fd356f97225fc6866a8eb",
+  "source": "J1-START\n\n[[include ページ]]\n\nJ1-END",
+  "source_sha256": "923192e53a0e98e66dcbe00dc527225e9b3712b1b9af9358f9e7de8867138a11",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "accent-plain": {
+  "fullname": "muse-probe-c5i-accent-plain",
+  "html": "<p>J2-START</p>\n<p>[[include café]]</p>\n<p>J2-END</p>",
+  "html_sha256": "2a736789736e3136b2b84345f51760f60cf668cc24735aaf4afe5466a2d68215",
+  "source": "J2-START\n\n[[include café]]\n\nJ2-END",
+  "source_sha256": "fe744c3d71e9c8c2bf8376aba1fafdd7471d131c41aa92e004fd061b1196380c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "jp-mixed": {
+  "fullname": "muse-probe-c5i-jp-mixed",
+  "html": "<p>J3-START</p>\n<p>[[include テストpage]]</p>\n<p>J3-END</p>",
+  "html_sha256": "02a382c8fd92ec1ddbab599389e000f36a266f17516f4cf2cb4a7d36cbf76f54",
+  "source": "J3-START\n\n[[include テストpage]]\n\nJ3-END",
+  "source_sha256": "460eab771d51bac57184ec28cb751d7cc0231b05f9190eea4f3b70405977ba0f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "dot-plain": {
+  "fullname": "muse-probe-c5d-dot-plain",
+  "html": "<p>E1-START</p>\n<p>[[include some.page]]</p>\n<p>E1-END</p>",
+  "html_sha256": "c5f13a344e9287db352a6c69e420b29ba9b56cfe623c100d9184ea519e83b003",
+  "source": "E1-START\n\n[[include some.page]]\n\nE1-END",
+  "source_sha256": "b08be3502ffc2ba99b1fe0f5f30712963bf26d7c9e4a6308e248bda5fa910bdf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "slash-plain": {
+  "fullname": "muse-probe-c5d-slash-plain",
+  "html": "<p>E2-START</p>\n<p>[[include a/b]]</p>\n<p>E2-END</p>",
+  "html_sha256": "ed74e3aaaaab8c7d410f8905af964ef5272df1dfffd477b56139ff71da5fa790",
+  "source": "E2-START\n\n[[include a/b]]\n\nE2-END",
+  "source_sha256": "64921abdabe0192a249529b4ac442c33a8b48fd352e31720cb850097f38ab018",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "colon-dot": {
+  "fullname": "muse-probe-c5d-colon-dot",
+  "html": "<p>E3-START</p>\n<p>[[include :foo.bar]]</p>\n<p>E3-END</p>",
+  "html_sha256": "dc1b0313bca513b66fed81695354cf511a5e91e65c98369d3d9f6c6b3686f955",
+  "source": "E3-START\n\n[[include :foo.bar]]\n\nE3-END",
+  "source_sha256": "e9b01595de7d80061cbda9e2dab463cc3a8ea2fd6bf3ddb583eab398fb58e27e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "colon-slash": {
+  "fullname": "muse-probe-c5d-colon-slash",
+  "html": "<p>E4-START</p>\n<p>[[include :foo/bar]]</p>\n<p>E4-END</p>",
+  "html_sha256": "fe768745f148c40fdb72bfe7d1787aff72f65203e321f108e7304fc36c7de821",
+  "source": "E4-START\n\n[[include :foo/bar]]\n\nE4-END",
+  "source_sha256": "5c8f5647a32bb28ef0633a357b91cde4b882d76e08c22acce93d9430cda27896",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "colon-underscore": {
+  "fullname": "muse-probe-c5d-colon-underscore",
+  "html": "<p>E5-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;foo-bar&quot; does not exist (<a href=\"/foo-bar/edit/true\">create it now</a>)</p>\n</div>\n<p>E5-END</p>",
+  "html_sha256": "a2a4060208f0034a66d578329a6b333563cdb7306fc73de5035a11f114afad5d",
+  "source": "E5-START\n\n[[include :foo_bar]]\n\nE5-END",
+  "source_sha256": "7e1f85d4c5373d0ad7cc749d5e0056a563135d7de89d0eb5a93431e36d186244",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "single-colon": {
+  "fullname": "muse-probe-c5d-single-colon",
+  "html": "<p>E6-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;&quot; does not exist (<a href=\"//edit/true\">create it now</a>)</p>\n</div>\n<p>E6-END</p>",
+  "html_sha256": "e82de492c51636634c558724b7462af8b5597c000c213d4480ef9ef3579393f5",
+  "source": "E6-START\n\n[[include :]]\n\nE6-END",
+  "source_sha256": "b9f6f2f3ee077507578f189bbf7297641e94021cedcaa80789c06b3ba6a865d6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

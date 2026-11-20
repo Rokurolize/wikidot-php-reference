@@ -1,0 +1,5 @@
+{"id": "dashes", "source": "F1-START\n\n[[include ---]]\n\nF1-END"}
+{"id": "colon-dash", "source": "F2-START\n\n[[include :-]]\n\nF2-END"}
+{"id": "plus-head", "source": "F3-START\n\n[[include +foo]]\n\nF3-END"}
+{"id": "tilde-mid", "source": "F4-START\n\n[[include foo~bar]]\n\nF4-END"}
+{"id": "underscore-ctl", "source": "F5-START\n\n[[include _template]]\n\nF5-END"}

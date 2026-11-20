@@ -1,0 +1,152 @@
+{
+ "wrap-basic": {
+  "fullname": "muse-probe-r2code-wrap-basic",
+  "html": "<p>PROBE-WRAP-BEGIN</p>\n<div class=\"code\">\n<pre><code>alpha</code></pre></div>\n<br />\nPROBE-WRAP-END",
+  "html_sha256": "77910f33f933a7a8ccaad3b82f460aa0c5c3f6b03f6a6a3828ecf807f65892bb",
+  "source": "PROBE-WRAP-BEGIN\n[[code]]\nalpha\n[[/code]]\nPROBE-WRAP-END",
+  "source_sha256": "90223bcf5e6e294641fb03f3d042989c1f3fdbb98bfc93e495d8f415cb3dde6b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "empty-body": {
+  "fullname": "muse-probe-r2code-empty-body",
+  "html": "<p>EMPTY-BEGIN</p>\n<div class=\"code\"></div>\n<br />\nEMPTY-END",
+  "html_sha256": "8b1d4fdae9d48f44b23eef03e1db4ef71dcbad1bdb6b69a61c451f3f84394e54",
+  "source": "EMPTY-BEGIN\n[[code]]\n[[/code]]\nEMPTY-END",
+  "source_sha256": "1853f6af214778364ef37e9bc823892e821df530fbd334b2833b890ad189ecbd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "blank-body": {
+  "fullname": "muse-probe-r2code-blank-body",
+  "html": "<p>BLANK-BEGIN</p>\n<div class=\"code\"></div>\n<br />\nBLANK-END",
+  "html_sha256": "b345f7f2ad22b80af29d39e673e95616484cbeb988fc98642dddd27437e45904",
+  "source": "BLANK-BEGIN\n[[code]]\n\n\n[[/code]]\nBLANK-END",
+  "source_sha256": "4353ed17aae407e002c2fe129a62e80aa2f1d5246378b33d493bd6ae5213e5bf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "blankrun-body": {
+  "fullname": "muse-probe-r2code-blankrun-body",
+  "html": "<p>RUN-BEGIN</p>\n<div class=\"code\">\n<pre><code>a\n\nb</code></pre></div>\n<br />\nRUN-END",
+  "html_sha256": "f456362be219926f93acc0de34a8f18f727074c8650145864d5e25272bce3c53",
+  "source": "RUN-BEGIN\n[[code]]\na\n\n\n\nb\n[[/code]]\nRUN-END",
+  "source_sha256": "3199799b9e19844ee9f84cd237a78db81e122cc35bb28337b34a7d923dc6e14b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "py-type": {
+  "fullname": "muse-probe-r2code-py-type",
+  "html": "<p>PY-BEGIN</p>\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-reserved\">import</span><span class=\"hl-code\"> </span><span class=\"hl-identifier\">antigravity</span></pre></div>\n</div>\n<br />\nPY-END",
+  "html_sha256": "692a27c30d259bc44c07f14abd967b30bfd365eb2474c4117649ed7c51203dfa",
+  "source": "PY-BEGIN\n[[code type=\"python\"]]\nimport antigravity\n[[/code]]\nPY-END",
+  "source_sha256": "9114e634bfeedb7abcecbf87a594d557efae1efd2f5bea54bd7a5ee10ae7e71e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "css-type": {
+  "fullname": "muse-probe-r2code-css-type",
+  "html": "<p>CSS-BEGIN</p>\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-identifier\">a</span><span class=\"hl-code\"> </span><span class=\"hl-brackets\">{</span><span class=\"hl-code\"> </span><span class=\"hl-reserved\">display:</span><span class=\"hl-code\"> </span><span class=\"hl-string\">none</span><span class=\"hl-code\">; </span><span class=\"hl-brackets\">}</span></pre></div>\n</div>\n<br />\nCSS-END",
+  "html_sha256": "28842dc7a5cbfc85733bdf31e7a66a6cafbf58084247f18d64400bf992aa83e6",
+  "source": "CSS-BEGIN\n[[code type=\"css\"]]a { display: none; }[[/code]]\nCSS-END",
+  "source_sha256": "cd2edbcf383a5e99cbdfe878d2a922f10804bfe004ca9e0f6d00c4edeb67fbe9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unknown-type": {
+  "fullname": "muse-probe-r2code-unknown-type",
+  "html": "<p>UNK-BEGIN</p>\n<div class=\"code\">\n<pre><code>SELECT 1;</code></pre></div>\n<br />\nUNK-END",
+  "html_sha256": "d4b5a515fbaa01277c44d5c6e09f269d26403164758a771ede8d2878876a44bb",
+  "source": "UNK-BEGIN\n[[code type=\"apache\"]]\nSELECT 1;\n[[/code]]\nUNK-END",
+  "source_sha256": "701cbc296aa68af5817ecb40737aa52bb595cf14fbf8c990c7200c35d5075c13",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "name-arg": {
+  "fullname": "muse-probe-r2code-name-arg",
+  "html": "<p>NAME-BEGIN</p>\n<div class=\"code\">\n<pre><code>body</code></pre></div>\n<br />\nNAME-END",
+  "html_sha256": "e1d5a17c0b07da7f71b45e1901089aa1eb57ccc03ebaf20f304ed8bd9277b0f7",
+  "source": "NAME-BEGIN\n[[code name=\"Sample Heading\"]]\nbody\n[[/code]]\nNAME-END",
+  "source_sha256": "8f293811a45bcbd6e2430ab0e342199c35d36e5c08a3c6e88b2d222026e114db",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "literal-body": {
+  "fullname": "muse-probe-r2code-literal-body",
+  "html": "<p>LIT-BEGIN</p>\n<div class=\"code\">\n<pre><code>[[div]]\nnot a div\n[[/div]]\n**not bold**</code></pre></div>\n<br />\nLIT-END",
+  "html_sha256": "a9941806c73cbbd2d58a153951aeccfeaec86acfe6d8dcdd6d5c348c79c5ff41",
+  "source": "LIT-BEGIN\n[[code]]\n[[div]]\nnot a div\n[[/div]]\n**not bold**\n[[/code]]\nLIT-END",
+  "source_sha256": "d4ece3e4db0853de95492b8e9e194a76a561450755d6cc9609d7501081859780",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "entities-body": {
+  "fullname": "muse-probe-r2code-entities-body",
+  "html": "<p>ENT-BEGIN</p>\n<div class=\"code\">\n<pre><code>&quot;double&quot; 'single' &amp;amp; &amp; &lt; &gt;</code></pre></div>\n<br />\nENT-END",
+  "html_sha256": "bca9b8ace2868630b73545c1486d4a295c496e4a072dac993a4d45f6970c5641",
+  "source": "ENT-BEGIN\n[[code]]\n\"double\" 'single' &amp; & < >\n[[/code]]\nENT-END",
+  "source_sha256": "72d6232a9996072a930d354b817df6930ea6ea15e57cf0eac1caf6e50d6b7d30",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "midline": {
+  "fullname": "muse-probe-r2code-midline",
+  "html": "<p>MID-BEGIN<br />\npre [[code]]x[[/code]]<br />\npost<br />\nMID-END</p>",
+  "html_sha256": "3f94450d98169d323c99a243b98e02de70bdaad906ae99d621984614ef934e37",
+  "source": "MID-BEGIN\npre [[code]]x[[/code]]\npost\nMID-END",
+  "source_sha256": "e504ac7ae1c244fd02ed30272fee57b4018cb5386b113ae2e9c99a9c786b719a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "stray-close": {
+  "fullname": "muse-probe-r2code-stray-close",
+  "html": "<p>STRAY-BEGIN<br />\n[[/code]]<br />\nafter<br />\nSTRAY-END</p>",
+  "html_sha256": "a6ad6f0d1aee298bf1bf44612dcafc936aed611cdee99dae5b2ed63ac7e93767",
+  "source": "STRAY-BEGIN\n[[/code]]\nafter\nSTRAY-END",
+  "source_sha256": "e8a3b5b020a62f9faff32b029337e836427650d25d2139602c88989d3bbd38a9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unterminated": {
+  "fullname": "muse-probe-r2code-unterminated",
+  "html": "<p>UNTERM-BEGIN<br />\n[[code]]<br />\nnever closed<br />\nUNTERM-END</p>",
+  "html_sha256": "ee97866d345a818d40d58564318ebc6cf5c0ab99b60c017565829626f4638543",
+  "source": "UNTERM-BEGIN\n[[code]]\nnever closed\nUNTERM-END",
+  "source_sha256": "5204d7580b59fcfac0478a59116ef7045414b2c6f464f9983de492f43df569be",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nested": {
+  "fullname": "muse-probe-r2code-nested",
+  "html": "<p>NEST-BEGIN</p>\n<div class=\"code\">\n<pre><code>[[code]]\ninner\n[[/code]]\nouter</code></pre></div>\n<br />\nNEST-END",
+  "html_sha256": "e6f4df24cbb38c3d7baf939c853559a2b95118d47ccce2a5fe662b40de11ac72",
+  "source": "NEST-BEGIN\n[[code]]\n[[code]]\ninner\n[[/code]]\nouter\n[[/code]]\nNEST-END",
+  "source_sha256": "6825f64203fc199fe823309dfe88a2e6902ac2bdf98be4986ca133364529fafe",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "spaced-opener": {
+  "fullname": "muse-probe-r2code-spaced-opener",
+  "html": "<p>SPACED-BEGIN<br />\n[[ code ]]<br />\nNESTED</p>\n<div class=\"code\"></div>\n<br />\nSPACED-END",
+  "html_sha256": "1997370637d990d70a5ab8013866bf628ad1349e30ddb685fb8448ccda9271e5",
+  "source": "SPACED-BEGIN\n[[ code ]]\nNESTED\n[[code]]\n[[/code]]\nSPACED-END",
+  "source_sha256": "985847f63cdfe43bd20b4902d13a985f16dcf148bef1e4a45b7382c99e7d4acc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

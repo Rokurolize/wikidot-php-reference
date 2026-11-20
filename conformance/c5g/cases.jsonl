@@ -1,0 +1,2 @@
+{"id": "hash-extra", "source": "H1-START\n\n[[include other-page#frag]]\n\nH1-END"}
+{"id": "slash-extra", "source": "H2-START\n\n[[include other-page/extra]]\n\nH2-END"}

@@ -1,0 +1,32 @@
+{
+ "double": {
+  "fullname": "muse-probe-c5-double",
+  "html": "<p>C5DOUBLE-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;page&quot; does not exist (<a href=\"/page/edit/true\">create it now</a>)</p>\n</div>\n<p>C5DOUBLE-END</p>",
+  "html_sha256": "06ae65404dcdf932b593bd5d7bdb8ac52ff97d9c4c36d4ee777dcf14ba57967c",
+  "source": "C5DOUBLE-START\n[[include ::page]]\nC5DOUBLE-END",
+  "source_sha256": "dee1d9b2570a8facb9ff501f7eb1cad847c7f47424dcbb8d67be162dd3e71a48",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "single": {
+  "fullname": "muse-probe-c5-single",
+  "html": "<p>C5SINGLE-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;foo&quot; does not exist (<a href=\"/foo/edit/true\">create it now</a>)</p>\n</div>\n<p>C5SINGLE-END</p>",
+  "html_sha256": "4a8b66c0ac4ed1d7f0a7c9faa0da86317f36f95cdb7665ec50c322123d41efbd",
+  "source": "C5SINGLE-START\n[[include :foo]]\nC5SINGLE-END",
+  "source_sha256": "b91358d0391026f008fb4b55d878e5b5c3e022ce04f9d777e3ef01facf85e817",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "plain": {
+  "fullname": "muse-probe-c5-plain",
+  "html": "<p>C5PLAIN-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;page&quot; does not exist (<a href=\"/page/edit/true\">create it now</a>)</p>\n</div>\n<p>C5PLAIN-END</p>",
+  "html_sha256": "1b481a2fe318b7d5b47a89f8b4f273f0ff28e65915ff70d9d6a9ba9819e19609",
+  "source": "C5PLAIN-START\n[[include page]]\nC5PLAIN-END",
+  "source_sha256": "0ce2100b8b3182c15bc196d71fe492f2018a079e663d2707f7156749b70c25c4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,3 @@
+{"id": "pair-hash", "source": "I1-START\n\n[[include :foo:bar#frag]]\n\nI1-END"}
+{"id": "pair-slash", "source": "I2-START\n\n[[include :foo:bar/extra]]\n\nI2-END"}
+{"id": "pair-hash-self", "source": "I3-START\n\n[[include :sandbox-for-codex:other-page#frag]]\n\nI3-END"}

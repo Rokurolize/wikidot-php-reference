@@ -1,0 +1,22 @@
+{
+ "hash-extra": {
+  "fullname": "muse-probe-c5g-hash-extra",
+  "html": "<p>H1-START</p>\n<p>[[include other-page#frag]]</p>\n<p>H1-END</p>",
+  "html_sha256": "8696376efe4eab2cfdff029cdedbdbd373af28496f5559e0b94e3992949c0007",
+  "source": "H1-START\n\n[[include other-page#frag]]\n\nH1-END",
+  "source_sha256": "856381a1df201c0327550b1c2c81169d735fa479ecdd1ebcd5cb5f9de164ff2a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "slash-extra": {
+  "fullname": "muse-probe-c5g-slash-extra",
+  "html": "<p>H2-START</p>\n<p>[[include other-page/extra]]</p>\n<p>H2-END</p>",
+  "html_sha256": "661aff3ecc3851395de3777a5b7e18e51ae2186069a7ad490acaf07d9f4c39a9",
+  "source": "H2-START\n\n[[include other-page/extra]]\n\nH2-END",
+  "source_sha256": "8617a9d15ad339ee5bef0398c2c039f801f703afd55237c8a6f59998771cf8c7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

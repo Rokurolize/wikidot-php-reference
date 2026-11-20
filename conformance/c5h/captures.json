@@ -1,0 +1,32 @@
+{
+ "pair-hash": {
+  "fullname": "muse-probe-c5h-pair-hash",
+  "html": "<p>I1-START</p>\n<p>[[include :foo:bar#frag]]</p>\n<p>I1-END</p>",
+  "html_sha256": "fe762c3b74808d7f47fc95322f8d3c70007de7e25f761574865a98ff4c85946b",
+  "source": "I1-START\n\n[[include :foo:bar#frag]]\n\nI1-END",
+  "source_sha256": "7c09b60d560c801bdc465c3dd6fe9be53aa0559a11a77017ba10742ae7d07d50",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pair-slash": {
+  "fullname": "muse-probe-c5h-pair-slash",
+  "html": "<p>I2-START</p>\n<p>[[include :foo:bar/extra]]</p>\n<p>I2-END</p>",
+  "html_sha256": "2f62be021f5c61320f270ea4592d970a554d9310c27331375fef234c551db99d",
+  "source": "I2-START\n\n[[include :foo:bar/extra]]\n\nI2-END",
+  "source_sha256": "2c695e6ac14a375bd6700cd3a3f1259e471f59aac9458d1a0d71003d0f8e386a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pair-hash-self": {
+  "fullname": "muse-probe-c5h-pair-hash-self",
+  "html": "<p>I3-START</p>\n<p>[[include :sandbox-for-codex:other-page#frag]]</p>\n<p>I3-END</p>",
+  "html_sha256": "ebe59d4e7b6beec4db048540150c41112958307f78126fdb9a22663b4debd2a9",
+  "source": "I3-START\n\n[[include :sandbox-for-codex:other-page#frag]]\n\nI3-END",
+  "source_sha256": "630ce62f97074b4a18d6192af446079d8bb21839966d9ce3450c016e7d52af2c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

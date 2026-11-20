@@ -1,0 +1,93 @@
+wrap-basic -> muse-probe-r2code-wrap-basic (exists)
+empty-body -> muse-probe-r2code-empty-body (exists)
+blank-body -> muse-probe-r2code-blank-body (exists)
+blankrun-body -> muse-probe-r2code-blankrun-body (created)
+py-type -> muse-probe-r2code-py-type (created)
+css-type -> muse-probe-r2code-css-type (created)
+unknown-type -> muse-probe-r2code-unknown-type (created)
+name-arg -> muse-probe-r2code-name-arg (created)
+literal-body -> muse-probe-r2code-literal-body (created)
+entities-body -> muse-probe-r2code-entities-body (created)
+midline -> muse-probe-r2code-midline (created)
+stray-close -> muse-probe-r2code-stray-close (created)
+unterminated -> muse-probe-r2code-unterminated (created)
+nested -> muse-probe-r2code-nested (created)
+spaced-opener -> muse-probe-r2code-spaced-opener (created)
+15 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "wrap-basic": {
+  "fullname": "muse-probe-r2code-wrap-basic",
+  "source": "PROBE-WRAP-BEGIN\n[[code]]\nalpha\n[[/code]]\nPROBE-WRAP-END",
+  "action": "exists"
+ },
+ "empty-body": {
+  "fullname": "muse-probe-r2code-empty-body",
+  "source": "EMPTY-BEGIN\n[[code]]\n[[/code]]\nEMPTY-END",
+  "action": "exists"
+ },
+ "blank-body": {
+  "fullname": "muse-probe-r2code-blank-body",
+  "source": "BLANK-BEGIN\n[[code]]\n\n\n[[/code]]\nBLANK-END",
+  "action": "exists"
+ },
+ "blankrun-body": {
+  "fullname": "muse-probe-r2code-blankrun-body",
+  "source": "RUN-BEGIN\n[[code]]\na\n\n\n\nb\n[[/code]]\nRUN-END",
+  "action": "created"
+ },
+ "py-type": {
+  "fullname": "muse-probe-r2code-py-type",
+  "source": "PY-BEGIN\n[[code type=\"python\"]]\nimport antigravity\n[[/code]]\nPY-END",
+  "action": "created"
+ },
+ "css-type": {
+  "fullname": "muse-probe-r2code-css-type",
+  "source": "CSS-BEGIN\n[[code type=\"css\"]]a { display: none; }[[/code]]\nCSS-END",
+  "action": "created"
+ },
+ "unknown-type": {
+  "fullname": "muse-probe-r2code-unknown-type",
+  "source": "UNK-BEGIN\n[[code type=\"apache\"]]\nSELECT 1;\n[[/code]]\nUNK-END",
+  "action": "created"
+ },
+ "name-arg": {
+  "fullname": "muse-probe-r2code-name-arg",
+  "source": "NAME-BEGIN\n[[code name=\"Sample Heading\"]]\nbody\n[[/code]]\nNAME-END",
+  "action": "created"
+ },
+ "literal-body": {
+  "fullname": "muse-probe-r2code-literal-body",
+  "source": "LIT-BEGIN\n[[code]]\n[[div]]\nnot a div\n[[/div]]\n**not bold**\n[[/code]]\nLIT-END",
+  "action": "created"
+ },
+ "entities-body": {
+  "fullname": "muse-probe-r2code-entities-body",
+  "source": "ENT-BEGIN\n[[code]]\n\"double\" 'single' &amp; & < >\n[[/code]]\nENT-END",
+  "action": "created"
+ },
+ "midline": {
+  "fullname": "muse-probe-r2code-midline",
+  "source": "MID-BEGIN\npre [[code]]x[[/code]]\npost\nMID-END",
+  "action": "created"
+ },
+ "stray-close": {
+  "fullname": "muse-probe-r2code-stray-close",
+  "source": "STRAY-BEGIN\n[[/code]]\nafter\nSTRAY-END",
+  "action": "created"
+ },
+ "unterminated": {
+  "fullname": "muse-probe-r2code-unterminated",
+  "source": "UNTERM-BEGIN\n[[code]]\nnever closed\nUNTERM-END",
+  "action": "created"
+ },
+ "nested": {
+  "fullname": "muse-probe-r2code-nested",
+  "source": "NEST-BEGIN\n[[code]]\n[[code]]\ninner\n[[/code]]\nouter\n[[/code]]\nNEST-END",
+  "action": "created"
+ },
+ "spaced-opener": {
+  "fullname": "muse-probe-r2code-spaced-opener",
+  "source": "SPACED-BEGIN\n[[ code ]]\nNESTED\n[[code]]\n[[/code]]\nSPACED-END",
+  "action": "created"
+ }
+}

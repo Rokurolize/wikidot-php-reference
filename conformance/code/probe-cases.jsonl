@@ -1,0 +1,15 @@
+{"id": "wrap-basic", "source": "PROBE-WRAP-BEGIN\n[[code]]\nalpha\n[[/code]]\nPROBE-WRAP-END"}
+{"id": "empty-body", "source": "EMPTY-BEGIN\n[[code]]\n[[/code]]\nEMPTY-END"}
+{"id": "blank-body", "source": "BLANK-BEGIN\n[[code]]\n\n\n[[/code]]\nBLANK-END"}
+{"id": "blankrun-body", "source": "RUN-BEGIN\n[[code]]\na\n\n\n\nb\n[[/code]]\nRUN-END"}
+{"id": "py-type", "source": "PY-BEGIN\n[[code type=\"python\"]]\nimport antigravity\n[[/code]]\nPY-END"}
+{"id": "css-type", "source": "CSS-BEGIN\n[[code type=\"css\"]]a { display: none; }[[/code]]\nCSS-END"}
+{"id": "unknown-type", "source": "UNK-BEGIN\n[[code type=\"apache\"]]\nSELECT 1;\n[[/code]]\nUNK-END"}
+{"id": "name-arg", "source": "NAME-BEGIN\n[[code name=\"Sample Heading\"]]\nbody\n[[/code]]\nNAME-END"}
+{"id": "literal-body", "source": "LIT-BEGIN\n[[code]]\n[[div]]\nnot a div\n[[/div]]\n**not bold**\n[[/code]]\nLIT-END"}
+{"id": "entities-body", "source": "ENT-BEGIN\n[[code]]\n\"double\" 'single' &amp; & < >\n[[/code]]\nENT-END"}
+{"id": "midline", "source": "MID-BEGIN\npre [[code]]x[[/code]]\npost\nMID-END"}
+{"id": "stray-close", "source": "STRAY-BEGIN\n[[/code]]\nafter\nSTRAY-END"}
+{"id": "unterminated", "source": "UNTERM-BEGIN\n[[code]]\nnever closed\nUNTERM-END"}
+{"id": "nested", "source": "NEST-BEGIN\n[[code]]\n[[code]]\ninner\n[[/code]]\nouter\n[[/code]]\nNEST-END"}
+{"id": "spaced-opener", "source": "SPACED-BEGIN\n[[ code ]]\nNESTED\n[[code]]\n[[/code]]\nSPACED-END"}

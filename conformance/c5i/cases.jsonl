@@ -1,0 +1,3 @@
+{"id": "jp-plain", "source": "J1-START\n\n[[include ページ]]\n\nJ1-END"}
+{"id": "accent-plain", "source": "J2-START\n\n[[include café]]\n\nJ2-END"}
+{"id": "jp-mixed", "source": "J3-START\n\n[[include テストpage]]\n\nJ3-END"}

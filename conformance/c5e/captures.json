@@ -1,0 +1,52 @@
+{
+ "dashes": {
+  "fullname": "muse-probe-c5e-dashes",
+  "html": "<p>F1-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;&quot; does not exist (<a href=\"//edit/true\">create it now</a>)</p>\n</div>\n<p>F1-END</p>",
+  "html_sha256": "6156caaa2d97a35de96d1ba02a0d8323a2a595edf7c85362b7510eb3a7e17e5e",
+  "source": "F1-START\n\n[[include ---]]\n\nF1-END",
+  "source_sha256": "77a7c16925f0ec7d98771cc04676871f9fc9509ad0a7879728a2edf749f73be4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "colon-dash": {
+  "fullname": "muse-probe-c5e-colon-dash",
+  "html": "<p>F2-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;&quot; does not exist (<a href=\"//edit/true\">create it now</a>)</p>\n</div>\n<p>F2-END</p>",
+  "html_sha256": "21bd1e329a259aaa267acbbeeca8703acbbf85c21907b127ec5867deea9dc6ce",
+  "source": "F2-START\n\n[[include :-]]\n\nF2-END",
+  "source_sha256": "685e4de9d8df484789e3b4fd387a120e12df6e7689cf5016ca3d43bf097a7fa1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "plus-head": {
+  "fullname": "muse-probe-c5e-plus-head",
+  "html": "<p>F3-START</p>\n<p>[[include +foo]]</p>\n<p>F3-END</p>",
+  "html_sha256": "1a340e4c696133767b986ce7c40c76c29ed2151a5b8c51941f3d3b0782fb081a",
+  "source": "F3-START\n\n[[include +foo]]\n\nF3-END",
+  "source_sha256": "fc3378bca166ca6b3fb5b0b6b14c2c9ac29923d7d1c132ed85697101a2448008",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tilde-mid": {
+  "fullname": "muse-probe-c5e-tilde-mid",
+  "html": "<p>F4-START</p>\n<p>[[include foo~bar]]</p>\n<p>F4-END</p>",
+  "html_sha256": "19c8758e1b7cb7ec4d30a10dad8410de8f817136a81c46bd022247858456bb19",
+  "source": "F4-START\n\n[[include foo~bar]]\n\nF4-END",
+  "source_sha256": "5ac60b6a24dec64d0068e1b81f6746023d6b70e1c3b51801cad8fd445d2ee000",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "underscore-ctl": {
+  "fullname": "muse-probe-c5e-underscore-ctl",
+  "html": "<p>F5-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;_template&quot; does not exist (<a href=\"/_template/edit/true\">create it now</a>)</p>\n</div>\n<p>F5-END</p>",
+  "html_sha256": "3eb60203a7bbd64da468dc19801c4cc285dc3f736f8fa7f9f1020309b16dd5bd",
+  "source": "F5-START\n\n[[include _template]]\n\nF5-END",
+  "source_sha256": "f3d976d00d49508828f77f7d4c2e4ccc6053c746b84d333402813aab428f7bb9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

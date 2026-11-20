@@ -1,0 +1,15 @@
+{"id":"wrap-basic","output":"<p>PROBE-WRAP-BEGIN<\/p>\n\n\n<div class=\"code\">\n<pre><code>alpha<\/code><\/pre><\/div>\n\n<br \/>\nPROBE-WRAP-END"}
+{"id":"empty-body","output":"<p>EMPTY-BEGIN<\/p>\n\n\n<div class=\"code\"><\/div>\n\n<br \/>\nEMPTY-END"}
+{"id":"blank-body","output":"<p>BLANK-BEGIN<\/p>\n\n\n<div class=\"code\"><\/div>\n\n<br \/>\nBLANK-END"}
+{"id":"blankrun-body","output":"<p>RUN-BEGIN<\/p>\n\n\n<div class=\"code\">\n<pre><code>a\n\nb<\/code><\/pre><\/div>\n\n<br \/>\nRUN-END"}
+{"id":"py-type","output":"<p>PY-BEGIN<\/p>\n\n\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-reserved\">import<\/span><span class=\"hl-code\"> <\/span><span class=\"hl-identifier\">antigravity<\/span><\/pre><\/div>\n<\/div>\n\n<br \/>\nPY-END"}
+{"id":"css-type","output":"<p>CSS-BEGIN<\/p>\n\n\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-identifier\">a<\/span><span class=\"hl-code\"> <\/span><span class=\"hl-brackets\">{<\/span><span class=\"hl-code\"> <\/span><span class=\"hl-reserved\">display:<\/span><span class=\"hl-code\"> <\/span><span class=\"hl-string\">none<\/span><span class=\"hl-code\">; <\/span><span class=\"hl-brackets\">}<\/span><\/pre><\/div>\n<\/div>\n\n<br \/>\nCSS-END"}
+{"id":"unknown-type","output":"<p>UNK-BEGIN<\/p>\n\n\n<div class=\"code\">\n<pre><code>SELECT 1;<\/code><\/pre><\/div>\n\n<br \/>\nUNK-END"}
+{"id":"name-arg","output":"<p>NAME-BEGIN<\/p>\n\n\n<div class=\"code\">\n<pre><code>body<\/code><\/pre><\/div>\n\n<br \/>\nNAME-END"}
+{"id":"literal-body","output":"<p>LIT-BEGIN<\/p>\n\n\n<div class=\"code\">\n<pre><code>[[div]]\nnot a div\n[[\/div]]\n**not bold**<\/code><\/pre><\/div>\n\n<br \/>\nLIT-END"}
+{"id":"entities-body","output":"<p>ENT-BEGIN<\/p>\n\n\n<div class=\"code\">\n<pre><code>&quot;double&quot; 'single' &amp;amp; &amp; &lt; &gt;<\/code><\/pre><\/div>\n\n<br \/>\nENT-END"}
+{"id":"midline","output":"<p>MID-BEGIN<br \/>\npre [[code]]x[[\/code]]<br \/>\npost<br \/>\nMID-END<\/p>\n\n"}
+{"id":"stray-close","output":"<p>STRAY-BEGIN<br \/>\n[[\/code]]<br \/>\nafter<br \/>\nSTRAY-END<\/p>\n\n"}
+{"id":"unterminated","output":"<p>UNTERM-BEGIN<br \/>\n[[code]]<br \/>\nnever closed<br \/>\nUNTERM-END<\/p>\n\n"}
+{"id":"nested","output":"<p>NEST-BEGIN<\/p>\n\n\n<div class=\"code\">\n<pre><code>[[code]]\ninner\n[[\/code]]\nouter<\/code><\/pre><\/div>\n\n<br \/>\nNEST-END"}
+{"id":"spaced-opener","output":"<p>SPACED-BEGIN<br \/>\n[[ code ]]<br \/>\nNESTED<\/p>\n\n\n<div class=\"code\"><\/div>\n\n<br \/>\nSPACED-END"}

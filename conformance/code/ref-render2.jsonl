@@ -1,0 +1,68 @@
+{"id":"basic-line","output":"<p>BEFORE<\/p>\n\n\n<div class=\"code\">\n<pre><code>alpha\nbeta<\/code><\/pre><\/div>\n\n<br \/>\nAFTER"}
+{"id":"basic-inline","output":"\n<div class=\"code\">\n<pre><code>alpha<\/code><\/pre><\/div>\n\n"}
+{"id":"basic-no-trailing-nl","output":"<p>x<\/p>\n\n\n<div class=\"code\">\n<pre><code>alpha<\/code><\/pre><\/div>\n\n"}
+{"id":"basic-leading-text","output":"<p>pre [[code]]x[[\/code]]<br \/>\npost<\/p>\n\n"}
+{"id":"basic-two-blocks","output":"\n<div class=\"code\">\n<pre><code>a<\/code><\/pre><\/div>\n\n\n<div class=\"code\">\n<pre><code>b<\/code><\/pre><\/div>\n\n"}
+{"id":"basic-in-paragraph","output":"<p>para before [[code]]mid[[\/code]] para after<\/p>\n\n"}
+{"id":"empty","output":"\n<div class=\"code\"><\/div>\n\n"}
+{"id":"empty-lines","output":"\n<div class=\"code\"><\/div>\n\n"}
+{"id":"empty-two-lines","output":"\n<div class=\"code\"><\/div>\n\n"}
+{"id":"ws-body-spaces","output":"\n<div class=\"code\"><\/div>\n\n"}
+{"id":"ws-body-tabs","output":"\n<div class=\"code\"><\/div>\n\n"}
+{"id":"ws-body-blank-lines","output":"\n<div class=\"code\"><\/div>\n\n"}
+{"id":"body-tab","output":"\n<div class=\"code\">\n<pre><code>    x<\/code><\/pre><\/div>\n\n"}
+{"id":"body-tab-middle","output":"\n<div class=\"code\">\n<pre><code>a    b<\/code><\/pre><\/div>\n\n"}
+{"id":"body-blank-run","output":"\n<div class=\"code\">\n<pre><code>a\n\nb<\/code><\/pre><\/div>\n\n"}
+{"id":"body-leading-blanks","output":"\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n"}
+{"id":"body-trailing-blanks","output":"\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n"}
+{"id":"body-spaces-line","output":"\n<div class=\"code\">\n<pre><code>x\n\ny<\/code><\/pre><\/div>\n\n"}
+{"id":"body-mid-trailing-spaces","output":"\n<div class=\"code\">\n<pre><code>x \ny<\/code><\/pre><\/div>\n\n"}
+{"id":"body-leading-space-first","output":"\n<div class=\"code\">\n<pre><code>  indented\nnext<\/code><\/pre><\/div>\n\n"}
+{"id":"body-nbsp","output":"\n<div class=\"code\">\n<pre><code> x <\/code><\/pre><\/div>\n\n"}
+{"id":"body-ideographic","output":"\n<div class=\"code\">\n<pre><code>\u3000x\u3000<\/code><\/pre><\/div>\n\n"}
+{"id":"nested-openers","output":"\n<div class=\"code\">\n<pre><code>[[code]]\ninner\n[[\/code]]\nouter<\/code><\/pre><\/div>\n\n"}
+{"id":"nested-one-line","output":"\n<div class=\"code\">\n<pre><code>a[[code]]b[[\/code]]c<\/code><\/pre><\/div>\n\n"}
+{"id":"stray-closer","output":"<p>[[\/code]]<\/p>\n\n"}
+{"id":"stray-closer-after-text","output":"<p>before<br \/>\n[[\/code]]<br \/>\nafter<\/p>\n\n"}
+{"id":"stray-closer-before","output":"<p>[[\/code]]<\/p>\n\n\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n"}
+{"id":"unterminated","output":"<p>[[code]]<br \/>\nnever closed<\/p>\n\n"}
+{"id":"unterminated-inline","output":"<p>[[code]]abc<\/p>\n\n"}
+{"id":"unterminated-then-other","output":"<p>[[code]]<br \/>\nx<br \/>\n[[div]]y[[\/div]]<\/p>\n\n"}
+{"id":"closer-suffixed","output":"\n<div class=\"code\">\n<pre><code>a<\/code><\/pre><\/div>\n\n x"}
+{"id":"closer-trailing-space","output":"\n<div class=\"code\">\n<pre><code>a<\/code><\/pre><\/div>\n\n <br \/>\nNEXT"}
+{"id":"closer-suffix-newline","output":"\n<div class=\"code\">\n<pre><code>a<\/code><\/pre><\/div>\n\n<br \/>\nNEXT"}
+{"id":"arg-type-python","output":"\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-reserved\">import<\/span><span class=\"hl-code\"> <\/span><span class=\"hl-identifier\">antigravity<\/span><\/pre><\/div>\n<\/div>\n\n"}
+{"id":"arg-type-PYTHON","output":"\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-reserved\">import<\/span><span class=\"hl-code\"> <\/span><span class=\"hl-identifier\">antigravity<\/span><\/pre><\/div>\n<\/div>\n\n"}
+{"id":"arg-type-css-inline","output":"\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-identifier\">a<\/span><span class=\"hl-code\"> <\/span><span class=\"hl-brackets\">{<\/span><span class=\"hl-code\"> <\/span><span class=\"hl-reserved\">display:<\/span><span class=\"hl-code\"> <\/span><span class=\"hl-string\">none<\/span><span class=\"hl-code\">; <\/span><span class=\"hl-brackets\">}<\/span><\/pre><\/div>\n<\/div>\n\n"}
+{"id":"arg-type-unknown","output":"\n<div class=\"code\">\n<pre><code>SELECT 1;<\/code><\/pre><\/div>\n\n"}
+{"id":"arg-type-empty","output":"\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n"}
+{"id":"arg-name","output":"\n<div class=\"code\">\n<pre><code>body<\/code><\/pre><\/div>\n\n"}
+{"id":"arg-type-name","output":"\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-reserved\">class<\/span><span class=\"hl-code\"> <\/span><span class=\"hl-identifier\">A<\/span><span class=\"hl-code\"> <\/span><span class=\"hl-brackets\">{}<\/span><\/pre><\/div>\n<\/div>\n\n"}
+{"id":"arg-unknown","output":"\n<div class=\"code\">\n<pre><code>body<\/code><\/pre><\/div>\n\n"}
+{"id":"arg-unquoted","output":"\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n"}
+{"id":"arg-half-quote-1","output":"\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n"}
+{"id":"arg-half-quote-2","output":"\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n"}
+{"id":"arg-spaced-name","output":"<p>[[ code ]]<br \/>\nNESTED<\/p>\n\n\n<div class=\"code\"><\/div>\n\n"}
+{"id":"arg-tab-after","output":"\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-identifier\">x<\/span><\/pre><\/div>\n<\/div>\n\n"}
+{"id":"arg-multi-space","output":"\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-identifier\">x<\/span><\/pre><\/div>\n<\/div>\n\n"}
+{"id":"arg-two-attrs","output":"\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-identifier\">x<\/span><\/pre><\/div>\n<\/div>\n\n"}
+{"id":"arg-newline-after","output":"\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-identifier\">x<\/span><\/pre><\/div>\n<\/div>\n\n"}
+{"id":"body-wikitext","output":"\n<div class=\"code\">\n<pre><code>[[div]]\nnot a div\n[[\/div]]\n**not bold**<\/code><\/pre><\/div>\n\n"}
+{"id":"body-brackets","output":"\n<div class=\"code\">\n<pre><code>[[foo]] [[bar baz]] [[]]<\/code><\/pre><\/div>\n\n<br \/>\n[[\/code]]"}
+{"id":"body-quotes","output":"\n<div class=\"code\">\n<pre><code>&quot;double&quot; 'single' &amp;amp; &amp; &lt; &gt;<\/code><\/pre><\/div>\n\n"}
+{"id":"body-html","output":"\n<div class=\"code\">\n<pre><code>&lt;b&gt;bold&lt;\/b&gt; &lt;script&gt;alert(1)&lt;\/script&gt;<\/code><\/pre><\/div>\n\n"}
+{"id":"body-entities","output":"\n<div class=\"code\">\n<pre><code>&amp;amp; &amp;lt; &amp;gt; &amp;quot;<\/code><\/pre><\/div>\n\n"}
+{"id":"body-code-closer-literal","output":"\n<div class=\"code\"><\/div>\n\n literal<br \/>\n[[\/code]]"}
+{"id":"line-start-opener","output":"\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n"}
+{"id":"mid-paragraph","output":"<p>alpha [[code]]beta[[\/code]] gamma<\/p>\n\n"}
+{"id":"after-heading","output":"<p style=\"text-align: center;\">H =<\/p>\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n"}
+{"id":"three-blocks","output":"\n<div class=\"code\">\n<pre><code>a<\/code><\/pre><\/div>\n\n\n<div class=\"code\">\n<pre><code>b<\/code><\/pre><\/div>\n\n\n<div class=\"code\">\n<pre><code>c<\/code><\/pre><\/div>\n\n"}
+{"id":"block-then-paragraph","output":"\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n<br \/>\nparagraph after"}
+{"id":"crlf-basic","output":"\n<div class=\"code\">\n<pre><code>alpha\nbeta<\/code><\/pre><\/div>\n\n"}
+{"id":"crlf-empty","output":"\n<div class=\"code\"><\/div>\n\n"}
+{"id":"crlf-nested","output":"\n<div class=\"code\">\n<pre><code>[[code]]x[[\/code]]<\/code><\/pre><\/div>\n\n"}
+{"id":"crlf-args","output":"\n<div class=\"code\">\n<div class=\"hl-main\">\n<pre><span class=\"hl-identifier\">x<\/span><span class=\"hl-code\">=<\/span><span class=\"hl-number\">1<\/span><\/pre><\/div>\n<\/div>\n\n"}
+{"id":"lone-cr-body","output":"\n<div class=\"code\">\n<pre><code>a\nb<\/code><\/pre><\/div>\n\n"}
+{"id":"frame-tab-newlines","output":"\n<div class=\"code\">\n<pre><code>line1    \n\nline2<\/code><\/pre><\/div>\n\n"}
+{"id":"frame-ueue","output":"\n<div class=\"code\">\n<pre><code>\u00fc\u00fc<\/code><\/pre><\/div>\n\n"}
+{"id":"frame-quoted","output":"    <blockquote>    <blockquote><p>[[code]]<br \/>\nQUOTED_LITERAL<br \/>\n[[\/code]]<\/p>\n\n    <\/blockquote>\n<\/blockquote>\n"}

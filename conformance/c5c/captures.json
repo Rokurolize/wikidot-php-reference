@@ -1,0 +1,32 @@
+{
+ "host-slash": {
+  "fullname": "muse-probe-c5c-host-slash",
+  "html": "<p>D1-START</p>\n<p>[[include :scp-wiki:/]]</p>\n<p>D1-END</p>",
+  "html_sha256": "5d5a73512dc1f0363a9e4c9e839e021b4c3752efa62788a08958fe9e06dd7b0d",
+  "source": "D1-START\n\n[[include :scp-wiki:/]]\n\nD1-END",
+  "source_sha256": "2691836e7ef762f78a282805c7bf72c393331bf19368f08e48f8283fb547334a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "host-dotted": {
+  "fullname": "muse-probe-c5c-host-dotted",
+  "html": "<p>D2-START</p>\n<p>[[include :scp-jp.wikidot.com:]]</p>\n<p>D2-END</p>",
+  "html_sha256": "fbad0da928c62f8f414448e579f8a4327e5d523a6dc015dfa7b2f4287e021653",
+  "source": "D2-START\n\n[[include :scp-jp.wikidot.com:]]\n\nD2-END",
+  "source_sha256": "843af2fddeb0b8d34987a55253de4b20a7d49c86e04b0c6f441300ecc155acf4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "bare-colons": {
+  "fullname": "muse-probe-c5c-bare-colons",
+  "html": "<p>D3-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;&quot; does not exist (<a href=\"//edit/true\">create it now</a>)</p>\n</div>\n<p>D3-END</p>",
+  "html_sha256": "4c75d40ae20d88c9d38f7144e4660a28ccf5f16f71ceb8f7f79c8560c003762a",
+  "source": "D3-START\n\n[[include :::]]\n\nD3-END",
+  "source_sha256": "db37c05f088f867ef2b4b159c79cfe11adad628a8b9e8a46b1e3a8cb907d586f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

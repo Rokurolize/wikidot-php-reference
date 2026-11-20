@@ -1,0 +1,42 @@
+{
+ "site-empty": {
+  "fullname": "muse-probe-c5b-site-empty",
+  "html": "<p>C1-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;site&quot; does not exist (<a href=\"/site/edit/true\">create it now</a>)</p>\n</div>\n<p>C1-END</p>",
+  "html_sha256": "a270c619acd0c85f491b11edbf1520bf1e69e7503eeb631523d8c885f0412e3b",
+  "source": "C1-START\n\n[[include :site:]]\n\nC1-END",
+  "source_sha256": "9c21e6d8e76fd562e4c58495972d95977b0cb111aaeb1311d1b1567e76a9408a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "triple": {
+  "fullname": "muse-probe-c5b-triple",
+  "html": "<p>C2-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;page&quot; does not exist (<a href=\"/page/edit/true\">create it now</a>)</p>\n</div>\n<p>C2-END</p>",
+  "html_sha256": "750656596935093a8f46befe07328af57631c091461dc9a8514e45e2482bae80",
+  "source": "C2-START\n\n[[include :::page]]\n\nC2-END",
+  "source_sha256": "ba3ac9ac1a1b415836ed627a3fcb8738fbd7f33467ee6c1a74266bb4c867ff6f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "site-mid": {
+  "fullname": "muse-probe-c5b-site-mid",
+  "html": "<p>C3-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;bar&quot; does not exist (<a href=\"https://foo.wikidot.com/bar/edit/true\">create it now</a>)</p>\n</div>\n<p>C3-END</p>",
+  "html_sha256": "f249e171223fe7f487162a0e9853348664126398c23eedaba5d7cd82ae057c28",
+  "source": "C3-START\n\n[[include :foo:bar]]\n\nC3-END",
+  "source_sha256": "89443c924c3d7b42c59cd463ee7712875f081b7e33260681ae2b723da51d9f41",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "plain": {
+  "fullname": "muse-probe-c5b-plain",
+  "html": "<p>C4-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;page&quot; does not exist (<a href=\"/page/edit/true\">create it now</a>)</p>\n</div>\n<p>C4-END</p>",
+  "html_sha256": "75fe86105db0c0563f328041b3f34845aaea3c19317420adb0cfd8b8c9209024",
+  "source": "C4-START\n\n[[include page]]\n\nC4-END",
+  "source_sha256": "250871b9ebc3de88d226062ec30935ab2c78742f25baba859293cbbf8fad8db6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

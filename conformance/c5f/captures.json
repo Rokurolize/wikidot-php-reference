@@ -1,0 +1,22 @@
+{
+ "host-pair": {
+  "fullname": "muse-probe-c5f-host-pair",
+  "html": "<p>G1-START</p>\n<div class=\"error-block\">\n<p>Included page &quot;other-page&quot; does not exist (<a href=\"https://scp-jp.wikidot.com/other-page/edit/true\">create it now</a>)</p>\n</div>\n<p>G1-END</p>",
+  "html_sha256": "5f6c6b92276102024f8964246ff9f407c93a2d663dbc074e1c3c5f3f976eedc6",
+  "source": "G1-START\n\n[[include :scp-jp.wikidot.com:other-page]]\n\nG1-END",
+  "source_sha256": "196da62b5be9fd4c24fc35dd6a3d53a73ec9b2fb395c6d8d807ca73a85e57a8f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "host-pair-slugctl": {
+  "fullname": "muse-probe-c5f-host-pair-slugctl",
+  "html": "<p>G2-START</p>\n<div class=\"error-block\">\n<p>Site sandbox is private and you cannot include pages from it.</p>\n</div>\n<p>G2-END</p>",
+  "html_sha256": "cafcff44dfe9660ab4aea1b4ce45aab1353eaf3f9196c7a47b2285d798d3a7d3",
+  "source": "G2-START\n\n[[include :sandbox:other-page]]\n\nG2-END",
+  "source_sha256": "1ed93cee654d6a4e24e32e646ad5288fd8fd2d681640fd74c421ac0345a7081e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

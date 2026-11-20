@@ -1,0 +1,3 @@
+{"id": "site-empty", "source": "[[include :site:]]"}
+{"id": "triple", "source": "[[include :::page]]"}
+{"id": "site-mid", "source": "[[include :foo:bar]]"}

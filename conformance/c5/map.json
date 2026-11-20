@@ -1,0 +1,17 @@
+{
+ "double": {
+  "fullname": "muse-probe-c5-double",
+  "source": "C5DOUBLE-START\n[[include ::page]]\nC5DOUBLE-END",
+  "action": "created"
+ },
+ "single": {
+  "fullname": "muse-probe-c5-single",
+  "source": "C5SINGLE-START\n[[include :foo]]\nC5SINGLE-END",
+  "action": "created"
+ },
+ "plain": {
+  "fullname": "muse-probe-c5-plain",
+  "source": "C5PLAIN-START\n[[include page]]\nC5PLAIN-END",
+  "action": "created"
+ }
+}

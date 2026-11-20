@@ -1,0 +1,6 @@
+{"id": "dot-plain", "source": "E1-START\n\n[[include some.page]]\n\nE1-END"}
+{"id": "slash-plain", "source": "E2-START\n\n[[include a/b]]\n\nE2-END"}
+{"id": "colon-dot", "source": "E3-START\n\n[[include :foo.bar]]\n\nE3-END"}
+{"id": "colon-slash", "source": "E4-START\n\n[[include :foo/bar]]\n\nE4-END"}
+{"id": "colon-underscore", "source": "E5-START\n\n[[include :foo_bar]]\n\nE5-END"}
+{"id": "single-colon", "source": "E6-START\n\n[[include :]]\n\nE6-END"}

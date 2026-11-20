@@ -1,0 +1,38 @@
+{"id": "highlight-cpp", "source": "[[code type=\"cpp\"]]\n/* c */ int main(void) { printf(\"%d\\n\", 1.5e3); }\n[[/code]]\n"}
+{"id": "closer-directly-suffixed-literal", "source": "[[code]]\nbody\n[[/code]]x\nmore\n"}
+{"id": "closer-comment-suffix-literal", "source": "[[code]]\nbody\n[[/code]][!-- c --]"}
+{"id": "highlight-sql", "source": "[[code type=\"sql\"]]\nSELECT a FROM b WHERE c = 'd';\n[[/code]]\n"}
+{"id": "unknown-language-plain", "source": "[[code type=\"apache\"]]\nSELECT a FROM b WHERE c = 'd';\n[[/code]]\n"}
+{"id": "two-codes-suffixed-first-closer", "source": "[[code]]\na\n[[/code]] x\n[[code]]\nb\n[[/code]]\n"}
+{"id": "closer-trailing-blank-then-paragraph", "source": "[[code]]\nbody\n[[/code]] \n\ntail text\n"}
+{"id": "css-url-token-intact", "source": "[[code type=\"css\"]]\na { background: url(/files/deleted:component/x.png); }\n[[/code]]"}
+{"id": "fused-head-close", "source": "[[code type=\"text\"]]]]\nx\n[[/code]]"}
+{"id": "name-case-uppercase", "source": "[[CODE]]\nX\n[[/CODE]]\n"}
+{"id": "highlight-css", "source": "[[code type=\"css\"]]\n.a:hover { color: #fff; margin: 0 1px; }\n[[/code]]\n"}
+{"id": "css-pseudo-class-split", "source": "[[code type=\"css\"]]\na:hover { color: red; }\nspan:first-of-type { margin: 0; }\n[[/code]]"}
+{"id": "highlight-python", "source": "[[code type=\"python\"]]\ndef f(x):\n    return x + 1  # c\n\nclass A: pass\n[[/code]]\n"}
+{"id": "mid-line-opener-literal", "source": "pre [[code]]x[[/code]]\npost\n"}
+{"id": "closer-first-suffixed-wins", "source": "[[code]]\nbody\n[[/code]] x\nmore\n[[/code]]\n"}
+{"id": "revert", "source": "[[div]]\n[[div]]\n[[div]]\n\n[!-- these code blocks should only appear once each, at the end, despite the failed [[div]]s above --]\n\n[[code type=\"CSS\"]]\n.alpha { display: none; }\n[[/code]]\n\n[[code type=\"rust\" name=\"program\"]]\nfn main() {\n    println!(\"beta\");\n}\n[[/code]]\n"}
+{"id": "highlight-java", "source": "[[code type=\"java\"]]\nimport java.util.*;\nint a;\nList<String> l = new ArrayList<>();\n[[/code]]\n"}
+{"id": "name-case-title", "source": "[[Code]]\nX\n[[/Code]]\n"}
+{"id": "nested-suffixed-outer-closer", "source": "[[code]]\n[[code]]\ninner\n[[/code]]\nouter\n[[/code]] x\n"}
+{"id": "closer-whitespace-then-text", "source": "[[code]]\nbody\n[[/code]] x\n"}
+{"id": "highlight-diff", "source": "[[code type=\"diff\"]]\n+a\n-b\n[[/code]]\n"}
+{"id": "highlight-dtd", "source": "[[code type=\"dtd\"]]\n<a href=\"b\">c</a> &amp;\n[[/code]]\n"}
+{"id": "comment-name", "source": "[[co[!--x--]de]]x = 1[[/code]]"}
+{"id": "iftags-seam-prefix-name", "source": "[[[[iftags -zzz]][[/iftags]]code]]x[[/code]]\n"}
+{"id": "highlight-php", "source": "[[code type=\"php\"]]\n<?php echo 1;\n[[/code]]\n"}
+{"id": "iftags-seam-head", "source": "[[code type=\"py[[iftags -zzz]]thon[[/iftags]]\"]]x = 1[[/code]]\n\n[[code type=\"py[[iftags +zzz]]thon[[/iftags]]\"]]x = 1[[/code]]\n\n[[code ty[[iftags -zzz]][[/iftags]]pe=\"python\"]]x = 1[[/code]]\n"}
+{"id": "fail", "source": "[[code type=css]][[/code]]\n[[code type=\"css]][[/code]]\n[[code type=css\"]][[/code]]\n\n[[ code ]]\nNESTED\n[[code]]\n[[/code]]\n"}
+{"id": "highlight-javascript", "source": "[[code type=\"javascript\"]]\nvar re = /ab+c/gi;\nvar n = 1; // c\n[[/code]]\n"}
+{"id": "edge-whitespace", "source": "LEAD-BLANKS\n[[code]]\n\n\nx\n\n\n[[/code]]\n\nTRAIL-SPACES\n[[code]]\n  x  \n[[/code]]\n\nMID-SPACE-KEPT\n[[code]]\nx \ny \n[[/code]]\n\nTABS\n[[code]]\n\ty\t\n[[/code]]\n\nNBSP\n[[code]]\n x \n[[/code]]\n\nIDEOGRAPHIC\n[[code]]\n　x　\n[[/code]]\n\nWS-LINE-BLANKED\n[[code]]\nx\n \ny\n[[/code]]\n\nLEAD-WS-LINES\n[[code]]\n \nx\n \n[[/code]]\n\nALL-BLANK\n[[code]]\n\n\n[[/code]]\n"}
+{"id": "highlight-perl", "source": "[[code type=\"perl\"]]\nif (x == 1) { return \"a\"; } // c\n[[/code]]\n"}
+{"id": "quoted-nested-bracket", "source": "[[code type=\"a[[b\"]]\nx\n[[/code]]\n\n[[code type=\"a[[/code]]\ny\n[[/code]]\n"}
+{"id": "anchor-copy-inside", "source": "[[a href=\"https://e.com/\"]]\n[[code]]\nx\n[[/code]]\n[[/a]]"}
+{"id": "highlight-ruby", "source": "[[code type=\"ruby\"]]\nif (x == 1) { return \"a\"; } // c\n[[/code]]\n"}
+{"id": "iftags-seam-name", "source": "[[co[[iftags -zzz]][[/iftags]]de]]x = 1[[/code]]"}
+{"id": "highlight-xml", "source": "[[code type=\"xml\"]]\n<a b=\"c\"/>\n[[/code]]\n"}
+{"id": "basic", "source": "BASIC\n[[code]]\napple\nbanana\n[[/code]]\n\nEMPTY\n[[code]]\n[[/code]]\n\nESCAPES\n[[code]]\n[[div]]\nnot a div test\n[[/div]]\n\n**also not bold**\n[[/code]]\n\nLANG\n[[code type=\"python\"]]\nimport antigravity\n[[/code]]\n\nINLINE\n[[code type=\"css\"]]a { display: none; }[[/code]]\n\nNAMED\n[[code name=\"a\" type=\"java\"]]\npublic static final objective abstract interface class Foo {}\n[[/code]]\n\n[[code name=\"b\"]]\nYou can refer to this code block via /code/b instead of by its numerical index.\n[[/code]]\n"}
+{"id": "invalid-closer-then-nested", "source": "[[code]]\na\n[[/code]]x\n[[code]]\nb\n[[/code]]\n[[/code]]\n"}
+{"id": "highlight-html", "source": "[[code type=\"html\"]]\n<a href=\"b\">c</a> &amp;\n[[/code]]\n"}

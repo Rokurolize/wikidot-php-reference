@@ -1,0 +1,3 @@
+{"id": "double", "source": "C5DOUBLE-START\n[[include ::page]]\nC5DOUBLE-END"}
+{"id": "single", "source": "C5SINGLE-START\n[[include :foo]]\nC5SINGLE-END"}
+{"id": "plain", "source": "C5PLAIN-START\n[[include page]]\nC5PLAIN-END"}

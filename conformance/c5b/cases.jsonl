@@ -1,0 +1,4 @@
+{"id": "site-empty", "source": "C1-START\n\n[[include :site:]]\n\nC1-END"}
+{"id": "triple", "source": "C2-START\n\n[[include :::page]]\n\nC2-END"}
+{"id": "site-mid", "source": "C3-START\n\n[[include :foo:bar]]\n\nC3-END"}
+{"id": "plain", "source": "C4-START\n\n[[include page]]\n\nC4-END"}

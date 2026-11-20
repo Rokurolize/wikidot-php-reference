@@ -448,37 +448,57 @@ class Text_Wiki_Parse_Include extends Text_Wiki_Parse {
     }
 
     // The resolution layer (GRAMMAR R1-R5, with the L6 live
-    // correction). Returns array(siteOrNull, page) or null when
-    // the resolved page is empty (the block then stays literal).
-    // Structure follows ftml's PageRef::parse_include, except
-    // the malformed-site-form fallback: where ftml errors
-    // (:foo, ::page, :site: with an empty page), live treats
-    // the whole run as a page name and normalizes it, which
-    // strips the leading colons (L6; the fossil's disposition).
+    // correction as completed by the C6 round, probe batches
+    // C5-C5g). Returns array(siteOrNull, page), or null when
+    // the include does not fire (the block then stays
+    // literal). The live rule, as probed:
+    // (1) A well-formed site pair (':' site ':' page, site
+    //     non-empty, page part non-empty after the extra
+    //     split) resolves cross-site; the site segment may
+    //     be a dotted host, canonicalized per R3. This
+    //     branch is unchanged from the C4 implementation.
+    // (2) Any other run resolves as a page name ONLY if the
+    //     whole run consists of [A-Za-z0-9\-_:]; a run
+    //     containing any other character ('.', '/', '#',
+    //     '+', '~', ...) does not fire at all. There is no
+    //     extra split on this path: '#' and '/' block the
+    //     include rather than splitting (C5g).
+    // (3) On the page-name path the normalized result may
+    //     be empty (':', ':::', '---', ':-'): the include
+    //     still fires and the fetch misses, so the empty
+    //     name proceeds to refFetch (C5c/C5d/C5e).
     function refResolveRef($run)
     {
         $s = trim($run);
         if ($s === '') {
             return null;
         }
-        $site = null;
-        $pageRaw = $s;
         if ($s[0] === ':') {
             $idx = strpos($s, ':', 1);
             if ($idx !== false && $idx > 1) {
                 $pagePart = substr($s, $idx + 1);
-                if ($this->refSplitPage($pagePart) !== '') {
+                // C5h: the pair's page part is gated on the
+                // same charset as the page-name path. A '#'
+                // or '/' in it does not split; it kills the
+                // pair (and the gated fallback below then
+                // leaves the block literal), including for
+                // same-site pairs.
+                if ($pagePart !== ''
+                    && preg_match('/^[A-Za-z0-9\-_:]+$/', $pagePart)) {
                     $site = $this->refNormalize(
                         $this->refCanonicalSite(substr($s, 1, $idx - 1)));
-                    $pageRaw = $pagePart;
+                    $page = $this->refNormalize($pagePart);
+                    if ($page === '') {
+                        return null;
+                    }
+                    return array($site, $page);
                 }
             }
         }
-        $page = $this->refNormalize($this->refSplitPage($pageRaw));
-        if ($page === '') {
+        if (!preg_match('/^[A-Za-z0-9\-_:]+$/', $s)) {
             return null;
         }
-        return array($site, $page);
+        return array(null, $this->refNormalize($s));
     }
 
     // R2: split at the first '#' or '/'; the remainder is an
