@@ -1,0 +1,9 @@
+{"id": "adjacent-after-close", "source": "@@a@@@@b@@"}
+{"id": "adjacent-empty", "source": "JOIN @@@@!\n"}
+{"id": "angle-raw-literals", "source": "@<<b>>@\n\n@<...>@\n\n@<``a''>@\n\n@<a<<b>@\n\n@<a>>b>@\n\n@<<<a>>@\n\n@<<<>@\n\n@<>>>@\n\n@<<>@\n\n@<>>@\n\n@<<<a>>>@\n\n@<[!-- x --]>@\n\n@<a>@\n\n<<@<a>@>>\n\n@@<<@@\n\n@<a>>@\n\n@< >>@\n\nX@<  a  >@Y\n\n@<>@\n\n@<a>@>>\n\n<<@<a>@\n"}
+{"id": "basic", "source": "++ Standard\n\nBASIC @@**@@not bold@@**@@\nEMPTY @@@@\nAT1 @@@@@\nAT2 @@@@@@\n\nANGLE\n@@@<@@\n@@>@@@\n@@foo @< >@ bar@@\n\n++ Angle Brackets\n\nBASIC @<foo bar>@\nEMPTY @<>@\nAT1   @<@>@\nAT2   @<@@>@\nAT3   @<@@@>@\nAT4   @<@@@@>@\n"}
+{"id": "block", "source": "BASIC\n[[raw]]\napple\nbanana\n[[/raw]]\n\nEMPTY\n[[raw]]\n[[/raw]]\n\nESCAPES\n[[raw]]\n[[div]]\nnot a div test\n[[/div]]\n\n**also not bold**\n[[/raw]]\n\nINLINE\n[[raw]]a { display: none; }[[/raw]]\n\nMULTI\n[[raw]]\nfirst block\n[[/raw]]\n\n[[raw]]\nsecond block\n[[/raw]]\n"}
+{"id": "cross-line-close", "source": "@@x\n@@"}
+{"id": "cross-line-content-fails", "source": "@@x\ny@@"}
+{"id": "fail", "source": "interrupted @<\n>@\n\ninterrupted @@\n@@\n\n@@fail\n\nraw@@\n"}
+{"id": "space-escaping", "source": "@@a 0 2px@@"}

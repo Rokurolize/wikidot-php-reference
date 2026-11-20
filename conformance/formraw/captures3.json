@@ -1,0 +1,42 @@
+{
+ "rawlead2": {
+  "fullname": "muse-probe-r2formraw3-rawlead2",
+  "html": "<p>A <span style=\"white-space: pre-wrap;\">&#32;&#32;x</span> B</p>",
+  "html_sha256": "e688647330ad13ca95bfa4fa6b866e5b34dfdb25b1828928822cd2f2cec2fc43",
+  "source": "A @@  x@@ B",
+  "source_sha256": "9f37e7243f986d37c97fd606ae3d11e139e7985e9d3e1de6898b36b833c5c499",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "rawlead4": {
+  "fullname": "muse-probe-r2formraw3-rawlead4",
+  "html": "<p>A <span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;x</span> B</p>",
+  "html_sha256": "e255558df7f01f27c74460ce1c95f65bfde2a1dc514f9a13bc1fc1697040cc77",
+  "source": "A @@    x@@ B",
+  "source_sha256": "4e2c3d7bdd38e7656138ba5bbb2f89524de038aca74c8b7c1acc3ad0766f2d62",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "rawlead1": {
+  "fullname": "muse-probe-r2formraw3-rawlead1",
+  "html": "<p>A <span style=\"white-space: pre-wrap;\">&#32;x</span> B</p>",
+  "html_sha256": "9ec29ce8f59ecdc554c43b79a5f36ffcc7cfd302aa29ec5df4c3b1a937e29bcc",
+  "source": "A @@ x@@ B",
+  "source_sha256": "1f3c4d61d3d12b16129cb281570559cd328dae56b2b329d374280b8ab68f1fdc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "formindent1": {
+  "fullname": "muse-probe-r2formraw3-formindent1",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[form]]</span><br />\n<span style=\"white-space: pre-wrap;\">fields:</span><br />\n<span style=\"white-space: pre-wrap;\">&#32;x:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;type:&#32;text</span><br />\n<span style=\"white-space: pre-wrap;\">---</span><br />\n<span style=\"white-space: pre-wrap;\">y</span><br />\n<span style=\"white-space: pre-wrap;\">[[/form]]</span></p>",
+  "html_sha256": "cd6cc48e8501c2e26cae6678f5f4eec61e98ca42867475d8cee913c543a62a99",
+  "source": "[[form]]\nfields:\n x:\n  type: text\n---\ny\n[[/form]]",
+  "source_sha256": "06c66e8831a531ef531b476692fa720d16379b7818ccce6a86962ecbe848695e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "dblspace": {
+  "fullname": "muse-probe-r2formraw4-dblspace",
+  "source": "A  B",
+  "action": "created"
+ },
+ "indentline": {
+  "fullname": "muse-probe-r2formraw4-indentline",
+  "source": "A\n  name:\nB",
+  "action": "created"
+ },
+ "formnodata2": {
+  "fullname": "muse-probe-r2formraw4-formnodata2",
+  "source": "[[form]]\nfields:\n  name:\n    type: text\n---\n\n[[/form]]",
+  "action": "created"
+ },
+ "formempty2": {
+  "fullname": "muse-probe-r2formraw4-formempty2",
+  "source": "[[form]]\n\n---\n\n[[/form]]",
+  "action": "created"
+ }
+}

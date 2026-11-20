@@ -1,0 +1,68 @@
+{"id":"raw-basic","output":"<p>before raw **bold** [[link]] after<\/p>\n\n"}
+{"id":"raw-basic-inline","output":"<p>hello<\/p>\n\n"}
+{"id":"raw-empty","output":"<p>a  b<\/p>\n\n"}
+{"id":"raw-ws-only","output":"<p>a     b<\/p>\n\n"}
+{"id":"raw-tab-body","output":"<p>a      b<\/p>\n\n"}
+{"id":"raw-multiline","output":"<p>before<br \/>\n@@line one<br \/>\nline two@@<br \/>\nafter<\/p>\n\n"}
+{"id":"raw-multiline-leading","output":"<p>@@<br \/>\nindented<br \/>\n@@<\/p>\n\n"}
+{"id":"raw-nbsp","output":"<p>\u00a0x\u00a0<\/p>\n\n"}
+{"id":"raw-triple-open","output":"<p>a @x@ b<\/p>\n\n"}
+{"id":"raw-quad","output":"<p>a x b<\/p>\n\n"}
+{"id":"raw-five-run","output":"<p>a @x@ b<\/p>\n\n"}
+{"id":"raw-at-end","output":"<p>a x@ b<\/p>\n\n"}
+{"id":"raw-at-start","output":"<p>a @x b<\/p>\n\n"}
+{"id":"raw-inner-at","output":"<p>x@y<\/p>\n\n"}
+{"id":"raw-adjacent","output":"<p>one@@two@@<\/p>\n\n"}
+{"id":"raw-unterminated","output":"<p>a @@never closed<\/p>\n\n"}
+{"id":"raw-lone","output":"<p>a @@ b<\/p>\n\n"}
+{"id":"raw-two-lone","output":"<p>a  b  c<\/p>\n\n"}
+{"id":"raw-closer-only","output":"<p>a  b @ c<\/p>\n\n"}
+{"id":"raw-wikitext","output":"<p>\/\/italic\/\/ **bold** __under__++strikethrough++<\/p>\n\n"}
+{"id":"raw-brackets","output":"<p>[[wikilink]] [[\/bad]]<\/p>\n\n"}
+{"id":"raw-quotes","output":"<p>&quot;double&quot; &#039;single&#039; &amp; &lt; &gt;<\/p>\n\n"}
+{"id":"raw-html","output":"<p>&lt;b&gt;bold&lt;\/b&gt; &lt;script&gt;alert(1)&lt;\/script&gt;<\/p>\n\n"}
+{"id":"raw-entities","output":"<p>&amp;amp; &amp;lt; &amp;quot; &amp;#39;<\/p>\n\n"}
+{"id":"raw-code-markup","output":"<p>[[code]]inner[[\/code]]<\/p>\n\n"}
+{"id":"raw-form-markup","output":"<p>[[form]]x---y[[\/form]]<\/p>\n\n"}
+{"id":"raw-heading","output":"<p>= Heading =<\/p>\n\n"}
+{"id":"raw-list","output":"<p>@@* item<\/p>\n\n<ul>\n    <li>item@@<\/li>\n<\/ul>\n\n"}
+{"id":"raw-link","output":"<p>http:\/\/example.com\/?a=1&amp;b=2<\/p>\n\n"}
+{"id":"raw-accents","output":"<p>caf\u00e9 \u03b1 \u65e5\u672c<\/p>\n\n"}
+{"id":"raw-in-bold","output":"<p><strong>before raw after<\/strong><\/p>\n\n"}
+{"id":"raw-in-italic","output":"<p><em>before raw after<\/em><\/p>\n\n"}
+{"id":"raw-next-bold","output":"<p>raw <strong>bold<\/strong><\/p>\n\n"}
+{"id":"raw-in-link","output":"<p>[[<a href=\"http:\/\/x\/\">http:\/\/x\/<\/a>|raw]]<\/p>\n\n"}
+{"id":"raw-in-div","output":"<div  class=\"x\"><p>raw<\/p>\n\n<\/div>"}
+{"id":"raw-in-quote","output":"<blockquote><p>raw<\/p>\n\n<\/blockquote>\n"}
+{"id":"old-basic","output":"<p>before raw **bold** after<\/p>\n\n"}
+{"id":"old-empty","output":"<p>a ```` b<\/p>\n\n"}
+{"id":"old-ws-only","output":"<p>a    b<\/p>\n\n"}
+{"id":"old-multiline","output":"<p>before<br \/>\nline one\nline two<br \/>\nafter<\/p>\n\n"}
+{"id":"old-apostrophe","output":"<p>a &#8216;`it&#8217;s`` b<\/p>\n\n"}
+{"id":"old-triple","output":"<p>a `x` b<\/p>\n\n"}
+{"id":"old-unterminated","output":"<p>a ``never closed<\/p>\n\n"}
+{"id":"old-lone","output":"<p>a `` b<\/p>\n\n"}
+{"id":"old-wikitext","output":"<p>\/\/italic\/\/ **bold** [[link]]<\/p>\n\n"}
+{"id":"old-html","output":"<p>&#8216;`&lt;b&gt;&amp;&quot;&#8217;&lt;\/b&gt;``<\/p>\n\n"}
+{"id":"old-adjacent","output":"<p>one``two``<\/p>\n\n"}
+{"id":"old-and-raw","output":"<p>old raw<\/p>\n\n"}
+{"id":"old-quote-run","output":"<p>a x b y c<\/p>\n\n"}
+{"id":"form-basic","error":"Error: Class \"Wikidot_Form\" not found"}
+{"id":"form-no-data","error":"Error: Class \"Wikidot_Form\" not found"}
+{"id":"form-empty-body","error":"Error: Class \"Wikidot_Form\" not found"}
+{"id":"form-unterminated","output":"<p>[[form]]<br \/>\nfields:<br \/>\n  name:<br \/>\n    type: text<br \/>\n&#8212;-<br \/>\nname: x<\/p>\n\n"}
+{"id":"form-malformed-field","error":"Error: Class \"Wikidot_Form\" not found"}
+{"id":"form-no-separator","output":"<p>[[form]]<br \/>\nfields:<br \/>\n  name:<br \/>\n    type: text<br \/>\n[[\/form]]<\/p>\n\n"}
+{"id":"form-select","error":"Error: Class \"Wikidot_Form\" not found"}
+{"id":"form-wiki","error":"Error: Class \"Wikidot_Form\" not found"}
+{"id":"form-in-div","error":"Error: Class \"Wikidot_Form\" not found"}
+{"id":"form-stray-closer","output":"<p>text<br \/>\n[[\/form]]<br \/>\nafter<\/p>\n\n"}
+{"id":"form-inline","output":"<p>before [[form]]x&#8212;-y[[\/form]] after<\/p>\n\n"}
+{"id":"raw-in-code","output":"\n<div class=\"code\">\n<pre><code>@@raw@@<\/code><\/pre><\/div>\n\n"}
+{"id":"code-in-raw","output":"<p>[[code]]x[[\/code]]<\/p>\n\n"}
+{"id":"include-in-raw","output":"<p>[[include page=test]]<\/p>\n\n"}
+{"id":"raw-in-include","output":"<p>[[include page=raw-include]]<\/p>\n\n"}
+{"id":"form-in-code","output":"\n<div class=\"code\">\n<pre><code>[[form]]\nx\n---\ny\n[[\/form]]<\/code><\/pre><\/div>\n\n"}
+{"id":"code-in-form","error":"Error: Class \"Wikidot_Form\" not found"}
+{"id":"raw-after-code","output":"\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n<br \/>\nraw"}
+{"id":"old-in-code","output":"\n<div class=\"code\">\n<pre><code>``old``<\/code><\/pre><\/div>\n\n"}

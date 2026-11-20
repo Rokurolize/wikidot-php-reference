@@ -1,0 +1,68 @@
+{"id":"raw-basic","output":"<p>before <span style=\"white-space: pre-wrap;\">raw&#32;**bold**&#32;[[link]]<\/span> after<\/p>\n\n"}
+{"id":"raw-basic-inline","output":"<p><span style=\"white-space: pre-wrap;\">hello<\/span><\/p>\n\n"}
+{"id":"raw-empty","output":"<p>a @@ b<\/p>\n\n"}
+{"id":"raw-ws-only","output":"<p>a <span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;<\/span> b<\/p>\n\n"}
+{"id":"raw-tab-body","output":"<p>a <span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;<\/span> b<\/p>\n\n"}
+{"id":"raw-multiline","output":"<p>before<br \/>\n@@line one<br \/>\nline two@@<br \/>\nafter<\/p>\n\n"}
+{"id":"raw-multiline-leading","output":"<p>@@<br \/>\nindented<br \/>\n@@<\/p>\n\n"}
+{"id":"raw-nbsp","output":"<p><span style=\"white-space: pre-wrap;\">\u00a0x\u00a0<\/span><\/p>\n\n"}
+{"id":"raw-triple-open","output":"<p>a <span style=\"white-space: pre-wrap;\">@x<\/span>@ b<\/p>\n\n"}
+{"id":"raw-quad","output":"<p>a x b<\/p>\n\n"}
+{"id":"raw-five-run","output":"<p>a @x@ b<\/p>\n\n"}
+{"id":"raw-at-end","output":"<p>a <span style=\"white-space: pre-wrap;\">x<\/span>@ b<\/p>\n\n"}
+{"id":"raw-at-start","output":"<p>a <span style=\"white-space: pre-wrap;\">@x<\/span> b<\/p>\n\n"}
+{"id":"raw-inner-at","output":"<p><span style=\"white-space: pre-wrap;\">x@y<\/span><\/p>\n\n"}
+{"id":"raw-adjacent","output":"<p>onetwo@@<\/p>\n\n"}
+{"id":"raw-unterminated","output":"<p>a @@never closed<\/p>\n\n"}
+{"id":"raw-lone","output":"<p>a @@ b<\/p>\n\n"}
+{"id":"raw-two-lone","output":"<p>a <span style=\"white-space: pre-wrap;\">&#32;b&#32;<\/span> c<\/p>\n\n"}
+{"id":"raw-closer-only","output":"<p>a <span style=\"white-space: pre-wrap;\">&#32;b&#32;<\/span>@ c<\/p>\n\n"}
+{"id":"raw-wikitext","output":"<p><span style=\"white-space: pre-wrap;\">\/\/italic\/\/&#32;**bold**&#32;__under__++strikethrough++<\/span><\/p>\n\n"}
+{"id":"raw-brackets","output":"<p><span style=\"white-space: pre-wrap;\">[[wikilink]]&#32;[[\/bad]]<\/span><\/p>\n\n"}
+{"id":"raw-quotes","output":"<p><span style=\"white-space: pre-wrap;\">&quot;double&quot;&#32;'single'&#32;&amp;&#32;&lt;&#32;&gt;<\/span><\/p>\n\n"}
+{"id":"raw-html","output":"<p><span style=\"white-space: pre-wrap;\">&lt;b&gt;bold&lt;\/b&gt;&#32;&lt;script&gt;alert(1)&lt;\/script&gt;<\/span><\/p>\n\n"}
+{"id":"raw-entities","output":"<p><span style=\"white-space: pre-wrap;\">&amp;amp;&#32;&amp;lt;&#32;&amp;quot;&#32;&amp;#39;<\/span><\/p>\n\n"}
+{"id":"raw-code-markup","output":"<p><span style=\"white-space: pre-wrap;\">[[code]]inner[[\/code]]<\/span><\/p>\n\n"}
+{"id":"raw-form-markup","output":"<p><span style=\"white-space: pre-wrap;\">[[form]]x---y[[\/form]]<\/span><\/p>\n\n"}
+{"id":"raw-heading","output":"<p><span style=\"white-space: pre-wrap;\">=&#32;Heading&#32;=<\/span><\/p>\n\n"}
+{"id":"raw-list","output":"<p>@@* item<\/p>\n\n<ul>\n    <li>item@@<\/li>\n<\/ul>\n\n"}
+{"id":"raw-link","output":"<p><span style=\"white-space: pre-wrap;\">http:\/\/example.com\/?a=1&amp;b=2<\/span><\/p>\n\n"}
+{"id":"raw-accents","output":"<p><span style=\"white-space: pre-wrap;\">caf\u00e9&#32;\u03b1&#32;\u65e5\u672c<\/span><\/p>\n\n"}
+{"id":"raw-in-bold","output":"<p><strong>before <span style=\"white-space: pre-wrap;\">raw<\/span> after<\/strong><\/p>\n\n"}
+{"id":"raw-in-italic","output":"<p><em>before <span style=\"white-space: pre-wrap;\">raw<\/span> after<\/em><\/p>\n\n"}
+{"id":"raw-next-bold","output":"<p><span style=\"white-space: pre-wrap;\">raw<\/span> <strong>bold<\/strong><\/p>\n\n"}
+{"id":"raw-in-link","output":"<p>[[<a href=\"http:\/\/x\/\">http:\/\/x\/<\/a>|<span style=\"white-space: pre-wrap;\">raw<\/span>]]<\/p>\n\n"}
+{"id":"raw-in-div","output":"<div  class=\"x\"><p><span style=\"white-space: pre-wrap;\">raw<\/span><\/p>\n\n<\/div>"}
+{"id":"raw-in-quote","output":"<blockquote><p><span style=\"white-space: pre-wrap;\">raw<\/span><\/p>\n\n<\/blockquote>\n"}
+{"id":"old-basic","output":"<p>before raw **bold** after<\/p>\n\n"}
+{"id":"old-empty","output":"<p>a ```` b<\/p>\n\n"}
+{"id":"old-ws-only","output":"<p>a    b<\/p>\n\n"}
+{"id":"old-multiline","output":"<p>before<br \/>\nline one\nline two<br \/>\nafter<\/p>\n\n"}
+{"id":"old-apostrophe","output":"<p>a &#8216;`it&#8217;s`` b<\/p>\n\n"}
+{"id":"old-triple","output":"<p>a `x` b<\/p>\n\n"}
+{"id":"old-unterminated","output":"<p>a ``never closed<\/p>\n\n"}
+{"id":"old-lone","output":"<p>a `` b<\/p>\n\n"}
+{"id":"old-wikitext","output":"<p>\/\/italic\/\/ **bold** [[link]]<\/p>\n\n"}
+{"id":"old-html","output":"<p>&#8216;`&lt;b&gt;&amp;&quot;&#8217;&lt;\/b&gt;``<\/p>\n\n"}
+{"id":"old-adjacent","output":"<p>one``two``<\/p>\n\n"}
+{"id":"old-and-raw","output":"<p>old <span style=\"white-space: pre-wrap;\">raw<\/span><\/p>\n\n"}
+{"id":"old-quote-run","output":"<p>a x b y c<\/p>\n\n"}
+{"id":"form-basic","output":"<p><span style=\"white-space: pre-wrap;\">[[form]]<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">fields:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;name:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;type:&#32;text<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;label:&#32;Name<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">---<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">name:&#32;Alice<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">[[\/form]]<\/span><\/p>\n\n"}
+{"id":"form-no-data","output":"<p><span style=\"white-space: pre-wrap;\">[[form]]<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">fields:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;name:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;type:&#32;text<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;label:&#32;Name<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">---<\/span><br \/>\n<span style=\"white-space: pre-wrap;\"><\/span><br \/>\n<span style=\"white-space: pre-wrap;\">[[\/form]]<\/span><\/p>\n\n"}
+{"id":"form-empty-body","output":"<p><span style=\"white-space: pre-wrap;\">[[form]]<\/span><br \/>\n<span style=\"white-space: pre-wrap;\"><\/span><br \/>\n<span style=\"white-space: pre-wrap;\">---<\/span><br \/>\n<span style=\"white-space: pre-wrap;\"><\/span><br \/>\n<span style=\"white-space: pre-wrap;\">[[\/form]]<\/span><\/p>\n\n"}
+{"id":"form-unterminated","output":"<p>[[form]]<br \/>\nfields:<br \/>\n  name:<br \/>\n    type: text<br \/>\n&#8212;-<br \/>\nname: x<\/p>\n\n"}
+{"id":"form-malformed-field","output":"<p><span style=\"white-space: pre-wrap;\">[[form]]<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">fields:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;name:&#32;[broken<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">---<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">name:&#32;x<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">[[\/form]]<\/span><\/p>\n\n"}
+{"id":"form-no-separator","output":"<p>[[form]]<br \/>\nfields:<br \/>\n  name:<br \/>\n    type: text<br \/>\n[[\/form]]<\/p>\n\n"}
+{"id":"form-select","output":"<p><span style=\"white-space: pre-wrap;\">[[form]]<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">fields:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;color:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;type:&#32;select<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;label:&#32;Color<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;options:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;&#32;&#32;r:&#32;Red<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;&#32;&#32;b:&#32;Blue<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">---<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">color:&#32;r<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">[[\/form]]<\/span><\/p>\n\n"}
+{"id":"form-wiki","output":"<p><span style=\"white-space: pre-wrap;\">[[form]]<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">fields:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;note:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;type:&#32;wiki<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;label:&#32;Note<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">---<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">note:&#32;**bold**<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">[[\/form]]<\/span><\/p>\n\n"}
+{"id":"form-in-div","output":"<div  class=\"x\"><p><span style=\"white-space: pre-wrap;\">[[form]]<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">x<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">---<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">y<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">[[\/form]]<\/span><\/p>\n\n<\/div>"}
+{"id":"form-stray-closer","output":"<p>text<br \/>\n[[\/form]]<br \/>\nafter<\/p>\n\n"}
+{"id":"form-inline","output":"<p>before [[form]]x&#8212;-y[[\/form]] after<\/p>\n\n"}
+{"id":"raw-in-code","output":"\n<div class=\"code\">\n<pre><code>@@raw@@<\/code><\/pre><\/div>\n\n"}
+{"id":"code-in-raw","output":"<p><span style=\"white-space: pre-wrap;\">[[code]]x[[\/code]]<\/span><\/p>\n\n"}
+{"id":"include-in-raw","output":"<p><span style=\"white-space: pre-wrap;\">[[include&#32;page=test]]<\/span><\/p>\n\n"}
+{"id":"raw-in-include","output":"<p>[[include page=raw-include]]<\/p>\n\n"}
+{"id":"form-in-code","output":"\n<div class=\"code\">\n<pre><code>[[form]]\nx\n---\ny\n[[\/form]]<\/code><\/pre><\/div>\n\n"}
+{"id":"code-in-form","output":"<p><span style=\"white-space: pre-wrap;\">[[form]]<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">fields:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;note:<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;&#32;type:&#32;wiki<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">---<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">note:&#32;[[code]]x[[\/code]]<\/span><br \/>\n<span style=\"white-space: pre-wrap;\">[[\/form]]<\/span><\/p>\n\n"}
+{"id":"raw-after-code","output":"\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n<br \/>\n<span style=\"white-space: pre-wrap;\">raw<\/span>"}
+{"id":"old-in-code","output":"\n<div class=\"code\">\n<pre><code>``old``<\/code><\/pre><\/div>\n\n"}

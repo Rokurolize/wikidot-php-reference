@@ -1,63 +1,56 @@
 <?php
-// vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4:
 /**
- * Image rule end renderer for Xhtml
+ * Form rule end renderer for Xhtml (R2 Form/Raw/Rawold corrected).
  *
- * PHP versions 4 and 5
- *
- * @category   Text
- * @package    Text_Wiki
- * @author     Paul M. Jones <pmjones@php.net>
- * @author Michal Frackowiak
- * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    $Id$
- * @link       http://pear.php.net/package/Text_Wiki
+ * Live Wikidot (probe muse-probe-r2formraw-form-basic et al.) renders a
+ * matched [[form]] block as literal source text, one raw-style span per line,
+ * not as an interactive form. The interactive submission behavior belongs to
+ * the serving layer and is out of scope here. The parse rule stores one token
+ * per line, so this renderer emits the same pre-wrap span as the Raw rule.
  */
+if (!function_exists('wikidotEscapeRaw')) {
+    function wikidotEscapeRaw($s) {
+        return strtr($s, array(
+            ' ' => '&#32;',
+            "\0" => ' ',
+            '>' => '&gt;',
+            '<' => '&lt;',
+            '&' => '&amp;',
+            "'" => "'",
+            '"' => '&quot;',
+        ));
+    }
+}
 
-/**
- * This class inserts an image in XHTML.
- *
- * @category   Text
- * @package    Text_Wiki
- * @author     Paul M. Jones <pmjones@php.net>
- * @author Michal Frackowiak
- * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    Release: @package_version@
- * @link       http://pear.php.net/package/Text_Wiki
- */
 class Text_Wiki_Render_Xhtml_Form extends Text_Wiki_Render {
-
-    /**
-    *
-    * Renders a token into text matching the requested format.
-    *
-    * @access public
-    *
-    * @param array $options The "options" portion of the token (second
-    * element).
-    *
-    * @return string The text rendered from the token options.
-    *
-    */
 
     function token($options)
     {
-        if (isset($options['begin'])) {
-            return '<table class="form-view">';
+        if (isset($options['blank'])) {
+            return '';
         }
-        if (isset($options['end'])) {
-            return '</table>';
+        if (isset($options['text'])) {
+            $line = wikidotEscapeRaw($options['text']);
+            // Live Form's literal lines indent with a Wikidot nbsp/space
+            // alternation: each leading pair of spaces is &nbsp;&#32;, with
+            // a trailing single space rendered as &#32; (probes
+            // muse-probe-r2formraw-form-basic, -formindent1).
+            $prefix = '';
+            while (substr($line, 0, 10) === '&#32;&#32;') {
+                $prefix .= '&nbsp;&#32;';
+                $line = substr($line, 10);
+            }
+            if (substr($line, 0, 5) === '&#32;') {
+                $prefix .= '&#32;';
+                $line = substr($line, 5);
+            }
+            return '<span style="white-space: pre-wrap;">'
+                . $prefix . $line
+                . '</span>';
         }
-
-        $field = Wikidot_Form_Field::field($options['field']);
-        $h_label = htmlspecialchars($options['field']['label']);
-        $h_value = $field->renderView();
-
-        $output = '<tr class="form-view-field">';
-        $output .= "<td class=\"form-view-field-label\">$h_label:</td>";
-        $output .= "<td class=\"form-view-field-value\">$h_value</td>";
-        $output .= '</tr>';
-        
-        return $output;
+        // Kept for compatibility with the fossil's begin/field/end token
+        // shape; live evidence gives those no observable role on a saved
+        // anonymous page view.
+        return '';
     }
 }

@@ -1,0 +1,42 @@
+{
+ "dblspace": {
+  "fullname": "muse-probe-r2formraw4-dblspace",
+  "html": "<p>A B</p>",
+  "html_sha256": "036156d0e73a072ff96f2631eb56732be5bb90733f7a01685ac90cb54344f72d",
+  "source": "A  B",
+  "source_sha256": "a70bb07d21893fdab96bd3bd05c3b9dc6e177c224d7253a628ec51194f753323",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "indentline": {
+  "fullname": "muse-probe-r2formraw4-indentline",
+  "html": "<p>A<br />\nname:<br />\nB</p>",
+  "html_sha256": "7b5a1c143ddd3c28aa1c178e0aedac2a0083bb7513fb63cbc28f9a3a1e701ed8",
+  "source": "A\n  name:\nB",
+  "source_sha256": "d04fc3154b44f741bc3783935b7a5fde4bebd5fd376765018310e1adfc74bc6e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "formnodata2": {
+  "fullname": "muse-probe-r2formraw4-formnodata2",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[form]]</span><br />\n<span style=\"white-space: pre-wrap;\">fields:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;name:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;type:&#32;text</span><br />\n<span style=\"white-space: pre-wrap;\">---</span><br />\n<br />\n<span style=\"white-space: pre-wrap;\">[[/form]]</span></p>",
+  "html_sha256": "ec4c3d6602ed7d2e8db88ef12c9b02c56c0056a2f2a73c2d300c3fd33b7cea34",
+  "source": "[[form]]\nfields:\n  name:\n    type: text\n---\n\n[[/form]]",
+  "source_sha256": "b3f38697520a8764688d68e4b6e61995eb56b6ae9840c495f5bcde661b61fec4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "formempty2": {
+  "fullname": "muse-probe-r2formraw4-formempty2",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[form]]</span><br />\n<br />\n<span style=\"white-space: pre-wrap;\">---</span><br />\n<br />\n<span style=\"white-space: pre-wrap;\">[[/form]]</span></p>",
+  "html_sha256": "84b99f1d574b50c5e36c920abe896c397a3317b56fd45ddd3ad3d026bb4f6d92",
+  "source": "[[form]]\n\n---\n\n[[/form]]",
+  "source_sha256": "77e803f4f2d2e0f9d6b4889c2077a83033c002768a659a82be5de8fc299b55b2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,75 @@
+run1 -> muse-probe-r2formraw2-run1 (created)
+run2 -> muse-probe-r2formraw2-run2 (created)
+run3 -> muse-probe-r2formraw2-run3 (created)
+run4 -> muse-probe-r2formraw2-run4 (created)
+crossline1 -> muse-probe-r2formraw2-crossline1 (created)
+crossline2 -> muse-probe-r2formraw2-crossline2 (created)
+blockquote -> muse-probe-r2formraw2-blockquote (created)
+tab -> muse-probe-r2formraw2-tab (created)
+newline-in-body -> muse-probe-r2formraw2-newline-in-body (created)
+entity-apos -> muse-probe-r2formraw2-entity-apos (created)
+oldhtml -> muse-probe-r2formraw2-oldhtml (created)
+oldsemi -> muse-probe-r2formraw2-oldsemi (created)
+12 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "run1": {
+  "fullname": "muse-probe-r2formraw2-run1",
+  "source": "A @@@x@@@ B",
+  "action": "created"
+ },
+ "run2": {
+  "fullname": "muse-probe-r2formraw2-run2",
+  "source": "A @@@@x@@@@ B",
+  "action": "created"
+ },
+ "run3": {
+  "fullname": "muse-probe-r2formraw2-run3",
+  "source": "A @@@@@x@@@@@ B",
+  "action": "created"
+ },
+ "run4": {
+  "fullname": "muse-probe-r2formraw2-run4",
+  "source": "A @@@@@@x@@@@@@ B",
+  "action": "created"
+ },
+ "crossline1": {
+  "fullname": "muse-probe-r2formraw2-crossline1",
+  "source": "A @@x\n@@ B",
+  "action": "created"
+ },
+ "crossline2": {
+  "fullname": "muse-probe-r2formraw2-crossline2",
+  "source": "A @@x\ny@@ B",
+  "action": "created"
+ },
+ "blockquote": {
+  "fullname": "muse-probe-r2formraw2-blockquote",
+  "source": "A\n> @@raw@@\nB",
+  "action": "created"
+ },
+ "tab": {
+  "fullname": "muse-probe-r2formraw2-tab",
+  "source": "@@a\tb@@",
+  "action": "created"
+ },
+ "newline-in-body": {
+  "fullname": "muse-probe-r2formraw2-newline-in-body",
+  "source": "@@a\nb@@",
+  "action": "created"
+ },
+ "entity-apos": {
+  "fullname": "muse-probe-r2formraw2-entity-apos",
+  "source": "@@x'y@@",
+  "action": "created"
+ },
+ "oldhtml": {
+  "fullname": "muse-probe-r2formraw2-oldhtml",
+  "source": "A ``<b>&\\\"'</b>`` B",
+  "action": "created"
+ },
+ "oldsemi": {
+  "fullname": "muse-probe-r2formraw2-oldsemi",
+  "source": "A ``x & y`` B",
+  "action": "created"
+ }
+}

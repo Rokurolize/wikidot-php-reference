@@ -1,0 +1,122 @@
+{
+ "run1": {
+  "fullname": "muse-probe-r2formraw2-run1",
+  "html": "<p>A <span style=\"white-space: pre-wrap;\">@x</span>@ B</p>",
+  "html_sha256": "2ed69eeb5f16153adf3cab17309f0c06def7553afc89975087fc399d092cc75f",
+  "source": "A @@@x@@@ B",
+  "source_sha256": "21bd3831fad0f6dc8ff098d95c44e8a749e7560a6b424183388925a9c868bcca",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "run2": {
+  "fullname": "muse-probe-r2formraw2-run2",
+  "html": "<p>A x B</p>",
+  "html_sha256": "a185c5b833bc625340cc34f55ac2d9a7a46daffbc2a93279dca36eefcad84e5b",
+  "source": "A @@@@x@@@@ B",
+  "source_sha256": "6aacbd99eb85193381b48ac399c2c03eb6052093a2e2fee169925d3f03e2f1c9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "run3": {
+  "fullname": "muse-probe-r2formraw2-run3",
+  "html": "<p>A @x@ B</p>",
+  "html_sha256": "8ecd3f464723eead55f5f3b4d738e40c04d3ada974f073260c882447b7a13be9",
+  "source": "A @@@@@x@@@@@ B",
+  "source_sha256": "07f0ab363c621631801112d82152571ccdcde01325dd2e389b3313780a9ee063",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "run4": {
+  "fullname": "muse-probe-r2formraw2-run4",
+  "html": "<p>A @@x@@ B</p>",
+  "html_sha256": "52a5160b1d2f09a7aaea54772ca8a077343160918b3275a601a882977c1c75fe",
+  "source": "A @@@@@@x@@@@@@ B",
+  "source_sha256": "7d4e2adefa9035c7a1daa5d2fae94f42eee8f4ea67ff9f5429437d83313e9ce6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "crossline1": {
+  "fullname": "muse-probe-r2formraw2-crossline1",
+  "html": "<p>A <span style=\"white-space: pre-wrap;\">x</span> B</p>",
+  "html_sha256": "d04f2d121e83fa4fc26862dd322fe596137582d28873c2818781903b81316203",
+  "source": "A @@x\n@@ B",
+  "source_sha256": "3dc80805137389902512d00d0d9b9ed1d1cf2c520436b699dc8ae59d4a88396e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "crossline2": {
+  "fullname": "muse-probe-r2formraw2-crossline2",
+  "html": "<p>A @@x<br />\ny@@ B</p>",
+  "html_sha256": "a15649ab2f5a681691364fed5b0d72ecd962d6b6bfa00dafca78db3a9c66b9f3",
+  "source": "A @@x\ny@@ B",
+  "source_sha256": "0446bb8e5d1a6f2a2673e69cabb0e803e5e4df229abf7949a733f180c66d6949",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "blockquote": {
+  "fullname": "muse-probe-r2formraw2-blockquote",
+  "html": "<p>A</p>\n<blockquote>\n<p><span style=\"white-space: pre-wrap;\">raw</span></p>\n</blockquote>\n<p>B</p>",
+  "html_sha256": "19953bec0700c06dbd510efa9d3ef7215bf08d8678b1d5f3fd8fad42b4624e4d",
+  "source": "A\n> @@raw@@\nB",
+  "source_sha256": "8aaf101e6ef7df366670f8cd57dcf25ef5ae6fcf2f9c8f9d9f66a504a2e4aff0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "tab": {
+  "fullname": "muse-probe-r2formraw2-tab",
+  "html": "<p><span style=\"white-space: pre-wrap;\">a&#32;&#32;&#32;&#32;b</span></p>",
+  "html_sha256": "a136070e1aca700ed946a4619548cdb992da1f5d46155127bbd38052a46f2124",
+  "source": "@@a\tb@@",
+  "source_sha256": "93a3d29fafe4fb7744ffa764a845decb7dba62324422fe3c9481e8c22e10b6b5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "newline-in-body": {
+  "fullname": "muse-probe-r2formraw2-newline-in-body",
+  "html": "<p>@@a<br />\nb@@</p>",
+  "html_sha256": "58d60c6c11297ccb891f3e45baf105fb17c58b0e1dcabdfd67c7862e7da940a9",
+  "source": "@@a\nb@@",
+  "source_sha256": "30a9ba200d9d557e2b4c09bccf7caba970a1bdfb3fc98978d759355bfc3e77ee",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "entity-apos": {
+  "fullname": "muse-probe-r2formraw2-entity-apos",
+  "html": "<p><span style=\"white-space: pre-wrap;\">x'y</span></p>",
+  "html_sha256": "539a8f1a9b5e5611aeab1d5fed17e2eeb3811f14ef5562111d1a12fb2a5ef75c",
+  "source": "@@x'y@@",
+  "source_sha256": "7654acd0bb669820c7c94941cf0ecd07a835d6f3506e0b0965464772b7b7e4c6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "oldhtml": {
+  "fullname": "muse-probe-r2formraw2-oldhtml",
+  "html": "<p>A &#8216;`&lt;b&gt;&amp;\\&quot;&#8217;&lt;/b&gt;`` B</p>",
+  "html_sha256": "9338c0eac1e3b3fd4391bb95b647f34296f0676abcd0f1022294bf5926578ddb",
+  "source": "A ``<b>&\\\"'</b>`` B",
+  "source_sha256": "e75a7bc7bd768e1df369b9260d47257d59ac3eb2921b8dd06488a3eedeb117ca",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "oldsemi": {
+  "fullname": "muse-probe-r2formraw2-oldsemi",
+  "html": "<p>A x &amp; y B</p>",
+  "html_sha256": "39d9e2849f20f3541cbb86474b131c30b55515e8657a1cc34917c9266851edbd",
+  "source": "A ``x & y`` B",
+  "source_sha256": "d6844b63ee3e297a9d541968923f119dad3d350fb44da1a3cade589d06df02e9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

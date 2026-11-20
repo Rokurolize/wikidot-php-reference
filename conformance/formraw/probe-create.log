@@ -1,0 +1,171 @@
+raw-basic -> muse-probe-r2formraw-raw-basic (created)
+raw-empty -> muse-probe-r2formraw-raw-empty (created)
+raw-ws -> muse-probe-r2formraw-raw-ws (created)
+raw-entities -> muse-probe-r2formraw-raw-entities (created)
+raw-wikitext -> muse-probe-r2formraw-raw-wikitext (created)
+raw-at-run -> muse-probe-r2formraw-raw-at-run (created)
+raw-adjacent -> muse-probe-r2formraw-raw-adjacent (created)
+raw-unterm -> muse-probe-r2formraw-raw-unterm (created)
+raw-lone -> muse-probe-r2formraw-raw-lone (created)
+raw-in-bold -> muse-probe-r2formraw-raw-in-bold (created)
+raw-in-div -> muse-probe-r2formraw-raw-in-div (created)
+raw-in-quote -> muse-probe-r2formraw-raw-in-quote (created)
+old-basic -> muse-probe-r2formraw-old-basic (created)
+old-empty -> muse-probe-r2formraw-old-empty (created)
+old-apostrophe -> muse-probe-r2formraw-old-apostrophe (created)
+old-wikitext -> muse-probe-r2formraw-old-wikitext (created)
+old-and-raw -> muse-probe-r2formraw-old-and-raw (created)
+form-basic -> muse-probe-r2formraw-form-basic (created)
+form-no-data -> muse-probe-r2formraw-form-no-data (created)
+form-empty -> muse-probe-r2formraw-form-empty (created)
+form-select -> muse-probe-r2formraw-form-select (created)
+form-wiki -> muse-probe-r2formraw-form-wiki (created)
+form-unterm -> muse-probe-r2formraw-form-unterm (created)
+form-malformed -> muse-probe-r2formraw-form-malformed (created)
+form-no-sep -> muse-probe-r2formraw-form-no-sep (created)
+raw-in-code -> muse-probe-r2formraw-raw-in-code (created)
+code-in-raw -> muse-probe-r2formraw-code-in-raw (created)
+form-in-code -> muse-probe-r2formraw-form-in-code (created)
+28 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "raw-basic": {
+  "fullname": "muse-probe-r2formraw-raw-basic",
+  "source": "BEFORE @@raw **bold** [[link]]@@ AFTER",
+  "action": "created"
+ },
+ "raw-empty": {
+  "fullname": "muse-probe-r2formraw-raw-empty",
+  "source": "A @@@@ B",
+  "action": "created"
+ },
+ "raw-ws": {
+  "fullname": "muse-probe-r2formraw-raw-ws",
+  "source": "A @@   @@ B",
+  "action": "created"
+ },
+ "raw-entities": {
+  "fullname": "muse-probe-r2formraw-raw-entities",
+  "source": "@@\"double\" 'single' & < > <b>&amp;</b>@@",
+  "action": "created"
+ },
+ "raw-wikitext": {
+  "fullname": "muse-probe-r2formraw-raw-wikitext",
+  "source": "@@//italic// **bold** = H = * list@@",
+  "action": "created"
+ },
+ "raw-at-run": {
+  "fullname": "muse-probe-r2formraw-raw-at-run",
+  "source": "A @@@x@@@ B @@@@x@@@@ C @@@@@x@@@@@ D",
+  "action": "created"
+ },
+ "raw-adjacent": {
+  "fullname": "muse-probe-r2formraw-raw-adjacent",
+  "source": "@@one@@@@two@@",
+  "action": "created"
+ },
+ "raw-unterm": {
+  "fullname": "muse-probe-r2formraw-raw-unterm",
+  "source": "A @@never closed",
+  "action": "created"
+ },
+ "raw-lone": {
+  "fullname": "muse-probe-r2formraw-raw-lone",
+  "source": "A @@ B @@@ C",
+  "action": "created"
+ },
+ "raw-in-bold": {
+  "fullname": "muse-probe-r2formraw-raw-in-bold",
+  "source": "**before @@raw@@ after**",
+  "action": "created"
+ },
+ "raw-in-div": {
+  "fullname": "muse-probe-r2formraw-raw-in-div",
+  "source": "[[div class=\"x\"]]\n@@raw@@\n[[/div]]",
+  "action": "created"
+ },
+ "raw-in-quote": {
+  "fullname": "muse-probe-r2formraw-raw-in-quote",
+  "source": "> @@raw@@",
+  "action": "created"
+ },
+ "old-basic": {
+  "fullname": "muse-probe-r2formraw-old-basic",
+  "source": "A ``raw **bold**`` B",
+  "action": "created"
+ },
+ "old-empty": {
+  "fullname": "muse-probe-r2formraw-old-empty",
+  "source": "A ```` B",
+  "action": "created"
+ },
+ "old-apostrophe": {
+  "fullname": "muse-probe-r2formraw-old-apostrophe",
+  "source": "A ``it's`` B",
+  "action": "created"
+ },
+ "old-wikitext": {
+  "fullname": "muse-probe-r2formraw-old-wikitext",
+  "source": "``//italic// **bold** [[link]]``",
+  "action": "created"
+ },
+ "old-and-raw": {
+  "fullname": "muse-probe-r2formraw-old-and-raw",
+  "source": "``old`` @@raw@@",
+  "action": "created"
+ },
+ "form-basic": {
+  "fullname": "muse-probe-r2formraw-form-basic",
+  "source": "[[form]]\nfields:\n  name:\n    type: text\n    label: Name\n---\nname: Alice\n[[/form]]",
+  "action": "created"
+ },
+ "form-no-data": {
+  "fullname": "muse-probe-r2formraw-form-no-data",
+  "source": "[[form]]\nfields:\n  name:\n    type: text\n    label: Name\n---\n\n[[/form]]",
+  "action": "created"
+ },
+ "form-empty": {
+  "fullname": "muse-probe-r2formraw-form-empty",
+  "source": "[[form]]\n\n---\n\n[[/form]]",
+  "action": "created"
+ },
+ "form-select": {
+  "fullname": "muse-probe-r2formraw-form-select",
+  "source": "[[form]]\nfields:\n  color:\n    type: select\n    label: Color\n    options:\n      r: Red\n      b: Blue\n---\ncolor: r\n[[/form]]",
+  "action": "created"
+ },
+ "form-wiki": {
+  "fullname": "muse-probe-r2formraw-form-wiki",
+  "source": "[[form]]\nfields:\n  note:\n    type: wiki\n    label: Note\n---\nnote: **bold**\n[[/form]]",
+  "action": "created"
+ },
+ "form-unterm": {
+  "fullname": "muse-probe-r2formraw-form-unterm",
+  "source": "[[form]]\nfields:\n  name:\n    type: text\n---\nname: x",
+  "action": "created"
+ },
+ "form-malformed": {
+  "fullname": "muse-probe-r2formraw-form-malformed",
+  "source": "[[form]]\nfields:\n  name: [broken\n---\nname: x\n[[/form]]",
+  "action": "created"
+ },
+ "form-no-sep": {
+  "fullname": "muse-probe-r2formraw-form-no-sep",
+  "source": "[[form]]\nfields:\n  name:\n    type: text\n[[/form]]",
+  "action": "created"
+ },
+ "raw-in-code": {
+  "fullname": "muse-probe-r2formraw-raw-in-code",
+  "source": "[[code]]\n@@raw@@\n[[/code]]",
+  "action": "created"
+ },
+ "code-in-raw": {
+  "fullname": "muse-probe-r2formraw-code-in-raw",
+  "source": "@@[[code]]x[[/code]]@@",
+  "action": "created"
+ },
+ "form-in-code": {
+  "fullname": "muse-probe-r2formraw-form-in-code",
+  "source": "[[code]]\n[[form]]\nx\n---\ny\n[[/form]]\n[[/code]]",
+  "action": "created"
+ }
+}

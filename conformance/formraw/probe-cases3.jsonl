@@ -1,0 +1,4 @@
+{"id": "rawlead2", "source": "A @@  x@@ B"}
+{"id": "rawlead4", "source": "A @@    x@@ B"}
+{"id": "rawlead1", "source": "A @@ x@@ B"}
+{"id": "formindent1", "source": "[[form]]\nfields:\n x:\n  type: text\n---\ny\n[[/form]]"}

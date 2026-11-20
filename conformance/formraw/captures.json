@@ -1,0 +1,282 @@
+{
+ "raw-basic": {
+  "fullname": "muse-probe-r2formraw-raw-basic",
+  "html": "<p>BEFORE <span style=\"white-space: pre-wrap;\">raw&#32;**bold**&#32;[[link]]</span> AFTER</p>",
+  "html_sha256": "3fc095892d8c7d57ffa9d23e5caa40967b6dfbce84c14dc4df879e3a65d5864f",
+  "source": "BEFORE @@raw **bold** [[link]]@@ AFTER",
+  "source_sha256": "a086d7c2fbd583416e685cb0d93b4a5a83e831243d28148ec241a784ae2d7368",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-empty": {
+  "fullname": "muse-probe-r2formraw-raw-empty",
+  "html": "<p>A B</p>",
+  "html_sha256": "036156d0e73a072ff96f2631eb56732be5bb90733f7a01685ac90cb54344f72d",
+  "source": "A @@@@ B",
+  "source_sha256": "6a5af26d6a96d46ef36f79c2b3a8325f66a306dc6392744f39ec9ce0255b5df7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-ws": {
+  "fullname": "muse-probe-r2formraw-raw-ws",
+  "html": "<p>A <span style=\"white-space: pre-wrap;\">&#32;&#32;&#32;</span> B</p>",
+  "html_sha256": "2a90e040affd35f77aeff3ad14ac6290d6dfe802917498e5aa976ea21e3aca4c",
+  "source": "A @@   @@ B",
+  "source_sha256": "84680a4d234bb79ea44a7c94f8cc76d463082d11dd56d9e9b3eb4b03bd939914",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-entities": {
+  "fullname": "muse-probe-r2formraw-raw-entities",
+  "html": "<p><span style=\"white-space: pre-wrap;\">&quot;double&quot;&#32;'single'&#32;&amp;&#32;&lt;&#32;&gt;&#32;&lt;b&gt;&amp;amp;&lt;/b&gt;</span></p>",
+  "html_sha256": "7ca9654d77ed6a546da2d8cda334eb2a45efe27f6fbc8aa85b56a4419b8439f9",
+  "source": "@@\"double\" 'single' & < > <b>&amp;</b>@@",
+  "source_sha256": "e8f8598d58a2f7f5768cd52530eadbabb798148a2c5c1177481c3cc0f0420a87",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-wikitext": {
+  "fullname": "muse-probe-r2formraw-raw-wikitext",
+  "html": "<p><span style=\"white-space: pre-wrap;\">//italic//&#32;**bold**&#32;=&#32;H&#32;=&#32;*&#32;list</span></p>",
+  "html_sha256": "51b143ec565d59103026e81cba67c2dc108f1953b248eee1195b5db597f53575",
+  "source": "@@//italic// **bold** = H = * list@@",
+  "source_sha256": "c8c49798708e9f82fe854541323319f17d831688e83e22e861b6af0ac650cdf5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-at-run": {
+  "fullname": "muse-probe-r2formraw-raw-at-run",
+  "html": "<p>A <span style=\"white-space: pre-wrap;\">@x</span>@ B x C @x@ D</p>",
+  "html_sha256": "71297592887b875143c881e4a2a0a6082db79421999a0d9e68f46879925fff38",
+  "source": "A @@@x@@@ B @@@@x@@@@ C @@@@@x@@@@@ D",
+  "source_sha256": "89d0eafdd9e3c26253b7100d5dc4dcd4c4bf51cab1f78b52d0405efea080b558",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-adjacent": {
+  "fullname": "muse-probe-r2formraw-raw-adjacent",
+  "html": "<p><span style=\"white-space: pre-wrap;\">one</span>@@two@@</p>",
+  "html_sha256": "5421b7146bdaff28ce48eb5103f19ab4e0a9008dbeb2c4e51b8129185dd0424a",
+  "source": "@@one@@@@two@@",
+  "source_sha256": "abc8b71f35ce63ba734683131df9759dd39a7a3cd596e7dbc17997363f9dfe56",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-unterm": {
+  "fullname": "muse-probe-r2formraw-raw-unterm",
+  "html": "<p>A @@never closed</p>",
+  "html_sha256": "86bebd4cb540b304cde4f54b31e69597b4993011cbb78ace0bb87c266254048a",
+  "source": "A @@never closed",
+  "source_sha256": "086072b7dbd9e48addc68178d0a1289d509abe5e5a9f199ddf65df3191fa4a37",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-lone": {
+  "fullname": "muse-probe-r2formraw-raw-lone",
+  "html": "<p>A <span style=\"white-space: pre-wrap;\">&#32;B&#32;</span>@ C</p>",
+  "html_sha256": "ca4ad570709f1063f1108088990295c3c5240c3e0cdd86a3574e6f16de14242a",
+  "source": "A @@ B @@@ C",
+  "source_sha256": "35f68b3495989d674cb84fa949fa60f4d4edd1b9233192dc4937aff389f12120",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-in-bold": {
+  "fullname": "muse-probe-r2formraw-raw-in-bold",
+  "html": "<p><strong>before <span style=\"white-space: pre-wrap;\">raw</span> after</strong></p>",
+  "html_sha256": "a28473b23c92d035859bab10df4b783440a2b1919ebb9de915b1bb68ebaf1ca1",
+  "source": "**before @@raw@@ after**",
+  "source_sha256": "45bc07c0d41d3b8281895fcf38212cd6ac8c5b644ff992423dc069dc11b54b02",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-in-div": {
+  "fullname": "muse-probe-r2formraw-raw-in-div",
+  "html": "<div class=\"x\">\n<p><span style=\"white-space: pre-wrap;\">raw</span></p>\n</div>",
+  "html_sha256": "4b3aa9dc6fc778dd2590c6cf45f1f434bec963a835de335f3471421a6f4ddc56",
+  "source": "[[div class=\"x\"]]\n@@raw@@\n[[/div]]",
+  "source_sha256": "afa3439defa90b2d6afe8ad118cc680aadf6bef50125efc8fd982cfe5d585ae3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-in-quote": {
+  "fullname": "muse-probe-r2formraw-raw-in-quote",
+  "html": "<blockquote>\n<p><span style=\"white-space: pre-wrap;\">raw</span></p>\n</blockquote>",
+  "html_sha256": "e3b20007d4ab5489cb2e4fb2263983d8919dcc7ceaea779133cffd365b8239de",
+  "source": "> @@raw@@",
+  "source_sha256": "c2d756103d632b6787d9a04949628ea4fe14b15432d9d855c15bc60d44d276dd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "old-basic": {
+  "fullname": "muse-probe-r2formraw-old-basic",
+  "html": "<p>A raw **bold** B</p>",
+  "html_sha256": "e3315e09fecfe71de2ac7f6f8e840eb54fd2f23aa9f84c6e061d0458993fdc8b",
+  "source": "A ``raw **bold**`` B",
+  "source_sha256": "c236832636dd8ae3adc3ec77b09df17597e5be3a906adf17165b1a935f197b52",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "old-empty": {
+  "fullname": "muse-probe-r2formraw-old-empty",
+  "html": "<p>A ```` B</p>",
+  "html_sha256": "907787b312c893804d6709ba88dbe6dfc59eb209cd4cc89ad91bc995174e28a2",
+  "source": "A ```` B",
+  "source_sha256": "15fbb2617d779423e1301b4dff008e7219e17b4bfe20644ea1cc9f558eb7e8d8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "old-apostrophe": {
+  "fullname": "muse-probe-r2formraw-old-apostrophe",
+  "html": "<p>A &#8216;`it&#8217;s`` B</p>",
+  "html_sha256": "10398499adeb14a69dc1cdf3d7b9448d9f73fbb73429add2875bb6a2d9706073",
+  "source": "A ``it's`` B",
+  "source_sha256": "fc288da496ecd1d725da5126be0e97dc03eb127aface2ff631ca0021ba24722d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "old-wikitext": {
+  "fullname": "muse-probe-r2formraw-old-wikitext",
+  "html": "<p>//italic// **bold** [[link]]</p>",
+  "html_sha256": "4d411b10f0a86faeea44ad07c91f14ee2f5df81045f83ad78da0bfa96d8a2c21",
+  "source": "``//italic// **bold** [[link]]``",
+  "source_sha256": "42673411d680d69fbcb2a3f39c7dc2b6750735bf39b8ddb2cd4e3dbd7ed10a3f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "old-and-raw": {
+  "fullname": "muse-probe-r2formraw-old-and-raw",
+  "html": "<p>old <span style=\"white-space: pre-wrap;\">raw</span></p>",
+  "html_sha256": "bfee1c0d7980366b7d9db6efa1d29d1a8375f205d5a8cdea3260b929f83d19bb",
+  "source": "``old`` @@raw@@",
+  "source_sha256": "6b97a4fa37b60507d047311dccee3813d9dc832d3bc7a12d2bf3b78c158e3880",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "form-basic": {
+  "fullname": "muse-probe-r2formraw-form-basic",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[form]]</span><br />\n<span style=\"white-space: pre-wrap;\">fields:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;name:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;type:&#32;text</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;label:&#32;Name</span><br />\n<span style=\"white-space: pre-wrap;\">---</span><br />\n<span style=\"white-space: pre-wrap;\">name:&#32;Alice</span><br />\n<span style=\"white-space: pre-wrap;\">[[/form]]</span></p>",
+  "html_sha256": "26c12476201d93f9c7ede78249c62fa0072f7587a8f0b9a00b008e36918c64b5",
+  "source": "[[form]]\nfields:\n  name:\n    type: text\n    label: Name\n---\nname: Alice\n[[/form]]",
+  "source_sha256": "2de1ee75ffb3c93574a1f2f82c6e5eacd54465a22ab16001d2dc1736528ee09b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "form-no-data": {
+  "fullname": "muse-probe-r2formraw-form-no-data",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[form]]</span><br />\n<span style=\"white-space: pre-wrap;\">fields:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;name:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;type:&#32;text</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;label:&#32;Name</span><br />\n<span style=\"white-space: pre-wrap;\">---</span><br />\n<br />\n<span style=\"white-space: pre-wrap;\">[[/form]]</span></p>",
+  "html_sha256": "5ec75a278e9356b8ca1aad64770a1a026e367b88308b3e8b53332febdf2ff675",
+  "source": "[[form]]\nfields:\n  name:\n    type: text\n    label: Name\n---\n\n[[/form]]",
+  "source_sha256": "b5aec06ae603605c5d4ea58d28b0af7f592a08e7cebb74464b6c6cab21b11919",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "form-empty": {
+  "fullname": "muse-probe-r2formraw-form-empty",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[form]]</span><br />\n<br />\n<span style=\"white-space: pre-wrap;\">---</span><br />\n<br />\n<span style=\"white-space: pre-wrap;\">[[/form]]</span></p>",
+  "html_sha256": "84b99f1d574b50c5e36c920abe896c397a3317b56fd45ddd3ad3d026bb4f6d92",
+  "source": "[[form]]\n\n---\n\n[[/form]]",
+  "source_sha256": "77e803f4f2d2e0f9d6b4889c2077a83033c002768a659a82be5de8fc299b55b2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "form-select": {
+  "fullname": "muse-probe-r2formraw-form-select",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[form]]</span><br />\n<span style=\"white-space: pre-wrap;\">fields:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;color:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;type:&#32;select</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;label:&#32;Color</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;options:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;&nbsp;&#32;r:&#32;Red</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;&nbsp;&#32;b:&#32;Blue</span><br />\n<span style=\"white-space: pre-wrap;\">---</span><br />\n<span style=\"white-space: pre-wrap;\">color:&#32;r</span><br />\n<span style=\"white-space: pre-wrap;\">[[/form]]</span></p>",
+  "html_sha256": "abe8ac719508ab9be6cc60350c869fb431c68b82e5a99538a8f39bf66051e5c5",
+  "source": "[[form]]\nfields:\n  color:\n    type: select\n    label: Color\n    options:\n      r: Red\n      b: Blue\n---\ncolor: r\n[[/form]]",
+  "source_sha256": "bbb0fd9e96994fcb219172273bb9ad3301830c1005407af263cd5841b731d9b1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "form-wiki": {
+  "fullname": "muse-probe-r2formraw-form-wiki",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[form]]</span><br />\n<span style=\"white-space: pre-wrap;\">fields:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;note:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;type:&#32;wiki</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;label:&#32;Note</span><br />\n<span style=\"white-space: pre-wrap;\">---</span><br />\n<span style=\"white-space: pre-wrap;\">note:&#32;**bold**</span><br />\n<span style=\"white-space: pre-wrap;\">[[/form]]</span></p>",
+  "html_sha256": "79d2255b8a153790b52bc99a718969a8a3b51635ffa669093cee2a9d73bc634f",
+  "source": "[[form]]\nfields:\n  note:\n    type: wiki\n    label: Note\n---\nnote: **bold**\n[[/form]]",
+  "source_sha256": "e57ac4180239c35adcb9c4b2ff2bbdf5a6aab13711d60620ca60f0dd38de8956",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "form-unterm": {
+  "fullname": "muse-probe-r2formraw-form-unterm",
+  "html": "<p>[[form]]<br />\nfields:<br />\nname:<br />\ntype: text<br />\n&#8212;-<br />\nname: x</p>",
+  "html_sha256": "c9273f4a208697474e767ee3bf348d71a6ef61fd15bbe8031338a2f6edbbe71a",
+  "source": "[[form]]\nfields:\n  name:\n    type: text\n---\nname: x",
+  "source_sha256": "f30fbef936e92e4c53309256a21be5bfdcb947215233157f5d29ad3ba8d6e7ab",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "form-malformed": {
+  "fullname": "muse-probe-r2formraw-form-malformed",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[form]]</span><br />\n<span style=\"white-space: pre-wrap;\">fields:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;name:&#32;[broken</span><br />\n<span style=\"white-space: pre-wrap;\">---</span><br />\n<span style=\"white-space: pre-wrap;\">name:&#32;x</span><br />\n<span style=\"white-space: pre-wrap;\">[[/form]]</span></p>",
+  "html_sha256": "2468ecdd73809a5624ae726cfd42d892fca5a142d3f46fdf673554b87f6239f7",
+  "source": "[[form]]\nfields:\n  name: [broken\n---\nname: x\n[[/form]]",
+  "source_sha256": "3af476a5cc0d6b9a866aca20027933849aa633474a014973cdbb82ecd7d828bb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "form-no-sep": {
+  "fullname": "muse-probe-r2formraw-form-no-sep",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[form]]</span><br />\n<span style=\"white-space: pre-wrap;\">fields:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;name:</span><br />\n<span style=\"white-space: pre-wrap;\">&nbsp;&#32;&nbsp;&#32;type:&#32;text</span><br />\n<span style=\"white-space: pre-wrap;\">[[/form]]</span></p>",
+  "html_sha256": "1a44bc95fdb3833115c84fa2fc3e0f56f9caa5318ab20603b2595f80d7e77946",
+  "source": "[[form]]\nfields:\n  name:\n    type: text\n[[/form]]",
+  "source_sha256": "4e374808b34725e10d2ff494e53472395e68fa7eac0667aa72db4399ff9a3eda",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "raw-in-code": {
+  "fullname": "muse-probe-r2formraw-raw-in-code",
+  "html": "<div class=\"code\">\n<pre><code>@@raw@@</code></pre></div>",
+  "html_sha256": "c5b6c3b477a05975a4c5d426050f3d357a8e43e734f9a4ae31e7e0fa678109c3",
+  "source": "[[code]]\n@@raw@@\n[[/code]]",
+  "source_sha256": "74d2c928c4795a65a03d4b780a11289f71e8027e76d82949eec30d0b41cef96f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "code-in-raw": {
+  "fullname": "muse-probe-r2formraw-code-in-raw",
+  "html": "<p><span style=\"white-space: pre-wrap;\">[[code]]x[[/code]]</span></p>",
+  "html_sha256": "5a2cc9e4b31e2a48e336d0ab69fdb6881f592ed02056813e81458fc296f7fce5",
+  "source": "@@[[code]]x[[/code]]@@",
+  "source_sha256": "7adbcb7e64905b3ada242ff2ffc746f40c41aa117b87c5ff8f45b51ce66a389f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "form-in-code": {
+  "fullname": "muse-probe-r2formraw-form-in-code",
+  "html": "<div class=\"code\">\n<pre><code>[[form]]\nx\n---\ny\n[[/form]]</code></pre></div>",
+  "html_sha256": "4f6325e3956fc5acf7664fa9aa79cd2409c51da85f8f06795d70cffe6335d9cb",
+  "source": "[[code]]\n[[form]]\nx\n---\ny\n[[/form]]\n[[/code]]",
+  "source_sha256": "d1d342e734d8e8ee145910cc0327c13e2d0146869df6ee43a03a97ebbec03382",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

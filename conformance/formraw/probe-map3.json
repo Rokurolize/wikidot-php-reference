@@ -1,0 +1,22 @@
+{
+ "rawlead2": {
+  "fullname": "muse-probe-r2formraw3-rawlead2",
+  "source": "A @@  x@@ B",
+  "action": "created"
+ },
+ "rawlead4": {
+  "fullname": "muse-probe-r2formraw3-rawlead4",
+  "source": "A @@    x@@ B",
+  "action": "created"
+ },
+ "rawlead1": {
+  "fullname": "muse-probe-r2formraw3-rawlead1",
+  "source": "A @@ x@@ B",
+  "action": "created"
+ },
+ "formindent1": {
+  "fullname": "muse-probe-r2formraw3-formindent1",
+  "source": "[[form]]\nfields:\n x:\n  type: text\n---\ny\n[[/form]]",
+  "action": "created"
+ }
+}

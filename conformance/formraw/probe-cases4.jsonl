@@ -1,0 +1,4 @@
+{"id": "dblspace", "source": "A  B"}
+{"id": "indentline", "source": "A\n  name:\nB"}
+{"id": "formnodata2", "source": "[[form]]\nfields:\n  name:\n    type: text\n---\n\n[[/form]]"}
+{"id": "formempty2", "source": "[[form]]\n\n---\n\n[[/form]]"}

@@ -1,0 +1,68 @@
+{"id": "raw-basic", "source": "before @@raw **bold** [[link]]@@ after"}
+{"id": "raw-basic-inline", "source": "@@hello@@"}
+{"id": "raw-empty", "source": "a @@@@ b"}
+{"id": "raw-ws-only", "source": "a @@   @@ b"}
+{"id": "raw-tab-body", "source": "a @@\t@@ b"}
+{"id": "raw-multiline", "source": "before\n@@line one\nline two@@\nafter"}
+{"id": "raw-multiline-leading", "source": "@@\nindented\n@@"}
+{"id": "raw-nbsp", "source": "@@ x @@"}
+{"id": "raw-triple-open", "source": "a @@@x@@@ b"}
+{"id": "raw-quad", "source": "a @@@@x@@@@ b"}
+{"id": "raw-five-run", "source": "a @@@@@x@@@@@ b"}
+{"id": "raw-at-end", "source": "a @@x@@@ b"}
+{"id": "raw-at-start", "source": "a @@@x@@ b"}
+{"id": "raw-inner-at", "source": "@@x@y@@"}
+{"id": "raw-adjacent", "source": "@@one@@@@two@@"}
+{"id": "raw-unterminated", "source": "a @@never closed"}
+{"id": "raw-lone", "source": "a @@ b"}
+{"id": "raw-two-lone", "source": "a @@ b @@ c"}
+{"id": "raw-closer-only", "source": "a @@ b @@@ c"}
+{"id": "raw-wikitext", "source": "@@//italic// **bold** __under__++strikethrough++@@"}
+{"id": "raw-brackets", "source": "@@[[wikilink]] [[/bad]]@@"}
+{"id": "raw-quotes", "source": "@@\"double\" 'single' & < >@@"}
+{"id": "raw-html", "source": "@@<b>bold</b> <script>alert(1)</script>@@"}
+{"id": "raw-entities", "source": "@@&amp; &lt; &quot; &#39;@@"}
+{"id": "raw-code-markup", "source": "@@[[code]]inner[[/code]]@@"}
+{"id": "raw-form-markup", "source": "@@[[form]]x---y[[/form]]@@"}
+{"id": "raw-heading", "source": "@@= Heading =@@"}
+{"id": "raw-list", "source": "@@* item\n* item@@"}
+{"id": "raw-link", "source": "@@http://example.com/?a=1&b=2@@"}
+{"id": "raw-accents", "source": "@@café α 日本@@"}
+{"id": "raw-in-bold", "source": "**before @@raw@@ after**"}
+{"id": "raw-in-italic", "source": "//before @@raw@@ after//"}
+{"id": "raw-next-bold", "source": "@@raw@@ **bold**"}
+{"id": "raw-in-link", "source": "[[http://x/|@@raw@@]]"}
+{"id": "raw-in-div", "source": "[[div class=\"x\"]]\n@@raw@@\n[[/div]]"}
+{"id": "raw-in-quote", "source": "> @@raw@@"}
+{"id": "old-basic", "source": "before ``raw **bold**`` after"}
+{"id": "old-empty", "source": "a ```` b"}
+{"id": "old-ws-only", "source": "a ``  `` b"}
+{"id": "old-multiline", "source": "before\n``line one\nline two``\nafter"}
+{"id": "old-apostrophe", "source": "a ``it's`` b"}
+{"id": "old-triple", "source": "a ```x``` b"}
+{"id": "old-unterminated", "source": "a ``never closed"}
+{"id": "old-lone", "source": "a `` b"}
+{"id": "old-wikitext", "source": "``//italic// **bold** [[link]]``"}
+{"id": "old-html", "source": "``<b>&\"'</b>``"}
+{"id": "old-adjacent", "source": "``one````two``"}
+{"id": "old-and-raw", "source": "``old`` @@raw@@"}
+{"id": "old-quote-run", "source": "a ``x`` b ``y`` c"}
+{"id": "form-basic", "source": "[[form]]\nfields:\n  name:\n    type: text\n    label: Name\n---\nname: Alice\n[[/form]]"}
+{"id": "form-no-data", "source": "[[form]]\nfields:\n  name:\n    type: text\n    label: Name\n---\n\n[[/form]]"}
+{"id": "form-empty-body", "source": "[[form]]\n\n---\n\n[[/form]]"}
+{"id": "form-unterminated", "source": "[[form]]\nfields:\n  name:\n    type: text\n---\nname: x"}
+{"id": "form-malformed-field", "source": "[[form]]\nfields:\n  name: [broken\n---\nname: x\n[[/form]]"}
+{"id": "form-no-separator", "source": "[[form]]\nfields:\n  name:\n    type: text\n[[/form]]"}
+{"id": "form-select", "source": "[[form]]\nfields:\n  color:\n    type: select\n    label: Color\n    options:\n      r: Red\n      b: Blue\n---\ncolor: r\n[[/form]]"}
+{"id": "form-wiki", "source": "[[form]]\nfields:\n  note:\n    type: wiki\n    label: Note\n---\nnote: **bold**\n[[/form]]"}
+{"id": "form-in-div", "source": "[[div class=\"x\"]]\n[[form]]\nx\n---\ny\n[[/form]]\n[[/div]]"}
+{"id": "form-stray-closer", "source": "text\n[[/form]]\nafter"}
+{"id": "form-inline", "source": "before [[form]]x---y[[/form]] after"}
+{"id": "raw-in-code", "source": "[[code]]\n@@raw@@\n[[/code]]"}
+{"id": "code-in-raw", "source": "@@[[code]]x[[/code]]@@"}
+{"id": "include-in-raw", "source": "@@[[include page=test]]@@"}
+{"id": "raw-in-include", "source": "[[include page=raw-include]]"}
+{"id": "form-in-code", "source": "[[code]]\n[[form]]\nx\n---\ny\n[[/form]]\n[[/code]]"}
+{"id": "code-in-form", "source": "[[form]]\nfields:\n  note:\n    type: wiki\n---\nnote: [[code]]x[[/code]]\n[[/form]]"}
+{"id": "raw-after-code", "source": "[[code]]x[[/code]]\n@@raw@@"}
+{"id": "old-in-code", "source": "[[code]]\n``old``\n[[/code]]"}

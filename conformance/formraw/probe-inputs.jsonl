@@ -1,0 +1,28 @@
+{"id": "raw-basic", "source": "BEFORE @@raw **bold** [[link]]@@ AFTER"}
+{"id": "raw-empty", "source": "A @@@@ B"}
+{"id": "raw-ws", "source": "A @@   @@ B"}
+{"id": "raw-entities", "source": "@@\"double\" 'single' & < > <b>&amp;</b>@@"}
+{"id": "raw-wikitext", "source": "@@//italic// **bold** = H = * list@@"}
+{"id": "raw-at-run", "source": "A @@@x@@@ B @@@@x@@@@ C @@@@@x@@@@@ D"}
+{"id": "raw-adjacent", "source": "@@one@@@@two@@"}
+{"id": "raw-unterm", "source": "A @@never closed"}
+{"id": "raw-lone", "source": "A @@ B @@@ C"}
+{"id": "raw-in-bold", "source": "**before @@raw@@ after**"}
+{"id": "raw-in-div", "source": "[[div class=\"x\"]]\n@@raw@@\n[[/div]]"}
+{"id": "raw-in-quote", "source": "> @@raw@@"}
+{"id": "old-basic", "source": "A ``raw **bold**`` B"}
+{"id": "old-empty", "source": "A ```` B"}
+{"id": "old-apostrophe", "source": "A ``it's`` B"}
+{"id": "old-wikitext", "source": "``//italic// **bold** [[link]]``"}
+{"id": "old-and-raw", "source": "``old`` @@raw@@"}
+{"id": "form-basic", "source": "[[form]]\nfields:\n  name:\n    type: text\n    label: Name\n---\nname: Alice\n[[/form]]"}
+{"id": "form-no-data", "source": "[[form]]\nfields:\n  name:\n    type: text\n    label: Name\n---\n\n[[/form]]"}
+{"id": "form-empty", "source": "[[form]]\n\n---\n\n[[/form]]"}
+{"id": "form-select", "source": "[[form]]\nfields:\n  color:\n    type: select\n    label: Color\n    options:\n      r: Red\n      b: Blue\n---\ncolor: r\n[[/form]]"}
+{"id": "form-wiki", "source": "[[form]]\nfields:\n  note:\n    type: wiki\n    label: Note\n---\nnote: **bold**\n[[/form]]"}
+{"id": "form-unterm", "source": "[[form]]\nfields:\n  name:\n    type: text\n---\nname: x"}
+{"id": "form-malformed", "source": "[[form]]\nfields:\n  name: [broken\n---\nname: x\n[[/form]]"}
+{"id": "form-no-sep", "source": "[[form]]\nfields:\n  name:\n    type: text\n[[/form]]"}
+{"id": "raw-in-code", "source": "[[code]]\n@@raw@@\n[[/code]]"}
+{"id": "code-in-raw", "source": "@@[[code]]x[[/code]]@@"}
+{"id": "form-in-code", "source": "[[code]]\n[[form]]\nx\n---\ny\n[[/form]]\n[[/code]]"}
