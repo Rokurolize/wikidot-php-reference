@@ -1,0 +1,42 @@
+{
+ "c64": {
+  "fullname": "muse-probe-r2in2-color-c64",
+  "html": "<p><span style=\"color: red\"><a href=\"x\">A</a></span></p>",
+  "html_sha256": "8d61f1999cc93a506c2b1bd9eb63c4b031f30a80b59a093b2b23b6880f9af962",
+  "source": "##red|[[a href=\"x\"]]A[[/a]]##",
+  "source_sha256": "7b201c54c92b6b93814fae85ec4be69ee104b2b463ee1caef3971ddc04187638",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c65": {
+  "fullname": "muse-probe-r2in2-color-c65",
+  "html": "<table class=\"wiki-content-table\">\n<tr>\n<td><span style=\"color: red\">A</span></td>\n<td>B</td>\n</tr>\n</table>",
+  "html_sha256": "50a33a99cecede4b95228a03ec174d30afa7d111d0ce2580b8b9f59694a2b53f",
+  "source": "|| ##red|A||B## ||",
+  "source_sha256": "1b95e7560bc2fc124afc2acab9e0d05891f3027323cbcf6c2b8f5746f5b1864e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c66": {
+  "fullname": "muse-probe-r2in2-color-c66",
+  "html": "<p><span><span style=\"color: red\">A</span></span></p>",
+  "html_sha256": "c5af3c39698660759649d70c0d6c9a1496c37eb1fba3f796bd476c115a93f086",
+  "source": "[[span]]##red|A##[[/span]]",
+  "source_sha256": "93c0e4c2d7a727af3d883fea0c8f60c076d1b7ee87e12fbc066e3a375a8104bc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c67": {
+  "fullname": "muse-probe-r2in2-color-c67",
+  "html": "<p><span style=\"color: darkred\">[[</span></p>",
+  "html_sha256": "5af7b4555f231c55b3f8515743be5d0a459e6ab984f7d436f5d8f395f3f28340",
+  "source": "##darkred|[[##",
+  "source_sha256": "9dc04a7a5e6a9f497751dbcbb92de461cd0995c425fe56268923df3ed5889729",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

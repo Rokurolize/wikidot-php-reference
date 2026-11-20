@@ -59,6 +59,19 @@ class Text_Wiki_Render_Xhtml_Url extends Text_Wiki_Render {
         $pos = strrpos($href, '.');
         $ext = strtolower(substr($href, $pos + 1));
         $href0 = $href;
+        // F-R2-68 correction (coordinator, 2026-11-20): live percent-encodes
+        // non-ASCII bytes in the emitted href (relay probe
+        // muse-probe-req-nbsp-url: the NBSP in an autolink href renders as
+        // %C2%A0, exactly as ftml has it; the reference kept the raw byte).
+        // Same bytewise encoding as the Image renderer's encodeNonAscii.
+        $href = preg_replace_callback('/[^\x00-\x7F]/', function ($m) {
+            $bytes = unpack('C*', $m[0]);
+            $out = '';
+            foreach ($bytes as $byte) {
+                $out .= '%' . strtoupper(str_pad(dechex($byte), 2, '0', STR_PAD_LEFT));
+            }
+            return $out;
+        }, $href);
         $href = htmlspecialchars($href);
         if($href=="#"){
         	$href="javascript:;";

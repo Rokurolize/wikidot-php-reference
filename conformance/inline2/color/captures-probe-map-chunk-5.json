@@ -1,0 +1,92 @@
+{
+ "c37": {
+  "fullname": "muse-probe-r2in2-color-c37",
+  "html": "<p><span style=\"color: red\"><span style=\"text-decoration: line-through;\">strike</span></span></p>",
+  "html_sha256": "c78781ff763343145ac50555cdbbf37edd870f744b6ddb1a673f7776d14d8351",
+  "source": "##red|--strike--##",
+  "source_sha256": "28cebd5ae245fe74a742558114266982101d8a107a28f915c66de86b00b9aa00",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c38": {
+  "fullname": "muse-probe-r2in2-color-c38",
+  "html": "<p><strong><span style=\"color: red\">A</span></strong></p>",
+  "html_sha256": "1caa5afb53687aa14e4cd496eb73a410468339ba91ffcde8c54b61048af4183a",
+  "source": "**##red|A##**",
+  "source_sha256": "0807ed7e5e1b585567ba47f08d39fed58344438edb507bbd994af807258c61c2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c39": {
+  "fullname": "muse-probe-r2in2-color-c39",
+  "html": "<p><span style=\"color: orange\"><strong>ORANGE</strong></span><strong>-PRIME:</strong></p>",
+  "html_sha256": "fd0b311cd2b536ae1cdbb34a7c54c5a19e14618f716e447d07921271f0074470",
+  "source": "##orange|**ORANGE##-PRIME:**",
+  "source_sha256": "79bfdcf247edc3bea9f4aa242bb14a66d174e031f4cbe7e825291bd9ccb5ef27",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c40": {
+  "fullname": "muse-probe-r2in2-color-c40",
+  "html": "<p><span style=\"color: red\">**a //b__c&#8212;d</span></p>",
+  "html_sha256": "18a9e8b39c54281fde8bc26d8d6bcc52494e7461c4d4ee704cd117faf57798fe",
+  "source": "##red|**a //b__c--d##",
+  "source_sha256": "f747d474d2ac75d793da5a65baf6513a2be80d418be2d71a5a6dcd9837095075",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c41": {
+  "fullname": "muse-probe-r2in2-color-c41",
+  "html": "<p>##red|A</p>",
+  "html_sha256": "7f5d8f6458d7852309ba9a9f1677eb88fea10b71f75ea48e4563db29dcb7c31d",
+  "source": "##red|A",
+  "source_sha256": "1ba02a79778076bc7a00037600be2323a61208d8f089619161b103c68ea7abf0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c42": {
+  "fullname": "muse-probe-r2in2-color-c42",
+  "html": "<p>red|A##</p>",
+  "html_sha256": "cc954706b78a3c4c9f4dcfab3af81d5e6926c4a16a7bb9a50553589ab64e4320",
+  "source": "red|A##",
+  "source_sha256": "0bf3df5b122c07f720650673bd7a40dc0dd977326b81690a3038499f1e4ab1e0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c43": {
+  "fullname": "muse-probe-r2in2-color-c43",
+  "html": "<p><span style=\"color: red\">A</span>##</p>",
+  "html_sha256": "a599fc441fe6afe8c7a1f6f9ca4f845d2e7fca3c9067a63e8d9ea904d042c5aa",
+  "source": "##red|A####",
+  "source_sha256": "c24745c5bc2690ccdfa6e8caf3c180b0daf38a0818dc3bc8797deb70f0e8a710",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c44": {
+  "fullname": "muse-probe-r2in2-color-c44",
+  "html": "<p><span style=\"color: red\">A</span>blue|B##</p>",
+  "html_sha256": "19d681e11bf273f1fcfa92d27f238fe1f5f58b2bc6ac7962f616168700d63495",
+  "source": "##red|A##blue|B##",
+  "source_sha256": "fa13a25081009087a6c417961302a7a3f71d2cb7cfef9a838729aa75e94600d8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c45": {
+  "fullname": "muse-probe-r2in2-color-c45",
+  "html": "<p><span style=\"color: red\">A</span>green|B<span style=\"color: ##blue\">C</span></p>",
+  "html_sha256": "cbc9857d511cba6fa8c8b2224c3fdb7d66c297214d928fd0332739fea30d0f5b",
+  "source": "##red|A##green|B####blue|C##",
+  "source_sha256": "2540babe5e1e5b58384bc76a2283a698650b391aeea875f6495cfb1b36f8159a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

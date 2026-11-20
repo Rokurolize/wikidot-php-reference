@@ -1,0 +1,55 @@
+all3           38: em01 em02 em03 em04 em05 em06 em07 em08 em10 em11 em13 em15 em16 em17 em18 em19 em20 em21 em22 em24 em25 em27 em28 em30 em31 em35 em36 em37 em38 em39 em40 em41 em42 em43 em45 em48 em49 em50
+ref+live        2: em44 em47
+ftml+live       7: em09 em12 em14 em23 em26 em29 em46
+ref+ftml        0: 
+all_disagree    3: em32 em33 em34
+no_live         0: 
+--- disagreements detail ---
+### em09
+  REF : '<p><em>//four</em>//</p>'
+  FTML: '<p>four</p>'
+  LIVE: '<p>four</p>'
+### em12
+  REF : '<p>////</p>'
+  FTML: ''
+  LIVE: ''
+### em14
+  REF : '<p><em>//em</em>//</p>'
+  FTML: '<p>em</p>'
+  LIVE: '<p>em</p>'
+### em23
+  REF : '<p><em><strong>crossed</em></strong></p>'
+  FTML: '<p><em><strong>crossed</strong></em></p>'
+  LIVE: '<p><em><strong>crossed</strong></em></p>'
+### em26
+  REF : '<p><em><span style="color: red;">colored italic</span></em></p>'
+  FTML: '<p><em><span style="color: red">colored italic</span></em></p>'
+  LIVE: '<p><em><span style="color: red">colored italic</span></em></p>'
+### em29
+  REF : '<p><em><strong>one **two</em></strong></p>'
+  FTML: '<p><em><strong>one **two</strong></em></p>'
+  LIVE: '<p><em><strong>one **two</strong></em></p>'
+### em32
+  REF : '<p>//line one</p>\n\n<p>line two//</p>'
+  FTML: '<p>//line one</p><p>line two//</p>'
+  LIVE: '<p>//line one</p>\n<p>line two//</p>'
+### em33
+  REF : '<p>//text</p>\n\n<div ><p>block</p>\n\n</div>//'
+  FTML: '<p>//text</p><div><p>block</p></div>\n//'
+  LIVE: '<p>//text</p>\n<div>\n<p>block</p>\n</div>\n//'
+### em34
+  REF : '<p>//text</p>\n\n<div ><p>block</p>\n\n</div>'
+  FTML: '<p>//text</p><div><p>block</p></div>'
+  LIVE: '<p>//text</p>\n<div>\n<p>block</p>\n</div>'
+### em44
+  REF : '<p>[<a href="http://example.com|//link">label//</a>]</p>'
+  FTML: '<p>[[<a href="http://example.com">http://example.com</a>|<em>link label</em>]]</p>'
+  LIVE: '<p>[<a href="http://example.com|//link">label//</a>]</p>'
+### em46
+  REF : '<p><tt> <em>code literal</em> </tt></p>'
+  FTML: '<p><tt><em>code literal</em></tt></p>'
+  LIVE: '<p><tt><em>code literal</em></tt></p>'
+### em47
+  REF : '<div class="code">\n<pre><code>//raw not italic//</code></pre></div>'
+  FTML: '<div class="code"><pre><code>//raw not italic//</code></pre></div>'
+  LIVE: '<div class="code">\n<pre><code>//raw not italic//</code></pre></div>'

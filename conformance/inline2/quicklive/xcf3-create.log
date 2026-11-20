@@ -1,0 +1,10 @@
+xcf3 -> muse-probe-r2in2-x-xcf3 (created)
+1 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "xcf3": {
+  "fullname": "muse-probe-r2in2-x-xcf3",
+  "source": "[[a href=\"http://x\"]]__label__[[/a]]",
+  "action": "created"
+ }
+}
+XCF3_RC=0

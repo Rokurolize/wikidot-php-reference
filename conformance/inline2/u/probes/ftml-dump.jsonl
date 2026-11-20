@@ -1,0 +1,12 @@
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">simple</span></p>","id":"p01"}
+{"errors":[],"html":"<p>Empty underline</p>","id":"p02"}
+{"errors":[],"html":"<p>ab</p>","id":"p03"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 4..6, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }"],"html":"<p>__x</p>","id":"p04"}
+{"errors":[],"html":"<p>xy</p>","id":"p05"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 11..13, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 11..13, kind: NoRulesMatch }"],"html":"<p>__ __</p>","id":"p06"}
+{"errors":[],"html":"<p>a</p>","id":"p07"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a</span><span style=\"text-decoration: underline;\">b</span></p>","id":"p08"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 0..2, kind: RuleFailed }","ParseError { token: Underline, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Underline, rule: \"underline\", span: 8..10, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p><span style=\"text-decoration: underline;\">a __ b</span></p>","id":"p09"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">_triple and triple</span>_</p>","id":"p10"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<br>\nb</span></p>","id":"p11"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a <strong>b</strong> c</span></p>","id":"p12"}

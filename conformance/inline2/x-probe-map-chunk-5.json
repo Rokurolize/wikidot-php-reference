@@ -1,0 +1,47 @@
+{
+ "x37": {
+  "fullname": "muse-probe-r2in2-x-x37",
+  "source": "--a##red|ab##ba--",
+  "action": "created"
+ },
+ "x38": {
+  "fullname": "muse-probe-r2in2-x-x38",
+  "source": "--a**ab**ba--",
+  "action": "created"
+ },
+ "x39": {
+  "fullname": "muse-probe-r2in2-x-x39",
+  "source": "--a//ab//ba--",
+  "action": "created"
+ },
+ "x40": {
+  "fullname": "muse-probe-r2in2-x-x40",
+  "source": "--a__ab__ba--",
+  "action": "created"
+ },
+ "x41": {
+  "fullname": "muse-probe-r2in2-x-x41",
+  "source": "##red|a**b//c__d--e--d__c//b##a",
+  "action": "created"
+ },
+ "x42": {
+  "fullname": "muse-probe-r2in2-x-x42",
+  "source": "##red|**//__--text##end**end//end__end",
+  "action": "created"
+ },
+ "x43": {
+  "fullname": "muse-probe-r2in2-x-x43",
+  "source": "**a** **b** //c// //d// __e__ __f__ --g-- --h--",
+  "action": "created"
+ },
+ "x44": {
+  "fullname": "muse-probe-r2in2-x-x44",
+  "source": "**bold\na//italic\nb//c**",
+  "action": "created"
+ },
+ "x45": {
+  "fullname": "muse-probe-r2in2-x-x45",
+  "source": "**bold\n\nacross**",
+  "action": "created"
+ }
+}

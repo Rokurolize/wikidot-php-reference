@@ -1,0 +1,133 @@
+c01 -> muse-probe-r2in2-color-c01 stable=True saved_source_matches=True valid=True
+c02 -> muse-probe-r2in2-color-c02 stable=True saved_source_matches=True valid=True
+c03 -> muse-probe-r2in2-color-c03 stable=True saved_source_matches=True valid=True
+c04 -> muse-probe-r2in2-color-c04 stable=True saved_source_matches=True valid=True
+c05 -> muse-probe-r2in2-color-c05 stable=True saved_source_matches=True valid=True
+c06 -> muse-probe-r2in2-color-c06 stable=True saved_source_matches=True valid=True
+c07 -> muse-probe-r2in2-color-c07 stable=True saved_source_matches=True valid=True
+c08 -> muse-probe-r2in2-color-c08 stable=True saved_source_matches=True valid=True
+c09 -> muse-probe-r2in2-color-c09 stable=True saved_source_matches=True valid=True
+c10 -> muse-probe-r2in2-color-c10 stable=True saved_source_matches=True valid=True
+c11 -> muse-probe-r2in2-color-c11 stable=True saved_source_matches=True valid=True
+c12 -> muse-probe-r2in2-color-c12 stable=True saved_source_matches=True valid=True
+c13 -> muse-probe-r2in2-color-c13 stable=True saved_source_matches=True valid=True
+c14 -> muse-probe-r2in2-color-c14 stable=True saved_source_matches=True valid=True
+c15 -> muse-probe-r2in2-color-c15 stable=True saved_source_matches=True valid=True
+c16 -> muse-probe-r2in2-color-c16 stable=True saved_source_matches=True valid=True
+c17 -> muse-probe-r2in2-color-c17 stable=True saved_source_matches=True valid=True
+c18 -> muse-probe-r2in2-color-c18 stable=True saved_source_matches=True valid=True
+c19 -> muse-probe-r2in2-color-c19 stable=True saved_source_matches=True valid=True
+c20 -> muse-probe-r2in2-color-c20 stable=True saved_source_matches=True valid=True
+c21 -> muse-probe-r2in2-color-c21 stable=True saved_source_matches=True valid=True
+c22 -> muse-probe-r2in2-color-c22 stable=True saved_source_matches=True valid=True
+c23 -> muse-probe-r2in2-color-c23 stable=True saved_source_matches=True valid=True
+c24 -> muse-probe-r2in2-color-c24 stable=True saved_source_matches=True valid=True
+c25 -> muse-probe-r2in2-color-c25 stable=True saved_source_matches=True valid=True
+c26 -> muse-probe-r2in2-color-c26 stable=True saved_source_matches=True valid=True
+c27 -> muse-probe-r2in2-color-c27 stable=True saved_source_matches=True valid=True
+c28 -> muse-probe-r2in2-color-c28 stable=True saved_source_matches=True valid=True
+c29 -> muse-probe-r2in2-color-c29 stable=True saved_source_matches=True valid=True
+c30 -> muse-probe-r2in2-color-c30 stable=True saved_source_matches=True valid=True
+c31 -> muse-probe-r2in2-color-c31 stable=True saved_source_matches=True valid=True
+c32 -> muse-probe-r2in2-color-c32 stable=True saved_source_matches=True valid=True
+c33 -> muse-probe-r2in2-color-c33 stable=True saved_source_matches=True valid=True
+c34 -> muse-probe-r2in2-color-c34 stable=True saved_source_matches=True valid=True
+c35 -> muse-probe-r2in2-color-c35 stable=True saved_source_matches=True valid=True
+c36 -> muse-probe-r2in2-color-c36 stable=True saved_source_matches=True valid=True
+c37 -> muse-probe-r2in2-color-c37 stable=True saved_source_matches=True valid=True
+c38 -> muse-probe-r2in2-color-c38 stable=True saved_source_matches=True valid=True
+c39 -> muse-probe-r2in2-color-c39 stable=True saved_source_matches=True valid=True
+c40 -> muse-probe-r2in2-color-c40 stable=True saved_source_matches=True valid=True
+c41 -> muse-probe-r2in2-color-c41 stable=True saved_source_matches=True valid=True
+c42 -> muse-probe-r2in2-color-c42 stable=True saved_source_matches=True valid=True
+c43 -> muse-probe-r2in2-color-c43 stable=True saved_source_matches=True valid=True
+c44 -> muse-probe-r2in2-color-c44 stable=True saved_source_matches=True valid=True
+c45 -> muse-probe-r2in2-color-c45 stable=True saved_source_matches=True valid=True
+c46 -> muse-probe-r2in2-color-c46 stable=True saved_source_matches=True valid=True
+c47 -> muse-probe-r2in2-color-c47 stable=True saved_source_matches=True valid=True
+Traceback (most recent call last):
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/roku/.local/share/uv/python/cpython-3.13.13-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 312, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 308, in main
+    return args.func(args)
+           ~~~~~~~~~^^^^^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 203, in cmd_capture
+    second = extract_page_content(fetch_rendered(args.site, fullname))
+                                  ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 182, in fetch_rendered
+    response = httpx.get(url, headers={"User-Agent": USER_AGENT}, timeout=60,
+                         follow_redirects=True)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_api.py", line 195, in get
+    return request(
+        "GET",
+    ...<9 lines>...
+        trust_env=trust_env,
+    )
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_api.py", line 109, in request
+    return client.request(
+           ~~~~~~~~~~~~~~^
+        method=method,
+        ^^^^^^^^^^^^^^
+    ...<8 lines>...
+        follow_redirects=follow_redirects,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/roku/.local/share/uv/python/cpython-3.13.13-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out

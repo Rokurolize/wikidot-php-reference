@@ -1,0 +1,101 @@
+c46 -> muse-probe-r2in2-color-c46 stable=True saved_source_matches=True valid=True
+c47 -> muse-probe-r2in2-color-c47 stable=True saved_source_matches=True valid=True
+c48 -> muse-probe-r2in2-color-c48 stable=True saved_source_matches=True valid=True
+c49 -> muse-probe-r2in2-color-c49 stable=True saved_source_matches=True valid=True
+c50 -> muse-probe-r2in2-color-c50 stable=True saved_source_matches=True valid=True
+c51 -> muse-probe-r2in2-color-c51 stable=True saved_source_matches=True valid=True
+c52 -> muse-probe-r2in2-color-c52 stable=True saved_source_matches=True valid=True
+c53 -> muse-probe-r2in2-color-c53 stable=True saved_source_matches=True valid=True
+c54 -> muse-probe-r2in2-color-c54 stable=True saved_source_matches=True valid=True
+{
+ "c46": {
+  "fullname": "muse-probe-r2in2-color-c46",
+  "html": "<p><span style=\"color: ##red\">A</span></p>",
+  "html_sha256": "b0a94740526bce540dd3276d03fd71978c31265b6df07957959c392f08a0e755",
+  "source": "####red|A##",
+  "source_sha256": "3669470142720a8f00fcccc855c3cfa20638f6acefe42bdfed4851f1a6c2d67f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c47": {
+  "fullname": "muse-probe-r2in2-color-c47",
+  "html": "<p>##red##</p>",
+  "html_sha256": "379b56801548340e7f050e69794d8572bb94ed723f75ab383c928cf43f6b6658",
+  "source": "##red##",
+  "source_sha256": "71602e2dd574da3abcdde2caa364fb22f8e2ee948e8100ce866c3a811854f85f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c48": {
+  "fullname": "muse-probe-r2in2-color-c48",
+  "html": "<p><span style=\"color: blue\">##red|a</span></p>",
+  "html_sha256": "73429cbb0eb5c5836a9e6f133a75067d25c173771feb017468edd77fde876722",
+  "source": "##blue|##red|a##",
+  "source_sha256": "34f96b52e1b1aebfdbc4c649d00fec9fad965bdcb7083522a1e2f4b5e4b8d075",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c49": {
+  "fullname": "muse-probe-r2in2-color-c49",
+  "html": "<p>ab<span style=\"color: red\">cd</span>ef</p>",
+  "html_sha256": "26401bd1f4c9f47fcd495d60e9d81e08ddd1d2def0c7ac6e4137ac34b9c786e9",
+  "source": "ab##red|cd##ef",
+  "source_sha256": "99b1ce8ed664a0158984df2938be27e0fedef9f9637e40a73f95bdd17afb8fd4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c50": {
+  "fullname": "muse-probe-r2in2-color-c50",
+  "html": "<p>ab <span style=\"color: red\">cd</span> ef</p>",
+  "html_sha256": "a15b835338c693600dc7f08a8709d665d63ed09aa414c2967155908089ce61cd",
+  "source": "ab ##red|cd## ef",
+  "source_sha256": "397b62dd36f5090ed07bdbb1ab4aee4d462cbf31686f728296da00981493aaa3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c51": {
+  "fullname": "muse-probe-r2in2-color-c51",
+  "html": "<p>x<span style=\"color: red\">A</span>y<span style=\"color: blue\">B</span>z</p>",
+  "html_sha256": "e525ba7defffe6fdd7075f0ae40cf5456fa167635cb8dc5819d3e946a5b8d87d",
+  "source": "x##red|A##y##blue|B##z",
+  "source_sha256": "7d5160d1a72e0dbf0ee963318acb6c5d15c2ac4145191d617993aa53024ad14f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c52": {
+  "fullname": "muse-probe-r2in2-color-c52",
+  "html": "<p><span style=\"color: red\">A</span></p>",
+  "html_sha256": "627ac70007d464d8fe289f81d02a22d95b69e24bc3f48e8b17fff5c1a267b70c",
+  "source": "## red | A ##",
+  "source_sha256": "40fbd57b66304ebdf510a120377c9302bbbffe74ae30038ca747b0675e7d3c96",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c53": {
+  "fullname": "muse-probe-r2in2-color-c53",
+  "html": "<p><span style=\"color: red\">A</span> blue|B## C##</p>",
+  "html_sha256": "85c98fd732e2b08fb64d66382558b9fae69cd2fc4fe65100f221ace07beae79d",
+  "source": "##red|A ##blue|B## C##",
+  "source_sha256": "54043b5485d93e36266d7a157a59fb44113725bef4902be4156992707bc71dee",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c54": {
+  "fullname": "muse-probe-r2in2-color-c54",
+  "html": "<p><span style=\"color: red\">A<br />\nB</span></p>",
+  "html_sha256": "09615bd686af075f951ca6a85c40e4339d12e02d1681ac53a61b7e8b78afe0b7",
+  "source": "##red|A\nB##",
+  "source_sha256": "4385b01e6e92454a268b57acb817bc9c546cc20da8c82fa21586aed2d3713f0b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

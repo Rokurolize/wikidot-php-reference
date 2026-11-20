@@ -1,0 +1,410 @@
+c01 -> muse-probe-r2in2-color-c01 (created)
+2026-11-20 17:42:52,619 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85347112', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in2-color-c02', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+c02 -> muse-probe-r2in2-color-c02 (created)
+c03 -> muse-probe-r2in2-color-c03 (created)
+c04 -> muse-probe-r2in2-color-c04 (created)
+c05 -> muse-probe-r2in2-color-c05 (created)
+2026-11-20 17:44:12,453 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85347142', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in2-color-c06', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+c06 -> muse-probe-r2in2-color-c06 (created)
+2026-11-20 17:44:52,854 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85347160', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in2-color-c07', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+2026-11-20 17:45:18,544 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85347170', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in2-color-c07', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+c07 -> muse-probe-r2in2-color-c07 (created)
+c08 -> muse-probe-r2in2-color-c08 (created)
+c09 -> muse-probe-r2in2-color-c09 (created)
+c10 -> muse-probe-r2in2-color-c10 (created)
+c11 -> muse-probe-r2in2-color-c11 (created)
+2026-11-20 17:47:34,286 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85347219', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in2-color-c12', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+c12 -> muse-probe-r2in2-color-c12 (created)
+c13 -> muse-probe-r2in2-color-c13 (created)
+c14 -> muse-probe-r2in2-color-c14 (created)
+c15 -> muse-probe-r2in2-color-c15 (created)
+c16 -> muse-probe-r2in2-color-c16 (created)
+c17 -> muse-probe-r2in2-color-c17 (created)
+c18 -> muse-probe-r2in2-color-c18 (created)
+c19 -> muse-probe-r2in2-color-c19 (created)
+c20 -> muse-probe-r2in2-color-c20 (created)
+c21 -> muse-probe-r2in2-color-c21 (created)
+c22 -> muse-probe-r2in2-color-c22 (created)
+c23 -> muse-probe-r2in2-color-c23 (created)
+c24 -> muse-probe-r2in2-color-c24 (created)
+c25 -> muse-probe-r2in2-color-c25 (created)
+c26 -> muse-probe-r2in2-color-c26 (created)
+c27 -> muse-probe-r2in2-color-c27 (created)
+c28 -> muse-probe-r2in2-color-c28 (created)
+c29 -> muse-probe-r2in2-color-c29 (created)
+c30 -> muse-probe-r2in2-color-c30 (created)
+c31 -> muse-probe-r2in2-color-c31 (created)
+c32 -> muse-probe-r2in2-color-c32 (created)
+c33 -> muse-probe-r2in2-color-c33 (created)
+c34 -> muse-probe-r2in2-color-c34 (created)
+c35 -> muse-probe-r2in2-color-c35 (created)
+c36 -> muse-probe-r2in2-color-c36 (created)
+c37 -> muse-probe-r2in2-color-c37 (created)
+c38 -> muse-probe-r2in2-color-c38 (created)
+c39 -> muse-probe-r2in2-color-c39 (created)
+c40 -> muse-probe-r2in2-color-c40 (created)
+c41 -> muse-probe-r2in2-color-c41 (created)
+c42 -> muse-probe-r2in2-color-c42 (created)
+c43 -> muse-probe-r2in2-color-c43 (created)
+c44 -> muse-probe-r2in2-color-c44 (created)
+c45 -> muse-probe-r2in2-color-c45 (created)
+c46 -> muse-probe-r2in2-color-c46 (created)
+c47 -> muse-probe-r2in2-color-c47 (created)
+c48 -> muse-probe-r2in2-color-c48 (created)
+c49 -> muse-probe-r2in2-color-c49 (created)
+c50 -> muse-probe-r2in2-color-c50 (created)
+c51 -> muse-probe-r2in2-color-c51 (created)
+c52 -> muse-probe-r2in2-color-c52 (created)
+c53 -> muse-probe-r2in2-color-c53 (created)
+c54 -> muse-probe-r2in2-color-c54 (created)
+c55 -> muse-probe-r2in2-color-c55 (created)
+c56 -> muse-probe-r2in2-color-c56 (created)
+c57 -> muse-probe-r2in2-color-c57 (created)
+c58 -> muse-probe-r2in2-color-c58 (created)
+c59 -> muse-probe-r2in2-color-c59 (created)
+c60 -> muse-probe-r2in2-color-c60 (created)
+c61 -> muse-probe-r2in2-color-c61 (created)
+c62 -> muse-probe-r2in2-color-c62 (created)
+c63 -> muse-probe-r2in2-color-c63 (created)
+c64 -> muse-probe-r2in2-color-c64 (created)
+c65 -> muse-probe-r2in2-color-c65 (created)
+c66 -> muse-probe-r2in2-color-c66 (created)
+c67 -> muse-probe-r2in2-color-c67 (created)
+67 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "c01": {
+  "fullname": "muse-probe-r2in2-color-c01",
+  "source": "##red|Apple##",
+  "action": "created"
+ },
+ "c02": {
+  "fullname": "muse-probe-r2in2-color-c02",
+  "source": "##blue|Blueberry##",
+  "action": "created"
+ },
+ "c03": {
+  "fullname": "muse-probe-r2in2-color-c03",
+  "source": "##orange|Orange##",
+  "action": "created"
+ },
+ "c04": {
+  "fullname": "muse-probe-r2in2-color-c04",
+  "source": "##DarkRed|Dark##",
+  "action": "created"
+ },
+ "c05": {
+  "fullname": "muse-probe-r2in2-color-c05",
+  "source": "##white|White##",
+  "action": "created"
+ },
+ "c06": {
+  "fullname": "muse-probe-r2in2-color-c06",
+  "source": "##aqua|Aqua##",
+  "action": "created"
+ },
+ "c07": {
+  "fullname": "muse-probe-r2in2-color-c07",
+  "source": "##grey|Grey##",
+  "action": "created"
+ },
+ "c08": {
+  "fullname": "muse-probe-r2in2-color-c08",
+  "source": "###fff|White##",
+  "action": "created"
+ },
+ "c09": {
+  "fullname": "muse-probe-r2in2-color-c09",
+  "source": "###cd3636|Cherry##",
+  "action": "created"
+ },
+ "c10": {
+  "fullname": "muse-probe-r2in2-color-c10",
+  "source": "##c00|Short##",
+  "action": "created"
+ },
+ "c11": {
+  "fullname": "muse-probe-r2in2-color-c11",
+  "source": "##FF0000|Red##",
+  "action": "created"
+ },
+ "c12": {
+  "fullname": "muse-probe-r2in2-color-c12",
+  "source": "##123456|Hex##",
+  "action": "created"
+ },
+ "c13": {
+  "fullname": "muse-probe-r2in2-color-c13",
+  "source": "###FFFF|Upper##",
+  "action": "created"
+ },
+ "c14": {
+  "fullname": "muse-probe-r2in2-color-c14",
+  "source": "##1234|Four##",
+  "action": "created"
+ },
+ "c15": {
+  "fullname": "muse-probe-r2in2-color-c15",
+  "source": "##rgb(241, 194, 50)|Mango##",
+  "action": "created"
+ },
+ "c16": {
+  "fullname": "muse-probe-r2in2-color-c16",
+  "source": "##var(--c-keyword)|Var##",
+  "action": "created"
+ },
+ "c17": {
+  "fullname": "muse-probe-r2in2-color-c17",
+  "source": "##rgb(var(--x))|VarRGB##",
+  "action": "created"
+ },
+ "c18": {
+  "fullname": "muse-probe-r2in2-color-c18",
+  "source": "##not-a-color|Text##",
+  "action": "created"
+ },
+ "c19": {
+  "fullname": "muse-probe-r2in2-color-c19",
+  "source": "##rgb(1, 2, 3)|A##",
+  "action": "created"
+ },
+ "c20": {
+  "fullname": "muse-probe-r2in2-color-c20",
+  "source": "##expression(alert(1))|Expr##",
+  "action": "created"
+ },
+ "c21": {
+  "fullname": "muse-probe-r2in2-color-c21",
+  "source": "##rgba(10,20,30,.5)|A##",
+  "action": "created"
+ },
+ "c22": {
+  "fullname": "muse-probe-r2in2-color-c22",
+  "source": "##hsl(120, 50%, 25%)|A##",
+  "action": "created"
+ },
+ "c23": {
+  "fullname": "muse-probe-r2in2-color-c23",
+  "source": "##a_b|A##",
+  "action": "created"
+ },
+ "c24": {
+  "fullname": "muse-probe-r2in2-color-c24",
+  "source": "##red;background:blue|A##",
+  "action": "created"
+ },
+ "c25": {
+  "fullname": "muse-probe-r2in2-color-c25",
+  "source": "##url(javascript:alert(1))|A##",
+  "action": "created"
+ },
+ "c26": {
+  "fullname": "muse-probe-r2in2-color-c26",
+  "source": "##|gold|A##",
+  "action": "created"
+ },
+ "c27": {
+  "fullname": "muse-probe-r2in2-color-c27",
+  "source": "##|A##",
+  "action": "created"
+ },
+ "c28": {
+  "fullname": "muse-probe-r2in2-color-c28",
+  "source": "##||A##",
+  "action": "created"
+ },
+ "c29": {
+  "fullname": "muse-probe-r2in2-color-c29",
+  "source": "##not color",
+  "action": "created"
+ },
+ "c30": {
+  "fullname": "muse-probe-r2in2-color-c30",
+  "source": "##red|##",
+  "action": "created"
+ },
+ "c31": {
+  "fullname": "muse-probe-r2in2-color-c31",
+  "source": "##red| ##",
+  "action": "created"
+ },
+ "c32": {
+  "fullname": "muse-probe-r2in2-color-c32",
+  "source": "##red|{{}}##",
+  "action": "created"
+ },
+ "c33": {
+  "fullname": "muse-probe-r2in2-color-c33",
+  "source": "##red|   ##",
+  "action": "created"
+ },
+ "c34": {
+  "fullname": "muse-probe-r2in2-color-c34",
+  "source": "##red|**bold**##",
+  "action": "created"
+ },
+ "c35": {
+  "fullname": "muse-probe-r2in2-color-c35",
+  "source": "##red|//italic//##",
+  "action": "created"
+ },
+ "c36": {
+  "fullname": "muse-probe-r2in2-color-c36",
+  "source": "##red|__under__##",
+  "action": "created"
+ },
+ "c37": {
+  "fullname": "muse-probe-r2in2-color-c37",
+  "source": "##red|--strike--##",
+  "action": "created"
+ },
+ "c38": {
+  "fullname": "muse-probe-r2in2-color-c38",
+  "source": "**##red|A##**",
+  "action": "created"
+ },
+ "c39": {
+  "fullname": "muse-probe-r2in2-color-c39",
+  "source": "##orange|**ORANGE##-PRIME:**",
+  "action": "created"
+ },
+ "c40": {
+  "fullname": "muse-probe-r2in2-color-c40",
+  "source": "##red|**a //b__c--d##",
+  "action": "created"
+ },
+ "c41": {
+  "fullname": "muse-probe-r2in2-color-c41",
+  "source": "##red|A",
+  "action": "created"
+ },
+ "c42": {
+  "fullname": "muse-probe-r2in2-color-c42",
+  "source": "red|A##",
+  "action": "created"
+ },
+ "c43": {
+  "fullname": "muse-probe-r2in2-color-c43",
+  "source": "##red|A####",
+  "action": "created"
+ },
+ "c44": {
+  "fullname": "muse-probe-r2in2-color-c44",
+  "source": "##red|A##blue|B##",
+  "action": "created"
+ },
+ "c45": {
+  "fullname": "muse-probe-r2in2-color-c45",
+  "source": "##red|A##green|B####blue|C##",
+  "action": "created"
+ },
+ "c46": {
+  "fullname": "muse-probe-r2in2-color-c46",
+  "source": "####red|A##",
+  "action": "created"
+ },
+ "c47": {
+  "fullname": "muse-probe-r2in2-color-c47",
+  "source": "##red##",
+  "action": "created"
+ },
+ "c48": {
+  "fullname": "muse-probe-r2in2-color-c48",
+  "source": "##blue|##red|a##",
+  "action": "created"
+ },
+ "c49": {
+  "fullname": "muse-probe-r2in2-color-c49",
+  "source": "ab##red|cd##ef",
+  "action": "created"
+ },
+ "c50": {
+  "fullname": "muse-probe-r2in2-color-c50",
+  "source": "ab ##red|cd## ef",
+  "action": "created"
+ },
+ "c51": {
+  "fullname": "muse-probe-r2in2-color-c51",
+  "source": "x##red|A##y##blue|B##z",
+  "action": "created"
+ },
+ "c52": {
+  "fullname": "muse-probe-r2in2-color-c52",
+  "source": "## red | A ##",
+  "action": "created"
+ },
+ "c53": {
+  "fullname": "muse-probe-r2in2-color-c53",
+  "source": "##red|A ##blue|B## C##",
+  "action": "created"
+ },
+ "c54": {
+  "fullname": "muse-probe-r2in2-color-c54",
+  "source": "##red|A\nB##",
+  "action": "created"
+ },
+ "c55": {
+  "fullname": "muse-probe-r2in2-color-c55",
+  "source": "##red|A\n\nB##",
+  "action": "created"
+ },
+ "c56": {
+  "fullname": "muse-probe-r2in2-color-c56",
+  "source": "##red|A\nB\nC##",
+  "action": "created"
+ },
+ "c57": {
+  "fullname": "muse-probe-r2in2-color-c57",
+  "source": "##red|A##\n##blue|B##",
+  "action": "created"
+ },
+ "c58": {
+  "fullname": "muse-probe-r2in2-color-c58",
+  "source": "##red|A\n\n[[div]]\nB\n[[/div]]\nC##",
+  "action": "created"
+ },
+ "c59": {
+  "fullname": "muse-probe-r2in2-color-c59",
+  "source": "> ##red|A##",
+  "action": "created"
+ },
+ "c60": {
+  "fullname": "muse-probe-r2in2-color-c60",
+  "source": "##red|A\n* item\nB##",
+  "action": "created"
+ },
+ "c61": {
+  "fullname": "muse-probe-r2in2-color-c61",
+  "source": "##red|A\n[[code]]\nB\n[[/code]]##",
+  "action": "created"
+ },
+ "c62": {
+  "fullname": "muse-probe-r2in2-color-c62",
+  "source": "##red|= Heading##",
+  "action": "created"
+ },
+ "c63": {
+  "fullname": "muse-probe-r2in2-color-c63",
+  "source": "[[div]]\n##red|A##\n[[/div]]",
+  "action": "created"
+ },
+ "c64": {
+  "fullname": "muse-probe-r2in2-color-c64",
+  "source": "##red|[[a href=\"x\"]]A[[/a]]##",
+  "action": "created"
+ },
+ "c65": {
+  "fullname": "muse-probe-r2in2-color-c65",
+  "source": "|| ##red|A||B## ||",
+  "action": "created"
+ },
+ "c66": {
+  "fullname": "muse-probe-r2in2-color-c66",
+  "source": "[[span]]##red|A##[[/span]]",
+  "action": "created"
+ },
+ "c67": {
+  "fullname": "muse-probe-r2in2-color-c67",
+  "source": "##darkred|[[##",
+  "action": "created"
+ }
+}

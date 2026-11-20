@@ -1,0 +1,63 @@
+{"errors":[],"html":"<p><span style=\"color: red\">a<strong>ab</strong></span><strong>ba</strong></p>","id":"x01"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<em>ab</em></span><em>ba</em></p>","id":"x02"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<span style=\"text-decoration: underline;\">ab</span>ba</span></p>","id":"x03"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<span style=\"text-decoration: line-through;\">ab</span>ba</span></p>","id":"x04"}
+{"errors":[],"html":"<p><strong>a<span style=\"color: red\">ab</span></strong><span style=\"color: red\">ba</span></p>","id":"x05"}
+{"errors":[],"html":"<p><strong>a<em>ab</em></strong><em>ba</em></p>","id":"x06"}
+{"errors":[],"html":"<p><strong>a<span style=\"text-decoration: underline;\">ab</span></strong><span style=\"text-decoration: underline;\">ba</span></p>","id":"x07"}
+{"errors":[],"html":"<p><strong>a<span style=\"text-decoration: line-through;\">ab</span></strong><span style=\"text-decoration: line-through;\">ba</span></p>","id":"x08"}
+{"errors":[],"html":"<p><em>a<span style=\"color: red\">ab</span></em><span style=\"color: red\">ba</span></p>","id":"x09"}
+{"errors":[],"html":"<p><em>a<strong>ab</strong></em><strong>ba</strong></p>","id":"x10"}
+{"errors":[],"html":"<p><em>a<span style=\"text-decoration: underline;\">ab</span></em><span style=\"text-decoration: underline;\">ba</span></p>","id":"x11"}
+{"errors":[],"html":"<p><em>a<span style=\"text-decoration: line-through;\">ab</span></em><span style=\"text-decoration: line-through;\">ba</span></p>","id":"x12"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<span style=\"color: red\">ab</span>ba</span></p>","id":"x13"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<strong>ab</strong></span><strong>ba</strong></p>","id":"x14"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<em>ab</em></span><em>ba</em></p>","id":"x15"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<span style=\"text-decoration: line-through;\">ab</span>ba</span></p>","id":"x16"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<span style=\"color: red\">ab</span>ba</span></p>","id":"x17"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<strong>ab</strong></span><strong>ba</strong></p>","id":"x18"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<em>ab</em></span><em>ba</em></p>","id":"x19"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<span style=\"text-decoration: underline;\">ab</span>ba</span></p>","id":"x20"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<strong>ab</strong>ba</span></p>","id":"x21"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<em>ab</em>ba</span></p>","id":"x22"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<span style=\"text-decoration: underline;\">ab</span>ba</span></p>","id":"x23"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<span style=\"text-decoration: line-through;\">ab</span>ba</span></p>","id":"x24"}
+{"errors":[],"html":"<p><strong>a<span style=\"color: red\">ab</span>ba</strong></p>","id":"x25"}
+{"errors":[],"html":"<p><strong>a<em>ab</em>ba</strong></p>","id":"x26"}
+{"errors":[],"html":"<p><strong>a<span style=\"text-decoration: underline;\">ab</span>ba</strong></p>","id":"x27"}
+{"errors":[],"html":"<p><strong>a<span style=\"text-decoration: line-through;\">ab</span>ba</strong></p>","id":"x28"}
+{"errors":[],"html":"<p><em>a<span style=\"color: red\">ab</span>ba</em></p>","id":"x29"}
+{"errors":[],"html":"<p><em>a<strong>ab</strong>ba</em></p>","id":"x30"}
+{"errors":[],"html":"<p><em>a<span style=\"text-decoration: underline;\">ab</span>ba</em></p>","id":"x31"}
+{"errors":[],"html":"<p><em>a<span style=\"text-decoration: line-through;\">ab</span>ba</em></p>","id":"x32"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<span style=\"color: red\">ab</span>ba</span></p>","id":"x33"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<strong>ab</strong>ba</span></p>","id":"x34"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<em>ab</em>ba</span></p>","id":"x35"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<span style=\"text-decoration: line-through;\">ab</span>ba</span></p>","id":"x36"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<span style=\"color: red\">ab</span>ba</span></p>","id":"x37"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<strong>ab</strong>ba</span></p>","id":"x38"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<em>ab</em>ba</span></p>","id":"x39"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<span style=\"text-decoration: underline;\">ab</span>ba</span></p>","id":"x40"}
+{"errors":[],"html":"<p><span style=\"color: red\">a**b<em>c<span style=\"text-decoration: underline;\">d<span style=\"text-decoration: line-through;\">e</span>d</span>c</em>b</span>a</p>","id":"x41"}
+{"errors":[],"html":"<p><span style=\"color: red\"><strong><em><span style=\"text-decoration: underline;\">—text</span>end</em>end</strong>end</span>end</p>","id":"x42"}
+{"errors":[],"html":"<p><strong>a</strong> <strong>b</strong> <em>c</em> <em>d</em> <span style=\"text-decoration: underline;\">e</span> <span style=\"text-decoration: underline;\">f</span> <span style=\"text-decoration: line-through;\">g</span> <span style=\"text-decoration: line-through;\">h</span></p>","id":"x43"}
+{"errors":[],"html":"<p><strong>bold<br>\na<em>italic<br>\nb</em>c</strong></p>","id":"x44"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 0..2, kind: RuleFailed }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 14..16, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 14..16, kind: NoRulesMatch }"],"html":"<p>**bold</p><p>across**</p>","id":"x45"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 6..11, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 19..19, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<p>##red|color</p><p>span##</p>","id":"x46"}
+{"errors":["ParseError { token: InputEnd, rule: \"bold\", span: 22..22, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 11..13, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 11..13, kind: NoRulesMatch }"],"html":"<p><strong>a[[div]]b</strong>c[[/div]]</p>","id":"x47"}
+{"errors":["ParseError { token: InputEnd, rule: \"underline\", span: 38..38, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Underline, rule: \"underline\", span: 19..21, kind: RuleFailed }","ParseError { token: Underline, rule: \"fallback\", span: 19..21, kind: NoRulesMatch }"],"html":"__a<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div><div class=\"collapsible-block-content\"><p>b__c</p></div></div></div>","id":"x48"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>header</td>\n<td>header</td>\n</tr>\n</table><p>| <strong>a | b</strong> |<br>\n| c | d |</p>","id":"x49"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>header</td>\n<td>header</td>\n</tr>\n</table><p>| <span style=\"text-decoration: line-through;\">a | b</span> |<br>\n| c | d |</p>","id":"x50"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">**b** //i// __u__ --s-- ##red|c##</a></p>","id":"x51"}
+{"errors":["ParseError { token: Italics, rule: \"block\", span: 28..30, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 55..57, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"https://example.com\">https://example.com</a>|<strong>b</strong> <em>i</em> <span style=\"text-decoration: underline;\">u</span> <span style=\"text-decoration: line-through;\">s</span> <span style=\"color: red\">c</span>]]</p>","id":"x52"}
+{"errors":[],"html":"<p style=\"text-align: center;\"><strong>b</strong> <em>i</em> <span style=\"text-decoration: underline;\">u</span> <span style=\"text-decoration: line-through;\">s</span> <span style=\"color: red\">c</span> =</p>","id":"x53"}
+{"errors":[],"html":"<p><em>example.com/path</em> and <a href=\"https://example.com//tail\">https://example.com//tail</a></p>","id":"x54"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 32..33, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 26..28, kind: NoRulesMatch }"],"html":"<p>a — b … // c ** d __ e ##red|f</p>","id":"x55"}
+{"errors":[],"html":"<p><strong>*b</strong>* <em>/i</em>/ <span style=\"text-decoration: underline;\">_u</span>_ <span style=\"text-decoration: line-through;\">-s</span>- <span style=\"color: #red\">t</span>#</p>","id":"x56"}
+{"errors":[],"html":"<p><strong>a</strong><strong>b</strong> <em>c</em><em>d</em> <span style=\"text-decoration: underline;\">e</span><span style=\"text-decoration: underline;\">f</span> <span style=\"text-decoration: line-through;\">g</span><span style=\"text-decoration: line-through;\">h</span></p>","id":"x57"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">**b**&#32;//i//&#32;__u__&#32;--s--&#32;##red|c##</span></p>","id":"x58"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>**b** //i// __u__ --s-- ##red|c##</code></pre></div>","id":"x59"}
+{"errors":["ParseError { token: LineBreak, rule: \"bold\", span: 5..6, kind: RuleFailed }","ParseError { token: Bold, rule: \"fallback\", span: 2..4, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 9..11, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }"],"html":"<ul>\n<li><strong>a</strong></li>\n<li><strong>b</strong></li>\n<li>c</li>\n</ul>","id":"x60"}
+{"errors":["ParseError { token: InputEnd, rule: \"bold\", span: 32..32, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 16..18, kind: RuleFailed }","ParseError { token: Bold, rule: \"fallback\", span: 16..18, kind: NoRulesMatch }"],"html":"<p>**a<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnote-1&#39;)\">1</a></sup></p><div class=\"footnotes-footer\"><div class=\"title\">Footnotes</div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnoteref-1&#39;)\">1</a>. b**c</div></div>","id":"x61"}
+{"errors":[],"html":"<p style=\"text-align: center;\"><span style=\"color: red\"><strong>b</strong> <em>i</em></span> =</p>","id":"x62"}
+{"errors":[],"html":"<p><a href=\"https://example.com\">**//example.com/x//**</a></p>","id":"x63"}

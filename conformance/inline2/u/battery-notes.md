@@ -1,0 +1,62 @@
+# R2-inline2 Underline battery notes
+
+- u01: basic __ pair | source: `__simple__`
+- u02: basic pair then trailing text (native pin) | source: `__Underline__ test`
+- u03: pair embedded mid-line | source: `lead __mid__ tail`
+- u04: two pairs on one line | source: `__a__ and __b__`
+- u05: space-bearing body | source: `__a b c__`
+- u06: pair inside a word, markers at non-boundaries | source: `x__a__y`
+- u07: underline outer, strong inner | source: `__a **b** c__`
+- u08: underline outer, emphasis inner | source: `__a //b// c__`
+- u09: underline outer, strike inner | source: `__a --b-- c__`
+- u10: underline outer, color inner | source: `__a ##red|b## c__`
+- u11: underline outer, spaced color body inner | source: `__a ##red|b c## d__`
+- u12: strong outer, underline inner | source: `**a __b__ c**`
+- u13: emphasis outer, underline inner | source: `//italic __b__ c//`
+- u14: crossed strike/underline close (corpus pin) | source: `--a __b-- c__`
+- u15: color outer, underline inner | source: `##red|a __b__## c`
+- u16: crossed underline/strike/strong (corpus pin) | source: `__A --B **C__ X-- Y**`
+- u17: crossed strong/underline/color (corpus pin) | source: `**A __B ##red|C** X__ Y##`
+- u18: unpaired opener | source: `__unmatched`
+- u19: unpaired closer | source: `unmatched__`
+- u20: tripled opener | source: `___triple`
+- u21: tripled closer | source: `triple___`
+- u22: empty pair (four underscores) | source: `____`
+- u23: empty pair inside a word | source: `a____b`
+- u24: six-underscore run | source: `______`
+- u25: eight-underscore run (corpus pin) | source: `x________y`
+- u26: empty pair run plus spaced run (corpus pin) | source: `______ ______`
+- u27: six-underscore run before content (corpus pin) | source: `______x`
+- u28: tripled marker inside a pair | source: `__a___b__`
+- u29: leading-space body (padded open) | source: `__ word__`
+- u30: trailing-space body (padded close) | source: `__word __`
+- u31: both-padded body | source: `__ word __`
+- u32: padded inner marker skipped (corpus pin) | source: `__a __ b__`
+- u33: pair wholly inside a word | source: `a__b__c`
+- u34: punctuation body | source: `__-punct-__`
+- u35: single underscore inside body | source: `__a_b__`
+- u36: pair crossing a single line break | source: `__a\nb__`
+- u37: newline inside pair, break plus space (corpus pin) | source: `x__a\n__y`
+- u38: pair crossing a blank line / paragraph break | source: `__a\n\nb__`
+- u39: pair crossing a heading boundary | source: `__a\n+++ heading\nb__`
+- u40: pair crossing a div block | source: `__a\n[[div]]x[[/div]]b__`
+- u41: pair crossing a list boundary | source: `__a\n* b\nc__`
+- u42: single-underscore identifier, no pair | source: `foo_bar_baz`
+- u43: dunder identifier form | source: `__init__`
+- u44: identifier plus a real pair | source: `some_variable_name __paired__ x`
+- u45: code block shield | source: `[[code]]__not underlined__[[/code]]`
+- u46: raw block shield | source: `{{{ __raw__ }}}`
+- u47: backtick inline code shield | source: `inline `__code__` tail`
+- u48: underline inside heading | source: `+++ __heading__`
+- u49: two pairs inside a heading | source: `++ __a__ and __b__`
+- u50: underline inside anchor label | source: `[[a href="http://x"]]__label__[[/a]]`
+- u51: underline inside described-link label | source: `[__label__ http://x]`
+- u52: underline crossing newline in anchor | source: `[[a href="#x"]]__a\nb__[[/a]]`
+- u53: whitespace/color hoist (corpus pin) | source: `x__##red| ##y__z`
+- u54: stray close block inside pair (corpus pin) | source: `__x [[/div]] y__`
+- u55: two padded single markers, no valid pair | source: `a __ b`
+- u56: two pairs on consecutive lines | source: `__a__\n__b__`
+- u57: empty-pair runs adjacent to content | source: `____a____`
+- u58: empty run with stray close (corpus pin) | source: `______[[/span]]`
+- u59: underline in blockquote | source: `> __quoted__`
+- u60: underline in table cells | source: `|| __head__ ||\n|| __cell__ ||`

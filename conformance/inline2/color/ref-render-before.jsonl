@@ -1,0 +1,67 @@
+{"id":"c01","output":"<p><span style=\"color: red;\">Apple<\/span><\/p>\n\n"}
+{"id":"c02","output":"<p><span style=\"color: blue;\">Blueberry<\/span><\/p>\n\n"}
+{"id":"c03","output":"<p><span style=\"color: #orange;\">Orange<\/span><\/p>\n\n"}
+{"id":"c04","output":"<p><span style=\"color: #DarkRed;\">Dark<\/span><\/p>\n\n"}
+{"id":"c05","output":"<p><span style=\"color: white;\">White<\/span><\/p>\n\n"}
+{"id":"c06","output":"<p><span style=\"color: aqua;\">Aqua<\/span><\/p>\n\n"}
+{"id":"c07","output":"<p><span style=\"color: #grey;\">Grey<\/span><\/p>\n\n"}
+{"id":"c08","output":"<p><span style=\"color: #fff;\">White<\/span><\/p>\n\n"}
+{"id":"c09","output":"<p><span style=\"color: #cd3636;\">Cherry<\/span><\/p>\n\n"}
+{"id":"c10","output":"<p><span style=\"color: #c00;\">Short<\/span><\/p>\n\n"}
+{"id":"c11","output":"<p><span style=\"color: #FF0000;\">Red<\/span><\/p>\n\n"}
+{"id":"c12","output":"<p><span style=\"color: #123456;\">Hex<\/span><\/p>\n\n"}
+{"id":"c13","output":"<p><span style=\"color: #FFFF;\">Upper<\/span><\/p>\n\n"}
+{"id":"c14","output":"<p><span style=\"color: #1234;\">Four<\/span><\/p>\n\n"}
+{"id":"c15","output":"<p><span style=\"color: #rgb(241, 194, 50);\">Mango<\/span><\/p>\n\n"}
+{"id":"c16","output":"<p><span style=\"color: #var(--c-keyword);\">Var<\/span><\/p>\n\n"}
+{"id":"c17","output":"<p><span style=\"color: #rgb(var(--x));\">VarRGB<\/span><\/p>\n\n"}
+{"id":"c18","output":"<p><span style=\"color: #not-a-color;\">Text<\/span><\/p>\n\n"}
+{"id":"c19","output":"<p><span style=\"color: #rgb(1, 2, 3);\">A<\/span><\/p>\n\n"}
+{"id":"c20","output":"<p><span style=\"color: #expression(alert(1));\">Expr<\/span><\/p>\n\n"}
+{"id":"c21","output":"<p><span style=\"color: #rgba(10,20,30,.5);\">A<\/span><\/p>\n\n"}
+{"id":"c22","output":"<p><span style=\"color: #hsl(120, 50%, 25%);\">A<\/span><\/p>\n\n"}
+{"id":"c23","output":"<p><span style=\"color: #a_b;\">A<\/span><\/p>\n\n"}
+{"id":"c24","output":"<p><span style=\"color: #red;background:blue;\">A<\/span><\/p>\n\n"}
+{"id":"c25","output":"<p><span style=\"color: #url(javascript:alert(1));\">A<\/span><\/p>\n\n"}
+{"id":"c26","output":"<p><span style=\"color: #|gold;\">A<\/span><\/p>\n\n"}
+{"id":"c27","output":"<p>##|A##<\/p>\n\n"}
+{"id":"c28","output":"<p><span style=\"color: #|;\">A<\/span><\/p>\n\n"}
+{"id":"c29","output":"<p>##not color<\/p>\n\n"}
+{"id":"c30","output":"<p>##red|##<\/p>\n\n"}
+{"id":"c31","output":"<p><span style=\"color: red;\"> <\/span><\/p>\n\n"}
+{"id":"c32","output":"<p><span style=\"color: red;\"><tt><\/tt><\/span><\/p>\n\n"}
+{"id":"c33","output":"<p><span style=\"color: red;\">   <\/span><\/p>\n\n"}
+{"id":"c34","output":"<p><span style=\"color: red;\"><strong>bold<\/strong><\/span><\/p>\n\n"}
+{"id":"c35","output":"<p><span style=\"color: red;\"><em>italic<\/em><\/span><\/p>\n\n"}
+{"id":"c36","output":"<p><span style=\"color: red;\"><span style=\"text-decoration: underline;\">under<\/span><\/span><\/p>\n\n"}
+{"id":"c37","output":"<p><span style=\"color: red;\"><span style=\"text-decoration: line-through;\">strike<\/span><\/span><\/p>\n\n"}
+{"id":"c38","output":"<p><strong><span style=\"color: red;\">A<\/span><\/strong><\/p>\n\n"}
+{"id":"c39","output":"<p><span style=\"color: #orange;\"><strong>ORANGE<\/span>-PRIME:<\/strong><\/p>\n\n"}
+{"id":"c40","output":"<p><span style=\"color: red;\">**a \/\/b__c&#8212;d<\/span><\/p>\n\n"}
+{"id":"c41","output":"<p>##red|A<\/p>\n\n"}
+{"id":"c42","output":"<p>red|A##<\/p>\n\n"}
+{"id":"c43","output":"<p><span style=\"color: red;\">A<\/span>##<\/p>\n\n"}
+{"id":"c44","output":"<p><span style=\"color: red;\">A<\/span>blue|B##<\/p>\n\n"}
+{"id":"c45","output":"<p><span style=\"color: red;\">A<\/span>green|B<span style=\"color: ##blue;\">C<\/span><\/p>\n\n"}
+{"id":"c46","output":"<p><span style=\"color: ##red;\">A<\/span><\/p>\n\n"}
+{"id":"c47","output":"<p>##red##<\/p>\n\n"}
+{"id":"c48","output":"<p><span style=\"color: blue;\">##red|a<\/span><\/p>\n\n"}
+{"id":"c49","output":"<p>ab<span style=\"color: red;\">cd<\/span>ef<\/p>\n\n"}
+{"id":"c50","output":"<p>ab <span style=\"color: red;\">cd<\/span> ef<\/p>\n\n"}
+{"id":"c51","output":"<p>x<span style=\"color: red;\">A<\/span>y<span style=\"color: blue;\">B<\/span>z<\/p>\n\n"}
+{"id":"c52","output":"<p><span style=\"color: # red ;\"> A <\/span><\/p>\n\n"}
+{"id":"c53","output":"<p><span style=\"color: red;\">A <\/span>blue|B## C##<\/p>\n\n"}
+{"id":"c54","output":"<p><span style=\"color: red;\">A<br \/>\nB<\/span><\/p>\n\n"}
+{"id":"c55","output":"<p>##red|A<\/p>\n\n<p>B##<\/p>\n\n"}
+{"id":"c56","output":"<p><span style=\"color: red;\">A<br \/>\nB<br \/>\nC<\/span><\/p>\n\n"}
+{"id":"c57","output":"<p><span style=\"color: red;\">A<\/span><br \/>\n<span style=\"color: blue;\">B<\/span><\/p>\n\n"}
+{"id":"c58","output":"<p>##red|A<\/p>\n\n<div ><p>B<\/p>\n\n<\/div><br \/>\nC##"}
+{"id":"c59","output":"<blockquote><p><span style=\"color: red;\">A<\/span><\/p>\n\n<\/blockquote>\n"}
+{"id":"c60","output":"<p>##red|A<\/p>\n\n<ul>\n<li>item<\/li>\n<\/ul><p>B##<\/p>\n\n"}
+{"id":"c61","output":"<p><span style=\"color: red;\">A<br \/>\n[[code]]<br \/>\nB<br \/>\n[[\/code]]<\/span><\/p>\n\n"}
+{"id":"c62","output":"<p><span style=\"color: red;\">= Heading<\/span><\/p>\n\n"}
+{"id":"c63","output":"<div ><p><span style=\"color: red;\">A<\/span><\/p>\n\n<\/div>"}
+{"id":"c64","output":"<p><span style=\"color: red;\">[[a href=&quot;x&quot;]]A[[\/a]]<\/span><\/p>\n\n"}
+{"id":"c65","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><span style=\"color: red;\">A<\/td>\n<td>B<\/span><\/td>\n<\/tr>\n<\/table>"}
+{"id":"c66","output":"<p><span><span style=\"color: red;\">A<\/span><\/span><\/p>\n\n"}
+{"id":"c67","output":"<p><span style=\"color: #darkred;\">[[<\/span><\/p>\n\n"}

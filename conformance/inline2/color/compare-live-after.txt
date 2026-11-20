@@ -1,0 +1,135 @@
+case | live-valid | live-style | ref-style | ftml-style | live==ref(norm) | live==ftml(norm)
+c01 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red">Apple</span></p>'
+c02 | True | ['blue'] | ['blue'] | ['blue'] | True | True
+  LIVE: '<p><span style="color: blue">Blueberry</span></p>'
+c03 | True | ['orange'] | ['orange'] | ['orange'] | True | True
+  LIVE: '<p><span style="color: orange">Orange</span></p>'
+c04 | True | ['darkred'] | ['darkred'] | ['darkred'] | True | True
+  LIVE: '<p><span style="color: darkred">Dark</span></p>'
+c05 | True | ['white'] | ['white'] | ['white'] | True | True
+  LIVE: '<p><span style="color: white">White</span></p>'
+c06 | True | ['aqua'] | ['aqua'] | ['aqua'] | True | True
+  LIVE: '<p><span style="color: aqua">Aqua</span></p>'
+c07 | True | ['grey'] | ['grey'] | ['grey'] | True | True
+  LIVE: '<p><span style="color: grey">Grey</span></p>'
+c08 | True | ['#fff'] | ['#fff'] | ['#fff'] | True | True
+  LIVE: '<p><span style="color: #fff">White</span></p>'
+c09 | True | ['#cd3636'] | ['#cd3636'] | ['#cd3636'] | True | True
+  LIVE: '<p><span style="color: #cd3636">Cherry</span></p>'
+c10 | True | ['#c00'] | ['#c00'] | ['#c00'] | True | True
+  LIVE: '<p><span style="color: #c00">Short</span></p>'
+c11 | True | ['#ff0000'] | ['#ff0000'] | ['#ff0000'] | True | True
+  LIVE: '<p><span style="color: #ff0000">Red</span></p>'
+c12 | True | ['#123456'] | ['#123456'] | ['#123456'] | True | True
+  LIVE: '<p><span style="color: #123456">Hex</span></p>'
+c13 | True | ['#ffff'] | ['#ffff'] | ['#ffff'] | True | True
+  LIVE: '<p><span style="color: #ffff">Upper</span></p>'
+c14 | True | ['1234'] | ['1234'] | ['1234'] | True | True
+  LIVE: '<p><span style="color: 1234">Four</span></p>'
+c15 | True | ['rgb(241, 194, 50)'] | ['rgb(241, 194, 50)'] | ['rgb(241, 194, 50)'] | True | True
+  LIVE: '<p><span style="color: rgb(241, 194, 50)">Mango</span></p>'
+c16 | True | ['var(--c-keyword)'] | ['var(--c-keyword)'] | ['var(--c-keyword)'] | True | True
+  LIVE: '<p><span style="color: var(--c-keyword)">Var</span></p>'
+c17 | True | ['rgb(var(--x))'] | ['rgb(var(--x))'] | ['rgb(var(--x))'] | True | True
+  LIVE: '<p><span style="color: rgb(var(--x))">VarRGB</span></p>'
+c18 | True | ['not-a-color'] | ['not-a-color'] | ['not-a-color'] | True | True
+  LIVE: '<p><span style="color: not-a-color">Text</span></p>'
+c19 | True | ['rgb(1, 2, 3)'] | ['rgb(1, 2, 3)'] | ['rgb(1, 2, 3)'] | True | True
+  LIVE: '<p><span style="color: rgb(1, 2, 3)">A</span></p>'
+c20 | True | ['expression(alert(1))'] | ['expression(alert(1))'] | ['expression(alert(1))'] | True | True
+  LIVE: '<p><span style="color: expression(alert(1))">Expr</span></p>'
+c21 | True | [] | [] | [] | True | True
+  LIVE: '<p>##rgba(10,20,30,.5)|A##</p>'
+c22 | True | [] | [] | [] | True | True
+  LIVE: '<p>##hsl(120, 50%, 25%)|A##</p>'
+c23 | True | [] | [] | [] | True | True
+  LIVE: '<p>##a_b|A##</p>'
+c24 | True | [] | [] | [] | True | True
+  LIVE: '<p>##red;background:blue|A##</p>'
+c25 | True | [] | [] | [] | True | True
+  LIVE: '<p>##url(javascript:alert(1))|A##</p>'
+c26 | True | [] | [] | [] | True | True
+  LIVE: '<p>##|gold|A##</p>'
+c27 | True | [] | [] | [] | True | True
+  LIVE: '<p>##|A##</p>'
+c28 | True | [] | [] | [] | True | True
+  LIVE: '<p>##||A##</p>'
+c29 | True | [] | [] | [] | True | True
+  LIVE: '<p>##not color</p>'
+c30 | True | [] | [] | [] | True | True
+  LIVE: '<p>##red|##</p>'
+c31 | True | [] | ['red'] | [] | False | True
+  LIVE: ''
+c32 | True | [] | ['red'] | [] | False | True
+  LIVE: ''
+c33 | True | [] | ['red'] | [] | False | True
+  LIVE: ''
+c34 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red"><strong>bold</strong></span></p>'
+c35 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red"><em>italic</em></span></p>'
+c36 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red"><span style="text-decoration: underline;">under</span></span></p>'
+c37 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red"><span style="text-decoration: line-through;">strike</span></span></p>'
+c38 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><strong><span style="color: red">A</span></strong></p>'
+c39 | True | ['orange'] | ['orange'] | ['orange'] | False | True
+  LIVE: '<p><span style="color: orange"><strong>ORANGE</strong></span><strong>-PRIME:</strong></p>'
+c40 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red">**a //b__c&#8212;d</span></p>'
+c41 | True | [] | [] | [] | True | True
+  LIVE: '<p>##red|A</p>'
+c42 | True | [] | [] | [] | True | True
+  LIVE: '<p>red|A##</p>'
+c43 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red">A</span>##</p>'
+c44 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red">A</span>blue|B##</p>'
+c45 | True | ['red', '##blue'] | ['red', '##blue'] | ['red', '##blue'] | True | True
+  LIVE: '<p><span style="color: red">A</span>green|B<span style="color: ##blue">C</span></p>'
+c46 | True | ['##red'] | ['##red'] | ['##red'] | True | True
+  LIVE: '<p><span style="color: ##red">A</span></p>'
+c47 | True | [] | [] | [] | True | True
+  LIVE: '<p>##red##</p>'
+c48 | True | ['blue'] | ['blue'] | ['blue'] | True | True
+  LIVE: '<p><span style="color: blue">##red|a</span></p>'
+c49 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p>ab<span style="color: red">cd</span>ef</p>'
+c50 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p>ab <span style="color: red">cd</span> ef</p>'
+c51 | True | ['red', 'blue'] | ['red', 'blue'] | ['red', 'blue'] | True | True
+  LIVE: '<p>x<span style="color: red">A</span>y<span style="color: blue">B</span>z</p>'
+c52 | True | ['red'] | ['red'] | ['red'] | False | True
+  LIVE: '<p><span style="color: red">A</span></p>'
+c53 | True | ['red'] | ['red'] | ['red'] | False | True
+  LIVE: '<p><span style="color: red">A</span> blue|B## C##</p>'
+c54 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red">A<br />\nB</span></p>'
+c55 | True | [] | [] | [] | True | False
+  LIVE: '<p>##red|A</p>\n<p>B##</p>'
+c56 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red">A<br />\nB<br />\nC</span></p>'
+c57 | True | ['red', 'blue'] | ['red', 'blue'] | ['red', 'blue'] | True | True
+  LIVE: '<p><span style="color: red">A</span><br />\n<span style="color: blue">B</span></p>'
+c58 | True | [] | [] | [] | False | False
+  LIVE: '<p>##red|A</p>\n<div>\n<p>B</p>\n</div>\n<br />\nC##'
+c59 | True | ['red'] | ['red'] | ['red'] | False | False
+  LIVE: '<blockquote>\n<p><span style="color: red">A</span></p>\n</blockquote>'
+c60 | True | [] | [] | ['red'] | False | False
+  LIVE: '<p>##red|A</p>\n<ul>\n<li>item</li>\n</ul>\n<p>B##</p>'
+c61 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red">A<br />\n[[code]]<br />\nB<br />\n[[/code]]</span></p>'
+c62 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span style="color: red">= Heading</span></p>'
+c63 | True | ['red'] | ['red'] | ['red'] | False | False
+  LIVE: '<div>\n<p><span style="color: red">A</span></p>\n</div>'
+c64 | True | ['red'] | ['red'] | ['red'] | False | True
+  LIVE: '<p><span style="color: red"><a href="x">A</a></span></p>'
+c65 | True | ['red'] | ['red'] | ['red'] | False | True
+  LIVE: '<table class="wiki-content-table">\n<tr>\n<td><span style="color: red">A</span></td>\n<td>B</td>\n</tr>\n</table>'
+c66 | True | ['red'] | ['red'] | ['red'] | True | True
+  LIVE: '<p><span><span style="color: red">A</span></span></p>'
+c67 | True | ['darkred'] | ['darkred'] | ['darkred'] | True | True
+  LIVE: '<p><span style="color: darkred">[[</span></p>'

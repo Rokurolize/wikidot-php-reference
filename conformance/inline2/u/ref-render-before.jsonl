@@ -1,0 +1,60 @@
+{"id":"u01","output":"<p><span style=\"text-decoration: underline;\">simple<\/span><\/p>\n\n"}
+{"id":"u02","output":"<p><span style=\"text-decoration: underline;\">Underline<\/span> test<\/p>\n\n"}
+{"id":"u03","output":"<p>lead <span style=\"text-decoration: underline;\">mid<\/span> tail<\/p>\n\n"}
+{"id":"u04","output":"<p><span style=\"text-decoration: underline;\">a<\/span> and <span style=\"text-decoration: underline;\">b<\/span><\/p>\n\n"}
+{"id":"u05","output":"<p><span style=\"text-decoration: underline;\">a b c<\/span><\/p>\n\n"}
+{"id":"u06","output":"<p>x<span style=\"text-decoration: underline;\">a<\/span>y<\/p>\n\n"}
+{"id":"u07","output":"<p><span style=\"text-decoration: underline;\">a <strong>b<\/strong> c<\/span><\/p>\n\n"}
+{"id":"u08","output":"<p><span style=\"text-decoration: underline;\">a <em>b<\/em> c<\/span><\/p>\n\n"}
+{"id":"u09","output":"<p><span style=\"text-decoration: underline;\">a <span style=\"text-decoration: line-through;\">b<\/span> c<\/span><\/p>\n\n"}
+{"id":"u10","output":"<p><span style=\"text-decoration: underline;\">a <span style=\"color: red;\">b<\/span> c<\/span><\/p>\n\n"}
+{"id":"u11","output":"<p><span style=\"text-decoration: underline;\">a <span style=\"color: red;\">b c<\/span> d<\/span><\/p>\n\n"}
+{"id":"u12","output":"<p><strong>a <span style=\"text-decoration: underline;\">b<\/span> c<\/strong><\/p>\n\n"}
+{"id":"u13","output":"<p><em>italic <span style=\"text-decoration: underline;\">b<\/span> c<\/em><\/p>\n\n"}
+{"id":"u14","output":"<p><span style=\"text-decoration: line-through;\">a <span style=\"text-decoration: underline;\">b<\/span> c<\/span><\/p>\n\n"}
+{"id":"u15","output":"<p><span style=\"color: red;\">a <span style=\"text-decoration: underline;\">b<\/span><\/span> c<\/p>\n\n"}
+{"id":"u16","output":"<p><span style=\"text-decoration: underline;\">A <span style=\"text-decoration: line-through;\">B <strong>C<\/span> X<\/span> Y<\/strong><\/p>\n\n"}
+{"id":"u17","output":"<p><strong>A <span style=\"text-decoration: underline;\">B <span style=\"color: red;\">C<\/strong> X<\/span> Y<\/span><\/p>\n\n"}
+{"id":"u18","output":"<p>__unmatched<\/p>\n\n"}
+{"id":"u19","output":"<p>unmatched__<\/p>\n\n"}
+{"id":"u20","output":"<p>___triple<\/p>\n\n"}
+{"id":"u21","output":"<p>triple___<\/p>\n\n"}
+{"id":"u22","output":"<p>____<\/p>\n\n"}
+{"id":"u23","output":"<p>a____b<\/p>\n\n"}
+{"id":"u24","output":"<p><span style=\"text-decoration: underline;\">_<\/span>_<\/p>\n\n"}
+{"id":"u25","output":"<p>x<span style=\"text-decoration: underline;\">_<\/span>___y<\/p>\n\n"}
+{"id":"u26","output":"<p><span style=\"text-decoration: underline;\">_<\/span>_ <span style=\"text-decoration: underline;\">_<\/span>_<\/p>\n\n"}
+{"id":"u27","output":"<p><span style=\"text-decoration: underline;\">_<\/span>_x<\/p>\n\n"}
+{"id":"u28","output":"<p><span style=\"text-decoration: underline;\">a<\/span>_b__<\/p>\n\n"}
+{"id":"u29","output":"<p>__ word__<\/p>\n\n"}
+{"id":"u30","output":"<p>__word __<\/p>\n\n"}
+{"id":"u31","output":"<p>__ word __<\/p>\n\n"}
+{"id":"u32","output":"<p><span style=\"text-decoration: underline;\">a __ b<\/span><\/p>\n\n"}
+{"id":"u33","output":"<p>a<span style=\"text-decoration: underline;\">b<\/span>c<\/p>\n\n"}
+{"id":"u34","output":"<p><span style=\"text-decoration: underline;\">-punct-<\/span><\/p>\n\n"}
+{"id":"u35","output":"<p><span style=\"text-decoration: underline;\">a_b<\/span><\/p>\n\n"}
+{"id":"u36","output":"<p><span style=\"text-decoration: underline;\">a<br \/>\nb<\/span><\/p>\n\n"}
+{"id":"u37","output":"<p>x<span style=\"text-decoration: underline;\">a<br \/>\n<\/span>y<\/p>\n\n"}
+{"id":"u38","output":"<p>__a<\/p>\n\n<p>b__<\/p>\n\n"}
+{"id":"u39","output":"<p>__a<\/p>\n\n\n<h3 id=\"toc0\"><span>heading<\/span><\/h3>\n<p>b__<\/p>\n\n"}
+{"id":"u40","output":"<p><span style=\"text-decoration: underline;\">a<br \/>\n[[div]]x[[\/div]]b<\/span><\/p>\n\n"}
+{"id":"u41","output":"<p>__a<\/p>\n\n<ul>\n<li>b<\/li>\n<\/ul><p>c__<\/p>\n\n"}
+{"id":"u42","output":"<p>foo_bar_baz<\/p>\n\n"}
+{"id":"u43","output":"<p><span style=\"text-decoration: underline;\">init<\/span><\/p>\n\n"}
+{"id":"u44","output":"<p>some_variable_name <span style=\"text-decoration: underline;\">paired<\/span> x<\/p>\n\n"}
+{"id":"u45","output":"\n<div class=\"code\">\n<pre><code>__not underlined__<\/code><\/pre><\/div>\n\n"}
+{"id":"u46","output":"<p><tt>{ <span style=\"text-decoration: underline;\">raw<\/span> }<\/tt><\/p>\n\n"}
+{"id":"u47","output":"<p>inline `<span style=\"text-decoration: underline;\">code<\/span>` tail<\/p>\n\n"}
+{"id":"u48","output":"\n<h3 id=\"toc0\"><span><span style=\"text-decoration: underline;\">heading<\/span><\/span><\/h3>\n"}
+{"id":"u49","output":"\n<h2 id=\"toc0\"><span><span style=\"text-decoration: underline;\">a<\/span> and <span style=\"text-decoration: underline;\">b<\/span><\/span><\/h2>\n"}
+{"id":"u50","output":"<p>[[a href=&quot;<a href=\"http:\/\/x\">http:\/\/x<\/a>&quot;]]<span style=\"text-decoration: underline;\">label<\/span>[[\/a]]<\/p>\n\n"}
+{"id":"u51","output":"<p>[<span style=\"text-decoration: underline;\">label<\/span> <a href=\"http:\/\/x\">http:\/\/x<\/a>]<\/p>\n\n"}
+{"id":"u52","output":"<p>[[a href=&quot;#x&quot;]]<span style=\"text-decoration: underline;\">a<br \/>\nb<\/span>[[\/a]]<\/p>\n\n"}
+{"id":"u53","output":"<p>x<span style=\"text-decoration: underline;\"><span style=\"color: red;\"> <\/span>y<\/span>z<\/p>\n\n"}
+{"id":"u54","output":"<p><span style=\"text-decoration: underline;\">x [[\/div]] y<\/span><\/p>\n\n"}
+{"id":"u55","output":"<p>a __ b<\/p>\n\n"}
+{"id":"u56","output":"<p><span style=\"text-decoration: underline;\">a<\/span><br \/>\n<span style=\"text-decoration: underline;\">b<\/span><\/p>\n\n"}
+{"id":"u57","output":"<p><span style=\"text-decoration: underline;\">__a<\/span>__<\/p>\n\n"}
+{"id":"u58","output":"<p><span style=\"text-decoration: underline;\">_<\/span>_[[\/span]]<\/p>\n\n"}
+{"id":"u59","output":"<blockquote><p><span style=\"text-decoration: underline;\">quoted<\/span><\/p>\n\n<\/blockquote>\n"}
+{"id":"u60","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><span style=\"text-decoration: underline;\">head<\/span><\/td>\n<\/tr>\n<tr>\n<td><span style=\"text-decoration: underline;\">cell<\/span><\/td>\n<\/tr>\n<\/table>"}

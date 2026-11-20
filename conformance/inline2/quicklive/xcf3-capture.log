@@ -1,0 +1,13 @@
+xcf3 -> muse-probe-r2in2-x-xcf3 stable=True saved_source_matches=True valid=True
+{
+ "xcf3": {
+  "fullname": "muse-probe-r2in2-x-xcf3",
+  "html": "<p><a href=\"http://x\"><span style=\"text-decoration: underline;\">label</span></a></p>",
+  "html_sha256": "d9618a48b538cc9a8766291750f3a77e6e0c190c9f2963f5fb9e4e2a276d3a9d",
+  "source": "[[a href=\"http://x\"]]__label__[[/a]]",
+  "source_sha256": "b1c6c42b77e9fbe0fb7bd9e472ff3fd26bc1d9349e792ec17bd4d0f3116ee773",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

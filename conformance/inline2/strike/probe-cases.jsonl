@@ -1,0 +1,23 @@
+{"id": "s01", "source": "before --removed-- after"}
+{"id": "s04", "source": "-- strike --"}
+{"id": "s05", "source": "--strike --"}
+{"id": "s06", "source": "-- strike--"}
+{"id": "s10", "source": "a----b"}
+{"id": "s11", "source": "raw ---] tail"}
+{"id": "s13", "source": "raw -----] tail"}
+{"id": "s15", "source": "raw -------] tail"}
+{"id": "s18", "source": "an em dash — and en dash – here"}
+{"id": "s22", "source": "x--a\n--y"}
+{"id": "s23", "source": "--a\n\nb--"}
+{"id": "s25", "source": "[[div]]\n--x [[/div]] y--"}
+{"id": "s29", "source": "##red|--a--## after"}
+{"id": "s30", "source": "##red|a--b##c--d"}
+{"id": "s31", "source": "**a--b**c--"}
+{"id": "s32", "source": "//a--b//c--"}
+{"id": "s34", "source": "--a****b--"}
+{"id": "s38", "source": "++ --strike-- heading"}
+{"id": "s39", "source": "[[[some-page | --strike--]]]"}
+{"id": "s40", "source": "[[code]]\n--not struck--\n[[/code]]"}
+{"id": "s43", "source": "----a--b--\n\n---- --a--"}
+{"id": "s44", "source": "--\n[[ul]]\n[[li]]\nx\n[[/li]]\n[[li]]\ny--\n[[/li]]\n[[/ul]]"}
+{"id": "s45", "source": "raw ---]\nraw ----]"}

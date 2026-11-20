@@ -1,0 +1,67 @@
+{"errors":[],"html":"<p><span style=\"color: red\">Apple</span></p>","id":"c01"}
+{"errors":[],"html":"<p><span style=\"color: blue\">Blueberry</span></p>","id":"c02"}
+{"errors":[],"html":"<p><span style=\"color: orange\">Orange</span></p>","id":"c03"}
+{"errors":[],"html":"<p><span style=\"color: darkred\">Dark</span></p>","id":"c04"}
+{"errors":[],"html":"<p><span style=\"color: white\">White</span></p>","id":"c05"}
+{"errors":[],"html":"<p><span style=\"color: aqua\">Aqua</span></p>","id":"c06"}
+{"errors":[],"html":"<p><span style=\"color: grey\">Grey</span></p>","id":"c07"}
+{"errors":[],"html":"<p><span style=\"color: #fff\">White</span></p>","id":"c08"}
+{"errors":[],"html":"<p><span style=\"color: #cd3636\">Cherry</span></p>","id":"c09"}
+{"errors":[],"html":"<p><span style=\"color: #c00\">Short</span></p>","id":"c10"}
+{"errors":[],"html":"<p><span style=\"color: #ff0000\">Red</span></p>","id":"c11"}
+{"errors":[],"html":"<p><span style=\"color: #123456\">Hex</span></p>","id":"c12"}
+{"errors":[],"html":"<p><span style=\"color: #ffff\">Upper</span></p>","id":"c13"}
+{"errors":[],"html":"<p><span style=\"color: 1234\">Four</span></p>","id":"c14"}
+{"errors":[],"html":"<p><span style=\"color: rgb(241, 194, 50)\">Mango</span></p>","id":"c15"}
+{"errors":[],"html":"<p><span style=\"color: var(--c-keyword)\">Var</span></p>","id":"c16"}
+{"errors":[],"html":"<p><span style=\"color: rgb(var(--x))\">VarRGB</span></p>","id":"c17"}
+{"errors":[],"html":"<p><span style=\"color: not-a-color\">Text</span></p>","id":"c18"}
+{"errors":[],"html":"<p><span style=\"color: rgb(1, 2, 3)\">A</span></p>","id":"c19"}
+{"errors":[],"html":"<p><span style=\"color: expression(alert(1))\">Expr</span></p>","id":"c20"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 20..21, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 23..23, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 21..23, kind: NoRulesMatch }"],"html":"<p>##rgba(10,20,30,.5)|A##</p>","id":"c21"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 21..22, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 24..24, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 22..24, kind: NoRulesMatch }"],"html":"<p>##hsl(120, 50%, 25%)|A##</p>","id":"c22"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 6..7, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 9..9, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }"],"html":"<p>##a_b|A##</p>","id":"c23"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 22..23, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 25..25, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 23..25, kind: NoRulesMatch }"],"html":"<p>##red;background:blue|A##</p>","id":"c24"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 27..28, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 30..30, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 28..30, kind: NoRulesMatch }"],"html":"<p>##url(javascript:alert(1))|A##</p>","id":"c25"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 3..7, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 11..11, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }"],"html":"<p>##|gold|A##</p>","id":"c26"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 3..4, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 6..6, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }"],"html":"<p>##|A##</p>","id":"c27"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 4..5, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: TableColumn, rule: \"page\", span: 2..4, kind: NotStartOfLine }","ParseError { token: TableColumn, rule: \"fallback\", span: 2..4, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 7..7, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }"],"html":"<p>##||A##</p>","id":"c28"}
+{"errors":["ParseError { token: InputEnd, rule: \"color\", span: 11..11, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>##not color</p>","id":"c29"}
+{"errors":["ParseError { token: Color, rule: \"color\", span: 6..8, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 8..8, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>##red|##</p>","id":"c30"}
+{"errors":[],"html":"","id":"c31"}
+{"errors":[],"html":"","id":"c32"}
+{"errors":[],"html":"","id":"c33"}
+{"errors":[],"html":"<p><span style=\"color: red\"><strong>bold</strong></span></p>","id":"c34"}
+{"errors":[],"html":"<p><span style=\"color: red\"><em>italic</em></span></p>","id":"c35"}
+{"errors":[],"html":"<p><span style=\"color: red\"><span style=\"text-decoration: underline;\">under</span></span></p>","id":"c36"}
+{"errors":[],"html":"<p><span style=\"color: red\"><span style=\"text-decoration: line-through;\">strike</span></span></p>","id":"c37"}
+{"errors":[],"html":"<p><strong><span style=\"color: red\">A</span></strong></p>","id":"c38"}
+{"errors":[],"html":"<p><span style=\"color: orange\"><strong>ORANGE</strong></span><strong>-PRIME:</strong></p>","id":"c39"}
+{"errors":[],"html":"<p><span style=\"color: red\">**a //b__c—d</span></p>","id":"c40"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 6..7, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>##red|A</p>","id":"c41"}
+{"errors":["ParseError { token: InputEnd, rule: \"color\", span: 7..7, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }"],"html":"<p>red|A##</p>","id":"c42"}
+{"errors":["ParseError { token: InputEnd, rule: \"color\", span: 11..11, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }"],"html":"<p><span style=\"color: red\">A</span>##</p>","id":"c43"}
+{"errors":["ParseError { token: InputEnd, rule: \"color\", span: 17..17, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 15..17, kind: NoRulesMatch }"],"html":"<p><span style=\"color: red\">A</span>blue|B##</p>","id":"c44"}
+{"errors":[],"html":"<p><span style=\"color: red\">A</span>green|B<span style=\"color: ##blue\">C</span></p>","id":"c45"}
+{"errors":[],"html":"<p><span style=\"color: ##red\">A</span></p>","id":"c46"}
+{"errors":["ParseError { token: InputEnd, rule: \"color\", span: 7..7, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 7..7, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }"],"html":"<p>##red##</p>","id":"c47"}
+{"errors":[],"html":"<p><span style=\"color: blue\">##red|a</span></p>","id":"c48"}
+{"errors":[],"html":"<p>ab<span style=\"color: red\">cd</span>ef</p>","id":"c49"}
+{"errors":[],"html":"<p>ab <span style=\"color: red\">cd</span> ef</p>","id":"c50"}
+{"errors":[],"html":"<p>x<span style=\"color: red\">A</span>y<span style=\"color: blue\">B</span>z</p>","id":"c51"}
+{"errors":[],"html":"<p><span style=\"color: red\">A</span></p>","id":"c52"}
+{"errors":["ParseError { token: InputEnd, rule: \"color\", span: 22..22, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 16..18, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 22..22, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 20..22, kind: NoRulesMatch }"],"html":"<p><span style=\"color: red\">A</span> blue|B## C##</p>","id":"c53"}
+{"errors":[],"html":"<p><span style=\"color: red\">A<br>\nB</span></p>","id":"c54"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 6..7, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 12..12, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>##red|A</p><p>B##</p>","id":"c55"}
+{"errors":[],"html":"<p><span style=\"color: red\">A<br>\nB<br>\nC</span></p>","id":"c56"}
+{"errors":[],"html":"<p><span style=\"color: red\">A</span><br>\n<span style=\"color: blue\">B</span></p>","id":"c57"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 6..7, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 31..31, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 29..31, kind: NoRulesMatch }"],"html":"<p>##red|A</p><div><p>B</p></div><br>\nC##","id":"c58"}
+{"errors":[],"html":"<blockquote><p><span style=\"color: red\">A</span></p></blockquote>","id":"c59"}
+{"errors":[],"html":"<span style=\"color: red\">A<ul>\n<li>item</li>\n</ul>\nB</span>","id":"c60"}
+{"errors":["ParseError { token: LineBreak, rule: \"block-code\", span: 16..17, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 14..16, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 19..22, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 26..28, kind: NoRulesMatch }"],"html":"<p><span style=\"color: red\">A<br>\n[[code]]<br>\nB<br>\n[[/code]]</span></p>","id":"c61"}
+{"errors":[],"html":"<p><span style=\"color: red\">= Heading</span></p>","id":"c62"}
+{"errors":[],"html":"<div><p><span style=\"color: red\">A</span></p></div>","id":"c63"}
+{"errors":[],"html":"<p><span style=\"color: red\"><a href=\"x\">A</a></span></p>","id":"c64"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td><span style=\"color: red\">A</span></td>\n<td>B</td>\n</tr>\n</table>","id":"c65"}
+{"errors":[],"html":"<p><span><span style=\"color: red\">A</span></span></p>","id":"c66"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 14..14, kind: EndOfInput }","ParseError { token: LeftBlock, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p><span style=\"color: darkred\">[[</span></p>","id":"c67"}

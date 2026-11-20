@@ -1,0 +1,27 @@
+{"errors":[],"html":"<p><strong>bold</strong><br>\nx</p>","id":"p01"}
+{"errors":[],"html":"<p><strong>a</strong>b<strong>c</strong><br>\nx</p>","id":"p02"}
+{"errors":[],"html":"<p><strong>*triple</strong>*<br>\nx</p>","id":"p03"}
+{"errors":[],"html":"<p><strong>a</strong>*<br>\nx</p>","id":"p04"}
+{"errors":[],"html":"<p>x</p>","id":"p05"}
+{"errors":[],"html":"","id":"p06"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 8..10, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>** bold **<br>\nx</p>","id":"p07"}
+{"errors":[],"html":"<p>wor<strong>d</strong>in<br>\nx</p>","id":"p08"}
+{"errors":[],"html":"<p><strong><em>em</em></strong><br>\nx</p>","id":"p09"}
+{"errors":[],"html":"<p><em><strong>bold</strong></em><br>\nx</p>","id":"p10"}
+{"errors":[],"html":"<p><span style=\"color: #c00\"><strong>red bold</strong></span><br>\nx</p>","id":"p11"}
+{"errors":[],"html":"<p><strong><span style=\"color: #c00\">red</span></strong><br>\nx</p>","id":"p12"}
+{"errors":[],"html":"<p><strong>a<br>\nb</strong><br>\nx</p>","id":"p13"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 0..2, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>**unpaired<br>\nx</p>","id":"p14"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 8..10, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>unpaired**<br>\nx</p>","id":"p15"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td><strong>A</strong></td>\n<td>B</td>\n</tr>\n</table><p>x</p>","id":"p16"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td><strong>A</strong></td>\n<td>B</td>\n<td>C</td>\n</tr>\n</table><p>x</p>","id":"p17"}
+{"errors":[],"html":"<p style=\"text-align: center;\"><strong>Head</strong> =</p><p>x</p>","id":"p18"}
+{"errors":[],"html":"<p><strong>= Head =</strong><br>\nx</p>","id":"p19"}
+{"errors":["ParseError { token: LineBreak, rule: \"block-star\", span: 20..21, kind: NoSuchBlock }","ParseError { token: LeftBlockStar, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 9..11, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[**label**|target]]<br>\nx</p>","id":"p20"}
+{"errors":["ParseError { token: LineBreak, rule: \"block\", span: 20..21, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[target|<strong>label</strong>]]<br>\nx</p>","id":"p21"}
+{"errors":["ParseError { token: LineBreak, rule: \"block-star\", span: 12..13, kind: NoSuchBlock }","ParseError { token: LeftBlockStar, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 8..10, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>[[**page**]]<br>\nx</p>","id":"p22"}
+{"errors":["ParseError { token: LineBreak, rule: \"bold\", span: 3..4, kind: RuleFailed }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 10..12, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>**a</p><hr><p>b**<br>\nx</p>","id":"p23"}
+{"errors":[],"html":"<p><strong><span style=\"text-decoration: underline;\">u</span></strong><br>\nx</p>","id":"p24"}
+{"errors":[],"html":"<p><strong><span style=\"text-decoration: line-through;\">s</span></strong><br>\nx</p>","id":"p25"}
+{"errors":[],"html":"<p>[code]<strong>bold</strong>[/code]<br>\nx</p>","id":"p26"}
+{"errors":[],"html":"<p><tt><strong>mono</strong></tt><br>\nx</p>","id":"p27"}

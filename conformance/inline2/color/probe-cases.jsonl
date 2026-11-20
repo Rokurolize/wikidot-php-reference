@@ -1,0 +1,67 @@
+{"id": "c01", "source": "##red|Apple##"}
+{"id": "c02", "source": "##blue|Blueberry##"}
+{"id": "c03", "source": "##orange|Orange##"}
+{"id": "c04", "source": "##DarkRed|Dark##"}
+{"id": "c05", "source": "##white|White##"}
+{"id": "c06", "source": "##aqua|Aqua##"}
+{"id": "c07", "source": "##grey|Grey##"}
+{"id": "c08", "source": "###fff|White##"}
+{"id": "c09", "source": "###cd3636|Cherry##"}
+{"id": "c10", "source": "##c00|Short##"}
+{"id": "c11", "source": "##FF0000|Red##"}
+{"id": "c12", "source": "##123456|Hex##"}
+{"id": "c13", "source": "###FFFF|Upper##"}
+{"id": "c14", "source": "##1234|Four##"}
+{"id": "c15", "source": "##rgb(241, 194, 50)|Mango##"}
+{"id": "c16", "source": "##var(--c-keyword)|Var##"}
+{"id": "c17", "source": "##rgb(var(--x))|VarRGB##"}
+{"id": "c18", "source": "##not-a-color|Text##"}
+{"id": "c19", "source": "##rgb(1, 2, 3)|A##"}
+{"id": "c20", "source": "##expression(alert(1))|Expr##"}
+{"id": "c21", "source": "##rgba(10,20,30,.5)|A##"}
+{"id": "c22", "source": "##hsl(120, 50%, 25%)|A##"}
+{"id": "c23", "source": "##a_b|A##"}
+{"id": "c24", "source": "##red;background:blue|A##"}
+{"id": "c25", "source": "##url(javascript:alert(1))|A##"}
+{"id": "c26", "source": "##|gold|A##"}
+{"id": "c27", "source": "##|A##"}
+{"id": "c28", "source": "##||A##"}
+{"id": "c29", "source": "##not color"}
+{"id": "c30", "source": "##red|##"}
+{"id": "c31", "source": "##red| ##"}
+{"id": "c32", "source": "##red|{{}}##"}
+{"id": "c33", "source": "##red|   ##"}
+{"id": "c34", "source": "##red|**bold**##"}
+{"id": "c35", "source": "##red|//italic//##"}
+{"id": "c36", "source": "##red|__under__##"}
+{"id": "c37", "source": "##red|--strike--##"}
+{"id": "c38", "source": "**##red|A##**"}
+{"id": "c39", "source": "##orange|**ORANGE##-PRIME:**"}
+{"id": "c40", "source": "##red|**a //b__c--d##"}
+{"id": "c41", "source": "##red|A"}
+{"id": "c42", "source": "red|A##"}
+{"id": "c43", "source": "##red|A####"}
+{"id": "c44", "source": "##red|A##blue|B##"}
+{"id": "c45", "source": "##red|A##green|B####blue|C##"}
+{"id": "c46", "source": "####red|A##"}
+{"id": "c47", "source": "##red##"}
+{"id": "c48", "source": "##blue|##red|a##"}
+{"id": "c49", "source": "ab##red|cd##ef"}
+{"id": "c50", "source": "ab ##red|cd## ef"}
+{"id": "c51", "source": "x##red|A##y##blue|B##z"}
+{"id": "c52", "source": "## red | A ##"}
+{"id": "c53", "source": "##red|A ##blue|B## C##"}
+{"id": "c54", "source": "##red|A\nB##"}
+{"id": "c55", "source": "##red|A\n\nB##"}
+{"id": "c56", "source": "##red|A\nB\nC##"}
+{"id": "c57", "source": "##red|A##\n##blue|B##"}
+{"id": "c58", "source": "##red|A\n\n[[div]]\nB\n[[/div]]\nC##"}
+{"id": "c59", "source": "> ##red|A##"}
+{"id": "c60", "source": "##red|A\n* item\nB##"}
+{"id": "c61", "source": "##red|A\n[[code]]\nB\n[[/code]]##"}
+{"id": "c62", "source": "##red|= Heading##"}
+{"id": "c63", "source": "[[div]]\n##red|A##\n[[/div]]"}
+{"id": "c64", "source": "##red|[[a href=\"x\"]]A[[/a]]##"}
+{"id": "c65", "source": "|| ##red|A||B## ||"}
+{"id": "c66", "source": "[[span]]##red|A##[[/span]]"}
+{"id": "c67", "source": "##darkred|[[##"}

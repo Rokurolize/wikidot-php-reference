@@ -1,0 +1,92 @@
+{
+ "x55": {
+  "fullname": "muse-probe-r2in2-x-x55",
+  "html": "<p>a &#8212; b &#8230; // c ** d __ e ##red|f</p>",
+  "html_sha256": "48f10a016d279824a5ae3ffdfc1653112ac95369ed744f648ee1cc70fba44f6c",
+  "source": "a -- b ... // c ** d __ e ##red|f",
+  "source_sha256": "e53147ddddd627a62b7baddf034d946e1ccef914533b78bca9d2f5b34491839d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x56": {
+  "fullname": "muse-probe-r2in2-x-x56",
+  "html": "<p><strong>*b</strong>* <em>/i</em>/ <span style=\"text-decoration: underline;\">_u</span>_ <span style=\"text-decoration: line-through;\">-s</span>- <span style=\"color: #red\">t</span>#</p>",
+  "html_sha256": "1adc0d12fc1f8138c6748169db3c8b1fa03866462f842a436a375737511e8aaa",
+  "source": "***b*** ///i/// ___u___ ---s--- ###red|t###",
+  "source_sha256": "7dc8a47a7c0ee6b2458d4a591880eb31511477f9474143f520bf207d12a9a496",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x57": {
+  "fullname": "muse-probe-r2in2-x-x57",
+  "html": "<p><strong>a</strong><strong>b</strong> <em>c</em><em>d</em> <span style=\"text-decoration: underline;\">e</span><span style=\"text-decoration: underline;\">f</span> <span style=\"text-decoration: line-through;\">g</span><span style=\"text-decoration: line-through;\">h</span></p>",
+  "html_sha256": "e71e9d48d784dd866e1e403278d3b0cbf088e09069be8f09761ed027fe42bbb5",
+  "source": "**a****b** //c////d// __e____f__ --g----h--",
+  "source_sha256": "228c227d6268b8a9591b2bbaf6ee1704c2c19bd77ce7913a0e45c9fc41061cdb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x58": {
+  "fullname": "muse-probe-r2in2-x-x58",
+  "html": "<p><span style=\"white-space: pre-wrap;\">**b**&#32;//i//&#32;__u__&#32;--s--&#32;##red|c##</span></p>",
+  "html_sha256": "08028f7efa11122e751e07f998145b8046d0e12b0ed367143c00ac8f0344e589",
+  "source": "@@**b** //i// __u__ --s-- ##red|c##@@",
+  "source_sha256": "5e2b518527caf31df6476b05f2fcef68c058067c48f47ad7310c09af4192f83f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x59": {
+  "fullname": "muse-probe-r2in2-x-x59",
+  "html": "<div class=\"code\">\n<pre><code>**b** //i// __u__ --s-- ##red|c##</code></pre></div>",
+  "html_sha256": "594412a5efb507d33e80cb7c374498e517c5d601cba32f7d3c95d5c0cb8df1f1",
+  "source": "[[code]]**b** //i// __u__ --s-- ##red|c##[[/code]]",
+  "source_sha256": "383322b450e22a1802abfbd84337305cab7414e8dc1c27ed91d54ace36554740",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x60": {
+  "fullname": "muse-probe-r2in2-x-x60",
+  "html": "<ul>\n<li><strong>a</strong></li>\n<li><strong>b</strong></li>\n<li>c</li>\n</ul>",
+  "html_sha256": "ae53b03834d08b1660b5db452794776217b1b2ef3da8ddfa97767dc7ea7a5e95",
+  "source": "* **a\n* b**\n* c",
+  "source_sha256": "bda66505d51bfbde82e5de7a639b04f5853f33b87b315805d638f46431e59383",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x61": {
+  "fullname": "muse-probe-r2in2-x-x61",
+  "html": "<p>**a<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. b**c</div>\n</div>",
+  "html_sha256": "dc2bcfa450ebde56b4802fd354944ca1ffdd74c1eee49634ee3152adf43b8ce6",
+  "source": "**a[[footnote]]b**c[[/footnote]]",
+  "source_sha256": "22c0ff2c406fe0c45513d98ab37540b3977e2d1f0a6a11a372af616159179555",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x62": {
+  "fullname": "muse-probe-r2in2-x-x62",
+  "html": "<p style=\"text-align: center;\"><span style=\"color: red\"><strong>b</strong> <em>i</em></span> =</p>",
+  "html_sha256": "afe2db10a0b81f2aa634c7cf3cb9dfa807913463e9423a9bdb69315a01b7929c",
+  "source": "= ##red|**b** //i// ## =",
+  "source_sha256": "4a189c7dbd29dbb7e070eeca27179e71a2fb7998852d4ba7cd8a5b61cf26a59d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x63": {
+  "fullname": "muse-probe-r2in2-x-x63",
+  "html": "<p><a href=\"https://example.com\">**//example.com/x//**</a></p>",
+  "html_sha256": "abc425c74bd2394e6ba87905ed57c06280a01f6fabaa9e1c1a5fe580da2d98ae",
+  "source": "[https://example.com **//example.com/x//**]",
+  "source_sha256": "f3758488bc3f6165131dcdfb27ee558c71b87620c33abb59222e68d3fb018a21",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

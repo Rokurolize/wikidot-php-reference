@@ -1,0 +1,101 @@
+c01 -> muse-probe-r2in2-color-c01 stable=True saved_source_matches=True valid=True
+c02 -> muse-probe-r2in2-color-c02 stable=True saved_source_matches=True valid=True
+c03 -> muse-probe-r2in2-color-c03 stable=True saved_source_matches=True valid=True
+c04 -> muse-probe-r2in2-color-c04 stable=True saved_source_matches=True valid=True
+c05 -> muse-probe-r2in2-color-c05 stable=True saved_source_matches=True valid=True
+c06 -> muse-probe-r2in2-color-c06 stable=True saved_source_matches=True valid=True
+c07 -> muse-probe-r2in2-color-c07 stable=True saved_source_matches=True valid=True
+c08 -> muse-probe-r2in2-color-c08 stable=True saved_source_matches=True valid=True
+c09 -> muse-probe-r2in2-color-c09 stable=True saved_source_matches=True valid=True
+{
+ "c01": {
+  "fullname": "muse-probe-r2in2-color-c01",
+  "html": "<p><span style=\"color: red\">Apple</span></p>",
+  "html_sha256": "a8b1cd23005b88a8380abaa70f88c3887ca72e162f98ea2ff9797eac6cef5970",
+  "source": "##red|Apple##",
+  "source_sha256": "24d2d2e0237bc3a7826bf30b8da340db988759378f1155b33bc3abac7d5f908b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c02": {
+  "fullname": "muse-probe-r2in2-color-c02",
+  "html": "<p><span style=\"color: blue\">Blueberry</span></p>",
+  "html_sha256": "735e041355c3584e38406a2688ae52c202db14d0b3a1a20ffa5953115d2849b0",
+  "source": "##blue|Blueberry##",
+  "source_sha256": "d3a466f5a3072bc4894c6593efffbf988c6a938374278e47c98e749577293b8c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c03": {
+  "fullname": "muse-probe-r2in2-color-c03",
+  "html": "<p><span style=\"color: orange\">Orange</span></p>",
+  "html_sha256": "af5bd4eab8de3acd9048f74ef2fca8a901b8a50a112ca238c94d40521c22c841",
+  "source": "##orange|Orange##",
+  "source_sha256": "df891169902195190bab39ead8b62f6220082eaea357dbeac6e9229a9284bcc0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c04": {
+  "fullname": "muse-probe-r2in2-color-c04",
+  "html": "<p><span style=\"color: darkred\">Dark</span></p>",
+  "html_sha256": "8c00d7550d873886865e67a5f0ca1b1b30e46f09afeb7f45fb896090c3e7d9b0",
+  "source": "##DarkRed|Dark##",
+  "source_sha256": "7d0a1a2ee59e17731f284c3aa036b2c5925500a330fdffb549dae73c5c1523e9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c05": {
+  "fullname": "muse-probe-r2in2-color-c05",
+  "html": "<p><span style=\"color: white\">White</span></p>",
+  "html_sha256": "3ee23076da223b28f804a2fa9b0b41ad1d3ca205979e2b7e83d01fed14da455c",
+  "source": "##white|White##",
+  "source_sha256": "fd2eb118fef3aad9f6abd2b069303e7830a9e73f33315dce2d7247597e03f441",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c06": {
+  "fullname": "muse-probe-r2in2-color-c06",
+  "html": "<p><span style=\"color: aqua\">Aqua</span></p>",
+  "html_sha256": "4f118062139ba3048636b073b9e910c273fcef03ad4dc56a20d0ab3f506a5392",
+  "source": "##aqua|Aqua##",
+  "source_sha256": "34df82b4d6bc7742dee657bb1d0e20d153fd67fd3046bda0500c7ebf462a141d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c07": {
+  "fullname": "muse-probe-r2in2-color-c07",
+  "html": "<p><span style=\"color: grey\">Grey</span></p>",
+  "html_sha256": "a80c06a734364b8b4156c158ff02df94826ebe516a4ed79e98d426f0c8b42110",
+  "source": "##grey|Grey##",
+  "source_sha256": "374894940c79a0dfa461a7590d81525713a59592ad12af64955073a3afd9e145",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c08": {
+  "fullname": "muse-probe-r2in2-color-c08",
+  "html": "<p><span style=\"color: #fff\">White</span></p>",
+  "html_sha256": "5c22a4881e6dc56ba6e426190caa43fb3806404763b1ca4792198daf01ff487e",
+  "source": "###fff|White##",
+  "source_sha256": "1184ed1810267dd4d60fe62a7f3b7ef7f54c01cda33112f7f2c23348479bea19",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "c09": {
+  "fullname": "muse-probe-r2in2-color-c09",
+  "html": "<p><span style=\"color: #cd3636\">Cherry</span></p>",
+  "html_sha256": "b41c710d54ba929d2938673ed2dd9d827271a5aea0ac1222a4878b129bae3a07",
+  "source": "###cd3636|Cherry##",
+  "source_sha256": "38b0cb37754e5d68a0eef5cc9fdfd5718fa4cae330c4dacc2cf4aa77b92fb281",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

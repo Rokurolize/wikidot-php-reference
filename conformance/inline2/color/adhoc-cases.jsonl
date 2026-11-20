@@ -1,0 +1,6 @@
+{"id":"a1","source":"## |gold|A##"}
+{"id":"a2","source":"##|gold|A##"}
+{"id":"a3","source":"##red|A##"}
+{"id":"a4","source":"##rgb(10, 12, 14)|A##"}
+{"id":"a5","source":"##hsl(1, 2, 3)|A##"}
+{"id":"a6","source":"##var(--c-keyword)|A##"}

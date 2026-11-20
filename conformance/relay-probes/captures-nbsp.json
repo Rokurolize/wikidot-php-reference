@@ -1,0 +1,12 @@
+{
+ "nbsp-url": {
+  "fullname": "muse-probe-req-nbsp-url",
+  "html": "<p>Link <a href=\"http://example.com/a%C2%A0b\">http://example.com/a&nbsp;b</a> end</p>",
+  "html_sha256": "3821efb2ae99f795e1c61cb14ae9608f19b2e1e20fe3044af83f9d8cf47ffb7e",
+  "source": "Link http://example.com/a b end",
+  "source_sha256": "1d9381bab3b990815344ecc944b7279feeeec51bf87096dd9f4023a1823be6de",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

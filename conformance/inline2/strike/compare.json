@@ -1,0 +1,544 @@
+{
+ "ref_file": "ref-after-render.jsonl",
+ "rows": [
+  {
+   "id": "s01",
+   "source": "before --removed-- after",
+   "ref": "<p>before <span style=\"text-decoration: line-through;\">removed</span> after</p>",
+   "ftml": "<p>before <span style=\"text-decoration: line-through;\">removed</span> after</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p>before <span style=\"text-decoration: line-through;\">removed</span> after</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s02",
+   "source": "ab--cd--ef",
+   "ref": "<p>ab<span style=\"text-decoration: line-through;\">cd</span>ef</p>",
+   "ftml": "<p>ab<span style=\"text-decoration: line-through;\">cd</span>ef</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s03",
+   "source": "--strike-- and text",
+   "ref": "<p><span style=\"text-decoration: line-through;\">strike</span> and text</p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\">strike</span> and text</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s04",
+   "source": "-- strike --",
+   "ref": "<p>— strike —</p>",
+   "ftml": "<p>— strike —</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p>— strike —</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s05",
+   "source": "--strike --",
+   "ref": "<p>—strike —</p>",
+   "ftml": "<p>—strike —</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p>—strike —</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s06",
+   "source": "-- strike--",
+   "ref": "<p>— strike—</p>",
+   "ftml": "<p>— strike—</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p>— strike—</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s07",
+   "source": "a -- b",
+   "ref": "<p>a — b</p>",
+   "ftml": "<p>a — b</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s08",
+   "source": "text --",
+   "ref": "<p>text —</p>",
+   "ftml": "<p>text —</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s09",
+   "source": "-- text",
+   "ref": "<p>— text</p>",
+   "ftml": "<p>— text</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s10",
+   "source": "a----b",
+   "ref": "<p>a——b</p>",
+   "ftml": "<p>a——b</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p>a——b</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s11",
+   "source": "raw ---] tail",
+   "ref": "<p>raw —-] tail</p>",
+   "ftml": "<p>raw —-] tail</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p>raw —-] tail</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s12",
+   "source": "raw ----] tail",
+   "ref": "<p>raw ——] tail</p>",
+   "ftml": "<p>raw ——] tail</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s13",
+   "source": "raw -----] tail",
+   "ref": "<p>raw <span style=\"text-decoration: line-through;\">-</span>] tail</p>",
+   "ftml": "<p>raw <span style=\"text-decoration: line-through;\">-</span>] tail</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p>raw <span style=\"text-decoration: line-through;\">-</span>] tail</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s14",
+   "source": "raw ------] tail",
+   "ref": "<p>raw <span style=\"text-decoration: line-through;\">-</span>-] tail</p>",
+   "ftml": "<p>raw <span style=\"text-decoration: line-through;\">-</span>-] tail</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s15",
+   "source": "raw -------] tail",
+   "ref": "<p>raw <span style=\"text-decoration: line-through;\">-</span>—] tail</p>",
+   "ftml": "<p>raw <span style=\"text-decoration: line-through;\">-</span>—] tail</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p>raw <span style=\"text-decoration: line-through;\">-</span>—] tail</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s16",
+   "source": "raw ---------] tail",
+   "ref": "<p>raw <span style=\"text-decoration: line-through;\">-</span>——] tail</p>",
+   "ftml": "<p>raw <span style=\"text-decoration: line-through;\">-</span>——] tail</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s17",
+   "source": "raw ----------] tail",
+   "ref": "<p>raw <span style=\"text-decoration: line-through;\">-</span><span style=\"text-decoration: line-through;\">-</span>] tail</p>",
+   "ftml": "<p>raw <span style=\"text-decoration: line-through;\">-</span><span style=\"text-decoration: line-through;\">-</span>] tail</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s18",
+   "source": "an em dash — and en dash – here",
+   "ref": "<p>an em dash — and en dash – here</p>",
+   "ftml": "<p>an em dash — and en dash – here</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p>an em dash — and en dash – here</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s19",
+   "source": "entity &#8212; and &mdash; here",
+   "ref": "<p>entity &amp;#8212; and &amp;mdash; here</p>",
+   "ftml": "<p>entity &amp;#8212; and &amp;mdash; here</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s20",
+   "source": "a---b---c",
+   "ref": "<p>a<span style=\"text-decoration: line-through;\">-b</span>-c</p>",
+   "ftml": "<p>a<span style=\"text-decoration: line-through;\">-b</span>-c</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s21",
+   "source": "--\nx--",
+   "ref": "<p><span style=\"text-decoration: line-through;\"><br>x</span></p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\"><br>x</span></p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s22",
+   "source": "x--a\n--y",
+   "ref": "<p>x<span style=\"text-decoration: line-through;\">a<br></span>y</p>",
+   "ftml": "<p>x<span style=\"text-decoration: line-through;\">a<br></span> y</p>",
+   "ref_vs_ftml": "diff",
+   "live": "<p>x<span style=\"text-decoration: line-through;\">a<br></span> y</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "diff",
+   "live_vs_ftml": "same",
+   "triple": "ftml+live"
+  },
+  {
+   "id": "s23",
+   "source": "--a\n\nb--",
+   "ref": "<p>—a</p><p>b—</p>",
+   "ftml": "<p>—a</p><p>b—</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p>—a</p><p>b—</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s24",
+   "source": "--x [[/div]] y--",
+   "ref": "<p><span style=\"text-decoration: line-through;\">x [[/div]] y</span></p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\">x [[/div]] y</span></p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s25",
+   "source": "[[div]]\n--x [[/div]] y--",
+   "ref": "<div><p>—x</p></div>y—",
+   "ftml": "<div><p>—x</p></div>y—",
+   "ref_vs_ftml": "same",
+   "live": "<div><p>—x</p></div>y—",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s26",
+   "source": "--Nested **strike**through--",
+   "ref": "<p><span style=\"text-decoration: line-through;\">Nested <strong>strike</strong>through</span></p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\">Nested <strong>strike</strong>through</span></p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s27",
+   "source": "--a//b//c--",
+   "ref": "<p><span style=\"text-decoration: line-through;\">a<em>b</em>c</span></p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\">a<em>b</em>c</span></p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s28",
+   "source": "--a__b__c--",
+   "ref": "<p><span style=\"text-decoration: line-through;\">a<span style=\"text-decoration: underline;\">b</span>c</span></p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\">a<span style=\"text-decoration: underline;\">b</span>c</span></p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s29",
+   "source": "##red|--a--## after",
+   "ref": "<p><span style=\"color: red\"><span style=\"text-decoration: line-through;\">a</span></span> after</p>",
+   "ftml": "<p><span style=\"color: red\"><span style=\"text-decoration: line-through;\">a</span></span> after</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p><span style=\"color: red\"><span style=\"text-decoration: line-through;\">a</span></span> after</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s30",
+   "source": "##red|a--b##c--d",
+   "ref": "<p><span style=\"color: red\">a<span style=\"text-decoration: line-through;\">b</span>c</span>d</p>",
+   "ftml": "<p><span style=\"color: red\">a<span style=\"text-decoration: line-through;\">b</span>c</span>d</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p><span style=\"color: red\">a<span style=\"text-decoration: line-through;\">b</span>c</span>d</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s31",
+   "source": "**a--b**c--",
+   "ref": "<p><strong>a<span style=\"text-decoration: line-through;\">b</strong>c</span></p>",
+   "ftml": "<p><strong>a<span style=\"text-decoration: line-through;\">b</span></strong><span style=\"text-decoration: line-through;\">c</span></p>",
+   "ref_vs_ftml": "diff",
+   "live": "<p><strong>a<span style=\"text-decoration: line-through;\">b</span></strong><span style=\"text-decoration: line-through;\">c</span></p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "diff",
+   "live_vs_ftml": "same",
+   "triple": "ftml+live"
+  },
+  {
+   "id": "s32",
+   "source": "//a--b//c--",
+   "ref": "<p><em>a<span style=\"text-decoration: line-through;\">b</em>c</span></p>",
+   "ftml": "<p><em>a<span style=\"text-decoration: line-through;\">b</span></em><span style=\"text-decoration: line-through;\">c</span></p>",
+   "ref_vs_ftml": "diff",
+   "live": "<p><em>a<span style=\"text-decoration: line-through;\">b</span></em><span style=\"text-decoration: line-through;\">c</span></p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "diff",
+   "live_vs_ftml": "same",
+   "triple": "ftml+live"
+  },
+  {
+   "id": "s33",
+   "source": "__a--b__c--",
+   "ref": "<p><span style=\"text-decoration: underline;\">a<span style=\"text-decoration: line-through;\">b</span>c</span></p>",
+   "ftml": "<p><span style=\"text-decoration: underline;\">a<span style=\"text-decoration: line-through;\">b</span>c</span></p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s34",
+   "source": "--a****b--",
+   "ref": "<p><span style=\"text-decoration: line-through;\">a****b</span></p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\">ab</span></p>",
+   "ref_vs_ftml": "diff",
+   "live": "<p><span style=\"text-decoration: line-through;\">ab</span></p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "diff",
+   "live_vs_ftml": "same",
+   "triple": "ftml+live"
+  },
+  {
+   "id": "s35",
+   "source": "----",
+   "ref": "<hr>",
+   "ftml": "<hr>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s36",
+   "source": "---a---",
+   "ref": "<p><span style=\"text-decoration: line-through;\">-a</span>-</p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\">-a</span>-</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s37",
+   "source": "--a-- and --b--",
+   "ref": "<p><span style=\"text-decoration: line-through;\">a</span> and <span style=\"text-decoration: line-through;\">b</span></p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\">a</span> and <span style=\"text-decoration: line-through;\">b</span></p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s38",
+   "source": "++ --strike-- heading",
+   "ref": "<h2 id=\"toc0\"><span><span style=\"text-decoration: line-through;\">strike</span> heading</span></h2>",
+   "ftml": "<h2 id=\"toc0\"><span><span style=\"text-decoration: line-through;\">strike</span> heading</span></h2>",
+   "ref_vs_ftml": "same",
+   "live": "<h2 id=\"toc0\"><span><span style=\"text-decoration: line-through;\">strike</span> heading</span></h2>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s39",
+   "source": "[[[some-page | --strike--]]]",
+   "ref": "<p><a href=\"/some-page\">--strike--</a></p>",
+   "ftml": "<p><a href=\"/some-page\">--strike--</a></p>",
+   "ref_vs_ftml": "same",
+   "live": "<p><a href=\"/some-page\">--strike--</a></p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s40",
+   "source": "[[code]]\n--not struck--\n[[/code]]",
+   "ref": "<div class=\"code\"><pre><code>--not struck--</code></pre></div>",
+   "ftml": "<div class=\"code\"><pre><code>--not struck--</code></pre></div>",
+   "ref_vs_ftml": "same",
+   "live": "<div class=\"code\"><pre><code>--not struck--</code></pre></div>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s41",
+   "source": "@@--not struck--@@",
+   "ref": "<p><span style=\"white-space: pre-wrap;\">--not&#32;struck--</span></p>",
+   "ftml": "<p><span style=\"white-space: pre-wrap;\">--not&#32;struck--</span></p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s42",
+   "source": "{{--mono--}}",
+   "ref": "<p><tt><span style=\"text-decoration: line-through;\">mono</span></tt></p>",
+   "ftml": "<p><tt><span style=\"text-decoration: line-through;\">mono</span></tt></p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s43",
+   "source": "----a--b--\n\n---- --a--",
+   "ref": "<p><span style=\"text-decoration: line-through;\">—a</span>b—</p><p><span style=\"text-decoration: line-through;\">— —a</span></p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\">—a</span>b—</p><p><span style=\"text-decoration: line-through;\">— —a</span></p>",
+   "ref_vs_ftml": "same",
+   "live": "<p><span style=\"text-decoration: line-through;\">—a</span>b—</p><p><span style=\"text-decoration: line-through;\">— —a</span></p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s44",
+   "source": "--\n[[ul]]\n[[li]]\nx\n[[/li]]\n[[li]]\ny--\n[[/li]]\n[[/ul]]",
+   "ref": "<p><span style=\"text-decoration: line-through;\"><br>[[ul]]<br>[[li]]<br>x<br>[[/li]]<br>[[li]]<br>y</span><br>[[/li]]<br>[[/ul]]</p>",
+   "ftml": "<span style=\"text-decoration: line-through;\"><br></span><ul><li><span style=\"text-decoration: line-through;\">x<br></span></li><li><span style=\"text-decoration: line-through;\">y</span><br></li></ul><br>",
+   "ref_vs_ftml": "diff",
+   "live": "<span style=\"text-decoration: line-through;\"><br></span><ul><li><span style=\"text-decoration: line-through;\">x<br></span></li><li><span style=\"text-decoration: line-through;\">y</span><br></li></ul><br>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "diff",
+   "live_vs_ftml": "same",
+   "triple": "ftml+live"
+  },
+  {
+   "id": "s45",
+   "source": "raw ---]\nraw ----]",
+   "ref": "<p>raw <span style=\"text-decoration: line-through;\">-]<br>raw -</span>-]</p>",
+   "ftml": "<p>raw <span style=\"text-decoration: line-through;\">-]<br>raw -</span>-]</p>",
+   "ref_vs_ftml": "same",
+   "live": "<p>raw <span style=\"text-decoration: line-through;\">-]<br>raw -</span>-]</p>",
+   "live_valid": true,
+   "live_stable": true,
+   "saved_source_matches": true,
+   "live_vs_ref": "same",
+   "live_vs_ftml": "same",
+   "triple": "all3"
+  },
+  {
+   "id": "s46",
+   "source": "--http://example.com/s-- end",
+   "ref": "<p><span style=\"text-decoration: line-through;\"><a href=\"http://example.com/s\">http://example.com/s</a></span> end</p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\"><a href=\"http://example.com/s\">http://example.com/s</a></span> end</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s47",
+   "source": "--//example.com//--",
+   "ref": "<p><span style=\"text-decoration: line-through;\"><em>example.com</em></span></p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\"><em>example.com</em></span></p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s48",
+   "source": "[[footnote]]--a--[[/footnote]]",
+   "ref": "<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p><div class=\"footnotes-footer\"><div class=\"title\">Footnotes</div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. <span style=\"text-decoration: line-through;\">a</span></div></div>",
+   "ftml": "<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p><div class=\"footnotes-footer\"><div class=\"title\">Footnotes</div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. <span style=\"text-decoration: line-through;\">a</span></div></div>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s49",
+   "source": "* --a--\n* b--c--",
+   "ref": "<ul><li><span style=\"text-decoration: line-through;\">a</span></li><li>b<span style=\"text-decoration: line-through;\">c</span></li></ul>",
+   "ftml": "<ul><li><span style=\"text-decoration: line-through;\">a</span></li><li>b<span style=\"text-decoration: line-through;\">c</span></li></ul>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s50",
+   "source": "--a—b--",
+   "ref": "<p><span style=\"text-decoration: line-through;\">a—b</span></p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\">a—b</span></p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s51",
+   "source": "~~a--b~~",
+   "ref": "<p>~~a—b~~</p>",
+   "ftml": "<p>~~a—b~~</p>",
+   "ref_vs_ftml": "same"
+  },
+  {
+   "id": "s52",
+   "source": "[[div]]\n--x [[/div]] y--\n--z--",
+   "ref": "<div><p>—x</p></div>y<span style=\"text-decoration: line-through;\"><br></span>z—",
+   "ftml": "<div><p>—x</p></div>y<span style=\"text-decoration: line-through;\"><br></span> z—",
+   "ref_vs_ftml": "diff"
+  },
+  {
+   "id": "s53",
+   "source": "--a\n--b--",
+   "ref": "<p><span style=\"text-decoration: line-through;\">a<br></span>b—</p>",
+   "ftml": "<p><span style=\"text-decoration: line-through;\">a<br></span> b—</p>",
+   "ref_vs_ftml": "diff"
+  },
+  {
+   "id": "s54",
+   "source": "abc --a-- def -- gh --b-- ijk",
+   "ref": "<p>abc <span style=\"text-decoration: line-through;\">a</span> def — gh <span style=\"text-decoration: line-through;\">b</span> ijk</p>",
+   "ftml": "<p>abc <span style=\"text-decoration: line-through;\">a</span> def — gh <span style=\"text-decoration: line-through;\">b</span> ijk</p>",
+   "ref_vs_ftml": "same"
+  }
+ ]
+}

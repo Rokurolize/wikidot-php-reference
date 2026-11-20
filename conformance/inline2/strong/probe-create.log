@@ -1,0 +1,167 @@
+p01 -> muse-probe-r2in2-strong-p01 (created)
+p02 -> muse-probe-r2in2-strong-p02 (created)
+p03 -> muse-probe-r2in2-strong-p03 (created)
+p04 -> muse-probe-r2in2-strong-p04 (created)
+p05 -> muse-probe-r2in2-strong-p05 (created)
+p06 -> muse-probe-r2in2-strong-p06 (created)
+p07 -> muse-probe-r2in2-strong-p07 (created)
+p08 -> muse-probe-r2in2-strong-p08 (created)
+p09 -> muse-probe-r2in2-strong-p09 (created)
+p10 -> muse-probe-r2in2-strong-p10 (created)
+2026-11-20 17:42:59,889 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85347114', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in2-strong-p11', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p11 -> muse-probe-r2in2-strong-p11 (created)
+p12 -> muse-probe-r2in2-strong-p12 (created)
+p13 -> muse-probe-r2in2-strong-p13 (created)
+p14 -> muse-probe-r2in2-strong-p14 (created)
+2026-11-20 17:44:45,884 [wikidot/ERROR] AMC is respond status: "try_again" -> {'wikidot_token7': '***MASKED***', 'action': 'WikiPageAction', 'event': 'savePage', 'moduleName': 'Empty', 'mode': 'page', 'lock_id': '85347156', 'lock_secret': '***MASKED***', 'revision_id': '', 'wiki_page': 'muse-probe-r2in2-strong-p15', 'page_id': '', 'title': '***MASKED***', 'source': '***MASKED***', 'comments': '***MASKED***'}
+p15 -> muse-probe-r2in2-strong-p15 (created)
+p16 -> muse-probe-r2in2-strong-p16 (created)
+p17 -> muse-probe-r2in2-strong-p17 (created)
+p18 -> muse-probe-r2in2-strong-p18 (created)
+p19 -> muse-probe-r2in2-strong-p19 (created)
+p20 -> muse-probe-r2in2-strong-p20 (created)
+p21 -> muse-probe-r2in2-strong-p21 (created)
+p22 -> muse-probe-r2in2-strong-p22 (created)
+p23 -> muse-probe-r2in2-strong-p23 (created)
+p24 -> muse-probe-r2in2-strong-p24 (created)
+p25 -> muse-probe-r2in2-strong-p25 (created)
+p26 -> muse-probe-r2in2-strong-p26 (created)
+p27 -> muse-probe-r2in2-strong-p27 (created)
+27 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01": {
+  "fullname": "muse-probe-r2in2-strong-p01",
+  "source": "**bold**\nx",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-r2in2-strong-p02",
+  "source": "**a**b**c**\nx",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-r2in2-strong-p03",
+  "source": "***triple***\nx",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-r2in2-strong-p04",
+  "source": "**a***\nx",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-r2in2-strong-p05",
+  "source": "****\nx",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-r2in2-strong-p06",
+  "source": "****",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-r2in2-strong-p07",
+  "source": "** bold **\nx",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-r2in2-strong-p08",
+  "source": "wor**d**in\nx",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-r2in2-strong-p09",
+  "source": "**//em//**\nx",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-r2in2-strong-p10",
+  "source": "//**bold**//\nx",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-r2in2-strong-p11",
+  "source": "##c00|**red bold**##\nx",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-r2in2-strong-p12",
+  "source": "**##c00|red##**\nx",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-r2in2-strong-p13",
+  "source": "**a\nb**\nx",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-r2in2-strong-p14",
+  "source": "**unpaired\nx",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-r2in2-strong-p15",
+  "source": "unpaired**\nx",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-r2in2-strong-p16",
+  "source": "|| **A** || B ||\nx",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-r2in2-strong-p17",
+  "source": "|| **A || B** || C ||\nx",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-r2in2-strong-p18",
+  "source": "= **Head** =\nx",
+  "action": "created"
+ },
+ "p19": {
+  "fullname": "muse-probe-r2in2-strong-p19",
+  "source": "**= Head =**\nx",
+  "action": "created"
+ },
+ "p20": {
+  "fullname": "muse-probe-r2in2-strong-p20",
+  "source": "[[**label**|target]]\nx",
+  "action": "created"
+ },
+ "p21": {
+  "fullname": "muse-probe-r2in2-strong-p21",
+  "source": "[[target|**label**]]\nx",
+  "action": "created"
+ },
+ "p22": {
+  "fullname": "muse-probe-r2in2-strong-p22",
+  "source": "[[**page**]]\nx",
+  "action": "created"
+ },
+ "p23": {
+  "fullname": "muse-probe-r2in2-strong-p23",
+  "source": "**a\n----\nb**\nx",
+  "action": "created"
+ },
+ "p24": {
+  "fullname": "muse-probe-r2in2-strong-p24",
+  "source": "**__u__**\nx",
+  "action": "created"
+ },
+ "p25": {
+  "fullname": "muse-probe-r2in2-strong-p25",
+  "source": "**--s--**\nx",
+  "action": "created"
+ },
+ "p26": {
+  "fullname": "muse-probe-r2in2-strong-p26",
+  "source": "[code]**bold**[/code]\nx",
+  "action": "created"
+ },
+ "p27": {
+  "fullname": "muse-probe-r2in2-strong-p27",
+  "source": "{{**mono**}}\nx",
+  "action": "created"
+ }
+}

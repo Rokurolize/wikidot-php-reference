@@ -1,0 +1,47 @@
+{
+ "c01": {
+  "fullname": "muse-probe-r2in2-color-c01",
+  "source": "##red|Apple##",
+  "action": "created"
+ },
+ "c02": {
+  "fullname": "muse-probe-r2in2-color-c02",
+  "source": "##blue|Blueberry##",
+  "action": "created"
+ },
+ "c03": {
+  "fullname": "muse-probe-r2in2-color-c03",
+  "source": "##orange|Orange##",
+  "action": "created"
+ },
+ "c04": {
+  "fullname": "muse-probe-r2in2-color-c04",
+  "source": "##DarkRed|Dark##",
+  "action": "created"
+ },
+ "c05": {
+  "fullname": "muse-probe-r2in2-color-c05",
+  "source": "##white|White##",
+  "action": "created"
+ },
+ "c06": {
+  "fullname": "muse-probe-r2in2-color-c06",
+  "source": "##aqua|Aqua##",
+  "action": "created"
+ },
+ "c07": {
+  "fullname": "muse-probe-r2in2-color-c07",
+  "source": "##grey|Grey##",
+  "action": "created"
+ },
+ "c08": {
+  "fullname": "muse-probe-r2in2-color-c08",
+  "source": "###fff|White##",
+  "action": "created"
+ },
+ "c09": {
+  "fullname": "muse-probe-r2in2-color-c09",
+  "source": "###cd3636|Cherry##",
+  "action": "created"
+ }
+}

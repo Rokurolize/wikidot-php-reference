@@ -1,0 +1,50 @@
+{"id": "em01", "source": "//simple//"}
+{"id": "em02", "source": "before //emphasis// after"}
+{"id": "em03", "source": "//two words inside//"}
+{"id": "em04", "source": "a//b//c"}
+{"id": "em05", "source": "x //one// y //two// z"}
+{"id": "em06", "source": "//unpaired"}
+{"id": "em07", "source": "unpaired//"}
+{"id": "em08", "source": "///triple///"}
+{"id": "em09", "source": "////four////"}
+{"id": "em10", "source": "//a//b//"}
+{"id": "em11", "source": "a//b//c//d"}
+{"id": "em12", "source": "////"}
+{"id": "em13", "source": "// //"}
+{"id": "em14", "source": "////em////"}
+{"id": "em15", "source": "// padded //"}
+{"id": "em16", "source": "// padded//"}
+{"id": "em17", "source": "//padded //"}
+{"id": "em18", "source": "word//inside//word"}
+{"id": "em19", "source": "// leadingspace"}
+{"id": "em20", "source": "trailingspace //"}
+{"id": "em21", "source": "//**bold italic**//"}
+{"id": "em22", "source": "**//italic bold//**"}
+{"id": "em23", "source": "//**crossed//**"}
+{"id": "em24", "source": "//__underline italic__//"}
+{"id": "em25", "source": "//--strike italic--//"}
+{"id": "em26", "source": "//##red|colored italic##//"}
+{"id": "em27", "source": "//before **bold** after//"}
+{"id": "em28", "source": "//**A**// and //**B**//"}
+{"id": "em29", "source": "//**one **two//**"}
+{"id": "em30", "source": "//**Warsaw**//\n**GENIUS //DEPARTMENT//**"}
+{"id": "em31", "source": "//line one\nline two//"}
+{"id": "em32", "source": "//line one\n\nline two//"}
+{"id": "em33", "source": "//text\n[[div]]\nblock\n[[/div]]//"}
+{"id": "em34", "source": "//text\n\n[[div]]\nblock\n[[/div]]"}
+{"id": "em35", "source": "* //**Title**// by author\n* //**Title2**// by author"}
+{"id": "em36", "source": "//example.com/a"}
+{"id": "em37", "source": "//example.com/a//"}
+{"id": "em38", "source": "http://example.com/a"}
+{"id": "em39", "source": "http://example.com//path//"}
+{"id": "em40", "source": "visit //example.com// now"}
+{"id": "em41", "source": "text with a//b in it"}
+{"id": "em42", "source": "https://x.test/a//b//c"}
+{"id": "em43", "source": "= //heading italic// ="}
+{"id": "em44", "source": "[[http://example.com|//link label//]]"}
+{"id": "em45", "source": "[[page-name|//label//]]"}
+{"id": "em46", "source": "{{ //code literal// }}"}
+{"id": "em47", "source": "[[code]]\n//raw not italic//\n[[/code]]"}
+{"id": "em48", "source": "[[!-- //commented// --]]\n//live//"}
+{"id": "em49", "source": "[[em]]block italics[[/em]]"}
+{"id": "em50", "source": "//[[iftags +t]]X[[/iftags]]/word//"}

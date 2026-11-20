@@ -1,0 +1,60 @@
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">simple</span></p>","id":"u01"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">Underline</span> test</p>","id":"u02"}
+{"errors":[],"html":"<p>lead <span style=\"text-decoration: underline;\">mid</span> tail</p>","id":"u03"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a</span> and <span style=\"text-decoration: underline;\">b</span></p>","id":"u04"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a b c</span></p>","id":"u05"}
+{"errors":[],"html":"<p>x<span style=\"text-decoration: underline;\">a</span>y</p>","id":"u06"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a <strong>b</strong> c</span></p>","id":"u07"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a <em>b</em> c</span></p>","id":"u08"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a <span style=\"text-decoration: line-through;\">b</span> c</span></p>","id":"u09"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a <span style=\"color: red\">b</span> c</span></p>","id":"u10"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a <span style=\"color: red\">b c</span> d</span></p>","id":"u11"}
+{"errors":[],"html":"<p><strong>a <span style=\"text-decoration: underline;\">b</span> c</strong></p>","id":"u12"}
+{"errors":[],"html":"<p><em>italic <span style=\"text-decoration: underline;\">b</span> c</em></p>","id":"u13"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a <span style=\"text-decoration: underline;\">b</span> c</span></p>","id":"u14"}
+{"errors":[],"html":"<p><span style=\"color: red\">a <span style=\"text-decoration: underline;\">b</span></span> c</p>","id":"u15"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">A <span style=\"text-decoration: line-through;\">B <strong>C</strong></span> <strong>X</strong> Y</span></p>","id":"u16"}
+{"errors":[],"html":"<p><strong>A <span style=\"text-decoration: underline;\">B <span style=\"color: red\">C</span></span> <span style=\"text-decoration: underline;\">X</span> Y</strong></p>","id":"u17"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 0..2, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>__unmatched</p>","id":"u18"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 9..11, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }"],"html":"<p>unmatched__</p>","id":"u19"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 0..2, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>___triple</p>","id":"u20"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 6..8, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>triple___</p>","id":"u21"}
+{"errors":[],"html":"","id":"u22"}
+{"errors":[],"html":"<p>ab</p>","id":"u23"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 4..6, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }"],"html":"<p>__</p>","id":"u24"}
+{"errors":[],"html":"<p>xy</p>","id":"u25"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 11..13, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 11..13, kind: NoRulesMatch }"],"html":"<p>__ __</p>","id":"u26"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 4..6, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }"],"html":"<p>__x</p>","id":"u27"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 7..9, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }"],"html":"<p><span style=\"text-decoration: underline;\">a</span>_b__</p>","id":"u28"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 7..9, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }"],"html":"<p>__ word__</p>","id":"u29"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 0..2, kind: RuleFailed }","ParseError { token: Underline, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Underline, rule: \"underline\", span: 7..9, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }"],"html":"<p>__word __</p>","id":"u30"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 8..10, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>__ word __</p>","id":"u31"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 0..2, kind: RuleFailed }","ParseError { token: Underline, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Underline, rule: \"underline\", span: 8..10, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p><span style=\"text-decoration: underline;\">a __ b</span></p>","id":"u32"}
+{"errors":[],"html":"<p>a<span style=\"text-decoration: underline;\">b</span>c</p>","id":"u33"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">-punct-</span></p>","id":"u34"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a_b</span></p>","id":"u35"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<br>\nb</span></p>","id":"u36"}
+{"errors":[],"html":"<p>x<span style=\"text-decoration: underline;\">a<br></span> y</p>","id":"u37"}
+{"errors":["ParseError { token: Underline, rule: \"underline\", span: 0..2, kind: RuleFailed }","ParseError { token: Underline, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Underline, rule: \"underline\", span: 6..8, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>__a</p><p>b__</p>","id":"u38"}
+{"errors":["ParseError { token: LineBreak, rule: \"underline\", span: 3..4, kind: RuleFailed }","ParseError { token: Underline, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Underline, rule: \"underline\", span: 17..19, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<p>__a</p><h3 id=\"toc0\"><span>heading</span></h3><p>b__</p>","id":"u39"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<br>\n[[div]]x[[/div]]b</span></p>","id":"u40"}
+{"errors":["ParseError { token: LineBreak, rule: \"underline\", span: 3..4, kind: RuleFailed }","ParseError { token: Underline, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Underline, rule: \"underline\", span: 9..11, kind: EndOfInput }","ParseError { token: Underline, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }"],"html":"<p>__a</p><ul>\n<li>b</li>\n</ul><p>c__</p>","id":"u41"}
+{"errors":[],"html":"<p>foo_bar_baz</p>","id":"u42"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">init</span></p>","id":"u43"}
+{"errors":[],"html":"<p>some_variable_name <span style=\"text-decoration: underline;\">paired</span> x</p>","id":"u44"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>__not underlined__</code></pre></div>","id":"u45"}
+{"errors":[],"html":"<p><tt>{ <span style=\"text-decoration: underline;\">raw</span> }</tt></p>","id":"u46"}
+{"errors":[],"html":"<p>inline `<span style=\"text-decoration: underline;\">code</span>` tail</p>","id":"u47"}
+{"errors":[],"html":"<h3 id=\"toc0\"><span><span style=\"text-decoration: underline;\">heading</span></span></h3>","id":"u48"}
+{"errors":[],"html":"<h2 id=\"toc0\"><span><span style=\"text-decoration: underline;\">a</span> and <span style=\"text-decoration: underline;\">b</span></span></h2>","id":"u49"}
+{"errors":[],"html":"<p><a href=\"http://x\"><span style=\"text-decoration: underline;\">label</span></a></p>","id":"u50"}
+{"errors":[],"html":"<p>[<span style=\"text-decoration: underline;\">label</span> <a href=\"http://x\">http://x</a>]</p>","id":"u51"}
+{"errors":[],"html":"<p><a href=\"#x\"><span style=\"text-decoration: underline;\">a<br>\nb</span></a></p>","id":"u52"}
+{"errors":[],"html":"<p>x <span style=\"text-decoration: underline;\">y</span>z</p>","id":"u53"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 4..7, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p><span style=\"text-decoration: underline;\">x [[/div]] y</span></p>","id":"u54"}
+{"errors":[],"html":"<p>a __ b</p>","id":"u55"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a</span><br>\n<span style=\"text-decoration: underline;\">b</span></p>","id":"u56"}
+{"errors":[],"html":"<p>a</p>","id":"u57"}
+{"errors":[],"html":"<p>__[[/span]]</p>","id":"u58"}
+{"errors":[],"html":"<blockquote><p><span style=\"text-decoration: underline;\">quoted</span></p></blockquote>","id":"u59"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td><span style=\"text-decoration: underline;\">head</span></td>\n</tr>\n<tr>\n<td><span style=\"text-decoration: underline;\">cell</span></td>\n</tr>\n</table>","id":"u60"}

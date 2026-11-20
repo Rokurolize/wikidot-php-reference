@@ -1,0 +1,6 @@
+{"errors":[],"html":"<p><span style=\"color:\">gold|A</span></p>","id":"a1"}
+{"errors":["ParseError { token: Identifier, rule: \"color\", span: 3..7, kind: RuleFailed }","ParseError { token: Color, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 11..11, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }"],"html":"<p>##|gold|A##</p>","id":"a2"}
+{"errors":[],"html":"<p><span style=\"color: red\">A</span></p>","id":"a3"}
+{"errors":[],"html":"<p><span style=\"color: rgb(10, 12, 14)\">A</span></p>","id":"a4"}
+{"errors":[],"html":"<p><span style=\"color: hsl(1, 2, 3)\">A</span></p>","id":"a5"}
+{"errors":[],"html":"<p><span style=\"color: var(--c-keyword)\">A</span></p>","id":"a6"}

@@ -1,0 +1,50 @@
+{"errors":[],"html":"<p><em>simple</em></p>","id":"em01"}
+{"errors":[],"html":"<p>before <em>emphasis</em> after</p>","id":"em02"}
+{"errors":[],"html":"<p><em>two words inside</em></p>","id":"em03"}
+{"errors":[],"html":"<p>a<em>b</em>c</p>","id":"em04"}
+{"errors":[],"html":"<p>x <em>one</em> y <em>two</em> z</p>","id":"em05"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 0..2, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>//unpaired</p>","id":"em06"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 8..10, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>unpaired//</p>","id":"em07"}
+{"errors":[],"html":"<p><em>/triple</em>/</p>","id":"em08"}
+{"errors":[],"html":"<p>four</p>","id":"em09"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 6..8, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p><em>a</em>b//</p>","id":"em10"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 7..9, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }"],"html":"<p>a<em>b</em>c//d</p>","id":"em11"}
+{"errors":[],"html":"","id":"em12"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 3..5, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 3..5, kind: NoRulesMatch }"],"html":"<p>// //</p>","id":"em13"}
+{"errors":[],"html":"<p>em</p>","id":"em14"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 10..12, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>// padded //</p>","id":"em15"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 9..11, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }"],"html":"<p>// padded//</p>","id":"em16"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 0..2, kind: RuleFailed }","ParseError { token: Italics, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Italics, rule: \"italics\", span: 9..11, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }"],"html":"<p>//padded //</p>","id":"em17"}
+{"errors":[],"html":"<p>word<em>inside</em>word</p>","id":"em18"}
+{"errors":[],"html":"<p>// leadingspace</p>","id":"em19"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 14..16, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 14..16, kind: NoRulesMatch }"],"html":"<p>trailingspace //</p>","id":"em20"}
+{"errors":[],"html":"<p><em><strong>bold italic</strong></em></p>","id":"em21"}
+{"errors":[],"html":"<p><strong><em>italic bold</em></strong></p>","id":"em22"}
+{"errors":[],"html":"<p><em><strong>crossed</strong></em></p>","id":"em23"}
+{"errors":[],"html":"<p><em><span style=\"text-decoration: underline;\">underline italic</span></em></p>","id":"em24"}
+{"errors":[],"html":"<p><em><span style=\"text-decoration: line-through;\">strike italic</span></em></p>","id":"em25"}
+{"errors":[],"html":"<p><em><span style=\"color: red\">colored italic</span></em></p>","id":"em26"}
+{"errors":[],"html":"<p><em>before <strong>bold</strong> after</em></p>","id":"em27"}
+{"errors":[],"html":"<p><em><strong>A</strong></em> and <em><strong>B</strong></em></p>","id":"em28"}
+{"errors":[],"html":"<p><em><strong>one **two</strong></em></p>","id":"em29"}
+{"errors":[],"html":"<p><em><strong>Warsaw</strong></em><br>\n<strong>GENIUS <em>DEPARTMENT</em></strong></p>","id":"em30"}
+{"errors":[],"html":"<p><em>line one<br>\nline two</em></p>","id":"em31"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 0..2, kind: RuleFailed }","ParseError { token: Italics, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Italics, rule: \"italics\", span: 20..22, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 20..22, kind: NoRulesMatch }"],"html":"<p>//line one</p><p>line two//</p>","id":"em32"}
+{"errors":["ParseError { token: InputEnd, rule: \"italics\", span: 31..31, kind: RuleFailed }","ParseError { token: Italics, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Italics, rule: \"italics\", span: 29..31, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 29..31, kind: NoRulesMatch }"],"html":"<p>//text</p><div><p>block</p></div>\n//","id":"em33"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 0..2, kind: RuleFailed }","ParseError { token: Italics, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>//text</p><div><p>block</p></div>","id":"em34"}
+{"errors":[],"html":"<ul>\n<li><em><strong>Title</strong></em> by author</li>\n<li><em><strong>Title2</strong></em> by author</li>\n</ul>","id":"em35"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 0..2, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>//example.com/a</p>","id":"em36"}
+{"errors":[],"html":"<p><em>example.com/a</em></p>","id":"em37"}
+{"errors":[],"html":"<p><a href=\"http://example.com/a\">http://example.com/a</a></p>","id":"em38"}
+{"errors":[],"html":"<p><a href=\"http://example.com//path//\">http://example.com//path//</a></p>","id":"em39"}
+{"errors":[],"html":"<p>visit <em>example.com</em> now</p>","id":"em40"}
+{"errors":["ParseError { token: Italics, rule: \"italics\", span: 11..13, kind: EndOfInput }","ParseError { token: Italics, rule: \"fallback\", span: 11..13, kind: NoRulesMatch }"],"html":"<p>text with a//b in it</p>","id":"em41"}
+{"errors":[],"html":"<p><a href=\"https://x.test/a//b//c\">https://x.test/a//b//c</a></p>","id":"em42"}
+{"errors":[],"html":"<p style=\"text-align: center;\"><em>heading italic</em> =</p>","id":"em43"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 28..33, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 35..37, kind: NoRulesMatch }"],"html":"<p>[[<a href=\"http://example.com\">http://example.com</a>|<em>link label</em>]]</p>","id":"em44"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 23..23, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 21..23, kind: NoRulesMatch }"],"html":"<p>[[page-name|<em>label</em>]]</p>","id":"em45"}
+{"errors":[],"html":"<p><tt><em>code literal</em></tt></p>","id":"em46"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>//raw not italic//</code></pre></div>","id":"em47"}
+{"errors":[],"html":"<p>[]<br>\n<em>live</em></p>","id":"em48"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 6..11, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 19..22, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 24..26, kind: NoRulesMatch }"],"html":"<p>[[em]]block italics[[/em]]</p>","id":"em49"}
+{"errors":[],"html":"<p><em>/word</em></p>","id":"em50"}

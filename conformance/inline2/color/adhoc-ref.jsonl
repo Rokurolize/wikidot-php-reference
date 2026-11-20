@@ -1,0 +1,6 @@
+{"id":"a1","output":"<p><span style=\"color:\">gold|A<\/span><\/p>\n\n"}
+{"id":"a2","output":"<p>##|gold|A##<\/p>\n\n"}
+{"id":"a3","output":"<p><span style=\"color: red\">A<\/span><\/p>\n\n"}
+{"id":"a4","output":"<p><span style=\"color: rgb(10, 12, 14)\">A<\/span><\/p>\n\n"}
+{"id":"a5","output":"<p><span style=\"color: hsl(1, 2, 3)\">A<\/span><\/p>\n\n"}
+{"id":"a6","output":"<p><span style=\"color: var(--c-keyword)\">A<\/span><\/p>\n\n"}

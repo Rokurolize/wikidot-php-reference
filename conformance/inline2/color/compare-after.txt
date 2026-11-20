@@ -1,0 +1,269 @@
+total=67 exact_equal=0 rstrip_equal=49 norm_equal=49
+=== c01 ===
+REF : '<p><span style="color: red">Apple</span></p>\n\n'
+FTML: '<p><span style="color: red">Apple</span></p>'
+DIFF
+=== c02 ===
+REF : '<p><span style="color: blue">Blueberry</span></p>\n\n'
+FTML: '<p><span style="color: blue">Blueberry</span></p>'
+DIFF
+=== c03 ===
+REF : '<p><span style="color: orange">Orange</span></p>\n\n'
+FTML: '<p><span style="color: orange">Orange</span></p>'
+DIFF
+=== c04 ===
+REF : '<p><span style="color: darkred">Dark</span></p>\n\n'
+FTML: '<p><span style="color: darkred">Dark</span></p>'
+DIFF
+=== c05 ===
+REF : '<p><span style="color: white">White</span></p>\n\n'
+FTML: '<p><span style="color: white">White</span></p>'
+DIFF
+=== c06 ===
+REF : '<p><span style="color: aqua">Aqua</span></p>\n\n'
+FTML: '<p><span style="color: aqua">Aqua</span></p>'
+DIFF
+=== c07 ===
+REF : '<p><span style="color: grey">Grey</span></p>\n\n'
+FTML: '<p><span style="color: grey">Grey</span></p>'
+DIFF
+=== c08 ===
+REF : '<p><span style="color: #fff">White</span></p>\n\n'
+FTML: '<p><span style="color: #fff">White</span></p>'
+DIFF
+=== c09 ===
+REF : '<p><span style="color: #cd3636">Cherry</span></p>\n\n'
+FTML: '<p><span style="color: #cd3636">Cherry</span></p>'
+DIFF
+=== c10 ===
+REF : '<p><span style="color: #c00">Short</span></p>\n\n'
+FTML: '<p><span style="color: #c00">Short</span></p>'
+DIFF
+=== c11 ===
+REF : '<p><span style="color: #ff0000">Red</span></p>\n\n'
+FTML: '<p><span style="color: #ff0000">Red</span></p>'
+DIFF
+=== c12 ===
+REF : '<p><span style="color: #123456">Hex</span></p>\n\n'
+FTML: '<p><span style="color: #123456">Hex</span></p>'
+DIFF
+=== c13 ===
+REF : '<p><span style="color: #ffff">Upper</span></p>\n\n'
+FTML: '<p><span style="color: #ffff">Upper</span></p>'
+DIFF
+=== c14 ===
+REF : '<p><span style="color: 1234">Four</span></p>\n\n'
+FTML: '<p><span style="color: 1234">Four</span></p>'
+DIFF
+=== c15 ===
+REF : '<p><span style="color: rgb(241, 194, 50)">Mango</span></p>\n\n'
+FTML: '<p><span style="color: rgb(241, 194, 50)">Mango</span></p>'
+DIFF
+=== c16 ===
+REF : '<p><span style="color: var(--c-keyword)">Var</span></p>\n\n'
+FTML: '<p><span style="color: var(--c-keyword)">Var</span></p>'
+DIFF
+=== c17 ===
+REF : '<p><span style="color: rgb(var(--x))">VarRGB</span></p>\n\n'
+FTML: '<p><span style="color: rgb(var(--x))">VarRGB</span></p>'
+DIFF
+=== c18 ===
+REF : '<p><span style="color: not-a-color">Text</span></p>\n\n'
+FTML: '<p><span style="color: not-a-color">Text</span></p>'
+DIFF
+=== c19 ===
+REF : '<p><span style="color: rgb(1, 2, 3)">A</span></p>\n\n'
+FTML: '<p><span style="color: rgb(1, 2, 3)">A</span></p>'
+DIFF
+=== c20 ===
+REF : '<p><span style="color: expression(alert(1))">Expr</span></p>\n\n'
+FTML: '<p><span style="color: expression(alert(1))">Expr</span></p>'
+DIFF
+=== c21 ===
+REF : '<p>##rgba(10,20,30,.5)|A##</p>\n\n'
+FTML: '<p>##rgba(10,20,30,.5)|A##</p>'
+DIFF
+=== c22 ===
+REF : '<p>##hsl(120, 50%, 25%)|A##</p>\n\n'
+FTML: '<p>##hsl(120, 50%, 25%)|A##</p>'
+DIFF
+=== c23 ===
+REF : '<p>##a_b|A##</p>\n\n'
+FTML: '<p>##a_b|A##</p>'
+DIFF
+=== c24 ===
+REF : '<p>##red;background:blue|A##</p>\n\n'
+FTML: '<p>##red;background:blue|A##</p>'
+DIFF
+=== c25 ===
+REF : '<p>##url(javascript:alert(1))|A##</p>\n\n'
+FTML: '<p>##url(javascript:alert(1))|A##</p>'
+DIFF
+=== c26 ===
+REF : '<p>##|gold|A##</p>\n\n'
+FTML: '<p>##|gold|A##</p>'
+DIFF
+=== c27 ===
+REF : '<p>##|A##</p>\n\n'
+FTML: '<p>##|A##</p>'
+DIFF
+=== c28 ===
+REF : '<p>##||A##</p>\n\n'
+FTML: '<p>##||A##</p>'
+DIFF
+=== c29 ===
+REF : '<p>##not color</p>\n\n'
+FTML: '<p>##not color</p>'
+DIFF
+=== c30 ===
+REF : '<p>##red|##</p>\n\n'
+FTML: '<p>##red|##</p>'
+DIFF
+=== c31 ===
+REF : '<p><span style="color: red"> </span></p>\n\n'
+FTML: ''
+DIFF+NORM
+=== c32 ===
+REF : '<p><span style="color: red"><tt></tt></span></p>\n\n'
+FTML: ''
+DIFF+NORM
+=== c33 ===
+REF : '<p><span style="color: red">   </span></p>\n\n'
+FTML: ''
+DIFF+NORM
+=== c34 ===
+REF : '<p><span style="color: red"><strong>bold</strong></span></p>\n\n'
+FTML: '<p><span style="color: red"><strong>bold</strong></span></p>'
+DIFF
+=== c35 ===
+REF : '<p><span style="color: red"><em>italic</em></span></p>\n\n'
+FTML: '<p><span style="color: red"><em>italic</em></span></p>'
+DIFF
+=== c36 ===
+REF : '<p><span style="color: red"><span style="text-decoration: underline;">under</span></span></p>\n\n'
+FTML: '<p><span style="color: red"><span style="text-decoration: underline;">under</span></span></p>'
+DIFF
+=== c37 ===
+REF : '<p><span style="color: red"><span style="text-decoration: line-through;">strike</span></span></p>\n\n'
+FTML: '<p><span style="color: red"><span style="text-decoration: line-through;">strike</span></span></p>'
+DIFF
+=== c38 ===
+REF : '<p><strong><span style="color: red">A</span></strong></p>\n\n'
+FTML: '<p><strong><span style="color: red">A</span></strong></p>'
+DIFF
+=== c39 ===
+REF : '<p><span style="color: orange"><strong>ORANGE</span>-PRIME:</strong></p>\n\n'
+FTML: '<p><span style="color: orange"><strong>ORANGE</strong></span><strong>-PRIME:</strong></p>'
+DIFF+NORM
+=== c40 ===
+REF : '<p><span style="color: red">**a //b__c&#8212;d</span></p>\n\n'
+FTML: '<p><span style="color: red">**a //b__c—d</span></p>'
+DIFF+NORM
+=== c41 ===
+REF : '<p>##red|A</p>\n\n'
+FTML: '<p>##red|A</p>'
+DIFF
+=== c42 ===
+REF : '<p>red|A##</p>\n\n'
+FTML: '<p>red|A##</p>'
+DIFF
+=== c43 ===
+REF : '<p><span style="color: red">A</span>##</p>\n\n'
+FTML: '<p><span style="color: red">A</span>##</p>'
+DIFF
+=== c44 ===
+REF : '<p><span style="color: red">A</span>blue|B##</p>\n\n'
+FTML: '<p><span style="color: red">A</span>blue|B##</p>'
+DIFF
+=== c45 ===
+REF : '<p><span style="color: red">A</span>green|B<span style="color: ##blue">C</span></p>\n\n'
+FTML: '<p><span style="color: red">A</span>green|B<span style="color: ##blue">C</span></p>'
+DIFF
+=== c46 ===
+REF : '<p><span style="color: ##red">A</span></p>\n\n'
+FTML: '<p><span style="color: ##red">A</span></p>'
+DIFF
+=== c47 ===
+REF : '<p>##red##</p>\n\n'
+FTML: '<p>##red##</p>'
+DIFF
+=== c48 ===
+REF : '<p><span style="color: blue">##red|a</span></p>\n\n'
+FTML: '<p><span style="color: blue">##red|a</span></p>'
+DIFF
+=== c49 ===
+REF : '<p>ab<span style="color: red">cd</span>ef</p>\n\n'
+FTML: '<p>ab<span style="color: red">cd</span>ef</p>'
+DIFF
+=== c50 ===
+REF : '<p>ab <span style="color: red">cd</span> ef</p>\n\n'
+FTML: '<p>ab <span style="color: red">cd</span> ef</p>'
+DIFF
+=== c51 ===
+REF : '<p>x<span style="color: red">A</span>y<span style="color: blue">B</span>z</p>\n\n'
+FTML: '<p>x<span style="color: red">A</span>y<span style="color: blue">B</span>z</p>'
+DIFF
+=== c52 ===
+REF : '<p><span style="color: red"> A </span></p>\n\n'
+FTML: '<p><span style="color: red">A</span></p>'
+DIFF+NORM
+=== c53 ===
+REF : '<p><span style="color: red">A </span>blue|B## C##</p>\n\n'
+FTML: '<p><span style="color: red">A</span> blue|B## C##</p>'
+DIFF+NORM
+=== c54 ===
+REF : '<p><span style="color: red">A<br />\nB</span></p>\n\n'
+FTML: '<p><span style="color: red">A<br>\nB</span></p>'
+DIFF+NORM
+=== c55 ===
+REF : '<p>##red|A</p>\n\n<p>B##</p>\n\n'
+FTML: '<p>##red|A</p><p>B##</p>'
+DIFF+NORM
+=== c56 ===
+REF : '<p><span style="color: red">A<br />\nB<br />\nC</span></p>\n\n'
+FTML: '<p><span style="color: red">A<br>\nB<br>\nC</span></p>'
+DIFF+NORM
+=== c57 ===
+REF : '<p><span style="color: red">A</span><br />\n<span style="color: blue">B</span></p>\n\n'
+FTML: '<p><span style="color: red">A</span><br>\n<span style="color: blue">B</span></p>'
+DIFF+NORM
+=== c58 ===
+REF : '<p>##red|A</p>\n\n<div ><p>B</p>\n\n</div><br />\nC##'
+FTML: '<p>##red|A</p><div><p>B</p></div><br>\nC##'
+DIFF+NORM
+=== c59 ===
+REF : '<blockquote><p><span style="color: red">A</span></p>\n\n</blockquote>\n'
+FTML: '<blockquote><p><span style="color: red">A</span></p></blockquote>'
+DIFF+NORM
+=== c60 ===
+REF : '<p>##red|A</p>\n\n<ul>\n<li>item</li>\n</ul><p>B##</p>\n\n'
+FTML: '<span style="color: red">A<ul>\n<li>item</li>\n</ul>\nB</span>'
+DIFF+NORM
+=== c61 ===
+REF : '<p><span style="color: red">A<br />\n[[code]]<br />\nB<br />\n[[/code]]</span></p>\n\n'
+FTML: '<p><span style="color: red">A<br>\n[[code]]<br>\nB<br>\n[[/code]]</span></p>'
+DIFF+NORM
+=== c62 ===
+REF : '<p><span style="color: red">= Heading</span></p>\n\n'
+FTML: '<p><span style="color: red">= Heading</span></p>'
+DIFF
+=== c63 ===
+REF : '<div ><p><span style="color: red">A</span></p>\n\n</div>'
+FTML: '<div><p><span style="color: red">A</span></p></div>'
+DIFF+NORM
+=== c64 ===
+REF : '<p><span style="color: red">[[a href=&quot;x&quot;]]A[[/a]]</span></p>\n\n'
+FTML: '<p><span style="color: red"><a href="x">A</a></span></p>'
+DIFF+NORM
+=== c65 ===
+REF : '<table class="wiki-content-table">\n<tr>\n<td><span style="color: red">A</td>\n<td>B</span></td>\n</tr>\n</table>'
+FTML: '<table class="wiki-content-table">\n<tr>\n<td><span style="color: red">A</span></td>\n<td>B</td>\n</tr>\n</table>'
+DIFF+NORM
+=== c66 ===
+REF : '<p><span><span style="color: red">A</span></span></p>\n\n'
+FTML: '<p><span><span style="color: red">A</span></span></p>'
+DIFF
+=== c67 ===
+REF : '<p><span style="color: darkred">[[</span></p>\n\n'
+FTML: '<p><span style="color: darkred">[[</span></p>'
+DIFF

@@ -51,7 +51,17 @@ class Text_Wiki_Parse_Strong extends Text_Wiki_Parse {
      * 
      */
     
-    public $regex = "/\*\*([^\s\n](?:.*[^\s\n])?)\*\*/U";
+    // R2-inline2 correction C1: the fossil regex required a non-whitespace
+    // character at both edges of the body, so a bare `****` (an empty bold
+    // pair) never paired and its four markers survived as literal text. Live
+    // Wikidot consumes the markers and emits nothing: saved-page probe
+    // muse-probe-r2in2-strong-p06 (source `****`) renders to an empty page and
+    // p05 (`****\nx`) keeps only the line break, while ftml's bold rule returns
+    // Elements::None for the empty body (corpus pins test/bold/native and
+    // test/bold/empty-pair-feeds-later-rule). The added empty alternative lets
+    // the pair match; process() emits no tokens for it, so nothing renders and
+    // the surrounding line structure is untouched.
+    public $regex = "/\*\*([^\s\n](?:.*[^\s\n])?|)\*\*/U";
 
     /**
      * 
@@ -70,6 +80,11 @@ class Text_Wiki_Parse_Strong extends Text_Wiki_Parse {
      */
     
     function process($matches) {
+        // R2-inline2 correction C1 (continued): an empty body consumes the
+        // four markers but emits no start/end tokens, matching live and ftml.
+        if ($matches[1] === '') {
+            return '';
+        }
         $start = $this->wiki->addToken($this->rule, array(
             'type' => 'start'));
         

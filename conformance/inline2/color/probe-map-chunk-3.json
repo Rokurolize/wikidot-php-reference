@@ -1,0 +1,47 @@
+{
+ "c19": {
+  "fullname": "muse-probe-r2in2-color-c19",
+  "source": "##rgb(1, 2, 3)|A##",
+  "action": "created"
+ },
+ "c20": {
+  "fullname": "muse-probe-r2in2-color-c20",
+  "source": "##expression(alert(1))|Expr##",
+  "action": "created"
+ },
+ "c21": {
+  "fullname": "muse-probe-r2in2-color-c21",
+  "source": "##rgba(10,20,30,.5)|A##",
+  "action": "created"
+ },
+ "c22": {
+  "fullname": "muse-probe-r2in2-color-c22",
+  "source": "##hsl(120, 50%, 25%)|A##",
+  "action": "created"
+ },
+ "c23": {
+  "fullname": "muse-probe-r2in2-color-c23",
+  "source": "##a_b|A##",
+  "action": "created"
+ },
+ "c24": {
+  "fullname": "muse-probe-r2in2-color-c24",
+  "source": "##red;background:blue|A##",
+  "action": "created"
+ },
+ "c25": {
+  "fullname": "muse-probe-r2in2-color-c25",
+  "source": "##url(javascript:alert(1))|A##",
+  "action": "created"
+ },
+ "c26": {
+  "fullname": "muse-probe-r2in2-color-c26",
+  "source": "##|gold|A##",
+  "action": "created"
+ },
+ "c27": {
+  "fullname": "muse-probe-r2in2-color-c27",
+  "source": "##|A##",
+  "action": "created"
+ }
+}

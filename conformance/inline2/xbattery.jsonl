@@ -1,0 +1,63 @@
+{"id": "x01", "source": "##red|a**ab##ba**", "note": "cross C-outer B-inner: ##red| a ** ab ## ba **"}
+{"id": "x02", "source": "##red|a//ab##ba//", "note": "cross C-outer I-inner: ##red| a // ab ## ba //"}
+{"id": "x03", "source": "##red|a__ab##ba__", "note": "cross C-outer U-inner: ##red| a __ ab ## ba __"}
+{"id": "x04", "source": "##red|a--ab##ba--", "note": "cross C-outer S-inner: ##red| a -- ab ## ba --"}
+{"id": "x05", "source": "**a##red|ab**ba##", "note": "cross B-outer C-inner: ** a ##red| ab ** ba ##"}
+{"id": "x06", "source": "**a//ab**ba//", "note": "cross B-outer I-inner: ** a // ab ** ba //"}
+{"id": "x07", "source": "**a__ab**ba__", "note": "cross B-outer U-inner: ** a __ ab ** ba __"}
+{"id": "x08", "source": "**a--ab**ba--", "note": "cross B-outer S-inner: ** a -- ab ** ba --"}
+{"id": "x09", "source": "//a##red|ab//ba##", "note": "cross I-outer C-inner: // a ##red| ab // ba ##"}
+{"id": "x10", "source": "//a**ab//ba**", "note": "cross I-outer B-inner: // a ** ab // ba **"}
+{"id": "x11", "source": "//a__ab//ba__", "note": "cross I-outer U-inner: // a __ ab // ba __"}
+{"id": "x12", "source": "//a--ab//ba--", "note": "cross I-outer S-inner: // a -- ab // ba --"}
+{"id": "x13", "source": "__a##red|ab__ba##", "note": "cross U-outer C-inner: __ a ##red| ab __ ba ##"}
+{"id": "x14", "source": "__a**ab__ba**", "note": "cross U-outer B-inner: __ a ** ab __ ba **"}
+{"id": "x15", "source": "__a//ab__ba//", "note": "cross U-outer I-inner: __ a // ab __ ba //"}
+{"id": "x16", "source": "__a--ab__ba--", "note": "cross U-outer S-inner: __ a -- ab __ ba --"}
+{"id": "x17", "source": "--a##red|ab--ba##", "note": "cross S-outer C-inner: -- a ##red| ab -- ba ##"}
+{"id": "x18", "source": "--a**ab--ba**", "note": "cross S-outer B-inner: -- a ** ab -- ba **"}
+{"id": "x19", "source": "--a//ab--ba//", "note": "cross S-outer I-inner: -- a // ab -- ba //"}
+{"id": "x20", "source": "--a__ab--ba__", "note": "cross S-outer U-inner: -- a __ ab -- ba __"}
+{"id": "x21", "source": "##red|a**ab**ba##", "note": "nested control C-outer B-inner: ##red| a ** ab ** ba ##"}
+{"id": "x22", "source": "##red|a//ab//ba##", "note": "nested control C-outer I-inner: ##red| a // ab // ba ##"}
+{"id": "x23", "source": "##red|a__ab__ba##", "note": "nested control C-outer U-inner: ##red| a __ ab __ ba ##"}
+{"id": "x24", "source": "##red|a--ab--ba##", "note": "nested control C-outer S-inner: ##red| a -- ab -- ba ##"}
+{"id": "x25", "source": "**a##red|ab##ba**", "note": "nested control B-outer C-inner: ** a ##red| ab ## ba **"}
+{"id": "x26", "source": "**a//ab//ba**", "note": "nested control B-outer I-inner: ** a // ab // ba **"}
+{"id": "x27", "source": "**a__ab__ba**", "note": "nested control B-outer U-inner: ** a __ ab __ ba **"}
+{"id": "x28", "source": "**a--ab--ba**", "note": "nested control B-outer S-inner: ** a -- ab -- ba **"}
+{"id": "x29", "source": "//a##red|ab##ba//", "note": "nested control I-outer C-inner: // a ##red| ab ## ba //"}
+{"id": "x30", "source": "//a**ab**ba//", "note": "nested control I-outer B-inner: // a ** ab ** ba //"}
+{"id": "x31", "source": "//a__ab__ba//", "note": "nested control I-outer U-inner: // a __ ab __ ba //"}
+{"id": "x32", "source": "//a--ab--ba//", "note": "nested control I-outer S-inner: // a -- ab -- ba //"}
+{"id": "x33", "source": "__a##red|ab##ba__", "note": "nested control U-outer C-inner: __ a ##red| ab ## ba __"}
+{"id": "x34", "source": "__a**ab**ba__", "note": "nested control U-outer B-inner: __ a ** ab ** ba __"}
+{"id": "x35", "source": "__a//ab//ba__", "note": "nested control U-outer I-inner: __ a // ab // ba __"}
+{"id": "x36", "source": "__a--ab--ba__", "note": "nested control U-outer S-inner: __ a -- ab -- ba __"}
+{"id": "x37", "source": "--a##red|ab##ba--", "note": "nested control S-outer C-inner: -- a ##red| ab ## ba --"}
+{"id": "x38", "source": "--a**ab**ba--", "note": "nested control S-outer B-inner: -- a ** ab ** ba --"}
+{"id": "x39", "source": "--a//ab//ba--", "note": "nested control S-outer I-inner: -- a // ab // ba --"}
+{"id": "x40", "source": "--a__ab__ba--", "note": "nested control S-outer U-inner: -- a __ ab __ ba --"}
+{"id": "x41", "source": "##red|a**b//c__d--e--d__c//b##a", "note": "all five properly nested, open C B I U S close S U I B C"}
+{"id": "x42", "source": "##red|**//__--text##end**end//end__end", "note": "all five openers then closers in forward order C B I U S"}
+{"id": "x43", "source": "**a** **b** //c// //d// __e__ __f__ --g-- --h--", "note": "same-marker double nest of each marker in one source"}
+{"id": "x44", "source": "**bold\na//italic\nb//c**", "note": "markers crossing a single newline"}
+{"id": "x45", "source": "**bold\n\nacross**", "note": "markers crossing a blank-line paragraph break"}
+{"id": "x46", "source": "##red|color\n\nspan##", "note": "colortext crossing a blank-line paragraph break"}
+{"id": "x47", "source": "**a[[div]]b**c[[/div]]", "note": "strong crossing a div container opener and closer"}
+{"id": "x48", "source": "__a[[collapsible]]b__c[[/collapsible]]", "note": "underline crossing a collapsible container opener and closer"}
+{"id": "x49", "source": "|| header || header ||\n| **a | b** |\n| c | d |", "note": "strong crossing a wiki table cell boundary"}
+{"id": "x50", "source": "|| header || header ||\n| --a | b-- |\n| c | d |", "note": "strikethrough crossing a wiki table cell boundary"}
+{"id": "x51", "source": "[https://example.com **b** //i// __u__ --s-- ##red|c##]", "note": "all five markers inside a described-link label"}
+{"id": "x52", "source": "[[https://example.com|**b** //i// __u__ --s-- ##red|c##]]", "note": "all five markers inside a double-bracket link label"}
+{"id": "x53", "source": "= **b** //i// __u__ --s-- ##red|c## =", "note": "all five markers inside a heading"}
+{"id": "x54", "source": "//example.com/path// and https://example.com//tail", "note": "protocol-relative URL colliding with emphasis"}
+{"id": "x55", "source": "a -- b ... // c ** d __ e ##red|f", "note": "unpaired marker text that Typography and Tighten see"}
+{"id": "x56", "source": "***b*** ///i/// ___u___ ---s--- ###red|t###", "note": "tripled markers and a hash-run next to colortext"}
+{"id": "x57", "source": "**a****b** //c////d// __e____f__ --g----h--", "note": "adjacent same-marker spans"}
+{"id": "x58", "source": "@@**b** //i// __u__ --s-- ##red|c##@@", "note": "markers inside an inline code shield"}
+{"id": "x59", "source": "[[code]]**b** //i// __u__ --s-- ##red|c##[[/code]]", "note": "markers inside a code block shield"}
+{"id": "x60", "source": "* **a\n* b**\n* c", "note": "marker body spanning a list item boundary"}
+{"id": "x61", "source": "**a[[footnote]]b**c[[/footnote]]", "note": "marker crossing a footnote body boundary"}
+{"id": "x62", "source": "= ##red|**b** //i// ## =", "note": "colortext with a marker in its body inside a heading cell"}
+{"id": "x63", "source": "[https://example.com **//example.com/x//**]", "note": "protocol-relative URL inside a bold span inside a link label"}

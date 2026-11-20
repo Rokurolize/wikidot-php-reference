@@ -1,0 +1,12 @@
+{"id":"p01","output":"<p><span style=\"text-decoration: underline;\">simple<\/span><\/p>\n\n"}
+{"id":"p02","output":"<p>Empty underline <\/p>\n\n"}
+{"id":"p03","output":"<p>ab<\/p>\n\n"}
+{"id":"p04","output":"<p>__x<\/p>\n\n"}
+{"id":"p05","output":"<p>xy<\/p>\n\n"}
+{"id":"p06","output":"<p>__ __<\/p>\n\n"}
+{"id":"p07","output":"<p>a<\/p>\n\n"}
+{"id":"p08","output":"<p><span style=\"text-decoration: underline;\">a<\/span><span style=\"text-decoration: underline;\">b<\/span><\/p>\n\n"}
+{"id":"p09","output":"<p><span style=\"text-decoration: underline;\">a __ b<\/span><\/p>\n\n"}
+{"id":"p10","output":"<p><span style=\"text-decoration: underline;\">_triple and triple<\/span>_<\/p>\n\n"}
+{"id":"p11","output":"<p><span style=\"text-decoration: underline;\">a<br \/>\nb<\/span><\/p>\n\n"}
+{"id":"p12","output":"<p><span style=\"text-decoration: underline;\">a <strong>b<\/strong> c<\/span><\/p>\n\n"}

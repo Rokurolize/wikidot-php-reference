@@ -2,8 +2,8 @@
 
 /**
  * 
- * Parses for bold text.
- * 
+ * Parses for underlined text.
+ *
  * @category Text
  * 
  * @package Text_Wiki
@@ -19,13 +19,14 @@
 
 /**
  * 
- * Parses for bold text.
- * 
+ * Parses for underlined text.
+ *
  * This class implements a Text_Wiki_Rule to find source text marked for
- * strong emphasis (bold) as defined by text surrounded by three
- * single-quotes. On parsing, the text itself is left in place, but the
- * starting and ending instances of three single-quotes are replaced with
- * tokens.
+ * underline as defined by text surrounded by a pair of double underscores.
+ * On parsing, the text itself is left in place, but the starting and ending
+ * double underscores are replaced with tokens. An empty pair (two adjacent
+ * __ markers) is discarded entirely, matching live Wikidot and ftml's
+ * symmetric-marker first-fit; an odd leftover marker stays literal.
  *
  * @category Text
  * 
@@ -51,7 +52,11 @@ class Text_Wiki_Parse_Underline extends Text_Wiki_Parse {
      * 
      */
     
-    public $regex = "/__([^\s](?:.*[^\s])?)__/U";
+    // R2-INLINE2 correction C1: the first alternative removes adjacent empty
+    // __ pairs (live Wikidot and ftml discard them); the original pair regex
+    // is kept unchanged as the second alternative so padded bodies and
+    // first-fit ungreedy pairing still behave exactly as before.
+    public $regex = "/____|__([^\s](?:.*[^\s])?)__/U";
 
     /**
      * 
@@ -70,6 +75,10 @@ class Text_Wiki_Parse_Underline extends Text_Wiki_Parse {
      */
     
     function process($matches) {
+        // Empty adjacent __ pairs carry no capture group and render to nothing.
+        if (!isset($matches[1]) || $matches[1] === '') {
+            return '';
+        }
         $start = $this->wiki->addToken($this->rule, array(
             'type' => 'start'));
         $end = $this->wiki->addToken($this->rule, array(

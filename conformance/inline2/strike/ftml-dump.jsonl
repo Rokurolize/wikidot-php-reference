@@ -1,0 +1,54 @@
+{"errors":[],"html":"<p>before <span style=\"text-decoration: line-through;\">removed</span> after</p>","id":"s01"}
+{"errors":[],"html":"<p>ab<span style=\"text-decoration: line-through;\">cd</span>ef</p>","id":"s02"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">strike</span> and text</p>","id":"s03"}
+{"errors":[],"html":"<p>— strike —</p>","id":"s04"}
+{"errors":[],"html":"<p>—strike —</p>","id":"s05"}
+{"errors":[],"html":"<p>— strike—</p>","id":"s06"}
+{"errors":[],"html":"<p>a — b</p>","id":"s07"}
+{"errors":[],"html":"<p>text —</p>","id":"s08"}
+{"errors":[],"html":"<p>— text</p>","id":"s09"}
+{"errors":[],"html":"<p>a——b</p>","id":"s10"}
+{"errors":[],"html":"<p>raw —-] tail</p>","id":"s11"}
+{"errors":[],"html":"<p>raw ——] tail</p>","id":"s12"}
+{"errors":[],"html":"<p>raw <span style=\"text-decoration: line-through;\">-</span>] tail</p>","id":"s13"}
+{"errors":[],"html":"<p>raw <span style=\"text-decoration: line-through;\">-</span>-] tail</p>","id":"s14"}
+{"errors":[],"html":"<p>raw <span style=\"text-decoration: line-through;\">-</span>—] tail</p>","id":"s15"}
+{"errors":[],"html":"<p>raw <span style=\"text-decoration: line-through;\">-</span>——] tail</p>","id":"s16"}
+{"errors":[],"html":"<p>raw <span style=\"text-decoration: line-through;\">-</span><span style=\"text-decoration: line-through;\">-</span>] tail</p>","id":"s17"}
+{"errors":[],"html":"<p>an em dash — and en dash – here</p>","id":"s18"}
+{"errors":[],"html":"<p>entity &amp;#8212; and &amp;mdash; here</p>","id":"s19"}
+{"errors":[],"html":"<p>a<span style=\"text-decoration: line-through;\">-b</span>-c</p>","id":"s20"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\"><br>\nx</span></p>","id":"s21"}
+{"errors":[],"html":"<p>x<span style=\"text-decoration: line-through;\">a<br></span> y</p>","id":"s22"}
+{"errors":[],"html":"<p>—a</p><p>b—</p>","id":"s23"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 4..7, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p><span style=\"text-decoration: line-through;\">x [[/div]] y</span></p>","id":"s24"}
+{"errors":[],"html":"<div><p>—x</p></div>\ny—","id":"s25"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">Nested <strong>strike</strong>through</span></p>","id":"s26"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<em>b</em>c</span></p>","id":"s27"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<span style=\"text-decoration: underline;\">b</span>c</span></p>","id":"s28"}
+{"errors":[],"html":"<p><span style=\"color: red\"><span style=\"text-decoration: line-through;\">a</span></span> after</p>","id":"s29"}
+{"errors":[],"html":"<p><span style=\"color: red\">a<span style=\"text-decoration: line-through;\">b</span>c</span>d</p>","id":"s30"}
+{"errors":[],"html":"<p><strong>a<span style=\"text-decoration: line-through;\">b</span></strong><span style=\"text-decoration: line-through;\">c</span></p>","id":"s31"}
+{"errors":[],"html":"<p><em>a<span style=\"text-decoration: line-through;\">b</span></em><span style=\"text-decoration: line-through;\">c</span></p>","id":"s32"}
+{"errors":[],"html":"<p><span style=\"text-decoration: underline;\">a<span style=\"text-decoration: line-through;\">b</span>c</span></p>","id":"s33"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">ab</span></p>","id":"s34"}
+{"errors":[],"html":"<hr>","id":"s35"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">-a</span>-</p>","id":"s36"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a</span> and <span style=\"text-decoration: line-through;\">b</span></p>","id":"s37"}
+{"errors":[],"html":"<h2 id=\"toc0\"><span><span style=\"text-decoration: line-through;\">strike</span> heading</span></h2>","id":"s38"}
+{"errors":[],"html":"<p><a href=\"/some-page\">--strike--</a></p>","id":"s39"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>--not struck--</code></pre></div>","id":"s40"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">--not&#32;struck--</span></p>","id":"s41"}
+{"errors":[],"html":"<p><tt><span style=\"text-decoration: line-through;\">mono</span></tt></p>","id":"s42"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">—a</span>b—</p><p><span style=\"text-decoration: line-through;\">— —a</span></p>","id":"s43"}
+{"errors":[],"html":"<span style=\"text-decoration: line-through;\"><br></span><ul>\n<li><span style=\"text-decoration: line-through;\">x<br></span></li>\n<li><span style=\"text-decoration: line-through;\">y</span><br></li>\n</ul><br>\n","id":"s44"}
+{"errors":[],"html":"<p>raw <span style=\"text-decoration: line-through;\">-]<br>\nraw -</span>-]</p>","id":"s45"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\"><a href=\"http://example.com/s\">http://example.com/s</a></span> end</p>","id":"s46"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\"><em>example.com</em></span></p>","id":"s47"}
+{"errors":[],"html":"<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnote-1&#39;)\">1</a></sup></p><div class=\"footnotes-footer\"><div class=\"title\">Footnotes</div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnoteref-1&#39;)\">1</a>. <span style=\"text-decoration: line-through;\">a</span></div></div>","id":"s48"}
+{"errors":[],"html":"<ul>\n<li><span style=\"text-decoration: line-through;\">a</span></li>\n<li>b<span style=\"text-decoration: line-through;\">c</span></li>\n</ul>","id":"s49"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a—b</span></p>","id":"s50"}
+{"errors":["ParseError { token: DoubleTilde, rule: \"strikethrough-tilde\", span: 0..2, kind: RuleFailed }","ParseError { token: DoubleTilde, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: DoubleTilde, rule: \"strikethrough-tilde\", span: 6..8, kind: RuleFailed }","ParseError { token: DoubleTilde, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>~~a—b~~</p>","id":"s51"}
+{"errors":[],"html":"<div><p>—x</p></div>\ny<span style=\"text-decoration: line-through;\"><br></span> z—","id":"s52"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a<br></span> b—</p>","id":"s53"}
+{"errors":[],"html":"<p>abc <span style=\"text-decoration: line-through;\">a</span> def — gh <span style=\"text-decoration: line-through;\">b</span> ijk</p>","id":"s54"}

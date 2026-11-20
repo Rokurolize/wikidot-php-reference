@@ -1,0 +1,10 @@
+{"id": "x00", "source": "--a --b-- c--"}
+{"id": "x01", "source": "-- a--b --"}
+{"id": "x02", "source": "--a--b--c--"}
+{"id": "x03", "source": "--a----b--"}
+{"id": "x04", "source": "a--b--c--d--e"}
+{"id": "x05", "source": "[[code]]--a--[[/code]]--b--"}
+{"id": "x06", "source": "@@--a--@@--b--"}
+{"id": "x07", "source": "[[[p|--a--b--]]]"}
+{"id": "x08", "source": "x--a-- --b--y"}
+{"id": "x09", "source": "--a\t--b--"}

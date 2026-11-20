@@ -1,0 +1,10 @@
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a —b</span> c—</p>","id":"x00"}
+{"errors":[],"html":"<p>— a—b —</p>","id":"x01"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a</span>b<span style=\"text-decoration: line-through;\">c</span></p>","id":"x02"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a</span><span style=\"text-decoration: line-through;\">b</span></p>","id":"x03"}
+{"errors":[],"html":"<p>a<span style=\"text-decoration: line-through;\">b</span>c<span style=\"text-decoration: line-through;\">d</span>e</p>","id":"x04"}
+{"errors":["ParseError { token: DoubleDash, rule: \"block-code\", span: 8..10, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 13..16, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 20..22, kind: NoRulesMatch }"],"html":"<p>[[code]]<span style=\"text-decoration: line-through;\">a</span>[[/code]]<span style=\"text-decoration: line-through;\">b</span></p>","id":"x05"}
+{"errors":[],"html":"<p><span style=\"white-space: pre-wrap;\">--a--</span><span style=\"text-decoration: line-through;\">b</span></p>","id":"x06"}
+{"errors":[],"html":"<p><a href=\"/p\">--a--b--</a></p>","id":"x07"}
+{"errors":[],"html":"<p>x<span style=\"text-decoration: line-through;\">a</span> <span style=\"text-decoration: line-through;\">b</span>y</p>","id":"x08"}
+{"errors":[],"html":"<p><span style=\"text-decoration: line-through;\">a —b</span></p>","id":"x09"}

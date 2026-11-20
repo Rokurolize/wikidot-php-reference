@@ -1,0 +1,140 @@
+s01 -> muse-probe-r2in2-strike-s01 (created)
+s04 -> muse-probe-r2in2-strike-s04 (created)
+s05 -> muse-probe-r2in2-strike-s05 (created)
+s06 -> muse-probe-r2in2-strike-s06 (created)
+s10 -> muse-probe-r2in2-strike-s10 (created)
+s11 -> muse-probe-r2in2-strike-s11 (created)
+s13 -> muse-probe-r2in2-strike-s13 (created)
+s15 -> muse-probe-r2in2-strike-s15 (created)
+s18 -> muse-probe-r2in2-strike-s18 (created)
+s22 -> muse-probe-r2in2-strike-s22 (created)
+s23 -> muse-probe-r2in2-strike-s23 (created)
+s25 -> muse-probe-r2in2-strike-s25 (created)
+s29 -> muse-probe-r2in2-strike-s29 (created)
+s30 -> muse-probe-r2in2-strike-s30 (created)
+s31 -> muse-probe-r2in2-strike-s31 (created)
+s32 -> muse-probe-r2in2-strike-s32 (created)
+s34 -> muse-probe-r2in2-strike-s34 (created)
+s38 -> muse-probe-r2in2-strike-s38 (created)
+s39 -> muse-probe-r2in2-strike-s39 (created)
+s40 -> muse-probe-r2in2-strike-s40 (created)
+s43 -> muse-probe-r2in2-strike-s43 (created)
+s44 -> muse-probe-r2in2-strike-s44 (created)
+s45 -> muse-probe-r2in2-strike-s45 (created)
+{
+ "s01": {
+  "fullname": "muse-probe-r2in2-strike-s01",
+  "source": "before --removed-- after",
+  "action": "created"
+ },
+ "s04": {
+  "fullname": "muse-probe-r2in2-strike-s04",
+  "source": "-- strike --",
+  "action": "created"
+ },
+ "s05": {
+  "fullname": "muse-probe-r2in2-strike-s05",
+  "source": "--strike --",
+  "action": "created"
+ },
+ "s06": {
+  "fullname": "muse-probe-r2in2-strike-s06",
+  "source": "-- strike--",
+  "action": "created"
+ },
+ "s10": {
+  "fullname": "muse-probe-r2in2-strike-s10",
+  "source": "a----b",
+  "action": "created"
+ },
+ "s11": {
+  "fullname": "muse-probe-r2in2-strike-s11",
+  "source": "raw ---] tail",
+  "action": "created"
+ },
+ "s13": {
+  "fullname": "muse-probe-r2in2-strike-s13",
+  "source": "raw -----] tail",
+  "action": "created"
+ },
+ "s15": {
+  "fullname": "muse-probe-r2in2-strike-s15",
+  "source": "raw -------] tail",
+  "action": "created"
+ },
+ "s18": {
+  "fullname": "muse-probe-r2in2-strike-s18",
+  "source": "an em dash — and en dash – here",
+  "action": "created"
+ },
+ "s22": {
+  "fullname": "muse-probe-r2in2-strike-s22",
+  "source": "x--a\n--y",
+  "action": "created"
+ },
+ "s23": {
+  "fullname": "muse-probe-r2in2-strike-s23",
+  "source": "--a\n\nb--",
+  "action": "created"
+ },
+ "s25": {
+  "fullname": "muse-probe-r2in2-strike-s25",
+  "source": "[[div]]\n--x [[/div]] y--",
+  "action": "created"
+ },
+ "s29": {
+  "fullname": "muse-probe-r2in2-strike-s29",
+  "source": "##red|--a--## after",
+  "action": "created"
+ },
+ "s30": {
+  "fullname": "muse-probe-r2in2-strike-s30",
+  "source": "##red|a--b##c--d",
+  "action": "created"
+ },
+ "s31": {
+  "fullname": "muse-probe-r2in2-strike-s31",
+  "source": "**a--b**c--",
+  "action": "created"
+ },
+ "s32": {
+  "fullname": "muse-probe-r2in2-strike-s32",
+  "source": "//a--b//c--",
+  "action": "created"
+ },
+ "s34": {
+  "fullname": "muse-probe-r2in2-strike-s34",
+  "source": "--a****b--",
+  "action": "created"
+ },
+ "s38": {
+  "fullname": "muse-probe-r2in2-strike-s38",
+  "source": "++ --strike-- heading",
+  "action": "created"
+ },
+ "s39": {
+  "fullname": "muse-probe-r2in2-strike-s39",
+  "source": "[[[some-page | --strike--]]]",
+  "action": "created"
+ },
+ "s40": {
+  "fullname": "muse-probe-r2in2-strike-s40",
+  "source": "[[code]]\n--not struck--\n[[/code]]",
+  "action": "created"
+ },
+ "s43": {
+  "fullname": "muse-probe-r2in2-strike-s43",
+  "source": "----a--b--\n\n---- --a--",
+  "action": "created"
+ },
+ "s44": {
+  "fullname": "muse-probe-r2in2-strike-s44",
+  "source": "--\n[[ul]]\n[[li]]\nx\n[[/li]]\n[[li]]\ny--\n[[/li]]\n[[/ul]]",
+  "action": "created"
+ },
+ "s45": {
+  "fullname": "muse-probe-r2in2-strike-s45",
+  "source": "raw ---]\nraw ----]",
+  "action": "created"
+ }
+}

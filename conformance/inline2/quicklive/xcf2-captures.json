@@ -1,0 +1,12 @@
+{
+ "xcf2": {
+  "fullname": "muse-probe-r2in2-x-xcf2",
+  "html": "<p>x<span style=\"text-decoration: underline;\">a<br /></span> y</p>",
+  "html_sha256": "ff6985c981aeaceb9fc3db93df9743b5592126c2a8d1a589cb3a31279ae42d6c",
+  "source": "x__a\n__y",
+  "source_sha256": "076bb48504796fd89d8fc835cb92190147ef2ca53cb5a223a6bdb2383b504e3d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

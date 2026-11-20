@@ -1,0 +1,552 @@
+em01 -> muse-probe-r2in2-em-em01 stable=True saved_source_matches=True valid=True
+em02 -> muse-probe-r2in2-em-em02 stable=True saved_source_matches=True valid=True
+em03 -> muse-probe-r2in2-em-em03 stable=True saved_source_matches=True valid=True
+em04 -> muse-probe-r2in2-em-em04 stable=True saved_source_matches=True valid=True
+em05 -> muse-probe-r2in2-em-em05 stable=True saved_source_matches=True valid=True
+em06 -> muse-probe-r2in2-em-em06 stable=True saved_source_matches=True valid=True
+em07 -> muse-probe-r2in2-em-em07 stable=True saved_source_matches=True valid=True
+em08 -> muse-probe-r2in2-em-em08 stable=True saved_source_matches=True valid=True
+em09 -> muse-probe-r2in2-em-em09 stable=True saved_source_matches=True valid=True
+em10 -> muse-probe-r2in2-em-em10 stable=True saved_source_matches=True valid=True
+em11 -> muse-probe-r2in2-em-em11 stable=True saved_source_matches=True valid=True
+em12 -> muse-probe-r2in2-em-em12 stable=True saved_source_matches=True valid=True
+em13 -> muse-probe-r2in2-em-em13 stable=True saved_source_matches=True valid=True
+em14 -> muse-probe-r2in2-em-em14 stable=True saved_source_matches=True valid=True
+em15 -> muse-probe-r2in2-em-em15 stable=True saved_source_matches=True valid=True
+em16 -> muse-probe-r2in2-em-em16 stable=True saved_source_matches=True valid=True
+em17 -> muse-probe-r2in2-em-em17 stable=True saved_source_matches=True valid=True
+em18 -> muse-probe-r2in2-em-em18 stable=True saved_source_matches=True valid=True
+em19 -> muse-probe-r2in2-em-em19 stable=True saved_source_matches=True valid=True
+em20 -> muse-probe-r2in2-em-em20 stable=True saved_source_matches=True valid=True
+em21 -> muse-probe-r2in2-em-em21 stable=True saved_source_matches=True valid=True
+em22 -> muse-probe-r2in2-em-em22 stable=True saved_source_matches=True valid=True
+em23 -> muse-probe-r2in2-em-em23 stable=True saved_source_matches=True valid=True
+em24 -> muse-probe-r2in2-em-em24 stable=True saved_source_matches=True valid=True
+em25 -> muse-probe-r2in2-em-em25 stable=True saved_source_matches=True valid=True
+em26 -> muse-probe-r2in2-em-em26 stable=True saved_source_matches=True valid=True
+em27 -> muse-probe-r2in2-em-em27 stable=True saved_source_matches=True valid=True
+em28 -> muse-probe-r2in2-em-em28 stable=True saved_source_matches=True valid=True
+em29 -> muse-probe-r2in2-em-em29 stable=True saved_source_matches=True valid=True
+em30 -> muse-probe-r2in2-em-em30 stable=True saved_source_matches=True valid=True
+em31 -> muse-probe-r2in2-em-em31 stable=True saved_source_matches=True valid=True
+em32 -> muse-probe-r2in2-em-em32 stable=True saved_source_matches=True valid=True
+em33 -> muse-probe-r2in2-em-em33 stable=True saved_source_matches=True valid=True
+em34 -> muse-probe-r2in2-em-em34 stable=True saved_source_matches=True valid=True
+em35 -> muse-probe-r2in2-em-em35 stable=True saved_source_matches=True valid=True
+em36 -> muse-probe-r2in2-em-em36 stable=True saved_source_matches=True valid=True
+em37 -> muse-probe-r2in2-em-em37 stable=True saved_source_matches=True valid=True
+em38 -> muse-probe-r2in2-em-em38 stable=True saved_source_matches=True valid=True
+em39 -> muse-probe-r2in2-em-em39 stable=True saved_source_matches=True valid=True
+em40 -> muse-probe-r2in2-em-em40 stable=True saved_source_matches=True valid=True
+em41 -> muse-probe-r2in2-em-em41 stable=True saved_source_matches=True valid=True
+em42 -> muse-probe-r2in2-em-em42 stable=True saved_source_matches=True valid=True
+em43 -> muse-probe-r2in2-em-em43 stable=True saved_source_matches=True valid=True
+em44 -> muse-probe-r2in2-em-em44 stable=True saved_source_matches=True valid=True
+em45 -> muse-probe-r2in2-em-em45 stable=True saved_source_matches=True valid=True
+em46 -> muse-probe-r2in2-em-em46 stable=True saved_source_matches=True valid=True
+em47 -> muse-probe-r2in2-em-em47 stable=True saved_source_matches=True valid=True
+em48 -> muse-probe-r2in2-em-em48 stable=True saved_source_matches=True valid=True
+em49 -> muse-probe-r2in2-em-em49 stable=True saved_source_matches=True valid=True
+em50 -> muse-probe-r2in2-em-em50 stable=True saved_source_matches=True valid=True
+{
+ "em01": {
+  "fullname": "muse-probe-r2in2-em-em01",
+  "html": "<p><em>simple</em></p>",
+  "html_sha256": "858f6b3b497ca65fa9dd551cd728cc2b1a33a72c8aab0833c2f95c0b98942c42",
+  "source": "//simple//",
+  "source_sha256": "a09fe1b0326c42e95af88b1ebb9e983110923112f813e7d0ef93a9295dd87fdd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em02": {
+  "fullname": "muse-probe-r2in2-em-em02",
+  "html": "<p>before <em>emphasis</em> after</p>",
+  "html_sha256": "5ddefa5f080e04f137606dbeaaf659ca92d201f9d4c9e5558e26ce286bdbaad2",
+  "source": "before //emphasis// after",
+  "source_sha256": "6fcea555c3c385535cb8f8a2011d56ae7d49975f042783162d91916d1e094627",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em03": {
+  "fullname": "muse-probe-r2in2-em-em03",
+  "html": "<p><em>two words inside</em></p>",
+  "html_sha256": "16aa993193040278016fa4bc9a9b40c3371a8ff8a317f9af861e18222a22c494",
+  "source": "//two words inside//",
+  "source_sha256": "462e46bad24fe7418362d601ddfae57211811f1d31cf141b7c56a4ae744bb1b7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em04": {
+  "fullname": "muse-probe-r2in2-em-em04",
+  "html": "<p>a<em>b</em>c</p>",
+  "html_sha256": "53a0297788bb4434173c00e27a247b16b2d63078cca98bc82b296d158af5f216",
+  "source": "a//b//c",
+  "source_sha256": "608cd74a272ea1b656b90f7a1f1a1d498beb5cee8a6b23768321e20e2349109e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em05": {
+  "fullname": "muse-probe-r2in2-em-em05",
+  "html": "<p>x <em>one</em> y <em>two</em> z</p>",
+  "html_sha256": "41916f166403a167fc12d816c8c4675a69bce391b9f31304040d16347af39a92",
+  "source": "x //one// y //two// z",
+  "source_sha256": "fe5ddef12b10c212dbe6687379f2adf0b6d9d4a66677aaf4a41211020bbea1b8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em06": {
+  "fullname": "muse-probe-r2in2-em-em06",
+  "html": "<p>//unpaired</p>",
+  "html_sha256": "42addf9f518885541f8c23356ed28abe4965a3507edf52331a1a184ba93b7b52",
+  "source": "//unpaired",
+  "source_sha256": "b0d85bc27e5b101791ca166ea1caf59dc55920b804c9f8235e1a564f423572bd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em07": {
+  "fullname": "muse-probe-r2in2-em-em07",
+  "html": "<p>unpaired//</p>",
+  "html_sha256": "3364fd038b9221bd37280adee97949cfd9d1754c0378aef45872124e104e47dd",
+  "source": "unpaired//",
+  "source_sha256": "780257568e48155a0e5dd1ed5d1a21aef8cc42fa49e812522b4ba1f33b09cbd1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em08": {
+  "fullname": "muse-probe-r2in2-em-em08",
+  "html": "<p><em>/triple</em>/</p>",
+  "html_sha256": "d61f89377b3ca78cd16c6e1090de787228fdff4518ffbb0eaa0c3405113a45de",
+  "source": "///triple///",
+  "source_sha256": "1ac028741b0c1cf8c361a059c2e16e196c4b885c27dd539c11b643a8ea894a7d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em09": {
+  "fullname": "muse-probe-r2in2-em-em09",
+  "html": "<p>four</p>",
+  "html_sha256": "60c98b3c9cc468edadc8ff85d6f84b0f613e02e3018274fd29f811d5f257df1b",
+  "source": "////four////",
+  "source_sha256": "0abb24aec8b9bac48f36fd1194a1e09e03fe9ac055986a09782b02141bda447f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em10": {
+  "fullname": "muse-probe-r2in2-em-em10",
+  "html": "<p><em>a</em>b//</p>",
+  "html_sha256": "7b0d3771da1dda22227365adc87d96d7968098515f5b05642b7eddbef3494a25",
+  "source": "//a//b//",
+  "source_sha256": "d837a047980a8c384accd90dfdcfbc3d139bc209f0cca1bc43e900386399315f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em11": {
+  "fullname": "muse-probe-r2in2-em-em11",
+  "html": "<p>a<em>b</em>c//d</p>",
+  "html_sha256": "3dc3282f5d067df179617858d5effd5552b61e9cf5f050fc978e4478d22ddebf",
+  "source": "a//b//c//d",
+  "source_sha256": "5712529a08fe3f57dca712d42d5bcbc48e715682d2e85256522128fe0e3e5fc1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em12": {
+  "fullname": "muse-probe-r2in2-em-em12",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "////",
+  "source_sha256": "0ea28b450f5e2ae8a3979cdc28901fb7dc257f1b9639199a52eafa9489420330",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em13": {
+  "fullname": "muse-probe-r2in2-em-em13",
+  "html": "<p>// //</p>",
+  "html_sha256": "1db5d8207ec20e4e4152d18c4d3d5a7e7278116f465b0ed8ac524c7f31f7c6ea",
+  "source": "// //",
+  "source_sha256": "d70b7bc352cc83e052b5f455884beea4e66bbc5fcc1e553a8f22ca56e966f5c4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em14": {
+  "fullname": "muse-probe-r2in2-em-em14",
+  "html": "<p>em</p>",
+  "html_sha256": "e72d9dce27a50aba4a6af25348451d2145f33f4ff54b8d5e2d31f834987c56a9",
+  "source": "////em////",
+  "source_sha256": "dc05725dd56a51ce0750980cc7a19ad18a853af170ea12926caa9fe71266e7cd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em15": {
+  "fullname": "muse-probe-r2in2-em-em15",
+  "html": "<p>// padded //</p>",
+  "html_sha256": "89b645249d4aa7775f42254de7445fbdc209c938ca6aad0d362f99779d2eadd0",
+  "source": "// padded //",
+  "source_sha256": "d7cc8997d0126bacbce717d34622579055fa59dd6cc0819e2c3d3d0320147c39",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em16": {
+  "fullname": "muse-probe-r2in2-em-em16",
+  "html": "<p>// padded//</p>",
+  "html_sha256": "92ce48c246a85e1fc1fa1724d33b63b87269023106685b034f031e59e8507ad5",
+  "source": "// padded//",
+  "source_sha256": "48afe8181f6546879ea35d519c860165afa0efab2bc22ca5ffd9f74ac02902d8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em17": {
+  "fullname": "muse-probe-r2in2-em-em17",
+  "html": "<p>//padded //</p>",
+  "html_sha256": "e402f962211e4d3bed928c6b3f87be9009451d77a8a47bc02412a0f35228a94c",
+  "source": "//padded //",
+  "source_sha256": "6a5e2d7e46c37907c45900f587904b3193b8989082d301e404f20867c29d7e39",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em18": {
+  "fullname": "muse-probe-r2in2-em-em18",
+  "html": "<p>word<em>inside</em>word</p>",
+  "html_sha256": "f081d5fcbc4fca2e6659bf53c7c33387a1f99b2d11890b1bc16c7b6feaa9a8c8",
+  "source": "word//inside//word",
+  "source_sha256": "68612eb80c6a57518d8dc8f7e19dd7496c123564f631faee4e912355373055b8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em19": {
+  "fullname": "muse-probe-r2in2-em-em19",
+  "html": "<p>// leadingspace</p>",
+  "html_sha256": "31c7a85258e376d4f90617337a87e84e41b95f2edbb81bcf85d0d6117989e3ff",
+  "source": "// leadingspace",
+  "source_sha256": "acd260653d2bd73c8f77cb34d5c921ad3fd8856034627719007d5c26a7940771",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em20": {
+  "fullname": "muse-probe-r2in2-em-em20",
+  "html": "<p>trailingspace //</p>",
+  "html_sha256": "4b1f1811804edb1962b88d290fe82950b0655894102fcb8133e8d9eed8fb09a3",
+  "source": "trailingspace //",
+  "source_sha256": "080383fae4f136c7050017c9dea39b37fbadb494843f513025de3c8c6aac2bf6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em21": {
+  "fullname": "muse-probe-r2in2-em-em21",
+  "html": "<p><em><strong>bold italic</strong></em></p>",
+  "html_sha256": "d17823b42f1811cc2c42c330bbb478b2e8d77dd92546f321d57973719c869069",
+  "source": "//**bold italic**//",
+  "source_sha256": "0dbfdf42b4bb03f92d96b5c3792f71e73620adfef3b20ec32071d376197f4f9b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em22": {
+  "fullname": "muse-probe-r2in2-em-em22",
+  "html": "<p><strong><em>italic bold</em></strong></p>",
+  "html_sha256": "4aebbe12c22a8ccc995bcefa46bd285b4b3f268d113533aedd59a0a4471fd7b1",
+  "source": "**//italic bold//**",
+  "source_sha256": "dd1be3fad45e842acb27928c032aa8852c712dd6b66a432d44ee14e69a55342b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em23": {
+  "fullname": "muse-probe-r2in2-em-em23",
+  "html": "<p><em><strong>crossed</strong></em></p>",
+  "html_sha256": "92c1b52904a14a32321bf3f147dede185b99853c61baa84e0fbb00017b87cdea",
+  "source": "//**crossed//**",
+  "source_sha256": "eac0a2e5d678a9e788d566251cf011131c989cc9735533a36d7556bd2528e497",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em24": {
+  "fullname": "muse-probe-r2in2-em-em24",
+  "html": "<p><em><span style=\"text-decoration: underline;\">underline italic</span></em></p>",
+  "html_sha256": "6f47b6a9ea8fa90ae23b64a2a7dd55332a619fc46c8949997ba093f195427c73",
+  "source": "//__underline italic__//",
+  "source_sha256": "5f12f0f338afdcdb603b35f7a8edec96cb98230704ec9a4a641d348f09bc3a41",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em25": {
+  "fullname": "muse-probe-r2in2-em-em25",
+  "html": "<p><em><span style=\"text-decoration: line-through;\">strike italic</span></em></p>",
+  "html_sha256": "0ab58788753776923ae1fe8404e96e836d16aea12961107384bb8fe56441ccb6",
+  "source": "//--strike italic--//",
+  "source_sha256": "02df8ca292af1945282ebc8d342f10d97dfdbe016a6df10f7cb25f569da00b8e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em26": {
+  "fullname": "muse-probe-r2in2-em-em26",
+  "html": "<p><em><span style=\"color: red\">colored italic</span></em></p>",
+  "html_sha256": "5cc9d77ffcf24b354e9ef19e8942b8c9646ab4a555b756c88c3c9028428d637b",
+  "source": "//##red|colored italic##//",
+  "source_sha256": "aa19f5bc449b80d9905c72550ef342d03482fb107e8067ef11ce6b64215f34a7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em27": {
+  "fullname": "muse-probe-r2in2-em-em27",
+  "html": "<p><em>before <strong>bold</strong> after</em></p>",
+  "html_sha256": "5f9df46c726caf959bf879652809a2af3fc5351e34572ba1badfada7a4894ecf",
+  "source": "//before **bold** after//",
+  "source_sha256": "d2745f51aff7e3025e5430c1f22600be2d4c58ad7244c1e4cecf99bccabee836",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em28": {
+  "fullname": "muse-probe-r2in2-em-em28",
+  "html": "<p><em><strong>A</strong></em> and <em><strong>B</strong></em></p>",
+  "html_sha256": "3c34605f0f668bc069182cdeadb6aab862f204cfaba5e00c654736ba71d7b89e",
+  "source": "//**A**// and //**B**//",
+  "source_sha256": "75fb671bd2dd70cf7f74d01e3c903c6df4b5d7fe4980e5473dae864cd09aed44",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em29": {
+  "fullname": "muse-probe-r2in2-em-em29",
+  "html": "<p><em><strong>one **two</strong></em></p>",
+  "html_sha256": "f11501cccaf38b0f6225604af03b9bca15286d930e8d15eae054c9236b504ae3",
+  "source": "//**one **two//**",
+  "source_sha256": "e6af11111f78cea8cb05a9c406ae3323b0535f0fae0b399fa6d092c5af6f758d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em30": {
+  "fullname": "muse-probe-r2in2-em-em30",
+  "html": "<p><em><strong>Warsaw</strong></em><br />\n<strong>GENIUS <em>DEPARTMENT</em></strong></p>",
+  "html_sha256": "4de0526616ee3ab65aadb63a58bd572329751daf3bfc5c86ea34c4b7587343ef",
+  "source": "//**Warsaw**//\n**GENIUS //DEPARTMENT//**",
+  "source_sha256": "edd743881d1551f4efa1e8617f9f6fea94886eedc01b5e68dafc670958296935",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em31": {
+  "fullname": "muse-probe-r2in2-em-em31",
+  "html": "<p><em>line one<br />\nline two</em></p>",
+  "html_sha256": "4fab216cf931cc3f04d0042b8e803b6e4eb81aded2070a493dbc6ff67e43f1f0",
+  "source": "//line one\nline two//",
+  "source_sha256": "ba1ff021bed4ecf8e68cbf6b2ac96eba4a048215f050c9b0385cfa0110a576a4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em32": {
+  "fullname": "muse-probe-r2in2-em-em32",
+  "html": "<p>//line one</p>\n<p>line two//</p>",
+  "html_sha256": "4cd1c40e648386cc4910a4e64e64c2a977a32065d16dfd90b3ac99fa12456ed6",
+  "source": "//line one\n\nline two//",
+  "source_sha256": "69a3c9d48608c479053214dc07d0bb8b9b4208dbd51aa2879fe64a03d4853a29",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em33": {
+  "fullname": "muse-probe-r2in2-em-em33",
+  "html": "<p>//text</p>\n<div>\n<p>block</p>\n</div>\n//",
+  "html_sha256": "9e92810f14810a4bcacf0da8ab71a806047eadfb992ccaecbba55467578af64c",
+  "source": "//text\n[[div]]\nblock\n[[/div]]//",
+  "source_sha256": "b4fa003d61358d2861c2d77d8c2409ba7e99acb55367f455af4f97050ac420d2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em34": {
+  "fullname": "muse-probe-r2in2-em-em34",
+  "html": "<p>//text</p>\n<div>\n<p>block</p>\n</div>",
+  "html_sha256": "e89744a7b619dd91c1bb02029a8bc121bc8a5e7572909e281eb46332122237d5",
+  "source": "//text\n\n[[div]]\nblock\n[[/div]]",
+  "source_sha256": "a8b760f40609723d5a02cad5d93b566a9fb6d63183510ed9e79adbdfb6e1553a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em35": {
+  "fullname": "muse-probe-r2in2-em-em35",
+  "html": "<ul>\n<li><em><strong>Title</strong></em> by author</li>\n<li><em><strong>Title2</strong></em> by author</li>\n</ul>",
+  "html_sha256": "c7fde9611e130f412069f6eadcef886918cca421d204b20437fd8a85f4326604",
+  "source": "* //**Title**// by author\n* //**Title2**// by author",
+  "source_sha256": "2ac092c2e6f4a25b310150d470cbfd556b151e56608c5c81d58c8694c5770dc7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em36": {
+  "fullname": "muse-probe-r2in2-em-em36",
+  "html": "<p>//example.com/a</p>",
+  "html_sha256": "cbad9cbfc9eaf246c1351c83e79260b6ba94cb877dd58b2a6b83dbf30e3332b9",
+  "source": "//example.com/a",
+  "source_sha256": "863f4bef0a60948da18dfff6319092af61021661edf2c892a0aedf6fb60152da",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em37": {
+  "fullname": "muse-probe-r2in2-em-em37",
+  "html": "<p><em>example.com/a</em></p>",
+  "html_sha256": "e72ee9944fd0b6e868cb70c55d60cd9241605c990fcd04cc882b4cdd3f4c9ca4",
+  "source": "//example.com/a//",
+  "source_sha256": "dd69d9a2d1fc7294154ae5db366f0cb21226c716a62195d5d3ccbfe6f0744e1f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em38": {
+  "fullname": "muse-probe-r2in2-em-em38",
+  "html": "<p><a href=\"http://example.com/a\">http://example.com/a</a></p>",
+  "html_sha256": "4a47a389889d31c32ca3b23be4f306ef90f7e93890adce13d2950090fe8771bd",
+  "source": "http://example.com/a",
+  "source_sha256": "5bd48fa66118084cc32779267a31116dc05c70bcbca0f28e990cd58ce10afeae",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em39": {
+  "fullname": "muse-probe-r2in2-em-em39",
+  "html": "<p><a href=\"http://example.com//path//\">http://example.com//path//</a></p>",
+  "html_sha256": "1b679f51deb7fa8af5a00e17ac909566133cc84dc2c629bf3ad622363f4174aa",
+  "source": "http://example.com//path//",
+  "source_sha256": "ea7390c21be8da411a23716729a89629414b27ce1ae106bad176ce499868ccb4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em40": {
+  "fullname": "muse-probe-r2in2-em-em40",
+  "html": "<p>visit <em>example.com</em> now</p>",
+  "html_sha256": "72d7e6d0a2e5d01ddf8c830561c84453dcfd579f7d059fa3b8d391efae31382f",
+  "source": "visit //example.com// now",
+  "source_sha256": "36c62cde394d4fc05dc96ff782f3605288d9c833ff0b5f33ec4343f17cc8d2f1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em41": {
+  "fullname": "muse-probe-r2in2-em-em41",
+  "html": "<p>text with a//b in it</p>",
+  "html_sha256": "29ca42c2a6853972e04be0c96d38b4d92b1c19a4af2c1ac53804f0e4d9599ddc",
+  "source": "text with a//b in it",
+  "source_sha256": "3c93992e97f374300d2556a39431eb6449934fe624f18fffc0479338cacd70f1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em42": {
+  "fullname": "muse-probe-r2in2-em-em42",
+  "html": "<p><a href=\"https://x.test/a//b//c\">https://x.test/a//b//c</a></p>",
+  "html_sha256": "f984e4affe4b8aa845bda4adb3dbf203f9b03d2916e3f6ffa18c10d2e9320c3e",
+  "source": "https://x.test/a//b//c",
+  "source_sha256": "bb40d131f1e6f0bb966d95411bb2a458c66069daac23e0fd0ffb60fce87fc517",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em43": {
+  "fullname": "muse-probe-r2in2-em-em43",
+  "html": "<p style=\"text-align: center;\"><em>heading italic</em> =</p>",
+  "html_sha256": "28e75d709a591e4faa92996181a7cac989f522e0d25684461e7f716985597dd6",
+  "source": "= //heading italic// =",
+  "source_sha256": "d71894cefc6c99aad547270dea090c98f052fff2610f3d432819509df35b897d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em44": {
+  "fullname": "muse-probe-r2in2-em-em44",
+  "html": "<p>[<a href=\"http://example.com|//link\">label//</a>]</p>",
+  "html_sha256": "0519c7e16d7e950702200e09097a8dd7ecb54b68b401259b01844870c4aa3158",
+  "source": "[[http://example.com|//link label//]]",
+  "source_sha256": "22cc0d1bcc57a89986fe32cd5cce11e1288e53f3d6d3407e3a8af3ffe83b9408",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em45": {
+  "fullname": "muse-probe-r2in2-em-em45",
+  "html": "<p>[[page-name|<em>label</em>]]</p>",
+  "html_sha256": "e4c14fc6ecfa81c24e1d820b41c5cc9046d0368420d169c0fd82dfeac9827e6e",
+  "source": "[[page-name|//label//]]",
+  "source_sha256": "8ce54d26c5292df80660d32c7500184f62eef9839c68ca38dfd81713d8482875",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em46": {
+  "fullname": "muse-probe-r2in2-em-em46",
+  "html": "<p><tt><em>code literal</em></tt></p>",
+  "html_sha256": "6bdc0c4aab35518073a8e4c5ba0015db77a42fefb8e96f57b1c6cdff62326d27",
+  "source": "{{ //code literal// }}",
+  "source_sha256": "2550c1fe6e72f775be69c9346c412e5eac0ad3f27f78e754cc2b23f19e8f0288",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em47": {
+  "fullname": "muse-probe-r2in2-em-em47",
+  "html": "<div class=\"code\">\n<pre><code>//raw not italic//</code></pre></div>",
+  "html_sha256": "8cb6919bbaa0da081410fb6985ea5dcccea11efe14b8fc4aa9310afb34e45d85",
+  "source": "[[code]]\n//raw not italic//\n[[/code]]",
+  "source_sha256": "a30629d5d506b6b5d1d50a77626d97a6e60352b4a37170882a6f3db203648e27",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em48": {
+  "fullname": "muse-probe-r2in2-em-em48",
+  "html": "<p>[]<br />\n<em>live</em></p>",
+  "html_sha256": "edf059bb2ae45eb87109a5702d1e547107eb9d0912921337c719032fed19739b",
+  "source": "[[!-- //commented// --]]\n//live//",
+  "source_sha256": "7a34838331734694dd4e60eed07b80c336672b4eeb5501a18f94aea074e0d8f2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em49": {
+  "fullname": "muse-probe-r2in2-em-em49",
+  "html": "<p>[[em]]block italics[[/em]]</p>",
+  "html_sha256": "18d8e7687a0c75c07c56e1869b9d39b20eb0bd4c63625e9bbfc73c62d4b59f86",
+  "source": "[[em]]block italics[[/em]]",
+  "source_sha256": "e83cc94221d66113ab54335165d5d78775afa8cc4e7f66d5e72e073df8ce3a13",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "em50": {
+  "fullname": "muse-probe-r2in2-em-em50",
+  "html": "<p><em>/word</em></p>",
+  "html_sha256": "18a468a99ded3260aae12a4e1fbd57d34e0eb9bda8b4d319cb1a30dbfce0d86d",
+  "source": "//[[iftags +t]]X[[/iftags]]/word//",
+  "source_sha256": "a6f426c1c85a9484579c4ac1db8765b59f38a9cc3c8017b26528bb6082d0f0a1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

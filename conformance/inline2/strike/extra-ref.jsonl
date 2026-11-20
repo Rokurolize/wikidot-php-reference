@@ -1,0 +1,10 @@
+{"id":"x00","output":"<p><span style=\"text-decoration: line-through;\">a &#8212;b<\/span> c&#8212;<\/p>\n\n"}
+{"id":"x01","output":"<p>&#8212; a&#8212;b &#8212;<\/p>\n\n"}
+{"id":"x02","output":"<p><span style=\"text-decoration: line-through;\">a<\/span>b<span style=\"text-decoration: line-through;\">c<\/span><\/p>\n\n"}
+{"id":"x03","output":"<p><span style=\"text-decoration: line-through;\">a<\/span><span style=\"text-decoration: line-through;\">b<\/span><\/p>\n\n"}
+{"id":"x04","output":"<p>a<span style=\"text-decoration: line-through;\">b<\/span>c<span style=\"text-decoration: line-through;\">d<\/span>e<\/p>\n\n"}
+{"id":"x05","output":"<p>[[code]]<span style=\"text-decoration: line-through;\">a<\/span>[[\/code]]<span style=\"text-decoration: line-through;\">b<\/span><\/p>\n\n"}
+{"id":"x06","output":"<p><span style=\"white-space: pre-wrap;\">--a--<\/span><span style=\"text-decoration: line-through;\">b<\/span><\/p>\n\n"}
+{"id":"x07","output":"<p><a class=\"newpage\" href=\"\/p\">--a--b--<\/a><\/p>\n\n"}
+{"id":"x08","output":"<p>x<span style=\"text-decoration: line-through;\">a<\/span> <span style=\"text-decoration: line-through;\">b<\/span>y<\/p>\n\n"}
+{"id":"x09","output":"<p><span style=\"text-decoration: line-through;\">a    &#8212;b<\/span><\/p>\n\n"}

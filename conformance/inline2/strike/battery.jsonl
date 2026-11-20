@@ -1,0 +1,54 @@
+{"id": "s01", "source": "before --removed-- after"}
+{"id": "s02", "source": "ab--cd--ef"}
+{"id": "s03", "source": "--strike-- and text"}
+{"id": "s04", "source": "-- strike --"}
+{"id": "s05", "source": "--strike --"}
+{"id": "s06", "source": "-- strike--"}
+{"id": "s07", "source": "a -- b"}
+{"id": "s08", "source": "text --"}
+{"id": "s09", "source": "-- text"}
+{"id": "s10", "source": "a----b"}
+{"id": "s11", "source": "raw ---] tail"}
+{"id": "s12", "source": "raw ----] tail"}
+{"id": "s13", "source": "raw -----] tail"}
+{"id": "s14", "source": "raw ------] tail"}
+{"id": "s15", "source": "raw -------] tail"}
+{"id": "s16", "source": "raw ---------] tail"}
+{"id": "s17", "source": "raw ----------] tail"}
+{"id": "s18", "source": "an em dash — and en dash – here"}
+{"id": "s19", "source": "entity &#8212; and &mdash; here"}
+{"id": "s20", "source": "a---b---c"}
+{"id": "s21", "source": "--\nx--"}
+{"id": "s22", "source": "x--a\n--y"}
+{"id": "s23", "source": "--a\n\nb--"}
+{"id": "s24", "source": "--x [[/div]] y--"}
+{"id": "s25", "source": "[[div]]\n--x [[/div]] y--"}
+{"id": "s26", "source": "--Nested **strike**through--"}
+{"id": "s27", "source": "--a//b//c--"}
+{"id": "s28", "source": "--a__b__c--"}
+{"id": "s29", "source": "##red|--a--## after"}
+{"id": "s30", "source": "##red|a--b##c--d"}
+{"id": "s31", "source": "**a--b**c--"}
+{"id": "s32", "source": "//a--b//c--"}
+{"id": "s33", "source": "__a--b__c--"}
+{"id": "s34", "source": "--a****b--"}
+{"id": "s35", "source": "----"}
+{"id": "s36", "source": "---a---"}
+{"id": "s37", "source": "--a-- and --b--"}
+{"id": "s38", "source": "++ --strike-- heading"}
+{"id": "s39", "source": "[[[some-page | --strike--]]]"}
+{"id": "s40", "source": "[[code]]\n--not struck--\n[[/code]]"}
+{"id": "s41", "source": "@@--not struck--@@"}
+{"id": "s42", "source": "{{--mono--}}"}
+{"id": "s43", "source": "----a--b--\n\n---- --a--"}
+{"id": "s44", "source": "--\n[[ul]]\n[[li]]\nx\n[[/li]]\n[[li]]\ny--\n[[/li]]\n[[/ul]]"}
+{"id": "s45", "source": "raw ---]\nraw ----]"}
+{"id": "s46", "source": "--http://example.com/s-- end"}
+{"id": "s47", "source": "--//example.com//--"}
+{"id": "s48", "source": "[[footnote]]--a--[[/footnote]]"}
+{"id": "s49", "source": "* --a--\n* b--c--"}
+{"id": "s50", "source": "--a—b--"}
+{"id": "s51", "source": "~~a--b~~"}
+{"id": "s52", "source": "[[div]]\n--x [[/div]] y--\n--z--"}
+{"id": "s53", "source": "--a\n--b--"}
+{"id": "s54", "source": "abc --a-- def -- gh --b-- ijk"}

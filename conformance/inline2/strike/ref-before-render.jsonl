@@ -1,0 +1,54 @@
+{"id":"s01","output":"<p>before <span style=\"text-decoration: line-through;\">removed<\/span> after<\/p>\n\n"}
+{"id":"s02","output":"<p>ab<span style=\"text-decoration: line-through;\">cd<\/span>ef<\/p>\n\n"}
+{"id":"s03","output":"<p><span style=\"text-decoration: line-through;\">strike<\/span> and text<\/p>\n\n"}
+{"id":"s04","output":"<p>&#8212; strike &#8212;<\/p>\n\n"}
+{"id":"s05","output":"<p>&#8212;strike &#8212;<\/p>\n\n"}
+{"id":"s06","output":"<p>&#8212; strike&#8212;<\/p>\n\n"}
+{"id":"s07","output":"<p>a &#8212; b<\/p>\n\n"}
+{"id":"s08","output":"<p>text &#8212;<\/p>\n\n"}
+{"id":"s09","output":"<p>&#8212; text<\/p>\n\n"}
+{"id":"s10","output":"<p>a&#8212;&#8212;b<\/p>\n\n"}
+{"id":"s11","output":"<p>raw &#8212;-] tail<\/p>\n\n"}
+{"id":"s12","output":"<p>raw &#8212;&#8212;] tail<\/p>\n\n"}
+{"id":"s13","output":"<p>raw <span style=\"text-decoration: line-through;\">-<\/span>] tail<\/p>\n\n"}
+{"id":"s14","output":"<p>raw <span style=\"text-decoration: line-through;\">-<\/span>-] tail<\/p>\n\n"}
+{"id":"s15","output":"<p>raw <span style=\"text-decoration: line-through;\">-<\/span>&#8212;] tail<\/p>\n\n"}
+{"id":"s16","output":"<p>raw <span style=\"text-decoration: line-through;\">-<\/span>&#8212;&#8212;] tail<\/p>\n\n"}
+{"id":"s17","output":"<p>raw <span style=\"text-decoration: line-through;\">-<\/span><span style=\"text-decoration: line-through;\">-<\/span>] tail<\/p>\n\n"}
+{"id":"s18","output":"<p>an em dash \u2014 and en dash \u2013 here<\/p>\n\n"}
+{"id":"s19","output":"<p>entity &amp;#8212; and &amp;mdash; here<\/p>\n\n"}
+{"id":"s20","output":"<p>a<span style=\"text-decoration: line-through;\">-b<\/span>-c<\/p>\n\n"}
+{"id":"s21","output":"<p><span style=\"text-decoration: line-through;\"><br \/>\nx<\/span><\/p>\n\n"}
+{"id":"s22","output":"<p>x<span style=\"text-decoration: line-through;\">a<br \/>\n<\/span>y<\/p>\n\n"}
+{"id":"s23","output":"<p>&#8212;a<\/p>\n\n<p>b&#8212;<\/p>\n\n"}
+{"id":"s24","output":"<p><span style=\"text-decoration: line-through;\">x [[\/div]] y<\/span><\/p>\n\n"}
+{"id":"s25","output":"<div ><p>&#8212;x<\/p>\n\n<\/div>y&#8212;"}
+{"id":"s26","output":"<p><span style=\"text-decoration: line-through;\">Nested <strong>strike<\/strong>through<\/span><\/p>\n\n"}
+{"id":"s27","output":"<p><span style=\"text-decoration: line-through;\">a<em>b<\/em>c<\/span><\/p>\n\n"}
+{"id":"s28","output":"<p><span style=\"text-decoration: line-through;\">a<span style=\"text-decoration: underline;\">b<\/span>c<\/span><\/p>\n\n"}
+{"id":"s29","output":"<p><span style=\"color: red;\"><span style=\"text-decoration: line-through;\">a<\/span><\/span> after<\/p>\n\n"}
+{"id":"s30","output":"<p><span style=\"color: red;\">a<span style=\"text-decoration: line-through;\">b<\/span>c<\/span>d<\/p>\n\n"}
+{"id":"s31","output":"<p><strong>a<span style=\"text-decoration: line-through;\">b<\/strong>c<\/span><\/p>\n\n"}
+{"id":"s32","output":"<p><em>a<span style=\"text-decoration: line-through;\">b<\/em>c<\/span><\/p>\n\n"}
+{"id":"s33","output":"<p><span style=\"text-decoration: underline;\">a<span style=\"text-decoration: line-through;\">b<\/span>c<\/span><\/p>\n\n"}
+{"id":"s34","output":"<p><span style=\"text-decoration: line-through;\">a****b<\/span><\/p>\n\n"}
+{"id":"s35","output":"<hr \/>\n"}
+{"id":"s36","output":"<p><span style=\"text-decoration: line-through;\">-a<\/span>-<\/p>\n\n"}
+{"id":"s37","output":"<p><span style=\"text-decoration: line-through;\">a<\/span> and <span style=\"text-decoration: line-through;\">b<\/span><\/p>\n\n"}
+{"id":"s38","output":"\n<h2 id=\"toc0\"><span><span style=\"text-decoration: line-through;\">strike<\/span> heading<\/span><\/h2>\n"}
+{"id":"s39","output":"<p><a class=\"newpage\" href=\"\/some-page\">--strike--<\/a><\/p>\n\n"}
+{"id":"s40","output":"\n<div class=\"code\">\n<pre><code>--not struck--<\/code><\/pre><\/div>\n\n"}
+{"id":"s41","output":"<p><span style=\"white-space: pre-wrap;\">--not&#32;struck--<\/span><\/p>\n\n"}
+{"id":"s42","output":"<p><tt><span style=\"text-decoration: line-through;\">mono<\/span><\/tt><\/p>\n\n"}
+{"id":"s43","output":"<p><span style=\"text-decoration: line-through;\">&#8212;a<\/span>b&#8212;<\/p>\n\n<p><span style=\"text-decoration: line-through;\">&#8212; &#8212;a<\/span><\/p>\n\n"}
+{"id":"s44","output":"<p><span style=\"text-decoration: line-through;\"><br \/>\n[[ul]]<br \/>\n[[li]]<br \/>\nx<br \/>\n[[\/li]]<br \/>\n[[li]]<br \/>\ny<\/span><br \/>\n[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"s45","output":"<p>raw <span style=\"text-decoration: line-through;\">-]<br \/>\nraw -<\/span>-]<\/p>\n\n"}
+{"id":"s46","output":"<p><span style=\"text-decoration: line-through;\"><a href=\"http:\/\/example.com\/s\">http:\/\/example.com\/s<\/a><\/span> end<\/p>\n\n"}
+{"id":"s47","output":"<p><span style=\"text-decoration: line-through;\"><em>example.com<\/em><\/span><\/p>\n\n"}
+{"id":"s48","output":"<p><sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1<\/a><\/sup><\/p>\n\n<div class=\"footnotes-footer\"><div class=\"title\">Footnotes<\/div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1<\/a>. <span style=\"text-decoration: line-through;\">a<\/span><\/div><\/div>"}
+{"id":"s49","output":"<ul>\n<li><span style=\"text-decoration: line-through;\">a<\/span><\/li>\n<li>b<span style=\"text-decoration: line-through;\">c<\/span><\/li>\n<\/ul>"}
+{"id":"s50","output":"<p><span style=\"text-decoration: line-through;\">a\u2014b<\/span><\/p>\n\n"}
+{"id":"s51","output":"<p>~~a&#8212;b~~<\/p>\n\n"}
+{"id":"s52","output":"<div ><p>&#8212;x<\/p>\n\n<\/div>y<span style=\"text-decoration: line-through;\"><br \/>\n<\/span>z&#8212;"}
+{"id":"s53","output":"<p><span style=\"text-decoration: line-through;\">a<br \/>\n<\/span>b&#8212;<\/p>\n\n"}
+{"id":"s54","output":"<p>abc <span style=\"text-decoration: line-through;\">a<\/span> def &#8212; gh <span style=\"text-decoration: line-through;\">b<\/span> ijk<\/p>\n\n"}

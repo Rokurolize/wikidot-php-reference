@@ -1,0 +1,27 @@
+{"id":"p01","output":"<p><strong>bold<\/strong><br \/>\nx<\/p>\n\n"}
+{"id":"p02","output":"<p><strong>a<\/strong>b<strong>c<\/strong><br \/>\nx<\/p>\n\n"}
+{"id":"p03","output":"<p><strong>*triple<\/strong>*<br \/>\nx<\/p>\n\n"}
+{"id":"p04","output":"<p><strong>a<\/strong>*<br \/>\nx<\/p>\n\n"}
+{"id":"p05","output":"<p><br \/>\nx<\/p>\n\n"}
+{"id":"p06","output":"<p><\/p>\n\n"}
+{"id":"p07","output":"<p>** bold **<br \/>\nx<\/p>\n\n"}
+{"id":"p08","output":"<p>wor<strong>d<\/strong>in<br \/>\nx<\/p>\n\n"}
+{"id":"p09","output":"<p><strong><em>em<\/em><\/strong><br \/>\nx<\/p>\n\n"}
+{"id":"p10","output":"<p><em><strong>bold<\/strong><\/em><br \/>\nx<\/p>\n\n"}
+{"id":"p11","output":"<p><span style=\"color: #c00\"><strong>red bold<\/strong><\/span><br \/>\nx<\/p>\n\n"}
+{"id":"p12","output":"<p><strong><span style=\"color: #c00\">red<\/span><\/strong><br \/>\nx<\/p>\n\n"}
+{"id":"p13","output":"<p><strong>a<br \/>\nb<\/strong><br \/>\nx<\/p>\n\n"}
+{"id":"p14","output":"<p>**unpaired<br \/>\nx<\/p>\n\n"}
+{"id":"p15","output":"<p>unpaired**<br \/>\nx<\/p>\n\n"}
+{"id":"p16","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><strong>A<\/strong><\/td>\n<td>B<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p17","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><strong>A<\/td>\n<td>B<\/strong><\/td>\n<td>C<\/td>\n<\/tr>\n<\/table><p>x<\/p>\n\n"}
+{"id":"p18","output":"<p style=\"text-align: center;\"><strong>Head<\/strong> =<\/p><p>x<\/p>\n\n"}
+{"id":"p19","output":"<p><strong>= Head =<\/strong><br \/>\nx<\/p>\n\n"}
+{"id":"p20","output":"<p>[[<strong>label<\/strong>|target]]<br \/>\nx<\/p>\n\n"}
+{"id":"p21","output":"<p>[[target|<strong>label<\/strong>]]<br \/>\nx<\/p>\n\n"}
+{"id":"p22","output":"<p>[[<strong>page<\/strong>]]<br \/>\nx<\/p>\n\n"}
+{"id":"p23","output":"<p>**a<\/p>\n\n<hr \/>\n<p>b**<br \/>\nx<\/p>\n\n"}
+{"id":"p24","output":"<p><strong><span style=\"text-decoration: underline;\">u<\/span><\/strong><br \/>\nx<\/p>\n\n"}
+{"id":"p25","output":"<p><strong><span style=\"text-decoration: line-through;\">s<\/span><\/strong><br \/>\nx<\/p>\n\n"}
+{"id":"p26","output":"<p>[code]<strong>bold<\/strong>[\/code]<br \/>\nx<\/p>\n\n"}
+{"id":"p27","output":"<p><tt><strong>mono<\/strong><\/tt><br \/>\nx<\/p>\n\n"}

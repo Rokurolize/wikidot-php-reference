@@ -1,0 +1,45 @@
+c01 -> muse-probe-r2in2-color-c01 stable=True saved_source_matches=True valid=True
+c02 -> muse-probe-r2in2-color-c02 stable=True saved_source_matches=True valid=True
+c03 -> muse-probe-r2in2-color-c03 stable=True saved_source_matches=True valid=True
+c04 -> muse-probe-r2in2-color-c04 stable=True saved_source_matches=True valid=True
+c05 -> muse-probe-r2in2-color-c05 stable=True saved_source_matches=True valid=True
+c06 -> muse-probe-r2in2-color-c06 stable=True saved_source_matches=True valid=True
+c07 -> muse-probe-r2in2-color-c07 stable=True saved_source_matches=True valid=True
+c08 -> muse-probe-r2in2-color-c08 stable=True saved_source_matches=True valid=True
+c09 -> muse-probe-r2in2-color-c09 stable=True saved_source_matches=True valid=True
+c10 -> muse-probe-r2in2-color-c10 stable=True saved_source_matches=True valid=True
+c11 -> muse-probe-r2in2-color-c11 stable=True saved_source_matches=True valid=True
+c12 -> muse-probe-r2in2-color-c12 stable=True saved_source_matches=True valid=True
+c13 -> muse-probe-r2in2-color-c13 stable=True saved_source_matches=True valid=True
+c14 -> muse-probe-r2in2-color-c14 stable=True saved_source_matches=True valid=True
+c15 -> muse-probe-r2in2-color-c15 stable=True saved_source_matches=True valid=True
+c16 -> muse-probe-r2in2-color-c16 stable=True saved_source_matches=True valid=True
+c17 -> muse-probe-r2in2-color-c17 stable=True saved_source_matches=True valid=True
+c18 -> muse-probe-r2in2-color-c18 stable=True saved_source_matches=True valid=True
+c19 -> muse-probe-r2in2-color-c19 stable=True saved_source_matches=True valid=True
+c20 -> muse-probe-r2in2-color-c20 stable=True saved_source_matches=True valid=True
+c21 -> muse-probe-r2in2-color-c21 stable=True saved_source_matches=True valid=True
+c22 -> muse-probe-r2in2-color-c22 stable=True saved_source_matches=True valid=True
+c23 -> muse-probe-r2in2-color-c23 stable=True saved_source_matches=True valid=True
+c24 -> muse-probe-r2in2-color-c24 stable=True saved_source_matches=True valid=True
+c25 -> muse-probe-r2in2-color-c25 stable=True saved_source_matches=True valid=True
+c26 -> muse-probe-r2in2-color-c26 stable=True saved_source_matches=True valid=True
+c27 -> muse-probe-r2in2-color-c27 stable=True saved_source_matches=True valid=True
+c28 -> muse-probe-r2in2-color-c28 stable=True saved_source_matches=True valid=True
+Traceback (most recent call last):
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 312, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 308, in main
+    return args.func(args)
+           ~~~~~~~~~^^^^^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 201, in cmd_capture
+    first = extract_page_content(fetch_rendered(args.site, fullname))
+                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roku/.agents/skills/wikidot-py-operations/scripts/wikidot-probe", line 184, in fetch_rendered
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/roku/src/Rokurolize/wikidot.py/.venv/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Server error '503 Service Unavailable' for url 'https://sandbox-for-codex.wikidot.com/muse-probe-r2in2-color-c29'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503

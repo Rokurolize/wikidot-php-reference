@@ -1,0 +1,60 @@
+{"errors":[],"html":"<p><strong>bold</strong></p>","id":"s01"}
+{"errors":[],"html":"<p>before <strong>bold</strong> after</p>","id":"s02"}
+{"errors":[],"html":"<p><strong>one</strong> <strong>two</strong></p>","id":"s03"}
+{"errors":[],"html":"<p><strong>a</strong>b<strong>c</strong></p>","id":"s04"}
+{"errors":[],"html":"<p>wor<strong>d</strong>in</p>","id":"s05"}
+{"errors":[],"html":"<p><strong>two words</strong></p>","id":"s06"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 8..10, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>** bold **</p>","id":"s07"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 0..2, kind: RuleFailed }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 7..9, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }"],"html":"<p>**bold **</p>","id":"s08"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 7..9, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }"],"html":"<p>** bold**</p>","id":"s09"}
+{"errors":[],"html":"<p><strong>a b</strong></p>","id":"s10"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 10..12, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>** a<strong>b</strong> **</p>","id":"s11"}
+{"errors":[],"html":"<p><strong>a</strong> ** b ** <strong>c</strong></p>","id":"s12"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 0..2, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }"],"html":"<p>**unpaired</p>","id":"s13"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 8..10, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>unpaired**</p>","id":"s14"}
+{"errors":[],"html":"<p><strong>*triple</strong>*</p>","id":"s15"}
+{"errors":[],"html":"<p><strong>a</strong>*</p>","id":"s16"}
+{"errors":[],"html":"<p><strong>*a</strong></p>","id":"s17"}
+{"errors":[],"html":"","id":"s18"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 3..5, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 3..5, kind: NoRulesMatch }"],"html":"<p>** **</p>","id":"s19"}
+{"errors":[],"html":"<p><strong>a</strong><strong>b</strong></p>","id":"s20"}
+{"errors":[],"html":"<p><strong><em>em</em></strong></p>","id":"s21"}
+{"errors":[],"html":"<p><em><strong>bold</strong></em></p>","id":"s22"}
+{"errors":[],"html":"<p><strong><span style=\"text-decoration: underline;\">u</span></strong></p>","id":"s23"}
+{"errors":[],"html":"<p><strong><span style=\"text-decoration: line-through;\">s</span></strong></p>","id":"s24"}
+{"errors":[],"html":"<p><span style=\"color: #c00\"><strong>red bold</strong></span></p>","id":"s25"}
+{"errors":[],"html":"<p><strong><span style=\"color: #c00\">red</span></strong></p>","id":"s26"}
+{"errors":[],"html":"<p><strong><tt>mono</tt></strong></p>","id":"s27"}
+{"errors":[],"html":"<p><tt><strong>mono</strong></tt></p>","id":"s28"}
+{"errors":[],"html":"<p><strong><sup>sup</sup></strong></p>","id":"s29"}
+{"errors":[],"html":"<p><strong><sub>sub</sub></strong></p>","id":"s30"}
+{"errors":[],"html":"<p><strong>a<br>\nb</strong><br>\nx</p>","id":"s31"}
+{"errors":["ParseError { token: Bold, rule: \"bold\", span: 0..2, kind: RuleFailed }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 6..8, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }"],"html":"<p>**a</p><p>b**<br>\nx</p>","id":"s32"}
+{"errors":["ParseError { token: LineBreak, rule: \"bold\", span: 3..4, kind: RuleFailed }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 10..12, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>**a</p><hr><p>b**<br>\nx</p>","id":"s33"}
+{"errors":[],"html":"<p><strong>a<br>\nb</strong><br>\nx</p>","id":"s34"}
+{"errors":[],"html":"<p><strong>a<br>\nb</strong></p><p>x</p>","id":"s35"}
+{"errors":["ParseError { token: LineBreak, rule: \"bold\", span: 3..4, kind: RuleFailed }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 13..15, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 13..15, kind: NoRulesMatch }"],"html":"<p>**a</p><blockquote><p>quote</p></blockquote><p>b**<br>\nx</p>","id":"s36"}
+{"errors":[],"html":"<p><strong>[[div]]inside[[/div]]</strong><br>\nx</p>","id":"s37"}
+{"errors":["ParseError { token: LineBreak, rule: \"bold\", span: 3..4, kind: RuleFailed }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 12..14, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 12..14, kind: NoRulesMatch }"],"html":"<p>**a</p><ul>\n<li>list</li>\n</ul><p>b**<br>\nx</p>","id":"s38"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td><strong>A</strong></td>\n<td>B</td>\n</tr>\n</table><p>x</p>","id":"s39"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td><strong>A</strong></td>\n<td>B</td>\n<td>C</td>\n</tr>\n</table><p>x</p>","id":"s40"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td><strong>b</strong></td>\n<td>c</td>\n</tr>\n</table><p>x</p>","id":"s41"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>** A **</td>\n</tr>\n</table><p>x</p>","id":"s42"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td colspan=\"2\"><strong>span</strong></td>\n<td colspan=\"2\">x</td>\n</tr>\n</table><p>x</p>","id":"s43"}
+{"errors":[],"html":"<p style=\"text-align: center;\"><strong>Head</strong> =</p><p>x</p>","id":"s44"}
+{"errors":[],"html":"<p><strong>= Head =</strong><br>\nx</p>","id":"s45"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-star\", span: 20..20, kind: NoSuchBlock }","ParseError { token: LeftBlockStar, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 9..11, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 9..11, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[**label**|target]]</p>","id":"s46"}
+{"errors":["ParseError { token: InputEnd, rule: \"block\", span: 20..20, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[target|<strong>label</strong>]]</p>","id":"s47"}
+{"errors":["ParseError { token: InputEnd, rule: \"block-star\", span: 12..12, kind: NoSuchBlock }","ParseError { token: LeftBlockStar, rule: \"fallback\", span: 0..3, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 8..10, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 10..12, kind: NoRulesMatch }"],"html":"<p>[[**page**]]</p>","id":"s48"}
+{"errors":[],"html":"<p>[code]<strong>bold</strong>[/code]</p>","id":"s49"}
+{"errors":[],"html":"<p><tt><strong>mono</strong></tt></p>","id":"s50"}
+{"errors":["ParseError { token: Bold, rule: \"block-raw\", span: 7..9, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 5..7, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 12..15, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 18..20, kind: NoRulesMatch }"],"html":"<p>[[raw]]<strong>x</strong>[[/raw]]</p>","id":"s51"}
+{"errors":[],"html":"<p>`<strong>code</strong>`</p>","id":"s52"}
+{"errors":[],"html":"<p>[code]<br>\n<strong>bold</strong><br>\n[/code]</p>","id":"s53"}
+{"errors":[],"html":"<p><strong>a[code]x[/code]b</strong></p>","id":"s54"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>**bold**</code></pre></div>","id":"s55"}
+{"errors":["ParseError { token: LineBreak, rule: \"bold\", span: 26..27, kind: RuleFailed }","ParseError { token: Bold, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: Bold, rule: \"bold\", span: 24..26, kind: EndOfInput }","ParseError { token: Bold, rule: \"fallback\", span: 24..26, kind: NoRulesMatch }"],"html":"<p>**a</p><div><p>b</p></div><br>\nc**<br>\nx","id":"s56"}
+{"errors":[],"html":"<p><a href=\"/caption\">target</a><br>\nx</p>","id":"s57"}
+{"errors":[],"html":"<p><a href=\"/target\">**caption**</a><br>\nx</p>","id":"s58"}
+{"errors":[],"html":"<p><a href=\"https://example.com\"><strong>label</strong></a><br>\nx</p>","id":"s59"}
+{"errors":[],"html":"<p><a href=\"/page\">**page**</a><br>\nx</p>","id":"s60"}

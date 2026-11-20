@@ -1,0 +1,50 @@
+{"id":"em01","output":"<p><em>simple<\/em><\/p>\n\n"}
+{"id":"em02","output":"<p>before <em>emphasis<\/em> after<\/p>\n\n"}
+{"id":"em03","output":"<p><em>two words inside<\/em><\/p>\n\n"}
+{"id":"em04","output":"<p>a<em>b<\/em>c<\/p>\n\n"}
+{"id":"em05","output":"<p>x <em>one<\/em> y <em>two<\/em> z<\/p>\n\n"}
+{"id":"em06","output":"<p>\/\/unpaired<\/p>\n\n"}
+{"id":"em07","output":"<p>unpaired\/\/<\/p>\n\n"}
+{"id":"em08","output":"<p><em>\/triple<\/em>\/<\/p>\n\n"}
+{"id":"em09","output":"<p><em>\/\/four<\/em>\/\/<\/p>\n\n"}
+{"id":"em10","output":"<p><em>a<\/em>b\/\/<\/p>\n\n"}
+{"id":"em11","output":"<p>a<em>b<\/em>c\/\/d<\/p>\n\n"}
+{"id":"em12","output":"<p>\/\/\/\/<\/p>\n\n"}
+{"id":"em13","output":"<p>\/\/ \/\/<\/p>\n\n"}
+{"id":"em14","output":"<p><em>\/\/em<\/em>\/\/<\/p>\n\n"}
+{"id":"em15","output":"<p>\/\/ padded \/\/<\/p>\n\n"}
+{"id":"em16","output":"<p>\/\/ padded\/\/<\/p>\n\n"}
+{"id":"em17","output":"<p>\/\/padded \/\/<\/p>\n\n"}
+{"id":"em18","output":"<p>word<em>inside<\/em>word<\/p>\n\n"}
+{"id":"em19","output":"<p>\/\/ leadingspace<\/p>\n\n"}
+{"id":"em20","output":"<p>trailingspace \/\/<\/p>\n\n"}
+{"id":"em21","output":"<p><em><strong>bold italic<\/strong><\/em><\/p>\n\n"}
+{"id":"em22","output":"<p><strong><em>italic bold<\/em><\/strong><\/p>\n\n"}
+{"id":"em23","output":"<p><em><strong>crossed<\/em><\/strong><\/p>\n\n"}
+{"id":"em24","output":"<p><em><span style=\"text-decoration: underline;\">underline italic<\/span><\/em><\/p>\n\n"}
+{"id":"em25","output":"<p><em><span style=\"text-decoration: line-through;\">strike italic<\/span><\/em><\/p>\n\n"}
+{"id":"em26","output":"<p><em><span style=\"color: red;\">colored italic<\/span><\/em><\/p>\n\n"}
+{"id":"em27","output":"<p><em>before <strong>bold<\/strong> after<\/em><\/p>\n\n"}
+{"id":"em28","output":"<p><em><strong>A<\/strong><\/em> and <em><strong>B<\/strong><\/em><\/p>\n\n"}
+{"id":"em29","output":"<p><em><strong>one **two<\/em><\/strong><\/p>\n\n"}
+{"id":"em30","output":"<p><em><strong>Warsaw<\/strong><\/em><br \/>\n<strong>GENIUS <em>DEPARTMENT<\/em><\/strong><\/p>\n\n"}
+{"id":"em31","output":"<p><em>line one<br \/>\nline two<\/em><\/p>\n\n"}
+{"id":"em32","output":"<p>\/\/line one<\/p>\n\n<p>line two\/\/<\/p>\n\n"}
+{"id":"em33","output":"<p>\/\/text<\/p>\n\n<div ><p>block<\/p>\n\n<\/div>\/\/"}
+{"id":"em34","output":"<p>\/\/text<\/p>\n\n<div ><p>block<\/p>\n\n<\/div>"}
+{"id":"em35","output":"<ul>\n<li><em><strong>Title<\/strong><\/em> by author<\/li>\n<li><em><strong>Title2<\/strong><\/em> by author<\/li>\n<\/ul>"}
+{"id":"em36","output":"<p>\/\/example.com\/a<\/p>\n\n"}
+{"id":"em37","output":"<p><em>example.com\/a<\/em><\/p>\n\n"}
+{"id":"em38","output":"<p><a href=\"http:\/\/example.com\/a\">http:\/\/example.com\/a<\/a><\/p>\n\n"}
+{"id":"em39","output":"<p><a href=\"http:\/\/example.com\/\/path\/\/\">http:\/\/example.com\/\/path\/\/<\/a><\/p>\n\n"}
+{"id":"em40","output":"<p>visit <em>example.com<\/em> now<\/p>\n\n"}
+{"id":"em41","output":"<p>text with a\/\/b in it<\/p>\n\n"}
+{"id":"em42","output":"<p><a href=\"https:\/\/x.test\/a\/\/b\/\/c\">https:\/\/x.test\/a\/\/b\/\/c<\/a><\/p>\n\n"}
+{"id":"em43","output":"<p style=\"text-align: center;\"><em>heading italic<\/em> =<\/p>"}
+{"id":"em44","output":"<p>[<a href=\"http:\/\/example.com|\/\/link\">label\/\/<\/a>]<\/p>\n\n"}
+{"id":"em45","output":"<p>[[page-name|<em>label<\/em>]]<\/p>\n\n"}
+{"id":"em46","output":"<p><tt> <em>code literal<\/em> <\/tt><\/p>\n\n"}
+{"id":"em47","output":"\n<div class=\"code\">\n<pre><code>\/\/raw not italic\/\/<\/code><\/pre><\/div>\n\n"}
+{"id":"em48","output":"<p>[]<br \/>\n<em>live<\/em><\/p>\n\n"}
+{"id":"em49","output":"<p>[[em]]block italics[[\/em]]<\/p>\n\n"}
+{"id":"em50","output":"<p><em>\/word<\/em><\/p>\n\n"}
