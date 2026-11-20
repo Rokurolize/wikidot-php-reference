@@ -1,0 +1,68 @@
+{"id":"i37-01-plain","output":"<img src=\"\/local--files\/\/photo.png\" alt=\"photo.png\" class=\"image\" \/>"}
+{"id":"i37-02-align-center","output":"<div class=\"image-container aligncenter\"><img src=\"\/local--files\/\/photo.png\" alt=\"photo.png\" class=\"image\" \/><\/div>"}
+{"id":"i37-03-align-left","output":"<div class=\"image-container alignleft\"><img src=\"\/local--files\/\/photo.png\" alt=\"photo.png\" class=\"image\" \/><\/div>"}
+{"id":"i37-04-align-right","output":"<div class=\"image-container alignright\"><img src=\"\/local--files\/\/photo.png\" alt=\"photo.png\" class=\"image\" \/><\/div>"}
+{"id":"i37-05-float-left","output":"<div class=\"image-container floatleft\"><img src=\"\/local--files\/\/photo.png\" alt=\"photo.png\" class=\"image\" \/><\/div>"}
+{"id":"i37-06-float-center","output":"<div class=\"image-container\"><img src=\"\/local--files\/\/photo.png\" alt=\"photo.png\" class=\"image\" \/><\/div>"}
+{"id":"i37-07-float-right","output":"<div class=\"image-container floatright\"><img src=\"\/local--files\/\/photo.png\" alt=\"photo.png\" class=\"image\" \/><\/div>"}
+{"id":"i37-08-uppercase-name","output":"<img src=\"https:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"i37-09-titlecase-name","output":"<img src=\"https:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"i37-10-uppercase-align","output":"<div class=\"image-container\"><img src=\"https:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/div>"}
+{"id":"i37-11-external-https","output":"<img src=\"https:\/\/example.com\/some-image.webp\" alt=\"some-image.webp\" class=\"image\" \/>"}
+{"id":"i37-12-external-http-alt-suffix","output":"<img src=\"https:\/\/example.com\/a.png?b=c\" alt=\"a.png?b=c\" class=\"image\" \/>"}
+{"id":"i37-13-external-fragment","output":"<img src=\"https:\/\/example.com\/a.png#frag\" alt=\"a.png#frag\" class=\"image\" \/>"}
+{"id":"i37-14-external-trailing-slash","output":"<img src=\"https:\/\/example.com\/\" alt=\"example.com\" class=\"image\" \/>"}
+{"id":"i37-15-local-png","output":"<img src=\"\/local--files\/\/filename.png\" alt=\"filename.png\" class=\"image\" \/>"}
+{"id":"i37-16-local-jpg-nosize","output":"<img src=\"\/local--files\/\/landscape.jpg\" alt=\"landscape.jpg\" class=\"image\" \/>"}
+{"id":"i37-17-local-webp-resized","output":"<a href=\"\/local--files\/\/picture.webp\" ><img src=\"\/local--resized-images\/\/picture.webp\/medium.jpg\" alt=\"picture.webp\" class=\"image\" \/><\/a>"}
+{"id":"i37-18-local-noext-resized","output":"<a href=\"\/local--files\/\/picture\" ><img src=\"\/local--resized-images\/\/picture\/medium.jpg\" alt=\"picture\" class=\"image\" \/><\/a>"}
+{"id":"i37-19-page-qualified-png","output":"<img src=\"\/local--files\/other-page\/photo.png\" alt=\"photo.png\" class=\"image\" \/>"}
+{"id":"i37-20-page-qualified-jpeg","output":"<a href=\"\/local--files\/other-page\/photo.jpeg\" ><img src=\"\/local--resized-images\/other-page\/photo.jpeg\/medium.jpg\" alt=\"photo.jpeg\" class=\"image\" \/><\/a>"}
+{"id":"i37-21-absolute-path","output":"<img src=\"\/local--files\/my-picture.png\" alt=\"my-picture.png\" class=\"image\" \/>"}
+{"id":"i37-22-absolute-page-path","output":"<img src=\"\/local--files\/some-other-page\/my-picture.png\" alt=\"my-picture.png\" class=\"image\" \/>"}
+{"id":"i37-23-double-leading-slash","output":"<img src=\"\/local--files\/\/example.com\/x.png\" alt=\"x.png\" class=\"image\" \/>"}
+{"id":"i37-24-multi-segment-path","output":"<img src=\"\/local--files\/a\/b\/c.png\" alt=\"c.png\" class=\"image\" \/>"}
+{"id":"i37-25-nonascii-filename","output":"<img src=\"\/local--files\/\/\u65e5\u672c\u8a9e.png\" alt=\"\u65e5\u672c\u8a9e.png\" class=\"image\" \/>"}
+{"id":"i37-26-comment-in-filename","output":"<img src=\"\/local--files\/\/ab.png\" alt=\"ab.png\" class=\"image\" \/>"}
+{"id":"i37-27-comment-gap","output":"<img src=\"\/local--files\/\/a.png\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"i37-28-quoted-url-source","output":"<img src=\"&quot;https:\/\/example.com\/a.png&quot;\" alt=\"a.png&quot;\" class=\"image\" \/>"}
+{"id":"i37-29-data-source","output":"<a href=\"\/local--files\/data:image\/png;base64,AAAA\" ><img src=\"\/local--resized-images\/data:image\/png;base64,AAAA\/medium.jpg\" alt=\"png;base64,AAAA\" class=\"image\" \/><\/a>"}
+{"id":"i37-30-mailto-source","output":"<a href=\"\/local--files\/\/mailto:someone@example.com\" ><img src=\"\/local--resized-images\/\/mailto:someone@example.com\/medium.jpg\" alt=\"mailto:someone@example.com\" class=\"image\" \/><\/a>"}
+{"id":"i37-31-attr-class-style-title-alt","output":"<img src=\"\/local--files\/\/foo.gif\" style=\"border: 1em solid\" class=\"animated\" alt=\"A foobar\" \/>"}
+{"id":"i37-32-attr-width-px","output":"<img src=\"https:\/\/example.com\/a.png\" width=\"200px\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"i37-33-attr-width-bare","output":"<img src=\"https:\/\/example.com\/a.png\" width=\"200\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"i37-34-attr-width-percent","output":"<img src=\"https:\/\/example.com\/a.png\" width=\"50%\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"i37-35-attr-width-unquoted","output":"<img src=\"https:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"i37-36-attr-width-empty","output":"<img src=\"https:\/\/example.com\/a.png\" width=\"\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"i37-37-attr-height","output":"<img src=\"https:\/\/example.com\/a.png\" height=\"120\" width=\"200\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"i37-38-attr-size-small","output":"<a href=\"\/local--files\/\/photo.jpeg\" ><img src=\"\/local--resized-images\/\/photo.jpeg\/small.jpg\" alt=\"photo.jpeg\" class=\"image\" \/><\/a>"}
+{"id":"i37-39-attr-size-bogus","output":"<a href=\"\/local--files\/\/photo.jpeg\" ><img src=\"\/local--resized-images\/\/photo.jpeg\/medium.jpg\" alt=\"photo.jpeg\" class=\"image\" \/><\/a>"}
+{"id":"i37-40-attr-size-unquoted","output":"<a href=\"\/local--files\/\/photo.jpeg\" ><img src=\"\/local--resized-images\/\/photo.jpeg\/medium.jpg\" alt=\"photo.jpeg\" class=\"image\" \/><\/a>"}
+{"id":"i37-41-attr-unknown-key","output":"<img src=\"\/local--files\/\/foo.gif\" alt=\"foo.gif\" class=\"image\" \/>"}
+{"id":"i37-42-attr-key-case","output":"<img src=\"\/local--files\/\/foo.gif\" alt=\"foo.gif\" class=\"image\" \/>"}
+{"id":"i37-43-attr-single-quotes","output":"<img src=\"\/local--files\/\/foo.gif\" alt=\"foo.gif\" class=\"image\" \/>"}
+{"id":"i37-44-link-fragment","output":"<a href=\"\/#gif-sucks\" ><img src=\"\/local--files\/\/foo.gif\" alt=\"foo.gif\" class=\"image\" \/><\/a>"}
+{"id":"i37-45-link-page","output":"<a href=\"\/some-page\" ><img src=\"\/local--files\/\/foo.gif\" alt=\"foo.gif\" class=\"image\" \/><\/a>"}
+{"id":"i37-46-link-external","output":"<a href=\"https:\/\/example.com\/\" ><img src=\"\/local--files\/\/foo.gif\" alt=\"foo.gif\" class=\"image\" \/><\/a>"}
+{"id":"i37-47-link-leading-space-literal","output":"<a href=\" https:\/\/example.com\/\" ><img src=\"\/local--files\/\/foo.gif\" alt=\"foo.gif\" class=\"image\" \/><\/a>"}
+{"id":"i37-48-link-star","output":"<a href=\"https:\/\/example.com\/\"  target=\"_blank\" ><img src=\"\/local--files\/\/foo.gif\" alt=\"foo.gif\" class=\"image\" \/><\/a>"}
+{"id":"i37-49-link-star-space-literal","output":"<a href=\" https:\/\/example.com\/\"  target=\"_blank\" ><img src=\"\/local--files\/\/foo.gif\" alt=\"foo.gif\" class=\"image\" \/><\/a>"}
+{"id":"i37-50-link-star-page","output":"<a href=\"\/some-page\"  target=\"_blank\" ><img src=\"\/local--files\/\/foo.gif\" alt=\"foo.gif\" class=\"image\" \/><\/a>"}
+{"id":"i37-51-link-explicit-overrides","output":"<a href=\"https:\/\/example.com\/\" ><img src=\"\/local--files\/\/foo.png\" alt=\"foo.png\" class=\"image\" \/><\/a>"}
+{"id":"i37-52-caption-body","output":"<img src=\"https:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"i37-53-caption-with-align","output":"<div class=\"image-container alignleft\"><img src=\"https:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/div>"}
+{"id":"i37-54-empty-name","output":"<p>[[image]]<\/p>\n\n"}
+{"id":"i37-55-empty-head-space","output":"<p>[[image ]]<\/p>\n\n"}
+{"id":"i37-56-unclosed","output":"<p>[[image landscape.jpg<\/p>\n\n"}
+{"id":"i37-57-double-equals","output":"<p>[[==image landscape.jpg]]<\/p>\n\n"}
+{"id":"i37-58-double-float","output":"<p>[[ff&lt;image <a href=\"https:\/\/example.com\/a.png\">https:\/\/example.com\/a.png<\/a>]]<\/p>\n\n"}
+{"id":"i37-59-star-flag","output":"<p>[[*$image landscape.jpg]]<\/p>\n\n"}
+{"id":"i37-60-space-after-marker","output":"<p>[[= image <a href=\"https:\/\/example.com\/a.png\">https:\/\/example.com\/a.png<\/a>]]<\/p>\n\n"}
+{"id":"i37-61-inline-in-text","output":"<p>BASIC <img src=\"\/local--files\/\/filename.png\" alt=\"filename.png\" class=\"image\" \/><\/p>\n\n"}
+{"id":"i37-62-blank-line-after","output":"<p>BASIC <img src=\"\/local--files\/\/filename.png\" alt=\"filename.png\" class=\"image\" \/><\/p>\n\n<p>LEFT<\/p>\n\n"}
+{"id":"i37-63-two-images-one-line","output":"<div class=\"image-container alignleft\"><img src=\"\/local--files\/\/a.png\" alt=\"a.png\" class=\"image\" \/><\/div><div class=\"image-container alignright\"><img src=\"\/local--files\/\/b.jpg\" alt=\"b.jpg\" class=\"image\" \/><\/div>"}
+{"id":"i37-64-image-then-paragraph","output":"<img src=\"\/local--files\/\/a.png\" alt=\"a.png\" class=\"image\" \/><p>after paragraph<\/p>\n\n"}
+{"id":"i37-65-paragraph-then-image","output":"<p>before paragraph<\/p>\n\n<img src=\"\/local--files\/\/a.png\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"i37-66-source-typography","output":"<img src=\"\/local--files\/\/aa&lt;&lt;bb&gt;&gt;cc.png\" alt=\"aa&lt;&lt;bb&gt;&gt;cc.png\" class=\"image\" \/>"}
+{"id":"i37-67-raw-head-literal","output":"<img src=\"\/local--files\/\/a.png\" alt=\"\ufffd944\ufffd\" class=\"image\" \/>"}
+{"id":"i37-68-size-lookalike-in-alt","output":"<div class=\"image-container aligncenter\"><img src=\"\/local--files\/\/photo.png\" alt=\"a size=b\" class=\"image\" \/><\/div>"}

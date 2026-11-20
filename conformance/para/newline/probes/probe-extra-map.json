@@ -1,0 +1,17 @@
+{
+ "p18-table-cell-break": {
+  "fullname": "muse-probe-r2para-nl-p18-table-cell-break",
+  "source": "|| a\nb || c ||",
+  "action": "created"
+ },
+ "p19-color-break": {
+  "fullname": "muse-probe-r2para-nl-p19-color-break",
+  "source": "[[color red]]a\nb[[/color]]",
+  "action": "created"
+ },
+ "p20-stray-closer": {
+  "fullname": "muse-probe-r2para-nl-p20-stray-closer",
+  "source": "a\n[[/div]]",
+  "action": "created"
+ }
+}

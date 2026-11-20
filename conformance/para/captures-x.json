@@ -1,0 +1,462 @@
+{
+ "x01-image-alone": {
+  "fullname": "muse-probe-r2para-x-x01-image-alone",
+  "html": "<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" />",
+  "html_sha256": "9618d1bd7e0dc3b9f9701021b806ec19744292437bac63b68c6e613b547f8620",
+  "source": "[[image http://example.com/a.png]]",
+  "source_sha256": "7ebea1e3647d0a22fc478cc1aa209911df5fd38ce5398f843b312dfc7fe85c3a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x02-image-in-text-run": {
+  "fullname": "muse-probe-r2para-x-x02-image-in-text-run",
+  "html": "before <img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /> after",
+  "html_sha256": "497d935aafa12795914443ad318f3136192d403f89e41274cc14c9371a9d3263",
+  "source": "before [[image http://example.com/a.png]] after",
+  "source_sha256": "525f0b9c985625a525a329923d0c62d911044a92e1a0b4d07a5fa5e9e10eaf14",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x03-image-between-paragraphs": {
+  "fullname": "muse-probe-r2para-x-x03-image-between-paragraphs",
+  "html": "<p>lead</p>\n<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" />\n<p>tail</p>",
+  "html_sha256": "5e66b72636b6eed1596c3697466a36e8a7b4a1ed295d562ce12f6313cfa20780",
+  "source": "lead\n\n[[image http://example.com/a.png]]\n\ntail",
+  "source_sha256": "0c1aa3a22076bd9eb9191a55cd5935dbcb4036d0b38f3280b5093771194a7878",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x04-image-with-caption": {
+  "fullname": "muse-probe-r2para-x-x04-image-with-caption",
+  "html": "<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" />caption here[[/image]]",
+  "html_sha256": "6957619e0369196452ccc5cbabe6193930c6ad79f99f4b25ccf99c4fe8e76686",
+  "source": "[[image http://example.com/a.png]]caption here[[/image]]",
+  "source_sha256": "51f894e6604246e57a0a6e44606570cecf39a9dcc795c4fd40e51482c7ad6b6e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x05-aligned-image-in-paragraph": {
+  "fullname": "muse-probe-r2para-x-x05-aligned-image-in-paragraph",
+  "html": "<p>text</p>\n<div class=\"image-container aligncenter\"><img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /></div>\n<p>more</p>",
+  "html_sha256": "5d0e08dda1b1848bf3e7a3d7c0a58df97c4c60119aca7f83a43618764db502b9",
+  "source": "text\n\n[[=image http://example.com/a.png]]\n\nmore",
+  "source_sha256": "e1c7b29a8606d4068925e7daf0854140bdaa13de62a2947aa2954ac848927349",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x06-image-with-link": {
+  "fullname": "muse-probe-r2para-x-x06-image-with-link",
+  "html": "<a href=\"http://example.com/page\"><img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /></a>",
+  "html_sha256": "fa0a207bc3d00cf0ca496440f45ccf31d3813a5838092b6b436f7c318b626585",
+  "source": "[[image http://example.com/a.png link=\"http://example.com/page\"]]",
+  "source_sha256": "4da5176bc66867f9bfa2cc97157f4259e8737fef5538714e80e6cb3f9b4003d3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x07-two-images-one-paragraph": {
+  "fullname": "muse-probe-r2para-x-x07-two-images-one-paragraph",
+  "html": "<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /> <img src=\"http://example.com/b.png\" alt=\"b.png\" class=\"image\" />",
+  "html_sha256": "b0adf2385936646d9e739ef89b52ffa5f3e27428522f0cdc428985daf9a6e863",
+  "source": "[[image http://example.com/a.png]] [[image http://example.com/b.png]]",
+  "source_sha256": "7ba8d00034626ab0bbde211dfc339c5675678ab322f7e13eac8bffbd94b92a08",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x08-image-after-newline": {
+  "fullname": "muse-probe-r2para-x-x08-image-after-newline",
+  "html": "line one<br />\n<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /><br />\nline two",
+  "html_sha256": "f2fac6fcbac2a2a3f49cab436b6275ad6077130f41d45df49d8329052eb614ec",
+  "source": "line one\n[[image http://example.com/a.png]]\nline two",
+  "source_sha256": "07b668722e4b119193aad511777c73f9d3fbd456eaee7ef5fde93f126e6423a9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x09-image-in-simple-cell": {
+  "fullname": "muse-probe-r2para-x-x09-image-in-simple-cell",
+  "html": "<table class=\"wiki-content-table\">\n<tr>\n<td><img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /></td>\n<td>b</td>\n</tr>\n</table>",
+  "html_sha256": "7c22fa73ed8cde8e5a7ce6cfb6da21e6d1e70b3b3dfeeea35fa3ec25fd5e5e20",
+  "source": "|| [[image http://example.com/a.png]] || b ||",
+  "source_sha256": "32462c54b86d5d69c3629e4381705f72ca15ca3f5698f77e5b006f3838ff9fd4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x10-image-in-adv-cell": {
+  "fullname": "muse-probe-r2para-x-x10-image-in-adv-cell",
+  "html": "<table>\n<tr>\n<td><img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /></td>\n</tr>\n</table>",
+  "html_sha256": "644a5a6704762769fc25cfc75be8692c694b3594eb5a395d264d7e1a73804497",
+  "source": "[[table]][[row]][[cell]][[image http://example.com/a.png]][[/cell]][[/row]][[/table]]",
+  "source_sha256": "bff96b1edff853c1c69459f944e6106d0344602696de0090ad05517b2ead2166",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x11-image-in-div": {
+  "fullname": "muse-probe-r2para-x-x11-image-in-div",
+  "html": "<div class=\"box\"><img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /></div>",
+  "html_sha256": "ba392a467a61a68a9682798c965c499c82435f9981815084475a4c0454c41c35",
+  "source": "[[div class=\"box\"]]\n[[image http://example.com/a.png]]\n[[/div]]",
+  "source_sha256": "a4339412ffc46b3f70b0d8ff7cff3f7a667b2d9df0231ca8d61bce645e611058",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x12-image-in-collapsible": {
+  "fullname": "muse-probe-r2para-x-x12-image-in-collapsible",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\"><img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /></div>\n</div>\n</div>",
+  "html_sha256": "5a76f44a962944e59c53cbdf65e989d054ff41c3a9c05c3f829eb39fd68b2eed",
+  "source": "[[collapsible]]\n[[image http://example.com/a.png]]\n[[/collapsible]]",
+  "source_sha256": "5f6b35401716aa142da9cd8832da0d16dd95dcfe1821eb8f6c73fc796d51075d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x13-image-in-quote": {
+  "fullname": "muse-probe-r2para-x-x13-image-in-quote",
+  "html": "<blockquote><img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /></blockquote>",
+  "html_sha256": "9cafed1fdfd2daa9e6352f658d569a0e6c0d3f829a714e48d3d15f1de1cf5a39",
+  "source": "> [[image http://example.com/a.png]]",
+  "source_sha256": "d0b75c98b298d25d0f8d0145e7d7625c21cc39a014a1c1748583f3ed47bd97fa",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x14-image-caption-with-link": {
+  "fullname": "muse-probe-r2para-x-x14-image-caption-with-link",
+  "html": "<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" />click [[<a href=\"http://example.com|here]][[/image\">http://example.com|here]][[/image</a>]]",
+  "html_sha256": "6cdc16f9610a78fc082ded509a7777d3083f8d159042a1cab8636c0602f23b5c",
+  "source": "[[image http://example.com/a.png]]click [[http://example.com|here]][[/image]]",
+  "source_sha256": "890afd2aef23a787c51229cffcff85e2fd1cdddfa1662a0749d219a33a845ea8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x15-image-caption-with-image": {
+  "fullname": "muse-probe-r2para-x-x15-image-caption-with-image",
+  "html": "<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /><img src=\"http://example.com/b.png\" alt=\"b.png\" class=\"image\" />[[/image]]",
+  "html_sha256": "ac91a7ef05fa4ebad0b41b1b2680c12e7c4b0500fc2354cd8a2637226201396b",
+  "source": "[[image http://example.com/a.png]][[image http://example.com/b.png]][[/image]]",
+  "source_sha256": "776648d3ef3b68dd8738315f275133686c5c9c12346b899f4ae6801af634f731",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x16-aligned-image-in-cell": {
+  "fullname": "muse-probe-r2para-x-x16-aligned-image-in-cell",
+  "html": "<table class=\"wiki-content-table\">\n<tr>\n<td>\n<div class=\"image-container aligncenter\"><img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /></div>\n</td>\n<td>b</td>\n</tr>\n</table>",
+  "html_sha256": "5a9d43732018f1a8eccf76c9a9858184467b547f86277e2ee5ef14ea0ee79949",
+  "source": "|| [[=image http://example.com/a.png]] || b ||",
+  "source_sha256": "1fa03c414cdb0040f65326b333ec6da38d91327acfd9e0bb19df4a71e25cc5cf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x17-text-div-text": {
+  "fullname": "muse-probe-r2para-x-x17-text-div-text",
+  "html": "<p>lead<br />\n[[div]]inner[[/div]]<br />\ntail</p>",
+  "html_sha256": "2ba07f4878f4dcd69588772840a5f95160a0880b802f7241a3be201490d15e9e",
+  "source": "lead\n[[div]]inner[[/div]]\ntail",
+  "source_sha256": "3fea37d8b8080fbf84e255479db281e8e2d0504ec5d4d768c7cc1bf4072568a0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x18-text-collapsible-text": {
+  "fullname": "muse-probe-r2para-x-x18-text-collapsible-text",
+  "html": "<p>lead</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>inner</p>\n</div>\n</div>\n</div>\n<br />\ntail",
+  "html_sha256": "9c325d454eabec41c559fdc19cdf9d488144b3eb9d64fa1cd398dfb035168b5a",
+  "source": "lead\n[[collapsible]]inner[[/collapsible]]\ntail",
+  "source_sha256": "72f1c65905e7f9321bea287983a41c27cba5ae793364ad698a31bbcdf220cbd3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x19-text-table-text": {
+  "fullname": "muse-probe-r2para-x-x19-text-table-text",
+  "html": "lead<br />\n<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td>b</td>\n</tr>\n</table>\n<p>tail</p>",
+  "html_sha256": "64ae6a226cc82b44ea07b6c78a057fbd499f3b4801aa22438836379ea2a65707",
+  "source": "lead\n|| a || b ||\ntail",
+  "source_sha256": "43e537056342e51fbde8d486bcdaeabe834ad425643f27cdafd717f00474938c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x20-text-adv-table-text": {
+  "fullname": "muse-probe-r2para-x-x20-text-adv-table-text",
+  "html": "<p>lead</p>\n<table>\n<tr>\n<td>a</td>\n</tr>\n</table>\n<p>tail</p>",
+  "html_sha256": "ac69ee71d3d43632b910b6b5d2d4ee6b5b85711b8f28fec635ff4b4a0539be73",
+  "source": "lead\n[[table]][[row]][[cell]]a[[/cell]][[/row]][[/table]]\ntail",
+  "source_sha256": "d9fa6e0f491e4254fa707375960cadf80d00ec764757be3cc19527fcfcd3c51c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x21-text-list-text": {
+  "fullname": "muse-probe-r2para-x-x21-text-list-text",
+  "html": "<p>lead</p>\n<ul>\n<li>item</li>\n</ul>\n<p>tail</p>",
+  "html_sha256": "b89a930c8ac4815ebfe80e781974a58fa36ca1e13ed8903b6a15ba3a17866bf9",
+  "source": "lead\n* item\ntail",
+  "source_sha256": "fc4dacf8d1a0bacda0c70242631e2432b13c9c7b3660d600189ae72e512310a3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x22-text-deflist-text": {
+  "fullname": "muse-probe-r2para-x-x22-text-deflist-text",
+  "html": "lead<br />\n<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n<p>tail</p>",
+  "html_sha256": "bfb0b55d24ca6ef96b95d57ef7f4fb2dc5b2553568aff4ff0138a09249bb2672",
+  "source": "lead\n: term : definition\ntail",
+  "source_sha256": "0cb18463344969e79fd659bd9a610b2adc91cfb2c9169c5a6f623743eb967d4b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x23-text-heading-text": {
+  "fullname": "muse-probe-r2para-x-x23-text-heading-text",
+  "html": "<p>lead</p>\n<p style=\"text-align: center;\">Heading =</p>\n<p>tail</p>",
+  "html_sha256": "6e0aa7c744883566a952defbb6fcaa75fa7a3fd03046a80a1fd120ca66638cf0",
+  "source": "lead\n= Heading =\ntail",
+  "source_sha256": "3164530712c0329b9e1c0735a89e01c9ec31ee948994b128cae5e54a45893e9f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x24-text-footnoteblock-text": {
+  "fullname": "muse-probe-r2para-x-x24-text-footnoteblock-text",
+  "html": "<p>lead<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></p>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. note</div>\n</div>\n<p>tail</p>",
+  "html_sha256": "ba27e52c48716a7d1a7a3be1420bca6ab0bb47d3fbae7cd7a0c97ca8362c4289",
+  "source": "lead[[footnote]]note[[/footnote]]\n[[footnoteblock]]\ntail",
+  "source_sha256": "e54b78fe8fc0649d0bb56673743337717707ec68fa87bef3f140ecef7f937037",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x25-text-code-text": {
+  "fullname": "muse-probe-r2para-x-x25-text-code-text",
+  "html": "<p>lead</p>\n<div class=\"code\">\n<pre><code>x</code></pre></div>\n<br />\ntail",
+  "html_sha256": "e57cbb49915737d3a8ca86ab2f28ba75dddb2c4aa035fdb43860dc83bab90a5f",
+  "source": "lead\n[[code]]\nx\n[[/code]]\ntail",
+  "source_sha256": "13d91ed5835c1a00f27813fff276a03edb6f569141a5cd90ff9acfb93a7bd7a4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x26-text-quote-text": {
+  "fullname": "muse-probe-r2para-x-x26-text-quote-text",
+  "html": "<p>lead</p>\n<blockquote>\n<p>quoted</p>\n</blockquote>\n<p>tail</p>",
+  "html_sha256": "f3f256f14df9ff0a451a4e9a90845cd4b3f48dd92415da4bdb73495cb99146ac",
+  "source": "lead\n> quoted\ntail",
+  "source_sha256": "83a32e9cd84d1c8d7b484afb1d1fea06778394b80c875c14a25652393f9a67d4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x27-div-text-div": {
+  "fullname": "muse-probe-r2para-x-x27-div-text-div",
+  "html": "<p>[[div]]a[[/div]]<br />\nmid<br />\n[[div]]b[[/div]]</p>",
+  "html_sha256": "873e656bc644f98f0741ddb7c417a6d2369c83c98a44acd0bd3d1e2f7dfcc367",
+  "source": "[[div]]a[[/div]]\nmid\n[[div]]b[[/div]]",
+  "source_sha256": "b28fdbd3970e04d1722278874cf35e56abb5060a0ee5747568c9ae8253ad2dc4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x28-heading-text-list": {
+  "fullname": "muse-probe-r2para-x-x28-heading-text-list",
+  "html": "<p style=\"text-align: center;\">Heading =</p>\n<p>mid</p>\n<ul>\n<li>item</li>\n</ul>",
+  "html_sha256": "1786e23d5bb261446e26a3e98b92e9d5b7729ebd91b6334d32583229847d5243",
+  "source": "= Heading =\nmid\n* item",
+  "source_sha256": "f6683d51a09839d8c03e1396730ad84f365d8ab05f2466faf3afc4fca037fb7f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x29-text-toc-text": {
+  "fullname": "muse-probe-r2para-x-x29-text-toc-text",
+  "html": "<p>lead</p>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\"></div>\n</div>\n</td>\n</tr>\n</table>\n<p>tail</p>",
+  "html_sha256": "36c4f34d66bff06bf2caad4c46b80d8442c376183e1bf33969b037404b4e77d5",
+  "source": "lead\n[[toc]]\ntail",
+  "source_sha256": "f427b154ab5f870ebc8160be46b07a9d2e499de5312f942ec7120f1954762ec6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x30-block-tabs-text": {
+  "fullname": "muse-probe-r2para-x-x30-block-tabs-text",
+  "html": "<p>[[div]]a[[/div]]<br />\nword1 word2<br />\ntail</p>",
+  "html_sha256": "ce188ba96881db825b9dd6c96dda58caaf07fb8ab494d4f3df6b44fa129c1f5f",
+  "source": "[[div]]a[[/div]]\nword1\tword2\ntail",
+  "source_sha256": "b363408a79c2fc5d9814af675394dd5445707a432c94186e591dec5a1d14de76",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x31-newline-in-div": {
+  "fullname": "muse-probe-r2para-x-x31-newline-in-div",
+  "html": "<div>\n<p>line1<br />\nline2</p>\n</div>",
+  "html_sha256": "4d174ef578f2b4985f496cf1a8d59506f256cc0f8f8f1c371d8139bc553b2cb3",
+  "source": "[[div]]\nline1\nline2\n[[/div]]",
+  "source_sha256": "7ef7398945490246d5e13f75b253003c9e20eb60696e5da53db781cbd5863d65",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x32-newline-in-collapsible": {
+  "fullname": "muse-probe-r2para-x-x32-newline-in-collapsible",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>line1<br />\nline2</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "5f507bf70d008d8204dc692b89fdc9c85e51237917e01a204e7d1914892c4fb5",
+  "source": "[[collapsible]]\nline1\nline2\n[[/collapsible]]",
+  "source_sha256": "b588b1d0ea204dc1756c2a1fb22e1782d21d8e27588384afde7c57888f8e4f52",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x33-newline-in-simple-cell": {
+  "fullname": "muse-probe-r2para-x-x33-newline-in-simple-cell",
+  "html": "<table class=\"wiki-content-table\">\n<tr>\n<td></td>\n</tr>\n</table>\n<p>b || c ||</p>",
+  "html_sha256": "6b3e0fed400724a80f24fb738752432129e43847c6af5ee2a5bbe107a1c08ce6",
+  "source": "|| a\nb || c ||",
+  "source_sha256": "536549cf74d54a3c3f7632e1ea33b32a7e6903f4f71155c842caeaa5c6b7d217",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x34-newline-in-adv-cell": {
+  "fullname": "muse-probe-r2para-x-x34-newline-in-adv-cell",
+  "html": "<table>\n<tr>\n<td>a<br />\nb</td>\n</tr>\n</table>",
+  "html_sha256": "d267b32a9cbd84c13844a30af0fc1446351ee0230fdbc0843a4621cd0cf476df",
+  "source": "[[table]][[row]][[cell]]a\nb[[/cell]][[/row]][[/table]]",
+  "source_sha256": "160885aa49e96aba716d57609ab107cb2572c1842af2185c1984ccd7a4b1fc6f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x35-newline-in-list": {
+  "fullname": "muse-probe-r2para-x-x35-newline-in-list",
+  "html": "<ul>\n<li>item</li>\n</ul>\n<p>continue</p>",
+  "html_sha256": "0c60b899163d8a8cf94ef60a62c54cc9013273800e5c05ca8c2e78e9bdec1b2f",
+  "source": "* item\ncontinue",
+  "source_sha256": "587b2877c75b60d9cb67c5995334e1587813e70939cd0858be605d2585a93ae6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x36-doubled-newline-in-div": {
+  "fullname": "muse-probe-r2para-x-x36-doubled-newline-in-div",
+  "html": "<div>\n<p>line1</p>\n<p>line2</p>\n</div>",
+  "html_sha256": "a163bfb4ab59f2e0b81162cc7bbd5e6cc3396b80438121ea09c004edc5533123",
+  "source": "[[div]]\nline1\n\nline2\n[[/div]]",
+  "source_sha256": "72ca6d3c48dcc04b7e4bfac0e4e0dfe04c7b3b14e1d05a7487e05cf876f561d2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x37-newline-in-quote": {
+  "fullname": "muse-probe-r2para-x-x37-newline-in-quote",
+  "html": "<blockquote>\n<p>line1<br />\nline2</p>\n</blockquote>",
+  "html_sha256": "ccad1fa0065fbcf46413aa5917bae84292dc2cbc89d770e33e8680758a550f99",
+  "source": "> line1\n> line2",
+  "source_sha256": "5204ac7e50e05ce6e70050f837f0b2922bb4cb82c5a39cecd1e4641bd7de5736",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x38-newline-in-caption": {
+  "fullname": "muse-probe-r2para-x-x38-newline-in-caption",
+  "html": "<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" />cap1<br />\ncap2[[/image]]",
+  "html_sha256": "c6ece3368bf83fda43319af83b85d1751dfb6dc47ae8c61a54bf56dae79fd913",
+  "source": "[[image http://example.com/a.png]]cap1\ncap2[[/image]]",
+  "source_sha256": "9719a1b58d1e5e76e9344f014bfade70dbfd5075354be8a4db218712ff94e246",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x39-score-span-alone": {
+  "fullname": "muse-probe-r2para-x-x39-score-span-alone",
+  "html": "<p><span class=\"score\">100</span></p>",
+  "html_sha256": "b9b85f1611ee49aea2e590f72942b27adc1bf7c375d1f9050395aedd469b040f",
+  "source": "[[span class=\"score\"]]100[[/span]]",
+  "source_sha256": "e2a2a7ecdff1918e0be7f06cfd59554f78f699ecff77ee46b146bfe755689710",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x40-score-span-with-text": {
+  "fullname": "muse-probe-r2para-x-x40-score-span-with-text",
+  "html": "<p>before<br />\n<span class=\"score\">100</span><br />\nafter</p>",
+  "html_sha256": "35be7fc435d3c9580e00c32ffd645174cd34c93824ad3d3da7f60afe4fefae4a",
+  "source": "before\n[[span class=\"score\"]]100[[/span]]\nafter",
+  "source_sha256": "21695c38a19fc6da8059228a3a3acc3e052d2f56927bdaa1042d47a483211605",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x41-score-span-in-div": {
+  "fullname": "muse-probe-r2para-x-x41-score-span-in-div",
+  "html": "<div>\n<p><span class=\"score\">100</span></p>\n</div>",
+  "html_sha256": "6bc7ecea1e1d0883fc03bf6dbce195761458d69ec6a9817f0b74c8ce1f9a4cbd",
+  "source": "[[div]]\n[[span class=\"score\"]]100[[/span]]\n[[/div]]",
+  "source_sha256": "b92555596b780baaa777e624bbcb2ad3275c90d3bd833d4f3861946ea2fb9c50",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x42-tab-in-paragraph": {
+  "fullname": "muse-probe-r2para-x-x42-tab-in-paragraph",
+  "html": "<p>word1 word2</p>",
+  "html_sha256": "d78540c9daba8b0cc8eb7af787dbe166e63ac3930b38fb2f170a27c12513d64d",
+  "source": "word1\tword2",
+  "source_sha256": "53cb7fb797937290f09772e56be5ecc6407b3874bb1862b1d11f15669e5f2694",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x43-tab-in-list": {
+  "fullname": "muse-probe-r2para-x-x43-tab-in-list",
+  "html": "<ul>\n<li>word1 word2</li>\n</ul>",
+  "html_sha256": "7be4588d01a6b2c749d2bf8b564176d490433092cdf9b6a5603c01cfa2dab7f2",
+  "source": "* word1\tword2",
+  "source_sha256": "ea66011968100c52f4bc11e10c93fb9e93f32dd63d229cd0b7c0e03c0a11587a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x44-tab-in-cell": {
+  "fullname": "muse-probe-r2para-x-x44-tab-in-cell",
+  "html": "<table class=\"wiki-content-table\">\n<tr>\n<td>word1 word2</td>\n<td>b</td>\n</tr>\n</table>",
+  "html_sha256": "25c9f61df0b00b5faf1d714462f3d222a96e63d9c682051ab74771dbf87371d4",
+  "source": "|| word1\tword2 || b ||",
+  "source_sha256": "1654d42aba856d2505d47a18bbe5a5ab607b81838405607888bdaeed0fb974df",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x45-unclosed-image-opener": {
+  "fullname": "muse-probe-r2para-x-x45-unclosed-image-opener",
+  "html": "<img src=\"http://example.com/a.png[[div\" alt=\"a.png [[div\" class=\"image\" />x[[/div]]",
+  "html_sha256": "29001b876673247309fef6eac29d85c2a93963264a59b0e19fca0a73596c0656",
+  "source": "[[image http://example.com/a.png\n\n[[div]]x[[/div]]",
+  "source_sha256": "d29c092451cb1e66f0b7da9d870272b88752b8b3848c52c1c6009d3d52123734",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x46-image-caption-unclosed": {
+  "fullname": "muse-probe-r2para-x-x46-image-caption-unclosed",
+  "html": "<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" />caption\n<p>next</p>",
+  "html_sha256": "4b1ca0ff6d852f030750516512317be2c937553c7e6118fb1e0c217e20395a22",
+  "source": "[[image http://example.com/a.png]]caption\n\nnext",
+  "source_sha256": "ce4e08062ada02ddcda72f7955bfdba4b19194a5da79825911f0752d7c8887e8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

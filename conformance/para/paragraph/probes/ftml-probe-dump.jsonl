@@ -1,0 +1,26 @@
+{"errors":[],"html":"<p>TABSTART word1 word2 TABEND</p>","id":"p01-tab-flow"}
+{"errors":[],"html":"<span>word1 word2</span>","id":"p02-tab-in-scored-span"}
+{"errors":[],"html":"<p><span>word1 word2</span></p>","id":"p03-tab-in-plain-span"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>word1    word2</code></pre></div>","id":"p04-tab-in-code"}
+{"errors":[],"html":"<p>word1 word2</p>","id":"p05-multispace-flow"}
+{"errors":[],"html":"<p>A word B</p>","id":"p06-tab-near-edges"}
+{"errors":[],"html":"<span>word1 word2</span>","id":"p07-multispace-in-scored-span"}
+{"errors":[],"html":"<span>X</span>","id":"p08-scored-span-alone"}
+{"errors":[],"html":"<p><span class=\"score\">100</span></p>","id":"p09-score-class-span-alone"}
+{"errors":[],"html":"<p>before<br>\n<span class=\"score\">100</span><br>\nafter</p>","id":"p10-score-class-with-text"}
+{"errors":[],"html":"<p>before<span>X</span>after</p>","id":"p11-scored-span-with-text"}
+{"errors":[],"html":"<p>A <span class=\"score\">100</span> B</p>","id":"p12-score-class-inline"}
+{"errors":[],"html":"<p><span>X</span></p>","id":"p13-plain-span-alone"}
+{"errors":[],"html":"<p><span class=\"other\">X</span></p>","id":"p14-other-class-span-alone"}
+{"errors":[],"html":"<div><p><span class=\"score\">100</span></p></div>","id":"p15-score-class-in-div"}
+{"errors":[],"html":"<p>before</p><p><span class=\"score\">100</span></p><p>after</p>","id":"p16-score-class-double-blank"}
+{"errors":[],"html":"<p>before<span>X</span>after</p>","id":"p17-scored-span-double-blank"}
+{"errors":[],"html":"<p>first</p><p>second</p>","id":"p18-two-paragraphs"}
+{"errors":[],"html":"<p>A</p><p>lead</p>","id":"p19-blank-then-text"}
+{"errors":[],"html":"<p>tail</p><p>END</p>","id":"p20-text-then-blank"}
+{"errors":[],"html":"<p>a</p><p>b</p>","id":"p21-blank-run"}
+{"errors":[],"html":"<p>a<br>\nb c</p><p>c</p>","id":"p22-tab-in-line"}
+{"errors":[],"html":"<p style=\"text-align: center;\">Heading =</p><p>text</p>","id":"p23-heading-then-text"}
+{"errors":[],"html":"<p>[[div]]block[[/div]]\n</p><p>text</p>","id":"p24-div-then-text"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>code</code></pre></div><p>text</p>","id":"p25-code-then-text"}
+{"errors":[],"html":"<p>line one<br>\nline two</p>","id":"p26-single-newline"}

@@ -1,0 +1,72 @@
+raw: ref-before vs ftml 7/56, ref-after vs ftml 8/56, ref-before vs ref-after 55/56
+N1: ref-before vs ftml 49/56, ref-after vs ftml 50/56, ref-before vs ref-after 55/56
+N2: ref-before vs ftml 51/56, ref-after vs ftml 52/56, ref-before vs ref-after 55/56
+
+pg01-single-paragraph N1=agree N2=agree
+pg02-two-paragraphs N1=agree N2=agree
+pg03-three-paragraphs N1=agree N2=agree
+pg04-multiple-blank-lines N1=agree N2=agree
+pg05-leading-blank-lines N1=agree N2=agree
+pg06-trailing-blank-lines N1=agree N2=agree
+pg07-leading-and-trailing-blanks N1=agree N2=agree
+pg08-blank-between-white-lines N1=agree N2=agree
+pg09-blank-between-tab-lines N1=agree N2=agree
+pg10-blank-between-formfeed-lines N1=agree N2=agree
+pg11-single-line N1=agree N2=agree
+pg12-single-line-inline N1=DIFF N2=DIFF
+  REF: "<p>plain ''em'' and <strong>strong</strong> text</p>\n\n"
+  DMP: '<p>plain &#39;&#39;em&#39;&#39; and <strong>strong</strong> text</p>'
+pg13-two-lines-single-break N1=agree N2=agree
+pg14-three-lines-single-breaks N1=agree N2=agree
+pg15-inline-span-run N1=agree N2=agree
+pg16-inline-link-run N1=DIFF N2=DIFF
+  REF: '<p>see [[<a href="http://example.com|example">http://example.com|example</a>]] now</p>\n\n'
+  DMP: '<p>see [[<a href="http://example.com">http://example.com</a>|example]] now</p>'
+pg17-leading-spaces N1=agree N2=agree
+pg18-leading-tab N1=agree N2=agree
+pg19-leading-mixed N1=agree N2=agree
+pg20-trailing-spaces N1=agree N2=agree
+pg21-trailing-tab N1=agree N2=agree
+pg22-trailing-mixed N1=agree N2=agree
+pg23-both-edges N1=agree N2=agree
+pg24-tab-inside-flow N1=DIFF N2=agree
+  REF: '<p>word1    word2</p>\n\n'
+  DMP: '<p>word1 word2</p>'
+pg25-multiple-spaces-inside-flow N1=DIFF N2=agree
+  REF: '<p>word1    word2</p>\n\n'
+  DMP: '<p>word1 word2</p>'
+pg26-tab-at-run-boundary N1=agree N2=agree
+pg27-empty-document N1=agree N2=agree
+pg28-only-newlines N1=agree N2=agree
+pg29-only-spaces N1=agree N2=agree
+pg30-only-tabs N1=agree N2=agree
+pg31-whitespace-run-between-text N1=agree N2=agree
+pg32-blank-then-whitespace-only N1=agree N2=agree
+pg33-heading-above N1=agree N2=agree
+pg34-heading-below N1=agree N2=agree
+pg35-div-above N1=DIFF N2=DIFF
+  REF: '<p>[[div]]block[[/div]]</p>\n\n<p>text after</p>\n\n'
+  DMP: '<p>[[div]]block[[/div]]\n</p><p>text after</p>'
+pg36-div-below N1=agree N2=agree
+pg37-code-above N1=agree N2=agree
+pg38-code-below N1=agree N2=agree
+pg39-list-above N1=agree N2=agree
+pg40-list-below N1=agree N2=agree
+pg41-table-above N1=agree N2=agree
+pg42-table-below N1=agree N2=agree
+pg43-horiz-between N1=agree N2=agree
+pg44-quote-between N1=agree N2=agree
+pg45-text-div-text N1=DIFF N2=DIFF
+  REF: '<p>lead<br />\n[[div]]inner[[/div]]<br />\ntail</p>\n\n'
+  DMP: '<p>lead<br>\n[[div]]inner[[/div]]\n<br>\ntail</p>'
+pg46-mixed-blocks N1=agree N2=agree
+pg47-only-div N1=agree N2=agree
+pg48-only-code N1=agree N2=agree
+pg49-only-heading N1=agree N2=agree
+pg50-only-list N1=agree N2=agree
+pg51-only-table N1=agree N2=agree
+pg52-only-quote N1=agree N2=agree
+pg53-plain-span-run N1=agree N2=agree
+pg54-scored-span-alone N1=agree N2=agree
+pg55-score-class-span-alone N1=agree N2=agree
+pg56-score-class-with-text N1=agree N2=agree

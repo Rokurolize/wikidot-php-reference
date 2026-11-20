@@ -47,6 +47,23 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
     *
     */
 
+    // R2-PARA correction C6: live percent-encodes non-ASCII bytes in the
+    // emitted src and href URLs but keeps the authored spelling in the alt
+    // text (probe p12 and pin image/nonascii-filename). This encodes only
+    // bytes outside ASCII, leaving existing percent escapes and punctuation
+    // untouched.
+    private function encodeNonAscii($value)
+    {
+        return preg_replace_callback('/[^\x00-\x7F]/', function ($m) {
+            $bytes = unpack('C*', $m[0]);
+            $out = '';
+            foreach ($bytes as $byte) {
+                $out .= '%' . strtoupper(str_pad(dechex($byte), 2, '0', STR_PAD_LEFT));
+            }
+            return $out;
+        }, $value);
+    }
+
     function token($options)
     {
         // note the image source
@@ -155,12 +172,20 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
                 // it's a URL, prefix the URL base
                 $href = $this->getConf('url_base') . $options['attr']['link'];
             } else {
-                // it's a WikiPage; assume it exists.
+                // it's a WikiPage or a fragment; assume it exists.
                 /** @todo This needs to honor sprintf wikilinks (pmjones) */
                 /** @todo This needs to honor interwiki (pmjones) */
                 /** @todo This needs to honor freelinks (pmjones) */
-                $href = '/'.$options['attr']['link'];
-                $href = preg_replace(';^/+;', '/',$href); // a dirty fix
+                // R2-PARA correction C5: a fragment-only link stays a bare
+                // fragment on live, while the fossil prepended '/', turning
+                // `link="#x"` into `href="/#x"` (probe p08, pin image/basic).
+                $linkValue = $options['attr']['link'];
+                if (isset($linkValue[0]) && $linkValue[0] === '#') {
+                    $href = $linkValue;
+                } else {
+                    $href = '/'.$linkValue;
+                    $href = preg_replace(';^/+;', '/',$href); // a dirty fix
+                }
             }
         } else {
             // image is not clickable.
@@ -169,7 +194,7 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
         // unset so it won't show up as an attribute
         unset($options['attr']['link']);
 
-        $output .= '<img src="' . htmlspecialchars($src) . '"';
+        $output .= '<img src="' . htmlspecialchars($this->encodeNonAscii($src)) . '"';
 
         // get the CSS class but don't add it yet
         $css = "image";
@@ -189,8 +214,11 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
                 $css = null;
             }
 
-			if($key == "class" || $key == "alt"  || $key == "style" 
-				|| $key=="width" || $key=="height"){          
+            // R2-PARA correction C1: `title` joins live's emitted attribute
+            // set (probes p09 and p17, pin image/basic); the parse rule now
+            // places it first so this loop emits it before style/class/alt.
+			if($key == "class" || $key == "alt"  || $key == "style"
+				|| $key=="width" || $key=="height" || $key=="title"){
 	            	$key = htmlspecialchars($key);
             		$val = htmlspecialchars($val);
             		$output .= " $key=\"$val\"";
@@ -212,13 +240,19 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
         // was the image clickable?
         if ($href) {
             // yes, add the href and return
-            $href = htmlspecialchars($href);
+            // R2-PARA correction C6: percent-encode non-ASCII URL bytes.
+            $href = htmlspecialchars($this->encodeNonAscii($href));
             $css = $this->formatConf(' class="%s"', 'css_link');
+            // R2-PARA correction C8: the fossil emitted a stray space before
+            // '>' on every anchor and padded the target attribute with a
+            // trailing space (`<a href="x"  target="y" >`). Live and the pins
+            // emit the compact form, matching the same fossil-era artifact
+            // corrected in the Table renderer.
             $target = '';
-            if($options['target']){
-            		$target = ' target="'.$options['target'].'" ';	
+            if (!empty($options['target'])) {
+                $target = ' target="'.$options['target'].'"';
             }
-            $output = "<a$css href=\"$href\" $target>$output</a>";
+            $output = "<a$css href=\"$href\"$target>$output</a>";
         }
         
         $align = $options['align'];

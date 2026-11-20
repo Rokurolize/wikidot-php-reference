@@ -1,0 +1,46 @@
+{"id":"x01-image-alone","output":"<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"x02-image-in-text-run","output":"<p>before <img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/> after<\/p>\n\n"}
+{"id":"x03-image-between-paragraphs","output":"<p>lead<\/p>\n\n<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><p>tail<\/p>\n\n"}
+{"id":"x04-image-with-caption","output":"<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"x05-aligned-image-in-paragraph","output":"<p>text<\/p>\n\n<div class=\"image-container aligncenter\"><img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/div><p>more<\/p>\n\n"}
+{"id":"x06-image-with-link","output":"<a href=\"http:\/\/example.com\/page\" ><img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/a>"}
+{"id":"x07-two-images-one-paragraph","output":"<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/> <img src=\"http:\/\/example.com\/b.png\" alt=\"b.png\" class=\"image\" \/>"}
+{"id":"x08-image-after-newline","output":"<p>line one<br \/>\n<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><br \/>\nline two<\/p>\n\n"}
+{"id":"x09-image-in-simple-cell","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/td>\n<td>b<\/td>\n<\/tr>\n<\/table>"}
+{"id":"x10-image-in-adv-cell","output":"<table>\n<tr>\n<td><img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/td>\n<\/tr>\n<\/table>"}
+{"id":"x11-image-in-div","output":"<div  class=\"box\"><img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/div>"}
+{"id":"x12-image-in-collapsible","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/div><\/div><\/div>"}
+{"id":"x13-image-in-quote","output":"<blockquote><img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/blockquote>\n"}
+{"id":"x14-image-caption-with-link","output":"<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"x15-image-caption-with-image","output":"<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"x16-aligned-image-in-cell","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><div class=\"image-container aligncenter\"><img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/div><\/td>\n<td>b<\/td>\n<\/tr>\n<\/table>"}
+{"id":"x17-text-div-text","output":"<p>lead<br \/>\n[[div]]inner[[\/div]]<br \/>\ntail<\/p>\n\n"}
+{"id":"x18-text-collapsible-text","output":"<p>lead<\/p>\n\n<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><p>inner<\/p>\n\n<\/div><\/div><\/div><br \/>\ntail"}
+{"id":"x19-text-table-text","output":"<p>lead<br \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table><\/p>\n\n<p>tail<\/p>\n\n"}
+{"id":"x20-text-adv-table-text","output":"<p>lead<br \/>\n<table>\n<tr>\n<td>a<\/td>\n<\/tr>\n<\/table><br \/>\ntail<\/p>\n\n"}
+{"id":"x21-text-list-text","output":"<p>lead<\/p>\n\n<ul>\n<li>item<\/li>\n<\/ul><p>tail<\/p>\n\n"}
+{"id":"x22-text-deflist-text","output":"<p>lead<br \/>\n<dl>\n<dt>term<\/dt>\n<dd>definition<\/dd>\n<\/dl>\n<\/p>\n\n<p>tail<\/p>\n\n"}
+{"id":"x23-text-heading-text","output":"<p>lead<\/p>\n\n<p style=\"text-align: center;\">Heading =<\/p><p>tail<\/p>\n\n"}
+{"id":"x24-text-footnoteblock-text","output":"<p>lead<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1<\/a><\/sup><\/p>\n\n<div class=\"footnotes-footer\"><div class=\"title\">Footnotes<\/div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1<\/a>. note<\/div><\/div><p>tail<\/p>\n\n"}
+{"id":"x25-text-code-text","output":"<p>lead<\/p>\n\n\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n<br \/>\ntail"}
+{"id":"x26-text-quote-text","output":"<p>lead<\/p>\n\n<blockquote><p>quoted<\/p>\n\n<\/blockquote>\n<p>tail<\/p>\n\n"}
+{"id":"x27-div-text-div","output":"<p>[[div]]a[[\/div]]<br \/>\nmid<br \/>\n[[div]]b[[\/div]]<\/p>\n\n"}
+{"id":"x28-heading-text-list","output":"<p style=\"text-align: center;\">Heading =<\/p><p>mid<\/p>\n\n<ul>\n<li>item<\/li>\n<\/ul>"}
+{"id":"x29-text-toc-text","output":"<p>lead<\/p>\n\n<table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold<\/a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold<\/a><\/div><div class=\"title\">Table of Contents<\/div><div id=\"toc-list\">\n<\/div><\/div><\/td><\/tr><\/table>\n\n<p>tail<\/p>\n\n"}
+{"id":"x30-block-tabs-text","output":"<p>[[div]]a[[\/div]]<br \/>\nword1    word2<br \/>\ntail<\/p>\n\n"}
+{"id":"x31-newline-in-div","output":"<div ><p>line1<br \/>\nline2<\/p>\n\n<\/div>"}
+{"id":"x32-newline-in-collapsible","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><p>line1<br \/>\nline2<\/p>\n\n<\/div><\/div><\/div>"}
+{"id":"x33-newline-in-simple-cell","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><\/td>\n<\/tr>\n<\/table><p>b || c ||<\/p>\n\n"}
+{"id":"x34-newline-in-adv-cell","output":"<table>\n<tr>\n<td>a<br \/>\nb<\/td>\n<\/tr>\n<\/table>"}
+{"id":"x35-newline-in-list","output":"<ul>\n<li>item<\/li>\n<\/ul><p>continue<\/p>\n\n"}
+{"id":"x36-doubled-newline-in-div","output":"<div ><p>line1<\/p>\n\n<p>line2<\/p>\n\n<\/div>"}
+{"id":"x37-newline-in-quote","output":"<blockquote><p>line1<br \/>\nline2<\/p>\n\n<\/blockquote>\n"}
+{"id":"x38-newline-in-caption","output":"<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>"}
+{"id":"x39-score-span-alone","output":"<p><span class=\"score\">100<\/span><\/p>\n\n"}
+{"id":"x40-score-span-with-text","output":"<p>before<br \/>\n<span class=\"score\">100<\/span><br \/>\nafter<\/p>\n\n"}
+{"id":"x41-score-span-in-div","output":"<div ><p><span class=\"score\">100<\/span><\/p>\n\n<\/div>"}
+{"id":"x42-tab-in-paragraph","output":"<p>word1    word2<\/p>\n\n"}
+{"id":"x43-tab-in-list","output":"<ul>\n<li>word1    word2<\/li>\n<\/ul>"}
+{"id":"x44-tab-in-cell","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>word1    word2<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table>"}
+{"id":"x45-unclosed-image-opener","output":"<img src=\"http:\/\/example.com\/a.png\n\n[[div\" alt=\"a.png\n\n[[div\" class=\"image\" \/>x[[\/div]]"}
+{"id":"x46-image-caption-unclosed","output":"<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>caption<p>next<\/p>\n\n"}

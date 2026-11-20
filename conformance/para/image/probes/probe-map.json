@@ -1,0 +1,17 @@
+{
+ "p01-caption-body": {"fullname": "muse-probe-r2para-img-p01-caption-body", "source": "[[image https://example.com/a.png]]a caption[[/image]]\n\nx", "action": "created"},
+ "p02-caption-align": {"fullname": "muse-probe-r2para-img-p02-caption-align", "source": "[[<image https://example.com/a.png]]caption[[/image]]\n\nx", "action": "created"},
+ "p03-link-leading-space": {"fullname": "muse-probe-r2para-img-p03-link-leading-space", "source": "[[image foo.gif link=\" https://example.com/\"]]\n\nx", "action": "created"},
+ "p04-link-star-space": {"fullname": "muse-probe-r2para-img-p04-link-star-space", "source": "[[image foo.gif link=\"* https://example.com/\"]]\n\nx", "action": "created"},
+ "p05-uppercase-align": {"fullname": "muse-probe-r2para-img-p05-uppercase-align", "source": "[[F>IMAGE https://example.com/a.png]]\n\nx", "action": "created"},
+ "p06-uppercase-name": {"fullname": "muse-probe-r2para-img-p06-uppercase-name", "source": "[[IMAGE https://example.com/a.png]]\n\nx", "action": "created"},
+ "p07-empty-head": {"fullname": "muse-probe-r2para-img-p07-empty-head", "source": "[[image ]]\n\nx", "action": "created"},
+ "p08-fragment-link": {"fullname": "muse-probe-r2para-img-p08-fragment-link", "source": "[[image foo.gif link=\"#gif-sucks\"]]\n\nx", "action": "created"},
+ "p09-attrs-order-title": {"fullname": "muse-probe-r2para-img-p09-attrs-order-title", "source": "[[image foo.gif class=\"animated\" style=\"border: 1em solid\" data-xyz=\"bar\" alt=\"A foobar\" title=\"FOO\"]]\n\nx", "action": "created"},
+ "p10-width-height-order": {"fullname": "muse-probe-r2para-img-p10-width-height-order", "source": "[[image https://example.com/a.png height=\"120\" width=\"200\"]]\n\nx", "action": "created"},
+ "p11-width-empty": {"fullname": "muse-probe-r2para-img-p11-width-empty", "source": "[[image https://example.com/a.png width=\"\"]]\n\nx", "action": "created"},
+ "p12-nonascii": {"fullname": "muse-probe-r2para-img-p12-nonascii", "source": "[[image 日本語.png]]\n\nx", "action": "created"},
+ "p13-quoted-url": {"fullname": "muse-probe-r2para-img-p13-quoted-url", "source": "[[image \"https://example.com/a.png\"]]\n\nx", "action": "created"},
+ "p14-external-and-local": {"fullname": "muse-probe-r2para-img-p14-external-and-local", "source": "[[image https://example.com/a.png]]\n\n[[image b.png]]\n\nx", "action": "created"},
+ "p15-size-unquoted": {"fullname": "muse-probe-r2para-img-p15-size-unquoted", "source": "[[image foo.png size=small]]\n\nx", "action": "created"}
+}

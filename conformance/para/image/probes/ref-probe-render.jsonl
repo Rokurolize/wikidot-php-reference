@@ -1,0 +1,18 @@
+{"id":"p01-caption-body","output":"<img src=\"https:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>a caption[[\/image]]<p>x<\/p>\n\n"}
+{"id":"p02-caption-align","output":"<div class=\"image-container alignleft\"><img src=\"https:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/div><p>caption[[\/image]]<\/p>\n\n<p>x<\/p>\n\n"}
+{"id":"p03-link-leading-space","output":"<p>[[image foo.gif link=&quot; <a href=\"https:\/\/example.com\/\">https:\/\/example.com\/<\/a>&quot;]]<\/p>\n\n<p>x<\/p>\n\n"}
+{"id":"p04-link-star-space","output":"<p>[[image foo.gif link=&quot;* <a href=\"https:\/\/example.com\/\">https:\/\/example.com\/<\/a>&quot;]]<\/p>\n\n<p>x<\/p>\n\n"}
+{"id":"p05-uppercase-align","output":"<div class=\"image-container\"><img src=\"https:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/div><p>x<\/p>\n\n"}
+{"id":"p06-uppercase-name","output":"<img src=\"https:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><p>x<\/p>\n\n"}
+{"id":"p07-empty-head","output":"<a href=\"\/local--files\/\/\"><img src=\"\/local--resized-images\/\/\/medium.jpg\" alt=\"\" class=\"image\" \/><\/a><p>x<\/p>\n\n"}
+{"id":"p08-fragment-link","output":"<a href=\"#gif-sucks\"><img src=\"\/local--files\/\/foo.gif\" alt=\"foo.gif\" class=\"image\" \/><\/a><p>x<\/p>\n\n"}
+{"id":"p09-attrs-order-title","output":"<img src=\"\/local--files\/\/foo.gif\" title=\"FOO\" style=\"border: 1em solid\" class=\"animated\" alt=\"A foobar\" \/><p>x<\/p>\n\n"}
+{"id":"p10-width-height-order","output":"<img src=\"https:\/\/example.com\/a.png\" height=\"120\" width=\"200\" alt=\"a.png\" class=\"image\" \/><p>x<\/p>\n\n"}
+{"id":"p11-width-empty","output":"<img src=\"https:\/\/example.com\/a.png\" width=\"\" alt=\"a.png\" class=\"image\" \/><p>x<\/p>\n\n"}
+{"id":"p12-nonascii","output":"<img src=\"\/local--files\/\/%E6%97%A5%E6%9C%AC%E8%AA%9E.png\" alt=\"\u65e5\u672c\u8a9e.png\" class=\"image\" \/><p>x<\/p>\n\n"}
+{"id":"p13-quoted-url","output":"<img src=\"&quot;https:\/\/example.com\/a.png&quot;\" alt=\"a.png&quot;\" class=\"image\" \/><p>x<\/p>\n\n"}
+{"id":"p14-external-and-local","output":"<img src=\"https:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><img src=\"\/local--files\/\/b.png\" alt=\"b.png\" class=\"image\" \/><p>x<\/p>\n\n"}
+{"id":"p15-size-unquoted","output":"<img src=\"\/local--files\/\/foo.png\" alt=\"foo.png\" class=\"image\" \/><p>x<\/p>\n\n"}
+{"id":"p16-width-first","output":"<img src=\"https:\/\/example.com\/a.png\" height=\"120\" width=\"200\" alt=\"a.png\" class=\"image\" \/><p>x<\/p>\n\n"}
+{"id":"p17-attr-mixed-order","output":"<img src=\"https:\/\/example.com\/a.png\" title=\"T\" style=\"border:0\" alt=\"A\" height=\"120\" width=\"200\" class=\"image\" \/><p>x<\/p>\n\n"}
+{"id":"p18-size-quoted-png","output":"<a href=\"\/local--files\/\/foo.png\"><img src=\"\/local--resized-images\/\/foo.png\/small.jpg\" alt=\"foo.png\" class=\"image\" \/><\/a><p>x<\/p>\n\n"}

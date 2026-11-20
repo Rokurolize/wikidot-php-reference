@@ -1,0 +1,6 @@
+ftml checkout: /home/roku/src/Rokurolize/ftml
+HEAD: f9dc0e41086de31f2be6d42d4e7e5f085bcb8220
+short: f9dc0e410
+branch: HEAD
+HEAD subject: fix(module): match live Wikidot module-family behavior (#1540)
+note: recorded at R2-para dumper build time. This is the same checkout HEAD the R2-table stage observed mid-stage after its own pinned a61ae005d; the checkout advanced by the single module-only commit #1540, which changes no image, newline or paragraph source or pin. The dumper binary is built once at the recorded HEAD above and is the one shared dumper for all three rule owners and root; every stage differential is produced at that HEAD, and no later checkout change is re-run during this stage. The previous stages pinned a61ae005d; this stage pins f9dc0e410 because that is the current checkout HEAD at build time and the intervening commit is unrelated to the three owned rules.

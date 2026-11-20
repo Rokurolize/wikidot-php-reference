@@ -1,0 +1,99 @@
+p01-break-inline -> muse-probe-r2para-nl-p01-break-inline (exists)
+p02-two-breaks -> muse-probe-r2para-nl-p02-two-breaks (exists)
+p03-doubled -> muse-probe-r2para-nl-p03-doubled (exists)
+p04-spaces-around -> muse-probe-r2para-nl-p04-spaces-around (exists)
+p06-before-div -> muse-probe-r2para-nl-p06-before-div (created)
+p07-after-code -> muse-probe-r2para-nl-p07-after-code (created)
+p08-after-heading -> muse-probe-r2para-nl-p08-after-heading (created)
+p09-before-table -> muse-probe-r2para-nl-p09-before-table (created)
+p10-after-table -> muse-probe-r2para-nl-p10-after-table (created)
+p11-list-continuation -> muse-probe-r2para-nl-p11-list-continuation (created)
+p12-bq-multiline -> muse-probe-r2para-nl-p12-bq-multiline (created)
+p13-bold-break -> muse-probe-r2para-nl-p13-bold-break (created)
+p14-underscore -> muse-probe-r2para-nl-p14-underscore (created)
+p15-before-quote -> muse-probe-r2para-nl-p15-before-quote (created)
+p16-bold-trailing-break -> muse-probe-r2para-nl-p16-bold-trailing-break (created)
+p17-span-trailing-break -> muse-probe-r2para-nl-p17-span-trailing-break (created)
+16 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01-break-inline": {
+  "fullname": "muse-probe-r2para-nl-p01-break-inline",
+  "source": "alpha\nbeta",
+  "action": "exists"
+ },
+ "p02-two-breaks": {
+  "fullname": "muse-probe-r2para-nl-p02-two-breaks",
+  "source": "a\nb\nc",
+  "action": "exists"
+ },
+ "p03-doubled": {
+  "fullname": "muse-probe-r2para-nl-p03-doubled",
+  "source": "alpha\n\nbeta",
+  "action": "exists"
+ },
+ "p04-spaces-around": {
+  "fullname": "muse-probe-r2para-nl-p04-spaces-around",
+  "source": "alpha \n beta",
+  "action": "exists"
+ },
+ "p06-before-div": {
+  "fullname": "muse-probe-r2para-nl-p06-before-div",
+  "source": "text\n[[div]]\nbody\n[[/div]]",
+  "action": "created"
+ },
+ "p07-after-code": {
+  "fullname": "muse-probe-r2para-nl-p07-after-code",
+  "source": "[[code]]\nbody\n[[/code]]\ntext",
+  "action": "created"
+ },
+ "p08-after-heading": {
+  "fullname": "muse-probe-r2para-nl-p08-after-heading",
+  "source": "+ Heading\ntext",
+  "action": "created"
+ },
+ "p09-before-table": {
+  "fullname": "muse-probe-r2para-nl-p09-before-table",
+  "source": "text\n|| a || b ||",
+  "action": "created"
+ },
+ "p10-after-table": {
+  "fullname": "muse-probe-r2para-nl-p10-after-table",
+  "source": "|| a || b ||\ntext",
+  "action": "created"
+ },
+ "p11-list-continuation": {
+  "fullname": "muse-probe-r2para-nl-p11-list-continuation",
+  "source": "* one\ncontinued",
+  "action": "created"
+ },
+ "p12-bq-multiline": {
+  "fullname": "muse-probe-r2para-nl-p12-bq-multiline",
+  "source": "> a\n> b",
+  "action": "created"
+ },
+ "p13-bold-break": {
+  "fullname": "muse-probe-r2para-nl-p13-bold-break",
+  "source": "**a\nb**",
+  "action": "created"
+ },
+ "p14-underscore": {
+  "fullname": "muse-probe-r2para-nl-p14-underscore",
+  "source": "a _\nb",
+  "action": "created"
+ },
+ "p15-before-quote": {
+  "fullname": "muse-probe-r2para-nl-p15-before-quote",
+  "source": "text\n> quoted",
+  "action": "created"
+ },
+ "p16-bold-trailing-break": {
+  "fullname": "muse-probe-r2para-nl-p16-bold-trailing-break",
+  "source": "**a\n**",
+  "action": "created"
+ },
+ "p17-span-trailing-break": {
+  "fullname": "muse-probe-r2para-nl-p17-span-trailing-break",
+  "source": "[[span]]a\n[[/span]]",
+  "action": "created"
+ }
+}

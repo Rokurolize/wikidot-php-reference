@@ -1,0 +1,60 @@
+{"id":"n38-01-single-break","output":"<p>alpha<br \/>\nbeta<\/p>\n\n"}
+{"id":"n38-02-two-breaks","output":"<p>a<br \/>\nb<br \/>\nc<\/p>\n\n"}
+{"id":"n38-03-four-lines","output":"<p>one<br \/>\ntwo<br \/>\nthree<br \/>\nfour<\/p>\n\n"}
+{"id":"n38-04-doubled-break","output":"<p>alpha<\/p>\n\n<p>beta<\/p>\n\n"}
+{"id":"n38-05-tripled-break","output":"<p>alpha<\/p>\n\n<p>beta<\/p>\n\n"}
+{"id":"n38-06-leading-newline","output":"<p>alpha<\/p>\n\n"}
+{"id":"n38-07-trailing-newline","output":"<p>alpha<\/p>\n\n"}
+{"id":"n38-08-only-newlines","output":""}
+{"id":"n38-09-break-with-spaces","output":"<p>alpha <br \/>\n beta<\/p>\n\n"}
+{"id":"n38-10-break-with-tabs","output":"<p>alpha    <br \/>\n    beta<\/p>\n\n"}
+{"id":"n38-11-before-div","output":"<p>text<\/p>\n\n<div ><p>body<\/p>\n\n<\/div>"}
+{"id":"n38-12-after-div","output":"<div ><p>body<\/p>\n\n<\/div><br \/>\ntext"}
+{"id":"n38-13-before-code","output":"<p>text<\/p>\n\n\n<div class=\"code\">\n<pre><code>body<\/code><\/pre><\/div>\n\n"}
+{"id":"n38-14-after-code","output":"\n<div class=\"code\">\n<pre><code>body<\/code><\/pre><\/div>\n\n<br \/>\ntext"}
+{"id":"n38-15-before-quote","output":"<p>text<\/p>\n\n<blockquote><p>quoted<\/p>\n\n<\/blockquote>\n"}
+{"id":"n38-16-after-quote","output":"<blockquote><p>quoted<\/p>\n\n<\/blockquote>\n<p>text<\/p>\n\n"}
+{"id":"n38-17-before-heading","output":"<p>text<\/p>\n\n\n<h1 id=\"toc0\"><span>Heading<\/span><\/h1>\n"}
+{"id":"n38-18-after-heading","output":"\n<h1 id=\"toc0\"><span>Heading<\/span><\/h1>\n<p>text<\/p>\n\n"}
+{"id":"n38-19-before-hr","output":"<p>text<\/p>\n\n<hr \/>\n"}
+{"id":"n38-20-after-hr","output":"<hr \/>\n<p>text<\/p>\n\n"}
+{"id":"n38-21-before-table","output":"<p>text<br \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table><\/p>\n\n"}
+{"id":"n38-22-after-table","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table><p>text<\/p>\n\n"}
+{"id":"n38-23-before-ul","output":"<p>text<\/p>\n\n<ul>\n<li>item<\/li>\n<\/ul>"}
+{"id":"n38-24-after-ul","output":"<ul>\n<li>item<\/li>\n<\/ul><p>text<\/p>\n\n"}
+{"id":"n38-25-before-ol","output":"<p>text<\/p>\n\n<ol>\n<li>item<\/li>\n<\/ol>"}
+{"id":"n38-26-explicit-ul","output":"<p>text<br \/>\n[[ul]]<br \/>\n[[li]]item<br \/>\n[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"n38-27-ul-two-items","output":"<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>"}
+{"id":"n38-28-ol-two-items","output":"<ol>\n<li>one<\/li>\n<li>two<\/li>\n<\/ol>"}
+{"id":"n38-29-list-continuation","output":"<ul>\n<li>one<\/li>\n<\/ul><p>continued<\/p>\n\n"}
+{"id":"n38-30-list-blank-between","output":"<ul>\n<li>one<\/li>\n<\/ul><ul>\n<li>two<\/li>\n<\/ul>"}
+{"id":"n38-31-nested-list","output":"<ul>\n<li>one<\/li>\n<\/ul><p>** two<\/p>\n\n<ul>\n<li>three<\/li>\n<\/ul>"}
+{"id":"n38-32-table-two-rows","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<tr>\n<td>c<\/td>\n<td>d<\/td>\n<\/tr>\n<\/table>"}
+{"id":"n38-33-table-cell-break","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><\/td>\n<\/tr>\n<\/table><p>b || c ||<\/p>\n\n"}
+{"id":"n38-34-table-with-leading-text","output":"<p>text<br \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table><\/p>\n\n<p>text<\/p>\n\n"}
+{"id":"n38-35-doubled-with-space","output":"<p>a<\/p>\n\n<p>b<\/p>\n\n"}
+{"id":"n38-36-doubled-after-block","output":"<div ><p>x<\/p>\n\n<\/div><p>after<\/p>\n\n"}
+{"id":"n38-37-many-blank","output":"<p>a<\/p>\n\n<p>b<\/p>\n\n"}
+{"id":"n38-38-break-in-bold","output":"<p><strong>a<br \/>\nb<\/strong><\/p>\n\n"}
+{"id":"n38-39-break-in-span","output":"<p><span>a<br \/>\nb<\/span><\/p>\n\n"}
+{"id":"n38-40-break-across-closer","output":"<p><strong>a<br \/>\nb<br \/>\nc<\/strong><\/p>\n\n"}
+{"id":"n38-41-break-in-color","output":"<p>[[color red]]a<br \/>\nb[[\/color]]<\/p>\n\n"}
+{"id":"n38-42-break-before-closer","output":"<p>a<br \/>\n[[\/div]]<\/p>\n\n"}
+{"id":"n38-43-underscore-break","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"n38-44-underscore-doubled","output":"<p>a<br \/>\n<br \/>\nb<\/p>\n\n"}
+{"id":"n38-45-underscore-space","output":"<p>a _ <br \/>\nb<\/p>\n\n"}
+{"id":"n38-46-crlf","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"n38-47-mixed-blocks","output":"<p>a<\/p>\n\n<div ><p>x<br \/>\ny<\/p>\n\n<\/div>\n<div class=\"code\">\n<pre><code>z<\/code><\/pre><\/div>\n\n<p>b<\/p>\n\n"}
+{"id":"n38-48-break-after-comment","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"n38-49-comment-with-break","output":"<p>ab<\/p>\n\n"}
+{"id":"n38-50-break-after-freelink","output":"<p>www.example.com<br \/>\nb<\/p>\n\n"}
+{"id":"n38-51-escape-continued","output":"<p>ab<\/p>\n\n"}
+{"id":"n38-52-break-with-inline-markup","output":"<p><strong>bold<\/strong><br \/>\n<em>italic<\/em><\/p>\n\n"}
+{"id":"n38-53-bq-multiline","output":"<blockquote><p>a<br \/>\nb<\/p>\n\n<\/blockquote>\n"}
+{"id":"n38-54-bq-blank","output":"<blockquote><p>a<br \/>\nb<\/p>\n\n<\/blockquote>\n"}
+{"id":"n38-55-break-in-collapsible","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><p>a<br \/>\nb<\/p>\n\n<\/div><\/div><\/div>"}
+{"id":"n38-56-empty-doc","output":""}
+{"id":"n38-57-space-only","output":""}
+{"id":"n38-58-only-block","output":"<div ><p>x<\/p>\n\n<\/div>"}
+{"id":"n38-59-heading-then-text-blank","output":"\n<h1 id=\"toc0\"><span>H<\/span><\/h1>\n<p>text<\/p>\n\n"}
+{"id":"n38-60-mixed","output":"<p>a<br \/>\nb<\/p>\n\n<ul>\n<li>x<\/li>\n<li>y<\/li>\n<\/ul><p>c<br \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>p<\/td>\n<td>q<\/td>\n<\/tr>\n<\/table><\/p>\n\n<p>d<\/p>\n\n"}

@@ -1,0 +1,60 @@
+{"errors":[],"html":"<p>alpha<br>\nbeta</p>","id":"n38-01-single-break"}
+{"errors":[],"html":"<p>a<br>\nb<br>\nc</p>","id":"n38-02-two-breaks"}
+{"errors":[],"html":"<p>one<br>\ntwo<br>\nthree<br>\nfour</p>","id":"n38-03-four-lines"}
+{"errors":[],"html":"<p>alpha</p><p>beta</p>","id":"n38-04-doubled-break"}
+{"errors":[],"html":"<p>alpha</p><p>beta</p>","id":"n38-05-tripled-break"}
+{"errors":[],"html":"<p>alpha</p>","id":"n38-06-leading-newline"}
+{"errors":[],"html":"<p>alpha</p>","id":"n38-07-trailing-newline"}
+{"errors":[],"html":"","id":"n38-08-only-newlines"}
+{"errors":[],"html":"<p>alpha<br>\nbeta</p>","id":"n38-09-break-with-spaces"}
+{"errors":[],"html":"<p>alpha<br>\nbeta</p>","id":"n38-10-break-with-tabs"}
+{"errors":[],"html":"<p>text</p><div><p>body</p></div>","id":"n38-11-before-div"}
+{"errors":[],"html":"<div><p>body</p></div><br>\ntext","id":"n38-12-after-div"}
+{"errors":[],"html":"<p>text</p><div class=\"code\"><pre><code>body</code></pre></div>","id":"n38-13-before-code"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>body</code></pre></div><br>\ntext","id":"n38-14-after-code"}
+{"errors":[],"html":"<p>text</p><blockquote><p>quoted</p></blockquote>","id":"n38-15-before-quote"}
+{"errors":[],"html":"<blockquote><p>quoted</p></blockquote><p>text</p>","id":"n38-16-after-quote"}
+{"errors":[],"html":"<p>text</p><h1 id=\"toc0\"><span>Heading</span></h1>","id":"n38-17-before-heading"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span>Heading</span></h1><p>text</p>","id":"n38-18-after-heading"}
+{"errors":[],"html":"<p>text</p><hr>","id":"n38-19-before-hr"}
+{"errors":[],"html":"<hr><p>text</p>","id":"n38-20-after-hr"}
+{"errors":[],"html":"text<br>\n<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td>b</td>\n</tr>\n</table>","id":"n38-21-before-table"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td>b</td>\n</tr>\n</table><p>text</p>","id":"n38-22-after-table"}
+{"errors":[],"html":"<p>text</p><ul>\n<li>item</li>\n</ul>","id":"n38-23-before-ul"}
+{"errors":[],"html":"<ul>\n<li>item</li>\n</ul><p>text</p>","id":"n38-24-after-ul"}
+{"errors":[],"html":"<p>text</p><ol>\n<li>item</li>\n</ol>","id":"n38-25-before-ol"}
+{"errors":[],"html":"text<br>\n<ul>\n<li>item<br></li>\n</ul><br>\n","id":"n38-26-explicit-ul"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n<li>two</li>\n</ul>","id":"n38-27-ul-two-items"}
+{"errors":[],"html":"<ol>\n<li>one</li>\n<li>two</li>\n</ol>","id":"n38-28-ol-two-items"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n</ul><p>continued</p>","id":"n38-29-list-continuation"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n</ul><ul>\n<li>two</li>\n</ul>","id":"n38-30-list-blank-between"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n</ul><p>** two</p><ul>\n<li>three</li>\n</ul>","id":"n38-31-nested-list"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td>b</td>\n</tr>\n<tr>\n<td>c</td>\n<td>d</td>\n</tr>\n</table>","id":"n38-32-table-two-rows"}
+{"errors":["ParseError { token: TableColumn, rule: \"page\", span: 7..9, kind: NotStartOfLine }","ParseError { token: TableColumn, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }","ParseError { token: TableColumn, rule: \"page\", span: 12..14, kind: NotStartOfLine }","ParseError { token: TableColumn, rule: \"fallback\", span: 12..14, kind: NoRulesMatch }"],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td></td>\n</tr>\n</table><p>b || c ||</p>","id":"n38-33-table-cell-break"}
+{"errors":[],"html":"text<br>\n<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td>b</td>\n</tr>\n</table><p>text</p>","id":"n38-34-table-with-leading-text"}
+{"errors":[],"html":"<p>a</p><p>b</p>","id":"n38-35-doubled-with-space"}
+{"errors":[],"html":"<div><p>x</p></div><p>after</p>","id":"n38-36-doubled-after-block"}
+{"errors":[],"html":"<p>a</p><p>b</p>","id":"n38-37-many-blank"}
+{"errors":[],"html":"<p><strong>a<br>\nb</strong></p>","id":"n38-38-break-in-bold"}
+{"errors":[],"html":"<p><span>a<br>\nb</span></p>","id":"n38-39-break-in-span"}
+{"errors":[],"html":"<p><strong>a<br>\nb<br>\nc</strong></p>","id":"n38-40-break-across-closer"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 8..11, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 11..13, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 16..19, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 24..26, kind: NoRulesMatch }"],"html":"<p>[[color red]]a<br>\nb[[/color]]</p>","id":"n38-41-break-in-color"}
+{"errors":["ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 2..5, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 8..10, kind: NoRulesMatch }"],"html":"<p>a<br>\n[[/div]]</p>","id":"n38-42-break-before-closer"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"n38-43-underscore-break"}
+{"errors":[],"html":"<p>a<br>\n<br>\nb</p>","id":"n38-44-underscore-doubled"}
+{"errors":[],"html":"<p>a _<br>\nb</p>","id":"n38-45-underscore-space"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"n38-46-crlf"}
+{"errors":[],"html":"<p>a</p><div><p>x<br>\ny</p></div><div class=\"code\"><pre><code>z</code></pre></div><p>b</p>","id":"n38-47-mixed-blocks"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"n38-48-break-after-comment"}
+{"errors":[],"html":"<p>ab</p>","id":"n38-49-comment-with-break"}
+{"errors":[],"html":"<p>www.example.com<br>\nb</p>","id":"n38-50-break-after-freelink"}
+{"errors":[],"html":"<p>ab</p>","id":"n38-51-escape-continued"}
+{"errors":[],"html":"<p><strong>bold</strong><br>\n<em>italic</em></p>","id":"n38-52-break-with-inline-markup"}
+{"errors":[],"html":"<blockquote><p>a<br>\nb</p></blockquote>","id":"n38-53-bq-multiline"}
+{"errors":[],"html":"<blockquote><p>a<br>\nb</p></blockquote>","id":"n38-54-bq-blank"}
+{"errors":[],"html":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div><div class=\"collapsible-block-content\"><p>a<br>\nb</p></div></div></div>","id":"n38-55-break-in-collapsible"}
+{"errors":[],"html":"","id":"n38-56-empty-doc"}
+{"errors":[],"html":"","id":"n38-57-space-only"}
+{"errors":[],"html":"<div><p>x</p></div>","id":"n38-58-only-block"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span>H</span></h1><p>text</p>","id":"n38-59-heading-then-text-blank"}
+{"errors":[],"html":"<p>a<br>\nb</p><ul>\n<li>x</li>\n<li>y</li>\n</ul>\nc<br>\n<table class=\"wiki-content-table\">\n<tr>\n<td>p</td>\n<td>q</td>\n</tr>\n</table><p>d</p>","id":"n38-60-mixed"}

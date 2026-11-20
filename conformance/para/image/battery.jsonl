@@ -1,0 +1,68 @@
+{"id": "i37-01-plain", "source": "[[image photo.png]]"}
+{"id": "i37-02-align-center", "source": "[[=image photo.png]]"}
+{"id": "i37-03-align-left", "source": "[[<image photo.png]]"}
+{"id": "i37-04-align-right", "source": "[[>image photo.png]]"}
+{"id": "i37-05-float-left", "source": "[[f<image photo.png]]"}
+{"id": "i37-06-float-center", "source": "[[f=image photo.png]]"}
+{"id": "i37-07-float-right", "source": "[[f>image photo.png]]"}
+{"id": "i37-08-uppercase-name", "source": "[[IMAGE https://example.com/a.png]]"}
+{"id": "i37-09-titlecase-name", "source": "[[Image https://example.com/a.png]]"}
+{"id": "i37-10-uppercase-align", "source": "[[F>IMAGE https://example.com/a.png]]"}
+{"id": "i37-11-external-https", "source": "[[image https://example.com/some-image.webp]]"}
+{"id": "i37-12-external-http-alt-suffix", "source": "[[image https://example.com/a.png?b=c]]"}
+{"id": "i37-13-external-fragment", "source": "[[image https://example.com/a.png#frag]]"}
+{"id": "i37-14-external-trailing-slash", "source": "[[image https://example.com/]]"}
+{"id": "i37-15-local-png", "source": "[[image filename.png]]"}
+{"id": "i37-16-local-jpg-nosize", "source": "[[image landscape.jpg]]"}
+{"id": "i37-17-local-webp-resized", "source": "[[image picture.webp]]"}
+{"id": "i37-18-local-noext-resized", "source": "[[image picture]]"}
+{"id": "i37-19-page-qualified-png", "source": "[[image other-page/photo.png]]"}
+{"id": "i37-20-page-qualified-jpeg", "source": "[[image other-page/photo.jpeg]]"}
+{"id": "i37-21-absolute-path", "source": "[[image /my-picture.png]]"}
+{"id": "i37-22-absolute-page-path", "source": "[[image /some-other-page/my-picture.png]]"}
+{"id": "i37-23-double-leading-slash", "source": "[[image //example.com/x.png]]"}
+{"id": "i37-24-multi-segment-path", "source": "[[image a/b/c.png]]"}
+{"id": "i37-25-nonascii-filename", "source": "[[image \u65e5\u672c\u8a9e.png]]"}
+{"id": "i37-26-comment-in-filename", "source": "[[image a[!--x--]b.png]]"}
+{"id": "i37-27-comment-gap", "source": "[[image [!--x--] a.png]]"}
+{"id": "i37-28-quoted-url-source", "source": "[[image \"https://example.com/a.png\"]]"}
+{"id": "i37-29-data-source", "source": "[[image data:image/png;base64,AAAA]]"}
+{"id": "i37-30-mailto-source", "source": "[[image mailto:someone@example.com]]"}
+{"id": "i37-31-attr-class-style-title-alt", "source": "[[image foo.gif class=\"animated\" style=\"border: 1em solid\" data-xyz=\"bar\" alt=\"A foobar\" title=\"FOO\"]]"}
+{"id": "i37-32-attr-width-px", "source": "[[image https://example.com/a.png width=\"200px\"]]"}
+{"id": "i37-33-attr-width-bare", "source": "[[image https://example.com/a.png width=\"200\"]]"}
+{"id": "i37-34-attr-width-percent", "source": "[[image https://example.com/a.png width=\"50%\"]]"}
+{"id": "i37-35-attr-width-unquoted", "source": "[[image https://example.com/a.png width=200]]"}
+{"id": "i37-36-attr-width-empty", "source": "[[image https://example.com/a.png width=\"\"]]"}
+{"id": "i37-37-attr-height", "source": "[[image https://example.com/a.png height=\"120\" width=\"200\"]]"}
+{"id": "i37-38-attr-size-small", "source": "[[image photo.jpeg size=\"small\"]]"}
+{"id": "i37-39-attr-size-bogus", "source": "[[image photo.jpeg size=\"bogus\"]]"}
+{"id": "i37-40-attr-size-unquoted", "source": "[[image photo.jpeg size=small]]"}
+{"id": "i37-41-attr-unknown-key", "source": "[[image foo.gif v7UnknownArgument=\"x\"]]"}
+{"id": "i37-42-attr-key-case", "source": "[[image foo.gif CLASS=\"hi\" ALT=\"Hi there\" WIDTH=\"20\"]]"}
+{"id": "i37-43-attr-single-quotes", "source": "[[image foo.gif class='one' style='border:0']]"}
+{"id": "i37-44-link-fragment", "source": "[[image foo.gif link=\"#gif-sucks\"]]"}
+{"id": "i37-45-link-page", "source": "[[image foo.gif link=\"some-page\"]]"}
+{"id": "i37-46-link-external", "source": "[[image foo.gif link=\"https://example.com/\"]]"}
+{"id": "i37-47-link-leading-space-literal", "source": "[[image foo.gif link=\" https://example.com/\"]]"}
+{"id": "i37-48-link-star", "source": "[[image foo.gif link=\"*https://example.com/\"]]"}
+{"id": "i37-49-link-star-space-literal", "source": "[[image foo.gif link=\"* https://example.com/\"]]"}
+{"id": "i37-50-link-star-page", "source": "[[image foo.gif link=\"*some-page\"]]"}
+{"id": "i37-51-link-explicit-overrides", "source": "[[image foo.png link=\"https://example.com/\"]]"}
+{"id": "i37-52-caption-body", "source": "[[image https://example.com/a.png]]a caption[[/image]]"}
+{"id": "i37-53-caption-with-align", "source": "[[<image https://example.com/a.png]]caption[[/image]]"}
+{"id": "i37-54-empty-name", "source": "[[image]]"}
+{"id": "i37-55-empty-head-space", "source": "[[image ]]"}
+{"id": "i37-56-unclosed", "source": "[[image landscape.jpg"}
+{"id": "i37-57-double-equals", "source": "[[==image landscape.jpg]]"}
+{"id": "i37-58-double-float", "source": "[[ff<image https://example.com/a.png]]"}
+{"id": "i37-59-star-flag", "source": "[[*$image landscape.jpg]]"}
+{"id": "i37-60-space-after-marker", "source": "[[= image https://example.com/a.png]]"}
+{"id": "i37-61-inline-in-text", "source": "BASIC [[image filename.png]]"}
+{"id": "i37-62-blank-line-after", "source": "BASIC [[image filename.png]]\n\nLEFT"}
+{"id": "i37-63-two-images-one-line", "source": "[[<image a.png]] [[>image b.jpg]]"}
+{"id": "i37-64-image-then-paragraph", "source": "[[image a.png]]\n\nafter paragraph"}
+{"id": "i37-65-paragraph-then-image", "source": "before paragraph\n\n[[image a.png]]"}
+{"id": "i37-66-source-typography", "source": "[[image aa<<bb>>cc.png]]"}
+{"id": "i37-67-raw-head-literal", "source": "[[image a.png alt=\"@@a@@\"]]"}
+{"id": "i37-68-size-lookalike-in-alt", "source": "[[=image photo.png alt=\"a size=b\"]]"}

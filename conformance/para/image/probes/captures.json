@@ -1,0 +1,152 @@
+{
+ "p01-caption-body": {
+  "fullname": "muse-probe-r2para-img-p01-caption-body",
+  "html": "<img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" />a caption[[/image]]\n<p>x</p>",
+  "html_sha256": "6c68892a8e0b6ce8fc788357589a9fc0a550a0c0b46e819cee11b23d99c467f6",
+  "source": "[[image https://example.com/a.png]]a caption[[/image]]\n\nx",
+  "source_sha256": "95abca27c8b04fa961b47c2f1d71db198f2c3d2257ddbb7c786c6aa0780d2b52",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02-caption-align": {
+  "fullname": "muse-probe-r2para-img-p02-caption-align",
+  "html": "<div class=\"image-container alignleft\"><img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /></div>\n<p>caption[[/image]]</p>\n<p>x</p>",
+  "html_sha256": "c78ba75ab888e9a8107be228cb6b3378becec5b2dc1fd14a3fb8fe6ea68069f8",
+  "source": "[[<image https://example.com/a.png]]caption[[/image]]\n\nx",
+  "source_sha256": "10d89950d36d91e1ef4deaab8f4bb03f2fe7e8f605a13c1e113990546d0537a7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03-link-leading-space": {
+  "fullname": "muse-probe-r2para-img-p03-link-leading-space",
+  "html": "<p>[[image foo.gif link=&quot; <a href=\"https://example.com/\">https://example.com/</a>&quot;]]</p>\n<p>x</p>",
+  "html_sha256": "647153b5a7ddfc08699947ac514f8bb008669ceeceba7baa1319c9494098d930",
+  "source": "[[image foo.gif link=\" https://example.com/\"]]\n\nx",
+  "source_sha256": "2590192f821b02622ec37763808b4e89bdceeb918127cee44c8e7846d444cecc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04-link-star-space": {
+  "fullname": "muse-probe-r2para-img-p04-link-star-space",
+  "html": "<p>[[image foo.gif link=&quot;* <a href=\"https://example.com/\">https://example.com/</a>&quot;]]</p>\n<p>x</p>",
+  "html_sha256": "65ce93eecac759e65d377c5a99b18fe2a438611618943873bd889a73494d84cf",
+  "source": "[[image foo.gif link=\"* https://example.com/\"]]\n\nx",
+  "source_sha256": "87b34ffe8fb27b388bf8437b2272deb743c031dd06298b2190b5f826513a9c36",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05-uppercase-align": {
+  "fullname": "muse-probe-r2para-img-p05-uppercase-align",
+  "html": "<div class=\"image-container\"><img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /></div>\n<p>x</p>",
+  "html_sha256": "8f802c35b4c56c7c367ce2c2acbf8766f36706ffa9ed1d179fdd0cece87d8aed",
+  "source": "[[F>IMAGE https://example.com/a.png]]\n\nx",
+  "source_sha256": "60c1ff3768b65535a9eab46098823a5a3a950f69d259fe83cd09af118a8e2d4c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06-uppercase-name": {
+  "fullname": "muse-probe-r2para-img-p06-uppercase-name",
+  "html": "<img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" />\n<p>x</p>",
+  "html_sha256": "43775252bab881b09d2a885df0c4bd712dee231440b5fb73f97b96a8fb67bd06",
+  "source": "[[IMAGE https://example.com/a.png]]\n\nx",
+  "source_sha256": "89b19b0f83f66f40327abd817cacaab7b6c61ee4ec653c0d67d4211de304bff8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07-empty-head": {
+  "fullname": "muse-probe-r2para-img-p07-empty-head",
+  "html": "<a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-r2para-img-p07-empty-head/\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-r2para-img-p07-empty-head//medium.jpg\" alt=\"\" class=\"image\" /></a>\n<p>x</p>",
+  "html_sha256": "b1ae2a94c212a3d751b053b8f1a2f4fc54bdcf52ff3a6e355f7a1ecb88b6350d",
+  "source": "[[image ]]\n\nx",
+  "source_sha256": "5aa640138f99eebcf077cfbaded71e09971981bfac5b69f97c8f0229310b5dbd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08-fragment-link": {
+  "fullname": "muse-probe-r2para-img-p08-fragment-link",
+  "html": "<a href=\"#gif-sucks\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-r2para-img-p08-fragment-link/foo.gif\" alt=\"foo.gif\" class=\"image\" /></a>\n<p>x</p>",
+  "html_sha256": "3d470fe8853531b316777fadd40db9c3374b1f1ef2c7481be3acf8e069d7cfeb",
+  "source": "[[image foo.gif link=\"#gif-sucks\"]]\n\nx",
+  "source_sha256": "67672e4e4e8a1b1ae1d10083236e518997824d13ab0b7cb73400368cf861af61",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09-attrs-order-title": {
+  "fullname": "muse-probe-r2para-img-p09-attrs-order-title",
+  "html": "<img src=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-r2para-img-p09-attrs-order-title/foo.gif\" title=\"FOO\" style=\"border: 1em solid\" class=\"animated\" alt=\"A foobar\" />\n<p>x</p>",
+  "html_sha256": "48123a88a9aca5d980834d305a481fe8d0243786c1290014de3d092ad6febe34",
+  "source": "[[image foo.gif class=\"animated\" style=\"border: 1em solid\" data-xyz=\"bar\" alt=\"A foobar\" title=\"FOO\"]]\n\nx",
+  "source_sha256": "666455e03e44262f0fa24d17e75acfa8825cd2b9ca5daf06b06bd1345afc33dd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10-width-height-order": {
+  "fullname": "muse-probe-r2para-img-p10-width-height-order",
+  "html": "<img src=\"https://example.com/a.png\" height=\"120\" width=\"200\" alt=\"a.png\" class=\"image\" />\n<p>x</p>",
+  "html_sha256": "6d1baec0f4efda1d026023e78ca88e9f2e04a95503066ce3fb1f78a83a3d737d",
+  "source": "[[image https://example.com/a.png height=\"120\" width=\"200\"]]\n\nx",
+  "source_sha256": "005f8e8d95d753a8c5dd1eb737250fda22caa967d6162fe8b127e416b14de093",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11-width-empty": {
+  "fullname": "muse-probe-r2para-img-p11-width-empty",
+  "html": "<img src=\"https://example.com/a.png\" width=\"\" alt=\"a.png\" class=\"image\" />\n<p>x</p>",
+  "html_sha256": "f6e3bb5f6ab6ed90b15927326f25e5de245bd0d7250c335918d8a1ac550d7b92",
+  "source": "[[image https://example.com/a.png width=\"\"]]\n\nx",
+  "source_sha256": "3038ea654e4c286e16962b942e8501040d7c945e86359e8732b6f42ea273be00",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12-nonascii": {
+  "fullname": "muse-probe-r2para-img-p12-nonascii",
+  "html": "<img src=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-r2para-img-p12-nonascii/%E6%97%A5%E6%9C%AC%E8%AA%9E.png\" alt=\"日本語.png\" class=\"image\" />\n<p>x</p>",
+  "html_sha256": "17c829d931ff0e5343e24ae9f1e3ae1c2ee64b757fd6b34567471ac8876e59f0",
+  "source": "[[image 日本語.png]]\n\nx",
+  "source_sha256": "cf9d8f2a3beb14d39b5a780c67057cd46037096e2a0d4e2d4b3dbf07cd41a4c8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13-quoted-url": {
+  "fullname": "muse-probe-r2para-img-p13-quoted-url",
+  "html": "<img src=\"&quot;https://example.com/a.png&quot;\" alt=\"a.png&quot;\" class=\"image\" />\n<p>x</p>",
+  "html_sha256": "57647d73a393db1e114a97c24d4841d6eb8c390b739435d25c436ff75d3c7346",
+  "source": "[[image \"https://example.com/a.png\"]]\n\nx",
+  "source_sha256": "d3230bb78506e80a352e40c15d1da85d735cda653698d43c22bfa60c1c54dadd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14-external-and-local": {
+  "fullname": "muse-probe-r2para-img-p14-external-and-local",
+  "html": "<img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /><img src=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-r2para-img-p14-external-and-local/b.png\" alt=\"b.png\" class=\"image\" />\n<p>x</p>",
+  "html_sha256": "e2a7f9cd21a95f2040e1ccf49cd615675f1ccb7c218f5fc4c158fb70af3047de",
+  "source": "[[image https://example.com/a.png]]\n\n[[image b.png]]\n\nx",
+  "source_sha256": "8ff8527e6fbadfc9643f1940bf18513377f369324f9b572a34bc7d07b1c0272f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15-size-unquoted": {
+  "fullname": "muse-probe-r2para-img-p15-size-unquoted",
+  "html": "<img src=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-r2para-img-p15-size-unquoted/foo.png\" alt=\"foo.png\" class=\"image\" />\n<p>x</p>",
+  "html_sha256": "b4aed05bba6c833e885243fd5047bcb5321c3d9e02125d4321a3d440618bd5f7",
+  "source": "[[image foo.png size=small]]\n\nx",
+  "source_sha256": "cc0a6a3d987d3ef7d57ce8538d7741ffa6cff06936b4651e798623a43c0c4a5d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

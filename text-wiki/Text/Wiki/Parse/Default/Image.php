@@ -53,7 +53,15 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
      *
      */
     
-    public $regex = '/(\[\[((?:f)?[<>=])?image\s+)(.+?)(?:\]\])(?:(.*?)\[\[\/image\]\])?/is';
+    // R2-PARA correction C2: the fossil consumed an optional `[[/image]]`
+    // closer and captured its body as a "caption" that the renderer never
+    // used. Live (probes p01 and p02) and the pinned ftml behaviour leave the
+    // body and the unmatched `[[/image]]` as ordinary text after the image,
+    // and corpus pin image/basic shows no caption wrapper. C4: an empty head
+    // (`[[image ]]`) is a real live image with an empty filename (probe p07
+    // and pin image/empty-head), so the source group is `.*?` rather than
+    // `.+?`. The alignment/name prefix group is unchanged.
+    public $regex = '/(\[\[((?:f)?[<>=])?image\s+)(.*?)\]\]/is';
 
     /**
      * The regular expressions used to check ecternal urls
@@ -99,6 +107,17 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
      */
     
     function process($matches) {
+        // R2-PARA correction C7: a complete raw inline construct (`@@...@@`)
+        // in the opener head makes live reject the whole image block and
+        // leave the opener literal, with the raw token rendered in place
+        // (pin image/raw-head-literal, battery i37-67). By the time this rule
+        // runs the Raw rule has replaced that construct with a delimited
+        // token, so detect the delimiter and bail out with the original
+        // matched text; the token then resolves normally in the source.
+        if (strpos($matches[0], $this->wiki->delim) !== false) {
+            return $matches[0];
+        }
+
         $pos = strpos($matches[3], ' ');
         
         if ($pos === false) {
@@ -111,6 +130,15 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
             // class, link and style
             $attr = $this->getAttrs(substr($matches[3], $pos + 1));
             $attr2 = array();
+            // R2-PARA correction C1: live emits a `title` attribute (probes
+            // p09 and p17 and pin image/basic) and it precedes style, class,
+            // alt, height and width in live's fixed attribute order. The
+            // fossil whitelist omitted it entirely. Putting it first in the
+            // option array makes the renderer's existing attribute loop emit
+            // it in that position without disturbing the other attributes.
+            if (isset($attr['title'])) {
+                $attr2['title'] = $attr['title'];
+            }
             if (isset($attr['link'])) {
                 $attr2['link'] = $attr['link'];
             }
@@ -138,13 +166,23 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
 
             // fix the target="_blank"
 
-            $link = $options['attr']['link'];
+            $link = isset($options['attr']['link']) ? $options['attr']['link'] : null;
             if ($link && $link[0] == '*') {
                 $link = substr($link, 1);
                 $options['target'] = '_blank';
                 $options['attr']['link'] = $link;
             }
-            
+
+            // R2-PARA correction C3: a link value that starts with whitespace,
+            // either directly or after the new-tab `*`, is not accepted by
+            // live; the whole opener stays literal (probes p03 and p04, pin
+            // image/basic's `link=" https://..."` row). The fossil accepted
+            // it and emitted a broken href with a leading space.
+            if (isset($options['attr']['link']) && $options['attr']['link'] !== ''
+                && ctype_space($options['attr']['link'][0])) {
+                return $matches[0];
+            }
+
             // check the scheme case of external link
             if (array_key_exists('link', $options['attr'])) {
                 // external url ?
@@ -163,11 +201,10 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
             $options['align'] = $align;
         }
         
-        $caption = $matches[4];
-        if ($caption != null && $caption !== '') {
-            $options['caption'] = $caption;
-        }
-        
+        // R2-PARA correction C2: the caption option sourced from the removed
+        // [[/image]] group is gone; live keeps any text after the image as
+        // ordinary source text (probes p01 and p02).
+
         // fix the target="_blank"
 
         $src = $options['src'];

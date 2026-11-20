@@ -1,0 +1,46 @@
+{"id": "x01-image-alone", "source": "[[image http://example.com/a.png]]"}
+{"id": "x02-image-in-text-run", "source": "before [[image http://example.com/a.png]] after"}
+{"id": "x03-image-between-paragraphs", "source": "lead\n\n[[image http://example.com/a.png]]\n\ntail"}
+{"id": "x04-image-with-caption", "source": "[[image http://example.com/a.png]]caption here[[/image]]"}
+{"id": "x05-aligned-image-in-paragraph", "source": "text\n\n[[=image http://example.com/a.png]]\n\nmore"}
+{"id": "x06-image-with-link", "source": "[[image http://example.com/a.png link=\"http://example.com/page\"]]"}
+{"id": "x07-two-images-one-paragraph", "source": "[[image http://example.com/a.png]] [[image http://example.com/b.png]]"}
+{"id": "x08-image-after-newline", "source": "line one\n[[image http://example.com/a.png]]\nline two"}
+{"id": "x09-image-in-simple-cell", "source": "|| [[image http://example.com/a.png]] || b ||"}
+{"id": "x10-image-in-adv-cell", "source": "[[table]][[row]][[cell]][[image http://example.com/a.png]][[/cell]][[/row]][[/table]]"}
+{"id": "x11-image-in-div", "source": "[[div class=\"box\"]]\n[[image http://example.com/a.png]]\n[[/div]]"}
+{"id": "x12-image-in-collapsible", "source": "[[collapsible]]\n[[image http://example.com/a.png]]\n[[/collapsible]]"}
+{"id": "x13-image-in-quote", "source": "> [[image http://example.com/a.png]]"}
+{"id": "x14-image-caption-with-link", "source": "[[image http://example.com/a.png]]click [[http://example.com|here]][[/image]]"}
+{"id": "x15-image-caption-with-image", "source": "[[image http://example.com/a.png]][[image http://example.com/b.png]][[/image]]"}
+{"id": "x16-aligned-image-in-cell", "source": "|| [[=image http://example.com/a.png]] || b ||"}
+{"id": "x17-text-div-text", "source": "lead\n[[div]]inner[[/div]]\ntail"}
+{"id": "x18-text-collapsible-text", "source": "lead\n[[collapsible]]inner[[/collapsible]]\ntail"}
+{"id": "x19-text-table-text", "source": "lead\n|| a || b ||\ntail"}
+{"id": "x20-text-adv-table-text", "source": "lead\n[[table]][[row]][[cell]]a[[/cell]][[/row]][[/table]]\ntail"}
+{"id": "x21-text-list-text", "source": "lead\n* item\ntail"}
+{"id": "x22-text-deflist-text", "source": "lead\n: term : definition\ntail"}
+{"id": "x23-text-heading-text", "source": "lead\n= Heading =\ntail"}
+{"id": "x24-text-footnoteblock-text", "source": "lead[[footnote]]note[[/footnote]]\n[[footnoteblock]]\ntail"}
+{"id": "x25-text-code-text", "source": "lead\n[[code]]\nx\n[[/code]]\ntail"}
+{"id": "x26-text-quote-text", "source": "lead\n> quoted\ntail"}
+{"id": "x27-div-text-div", "source": "[[div]]a[[/div]]\nmid\n[[div]]b[[/div]]"}
+{"id": "x28-heading-text-list", "source": "= Heading =\nmid\n* item"}
+{"id": "x29-text-toc-text", "source": "lead\n[[toc]]\ntail"}
+{"id": "x30-block-tabs-text", "source": "[[div]]a[[/div]]\nword1\tword2\ntail"}
+{"id": "x31-newline-in-div", "source": "[[div]]\nline1\nline2\n[[/div]]"}
+{"id": "x32-newline-in-collapsible", "source": "[[collapsible]]\nline1\nline2\n[[/collapsible]]"}
+{"id": "x33-newline-in-simple-cell", "source": "|| a\nb || c ||"}
+{"id": "x34-newline-in-adv-cell", "source": "[[table]][[row]][[cell]]a\nb[[/cell]][[/row]][[/table]]"}
+{"id": "x35-newline-in-list", "source": "* item\ncontinue"}
+{"id": "x36-doubled-newline-in-div", "source": "[[div]]\nline1\n\nline2\n[[/div]]"}
+{"id": "x37-newline-in-quote", "source": "> line1\n> line2"}
+{"id": "x38-newline-in-caption", "source": "[[image http://example.com/a.png]]cap1\ncap2[[/image]]"}
+{"id": "x39-score-span-alone", "source": "[[span class=\"score\"]]100[[/span]]"}
+{"id": "x40-score-span-with-text", "source": "before\n[[span class=\"score\"]]100[[/span]]\nafter"}
+{"id": "x41-score-span-in-div", "source": "[[div]]\n[[span class=\"score\"]]100[[/span]]\n[[/div]]"}
+{"id": "x42-tab-in-paragraph", "source": "word1\tword2"}
+{"id": "x43-tab-in-list", "source": "* word1\tword2"}
+{"id": "x44-tab-in-cell", "source": "|| word1\tword2 || b ||"}
+{"id": "x45-unclosed-image-opener", "source": "[[image http://example.com/a.png\n\n[[div]]x[[/div]]"}
+{"id": "x46-image-caption-unclosed", "source": "[[image http://example.com/a.png]]caption\n\nnext"}

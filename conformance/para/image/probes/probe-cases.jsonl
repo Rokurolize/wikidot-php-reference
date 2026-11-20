@@ -1,0 +1,18 @@
+{"id": "p01-caption-body", "source": "[[image https://example.com/a.png]]a caption[[/image]]\n\nx"}
+{"id": "p02-caption-align", "source": "[[<image https://example.com/a.png]]caption[[/image]]\n\nx"}
+{"id": "p03-link-leading-space", "source": "[[image foo.gif link=\" https://example.com/\"]]\n\nx"}
+{"id": "p04-link-star-space", "source": "[[image foo.gif link=\"* https://example.com/\"]]\n\nx"}
+{"id": "p05-uppercase-align", "source": "[[F>IMAGE https://example.com/a.png]]\n\nx"}
+{"id": "p06-uppercase-name", "source": "[[IMAGE https://example.com/a.png]]\n\nx"}
+{"id": "p07-empty-head", "source": "[[image ]]\n\nx"}
+{"id": "p08-fragment-link", "source": "[[image foo.gif link=\"#gif-sucks\"]]\n\nx"}
+{"id": "p09-attrs-order-title", "source": "[[image foo.gif class=\"animated\" style=\"border: 1em solid\" data-xyz=\"bar\" alt=\"A foobar\" title=\"FOO\"]]\n\nx"}
+{"id": "p10-width-height-order", "source": "[[image https://example.com/a.png height=\"120\" width=\"200\"]]\n\nx"}
+{"id": "p11-width-empty", "source": "[[image https://example.com/a.png width=\"\"]]\n\nx"}
+{"id": "p12-nonascii", "source": "[[image \u65e5\u672c\u8a9e.png]]\n\nx"}
+{"id": "p13-quoted-url", "source": "[[image \"https://example.com/a.png\"]]\n\nx"}
+{"id": "p14-external-and-local", "source": "[[image https://example.com/a.png]]\n\n[[image b.png]]\n\nx"}
+{"id": "p15-size-unquoted", "source": "[[image foo.png size=small]]\n\nx"}
+{"id": "p16-width-first", "source": "[[image https://example.com/a.png width=\"200\" height=\"120\"]]\n\nx"}
+{"id": "p17-attr-mixed-order", "source": "[[image https://example.com/a.png style=\"border:0\" width=\"200\" title=\"T\" height=\"120\" alt=\"A\"]]\n\nx"}
+{"id": "p18-size-quoted-png", "source": "[[image foo.png size=\"small\"]]\n\nx"}

@@ -1,0 +1,60 @@
+{"id": "n38-01-single-break", "source": "alpha\nbeta"}
+{"id": "n38-02-two-breaks", "source": "a\nb\nc"}
+{"id": "n38-03-four-lines", "source": "one\ntwo\nthree\nfour"}
+{"id": "n38-04-doubled-break", "source": "alpha\n\nbeta"}
+{"id": "n38-05-tripled-break", "source": "alpha\n\n\nbeta"}
+{"id": "n38-06-leading-newline", "source": "\nalpha"}
+{"id": "n38-07-trailing-newline", "source": "alpha\n"}
+{"id": "n38-08-only-newlines", "source": "\n\n"}
+{"id": "n38-09-break-with-spaces", "source": "alpha \n beta"}
+{"id": "n38-10-break-with-tabs", "source": "alpha\t\n\tbeta"}
+{"id": "n38-11-before-div", "source": "text\n[[div]]\nbody\n[[/div]]"}
+{"id": "n38-12-after-div", "source": "[[div]]\nbody\n[[/div]]\ntext"}
+{"id": "n38-13-before-code", "source": "text\n[[code]]\nbody\n[[/code]]"}
+{"id": "n38-14-after-code", "source": "[[code]]\nbody\n[[/code]]\ntext"}
+{"id": "n38-15-before-quote", "source": "text\n> quoted"}
+{"id": "n38-16-after-quote", "source": "> quoted\ntext"}
+{"id": "n38-17-before-heading", "source": "text\n+ Heading"}
+{"id": "n38-18-after-heading", "source": "+ Heading\ntext"}
+{"id": "n38-19-before-hr", "source": "text\n----"}
+{"id": "n38-20-after-hr", "source": "----\ntext"}
+{"id": "n38-21-before-table", "source": "text\n|| a || b ||"}
+{"id": "n38-22-after-table", "source": "|| a || b ||\ntext"}
+{"id": "n38-23-before-ul", "source": "text\n* item"}
+{"id": "n38-24-after-ul", "source": "* item\ntext"}
+{"id": "n38-25-before-ol", "source": "text\n# item"}
+{"id": "n38-26-explicit-ul", "source": "text\n[[ul]]\n[[li]]item\n[[/li]]\n[[/ul]]"}
+{"id": "n38-27-ul-two-items", "source": "* one\n* two"}
+{"id": "n38-28-ol-two-items", "source": "# one\n# two"}
+{"id": "n38-29-list-continuation", "source": "* one\ncontinued"}
+{"id": "n38-30-list-blank-between", "source": "* one\n\n* two"}
+{"id": "n38-31-nested-list", "source": "* one\n** two\n* three"}
+{"id": "n38-32-table-two-rows", "source": "|| a || b ||\n|| c || d ||"}
+{"id": "n38-33-table-cell-break", "source": "|| a\nb || c ||"}
+{"id": "n38-34-table-with-leading-text", "source": "text\n|| a || b ||\ntext"}
+{"id": "n38-35-doubled-with-space", "source": "a \n\n b"}
+{"id": "n38-36-doubled-after-block", "source": "[[div]]\nx\n[[/div]]\n\nafter"}
+{"id": "n38-37-many-blank", "source": "a\n\n\n\n\nb"}
+{"id": "n38-38-break-in-bold", "source": "**a\nb**"}
+{"id": "n38-39-break-in-span", "source": "[[span]]a\nb[[/span]]"}
+{"id": "n38-40-break-across-closer", "source": "**a\nb\nc**"}
+{"id": "n38-41-break-in-color", "source": "[[color red]]a\nb[[/color]]"}
+{"id": "n38-42-break-before-closer", "source": "a\n[[/div]]"}
+{"id": "n38-43-underscore-break", "source": "a _\nb"}
+{"id": "n38-44-underscore-doubled", "source": "a _\n\nb"}
+{"id": "n38-45-underscore-space", "source": "a _ \nb"}
+{"id": "n38-46-crlf", "source": "a\r\nb"}
+{"id": "n38-47-mixed-blocks", "source": "a\n\n[[div]]\nx\ny\n[[/div]]\n\n[[code]]\nz\n[[/code]]\n\nb"}
+{"id": "n38-48-break-after-comment", "source": "a[!--c--]\nb"}
+{"id": "n38-49-comment-with-break", "source": "a[!--c\nd--]b"}
+{"id": "n38-50-break-after-freelink", "source": "www.example.com\nb"}
+{"id": "n38-51-escape-continued", "source": "a\\\nb"}
+{"id": "n38-52-break-with-inline-markup", "source": "**bold**\n//italic//"}
+{"id": "n38-53-bq-multiline", "source": "> a\n> b"}
+{"id": "n38-54-bq-blank", "source": "> a\n>\n> b"}
+{"id": "n38-55-break-in-collapsible", "source": "[[collapsible]]\na\nb\n[[/collapsible]]"}
+{"id": "n38-56-empty-doc", "source": ""}
+{"id": "n38-57-space-only", "source": "   "}
+{"id": "n38-58-only-block", "source": "[[div]]\nx\n[[/div]]"}
+{"id": "n38-59-heading-then-text-blank", "source": "+ H\n\ntext"}
+{"id": "n38-60-mixed", "source": "a\nb\n\n* x\n* y\nc\n|| p || q ||\nd"}

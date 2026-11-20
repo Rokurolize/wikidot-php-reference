@@ -1,0 +1,12 @@
+{"id":"x2-01-scored-span-alone","output":"<span>100<\/span>"}
+{"id":"x2-02-scored-span-with-text","output":"<p>before<span>100<\/span>after<\/p>\n\n"}
+{"id":"x2-03-scored-span-in-div","output":"<div ><span>100<\/span><\/div>"}
+{"id":"x2-04-scored-span-then-block","output":"<p><span>100<\/span>[[div]]x[[\/div]]<\/p>\n\n"}
+{"id":"x2-05-scored-span-then-heading","output":"<p><span>100<\/span><p style=\"text-align: center;\">H =<\/p><\/p>\n\n<p>text<\/p>\n\n"}
+{"id":"x2-06-image-caption-sentinel","output":"<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>caption here[[\/image]]<p>sentinel<\/p>\n\n"}
+{"id":"x2-07-image-caption-link-sentinel","output":"<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/>click [[<a href=\"http:\/\/example.com|here]][[\/image\">http:\/\/example.com|here]][[\/image<\/a>]]<p>sentinel<\/p>\n\n"}
+{"id":"x2-08-aligned-image-caption-sentinel","output":"<div class=\"image-container aligncenter\"><img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><\/div><p>cap[[\/image]]<\/p>\n\n<p>sentinel<\/p>\n\n"}
+{"id":"x2-09-image-in-paragraph-sentinel","output":"<p>lead <img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/> tail<\/p>\n\n<p>sentinel<\/p>\n\n"}
+{"id":"x2-10-image-after-break-sentinel","output":"<p>line one<br \/>\n<img src=\"http:\/\/example.com\/a.png\" alt=\"a.png\" class=\"image\" \/><br \/>\nline two<\/p>\n\n<p>sentinel<\/p>\n\n"}
+{"id":"x2-11-text-table-sentinel","output":"<p>lead<br \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table><\/p>\n\n<p>tail<\/p>\n\n<p>sentinel<\/p>\n\n"}
+{"id":"x2-12-text-deflist-sentinel","output":"<p>lead<br \/>\n<dl>\n<dt>term<\/dt>\n<dd>definition<\/dd>\n<\/dl>\n<\/p>\n\n<p>tail<\/p>\n\n<p>sentinel<\/p>\n\n"}

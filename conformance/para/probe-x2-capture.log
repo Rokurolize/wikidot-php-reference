@@ -1,0 +1,134 @@
+x2-01-scored-span-alone -> muse-probe-r2para-x-x2-01-scored-span-alone stable=True saved_source_matches=True valid=True
+x2-02-scored-span-with-text -> muse-probe-r2para-x-x2-02-scored-span-with-text stable=True saved_source_matches=True valid=True
+x2-03-scored-span-in-div -> muse-probe-r2para-x-x2-03-scored-span-in-div stable=True saved_source_matches=True valid=True
+x2-04-scored-span-then-block -> muse-probe-r2para-x-x2-04-scored-span-then-block stable=True saved_source_matches=True valid=True
+x2-05-scored-span-then-heading -> muse-probe-r2para-x-x2-05-scored-span-then-heading stable=True saved_source_matches=True valid=True
+x2-06-image-caption-sentinel -> muse-probe-r2para-x-x2-06-image-caption-sentinel stable=True saved_source_matches=True valid=True
+x2-07-image-caption-link-sentinel -> muse-probe-r2para-x-x2-07-image-caption-link-sentinel stable=True saved_source_matches=True valid=True
+x2-08-aligned-image-caption-sentinel -> muse-probe-r2para-x-x2-08-aligned-image-caption-sentinel stable=True saved_source_matches=True valid=True
+x2-09-image-in-paragraph-sentinel -> muse-probe-r2para-x-x2-09-image-in-paragraph-sentinel stable=True saved_source_matches=True valid=True
+x2-10-image-after-break-sentinel -> muse-probe-r2para-x-x2-10-image-after-break-sentinel stable=True saved_source_matches=True valid=True
+x2-11-text-table-sentinel -> muse-probe-r2para-x-x2-11-text-table-sentinel stable=True saved_source_matches=True valid=True
+x2-12-text-deflist-sentinel -> muse-probe-r2para-x-x2-12-text-deflist-sentinel stable=True saved_source_matches=True valid=True
+{
+ "x2-01-scored-span-alone": {
+  "fullname": "muse-probe-r2para-x-x2-01-scored-span-alone",
+  "html": "<span>100</span>",
+  "html_sha256": "807bf3ef8dc8aaedc19ecf63382061ccb8f07d338f473cf1b0bdce2fa9540ffe",
+  "source": "[[span_]]100[[/span]]",
+  "source_sha256": "26536c85de5aec9c5fca34ed1bc4d858f5076e60e45e31235bb99fa6e8fff19d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x2-02-scored-span-with-text": {
+  "fullname": "muse-probe-r2para-x-x2-02-scored-span-with-text",
+  "html": "<p>before<span>100</span>after</p>",
+  "html_sha256": "61435dad0e8d08cc34408f5595fa0e25f45157d4ec2afdb298ca70d494b9b28f",
+  "source": "before\n[[span_]]100[[/span]]\nafter",
+  "source_sha256": "3416029fabd3aea144637744306b246761335672b3de769b714afd6005387cef",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x2-03-scored-span-in-div": {
+  "fullname": "muse-probe-r2para-x-x2-03-scored-span-in-div",
+  "html": "<p>[[div]]<span>100</span>[[/div]]</p>",
+  "html_sha256": "0895de174185009935c49e555ca3dcae9dfc2947fe130df9908af256ec75765e",
+  "source": "[[div]]\n[[span_]]100[[/span]]\n[[/div]]",
+  "source_sha256": "8d2ce346404802f208c236e6c01affce83d744a9aa0c33593c4657ebf8542d7a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x2-04-scored-span-then-block": {
+  "fullname": "muse-probe-r2para-x-x2-04-scored-span-then-block",
+  "html": "<p><span>100</span>[[div]]x[[/div]]</p>",
+  "html_sha256": "8e1c218a6db7983f8a6f00a115151c5b67978b8233d8dae6a3ae7ebbdabc347b",
+  "source": "[[span_]]100[[/span]]\n[[div]]x[[/div]]",
+  "source_sha256": "7a62acd721aa5d6eb8c355fa61ff1d3a0dc293a6bb3ec6af5e57f9a6a07ad4f3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x2-05-scored-span-then-heading": {
+  "fullname": "muse-probe-r2para-x-x2-05-scored-span-then-heading",
+  "html": "<p><span>100</span>= H =<br />\ntext</p>",
+  "html_sha256": "e881d6b53f1639f2534ebba1f097be5a29f0090ebd1d281b61e1cd2678c68554",
+  "source": "[[span_]]100[[/span]]\n= H =\ntext",
+  "source_sha256": "0e1e1e90adc7bf39059b5084f103afe6bf3180de3ce81990f92a04720f4b01d3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x2-06-image-caption-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-06-image-caption-sentinel",
+  "html": "<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" />caption here[[/image]]\n<p>sentinel</p>",
+  "html_sha256": "e3bf52a7e8a2caaceeca9cd499315fe51d2622fc0fffc5ccc7aa9c5d16fd6f8e",
+  "source": "[[image http://example.com/a.png]]caption here[[/image]]\n\nsentinel",
+  "source_sha256": "ffedae51fe4d4bc85959c6f0f24884ee091ef6091f24d602822b560511cd96fa",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x2-07-image-caption-link-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-07-image-caption-link-sentinel",
+  "html": "<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" />click [[<a href=\"http://example.com|here]][[/image\">http://example.com|here]][[/image</a>]]\n<p>sentinel</p>",
+  "html_sha256": "e2b44467ba9383eff3c6d5639b907ed804ab2b9d610adae6b8dce96ff8d5af8f",
+  "source": "[[image http://example.com/a.png]]click [[http://example.com|here]][[/image]]\n\nsentinel",
+  "source_sha256": "91920c21c2ff8c67bc26c6dc8483c37bdc60efb4cd9bd39d32490071592865c5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x2-08-aligned-image-caption-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-08-aligned-image-caption-sentinel",
+  "html": "<div class=\"image-container aligncenter\"><img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /></div>\n<p>cap[[/image]]</p>\n<p>sentinel</p>",
+  "html_sha256": "2c3f00f3a16dcee7e35571a191db6af9eff46e39e77205fa5475edf859fe4cc9",
+  "source": "[[=image http://example.com/a.png]]cap[[/image]]\n\nsentinel",
+  "source_sha256": "9a3d353760e058de3bd0e5fdef458f5c60d90813901907c87360dceeb599998c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x2-09-image-in-paragraph-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-09-image-in-paragraph-sentinel",
+  "html": "lead <img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /> tail\n<p>sentinel</p>",
+  "html_sha256": "527ba7be17ab52303f947066977f877fbd1fa9a117cbb85be325721539aee3fc",
+  "source": "lead [[image http://example.com/a.png]] tail\n\nsentinel",
+  "source_sha256": "fe55781aeb3d1762df8c7f8ead05b54a873d65b599b372cc8e0130c207e859b7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x2-10-image-after-break-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-10-image-after-break-sentinel",
+  "html": "line one<br />\n<img src=\"http://example.com/a.png\" alt=\"a.png\" class=\"image\" /><br />\nline two\n<p>sentinel</p>",
+  "html_sha256": "75422ac05439144370781563d516da46bbe9e35d27cf99f69c4705e273d1a085",
+  "source": "line one\n[[image http://example.com/a.png]]\nline two\n\nsentinel",
+  "source_sha256": "69c7a5df1335791382843a59c31c32bdf3f7abf6459e1d326cbe056bf8ef0273",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x2-11-text-table-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-11-text-table-sentinel",
+  "html": "lead<br />\n<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td>b</td>\n</tr>\n</table>\n<p>tail</p>\n<p>sentinel</p>",
+  "html_sha256": "153553dea982653c12c79f8954f31ba97d522802ab33d8e7d94f3b44382276de",
+  "source": "lead\n|| a || b ||\ntail\n\nsentinel",
+  "source_sha256": "72b367ff4a8334d9b3e7faa547f65bd67d97978bb3782ce2890174d263fa0780",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x2-12-text-deflist-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-12-text-deflist-sentinel",
+  "html": "lead<br />\n<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n<p>tail</p>\n<p>sentinel</p>",
+  "html_sha256": "83cb0b07b8ccff97825065447b5f7728e145ac7e4269ba0dab7689144fad7d75",
+  "source": "lead\n: term : definition\ntail\n\nsentinel",
+  "source_sha256": "0fdbd42161cf6daec2c2b56499399a172b2eb7172ce02267796eefe1bedfd6ba",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

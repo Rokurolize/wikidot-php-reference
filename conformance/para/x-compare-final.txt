@@ -1,0 +1,104 @@
+R2-para root cross-rule interaction: three-way comparison (final)
+valid probes: 58; signature counts: {'all3': 44, 'ref_live': 2, 'ftm_live': 11, 'ref_ftm': 0, 'all_disagree': 1}
+canon counts: ref==ftml 41, ref==live 43, ftml==live 48
+
+x01-image-alone                    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x02-image-in-text-run              FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'before after'}
+  ftml: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [], 'lit': {}, 'text': 'before after'}
+  live: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [], 'lit': {}, 'text': 'before after'}
+x03-image-between-paragraphs       ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x04-image-with-caption             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x05-aligned-image-in-paragraph     ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x06-image-with-link                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x07-two-images-one-paragraph       ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x08-image-after-newline            FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('', 'br'), ('', 'br'), ('/', 'p')], 'lit': {}, 'text': 'line one line two'}
+  ftml: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'br')], 'lit': {}, 'text': 'line one line two'}
+  live: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'br')], 'lit': {}, 'text': 'line one line two'}
+x09-image-in-simple-cell           ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x10-image-in-adv-cell              ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x11-image-in-div                   ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x12-image-in-collapsible           ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x13-image-in-quote                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x14-image-caption-with-link        REF+LIVE       canon(r=f)=False canon(r=l)=True canon(f=l)=False
+  ref : {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': ['http://example.com|here]][[/image'], 'containers': [], 'blocks': [], 'lit': {'[[/image': 2}, 'text': 'click [[ http://example.com|here]][[/image ]]'}
+  ftml: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': ['http://example.com'], 'containers': [], 'blocks': [], 'lit': {'[[/image': 1}, 'text': 'click [[ http://example.com |here]][[/image]]'}
+  live: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': ['http://example.com|here]][[/image'], 'containers': [], 'blocks': [], 'lit': {'[[/image': 2}, 'text': 'click [[ http://example.com|here]][[/image ]]'}
+x15-image-caption-with-image       ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x16-aligned-image-in-cell          ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x17-text-div-text                  ALL3           canon(r=f)=False canon(r=l)=True canon(f=l)=False
+x18-text-collapsible-text          ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x19-text-table-text                FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('', 'br'), ('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead a b tail'}
+  ftml: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead a b tail'}
+  live: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead a b tail'}
+x20-text-adv-table-text            FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('', 'br'), ('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table'), ('', 'br'), ('/', 'p')], 'lit': {}, 'text': 'lead a tail'}
+  ftml: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('/', 'p'), ('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead a tail'}
+  live: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('/', 'p'), ('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead a tail'}
+x21-text-list-text                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x22-text-deflist-text              FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('', 'br'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead term definition tail'}
+  ftml: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead term definition tail'}
+  live: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead term definition tail'}
+x23-text-heading-text              ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x24-text-footnoteblock-text        ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x25-text-code-text                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x26-text-quote-text                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x27-div-text-div                   ALL3           canon(r=f)=False canon(r=l)=True canon(f=l)=False
+x28-heading-text-list              ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x29-text-toc-text                  ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x30-block-tabs-text                ALL3           canon(r=f)=False canon(r=l)=True canon(f=l)=False
+x31-newline-in-div                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x32-newline-in-collapsible         ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x33-newline-in-simple-cell         ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x34-newline-in-adv-cell            ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x35-newline-in-list                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x36-doubled-newline-in-div         ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x37-newline-in-quote               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x38-newline-in-caption             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x39-score-span-alone               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x40-score-span-with-text           ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x41-score-span-in-div              ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x42-tab-in-paragraph               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x43-tab-in-list                    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x44-tab-in-cell                    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x45-unclosed-image-opener          ALL-DISAGREE   canon(r=f)=False canon(r=l)=False canon(f=l)=False
+  ref : {'imgs': [('s=http://example.com/a.png [[div', 'c=image', 'a=a.png [[div')], 'links': [], 'containers': [], 'blocks': [], 'lit': {'[[div': 2, '[[/div': 1}, 'text': 'x[[/div]]'}
+  ftml: {'imgs': [], 'links': ['http://example.com/a.png'], 'containers': [], 'blocks': [('', 'p'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {'[[image': 1, '[[div': 1, '[[/div': 1}, 'text': '[[image http://example.com/a.png [[div]]x[[/div]]'}
+  live: {'imgs': [('s=http://example.com/a.png[[div', 'c=image', 'a=a.png [[div')], 'links': [], 'containers': [], 'blocks': [], 'lit': {'[[div': 2, '[[/div': 1}, 'text': 'x[[/div]]'}
+x46-image-caption-unclosed         ALL3           canon(r=f)=True canon(r=l)=False canon(f=l)=False
+x2-01-scored-span-alone            ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x2-02-scored-span-with-text        ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x2-03-scored-span-in-div           FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'div'), ('/', 'div')], 'lit': {}, 'text': '100'}
+  ftml: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[[div': 1, '[[/div': 1}, 'text': '[[div]] 100 [[/div]]'}
+  live: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[[div': 1, '[[/div': 1}, 'text': '[[div]] 100 [[/div]]'}
+x2-04-scored-span-then-block       ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x2-05-scored-span-then-heading     FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('', 'p'), ('/', 'p'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': '100 H = text'}
+  ftml: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('', 'br'), ('/', 'p')], 'lit': {}, 'text': '100 = H = text'}
+  live: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('', 'br'), ('/', 'p')], 'lit': {}, 'text': '100 = H = text'}
+x2-06-image-caption-sentinel       ALL3           canon(r=f)=True canon(r=l)=False canon(f=l)=False
+x2-07-image-caption-link-sentinel  REF+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=False
+  ref : {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': ['http://example.com|here]][[/image'], 'containers': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[[/image': 2}, 'text': 'click [[ http://example.com|here]][[/image ]] sentinel'}
+  ftml: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': ['http://example.com'], 'containers': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[[/image': 1}, 'text': 'click [[ http://example.com |here]][[/image]] sentinel'}
+  live: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': ['http://example.com|here]][[/image'], 'containers': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {'[[/image': 2}, 'text': 'click [[ http://example.com|here]][[/image ]] sentinel'}
+x2-08-aligned-image-caption-sentinel ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x2-09-image-in-paragraph-sentinel  FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=False
+  ref : {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead tail sentinel'}
+  ftml: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead tail sentinel'}
+  live: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead tail sentinel'}
+x2-10-image-after-break-sentinel   FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=False
+  ref : {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('', 'br'), ('', 'br'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'line one line two sentinel'}
+  ftml: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'br'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'line one line two sentinel'}
+  live: {'imgs': [('s=http://example.com/a.png', 'c=image', 'a=a.png')], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'br'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'line one line two sentinel'}
+x2-11-text-table-sentinel          FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('', 'br'), ('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table'), ('/', 'p'), ('', 'p'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead a b tail sentinel'}
+  ftml: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table'), ('', 'p'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead a b tail sentinel'}
+  live: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'table'), ('', 'tr'), ('', 'td'), ('/', 'td'), ('', 'td'), ('/', 'td'), ('/', 'tr'), ('/', 'table'), ('', 'p'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead a b tail sentinel'}
+x2-12-text-deflist-sentinel        FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'p'), ('', 'br'), ('/', 'p'), ('', 'p'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead term definition tail sentinel'}
+  ftml: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'p'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead term definition tail sentinel'}
+  live: {'imgs': [], 'links': [], 'containers': [], 'blocks': [('', 'br'), ('', 'p'), ('/', 'p'), ('', 'p'), ('/', 'p')], 'lit': {}, 'text': 'lead term definition tail sentinel'}

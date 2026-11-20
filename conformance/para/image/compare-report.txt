@@ -1,0 +1,100 @@
+BATTERY (whole-document cases)
+cases=68
+before: byte_identical=0/68 frame_normalized=6/68 shape_normalized=54/68
+final: byte_identical=0/68 frame_normalized=10/68 shape_normalized=63/68
+final shape disagreements: i37-10-uppercase-align, i37-36-attr-width-empty, i37-61-inline-in-text, i37-62-blank-line-after, i37-65-paragraph-then-image
+=== i37-10-uppercase-align
+  ref: '<div class="image-container"><img alt="a.png" class="image" src="https://example.com/a.png"></div>'
+  ftml: '<div class="image-container floatright"><img alt="a.png" class="image" src="https://example.com/a.png"></div>'
+=== i37-36-attr-width-empty
+  ref: '<img alt="a.png" class="image" src="https://example.com/a.png" width="">'
+  ftml: '<img alt="a.png" class="image" src="https://example.com/a.png" width>'
+=== i37-61-inline-in-text
+  ref: '<p>BASIC <img alt="filename.png" class="image" src="/local--files/filename.png"></p>'
+  ftml: 'BASIC <img alt="filename.png" class="image" src="/local--files/filename.png">'
+=== i37-62-blank-line-after
+  ref: '<p>BASIC <img alt="filename.png" class="image" src="/local--files/filename.png"></p>\n<p>LEFT</p>'
+  ftml: 'BASIC <img alt="filename.png" class="image" src="/local--files/filename.png"><p>LEFT</p>'
+=== i37-65-paragraph-then-image
+  ref: '<p>before paragraph</p>\n<img alt="a.png" class="image" src="/local--files/a.png">'
+  ftml: '<p>before paragraph</p><img alt="a.png" class="image" src="/local--files/a.png">'
+
+LIVE PROBES
+probes=18 valid=18 stable=18 source_matches=18
+Live uses .wdfiles.com and a per-page filename in local--files; both are served-layer and removed by shape().
+A trailing sentinel paragraph `<p>x</p>` is part of every probe source; it is kept in the comparison.
+before reference vs live (shape): match=9/18
+final reference vs live (shape): match=18/18
+ftml dumper vs live (shape): match=16/18
+=== p01-caption-body ref=MATCH ftml=MATCH
+  ref:  '<img alt="a.png" class="image" src="https://example.com/a.png">a caption[[/image]]<p>x</p>'
+  ftml: '<img alt="a.png" class="image" src="https://example.com/a.png">a caption[[/image]]<p>x</p>'
+  live: '<img alt="a.png" class="image" src="https://example.com/a.png">a caption[[/image]]<p>x</p>'
+=== p02-caption-align ref=MATCH ftml=MATCH
+  ref:  '<div class="image-container alignleft"><img alt="a.png" class="image" src="https://example.com/a.png"></div><p>caption[[/image]]</p><p>x</p>'
+  ftml: '<div class="image-container alignleft"><img alt="a.png" class="image" src="https://example.com/a.png"></div><p>caption[[/image]]</p><p>x</p>'
+  live: '<div class="image-container alignleft"><img alt="a.png" class="image" src="https://example.com/a.png"></div><p>caption[[/image]]</p><p>x</p>'
+=== p03-link-leading-space ref=MATCH ftml=MATCH
+  ref:  '<p>[[image foo.gif link=&quot; <a href="https://example.com/">https://example.com/</a>&quot;]]</p><p>x</p>'
+  ftml: '<p>[[image foo.gif link=&quot; <a href="https://example.com/">https://example.com/</a>&quot;]]</p><p>x</p>'
+  live: '<p>[[image foo.gif link=&quot; <a href="https://example.com/">https://example.com/</a>&quot;]]</p><p>x</p>'
+=== p04-link-star-space ref=MATCH ftml=MATCH
+  ref:  '<p>[[image foo.gif link=&quot;* <a href="https://example.com/">https://example.com/</a>&quot;]]</p><p>x</p>'
+  ftml: '<p>[[image foo.gif link=&quot;* <a href="https://example.com/">https://example.com/</a>&quot;]]</p><p>x</p>'
+  live: '<p>[[image foo.gif link=&quot;* <a href="https://example.com/">https://example.com/</a>&quot;]]</p><p>x</p>'
+=== p05-uppercase-align ref=MATCH ftml=DIFF
+  ref:  '<div class="image-container"><img alt="a.png" class="image" src="https://example.com/a.png"></div><p>x</p>'
+  ftml: '<div class="image-container floatright"><img alt="a.png" class="image" src="https://example.com/a.png"></div><p>x</p>'
+  live: '<div class="image-container"><img alt="a.png" class="image" src="https://example.com/a.png"></div><p>x</p>'
+=== p06-uppercase-name ref=MATCH ftml=MATCH
+  ref:  '<img alt="a.png" class="image" src="https://example.com/a.png"><p>x</p>'
+  ftml: '<img alt="a.png" class="image" src="https://example.com/a.png"><p>x</p>'
+  live: '<img alt="a.png" class="image" src="https://example.com/a.png"><p>x</p>'
+=== p07-empty-head ref=MATCH ftml=MATCH
+  ref:  '<a href="/local--files/"><img alt="" class="image" src="/local--resized-images/medium.jpg"></a><p>x</p>'
+  ftml: '<a href="/local--files/"><img alt="" class="image" src="/local--resized-images/medium.jpg"></a><p>x</p>'
+  live: '<a href="/local--files/"><img alt="" class="image" src="/local--resized-images/medium.jpg"></a><p>x</p>'
+=== p08-fragment-link ref=MATCH ftml=MATCH
+  ref:  '<a href="#gif-sucks"><img alt="foo.gif" class="image" src="/local--files/foo.gif"></a><p>x</p>'
+  ftml: '<a href="#gif-sucks"><img alt="foo.gif" class="image" src="/local--files/foo.gif"></a><p>x</p>'
+  live: '<a href="#gif-sucks"><img alt="foo.gif" class="image" src="/local--files/foo.gif"></a><p>x</p>'
+=== p09-attrs-order-title ref=MATCH ftml=MATCH
+  ref:  '<img alt="A foobar" class="animated" src="/local--files/foo.gif" style="border: 1em solid" title="FOO"><p>x</p>'
+  ftml: '<img alt="A foobar" class="animated" src="/local--files/foo.gif" style="border: 1em solid" title="FOO"><p>x</p>'
+  live: '<img alt="A foobar" class="animated" src="/local--files/foo.gif" style="border: 1em solid" title="FOO"><p>x</p>'
+=== p10-width-height-order ref=MATCH ftml=MATCH
+  ref:  '<img alt="a.png" class="image" height="120" src="https://example.com/a.png" width="200"><p>x</p>'
+  ftml: '<img alt="a.png" class="image" height="120" src="https://example.com/a.png" width="200"><p>x</p>'
+  live: '<img alt="a.png" class="image" height="120" src="https://example.com/a.png" width="200"><p>x</p>'
+=== p11-width-empty ref=MATCH ftml=DIFF
+  ref:  '<img alt="a.png" class="image" src="https://example.com/a.png" width=""><p>x</p>'
+  ftml: '<img alt="a.png" class="image" src="https://example.com/a.png" width><p>x</p>'
+  live: '<img alt="a.png" class="image" src="https://example.com/a.png" width=""><p>x</p>'
+=== p12-nonascii ref=MATCH ftml=MATCH
+  ref:  '<img alt="日本語.png" class="image" src="/local--files/%E6%97%A5%E6%9C%AC%E8%AA%9E.png"><p>x</p>'
+  ftml: '<img alt="日本語.png" class="image" src="/local--files/%E6%97%A5%E6%9C%AC%E8%AA%9E.png"><p>x</p>'
+  live: '<img alt="日本語.png" class="image" src="/local--files/%E6%97%A5%E6%9C%AC%E8%AA%9E.png"><p>x</p>'
+=== p13-quoted-url ref=MATCH ftml=MATCH
+  ref:  '<img alt="a.png&quot;" class="image" src="&quot;https://example.com/a.png&quot;"><p>x</p>'
+  ftml: '<img alt="a.png&quot;" class="image" src="&quot;https://example.com/a.png&quot;"><p>x</p>'
+  live: '<img alt="a.png&quot;" class="image" src="&quot;https://example.com/a.png&quot;"><p>x</p>'
+=== p14-external-and-local ref=MATCH ftml=MATCH
+  ref:  '<img alt="a.png" class="image" src="https://example.com/a.png"><img alt="b.png" class="image" src="/local--files/b.png"><p>x</p>'
+  ftml: '<img alt="a.png" class="image" src="https://example.com/a.png"><img alt="b.png" class="image" src="/local--files/b.png"><p>x</p>'
+  live: '<img alt="a.png" class="image" src="https://example.com/a.png"><img alt="b.png" class="image" src="/local--files/b.png"><p>x</p>'
+=== p15-size-unquoted ref=MATCH ftml=MATCH
+  ref:  '<img alt="foo.png" class="image" src="/local--files/foo.png"><p>x</p>'
+  ftml: '<img alt="foo.png" class="image" src="/local--files/foo.png"><p>x</p>'
+  live: '<img alt="foo.png" class="image" src="/local--files/foo.png"><p>x</p>'
+=== p16-width-first ref=MATCH ftml=MATCH
+  ref:  '<img alt="a.png" class="image" height="120" src="https://example.com/a.png" width="200"><p>x</p>'
+  ftml: '<img alt="a.png" class="image" height="120" src="https://example.com/a.png" width="200"><p>x</p>'
+  live: '<img alt="a.png" class="image" height="120" src="https://example.com/a.png" width="200"><p>x</p>'
+=== p17-attr-mixed-order ref=MATCH ftml=MATCH
+  ref:  '<img alt="A" class="image" height="120" src="https://example.com/a.png" style="border:0" title="T" width="200"><p>x</p>'
+  ftml: '<img alt="A" class="image" height="120" src="https://example.com/a.png" style="border:0" title="T" width="200"><p>x</p>'
+  live: '<img alt="A" class="image" height="120" src="https://example.com/a.png" style="border:0" title="T" width="200"><p>x</p>'
+=== p18-size-quoted-png ref=MATCH ftml=MATCH
+  ref:  '<a href="/local--files/foo.png"><img alt="foo.png" class="image" src="/local--resized-images/foo.png/small.jpg"></a><p>x</p>'
+  ftml: '<a href="/local--files/foo.png"><img alt="foo.png" class="image" src="/local--resized-images/foo.png/small.jpg"></a><p>x</p>'
+  live: '<a href="/local--files/foo.png"><img alt="foo.png" class="image" src="/local--resized-images/foo.png/small.jpg"></a><p>x</p>'

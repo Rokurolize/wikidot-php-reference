@@ -1,0 +1,17 @@
+{"errors":[],"html":"<p>alpha<br>\nbeta</p>","id":"nlp-p01-break-inline"}
+{"errors":[],"html":"<p>a<br>\nb<br>\nc</p>","id":"nlp-p02-two-breaks"}
+{"errors":[],"html":"<p>alpha</p><p>beta</p>","id":"nlp-p03-doubled"}
+{"errors":[],"html":"<p>alpha<br>\nbeta</p>","id":"nlp-p04-spaces-around"}
+{"errors":[],"html":"<p>alpha<br>\nbeta</p>","id":"nlp-p05-tabs-around"}
+{"errors":[],"html":"<p>text</p><div><p>body</p></div>","id":"nlp-p06-before-div"}
+{"errors":[],"html":"<div class=\"code\"><pre><code>body</code></pre></div><br>\ntext","id":"nlp-p07-after-code"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span>Heading</span></h1><p>text</p>","id":"nlp-p08-after-heading"}
+{"errors":[],"html":"text<br>\n<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td>b</td>\n</tr>\n</table>","id":"nlp-p09-before-table"}
+{"errors":[],"html":"<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td>b</td>\n</tr>\n</table><p>text</p>","id":"nlp-p10-after-table"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n</ul><p>continued</p>","id":"nlp-p11-list-continuation"}
+{"errors":[],"html":"<blockquote><p>a<br>\nb</p></blockquote>","id":"nlp-p12-bq-multiline"}
+{"errors":[],"html":"<p><strong>a<br>\nb</strong></p>","id":"nlp-p13-bold-break"}
+{"errors":[],"html":"<p>a<br>\nb</p>","id":"nlp-p14-underscore"}
+{"errors":[],"html":"<p>text</p><blockquote><p>quoted</p></blockquote>","id":"nlp-p15-before-quote"}
+{"errors":[],"html":"<p><strong>a<br></strong></p>","id":"nlp-p16-bold-trailing-break"}
+{"errors":[],"html":"<p><span>a<br></span></p>","id":"nlp-p17-span-trailing-break"}

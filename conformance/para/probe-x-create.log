@@ -1,0 +1,279 @@
+x01-image-alone -> muse-probe-r2para-x-x01-image-alone (created)
+x02-image-in-text-run -> muse-probe-r2para-x-x02-image-in-text-run (created)
+x03-image-between-paragraphs -> muse-probe-r2para-x-x03-image-between-paragraphs (created)
+x04-image-with-caption -> muse-probe-r2para-x-x04-image-with-caption (created)
+x05-aligned-image-in-paragraph -> muse-probe-r2para-x-x05-aligned-image-in-paragraph (created)
+x06-image-with-link -> muse-probe-r2para-x-x06-image-with-link (created)
+x07-two-images-one-paragraph -> muse-probe-r2para-x-x07-two-images-one-paragraph (created)
+x08-image-after-newline -> muse-probe-r2para-x-x08-image-after-newline (created)
+x09-image-in-simple-cell -> muse-probe-r2para-x-x09-image-in-simple-cell (created)
+x10-image-in-adv-cell -> muse-probe-r2para-x-x10-image-in-adv-cell (created)
+x11-image-in-div -> muse-probe-r2para-x-x11-image-in-div (created)
+x12-image-in-collapsible -> muse-probe-r2para-x-x12-image-in-collapsible (created)
+x13-image-in-quote -> muse-probe-r2para-x-x13-image-in-quote (created)
+x14-image-caption-with-link -> muse-probe-r2para-x-x14-image-caption-with-link (created)
+x15-image-caption-with-image -> muse-probe-r2para-x-x15-image-caption-with-image (created)
+x16-aligned-image-in-cell -> muse-probe-r2para-x-x16-aligned-image-in-cell (created)
+x17-text-div-text -> muse-probe-r2para-x-x17-text-div-text (created)
+x18-text-collapsible-text -> muse-probe-r2para-x-x18-text-collapsible-text (created)
+x19-text-table-text -> muse-probe-r2para-x-x19-text-table-text (created)
+x20-text-adv-table-text -> muse-probe-r2para-x-x20-text-adv-table-text (created)
+x21-text-list-text -> muse-probe-r2para-x-x21-text-list-text (created)
+x22-text-deflist-text -> muse-probe-r2para-x-x22-text-deflist-text (created)
+x23-text-heading-text -> muse-probe-r2para-x-x23-text-heading-text (created)
+x24-text-footnoteblock-text -> muse-probe-r2para-x-x24-text-footnoteblock-text (created)
+x25-text-code-text -> muse-probe-r2para-x-x25-text-code-text (created)
+x26-text-quote-text -> muse-probe-r2para-x-x26-text-quote-text (created)
+x27-div-text-div -> muse-probe-r2para-x-x27-div-text-div (created)
+x28-heading-text-list -> muse-probe-r2para-x-x28-heading-text-list (created)
+x29-text-toc-text -> muse-probe-r2para-x-x29-text-toc-text (created)
+x30-block-tabs-text -> muse-probe-r2para-x-x30-block-tabs-text (created)
+x31-newline-in-div -> muse-probe-r2para-x-x31-newline-in-div (created)
+x32-newline-in-collapsible -> muse-probe-r2para-x-x32-newline-in-collapsible (created)
+x33-newline-in-simple-cell -> muse-probe-r2para-x-x33-newline-in-simple-cell (created)
+x34-newline-in-adv-cell -> muse-probe-r2para-x-x34-newline-in-adv-cell (created)
+x35-newline-in-list -> muse-probe-r2para-x-x35-newline-in-list (created)
+x36-doubled-newline-in-div -> muse-probe-r2para-x-x36-doubled-newline-in-div (created)
+x37-newline-in-quote -> muse-probe-r2para-x-x37-newline-in-quote (created)
+x38-newline-in-caption -> muse-probe-r2para-x-x38-newline-in-caption (created)
+x39-score-span-alone -> muse-probe-r2para-x-x39-score-span-alone (created)
+x40-score-span-with-text -> muse-probe-r2para-x-x40-score-span-with-text (created)
+x41-score-span-in-div -> muse-probe-r2para-x-x41-score-span-in-div (created)
+x42-tab-in-paragraph -> muse-probe-r2para-x-x42-tab-in-paragraph (created)
+x43-tab-in-list -> muse-probe-r2para-x-x43-tab-in-list (created)
+x44-tab-in-cell -> muse-probe-r2para-x-x44-tab-in-cell (created)
+x45-unclosed-image-opener -> muse-probe-r2para-x-x45-unclosed-image-opener (created)
+x46-image-caption-unclosed -> muse-probe-r2para-x-x46-image-caption-unclosed (created)
+46 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "x01-image-alone": {
+  "fullname": "muse-probe-r2para-x-x01-image-alone",
+  "source": "[[image http://example.com/a.png]]",
+  "action": "created"
+ },
+ "x02-image-in-text-run": {
+  "fullname": "muse-probe-r2para-x-x02-image-in-text-run",
+  "source": "before [[image http://example.com/a.png]] after",
+  "action": "created"
+ },
+ "x03-image-between-paragraphs": {
+  "fullname": "muse-probe-r2para-x-x03-image-between-paragraphs",
+  "source": "lead\n\n[[image http://example.com/a.png]]\n\ntail",
+  "action": "created"
+ },
+ "x04-image-with-caption": {
+  "fullname": "muse-probe-r2para-x-x04-image-with-caption",
+  "source": "[[image http://example.com/a.png]]caption here[[/image]]",
+  "action": "created"
+ },
+ "x05-aligned-image-in-paragraph": {
+  "fullname": "muse-probe-r2para-x-x05-aligned-image-in-paragraph",
+  "source": "text\n\n[[=image http://example.com/a.png]]\n\nmore",
+  "action": "created"
+ },
+ "x06-image-with-link": {
+  "fullname": "muse-probe-r2para-x-x06-image-with-link",
+  "source": "[[image http://example.com/a.png link=\"http://example.com/page\"]]",
+  "action": "created"
+ },
+ "x07-two-images-one-paragraph": {
+  "fullname": "muse-probe-r2para-x-x07-two-images-one-paragraph",
+  "source": "[[image http://example.com/a.png]] [[image http://example.com/b.png]]",
+  "action": "created"
+ },
+ "x08-image-after-newline": {
+  "fullname": "muse-probe-r2para-x-x08-image-after-newline",
+  "source": "line one\n[[image http://example.com/a.png]]\nline two",
+  "action": "created"
+ },
+ "x09-image-in-simple-cell": {
+  "fullname": "muse-probe-r2para-x-x09-image-in-simple-cell",
+  "source": "|| [[image http://example.com/a.png]] || b ||",
+  "action": "created"
+ },
+ "x10-image-in-adv-cell": {
+  "fullname": "muse-probe-r2para-x-x10-image-in-adv-cell",
+  "source": "[[table]][[row]][[cell]][[image http://example.com/a.png]][[/cell]][[/row]][[/table]]",
+  "action": "created"
+ },
+ "x11-image-in-div": {
+  "fullname": "muse-probe-r2para-x-x11-image-in-div",
+  "source": "[[div class=\"box\"]]\n[[image http://example.com/a.png]]\n[[/div]]",
+  "action": "created"
+ },
+ "x12-image-in-collapsible": {
+  "fullname": "muse-probe-r2para-x-x12-image-in-collapsible",
+  "source": "[[collapsible]]\n[[image http://example.com/a.png]]\n[[/collapsible]]",
+  "action": "created"
+ },
+ "x13-image-in-quote": {
+  "fullname": "muse-probe-r2para-x-x13-image-in-quote",
+  "source": "> [[image http://example.com/a.png]]",
+  "action": "created"
+ },
+ "x14-image-caption-with-link": {
+  "fullname": "muse-probe-r2para-x-x14-image-caption-with-link",
+  "source": "[[image http://example.com/a.png]]click [[http://example.com|here]][[/image]]",
+  "action": "created"
+ },
+ "x15-image-caption-with-image": {
+  "fullname": "muse-probe-r2para-x-x15-image-caption-with-image",
+  "source": "[[image http://example.com/a.png]][[image http://example.com/b.png]][[/image]]",
+  "action": "created"
+ },
+ "x16-aligned-image-in-cell": {
+  "fullname": "muse-probe-r2para-x-x16-aligned-image-in-cell",
+  "source": "|| [[=image http://example.com/a.png]] || b ||",
+  "action": "created"
+ },
+ "x17-text-div-text": {
+  "fullname": "muse-probe-r2para-x-x17-text-div-text",
+  "source": "lead\n[[div]]inner[[/div]]\ntail",
+  "action": "created"
+ },
+ "x18-text-collapsible-text": {
+  "fullname": "muse-probe-r2para-x-x18-text-collapsible-text",
+  "source": "lead\n[[collapsible]]inner[[/collapsible]]\ntail",
+  "action": "created"
+ },
+ "x19-text-table-text": {
+  "fullname": "muse-probe-r2para-x-x19-text-table-text",
+  "source": "lead\n|| a || b ||\ntail",
+  "action": "created"
+ },
+ "x20-text-adv-table-text": {
+  "fullname": "muse-probe-r2para-x-x20-text-adv-table-text",
+  "source": "lead\n[[table]][[row]][[cell]]a[[/cell]][[/row]][[/table]]\ntail",
+  "action": "created"
+ },
+ "x21-text-list-text": {
+  "fullname": "muse-probe-r2para-x-x21-text-list-text",
+  "source": "lead\n* item\ntail",
+  "action": "created"
+ },
+ "x22-text-deflist-text": {
+  "fullname": "muse-probe-r2para-x-x22-text-deflist-text",
+  "source": "lead\n: term : definition\ntail",
+  "action": "created"
+ },
+ "x23-text-heading-text": {
+  "fullname": "muse-probe-r2para-x-x23-text-heading-text",
+  "source": "lead\n= Heading =\ntail",
+  "action": "created"
+ },
+ "x24-text-footnoteblock-text": {
+  "fullname": "muse-probe-r2para-x-x24-text-footnoteblock-text",
+  "source": "lead[[footnote]]note[[/footnote]]\n[[footnoteblock]]\ntail",
+  "action": "created"
+ },
+ "x25-text-code-text": {
+  "fullname": "muse-probe-r2para-x-x25-text-code-text",
+  "source": "lead\n[[code]]\nx\n[[/code]]\ntail",
+  "action": "created"
+ },
+ "x26-text-quote-text": {
+  "fullname": "muse-probe-r2para-x-x26-text-quote-text",
+  "source": "lead\n> quoted\ntail",
+  "action": "created"
+ },
+ "x27-div-text-div": {
+  "fullname": "muse-probe-r2para-x-x27-div-text-div",
+  "source": "[[div]]a[[/div]]\nmid\n[[div]]b[[/div]]",
+  "action": "created"
+ },
+ "x28-heading-text-list": {
+  "fullname": "muse-probe-r2para-x-x28-heading-text-list",
+  "source": "= Heading =\nmid\n* item",
+  "action": "created"
+ },
+ "x29-text-toc-text": {
+  "fullname": "muse-probe-r2para-x-x29-text-toc-text",
+  "source": "lead\n[[toc]]\ntail",
+  "action": "created"
+ },
+ "x30-block-tabs-text": {
+  "fullname": "muse-probe-r2para-x-x30-block-tabs-text",
+  "source": "[[div]]a[[/div]]\nword1\tword2\ntail",
+  "action": "created"
+ },
+ "x31-newline-in-div": {
+  "fullname": "muse-probe-r2para-x-x31-newline-in-div",
+  "source": "[[div]]\nline1\nline2\n[[/div]]",
+  "action": "created"
+ },
+ "x32-newline-in-collapsible": {
+  "fullname": "muse-probe-r2para-x-x32-newline-in-collapsible",
+  "source": "[[collapsible]]\nline1\nline2\n[[/collapsible]]",
+  "action": "created"
+ },
+ "x33-newline-in-simple-cell": {
+  "fullname": "muse-probe-r2para-x-x33-newline-in-simple-cell",
+  "source": "|| a\nb || c ||",
+  "action": "created"
+ },
+ "x34-newline-in-adv-cell": {
+  "fullname": "muse-probe-r2para-x-x34-newline-in-adv-cell",
+  "source": "[[table]][[row]][[cell]]a\nb[[/cell]][[/row]][[/table]]",
+  "action": "created"
+ },
+ "x35-newline-in-list": {
+  "fullname": "muse-probe-r2para-x-x35-newline-in-list",
+  "source": "* item\ncontinue",
+  "action": "created"
+ },
+ "x36-doubled-newline-in-div": {
+  "fullname": "muse-probe-r2para-x-x36-doubled-newline-in-div",
+  "source": "[[div]]\nline1\n\nline2\n[[/div]]",
+  "action": "created"
+ },
+ "x37-newline-in-quote": {
+  "fullname": "muse-probe-r2para-x-x37-newline-in-quote",
+  "source": "> line1\n> line2",
+  "action": "created"
+ },
+ "x38-newline-in-caption": {
+  "fullname": "muse-probe-r2para-x-x38-newline-in-caption",
+  "source": "[[image http://example.com/a.png]]cap1\ncap2[[/image]]",
+  "action": "created"
+ },
+ "x39-score-span-alone": {
+  "fullname": "muse-probe-r2para-x-x39-score-span-alone",
+  "source": "[[span class=\"score\"]]100[[/span]]",
+  "action": "created"
+ },
+ "x40-score-span-with-text": {
+  "fullname": "muse-probe-r2para-x-x40-score-span-with-text",
+  "source": "before\n[[span class=\"score\"]]100[[/span]]\nafter",
+  "action": "created"
+ },
+ "x41-score-span-in-div": {
+  "fullname": "muse-probe-r2para-x-x41-score-span-in-div",
+  "source": "[[div]]\n[[span class=\"score\"]]100[[/span]]\n[[/div]]",
+  "action": "created"
+ },
+ "x42-tab-in-paragraph": {
+  "fullname": "muse-probe-r2para-x-x42-tab-in-paragraph",
+  "source": "word1\tword2",
+  "action": "created"
+ },
+ "x43-tab-in-list": {
+  "fullname": "muse-probe-r2para-x-x43-tab-in-list",
+  "source": "* word1\tword2",
+  "action": "created"
+ },
+ "x44-tab-in-cell": {
+  "fullname": "muse-probe-r2para-x-x44-tab-in-cell",
+  "source": "|| word1\tword2 || b ||",
+  "action": "created"
+ },
+ "x45-unclosed-image-opener": {
+  "fullname": "muse-probe-r2para-x-x45-unclosed-image-opener",
+  "source": "[[image http://example.com/a.png\n\n[[div]]x[[/div]]",
+  "action": "created"
+ },
+ "x46-image-caption-unclosed": {
+  "fullname": "muse-probe-r2para-x-x46-image-caption-unclosed",
+  "source": "[[image http://example.com/a.png]]caption\n\nnext",
+  "action": "created"
+ }
+}

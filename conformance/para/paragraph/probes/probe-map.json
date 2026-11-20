@@ -1,0 +1,132 @@
+{
+ "p01-tab-flow": {
+  "fullname": "muse-probe-r2para-pg-p01-tab-flow",
+  "source": "TABSTART word1\tword2 TABEND",
+  "action": "created"
+ },
+ "p02-tab-in-scored-span": {
+  "fullname": "muse-probe-r2para-pg-p02-tab-in-scored-span",
+  "source": "[[span_]]word1\tword2[[/span]]",
+  "action": "created"
+ },
+ "p03-tab-in-plain-span": {
+  "fullname": "muse-probe-r2para-pg-p03-tab-in-plain-span",
+  "source": "[[span]]word1\tword2[[/span]]",
+  "action": "created"
+ },
+ "p04-tab-in-code": {
+  "fullname": "muse-probe-r2para-pg-p04-tab-in-code",
+  "source": "[[code]]word1\tword2[[/code]]",
+  "action": "created"
+ },
+ "p05-multispace-flow": {
+  "fullname": "muse-probe-r2para-pg-p05-multispace-flow",
+  "source": "word1    word2",
+  "action": "created"
+ },
+ "p06-tab-near-edges": {
+  "fullname": "muse-probe-r2para-pg-p06-tab-near-edges",
+  "source": "A\tword\tB",
+  "action": "created"
+ },
+ "p07-multispace-in-scored-span": {
+  "fullname": "muse-probe-r2para-pg-p07-multispace-in-scored-span",
+  "source": "[[span_]]word1    word2[[/span]]",
+  "action": "created"
+ },
+ "p08-scored-span-alone": {
+  "fullname": "muse-probe-r2para-pg-p08-scored-span-alone",
+  "source": "[[span_]]X[[/span]]",
+  "action": "created"
+ },
+ "p09-score-class-span-alone": {
+  "fullname": "muse-probe-r2para-pg-p09-score-class-span-alone",
+  "source": "[[span class=\"score\"]]100[[/span]]",
+  "action": "created"
+ },
+ "p10-score-class-with-text": {
+  "fullname": "muse-probe-r2para-pg-p10-score-class-with-text",
+  "source": "before\n[[span class=\"score\"]]100[[/span]]\nafter",
+  "action": "created"
+ },
+ "p11-scored-span-with-text": {
+  "fullname": "muse-probe-r2para-pg-p11-scored-span-with-text",
+  "source": "before\n[[span_]]X[[/span]]\nafter",
+  "action": "created"
+ },
+ "p12-score-class-inline": {
+  "fullname": "muse-probe-r2para-pg-p12-score-class-inline",
+  "source": "A [[span class=\"score\"]]100[[/span]] B",
+  "action": "created"
+ },
+ "p13-plain-span-alone": {
+  "fullname": "muse-probe-r2para-pg-p13-plain-span-alone",
+  "source": "[[span]]X[[/span]]",
+  "action": "created"
+ },
+ "p14-other-class-span-alone": {
+  "fullname": "muse-probe-r2para-pg-p14-other-class-span-alone",
+  "source": "[[span class=\"other\"]]X[[/span]]",
+  "action": "created"
+ },
+ "p15-score-class-in-div": {
+  "fullname": "muse-probe-r2para-pg-p15-score-class-in-div",
+  "source": "[[div]]\n[[span class=\"score\"]]100[[/span]]\n[[/div]]",
+  "action": "created"
+ },
+ "p16-score-class-double-blank": {
+  "fullname": "muse-probe-r2para-pg-p16-score-class-double-blank",
+  "source": "before\n\n[[span class=\"score\"]]100[[/span]]\n\nafter",
+  "action": "created"
+ },
+ "p17-scored-span-double-blank": {
+  "fullname": "muse-probe-r2para-pg-p17-scored-span-double-blank",
+  "source": "before\n\n[[span_]]X[[/span]]\n\nafter",
+  "action": "created"
+ },
+ "p18-two-paragraphs": {
+  "fullname": "muse-probe-r2para-pg-p18-two-paragraphs",
+  "source": "first\n\nsecond",
+  "action": "created"
+ },
+ "p19-blank-then-text": {
+  "fullname": "muse-probe-r2para-pg-p19-blank-then-text",
+  "source": "A\n\nlead",
+  "action": "created"
+ },
+ "p20-text-then-blank": {
+  "fullname": "muse-probe-r2para-pg-p20-text-then-blank",
+  "source": "tail\n\nEND",
+  "action": "created"
+ },
+ "p21-blank-run": {
+  "fullname": "muse-probe-r2para-pg-p21-blank-run",
+  "source": "a\n\n\n\nb",
+  "action": "created"
+ },
+ "p22-tab-in-line": {
+  "fullname": "muse-probe-r2para-pg-p22-tab-in-line",
+  "source": "a\nb\tc\n\nc",
+  "action": "edited"
+ },
+ "p23-heading-then-text": {
+  "fullname": "muse-probe-r2para-pg-p23-heading-then-text",
+  "source": "= Heading =\n\ntext",
+  "action": "created"
+ },
+ "p24-div-then-text": {
+  "fullname": "muse-probe-r2para-pg-p24-div-then-text",
+  "source": "[[div]]block[[/div]]\n\ntext",
+  "action": "created"
+ },
+ "p25-code-then-text": {
+  "fullname": "muse-probe-r2para-pg-p25-code-then-text",
+  "source": "[[code]]\ncode\n[[/code]]\n\ntext",
+  "action": "created"
+ },
+ "p26-single-newline": {
+  "fullname": "muse-probe-r2para-pg-p26-single-newline",
+  "source": "line one\nline two",
+  "action": "created"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "pg20-trailing-spaces": "unsavable-trailing-ws",
+ "pg21-trailing-tab": "unsavable-trailing-ws",
+ "pg22-trailing-mixed": "unsavable-trailing-ws",
+ "pg23-both-edges": "unsavable-trailing-ws",
+ "pg26-tab-at-run-boundary": "unsavable-trailing-ws"
+}

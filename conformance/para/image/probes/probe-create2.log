@@ -1,0 +1,21 @@
+p16-width-first -> muse-probe-r2para-img-p16-width-first (created)
+p17-attr-mixed-order -> muse-probe-r2para-img-p17-attr-mixed-order (created)
+p18-size-quoted-png -> muse-probe-r2para-img-p18-size-quoted-png (created)
+3 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p16-width-first": {
+  "fullname": "muse-probe-r2para-img-p16-width-first",
+  "source": "[[image https://example.com/a.png width=\"200\" height=\"120\"]]\n\nx",
+  "action": "created"
+ },
+ "p17-attr-mixed-order": {
+  "fullname": "muse-probe-r2para-img-p17-attr-mixed-order",
+  "source": "[[image https://example.com/a.png style=\"border:0\" width=\"200\" title=\"T\" height=\"120\" alt=\"A\"]]\n\nx",
+  "action": "created"
+ },
+ "p18-size-quoted-png": {
+  "fullname": "muse-probe-r2para-img-p18-size-quoted-png",
+  "source": "[[image foo.png size=\"small\"]]\n\nx",
+  "action": "created"
+ }
+}

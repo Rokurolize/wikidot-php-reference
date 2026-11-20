@@ -1,0 +1,26 @@
+{"id":"p01-tab-flow","output":"<p>TABSTART word1    word2 TABEND<\/p>\n\n"}
+{"id":"p02-tab-in-scored-span","output":"<p>[[span_]]word1    word2[[\/span]]<\/p>\n\n"}
+{"id":"p03-tab-in-plain-span","output":"<p><span>word1    word2<\/span><\/p>\n\n"}
+{"id":"p04-tab-in-code","output":"\n<div class=\"code\">\n<pre><code>word1    word2<\/code><\/pre><\/div>\n\n"}
+{"id":"p05-multispace-flow","output":"<p>word1    word2<\/p>\n\n"}
+{"id":"p06-tab-near-edges","output":"<p>A    word    B<\/p>\n\n"}
+{"id":"p07-multispace-in-scored-span","output":"<p>[[span_]]word1    word2[[\/span]]<\/p>\n\n"}
+{"id":"p08-scored-span-alone","output":"<p>[[span_]]X[[\/span]]<\/p>\n\n"}
+{"id":"p09-score-class-span-alone","output":"<p><span class=\"score\">100<\/span><\/p>\n\n"}
+{"id":"p10-score-class-with-text","output":"<p>before<br \/>\n<span class=\"score\">100<\/span><br \/>\nafter<\/p>\n\n"}
+{"id":"p11-scored-span-with-text","output":"<p>before<br \/>\n[[span_]]X[[\/span]]<br \/>\nafter<\/p>\n\n"}
+{"id":"p12-score-class-inline","output":"<p>A <span class=\"score\">100<\/span> B<\/p>\n\n"}
+{"id":"p13-plain-span-alone","output":"<p><span>X<\/span><\/p>\n\n"}
+{"id":"p14-other-class-span-alone","output":"<p><span class=\"other\">X<\/span><\/p>\n\n"}
+{"id":"p15-score-class-in-div","output":"<div ><p><span class=\"score\">100<\/span><\/p>\n\n<\/div>"}
+{"id":"p16-score-class-double-blank","output":"<p>before<\/p>\n\n<p><span class=\"score\">100<\/span><\/p>\n\n<p>after<\/p>\n\n"}
+{"id":"p17-scored-span-double-blank","output":"<p>before<\/p>\n\n<p>[[span_]]X[[\/span]]<\/p>\n\n<p>after<\/p>\n\n"}
+{"id":"p18-two-paragraphs","output":"<p>first<\/p>\n\n<p>second<\/p>\n\n"}
+{"id":"p19-blank-then-text","output":"<p>A<\/p>\n\n<p>lead<\/p>\n\n"}
+{"id":"p20-text-then-blank","output":"<p>tail<\/p>\n\n<p>END<\/p>\n\n"}
+{"id":"p21-blank-run","output":"<p>a<\/p>\n\n<p>b<\/p>\n\n"}
+{"id":"p22-tab-in-line","output":"<p>a<br \/>\nb    c<\/p>\n\n<p>c<\/p>\n\n"}
+{"id":"p23-heading-then-text","output":"<p style=\"text-align: center;\">Heading =<\/p><p>text<\/p>\n\n"}
+{"id":"p24-div-then-text","output":"<p>[[div]]block[[\/div]]<\/p>\n\n<p>text<\/p>\n\n"}
+{"id":"p25-code-then-text","output":"\n<div class=\"code\">\n<pre><code>code<\/code><\/pre><\/div>\n\n<p>text<\/p>\n\n"}
+{"id":"p26-single-newline","output":"<p>line one<br \/>\nline two<\/p>\n\n"}

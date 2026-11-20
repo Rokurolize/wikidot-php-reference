@@ -1,0 +1,17 @@
+{"id": "nlp-p01-break-inline", "source": "alpha\nbeta"}
+{"id": "nlp-p02-two-breaks", "source": "a\nb\nc"}
+{"id": "nlp-p03-doubled", "source": "alpha\n\nbeta"}
+{"id": "nlp-p04-spaces-around", "source": "alpha \n beta"}
+{"id": "nlp-p05-tabs-around", "source": "alpha\t\n\tbeta"}
+{"id": "nlp-p06-before-div", "source": "text\n[[div]]\nbody\n[[/div]]"}
+{"id": "nlp-p07-after-code", "source": "[[code]]\nbody\n[[/code]]\ntext"}
+{"id": "nlp-p08-after-heading", "source": "+ Heading\ntext"}
+{"id": "nlp-p09-before-table", "source": "text\n|| a || b ||"}
+{"id": "nlp-p10-after-table", "source": "|| a || b ||\ntext"}
+{"id": "nlp-p11-list-continuation", "source": "* one\ncontinued"}
+{"id": "nlp-p12-bq-multiline", "source": "> a\n> b"}
+{"id": "nlp-p13-bold-break", "source": "**a\nb**"}
+{"id": "nlp-p14-underscore", "source": "a _\nb"}
+{"id": "nlp-p15-before-quote", "source": "text\n> quoted"}
+{"id": "nlp-p16-bold-trailing-break", "source": "**a\n**"}
+{"id": "nlp-p17-span-trailing-break", "source": "[[span]]a\n[[/span]]"}

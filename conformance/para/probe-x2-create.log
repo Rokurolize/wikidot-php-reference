@@ -1,0 +1,75 @@
+x2-01-scored-span-alone -> muse-probe-r2para-x-x2-01-scored-span-alone (created)
+x2-02-scored-span-with-text -> muse-probe-r2para-x-x2-02-scored-span-with-text (created)
+x2-03-scored-span-in-div -> muse-probe-r2para-x-x2-03-scored-span-in-div (created)
+x2-04-scored-span-then-block -> muse-probe-r2para-x-x2-04-scored-span-then-block (created)
+x2-05-scored-span-then-heading -> muse-probe-r2para-x-x2-05-scored-span-then-heading (created)
+x2-06-image-caption-sentinel -> muse-probe-r2para-x-x2-06-image-caption-sentinel (created)
+x2-07-image-caption-link-sentinel -> muse-probe-r2para-x-x2-07-image-caption-link-sentinel (created)
+x2-08-aligned-image-caption-sentinel -> muse-probe-r2para-x-x2-08-aligned-image-caption-sentinel (created)
+x2-09-image-in-paragraph-sentinel -> muse-probe-r2para-x-x2-09-image-in-paragraph-sentinel (created)
+x2-10-image-after-break-sentinel -> muse-probe-r2para-x-x2-10-image-after-break-sentinel (created)
+x2-11-text-table-sentinel -> muse-probe-r2para-x-x2-11-text-table-sentinel (created)
+x2-12-text-deflist-sentinel -> muse-probe-r2para-x-x2-12-text-deflist-sentinel (created)
+12 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "x2-01-scored-span-alone": {
+  "fullname": "muse-probe-r2para-x-x2-01-scored-span-alone",
+  "source": "[[span_]]100[[/span]]",
+  "action": "created"
+ },
+ "x2-02-scored-span-with-text": {
+  "fullname": "muse-probe-r2para-x-x2-02-scored-span-with-text",
+  "source": "before\n[[span_]]100[[/span]]\nafter",
+  "action": "created"
+ },
+ "x2-03-scored-span-in-div": {
+  "fullname": "muse-probe-r2para-x-x2-03-scored-span-in-div",
+  "source": "[[div]]\n[[span_]]100[[/span]]\n[[/div]]",
+  "action": "created"
+ },
+ "x2-04-scored-span-then-block": {
+  "fullname": "muse-probe-r2para-x-x2-04-scored-span-then-block",
+  "source": "[[span_]]100[[/span]]\n[[div]]x[[/div]]",
+  "action": "created"
+ },
+ "x2-05-scored-span-then-heading": {
+  "fullname": "muse-probe-r2para-x-x2-05-scored-span-then-heading",
+  "source": "[[span_]]100[[/span]]\n= H =\ntext",
+  "action": "created"
+ },
+ "x2-06-image-caption-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-06-image-caption-sentinel",
+  "source": "[[image http://example.com/a.png]]caption here[[/image]]\n\nsentinel",
+  "action": "created"
+ },
+ "x2-07-image-caption-link-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-07-image-caption-link-sentinel",
+  "source": "[[image http://example.com/a.png]]click [[http://example.com|here]][[/image]]\n\nsentinel",
+  "action": "created"
+ },
+ "x2-08-aligned-image-caption-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-08-aligned-image-caption-sentinel",
+  "source": "[[=image http://example.com/a.png]]cap[[/image]]\n\nsentinel",
+  "action": "created"
+ },
+ "x2-09-image-in-paragraph-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-09-image-in-paragraph-sentinel",
+  "source": "lead [[image http://example.com/a.png]] tail\n\nsentinel",
+  "action": "created"
+ },
+ "x2-10-image-after-break-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-10-image-after-break-sentinel",
+  "source": "line one\n[[image http://example.com/a.png]]\nline two\n\nsentinel",
+  "action": "created"
+ },
+ "x2-11-text-table-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-11-text-table-sentinel",
+  "source": "lead\n|| a || b ||\ntail\n\nsentinel",
+  "action": "created"
+ },
+ "x2-12-text-deflist-sentinel": {
+  "fullname": "muse-probe-r2para-x-x2-12-text-deflist-sentinel",
+  "source": "lead\n: term : definition\ntail\n\nsentinel",
+  "action": "created"
+ }
+}

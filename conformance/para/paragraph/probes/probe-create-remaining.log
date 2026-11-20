@@ -1,0 +1,33 @@
+p22-tab-in-line -> muse-probe-r2para-pg-p22-tab-in-line (edited)
+p23-heading-then-text -> muse-probe-r2para-pg-p23-heading-then-text (created)
+p24-div-then-text -> muse-probe-r2para-pg-p24-div-then-text (created)
+p25-code-then-text -> muse-probe-r2para-pg-p25-code-then-text (created)
+p26-single-newline -> muse-probe-r2para-pg-p26-single-newline (created)
+5 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p22-tab-in-line": {
+  "fullname": "muse-probe-r2para-pg-p22-tab-in-line",
+  "source": "a\nb\tc\n\nc",
+  "action": "edited"
+ },
+ "p23-heading-then-text": {
+  "fullname": "muse-probe-r2para-pg-p23-heading-then-text",
+  "source": "= Heading =\n\ntext",
+  "action": "created"
+ },
+ "p24-div-then-text": {
+  "fullname": "muse-probe-r2para-pg-p24-div-then-text",
+  "source": "[[div]]block[[/div]]\n\ntext",
+  "action": "created"
+ },
+ "p25-code-then-text": {
+  "fullname": "muse-probe-r2para-pg-p25-code-then-text",
+  "source": "[[code]]\ncode\n[[/code]]\n\ntext",
+  "action": "created"
+ },
+ "p26-single-newline": {
+  "fullname": "muse-probe-r2para-pg-p26-single-newline",
+  "source": "line one\nline two",
+  "action": "created"
+ }
+}

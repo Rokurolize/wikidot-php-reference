@@ -1,0 +1,17 @@
+{"id":"nlp-p01-break-inline","output":"<p>alpha<br \/>\nbeta<\/p>\n\n"}
+{"id":"nlp-p02-two-breaks","output":"<p>a<br \/>\nb<br \/>\nc<\/p>\n\n"}
+{"id":"nlp-p03-doubled","output":"<p>alpha<\/p>\n\n<p>beta<\/p>\n\n"}
+{"id":"nlp-p04-spaces-around","output":"<p>alpha <br \/>\n beta<\/p>\n\n"}
+{"id":"nlp-p05-tabs-around","output":"<p>alpha    <br \/>\n    beta<\/p>\n\n"}
+{"id":"nlp-p06-before-div","output":"<p>text<\/p>\n\n<div ><p>body<\/p>\n\n<\/div>"}
+{"id":"nlp-p07-after-code","output":"\n<div class=\"code\">\n<pre><code>body<\/code><\/pre><\/div>\n\n<br \/>\ntext"}
+{"id":"nlp-p08-after-heading","output":"\n<h1 id=\"toc0\"><span>Heading<\/span><\/h1>\n<p>text<\/p>\n\n"}
+{"id":"nlp-p09-before-table","output":"<p>text<br \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table><\/p>\n\n"}
+{"id":"nlp-p10-after-table","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table><p>text<\/p>\n\n"}
+{"id":"nlp-p11-list-continuation","output":"<ul>\n<li>one<\/li>\n<\/ul><p>continued<\/p>\n\n"}
+{"id":"nlp-p12-bq-multiline","output":"<blockquote><p>a<br \/>\nb<\/p>\n\n<\/blockquote>\n"}
+{"id":"nlp-p13-bold-break","output":"<p><strong>a<br \/>\nb<\/strong><\/p>\n\n"}
+{"id":"nlp-p14-underscore","output":"<p>a<br \/>\nb<\/p>\n\n"}
+{"id":"nlp-p15-before-quote","output":"<p>text<\/p>\n\n<blockquote><p>quoted<\/p>\n\n<\/blockquote>\n"}
+{"id":"nlp-p16-bold-trailing-break","output":"<p><strong>a<br \/>\n<\/strong><\/p>\n\n"}
+{"id":"nlp-p17-span-trailing-break","output":"<p><span>a<br \/>\n<\/span><\/p>\n\n"}

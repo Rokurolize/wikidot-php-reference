@@ -1,0 +1,32 @@
+{
+ "p16-width-first": {
+  "fullname": "muse-probe-r2para-img-p16-width-first",
+  "html": "<img src=\"https://example.com/a.png\" height=\"120\" width=\"200\" alt=\"a.png\" class=\"image\" />\n<p>x</p>",
+  "html_sha256": "6d1baec0f4efda1d026023e78ca88e9f2e04a95503066ce3fb1f78a83a3d737d",
+  "source": "[[image https://example.com/a.png width=\"200\" height=\"120\"]]\n\nx",
+  "source_sha256": "0d245f9dde5a0a64f3a6526cf7fb0e1ee888b45b174aa9f9da7de09c167e7b1b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17-attr-mixed-order": {
+  "fullname": "muse-probe-r2para-img-p17-attr-mixed-order",
+  "html": "<img src=\"https://example.com/a.png\" title=\"T\" style=\"border:0\" alt=\"A\" height=\"120\" width=\"200\" class=\"image\" />\n<p>x</p>",
+  "html_sha256": "3087992a8f0cb83a1ee86f6117e094187cb73495a3b4cc7cddcea7cebe59dc50",
+  "source": "[[image https://example.com/a.png style=\"border:0\" width=\"200\" title=\"T\" height=\"120\" alt=\"A\"]]\n\nx",
+  "source_sha256": "760495b333dc6bb57e83da160d45cb4b01decfec79cfa94836440299a395fe1a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18-size-quoted-png": {
+  "fullname": "muse-probe-r2para-img-p18-size-quoted-png",
+  "html": "<a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-r2para-img-p18-size-quoted-png/foo.png\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-r2para-img-p18-size-quoted-png/foo.png/small.jpg\" alt=\"foo.png\" class=\"image\" /></a>\n<p>x</p>",
+  "html_sha256": "d4b1faf388dd79cdffdf608f8196a4d4de51d1ec8be7c40574d5e80537793c19",
+  "source": "[[image foo.png size=\"small\"]]\n\nx",
+  "source_sha256": "977639bd063340fe0465dca3d65c04e6037eaadc105fb2e06a20a5c8bdf3388a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
