@@ -1,0 +1,22 @@
+MODE probe: {"all3": 18, "n": 22, "sig_after_ftml": 18, "sig_after_live": 20, "sig_before_ftml": 10, "sig_ftml_live": 20, "whole_after_ftml": 12, "whole_after_live": 17}
+mismatching cases after correction: 4
+--- p07-external-link
+    before: [(1, 'toc0', '<span>See [<a href="http://example.com|the">site</a>]</span>')]
+    after : [(1, 'toc0', '<span>See [<a href="http://example.com|the">site</a>]</span>')]
+    ftml  : [(1, 'toc0', '<span>See [[<a href="http://example.com">http://example.com</a>|the site]]</span>')]
+    live  : [(1, 'toc0', '<span>See [<a href="http://example.com|the">site</a>]</span>')]
+--- p08-entities
+    before: [(1, 'toc0', "<span>A &amp; B &lt; C &gt; D &quot;quote&quot; 'apos'</span>")]
+    after : [(1, 'toc0', "<span>A &amp; B &lt; C &gt; D &quot;quote&quot; 'apos'</span>")]
+    ftml  : [(1, 'toc0', '<span>A &amp; B &lt; C &gt; D &quot;quote&quot; &#39;apos&#39;</span>')]
+    live  : [(1, 'toc0', "<span>A &amp; B &lt; C &gt; D &quot;quote&quot; 'apos'</span>")]
+--- p22-anchor-element
+    before: [(1, 'toc0', '<span>[[a name=&quot;x&quot;]]anchor[[/a]]</span>')]
+    after : [(1, 'toc0', '<span>[[a name=&quot;x&quot;]]anchor[[/a]]</span>')]
+    ftml  : [(1, 'toc0', '<span><a href="">anchor</a></span>')]
+    live  : [(1, 'toc0', '<span><a href="">anchor</a></span>')]
+--- p23-div-barrier-inline
+    before: [(1, 'toc0', '<span>Head</div>tail</span>'), (2, 'toc1', '<span>J</span>')]
+    after : [(1, 'toc0', '<span>Head</div>tail</span>'), (2, 'toc1', '<span>J</span>')]
+    ftml  : [(1, 'toc0', '<span>Head</span> tail'), (2, 'toc1', '<span><span>J</span></span>')]
+    live  : [(1, 'toc0', '<span>Head</span> tail'), (2, 'toc1', '<span><span>J</span></span>')]

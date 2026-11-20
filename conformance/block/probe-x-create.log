@@ -1,0 +1,153 @@
+x-toc-basic -> muse-probe-r2block-x-x-toc-basic (created)
+x-toc-in-div -> muse-probe-r2block-x-x-toc-in-div (created)
+x-toc-in-collapsible -> muse-probe-r2block-x-x-toc-in-collapsible (created)
+x-toc-untagged-iftags -> muse-probe-r2block-x-x-toc-untagged-iftags (created)
+x-toc-in-code -> muse-probe-r2block-x-x-toc-in-code (created)
+x-toc-in-quote -> muse-probe-r2block-x-x-toc-in-quote (created)
+x-toc-before -> muse-probe-r2block-x-x-toc-before (created)
+x-toc-two -> muse-probe-r2block-x-x-toc-two (created)
+x-toc-float-right -> muse-probe-r2block-x-x-toc-float-right (created)
+x-anchor-repeat -> muse-probe-r2block-x-x-anchor-repeat (created)
+x-anchor-repeat-levels -> muse-probe-r2block-x-x-anchor-repeat-levels (created)
+x-anchor-markup -> muse-probe-r2block-x-x-anchor-markup (created)
+x-anchor-across-containers -> muse-probe-r2block-x-x-anchor-across-containers (created)
+x-anchor-skips -> muse-probe-r2block-x-x-anchor-skips (created)
+x-bq-head -> muse-probe-r2block-x-x-bq-head (created)
+x-bq-footnote -> muse-probe-r2block-x-x-bq-footnote (created)
+x-bq-list -> muse-probe-r2block-x-x-bq-list (created)
+x-bq-empty -> muse-probe-r2block-x-x-bq-empty (created)
+x-bq-empty-lines -> muse-probe-r2block-x-x-bq-empty-lines (created)
+x-bq-nested-head -> muse-probe-r2block-x-x-bq-nested-head (created)
+x-bq-attr -> muse-probe-r2block-x-x-bq-attr (created)
+x-bq-unterminated -> muse-probe-r2block-x-x-bq-unterminated (created)
+x-quote-head -> muse-probe-r2block-x-x-quote-head (created)
+x-mix-bq-head-toc -> muse-probe-r2block-x-x-mix-bq-head-toc (created)
+x-mix-toc-in-bq -> muse-probe-r2block-x-x-mix-toc-in-bq (created)
+25 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "x-toc-basic": {
+  "fullname": "muse-probe-r2block-x-x-toc-basic",
+  "source": "+ Alpha\n++ Beta\n[[toc]]",
+  "action": "created"
+ },
+ "x-toc-in-div": {
+  "fullname": "muse-probe-r2block-x-x-toc-in-div",
+  "source": "[[div]]\n+ In div\n[[/div]]\n+ Outside\n[[toc]]",
+  "action": "created"
+ },
+ "x-toc-in-collapsible": {
+  "fullname": "muse-probe-r2block-x-x-toc-in-collapsible",
+  "source": "[[collapsible]]\n+ In collapsible\n[[/collapsible]]\n+ Outside\n[[toc]]",
+  "action": "created"
+ },
+ "x-toc-untagged-iftags": {
+  "fullname": "muse-probe-r2block-x-x-toc-untagged-iftags",
+  "source": "[[iftags -alpha]]\n+ Hidden\n[[/iftags]]\n+ Visible\n[[toc]]",
+  "action": "created"
+ },
+ "x-toc-in-code": {
+  "fullname": "muse-probe-r2block-x-x-toc-in-code",
+  "source": "[[code]]\n+ Literal\n[[/code]]\n+ Real\n[[toc]]",
+  "action": "created"
+ },
+ "x-toc-in-quote": {
+  "fullname": "muse-probe-r2block-x-x-toc-in-quote",
+  "source": "> + Quoted heading\n\n+ Real\n[[toc]]",
+  "action": "created"
+ },
+ "x-toc-before": {
+  "fullname": "muse-probe-r2block-x-x-toc-before",
+  "source": "[[toc]]\n+ Alpha\n++ Beta",
+  "action": "created"
+ },
+ "x-toc-two": {
+  "fullname": "muse-probe-r2block-x-x-toc-two",
+  "source": "[[toc]]\n+ One\n[[toc]]\n++ Two",
+  "action": "created"
+ },
+ "x-toc-float-right": {
+  "fullname": "muse-probe-r2block-x-x-toc-float-right",
+  "source": "[[f>toc]]\n+ Alpha\n++ Beta",
+  "action": "created"
+ },
+ "x-anchor-repeat": {
+  "fullname": "muse-probe-r2block-x-x-anchor-repeat",
+  "source": "+ Alpha\n+ Alpha\n[[toc]]",
+  "action": "created"
+ },
+ "x-anchor-repeat-levels": {
+  "fullname": "muse-probe-r2block-x-x-anchor-repeat-levels",
+  "source": "+ Alpha\n++ Alpha\n+ Alpha\n[[toc]]",
+  "action": "created"
+ },
+ "x-anchor-markup": {
+  "fullname": "muse-probe-r2block-x-x-anchor-markup",
+  "source": "+ **Bold** and [[http://example.com|link]]\n[[toc]]",
+  "action": "created"
+ },
+ "x-anchor-across-containers": {
+  "fullname": "muse-probe-r2block-x-x-anchor-across-containers",
+  "source": "[[div]]\n+ Same\n[[/div]]\n+ Same\n[[toc]]",
+  "action": "created"
+ },
+ "x-anchor-skips": {
+  "fullname": "muse-probe-r2block-x-x-anchor-skips",
+  "source": "+ Level1\n++++ Level4\n[[toc]]",
+  "action": "created"
+ },
+ "x-bq-head": {
+  "fullname": "muse-probe-r2block-x-x-bq-head",
+  "source": "[[blockquote]]\n+ Inside\n[[/blockquote]]\n+ Outside\n[[toc]]",
+  "action": "created"
+ },
+ "x-bq-footnote": {
+  "fullname": "muse-probe-r2block-x-x-bq-footnote",
+  "source": "[[blockquote]]\n[[footnote]]inside[[/footnote]]\n[[/blockquote]]\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x-bq-list": {
+  "fullname": "muse-probe-r2block-x-x-bq-list",
+  "source": "[[blockquote]]\n* one\n* two\n[[/blockquote]]",
+  "action": "created"
+ },
+ "x-bq-empty": {
+  "fullname": "muse-probe-r2block-x-x-bq-empty",
+  "source": "a\n[[blockquote]][[/blockquote]]\nb",
+  "action": "created"
+ },
+ "x-bq-empty-lines": {
+  "fullname": "muse-probe-r2block-x-x-bq-empty-lines",
+  "source": "a\n[[blockquote]]\n\n[[/blockquote]]\nb",
+  "action": "created"
+ },
+ "x-bq-nested-head": {
+  "fullname": "muse-probe-r2block-x-x-bq-nested-head",
+  "source": "[[blockquote]]\n[[blockquote]]\n+ Deep\n[[/blockquote]]\n[[/blockquote]]\n[[toc]]",
+  "action": "created"
+ },
+ "x-bq-attr": {
+  "fullname": "muse-probe-r2block-x-x-bq-attr",
+  "source": "[[blockquote id=\"bq\" class=\"c\"]]text[[/blockquote]]",
+  "action": "created"
+ },
+ "x-bq-unterminated": {
+  "fullname": "muse-probe-r2block-x-x-bq-unterminated",
+  "source": "[[blockquote]]\ntext",
+  "action": "created"
+ },
+ "x-quote-head": {
+  "fullname": "muse-probe-r2block-x-x-quote-head",
+  "source": "> + quoted\n\n+ real\n[[toc]]",
+  "action": "created"
+ },
+ "x-mix-bq-head-toc": {
+  "fullname": "muse-probe-r2block-x-x-mix-bq-head-toc",
+  "source": "[[blockquote]]\n+ In quote\n[[/blockquote]]\n+ Outside\n[[toc]]",
+  "action": "created"
+ },
+ "x-mix-toc-in-bq": {
+  "fullname": "muse-probe-r2block-x-x-mix-toc-in-bq",
+  "source": "[[blockquote]]\n[[toc]]\n+ Inside\n[[/blockquote]]",
+  "action": "created"
+ }
+}

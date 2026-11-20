@@ -1,0 +1,24 @@
+p31-star -> muse-probe-r2block-toc-p31-star stable=True saved_source_matches=True valid=True
+p32-iftags-mid-name -> muse-probe-r2block-toc-p32-iftags-mid-name stable=True saved_source_matches=True valid=True
+{
+ "p31-star": {
+  "fullname": "muse-probe-r2block-toc-p31-star",
+  "html": "<p>[[*toc]]</p>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "2169b5f93b61850ced4f852921de0bd2ce6d033d9e47d8fe6ca3cdcabd7afe2d",
+  "source": "[[*toc]]\n\n+ A",
+  "source_sha256": "c3e823273192542c0ece94eb677748a6688c65274f970160d9674a0c3f8927e0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p32-iftags-mid-name": {
+  "fullname": "muse-probe-r2block-toc-p32-iftags-mid-name",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "f8a9fabe28e4554135baa831c03baa55074b99763e915c97c2fe8f132a1e5711",
+  "source": "[[t[[iftags -zzz]][[/iftags]]oc]]\n\n+ A",
+  "source_sha256": "f261f29edff05e3806080963986ac394414c544c1b7de87da9affd4ddc54e225",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

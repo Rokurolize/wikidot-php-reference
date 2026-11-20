@@ -1,0 +1,2 @@
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 29..33, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 4..6, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 33..35, kind: NoRulesMatch }"],"html":"<p>See [[<a href=\"http://example.com\">http://example.com</a>|the site]]</p>","id":"inline-link"}
+{"errors":[],"html":"<p><a href=\"\">anchor</a></p>","id":"inline-anchor"}

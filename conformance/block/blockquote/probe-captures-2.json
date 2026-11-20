@@ -1,0 +1,42 @@
+{
+ "depth-skip": {
+  "fullname": "muse-probe-r2block-bq-depth-skip",
+  "html": "<blockquote>\n<p>a</p>\n<blockquote>\n<blockquote>\n<p>c</p>\n</blockquote>\n</blockquote>\n</blockquote>",
+  "html_sha256": "7739c3570392fe105ce3eb9e3a139359f26c0f2fe64fbc033f7eba3431484c49",
+  "source": "> a\n>>> c",
+  "source_sha256": "a6d7f597d14e9fc4b36e062ae8c1c308c1f9d65b90a029fa187f0060c37e45c1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "entities": {
+  "fullname": "muse-probe-r2block-bq-entities",
+  "html": "<blockquote>\n<p>&amp;amp; &amp;lt;</p>\n</blockquote>",
+  "html_sha256": "3acb47e232ca140e3e1b7a4bb34bc040e2774d2a3b589ccf229e905c547f92a9",
+  "source": "> &amp; &lt;",
+  "source_sha256": "5c85448a8252b7eddbca5461b2daa36b4b08b44dffc5b0e04dd0fb93b92e360b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "inline-markup": {
+  "fullname": "muse-probe-r2block-bq-inline-markup",
+  "html": "<blockquote>\n<p><strong>b</strong> <a href=\"http://example.com\">label</a></p>\n</blockquote>",
+  "html_sha256": "b5f2e11a5a53e25567cbfb787377b8815771a1cc462490464a96858605b0b99e",
+  "source": "> **b** [http://example.com label]",
+  "source_sha256": "ac63ad326b9188dd0a11f9eb9a4f7bca72c84ccaa1a2b30a69ef621530753551",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "marker-space-before-text": {
+  "fullname": "muse-probe-r2block-bq-marker-space-before-text",
+  "html": "<p>X</p>",
+  "html_sha256": "ad248596661a840f40c40032a10aabcc6de25f92a6220ba1d0dd826fab1b2156",
+  "source": "> \nX",
+  "source_sha256": "099c96ceb91a8d127728212931eaf38aaaa43ce9f45ce97d6942583d83c2e3fa",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,2 @@
+{"id": "inline-link", "source": "See [[http://example.com|the site]]"}
+{"id": "inline-anchor", "source": "[[a name=\"x\"]]anchor[[/a]]"}

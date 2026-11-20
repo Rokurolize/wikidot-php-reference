@@ -1,0 +1,48 @@
+p01-notoc-single: captured on attempt 1
+p02-notoc-interleaved: captured on attempt 1
+p09-toc-excludes-notoc: captured on attempt 1
+p03-same-text: captured on attempt 1
+p18-toc-anchors: captured on attempt 1
+p04-nospace: captured on attempt 1
+p05-seven: captured on attempt 1
+p12-internal-space attempt 1: rc=1 For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+p12-internal-space: captured on attempt 2
+p13-double-space: captured on attempt 1
+p06-inline-em: captured on attempt 1
+p07-external-link attempt 1: rc=1 For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+p07-external-link: captured on attempt 2
+p08-entities: captured on attempt 1
+p11-unicode: captured on attempt 1
+p10-level6: captured on attempt 1
+p14-adjacent-div: captured on attempt 1
+p15-div-barrier: captured on attempt 1
+p17-notoc-repeat: captured on attempt 1
+DONE: 17/17 valid captures
+p19-tab-after: captured on attempt 1
+p20-three-spaces: captured on attempt 1
+p21-notoc-two-spaces: captured on attempt 1
+DONE: 20/3 valid captures
+p22-anchor-element: captured on attempt 1
+p23-div-barrier-inline attempt 1: invalid record {'fullname': 'muse-probe-r2block-head-p23-div-barrier-inline', 'html': '<div>\n<h1 id="toc0"><span>Head</span> tail</h1>\n<h2 id="toc1"><span><span>J</span></span></h2>\n</div>\n\n\n\n\n\n\n\n\n\n\n\n\n          \n          <div class="page-info-break"></div>\n          <div class="page-options-container"></div>\n          <div id="action-area" style="display: none;"></div>', 'html_sha256': 'e4507d1cdd642c0d770d1b8f4884e68dca5882ef324435d6160c986d254b95d8', 'source': '[[div]]\n+ Head[[/div]] tail\n\n++ J', 'source_sha256': '13cae6b90ece44a8392bd584f0089dcae106549790201770238de3d8002c6055', 'saved_source_matches': True, 'stable': False, 'valid': False}
+p23-div-barrier-inline: captured on attempt 2
+p01-notoc-single: already captured, skipping
+p02-notoc-interleaved: already captured, skipping
+p09-toc-excludes-notoc: already captured, skipping
+p03-same-text: already captured, skipping
+p18-toc-anchors: already captured, skipping
+p04-nospace: already captured, skipping
+p05-seven: already captured, skipping
+p12-internal-space: already captured, skipping
+p13-double-space: already captured, skipping
+p06-inline-em: already captured, skipping
+p07-external-link: already captured, skipping
+p08-entities: already captured, skipping
+p11-unicode: already captured, skipping
+p10-level6: already captured, skipping
+p14-adjacent-div: already captured, skipping
+p15-div-barrier: already captured, skipping
+p17-notoc-repeat: already captured, skipping
+p19-tab-after: already captured, skipping
+p20-three-spaces: already captured, skipping
+p21-notoc-two-spaces: already captured, skipping
+DONE: 22/22 valid captures

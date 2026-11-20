@@ -1,0 +1,42 @@
+{
+ "marker-space-two-spaces": {
+  "fullname": "muse-probe-r2block-bq-marker-space-two-spaces",
+  "html": "<blockquote>\n<p>text</p>\n</blockquote>",
+  "html_sha256": "7d3d3c113d756d8c433c2b5f18c727c63de943d6385eadac1e72627f95960fa8",
+  "source": ">  text",
+  "source_sha256": "f9741a7bcfae48beb64c5f476e8e5c6f269dd249c4c16c4e4fb01b8058e90c34",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "marker-tab": {
+  "fullname": "muse-probe-r2block-bq-marker-tab",
+  "html": "<blockquote>\n<p>text</p>\n</blockquote>",
+  "html_sha256": "7d3d3c113d756d8c433c2b5f18c727c63de943d6385eadac1e72627f95960fa8",
+  "source": ">\ttext",
+  "source_sha256": "49559cc4e054fab82a1e82ba0689de9921b74852b17e97fd69e785bdfb232df5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nested-mixed": {
+  "fullname": "muse-probe-r2block-bq-nested-mixed",
+  "html": "<blockquote>\n<p>a</p>\n<blockquote>\n<p>b</p>\n</blockquote>\n<p>c</p>\n</blockquote>",
+  "html_sha256": "9a33eb61b46bca37fd824a65e640f62c1c8757f57d62bb3dbb2c6ceb14adcfcd",
+  "source": "> a\n>> b\n> c",
+  "source_sha256": "b7c9f1dc041d16a907b23b4fb4daa409280668e97d60f1dac967822764ab5efb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "nospace-in-run": {
+  "fullname": "muse-probe-r2block-bq-nospace-in-run",
+  "html": "<blockquote>\n<p>one<br />\ntwo</p>\n</blockquote>",
+  "html_sha256": "c9fb8436526930bcd0e92aad3518110a31ece136f8b306f58958fee7ab8ceee0",
+  "source": "> one\n>no\n> two",
+  "source_sha256": "ae1c7c54a42c61fed161e20a9cf25d861a1545f415a1fd734968a7cbd9781fd3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

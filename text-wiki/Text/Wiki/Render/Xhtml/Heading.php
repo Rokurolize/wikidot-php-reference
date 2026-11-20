@@ -46,8 +46,17 @@ class Text_Wiki_Render_Xhtml_Heading extends Text_Wiki_Render {
         case 'start':
         		$useId = $this->getConf('use_id');
             $css = $this->formatConf(' class="%s"', "css_h$level");
+            // Live emits the space before the id only when an id is present.
+            // An anchored heading keeps <hN id="tocN">; the no-toc form below
+            // emits a bare <hN> with no stray space.
+            $idAttr = ($useId && isset($id) && $id !== '') ? ' id="'.$id.'"' : '';
             return '
-<h'.$level.' '.($useId ? 'id="'.$id.'"':'').$css.($collapse !== null ? ' onclick="hideTOC(\''.$id.'\');"' : '').'><span>';
+<h'.$level.$idAttr.$css.($collapse !== null ? ' onclick="hideTOC(\''.$id.'\');"' : '').'><span>';
+
+        case 'start-notoc':
+            $css = $this->formatConf(' class="%s"', "css_h$level");
+            return '
+<h'.$level.$css.'><span>';
 
         case 'end':
             return '</span></h'.$level.'>

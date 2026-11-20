@@ -1,0 +1,36 @@
+{"id": "x-toc-basic", "source": "+ Alpha\n++ Beta\n[[toc]]\n"}
+{"id": "x-toc-before", "source": "[[toc]]\n+ Alpha\n++ Beta\n"}
+{"id": "x-toc-two", "source": "[[toc]]\n+ One\n[[toc]]\n++ Two\n"}
+{"id": "x-toc-in-div", "source": "[[div]]\n+ In div\n[[/div]]\n+ Outside\n[[toc]]\n"}
+{"id": "x-toc-in-collapsible", "source": "[[collapsible]]\n+ In collapsible\n[[/collapsible]]\n+ Outside\n[[toc]]\n"}
+{"id": "x-toc-in-iftags-drop", "source": "[[iftags -alpha]]\n+ Hidden\n[[/iftags]]\n+ Visible\n[[toc]]\n", "tags": ["alpha"]}
+{"id": "x-toc-in-iftags-keep", "source": "[[iftags +alpha]]\n+ Kept\n[[/iftags]]\n+ Visible\n[[toc]]\n", "tags": ["alpha"]}
+{"id": "x-toc-untagged-iftags", "source": "[[iftags -alpha]]\n+ Hidden\n[[/iftags]]\n+ Visible\n[[toc]]\n"}
+{"id": "x-toc-in-code", "source": "[[code]]\n+ Literal\n[[/code]]\n+ Real\n[[toc]]\n"}
+{"id": "x-toc-in-quote", "source": "> + Quoted heading\n\n+ Real\n[[toc]]\n"}
+{"id": "x-toc-in-toc-div", "source": "[[div]]\n[[toc]]\n+ Inside\n[[/div]]\n+ Outside\n[[toc]]\n"}
+{"id": "x-toc-float-right", "source": "[[f>toc]]\n+ Alpha\n++ Beta\n"}
+{"id": "x-toc-float-left", "source": "[[f<toc]]\n+ Alpha\n++ Beta\n"}
+{"id": "x-toc-attr", "source": "[[toc class=\"mine\"]]\n+ Alpha\n[[toc ]]\n"}
+{"id": "x-anchor-repeat", "source": "+ Alpha\n+ Alpha\n[[toc]]\n"}
+{"id": "x-anchor-repeat-levels", "source": "+ Alpha\n++ Alpha\n+ Alpha\n[[toc]]\n"}
+{"id": "x-anchor-markup", "source": "+ **Bold** and [[http://example.com|link]]\n[[toc]]\n"}
+{"id": "x-anchor-spaces", "source": "+  Two spaces\n+ Trailing  \n[[toc]]\n"}
+{"id": "x-anchor-across-containers", "source": "[[div]]\n+ Same\n[[/div]]\n+ Same\n[[toc]]\n"}
+{"id": "x-anchor-skips", "source": "+ Level1\n++++ Level4\n[[toc]]\n"}
+{"id": "x-anchor-collapsible-repeat", "source": "[[collapsible]]\n+ Repeat\n[[/collapsible]]\n+ Repeat\n[[toc]]\n"}
+{"id": "x-anchor-head-footnote", "source": "+ Head [[footnote]]note[[/footnote]]\n[[toc]]\n[[footnoteblock]]\n"}
+{"id": "x-bq-head", "source": "[[blockquote]]\n+ Inside\n[[/blockquote]]\n+ Outside\n[[toc]]\n"}
+{"id": "x-bq-list", "source": "[[blockquote]]\n* one\n* two\n[[/blockquote]]\n"}
+{"id": "x-bq-footnote", "source": "[[blockquote]]\n[[footnote]]inside[[/footnote]]\n[[/blockquote]]\n[[footnoteblock]]\n"}
+{"id": "x-bq-head-list-footnote", "source": "[[blockquote]]\n+ Inside\n* item\n[[footnote]]note[[/footnote]]\n[[/blockquote]]\n[[toc]]\n[[footnoteblock]]\n"}
+{"id": "x-bq-empty", "source": "a\n[[blockquote]][[/blockquote]]\nb\n"}
+{"id": "x-bq-empty-lines", "source": "a\n[[blockquote]]\n\n[[/blockquote]]\nb\n"}
+{"id": "x-bq-nested-head", "source": "[[blockquote]]\n[[blockquote]]\n+ Deep\n[[/blockquote]]\n[[/blockquote]]\n[[toc]]\n"}
+{"id": "x-bq-attr", "source": "[[blockquote id=\"bq\" class=\"c\"]]text[[/blockquote]]\n"}
+{"id": "x-bq-unterminated", "source": "[[blockquote]]\ntext\n"}
+{"id": "x-quote-head", "source": "> + quoted\n\n+ real\n[[toc]]\n"}
+{"id": "x-quote-list", "source": "> * item\n\noutside\n"}
+{"id": "x-mix-bq-head-toc", "source": "[[blockquote]]\n+ In quote\n[[/blockquote]]\n+ Outside\n[[toc]]\n"}
+{"id": "x-mix-toc-in-bq", "source": "[[blockquote]]\n[[toc]]\n+ Inside\n[[/blockquote]]\n"}
+{"id": "x-mix-div-toc-iftags", "source": "[[div]]\n+ In div\n[[toc]]\n[[/div]]\n[[iftags -alpha]]\n+ Hidden\n[[/iftags]]\n+ Visible\n", "tags": ["alpha"]}

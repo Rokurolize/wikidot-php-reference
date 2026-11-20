@@ -1,0 +1,62 @@
+{
+ "p25-two-spaces": {
+  "fullname": "muse-probe-r2block-toc-p25-two-spaces",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">X</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "22c182ee104492bd6286ba4f2016238400522cd785e6a5e7c73c718ec91a8d06",
+  "source": "[[toc  title=\"X\"]]\n\n+ A",
+  "source_sha256": "d9421ed82a47c5f96a679db8fcda3d34bba527747a56f6294070aa03fefc1ea2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p26-tab-sep": {
+  "fullname": "muse-probe-r2block-toc-p26-tab-sep",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">X</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "22c182ee104492bd6286ba4f2016238400522cd785e6a5e7c73c718ec91a8d06",
+  "source": "[[toc\ttitle=\"X\"]]\n\n+ A",
+  "source_sha256": "d1da70c906dbc826f6601c6eaaa4ab6f9fed535b3990a81b864c07f8eb9c214f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p27-unterminated": {
+  "fullname": "muse-probe-r2block-toc-p27-unterminated",
+  "html": "<p>[[toc</p>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "e6215fb422e7e3f97ac48bffd9396040a04cdf1e0ee8144acc76af667a7e9477",
+  "source": "[[toc\n\n+ A",
+  "source_sha256": "f4fbc432356401dc29ead9751b176de8e4574c328fe2e920109b135b53ac9568",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p28-same-line-text": {
+  "fullname": "muse-probe-r2block-toc-p28-same-line-text",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<p>trailing</p>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "9278956f0a670f13f14a62d7fb10c21177421854d74fc095901d98aa768d71df",
+  "source": "[[toc]] trailing\n\n+ A",
+  "source_sha256": "841e54d94fdb33623dbe14791e6fb4685b14391997f65ab2563842169f97a8e5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p29-clear-float": {
+  "fullname": "muse-probe-r2block-toc-p29-clear-float",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<div style=\"clear:both; height: 0px; font-size: 1px\"></div>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "aea212ab2508f6dd2990207983af1264a5a80f7ea1e3fe5a9a207b949ed10017",
+  "source": "[[toc]]~~~~\n\n+ A",
+  "source_sha256": "0905b3a5498465e4782ce5b187b1c7d833b524595eb5e26c1adae04e3539910b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p30-style": {
+  "fullname": "muse-probe-r2block-toc-p30-style",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "f8a9fabe28e4554135baa831c03baa55074b99763e915c97c2fe8f132a1e5711",
+  "source": "[[toc style=\"color: blue\"]]\n\n+ A",
+  "source_sha256": "6326ec10803121497605dffedc8dc5125761e7892e458e40005b3203609bd1ce",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

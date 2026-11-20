@@ -1,0 +1,4 @@
+x-toc-in-iftags-drop -> muse-probe-r2block-x-x-toc-in-iftags-drop source_match= True
+x-toc-in-iftags-keep -> muse-probe-r2block-x-x-toc-in-iftags-keep source_match= True
+x-mix-div-toc-iftags -> muse-probe-r2block-x-x-mix-div-toc-iftags source_match= True
+wrote 3 tagged probe pages

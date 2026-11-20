@@ -1,0 +1,46 @@
+bare-marker-in-run -> muse-probe-r2block-bq-bare-marker-in-run stable=True saved_source_matches=True valid=True
+block-attrs -> muse-probe-r2block-bq-block-attrs stable=True saved_source_matches=True valid=True
+block-form -> muse-probe-r2block-bq-block-form stable=True saved_source_matches=True valid=True
+block-unterminated -> muse-probe-r2block-bq-block-unterminated stable=True saved_source_matches=True valid=True
+{
+ "bare-marker-in-run": {
+  "fullname": "muse-probe-r2block-bq-bare-marker-in-run",
+  "html": "<blockquote>\n<p>one<br />\ntwo</p>\n</blockquote>",
+  "html_sha256": "c9fb8436526930bcd0e92aad3518110a31ece136f8b306f58958fee7ab8ceee0",
+  "source": "> one\n>\n> two",
+  "source_sha256": "b91fe93c15adc33a4dfed9fd31485ebe62a58dc007b2a8fca47fd01697c26e16",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "block-attrs": {
+  "fullname": "muse-probe-r2block-bq-block-attrs",
+  "html": "<p>[[blockquote class=&quot;bq&quot; id=&quot;q1&quot;]]<br />\ntext<br />\n[[/blockquote]]</p>",
+  "html_sha256": "34a87d484b8fb5c63cdd2bc5bf6531c3d51f6aff892e17dad5b98aa0b22ea568",
+  "source": "[[blockquote class=\"bq\" id=\"q1\"]]\ntext\n[[/blockquote]]",
+  "source_sha256": "e479bfd162cdcb8762661eb9ca8b7e34d72251b2cd48bc5713e1d8f3d8799a04",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "block-form": {
+  "fullname": "muse-probe-r2block-bq-block-form",
+  "html": "<p>[[blockquote]]<br />\ntext<br />\n[[/blockquote]]</p>",
+  "html_sha256": "85d226c3551b29839aa157c517583d7fa3e6abe310e7b78ecfb30b87b38f3328",
+  "source": "[[blockquote]]\ntext\n[[/blockquote]]",
+  "source_sha256": "37fc579feee74f130fd91c9f089aa0a4459ec3db774f7be84dc387a49ef0b79f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "block-unterminated": {
+  "fullname": "muse-probe-r2block-bq-block-unterminated",
+  "html": "<p>[[blockquote]]<br />\ntext</p>",
+  "html_sha256": "c9450a2aff7acaae7484c177726a61838c8a9a5cf01c2ed1e76a234bf15b73f2",
+  "source": "[[blockquote]]\ntext",
+  "source_sha256": "fdc2d91f67ba5274edc18740c2c1a00b524d65457545787bcbb58af992c72a33",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

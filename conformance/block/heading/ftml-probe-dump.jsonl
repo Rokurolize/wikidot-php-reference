@@ -1,0 +1,22 @@
+{"errors":[],"html":"<h1><span>no toc one</span></h1>","id":"p01-notoc-single"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span>A</span></h1><h1><span>B</span></h1><h2 id=\"toc1\"><span>C</span></h2>","id":"p02-notoc-interleaved"}
+{"errors":[],"html":"<table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div><div class=\"title\">Table of Contents</div><div id=\"toc-list\"><div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div><div style=\"margin-left: 2em;\"><a href=\"#toc1\">B</a></div></div></div></td></tr></table><h1 id=\"toc0\"><span>A</span></h1><h2><span>skip</span></h2><h2 id=\"toc1\"><span>B</span></h2>","id":"p09-toc-excludes-notoc"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span>Same</span></h1><h1 id=\"toc1\"><span>Same</span></h1><h1 id=\"toc2\"><span>Same</span></h1>","id":"p03-same-text"}
+{"errors":[],"html":"<table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div><div class=\"title\">Table of Contents</div><div id=\"toc-list\"><div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div><div style=\"margin-left: 2em;\"><a href=\"#toc1\">B</a></div><div style=\"margin-left: 3em;\"><a href=\"#toc2\">C</a></div></div></div></td></tr></table><h1 id=\"toc0\"><span>A</span></h1><h2 id=\"toc1\"><span>B</span></h2><h3 id=\"toc2\"><span>C</span></h3>","id":"p18-toc-anchors"}
+{"errors":[],"html":"<p>+No space</p>","id":"p04-nospace"}
+{"errors":[],"html":"<p>+++++++ seven</p>","id":"p05-seven"}
+{"errors":[],"html":"<h2 id=\"toc0\"><span>a b</span></h2>","id":"p12-internal-space"}
+{"errors":[],"html":"<h2 id=\"toc0\"><span>two spaces after prefix</span></h2>","id":"p13-double-space"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span>My <em>header</em></span></h1>","id":"p06-inline-em"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 31..35, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 6..8, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 35..37, kind: NoRulesMatch }"],"html":"<h1 id=\"toc0\"><span>See [[<a href=\"http://example.com\">http://example.com</a>|the site]]</span></h1>","id":"p07-external-link"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span>A &amp; B &lt; C &gt; D &quot;quote&quot; &#39;apos&#39;</span></h1>","id":"p08-entities"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span>Héading 中文 🎉</span></h1>","id":"p11-unicode"}
+{"errors":[],"html":"<h6 id=\"toc0\"><span>h6</span></h6>","id":"p10-level6"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span>H</span></h1><div><p>d</p></div>","id":"p14-adjacent-div"}
+{"errors":["ParseError { token: LineBreak, rule: \"block-div\", span: 9..10, kind: RuleFailed }","ParseError { token: LeftBlock, rule: \"fallback\", span: 2..4, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 11..14, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<h1 id=\"toc0\"><span>[[div]]</span></h1><p>d[[/div]]</p>","id":"p15-div-barrier"}
+{"errors":[],"html":"<h1><span>Same</span></h1><h2><span>Same</span></h2>","id":"p17-notoc-repeat"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span>Tab after plus</span></h1>","id":"p19-tab-after"}
+{"errors":[],"html":"<h3 id=\"toc0\"><span>abc</span></h3>","id":"p20-three-spaces"}
+{"errors":[],"html":"<h2><span>abc</span></h2>","id":"p21-notoc-two-spaces"}
+{"errors":[],"html":"<h1 id=\"toc0\"><span><a href=\"\">anchor</a></span></h1>","id":"p22-anchor-element"}
+{"errors":[],"html":"<div><h1 id=\"toc0\"><span>Head</span> tail</h1><h2 id=\"toc1\"><span><span>J</span></span></h2></div>","id":"p23-div-barrier-inline"}

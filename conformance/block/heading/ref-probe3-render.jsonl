@@ -1,0 +1,2 @@
+{"id":"p22-anchor-element","output":"\n<h1 id=\"toc0\"><span>[[a name=&quot;x&quot;]]anchor[[\/a]]<\/span><\/h1>\n"}
+{"id":"p23-div-barrier-inline","output":"<div >\n<h1 id=\"toc0\"><span>Head<\/div>tail<\/span><\/h1>\n\n<h2 id=\"toc1\"><span>J<\/span><\/h2>\n"}

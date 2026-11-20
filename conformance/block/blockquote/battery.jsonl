@@ -1,0 +1,50 @@
+{"id": "bq01-simple", "source": "> quote"}
+{"id": "bq02-two-lines", "source": "> one\n> two"}
+{"id": "bq03-nospace", "source": ">no space"}
+{"id": "bq04-marker-only", "source": ">"}
+{"id": "bq05-marker-space", "source": "> "}
+{"id": "bq06-at-doc-start", "source": "> first line"}
+{"id": "bq07-leading-blank", "source": "\n> quote"}
+{"id": "bq08-tab-after-marker", "source": ">\tquote"}
+{"id": "bq09-space-nested", "source": "> > nested"}
+{"id": "bq10-tight-nested", "source": ">> nested"}
+{"id": "bq11-depth3-space", "source": "> > > three"}
+{"id": "bq12-depth3-tight", "source": ">>> three"}
+{"id": "bq13-mixed-up", "source": "> one\n>> two\n>>> three"}
+{"id": "bq14-mixed-down", "source": ">>> three\n>> two\n> one"}
+{"id": "bq15-mixed-updown", "source": "> one\n>> two\n> three\n>>> four\n>> five\n> six"}
+{"id": "bq16-depth-skip", "source": "> one\n>>> three"}
+{"id": "bq17-depth4", "source": "> one\n>> two\n>>> three\n>>>> four"}
+{"id": "bq18-block-basic", "source": "[[blockquote]]\ntext\n[[/blockquote]]"}
+{"id": "bq19-block-quote-alias", "source": "[[quote]]\ntext\n[[/quote]]"}
+{"id": "bq20-block-attr-class", "source": "[[blockquote class=\"bq\"]]\ntext\n[[/blockquote]]"}
+{"id": "bq21-block-attr-style", "source": "[[blockquote style=\"color: red;\"]]\ntext\n[[/blockquote]]"}
+{"id": "bq22-block-attr-id", "source": "[[blockquote id=\"q1\"]]\ntext\n[[/blockquote]]"}
+{"id": "bq23-block-unterminated", "source": "[[blockquote]]\ntext"}
+{"id": "bq24-block-with-marker", "source": "[[blockquote]]\n> quote\n[[/blockquote]]"}
+{"id": "bq25-block-inline", "source": "[[blockquote]]text[[/blockquote]]"}
+{"id": "bq26-block-empty", "source": "[[blockquote]][[/blockquote]]"}
+{"id": "bq27-block-mixed-case", "source": "[[Blockquote]]\ntext\n[[/blockquote]]"}
+{"id": "bq28-block-bogus-attr", "source": "[[blockquote bogus=\"x\"]]\ntext\n[[/blockquote]]"}
+{"id": "bq29-quote-then-heading", "source": "> quote\n+ heading"}
+{"id": "bq30-heading-then-quote", "source": "+ heading\n> quote"}
+{"id": "bq31-quote-then-list", "source": "> quote\n* item"}
+{"id": "bq32-list-then-quote", "source": "* item\n> quote"}
+{"id": "bq33-quote-then-div", "source": "> quote\n[[div]]\ninside\n[[/div]]"}
+{"id": "bq34-div-then-quote", "source": "[[div]]\ninside\n[[/div]]\n> quote"}
+{"id": "bq35-quote-then-code", "source": "> quote\n[[code]]\ncode\n[[/code]]"}
+{"id": "bq36-blank-in-run", "source": "> one\n\n> two"}
+{"id": "bq37-quote-then-para", "source": "> quote\nplain paragraph"}
+{"id": "bq38-para-then-quote", "source": "plain paragraph\n> quote"}
+{"id": "bq39-space-prefixed-marker", "source": " > quote"}
+{"id": "bq40-quote-midline", "source": "text > quote"}
+{"id": "bq41-double-space-after-marker", "source": ">  quote"}
+{"id": "bq42-inline-bold", "source": "> **bold** quote"}
+{"id": "bq43-inline-link", "source": "> [http://example.com label]"}
+{"id": "bq44-wikitext-body", "source": "> a [[div]] b"}
+{"id": "bq45-unterminated-deep", "source": ">>> three\n>> two"}
+{"id": "bq46-shallower-after-run", "source": "> one\n>> two\nplain"}
+{"id": "bq47-entities", "source": "> &amp; &lt; &#39;"}
+{"id": "bq48-unicode", "source": "> café 日本語"}
+{"id": "bq49-quote-around-block", "source": "> before\n[[blockquote]]\ninner\n[[/blockquote]]\n> after"}
+{"id": "bq50-block-around-quote", "source": "[[blockquote]]\n> inner quote\n[[/blockquote]]"}

@@ -1,0 +1,6 @@
+tag=final cases=56 entries_agree=55 chrome_agree=56 both_agree=55
+--- entry signature disagreements ---
+toc15-dash-runs
+  ref :[('1', '#toc0', 'aa &#8212; bb'), ('1', '#toc1', 'cc &#8212;- dd'), ('1', '#toc2', 'ee &#8212; ff &#8212; gg')]
+  ftml:[('1', '#toc0', 'aa — bb'), ('1', '#toc1', 'cc —- dd'), ('1', '#toc2', 'ee — ff — gg')]
+--- chrome disagreements ---

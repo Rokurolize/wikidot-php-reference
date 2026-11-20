@@ -1,0 +1,82 @@
+{
+ "marker-space-two-spaces": {
+  "fullname": "muse-probe-r2block-bq-marker-space-two-spaces",
+  "source": ">  text",
+  "action": "exists"
+ },
+ "marker-tab": {
+  "fullname": "muse-probe-r2block-bq-marker-tab",
+  "source": ">\ttext",
+  "action": "exists"
+ },
+ "bare-marker-in-run": {
+  "fullname": "muse-probe-r2block-bq-bare-marker-in-run",
+  "source": "> one\n>\n> two",
+  "action": "exists"
+ },
+ "nospace-in-run": {
+  "fullname": "muse-probe-r2block-bq-nospace-in-run",
+  "source": "> one\n>no\n> two",
+  "action": "exists"
+ },
+ "nested-mixed": {
+  "fullname": "muse-probe-r2block-bq-nested-mixed",
+  "source": "> a\n>> b\n> c",
+  "action": "exists"
+ },
+ "depth-skip": {
+  "fullname": "muse-probe-r2block-bq-depth-skip",
+  "source": "> a\n>>> c",
+  "action": "exists"
+ },
+ "block-form": {
+  "fullname": "muse-probe-r2block-bq-block-form",
+  "source": "[[blockquote]]\ntext\n[[/blockquote]]",
+  "action": "exists"
+ },
+ "quote-alias": {
+  "fullname": "muse-probe-r2block-bq-quote-alias",
+  "source": "[[quote]]\ntext\n[[/quote]]",
+  "action": "exists"
+ },
+ "block-attrs": {
+  "fullname": "muse-probe-r2block-bq-block-attrs",
+  "source": "[[blockquote class=\"bq\" id=\"q1\"]]\ntext\n[[/blockquote]]",
+  "action": "exists"
+ },
+ "block-unterminated": {
+  "fullname": "muse-probe-r2block-bq-block-unterminated",
+  "source": "[[blockquote]]\ntext",
+  "action": "exists"
+ },
+ "quote-then-heading": {
+  "fullname": "muse-probe-r2block-bq-quote-then-heading",
+  "source": "> q\n+ h",
+  "action": "exists"
+ },
+ "quote-then-list": {
+  "fullname": "muse-probe-r2block-bq-quote-then-list",
+  "source": "> q\n* i",
+  "action": "exists"
+ },
+ "quote-then-div": {
+  "fullname": "muse-probe-r2block-bq-quote-then-div",
+  "source": "> q\n[[div]]\nin\n[[/div]]",
+  "action": "exists"
+ },
+ "marker-space-before-text": {
+  "fullname": "muse-probe-r2block-bq-marker-space-before-text",
+  "source": "> \nX",
+  "action": "created"
+ },
+ "inline-markup": {
+  "fullname": "muse-probe-r2block-bq-inline-markup",
+  "source": "> **b** [http://example.com label]",
+  "action": "created"
+ },
+ "entities": {
+  "fullname": "muse-probe-r2block-bq-entities",
+  "source": "> &amp; &lt;",
+  "action": "created"
+ }
+}

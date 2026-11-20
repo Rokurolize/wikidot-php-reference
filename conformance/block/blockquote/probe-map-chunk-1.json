@@ -1,0 +1,22 @@
+{
+ "bare-marker-in-run": {
+  "fullname": "muse-probe-r2block-bq-bare-marker-in-run",
+  "source": "> one\n>\n> two",
+  "action": "exists"
+ },
+ "block-attrs": {
+  "fullname": "muse-probe-r2block-bq-block-attrs",
+  "source": "[[blockquote class=\"bq\" id=\"q1\"]]\ntext\n[[/blockquote]]",
+  "action": "exists"
+ },
+ "block-form": {
+  "fullname": "muse-probe-r2block-bq-block-form",
+  "source": "[[blockquote]]\ntext\n[[/blockquote]]",
+  "action": "exists"
+ },
+ "block-unterminated": {
+  "fullname": "muse-probe-r2block-bq-block-unterminated",
+  "source": "[[blockquote]]\ntext",
+  "action": "exists"
+ }
+}

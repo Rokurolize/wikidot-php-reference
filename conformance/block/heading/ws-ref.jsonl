@@ -1,0 +1,10 @@
+{"id":"ws-para-double","output":"<p>a  b<\/p>\n\n"}
+{"id":"ws-head-double","output":"\n<h2 id=\"toc0\"><span>a  b<\/span><\/h2>\n"}
+{"id":"ws-head-two-after","output":"\n<h2 id=\"toc0\"><span> ab<\/span><\/h2>\n"}
+{"id":"ws-head-tab","output":"\n<h1 id=\"toc0\"><span>   Tab after plus<\/span><\/h1>\n"}
+{"id":"ws-head-space-tab","output":"\n<h1 id=\"toc0\"><span>    Tab after plus<\/span><\/h1>\n"}
+{"id":"ws-head-three-after","output":"\n<h3 id=\"toc0\"><span>  abc<\/span><\/h3>\n"}
+{"id":"ws-notoc-two-after","output":"<p>++*  abc<\/p>\n\n"}
+{"id":"ws-notoc-tab","output":"<p>++*    abc<\/p>\n\n"}
+{"id":"ws-head-trail","output":"\n<h2 id=\"toc0\"><span>ab  <\/span><\/h2>\n"}
+{"id":"ws-head-mixed","output":"\n<h2 id=\"toc0\"><span> a   b<\/span><\/h2>\n"}

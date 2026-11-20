@@ -1,0 +1,22 @@
+{
+ "p33-dash-runs": {
+  "fullname": "muse-probe-r2block-toc-p33-dash-runs",
+  "html": "<h1 id=\"toc0\"><span>aa &#8212; bb</span></h1>\n<h1 id=\"toc1\"><span>cc &#8212;- dd</span></h1>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">aa &#8212; bb</a></div>\n<div style=\"margin-left: 1em;\"><a href=\"#toc1\">cc &#8212;- dd</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>",
+  "html_sha256": "2b133a33a42b26fcf1310d67de0be191f438ccb3ec648a57c3a06c271586c0f7",
+  "source": "+ aa -- bb\n\n+ cc --- dd\n\n[[toc]]",
+  "source_sha256": "3ec37b16f06a0f4632d2530e7d2130c45806d2721efe333025321d17f9b226e1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p34-title-apostrophe": {
+  "fullname": "muse-probe-r2block-toc-p34-title-apostrophe",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">it's &amp; fine</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "b564012204d3a3a4ac9eb985c883e1520bc894717e3a9f42c3cf08993fefc6b4",
+  "source": "[[toc title=\"it's & fine\"]]\n\n+ A",
+  "source_sha256": "4cccc3458288102d2e8eb4cdcda379a56a0e79be10b834fae7924d90c75a0c9a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

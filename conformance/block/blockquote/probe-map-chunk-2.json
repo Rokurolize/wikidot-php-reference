@@ -1,0 +1,22 @@
+{
+ "depth-skip": {
+  "fullname": "muse-probe-r2block-bq-depth-skip",
+  "source": "> a\n>>> c",
+  "action": "exists"
+ },
+ "entities": {
+  "fullname": "muse-probe-r2block-bq-entities",
+  "source": "> &amp; &lt;",
+  "action": "created"
+ },
+ "inline-markup": {
+  "fullname": "muse-probe-r2block-bq-inline-markup",
+  "source": "> **b** [http://example.com label]",
+  "action": "created"
+ },
+ "marker-space-before-text": {
+  "fullname": "muse-probe-r2block-bq-marker-space-before-text",
+  "source": "> \nX",
+  "action": "created"
+ }
+}

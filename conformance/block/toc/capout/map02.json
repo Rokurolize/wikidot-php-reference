@@ -1,0 +1,62 @@
+{
+ "p13-skipped": {
+  "fullname": "muse-probe-r2block-toc-p13-skipped",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">Alpha</a></div>\n<div style=\"margin-left: 2em;\"><a href=\"#toc1\">Beta</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h1 id=\"toc0\"><span>Alpha</span></h1>\n<h1><span>Skipped</span></h1>\n<h2 id=\"toc1\"><span>Beta</span></h2>",
+  "html_sha256": "e3a8d3e6791673a9254b39eab291a41f4acdfe27488ff7021d5b51f1baa7881b",
+  "source": "[[toc]]\n\n+ Alpha\n\n+* Skipped\n\n++ Beta",
+  "source_sha256": "95e28f6c3402689a41d04cd27b5a4b824b68419c4f48c4482b035c2f4c737fa2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14-multiple": {
+  "fullname": "muse-probe-r2block-toc-p14-multiple",
+  "html": "<h1 id=\"toc0\"><span>Lead</span></h1>\n<p>intro</p>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">Lead</a></div>\n<div style=\"margin-left: 1em;\"><a href=\"#toc1\">Middle</a></div>\n<div style=\"margin-left: 2em;\"><a href=\"#toc2\">Nested</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h1 id=\"toc1\"><span>Middle</span></h1>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">Lead</a></div>\n<div style=\"margin-left: 1em;\"><a href=\"#toc1\">Middle</a></div>\n<div style=\"margin-left: 2em;\"><a href=\"#toc2\">Nested</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h2 id=\"toc2\"><span>Nested</span></h2>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">Lead</a></div>\n<div style=\"margin-left: 1em;\"><a href=\"#toc1\">Middle</a></div>\n<div style=\"margin-left: 2em;\"><a href=\"#toc2\">Nested</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>",
+  "html_sha256": "97faef94bb8a0fb0607d2553a2b48fbe872f21a4d64ddcdfa30297a65607dc7d",
+  "source": "+ Lead\n\nintro\n\n[[toc]]\n\n+ Middle\n\n[[toc]]\n\n++ Nested\n\n[[toc]]",
+  "source_sha256": "7ebd3a9930efc9b67c3d0b2eba472fd2732e7493fd950fe35adde4bed964a5b4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15-div-heading": {
+  "fullname": "muse-probe-r2block-toc-p15-div-heading",
+  "html": "<div class=\"x\">\n<h1 id=\"toc0\"><span>Inside div</span></h1>\n</div>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">Inside div</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>",
+  "html_sha256": "8d38793e0460916bd19bbc3a6d857b0ab47fe73378b8c47aa70a80113565d963",
+  "source": "[[div class=\"x\"]]\n+ Inside div\n[[/div]]\n\n[[toc]]",
+  "source_sha256": "20499622d003bf4069232a7c2f3718da22be26cf09d50d96ad10ba5955eee208",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16-collapsible-heading": {
+  "fullname": "muse-probe-r2block-toc-p16-collapsible-heading",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<h1 id=\"toc0\"><span>Inside collapsible</span></h1>\n</div>\n</div>\n</div>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">Inside collapsible</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>",
+  "html_sha256": "25ba1612e2a8ac9e381e55e3d37fb874581861498d4c24e6e56bfae84b1aeef3",
+  "source": "[[collapsible]]\n+ Inside collapsible\n[[/collapsible]]\n\n[[toc]]",
+  "source_sha256": "6854f61943218fccadf661120524224a6c20fb7aeb83d993f3713ba6d4f8926c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17-iftags-seam": {
+  "fullname": "muse-probe-r2block-toc-p17-iftags-seam",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">Alpha</a></div>\n<div style=\"margin-left: 2em;\"><a href=\"#toc1\">Bed</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h1 id=\"toc0\"><span>Alpha</span></h1>\n<h2 id=\"toc1\"><span>Bed</span></h2>",
+  "html_sha256": "ec1ce5d5e6d2144dc431ffc8e9543b385f4fb64c5b359ac5b8698992aaec1bd2",
+  "source": "[[toc]]\n\n+ Alp[[iftags -zzz]]ha[[/iftags]]\n\n++ Be[[iftags +zzz]]ta[[/iftags]]d",
+  "source_sha256": "bbd5b6a173a5ae735bc1a53b05a054fa361e2f4f45acf6f75fe830b15eed85ea",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18-toc-in-div": {
+  "fullname": "muse-probe-r2block-toc-p18-toc-in-div",
+  "html": "<div>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n</div>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "a01dd9cb2feb3cf8076cba9011215fb76eb01b6898dddb5605b9f0f23c1bdd82",
+  "source": "[[div]]\n[[toc]]\n[[/div]]\n\n+ A",
+  "source_sha256": "072ea461cf92e9f434794666ce6fa160b0bef02f9aa87b3b46c7668f7a71c325",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

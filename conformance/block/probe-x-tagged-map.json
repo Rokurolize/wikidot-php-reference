@@ -1,0 +1,26 @@
+{
+ "x-toc-in-iftags-drop": {
+  "fullname": "muse-probe-r2block-x-x-toc-in-iftags-drop",
+  "source": "[[iftags -alpha]]\n+ Hidden\n[[/iftags]]\n+ Visible\n[[toc]]",
+  "action": "publish-tags",
+  "tags": [
+   "alpha"
+  ]
+ },
+ "x-toc-in-iftags-keep": {
+  "fullname": "muse-probe-r2block-x-x-toc-in-iftags-keep",
+  "source": "[[iftags +alpha]]\n+ Kept\n[[/iftags]]\n+ Visible\n[[toc]]",
+  "action": "publish-tags",
+  "tags": [
+   "alpha"
+  ]
+ },
+ "x-mix-div-toc-iftags": {
+  "fullname": "muse-probe-r2block-x-x-mix-div-toc-iftags",
+  "source": "[[div]]\n+ In div\n[[toc]]\n[[/div]]\n[[iftags -alpha]]\n+ Hidden\n[[/iftags]]\n+ Visible",
+  "action": "publish-tags",
+  "tags": [
+   "alpha"
+  ]
+ }
+}

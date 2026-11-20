@@ -80,12 +80,16 @@ class Text_Wiki_Render_Xhtml_Toc extends Text_Wiki_Render {
                 $html .= " id=\"$div_id\"";
             }
 			if($class){
-				$html .= ' class="'.$class.'" ';
+				$html .= ' class="'.$class.'"';
 			}
             // add the title, and done
             $html .= '>';
-            $html .= '<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">'._('fold').'</a><a style="display: none" href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)">'._('unfold').'</a></div>';
-            $html .= '<div class="title">'._('Table of Contents').'</div>';
+            $html .= '<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Fold</a><a style="display: none" href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)">Unfold</a></div>';
+            $title = 'Table of Contents';
+            if (isset($attr) && is_array($attr) && isset($attr['title']) && is_string($attr['title'])) {
+                $title = $attr['title'];
+            }
+            $html .= '<div class="title">'.htmlspecialchars($title, ENT_COMPAT, 'UTF-8').'</div>';
             $html .= '<div id="toc-list">';
             return $html;
             break;

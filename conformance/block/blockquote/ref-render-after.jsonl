@@ -1,0 +1,50 @@
+{"id":"bq01-simple","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq02-two-lines","output":"<blockquote><p>one<br \/>\ntwo<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq03-nospace","output":""}
+{"id":"bq04-marker-only","output":""}
+{"id":"bq05-marker-space","output":""}
+{"id":"bq06-at-doc-start","output":"<blockquote><p>first line<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq07-leading-blank","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq08-tab-after-marker","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq09-space-nested","output":"<blockquote><p>&gt; nested<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq10-tight-nested","output":"<blockquote><blockquote><p>nested<\/p>\n\n<\/blockquote>\n<\/blockquote>\n"}
+{"id":"bq11-depth3-space","output":"<blockquote><p>&gt; &gt; three<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq12-depth3-tight","output":"<blockquote><blockquote><blockquote><p>three<\/p>\n\n<\/blockquote>\n<\/blockquote>\n<\/blockquote>\n"}
+{"id":"bq13-mixed-up","output":"<blockquote><p>one<\/p>\n\n<blockquote><p>two<\/p>\n\n<blockquote><p>three<\/p>\n\n<\/blockquote>\n<\/blockquote>\n<\/blockquote>\n"}
+{"id":"bq14-mixed-down","output":"<blockquote><blockquote><blockquote><p>three<\/p>\n\n<\/blockquote>\n<p>two<\/p>\n\n<\/blockquote>\n<p>one<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq15-mixed-updown","output":"<blockquote><p>one<\/p>\n\n<blockquote><p>two<\/p>\n\n<\/blockquote>\n<p>three<\/p>\n\n<blockquote><blockquote><p>four<\/p>\n\n<\/blockquote>\n<p>five<\/p>\n\n<\/blockquote>\n<p>six<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq16-depth-skip","output":"<blockquote><p>one<\/p>\n\n<blockquote><blockquote><p>three<\/p>\n\n<\/blockquote>\n<\/blockquote>\n<\/blockquote>\n"}
+{"id":"bq17-depth4","output":"<blockquote><p>one<\/p>\n\n<blockquote><p>two<\/p>\n\n<blockquote><p>three<\/p>\n\n<blockquote><p>four<\/p>\n\n<\/blockquote>\n<\/blockquote>\n<\/blockquote>\n<\/blockquote>\n"}
+{"id":"bq18-block-basic","output":"<p>[[blockquote]]<br \/>\ntext<br \/>\n[[\/blockquote]]<\/p>\n\n"}
+{"id":"bq19-block-quote-alias","output":"<p>[[quote]]<br \/>\ntext<br \/>\n[[\/quote]]<\/p>\n\n"}
+{"id":"bq20-block-attr-class","output":"<p>[[blockquote class=&quot;bq&quot;]]<br \/>\ntext<br \/>\n[[\/blockquote]]<\/p>\n\n"}
+{"id":"bq21-block-attr-style","output":"<p>[[blockquote style=&quot;color: red;&quot;]]<br \/>\ntext<br \/>\n[[\/blockquote]]<\/p>\n\n"}
+{"id":"bq22-block-attr-id","output":"<p>[[blockquote id=&quot;q1&quot;]]<br \/>\ntext<br \/>\n[[\/blockquote]]<\/p>\n\n"}
+{"id":"bq23-block-unterminated","output":"<p>[[blockquote]]<br \/>\ntext<\/p>\n\n"}
+{"id":"bq24-block-with-marker","output":"<p>[[blockquote]]<\/p>\n\n<blockquote><p>quote<\/p>\n\n<\/blockquote>\n<p>[[\/blockquote]]<\/p>\n\n"}
+{"id":"bq25-block-inline","output":"<p>[[blockquote]]text[[\/blockquote]]<\/p>\n\n"}
+{"id":"bq26-block-empty","output":"<p>[[blockquote]][[\/blockquote]]<\/p>\n\n"}
+{"id":"bq27-block-mixed-case","output":"<p>[[Blockquote]]<br \/>\ntext<br \/>\n[[\/blockquote]]<\/p>\n\n"}
+{"id":"bq28-block-bogus-attr","output":"<p>[[blockquote bogus=&quot;x&quot;]]<br \/>\ntext<br \/>\n[[\/blockquote]]<\/p>\n\n"}
+{"id":"bq29-quote-then-heading","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n\n<h1 id=\"toc0\"><span>heading<\/span><\/h1>\n"}
+{"id":"bq30-heading-then-quote","output":"\n<h1 id=\"toc0\"><span>heading<\/span><\/h1>\n<blockquote><p>quote<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq31-quote-then-list","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n<ul>\n    <li>item<\/li>\n<\/ul>\n\n"}
+{"id":"bq32-list-then-quote","output":"<ul>\n    <li>item<\/li>\n<\/ul>\n\n<blockquote><p>quote<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq33-quote-then-div","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n<div ><p>inside<\/p>\n\n<\/div>"}
+{"id":"bq34-div-then-quote","output":"<div ><p>inside<\/p>\n\n<\/div><blockquote><p>quote<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq35-quote-then-code","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n\n<div class=\"code\">\n<pre><code>code<\/code><\/pre><\/div>\n\n"}
+{"id":"bq36-blank-in-run","output":"<blockquote><p>one<\/p>\n\n<\/blockquote>\n<blockquote><p>two<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq37-quote-then-para","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n<p>plain paragraph<\/p>\n\n"}
+{"id":"bq38-para-then-quote","output":"<p>plain paragraph<\/p>\n\n<blockquote><p>quote<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq39-space-prefixed-marker","output":"<p>&gt; quote<\/p>\n\n"}
+{"id":"bq40-quote-midline","output":"<p>text &gt; quote<\/p>\n\n"}
+{"id":"bq41-double-space-after-marker","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq42-inline-bold","output":"<blockquote><p><strong>bold<\/strong> quote<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq43-inline-link","output":"<blockquote><p><a href=\"http:\/\/example.com\">label<\/a><\/p>\n\n<\/blockquote>\n"}
+{"id":"bq44-wikitext-body","output":"<blockquote><p>a [[div]] b<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq45-unterminated-deep","output":"<blockquote><blockquote><blockquote><p>three<\/p>\n\n<\/blockquote>\n<p>two<\/p>\n\n<\/blockquote>\n<\/blockquote>\n"}
+{"id":"bq46-shallower-after-run","output":"<blockquote><p>one<\/p>\n\n<blockquote><p>two<\/p>\n\n<\/blockquote>\n<\/blockquote>\n<p>plain<\/p>\n\n"}
+{"id":"bq47-entities","output":"<blockquote><p>&amp;amp; &amp;lt; &amp;#39;<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq48-unicode","output":"<blockquote><p>caf\u00e9 \u65e5\u672c\u8a9e<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq49-quote-around-block","output":"<blockquote><p>before<\/p>\n\n<\/blockquote>\n<p>[[blockquote]]<br \/>\ninner<br \/>\n[[\/blockquote]]<\/p>\n\n<blockquote><p>after<\/p>\n\n<\/blockquote>\n"}
+{"id":"bq50-block-around-quote","output":"<p>[[blockquote]]<\/p>\n\n<blockquote><p>inner quote<\/p>\n\n<\/blockquote>\n<p>[[\/blockquote]]<\/p>\n\n"}

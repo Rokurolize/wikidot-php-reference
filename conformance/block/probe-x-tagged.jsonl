@@ -1,0 +1,3 @@
+{"id": "x-toc-in-iftags-drop", "source": "[[iftags -alpha]]\n+ Hidden\n[[/iftags]]\n+ Visible\n[[toc]]", "tags": ["alpha"]}
+{"id": "x-toc-in-iftags-keep", "source": "[[iftags +alpha]]\n+ Kept\n[[/iftags]]\n+ Visible\n[[toc]]", "tags": ["alpha"]}
+{"id": "x-mix-div-toc-iftags", "source": "[[div]]\n+ In div\n[[toc]]\n[[/div]]\n[[iftags -alpha]]\n+ Hidden\n[[/iftags]]\n+ Visible", "tags": ["alpha"]}

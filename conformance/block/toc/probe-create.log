@@ -1,0 +1,195 @@
+p01-basic -> muse-probe-r2block-toc-p01-basic (created)
+p02-title -> muse-probe-r2block-toc-p02-title (created)
+p03-title-empty -> muse-probe-r2block-toc-p03-title-empty (created)
+p04-title-entities -> muse-probe-r2block-toc-p04-title-entities (created)
+p05-quoted-close -> muse-probe-r2block-toc-p05-quoted-close (created)
+p06-class -> muse-probe-r2block-toc-p06-class (created)
+p07-id -> muse-probe-r2block-toc-p07-id (created)
+p08-float-left -> muse-probe-r2block-toc-p08-float-left (created)
+p09-float-right -> muse-probe-r2block-toc-p09-float-right (created)
+p10-float-id -> muse-probe-r2block-toc-p10-float-id (created)
+p11-levels -> muse-probe-r2block-toc-p11-levels (created)
+p12-repeat -> muse-probe-r2block-toc-p12-repeat (created)
+p13-skipped -> muse-probe-r2block-toc-p13-skipped (created)
+p14-multiple -> muse-probe-r2block-toc-p14-multiple (created)
+p15-div-heading -> muse-probe-r2block-toc-p15-div-heading (created)
+p16-collapsible-heading -> muse-probe-r2block-toc-p16-collapsible-heading (created)
+p17-iftags-seam -> muse-probe-r2block-toc-p17-iftags-seam (created)
+p18-toc-in-div -> muse-probe-r2block-toc-p18-toc-in-div (created)
+p19-toc-in-footnote -> muse-probe-r2block-toc-p19-toc-in-footnote (created)
+p20-repeated-text -> muse-probe-r2block-toc-p20-repeated-text (created)
+p21-footnote-heading -> muse-probe-r2block-toc-p21-footnote-heading (created)
+p22-gt-align -> muse-probe-r2block-toc-p22-gt-align (created)
+p23-uppercase -> muse-probe-r2block-toc-p23-uppercase (created)
+p24-trailing-space -> muse-probe-r2block-toc-p24-trailing-space (created)
+p25-two-spaces -> muse-probe-r2block-toc-p25-two-spaces (created)
+p26-tab-sep -> muse-probe-r2block-toc-p26-tab-sep (created)
+p27-unterminated -> muse-probe-r2block-toc-p27-unterminated (created)
+p28-same-line-text -> muse-probe-r2block-toc-p28-same-line-text (created)
+p29-clear-float -> muse-probe-r2block-toc-p29-clear-float (created)
+p30-style -> muse-probe-r2block-toc-p30-style (created)
+p31-star -> muse-probe-r2block-toc-p31-star (created)
+p32-iftags-mid-name -> muse-probe-r2block-toc-p32-iftags-mid-name (created)
+32 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01-basic": {
+  "fullname": "muse-probe-r2block-toc-p01-basic",
+  "source": "[[toc]]\n\n+ Alpha\n\n+ Beta",
+  "action": "created"
+ },
+ "p02-title": {
+  "fullname": "muse-probe-r2block-toc-p02-title",
+  "source": "+ A\n\n[[toc title=\"Contents\"]]",
+  "action": "created"
+ },
+ "p03-title-empty": {
+  "fullname": "muse-probe-r2block-toc-p03-title-empty",
+  "source": "[[toc title=\"\"]]\n\n+ A",
+  "action": "created"
+ },
+ "p04-title-entities": {
+  "fullname": "muse-probe-r2block-toc-p04-title-entities",
+  "source": "[[toc title=\"目次 & <notes>\"]]\n\n+ A",
+  "action": "created"
+ },
+ "p05-quoted-close": {
+  "fullname": "muse-probe-r2block-toc-p05-quoted-close",
+  "source": "[[toc title=\"a]]b\"]]\n\n+ A",
+  "action": "created"
+ },
+ "p06-class": {
+  "fullname": "muse-probe-r2block-toc-p06-class",
+  "source": "[[toc class=\"third-toc\"]]\n\n+ A",
+  "action": "created"
+ },
+ "p07-id": {
+  "fullname": "muse-probe-r2block-toc-p07-id",
+  "source": "[[toc id=\"my-toc\"]]\n\n+ A",
+  "action": "created"
+ },
+ "p08-float-left": {
+  "fullname": "muse-probe-r2block-toc-p08-float-left",
+  "source": "[[f<toc]]\n\n+ A",
+  "action": "created"
+ },
+ "p09-float-right": {
+  "fullname": "muse-probe-r2block-toc-p09-float-right",
+  "source": "[[f>toc]]\n\n+ A",
+  "action": "created"
+ },
+ "p10-float-id": {
+  "fullname": "muse-probe-r2block-toc-p10-float-id",
+  "source": "[[f>toc id=\"toc-right\"]]\n\n+ A",
+  "action": "created"
+ },
+ "p11-levels": {
+  "fullname": "muse-probe-r2block-toc-p11-levels",
+  "source": "+ L1\n\n++ L2\n\n++++ L4\n\n[[toc]]",
+  "action": "created"
+ },
+ "p12-repeat": {
+  "fullname": "muse-probe-r2block-toc-p12-repeat",
+  "source": "+ A\n\n++ B\n\n+ C\n\n[[toc]]",
+  "action": "created"
+ },
+ "p13-skipped": {
+  "fullname": "muse-probe-r2block-toc-p13-skipped",
+  "source": "[[toc]]\n\n+ Alpha\n\n+* Skipped\n\n++ Beta",
+  "action": "created"
+ },
+ "p14-multiple": {
+  "fullname": "muse-probe-r2block-toc-p14-multiple",
+  "source": "+ Lead\n\nintro\n\n[[toc]]\n\n+ Middle\n\n[[toc]]\n\n++ Nested\n\n[[toc]]",
+  "action": "created"
+ },
+ "p15-div-heading": {
+  "fullname": "muse-probe-r2block-toc-p15-div-heading",
+  "source": "[[div class=\"x\"]]\n+ Inside div\n[[/div]]\n\n[[toc]]",
+  "action": "created"
+ },
+ "p16-collapsible-heading": {
+  "fullname": "muse-probe-r2block-toc-p16-collapsible-heading",
+  "source": "[[collapsible]]\n+ Inside collapsible\n[[/collapsible]]\n\n[[toc]]",
+  "action": "created"
+ },
+ "p17-iftags-seam": {
+  "fullname": "muse-probe-r2block-toc-p17-iftags-seam",
+  "source": "[[toc]]\n\n+ Alp[[iftags -zzz]]ha[[/iftags]]\n\n++ Be[[iftags +zzz]]ta[[/iftags]]d",
+  "action": "created"
+ },
+ "p18-toc-in-div": {
+  "fullname": "muse-probe-r2block-toc-p18-toc-in-div",
+  "source": "[[div]]\n[[toc]]\n[[/div]]\n\n+ A",
+  "action": "created"
+ },
+ "p19-toc-in-footnote": {
+  "fullname": "muse-probe-r2block-toc-p19-toc-in-footnote",
+  "source": "[[footnote]]\n[[toc]]\n[[/footnote]]\n\n+ A\n\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "p20-repeated-text": {
+  "fullname": "muse-probe-r2block-toc-p20-repeated-text",
+  "source": "+ Same\n\n+ Same\n\n[[toc]]",
+  "action": "created"
+ },
+ "p21-footnote-heading": {
+  "fullname": "muse-probe-r2block-toc-p21-footnote-heading",
+  "source": "+ Head[[footnote]]note[[/footnote]] tail\n\n[[toc]]",
+  "action": "created"
+ },
+ "p22-gt-align": {
+  "fullname": "muse-probe-r2block-toc-p22-gt-align",
+  "source": "[[>toc]]\n\n+ A",
+  "action": "created"
+ },
+ "p23-uppercase": {
+  "fullname": "muse-probe-r2block-toc-p23-uppercase",
+  "source": "[[TOC]]\n\n+ A",
+  "action": "created"
+ },
+ "p24-trailing-space": {
+  "fullname": "muse-probe-r2block-toc-p24-trailing-space",
+  "source": "[[toc ]]\n\n+ A",
+  "action": "created"
+ },
+ "p25-two-spaces": {
+  "fullname": "muse-probe-r2block-toc-p25-two-spaces",
+  "source": "[[toc  title=\"X\"]]\n\n+ A",
+  "action": "created"
+ },
+ "p26-tab-sep": {
+  "fullname": "muse-probe-r2block-toc-p26-tab-sep",
+  "source": "[[toc\ttitle=\"X\"]]\n\n+ A",
+  "action": "created"
+ },
+ "p27-unterminated": {
+  "fullname": "muse-probe-r2block-toc-p27-unterminated",
+  "source": "[[toc\n\n+ A",
+  "action": "created"
+ },
+ "p28-same-line-text": {
+  "fullname": "muse-probe-r2block-toc-p28-same-line-text",
+  "source": "[[toc]] trailing\n\n+ A",
+  "action": "created"
+ },
+ "p29-clear-float": {
+  "fullname": "muse-probe-r2block-toc-p29-clear-float",
+  "source": "[[toc]]~~~~\n\n+ A",
+  "action": "created"
+ },
+ "p30-style": {
+  "fullname": "muse-probe-r2block-toc-p30-style",
+  "source": "[[toc style=\"color: blue\"]]\n\n+ A",
+  "action": "created"
+ },
+ "p31-star": {
+  "fullname": "muse-probe-r2block-toc-p31-star",
+  "source": "[[*toc]]\n\n+ A",
+  "action": "created"
+ },
+ "p32-iftags-mid-name": {
+  "fullname": "muse-probe-r2block-toc-p32-iftags-mid-name",
+  "source": "[[t[[iftags -zzz]][[/iftags]]oc]]\n\n+ A",
+  "action": "created"
+ }
+}

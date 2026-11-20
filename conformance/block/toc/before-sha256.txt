@@ -1,0 +1,4 @@
+Pre-correction Toc rule files, captured before the first edit at 2026-11-20.
+Toc.parse.before.php  SHA-256 b9c4ff60f1a55cc8a2a20c05c18ac09e73bee5cdab4fa85ea293f5d6faf4ddcd  (copy of ref-php/text-wiki/Text/Wiki/Parse/Default/Toc.php)
+Toc.render.before.php SHA-256 fb2df31cad196f1ff10a990bc8c5e4a969dba287036232858b982d0f4b8b721d  (copy of ref-php/text-wiki/Text/Wiki/Render/Xhtml/Toc.php)
+Both copies were verified byte-identical to the live rule files at capture time.

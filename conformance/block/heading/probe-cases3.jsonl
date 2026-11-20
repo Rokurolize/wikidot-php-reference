@@ -1,0 +1,2 @@
+{"id": "p22-anchor-element", "source": "+ [[a name=\"x\"]]anchor[[/a]]"}
+{"id": "p23-div-barrier-inline", "source": "[[div]]\n+ Head[[/div]] tail\n\n++ J"}

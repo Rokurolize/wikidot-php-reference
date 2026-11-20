@@ -1,0 +1,34 @@
+MODE battery: {"all3": 0, "n": 55, "sig_after_ftml": 47, "sig_after_live": 0, "sig_before_ftml": 38, "sig_ftml_live": 0, "whole_after_ftml": 28, "whole_after_live": 0}
+mismatching cases after correction: 8
+--- h16-external-link
+    before: [(1, 'toc0', '<span>See [<a href="http://example.com|the">site</a>]</span>')]
+    after : [(1, 'toc0', '<span>See [<a href="http://example.com|the">site</a>]</span>')]
+    ftml  : [(1, 'toc0', '<span>See [[<a href="http://example.com">http://example.com</a>|the site]]</span>')]
+--- h18-anchor
+    before: [(3, 'toc0', '<span>[[a name=&quot;x&quot;]]anchor[[/a]]</span>')]
+    after : [(3, 'toc0', '<span>[[a name=&quot;x&quot;]]anchor[[/a]]</span>')]
+    ftml  : [(3, 'toc0', '<span><a href="">anchor</a></span>')]
+--- h19-entities
+    before: [(1, 'toc0', "<span>A &amp; B &lt; C &gt; D &quot;quote&quot; 'apos'</span>")]
+    after : [(1, 'toc0', "<span>A &amp; B &lt; C &gt; D &quot;quote&quot; 'apos'</span>")]
+    ftml  : [(1, 'toc0', '<span>A &amp; B &lt; C &gt; D &quot;quote&quot; &#39;apos&#39;</span>')]
+--- h40-plus-space-only
+    before: [(1, 'toc0', '<span></span>')]
+    after : [(1, 'toc0', '<span></span>')]
+    ftml  : [(1, 'toc0', '')]
+--- h41-trailing-spaces
+    before: [(1, 'toc0', '<span>trailing </span>')]
+    after : [(1, 'toc0', '<span>trailing </span>')]
+    ftml  : [(1, 'toc0', '<span>trailing</span>')]
+--- h48-barrier-div
+    before: [(1, 'toc0', '<span>Head</div>tail</span>'), (2, 'toc1', '<span>J</span>')]
+    after : [(1, 'toc0', '<span>Head</div>tail</span>'), (2, 'toc1', '<span>J</span>')]
+    ftml  : [(1, 'toc0', '<span>Head</span> tail'), (2, 'toc1', '<span><span>J</span></span>')]
+--- h52-empty-body
+    before: [(2, 'toc0', '<span> </span>')]
+    after : [(2, 'toc0', '<span></span>')]
+    ftml  : [(2, 'toc0', '')]
+--- h54-toc-raw-pin
+    before: [(1, 'toc0', '<span>Head</div>tail</span>'), (2, 'toc1', '<span>J</span>')]
+    after : [(1, 'toc0', '<span>Head</div>tail</span>'), (2, 'toc1', '<span>J</span>')]
+    ftml  : [(1, 'toc0', '<span>Head</span> tail'), (2, 'toc1', '<span><span>J</span></span>')]

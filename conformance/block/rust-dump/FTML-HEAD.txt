@@ -1,0 +1,6 @@
+ftml checkout: /home/roku/src/Rokurolize/ftml
+HEAD: 6a029bf416651e0d68408f7c977b4cae30ebec55
+short: 6a029bf41
+branch: HEAD
+HEAD subject: fix(preproc): keep indented quote-like lines as literal text (#1532)
+note: recorded at R2-block dumper build time, unchanged from the R2-notes stage's recorded HEAD. The dumper binary is built and every stage differential is produced at the recorded HEAD above; no later checkout change is re-run during this stage.

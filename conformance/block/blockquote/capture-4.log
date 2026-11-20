@@ -1,0 +1,46 @@
+quote-alias -> muse-probe-r2block-bq-quote-alias stable=True saved_source_matches=True valid=True
+quote-then-div -> muse-probe-r2block-bq-quote-then-div stable=True saved_source_matches=True valid=True
+quote-then-heading -> muse-probe-r2block-bq-quote-then-heading stable=True saved_source_matches=True valid=True
+quote-then-list -> muse-probe-r2block-bq-quote-then-list stable=True saved_source_matches=True valid=True
+{
+ "quote-alias": {
+  "fullname": "muse-probe-r2block-bq-quote-alias",
+  "html": "<p>[[quote]]<br />\ntext<br />\n[[/quote]]</p>",
+  "html_sha256": "007d0a2a4345688fa9c70157d47475ef7b3856a3db43ff5b85b620c0e0c3f363",
+  "source": "[[quote]]\ntext\n[[/quote]]",
+  "source_sha256": "1e8246e1d51b0942e23779e44ff2c2af23c7ce13124807a6a80950dc05e95926",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "quote-then-div": {
+  "fullname": "muse-probe-r2block-bq-quote-then-div",
+  "html": "<blockquote>\n<p>q</p>\n</blockquote>\n<div>\n<p>in</p>\n</div>",
+  "html_sha256": "5fb0dc6512618370be63e12dcd8ec02a373d21f2eef587c4d47e79ae6efa900a",
+  "source": "> q\n[[div]]\nin\n[[/div]]",
+  "source_sha256": "160ce9d0f60b575b3d95e472248e1b9a6ea26c4eb8cf62e6dc0ab0308250303e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "quote-then-heading": {
+  "fullname": "muse-probe-r2block-bq-quote-then-heading",
+  "html": "<blockquote>\n<p>q</p>\n</blockquote>\n<h1 id=\"toc0\"><span>h</span></h1>",
+  "html_sha256": "e0533e5aef062df3813acaa98891e9873c6d03daa1926e17eb5a8205d6e794f0",
+  "source": "> q\n+ h",
+  "source_sha256": "75004979f96e2aff375775dc5b5db33a3040a6f28613d6f5d01f99f6357c7c3e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "quote-then-list": {
+  "fullname": "muse-probe-r2block-bq-quote-then-list",
+  "html": "<blockquote>\n<p>q</p>\n</blockquote>\n<ul>\n<li>i</li>\n</ul>",
+  "html_sha256": "216fe7a4daae1bb7ed5fd9b8093f445dccf9e7defcdb8dec512b1bd99206fc18",
+  "source": "> q\n* i",
+  "source_sha256": "94a01311a84dbfd71324dbe3373c3ef21c1ab9e4275dc9819febe684413dfbdb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,56 @@
+{"id": "toc01-before", "source": "[[toc]]\n\n+ Alpha\n\n+ Beta"}
+{"id": "toc02-after", "source": "+ Alpha\n\n+ Beta\n\n[[toc]]"}
+{"id": "toc03-empty", "source": "[[toc]]"}
+{"id": "toc04-no-headings-body", "source": "Opening text.\n\n[[toc]]\n\nClosing text."}
+{"id": "toc05-multiple", "source": "+ Lead\n\nintro\n\n[[toc]]\n\n+ Middle\n\n[[toc]]\n\n++ Nested\n\n[[toc]]\n\n+ Final"}
+{"id": "toc06-multiple-adjacent", "source": "[[toc]]\n[[toc]]\n\n+ One"}
+{"id": "toc07-levels", "source": "+ L1\n\n++ L2\n\n+++ L3\n\n++++ L4\n\n+++++ L5\n\n++++++ L6\n\n[[toc]]"}
+{"id": "toc08-skip", "source": "+ One\n\n++++ Four\n\n[[toc]]"}
+{"id": "toc09-repeat", "source": "+ A\n\n++ B\n\n+ C\n\n++ D\n\n[[toc]]"}
+{"id": "toc10-skipped-heading", "source": "[[toc]]\n\n+ Alpha\n\n+* Skipped\n\n++ Beta"}
+{"id": "toc11-inline-markup", "source": "+ **Bold** and //italic// text\n\n[[toc]]"}
+{"id": "toc12-link-in-heading", "source": "+ See [http://example.com the site]\n\n[[toc]]"}
+{"id": "toc13-footnote-in-heading", "source": "+ Head[[footnote]]note text[[/footnote]] tail\n\n+ Plain\n\n[[toc]]"}
+{"id": "toc14-repeated-text", "source": "+ Same\n\n+ Same\n\n+ Same\n\n[[toc]]"}
+{"id": "toc15-dash-runs", "source": "+ aa -- bb\n\n+ cc --- dd\n\n+ ee -- [[span]]ff[[/span]] -- gg\n\n[[toc]]"}
+{"id": "toc16-unicode", "source": "+ 日本語 🌊 café\n\n[[toc]]"}
+{"id": "toc20-float-left", "source": "[[f<toc]]\n\n+ A"}
+{"id": "toc21-float-right", "source": "[[f>toc]]\n\n+ A"}
+{"id": "toc22-title", "source": "+ A\n\n[[toc title=\"Contents\"]]"}
+{"id": "toc23-title-empty", "source": "[[toc title=\"\"]]\n\n+ A"}
+{"id": "toc24-title-entities", "source": "[[toc title=\"目次 & <notes>\"]]\n\n+ A"}
+{"id": "toc25-class", "source": "[[toc class=\"third-toc\"]]\n\n+ A"}
+{"id": "toc26-style", "source": "[[toc style=\"color: blue\"]]\n\n+ A"}
+{"id": "toc27-id", "source": "[[toc id=\"my-toc\"]]\n\n+ A"}
+{"id": "toc28-multi-attrs", "source": "[[toc title=\"T\" class=\"c\" style=\"color:red\" id=\"i\"]]\n\n+ A"}
+{"id": "toc29-quoted-close-bracket", "source": "[[toc title=\"a]]b\"]]\n\n+ A"}
+{"id": "toc30-float-title", "source": "[[f<toc title=\"Left TOC\"]]\n\n+ A"}
+{"id": "toc31-float-class", "source": "[[f>toc class=\"righty\"]]\n\n+ A"}
+{"id": "toc32-float-id", "source": "[[f>toc id=\"toc-right\"]]\n\n+ A"}
+{"id": "toc40-div-wrapped-heading", "source": "[[div class=\"x\"]]\n+ Inside div\n[[/div]]\n\n[[toc]]"}
+{"id": "toc41-collapsible-wrapped-heading", "source": "[[collapsible show=\"open\"]]\n+ Inside collapsible\n[[/collapsible]]\n\n[[toc]]"}
+{"id": "toc42-iftags-kept-heading", "source": "[[iftags tags=\"fn\"]]+ Kept heading[[/iftags]]\n\n[[toc]]", "tags": ["fn"]}
+{"id": "toc43-iftags-hidden-heading", "source": "[[iftags tags=\"other\"]]+ Hidden heading[[/iftags]]\n\n[[toc]]", "tags": ["fn"]}
+{"id": "toc44-toc-in-div", "source": "[[div]]\n[[toc]]\n[[/div]]\n\n+ A"}
+{"id": "toc45-toc-in-collapsible", "source": "[[collapsible]]\n[[toc]]\n[[/collapsible]]\n\n+ A"}
+{"id": "toc46-toc-in-quote", "source": "> [[toc]]\n\n+ A"}
+{"id": "toc47-toc-in-list", "source": "* [[toc]]\n\n+ A"}
+{"id": "toc48-toc-in-footnote", "source": "[[footnote]]\n[[toc]]\n[[/footnote]]\n\n+ A\n\n[[footnoteblock]]"}
+{"id": "toc49-iftags-mid-name", "source": "[[t[[iftags -zzz]][[/iftags]]oc]]\n\n+ A"}
+{"id": "toc50-author-anchor-collision", "source": "[[# toc1]]\n\n+ One\n\n+ Two\n\n[[# toc0]]\n\n[[toc]]"}
+{"id": "toc60-uppercase", "source": "[[TOC]]\n\n+ A"}
+{"id": "toc61-mixedcase", "source": "[[Toc]]\n\n+ A"}
+{"id": "toc62-gt-align", "source": "[[>toc]]\n\n+ A"}
+{"id": "toc63-star", "source": "[[*toc]]\n\n+ A"}
+{"id": "toc64-score", "source": "[[_toc]]\n\n+ A"}
+{"id": "toc65-prefix-suffix", "source": "x[[toc]]y\n\n+ A"}
+{"id": "toc66-indented", "source": "  [[toc]]\n\n+ A"}
+{"id": "toc67-tabbed", "source": "\t[[toc]]\n\n+ A"}
+{"id": "toc68-trailing-space", "source": "[[toc ]]\n\n+ A"}
+{"id": "toc69-two-spaces", "source": "[[toc  title=\"X\"]]\n\n+ A"}
+{"id": "toc70-tab-sep", "source": "[[toc\ttitle=\"X\"]]\n\n+ A"}
+{"id": "toc71-unterminated", "source": "[[toc\n\n+ A"}
+{"id": "toc72-stray-closer", "source": "[[/toc]]\n\n+ A"}
+{"id": "toc73-same-line-text", "source": "[[toc]] trailing\n\n+ A"}
+{"id": "toc74-clear-float", "source": "[[toc]]~~~~\n\n+ A"}
+{"id": "toc75-tocx", "source": "[[toctest]]\n\n+ A"}

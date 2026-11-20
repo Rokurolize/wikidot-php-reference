@@ -1,0 +1,17 @@
+{"id":"p01-notoc-single","output":"<p>+* no toc one<\/p>\n\n"}
+{"id":"p02-notoc-interleaved","output":"\n<h1 id=\"toc0\"><span>A<\/span><\/h1>\n<p>+* B<\/p>\n\n\n<h2 id=\"toc1\"><span>C<\/span><\/h2>\n"}
+{"id":"p09-toc-excludes-notoc","output":"<table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">fold<\/a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">unfold<\/a><\/div><div class=\"title\">Table of Contents<\/div><div id=\"toc-list\">\n\t<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A<\/a><\/div>\n\t<div style=\"margin-left: 2em;\"><a href=\"#toc1\">B<\/a><\/div>\n<\/div><\/div><\/td><\/tr><\/table>\n\n\n<h1 id=\"toc0\"><span>A<\/span><\/h1>\n<p>++* skip<\/p>\n\n\n<h2 id=\"toc1\"><span>B<\/span><\/h2>\n"}
+{"id":"p03-same-text","output":"\n<h1 id=\"toc0\"><span>Same<\/span><\/h1>\n\n<h1 id=\"toc1\"><span>Same<\/span><\/h1>\n\n<h1 id=\"toc2\"><span>Same<\/span><\/h1>\n"}
+{"id":"p18-toc-anchors","output":"<table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">fold<\/a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">unfold<\/a><\/div><div class=\"title\">Table of Contents<\/div><div id=\"toc-list\">\n\t<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A<\/a><\/div>\n\t<div style=\"margin-left: 2em;\"><a href=\"#toc1\">B<\/a><\/div>\n\t<div style=\"margin-left: 3em;\"><a href=\"#toc2\">C<\/a><\/div>\n<\/div><\/div><\/td><\/tr><\/table>\n\n\n<h1 id=\"toc0\"><span>A<\/span><\/h1>\n\n<h2 id=\"toc1\"><span>B<\/span><\/h2>\n\n<h3 id=\"toc2\"><span>C<\/span><\/h3>\n"}
+{"id":"p04-nospace","output":"<p>+No space<\/p>\n\n"}
+{"id":"p05-seven","output":"<p>+++++++ seven<\/p>\n\n"}
+{"id":"p12-internal-space","output":"\n<h2 id=\"toc0\"><span>a  b<\/span><\/h2>\n"}
+{"id":"p13-double-space","output":"\n<h2 id=\"toc0\"><span> two spaces after prefix<\/span><\/h2>\n"}
+{"id":"p06-inline-em","output":"\n<h1 id=\"toc0\"><span>My <em>header<\/em><\/span><\/h1>\n"}
+{"id":"p07-external-link","output":"\n<h1 id=\"toc0\"><span>See [<a href=\"http:\/\/example.com|the\">site<\/a>]<\/span><\/h1>\n"}
+{"id":"p08-entities","output":"\n<h1 id=\"toc0\"><span>A &amp; B &lt; C &gt; D &quot;quote&quot; 'apos'<\/span><\/h1>\n"}
+{"id":"p11-unicode","output":"\n<h1 id=\"toc0\"><span>H\u00e9ading \u4e2d\u6587 \ud83c\udf89<\/span><\/h1>\n"}
+{"id":"p10-level6","output":"\n<h6 id=\"toc0\"><span>h6<\/span><\/h6>\n"}
+{"id":"p14-adjacent-div","output":"\n<h1 id=\"toc0\"><span>H<\/span><\/h1>\n<div ><p>d<\/p>\n\n<\/div>"}
+{"id":"p15-div-barrier","output":"\n<h1 id=\"toc0\"><span>[[div]]<\/span><\/h1>\n<p>d[[\/div]]<\/p>\n\n"}
+{"id":"p17-notoc-repeat","output":"<p>+* Same<br \/>\n++* Same<\/p>\n\n"}

@@ -47,22 +47,23 @@ class Text_Wiki_Render_Xhtml_Blockquote extends Text_Wiki_Render {
         $type = $options['type'];
         $level = $options['level'];
 
-        // set up indenting so that the results look nice; we do this
-        // in two steps to avoid str_pad mathematics.  ;-)
-        $pad = str_pad('', $level, "\t");
-        $pad = str_replace("\t", '    ', $pad);
+        // R2-BLOCK C1: the fossil pretty-printed nested blockquotes with four
+        // spaces per level. Live (saved-page probes and ftml's corpus pins)
+        // emits no such padding, and the level is not part of the observable
+        // blockquote shape, so the padding is removed. $level stays in the
+        // token options for downstream compatibility.
 
         // pick the css type
         $css = $this->formatConf(' class="%s"', 'css');
 
         // starting
         if ($type == 'start') {
-            return "$pad<blockquote$css>";
+            return "<blockquote$css>";
         }
 
         // ending
         if ($type == 'end') {
-            return $pad . "</blockquote>\n";
+            return "</blockquote>\n";
         }
     }
 }

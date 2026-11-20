@@ -1,0 +1,2 @@
+{"id":"inline-link","output":"<p>See [<a href=\"http:\/\/example.com|the\">site<\/a>]<\/p>\n\n"}
+{"id":"inline-anchor","output":"<p>[[a name=&quot;x&quot;]]anchor[[\/a]]<\/p>\n\n"}

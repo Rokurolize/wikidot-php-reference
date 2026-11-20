@@ -1,0 +1,11 @@
+map00 OK attempt 1
+map01 attempt 1 failed; retrying
+map01 OK attempt 2
+map02 OK attempt 1
+map03 OK attempt 1
+map04 attempt 1 failed; retrying
+map04 attempt 2 failed; retrying
+map04 attempt 3 failed; retrying
+map04 OK attempt 4
+map05 OK attempt 1
+batches done

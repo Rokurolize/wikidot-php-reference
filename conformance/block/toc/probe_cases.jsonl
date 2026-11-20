@@ -1,0 +1,32 @@
+{"id":"p01-basic","source":"[[toc]]\n\n+ Alpha\n\n+ Beta"}
+{"id":"p02-title","source":"+ A\n\n[[toc title=\"Contents\"]]"}
+{"id":"p03-title-empty","source":"[[toc title=\"\"]]\n\n+ A"}
+{"id":"p04-title-entities","source":"[[toc title=\"目次 & <notes>\"]]\n\n+ A"}
+{"id":"p05-quoted-close","source":"[[toc title=\"a]]b\"]]\n\n+ A"}
+{"id":"p06-class","source":"[[toc class=\"third-toc\"]]\n\n+ A"}
+{"id":"p07-id","source":"[[toc id=\"my-toc\"]]\n\n+ A"}
+{"id":"p08-float-left","source":"[[f<toc]]\n\n+ A"}
+{"id":"p09-float-right","source":"[[f>toc]]\n\n+ A"}
+{"id":"p10-float-id","source":"[[f>toc id=\"toc-right\"]]\n\n+ A"}
+{"id":"p11-levels","source":"+ L1\n\n++ L2\n\n++++ L4\n\n[[toc]]"}
+{"id":"p12-repeat","source":"+ A\n\n++ B\n\n+ C\n\n[[toc]]"}
+{"id":"p13-skipped","source":"[[toc]]\n\n+ Alpha\n\n+* Skipped\n\n++ Beta"}
+{"id":"p14-multiple","source":"+ Lead\n\nintro\n\n[[toc]]\n\n+ Middle\n\n[[toc]]\n\n++ Nested\n\n[[toc]]"}
+{"id":"p15-div-heading","source":"[[div class=\"x\"]]\n+ Inside div\n[[/div]]\n\n[[toc]]"}
+{"id":"p16-collapsible-heading","source":"[[collapsible]]\n+ Inside collapsible\n[[/collapsible]]\n\n[[toc]]"}
+{"id":"p17-iftags-seam","source":"[[toc]]\n\n+ Alp[[iftags -zzz]]ha[[/iftags]]\n\n++ Be[[iftags +zzz]]ta[[/iftags]]d"}
+{"id":"p18-toc-in-div","source":"[[div]]\n[[toc]]\n[[/div]]\n\n+ A"}
+{"id":"p19-toc-in-footnote","source":"[[footnote]]\n[[toc]]\n[[/footnote]]\n\n+ A\n\n[[footnoteblock]]"}
+{"id":"p20-repeated-text","source":"+ Same\n\n+ Same\n\n[[toc]]"}
+{"id":"p21-footnote-heading","source":"+ Head[[footnote]]note[[/footnote]] tail\n\n[[toc]]"}
+{"id":"p22-gt-align","source":"[[>toc]]\n\n+ A"}
+{"id":"p23-uppercase","source":"[[TOC]]\n\n+ A"}
+{"id":"p24-trailing-space","source":"[[toc ]]\n\n+ A"}
+{"id":"p25-two-spaces","source":"[[toc  title=\"X\"]]\n\n+ A"}
+{"id":"p26-tab-sep","source":"[[toc\ttitle=\"X\"]]\n\n+ A"}
+{"id":"p27-unterminated","source":"[[toc\n\n+ A"}
+{"id":"p28-same-line-text","source":"[[toc]] trailing\n\n+ A"}
+{"id":"p29-clear-float","source":"[[toc]]~~~~\n\n+ A"}
+{"id":"p30-style","source":"[[toc style=\"color: blue\"]]\n\n+ A"}
+{"id":"p31-star","source":"[[*toc]]\n\n+ A"}
+{"id":"p32-iftags-mid-name","source":"[[t[[iftags -zzz]][[/iftags]]oc]]\n\n+ A"}

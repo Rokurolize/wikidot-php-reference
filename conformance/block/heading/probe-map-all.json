@@ -1,0 +1,212 @@
+{
+ "p22-anchor-element": {
+  "fullname": "muse-probe-r2block-head-p22-anchor-element",
+  "source": "+ [[a name=\"x\"]]anchor[[/a]]",
+  "action": "created"
+ },
+ "p23-div-barrier-inline": {
+  "fullname": "muse-probe-r2block-head-p23-div-barrier-inline",
+  "source": "[[div]]\n+ Head[[/div]] tail\n\n++ J",
+  "action": "created"
+ },
+ "p01-notoc-single": {
+  "fullname": "muse-probe-r2block-head-p01-notoc-single",
+  "html": "<h1><span>no toc one</span></h1>",
+  "html_sha256": "960c81f1dd925fc35b9da98fa5cb1ebd22f3b250e4d9cba9b108cd2d42b698a8",
+  "source": "+* no toc one",
+  "source_sha256": "fb676e4147172ae5107d01fc085c015e643057f3c16cb878f4e385ed2d87f59c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02-notoc-interleaved": {
+  "fullname": "muse-probe-r2block-head-p02-notoc-interleaved",
+  "html": "<h1 id=\"toc0\"><span>A</span></h1>\n<h1><span>B</span></h1>\n<h2 id=\"toc1\"><span>C</span></h2>",
+  "html_sha256": "f4d1c85093b99c6829f82d85c4dea9f0ae17b21e6b3653b54ae714b0f3041274",
+  "source": "+ A\n+* B\n++ C",
+  "source_sha256": "57fea471414622eecf28514369840e153baea7a93f1484fcdbf00ac312c815d8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09-toc-excludes-notoc": {
+  "fullname": "muse-probe-r2block-head-p09-toc-excludes-notoc",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n<div style=\"margin-left: 2em;\"><a href=\"#toc1\">B</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h1 id=\"toc0\"><span>A</span></h1>\n<h2><span>skip</span></h2>\n<h2 id=\"toc1\"><span>B</span></h2>",
+  "html_sha256": "46d4edda5acdedca2a090885a223d24563d08fbb22a472bedb1816d389f87b8d",
+  "source": "[[toc]]\n+ A\n++* skip\n++ B",
+  "source_sha256": "613ffe0b94dd288d3decccbafdd4c62e9ec8cf16808226c7c1638abdcd5a8b44",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03-same-text": {
+  "fullname": "muse-probe-r2block-head-p03-same-text",
+  "html": "<h1 id=\"toc0\"><span>Same</span></h1>\n<h1 id=\"toc1\"><span>Same</span></h1>\n<h1 id=\"toc2\"><span>Same</span></h1>",
+  "html_sha256": "dbb9de799832c3101759dad42ce9a894d080f33c0db45e0df917088ffd25a423",
+  "source": "+ Same\n+ Same\n+ Same",
+  "source_sha256": "62152b355e131cbb4af0de2e532a94b2e529eed49b615abeb3f2ece4e9058960",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18-toc-anchors": {
+  "fullname": "muse-probe-r2block-head-p18-toc-anchors",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n<div style=\"margin-left: 2em;\"><a href=\"#toc1\">B</a></div>\n<div style=\"margin-left: 3em;\"><a href=\"#toc2\">C</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h1 id=\"toc0\"><span>A</span></h1>\n<h2 id=\"toc1\"><span>B</span></h2>\n<h3 id=\"toc2\"><span>C</span></h3>",
+  "html_sha256": "df5ad4869de6abf219c3aa5ed959fde2d308576f5d87250c30980f8e947a5a99",
+  "source": "[[toc]]\n+ A\n++ B\n+++ C",
+  "source_sha256": "332cefee42a63b24d4e286511e8c23126229a0b9c8e38ff1aaf47074876bdc07",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04-nospace": {
+  "fullname": "muse-probe-r2block-head-p04-nospace",
+  "html": "<p>+No space</p>",
+  "html_sha256": "a3d2db46f51dcc408675f2f03fd75c50b12d5b81355d13dbe23018b7d2dbdf7b",
+  "source": "+No space",
+  "source_sha256": "56b1b2a9ce9ce6f96197ecc5bb915730ca1d189185df30c82a5c3843da825356",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05-seven": {
+  "fullname": "muse-probe-r2block-head-p05-seven",
+  "html": "<p>+++++++ seven</p>",
+  "html_sha256": "190f36c6bbd9d96f6e6b64a31a59c1a985ef60deeb4adc54c4cfd1f70e464b14",
+  "source": "+++++++ seven",
+  "source_sha256": "e480487136b944f333249f088a94194be45ee92c0d2d484ff84955667e97d507",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12-internal-space": {
+  "fullname": "muse-probe-r2block-head-p12-internal-space",
+  "html": "<h2 id=\"toc0\"><span>a b</span></h2>",
+  "html_sha256": "128c06f10abe0ed302e95e4d1accfdd06927d61bd660895271e57d7dbc63941d",
+  "source": "++ a  b",
+  "source_sha256": "2eae1bc93c3bba16d56916f29aaccbbb599e837fbe7f09ff6349e44177a80174",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13-double-space": {
+  "fullname": "muse-probe-r2block-head-p13-double-space",
+  "html": "<h2 id=\"toc0\"><span>two spaces after prefix</span></h2>",
+  "html_sha256": "132dd15b12b7c9e91f84d3d2c8689c47c2cf4ada4515f8aa7e5cdc9187038b7e",
+  "source": "++  two spaces after prefix",
+  "source_sha256": "f5f5b19635a809b9c54698fab948a74d5581d80bcdf06dc33cc0fdbaec48fcd2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06-inline-em": {
+  "fullname": "muse-probe-r2block-head-p06-inline-em",
+  "html": "<h1 id=\"toc0\"><span>My <em>header</em></span></h1>",
+  "html_sha256": "1226222b1aa5df8bf8c73193379b53c35c6285cca9352d6e05e4208931ed0e31",
+  "source": "+ My //header//",
+  "source_sha256": "3487fbeb1a809e81476672c1720bb8a6cfdf449e72304348e2bed4a6d2ff06eb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07-external-link": {
+  "fullname": "muse-probe-r2block-head-p07-external-link",
+  "html": "<h1 id=\"toc0\"><span>See [<a href=\"http://example.com|the\">site</a>]</span></h1>",
+  "html_sha256": "4cfc74c8278000d215469282c38b793da90e2f092b119d72f06d4c41bb223764",
+  "source": "+ See [[http://example.com|the site]]",
+  "source_sha256": "60f3dcc5251935597c9c1538f269abbc05e774213be3b28c96b014768361bac9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08-entities": {
+  "fullname": "muse-probe-r2block-head-p08-entities",
+  "html": "<h1 id=\"toc0\"><span>A &amp; B &lt; C &gt; D &quot;quote&quot; 'apos'</span></h1>",
+  "html_sha256": "48aa7f009757b09e9815960bb8d85218e5e4ae17d76a1bc21071e44270db0600",
+  "source": "+ A & B < C > D \"quote\" 'apos'",
+  "source_sha256": "370dd969c4d5c1b4cfb095eeb559ab89accb66ea63295b88bb40d306a27de5bf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11-unicode": {
+  "fullname": "muse-probe-r2block-head-p11-unicode",
+  "html": "<h1 id=\"toc0\"><span>Héading 中文 🎉</span></h1>",
+  "html_sha256": "02fbe6d6f351c3198514b3ed39cea7349faf4c4ceac0fa87dc9ec2fd639e9841",
+  "source": "+ Héading 中文 🎉",
+  "source_sha256": "8016bbf44dbb00f5f83ed5d4976f8ef0715b82c8cec5de23ad214fed46a81623",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10-level6": {
+  "fullname": "muse-probe-r2block-head-p10-level6",
+  "html": "<h6 id=\"toc0\"><span>h6</span></h6>",
+  "html_sha256": "3f1f32ec097b84698104a6c18b95db7d5b3c947dccbdd2e064e0a4590c210b5b",
+  "source": "++++++ h6",
+  "source_sha256": "dc4e0def2b136c0ca6c1ce3ec5008821900f5826c5d31957847d84aaa0ab0314",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14-adjacent-div": {
+  "fullname": "muse-probe-r2block-head-p14-adjacent-div",
+  "html": "<h1 id=\"toc0\"><span>H</span></h1>\n<div>\n<p>d</p>\n</div>",
+  "html_sha256": "5854d892d36b8e2b34e6418baf8cf4a60595aa12dc5d6ea8de1c015b528ca2c4",
+  "source": "+ H\n[[div]]\nd\n[[/div]]",
+  "source_sha256": "a2dc061499a387f65934df8dd51c09a455c9587790200179fc5581f0a74f2191",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15-div-barrier": {
+  "fullname": "muse-probe-r2block-head-p15-div-barrier",
+  "html": "<h1 id=\"toc0\"><span>[[div]]</span></h1>\n<p>d[[/div]]</p>",
+  "html_sha256": "56cebe8ebbafbbe51cbf22d5672a4183578553245fb49b405a08da532504dab9",
+  "source": "+ [[div]]\nd[[/div]]",
+  "source_sha256": "7c355068da9a3bc94f82afb3ce16f89277d3dc090025f63486db5b8776330a64",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17-notoc-repeat": {
+  "fullname": "muse-probe-r2block-head-p17-notoc-repeat",
+  "html": "<h1><span>Same</span></h1>\n<h2><span>Same</span></h2>",
+  "html_sha256": "f5781ffc7979ff815a2807644272bc34893e9d02b08481d33a37b528be3caeb1",
+  "source": "+* Same\n++* Same",
+  "source_sha256": "b5844784c3d41e68cbd6a25a37cbd5c6435fb60fa64a4b7da16725d6acb6905c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p19-tab-after": {
+  "fullname": "muse-probe-r2block-head-p19-tab-after",
+  "html": "<h1 id=\"toc0\"><span>Tab after plus</span></h1>",
+  "html_sha256": "8033bed573a905c10064faf6f0bbc1e1b768f2c0a1bb2a70609a09741988e21d",
+  "source": "+\tTab after plus",
+  "source_sha256": "666965b16bf1216b0f76f9a9b17c095d6e403ac1cdec25e28b443636648fec48",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p20-three-spaces": {
+  "fullname": "muse-probe-r2block-head-p20-three-spaces",
+  "html": "<h3 id=\"toc0\"><span>abc</span></h3>",
+  "html_sha256": "bd788c940d557d3fdaea2265920e7675731a8cfc8f117f4b6ca116f0c8c5b41e",
+  "source": "+++   abc",
+  "source_sha256": "260da89ceda41e640d53eb25669a22ec04e896d0b4b1915211c1dbfe58a62240",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p21-notoc-two-spaces": {
+  "fullname": "muse-probe-r2block-head-p21-notoc-two-spaces",
+  "html": "<h2><span>abc</span></h2>",
+  "html_sha256": "dd38b4cfa55f6820d1aa86cceb34c58dedc66bf9a3666420ae148c878e13f274",
+  "source": "++*  abc",
+  "source_sha256": "c65c3fed862b927027492e670745a513ba6d9e255368daab5e06285ab9df3ced",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

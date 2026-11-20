@@ -1,0 +1,68 @@
+p07-id -> muse-probe-r2block-toc-p07-id stable=True saved_source_matches=True valid=True
+p08-float-left -> muse-probe-r2block-toc-p08-float-left stable=True saved_source_matches=True valid=True
+p09-float-right -> muse-probe-r2block-toc-p09-float-right stable=True saved_source_matches=True valid=True
+p10-float-id -> muse-probe-r2block-toc-p10-float-id stable=True saved_source_matches=True valid=True
+p11-levels -> muse-probe-r2block-toc-p11-levels stable=True saved_source_matches=True valid=True
+p12-repeat -> muse-probe-r2block-toc-p12-repeat stable=True saved_source_matches=True valid=True
+{
+ "p07-id": {
+  "fullname": "muse-probe-r2block-toc-p07-id",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "f8a9fabe28e4554135baa831c03baa55074b99763e915c97c2fe8f132a1e5711",
+  "source": "[[toc id=\"my-toc\"]]\n\n+ A",
+  "source_sha256": "4d893f23f03bef8cddd7cf430843de6c97c9e37f8f7b73e8efb143a89acea323",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08-float-left": {
+  "fullname": "muse-probe-r2block-toc-p08-float-left",
+  "html": "<div id=\"toc\" class=\"floatleft\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "0debe16e24d75ed70e4edcae0e13ec4b7784c5b378b3f0867dc3f7ffaa2de670",
+  "source": "[[f<toc]]\n\n+ A",
+  "source_sha256": "4e629c76a35f630c9c575a95799a613658dc4ea41e4c4c28e4086301a91ec9b6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09-float-right": {
+  "fullname": "muse-probe-r2block-toc-p09-float-right",
+  "html": "<div id=\"toc\" class=\"floatright\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "f4fe95f387b38620ca3493f396afe47245caaa9082446356310b27cd22157856",
+  "source": "[[f>toc]]\n\n+ A",
+  "source_sha256": "21796a5763dae79e7d7ae3fea196fe1b66381b6d0bed02492e86d45524fc992b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10-float-id": {
+  "fullname": "muse-probe-r2block-toc-p10-float-id",
+  "html": "<div id=\"toc\" class=\"floatright\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "f4fe95f387b38620ca3493f396afe47245caaa9082446356310b27cd22157856",
+  "source": "[[f>toc id=\"toc-right\"]]\n\n+ A",
+  "source_sha256": "70e1ee77245d31454de777b1c641b7c20a185719b3e39b89c3ea40f935b1910c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11-levels": {
+  "fullname": "muse-probe-r2block-toc-p11-levels",
+  "html": "<h1 id=\"toc0\"><span>L1</span></h1>\n<h2 id=\"toc1\"><span>L2</span></h2>\n<h4 id=\"toc2\"><span>L4</span></h4>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">L1</a></div>\n<div style=\"margin-left: 2em;\"><a href=\"#toc1\">L2</a></div>\n<div style=\"margin-left: 4em;\"><a href=\"#toc2\">L4</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>",
+  "html_sha256": "f7292dc7e284ac3fbd2b6aa397925ce9b83a2d4acd8b14c0c5c63cc99d0089fa",
+  "source": "+ L1\n\n++ L2\n\n++++ L4\n\n[[toc]]",
+  "source_sha256": "15cd6fdaaebd8bd51622ad6ea186628e4504c3f72047b492a0dea3d85b399635",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12-repeat": {
+  "fullname": "muse-probe-r2block-toc-p12-repeat",
+  "html": "<h1 id=\"toc0\"><span>A</span></h1>\n<h2 id=\"toc1\"><span>B</span></h2>\n<h1 id=\"toc2\"><span>C</span></h1>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n<div style=\"margin-left: 2em;\"><a href=\"#toc1\">B</a></div>\n<div style=\"margin-left: 1em;\"><a href=\"#toc2\">C</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>",
+  "html_sha256": "6ebcb30aa3406ecb416966a1aed6cbda5d56253f0885e242ad27e6edcf6f3342",
+  "source": "+ A\n\n++ B\n\n+ C\n\n[[toc]]",
+  "source_sha256": "53703fb3101f88de30a0758012dfd7690be43bba9252daa06eae1dd9f1bb05d9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

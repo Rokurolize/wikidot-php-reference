@@ -1,0 +1,22 @@
+{
+ "quote-alias": {
+  "fullname": "muse-probe-r2block-bq-quote-alias",
+  "source": "[[quote]]\ntext\n[[/quote]]",
+  "action": "exists"
+ },
+ "quote-then-div": {
+  "fullname": "muse-probe-r2block-bq-quote-then-div",
+  "source": "> q\n[[div]]\nin\n[[/div]]",
+  "action": "exists"
+ },
+ "quote-then-heading": {
+  "fullname": "muse-probe-r2block-bq-quote-then-heading",
+  "source": "> q\n+ h",
+  "action": "exists"
+ },
+ "quote-then-list": {
+  "fullname": "muse-probe-r2block-bq-quote-then-list",
+  "source": "> q\n* i",
+  "action": "exists"
+ }
+}

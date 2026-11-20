@@ -1,0 +1,47 @@
+{
+ "p01-notoc-single": {
+  "fullname": "muse-probe-r2block-head-p01-notoc-single",
+  "source": "+* no toc one",
+  "action": "exists"
+ },
+ "p02-notoc-interleaved": {
+  "fullname": "muse-probe-r2block-head-p02-notoc-interleaved",
+  "source": "+ A\n+* B\n++ C",
+  "action": "exists"
+ },
+ "p09-toc-excludes-notoc": {
+  "fullname": "muse-probe-r2block-head-p09-toc-excludes-notoc",
+  "source": "[[toc]]\n+ A\n++* skip\n++ B",
+  "action": "exists"
+ },
+ "p03-same-text": {
+  "fullname": "muse-probe-r2block-head-p03-same-text",
+  "source": "+ Same\n+ Same\n+ Same",
+  "action": "exists"
+ },
+ "p18-toc-anchors": {
+  "fullname": "muse-probe-r2block-head-p18-toc-anchors",
+  "source": "[[toc]]\n+ A\n++ B\n+++ C",
+  "action": "exists"
+ },
+ "p04-nospace": {
+  "fullname": "muse-probe-r2block-head-p04-nospace",
+  "source": "+No space",
+  "action": "exists"
+ },
+ "p05-seven": {
+  "fullname": "muse-probe-r2block-head-p05-seven",
+  "source": "+++++++ seven",
+  "action": "exists"
+ },
+ "p12-internal-space": {
+  "fullname": "muse-probe-r2block-head-p12-internal-space",
+  "source": "++ a  b",
+  "action": "created"
+ },
+ "p13-double-space": {
+  "fullname": "muse-probe-r2block-head-p13-double-space",
+  "source": "++  two spaces after prefix",
+  "action": "created"
+ }
+}

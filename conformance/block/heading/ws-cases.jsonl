@@ -1,0 +1,10 @@
+{"id": "ws-para-double", "source": "a  b"}
+{"id": "ws-head-double", "source": "++ a  b"}
+{"id": "ws-head-two-after", "source": "++  ab"}
+{"id": "ws-head-tab", "source": "+\tTab after plus"}
+{"id": "ws-head-space-tab", "source": "+ \tTab after plus"}
+{"id": "ws-head-three-after", "source": "+++   abc"}
+{"id": "ws-notoc-two-after", "source": "++*  abc"}
+{"id": "ws-notoc-tab", "source": "++*\tabc"}
+{"id": "ws-head-trail", "source": "++ ab  "}
+{"id": "ws-head-mixed", "source": "++  a   b"}

@@ -1,0 +1,31 @@
+R2-block root cross-rule interaction: three-way family-shape comparison
+valid probes: 28; counts: {'all3': 28, 'ref_live': 0, 'ftm_live': 0, 'ref_ftm': 0, 'all_disagree': 0}
+
+x-toc-basic                  ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-toc-before                 ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-toc-two                    ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-toc-in-div                 ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-toc-in-collapsible         ALL3           canon(ref==ftml)=False canon(ref==live)=False canon(ftml==live)=True
+x-toc-in-iftags-drop         ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-toc-in-iftags-keep         ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-toc-untagged-iftags        ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-toc-in-code                ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-toc-in-quote               ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-toc-float-right            ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-anchor-repeat              ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-anchor-repeat-levels       ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-anchor-markup              ALL3           canon(ref==ftml)=False canon(ref==live)=True canon(ftml==live)=False
+x-anchor-across-containers   ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-anchor-skips               ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bq-head                    ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bq-list                    ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bq-footnote                ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bq-empty                   ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bq-empty-lines             ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bq-nested-head             ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bq-attr                    ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-bq-unterminated            ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-quote-head                 ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-mix-bq-head-toc            ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-mix-toc-in-bq              ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True
+x-mix-div-toc-iftags         ALL3           canon(ref==ftml)=True canon(ref==live)=True canon(ftml==live)=True

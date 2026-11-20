@@ -1,0 +1,25 @@
+{"id": "x-toc-basic", "source": "+ Alpha\n++ Beta\n[[toc]]"}
+{"id": "x-toc-in-div", "source": "[[div]]\n+ In div\n[[/div]]\n+ Outside\n[[toc]]"}
+{"id": "x-toc-in-collapsible", "source": "[[collapsible]]\n+ In collapsible\n[[/collapsible]]\n+ Outside\n[[toc]]"}
+{"id": "x-toc-untagged-iftags", "source": "[[iftags -alpha]]\n+ Hidden\n[[/iftags]]\n+ Visible\n[[toc]]"}
+{"id": "x-toc-in-code", "source": "[[code]]\n+ Literal\n[[/code]]\n+ Real\n[[toc]]"}
+{"id": "x-toc-in-quote", "source": "> + Quoted heading\n\n+ Real\n[[toc]]"}
+{"id": "x-toc-before", "source": "[[toc]]\n+ Alpha\n++ Beta"}
+{"id": "x-toc-two", "source": "[[toc]]\n+ One\n[[toc]]\n++ Two"}
+{"id": "x-toc-float-right", "source": "[[f>toc]]\n+ Alpha\n++ Beta"}
+{"id": "x-anchor-repeat", "source": "+ Alpha\n+ Alpha\n[[toc]]"}
+{"id": "x-anchor-repeat-levels", "source": "+ Alpha\n++ Alpha\n+ Alpha\n[[toc]]"}
+{"id": "x-anchor-markup", "source": "+ **Bold** and [[http://example.com|link]]\n[[toc]]"}
+{"id": "x-anchor-across-containers", "source": "[[div]]\n+ Same\n[[/div]]\n+ Same\n[[toc]]"}
+{"id": "x-anchor-skips", "source": "+ Level1\n++++ Level4\n[[toc]]"}
+{"id": "x-bq-head", "source": "[[blockquote]]\n+ Inside\n[[/blockquote]]\n+ Outside\n[[toc]]"}
+{"id": "x-bq-footnote", "source": "[[blockquote]]\n[[footnote]]inside[[/footnote]]\n[[/blockquote]]\n[[footnoteblock]]"}
+{"id": "x-bq-list", "source": "[[blockquote]]\n* one\n* two\n[[/blockquote]]"}
+{"id": "x-bq-empty", "source": "a\n[[blockquote]][[/blockquote]]\nb"}
+{"id": "x-bq-empty-lines", "source": "a\n[[blockquote]]\n\n[[/blockquote]]\nb"}
+{"id": "x-bq-nested-head", "source": "[[blockquote]]\n[[blockquote]]\n+ Deep\n[[/blockquote]]\n[[/blockquote]]\n[[toc]]"}
+{"id": "x-bq-attr", "source": "[[blockquote id=\"bq\" class=\"c\"]]text[[/blockquote]]"}
+{"id": "x-bq-unterminated", "source": "[[blockquote]]\ntext"}
+{"id": "x-quote-head", "source": "> + quoted\n\n+ real\n[[toc]]"}
+{"id": "x-mix-bq-head-toc", "source": "[[blockquote]]\n+ In quote\n[[/blockquote]]\n+ Outside\n[[toc]]"}
+{"id": "x-mix-toc-in-bq", "source": "[[blockquote]]\n[[toc]]\n+ Inside\n[[/blockquote]]"}

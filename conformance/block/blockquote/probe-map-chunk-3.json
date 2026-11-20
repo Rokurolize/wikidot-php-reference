@@ -1,0 +1,22 @@
+{
+ "marker-space-two-spaces": {
+  "fullname": "muse-probe-r2block-bq-marker-space-two-spaces",
+  "source": ">  text",
+  "action": "exists"
+ },
+ "marker-tab": {
+  "fullname": "muse-probe-r2block-bq-marker-tab",
+  "source": ">\ttext",
+  "action": "exists"
+ },
+ "nested-mixed": {
+  "fullname": "muse-probe-r2block-bq-nested-mixed",
+  "source": "> a\n>> b\n> c",
+  "action": "exists"
+ },
+ "nospace-in-run": {
+  "fullname": "muse-probe-r2block-bq-nospace-in-run",
+  "source": "> one\n>no\n> two",
+  "action": "exists"
+ }
+}

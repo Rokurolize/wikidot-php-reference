@@ -92,6 +92,23 @@ class Text_Wiki_Parse_Blockquote extends Text_Wiki_Parse {
             PREG_SET_ORDER
         );
         
+        // R2-BLOCK C2: live drops a quote run with no text at all rather than
+        // emitting an empty <blockquote></blockquote> container (saved-page
+        // probe muse-probe-r2block-bq-marker-space-before-text and the frozen
+        // notes probe muse-probe-r2notes-fnb-quote-empty-line; ftml agrees).
+        // Decide before any token is emitted: an all-empty run consumes its
+        // source lines but keeps only the paragraph break.
+        $has_text = false;
+        foreach ($list as $val) {
+            if (trim($val[2]) !== '') {
+                $has_text = true;
+                break;
+            }
+        }
+        if (!$has_text) {
+            return "\n\n";
+        }
+
         // a stack of starts and ends; we keep this so that we know what
         // indent level we're at.
         $stack = array();
@@ -151,7 +168,14 @@ class Text_Wiki_Parse_Blockquote extends Text_Wiki_Parse {
                     )
                 );
                 
-                $return .= "\n";
+                // R2-BLOCK C3: the fossil left only one newline after a
+                // shallower-level end token, so the Paragraph rule never
+                // wrapped the first line back at the lower depth and the
+                // reference emitted a bare <br /> instead of a paragraph.
+                // Live (probe muse-probe-r2block-bq-nested-mixed and the
+                // native corpus pin) and ftml both form a paragraph there;
+                // two newlines let the existing Paragraph rule do so.
+                $return .= "\n\n";
             }
             
             // add the line text.

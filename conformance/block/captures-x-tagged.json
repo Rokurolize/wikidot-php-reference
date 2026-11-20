@@ -1,0 +1,32 @@
+{
+ "x-toc-in-iftags-drop": {
+  "fullname": "muse-probe-r2block-x-x-toc-in-iftags-drop",
+  "html": "<h1 id=\"toc0\"><span>Visible</span></h1>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">Visible</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>",
+  "html_sha256": "380195655953753aef2a7fd9f7c0f5534bda3090fa9085c1537bc08ee7f408f3",
+  "source": "[[iftags -alpha]]\n+ Hidden\n[[/iftags]]\n+ Visible\n[[toc]]",
+  "source_sha256": "99d5fa9eb4aef5ebd3090f23605401f56e0d91e9f09cc08062e1e609c732b01f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-toc-in-iftags-keep": {
+  "fullname": "muse-probe-r2block-x-x-toc-in-iftags-keep",
+  "html": "<h1 id=\"toc0\"><span>Kept</span></h1>\n<h1 id=\"toc1\"><span>Visible</span></h1>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">Kept</a></div>\n<div style=\"margin-left: 1em;\"><a href=\"#toc1\">Visible</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>",
+  "html_sha256": "556eca3355175f6a7904b7f7d61a0191f9d1815faf40b15b9af13272dcbddcfb",
+  "source": "[[iftags +alpha]]\n+ Kept\n[[/iftags]]\n+ Visible\n[[toc]]",
+  "source_sha256": "615c9d6a378fa048641b4e7e5477782270a5e21a303e9967c65e594a6ee7fbf8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x-mix-div-toc-iftags": {
+  "fullname": "muse-probe-r2block-x-x-mix-div-toc-iftags",
+  "html": "<div>\n<h1 id=\"toc0\"><span>In div</span></h1>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">In div</a></div>\n<div style=\"margin-left: 1em;\"><a href=\"#toc1\">Visible</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n</div>\n<h1 id=\"toc1\"><span>Visible</span></h1>",
+  "html_sha256": "8de1f60b32a4d24e8602e4eae390324e8c1f8e8c008dd2925517f10b3a0f9673",
+  "source": "[[div]]\n+ In div\n[[toc]]\n[[/div]]\n[[iftags -alpha]]\n+ Hidden\n[[/iftags]]\n+ Visible",
+  "source_sha256": "a862750733ca48cce073282bbe37699ee6e2a7cdfc1e4c8bc6fff60ff297e926",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,16 @@
+{"errors":[],"html":"<blockquote><p>one<br>\ntwo</p></blockquote>","id":"bare-marker-in-run"}
+{"errors":["ParseError { token: Identifier, rule: \"block\", span: 13..18, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 31..33, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 39..42, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 52..54, kind: NoRulesMatch }"],"html":"<p>[[blockquote class=&quot;bq&quot; id=&quot;q1&quot;]]<br>\ntext<br>\n[[/blockquote]]</p>","id":"block-attrs"}
+{"errors":["ParseError { token: LineBreak, rule: \"block\", span: 14..15, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 12..14, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 20..23, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 33..35, kind: NoRulesMatch }"],"html":"<p>[[blockquote]]<br>\ntext<br>\n[[/blockquote]]</p>","id":"block-form"}
+{"errors":["ParseError { token: LineBreak, rule: \"block\", span: 14..15, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 12..14, kind: NoRulesMatch }"],"html":"<p>[[blockquote]]<br>\ntext</p>","id":"block-unterminated"}
+{"errors":[],"html":"<blockquote><p>a</p><blockquote><blockquote><p>c</p></blockquote></blockquote></blockquote>","id":"depth-skip"}
+{"errors":[],"html":"<blockquote><p>&amp;amp; &amp;lt;</p></blockquote>","id":"entities"}
+{"errors":[],"html":"<blockquote><p><strong>b</strong> <a href=\"http://example.com\">label</a></p></blockquote>","id":"inline-markup"}
+{"errors":[],"html":"<p>X</p>","id":"marker-space-before-text"}
+{"errors":[],"html":"<blockquote><p>text</p></blockquote>","id":"marker-space-two-spaces"}
+{"errors":[],"html":"<blockquote><p>text</p></blockquote>","id":"marker-tab"}
+{"errors":[],"html":"<blockquote><p>a</p><blockquote><p>b</p></blockquote><p>c</p></blockquote>","id":"nested-mixed"}
+{"errors":[],"html":"<blockquote><p>one<br>\ntwo</p></blockquote>","id":"nospace-in-run"}
+{"errors":["ParseError { token: LineBreak, rule: \"block\", span: 9..10, kind: NoSuchBlock }","ParseError { token: LeftBlock, rule: \"fallback\", span: 0..2, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 7..9, kind: NoRulesMatch }","ParseError { token: LeftBlockEnd, rule: \"fallback\", span: 15..18, kind: NoRulesMatch }","ParseError { token: RightBlock, rule: \"fallback\", span: 23..25, kind: NoRulesMatch }"],"html":"<p>[[quote]]<br>\ntext<br>\n[[/quote]]</p>","id":"quote-alias"}
+{"errors":[],"html":"<blockquote><p>q</p></blockquote><div><p>in</p></div>","id":"quote-then-div"}
+{"errors":[],"html":"<blockquote><p>q</p></blockquote><h1 id=\"toc0\"><span>h</span></h1>","id":"quote-then-heading"}
+{"errors":[],"html":"<blockquote><p>q</p></blockquote><ul>\n<li>i</li>\n</ul>","id":"quote-then-list"}

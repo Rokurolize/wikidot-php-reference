@@ -1,0 +1,12 @@
+{
+ "p22-anchor-element": {
+  "fullname": "muse-probe-r2block-head-p22-anchor-element",
+  "source": "+ [[a name=\"x\"]]anchor[[/a]]",
+  "action": "created"
+ },
+ "p23-div-barrier-inline": {
+  "fullname": "muse-probe-r2block-head-p23-div-barrier-inline",
+  "source": "[[div]]\n+ Head[[/div]] tail\n\n++ J",
+  "action": "created"
+ }
+}
