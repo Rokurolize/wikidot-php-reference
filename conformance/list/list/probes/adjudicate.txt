@@ -1,0 +1,13 @@
+probes=13 valid=13 ref_live_match=10 ftml_live_match=10 ref_disagreements=3
+=== p08-empty-at-end
+  ref: '<ul>\n<li>a</li>\n<li>b</li>\n</ul><p>x</p>\n\n'
+  ftm: '<ul>\n<li>a</li>\n<li>b</li>\n</ul><p>x</p>'
+  live:'<ul>\n<li>a</li>\n<li>b</li>\n</ul>\n<p>x</p>'
+=== p09-skip-one
+  ref: '<ul>\n<li>root\n<ul>\n<li style="list-style: none; display: inline"><ul>\n<li>skipped</li>\n</ul></li></ul>\n</li>\n<li>after</li>\n</ul>'
+  ftm: '<ul>\n<li>root\n<ul>\n<li style="list-style: none; display: inline"><ul>\n<li>skipped</li>\n</ul></li></ul>\n</li>\n<li>after</li>\n</ul>'
+  live:'<ul>\n<li>root\n<ul>\n<li style="list-style: none; display: inline">\n<ul>\n<li>skipped</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>after</li>\n</ul>'
+=== p10-skip-three
+  ref: '<ul>\n<li>root\n<ol>\n<li style="list-style: none; display: inline"><ol>\n<li style="list-style: none; display: inline"><ol>\n<li style="list-style: none; display: inline"><ol>\n<li>skipped three</li>\n</ol></li></ol></li></ol></li></ol>\n</li>\n<li>after</li>\n</ul>'
+  ftm: '<ul>\n<li>root\n<ol>\n<li style="list-style: none; display: inline"><ol>\n<li style="list-style: none; display: inline"><ol>\n<li style="list-style: none; display: inline"><ol>\n<li>skipped three</li>\n</ol></li></ol></li></ol></li></ol>\n</li>\n<li>after</li>\n</ul>'
+  live:'<ul>\n<li>root\n<ol>\n<li style="list-style: none; display: inline">\n<ol>\n<li style="list-style: none; display: inline">\n<ol>\n<li style="list-style: none; display: inline">\n<ol>\n<li>skipped three</li>\n</ol>\n</li>\n</ol>\n</li>\n</ol>\n</li>\n</ol>\n</li>\n<li>after</li>\n</ul>'

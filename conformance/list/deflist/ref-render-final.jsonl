@@ -1,0 +1,60 @@
+{"id":"def01-basic-single","output":"<dl>\n<dt>term<\/dt>\n<dd>definition<\/dd>\n<\/dl>\n"}
+{"id":"def02-basic-multi","output":"<dl>\n<dt>Alpha<\/dt>\n<dd>One<\/dd>\n<dt>Beta<\/dt>\n<dd>Two<\/dd>\n<\/dl>\n"}
+{"id":"def03-inline-bold","output":"<dl>\n<dt><strong>Key<\/strong><\/dt>\n<dd><em>value<\/em><\/dd>\n<\/dl>\n"}
+{"id":"def04-leading-prose","output":"<p>Intro line<br \/>\n<dl>\n<dt>k<\/dt>\n<dd>v<\/dd>\n<\/dl>\n<\/p>\n\n"}
+{"id":"def05-blank-before","output":"<p>Intro<\/p>\n\n<dl>\n<dt>k<\/dt>\n<dd>v<\/dd>\n<\/dl>\n"}
+{"id":"def06-trailing-prose","output":"<dl>\n<dt>k<\/dt>\n<dd>v<\/dd>\n<\/dl>\n<p>Trailing prose<\/p>\n\n"}
+{"id":"def07-blank-separated-two","output":"<dl>\n<dt>a<\/dt>\n<dd>1<\/dd>\n<dt>b<\/dt>\n<dd>2<\/dd>\n<\/dl>\n"}
+{"id":"def08-empty-term","output":"<dl>\n<dd>Value<\/dd>\n<\/dl>\n"}
+{"id":"def09-empty-term-many-spaces","output":"<dl>\n<dd>Value<\/dd>\n<\/dl>\n"}
+{"id":"def10-empty-def-no-trailing","output":""}
+{"id":"def11-empty-def-trailing-space","output":"<dl>\n<dt>Term<\/dt>\n<dd><\/dd>\n<\/dl>\n"}
+{"id":"def12-empty-def-blank-then","output":"<dl>\n<dt>Term :<p>: B<\/dt>\n<dd>2<\/dd>\n<\/dl>\n<\/p>\n\n"}
+{"id":"def13-empty-def-glued","output":"<dl>\n<dt>A<\/dt>\n<dd>1<\/dd>\n<dt>Term :<br \/>\n: B<\/dt>\n<dd>2<\/dd>\n<\/dl>\n"}
+{"id":"def14-multiple-defs","output":"<dl>\n<dt>A<\/dt>\n<dd>1<\/dd>\n<dt>A<\/dt>\n<dd>2<\/dd>\n<dt>A<\/dt>\n<dd>3<\/dd>\n<\/dl>\n"}
+{"id":"def15-colon-in-def","output":"<dl>\n<dt>key<\/dt>\n<dd>a: b: c<\/dd>\n<\/dl>\n"}
+{"id":"def16-colon-in-term","output":"<dl>\n<dt>a:b<\/dt>\n<dd>value<\/dd>\n<\/dl>\n"}
+{"id":"def17-sep-no-space-after","output":"<dl>\n<dt>A :1<br \/>\n: B<\/dt>\n<dd>2<\/dd>\n<\/dl>\n"}
+{"id":"def18-sep-tab-after","output":"<dl>\n<dt>A<\/dt>\n<dd>Tabbed<\/dd>\n<\/dl>\n"}
+{"id":"def19-semicolon-form","output":"<p>; term : definition<\/p>\n\n"}
+{"id":"def20-semicolon-mixed","output":"<p>; term : definition<br \/>\n<dl>\n<dt>real<\/dt>\n<dd>def<\/dd>\n<\/dl>\n<\/p>\n\n"}
+{"id":"def21-no-space-leading","output":"<p>:Key:Value<\/p>\n\n"}
+{"id":"def22-no-space-leading2","output":"<p>:term : def<\/p>\n\n"}
+{"id":"def23-missing-separator","output":""}
+{"id":"def24-residue-vanish","output":"<p>text before<br \/>\ntext after<\/p>\n\n"}
+{"id":"def25-just-colon-space","output":""}
+{"id":"def26-colon-only","output":"<p>:<\/p>\n\n"}
+{"id":"def27-tab-prefix","output":"<dl>\n<dd>value<\/dd>\n<\/dl>\n"}
+{"id":"def28-leading-space","output":"<p>: A : 1<br \/>\n<dl>\n<dt>B<\/dt>\n<dd>2<\/dd>\n<\/dl>\n<\/p>\n\n"}
+{"id":"def29-two-leading-spaces","output":"<p>: A : 1<\/p>\n\n"}
+{"id":"def30-definition-only-continuation","output":"<dl>\n<dt>term<\/dt>\n<dd>def<\/dd>\n<\/dl>\n"}
+{"id":"def31-heading-interrupt","output":"<dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<\/dl>\n<p>== Heading ==<br \/>\n<dl>\n<dt>b<\/dt>\n<dd>B<\/dd>\n<\/dl>\n<\/p>\n\n"}
+{"id":"def32-code-interrupt","output":"<dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<\/dl>\n\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n<br \/>\n<dl>\n<dt>b<\/dt>\n<dd>B<\/dd>\n<\/dl>\n"}
+{"id":"def33-div-interrupt","output":"<dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<\/dl>\n<p>[[div class=x]]d[[\/div]]<br \/>\n<dl>\n<dt>b<\/dt>\n<dd>B<\/dd>\n<\/dl>\n<\/p>\n\n"}
+{"id":"def34-list-interrupt","output":"<dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<\/dl>\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>"}
+{"id":"def35-list-then-deflist","output":"<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<\/dl>\n"}
+{"id":"def36-quote-interrupt","output":"<dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<\/dl>\n<blockquote><p>quoted<\/p>\n\n<\/blockquote>\n<dl>\n<dt>b<\/dt>\n<dd>B<\/dd>\n<\/dl>\n"}
+{"id":"def37-deflist-in-div","output":"<div ><dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<\/dl>\n<\/div>"}
+{"id":"def38-deflist-in-collapsible","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<\/dl>\n<\/div><\/div><\/div>"}
+{"id":"def39-deflist-in-quote","output":"<blockquote><dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<dt>b<\/dt>\n<dd>B<\/dd>\n<\/dl>\n<\/blockquote>\n"}
+{"id":"def40-bold-cross-lines","output":"<dl>\n<dt>a<\/dt>\n<dd><strong>x<\/dd>\n<dt>b<\/dt>\n<dd>y<\/strong><\/dd>\n<\/dl>\n"}
+{"id":"def41-iftags-in-value","output":"<dl>\n<dt>term<\/dt>\n<dd>A<\/dd>\n<\/dl>\n<p>B<\/p>\n\n"}
+{"id":"def42-multiline-value","output":"<dl>\n<dt>Pineapple<\/dt>\n<dd>Very very long<\/dd>\n<\/dl>\n<p>with a newline break<\/p>\n\n"}
+{"id":"def43-comment-term","output":"<dl>\n<dd>e<\/dd>\n<\/dl>\n"}
+{"id":"def44-item-inside-list","output":"<p>[[ul]]<br \/>\n[[li]]<br \/>\n<dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<\/dl>\n<\/p>\n\n<p>[[\/li]]<br \/>\n[[\/ul]]<\/p>\n\n"}
+{"id":"def45-bib-closed","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha<\/div><\/div>"}
+{"id":"def46-bib-multi","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a> <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha<\/div><div class=\"bibitem\" id=\"bibitem-2\">2. Bravo<\/div><\/div>"}
+{"id":"def47-bib-direct-colon","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha<\/div><\/div>"}
+{"id":"def48-bib-malformed","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div>\n: b :Bravo\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha<\/div><\/div>"}
+{"id":"def49-bib-empty-value","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1.<\/div><\/div>"}
+{"id":"def50-bib-unclosed","output":"<p>[[bibliography]]<br \/>\n<dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<\/dl>\n<\/p>\n\n"}
+{"id":"def51-bib-residual","output":"<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. A<\/div>\nprose line<\/div>"}
+{"id":"def52-bib-next-line","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. Value next line<\/div><\/div>"}
+{"id":"def53-bib-duplicate","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. First<\/div><div class=\"bibitem\" id=\"bibitem-2\">2. Second<\/div><\/div>"}
+{"id":"def54-bib-colon-content","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. A: with colon<\/div><\/div>"}
+{"id":"def55-unicode-empty","output":"<dl>\n<dt>\u7528\u8a9e<\/dt>\n<dd>\u5b9a\u7fa9<\/dd>\n<\/dl>\n"}
+{"id":"def56-unicode-combined","output":"<dl>\n<dd>Value<\/dd>\n<dt>key<\/dt>\n<dd><\/dd>\n<\/dl>\n"}
+{"id":"def57-double-colon-start","output":"<p>:: term : definition<\/p>\n\n"}
+{"id":"def58-many-colons","output":"<dl>\n<dt>a<\/dt>\n<dd>b : c : d<\/dd>\n<\/dl>\n"}
+{"id":"def59-bib-label-charset","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a> <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. Smith 2020.<\/div>\n: smith-2020 : Never.\n<div class=\"bibitem\" id=\"bibitem-2\">2. Or not.<\/div><\/div>"}
+{"id":"def60-trailing-blank-lines","output":"<dl>\n<dt>a<\/dt>\n<dd>A<\/dd>\n<\/dl>\n"}

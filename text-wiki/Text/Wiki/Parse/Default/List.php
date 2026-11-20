@@ -20,13 +20,22 @@
 *
 * Parses for bulleted and numbered lists.
 *
-* This class implements a Text_Wiki_Parse to find source text marked as
-* a bulleted or numbered list.  In short, if a line starts with '* ' then
-* it is a bullet list item; if a line starts with '# ' then it is a
-* number list item.  Spaces in front of the * or # indicate an indented
-* sub-list.  The list items must be on sequential lines, and may be
-* separated by blank lines to improve readability.  Using a non-* non-#
-* non-whitespace character at the beginning of a line ends the list.
+* A line whose first character is '*' or '#' followed by exactly one space
+* begins a bullet or numbered item, and each additional leading space before
+* that marker opens one more level of nesting. A new marker type at the same
+* depth ends the current run and starts a new list, as does a blank line. The
+* outermost list must begin at column zero; an indented first line is literal
+* text. The outer regex finds a maximal run; process() then turns its lines
+* into the token stream consumed by the Xhtml render rule.
+*
+* R2 List corrections against live Wikidot (fossil-era artifacts): an item
+* whose body is empty or whitespace-only is dropped unless a deeper item
+* immediately follows it, in which case it survives as an empty list item
+* holding the child list; a list whose every item is empty emits no list at
+* all. Extra spaces after the marker are not part of the item body. A depth
+* skip of more than one level is represented by one inline-style list-item
+* wrapper per missing level, matching the live nested-list shape. See
+* conformance-refphp/list/list/SECTION.md for the probes and pins.
 *
 * @category Text
 *
@@ -58,19 +67,22 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
     * Generates a replacement for the matched text.  Token options are:
     *
     * 'type' =>
-    *     'bullet_start' : the start of a bullet list
-    *     'bullet_end'   : the end of a bullet list
-    *     'number_start' : the start of a number list
-    *     'number_end'   : the end of a number list
-    *     'item_start'   : the start of item text (bullet or number)
-    *     'item_end'     : the end of item text (bullet or number)
-    *     'unknown'      : unknown type of list or item
+    *     'bullet_list_start' : the start of a bullet list
+    *     'bullet_list_end'   : the end of a bullet list
+    *     'number_start'      : the start of a number list
+    *     'number_end'        : the end of a number list
+    *     'sublist_start'     : an inline wrapper for a skipped depth level
+    *     'sublist_end'       : the end of that wrapper
+    *     'item_start'        : the start of item text
+    *     'item_end'          : the end of item text
     *
-    * 'level' => the indent level (0 for the first level, 1 for the
-    * second, etc)
+    * 'level' => the zero-based nesting depth.
     *
-    * 'count' => the list item number at this level. not needed for
-    * xhtml, but very useful for PDF and RTF.
+    * 'count' => the item number at this depth.
+    *
+    * 'in_sublist' => whether a list or its close sits inside a wrapper.
+    *
+    * 'tail' => whether a list's last child was an item or a sublist wrapper.
     *
     * @access public
     *
@@ -86,160 +98,135 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
         // the replacement text we will return
         $return = '';
 
-        // the list of post-processing matches
-        $list = array();
-
-        // a stack of list-start and list-end types; we keep this
-        // so that we know what kind of list we're working with
-        // (bullet or number) and what indent level we're at.
-        $stack = array();
-
-        // the item count is the number of list items for any
-        // given list-type on the stack
-        $itemcount = array();
-
-        // have we processed the very first list item?
-        $pastFirst = false;
-
-        // populate $list with this set of matches. $matches[1] is the
-        // text matched as a list set by parse().
+        // collect this run's item lines before deciding which survive
+        $raw = array();
         preg_match_all(
             '=^( {0,})(\*|#) (.*)$=Ums',
             $matches[1],
             $list,
             PREG_SET_ORDER
         );
+        foreach ($list as $val) {
+            $raw[] = array(
+                'depth' => strlen($val[1]),
+                'type' => ($val[2] == '*') ? 'bullet' : 'number',
+                'body' => ltrim($val[3], " \t"),
+            );
+        }
 
-        // loop through each list-item element.
-        foreach ($list as $key => $val) {
-
-            // $val[0] is the full matched list-item line
-            // $val[1] is the number of initial spaces (indent level)
-            // $val[2] is the list item type (* or #)
-            // $val[3] is the list item text
-
-            // how many levels are we indented? (1 means the "root"
-            // list level, no indenting.)
-            $level = strlen($val[1]) + 1;
-
-            // get the list item type
-            if ($val[2] == '*') {
-                $type = 'bullet';
-            } elseif ($val[2] == '#') {
-                $type = 'number';
-            } else {
-                $type = 'unknown';
+        // live drops a whitespace-only item unless a deeper item follows it;
+        // a run with no surviving items leaves no list behind at all
+        $items = array();
+        $total = count($raw);
+        foreach ($raw as $index => $item) {
+            $empty = (trim($item['body']) === '');
+            $hasChild = ($index + 1 < $total
+                && $raw[$index + 1]['depth'] > $item['depth']);
+            if (! $empty || $hasChild) {
+                $items[] = $item;
             }
+        }
+        if (count($items) === 0) {
+            return '';
+        }
 
-            // get the text of the list item
-            $text = $val[3];
+        // the stack holds one entry per open list, with the type of that
+        // list and whether its most recent child was a sublist wrapper
+        $stack = array();
+        $itemcount = array();
 
-            // add a level to the list?
-            if ($level > count($stack)) {
+        // close one level; a sublist tail closes its wrapper before the list
+        $closeLevel = function ($level) use (&$return, &$stack) {
+            $entry = $stack[$level];
+            if ($entry['tail'] === 'sublist') {
+                $return .= $this->wiki->addToken(
+                    $this->rule,
+                    array('type' => 'sublist_end', 'level' => $level)
+                );
+            }
+            $return .= $this->wiki->addToken(
+                $this->rule,
+                array(
+                    'type' => $entry['type'] . '_list_end',
+                    'level' => $level,
+                    'in_sublist' => $entry['in_sublist'],
+                    'tail' => $entry['tail'],
+                )
+            );
+            unset($stack[$level]);
+        };
 
-                // the current indent level is greater than the
-                // number of stack elements, so we must be starting
-                // a new list.  push the new list type onto the
-                // stack...
-                array_push($stack, $type);
+        foreach ($items as $item) {
+            $depth = $item['depth'];
+            $type = $item['type'];
 
-                // ...and add a list-start token to the return.
+            // open every missing level. The first new list is the child of
+            // the current item; each further one is wrapped in an inline
+            // list item, which is live's shape for a skipped depth.
+            $firstNewLevel = count($stack);
+            while ($depth >= count($stack)) {
+                $level = count($stack);
+                $inSublist = ($level > $firstNewLevel);
+                if ($inSublist) {
+                    $stack[$level - 1]['tail'] = 'sublist';
+                    $return .= $this->wiki->addToken(
+                        $this->rule,
+                        array('type' => 'sublist_start', 'level' => $level)
+                    );
+                }
+                $stack[$level] = array(
+                    'type' => $type,
+                    'in_sublist' => $inSublist,
+                    'tail' => 'item',
+                );
                 $return .= $this->wiki->addToken(
                     $this->rule,
                     array(
                         'type' => $type . '_list_start',
-                        'level' => $level - 1
+                        'level' => $level,
+                        'in_sublist' => $inSublist,
                     )
                 );
             }
 
-            // remove a level from the list?
-            while (count($stack) > $level) {
-
-                // so we don't keep counting the stack, we set up a temp
-                // var for the count.  -1 becuase we're going to pop the
-                // stack in the next command.  $tmp will then equal the
-                // current level of indent.
-                $tmp = count($stack) - 1;
-
-                // as long as the stack count is greater than the
-                // current indent level, we need to end list types.
-                // continue adding end-list tokens until the stack count
-                // and the indent level are the same.
-                $return .= $this->wiki->addToken(
-                    $this->rule,
-                    array (
-                        'type' => array_pop($stack) . '_list_end',
-                        'level' => $tmp
-                    )
-                );
-
-                // reset to the current (previous) list type so that
-                // the new list item matches the proper list type.
-                $type = $stack[$tmp - 1];
-
-                // reset the item count for the popped indent level
-                unset($itemcount[$tmp + 1]);
+            // unwind to the item's depth
+            while (count($stack) > $depth + 1) {
+                $level = count($stack) - 1;
+                $closeLevel($level);
+                unset($itemcount[$level]);
             }
 
-            // add to the item count for this list (taking into account
-            // which level we are at).
-            if (! isset($itemcount[$level])) {
-                // first count
-                $itemcount[$level] = 0;
+            if (! isset($itemcount[$depth])) {
+                $itemcount[$depth] = 0;
             } else {
-                // increment count
-                $itemcount[$level]++;
+                $itemcount[$depth]++;
             }
 
-            // is this the very first item in the list?
-            if (! $pastFirst) {
-                $first = true;
-                $pastFirst = true;
-            } else {
-                $first = false;
-            }
-
-            // create a list-item starting token.
-            $start = $this->wiki->addToken(
+            $return .= $this->wiki->addToken(
                 $this->rule,
                 array(
                     'type' => $type . '_item_start',
-                    'level' => $level,
-                    'count' => $itemcount[$level],
-                    'first' => $first
+                    'level' => $depth,
+                    'count' => $itemcount[$depth],
+                    'first' => ($itemcount[$depth] === 0),
                 )
             );
-
-            // create a list-item ending token.
-            $end = $this->wiki->addToken(
+            $return .= $item['body'];
+            $return .= $this->wiki->addToken(
                 $this->rule,
                 array(
                     'type' => $type . '_item_end',
-                    'level' => $level,
-                    'count' => $itemcount[$level]
+                    'level' => $depth,
+                    'count' => $itemcount[$depth],
                 )
             );
-
-            // add the starting token, list-item text, and ending token
-            // to the return.
-            $return .= $start . $val[3] . $end;
         }
 
-        // the last list-item may have been indented.  go through the
-        // list-type stack and create end-list tokens until the stack
-        // is empty.
+        // close every list still open at the end of the run
         while (count($stack) > 0) {
-            $return .= $this->wiki->addToken(
-                $this->rule,
-                array (
-                    'type' => array_pop($stack) . '_list_end',
-                    'level' => count($stack)
-                )
-            );
+            $closeLevel(count($stack) - 1);
         }
 
-        // we're done!  send back the replacement text.
         return "\n\n" . $return . "\n\n";
     }
 }

@@ -1,0 +1,81 @@
+p01-empty-bullet -> muse-probe-r2list-list-p01-empty-bullet (exists)
+p02-empty-number -> muse-probe-r2list-list-p02-empty-number (exists)
+p03-empty-between -> muse-probe-r2list-list-p03-empty-between (exists)
+p04-all-empty -> muse-probe-r2list-list-p04-all-empty (exists)
+p05-whitespace-only -> muse-probe-r2list-list-p05-whitespace-only (exists)
+p06-empty-parent -> muse-probe-r2list-list-p06-empty-parent (exists)
+p07-empty-nested-parent -> muse-probe-r2list-list-p07-empty-nested-parent (exists)
+p08-empty-at-end -> muse-probe-r2list-list-p08-empty-at-end (exists)
+p09-skip-one -> muse-probe-r2list-list-p09-skip-one (exists)
+p10-skip-three -> muse-probe-r2list-list-p10-skip-three (exists)
+p11-two-spaces -> muse-probe-r2list-list-p11-two-spaces (exists)
+p12-same-depth-child-markers -> muse-probe-r2list-list-p12-same-depth-child-markers (exists)
+p14-child-switch -> muse-probe-r2list-list-p14-child-switch (created)
+13 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01-empty-bullet": {
+  "fullname": "muse-probe-r2list-list-p01-empty-bullet",
+  "source": "* \nx",
+  "action": "exists"
+ },
+ "p02-empty-number": {
+  "fullname": "muse-probe-r2list-list-p02-empty-number",
+  "source": "# \nx",
+  "action": "exists"
+ },
+ "p03-empty-between": {
+  "fullname": "muse-probe-r2list-list-p03-empty-between",
+  "source": "* a\n* \n* b",
+  "action": "exists"
+ },
+ "p04-all-empty": {
+  "fullname": "muse-probe-r2list-list-p04-all-empty",
+  "source": "* \n* \n* \nx",
+  "action": "exists"
+ },
+ "p05-whitespace-only": {
+  "fullname": "muse-probe-r2list-list-p05-whitespace-only",
+  "source": "* a\n*  \t \n* b",
+  "action": "exists"
+ },
+ "p06-empty-parent": {
+  "fullname": "muse-probe-r2list-list-p06-empty-parent",
+  "source": "* \n * child\n* after",
+  "action": "exists"
+ },
+ "p07-empty-nested-parent": {
+  "fullname": "muse-probe-r2list-list-p07-empty-nested-parent",
+  "source": "* root\n * \n  * grandchild\n* after",
+  "action": "exists"
+ },
+ "p08-empty-at-end": {
+  "fullname": "muse-probe-r2list-list-p08-empty-at-end",
+  "source": "* a\n* b\n* \nx",
+  "action": "exists"
+ },
+ "p09-skip-one": {
+  "fullname": "muse-probe-r2list-list-p09-skip-one",
+  "source": "* root\n  * skipped\n* after",
+  "action": "exists"
+ },
+ "p10-skip-three": {
+  "fullname": "muse-probe-r2list-list-p10-skip-three",
+  "source": "* root\n    # skipped three\n* after",
+  "action": "exists"
+ },
+ "p11-two-spaces": {
+  "fullname": "muse-probe-r2list-list-p11-two-spaces",
+  "source": "*  two spaces",
+  "action": "exists"
+ },
+ "p12-same-depth-child-markers": {
+  "fullname": "muse-probe-r2list-list-p12-same-depth-child-markers",
+  "source": "* a\n * b\n # c\n * d",
+  "action": "exists"
+ },
+ "p14-child-switch": {
+  "fullname": "muse-probe-r2list-list-p14-child-switch",
+  "source": "* apple\n * banana\n* mango\n # lettuce\n* pineapple",
+  "action": "created"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "p14-in-div": {
+  "fullname": "muse-probe-r2list-def-p14-in-div",
+  "source": "[[div class=x]]\n: a : A\n[[/div]]",
+  "action": "created"
+ },
+ "p15-comment-term": {
+  "fullname": "muse-probe-r2list-def-p15-comment-term",
+  "source": ": [!-- c --] : e",
+  "action": "created"
+ },
+ "p16-tab-prefix": {
+  "fullname": "muse-probe-r2list-def-p16-tab-prefix",
+  "source": ":\t: value",
+  "action": "created"
+ },
+ "p17-def-only-cont": {
+  "fullname": "muse-probe-r2list-def-p17-def-only-cont",
+  "source": ": term : def\n: more text",
+  "action": "created"
+ },
+ "p18-many-colons": {
+  "fullname": "muse-probe-r2list-def-p18-many-colons",
+  "source": ": a : b : c : d",
+  "action": "created"
+ }
+}

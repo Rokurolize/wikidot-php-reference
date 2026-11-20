@@ -1,0 +1,28 @@
+total=59 shaped_same=50 diff=9
+=== b02-paragraph-then-list
+  ref: '<p>text before</p>\n\n<ul>\n<li>a</li>\n<li>b</li>\n</ul>'
+  ftm: '<p>text before</p><ul>\n<li>a</li>\n<li>b</li>\n</ul>'
+=== b04-interrupted-by-heading
+  ref: '<ul>\n<li>a</li>\n<li>b</li>\n</ul>\n<h1 id="toc0"><span>Heading</span></h1>\n<p>text</p>\n\n'
+  ftm: '<ul>\n<li>a</li>\n<li>b</li>\n</ul><h1 id="toc0"><span>Heading</span></h1><p>text</p>'
+=== b05-interrupted-by-quote
+  ref: '<ul>\n<li>a</li>\n</ul><blockquote><p>quote</p>\n\n</blockquote>\n<ul>\n<li>b</li>\n</ul>'
+  ftm: '<ul>\n<li>a</li>\n</ul><blockquote><p>quote</p></blockquote><ul>\n<li>b</li>\n</ul>'
+=== b06-interrupted-by-code
+  ref: '<ul>\n<li>a</li>\n</ul><p><tt> code </tt></p>\n\n<ul>\n<li>b</li>\n</ul>'
+  ftm: '<ul>\n<li>a</li>\n</ul><p><tt>code</tt></p><ul>\n<li>b</li>\n</ul>'
+=== b08-list-hr-list
+  ref: '<ul>\n<li>a</li>\n</ul><hr />\n<ul>\n<li>b</li>\n</ul>'
+  ftm: '<ul>\n<li>a</li>\n</ul><hr><ul>\n<li>b</li>\n</ul>'
+=== b09-interrupted-by-div
+  ref: '<ul>\n<li>a</li>\n</ul><div  class="x"><p>inner</p>\n\n</div><ul>\n<li>b</li>\n</ul>'
+  ftm: '<ul>\n<li>a</li>\n</ul><div class="x"><p>inner</p></div><ul>\n<li>b</li>\n</ul>'
+=== b10-continuation-blank
+  ref: '<ul>\n<li>a</li>\n</ul><p>second paragraph inside item</p>\n\n<ul>\n<li>b</li>\n</ul>'
+  ftm: '<ul>\n<li>a</li>\n</ul><p>second paragraph inside item</p><ul>\n<li>b</li>\n</ul>'
+=== d09-descending
+  ref: '<p>* four<br />\n  * three<br />\n * two</p>\n\n<ul>\n<li>one</li>\n</ul>'
+  ftm: '<p>* four<br>\n* three<br>\n* two</p><ul>\n<li>one</li>\n</ul>'
+=== d11-indented-first
+  ref: '<p>* indented first</p>\n\n<ul>\n<li>second</li>\n</ul>'
+  ftm: '<p>* indented first</p><ul>\n<li>second</li>\n</ul>'

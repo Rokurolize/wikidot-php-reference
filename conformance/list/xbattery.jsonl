@@ -1,0 +1,46 @@
+{"id": "x01-list-in-div", "source": "[[div class=x]]\n* one\n* two\n[[/div]]"}
+{"id": "x02-numbered-in-div", "source": "[[div class=x]]\n# one\n# two\n[[/div]]"}
+{"id": "x03-nested-list-in-div", "source": "[[div class=x]]\n* one\n * nested\n* two\n[[/div]]"}
+{"id": "x04-list-in-collapsible", "source": "[[collapsible]]\n* one\n* two\n[[/collapsible]]"}
+{"id": "x05-list-in-collapsible-labeled", "source": "[[collapsible show=show hide=hide]]\n# one\n# two\n[[/collapsible]]"}
+{"id": "x06-list-in-quote", "source": "> * one\n> * two"}
+{"id": "x07-nested-list-in-quote", "source": "> * one\n>  * nested\n> * two"}
+{"id": "x08-list-in-tab", "source": "[[tabview]]\n[[tab title=A]]\n* one\n* two\n[[/tab]]\n[[/tabview]]"}
+{"id": "x09-div-in-list-item", "source": "[[div class=x]]\ninside\n[[/div]]\n* one\n* two"}
+{"id": "x10-list-then-div", "source": "* one\n* two\n[[div class=x]]\nafter\n[[/div]]"}
+{"id": "x11-quote-then-list", "source": "> quoted\n* one\n* two"}
+{"id": "x12-collapsible-in-list-item", "source": "* one [[collapsible]]inside[[/collapsible]]\n* two"}
+{"id": "x13-deflist-in-bib", "source": "((bibcite a))\n[[bibliography]]\n: a : Alpha\n[[/bibliography]]"}
+{"id": "x14-deflist-multi-bib", "source": "((bibcite a)) ((bibcite b))\n[[bibliography]]\n: a : Alpha\n: b : Bravo\n[[/bibliography]]"}
+{"id": "x15-deflist-bib-colon", "source": "((bibcite a))\n[[bibliography]]\n: a: Alpha: with colon\n[[/bibliography]]"}
+{"id": "x16-deflist-in-div", "source": "[[div class=x]]\n: term : definition\n[[/div]]"}
+{"id": "x17-deflist-in-quote", "source": "> : term : definition"}
+{"id": "x18-deflist-in-collapsible", "source": "[[collapsible]]\n: term : definition\n[[/collapsible]]"}
+{"id": "x19-bib-then-deflist", "source": "[[bibliography]]\n: a : Alpha\n[[/bibliography]]\n: b : Bravo"}
+{"id": "x20-deflist-then-bib", "source": ": b : Bravo\n[[bibliography]]\n: a : Alpha\n[[/bibliography]]"}
+{"id": "x21-list-heading", "source": "* one\n== Heading ==\n* two"}
+{"id": "x22-list-toc", "source": "* one\n[[toc]]\n* two"}
+{"id": "x23-list-footnote", "source": "* one[[footnote]]note[[/footnote]]\n* two\n[[footnoteblock]]"}
+{"id": "x24-list-footnoteblock", "source": "* one\n[[footnoteblock]]\n* two"}
+{"id": "x25-list-hr", "source": "* one\n----\n* two"}
+{"id": "x26-list-code", "source": "* one\n[[code]]\ncode\n[[/code]]\n* two"}
+{"id": "x27-deflist-heading", "source": ": term : definition\n== Heading ==\n: other : more"}
+{"id": "x28-list-quote-interrupt", "source": "* one\n> quoted\n* two"}
+{"id": "x29-heading-then-list", "source": "== Heading ==\n* one\n* two"}
+{"id": "x30-empty-bullet", "source": "* "}
+{"id": "x31-empty-number", "source": "# "}
+{"id": "x32-empty-items-mixed", "source": "* a\n* \n* b"}
+{"id": "x33-whitespace-only-item", "source": "*   \t "}
+{"id": "x34-empty-nested", "source": "* one\n * \n* two"}
+{"id": "x35-empty-deflist-term", "source": ":  : definition"}
+{"id": "x36-empty-deflist-def", "source": ": term :  "}
+{"id": "x37-span-in-item", "source": "[[span class=a]]A[[/span]]\n* one\n* two"}
+{"id": "x38-span-cross-item", "source": "* [[span class=a]]one\n* two[[/span]]"}
+{"id": "x39-size-cross-item", "source": "* [[size 12px]]one\n* two[[/size]]"}
+{"id": "x40-color-cross-item", "source": "* ##red|one\n* two##"}
+{"id": "x41-strike-in-item", "source": "* --one--\n* two"}
+{"id": "x42-bold-in-item", "source": "* **one**\n* two"}
+{"id": "x43-span-nested-in-item", "source": "* one [[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]\n* two"}
+{"id": "x44-list-plain-control", "source": "* one\n* two"}
+{"id": "x45-iftags-suppressed-list", "source": "[[iftags +alpha]]\n* one\n* two\n[[/iftags]]\nvisible", "tags": []}
+{"id": "x46-iftags-active-list", "source": "[[iftags +alpha]]\n* one\n* two\n[[/iftags]]\nvisible", "tags": ["alpha"]}

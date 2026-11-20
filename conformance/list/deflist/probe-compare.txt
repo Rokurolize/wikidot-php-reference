@@ -1,0 +1,67 @@
+p01-basic                  valid=True all3
+   LIVE: '<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>'
+   REF : '<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n'
+   FTL : '<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n'
+p02-multi                  valid=True all3
+   LIVE: '<dl>\n<dt>Alpha</dt>\n<dd>One</dd>\n<dt>Beta</dt>\n<dd>Two</dd>\n</dl>'
+   REF : '<dl>\n<dt>Alpha</dt>\n<dd>One</dd>\n<dt>Beta</dt>\n<dd>Two</dd>\n</dl>\n'
+   FTL : '<dl>\n<dt>Alpha</dt>\n<dd>One</dd>\n<dt>Beta</dt>\n<dd>Two</dd>\n</dl>\n'
+p03-empty-term             valid=True all3
+   LIVE: '<dl>\n<dd>Value</dd>\n</dl>'
+   REF : '<dl>\n<dd>Value</dd>\n</dl>\n'
+   FTL : '<dl>\n<dd>Value</dd>\n</dl>\n'
+p04-empty-def              valid=True all3
+   LIVE: ''
+   REF : ''
+   FTL : ''
+p06-missing-sep            valid=True all3
+   LIVE: ''
+   REF : ''
+   FTL : ''
+p07-semicolon              valid=True all3
+   LIVE: '<p>; term : definition</p>'
+   REF : '<p>; term : definition</p>\n\n'
+   FTL : '<p>; term : definition</p>'
+p08-blank-two              valid=True all3
+   LIVE: '<dl>\n<dt>a</dt>\n<dd>1</dd>\n<dt>b</dt>\n<dd>2</dd>\n</dl>'
+   REF : '<dl>\n<dt>a</dt>\n<dd>1</dd>\n<dt>b</dt>\n<dd>2</dd>\n</dl>\n'
+   FTL : '<dl>\n<dt>a</dt>\n<dd>1</dd>\n<dt>b</dt>\n<dd>2</dd>\n</dl>\n'
+p09-residue                valid=True live_ftml
+   LIVE: 'text before<br />\n<p>text after</p>'
+   REF : '<p>text before<br />\ntext after</p>\n\n'
+   FTL : 'text before<br>\n<p>text after</p>'
+p10-bold-cross             valid=True live_ftml
+   LIVE: '<dl>\n<dt>a</dt>\n<dd><strong>x</strong></dd>\n<dt><strong>b</strong></dt>\n<dd><strong>y</strong></dd>\n</dl>'
+   REF : '<dl>\n<dt>a</dt>\n<dd><strong>x</dd>\n<dt>b</dt>\n<dd>y</strong></dd>\n</dl>\n'
+   FTL : '<dl>\n<dt>a</dt>\n<dd><strong>x</strong></dd>\n<dt><strong>b</strong></dt>\n<dd><strong>y</strong></dd>\n</dl>\n'
+p11-bib                    valid=True all_diff
+   LIVE: '<p><a href="javascript:;" class="bibcite" id="bibcite-1-74081a" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a></p>\n<div class="bibitems">\n<div class="title">Bibliography</div>\n<div class="bibitem" id="bibitem-1">1. Alpha</div>\n</div>'
+   REF : '<p><a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a></p>\n\n<div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha</div></div>'
+   FTL : '<p><a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a></p><div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha</div></div>'
+p12-prose-adjacent         valid=True live_ftml
+   LIVE: 'ALPHA<br />\n<dl>\n<dt>Key</dt>\n<dd>Value</dd>\n</dl>'
+   REF : '<p>ALPHA<br />\n<dl>\n<dt>Key</dt>\n<dd>Value</dd>\n</dl>\n</p>\n\n'
+   FTL : 'ALPHA<br>\n<dl>\n<dt>Key</dt>\n<dd>Value</dd>\n</dl>\n'
+p14-in-div                 valid=True all_diff
+   LIVE: '<div>\n<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n</div>'
+   REF : '<div ><dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n</div>'
+   FTL : '<div><dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n</div>'
+p15-comment-term           valid=True all3
+   LIVE: '<dl>\n<dd>e</dd>\n</dl>'
+   REF : '<dl>\n<dd>e</dd>\n</dl>\n'
+   FTL : '<dl>\n<dd>e</dd>\n</dl>\n'
+p16-tab-prefix             valid=True all3
+   LIVE: '<dl>\n<dd>value</dd>\n</dl>'
+   REF : '<dl>\n<dd>value</dd>\n</dl>\n'
+   FTL : '<dl>\n<dd>value</dd>\n</dl>\n'
+p17-def-only-cont          valid=True all3
+   LIVE: '<dl>\n<dt>term</dt>\n<dd>def</dd>\n</dl>'
+   REF : '<dl>\n<dt>term</dt>\n<dd>def</dd>\n</dl>\n'
+   FTL : '<dl>\n<dt>term</dt>\n<dd>def</dd>\n</dl>\n'
+p18-many-colons            valid=True all3
+   LIVE: '<dl>\n<dt>a</dt>\n<dd>b : c : d</dd>\n</dl>'
+   REF : '<dl>\n<dt>a</dt>\n<dd>b : c : d</dd>\n</dl>\n'
+   FTL : '<dl>\n<dt>a</dt>\n<dd>b : c : d</dd>\n</dl>\n'
+
+canonical three-way counts: all3=11, live_ref=0, live_ftml=3, ref_ftml=0, all_diff=2
+stable, source-matching, valid captures: 16/16

@@ -1,0 +1,82 @@
+{
+ "p01-basic": {
+  "fullname": "muse-probe-r2list-def-p01-basic",
+  "source": ": term : definition",
+  "action": "exists"
+ },
+ "p02-multi": {
+  "fullname": "muse-probe-r2list-def-p02-multi",
+  "source": ": Alpha : One\n: Beta : Two",
+  "action": "exists"
+ },
+ "p03-empty-term": {
+  "fullname": "muse-probe-r2list-def-p03-empty-term",
+  "source": ":  : Value",
+  "action": "exists"
+ },
+ "p04-empty-def": {
+  "fullname": "muse-probe-r2list-def-p04-empty-def",
+  "source": ": Term :",
+  "action": "exists"
+ },
+ "p06-missing-sep": {
+  "fullname": "muse-probe-r2list-def-p06-missing-sep",
+  "source": ": term",
+  "action": "exists"
+ },
+ "p07-semicolon": {
+  "fullname": "muse-probe-r2list-def-p07-semicolon",
+  "source": "; term : definition",
+  "action": "exists"
+ },
+ "p08-blank-two": {
+  "fullname": "muse-probe-r2list-def-p08-blank-two",
+  "source": ": a : 1\n\n: b : 2",
+  "action": "exists"
+ },
+ "p09-residue": {
+  "fullname": "muse-probe-r2list-def-p09-residue",
+  "source": "text before\n: key value\ntext after",
+  "action": "exists"
+ },
+ "p10-bold-cross": {
+  "fullname": "muse-probe-r2list-def-p10-bold-cross",
+  "source": ": a : **x\n: b : y**",
+  "action": "exists"
+ },
+ "p11-bib": {
+  "fullname": "muse-probe-r2list-def-p11-bib",
+  "source": "((bibcite a))\n\n[[bibliography]]\n: a : Alpha\n[[/bibliography]]",
+  "action": "exists"
+ },
+ "p12-prose-adjacent": {
+  "fullname": "muse-probe-r2list-def-p12-prose-adjacent",
+  "source": "ALPHA\n: Key : Value",
+  "action": "exists"
+ },
+ "p14-in-div": {
+  "fullname": "muse-probe-r2list-def-p14-in-div",
+  "source": "[[div class=x]]\n: a : A\n[[/div]]",
+  "action": "created"
+ },
+ "p15-comment-term": {
+  "fullname": "muse-probe-r2list-def-p15-comment-term",
+  "source": ": [!-- c --] : e",
+  "action": "created"
+ },
+ "p16-tab-prefix": {
+  "fullname": "muse-probe-r2list-def-p16-tab-prefix",
+  "source": ":\t: value",
+  "action": "created"
+ },
+ "p17-def-only-cont": {
+  "fullname": "muse-probe-r2list-def-p17-def-only-cont",
+  "source": ": term : def\n: more text",
+  "action": "created"
+ },
+ "p18-many-colons": {
+  "fullname": "muse-probe-r2list-def-p18-many-colons",
+  "source": ": a : b : c : d",
+  "action": "created"
+ }
+}

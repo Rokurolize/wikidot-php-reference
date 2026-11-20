@@ -1,0 +1,162 @@
+{
+ "p01-basic": {
+  "fullname": "muse-probe-r2list-def-p01-basic",
+  "html": "<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>",
+  "html_sha256": "05e6f0f79bdf8e8dcf274ab26dee2bd22e49c4a1b3d2115fb4084dce46fe4a6d",
+  "source": ": term : definition",
+  "source_sha256": "c130bcab81fcaf517d285a53df14744f9e32babd6535646283363aa7a4919a90",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02-multi": {
+  "fullname": "muse-probe-r2list-def-p02-multi",
+  "html": "<dl>\n<dt>Alpha</dt>\n<dd>One</dd>\n<dt>Beta</dt>\n<dd>Two</dd>\n</dl>",
+  "html_sha256": "7c7566a6bd0b2460108b89cc0efcf13b83ed32a323d4fb97b21a6ee239a5f646",
+  "source": ": Alpha : One\n: Beta : Two",
+  "source_sha256": "ad41c46795f2b0f9c21b6d9f462830245827787f6010e47c0bb22d91a8cc2757",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03-empty-term": {
+  "fullname": "muse-probe-r2list-def-p03-empty-term",
+  "html": "<dl>\n<dd>Value</dd>\n</dl>",
+  "html_sha256": "18bb43ff0ad9b200e3d7f50baff51c0f0d120bd9de0dcb519ab392dabd3c5a32",
+  "source": ":  : Value",
+  "source_sha256": "9b5bb98123314abbf78d4f895b032ee395d4901811dc474d6a131a8ed51de97f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04-empty-def": {
+  "fullname": "muse-probe-r2list-def-p04-empty-def",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": ": Term :",
+  "source_sha256": "a457e10eb6776095fa1021a7452d1a139db0ed7c259bc7b1c75bae3aadd01630",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06-missing-sep": {
+  "fullname": "muse-probe-r2list-def-p06-missing-sep",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": ": term",
+  "source_sha256": "7fd93b528c7d723e7a1394f01ed60f60cc04eb59aa2928ccf3addb1d31dad35f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07-semicolon": {
+  "fullname": "muse-probe-r2list-def-p07-semicolon",
+  "html": "<p>; term : definition</p>",
+  "html_sha256": "b6ccf66d26bb4865fa6aed3b0a6c546ed835b7fb4e20262b794b9fcdfd71a9cd",
+  "source": "; term : definition",
+  "source_sha256": "627c89ca3ef0814e7dd35e40014dbdd5917a5b40ee271184a22e34945b97ee66",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08-blank-two": {
+  "fullname": "muse-probe-r2list-def-p08-blank-two",
+  "html": "<dl>\n<dt>a</dt>\n<dd>1</dd>\n<dt>b</dt>\n<dd>2</dd>\n</dl>",
+  "html_sha256": "824a97a23b658954794a0de0c78b8013692f242820deb6f73ef9a76840008262",
+  "source": ": a : 1\n\n: b : 2",
+  "source_sha256": "a7ce6957d475dd364e7cff22ea108fecb01c7150f5c8499b8c07ed7961c20c54",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09-residue": {
+  "fullname": "muse-probe-r2list-def-p09-residue",
+  "html": "text before<br />\n<p>text after</p>",
+  "html_sha256": "e2994b2c1aee19ca2d0673fab876c57e8eed05c54ade12da997c183d12ebed00",
+  "source": "text before\n: key value\ntext after",
+  "source_sha256": "605f501cde99348ed87d24690cf251d65581bb6ec2e74c61725a90fb4839aa29",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10-bold-cross": {
+  "fullname": "muse-probe-r2list-def-p10-bold-cross",
+  "html": "<dl>\n<dt>a</dt>\n<dd><strong>x</strong></dd>\n<dt><strong>b</strong></dt>\n<dd><strong>y</strong></dd>\n</dl>",
+  "html_sha256": "9c23925eaf1253514655efa169bb5ee319d8325a1c0e9d854905ca80b504e2fe",
+  "source": ": a : **x\n: b : y**",
+  "source_sha256": "6d37901daa047c01dc39c4cebf729dd727d2ac385e25b1974c4b97967c6f935b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11-bib": {
+  "fullname": "muse-probe-r2list-def-p11-bib",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-74081a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha</div>\n</div>",
+  "html_sha256": "4bba3ed5ed55bbbbcea6ca75092bd16af87a8545c7b53338a445813a49d91817",
+  "source": "((bibcite a))\n\n[[bibliography]]\n: a : Alpha\n[[/bibliography]]",
+  "source_sha256": "f3b23030cfbd2c1e27ecefcd0f11f04def09a459a651dbed1ecfcd550db24a51",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12-prose-adjacent": {
+  "fullname": "muse-probe-r2list-def-p12-prose-adjacent",
+  "html": "ALPHA<br />\n<dl>\n<dt>Key</dt>\n<dd>Value</dd>\n</dl>",
+  "html_sha256": "affa18dfcb1ff07d67465b764e7f8dd2ceae46aed61a8d557190b93aca1f3d10",
+  "source": "ALPHA\n: Key : Value",
+  "source_sha256": "c37c4e27035f19e24644b794b5c7328d5c39ed54533bfb38d736576c8e1c25f1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14-in-div": {
+  "fullname": "muse-probe-r2list-def-p14-in-div",
+  "html": "<div>\n<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n</div>",
+  "html_sha256": "72b8f5cf61c76575d7fa3ce7370517c5744eb584e3ec3b73bbc0294f648835d7",
+  "source": "[[div class=x]]\n: a : A\n[[/div]]",
+  "source_sha256": "86ee22901114fc6a64d112a16719dbf2fc618fa1a9d5fa8d8daccee3729f3239",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15-comment-term": {
+  "fullname": "muse-probe-r2list-def-p15-comment-term",
+  "html": "<dl>\n<dd>e</dd>\n</dl>",
+  "html_sha256": "e17a6a5ffa41104b37345139fb55d45c835d3bb408d47ca31fdfb69a63da9e67",
+  "source": ": [!-- c --] : e",
+  "source_sha256": "e8735b769fa3aa639bf5f1ae318625c6477bc201d941c74947d15d6ba3dda0e3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16-tab-prefix": {
+  "fullname": "muse-probe-r2list-def-p16-tab-prefix",
+  "html": "<dl>\n<dd>value</dd>\n</dl>",
+  "html_sha256": "39c7b5165f379a24d51ed76b2d72b5a34bc29ca692eec91d5ab8e406c26a2cc8",
+  "source": ":\t: value",
+  "source_sha256": "15895ff2d563aec12026fbad72ddaca3f09856ac57d655781454717080c63f60",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17-def-only-cont": {
+  "fullname": "muse-probe-r2list-def-p17-def-only-cont",
+  "html": "<dl>\n<dt>term</dt>\n<dd>def</dd>\n</dl>",
+  "html_sha256": "b5b06b41a466c48385bf84d2cacec8bb27f088fb7892f432972520b0ecd5011e",
+  "source": ": term : def\n: more text",
+  "source_sha256": "dcff32875dc822b78be0ea077aaa8df0fd6e608808fb219dae060a2e6ea89163",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18-many-colons": {
+  "fullname": "muse-probe-r2list-def-p18-many-colons",
+  "html": "<dl>\n<dt>a</dt>\n<dd>b : c : d</dd>\n</dl>",
+  "html_sha256": "b428e7c9e916d8d18b2e2ab7102f764e73702e836c412ab5753a5f008c3ad169",
+  "source": ": a : b : c : d",
+  "source_sha256": "1ca969a1c01e27534103f7c3b5d1c5de73817cd95156dae62eefd92378daa7b2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

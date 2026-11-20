@@ -1,0 +1,59 @@
+{"id":"l01-bullet-single","output":"<ul>\n    <li>one<\/li>\n<\/ul>\n\n"}
+{"id":"l02-number-single","output":"<ol>\n    <li>one<\/li>\n<\/ol>\n\n"}
+{"id":"l03-bullet-three","output":"<ul>\n    <li>one<\/li>\n    <li>two<\/li>\n    <li>three<\/li>\n<\/ul>\n\n"}
+{"id":"l04-number-three","output":"<ol>\n    <li>one<\/li>\n    <li>two<\/li>\n    <li>three<\/li>\n<\/ol>\n\n"}
+{"id":"l05-no-final-newline","output":"<ul>\n    <li>alpha<\/li>\n    <li>beta<\/li>\n<\/ul>\n\n"}
+{"id":"l06-inline-markup","output":"<ul>\n    <li><strong>bold<\/strong> and <em>italic<\/em> and [[b]]tag[[\/b]]<\/li>\n<\/ul>\n\n"}
+{"id":"l07-long-item","output":"<ul>\n    <li>a fairly long item with several words and punctuation, including a comma<\/li>\n<\/ul>\n\n"}
+{"id":"d01-child-step","output":"<ul>\n    <li>one<ul>\n        <li>two<\/li>\n    <\/ul><\/li>\n    <li>three<\/li>\n<\/ul>\n\n"}
+{"id":"d02-two-levels","output":"<ul>\n    <li>one<ul>\n        <li>two<ul>\n            <li>three<\/li>\n        <\/ul><\/li>\n    <\/ul><\/li>\n    <li>four<\/li>\n<\/ul>\n\n"}
+{"id":"d03-three-levels","output":"<ul>\n    <li>one<ul>\n        <li>two<ul>\n            <li>three<ul>\n                <li>four<\/li>\n            <\/ul><\/li>\n        <\/ul><\/li>\n    <\/ul><\/li>\n<\/ul>\n\n"}
+{"id":"d04-skip-one-level","output":"<ul>\n    <li>root<ul>\n            <li>skipped<\/li>\n    <\/ul><\/li>\n    <li>after<\/li>\n<\/ul>\n\n"}
+{"id":"d05-skip-three-levels","output":"<ul>\n    <li>root<ol>\n                    <li>skipped three<\/li>\n    <\/ol><\/li>\n    <li>after<\/li>\n<\/ul>\n\n"}
+{"id":"d06-return-to-root","output":"<ul>\n    <li>one<ul>\n        <li>two<ul>\n            <li>three<\/li>\n        <\/ul><\/li>\n    <\/ul><\/li>\n    <li>four<\/li>\n<\/ul>\n\n"}
+{"id":"d07-partial-return","output":"<ul>\n    <li>one<ul>\n        <li>two<ul>\n            <li>three<\/li>\n        <\/ul><\/li>\n        <li>four<\/li>\n    <\/ul><\/li>\n    <li>five<\/li>\n<\/ul>\n\n"}
+{"id":"d08-sibling-sublists","output":"<ul>\n    <li>first<ol>\n        <li>a<\/li>\n    <\/ol><\/li>\n    <li>second<ol>\n        <li>b<\/li>\n    <\/ol><\/li>\n<\/ul>\n\n"}
+{"id":"d09-descending","output":"<p>* four<br \/>\n  * three<br \/>\n * two<\/p>\n\n<ul>\n    <li>one<\/li>\n<\/ul>\n\n"}
+{"id":"d10-tab-indent","output":"<ul>\n    <li>root<ul>\n                    <li>tab child<\/li>\n    <\/ul><\/li>\n    <li>after<\/li>\n<\/ul>\n\n"}
+{"id":"d11-indented-first","output":"<p>* indented first<\/p>\n\n<ul>\n    <li>second<\/li>\n<\/ul>\n\n"}
+{"id":"d12-too-deep-first","output":"<p>* too deep<\/p>\n\n"}
+{"id":"d13-deep-then-root","output":"<ul>\n    <li>a<ol>\n            <li>b<ul>\n                    <li>c<\/li>\n            <li>d<\/li>\n        <\/ul><\/li>\n    <\/ol><\/li>\n    <li>e<\/li>\n<\/ul>\n\n"}
+{"id":"m01-root-switch","output":"<ul>\n    <li>apple<\/li>\n    <li>banana<\/li>\n<\/ul>\n\n<ol>\n    <li>celery<\/li>\n    <li>kale<\/li>\n<\/ol>\n\n<ul>\n    <li>cherry<\/li>\n<\/ul>\n\n"}
+{"id":"m02-root-switch-number-first","output":"<ol>\n    <li>apple<\/li>\n    <li>banana<\/li>\n<\/ol>\n\n<ul>\n    <li>celery<\/li>\n    <li>kale<\/li>\n<\/ul>\n\n<ol>\n    <li>cherry<\/li>\n<\/ol>\n\n"}
+{"id":"m03-child-switch","output":"<ul>\n    <li>apple<ul>\n        <li>banana<\/li>\n        <li>cherry<\/li>\n    <\/ul><\/li>\n    <li>mango<ol>\n        <li>lettuce<\/li>\n        <li>spinach<\/li>\n    <\/ol><\/li>\n    <li>pineapple<\/li>\n<\/ul>\n\n"}
+{"id":"m04-child-switch-deeper","output":"<ul>\n    <li>A<ul>\n        <li>B<ol>\n            <li>1<\/li>\n            <li>2<\/li>\n        <\/ol><\/li>\n        <li>C<\/li>\n    <\/ul><\/li>\n    <li>D<\/li>\n<\/ul>\n\n"}
+{"id":"m05-switch-and-return","output":"<ul>\n    <li>a<ol>\n        <li>b<ul>\n            <li>c<\/li>\n        <\/ul><\/li>\n        <li>d<\/li>\n    <\/ol><\/li>\n    <li>e<\/li>\n<\/ul>\n\n"}
+{"id":"m06-same-depth-child-markers","output":"<ul>\n    <li>a<ul>\n        <li>b<\/li>\n        <li>c<\/li>\n        <li>d<\/li>\n    <\/ul><\/li>\n<\/ul>\n\n"}
+{"id":"m07-blank-between-runs","output":"<ul>\n    <li>apple<\/li>\n<\/ul>\n\n<ul>\n    <li>banana<\/li>\n<\/ul>\n\n<ul>\n    <li>cherry<\/li>\n    <li>mango<\/li>\n<\/ul>\n\n"}
+{"id":"m08-adjacent-runs","output":"<ul>\n    <li>a<\/li>\n<\/ul>\n\n<ol>\n    <li>b<\/li>\n<\/ol>\n\n<ul>\n    <li>c<\/li>\n<\/ul>\n\n"}
+{"id":"z01-empty-bullet","output":"<ul>\n    <li><\/li>\n<\/ul>\n\n"}
+{"id":"z02-empty-number","output":"<ol>\n    <li><\/li>\n<\/ol>\n\n"}
+{"id":"z03-empty-between","output":"<ul>\n    <li>a<\/li>\n    <li><\/li>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"z04-all-empty","output":"<ul>\n    <li><\/li>\n    <li><\/li>\n    <li><\/li>\n<\/ul>\n\n"}
+{"id":"z05-whitespace-only","output":"<ul>\n    <li>a<\/li>\n    <li>      <\/li>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"z06-empty-parent","output":"<ul>\n    <li><ul>\n        <li>child<\/li>\n    <\/ul><\/li>\n    <li>after<\/li>\n<\/ul>\n\n"}
+{"id":"z07-empty-nested-parent","output":"<ul>\n    <li>root<ul>\n        <li><ul>\n            <li>grandchild<\/li>\n        <\/ul><\/li>\n    <\/ul><\/li>\n    <li>after<\/li>\n<\/ul>\n\n"}
+{"id":"z08-empty-at-end","output":"<ul>\n    <li>a<\/li>\n    <li>b<\/li>\n    <li><\/li>\n<\/ul>\n\n"}
+{"id":"z09-empty-at-start","output":"<ul>\n    <li><\/li>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"b01-list-then-paragraph","output":"<ul>\n    <li>a<\/li>\n    <li>b<\/li>\n<\/ul>\n\n<p>text after<\/p>\n\n"}
+{"id":"b02-paragraph-then-list","output":"<p>text before<\/p>\n\n<ul>\n    <li>a<\/li>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"b03-continuation-lines","output":"<ul>\n    <li>mango<br \/>\nmelon<br \/>\npineapple<\/li>\n    <li>pear<\/li>\n<\/ul>\n\n"}
+{"id":"b04-interrupted-by-heading","output":"<ul>\n    <li>a<\/li>\n    <li>b<\/li>\n<\/ul>\n\n\n<h1 id=\"toc0\"><span>Heading<\/span><\/h1>\n<p>text<\/p>\n\n"}
+{"id":"b05-interrupted-by-quote","output":"<ul>\n    <li>a<\/li>\n<\/ul>\n\n<blockquote><p>quote<\/p>\n\n<\/blockquote>\n<ul>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"b06-interrupted-by-code","output":"<ul>\n    <li>a<\/li>\n<\/ul>\n\n<p><tt> code <\/tt><\/p>\n\n<ul>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"b07-item-with-link","output":"<ul>\n    <li>see <a href=\"http:\/\/example.com\">the site<\/a><\/li>\n    <li>next<\/li>\n<\/ul>\n\n"}
+{"id":"b08-list-hr-list","output":"<ul>\n    <li>a<\/li>\n<\/ul>\n\n<hr \/>\n<ul>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"b09-interrupted-by-div","output":"<ul>\n    <li>a<\/li>\n<\/ul>\n\n<div  class=\"x\"><p>inner<\/p>\n\n<\/div><ul>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"b10-continuation-blank","output":"<ul>\n    <li>a<\/li>\n<\/ul>\n\n<p>second paragraph inside item<\/p>\n\n<ul>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"x01-no-space-star","output":"<p>*No space<\/p>\n\n"}
+{"id":"x02-no-space-hash","output":"<p>#No space<\/p>\n\n"}
+{"id":"x03-two-spaces-after-marker","output":"<ul>\n    <li> two spaces<\/li>\n<\/ul>\n\n"}
+{"id":"x04-midline-marker","output":"<p>text * not a marker<\/p>\n\n"}
+{"id":"x05-quoted-marker","output":"<blockquote><ul>\n    <li>quoted marker<\/li>\n<\/ul>\n\n<\/blockquote>\n"}
+{"id":"x06-double-star","output":"<p><strong>bold<\/strong><\/p>\n\n"}
+{"id":"x07-hash-alone","output":"<p>#<\/p>\n\n"}
+{"id":"x08-space-then-blank","output":"<ul>\n    <li>a<\/li>\n<\/ul>\n\n<ul>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"u01-unterminated-bullet","output":"<ul>\n    <li>a<\/li>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"u02-unterminated-nested","output":"<ul>\n    <li>a<ul>\n        <li>b<ul>\n            <li>c<\/li>\n        <\/ul><\/li>\n    <\/ul><\/li>\n<\/ul>\n\n"}
+{"id":"u03-unterminated-then-blank","output":"<ul>\n    <li>a<\/li>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"u04-unterminated-number","output":"<ol>\n    <li>one<ol>\n        <li>two<\/li>\n    <\/ol><\/li>\n<\/ol>\n\n"}

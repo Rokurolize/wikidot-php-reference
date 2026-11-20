@@ -1,0 +1,33 @@
+p14-in-div -> muse-probe-r2list-def-p14-in-div (created)
+p15-comment-term -> muse-probe-r2list-def-p15-comment-term (created)
+p16-tab-prefix -> muse-probe-r2list-def-p16-tab-prefix (created)
+p17-def-only-cont -> muse-probe-r2list-def-p17-def-only-cont (created)
+p18-many-colons -> muse-probe-r2list-def-p18-many-colons (created)
+5 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p14-in-div": {
+  "fullname": "muse-probe-r2list-def-p14-in-div",
+  "source": "[[div class=x]]\n: a : A\n[[/div]]",
+  "action": "created"
+ },
+ "p15-comment-term": {
+  "fullname": "muse-probe-r2list-def-p15-comment-term",
+  "source": ": [!-- c --] : e",
+  "action": "created"
+ },
+ "p16-tab-prefix": {
+  "fullname": "muse-probe-r2list-def-p16-tab-prefix",
+  "source": ":\t: value",
+  "action": "created"
+ },
+ "p17-def-only-cont": {
+  "fullname": "muse-probe-r2list-def-p17-def-only-cont",
+  "source": ": term : def\n: more text",
+  "action": "created"
+ },
+ "p18-many-colons": {
+  "fullname": "muse-probe-r2list-def-p18-many-colons",
+  "source": ": a : b : c : d",
+  "action": "created"
+ }
+}

@@ -1,0 +1,5 @@
+{"id": "p14-in-div", "source": "[[div class=x]]\n: a : A\n[[/div]]"}
+{"id": "p15-comment-term", "source": ": [!-- c --] : e"}
+{"id": "p16-tab-prefix", "source": ":\t: value"}
+{"id": "p17-def-only-cont", "source": ": term : def\n: more text"}
+{"id": "p18-many-colons", "source": ": a : b : c : d"}

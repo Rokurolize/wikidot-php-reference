@@ -1,0 +1,15 @@
+{"id":"x30n-bare-bullet-marker","output":"<p>*<\/p>\n\n"}
+{"id":"x31n-bare-number-marker","output":"<p>#<\/p>\n\n"}
+{"id":"x32-empty-items-mixed","output":"<ul>\n    <li>a<\/li>\n    <li><\/li>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"x33n-bare-marker-between-items","output":"<ul>\n    <li>a<\/li>\n<\/ul>\n\n<p>*<\/p>\n\n<ul>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"x34n-bare-nested-marker","output":"<ul>\n    <li>one<\/li>\n<\/ul>\n\n<p>*<\/p>\n\n<ul>\n    <li>two<\/li>\n<\/ul>\n\n"}
+{"id":"x35-empty-deflist-term","output":"<dl>\n    <dt><\/dt>\n        <dd>definition<\/dd>\n<\/dl>\n\n"}
+{"id":"x36n-bare-def-separator","output":"<dl>\n<\/dl>\n\n"}
+{"id":"x37-span-in-item","output":"<p><span>A<\/span><\/p>\n\n<ul>\n    <li>one<\/li>\n    <li>two<\/li>\n<\/ul>\n\n"}
+{"id":"x38-span-cross-item","output":"<ul>\n    <li><span>one<\/li>\n    <li>two<\/span><\/li>\n<\/ul>\n\n"}
+{"id":"x39-size-cross-item","output":"<ul>\n    <li><span style=\"font-size:12px;\">one<\/li>\n    <li>two<\/span><\/li>\n<\/ul>\n\n"}
+{"id":"x40-color-cross-item","output":"<ul>\n    <li><span style=\"color: red;\">one<\/li>\n    <li>two<\/span><\/li>\n<\/ul>\n\n"}
+{"id":"x41-strike-in-item","output":"<ul>\n    <li><span style=\"text-decoration: line-through;\">one<\/span><\/li>\n    <li>two<\/li>\n<\/ul>\n\n"}
+{"id":"x42-bold-in-item","output":"<ul>\n    <li><strong>one<\/strong><\/li>\n    <li>two<\/li>\n<\/ul>\n\n"}
+{"id":"x43-span-nested-in-item","output":"<ul>\n    <li>one <span>A<span style=\"font-size:12px;\">B<\/span>C<\/span><\/li>\n    <li>two<\/li>\n<\/ul>\n\n"}
+{"id":"x44-list-plain-control","output":"<ul>\n    <li>one<\/li>\n    <li>two<\/li>\n<\/ul>\n\n"}

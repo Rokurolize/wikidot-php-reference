@@ -1,0 +1,60 @@
+{"id": "def01-basic-single", "source": ": term : definition"}
+{"id": "def02-basic-multi", "source": ": Alpha : One\n: Beta : Two"}
+{"id": "def03-inline-bold", "source": ": **Key** : //value//"}
+{"id": "def04-leading-prose", "source": "Intro line\n: k : v"}
+{"id": "def05-blank-before", "source": "Intro\n\n: k : v"}
+{"id": "def06-trailing-prose", "source": ": k : v\nTrailing prose"}
+{"id": "def07-blank-separated-two", "source": ": a : 1\n\n: b : 2"}
+{"id": "def08-empty-term", "source": ":  : Value"}
+{"id": "def09-empty-term-many-spaces", "source": ":     : Value"}
+{"id": "def10-empty-def-no-trailing", "source": ": Term :"}
+{"id": "def11-empty-def-trailing-space", "source": ": Term : "}
+{"id": "def12-empty-def-blank-then", "source": ": Term :\n\n: B : 2"}
+{"id": "def13-empty-def-glued", "source": ": A : 1\n: Term :\n: B : 2"}
+{"id": "def14-multiple-defs", "source": ": A : 1\n: A : 2\n: A : 3"}
+{"id": "def15-colon-in-def", "source": ": key : a: b: c"}
+{"id": "def16-colon-in-term", "source": ": a:b : value"}
+{"id": "def17-sep-no-space-after", "source": ": A :1\n: B : 2"}
+{"id": "def18-sep-tab-after", "source": ": A :\tTabbed"}
+{"id": "def19-semicolon-form", "source": "; term : definition"}
+{"id": "def20-semicolon-mixed", "source": "; term : definition\n: real : def"}
+{"id": "def21-no-space-leading", "source": ":Key:Value"}
+{"id": "def22-no-space-leading2", "source": ":term : def"}
+{"id": "def23-missing-separator", "source": ": term"}
+{"id": "def24-residue-vanish", "source": "text before\n: key value\ntext after"}
+{"id": "def25-just-colon-space", "source": ": "}
+{"id": "def26-colon-only", "source": ":"}
+{"id": "def27-tab-prefix", "source": ":\t: value"}
+{"id": "def28-leading-space", "source": " : A : 1\n: B : 2"}
+{"id": "def29-two-leading-spaces", "source": "  : A : 1"}
+{"id": "def30-definition-only-continuation", "source": ": term : def\n: more text"}
+{"id": "def31-heading-interrupt", "source": ": a : A\n== Heading ==\n: b : B"}
+{"id": "def32-code-interrupt", "source": ": a : A\n[[code]]x[[/code]]\n: b : B"}
+{"id": "def33-div-interrupt", "source": ": a : A\n[[div class=x]]d[[/div]]\n: b : B"}
+{"id": "def34-list-interrupt", "source": ": a : A\n* one\n* two"}
+{"id": "def35-list-then-deflist", "source": "* one\n* two\n: a : A"}
+{"id": "def36-quote-interrupt", "source": ": a : A\n> quoted\n: b : B"}
+{"id": "def37-deflist-in-div", "source": "[[div class=x]]\n: a : A\n[[/div]]"}
+{"id": "def38-deflist-in-collapsible", "source": "[[collapsible]]\n: a : A\n[[/collapsible]]"}
+{"id": "def39-deflist-in-quote", "source": "> : a : A\n> : b : B"}
+{"id": "def40-bold-cross-lines", "source": ": a : **x\n: b : y**"}
+{"id": "def41-iftags-in-value", "source": ": term : [[iftags -zzz]]A\n\nB[[/iftags]]"}
+{"id": "def42-multiline-value", "source": ": Pineapple : Very very long\nwith a newline break"}
+{"id": "def43-comment-term", "source": ": [!-- c --] : e"}
+{"id": "def44-item-inside-list", "source": "[[ul]]\n[[li]]\n: a : A\n[[/li]]\n[[/ul]]"}
+{"id": "def45-bib-closed", "source": "((bibcite a))\n\n[[bibliography]]\n: a : Alpha\n[[/bibliography]]"}
+{"id": "def46-bib-multi", "source": "((bibcite a)) ((bibcite b))\n\n[[bibliography]]\n: a : Alpha\n: b : Bravo\n[[/bibliography]]"}
+{"id": "def47-bib-direct-colon", "source": "((bibcite a))\n\n[[bibliography]]\n: a: Alpha\n[[/bibliography]]"}
+{"id": "def48-bib-malformed", "source": "((bibcite a))\n\n[[bibliography]]\n: b :Bravo\n: a : Alpha\n[[/bibliography]]"}
+{"id": "def49-bib-empty-value", "source": "((bibcite a))\n\n[[bibliography]]\n: a :\n[[/bibliography]]"}
+{"id": "def50-bib-unclosed", "source": "[[bibliography]]\n: a : A"}
+{"id": "def51-bib-residual", "source": "[[bibliography]]\n: a : A\nprose line\n[[/bibliography]]"}
+{"id": "def52-bib-next-line", "source": "((bibcite a))\n\n[[bibliography]]\n: a:\nValue next line\n[[/bibliography]]"}
+{"id": "def53-bib-duplicate", "source": "((bibcite a))\n\n[[bibliography]]\n: a : First\n: a : Second\n[[/bibliography]]"}
+{"id": "def54-bib-colon-content", "source": "((bibcite a))\n\n[[bibliography]]\n: a : A: with colon\n[[/bibliography]]"}
+{"id": "def55-unicode-empty", "source": ": 用語 : 定義\n: 空 :"}
+{"id": "def56-unicode-combined", "source": ":  : Value\n: key : "}
+{"id": "def57-double-colon-start", "source": ":: term : definition"}
+{"id": "def58-many-colons", "source": ": a : b : c : d"}
+{"id": "def59-bib-label-charset", "source": "((bibcite smith2020)) ((bibcite 2b))\n\n[[bibliography]]\n: smith2020 : Smith 2020.\n: smith-2020 : Never.\n: 2b : Or not.\n[[/bibliography]]"}
+{"id": "def60-trailing-blank-lines", "source": ": a : A"}

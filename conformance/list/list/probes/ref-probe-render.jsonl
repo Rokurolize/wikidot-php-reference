@@ -1,0 +1,13 @@
+{"id":"p01-empty-bullet","output":"<p>x<\/p>\n\n"}
+{"id":"p02-empty-number","output":"<p>x<\/p>\n\n"}
+{"id":"p03-empty-between","output":"<ul>\n<li>a<\/li>\n<li>b<\/li>\n<\/ul>"}
+{"id":"p04-all-empty","output":"<p>x<\/p>\n\n"}
+{"id":"p05-whitespace-only","output":"<ul>\n<li>a<\/li>\n<li>b<\/li>\n<\/ul>"}
+{"id":"p06-empty-parent","output":"<ul>\n<li>\n<ul>\n<li>child<\/li>\n<\/ul>\n<\/li>\n<li>after<\/li>\n<\/ul>"}
+{"id":"p07-empty-nested-parent","output":"<ul>\n<li>root\n<ul>\n<li>\n<ul>\n<li>grandchild<\/li>\n<\/ul>\n<\/li>\n<\/ul>\n<\/li>\n<li>after<\/li>\n<\/ul>"}
+{"id":"p08-empty-at-end","output":"<ul>\n<li>a<\/li>\n<li>b<\/li>\n<\/ul><p>x<\/p>\n\n"}
+{"id":"p09-skip-one","output":"<ul>\n<li>root\n<ul>\n<li style=\"list-style: none; display: inline\"><ul>\n<li>skipped<\/li>\n<\/ul><\/li><\/ul>\n<\/li>\n<li>after<\/li>\n<\/ul>"}
+{"id":"p10-skip-three","output":"<ul>\n<li>root\n<ol>\n<li style=\"list-style: none; display: inline\"><ol>\n<li style=\"list-style: none; display: inline\"><ol>\n<li style=\"list-style: none; display: inline\"><ol>\n<li>skipped three<\/li>\n<\/ol><\/li><\/ol><\/li><\/ol><\/li><\/ol>\n<\/li>\n<li>after<\/li>\n<\/ul>"}
+{"id":"p11-two-spaces","output":"<ul>\n<li>two spaces<\/li>\n<\/ul>"}
+{"id":"p12-same-depth-child-markers","output":"<ul>\n<li>a\n<ul>\n<li>b<\/li>\n<li>c<\/li>\n<li>d<\/li>\n<\/ul>\n<\/li>\n<\/ul>"}
+{"id":"p14-child-switch","output":"<ul>\n<li>apple\n<ul>\n<li>banana<\/li>\n<\/ul>\n<\/li>\n<li>mango\n<ol>\n<li>lettuce<\/li>\n<\/ol>\n<\/li>\n<li>pineapple<\/li>\n<\/ul>"}

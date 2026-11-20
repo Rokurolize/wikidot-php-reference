@@ -1,0 +1,16 @@
+{"errors":[],"html":"<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n","id":"p01-basic"}
+{"errors":[],"html":"<dl>\n<dt>Alpha</dt>\n<dd>One</dd>\n<dt>Beta</dt>\n<dd>Two</dd>\n</dl>\n","id":"p02-multi"}
+{"errors":[],"html":"<dl>\n<dd>Value</dd>\n</dl>\n","id":"p03-empty-term"}
+{"errors":[],"html":"","id":"p04-empty-def"}
+{"errors":[],"html":"","id":"p06-missing-sep"}
+{"errors":[],"html":"<p>; term : definition</p>","id":"p07-semicolon"}
+{"errors":[],"html":"<dl>\n<dt>a</dt>\n<dd>1</dd>\n<dt>b</dt>\n<dd>2</dd>\n</dl>\n","id":"p08-blank-two"}
+{"errors":[],"html":"text before<br>\n<p>text after</p>","id":"p09-residue"}
+{"errors":[],"html":"<dl>\n<dt>a</dt>\n<dd><strong>x</strong></dd>\n<dt><strong>b</strong></dt>\n<dd><strong>y</strong></dd>\n</dl>\n","id":"p10-bold-cross"}
+{"errors":[],"html":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-81349a\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)\">1</a></p><div class=\"bibitems\"><div class=\"title\">Bibliography</div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha</div></div>","id":"p11-bib"}
+{"errors":[],"html":"ALPHA<br>\n<dl>\n<dt>Key</dt>\n<dd>Value</dd>\n</dl>\n","id":"p12-prose-adjacent"}
+{"errors":[],"html":"<div><dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n</div>","id":"p14-in-div"}
+{"errors":[],"html":"<dl>\n<dd>e</dd>\n</dl>\n","id":"p15-comment-term"}
+{"errors":[],"html":"<dl>\n<dd>value</dd>\n</dl>\n","id":"p16-tab-prefix"}
+{"errors":[],"html":"<dl>\n<dt>term</dt>\n<dd>def</dd>\n</dl>\n","id":"p17-def-only-cont"}
+{"errors":[],"html":"<dl>\n<dt>a</dt>\n<dd>b : c : d</dd>\n</dl>\n","id":"p18-many-colons"}

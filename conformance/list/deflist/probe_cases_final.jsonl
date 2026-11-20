@@ -1,0 +1,17 @@
+{"id": "p01-basic", "source": ": term : definition"}
+{"id": "p02-multi", "source": ": Alpha : One\n: Beta : Two"}
+{"id": "p03-empty-term", "source": ":  : Value"}
+{"id": "p04-empty-def", "source": ": Term :"}
+{"id": "p06-missing-sep", "source": ": term"}
+{"id": "p07-semicolon", "source": "; term : definition"}
+{"id": "p08-blank-two", "source": ": a : 1\n\n: b : 2"}
+{"id": "p09-residue", "source": "text before\n: key value\ntext after"}
+{"id": "p10-bold-cross", "source": ": a : **x\n: b : y**"}
+{"id": "p11-bib", "source": "((bibcite a))\n\n[[bibliography]]\n: a : Alpha\n[[/bibliography]]"}
+{"id": "p12-prose-adjacent", "source": "ALPHA\n: Key : Value"}
+{"id": "p13-colon-space", "source": ": "}
+{"id": "p14-in-div", "source": "[[div class=x]]\n: a : A\n[[/div]]"}
+{"id": "p15-comment-term", "source": ": [!-- c --] : e"}
+{"id": "p16-tab-prefix", "source": ":\t: value"}
+{"id": "p17-def-only-cont", "source": ": term : def\n: more text"}
+{"id": "p18-many-colons", "source": ": a : b : c : d"}

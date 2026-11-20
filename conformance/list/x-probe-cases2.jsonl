@@ -1,0 +1,15 @@
+{"id": "x30n-bare-bullet-marker", "source": "*"}
+{"id": "x31n-bare-number-marker", "source": "#"}
+{"id": "x32-empty-items-mixed", "source": "* a\n* \n* b"}
+{"id": "x33n-bare-marker-between-items", "source": "* a\n*\n* b"}
+{"id": "x34n-bare-nested-marker", "source": "* one\n *\n* two"}
+{"id": "x35-empty-deflist-term", "source": ":  : definition"}
+{"id": "x36n-bare-def-separator", "source": ": term :"}
+{"id": "x37-span-in-item", "source": "[[span class=a]]A[[/span]]\n* one\n* two"}
+{"id": "x38-span-cross-item", "source": "* [[span class=a]]one\n* two[[/span]]"}
+{"id": "x39-size-cross-item", "source": "* [[size 12px]]one\n* two[[/size]]"}
+{"id": "x40-color-cross-item", "source": "* ##red|one\n* two##"}
+{"id": "x41-strike-in-item", "source": "* --one--\n* two"}
+{"id": "x42-bold-in-item", "source": "* **one**\n* two"}
+{"id": "x43-span-nested-in-item", "source": "* one [[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]\n* two"}
+{"id": "x44-list-plain-control", "source": "* one\n* two"}

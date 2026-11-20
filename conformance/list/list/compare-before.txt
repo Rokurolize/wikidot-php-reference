@@ -1,0 +1,127 @@
+total=59 shaped_same=17 diff=42
+=== b01-list-then-paragraph
+  ref: '<ul>\n    <li>a</li>\n    <li>b</li>\n</ul>\n\n<p>text after</p>\n\n'
+  ftm: '<ul>\n<li>a</li>\n<li>b</li>\n</ul><p>text after</p>'
+=== b02-paragraph-then-list
+  ref: '<p>text before</p>\n\n<ul>\n    <li>a</li>\n    <li>b</li>\n</ul>\n\n'
+  ftm: '<p>text before</p><ul>\n<li>a</li>\n<li>b</li>\n</ul>'
+=== b04-interrupted-by-heading
+  ref: '<ul>\n    <li>a</li>\n    <li>b</li>\n</ul>\n\n\n<h1 id="toc0"><span>Heading</span></h1>\n<p>text</p>\n\n'
+  ftm: '<ul>\n<li>a</li>\n<li>b</li>\n</ul><h1 id="toc0"><span>Heading</span></h1><p>text</p>'
+=== b05-interrupted-by-quote
+  ref: '<ul>\n    <li>a</li>\n</ul>\n\n<blockquote><p>quote</p>\n\n</blockquote>\n<ul>\n    <li>b</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a</li>\n</ul><blockquote><p>quote</p></blockquote><ul>\n<li>b</li>\n</ul>'
+=== b06-interrupted-by-code
+  ref: '<ul>\n    <li>a</li>\n</ul>\n\n<p><tt> code </tt></p>\n\n<ul>\n    <li>b</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a</li>\n</ul><p><tt>code</tt></p><ul>\n<li>b</li>\n</ul>'
+=== b08-list-hr-list
+  ref: '<ul>\n    <li>a</li>\n</ul>\n\n<hr />\n<ul>\n    <li>b</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a</li>\n</ul><hr><ul>\n<li>b</li>\n</ul>'
+=== b09-interrupted-by-div
+  ref: '<ul>\n    <li>a</li>\n</ul>\n\n<div  class="x"><p>inner</p>\n\n</div><ul>\n    <li>b</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a</li>\n</ul><div class="x"><p>inner</p></div><ul>\n<li>b</li>\n</ul>'
+=== b10-continuation-blank
+  ref: '<ul>\n    <li>a</li>\n</ul>\n\n<p>second paragraph inside item</p>\n\n<ul>\n    <li>b</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a</li>\n</ul><p>second paragraph inside item</p><ul>\n<li>b</li>\n</ul>'
+=== d01-child-step
+  ref: '<ul>\n    <li>one<ul>\n        <li>two</li>\n    </ul></li>\n    <li>three</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>one\n<ul>\n<li>two</li>\n</ul>\n</li>\n<li>three</li>\n</ul>'
+=== d02-two-levels
+  ref: '<ul>\n    <li>one<ul>\n        <li>two<ul>\n            <li>three</li>\n        </ul></li>\n    </ul></li>\n    <li>four</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>one\n<ul>\n<li>two\n<ul>\n<li>three</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>four</li>\n</ul>'
+=== d03-three-levels
+  ref: '<ul>\n    <li>one<ul>\n        <li>two<ul>\n            <li>three<ul>\n                <li>four</li>\n            </ul></li>\n        </ul></li>\n    </ul></li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>one\n<ul>\n<li>two\n<ul>\n<li>three\n<ul>\n<li>four</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>'
+=== d04-skip-one-level
+  ref: '<ul>\n    <li>root<ul>\n            <li>skipped</li>\n    </ul></li>\n    <li>after</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>root\n<ul>\n<li style="list-style: none; display: inline"><ul>\n<li>skipped</li>\n</ul></li></ul>\n</li>\n<li>after</li>\n</ul>'
+=== d05-skip-three-levels
+  ref: '<ul>\n    <li>root<ol>\n                    <li>skipped three</li>\n    </ol></li>\n    <li>after</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>root\n<ol>\n<li style="list-style: none; display: inline"><ol>\n<li style="list-style: none; display: inline"><ol>\n<li style="list-style: none; display: inline"><ol>\n<li>skipped three</li>\n</ol></li></ol></li></ol></li></ol>\n</li>\n<li>after</li>\n</ul>'
+=== d06-return-to-root
+  ref: '<ul>\n    <li>one<ul>\n        <li>two<ul>\n            <li>three</li>\n        </ul></li>\n    </ul></li>\n    <li>four</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>one\n<ul>\n<li>two\n<ul>\n<li>three</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>four</li>\n</ul>'
+=== d07-partial-return
+  ref: '<ul>\n    <li>one<ul>\n        <li>two<ul>\n            <li>three</li>\n        </ul></li>\n        <li>four</li>\n    </ul></li>\n    <li>five</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>one\n<ul>\n<li>two\n<ul>\n<li>three</li>\n</ul>\n</li>\n<li>four</li>\n</ul>\n</li>\n<li>five</li>\n</ul>'
+=== d08-sibling-sublists
+  ref: '<ul>\n    <li>first<ol>\n        <li>a</li>\n    </ol></li>\n    <li>second<ol>\n        <li>b</li>\n    </ol></li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>first\n<ol>\n<li>a</li>\n</ol>\n</li>\n<li>second\n<ol>\n<li>b</li>\n</ol>\n</li>\n</ul>'
+=== d09-descending
+  ref: '<p>* four<br />\n  * three<br />\n * two</p>\n\n<ul>\n    <li>one</li>\n</ul>\n\n'
+  ftm: '<p>* four<br>\n* three<br>\n* two</p><ul>\n<li>one</li>\n</ul>'
+=== d10-tab-indent
+  ref: '<ul>\n    <li>root<ul>\n                    <li>tab child</li>\n    </ul></li>\n    <li>after</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>root\n<ul>\n<li style="list-style: none; display: inline"><ul>\n<li style="list-style: none; display: inline"><ul>\n<li style="list-style: none; display: inline"><ul>\n<li>tab child</li>\n</ul></li></ul></li></ul></li></ul>\n</li>\n<li>after</li>\n</ul>'
+=== d11-indented-first
+  ref: '<p>* indented first</p>\n\n<ul>\n    <li>second</li>\n</ul>\n\n'
+  ftm: '<p>* indented first</p><ul>\n<li>second</li>\n</ul>'
+=== d13-deep-then-root
+  ref: '<ul>\n    <li>a<ol>\n            <li>b<ul>\n                    <li>c</li>\n            <li>d</li>\n        </ul></li>\n    </ol></li>\n    <li>e</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a\n<ol>\n<li style="list-style: none; display: inline"><ol>\n<li>b\n<ul>\n<li style="list-style: none; display: inline"><ul>\n<li>c</li>\n</ul></li></ul>\n</li>\n<li>d</li>\n</ol></li></ol>\n</li>\n<li>e</li>\n</ul>'
+=== m01-root-switch
+  ref: '<ul>\n    <li>apple</li>\n    <li>banana</li>\n</ul>\n\n<ol>\n    <li>celery</li>\n    <li>kale</li>\n</ol>\n\n<ul>\n    <li>cherry</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>apple</li>\n<li>banana</li>\n</ul><ol>\n<li>celery</li>\n<li>kale</li>\n</ol><ul>\n<li>cherry</li>\n</ul>'
+=== m02-root-switch-number-first
+  ref: '<ol>\n    <li>apple</li>\n    <li>banana</li>\n</ol>\n\n<ul>\n    <li>celery</li>\n    <li>kale</li>\n</ul>\n\n<ol>\n    <li>cherry</li>\n</ol>\n\n'
+  ftm: '<ol>\n<li>apple</li>\n<li>banana</li>\n</ol><ul>\n<li>celery</li>\n<li>kale</li>\n</ul><ol>\n<li>cherry</li>\n</ol>'
+=== m03-child-switch
+  ref: '<ul>\n    <li>apple<ul>\n        <li>banana</li>\n        <li>cherry</li>\n    </ul></li>\n    <li>mango<ol>\n        <li>lettuce</li>\n        <li>spinach</li>\n    </ol></li>\n    <li>pineapple</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>apple\n<ul>\n<li>banana</li>\n<li>cherry</li>\n</ul>\n</li>\n<li>mango\n<ol>\n<li>lettuce</li>\n<li>spinach</li>\n</ol>\n</li>\n<li>pineapple</li>\n</ul>'
+=== m04-child-switch-deeper
+  ref: '<ul>\n    <li>A<ul>\n        <li>B<ol>\n            <li>1</li>\n            <li>2</li>\n        </ol></li>\n        <li>C</li>\n    </ul></li>\n    <li>D</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>A\n<ul>\n<li>B\n<ol>\n<li>1</li>\n<li>2</li>\n</ol>\n</li>\n<li>C</li>\n</ul>\n</li>\n<li>D</li>\n</ul>'
+=== m05-switch-and-return
+  ref: '<ul>\n    <li>a<ol>\n        <li>b<ul>\n            <li>c</li>\n        </ul></li>\n        <li>d</li>\n    </ol></li>\n    <li>e</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a\n<ol>\n<li>b\n<ul>\n<li>c</li>\n</ul>\n</li>\n<li>d</li>\n</ol>\n</li>\n<li>e</li>\n</ul>'
+=== m06-same-depth-child-markers
+  ref: '<ul>\n    <li>a<ul>\n        <li>b</li>\n        <li>c</li>\n        <li>d</li>\n    </ul></li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a\n<ul>\n<li>b</li>\n<li>c</li>\n<li>d</li>\n</ul>\n</li>\n</ul>'
+=== m07-blank-between-runs
+  ref: '<ul>\n    <li>apple</li>\n</ul>\n\n<ul>\n    <li>banana</li>\n</ul>\n\n<ul>\n    <li>cherry</li>\n    <li>mango</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>apple</li>\n</ul><ul>\n<li>banana</li>\n</ul><ul>\n<li>cherry</li>\n<li>mango</li>\n</ul>'
+=== m08-adjacent-runs
+  ref: '<ul>\n    <li>a</li>\n</ul>\n\n<ol>\n    <li>b</li>\n</ol>\n\n<ul>\n    <li>c</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a</li>\n</ul><ol>\n<li>b</li>\n</ol><ul>\n<li>c</li>\n</ul>'
+=== u02-unterminated-nested
+  ref: '<ul>\n    <li>a<ul>\n        <li>b<ul>\n            <li>c</li>\n        </ul></li>\n    </ul></li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a\n<ul>\n<li>b\n<ul>\n<li>c</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>'
+=== u04-unterminated-number
+  ref: '<ol>\n    <li>one<ol>\n        <li>two</li>\n    </ol></li>\n</ol>\n\n'
+  ftm: '<ol>\n<li>one\n<ol>\n<li>two</li>\n</ol>\n</li>\n</ol>'
+=== x03-two-spaces-after-marker
+  ref: '<ul>\n    <li> two spaces</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>two spaces</li>\n</ul>'
+=== x05-quoted-marker
+  ref: '<blockquote><ul>\n    <li>quoted marker</li>\n</ul>\n\n</blockquote>\n'
+  ftm: '<blockquote><ul>\n<li>quoted marker</li>\n</ul></blockquote>'
+=== x08-space-then-blank
+  ref: '<ul>\n    <li>a</li>\n</ul>\n\n<ul>\n    <li>b</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a</li>\n</ul><ul>\n<li>b</li>\n</ul>'
+=== z01-empty-bullet
+  ref: '<ul>\n    <li></li>\n</ul>\n\n'
+  ftm: ''
+=== z02-empty-number
+  ref: '<ol>\n    <li></li>\n</ol>\n\n'
+  ftm: ''
+=== z03-empty-between
+  ref: '<ul>\n    <li>a</li>\n    <li></li>\n    <li>b</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a</li>\n<li>b</li>\n</ul>'
+=== z04-all-empty
+  ref: '<ul>\n    <li></li>\n    <li></li>\n    <li></li>\n</ul>\n\n'
+  ftm: ''
+=== z05-whitespace-only
+  ref: '<ul>\n    <li>a</li>\n    <li>      </li>\n    <li>b</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a</li>\n<li>b</li>\n</ul>'
+=== z06-empty-parent
+  ref: '<ul>\n    <li><ul>\n        <li>child</li>\n    </ul></li>\n    <li>after</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>\n<ul>\n<li>child</li>\n</ul>\n</li>\n<li>after</li>\n</ul>'
+=== z07-empty-nested-parent
+  ref: '<ul>\n    <li>root<ul>\n        <li><ul>\n            <li>grandchild</li>\n        </ul></li>\n    </ul></li>\n    <li>after</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>root\n<ul>\n<li>\n<ul>\n<li>grandchild</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>after</li>\n</ul>'
+=== z08-empty-at-end
+  ref: '<ul>\n    <li>a</li>\n    <li>b</li>\n    <li></li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>a</li>\n<li>b</li>\n</ul>'
+=== z09-empty-at-start
+  ref: '<ul>\n    <li></li>\n    <li>b</li>\n</ul>\n\n'
+  ftm: '<ul>\n<li>b</li>\n</ul>'

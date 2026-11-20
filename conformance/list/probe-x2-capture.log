@@ -1,0 +1,167 @@
+x30n-bare-bullet-marker -> muse-probe-r2list-x-x30n-bare-bullet-marker stable=True saved_source_matches=True valid=True
+x31n-bare-number-marker -> muse-probe-r2list-x-x31n-bare-number-marker stable=True saved_source_matches=True valid=True
+x32-empty-items-mixed -> muse-probe-r2list-x-x32-empty-items-mixed stable=True saved_source_matches=True valid=True
+x33n-bare-marker-between-items -> muse-probe-r2list-x-x33n-bare-marker-between-items stable=True saved_source_matches=True valid=True
+x34n-bare-nested-marker -> muse-probe-r2list-x-x34n-bare-nested-marker stable=True saved_source_matches=True valid=True
+x35-empty-deflist-term -> muse-probe-r2list-x-x35-empty-deflist-term stable=True saved_source_matches=True valid=True
+x36n-bare-def-separator -> muse-probe-r2list-x-x36n-bare-def-separator stable=True saved_source_matches=True valid=True
+x37-span-in-item -> muse-probe-r2list-x-x37-span-in-item stable=True saved_source_matches=True valid=True
+x38-span-cross-item -> muse-probe-r2list-x-x38-span-cross-item stable=True saved_source_matches=True valid=True
+x39-size-cross-item -> muse-probe-r2list-x-x39-size-cross-item stable=True saved_source_matches=True valid=True
+x40-color-cross-item -> muse-probe-r2list-x-x40-color-cross-item stable=True saved_source_matches=True valid=True
+x41-strike-in-item -> muse-probe-r2list-x-x41-strike-in-item stable=True saved_source_matches=True valid=True
+x42-bold-in-item -> muse-probe-r2list-x-x42-bold-in-item stable=True saved_source_matches=True valid=True
+x43-span-nested-in-item -> muse-probe-r2list-x-x43-span-nested-in-item stable=True saved_source_matches=True valid=True
+x44-list-plain-control -> muse-probe-r2list-x-x44-list-plain-control stable=True saved_source_matches=True valid=True
+{
+ "x30n-bare-bullet-marker": {
+  "fullname": "muse-probe-r2list-x-x30n-bare-bullet-marker",
+  "html": "<p>*</p>",
+  "html_sha256": "cd2d532602c1a2527115d53f9f359fee27cc5aea0502653540f65062f9b3711e",
+  "source": "*",
+  "source_sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x31n-bare-number-marker": {
+  "fullname": "muse-probe-r2list-x-x31n-bare-number-marker",
+  "html": "<p>#</p>",
+  "html_sha256": "ae7faad3cf316892b3fafeabf50e89d7209d534dc3af3f73b7ef195f1de0c9e8",
+  "source": "#",
+  "source_sha256": "334359b90efed75da5f0ada1d5e6b256f4a6bd0aee7eb39c0f90182a021ffc8b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x32-empty-items-mixed": {
+  "fullname": "muse-probe-r2list-x-x32-empty-items-mixed",
+  "html": "<ul>\n<li>a</li>\n<li>b</li>\n</ul>",
+  "html_sha256": "100d590c3bfcc60a42b5234552450e120bdd01cf109db8533b75911271c14ca7",
+  "source": "* a\n* \n* b",
+  "source_sha256": "8e3e56bf3c371e8f2ace10bb6629ce10f4d117c4e4bb1b249845e28667916bfa",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x33n-bare-marker-between-items": {
+  "fullname": "muse-probe-r2list-x-x33n-bare-marker-between-items",
+  "html": "<ul>\n<li>a</li>\n</ul>\n<p>*</p>\n<ul>\n<li>b</li>\n</ul>",
+  "html_sha256": "2850d6ad48935e2cf1dadbfa5a7c9e6117bf953b64345b380d1640c49c35c9f8",
+  "source": "* a\n*\n* b",
+  "source_sha256": "2dfba85dfbabee2889f81b1545563bd6422be7339e3a320a98ed43c1f4fa6ceb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x34n-bare-nested-marker": {
+  "fullname": "muse-probe-r2list-x-x34n-bare-nested-marker",
+  "html": "<ul>\n<li>one</li>\n</ul>\n<p>*</p>\n<ul>\n<li>two</li>\n</ul>",
+  "html_sha256": "330a68772ed5d7c3d8f8491c608d8c2b3f98539f051ae60b57e4672521f51351",
+  "source": "* one\n *\n* two",
+  "source_sha256": "f217e61238c13b6984cd09f47ac02548fcfbab5204767f4b9bff1f019bc540f3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x35-empty-deflist-term": {
+  "fullname": "muse-probe-r2list-x-x35-empty-deflist-term",
+  "html": "<dl>\n<dd>definition</dd>\n</dl>",
+  "html_sha256": "3204daeaf15eb06c591105ebf9a384f3790dd3d6c4d8a9f821d8d81381f8bc73",
+  "source": ":  : definition",
+  "source_sha256": "d0153c70c38652d39fdd8553cd962bea2e54a85c4c119ac5a0df5785d9a3dba8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x36n-bare-def-separator": {
+  "fullname": "muse-probe-r2list-x-x36n-bare-def-separator",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": ": term :",
+  "source_sha256": "9000ba1dce9bae8ba9746d7cbf0313c13b98e290eb5b8b7932b512cee45dce81",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x37-span-in-item": {
+  "fullname": "muse-probe-r2list-x-x37-span-in-item",
+  "html": "<p><span>A</span></p>\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>",
+  "html_sha256": "96d15a788edab551e859e833d01561596aa3da4ec8943eb73b6e4a2f8a23d220",
+  "source": "[[span class=a]]A[[/span]]\n* one\n* two",
+  "source_sha256": "4b0ba3f7343186598f271a648d35e51ee886b3ae52e4b5529294adc82d5db4d0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x38-span-cross-item": {
+  "fullname": "muse-probe-r2list-x-x38-span-cross-item",
+  "html": "<ul>\n<li><span>one</span></li>\n<li><span>two</span></li>\n</ul>",
+  "html_sha256": "6b276d5e9f8af56b0976f3413034cec45012dbe8e9c205f98d0698703dbc5c4c",
+  "source": "* [[span class=a]]one\n* two[[/span]]",
+  "source_sha256": "bda0477b86a3722fda6f6e08d07d7a4f8a6fe2318a8e3c1c034c7d79a4ed6096",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x39-size-cross-item": {
+  "fullname": "muse-probe-r2list-x-x39-size-cross-item",
+  "html": "<ul>\n<li><span style=\"font-size:12px;\">one</span></li>\n<li><span style=\"font-size:12px;\">two</span></li>\n</ul>",
+  "html_sha256": "46e6926e92aa570b945e98bf2faf066354e66f34b0d53997babd1a8cd23b3837",
+  "source": "* [[size 12px]]one\n* two[[/size]]",
+  "source_sha256": "13f2674d599bd56afa7dabe37934e73ee51171234c07bb0807e4ab92b0c30132",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x40-color-cross-item": {
+  "fullname": "muse-probe-r2list-x-x40-color-cross-item",
+  "html": "<ul>\n<li><span style=\"color: red\">one</span></li>\n<li><span style=\"color: red\">two</span></li>\n</ul>",
+  "html_sha256": "f929fd98644ccd6e48539040bee5f3f824ed4eeb62db58129411a44a95fadf3d",
+  "source": "* ##red|one\n* two##",
+  "source_sha256": "faa9332c9fb883b2bf79a6e1d18146eceb3c5a8167b59b7cf6ef486961aad425",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x41-strike-in-item": {
+  "fullname": "muse-probe-r2list-x-x41-strike-in-item",
+  "html": "<ul>\n<li><span style=\"text-decoration: line-through;\">one</span></li>\n<li>two</li>\n</ul>",
+  "html_sha256": "88d53919da43aad6fe6274e9b9da9feffe5a55d29531343b54a3ed00b98a6315",
+  "source": "* --one--\n* two",
+  "source_sha256": "c8852d7438470e5af721f06b40bf7c6a095ea360fe3f5830aea29f3e8a1629ca",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x42-bold-in-item": {
+  "fullname": "muse-probe-r2list-x-x42-bold-in-item",
+  "html": "<ul>\n<li><strong>one</strong></li>\n<li>two</li>\n</ul>",
+  "html_sha256": "6a22b18735fae5015b6c0ac309fd76d49903729000e3e3e2e68c979cee5e0e36",
+  "source": "* **one**\n* two",
+  "source_sha256": "1e7d896e2c4213e753bf61e8950d488445da6b9a84bd9c87ecac5b2329ae23e5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x43-span-nested-in-item": {
+  "fullname": "muse-probe-r2list-x-x43-span-nested-in-item",
+  "html": "<ul>\n<li>one <span>A<span style=\"font-size:12px;\">B</span>C</span></li>\n<li>two</li>\n</ul>",
+  "html_sha256": "fdecdb45d056febd8975d71f77464120a58c0d972a2b3210e57d8c7a8462b8d9",
+  "source": "* one [[span class=a]]A[[size 12px]]B[[/span]]C[[/size]]\n* two",
+  "source_sha256": "7b9d604857a8e9e7e984b1380c3781f91f2b449e7ea775969bd5ce55255d67be",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x44-list-plain-control": {
+  "fullname": "muse-probe-r2list-x-x44-list-plain-control",
+  "html": "<ul>\n<li>one</li>\n<li>two</li>\n</ul>",
+  "html_sha256": "60ba44bcc88de109886a0d8dbf60c80f53357b6b6b9bd35b10bb80ddf2d20270",
+  "source": "* one\n* two",
+  "source_sha256": "d57665118507241cf8bc639786e044684e7a30d373a168b6704aa6ef701b96a7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

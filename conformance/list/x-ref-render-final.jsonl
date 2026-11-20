@@ -1,0 +1,46 @@
+{"id":"x01-list-in-div","output":"<div ><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><\/div>"}
+{"id":"x02-numbered-in-div","output":"<div ><ol>\n<li>one<\/li>\n<li>two<\/li>\n<\/ol><\/div>"}
+{"id":"x03-nested-list-in-div","output":"<div ><ul>\n<li>one\n<ul>\n<li>nested<\/li>\n<\/ul>\n<\/li>\n<li>two<\/li>\n<\/ul><\/div>"}
+{"id":"x04-list-in-collapsible","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><\/div><\/div><\/div>"}
+{"id":"x05-list-in-collapsible-labeled","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><ol>\n<li>one<\/li>\n<li>two<\/li>\n<\/ol><\/div><\/div><\/div>"}
+{"id":"x06-list-in-quote","output":"<blockquote><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><\/blockquote>\n"}
+{"id":"x07-nested-list-in-quote","output":"<blockquote><ul>\n<li>one\n<ul>\n<li>nested<\/li>\n<\/ul>\n<\/li>\n<li>two<\/li>\n<\/ul><\/blockquote>\n"}
+{"id":"x08-list-in-tab","output":"<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/element-beta-min.js\"><\/script>\n<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/tabview-min.js\"><\/script><div id=\"wiki-tabview-0\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>title=A<\/em><\/a><\/li><\/ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><\/div><\/div><\/div><script type=\"text\/javascript\">\n(function(){\n\tvar tabView0 = new YAHOO.widget.TabView('wiki-tabview-0');\n})();\n<\/script>"}
+{"id":"x09-div-in-list-item","output":"<div ><p>inside<\/p>\n\n<\/div><ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x10-list-then-div","output":"<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><div ><p>after<\/p>\n\n<\/div>"}
+{"id":"x11-quote-then-list","output":"<blockquote><p>quoted<\/p>\n\n<\/blockquote>\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x12-collapsible-in-list-item","output":"<ul>\n<li>one <div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><\/li>\n<\/ul><p>inside<\/p>\n\n<\/div><\/div><\/div><ul>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x13-deflist-in-bib","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha<\/div><\/div>"}
+{"id":"x14-deflist-multi-bib","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a> <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha<\/div><div class=\"bibitem\" id=\"bibitem-2\">2. Bravo<\/div><\/div>"}
+{"id":"x15-deflist-bib-colon","output":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha: with colon<\/div><\/div>"}
+{"id":"x16-deflist-in-div","output":"<div ><dl>\n<dt>term<\/dt>\n<dd>definition<\/dd>\n<\/dl>\n<\/div>"}
+{"id":"x17-deflist-in-quote","output":"<blockquote><dl>\n<dt>term<\/dt>\n<dd>definition<\/dd>\n<\/dl>\n<\/blockquote>\n"}
+{"id":"x18-deflist-in-collapsible","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><dl>\n<dt>term<\/dt>\n<dd>definition<\/dd>\n<\/dl>\n<\/div><\/div><\/div>"}
+{"id":"x19-bib-then-deflist","output":"<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha<\/div><\/div><dl>\n<dt>b<\/dt>\n<dd>Bravo<\/dd>\n<\/dl>\n"}
+{"id":"x20-deflist-then-bib","output":"<dl>\n<dt>b<\/dt>\n<dd>Bravo<\/dd>\n<\/dl>\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha<\/div><\/div>"}
+{"id":"x21-list-heading","output":"<ul>\n<li>one<\/li>\n<\/ul><p>== Heading ==<\/p>\n\n<ul>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x22-list-toc","output":"<ul>\n<li>one<\/li>\n<\/ul><table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold<\/a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold<\/a><\/div><div class=\"title\">Table of Contents<\/div><div id=\"toc-list\">\n<\/div><\/div><\/td><\/tr><\/table>\n\n<ul>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x23-list-footnote","output":"<ul>\n<li>one<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1<\/a><\/sup><\/li>\n<li>two<\/li>\n<\/ul><div class=\"footnotes-footer\"><div class=\"title\">Footnotes<\/div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1<\/a>. note<\/div><\/div>"}
+{"id":"x24-list-footnoteblock","output":"<ul>\n<li>one<\/li>\n<\/ul><ul>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x25-list-hr","output":"<ul>\n<li>one<\/li>\n<\/ul><hr \/>\n<ul>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x26-list-code","output":"<ul>\n<li>one<\/li>\n<\/ul>\n<div class=\"code\">\n<pre><code>code<\/code><\/pre><\/div>\n\n<ul>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x27-deflist-heading","output":"<dl>\n<dt>term<\/dt>\n<dd>definition<\/dd>\n<\/dl>\n<p>== Heading ==<br \/>\n<dl>\n<dt>other<\/dt>\n<dd>more<\/dd>\n<\/dl>\n<\/p>\n\n"}
+{"id":"x28-list-quote-interrupt","output":"<ul>\n<li>one<\/li>\n<\/ul><blockquote><p>quoted<\/p>\n\n<\/blockquote>\n<ul>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x29-heading-then-list","output":"<p>== Heading ==<\/p>\n\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x30-empty-bullet","output":""}
+{"id":"x31-empty-number","output":""}
+{"id":"x32-empty-items-mixed","output":"<ul>\n<li>a<\/li>\n<li>b<\/li>\n<\/ul>"}
+{"id":"x33-whitespace-only-item","output":""}
+{"id":"x34-empty-nested","output":"<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x35-empty-deflist-term","output":"<dl>\n<dd>definition<\/dd>\n<\/dl>\n"}
+{"id":"x36-empty-deflist-def","output":"<dl>\n<dt>term<\/dt>\n<dd><\/dd>\n<\/dl>\n"}
+{"id":"x37-span-in-item","output":"<p><span>A<\/span><\/p>\n\n<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x38-span-cross-item","output":"<ul>\n<li><span>one<\/li>\n<li>two<\/span><\/li>\n<\/ul>"}
+{"id":"x39-size-cross-item","output":"<ul>\n<li><span style=\"font-size:12px;\">one<\/li>\n<li>two<\/span><\/li>\n<\/ul>"}
+{"id":"x40-color-cross-item","output":"<ul>\n<li><span style=\"color: red;\">one<\/li>\n<li>two<\/span><\/li>\n<\/ul>"}
+{"id":"x41-strike-in-item","output":"<ul>\n<li><span style=\"text-decoration: line-through;\">one<\/span><\/li>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x42-bold-in-item","output":"<ul>\n<li><strong>one<\/strong><\/li>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x43-span-nested-in-item","output":"<ul>\n<li>one <span>A<span style=\"font-size:12px;\">B<\/span>C<\/span><\/li>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x44-list-plain-control","output":"<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul>"}
+{"id":"x45-iftags-suppressed-list","output":"<p>visible<\/p>\n\n"}
+{"id":"x46-iftags-active-list","output":"<ul>\n<li>one<\/li>\n<li>two<\/li>\n<\/ul><p>visible<\/p>\n\n"}

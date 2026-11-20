@@ -1,0 +1,46 @@
+{"errors":[],"html":"<div><ul>\n<li>one</li>\n<li>two</li>\n</ul></div>","id":"x01-list-in-div"}
+{"errors":[],"html":"<div><ol>\n<li>one</li>\n<li>two</li>\n</ol></div>","id":"x02-numbered-in-div"}
+{"errors":[],"html":"<div><ul>\n<li>one\n<ul>\n<li>nested</li>\n</ul>\n</li>\n<li>two</li>\n</ul></div>","id":"x03-nested-list-in-div"}
+{"errors":[],"html":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div><div class=\"collapsible-block-content\"><ul>\n<li>one</li>\n<li>two</li>\n</ul></div></div></div>","id":"x04-list-in-collapsible"}
+{"errors":[],"html":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div><div class=\"collapsible-block-content\"><ol>\n<li>one</li>\n<li>two</li>\n</ol></div></div></div>","id":"x05-list-in-collapsible-labeled"}
+{"errors":[],"html":"<blockquote><ul>\n<li>one</li>\n<li>two</li>\n</ul></blockquote>","id":"x06-list-in-quote"}
+{"errors":[],"html":"<blockquote><ul>\n<li>one\n<ul>\n<li>nested</li>\n</ul>\n</li>\n<li>two</li>\n</ul></blockquote>","id":"x07-nested-list-in-quote"}
+{"errors":[],"html":"<div id=\"wiki-tabview-cb1b29f812e5161287fa4c26392f9b9a\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li></ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><ul>\n<li>one</li>\n<li>two</li>\n</ul></div></div></div>","id":"x08-list-in-tab"}
+{"errors":[],"html":"<div><p>inside</p></div><ul>\n<li>one</li>\n<li>two</li>\n</ul>","id":"x09-div-in-list-item"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n<li>two</li>\n</ul><div><p>after</p></div>","id":"x10-list-then-div"}
+{"errors":[],"html":"<blockquote><p>quoted</p></blockquote><ul>\n<li>one</li>\n<li>two</li>\n</ul>","id":"x11-quote-then-list"}
+{"errors":[],"html":"<ul>\n<li>one<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div><div class=\"collapsible-block-content\"></div></div></div></li>\n</ul><p>inside</p><ul>\n<li>two</li>\n</ul>","id":"x12-collapsible-in-list-item"}
+{"errors":[],"html":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-81349a\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)\">1</a></p><div class=\"bibitems\"><div class=\"title\">Bibliography</div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha</div></div>","id":"x13-deflist-in-bib"}
+{"errors":[],"html":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-81349a\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)\">1</a> <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2-74963a\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;bibitem-2&#39;)\">2</a></p><div class=\"bibitems\"><div class=\"title\">Bibliography</div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha</div><div class=\"bibitem\" id=\"bibitem-2\">2. Bravo</div></div>","id":"x14-deflist-multi-bib"}
+{"errors":[],"html":"<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-81349a\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)\">1</a></p><div class=\"bibitems\"><div class=\"title\">Bibliography</div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha: with colon</div></div>","id":"x15-deflist-bib-colon"}
+{"errors":[],"html":"<div><dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n</div>","id":"x16-deflist-in-div"}
+{"errors":[],"html":"<blockquote><dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n</blockquote>","id":"x17-deflist-in-quote"}
+{"errors":[],"html":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div><div class=\"collapsible-block-content\"><dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n</div></div></div>","id":"x18-deflist-in-collapsible"}
+{"errors":[],"html":"<div class=\"bibitems\"><div class=\"title\">Bibliography</div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha</div></div><dl>\n<dt>b</dt>\n<dd>Bravo</dd>\n</dl>\n","id":"x19-bib-then-deflist"}
+{"errors":[],"html":"<dl>\n<dt>b</dt>\n<dd>Bravo</dd>\n</dl>\n<div class=\"bibitems\"><div class=\"title\">Bibliography</div><div class=\"bibitem\" id=\"bibitem-1\">1. Alpha</div></div>","id":"x20-deflist-then-bib"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n</ul><p>== Heading ==</p><ul>\n<li>two</li>\n</ul>","id":"x21-list-heading"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n</ul><table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div><div class=\"title\">Table of Contents</div><div id=\"toc-list\"></div></div></td></tr></table><ul>\n<li>two</li>\n</ul>","id":"x22-list-toc"}
+{"errors":[],"html":"<ul>\n<li>one<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnote-1&#39;)\">1</a></sup></li>\n<li>two</li>\n</ul><div class=\"footnotes-footer\"><div class=\"title\">Footnotes</div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference(&#39;footnoteref-1&#39;)\">1</a>. note</div></div>","id":"x23-list-footnote"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n</ul><ul>\n<li>two</li>\n</ul>","id":"x24-list-footnoteblock"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n</ul><hr><ul>\n<li>two</li>\n</ul>","id":"x25-list-hr"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n</ul><div class=\"code\"><pre><code>code</code></pre></div><ul>\n<li>two</li>\n</ul>","id":"x26-list-code"}
+{"errors":[],"html":"<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n== Heading ==<br>\n<dl>\n<dt>other</dt>\n<dd>more</dd>\n</dl>\n","id":"x27-deflist-heading"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n</ul><blockquote><p>quoted</p></blockquote><ul>\n<li>two</li>\n</ul>","id":"x28-list-quote-interrupt"}
+{"errors":[],"html":"<p>== Heading ==</p><ul>\n<li>one</li>\n<li>two</li>\n</ul>","id":"x29-heading-then-list"}
+{"errors":[],"html":"","id":"x30-empty-bullet"}
+{"errors":[],"html":"","id":"x31-empty-number"}
+{"errors":[],"html":"<ul>\n<li>a</li>\n<li>b</li>\n</ul>","id":"x32-empty-items-mixed"}
+{"errors":[],"html":"","id":"x33-whitespace-only-item"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n<li>two</li>\n</ul>","id":"x34-empty-nested"}
+{"errors":[],"html":"<dl>\n<dd>definition</dd>\n</dl>\n","id":"x35-empty-deflist-term"}
+{"errors":[],"html":"<dl>\n<dt>term</dt>\n<dd></dd>\n</dl>\n","id":"x36-empty-deflist-def"}
+{"errors":[],"html":"<p><span>A</span></p><ul>\n<li>one</li>\n<li>two</li>\n</ul>","id":"x37-span-in-item"}
+{"errors":[],"html":"<ul>\n<li><span>one</span></li>\n<li><span>two</span></li>\n</ul>","id":"x38-span-cross-item"}
+{"errors":[],"html":"<ul>\n<li><span style=\"font-size:12px;\">one</span></li>\n<li><span style=\"font-size:12px;\">two</span></li>\n</ul>","id":"x39-size-cross-item"}
+{"errors":["ParseError { token: InputEnd, rule: \"color\", span: 19..19, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 2..4, kind: NoRulesMatch }","ParseError { token: InputEnd, rule: \"color\", span: 19..19, kind: EndOfInput }","ParseError { token: Color, rule: \"fallback\", span: 17..19, kind: NoRulesMatch }"],"html":"<ul>\n<li><span style=\"color: red\">one</span></li>\n<li><span style=\"color: red\">two</span></li>\n</ul>","id":"x40-color-cross-item"}
+{"errors":[],"html":"<ul>\n<li><span style=\"text-decoration: line-through;\">one</span></li>\n<li>two</li>\n</ul>","id":"x41-strike-in-item"}
+{"errors":[],"html":"<ul>\n<li><strong>one</strong></li>\n<li>two</li>\n</ul>","id":"x42-bold-in-item"}
+{"errors":[],"html":"<ul>\n<li>one <span>A<span style=\"font-size:12px;\">B</span>C</span></li>\n<li>two</li>\n</ul>","id":"x43-span-nested-in-item"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n<li>two</li>\n</ul>","id":"x44-list-plain-control"}
+{"errors":[],"html":"<p>visible</p>","id":"x45-iftags-suppressed-list"}
+{"errors":[],"html":"<ul>\n<li>one</li>\n<li>two</li>\n</ul><p>visible</p>","id":"x46-iftags-active-list"}

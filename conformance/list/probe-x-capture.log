@@ -1,0 +1,321 @@
+x01-list-in-div -> muse-probe-r2list-x-x01-list-in-div stable=True saved_source_matches=True valid=True
+x02-numbered-in-div -> muse-probe-r2list-x-x02-numbered-in-div stable=True saved_source_matches=True valid=True
+x03-nested-list-in-div -> muse-probe-r2list-x-x03-nested-list-in-div stable=True saved_source_matches=True valid=True
+x04-list-in-collapsible -> muse-probe-r2list-x-x04-list-in-collapsible stable=True saved_source_matches=True valid=True
+x05-list-in-collapsible-labeled -> muse-probe-r2list-x-x05-list-in-collapsible-labeled stable=True saved_source_matches=True valid=True
+x06-list-in-quote -> muse-probe-r2list-x-x06-list-in-quote stable=True saved_source_matches=True valid=True
+x07-nested-list-in-quote -> muse-probe-r2list-x-x07-nested-list-in-quote stable=True saved_source_matches=True valid=True
+x08-list-in-tab -> muse-probe-r2list-x-x08-list-in-tab stable=True saved_source_matches=True valid=True
+x09-div-in-list-item -> muse-probe-r2list-x-x09-div-in-list-item stable=True saved_source_matches=True valid=True
+x10-list-then-div -> muse-probe-r2list-x-x10-list-then-div stable=True saved_source_matches=True valid=True
+x11-quote-then-list -> muse-probe-r2list-x-x11-quote-then-list stable=True saved_source_matches=True valid=True
+x12-collapsible-in-list-item -> muse-probe-r2list-x-x12-collapsible-in-list-item stable=True saved_source_matches=True valid=True
+x13-deflist-in-bib -> muse-probe-r2list-x-x13-deflist-in-bib stable=True saved_source_matches=True valid=True
+x14-deflist-multi-bib -> muse-probe-r2list-x-x14-deflist-multi-bib stable=True saved_source_matches=True valid=True
+x15-deflist-bib-colon -> muse-probe-r2list-x-x15-deflist-bib-colon stable=True saved_source_matches=True valid=True
+x16-deflist-in-div -> muse-probe-r2list-x-x16-deflist-in-div stable=True saved_source_matches=True valid=True
+x17-deflist-in-quote -> muse-probe-r2list-x-x17-deflist-in-quote stable=True saved_source_matches=True valid=True
+x18-deflist-in-collapsible -> muse-probe-r2list-x-x18-deflist-in-collapsible stable=True saved_source_matches=True valid=True
+x19-bib-then-deflist -> muse-probe-r2list-x-x19-bib-then-deflist stable=True saved_source_matches=True valid=True
+x20-deflist-then-bib -> muse-probe-r2list-x-x20-deflist-then-bib stable=True saved_source_matches=True valid=True
+x21-list-heading -> muse-probe-r2list-x-x21-list-heading stable=True saved_source_matches=True valid=True
+x22-list-toc -> muse-probe-r2list-x-x22-list-toc stable=True saved_source_matches=True valid=True
+x23-list-footnote -> muse-probe-r2list-x-x23-list-footnote stable=True saved_source_matches=True valid=True
+x24-list-footnoteblock -> muse-probe-r2list-x-x24-list-footnoteblock stable=True saved_source_matches=True valid=True
+x25-list-hr -> muse-probe-r2list-x-x25-list-hr stable=True saved_source_matches=True valid=True
+x26-list-code -> muse-probe-r2list-x-x26-list-code stable=True saved_source_matches=True valid=True
+x27-deflist-heading -> muse-probe-r2list-x-x27-deflist-heading stable=True saved_source_matches=True valid=True
+x28-list-quote-interrupt -> muse-probe-r2list-x-x28-list-quote-interrupt stable=True saved_source_matches=True valid=True
+x29-heading-then-list -> muse-probe-r2list-x-x29-heading-then-list stable=True saved_source_matches=True valid=True
+{
+ "x01-list-in-div": {
+  "fullname": "muse-probe-r2list-x-x01-list-in-div",
+  "html": "<div>\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>\n</div>",
+  "html_sha256": "b9759477d773cafc1a09909473781ce3aff92639b5a748b29694180b7d959a78",
+  "source": "[[div class=x]]\n* one\n* two\n[[/div]]",
+  "source_sha256": "8f30f2807c9cafa8a69dc9b3dc7557b54cce4158c623c9dba88659810bab43bf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x02-numbered-in-div": {
+  "fullname": "muse-probe-r2list-x-x02-numbered-in-div",
+  "html": "<div>\n<ol>\n<li>one</li>\n<li>two</li>\n</ol>\n</div>",
+  "html_sha256": "9d658846afd3774b982c895a52a9d18fc51688842b5e201fc1ad8a69b79e4c4e",
+  "source": "[[div class=x]]\n# one\n# two\n[[/div]]",
+  "source_sha256": "d7d2609e0d9e459df0789abaf9c464cff4e9ca98cadc67fe566fc4ef6db1905a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x03-nested-list-in-div": {
+  "fullname": "muse-probe-r2list-x-x03-nested-list-in-div",
+  "html": "<div>\n<ul>\n<li>one\n<ul>\n<li>nested</li>\n</ul>\n</li>\n<li>two</li>\n</ul>\n</div>",
+  "html_sha256": "acc7adf3fe70fba47234301e632d856a711cf0094f03a54fa7326c4704241174",
+  "source": "[[div class=x]]\n* one\n * nested\n* two\n[[/div]]",
+  "source_sha256": "f0b505dc9726be4d53393bcb547f65fd326393a538776017610e3ae78fbdade4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x04-list-in-collapsible": {
+  "fullname": "muse-probe-r2list-x-x04-list-in-collapsible",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>\n</div>\n</div>\n</div>",
+  "html_sha256": "775d9452286a7b7b63aa8bc31d9577ee7bf0c8e5451ffbed8e7fa58dd0dd0444",
+  "source": "[[collapsible]]\n* one\n* two\n[[/collapsible]]",
+  "source_sha256": "3f4c409c2cb7a92e36b714ed2e45f335b0ec450d2475e81e74534d3506a76c27",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x05-list-in-collapsible-labeled": {
+  "fullname": "muse-probe-r2list-x-x05-list-in-collapsible-labeled",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<ol>\n<li>one</li>\n<li>two</li>\n</ol>\n</div>\n</div>\n</div>",
+  "html_sha256": "181a6ce40857319ee7faa38d02133a0618ffbc9de4efd80a72453768d696e5e7",
+  "source": "[[collapsible show=show hide=hide]]\n# one\n# two\n[[/collapsible]]",
+  "source_sha256": "2c690eac3a1c55145c2e0809ddefa74c62d05a14802b4998ccc3fc339cd3c398",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x06-list-in-quote": {
+  "fullname": "muse-probe-r2list-x-x06-list-in-quote",
+  "html": "<blockquote>\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>\n</blockquote>",
+  "html_sha256": "863743ba36846601d01062f0f78979123503ccd59ad988fcbbc6ca2f78075165",
+  "source": "> * one\n> * two",
+  "source_sha256": "18178b9ad77923788bbb763d76a57e783e1cfd297b3a2f1385b46885c91c31e3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x07-nested-list-in-quote": {
+  "fullname": "muse-probe-r2list-x-x07-nested-list-in-quote",
+  "html": "<blockquote>\n<ul>\n<li>one\n<ul>\n<li>nested</li>\n</ul>\n</li>\n<li>two</li>\n</ul>\n</blockquote>",
+  "html_sha256": "e2c0f30899bc868d8b8c814d88dd07abf8d18f5672d39a2f0b56968e2f4f7ef3",
+  "source": "> * one\n>  * nested\n> * two",
+  "source_sha256": "e0ce12e41dc6d707a9d5467d86bee883c437cbb4ebbdd5048881dc0ffacaf12f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x08-list-in-tab": {
+  "fullname": "muse-probe-r2list-x-x08-list-in-tab",
+  "html": "<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/yahooui/tabview-min.js\"></script>\n<div id=\"wiki-tabview-a26ce589c73b4303d8f350b5a6ba6fd5\" class=\"yui-navset\">\n<ul class=\"yui-nav\">\n<li class=\"selected\"><a href=\"javascript:;\"><em>title=A</em></a></li>\n</ul>\n<div class=\"yui-content\">\n<div id=\"wiki-tab-0-0\">\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>\n</div>\n</div>\n</div>\n<script type=\"text/javascript\">\n//<![CDATA[\nOZONE.dom.onDomReady(function(){\n        var tabViewa26ce589c73b4303d8f350b5a6ba6fd5 = new YAHOO.widget.TabView('wiki-tabview-a26ce589c73b4303d8f350b5a6ba6fd5');\n                }, \"dummy-ondomready-block\");\n        \n//]]>\n</script>",
+  "html_sha256": "147617419c88aecb89e0f2df9b50061eadfbeef6836687b2be9f323f2078ad92",
+  "source": "[[tabview]]\n[[tab title=A]]\n* one\n* two\n[[/tab]]\n[[/tabview]]",
+  "source_sha256": "096485b0968bcbff9bf61f5b5875ddbb4b1647af665c815c0c382b9f807d147e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x09-div-in-list-item": {
+  "fullname": "muse-probe-r2list-x-x09-div-in-list-item",
+  "html": "<div>\n<p>inside</p>\n</div>\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>",
+  "html_sha256": "ef0bb87b8d7ec1b408b346400cd404650bd1c79b94717a0c426981f1708b1f09",
+  "source": "[[div class=x]]\ninside\n[[/div]]\n* one\n* two",
+  "source_sha256": "79f8268211ef9a13c95af0e1a82f2a87bcf1b96bada8b9ac592eabae44a9bd0d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x10-list-then-div": {
+  "fullname": "muse-probe-r2list-x-x10-list-then-div",
+  "html": "<ul>\n<li>one</li>\n<li>two</li>\n</ul>\n<div>\n<p>after</p>\n</div>",
+  "html_sha256": "69bfedc5af654279ab2e8b4d94a0c65c4c7835759c33b0d6b85742bd7524084c",
+  "source": "* one\n* two\n[[div class=x]]\nafter\n[[/div]]",
+  "source_sha256": "e47bfbffd3b740882000aa8188f6bdbb7eccac91a8fa544fbabfa1685f6f452d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x11-quote-then-list": {
+  "fullname": "muse-probe-r2list-x-x11-quote-then-list",
+  "html": "<blockquote>\n<p>quoted</p>\n</blockquote>\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>",
+  "html_sha256": "4c747950171f54c329220f6a900da38513ba397654c4b6998e88940d0fdd2f31",
+  "source": "> quoted\n* one\n* two",
+  "source_sha256": "5623bdeeef3ded9a6a66fe791d0ea5cf3cdfa817fb9caf760c8776bc7dd936fb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x12-collapsible-in-list-item": {
+  "fullname": "muse-probe-r2list-x-x12-collapsible-in-list-item",
+  "html": "<ul>\n<li>one\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\"></div>\n</div>\n</div>\n</li>\n</ul>\n<p>inside</p>\n<ul>\n<li>two</li>\n</ul>",
+  "html_sha256": "592df4aec3acbfb1a8df459171ab83e44e100e6c98127641d55bbcccb7e78e08",
+  "source": "* one [[collapsible]]inside[[/collapsible]]\n* two",
+  "source_sha256": "d0c6800a4310f036e86f010483e93ce66986c8aa8c5eefa01729db4a9f1b358b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x13-deflist-in-bib": {
+  "fullname": "muse-probe-r2list-x-x13-deflist-in-bib",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-84754a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha</div>\n</div>",
+  "html_sha256": "d68b203c281425e2d8faa4dce2419d7b14588bf759df5db2200fde792e1d481b",
+  "source": "((bibcite a))\n[[bibliography]]\n: a : Alpha\n[[/bibliography]]",
+  "source_sha256": "5ec0b771dcbc8ca80bba4c781200031375c589e80979ada7d8e324090a88afc1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x14-deflist-multi-bib": {
+  "fullname": "muse-probe-r2list-x-x14-deflist-multi-bib",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-77405a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a> <a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-2-79480a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-2')\">2</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha</div>\n<div class=\"bibitem\" id=\"bibitem-2\">2. Bravo</div>\n</div>",
+  "html_sha256": "67a20dbffaa80b2dece690e09e3e516323d5d4db3e23c3169d61c7fcd3f91b37",
+  "source": "((bibcite a)) ((bibcite b))\n[[bibliography]]\n: a : Alpha\n: b : Bravo\n[[/bibliography]]",
+  "source_sha256": "fd6ec69c9144e90e31589e7fa668918e4773be0d18aebbe2fc3dfd27b267c78c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x15-deflist-bib-colon": {
+  "fullname": "muse-probe-r2list-x-x15-deflist-bib-colon",
+  "html": "<p><a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1-66873a\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1</a></p>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha: with colon</div>\n</div>",
+  "html_sha256": "f7d9d16853990db811323c72bf9b3b122c07fa5e0dc3ab6e2d3e56b8dc87d8ac",
+  "source": "((bibcite a))\n[[bibliography]]\n: a: Alpha: with colon\n[[/bibliography]]",
+  "source_sha256": "96cac287296b16cc886bb29782b3a20a259128097a4e9531910c33bd817408bd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x16-deflist-in-div": {
+  "fullname": "muse-probe-r2list-x-x16-deflist-in-div",
+  "html": "<div>\n<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n</div>",
+  "html_sha256": "f95d28f4cee2a16d5531cd2b60286cc277b81af222b876a208fd9b0325ab12ed",
+  "source": "[[div class=x]]\n: term : definition\n[[/div]]",
+  "source_sha256": "bba67b23685b86146d6993fddc59011843a46e1f584290900705b2a5a6f10680",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x17-deflist-in-quote": {
+  "fullname": "muse-probe-r2list-x-x17-deflist-in-quote",
+  "html": "<blockquote>\n<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n</blockquote>",
+  "html_sha256": "92ff3a30bbb70aeb9a10710d9f8e9c488c914cd191b517ff1b84cc0b754b4c8a",
+  "source": "> : term : definition",
+  "source_sha256": "c8e69abb66424db38fea7489c0bf8c878f220e2b30167641038022aba80cd4b3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x18-deflist-in-collapsible": {
+  "fullname": "muse-probe-r2list-x-x18-deflist-in-collapsible",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n</div>\n</div>\n</div>",
+  "html_sha256": "07b583a704a8838ae3f59b42438d2e6b0a24e475f83d40b2f55d976f70215d82",
+  "source": "[[collapsible]]\n: term : definition\n[[/collapsible]]",
+  "source_sha256": "0e06b71cc70bb0c89fc9c900ce7e7466076c04e026d86dc73c22fa217d0f4ae8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x19-bib-then-deflist": {
+  "fullname": "muse-probe-r2list-x-x19-bib-then-deflist",
+  "html": "<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha</div>\n</div>\n<dl>\n<dt>b</dt>\n<dd>Bravo</dd>\n</dl>",
+  "html_sha256": "40898c0ae938ca3ca5dcb1c28fff418f1ad28f41b6dc6a678f7361e7193f38e5",
+  "source": "[[bibliography]]\n: a : Alpha\n[[/bibliography]]\n: b : Bravo",
+  "source_sha256": "53277df84f04ee2b6478f49b0a3ff9d6145338d14531b1f12e101690b4d1402f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x20-deflist-then-bib": {
+  "fullname": "muse-probe-r2list-x-x20-deflist-then-bib",
+  "html": "<dl>\n<dt>b</dt>\n<dd>Bravo</dd>\n</dl>\n<div class=\"bibitems\">\n<div class=\"title\">Bibliography</div>\n<div class=\"bibitem\" id=\"bibitem-1\">1. Alpha</div>\n</div>",
+  "html_sha256": "7f353756b19a4341f92faa6acfff9405aa83595d92b08c13d2b2c35ee4b494d3",
+  "source": ": b : Bravo\n[[bibliography]]\n: a : Alpha\n[[/bibliography]]",
+  "source_sha256": "31338004df737d16b9be19ded7616a1119abdc9d2a2b6bb93382b8a928fa3021",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x21-list-heading": {
+  "fullname": "muse-probe-r2list-x-x21-list-heading",
+  "html": "<ul>\n<li>one</li>\n</ul>\n<p>== Heading ==</p>\n<ul>\n<li>two</li>\n</ul>",
+  "html_sha256": "aee8e8a8914a2912e60c96e176899d97463a395da2ffa0c51b995f781b1ccf10",
+  "source": "* one\n== Heading ==\n* two",
+  "source_sha256": "368f5b44a063d6d072ecd5ccc940b52998fada101ca7e6b85ca00113b557e069",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x22-list-toc": {
+  "fullname": "muse-probe-r2list-x-x22-list-toc",
+  "html": "<ul>\n<li>one</li>\n</ul>\n<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\"></div>\n</div>\n</td>\n</tr>\n</table>\n<ul>\n<li>two</li>\n</ul>",
+  "html_sha256": "b4cfdf62d0f6da1a4683b04374c665adc34101ac3889c8857f880b2625e00b49",
+  "source": "* one\n[[toc]]\n* two",
+  "source_sha256": "d93a2be2db7852ce6bb7a7d89595b79e96f28210ed6c1e32d6709b1476184165",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x23-list-footnote": {
+  "fullname": "muse-probe-r2list-x-x23-list-footnote",
+  "html": "<ul>\n<li>one<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1</a></sup></li>\n<li>two</li>\n</ul>\n<div class=\"footnotes-footer\">\n<div class=\"title\">Footnotes</div>\n<div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1</a>. note</div>\n</div>",
+  "html_sha256": "d3facd9ea92b28c18c98d52dff4564f759b4dbe288a20b2109118072ae5d0fff",
+  "source": "* one[[footnote]]note[[/footnote]]\n* two\n[[footnoteblock]]",
+  "source_sha256": "db643c5b41443135d495180e74a8d7e68542dd9d95de0a0be91cd6633eb3c643",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x24-list-footnoteblock": {
+  "fullname": "muse-probe-r2list-x-x24-list-footnoteblock",
+  "html": "<ul>\n<li>one</li>\n</ul>\n<ul>\n<li>two</li>\n</ul>",
+  "html_sha256": "cc1569c00ef210adb25d6e03f70530681c58b5105a6040e7fc460f2aef9164c1",
+  "source": "* one\n[[footnoteblock]]\n* two",
+  "source_sha256": "3c6096947eadac6a1bd36e383b235db74ec7e71cb72030f43a51c6158f5b18d5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x25-list-hr": {
+  "fullname": "muse-probe-r2list-x-x25-list-hr",
+  "html": "<ul>\n<li>one</li>\n</ul>\n<hr />\n<ul>\n<li>two</li>\n</ul>",
+  "html_sha256": "e77f185d92f7c6552a8b8745e472ca339b5a62cf1874167f2a62e5a00047ebb9",
+  "source": "* one\n----\n* two",
+  "source_sha256": "0d5dbd2fb961d8776eb2611e7c1af70ad53e301226434529c83554f1fc32eaca",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x26-list-code": {
+  "fullname": "muse-probe-r2list-x-x26-list-code",
+  "html": "<ul>\n<li>one</li>\n</ul>\n<div class=\"code\">\n<pre><code>code</code></pre></div>\n<ul>\n<li>two</li>\n</ul>",
+  "html_sha256": "b204bc84b277d91970a451690dca269089f611de5dde26271a6f44949e537c12",
+  "source": "* one\n[[code]]\ncode\n[[/code]]\n* two",
+  "source_sha256": "f3db6c4e88536ead23d8ae584d9653ba30b60343b92af50ac6ac987eafa25aa5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x27-deflist-heading": {
+  "fullname": "muse-probe-r2list-x-x27-deflist-heading",
+  "html": "<dl>\n<dt>term</dt>\n<dd>definition</dd>\n</dl>\n== Heading ==<br />\n<dl>\n<dt>other</dt>\n<dd>more</dd>\n</dl>",
+  "html_sha256": "d938f86d3d65e4faefab3b96cadb25b184d94baafcf6bc6499853f94ae83f5f1",
+  "source": ": term : definition\n== Heading ==\n: other : more",
+  "source_sha256": "57574d38b44e57ed6c5fa0e804fff07a1e8ae578e65bc73a2958d22b6b44cb12",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x28-list-quote-interrupt": {
+  "fullname": "muse-probe-r2list-x-x28-list-quote-interrupt",
+  "html": "<ul>\n<li>one</li>\n</ul>\n<blockquote>\n<p>quoted</p>\n</blockquote>\n<ul>\n<li>two</li>\n</ul>",
+  "html_sha256": "3f603147a13d01a6b0d162262b4ff7aa17fa7226a73c360eeffd356a2e83dcb6",
+  "source": "* one\n> quoted\n* two",
+  "source_sha256": "88a371a3bba9e3b0720ad5359ce64c43c78f6f74739039c46cec6e0d31a360e0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "x29-heading-then-list": {
+  "fullname": "muse-probe-r2list-x-x29-heading-then-list",
+  "html": "<p>== Heading ==</p>\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>",
+  "html_sha256": "663039aef264a89a89682b576d98e40c654d2f9d06974a153103256fb84e7863",
+  "source": "== Heading ==\n* one\n* two",
+  "source_sha256": "f2e57e1fb4e4d30857f3a0f53f5eca29f5eef99621075b9738dcc6f9a9abf660",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

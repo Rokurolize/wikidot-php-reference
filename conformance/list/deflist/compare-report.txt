@@ -1,0 +1,113 @@
+battery cases: 60
+raw exact reference/ftml: before 1/60, after 25/60
+canonical reference/ftml: before 28/60, after 37/60
+render cases changed by the correction: 44/60
+changed ids: def01-basic-single, def02-basic-multi, def03-inline-bold, def04-leading-prose, def05-blank-before, def06-trailing-prose, def07-blank-separated-two, def08-empty-term, def09-empty-term-many-spaces, def10-empty-def-no-trailing, def11-empty-def-trailing-space, def12-empty-def-blank-then, def13-empty-def-glued, def14-multiple-defs, def15-colon-in-def, def16-colon-in-term, def17-sep-no-space-after, def18-sep-tab-after, def20-semicolon-mixed, def23-missing-separator, def24-residue-vanish, def25-just-colon-space, def27-tab-prefix, def28-leading-space, def30-definition-only-continuation, def31-heading-interrupt, def32-code-interrupt, def33-div-interrupt, def34-list-interrupt, def35-list-then-deflist, def36-quote-interrupt, def37-deflist-in-div, def38-deflist-in-collapsible, def39-deflist-in-quote, def40-bold-cross-lines, def41-iftags-in-value, def42-multiline-value, def43-comment-term, def44-item-inside-list, def50-bib-unclosed, def55-unicode-empty, def56-unicode-combined, def58-many-colons, def60-trailing-blank-lines
+
+per-case after-correction comparison (raw equality):
+OK   def01-basic-single                   canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+OK   def02-basic-multi                    canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl>
+OK   def03-inline-bold                    canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+DIFF def04-leading-prose                  canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<p>Intro line<br />\n<dl>\n<dt>k</dt>\n<dd>v</dd>\n</dl>\n</p>\n\n'
+   FTL: 'Intro line<br>\n<dl>\n<dt>k</dt>\n<dd>v</dd>\n</dl>\n'
+DIFF def05-blank-before                   canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<p>Intro</p>\n\n<dl>\n<dt>k</dt>\n<dd>v</dd>\n</dl>\n'
+   FTL: '<p>Intro</p><dl>\n<dt>k</dt>\n<dd>v</dd>\n</dl>\n'
+DIFF def06-trailing-prose                 canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+OK   def07-blank-separated-two            canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl>
+OK   def08-empty-term                     canon=OK shape_ref=<dl> <dd> </dd> </dl> shape_ftml=<dl> <dd> </dd> </dl>
+OK   def09-empty-term-many-spaces         canon=OK shape_ref=<dl> <dd> </dd> </dl> shape_ftml=<dl> <dd> </dd> </dl>
+OK   def10-empty-def-no-trailing          canon=OK shape_ref= shape_ftml=
+OK   def11-empty-def-trailing-space       canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+DIFF def12-empty-def-blank-then           canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<dl>\n<dt>Term :<p>: B</dt>\n<dd>2</dd>\n</dl>\n</p>\n\n'
+   FTL: '<dl>\n<dt>Term :: B</dt>\n<dd>2</dd>\n</dl>\n'
+DIFF def13-empty-def-glued                canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl>
+OK   def14-multiple-defs                  canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl>
+OK   def15-colon-in-def                   canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+OK   def16-colon-in-term                  canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+DIFF def17-sep-no-space-after             canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+OK   def18-sep-tab-after                  canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+DIFF def19-semicolon-form                 canon=OK shape_ref= shape_ftml=
+DIFF def20-semicolon-mixed                canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<p>; term : definition<br />\n<dl>\n<dt>real</dt>\n<dd>def</dd>\n</dl>\n</p>\n\n'
+   FTL: '; term : definition<br>\n<dl>\n<dt>real</dt>\n<dd>def</dd>\n</dl>\n'
+DIFF def21-no-space-leading               canon=OK shape_ref= shape_ftml=
+DIFF def22-no-space-leading2              canon=OK shape_ref= shape_ftml=
+OK   def23-missing-separator              canon=OK shape_ref= shape_ftml=
+DIFF def24-residue-vanish                 canon=DIFF shape_ref= shape_ftml=
+   REF: '<p>text before<br />\ntext after</p>\n\n'
+   FTL: 'text before<br>\n<p>text after</p>'
+OK   def25-just-colon-space               canon=OK shape_ref= shape_ftml=
+DIFF def26-colon-only                     canon=OK shape_ref= shape_ftml=
+OK   def27-tab-prefix                     canon=OK shape_ref=<dl> <dd> </dd> </dl> shape_ftml=<dl> <dd> </dd> </dl>
+DIFF def28-leading-space                  canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<p>: A : 1<br />\n<dl>\n<dt>B</dt>\n<dd>2</dd>\n</dl>\n</p>\n\n'
+   FTL: ': A : 1<br>\n<dl>\n<dt>B</dt>\n<dd>2</dd>\n</dl>\n'
+DIFF def29-two-leading-spaces             canon=OK shape_ref= shape_ftml=
+OK   def30-definition-only-continuation   canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+DIFF def31-heading-interrupt              canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> <dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl> <dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n<p>== Heading ==<br />\n<dl>\n<dt>b</dt>\n<dd>B</dd>\n</dl>\n</p>\n\n'
+   FTL: '<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n== Heading ==<br>\n<dl>\n<dt>b</dt>\n<dd>B</dd>\n</dl>\n'
+DIFF def32-code-interrupt                 canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> <dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl> <dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n\n<div class="code">\n<pre><code>x</code></pre></div>\n\n<br />\n<dl>\n<dt>b</dt>\n<dd>B</dd>\n</dl>\n'
+   FTL: '<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n<div class="code"><pre><code>x</code></pre></div><br>\n<dl>\n<dt>b</dt>\n<dd>B</dd>\n</dl>\n'
+DIFF def33-div-interrupt                  canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> <dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl> <dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n<p>[[div class=x]]d[[/div]]<br />\n<dl>\n<dt>b</dt>\n<dd>B</dd>\n</dl>\n</p>\n\n'
+   FTL: '<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n<p>[[div class=x]]d[[/div]]\n</p><dl>\n<dt>b</dt>\n<dd>B</dd>\n</dl>\n'
+OK   def34-list-interrupt                 canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+OK   def35-list-then-deflist              canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+DIFF def36-quote-interrupt                canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> <dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl> <dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n<blockquote><p>quoted</p>\n\n</blockquote>\n<dl>\n<dt>b</dt>\n<dd>B</dd>\n</dl>\n'
+   FTL: '<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n<blockquote><p>quoted</p></blockquote><dl>\n<dt>b</dt>\n<dd>B</dd>\n</dl>\n'
+DIFF def37-deflist-in-div                 canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<div ><dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n</div>'
+   FTL: '<div><dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n</div>'
+OK   def38-deflist-in-collapsible         canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+DIFF def39-deflist-in-quote               canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl>
+DIFF def40-bold-cross-lines               canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> <dt> </dt> <dd> </dd> </dl>
+   REF: '<dl>\n<dt>a</dt>\n<dd><strong>x</dd>\n<dt>b</dt>\n<dd>y</strong></dd>\n</dl>\n'
+   FTL: '<dl>\n<dt>a</dt>\n<dd><strong>x</strong></dd>\n<dt><strong>b</strong></dt>\n<dd><strong>y</strong></dd>\n</dl>\n'
+DIFF def41-iftags-in-value                canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+DIFF def42-multiline-value                canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+OK   def43-comment-term                   canon=OK shape_ref=<dl> <dd> </dd> </dl> shape_ftml=<dl> <dd> </dd> </dl>
+DIFF def44-item-inside-list               canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<p>[[ul]]<br />\n[[li]]<br />\n<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n</p>\n\n<p>[[/li]]<br />\n[[/ul]]</p>\n\n'
+   FTL: '<ul>\n<li><dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n<br></li>\n</ul><br>\n'
+DIFF def45-bib-closed                     canon=DIFF shape_ref= shape_ftml=
+   REF: '<p><a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a></p>\n\n<div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha</div></div>'
+   FTL: '<p><a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a></p><div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha</div></div>'
+DIFF def46-bib-multi                      canon=DIFF shape_ref= shape_ftml=
+   REF: '<p><a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a> <a href="javascript:;" class="bibcite" id="bibcite-2" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-2\')">2</a></p>\n\n<div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha</div><div class="bibitem" id="bibitem-2">
+   FTL: '<p><a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a> <a href="javascript:;" class="bibcite" id="bibcite-2-74963a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-2&#39;)">2</a></p><div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha</div><div class="bi
+DIFF def47-bib-direct-colon               canon=DIFF shape_ref= shape_ftml=
+   REF: '<p><a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a></p>\n\n<div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha</div></div>'
+   FTL: '<p><a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a></p><div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Alpha</div></div>'
+DIFF def48-bib-malformed                  canon=DIFF shape_ref= shape_ftml=
+   REF: '<p><a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a></p>\n\n<div class="bibitems"><div class="title">Bibliography</div>\n: b :Bravo\n<div class="bibitem" id="bibitem-1">1. Alpha</div></div>'
+   FTL: '<p><a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a></p><div class="bibitems"><div class="title">Bibliography</div>\n: b :Bravo\n<div class="bibitem" id="bibitem-1">1. Alpha</div></div>'
+DIFF def49-bib-empty-value                canon=DIFF shape_ref= shape_ftml=
+   REF: '<p><a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a></p>\n\n<div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1.</div></div>'
+   FTL: '<p><a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a></p><div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1.</div></div>'
+DIFF def50-bib-unclosed                   canon=DIFF shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+   REF: '<p>[[bibliography]]<br />\n<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n</p>\n\n'
+   FTL: '[[bibliography]]<br>\n<dl>\n<dt>a</dt>\n<dd>A</dd>\n</dl>\n'
+OK   def51-bib-residual                   canon=OK shape_ref= shape_ftml=
+DIFF def52-bib-next-line                  canon=DIFF shape_ref= shape_ftml=
+   REF: '<p><a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a></p>\n\n<div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Value next line</div></div>'
+   FTL: '<p><a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a></p><div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Value next line</div></div>'
+DIFF def53-bib-duplicate                  canon=DIFF shape_ref= shape_ftml=
+   REF: '<p><a href="javascript:;" class="bibcite" id="bibcite-2" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-2\')">2</a></p>\n\n<div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. First</div><div class="bibitem" id="bibitem-2">2. Second</div></div>'
+   FTL: '<p><a href="javascript:;" class="bibcite" id="bibcite-2-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-2&#39;)">2</a></p><div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. First</div><div class="bibitem" id="bibitem-2">2. Second</div></div>'
+DIFF def54-bib-colon-content              canon=DIFF shape_ref= shape_ftml=
+   REF: '<p><a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a></p>\n\n<div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A: with colon</div></div>'
+   FTL: '<p><a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a></p><div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. A: with colon</div></div>'
+OK   def55-unicode-empty                  canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+OK   def56-unicode-combined               canon=OK shape_ref=<dl> <dd> </dd> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dd> </dd> <dt> </dt> <dd> </dd> </dl>
+DIFF def57-double-colon-start             canon=OK shape_ref= shape_ftml=
+OK   def58-many-colons                    canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>
+DIFF def59-bib-label-charset              canon=DIFF shape_ref= shape_ftml=
+   REF: '<p><a href="javascript:;" class="bibcite" id="bibcite-1" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-1\')">1</a> <a href="javascript:;" class="bibcite" id="bibcite-2" onclick="WIKIDOT.page.utils.scrollToReference(\'bibitem-2\')">2</a></p>\n\n<div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Smith 2020.</div>\n: smith-2020 : Never.\n<div 
+   FTL: '<p><a href="javascript:;" class="bibcite" id="bibcite-1-81349a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-1&#39;)">1</a> <a href="javascript:;" class="bibcite" id="bibcite-2-74963a" onclick="WIKIDOT.page.utils.scrollToReference(&#39;bibitem-2&#39;)">2</a></p><div class="bibitems"><div class="title">Bibliography</div><div class="bibitem" id="bibitem-1">1. Smith 2020.</div>\n: smit
+OK   def60-trailing-blank-lines           canon=OK shape_ref=<dl> <dt> </dt> <dd> </dd> </dl> shape_ftml=<dl> <dt> </dt> <dd> </dd> </dl>

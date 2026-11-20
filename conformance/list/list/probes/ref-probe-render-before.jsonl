@@ -1,0 +1,13 @@
+{"id":"p01-empty-bullet","output":"<ul>\n    <li><\/li>\n<\/ul>\n\n<p>x<\/p>\n\n"}
+{"id":"p02-empty-number","output":"<ol>\n    <li><\/li>\n<\/ol>\n\n<p>x<\/p>\n\n"}
+{"id":"p03-empty-between","output":"<ul>\n    <li>a<\/li>\n    <li><\/li>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"p04-all-empty","output":"<ul>\n    <li><\/li>\n    <li><\/li>\n    <li><\/li>\n<\/ul>\n\n<p>x<\/p>\n\n"}
+{"id":"p05-whitespace-only","output":"<ul>\n    <li>a<\/li>\n    <li>      <\/li>\n    <li>b<\/li>\n<\/ul>\n\n"}
+{"id":"p06-empty-parent","output":"<ul>\n    <li><ul>\n        <li>child<\/li>\n    <\/ul><\/li>\n    <li>after<\/li>\n<\/ul>\n\n"}
+{"id":"p07-empty-nested-parent","output":"<ul>\n    <li>root<ul>\n        <li><ul>\n            <li>grandchild<\/li>\n        <\/ul><\/li>\n    <\/ul><\/li>\n    <li>after<\/li>\n<\/ul>\n\n"}
+{"id":"p08-empty-at-end","output":"<ul>\n    <li>a<\/li>\n    <li>b<\/li>\n    <li><\/li>\n<\/ul>\n\n<p>x<\/p>\n\n"}
+{"id":"p09-skip-one","output":"<ul>\n    <li>root<ul>\n            <li>skipped<\/li>\n    <\/ul><\/li>\n    <li>after<\/li>\n<\/ul>\n\n"}
+{"id":"p10-skip-three","output":"<ul>\n    <li>root<ol>\n                    <li>skipped three<\/li>\n    <\/ol><\/li>\n    <li>after<\/li>\n<\/ul>\n\n"}
+{"id":"p11-two-spaces","output":"<ul>\n    <li> two spaces<\/li>\n<\/ul>\n\n"}
+{"id":"p12-same-depth-child-markers","output":"<ul>\n    <li>a<ul>\n        <li>b<\/li>\n        <li>c<\/li>\n        <li>d<\/li>\n    <\/ul><\/li>\n<\/ul>\n\n"}
+{"id":"p14-child-switch","output":"<ul>\n    <li>apple<ul>\n        <li>banana<\/li>\n    <\/ul><\/li>\n    <li>mango<ol>\n        <li>lettuce<\/li>\n    <\/ol><\/li>\n    <li>pineapple<\/li>\n<\/ul>\n\n"}

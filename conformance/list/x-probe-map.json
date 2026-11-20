@@ -1,0 +1,147 @@
+{
+ "x01-list-in-div": {
+  "fullname": "muse-probe-r2list-x-x01-list-in-div",
+  "source": "[[div class=x]]\n* one\n* two\n[[/div]]",
+  "action": "created"
+ },
+ "x02-numbered-in-div": {
+  "fullname": "muse-probe-r2list-x-x02-numbered-in-div",
+  "source": "[[div class=x]]\n# one\n# two\n[[/div]]",
+  "action": "created"
+ },
+ "x03-nested-list-in-div": {
+  "fullname": "muse-probe-r2list-x-x03-nested-list-in-div",
+  "source": "[[div class=x]]\n* one\n * nested\n* two\n[[/div]]",
+  "action": "created"
+ },
+ "x04-list-in-collapsible": {
+  "fullname": "muse-probe-r2list-x-x04-list-in-collapsible",
+  "source": "[[collapsible]]\n* one\n* two\n[[/collapsible]]",
+  "action": "created"
+ },
+ "x05-list-in-collapsible-labeled": {
+  "fullname": "muse-probe-r2list-x-x05-list-in-collapsible-labeled",
+  "source": "[[collapsible show=show hide=hide]]\n# one\n# two\n[[/collapsible]]",
+  "action": "created"
+ },
+ "x06-list-in-quote": {
+  "fullname": "muse-probe-r2list-x-x06-list-in-quote",
+  "source": "> * one\n> * two",
+  "action": "created"
+ },
+ "x07-nested-list-in-quote": {
+  "fullname": "muse-probe-r2list-x-x07-nested-list-in-quote",
+  "source": "> * one\n>  * nested\n> * two",
+  "action": "created"
+ },
+ "x08-list-in-tab": {
+  "fullname": "muse-probe-r2list-x-x08-list-in-tab",
+  "source": "[[tabview]]\n[[tab title=A]]\n* one\n* two\n[[/tab]]\n[[/tabview]]",
+  "action": "created"
+ },
+ "x09-div-in-list-item": {
+  "fullname": "muse-probe-r2list-x-x09-div-in-list-item",
+  "source": "[[div class=x]]\ninside\n[[/div]]\n* one\n* two",
+  "action": "created"
+ },
+ "x10-list-then-div": {
+  "fullname": "muse-probe-r2list-x-x10-list-then-div",
+  "source": "* one\n* two\n[[div class=x]]\nafter\n[[/div]]",
+  "action": "created"
+ },
+ "x11-quote-then-list": {
+  "fullname": "muse-probe-r2list-x-x11-quote-then-list",
+  "source": "> quoted\n* one\n* two",
+  "action": "created"
+ },
+ "x12-collapsible-in-list-item": {
+  "fullname": "muse-probe-r2list-x-x12-collapsible-in-list-item",
+  "source": "* one [[collapsible]]inside[[/collapsible]]\n* two",
+  "action": "created"
+ },
+ "x13-deflist-in-bib": {
+  "fullname": "muse-probe-r2list-x-x13-deflist-in-bib",
+  "source": "((bibcite a))\n[[bibliography]]\n: a : Alpha\n[[/bibliography]]",
+  "action": "created"
+ },
+ "x14-deflist-multi-bib": {
+  "fullname": "muse-probe-r2list-x-x14-deflist-multi-bib",
+  "source": "((bibcite a)) ((bibcite b))\n[[bibliography]]\n: a : Alpha\n: b : Bravo\n[[/bibliography]]",
+  "action": "created"
+ },
+ "x15-deflist-bib-colon": {
+  "fullname": "muse-probe-r2list-x-x15-deflist-bib-colon",
+  "source": "((bibcite a))\n[[bibliography]]\n: a: Alpha: with colon\n[[/bibliography]]",
+  "action": "created"
+ },
+ "x16-deflist-in-div": {
+  "fullname": "muse-probe-r2list-x-x16-deflist-in-div",
+  "source": "[[div class=x]]\n: term : definition\n[[/div]]",
+  "action": "created"
+ },
+ "x17-deflist-in-quote": {
+  "fullname": "muse-probe-r2list-x-x17-deflist-in-quote",
+  "source": "> : term : definition",
+  "action": "created"
+ },
+ "x18-deflist-in-collapsible": {
+  "fullname": "muse-probe-r2list-x-x18-deflist-in-collapsible",
+  "source": "[[collapsible]]\n: term : definition\n[[/collapsible]]",
+  "action": "created"
+ },
+ "x19-bib-then-deflist": {
+  "fullname": "muse-probe-r2list-x-x19-bib-then-deflist",
+  "source": "[[bibliography]]\n: a : Alpha\n[[/bibliography]]\n: b : Bravo",
+  "action": "created"
+ },
+ "x20-deflist-then-bib": {
+  "fullname": "muse-probe-r2list-x-x20-deflist-then-bib",
+  "source": ": b : Bravo\n[[bibliography]]\n: a : Alpha\n[[/bibliography]]",
+  "action": "created"
+ },
+ "x21-list-heading": {
+  "fullname": "muse-probe-r2list-x-x21-list-heading",
+  "source": "* one\n== Heading ==\n* two",
+  "action": "created"
+ },
+ "x22-list-toc": {
+  "fullname": "muse-probe-r2list-x-x22-list-toc",
+  "source": "* one\n[[toc]]\n* two",
+  "action": "created"
+ },
+ "x23-list-footnote": {
+  "fullname": "muse-probe-r2list-x-x23-list-footnote",
+  "source": "* one[[footnote]]note[[/footnote]]\n* two\n[[footnoteblock]]",
+  "action": "created"
+ },
+ "x24-list-footnoteblock": {
+  "fullname": "muse-probe-r2list-x-x24-list-footnoteblock",
+  "source": "* one\n[[footnoteblock]]\n* two",
+  "action": "created"
+ },
+ "x25-list-hr": {
+  "fullname": "muse-probe-r2list-x-x25-list-hr",
+  "source": "* one\n----\n* two",
+  "action": "created"
+ },
+ "x26-list-code": {
+  "fullname": "muse-probe-r2list-x-x26-list-code",
+  "source": "* one\n[[code]]\ncode\n[[/code]]\n* two",
+  "action": "created"
+ },
+ "x27-deflist-heading": {
+  "fullname": "muse-probe-r2list-x-x27-deflist-heading",
+  "source": ": term : definition\n== Heading ==\n: other : more",
+  "action": "created"
+ },
+ "x28-list-quote-interrupt": {
+  "fullname": "muse-probe-r2list-x-x28-list-quote-interrupt",
+  "source": "* one\n> quoted\n* two",
+  "action": "created"
+ },
+ "x29-heading-then-list": {
+  "fullname": "muse-probe-r2list-x-x29-heading-then-list",
+  "source": "== Heading ==\n* one\n* two",
+  "action": "created"
+ }
+}

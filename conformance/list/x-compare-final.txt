@@ -1,0 +1,57 @@
+R2-list root cross-rule interaction: three-way comparison (final)
+valid probes: 44; signature counts: {'all3': 41, 'ref_live': 0, 'ftm_live': 3, 'ref_ftm': 0, 'all_disagree': 0}
+canon counts: ref==ftml 36, ref==live 36, ftml==live 43
+
+x01-list-in-div                    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x02-numbered-in-div                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x03-nested-list-in-div             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x04-list-in-collapsible            ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x05-list-in-collapsible-labeled    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x06-list-in-quote                  ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x07-nested-list-in-quote           ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x08-list-in-tab                    ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x09-div-in-list-item               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x10-list-then-div                  ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x11-quote-then-list                ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x12-collapsible-in-list-item       ALL3           canon(r=f)=False canon(r=l)=False canon(f=l)=False
+x13-deflist-in-bib                 ALL3           canon(r=f)=False canon(r=l)=False canon(f=l)=True
+x14-deflist-multi-bib              ALL3           canon(r=f)=False canon(r=l)=False canon(f=l)=True
+x15-deflist-bib-colon              ALL3           canon(r=f)=False canon(r=l)=False canon(f=l)=True
+x16-deflist-in-div                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x17-deflist-in-quote               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x18-deflist-in-collapsible         ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x19-bib-then-deflist               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x20-deflist-then-bib               ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x21-list-heading                   ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x22-list-toc                       ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x23-list-footnote                  ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x24-list-footnoteblock             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x25-list-hr                        ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x26-list-code                      ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x27-deflist-heading                ALL3           canon(r=f)=False canon(r=l)=False canon(f=l)=True
+x28-list-quote-interrupt           ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x29-heading-then-list              ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x32-empty-items-mixed              ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x35-empty-deflist-term             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x37-span-in-item                   ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x38-span-cross-item                FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'tags': [('', 'ul'), ('', 'li'), ('/', 'li'), ('', 'li'), ('/', 'li'), ('/', 'ul')], 'spans': [('c=', 's=')], 'lit': {}, 'text': 'one two'}
+  ftml: {'tags': [('', 'ul'), ('', 'li'), ('/', 'li'), ('', 'li'), ('/', 'li'), ('/', 'ul')], 'spans': [('c=', 's='), ('c=', 's=')], 'lit': {}, 'text': 'one two'}
+  live: {'tags': [('', 'ul'), ('', 'li'), ('/', 'li'), ('', 'li'), ('/', 'li'), ('/', 'ul')], 'spans': [('c=', 's='), ('c=', 's=')], 'lit': {}, 'text': 'one two'}
+x39-size-cross-item                FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'tags': [('', 'ul'), ('', 'li'), ('/', 'li'), ('', 'li'), ('/', 'li'), ('/', 'ul')], 'spans': [('c=', 's=font-size:12px;')], 'lit': {}, 'text': 'one two'}
+  ftml: {'tags': [('', 'ul'), ('', 'li'), ('/', 'li'), ('', 'li'), ('/', 'li'), ('/', 'ul')], 'spans': [('c=', 's=font-size:12px;'), ('c=', 's=font-size:12px;')], 'lit': {}, 'text': 'one two'}
+  live: {'tags': [('', 'ul'), ('', 'li'), ('/', 'li'), ('', 'li'), ('/', 'li'), ('/', 'ul')], 'spans': [('c=', 's=font-size:12px;'), ('c=', 's=font-size:12px;')], 'lit': {}, 'text': 'one two'}
+x40-color-cross-item               FTM+LIVE       canon(r=f)=False canon(r=l)=False canon(f=l)=True
+  ref : {'tags': [('', 'ul'), ('', 'li'), ('/', 'li'), ('', 'li'), ('/', 'li'), ('/', 'ul')], 'spans': [('c=', 's=color: red;')], 'lit': {}, 'text': 'one two'}
+  ftml: {'tags': [('', 'ul'), ('', 'li'), ('/', 'li'), ('', 'li'), ('/', 'li'), ('/', 'ul')], 'spans': [('c=', 's=color: red'), ('c=', 's=color: red')], 'lit': {}, 'text': 'one two'}
+  live: {'tags': [('', 'ul'), ('', 'li'), ('/', 'li'), ('', 'li'), ('/', 'li'), ('/', 'ul')], 'spans': [('c=', 's=color: red'), ('c=', 's=color: red')], 'lit': {}, 'text': 'one two'}
+x41-strike-in-item                 ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x42-bold-in-item                   ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x43-span-nested-in-item            ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x44-list-plain-control             ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x30n-bare-bullet-marker            ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x31n-bare-number-marker            ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x33n-bare-marker-between-items     ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x34n-bare-nested-marker            ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True
+x36n-bare-def-separator            ALL3           canon(r=f)=True canon(r=l)=True canon(f=l)=True

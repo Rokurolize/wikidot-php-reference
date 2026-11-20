@@ -47,7 +47,6 @@ class Text_Wiki_Render_Xhtml_Deflist extends Text_Wiki_Render {
     function token($options)
     {
         $type = $options['type'];
-        $pad = "    ";
 
         switch ($type) {
 
@@ -57,12 +56,12 @@ class Text_Wiki_Render_Xhtml_Deflist extends Text_Wiki_Render {
             break;
 
         case 'list_end':
-            return "</dl>\n\n";
+            return "</dl>\n";
             break;
 
         case 'term_start':
             $css = $this->formatConf(' class="%s"', 'css_dt');
-            return $pad . "<dt$css>";
+            return "<dt$css>";
             break;
 
         case 'term_end':
@@ -71,7 +70,7 @@ class Text_Wiki_Render_Xhtml_Deflist extends Text_Wiki_Render {
 
         case 'narr_start':
             $css = $this->formatConf(' class="%s"', 'css_dd');
-            return $pad . $pad . "<dd$css>";
+            return "<dd$css>";
             break;
 
         case 'narr_end':
