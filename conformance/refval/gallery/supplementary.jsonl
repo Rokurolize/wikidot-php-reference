@@ -1,0 +1,4 @@
+{"id": "pg01", "source": "[[gallery size=\"small\"]]\n: https://example.com/a.png\n[[/gallery]]"}
+{"id": "pg02", "source": "[[gallery]]\n: https://example.com/a.png\n: b.png\n[[/gallery]]"}
+{"id": "pg03", "source": "[[gallery]]\n: a.png alt=\"it's\"\n[[/gallery]]"}
+{"id": "pg04", "source": "[[gallery]]\n: b.png\n: https://example.com/a.png\n[[/gallery]]"}

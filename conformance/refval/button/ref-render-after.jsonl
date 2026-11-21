@@ -1,0 +1,87 @@
+{"id":"bt-01","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-02","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >Edit<\/a><\/p>\n\n"}
+{"id":"bt-03","output":"<p><a class=\"c\" style=\"s\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >Edit<\/a><\/p>\n\n"}
+{"id":"bt-04","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-05","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-06","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-07","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-08","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >b<\/a><\/p>\n\n"}
+{"id":"bt-09","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-10","output":"<p>[[button edit ]]<\/p>\n\n"}
+{"id":"bt-11","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-12","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-13","output":"<p><a class=\"c\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a b<\/a><\/p>\n\n"}
+{"id":"bt-14","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-15","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-16","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-17","output":"<p>[[button]]<\/p>\n\n"}
+{"id":"bt-18","output":"<p>[[button ]]<\/p>\n\n"}
+{"id":"bt-19","output":"<p>[[button edit<\/p>\n\n"}
+{"id":"bt-20","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-21","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"bt-22","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a&quot;b<\/a><\/p>\n\n"}
+{"id":"bt-23","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"bt-24","output":"<p>pre <a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a> post<\/p>\n\n"}
+{"id":"bt-25","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a> <a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\" WIKIDOT.page.listeners.historyClick(event)\" >history<\/a><\/p>\n\n"}
+{"id":"bt-26","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"bt-27","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"bt-28","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a|b<\/a><\/p>\n\n"}
+{"id":"bt-29","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-30","output":"<p><a class=\"c\" style=\"s\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >t<\/a><\/p>\n\n"}
+{"id":"bt-31","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-32","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-33","output":"\n<div class=\"code\">\n<pre><code>[[button edit]]<\/code><\/pre><\/div>\n\n"}
+{"id":"bt-34","output":"<p>[[button edit text=&quot;a&quot;<\/p>\n\n"}
+{"id":"bt-35","output":"<p>[[button edit[]]<\/p>\n\n"}
+{"id":"bt-36","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-37","output":"<p><a class=\"b\" style=\"c\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >z<\/a><\/p>\n\n"}
+{"id":"bt-38","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a\nb<\/a><\/p>\n\n"}
+{"id":"bt-39","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a>tail<\/p>\n\n"}
+{"id":"bt-40","output":"\n<h1 id=\"toc0\"><span><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/span><\/h1>\n"}
+{"id":"bt-41","output":"<p>[[div]]<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a>[[\/div]]<\/p>\n\n"}
+{"id":"bt-42","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"bt-43","output":"<p><a class=\"b\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"bt-x01","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.append(event)\" >append<\/a><\/p>\n\n"}
+{"id":"bt-x02","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.toggleEditSections(event)\" >edit sections<\/a><\/p>\n\n"}
+{"id":"bt-x03","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\" WIKIDOT.page.listeners.historyClick(event)\" >history<\/a><\/p>\n\n"}
+{"id":"bt-x04","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.printClick(event)\" >print<\/a><\/p>\n\n"}
+{"id":"bt-x05","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.filesClick(event)\" >files<\/a><\/p>\n\n"}
+{"id":"bt-x06","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editTags(event)\" >tags<\/a><\/p>\n\n"}
+{"id":"bt-x07","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.viewSourceClick(event)\" >view source<\/a><\/p>\n\n"}
+{"id":"bt-x08","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"window.location.href='\/talk:'+WIKIREQUEST.info.pageUnixName\" >talk<\/a><\/p>\n\n"}
+{"id":"bt-x09","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.backlinksClick(event)\" >backlinks<\/a><\/p>\n\n"}
+{"id":"bt-x10","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-x11","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-x12","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-x13","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-x14","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-x15","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-x16","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-x17","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-x18","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.append(event)\" >append<\/a><\/p>\n\n"}
+{"id":"bt-x19","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.toggleEditSections(event)\" >edit sections<\/a><\/p>\n\n"}
+{"id":"bt-x20","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a&lt;b&gt;c&amp;d&#039;e<\/a><\/p>\n\n"}
+{"id":"bt-x21","output":"<p><a class=\"c1 c2\" style=\"color:red\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-x22","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"p01","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"p02","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.append(event)\" >append<\/a><br \/>\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.toggleEditSections(event)\" >edit sections<\/a><\/p>\n\n"}
+{"id":"p03","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\" WIKIDOT.page.listeners.historyClick(event)\" >history<\/a><br \/>\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.printClick(event)\" >print<\/a><br \/>\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.filesClick(event)\" >files<\/a><\/p>\n\n"}
+{"id":"p04","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editTags(event)\" >tags<\/a><br \/>\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.viewSourceClick(event)\" >view source<\/a><br \/>\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"window.location.href='\/talk:'+WIKIREQUEST.info.pageUnixName\" >talk<\/a><br \/>\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.backlinksClick(event)\" >backlinks<\/a><\/p>\n\n"}
+{"id":"p05","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.append(event)\" >append<\/a><br \/>\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.toggleEditSections(event)\" >edit sections<\/a><\/p>\n\n"}
+{"id":"p06","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><br \/>\n<div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"p07","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><br \/>\n<div class=\"error-block\">The button type is not recognized<\/div><br \/>\n<div class=\"error-block\">The button type is not recognized<\/div><br \/>\n<div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"p08","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><br \/>\n<div class=\"error-block\">The button type is not recognized<\/div><br \/>\n<div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"p09","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >Edit Page<\/a><\/p>\n\n"}
+{"id":"p10","output":"<p><a class=\"my-btn\" style=\"color: red;\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >Edit<\/a><\/p>\n\n"}
+{"id":"p11","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"p12","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"p13","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a&lt;b&gt;c&amp;d&#039;e<\/a><\/p>\n\n"}
+{"id":"p14","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><br \/>\n<div class=\"error-block\">The button type is not recognized<\/div><br \/>\n<div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"p15","output":"<p>[[button edit ]]<\/p>\n\n"}
+{"id":"p16","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"p17","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"p18","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"p19","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >newline<\/a><\/p>\n\n"}
+{"id":"p20","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >tab<\/a><\/p>\n\n"}
+{"id":"p21","output":"<p>[[button]]<br \/>\n[[button ]]<\/p>\n\n"}
+{"id":"p22","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >b<\/a><\/p>\n\n"}

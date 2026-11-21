@@ -1,0 +1,8 @@
+{"id":"sb01","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.updateTagsByButton(event, '')\" >T<\/a><\/p>\n\n"}
+{"id":"sb02","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.updateTagsByButton(event, '')\" >T<\/a><\/p>\n\n"}
+{"id":"sb03","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.updateTagsByButton(event, '')\" >T<\/a><\/p>\n\n"}
+{"id":"sb04","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.updateTagsByButton(event, '')\" >T<\/a><\/p>\n\n"}
+{"id":"sb05","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.updateTagsByButton(event, '')\" >T<\/a><\/p>\n\n"}
+{"id":"sb06","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.updateTagsByButton(event, '')\" >T<\/a><\/p>\n\n"}
+{"id":"sb07","output":"<p><div class=\"error-block\"><em>lock<\/em> is not a valid button type<\/div><\/p>\n\n"}
+{"id":"sb08","output":"<p><div class=\"error-block\"><em>foo-bar<\/em> is not a valid button type<\/div><\/p>\n\n"}

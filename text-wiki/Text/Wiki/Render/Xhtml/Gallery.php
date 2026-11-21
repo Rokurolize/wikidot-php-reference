@@ -133,7 +133,6 @@ class Text_Wiki_Render_Xhtml_Gallery extends Text_Wiki_Render {
 		            }
 		        }elseif(strpos($src, '://') !== false){
 		        	$attr['link'] = $src;
-		        	$size = "original";
 		        }else{
 		        		return '<div class="error-block">Sorry, format for gallery item:<pre>'.$row.'</pre> is not supported.</div>';	
 		        }
@@ -167,7 +166,8 @@ class Text_Wiki_Render_Xhtml_Gallery extends Text_Wiki_Render {
 		      	$out .= '<div class="gallery-item '.$size.'">';	
     				$out .= '<table><tr><td>';
     				$out .= '<a href="'.$href.'" '.$target.'>';
-    				$out .= '<img src="'.$src.'" alt=""/>';
+    				$alt = isset($attr['alt']) ? htmlspecialchars($attr['alt'], ENT_COMPAT, 'UTF-8') : '';
+    				$out .= '<img src="'.$src.'" alt="'.$alt.'"/>';
     				$out .= '</a>';
     				$out .= '</td></tr></table>';
     				$out .= '</div>';
@@ -204,7 +204,7 @@ class Text_Wiki_Render_Xhtml_Gallery extends Text_Wiki_Render {
     		$files = DB_FilePeer::instance()->select($c);
     		
     		if(count($files) == 0){
-    			return '<div class="error-block">Sorry, no images found attached ' .
+    			return '<div class="error-block">Sorry, we couldn\'t find any images attached ' .
     					'to this page.</div>';	
     		}
     		

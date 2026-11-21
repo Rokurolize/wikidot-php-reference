@@ -1,0 +1,8 @@
+{"id": "sb01", "source": "[[button set-tags text=\"T\" tags=\"a b\"]]"}
+{"id": "sb02", "source": "[[button set-tags text=\"T\" tags=\"+a -b\"]]"}
+{"id": "sb03", "source": "[[button set-tags text=\"T\"]]"}
+{"id": "sb04", "source": "[[button set-tags text=\"T\" tags=\"a,b\"]]"}
+{"id": "sb05", "source": "[[button set-tags text=\"T\" tags=\"one\"]]"}
+{"id": "sb06", "source": "[[button SET-TAGS text=\"T\" tags=\"a\"]]"}
+{"id": "sb07", "source": "[[button LOCK]]"}
+{"id": "sb08", "source": "[[button Foo_Bar]]"}

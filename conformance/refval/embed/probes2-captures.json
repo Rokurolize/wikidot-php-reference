@@ -1,0 +1,62 @@
+{
+ "se01": {
+  "fullname": "muse-probe-refval2-embed-se01",
+  "html": "<p><iframe src=\"http://example.com\" width=\"400\" height=\"300\"></iframe></p>",
+  "html_sha256": "301af8ccfbae5ec6904393360309463d6797146618186efe97b83c064a2e25ed",
+  "source": "[[embed]]<iframe src=\"http://example.com\" width=\"400\" height=\"300\"></iframe>[[/embed]]",
+  "source_sha256": "3d5dc3f8750c8f5b962b93d256c484206d5d5b0d18a8ad3683f3811a911878ab",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "se02": {
+  "fullname": "muse-probe-refval2-embed-se02",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[embed]]<iframe src=\"JaVaScRiPt:alert(1)\"></iframe>[[/embed]]",
+  "source_sha256": "d93c2be54eab4cd81d36577e4543454416cd6b97f2acc6b0ab1e71cad6fa4a73",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "se03": {
+  "fullname": "muse-probe-refval2-embed-se03",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+  "source": "[[embed]]<iframe src=\"http://example.com\" data-x=\"javascript:foo\"></iframe>[[/embed]]",
+  "source_sha256": "9912d91cbef7521090ce55b18eeffa5738a9d1fb6489a365ae349484f828fe2a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "se04": {
+  "fullname": "muse-probe-refval2-embed-se04",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[embed]]<iframe src=\"vbscript:msgbox\"></iframe>[[/embed]]",
+  "source_sha256": "d92c91c4fae8da8613b2da44a084b2fa401b7ed474c35c1890d937d44f98efd1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "se05": {
+  "fullname": "muse-probe-refval2-embed-se05",
+  "html": "<p><iframe src=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></iframe></p>",
+  "html_sha256": "b075e09b8b2aa242ce25e2913b321b2fa84ca4944e0a30e5dfb9c177db7219b7",
+  "source": "[[embed]]<iframe src=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></iframe>[[/embed]]",
+  "source_sha256": "0a75464230f564781f83daa76e9e949853496b139d9d870badecbe237cf1cb88",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "se06": {
+  "fullname": "muse-probe-refval2-embed-se06",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[embed]]<iframe src=\" javascript:alert(1)\"></iframe>[[/embed]]",
+  "source_sha256": "ef03e128d51fe6b93fdc9bab9dc9e8027edb915a2ecc2046034464f10939a58e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

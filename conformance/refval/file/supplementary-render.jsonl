@@ -1,0 +1,6 @@
+{"id":"pf01","output":"<p><a href=\"\/a+b.txt\">a+b.txt<\/a><\/p>\n\n"}
+{"id":"pf02","output":"<p><a href=\"\/a%b.txt\">a%b.txt<\/a><\/p>\n\n"}
+{"id":"pf03","output":"<p><a href=\"\/a#b.txt\">a#b.txt<\/a><\/p>\n\n"}
+{"id":"pf04","output":"<p><a href=\"\/local--files\/other-page\/my%20file.txt\">other-page\/my file.txt<\/a><\/p>\n\n"}
+{"id":"pf05","output":"<p><a href=\"\/a&amp;b.txt\">a&amp;b.txt<\/a><\/p>\n\n"}
+{"id":"pf06","output":"<p><a href=\"\/a.txt\">it's<\/a><\/p>\n\n"}

@@ -58,10 +58,33 @@ class Text_Wiki_Render_Xhtml_Embed extends Text_Wiki_Render {
         foreach ($this->_patterns as $pattern) {
             if (preg_match($pattern, $content)) {
                 $content = preg_replace('/language="JavaScript[^"]*"/i', '', $content);
+                // a dangerous scheme in the src attribute makes the
+                // whole embed render empty on live Wikidot
+                if (preg_match('/\bsrc\s*=\s*"([^"]*)"/i', $content, $sm)) {
+                    $srcScheme = strtolower(trim($sm[1]));
+                    if (strpos($srcScheme, 'javascript:') === 0 || strpos($srcScheme, 'vbscript:') === 0) {
+                        return '';
+                    }
+                }
                 // check for js events
                 $eventpattern = 'on[a-z]+';
                 $eventpattern = ';<[^>]*\s+' . $eventpattern . '\s*=[^>]+>;si';
                 if (preg_match($eventpattern, $content)) {
+                    break;
+                }
+                // a dangerous scheme in any other attribute value
+                // falls through to the no-match error on live Wikidot
+                $badScheme = false;
+                if (preg_match_all('/[a-zA-Z0-9_-]+\s*=\s*"([^"]*)"/', $content, $am)) {
+                    foreach ($am[1] as $attrValue) {
+                        $lv = strtolower($attrValue);
+                        if (strpos($lv, 'javascript:') !== false || strpos($lv, 'vbscript:') !== false) {
+                            $badScheme = true;
+                            break;
+                        }
+                    }
+                }
+                if ($badScheme) {
                     break;
                 }
                 return $content;

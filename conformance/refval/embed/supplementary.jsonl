@@ -1,0 +1,6 @@
+{"id": "se01", "source": "[[embed]]<iframe src=\"http://example.com\" width=\"400\" height=\"300\"></iframe>[[/embed]]"}
+{"id": "se02", "source": "[[embed]]<iframe src=\"JaVaScRiPt:alert(1)\"></iframe>[[/embed]]"}
+{"id": "se03", "source": "[[embed]]<iframe src=\"http://example.com\" data-x=\"javascript:foo\"></iframe>[[/embed]]"}
+{"id": "se04", "source": "[[embed]]<iframe src=\"vbscript:msgbox\"></iframe>[[/embed]]"}
+{"id": "se05", "source": "[[embed]]<iframe src=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></iframe>[[/embed]]"}
+{"id": "se06", "source": "[[embed]]<iframe src=\" javascript:alert(1)\"></iframe>[[/embed]]"}

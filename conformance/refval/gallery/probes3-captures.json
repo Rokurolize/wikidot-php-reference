@@ -1,0 +1,42 @@
+{
+ "pg01": {
+  "fullname": "muse-probe-refval2-gallery-pg01",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-399297\">\n<div class=\"gallery-item small\">\n<table>\n<tr>\n<td><a href=\"https://example.com/a.png\" class=\"with-lb\"><img src=\"https://example.com/a.png\" alt=\"\" class=\"gallery-image-size-small\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-399297 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "88a3fbf399ff9f7dd330c168f5720a2612f91da4f1e2651144a1b875a253c91b",
+  "source": "[[gallery size=\"small\"]]\n: https://example.com/a.png\n[[/gallery]]",
+  "source_sha256": "7eb2beefb8502106c1fb6cd0691dc868ccab77a2ef2c20b49625df93f5f8dbd0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pg02": {
+  "fullname": "muse-probe-refval2-gallery-pg02",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-913065\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://example.com/a.png\" class=\"with-lb\"><img src=\"https://example.com/a.png\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval2-gallery-pg02/b.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval2-gallery-pg02/b.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-913065 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "258962e66d66beb41dbea93ec43c757cf285505b87edb3870c6452926bc7dbac",
+  "source": "[[gallery]]\n: https://example.com/a.png\n: b.png\n[[/gallery]]",
+  "source_sha256": "309d03f5f23677a9004b5272d5f4e8556c5a9ab00518bff4a619440629b6f69d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pg03": {
+  "fullname": "muse-probe-refval2-gallery-pg03",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-331327\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval2-gallery-pg03/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval2-gallery-pg03/a.png/thumbnail.jpg\" alt=\"it's\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-331327 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "4b0e09afa79cb768f36be103d61d183bda95a434c9653d9dfbc7832ca4d7a610",
+  "source": "[[gallery]]\n: a.png alt=\"it's\"\n[[/gallery]]",
+  "source_sha256": "40b9fd096115dfaf2b9bab8e628d3e91d0f5b471435ae5561e70acea46b0187d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pg04": {
+  "fullname": "muse-probe-refval2-gallery-pg04",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-581095\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval2-gallery-pg04/b.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval2-gallery-pg04/b.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://example.com/a.png\" class=\"with-lb\"><img src=\"https://example.com/a.png\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-581095 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "34814308a32c94071c4b15b4582122ca4cf4adfe3c917dce75569bca60b72911",
+  "source": "[[gallery]]\n: b.png\n: https://example.com/a.png\n[[/gallery]]",
+  "source_sha256": "04551e477c806f9860fefdf2675aa95733b0cd6d11e40b6cd2c370737fd2eb02",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

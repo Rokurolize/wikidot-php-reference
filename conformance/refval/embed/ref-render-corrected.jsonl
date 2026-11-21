@@ -1,0 +1,82 @@
+{"id":"eb-01","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-02","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-03","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-04","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-05","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-06","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-07","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-08","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-09","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-10","output":"<p>[[embed]]unclosed<\/p>\n\n"}
+{"id":"eb-11","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div>b[[\/embed]]<\/p>\n\n"}
+{"id":"eb-12","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-13","output":"<p>[[embedx]]y[[\/embedx]]<\/p>\n\n"}
+{"id":"eb-14","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div> <div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-15","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-16","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-17","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-18","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-19","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-20","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div> b [[\/embed]]<\/p>\n\n"}
+{"id":"eb-21","output":"<p>[[div]]<div class=\"error-block\">Sorry, no match for the embedded content.<\/div>[[\/div]]<\/p>\n\n"}
+{"id":"eb-22","output":"<p>pre<div class=\"error-block\">Sorry, no match for the embedded content.<\/div>post<\/p>\n\n"}
+{"id":"eb-23","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-24","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-25","output":"<p>[[embedvideo]]<\/p>\n\n"}
+{"id":"eb-26","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-27","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-28","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div>c[[\/embed]]<\/p>\n\n"}
+{"id":"eb-29","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-30","output":"<p>[[embed ]]x[[\/embed]]<\/p>\n\n"}
+{"id":"eb-31","output":"<p>[[embed]]x[[\/embed ]]<\/p>\n\n"}
+{"id":"eb-32","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-33","output":"<p>a <div class=\"error-block\">Sorry, no match for the embedded content.<\/div> b <div class=\"error-block\">Sorry, no match for the embedded content.<\/div> c<\/p>\n\n"}
+{"id":"eb-34","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/td>\n<\/tr>\n<\/table>"}
+{"id":"eb-35","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-36","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div>y<div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-37","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><br \/>\n\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot;\u00fe<\/p>\n\n"}
+{"id":"eb-38","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-39","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-40","output":"<p><a href=\"\/x\"><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/a><\/p>\n\n"}
+{"id":"eb-41","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-42","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-x01","output":"<p><iframe src=\"http:\/\/example.com\" width=\"400\" height=\"300\"><\/iframe><\/p>\n\n"}
+{"id":"eb-x02","output":"<p><iframe src=\"https:\/\/example.com\" width=\"400\" height=\"300\"><\/iframe><\/p>\n\n"}
+{"id":"eb-x03","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-x04","output":"<p><iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/dQw4w9WgXcQ\" frameborder=\"0\"><\/iframe><\/p>\n\n"}
+{"id":"eb-x05","output":"<p><iframe width=\"100\" height=\"100\" src=\"https:\/\/w.soundcloud.com\/player\/?url=https:\/\/api.soundcloud.com\/tracks\/1\"><\/iframe><\/p>\n\n"}
+{"id":"eb-x06","output":"<p><iframe src=\"http:\/\/example.com\"><\/iframe><\/p>\n\n"}
+{"id":"eb-x07","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-x08","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-x09","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-x10","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-x11","output":"<p><script type=\"text\/javascript\" src=\"https:\/\/static.wikidot.com\/common--misc\/reflection.js\"><\/script><\/p>\n\n"}
+{"id":"eb-x12","output":"<p><iframe src=\"http:\/\/wikimapia.org\/s\/123\"><\/iframe><\/p>\n\n"}
+{"id":"eb-x13","output":"<p><\/p>\n\n"}
+{"id":"eb-x14","output":"<p><object width=\"425\" height=\"344\"><param name=\"movie\" value=\"http:\/\/www.youtube.com\/v\/abc\"><\/param><embed src=\"http:\/\/www.youtube.com\/v\/abc\" type=\"application\/x-shockwave-flash\" width=\"425\" height=\"344\"><\/embed><\/object><\/p>\n\n"}
+{"id":"eb-x15","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-x16","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-x17","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-x18","output":"<p><iframe src=\"http:\/\/example.com\" width=\"200\" height=\"100\" allow=\"fullscreen\"><\/iframe><\/p>\n\n"}
+{"id":"eb-x19","output":"<p>pre <div class=\"error-block\">Sorry, no match for the embedded content.<\/div> post<\/p>\n\n"}
+{"id":"eb-x20","output":"<div ><p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n<\/div>"}
+{"id":"p01","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p02","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p03","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p04","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p05","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p06","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><br \/>\n<div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p07","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><br \/>\n<div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p08","output":"<p>[[embed]]unclosed<\/p>\n\n"}
+{"id":"p09","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div>b[[\/embed]]<\/p>\n\n"}
+{"id":"p10","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p11","output":"<p>[[embed ]]x[[\/embed]]<br \/>\n[[embed]]x[[\/embed ]]<\/p>\n\n"}
+{"id":"p12","output":"<p><iframe src=\"http:\/\/example.com\" width=\"400\" height=\"300\"><\/iframe><\/p>\n\n"}
+{"id":"p13","output":"<p><iframe src=\"https:\/\/example.com\" width=\"400\" height=\"300\"><\/iframe><\/p>\n\n"}
+{"id":"p14","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p15","output":"<p><iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/dQw4w9WgXcQ\" frameborder=\"0\"><\/iframe><\/p>\n\n"}
+{"id":"p16","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p17","output":"<p><\/p>\n\n"}
+{"id":"p18","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p19","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"p20","output":"<p>pre <div class=\"error-block\">Sorry, no match for the embedded content.<\/div> post<\/p>\n\n"}

@@ -1,0 +1,3 @@
+{"id": "fb01", "source": "[[button edit Text=\"x\"]]"}
+{"id": "fb02", "source": "[[button edit TEXT=\"x\"]]"}
+{"id": "ff01", "source": "[[file a.txt|Say \"hi\"]]"}

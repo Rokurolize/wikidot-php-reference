@@ -1,0 +1,6 @@
+{"id": "pf01", "source": "[[file a+b.txt]]"}
+{"id": "pf02", "source": "[[file a%b.txt]]"}
+{"id": "pf03", "source": "[[file a#b.txt]]"}
+{"id": "pf04", "source": "[[file other-page/my file.txt]]"}
+{"id": "pf05", "source": "[[file a&b.txt]]"}
+{"id": "pf06", "source": "[[file a.txt|it's]]"}

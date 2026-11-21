@@ -46,7 +46,7 @@ class Text_Wiki_Render_Xhtml_File extends Text_Wiki_Render {
         if (strpos($file, '/') !== false) {
         		// ok, hardcode the path... sorry.
         		$file = preg_replace("/^\//", '', $file);
-        		$file = "/local--files/".$file;
+        		$file = "/local--files/".$this->encodePath($file);
         }else{
         		$noLocal = $this->getConf("no_local");
         		if($noLocal){
@@ -54,10 +54,27 @@ class Text_Wiki_Render_Xhtml_File extends Text_Wiki_Render {
         					'Sorry, local files without page name specified not allowed. ' .
         					'Use [[file <em>pagename</em>/<em>filename</em>]]</span>';	
         		}
-        		$file = $this->getConf('base', '/') . $file;
+        		$file = $this->getConf('base', '/') . $this->encodePath($file);
         }
         
-        $output = "<a href=\"$file\">$anchor</a>";
+        $output = '<a href="'.htmlspecialchars($file, ENT_COMPAT, 'UTF-8').'">'.htmlspecialchars($anchor, ENT_COMPAT, 'UTF-8').'</a>';
         return $output;
+    }
+
+    // live Wikidot percent-encodes only spaces and non-ASCII bytes
+    // in the file path; other characters (including +, %, #) stay raw.
+    function encodePath($path)
+    {
+        $out = '';
+        $len = strlen($path);
+        for ($i = 0; $i < $len; $i++) {
+            $o = ord($path[$i]);
+            if ($o === 0x20 || $o >= 0x80) {
+                $out .= sprintf('%%%02X', $o);
+            } else {
+                $out .= $path[$i];
+            }
+        }
+        return $out;
     }
 }

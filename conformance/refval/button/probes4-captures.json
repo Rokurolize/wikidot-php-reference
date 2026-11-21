@@ -1,0 +1,22 @@
+{
+ "sb07": {
+  "fullname": "muse-probe-refval2-button-sb07",
+  "html": "<div class=\"error-block\"><em>lock</em> is not a valid button type</div>",
+  "html_sha256": "6d2abfacd669a124b1d4e05b5b23941e60827bffe44720ad5fe1943132c30fd6",
+  "source": "[[button LOCK]]",
+  "source_sha256": "ec2e704675173174fe5550d74b40286c5bbf03929589258f2552039a6414dad0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "sb08": {
+  "fullname": "muse-probe-refval2-button-sb08",
+  "html": "<div class=\"error-block\"><em>foo-bar</em> is not a valid button type</div>",
+  "html_sha256": "6b8158be3c558ed3ad22689f9b62be2831955681eca44578a5c94222a228fbf5",
+  "source": "[[button Foo_Bar]]",
+  "source_sha256": "fd96857ae27a06e87958f6b9014a7d72f578aa756eb9356aae1b29e4efe960a0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

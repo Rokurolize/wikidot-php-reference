@@ -1,0 +1,83 @@
+{"id":"fi-01","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-02","output":"<p><a href=\"\/a.txt\">Label<\/a><\/p>\n\n"}
+{"id":"fi-03","output":"<p><a href=\"\/a.txt|\">a.txt|<\/a><\/p>\n\n"}
+{"id":"fi-04","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-05","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-06","output":"<p><a href=\"\/a.txt\">Label<\/a><\/p>\n\n"}
+{"id":"fi-07","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-08","output":"<p><a href=\"\/a.txt\">a|b<\/a><\/p>\n\n"}
+{"id":"fi-09","output":"<p>[[file a<br \/>\nb.txt]]<\/p>\n\n"}
+{"id":"fi-10","output":"<p>[[file a.txt|x<br \/>\ny]]<\/p>\n\n"}
+{"id":"fi-11","output":"<p>[[file ]]<\/p>\n\n"}
+{"id":"fi-12","output":"<p><a href=\"\/a.txt\">a.txt<\/a> <a href=\"\/b.txt\">L<\/a><\/p>\n\n"}
+{"id":"fi-13","output":"<p>[[div]]<a href=\"\/a.txt\">a.txt<\/a>[[\/div]]<\/p>\n\n"}
+{"id":"fi-14","output":"<p><a href=\"\/x\"><a href=\"\/a.txt\">L<\/a><\/a><\/p>\n\n"}
+{"id":"fi-15","output":"\n<div class=\"code\">\n<pre><code>[[file a.txt]]<\/code><\/pre><\/div>\n\n"}
+{"id":"fi-16","output":"<p><a href=\"\/my file.txt\">my file.txt<\/a><\/p>\n\n"}
+{"id":"fi-17","output":"<p><a href=\"\/a.txt\">Label With Spaces<\/a><\/p>\n\n"}
+{"id":"fi-18","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-19","output":"<p><a href=\"\/|x\">|x<\/a><\/p>\n\n"}
+{"id":"fi-20","output":"<p><a href=\"\/a\">b|c<\/a><\/p>\n\n"}
+{"id":"fi-21","output":"<p><a href=\"\/a\">a<\/a>]<\/p>\n\n"}
+{"id":"fi-22","output":"<p><a href=\"\/a]b\">a]b<\/a><\/p>\n\n"}
+{"id":"fi-23","output":"<p><a href=\"\/caf\u00e9.txt\">caf\u00e9.txt<\/a><\/p>\n\n"}
+{"id":"fi-24","output":"<p><a href=\"\/a.txt\">[[math<\/a>x[[\/math]]]]<\/p>\n\n"}
+{"id":"fi-25","output":"<p><a href=\"\/[[math\">[[math<\/a>x[[\/math]].txt]]<\/p>\n\n"}
+{"id":"fi-26","output":"<p>x<a href=\"\/a.txt\">L<\/a>y<\/p>\n\n"}
+{"id":"fi-27","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-28","output":"<p><a href=\"\/a.txt |\">a.txt |<\/a><\/p>\n\n"}
+{"id":"fi-29","output":"<p><a href=\"\/a.txt\">L<\/a><\/p>\n\n"}
+{"id":"fi-30","output":"<p><a href=\"\/A.TXT\">Label<\/a><\/p>\n\n"}
+{"id":"fi-31","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><a href=\"\/a.txt\">a.txt<\/a><\/td>\n<\/tr>\n<\/table>"}
+{"id":"fi-32","output":"<ul>\n<li><a href=\"\/a.txt\">a.txt<\/a><\/li>\n<\/ul>"}
+{"id":"fi-33","output":"<p><a href=\"\/|\">|<\/a><\/p>\n\n"}
+{"id":"fi-34","output":"<p><a href=\"\/a.txt\">b<\/a><\/p>\n\n"}
+{"id":"fi-35","output":"<p><a href=\"\/a.txt\">b<\/a><\/p>\n\n"}
+{"id":"fi-36","output":"<p><a href=\"\/a.txt\">a.txt<\/a> and <a href=\"\/b.txt\">b.txt<\/a><\/p>\n\n"}
+{"id":"fi-37","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot;\u00fe <a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-38","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"fi-39","output":"<div class=\"wiki-note\"><p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n<\/div>"}
+{"id":"fi-40","output":"<p><a href=\"\/a\">]x<\/a><\/p>\n\n"}
+{"id":"fi-41","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-42","output":"<blockquote><p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n<\/blockquote>\n"}
+{"id":"fi-43","output":"<p><a href=\"\/a.txt\">L<\/a><\/p>\n\n"}
+{"id":"fi-x01","output":"<p><a href=\"\/local--files\/other-page\/a.txt\">other-page\/a.txt<\/a><\/p>\n\n"}
+{"id":"fi-x02","output":"<p><a href=\"\/local--files\/other-page\/a.txt\">Label<\/a><\/p>\n\n"}
+{"id":"fi-x03","output":"<p><a href=\"\/local--files\/other-page\/a.txt\">\/other-page\/a.txt<\/a><\/p>\n\n"}
+{"id":"fi-x04","output":"<p><a href=\"\/local--files\/other-page\/a.txt\">Label<\/a><\/p>\n\n"}
+{"id":"fi-x05","output":"<p><a href=\"\/local--files\/a\/b\/c.txt\">a\/b\/c.txt<\/a><\/p>\n\n"}
+{"id":"fi-x06","output":"<p><a href=\"\/a.txt\">**bold**<\/a><\/p>\n\n"}
+{"id":"fi-x07","output":"<p><a href=\"\/a.txt\">\/\/italic\/\/<\/a><\/p>\n\n"}
+{"id":"fi-x08","output":"<p><a href=\"\/a\"b.txt\">c<d>e<\/a><\/p>\n\n"}
+{"id":"fi-x09","output":"<p><a href=\"\/a&b.txt\">x&y<\/a><\/p>\n\n"}
+{"id":"fi-x10","output":"<p>[[file]]<\/p>\n\n"}
+{"id":"fi-x11","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-x12","output":"<p><a href=\"\/local--files\/:other-page\/a.txt\">:other-page\/a.txt<\/a><\/p>\n\n"}
+{"id":"fi-x13","output":"<p><a href=\"\/local--files\/:site:page\/a.txt\">:site:page\/a.txt<\/a><\/p>\n\n"}
+{"id":"fi-x14","output":"<p><a href=\"\/local--files\/cat:page\/a.txt\">cat:page\/a.txt<\/a><\/p>\n\n"}
+{"id":"fi-x15","output":"<p><a href=\"\/local--files\/cat:page\/a.txt\">Cat File<\/a><\/p>\n\n"}
+{"id":"fi-x16","output":"<p><a href=\"\/local--files\/https:\/\/example.com\/a.txt\">https:\/\/example.com\/a.txt<\/a><\/p>\n\n"}
+{"id":"fi-x17","output":"<p>[[*file a.txt]]<\/p>\n\n"}
+{"id":"fi-x18","output":"<p><a href=\"\/a.txt\">Label with \"quotes\"<\/a><\/p>\n\n"}
+{"id":"fi-x19","output":"<p><a href=\"\/my file.txt\">My File<\/a><\/p>\n\n"}
+{"id":"fi-x20","output":"<p><a href=\"\/a.txt\">Label<\/a> tail<\/p>\n\n"}
+{"id":"p01","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"p02","output":"<p><a href=\"\/a.txt\">Label<\/a><\/p>\n\n"}
+{"id":"p03","output":"<p><a href=\"\/local--files\/other-page\/a.txt\">other-page\/a.txt<\/a><\/p>\n\n"}
+{"id":"p04","output":"<p><a href=\"\/local--files\/other-page\/a.txt\">Label<\/a><\/p>\n\n"}
+{"id":"p05","output":"<p><a href=\"\/local--files\/other-page\/a.txt\">\/other-page\/a.txt<\/a><\/p>\n\n"}
+{"id":"p06","output":"<p><a href=\"\/local--files\/cat:page\/a.txt\">Cat File<\/a><\/p>\n\n"}
+{"id":"p07","output":"<p><a href=\"\/local--files\/:site:page\/a.txt\">:site:page\/a.txt<\/a><\/p>\n\n"}
+{"id":"p08","output":"<p><a href=\"\/a.txt|\">a.txt|<\/a><\/p>\n\n"}
+{"id":"p09","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"p10","output":"<p><a href=\"\/a.txt\">Label<\/a><\/p>\n\n"}
+{"id":"p11","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"p12","output":"<p><a href=\"\/|x\">|x<\/a><br \/>\n<a href=\"\/|\">|<\/a><\/p>\n\n"}
+{"id":"p13","output":"<p><a href=\"\/a\">b|c<\/a><\/p>\n\n"}
+{"id":"p14","output":"<p><a href=\"\/a.txt\">a.txt<\/a><br \/>\n<a href=\"\/a.txt\">Label<\/a><\/p>\n\n"}
+{"id":"p15","output":"<p><a href=\"\/my file.txt\">My File<\/a><br \/>\n<a href=\"\/caf\u00e9.txt\">caf\u00e9.txt<\/a><\/p>\n\n"}
+{"id":"p16","output":"<p><a href=\"\/a.txt\">**bold**<\/a><\/p>\n\n"}
+{"id":"p17","output":"<p><a href=\"\/a\"b.txt\">c<d>e<\/a><\/p>\n\n"}
+{"id":"p18","output":"<p>[[file a<br \/>\nb.txt]]<br \/>\n[[file a.txt|x<br \/>\ny]]<\/p>\n\n"}
+{"id":"p19","output":"<p>[[file ]]<br \/>\n[[file]]<br \/>\n[[*file a.txt]]<\/p>\n\n"}
+{"id":"p20","output":"<p><a href=\"\/a.txt\">a.txt<\/a><br \/>\n<a href=\"\/a\">a<\/a>]<br \/>\n<a href=\"\/a]b\">a]b<\/a><\/p>\n\n"}

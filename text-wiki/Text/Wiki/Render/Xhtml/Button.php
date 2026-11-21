@@ -24,7 +24,7 @@ class Text_Wiki_Render_Xhtml_Button extends Text_Wiki_Render {
 
 	function token($options){
     	
-    	$type = $options['type'];
+    	$type = strtolower($options['type']);
     	$text = $options['text'];
     	$style = $options['style'];
     	$class = $options['class'];
@@ -39,7 +39,13 @@ class Text_Wiki_Render_Xhtml_Button extends Text_Wiki_Render {
     		'tags',
     		'source',
     		'talk',
-    		'backlinks'
+    		'backlinks',
+    		'rename',
+    		'delete',
+    		'parent',
+    		'edit-meta',
+    		'watchers',
+    		'set-tags'
 
     	);
     	
@@ -53,7 +59,12 @@ class Text_Wiki_Render_Xhtml_Button extends Text_Wiki_Render {
     		'tags' => _('tags'),
     		'source' => _('view source'),
     		'talk' => _('talk'),
-    		'backlinks' => _('backlinks')
+    		'backlinks' => _('backlinks'),
+    		'rename' => _('rename'),
+    		'delete' => _('delete'),
+    		'parent' => _('parent'),
+    		'edit-meta' => _('edit meta'),
+    		'watchers' => _('watchers')
     		
     	);
     	
@@ -61,13 +72,19 @@ class Text_Wiki_Render_Xhtml_Button extends Text_Wiki_Render {
     		'edit' => 'WIKIDOT.page.listeners.editClick(event)',
     		'edit-append' => 'WIKIDOT.page.listeners.append(event)',
     		'edit-sections' => 'WIKIDOT.page.listeners.toggleEditSections(event)',
-    		'history' => ' WIKIDOT.page.listeners.historyClick(event)',
+    		'history' => 'WIKIDOT.page.listeners.historyClick(event)',
     		'print' => 'WIKIDOT.page.listeners.printClick(event)',
     		'files' => 'WIKIDOT.page.listeners.filesClick(event)',
     		'tags' => 'WIKIDOT.page.listeners.editTags(event)',
     		'source' => 'WIKIDOT.page.listeners.viewSourceClick(event)',
     		'talk' => "window.location.href='/talk:'+WIKIREQUEST.info.pageUnixName",
-    		'backlinks' => 'WIKIDOT.page.listeners.backlinksClick(event)'
+    		'backlinks' => 'WIKIDOT.page.listeners.backlinksClick(event)',
+    		'rename' => 'WIKIDOT.page.listeners.renamePage(event)',
+    		'delete' => 'WIKIDOT.page.listeners.deletePage(event)',
+    		'parent' => 'WIKIDOT.page.listeners.parentClick(event)',
+    		'edit-meta' => 'WIKIDOT.page.listeners.editMetaClick(event)',
+    		'watchers' => 'WIKIDOT.page.listeners.watchersClick(event)',
+    		'set-tags' => "WIKIDOT.page.listeners.updateTagsByButton(event, '')"
 
     	);
     	
@@ -77,7 +94,11 @@ class Text_Wiki_Render_Xhtml_Button extends Text_Wiki_Render {
     	$hrefs = array();
     	
     	if(!in_array($type, $allowedTypes)){
-    		return '<div class="error-block">'._('The button type is not recognized').'</div>';	
+    		return '<div class="error-block"><em>'.$type.'</em> is not a valid button type</div>';	
+    	}
+    	
+    	if($type === 'set-tags' && !$text){
+    		return '<div class="error-block">You need to set text for set-tags button.</div>';	
     	}
     	
     	// ok, fine
@@ -98,7 +119,7 @@ class Text_Wiki_Render_Xhtml_Button extends Text_Wiki_Render {
     	$out .= ($jsOnclick[$type]?'onclick="'.$jsOnclick[$type].'" ':' ');
     	
     	$out .= '>';
-    	$out .= htmlspecialchars($text);
+    	$out .= htmlspecialchars($text, ENT_COMPAT, 'UTF-8');
     	$out .= '</a>';
     	
     	return $out;

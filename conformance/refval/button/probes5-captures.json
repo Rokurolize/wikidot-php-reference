@@ -1,0 +1,32 @@
+{
+ "fb01": {
+  "fullname": "muse-probe-refval2-misc-fb01",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">edit</a></p>",
+  "html_sha256": "5eb53f364eb59d7051b88b28786f154ecb0b7043ed480ee5abe5ae6c0d7d9903",
+  "source": "[[button edit Text=\"x\"]]",
+  "source_sha256": "d8925aa5751a76b5fbb7c6aac2f1d562ffd8fc5ba18c397b9deda9fd2e688437",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "fb02": {
+  "fullname": "muse-probe-refval2-misc-fb02",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">edit</a></p>",
+  "html_sha256": "5eb53f364eb59d7051b88b28786f154ecb0b7043ed480ee5abe5ae6c0d7d9903",
+  "source": "[[button edit TEXT=\"x\"]]",
+  "source_sha256": "462ccb19d69c21886ae57ece50fb67788b483391eef19664f0181c9c548a14d9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "ff01": {
+  "fullname": "muse-probe-refval2-misc-ff01",
+  "html": "<p><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval2-misc-ff01/a.txt\">Say &quot;hi&quot;</a></p>",
+  "html_sha256": "1cec5d820040d5939bfb97366f58dbaf870c3711b208aff1ccc34f554bb4f2dc",
+  "source": "[[file a.txt|Say \"hi\"]]",
+  "source_sha256": "e6b4d24d5a9264adc934a9503060515dbdf2d109ab9ca427db467f1eca844416",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

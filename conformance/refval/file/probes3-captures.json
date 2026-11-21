@@ -1,0 +1,62 @@
+{
+ "pf01": {
+  "fullname": "muse-probe-refval2-file-pf01",
+  "html": "<p><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval2-file-pf01/a+b.txt\">a+b.txt</a></p>",
+  "html_sha256": "394d1d0a3a2aa5cbc48547d44659cafcfb05484db82c9fbe7e3ac94d4ba92e62",
+  "source": "[[file a+b.txt]]",
+  "source_sha256": "d47ca409eb076dcb3da698c9fb8d4a327e0fe1f37039a86487cf642be9618d64",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pf02": {
+  "fullname": "muse-probe-refval2-file-pf02",
+  "html": "<p><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval2-file-pf02/a%b.txt\">a%b.txt</a></p>",
+  "html_sha256": "2b925b232535b0d98d89499037fc2ece7b4f794f0c3a492b58231e95c03c3909",
+  "source": "[[file a%b.txt]]",
+  "source_sha256": "6ea86dbad456091eb0a6c1614dd25102f5898a0d7d146cdc4f93396ac3ca80f1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pf03": {
+  "fullname": "muse-probe-refval2-file-pf03",
+  "html": "<p><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval2-file-pf03/a#b.txt\">a#b.txt</a></p>",
+  "html_sha256": "8f7c27a7e1e2c6a4ff48333a0bb9846f1b3aed52573d76f7dc33878e142a68a7",
+  "source": "[[file a#b.txt]]",
+  "source_sha256": "b97f1d7976296ad52f8c7bfd4bdd105b0f19fd5ed8af7209d8e589070fcaa57a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pf04": {
+  "fullname": "muse-probe-refval2-file-pf04",
+  "html": "<p><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/other-page/my%20file.txt\">other-page/my file.txt</a></p>",
+  "html_sha256": "5cabb8ed6fcd642fd009e600db35f45100013439de94e11cc3256016e5c8a73d",
+  "source": "[[file other-page/my file.txt]]",
+  "source_sha256": "30f88344ee57fd7825846c00d25d2070e2318d96c62ccd079bb35422559ede70",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pf05": {
+  "fullname": "muse-probe-refval2-file-pf05",
+  "html": "<p><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval2-file-pf05/a&amp;b.txt\">a&amp;b.txt</a></p>",
+  "html_sha256": "ffdf13caecb55c008709a2f35c2ddc755432c1d4b9b9ebf96d80c834880e3e70",
+  "source": "[[file a&b.txt]]",
+  "source_sha256": "30f2e7cb159851cc9b7eaa52eb0568330734f2f1fae52bac66ff620e85609ce5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "pf06": {
+  "fullname": "muse-probe-refval2-file-pf06",
+  "html": "<p><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval2-file-pf06/a.txt\">it's</a></p>",
+  "html_sha256": "5eb270d391df8341bfea53a1b8aafedb8c0d447db6d1ed47cc6b390711829b5a",
+  "source": "[[file a.txt|it's]]",
+  "source_sha256": "8505120fc447a71705485f1d4aa66cf365fa2c23c9f45d8d9e1fe261d528aa2a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
