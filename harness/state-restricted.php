@@ -195,11 +195,40 @@ while (($line = fgets(STDIN)) !== false) {
                 $scoredAnchors[] = array($endTok, $startTok);
             }
         }
+        // CAPSTONE disclosed compared-state extension (fourth in the
+        // R3.4 pattern): the Include rule's registries join the
+        // compared state, serialized identically on the Lean side.
+        // "inclusions" is vars['inclusions'] as the ordered list of
+        // fired includes' page ids (the var is an id => id map in
+        // first-insertion order; Include's refFetch writes it), and
+        // "inclusionsNotExist" is vars['inclusionsNotExist'] as the
+        // ordered list of missing includes' display names (a
+        // display => display map in first-insertion order). A
+        // pipeline in which Include never runs leaves both vars
+        // unset, matching the model's per-document initial values
+        // (the empty lists). Before this extension the driver
+        // emitted neither key, which made any comparison that
+        // forces the inclusion components (the CAPSTONE retirement
+        // check's section 3) unsatisfiable against fresh runs.
+        $inclusions = array();
+        if (isset($wiki->vars['inclusions']) && is_array($wiki->vars['inclusions'])) {
+            foreach ($wiki->vars['inclusions'] as $incId) {
+                $inclusions[] = $incId;
+            }
+        }
+        $inclusionsNotExist = array();
+        if (isset($wiki->vars['inclusionsNotExist']) && is_array($wiki->vars['inclusionsNotExist'])) {
+            foreach ($wiki->vars['inclusionsNotExist'] as $incName) {
+                $inclusionsNotExist[] = $incName;
+            }
+        }
         $out = ref_wire_encode(array('id' => $id, 'segments' => $segments,
             'tokens' => $wiki->tokens, 'equations' => $equations,
             'mathId' => isset($wiki->vars['math_id']) ? $wiki->vars['math_id'] : null,
             'footnotes' => $footnotes, 'bibitems' => $bibitems,
-            'bibitemIds' => $bibitemIds, 'scoredAnchors' => $scoredAnchors));
+            'bibitemIds' => $bibitemIds, 'scoredAnchors' => $scoredAnchors,
+            'inclusions' => $inclusions,
+            'inclusionsNotExist' => $inclusionsNotExist));
         $json = json_encode($out);
         if ($json === false) {
             echo json_encode(array('id' => $id,
