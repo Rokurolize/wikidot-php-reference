@@ -43,7 +43,14 @@ class Text_Wiki_Render_Xhtml_Div extends Text_Wiki_Render {
             foreach ($args as $key => $value) {
                 $argstr .= ' ' . $key . '="' . $value . '"';
             }
-            return "<div " . $argstr . ">";
+            // R4-corr correction (fossil artifact): the fossil's literal
+            // "<div " carried a space the argument string does not need:
+            // with no arguments it emitted "<div >", and each argument
+            // already carries its own leading space, so with arguments it
+            // emitted "<div  k=\"v\">". Live emits "<div>" (captures
+            // footnoteitem p-div-first, footnoteblock div-block and
+            // x x-fn-in-div) and single-spaced attributes.
+            return "<div" . $argstr . ">";
         }
         
         if ($options['type'] == 'end') {
