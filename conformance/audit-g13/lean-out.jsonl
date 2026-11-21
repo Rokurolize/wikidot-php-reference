@@ -1,0 +1,26 @@
+{"id": "site-dashes", "output": "<MISSING-PAGE :---:muse-probe-audit-g13-target>", "pages": [":---:muse-probe-audit-g13-target"]}
+{"id": "site-dashes-missing", "output": "<MISSING-PAGE :---:nonexistent-page-xyz>", "pages": [":---:nonexistent-page-xyz"]}
+{"id": "site-dash-host", "output": "<MISSING-PAGE :-:muse-probe-audit-g13-target>", "pages": [":-:muse-probe-audit-g13-target"]}
+{"id": "site-slash", "output": "[[include :foo/bar:other-page]]", "pages": []}
+{"id": "site-hash", "output": "[[include :foo#bar:other-page]]", "pages": []}
+{"id": "site-dot", "output": "<MISSING-PAGE :a.b:other-page>", "pages": [":a.b:other-page"]}
+{"id": "site-nonascii", "output": "[[include :café:other-page]]", "pages": []}
+{"id": "site-empty-page-norm", "output": "<MISSING-PAGE :sandbox-for-codex:>", "pages": [":sandbox-for-codex:"]}
+{"id": "site-same-control", "output": "TARGET-OK-{$marker}", "pages": [":sandbox-for-codex:muse-probe-audit-g13-target"]}
+{"id": "f1-bad-next-good", "output": "[[include bad.page\n\nTARGET-OK-SURVIVED", "pages": ["muse-probe-audit-g13-target"]}
+{"id": "f1-unclosed-arg-next", "output": "TARGET-OK-SECOND", "pages": ["muse-probe-audit-g13-target"]}
+{"id": "f1-unclosed-cmt-next", "output": "TARGET-OK-AFTERCMT", "pages": ["muse-probe-audit-g13-target"]}
+{"id": "f1-cmt-closer", "output": "TARGET-OK-{$marker}\n\n--] | marker=CMTCLOSE]]", "pages": ["muse-probe-audit-g13-target"]}
+{"id": "stray-2sp", "output": "TARGET-OK-TWOSP", "pages": ["muse-probe-audit-g13-target"]}
+{"id": "stray-tab", "output": "TARGET-OK-TAB", "pages": ["muse-probe-audit-g13-target"]}
+{"id": "stray-cmt", "output": "TARGET-OK-STRCMT", "pages": ["muse-probe-audit-g13-target"]}
+{"id": "stray-fused-cmt", "output": "TARGET-OK-LEAKED --]", "pages": ["muse-probe-audit-g13-target"]}
+{"id": "close-trail-sp", "output": "[[include muse-probe-audit-g13-target | marker=SP]]   \nAFTER", "pages": []}
+{"id": "close-trail-text", "output": "[[include muse-probe-audit-g13-target]] AFTER", "pages": []}
+{"id": "close-midline", "output": "BEFORE [[include muse-probe-audit-g13-target]]", "pages": []}
+{"id": "leading-sp", "output": "TOP\n [[include muse-probe-audit-g13-target]]", "pages": []}
+{"id": "tight-pipe", "output": "[[include muse-probe-audit-g13-target|marker=TIGHT]]", "pages": []}
+{"id": "ref-tab", "output": "TARGET-OK-{$marker}", "pages": ["muse-probe-audit-g13-target"]}
+{"id": "inside-code", "output": "[[code]]\n\nTARGET-OK-INCODE\n\n[[/code]]", "pages": ["muse-probe-audit-g13-target"]}
+{"id": "quoted-tight-bare", "output": ">[[include muse-probe-g14-target]]", "pages": []}
+{"id": "quoted-tight-in-code", "output": "[[code]]\n>[[include muse-probe-g14-target]]\n[[/code]]", "pages": []}

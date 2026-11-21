@@ -1,0 +1,24 @@
+{"id": "site-dashes", "source": "[[include :---\u003amuse-probe-audit-g13-target]]"}
+{"id": "site-dashes-missing", "source": "[[include :---\u003anonexistent-page-xyz]]"}
+{"id": "site-dash-host", "source": "[[include :-.wikidot.com:muse-probe-audit-g13-target]]"}
+{"id": "site-slash", "source": "[[include :foo/bar:other-page]]"}
+{"id": "site-hash", "source": "[[include :foo#bar:other-page]]"}
+{"id": "site-dot", "source": "[[include :a.b:other-page]]"}
+{"id": "site-nonascii", "source": "[[include :café:other-page]]"}
+{"id": "site-empty-page-norm", "source": "[[include :sandbox-for-codex:---]]"}
+{"id": "site-same-control", "source": "[[include :sandbox-for-codex:muse-probe-audit-g13-target]]"}
+{"id": "f1-bad-next-good", "source": "[[include bad.page\n[[include muse-probe-audit-g13-target | marker=SURVIVED]]"}
+{"id": "f1-unclosed-arg-next", "source": "[[include muse-probe-audit-g13-target | x=1\n[[include muse-probe-audit-g13-target | marker=SECOND]]"}
+{"id": "f1-unclosed-cmt-next", "source": "[[include muse-probe-audit-g13-target | a=[!-- unclosed\n[[include muse-probe-audit-g13-target | marker=AFTERCMT]]"}
+{"id": "f1-cmt-closer", "source": "[[include muse-probe-audit-g13-target | a=[!-- ]]\n--] | marker=CMTCLOSE]]"}
+{"id": "stray-2sp", "source": "[[include muse-probe-audit-g13-target [[  | marker=TWOSP]]"}
+{"id": "stray-tab", "source": "[[include muse-probe-audit-g13-target [[\t| marker=TAB]]"}
+{"id": "stray-cmt", "source": "[[include muse-probe-audit-g13-target [[ [!-- c --] | marker=STRCMT]]"}
+{"id": "stray-fused-cmt", "source": "[[include muse-probe-audit-g13-target [[[!-- | marker=LEAKED --] | marker=REAL]]"}
+{"id": "close-trail-sp", "source": "[[include muse-probe-audit-g13-target | marker=SP]]   \nAFTER"}
+{"id": "close-trail-text", "source": "[[include muse-probe-audit-g13-target]] AFTER"}
+{"id": "close-midline", "source": "BEFORE [[include muse-probe-audit-g13-target]]"}
+{"id": "leading-sp", "source": "TOP\n [[include muse-probe-audit-g13-target]]"}
+{"id": "tight-pipe", "source": "[[include muse-probe-audit-g13-target|marker=TIGHT]]"}
+{"id": "ref-tab", "source": "[[include\tmuse-probe-audit-g13-target]]"}
+{"id": "inside-code", "source": "[[code]]\n[[include muse-probe-audit-g13-target | marker=INCODE]]\n[[/code]]"}

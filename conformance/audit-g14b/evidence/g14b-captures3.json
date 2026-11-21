@@ -1,0 +1,12 @@
+{
+ "e14-self-then-second": {
+  "fullname": "muse-probe-g14b-e14-self-then-second",
+  "html": "<p>A is {$a}.<br />\nB is {$b}.<br />\nM is SECONDX.<br />\nTARGET-END</p>",
+  "html_sha256": "8c48f888a75d69122401e13b6721d4e2ac882b506c56c3cde38fdc7bf14eb148",
+  "source": "[[include muse-probe-g14b-target | marker={$marker}X | marker=SECOND]]",
+  "source_sha256": "70cc9050f02b9ea0b804fef6a6aad00c9e340d1059e3cd538a8dbf74ebafe2bd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

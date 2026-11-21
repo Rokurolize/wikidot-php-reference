@@ -1,0 +1,12 @@
+{
+ "site-underscore": {
+  "fullname": "muse-probe-g13fix-site-underscore",
+  "source": "[[include :foo_bar:muse-probe-audit-g13-target]]",
+  "action": "created"
+ },
+ "site-upper": {
+  "fullname": "muse-probe-g13fix-site-upper",
+  "source": "[[include :FOO:muse-probe-audit-g13-target]]",
+  "action": "created"
+ }
+}

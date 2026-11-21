@@ -54,6 +54,31 @@
 * fold), the same fragment bound as the G1.4 Lean driver.
 * Still open: the current live missing-page message text
 * (class M update).
+* G13 CORRECTION (2026-11-21, AUDIT-G13): the quoted
+* consumption path (the Q1-Q3 mechanics above) is REMOVED.
+* A quote-prefixed candidate is not a candidate at all; the
+* scanner skips the line (live never consumes a quoted
+* include; the reference was the last artifact still
+* deleting tight quoted includes, including inside
+* [[code]]; finding F-G14-1). The resolution layer gains
+* the site-segment host gate (AUDIT-G13 site probes: the
+* pair fires only when the site segment consists of
+* [A-Za-z0-9.-]; '_' is excluded by probe
+* muse-probe-g13fix-site-underscore, whose run falls back
+* to whole-run page resolution), the site is no longer
+* passed through slug normalization (canonicalization is
+* R3 only; probe muse-probe-g13fix-site-upper names the
+* site "FOO" verbatim), and a pair whose page part
+* normalizes to empty now fires with the empty name
+* (probe muse-probe-audit-g13-site-empty-page-norm,
+* closing the C7 note in GRAMMAR-INCLUDE L6). F1
+* resumption is corrected: on block-parse or resolution
+* failure, scanning resumes at the next line start after
+* the failed candidate's opener line, not at the
+* candidate end (probe
+* muse-probe-audit-g13-f1-bad-next-good). The
+* pre-correction file is kept beside this one as
+* Include.php.before-g13fix.php.
 */
 
 class Text_Wiki_Parse_Include extends Text_Wiki_Parse {
@@ -99,37 +124,30 @@ class Text_Wiki_Parse_Include extends Text_Wiki_Parse {
                 $out .= substr($src, $pos);
                 break;
             }
-            if ($depth > 0) {
-                $consumed = $this->refQuotedAttempt($src, $ls, $depth, $candEnd);
-                if ($consumed !== null) {
-                    // Q2: consumed and deleted, never fetched.
-                    $out .= substr($src, $pos, $ls - $pos);
-                    $pos = $consumed;
-                    continue;
-                }
-                // Q3: the fallback is the unquoted parse from the
-                // LINE START, which the '>' prefix makes fail; the
-                // candidate is literal and scanning resumes at
-                // the candidate end (grid q-broken-continuation).
-                $out .= substr($src, $pos, $candEnd - $pos);
-                $pos = $candEnd;
-                continue;
-            }
             $block = $this->refParseBlock(substr($src, $matchEnd));
             if ($block === null) {
-                // F1: literal text, resume at the candidate end.
-                $out .= substr($src, $pos, $candEnd - $pos);
-                $pos = $candEnd;
+                // F1 (corrected 2026-11-21): the failed
+                // candidate stays literal; scanning resumes
+                // at the next line start after the failed
+                // candidate's opener line, so an include
+                // beginning on an intervening line is still
+                // found (probe
+                // muse-probe-audit-g13-f1-bad-next-good).
+                $resume = $this->refNextLineStart($src, $ls);
+                $out .= substr($src, $pos, $resume - $pos);
+                $pos = $resume;
                 continue;
             }
             list($blockEndRel, $refRun, $args) = $block;
             $blockEnd = $matchEnd + $blockEndRel;
             $resolved = $this->refResolveRef($refRun);
             if ($resolved === null) {
-                // Resolution failure (empty page after split
-                // and normalization): the block stays literal.
-                $out .= substr($src, $pos, $candEnd - $pos);
-                $pos = $candEnd;
+                // Resolution failure (a charset gate): the
+                // block stays literal; F1 resumption as
+                // above.
+                $resume = $this->refNextLineStart($src, $ls);
+                $out .= substr($src, $pos, $resume - $pos);
+                $pos = $resume;
                 continue;
             }
             $out .= substr($src, $pos, $ls - $pos);
@@ -139,10 +157,23 @@ class Text_Wiki_Parse_Include extends Text_Wiki_Parse {
         return $out;
     }
 
+    // The offset of the first line start strictly after the
+    // line containing $ls (F1 resumption); strlen($src) when
+    // no newline remains.
+    function refNextLineStart($src, $ls)
+    {
+        $nl = strpos($src, "\n", $ls);
+        return ($nl === false) ? strlen($src) : $nl + 1;
+    }
+
     // Find the next candidate at or after $from. Returns
     // array(lineStart, prefixLen, depth, matchEnd) or null.
     // S1/S2: line starts only, tight [[include, case-insensitive,
     // and at least one regex-whitespace char after "include".
+    // G13: a line whose lead run contains a '>' (a quoted
+    // line) is never a candidate; it is skipped whole (live
+    // keeps quoted includes literal; F-G14-1), so the depth
+    // of a returned candidate is always 0.
     function refFindCandidate($src, $from)
     {
         $len = strlen($src);
@@ -158,6 +189,14 @@ class Text_Wiki_Parse_Include extends Text_Wiki_Parse {
                     $lastGt = $i - $ls;
                 }
                 $i++;
+            }
+            if ($depth > 0) {
+                $nl = strpos($src, "\n", $ls);
+                if ($nl === false) {
+                    return null;
+                }
+                $ls = $nl + 1;
+                continue;
             }
             $plen = ($depth > 0) ? $lastGt + 1 : 0;
             $at = $ls + $plen;
@@ -191,85 +230,6 @@ class Text_Wiki_Parse_Include extends Text_Wiki_Parse {
             $i = $j + 1;
         }
         return null;
-    }
-
-    // Q1: try the quoted strategies (candidate-end bound, then
-    // whole-region bound). On success returns the original offset
-    // just after the consumed range; null on failure.
-    function refQuotedAttempt($src, $ls, $depth, $candEnd)
-    {
-        $bounds = array($candEnd, strlen($src));
-        foreach ($bounds as $bound) {
-            $region = substr($src, $ls, $bound - $ls);
-            $lines = explode("\n", $region);
-            $stripped = array();
-            $normLines = array();
-            $ok = true;
-            foreach ($lines as $line) {
-                $s = $this->refStripQuotePrefix($line, $depth);
-                if ($s === null) {
-                    $ok = false;
-                    break;
-                }
-                $stripped[] = $s[0];
-                $normLines[] = $s[1];
-            }
-            if (!$ok) {
-                continue;
-            }
-            $norm = implode("\n", $normLines);
-            // The normalized text starts with the opener.
-            if (strlen($norm) < 9 || substr_compare($norm, '[[include', 0, 9, true) !== 0) {
-                continue;
-            }
-            $block = $this->refParseBlock(substr($norm, 9));
-            if ($block === null) {
-                continue;
-            }
-            $normEnd = 9 + $block[0];
-            return $ls + $this->refOrigOffset($lines, $stripped, $normEnd);
-        }
-        return null;
-    }
-
-    // Strip one line's quote prefix (depth '>' markers, blanks
-    // allowed around each). Returns array(charsStripped, rest)
-    // or null when the line does not carry the prefix.
-    function refStripQuotePrefix($line, $depth)
-    {
-        $i = 0;
-        $len = strlen($line);
-        for ($k = 0; $k < $depth; $k++) {
-            while ($i < $len && ($line[$i] === ' ' || $line[$i] === "\t")) {
-                $i++;
-            }
-            if ($i >= $len || $line[$i] !== '>') {
-                return null;
-            }
-            $i++;
-        }
-        while ($i < $len && ($line[$i] === ' ' || $line[$i] === "\t")) {
-            $i++;
-        }
-        return array($i, substr($line, $i));
-    }
-
-    // Map an offset in the normalized (prefix-stripped) text back
-    // to an offset in the original region.
-    function refOrigOffset($lines, $stripped, $normOff)
-    {
-        $acc = 0;
-        $origAcc = 0;
-        $n = count($lines);
-        for ($j = 0; $j < $n; $j++) {
-            $normLen = strlen($lines[$j]) - $stripped[$j];
-            if ($normOff <= $acc + $normLen) {
-                return $origAcc + $stripped[$j] + ($normOff - $acc);
-            }
-            $acc += $normLen + 1;
-            $origAcc += strlen($lines[$j]) + 1;
-        }
-        return $origAcc;
     }
 
     // Parse a block body starting just after "[[include".
@@ -339,41 +299,22 @@ class Text_Wiki_Parse_Include extends Text_Wiki_Parse {
         }
         $tail = substr($text, $i, $end - $i);
         $args = $this->refSegments($tail);
-        if ($args === null) {
-            return null;
-        }
         return array($end + 2, $refRun, $args);
     }
 
-    // G4/G5: comment-aware segment split, then the segment rule.
-    // Returns the ordered argument list (the X1 fold input), or
-    // null when an unterminated comment fails the whole block.
+    // G4/G5 (corrected 2026-11-21): raw segment split, then the
+    // segment rule. Live's segment scanning is comment-unaware:
+    // segments split on raw '|' bytes, '[!-- ... --]' bytes are
+    // ordinary value bytes, and an unterminated comment is
+    // ordinary text that cannot fail the block (AUDIT probes
+    // muse-probe-audit-g14b-cmt-pipe and -cmt-unclosed; the
+    // earlier comment-aware split modelled ftml's parse.rs
+    // scan_include_arguments and was refuted by those probes).
+    // Returns the ordered argument list (the X1 fold input);
+    // never null.
     function refSegments($tail)
     {
-        $segments = array();
-        $cur = '';
-        $len = strlen($tail);
-        $i = 0;
-        while ($i < $len) {
-            if (substr($tail, $i, 4) === '[!--') {
-                $close = strpos($tail, '--]', $i + 4);
-                if ($close === false) {
-                    return null;
-                }
-                $cur .= substr($tail, $i, $close + 3 - $i);
-                $i = $close + 3;
-                continue;
-            }
-            if ($tail[$i] === '|') {
-                $segments[] = $cur;
-                $cur = '';
-                $i++;
-                continue;
-            }
-            $cur .= $tail[$i];
-            $i++;
-        }
-        $segments[] = $cur;
+        $segments = explode('|', $tail);
         $args = array();
         foreach ($segments as $seg) {
             $arg = $this->refSegmentArg($seg);
@@ -456,8 +397,15 @@ class Text_Wiki_Parse_Include extends Text_Wiki_Parse {
     // (1) A well-formed site pair (':' site ':' page, site
     //     non-empty, page part non-empty after the extra
     //     split) resolves cross-site; the site segment may
-    //     be a dotted host, canonicalized per R3. This
-    //     branch is unchanged from the C4 implementation.
+    //     be a dotted host, canonicalized per R3. G13
+    //     (2026-11-21) corrects this branch in three ways:
+    //     the site segment is gated on the host charset
+    //     [A-Za-z0-9.-] (a run failing the gate falls
+    //     through to the page-name rule below); the site
+    //     passes through R3 canonicalization only, never
+    //     slug normalization; and a page part normalizing
+    //     to empty fires with the empty name instead of
+    //     failing the block.
     // (2) Any other run resolves as a page name ONLY if the
     //     whole run consists of [A-Za-z0-9\-_:]; a run
     //     containing any other character ('.', '/', '#',
@@ -486,13 +434,29 @@ class Text_Wiki_Parse_Include extends Text_Wiki_Parse {
                 // same-site pairs.
                 if ($pagePart !== ''
                     && preg_match('/^[A-Za-z0-9\-_:]+$/', $pagePart)) {
-                    $site = $this->refNormalize(
-                        $this->refCanonicalSite(substr($s, 1, $idx - 1)));
-                    $page = $this->refNormalize($pagePart);
-                    if ($page === '') {
-                        return null;
+                    $siteSeg = substr($s, 1, $idx - 1);
+                    // G13 site gate: AUDIT-G13 probes show a
+                    // site run containing '/', '#', or a
+                    // non-ASCII character never fires as a
+                    // pair (the source stays literal), and
+                    // probe muse-probe-g13fix-site-underscore
+                    // shows '_' is outside the host set too
+                    // (its run falls back to whole-run page
+                    // resolution). A run failing the gate
+                    // falls through to the page-name rule.
+                    if (preg_match('/^[A-Za-z0-9.\-]+$/', $siteSeg)) {
+                        // G13: R3 canonicalization only; the
+                        // site is never slug-normalized
+                        // (probe muse-probe-g13fix-site-upper
+                        // names the site "FOO" verbatim), and
+                        // a page part normalizing to empty
+                        // fires with the empty name (probe
+                        // muse-probe-audit-g13-site-empty-
+                        // page-norm).
+                        return array(
+                            $this->refCanonicalSite($siteSeg),
+                            $this->refNormalize($pagePart));
                     }
-                    return array($site, $page);
                 }
             }
         }

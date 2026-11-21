@@ -1,0 +1,22 @@
+{
+ "e12-late-ref": {
+  "fullname": "muse-probe-g14b-e12-late-ref",
+  "html": "<p>A is {$a}.<br />\nB is B.<br />\nM is {$b}.<br />\nTARGET-END</p>",
+  "html_sha256": "1b16522104b3149cc0be639cc44719930d95b73cf900c4b8c55a391b34edf7cf",
+  "source": "[[include muse-probe-g14b-target | b=B | marker={$b}]]",
+  "source_sha256": "4b4f479e556584243d6924b7c9ed8a0a84f902d19e98ad8e4132ebb1f9cb70bd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e13-empty-then-second": {
+  "fullname": "muse-probe-g14b-e13-empty-then-second",
+  "html": "<p>A is {$a}.<br />\nB is {$b}.<br />\nM is SECOND.<br />\nTARGET-END</p>",
+  "html_sha256": "081058eb007eeb4100766e33411b7b2eb175941c16bee5eccd450862b8daa8fd",
+  "source": "[[include muse-probe-g14b-target | marker= | marker=SECOND]]",
+  "source_sha256": "5bda51a2f44bf4b50d5f83fa0bff397e0a4fcf70885a7bd9e09e0a62151fbda8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

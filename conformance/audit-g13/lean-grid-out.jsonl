@@ -1,0 +1,119 @@
+{"id": "basic-mid", "output": "BEFORE\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nAFTER", "pages": ["muse-probe-g14-target"]}
+{"id": "basic-start", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nAFTER", "pages": ["muse-probe-g14-target"]}
+{"id": "basic-end", "output": "BEFORE\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END", "pages": ["muse-probe-g14-target"]}
+{"id": "basic-whole", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END", "pages": ["muse-probe-g14-target"]}
+{"id": "basic-crlf", "output": "BEFORE\r\n\r\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\r\n\r\nAFTER", "pages": ["muse-probe-g14-target"]}
+{"id": "term-cr-then-other", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\rX\n\nOTHER-PAGE-CONTENT\nSecond value is {$marker}.\nOTHER-END\n\nY", "pages": ["muse-probe-g14-target", "other-page"]}
+{"id": "no-terminator", "output": "BEFORE\n[[include muse-probe-g14-target\nAFTER", "pages": []}
+{"id": "term-space", "output": "[[include muse-probe-g14-target]] \nAFTER", "pages": []}
+{"id": "term-x-then-other", "output": "[[include muse-probe-g14-target]]x\n\nOTHER-PAGE-CONTENT\nSecond value is {$marker}.\nOTHER-END\n\nY", "pages": ["other-page"]}
+{"id": "upper", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "mixed-case", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "tab-after", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "multi-space", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "newline-after", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "cr-after", "output": "[[include\rmuse-probe-g14-target]]\nX", "pages": []}
+{"id": "double-newline-after", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "space-before-include", "output": "[[ include muse-probe-g14-target]]\nX", "pages": []}
+{"id": "tab-before-include", "output": "[[\tinclude muse-probe-g14-target]]\nX", "pages": []}
+{"id": "not-line-start", "output": "x [[include muse-probe-g14-target]]\nX", "pages": []}
+{"id": "indented-spaces", "output": "  [[include muse-probe-g14-target]]\nX", "pages": []}
+{"id": "include-eof", "output": "[[include", "pages": []}
+{"id": "include-ws-eof", "output": "[[include ", "pages": []}
+{"id": "gt-line-before", "output": ">\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "missing", "output": "<MISSING-PAGE no-such-page>\n\nX", "pages": ["no-such-page"]}
+{"id": "empty-page-inc", "output": "A\n\nB", "pages": ["empty-page"]}
+{"id": "site", "output": "SITE-PAGE-CONTENT\n\nX", "pages": [":sandbox:other-page"]}
+{"id": "site-dotted", "output": "SITE-PAGE-CONTENT\n\nX", "pages": [":sandbox:other-page"]}
+{"id": "site-dotted-upper", "output": "<MISSING-PAGE :SANDBOX:other-page>\n\nX", "pages": [":SANDBOX:other-page"]}
+{"id": "site-trailing-dot", "output": "<MISSING-PAGE :sandbox.:other-page>\n\nX", "pages": [":sandbox.:other-page"]}
+{"id": "colon-page", "output": "<MISSING-PAGE component:box>\n\nX", "pages": ["component:box"]}
+{"id": "multi-colon", "output": "<MISSING-PAGE a-b:c>\n\nX", "pages": ["a-b:c"]}
+{"id": "colon-single-err", "output": "<MISSING-PAGE foo>\n\nX", "pages": ["foo"]}
+{"id": "colon-double-err", "output": "<MISSING-PAGE page>\n\nX", "pages": ["page"]}
+{"id": "site-empty-page", "output": "<MISSING-PAGE sandbox>\n\nX", "pages": ["sandbox"]}
+{"id": "colon-triple", "output": "<MISSING-PAGE page>\n\nX", "pages": ["page"]}
+{"id": "site-colon-empty", "output": "<MISSING-PAGE site>\n\nX", "pages": ["site"]}
+{"id": "site-pair-mid", "output": "<MISSING-PAGE :foo:bar>\n\nX", "pages": [":foo:bar"]}
+{"id": "colon-bare", "output": "<MISSING-PAGE >\n\nX", "pages": [""]}
+{"id": "dashes-bare", "output": "<MISSING-PAGE >\n\nX", "pages": [""]}
+{"id": "upper-ref", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "underscore-ref", "output": "<MISSING-PAGE my-page>\n\nX", "pages": ["my-page"]}
+{"id": "template-ref", "output": "<MISSING-PAGE _template>\n\nX", "pages": ["_template"]}
+{"id": "extra-slash", "output": "[[include muse-probe-g14-target/edit]]\nX", "pages": []}
+{"id": "extra-hash", "output": "[[include muse-probe-g14-target#frag]]\nX", "pages": []}
+{"id": "extra-only", "output": "[[include /edit]]\nX", "pages": []}
+{"id": "dotted-page", "output": "[[include some.page]]\nX", "pages": []}
+{"id": "default-cat", "output": "<MISSING-PAGE thing>\n\nX", "pages": ["thing"]}
+{"id": "ref-cr", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "ref-quote-fail", "output": "[[include page\"x]]\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nY", "pages": ["muse-probe-g14-target"]}
+{"id": "empty-ref", "output": "[[include ]]\nX", "pages": []}
+{"id": "host-as-page", "output": "[[include scp-jp.wikidot.com]]\nX", "pages": []}
+{"id": "one-arg", "output": "TARGET-CONTENT-START\nValue is HELLO.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-spaces", "output": "TARGET-CONTENT-START\nValue is SPACED.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-tabs", "output": "TARGET-CONTENT-START\nValue is TABBY.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-second-segment", "output": "TARGET-CONTENT-START\nValue is SECOND.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-empty-value", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-empty-spaced", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-no-equals", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-empty-segment", "output": "TARGET-CONTENT-START\nValue is DEEP.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-pipe-in-value", "output": "TARGET-CONTENT-START\nValue is a.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-quoted-value", "output": "TARGET-CONTENT-START\nValue is \"quoted\".\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-value-spaces-inside", "output": "TARGET-CONTENT-START\nValue is a b c.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-key-chars", "output": "TARGET-CONTENT-START\nValue is OK.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-duplicate", "output": "TARGET-CONTENT-START\nValue is FIRST.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-vt-trim", "output": "TARGET-CONTENT-START\nValue is VT.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-ff-inert", "output": "TARGET-CONTENT-START\nValue is YES.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-comment-pipe", "output": "TARGET-CONTENT-START\nValue is A [!--.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-comment-first", "output": "TARGET-CONTENT-START\nValue is CF.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-unterminated-comment", "output": "A\n\nTARGET-CONTENT-START\nValue is X [!-- open.\nTARGET-CONTENT-END\n\n\nOTHER-PAGE-CONTENT\nSecond value is {$marker}.\nOTHER-END\n\nB", "pages": ["muse-probe-g14-target", "other-page"]}
+{"id": "arg-newlines", "output": "TARGET-CONTENT-START\nValue is NL.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-crlf-tail", "output": "TARGET-CONTENT-START\nValue is CRLF.\nTARGET-CONTENT-END\r\n\r\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-spaced-sep", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-nospace-pipe", "output": "[[include muse-probe-g14-target|marker=NOSPACE]]\nX", "pages": []}
+{"id": "arg-multiline-comment", "output": "TARGET-CONTENT-START\nValue is ML.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-eof", "output": "TARGET-CONTENT-START\nValue is EOF.\nTARGET-CONTENT-END", "pages": ["muse-probe-g14-target"]}
+{"id": "ref-space-before-close", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "swallow-next-opener", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "stray-with-after", "output": "TARGET-CONTENT-START\nValue is S1.\nTARGET-CONTENT-END\n\nAFTER", "pages": ["muse-probe-g14-target"]}
+{"id": "stray-many", "output": "TARGET-CONTENT-START\nValue is S2.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "stray-nospace", "output": "TARGET-CONTENT-START\nValue is S3.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "stray-comment-guard", "output": "TARGET-CONTENT-START\nValue is S4.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "stray-comment-space", "output": "TARGET-CONTENT-START\nValue is S5.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "q-spaced", "output": "> [[include muse-probe-g14-target]]\nX", "pages": []}
+{"id": "q-unspaced", "output": "BEFORE\n>[[include muse-probe-g14-target]]\nAFTER", "pages": []}
+{"id": "q-unspaced-args", "output": ">[[include muse-probe-g14-target\n>| marker=NSOK]]\nAFTER", "pages": []}
+{"id": "q-depth2-unspaced", "output": ">>[[include muse-probe-g14-target]]\nX", "pages": []}
+{"id": "q-spaced-depth2", "output": ">> [[include muse-probe-g14-target]]\nX", "pages": []}
+{"id": "q-midtext", "output": "intro\n> some text\n>[[include muse-probe-g14-target]]\nX", "pages": []}
+{"id": "q-trailing-line", "output": ">[[include muse-probe-g14-target]]\n> trailing quoted\nX", "pages": []}
+{"id": "q-broken-continuation", "output": ">[[include muse-probe-g14-target\nplain line | marker=X]]\nY", "pages": []}
+{"id": "q-arg-spaced-cont", "output": ">[[include muse-probe-g14-target\n> | marker=QC]]\nY", "pages": []}
+{"id": "q-early-term-line", "output": ">[[include muse-probe-g14-target\n>]]\n> | marker=X]]\nY", "pages": []}
+{"id": "q-not-at-line-start", "output": "x>[[include muse-probe-g14-target]]\nY", "pages": []}
+{"id": "q-prefix-blanks", "output": " >[[include muse-probe-g14-target]]\nY", "pages": []}
+{"id": "q-tab-prefix", "output": "\t>[[include muse-probe-g14-target]]\nY", "pages": []}
+{"id": "q-gt-space-gt", "output": "> >[[include muse-probe-g14-target]]\nX", "pages": []}
+{"id": "two-includes", "output": "TARGET-CONTENT-START\nValue is A.\nTARGET-CONTENT-END\n\nMIDDLE\n\nOTHER-PAGE-CONTENT\nSecond value is B.\nOTHER-END\n\nEND", "pages": ["muse-probe-g14-target", "other-page"]}
+{"id": "empty-then-real", "output": "\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["empty-page", "muse-probe-g14-target"]}
+{"id": "adjacent-crlf", "output": "A\r\n\r\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\r\n\r\nB", "pages": ["muse-probe-g14-target"]}
+{"id": "include-only-crlf", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\r\n\r\n", "pages": ["muse-probe-g14-target"]}
+{"id": "missing-mid", "output": "A\n\n<MISSING-PAGE nope>\n\nB", "pages": ["nope"]}
+{"id": "var-in-caller", "output": "{$marker}\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "other-with-arg", "output": "OTHER-PAGE-CONTENT\nSecond value is ZZ.\nOTHER-END\n\nX", "pages": ["other-page"]}
+{"id": "crlf-throughout", "output": "A\r\n\r\nTARGET-CONTENT-START\nValue is W.\nTARGET-CONTENT-END\r\n\r\nB\r\n\r\nOTHER-PAGE-CONTENT\nSecond value is {$marker}.\nOTHER-END\r\n\r\nC", "pages": ["muse-probe-g14-target", "other-page"]}
+{"id": "term-cr-in-tail", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\r]]\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "term-cr-eof", "output": "[[include muse-probe-g14-target]]\r", "pages": []}
+{"id": "value-brackets", "output": "TARGET-CONTENT-START\nValue is a]] b.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "q-cr-term", "output": ">[[include muse-probe-g14-target]]\rX", "pages": []}
+{"id": "cr-no-line-start", "output": "A\r[[include muse-probe-g14-target]]\nX", "pages": []}
+{"id": "arg-value-comment-only", "output": "TARGET-CONTENT-START\nValue is [!-- x --].\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-comment-segment", "output": "TARGET-CONTENT-START\nValue is BC.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "value-nested-brackets", "output": "TARGET-CONTENT-START\nValue is [[[include]].\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "tail-pipe-eof", "output": "TARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END", "pages": ["muse-probe-g14-target"]}
+{"id": "site-extra-hash", "output": "[[include :sandbox:page#x]]\nX", "pages": []}
+{"id": "multi-mixed", "output": ">[[include muse-probe-g14-target]]\n\nOTHER-PAGE-CONTENT\nSecond value is {$marker}.\nOTHER-END\n\n>[[include muse-probe-g14-target]]\nEND", "pages": ["other-page"]}
+{"id": "arg-value-equals", "output": "TARGET-CONTENT-START\nValue is a=b.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "arg-digit-key", "output": "TARGET-CONTENT-START\nValue is DK.\nTARGET-CONTENT-END\n\nX", "pages": ["muse-probe-g14-target"]}
+{"id": "q-depth2-args", "output": ">>[[include muse-probe-g14-target\n>>| marker=D2]]\nX", "pages": []}
+{"id": "q-blanks-between-gt", "output": "  >  >[[include muse-probe-g14-target]]\nX", "pages": []}

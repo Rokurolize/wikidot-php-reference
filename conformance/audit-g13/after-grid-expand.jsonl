@@ -1,0 +1,119 @@
+{"id":"basic-mid","output":"BEFORE\n\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nAFTER"}
+{"id":"basic-start","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nAFTER"}
+{"id":"basic-end","output":"BEFORE\n\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n"}
+{"id":"basic-whole","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n"}
+{"id":"basic-crlf","output":"BEFORE\n\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nAFTER"}
+{"id":"term-cr-then-other","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\rX\n\n\nOTHER-PAGE-CONTENT\nSecond value is {$marker}.\nOTHER-END\n\n\nY"}
+{"id":"no-terminator","output":"BEFORE\n[[include muse-probe-g14-target\nAFTER"}
+{"id":"term-space","output":"[[include muse-probe-g14-target]] \nAFTER"}
+{"id":"term-x-then-other","output":"[[include muse-probe-g14-target]]x\n\n\nOTHER-PAGE-CONTENT\nSecond value is {$marker}.\nOTHER-END\n\n\nY"}
+{"id":"upper","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"mixed-case","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"tab-after","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"multi-space","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"newline-after","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"cr-after","output":"[[include\rmuse-probe-g14-target]]\nX"}
+{"id":"double-newline-after","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"space-before-include","output":"[[ include muse-probe-g14-target]]\nX"}
+{"id":"tab-before-include","output":"[[\tinclude muse-probe-g14-target]]\nX"}
+{"id":"not-line-start","output":"x [[include muse-probe-g14-target]]\nX"}
+{"id":"indented-spaces","output":"  [[include muse-probe-g14-target]]\nX"}
+{"id":"include-eof","output":"[[include"}
+{"id":"include-ws-eof","output":"[[include "}
+{"id":"gt-line-before","output":">\n\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"missing","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"no-such-page\" does not exist ([\/no-such-page\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"empty-page-inc","output":"A\n\n\n\n\n\nB"}
+{"id":"site","output":"\n\nSITE-PAGE-CONTENT\n\n\nX"}
+{"id":"site-dotted","output":"\n\nSITE-PAGE-CONTENT\n\n\nX"}
+{"id":"site-dotted-upper","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"other-page\" does not exist ([https:\/\/SANDBOX.wikidot.com\/other-page\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"site-trailing-dot","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"other-page\" does not exist ([https:\/\/sandbox..wikidot.com\/other-page\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"colon-page","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"component:box\" does not exist ([\/component:box\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"multi-colon","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"a-b:c\" does not exist ([\/a-b:c\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"colon-single-err","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"foo\" does not exist ([\/foo\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"colon-double-err","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"page\" does not exist ([\/page\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"site-empty-page","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"sandbox\" does not exist ([\/sandbox\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"colon-triple","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"page\" does not exist ([\/page\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"site-colon-empty","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"site\" does not exist ([\/site\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"site-pair-mid","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"bar\" does not exist ([https:\/\/foo.wikidot.com\/bar\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"colon-bare","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"\" does not exist ([\/\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"dashes-bare","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"\" does not exist ([\/\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"upper-ref","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"underscore-ref","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"my-page\" does not exist ([\/my-page\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"template-ref","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"_template\" does not exist ([\/_template\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"extra-slash","output":"[[include muse-probe-g14-target\/edit]]\nX"}
+{"id":"extra-hash","output":"[[include muse-probe-g14-target#frag]]\nX"}
+{"id":"extra-only","output":"[[include \/edit]]\nX"}
+{"id":"dotted-page","output":"[[include some.page]]\nX"}
+{"id":"default-cat","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"thing\" does not exist ([\/thing\/edit\/true create it now])\n[[\/div]]\n\n\nX"}
+{"id":"ref-cr","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"ref-quote-fail","output":"[[include page\"x]]\n\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nY"}
+{"id":"empty-ref","output":"[[include ]]\nX"}
+{"id":"host-as-page","output":"[[include scp-jp.wikidot.com]]\nX"}
+{"id":"one-arg","output":"\n\nTARGET-CONTENT-START\nValue is HELLO.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-spaces","output":"\n\nTARGET-CONTENT-START\nValue is SPACED.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-tabs","output":"\n\nTARGET-CONTENT-START\nValue is TABBY.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-second-segment","output":"\n\nTARGET-CONTENT-START\nValue is SECOND.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-empty-value","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-empty-spaced","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-no-equals","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-empty-segment","output":"\n\nTARGET-CONTENT-START\nValue is DEEP.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-pipe-in-value","output":"\n\nTARGET-CONTENT-START\nValue is a.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-quoted-value","output":"\n\nTARGET-CONTENT-START\nValue is \"quoted\".\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-value-spaces-inside","output":"\n\nTARGET-CONTENT-START\nValue is a b c.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-key-chars","output":"\n\nTARGET-CONTENT-START\nValue is OK.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-duplicate","output":"\n\nTARGET-CONTENT-START\nValue is FIRST.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-vt-trim","output":"\n\nTARGET-CONTENT-START\nValue is VT.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-ff-inert","output":"\n\nTARGET-CONTENT-START\nValue is YES.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-comment-pipe","output":"\n\nTARGET-CONTENT-START\nValue is A [!--.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-comment-first","output":"\n\nTARGET-CONTENT-START\nValue is CF.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-unterminated-comment","output":"A\n\n\nTARGET-CONTENT-START\nValue is X [!-- open.\nTARGET-CONTENT-END\n\n\n\n\nOTHER-PAGE-CONTENT\nSecond value is {$marker}.\nOTHER-END\n\n\nB"}
+{"id":"arg-newlines","output":"\n\nTARGET-CONTENT-START\nValue is NL.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-crlf-tail","output":"\n\nTARGET-CONTENT-START\nValue is CRLF.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-spaced-sep","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-nospace-pipe","output":"[[include muse-probe-g14-target|marker=NOSPACE]]\nX"}
+{"id":"arg-multiline-comment","output":"\n\nTARGET-CONTENT-START\nValue is ML.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-eof","output":"\n\nTARGET-CONTENT-START\nValue is EOF.\nTARGET-CONTENT-END\n\n"}
+{"id":"ref-space-before-close","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"swallow-next-opener","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"stray-with-after","output":"\n\nTARGET-CONTENT-START\nValue is S1.\nTARGET-CONTENT-END\n\n\nAFTER"}
+{"id":"stray-many","output":"\n\nTARGET-CONTENT-START\nValue is S2.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"stray-nospace","output":"\n\nTARGET-CONTENT-START\nValue is S3.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"stray-comment-guard","output":"\n\nTARGET-CONTENT-START\nValue is S4.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"stray-comment-space","output":"\n\nTARGET-CONTENT-START\nValue is S5.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"q-spaced","output":"> [[include muse-probe-g14-target]]\nX"}
+{"id":"q-unspaced","output":"BEFORE\n>[[include muse-probe-g14-target]]\nAFTER"}
+{"id":"q-unspaced-args","output":">[[include muse-probe-g14-target\n>| marker=NSOK]]\nAFTER"}
+{"id":"q-depth2-unspaced","output":">>[[include muse-probe-g14-target]]\nX"}
+{"id":"q-spaced-depth2","output":">> [[include muse-probe-g14-target]]\nX"}
+{"id":"q-midtext","output":"intro\n> some text\n>[[include muse-probe-g14-target]]\nX"}
+{"id":"q-trailing-line","output":">[[include muse-probe-g14-target]]\n> trailing quoted\nX"}
+{"id":"q-broken-continuation","output":">[[include muse-probe-g14-target\nplain line | marker=X]]\nY"}
+{"id":"q-arg-spaced-cont","output":">[[include muse-probe-g14-target\n> | marker=QC]]\nY"}
+{"id":"q-early-term-line","output":">[[include muse-probe-g14-target\n>]]\n> | marker=X]]\nY"}
+{"id":"q-not-at-line-start","output":"x>[[include muse-probe-g14-target]]\nY"}
+{"id":"q-prefix-blanks","output":" >[[include muse-probe-g14-target]]\nY"}
+{"id":"q-tab-prefix","output":"\t>[[include muse-probe-g14-target]]\nY"}
+{"id":"q-gt-space-gt","output":"> >[[include muse-probe-g14-target]]\nX"}
+{"id":"two-includes","output":"\n\nTARGET-CONTENT-START\nValue is A.\nTARGET-CONTENT-END\n\n\nMIDDLE\n\n\nOTHER-PAGE-CONTENT\nSecond value is B.\nOTHER-END\n\n\nEND"}
+{"id":"empty-then-real","output":"\n\n\n\n\n\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"adjacent-crlf","output":"A\n\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nB"}
+{"id":"include-only-crlf","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\n"}
+{"id":"missing-mid","output":"A\n\n\n[[div class=\"error-block\"]]\nIncluded page \"nope\" does not exist ([\/nope\/edit\/true create it now])\n[[\/div]]\n\n\nB"}
+{"id":"var-in-caller","output":"{$marker}\n\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"other-with-arg","output":"\n\nOTHER-PAGE-CONTENT\nSecond value is ZZ.\nOTHER-END\n\n\nX"}
+{"id":"crlf-throughout","output":"A\n\n\nTARGET-CONTENT-START\nValue is W.\nTARGET-CONTENT-END\n\n\nB\n\n\nOTHER-PAGE-CONTENT\nSecond value is {$marker}.\nOTHER-END\n\n\nC"}
+{"id":"term-cr-in-tail","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n\r]]\nX"}
+{"id":"term-cr-eof","output":"[[include muse-probe-g14-target]]\r"}
+{"id":"value-brackets","output":"\n\nTARGET-CONTENT-START\nValue is a]] b.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"q-cr-term","output":">[[include muse-probe-g14-target]]\rX"}
+{"id":"cr-no-line-start","output":"A\r[[include muse-probe-g14-target]]\nX"}
+{"id":"arg-value-comment-only","output":"\n\nTARGET-CONTENT-START\nValue is [!-- x --].\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-comment-segment","output":"\n\nTARGET-CONTENT-START\nValue is BC.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"value-nested-brackets","output":"\n\nTARGET-CONTENT-START\nValue is [[[include]].\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"tail-pipe-eof","output":"\n\nTARGET-CONTENT-START\nValue is {$marker}.\nTARGET-CONTENT-END\n\n"}
+{"id":"site-extra-hash","output":"[[include :sandbox:page#x]]\nX"}
+{"id":"multi-mixed","output":">[[include muse-probe-g14-target]]\n\n\nOTHER-PAGE-CONTENT\nSecond value is {$marker}.\nOTHER-END\n\n\n>[[include muse-probe-g14-target]]\nEND"}
+{"id":"arg-value-equals","output":"\n\nTARGET-CONTENT-START\nValue is a=b.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"arg-digit-key","output":"\n\nTARGET-CONTENT-START\nValue is DK.\nTARGET-CONTENT-END\n\n\nX"}
+{"id":"q-depth2-args","output":">>[[include muse-probe-g14-target\n>>| marker=D2]]\nX"}
+{"id":"q-blanks-between-gt","output":"  >  >[[include muse-probe-g14-target]]\nX"}

@@ -1,0 +1,22 @@
+{
+ "synth-adj": "A={$\nB=marker}\nADJ=BOOM\nNEST={marker}\nM=BOOM\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "synth-nest": "A=$\nB=BOOM\nADJ=$BOOM\nNEST=BOOM\nM={$marker}\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "val-zero-dup": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO=0\nDOT={$a.b}\nCOL={$a:b}",
+ "val-zero-only": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO=0\nDOT={$a.b}\nCOL={$a:b}",
+ "cmt-pipe": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=[!-- a\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "cmt-val-only": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=[!-- c --]\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "cmt-before-key": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "cmt-before-eq": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "cmt-unclosed": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=[!-- unclosed\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "case-both": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=LOWER\nUPPER=UPPERVAL\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "case-upper-only": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER=ONLYUPPER\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "backref": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=$0\\1\\\\$1\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "key-dot": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "key-colon": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "val-eq": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=x=y=z\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "no-pipe": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=NOPIPE\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "no-pipe-nl": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=NOPIPE\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "ws-only-dup": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=AFTERWS\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "dup-empty-second": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=FIRST\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}",
+ "val-trim-edges": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=MID\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}"
+}

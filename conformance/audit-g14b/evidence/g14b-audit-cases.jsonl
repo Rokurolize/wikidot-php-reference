@@ -1,0 +1,20 @@
+{"id": "synth-adj", "source": "[[include muse-probe-audit-g14b-target | a={$ | b=marker} | marker=BOOM]]"}
+{"id": "synth-nest", "source": "[[include muse-probe-audit-g14b-target | a=$ | b=BOOM]]"}
+{"id": "val-zero-dup", "source": "[[include muse-probe-audit-g14b-target | z=0 | z=FALLBACK]]"}
+{"id": "val-zero-only", "source": "[[include muse-probe-audit-g14b-target | z=0]]"}
+{"id": "cmt-pipe", "source": "[[include muse-probe-audit-g14b-target | marker=[!-- a|b --]HELLO]]"}
+{"id": "cmt-val-only", "source": "[[include muse-probe-audit-g14b-target | marker=[!-- c --] | marker=FALLBACK]]"}
+{"id": "cmt-before-key", "source": "[[include muse-probe-audit-g14b-target | [!-- c --] marker=HELLO]]"}
+{"id": "cmt-before-eq", "source": "[[include muse-probe-audit-g14b-target | marker [!-- c --] = HELLO]]"}
+{"id": "cmt-unclosed", "source": "[[include muse-probe-audit-g14b-target | marker=[!-- unclosed]]"}
+{"id": "case-both", "source": "[[include muse-probe-audit-g14b-target | marker=LOWER | MARKER=UPPERVAL]]"}
+{"id": "case-upper-only", "source": "[[include muse-probe-audit-g14b-target | MARKER=ONLYUPPER]]"}
+{"id": "backref", "source": "[[include muse-probe-audit-g14b-target | marker=$0\\1\\\\$1]]"}
+{"id": "key-dot", "source": "[[include muse-probe-audit-g14b-target | a.b=DOTVAL]]"}
+{"id": "key-colon", "source": "[[include muse-probe-audit-g14b-target | a:b=COLVAL]]"}
+{"id": "val-eq", "source": "[[include muse-probe-audit-g14b-target | marker=x=y=z]]"}
+{"id": "no-pipe", "source": "[[include muse-probe-audit-g14b-target marker=NOPIPE]]"}
+{"id": "no-pipe-nl", "source": "[[include muse-probe-audit-g14b-target\nmarker=NOPIPE]]"}
+{"id": "ws-only-dup", "source": "[[include muse-probe-audit-g14b-target | marker=   | marker=AFTERWS]]"}
+{"id": "dup-empty-second", "source": "[[include muse-probe-audit-g14b-target | marker=FIRST | marker=]]"}
+{"id": "val-trim-edges", "source": "[[include muse-probe-audit-g14b-target | marker=  MID  ]]"}

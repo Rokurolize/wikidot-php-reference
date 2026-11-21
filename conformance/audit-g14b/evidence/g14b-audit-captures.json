@@ -1,0 +1,202 @@
+{
+ "synth-adj": {
+  "fullname": "muse-probe-audit-g14b-synth-adj",
+  "html": "<p>A={$<br />\nB=marker}<br />\nADJ=BOOM<br />\nNEST={marker}<br />\nM=BOOM<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "4106e1ae4ef890ca3a8429e0559eb3e3fff7be316fbc9db9f41941d2c5abc066",
+  "source": "[[include muse-probe-audit-g14b-target | a={$ | b=marker} | marker=BOOM]]",
+  "source_sha256": "c5dd45026aa77df49e0a61f3ea0cad94ec70bf56610fd788cf2d195d4e22e461",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "synth-nest": {
+  "fullname": "muse-probe-audit-g14b-synth-nest",
+  "html": "<p>A=$<br />\nB=BOOM<br />\nADJ=$BOOM<br />\nNEST=BOOM<br />\nM={$marker}<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "2b10f016da61be057b27d4c4f0faf466682b774500472f286f48997d36443643",
+  "source": "[[include muse-probe-audit-g14b-target | a=$ | b=BOOM]]",
+  "source_sha256": "23919d8e21b61826e3b7173e79cbe723515fbd5e0d70fa6d1303e4ad3199154e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "val-zero-dup": {
+  "fullname": "muse-probe-audit-g14b-val-zero-dup",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM={$marker}<br />\nUPPER={$MARKER}<br />\nZERO=0<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "9f605f4f3b2f082bbd5a434eaf7ef844f5f58c734c34bf27850b03e753766a23",
+  "source": "[[include muse-probe-audit-g14b-target | z=0 | z=FALLBACK]]",
+  "source_sha256": "ffa7dd792d9bda786ad34bf27a1bc2ffc6fa87340ab1d189119807dd6378d7b4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "val-zero-only": {
+  "fullname": "muse-probe-audit-g14b-val-zero-only",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM={$marker}<br />\nUPPER={$MARKER}<br />\nZERO=0<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "9f605f4f3b2f082bbd5a434eaf7ef844f5f58c734c34bf27850b03e753766a23",
+  "source": "[[include muse-probe-audit-g14b-target | z=0]]",
+  "source_sha256": "9e1643209d43542659efef58f23bb10e631429dbf623df82637989592fc7dcbd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "cmt-pipe": {
+  "fullname": "muse-probe-audit-g14b-cmt-pipe",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM=[!&#8212; a<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "c10f6adf49e89553ead3714a875cd7a47cfc8fff3c9a822a4ec09567c576d3a5",
+  "source": "[[include muse-probe-audit-g14b-target | marker=[!-- a|b --]HELLO]]",
+  "source_sha256": "ec3b95780745b8a18fca12c170fca4424a054b15728ae30bfda69ef50387fae2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "cmt-val-only": {
+  "fullname": "muse-probe-audit-g14b-cmt-val-only",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM=<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "bace5c70931f61e7e896c71d82b5080d9d4e0fa9166fa8c61ca7c2455e286ebf",
+  "source": "[[include muse-probe-audit-g14b-target | marker=[!-- c --] | marker=FALLBACK]]",
+  "source_sha256": "688a1bb9011180f7c486a63bee4aca3fed57fd0961a96e7c5f58990cc05a85a5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "cmt-before-key": {
+  "fullname": "muse-probe-audit-g14b-cmt-before-key",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM={$marker}<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "dbfb86525ce059ed22250f146f89cfbc660ef08475377167adae68142000faeb",
+  "source": "[[include muse-probe-audit-g14b-target | [!-- c --] marker=HELLO]]",
+  "source_sha256": "46655a744a26a514b82b336fa40afe0a6f394e24aa71f3ac2ba68d2527143ce1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "cmt-before-eq": {
+  "fullname": "muse-probe-audit-g14b-cmt-before-eq",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM={$marker}<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "dbfb86525ce059ed22250f146f89cfbc660ef08475377167adae68142000faeb",
+  "source": "[[include muse-probe-audit-g14b-target | marker [!-- c --] = HELLO]]",
+  "source_sha256": "87f589167398602bd99355b090b8a75b1e27cc6dab4ae56a82bc4405f7898891",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "cmt-unclosed": {
+  "fullname": "muse-probe-audit-g14b-cmt-unclosed",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM=[!&#8212; unclosed<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "4ee219d10597c8e2b4bd166ee884b1a14f0cfecc2f92a280c3d1b1472027e7de",
+  "source": "[[include muse-probe-audit-g14b-target | marker=[!-- unclosed]]",
+  "source_sha256": "4969f5ba74a1eee3c02407abafc552d35d48a95baf09b12cf9dd403a00bea4c8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "case-both": {
+  "fullname": "muse-probe-audit-g14b-case-both",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM=LOWER<br />\nUPPER=UPPERVAL<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "cece62088337ab98aab88c43c7bcd37ac6aa528981f4a4b423a20c9af1da61f8",
+  "source": "[[include muse-probe-audit-g14b-target | marker=LOWER | MARKER=UPPERVAL]]",
+  "source_sha256": "729c11719b2461046accf061783ea4e27c541e91ecc5367b633e98565740e3ec",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "case-upper-only": {
+  "fullname": "muse-probe-audit-g14b-case-upper-only",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM={$marker}<br />\nUPPER=ONLYUPPER<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "99e8c2eaacd394d35c50ed37eb3f1cf24fb8da0fe37ef71c61a4ecbd7929e47d",
+  "source": "[[include muse-probe-audit-g14b-target | MARKER=ONLYUPPER]]",
+  "source_sha256": "aaf0ebe213a2b5a0dbf20369408f4ce415d424726e2c90c8ae78958951107195",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "backref": {
+  "fullname": "muse-probe-audit-g14b-backref",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM=$0\\1\\\\$1<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "84a94cbaff0b4d027bdc96e748df56c22f90e8655387594821d140965fd941d5",
+  "source": "[[include muse-probe-audit-g14b-target | marker=$0\\1\\\\$1]]",
+  "source_sha256": "fb109f9b2798733b608715d415503337e845f36fe28d2af60de5226748ed00cf",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "key-dot": {
+  "fullname": "muse-probe-audit-g14b-key-dot",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM={$marker}<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "dbfb86525ce059ed22250f146f89cfbc660ef08475377167adae68142000faeb",
+  "source": "[[include muse-probe-audit-g14b-target | a.b=DOTVAL]]",
+  "source_sha256": "58e71f64944b594cc4155a03e12e7de94d40b0f2c12e513877c3b96aa0fdc080",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "key-colon": {
+  "fullname": "muse-probe-audit-g14b-key-colon",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM={$marker}<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "dbfb86525ce059ed22250f146f89cfbc660ef08475377167adae68142000faeb",
+  "source": "[[include muse-probe-audit-g14b-target | a:b=COLVAL]]",
+  "source_sha256": "f191b0a4b0c2fb14dceeb890f87f3281de00442209a9cc0a38f75867c4cbcf9d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "val-eq": {
+  "fullname": "muse-probe-audit-g14b-val-eq",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM=x=y=z<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "20a351f4a05812711e5aec6f37c9159119f3d8001f2ceaf5174ed2bbc2457b87",
+  "source": "[[include muse-probe-audit-g14b-target | marker=x=y=z]]",
+  "source_sha256": "02f2ed03260951d94f77064cfed12698a39cf487d909e7d04a7b4adf42b65f22",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "no-pipe": {
+  "fullname": "muse-probe-audit-g14b-no-pipe",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM=NOPIPE<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "fe344dff637df1b06007ee40a4d5396b55f7e20d3a8faf711c42d2d194a71612",
+  "source": "[[include muse-probe-audit-g14b-target marker=NOPIPE]]",
+  "source_sha256": "e40467e98f837e08f0e84f4c0e9ac6b27ce53f0f9225b845e65d19e8d051ac82",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "no-pipe-nl": {
+  "fullname": "muse-probe-audit-g14b-no-pipe-nl",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM=NOPIPE<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "fe344dff637df1b06007ee40a4d5396b55f7e20d3a8faf711c42d2d194a71612",
+  "source": "[[include muse-probe-audit-g14b-target\nmarker=NOPIPE]]",
+  "source_sha256": "8081431bf41212ec3f12820d19fa5d6662b4840708e1a369112758e0dc5d9723",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "ws-only-dup": {
+  "fullname": "muse-probe-audit-g14b-ws-only-dup",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM=AFTERWS<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "6acb0029302a363dbd24c6f82aefb409bcd80f35e2c53707fceead4ef2411f22",
+  "source": "[[include muse-probe-audit-g14b-target | marker=   | marker=AFTERWS]]",
+  "source_sha256": "0661e5cd819bca11502d347f46fe662f9e98b345bddb75a7b1f5dc88f9d45842",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "dup-empty-second": {
+  "fullname": "muse-probe-audit-g14b-dup-empty-second",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM=FIRST<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "aa9d58a64762f653564002451bd2540b2effd3cd2d9a9ea9019f5c946f7ba3fb",
+  "source": "[[include muse-probe-audit-g14b-target | marker=FIRST | marker=]]",
+  "source_sha256": "5f5d8f71ecdf53da6cdec0d56ed34ff3867431069b8230077fb80e6fad3057ca",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "val-trim-edges": {
+  "fullname": "muse-probe-audit-g14b-val-trim-edges",
+  "html": "<p>A={$a}<br />\nB={$b}<br />\nADJ={$a}{$b}<br />\nNEST={{$a}b}<br />\nM=MID<br />\nUPPER={$MARKER}<br />\nZERO={$z}<br />\nDOT={$a.b}<br />\nCOL={$a:b}</p>",
+  "html_sha256": "9832fad6346d963989cf97dcc1b67096cfd4f1efdd8159145898c1eeafba5c0a",
+  "source": "[[include muse-probe-audit-g14b-target | marker=  MID  ]]",
+  "source_sha256": "1271ad2c7edc057eb57e7e9e4fea79925782cff40cb4fd45e895419e5413bc97",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

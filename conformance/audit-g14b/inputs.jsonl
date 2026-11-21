@@ -1,0 +1,35 @@
+{"id": "target", "source": "A is {$a}.\nB is {$b}.\nM is {$marker}.\nTARGET-END"}
+{"id": "e1-forward", "source": "[[include muse-probe-g14b-target | a=HELLO | marker={$a}]]"}
+{"id": "e2-backward", "source": "[[include muse-probe-g14b-target | marker={$a} | a=LATE]]"}
+{"id": "e3-key-expr", "source": "[[include muse-probe-g14b-target | k=marker | {$k}=KEYVAL]]"}
+{"id": "e4-self", "source": "[[include muse-probe-g14b-target | marker={$marker}]]"}
+{"id": "e5-cycle", "source": "[[include muse-probe-g14b-target | a={$b} | b={$a} | marker={$a}]]"}
+{"id": "e6-undef", "source": "[[include muse-probe-g14b-target | marker={$nope}]]"}
+{"id": "e7-chain", "source": "[[include muse-probe-g14b-target | a={$b} | b={$c} | c=DEEP | marker={$a}]]"}
+{"id": "e8-empty", "source": "[[include muse-probe-g14b-target | marker=]]"}
+{"id": "e9-dup", "source": "[[include muse-probe-g14b-target | marker=FIRST | marker=SECOND]]"}
+{"id": "e10-mixed", "source": "[[include muse-probe-g14b-target | a=X | marker=pre-{$a}-post]]"}
+{"id": "e11-double", "source": "[[include muse-probe-g14b-target | a=X | marker={$a}{$a}]]"}
+{"id": "e12-late-ref", "source": "[[include muse-probe-g14b-target | b=B | marker={$b}]]"}
+{"id": "e13-empty-then-second", "source": "[[include muse-probe-g14b-target | marker= | marker=SECOND]]"}
+{"id": "e14-self-then-second", "source": "[[include muse-probe-g14b-target | marker={$marker}X | marker=SECOND]]"}
+{"id": "synth-adj", "source": "[[include muse-probe-audit-g14b-target | a={$ | b=marker} | marker=BOOM]]"}
+{"id": "synth-nest", "source": "[[include muse-probe-audit-g14b-target | a=$ | b=BOOM]]"}
+{"id": "val-zero-dup", "source": "[[include muse-probe-audit-g14b-target | z=0 | z=FALLBACK]]"}
+{"id": "val-zero-only", "source": "[[include muse-probe-audit-g14b-target | z=0]]"}
+{"id": "cmt-pipe", "source": "[[include muse-probe-audit-g14b-target | marker=[!-- a|b --]HELLO]]"}
+{"id": "cmt-val-only", "source": "[[include muse-probe-audit-g14b-target | marker=[!-- c --] | marker=FALLBACK]]"}
+{"id": "cmt-before-key", "source": "[[include muse-probe-audit-g14b-target | [!-- c --] marker=HELLO]]"}
+{"id": "cmt-before-eq", "source": "[[include muse-probe-audit-g14b-target | marker [!-- c --] = HELLO]]"}
+{"id": "cmt-unclosed", "source": "[[include muse-probe-audit-g14b-target | marker=[!-- unclosed]]"}
+{"id": "case-both", "source": "[[include muse-probe-audit-g14b-target | marker=LOWER | MARKER=UPPERVAL]]"}
+{"id": "case-upper-only", "source": "[[include muse-probe-audit-g14b-target | MARKER=ONLYUPPER]]"}
+{"id": "backref", "source": "[[include muse-probe-audit-g14b-target | marker=$0\\1\\\\$1]]"}
+{"id": "key-dot", "source": "[[include muse-probe-audit-g14b-target | a.b=DOTVAL]]"}
+{"id": "key-colon", "source": "[[include muse-probe-audit-g14b-target | a:b=COLVAL]]"}
+{"id": "val-eq", "source": "[[include muse-probe-audit-g14b-target | marker=x=y=z]]"}
+{"id": "no-pipe", "source": "[[include muse-probe-audit-g14b-target marker=NOPIPE]]"}
+{"id": "no-pipe-nl", "source": "[[include muse-probe-audit-g14b-target\nmarker=NOPIPE]]"}
+{"id": "ws-only-dup", "source": "[[include muse-probe-audit-g14b-target | marker=   | marker=AFTERWS]]"}
+{"id": "dup-empty-second", "source": "[[include muse-probe-audit-g14b-target | marker=FIRST | marker=]]"}
+{"id": "val-trim-edges", "source": "[[include muse-probe-audit-g14b-target | marker=  MID  ]]"}

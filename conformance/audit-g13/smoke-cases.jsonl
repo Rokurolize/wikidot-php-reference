@@ -1,0 +1,9 @@
+{"id": "code", "source": "[[code]]\n$x = 1;\n[[/code]]\n"}
+{"id": "collapsible", "source": "[[collapsible]]\nhidden body\n[[/collapsible]]\n"}
+{"id": "div", "source": "[[div class=\"x\"]]\ninside div\n[[/div]]\n"}
+{"id": "footnote", "source": "Text with a note[[footnote]]the note text[[/footnote]] here.\n\n[[footnoteblock]]\n"}
+{"id": "include", "source": "Before\n[[include muse-probe-g14-target]]\nAfter\n"}
+{"id": "link", "source": "A [[[some-page|link text]]] and [[[missing-page]]] here.\n"}
+{"id": "math", "source": "Math $x^2$ inline and:\n[[math]]\nx^2 + y^2\n[[/math]]\n"}
+{"id": "quote", "source": "> quoted line\n> more quote\n"}
+{"id": "table", "source": "||~ cell1 ||~ cell2 ||\n|| a || b ||\n"}

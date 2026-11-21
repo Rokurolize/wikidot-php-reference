@@ -1,0 +1,30 @@
+{"id":"double","output":"C5DOUBLE-START\n\n\n[[div class=\"error-block\"]]\nIncluded page \"page\" does not exist ([\/page\/edit\/true create it now])\n[[\/div]]\n\n\nC5DOUBLE-END"}
+{"id":"single","output":"C5SINGLE-START\n\n\n[[div class=\"error-block\"]]\nIncluded page \"foo\" does not exist ([\/foo\/edit\/true create it now])\n[[\/div]]\n\n\nC5SINGLE-END"}
+{"id":"plain","output":"C5PLAIN-START\n\n\n[[div class=\"error-block\"]]\nIncluded page \"page\" does not exist ([\/page\/edit\/true create it now])\n[[\/div]]\n\n\nC5PLAIN-END"}
+{"id":"site-empty","output":"C1-START\n\n\n\n[[div class=\"error-block\"]]\nIncluded page \"site\" does not exist ([\/site\/edit\/true create it now])\n[[\/div]]\n\n\n\nC1-END"}
+{"id":"triple","output":"C2-START\n\n\n\n[[div class=\"error-block\"]]\nIncluded page \"page\" does not exist ([\/page\/edit\/true create it now])\n[[\/div]]\n\n\n\nC2-END"}
+{"id":"site-mid","output":"C3-START\n\n\n\n[[div class=\"error-block\"]]\nIncluded page \"bar\" does not exist ([https:\/\/foo.wikidot.com\/bar\/edit\/true create it now])\n[[\/div]]\n\n\n\nC3-END"}
+{"id":"host-slash","output":"D1-START\n\n[[include :scp-wiki:\/]]\n\nD1-END"}
+{"id":"host-dotted","output":"D2-START\n\n[[include :scp-jp.wikidot.com:]]\n\nD2-END"}
+{"id":"bare-colons","output":"D3-START\n\n\n\n[[div class=\"error-block\"]]\nIncluded page \"\" does not exist ([\/\/edit\/true create it now])\n[[\/div]]\n\n\n\nD3-END"}
+{"id":"dot-plain","output":"E1-START\n\n[[include some.page]]\n\nE1-END"}
+{"id":"slash-plain","output":"E2-START\n\n[[include a\/b]]\n\nE2-END"}
+{"id":"colon-dot","output":"E3-START\n\n[[include :foo.bar]]\n\nE3-END"}
+{"id":"colon-slash","output":"E4-START\n\n[[include :foo\/bar]]\n\nE4-END"}
+{"id":"colon-underscore","output":"E5-START\n\n\n\n[[div class=\"error-block\"]]\nIncluded page \"foo-bar\" does not exist ([\/foo-bar\/edit\/true create it now])\n[[\/div]]\n\n\n\nE5-END"}
+{"id":"single-colon","output":"E6-START\n\n\n\n[[div class=\"error-block\"]]\nIncluded page \"\" does not exist ([\/\/edit\/true create it now])\n[[\/div]]\n\n\n\nE6-END"}
+{"id":"dashes","output":"F1-START\n\n\n\n[[div class=\"error-block\"]]\nIncluded page \"\" does not exist ([\/\/edit\/true create it now])\n[[\/div]]\n\n\n\nF1-END"}
+{"id":"colon-dash","output":"F2-START\n\n\n\n[[div class=\"error-block\"]]\nIncluded page \"\" does not exist ([\/\/edit\/true create it now])\n[[\/div]]\n\n\n\nF2-END"}
+{"id":"plus-head","output":"F3-START\n\n[[include +foo]]\n\nF3-END"}
+{"id":"tilde-mid","output":"F4-START\n\n[[include foo~bar]]\n\nF4-END"}
+{"id":"underscore-ctl","output":"F5-START\n\n\n\n[[div class=\"error-block\"]]\nIncluded page \"_template\" does not exist ([\/_template\/edit\/true create it now])\n[[\/div]]\n\n\n\nF5-END"}
+{"id":"host-pair","output":"G1-START\n\n\n\n[[div class=\"error-block\"]]\nIncluded page \"other-page\" does not exist ([https:\/\/scp-jp.wikidot.com\/other-page\/edit\/true create it now])\n[[\/div]]\n\n\n\nG1-END"}
+{"id":"host-pair-slugctl","output":"G2-START\n\n\n\nSITE-PAGE-CONTENT\n\n\n\nG2-END"}
+{"id":"hash-extra","output":"H1-START\n\n[[include other-page#frag]]\n\nH1-END"}
+{"id":"slash-extra","output":"H2-START\n\n[[include other-page\/extra]]\n\nH2-END"}
+{"id":"pair-hash","output":"I1-START\n\n[[include :foo:bar#frag]]\n\nI1-END"}
+{"id":"pair-slash","output":"I2-START\n\n[[include :foo:bar\/extra]]\n\nI2-END"}
+{"id":"pair-hash-self","output":"I3-START\n\n[[include :sandbox-for-codex:other-page#frag]]\n\nI3-END"}
+{"id":"jp-plain","output":"J1-START\n\n[[include \u30da\u30fc\u30b8]]\n\nJ1-END"}
+{"id":"accent-plain","output":"J2-START\n\n[[include caf\u00e9]]\n\nJ2-END"}
+{"id":"jp-mixed","output":"J3-START\n\n[[include \u30c6\u30b9\u30c8page]]\n\nJ3-END"}

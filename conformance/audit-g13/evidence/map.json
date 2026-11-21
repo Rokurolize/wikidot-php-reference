@@ -1,0 +1,122 @@
+{
+ "site-dashes": {
+  "fullname": "muse-probe-audit-g13-site-dashes",
+  "source": "[[include :---:muse-probe-audit-g13-target]]",
+  "action": "created"
+ },
+ "site-dashes-missing": {
+  "fullname": "muse-probe-audit-g13-site-dashes-missing",
+  "source": "[[include :---:nonexistent-page-xyz]]",
+  "action": "created"
+ },
+ "site-dash-host": {
+  "fullname": "muse-probe-audit-g13-site-dash-host",
+  "source": "[[include :-.wikidot.com:muse-probe-audit-g13-target]]",
+  "action": "created"
+ },
+ "site-slash": {
+  "fullname": "muse-probe-audit-g13-site-slash",
+  "source": "[[include :foo/bar:other-page]]",
+  "action": "created"
+ },
+ "site-hash": {
+  "fullname": "muse-probe-audit-g13-site-hash",
+  "source": "[[include :foo#bar:other-page]]",
+  "action": "created"
+ },
+ "site-dot": {
+  "fullname": "muse-probe-audit-g13-site-dot",
+  "source": "[[include :a.b:other-page]]",
+  "action": "created"
+ },
+ "site-nonascii": {
+  "fullname": "muse-probe-audit-g13-site-nonascii",
+  "source": "[[include :caf\u00e9:other-page]]",
+  "action": "created"
+ },
+ "site-empty-page-norm": {
+  "fullname": "muse-probe-audit-g13-site-empty-page-norm",
+  "source": "[[include :sandbox-for-codex:---]]",
+  "action": "created"
+ },
+ "site-same-control": {
+  "fullname": "muse-probe-audit-g13-site-same-control",
+  "source": "[[include :sandbox-for-codex:muse-probe-audit-g13-target]]",
+  "action": "created"
+ },
+ "f1-bad-next-good": {
+  "fullname": "muse-probe-audit-g13-f1-bad-next-good",
+  "source": "[[include bad.page\n[[include muse-probe-audit-g13-target | marker=SURVIVED]]",
+  "action": "created"
+ },
+ "f1-unclosed-arg-next": {
+  "fullname": "muse-probe-audit-g13-f1-unclosed-arg-next",
+  "source": "[[include muse-probe-audit-g13-target | x=1\n[[include muse-probe-audit-g13-target | marker=SECOND]]",
+  "action": "created"
+ },
+ "f1-unclosed-cmt-next": {
+  "fullname": "muse-probe-audit-g13-f1-unclosed-cmt-next",
+  "source": "[[include muse-probe-audit-g13-target | a=[!-- unclosed\n[[include muse-probe-audit-g13-target | marker=AFTERCMT]]",
+  "action": "created"
+ },
+ "f1-cmt-closer": {
+  "fullname": "muse-probe-audit-g13-f1-cmt-closer",
+  "source": "[[include muse-probe-audit-g13-target | a=[!-- ]]\n--] | marker=CMTCLOSE]]",
+  "action": "created"
+ },
+ "stray-2sp": {
+  "fullname": "muse-probe-audit-g13-stray-2sp",
+  "source": "[[include muse-probe-audit-g13-target [[  | marker=TWOSP]]",
+  "action": "created"
+ },
+ "stray-tab": {
+  "fullname": "muse-probe-audit-g13-stray-tab",
+  "source": "[[include muse-probe-audit-g13-target [[\t| marker=TAB]]",
+  "action": "created"
+ },
+ "stray-cmt": {
+  "fullname": "muse-probe-audit-g13-stray-cmt",
+  "source": "[[include muse-probe-audit-g13-target [[ [!-- c --] | marker=STRCMT]]",
+  "action": "created"
+ },
+ "stray-fused-cmt": {
+  "fullname": "muse-probe-audit-g13-stray-fused-cmt",
+  "source": "[[include muse-probe-audit-g13-target [[[!-- | marker=LEAKED --] | marker=REAL]]",
+  "action": "created"
+ },
+ "close-trail-sp": {
+  "fullname": "muse-probe-audit-g13-close-trail-sp",
+  "source": "[[include muse-probe-audit-g13-target | marker=SP]]   \nAFTER",
+  "action": "created"
+ },
+ "close-trail-text": {
+  "fullname": "muse-probe-audit-g13-close-trail-text",
+  "source": "[[include muse-probe-audit-g13-target]] AFTER",
+  "action": "created"
+ },
+ "close-midline": {
+  "fullname": "muse-probe-audit-g13-close-midline",
+  "source": "BEFORE [[include muse-probe-audit-g13-target]]",
+  "action": "created"
+ },
+ "leading-sp": {
+  "fullname": "muse-probe-audit-g13-leading-sp",
+  "source": "TOP\n [[include muse-probe-audit-g13-target]]",
+  "action": "created"
+ },
+ "tight-pipe": {
+  "fullname": "muse-probe-audit-g13-tight-pipe",
+  "source": "[[include muse-probe-audit-g13-target|marker=TIGHT]]",
+  "action": "created"
+ },
+ "ref-tab": {
+  "fullname": "muse-probe-audit-g13-ref-tab",
+  "source": "[[include\tmuse-probe-audit-g13-target]]",
+  "action": "created"
+ },
+ "inside-code": {
+  "fullname": "muse-probe-audit-g13-inside-code",
+  "source": "[[code]]\n[[include muse-probe-audit-g13-target | marker=INCODE]]\n[[/code]]",
+  "action": "created"
+ }
+}

@@ -1,0 +1,20 @@
+{"id": "synth-adj", "output": "A={$\nB=marker}\nADJ=BOOM\nNEST={marker}\nM=BOOM\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "synth-nest", "output": "A=$\nB=BOOM\nADJ=$BOOM\nNEST=BOOM\nM={$marker}\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "val-zero-dup", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO=0\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "val-zero-only", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO=0\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "cmt-pipe", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=[!-- a|b --]HELLO\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "cmt-val-only", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=[!-- c --]\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "cmt-before-key", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "cmt-before-eq", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "cmt-unclosed", "output": "[[include muse-probe-audit-g14b-target | marker=[!-- unclosed]]", "pages": []}
+{"id": "case-both", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=LOWER\nUPPER=UPPERVAL\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "case-upper-only", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER=ONLYUPPER\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "backref", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=$0\\1\\\\$1\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "key-dot", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "key-colon", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM={$marker}\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "val-eq", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=x=y=z\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "no-pipe", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=NOPIPE\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "no-pipe-nl", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=NOPIPE\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "ws-only-dup", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=AFTERWS\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "dup-empty-second", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=FIRST\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}
+{"id": "val-trim-edges", "output": "A={$a}\nB={$b}\nADJ={$a}{$b}\nNEST={{$a}b}\nM=MID\nUPPER={$MARKER}\nZERO={$z}\nDOT={$a.b}\nCOL={$a:b}", "pages": ["muse-probe-audit-g14b-target"]}

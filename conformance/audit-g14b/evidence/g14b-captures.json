@@ -1,0 +1,122 @@
+{
+ "target": {
+  "fullname": "muse-probe-g14b-target",
+  "html": "<p>A is {$a}.<br />\nB is {$b}.<br />\nM is {$marker}.<br />\nTARGET-END</p>",
+  "html_sha256": "d9c1176cb8f914d105d22fa3ab2470fde187ade9e4687facd3d8f36a7d402bfe",
+  "source": "A is {$a}.\nB is {$b}.\nM is {$marker}.\nTARGET-END",
+  "source_sha256": "c0c9a6f802cff3a8dddd8a804f2d73fdeae7c2acbed56500e7730060f456e4ee",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e1-forward": {
+  "fullname": "muse-probe-g14b-e1-forward",
+  "html": "<p>A is HELLO.<br />\nB is {$b}.<br />\nM is {$a}.<br />\nTARGET-END</p>",
+  "html_sha256": "969f27c40911833138080a01a55514468f1ecafabf31003c2be4bcd6b736ffa5",
+  "source": "[[include muse-probe-g14b-target | a=HELLO | marker={$a}]]",
+  "source_sha256": "5486707606d796c5e5fbf9a76a29d630f66b534411b0aeb5d75f963ab0656149",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e2-backward": {
+  "fullname": "muse-probe-g14b-e2-backward",
+  "html": "<p>A is LATE.<br />\nB is {$b}.<br />\nM is LATE.<br />\nTARGET-END</p>",
+  "html_sha256": "36292b76de0701a36088dcc252aeaf9bfbae1dcdd8f8cb5bb8648fe5f1970b1d",
+  "source": "[[include muse-probe-g14b-target | marker={$a} | a=LATE]]",
+  "source_sha256": "6d459b764ba3b4260606fda7415de5c3c00494daf3f843c39eb596a0b46516f5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e3-key-expr": {
+  "fullname": "muse-probe-g14b-e3-key-expr",
+  "html": "<p>A is {$a}.<br />\nB is {$b}.<br />\nM is {$marker}.<br />\nTARGET-END</p>",
+  "html_sha256": "d9c1176cb8f914d105d22fa3ab2470fde187ade9e4687facd3d8f36a7d402bfe",
+  "source": "[[include muse-probe-g14b-target | k=marker | {$k}=KEYVAL]]",
+  "source_sha256": "1502aa3daec8aa5151d189a380cef569d72f463cc1484b9d4802715b5d5f4c90",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e4-self": {
+  "fullname": "muse-probe-g14b-e4-self",
+  "html": "<p>A is {$a}.<br />\nB is {$b}.<br />\nM is {$marker}.<br />\nTARGET-END</p>",
+  "html_sha256": "d9c1176cb8f914d105d22fa3ab2470fde187ade9e4687facd3d8f36a7d402bfe",
+  "source": "[[include muse-probe-g14b-target | marker={$marker}]]",
+  "source_sha256": "ef8203e96ec10ed89c7a8426f3289dd5c52a3767e734d660862c07f5533abfdd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e5-cycle": {
+  "fullname": "muse-probe-g14b-e5-cycle",
+  "html": "<p>A is {$a}.<br />\nB is {$a}.<br />\nM is {$a}.<br />\nTARGET-END</p>",
+  "html_sha256": "feb334732cf4b44c6098ef719aa52448509fe332c4a8261dfd5a23d8c59db56e",
+  "source": "[[include muse-probe-g14b-target | a={$b} | b={$a} | marker={$a}]]",
+  "source_sha256": "e862758602c10d15203893d86b61393d540ec211925c4beab0d8f324963c4f39",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e6-undef": {
+  "fullname": "muse-probe-g14b-e6-undef",
+  "html": "<p>A is {$a}.<br />\nB is {$b}.<br />\nM is {$nope}.<br />\nTARGET-END</p>",
+  "html_sha256": "0d3c24a6b409bd38ae918d2844f91fbcd6832fb486bc701610143142806e104d",
+  "source": "[[include muse-probe-g14b-target | marker={$nope}]]",
+  "source_sha256": "a7ac594ec1f0553095964cfe746f2b57b65204403307f8e0f875be9e08edb103",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e7-chain": {
+  "fullname": "muse-probe-g14b-e7-chain",
+  "html": "<p>A is DEEP.<br />\nB is DEEP.<br />\nM is {$a}.<br />\nTARGET-END</p>",
+  "html_sha256": "3a30b89b5914f97339df49532e2043a55f74422f612679a8b99c3a9e2022298b",
+  "source": "[[include muse-probe-g14b-target | a={$b} | b={$c} | c=DEEP | marker={$a}]]",
+  "source_sha256": "44bcb9e563e633c835e54c1e7bdcaa116308002025952c6140cbaba822da1d9a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e8-empty": {
+  "fullname": "muse-probe-g14b-e8-empty",
+  "html": "<p>A is {$a}.<br />\nB is {$b}.<br />\nM is {$marker}.<br />\nTARGET-END</p>",
+  "html_sha256": "d9c1176cb8f914d105d22fa3ab2470fde187ade9e4687facd3d8f36a7d402bfe",
+  "source": "[[include muse-probe-g14b-target | marker=]]",
+  "source_sha256": "fc4200623a5af347436628bf49e45829d51ed5d55591d502042b2dcf1b81d191",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e9-dup": {
+  "fullname": "muse-probe-g14b-e9-dup",
+  "html": "<p>A is {$a}.<br />\nB is {$b}.<br />\nM is FIRST.<br />\nTARGET-END</p>",
+  "html_sha256": "f939efba9f9b1fa13b550e8d43dc63ae113e03bd1732adc16e2a4c37ded18e62",
+  "source": "[[include muse-probe-g14b-target | marker=FIRST | marker=SECOND]]",
+  "source_sha256": "f441d6aee6c5a7912148481c87f645fc096c73cfc48d4f607e2e1d7accfcb51a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e10-mixed": {
+  "fullname": "muse-probe-g14b-e10-mixed",
+  "html": "<p>A is X.<br />\nB is {$b}.<br />\nM is pre-{$a}-post.<br />\nTARGET-END</p>",
+  "html_sha256": "44bac5ab2606fb63f85edda50292d8fecd46fc25b3e634fc38be26caafce3524",
+  "source": "[[include muse-probe-g14b-target | a=X | marker=pre-{$a}-post]]",
+  "source_sha256": "4ddd9aa715a9071cbd2b1ed0a41fc2c1b54254f45610358da979e08f6306ee13",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "e11-double": {
+  "fullname": "muse-probe-g14b-e11-double",
+  "html": "<p>A is X.<br />\nB is {$b}.<br />\nM is {$a}{$a}.<br />\nTARGET-END</p>",
+  "html_sha256": "6797b6b7144497f417429c4777e2fd8e3f5640fe47029b59c14a858c918e2660",
+  "source": "[[include muse-probe-g14b-target | a=X | marker={$a}{$a}]]",
+  "source_sha256": "5ced0ae3a5c19baedc322d28c7d107412e20b2571a2725ff437e42e20d28292e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

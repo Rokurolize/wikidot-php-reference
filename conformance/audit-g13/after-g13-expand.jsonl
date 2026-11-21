@@ -1,0 +1,26 @@
+{"id":"site-dashes","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"muse-probe-audit-g13-target\" does not exist ([https:\/\/---.wikidot.com\/muse-probe-audit-g13-target\/edit\/true create it now])\n[[\/div]]\n\n"}
+{"id":"site-dashes-missing","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"nonexistent-page-xyz\" does not exist ([https:\/\/---.wikidot.com\/nonexistent-page-xyz\/edit\/true create it now])\n[[\/div]]\n\n"}
+{"id":"site-dash-host","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"muse-probe-audit-g13-target\" does not exist ([https:\/\/-.wikidot.com\/muse-probe-audit-g13-target\/edit\/true create it now])\n[[\/div]]\n\n"}
+{"id":"site-slash","output":"[[include :foo\/bar:other-page]]"}
+{"id":"site-hash","output":"[[include :foo#bar:other-page]]"}
+{"id":"site-dot","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"other-page\" does not exist ([https:\/\/a.b.wikidot.com\/other-page\/edit\/true create it now])\n[[\/div]]\n\n"}
+{"id":"site-nonascii","output":"[[include :caf\u00e9:other-page]]"}
+{"id":"site-empty-page-norm","output":"\n\n[[div class=\"error-block\"]]\nIncluded page \"\" does not exist ([https:\/\/sandbox-for-codex.wikidot.com\/\/edit\/true create it now])\n[[\/div]]\n\n"}
+{"id":"site-same-control","output":"\n\nTARGET-OK-{$marker}\n\n"}
+{"id":"f1-bad-next-good","output":"[[include bad.page\n\n\nTARGET-OK-SURVIVED\n\n"}
+{"id":"f1-unclosed-arg-next","output":"\n\nTARGET-OK-SECOND\n\n"}
+{"id":"f1-unclosed-cmt-next","output":"\n\nTARGET-OK-AFTERCMT\n\n"}
+{"id":"f1-cmt-closer","output":"\n\nTARGET-OK-{$marker}\n\n\n--] | marker=CMTCLOSE]]"}
+{"id":"stray-2sp","output":"\n\nTARGET-OK-TWOSP\n\n"}
+{"id":"stray-tab","output":"\n\nTARGET-OK-TAB\n\n"}
+{"id":"stray-cmt","output":"\n\nTARGET-OK-STRCMT\n\n"}
+{"id":"stray-fused-cmt","output":"\n\nTARGET-OK-LEAKED --]\n\n"}
+{"id":"close-trail-sp","output":"[[include muse-probe-audit-g13-target | marker=SP]]   \nAFTER"}
+{"id":"close-trail-text","output":"[[include muse-probe-audit-g13-target]] AFTER"}
+{"id":"close-midline","output":"BEFORE [[include muse-probe-audit-g13-target]]"}
+{"id":"leading-sp","output":"TOP\n [[include muse-probe-audit-g13-target]]"}
+{"id":"tight-pipe","output":"[[include muse-probe-audit-g13-target|marker=TIGHT]]"}
+{"id":"ref-tab","output":"\n\nTARGET-OK-{$marker}\n\n"}
+{"id":"inside-code","output":"[[code]]\n\n\nTARGET-OK-INCODE\n\n\n[[\/code]]"}
+{"id":"quoted-tight-bare","output":">[[include muse-probe-g14-target]]"}
+{"id":"quoted-tight-in-code","output":"[[code]]\n>[[include muse-probe-g14-target]]\n[[\/code]]"}

@@ -1,0 +1,22 @@
+{
+ "site-underscore": {
+  "fullname": "muse-probe-g13fix-site-underscore",
+  "html": "<div class=\"error-block\">\n<p>Included page &quot;foo-bar:muse-probe-audit-g13-target&quot; does not exist (<a href=\"/foo-bar:muse-probe-audit-g13-target/edit/true\">create it now</a>)</p>\n</div>",
+  "html_sha256": "20de531374a5a226e4f05f3689d69b018acf92183ed7507eb500095f361908ab",
+  "source": "[[include :foo_bar:muse-probe-audit-g13-target]]",
+  "source_sha256": "45d2f9ff76d5e4fd776699573453ff14e4194d7a9031fb41b5dfe82fa6289e4a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "site-upper": {
+  "fullname": "muse-probe-g13fix-site-upper",
+  "html": "<div class=\"error-block\">\n<p>Site FOO cannot be found.</p>\n</div>",
+  "html_sha256": "718de001d5f93be7fe5ce0394df9f54a4a052067dd6fe7ab599863fec0270d16",
+  "source": "[[include :FOO:muse-probe-audit-g13-target]]",
+  "source_sha256": "039e4a4dd053c8655733686e36d33c427cce94afeab6103d132cc3101ee9a003",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
