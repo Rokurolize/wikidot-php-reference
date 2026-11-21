@@ -48,7 +48,13 @@ class Text_Wiki_Parse_Center extends Text_Wiki_Parse {
      * 
      */
     
-    public $regex = '/\n\= (.*?)\n/';
+    // REFVAL CORRECTION (2026-11-21): live Wikidot matches consecutive
+    // `= ` lines (probes muse-probe-refval-center-p10, p11), whereas the
+    // fossil `/\n\= (.*?)\n/` consumed the trailing newline and skipped
+    // the second consecutive centered line. Use a line-anchored pattern
+    // without consuming the bounding newlines, and trim leading/trailing
+    // horizontal spaces inside the centered paragraph (p08).
+    public $regex = '/^= (.*)$/m';
 
     /**
      * 
@@ -70,6 +76,6 @@ class Text_Wiki_Parse_Center extends Text_Wiki_Parse {
         $end = $this->wiki->addToken($this->rule, array(
             'type' => 'end'));
         
-        return "\n\n" . $start . $matches[1] . $end . "\n\n";
+        return "\n\n" . $start . trim($matches[1]) . $end . "\n\n";
     }
 }

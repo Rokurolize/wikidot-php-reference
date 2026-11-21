@@ -1,0 +1,202 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refval-embed-p01",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+  "source": "[[embed]]body[[/embed]]",
+  "source_sha256": "ce5fe67269d7f72483d1844c46881ae8bbfd4413c9ff3a8139fdc67a203d26d3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-embed-p02",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+  "source": "[[embedvideo]]body[[/embedvideo]]",
+  "source_sha256": "56185a47261bd9c6b273d2e5d17e32b7595c766191cdb5ed271fd5a56873211e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-embed-p03",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+  "source": "[[embedaudio]]body[[/embedaudio]]",
+  "source_sha256": "04903edcbc734de8fda17d6b9d9355d5f15def38defdc363fbb5e563def6c04a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-embed-p04",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+  "source": "[[embedvideo]]body[[/embed]]",
+  "source_sha256": "c712c0e54eb5279b77e2c6affde60c6d3ffc4beac988dae9efb33acdec8221be",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-embed-p05",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+  "source": "[[embed]]body[[/embedvideo]]",
+  "source_sha256": "f71cc01867cefb90104b07807fd196cb9e69f2f3cb9c35daae663229032bddd1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-embed-p06",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>\n<br />\n<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "17ccb1b824551a0c94b4b1e8db82d6202ad4aa04b4b92f701feb6e25370db6da",
+  "source": "[[EMBED]]x[[/EMBED]]\n[[EmbedVideo]]x[[/EmbedAudio]]",
+  "source_sha256": "bf552ae4dc3092ee08a7eb90455799cd589f3baf747755f37a8a06917d0e1f05",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-embed-p07",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>\n<br />\n<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "17ccb1b824551a0c94b4b1e8db82d6202ad4aa04b4b92f701feb6e25370db6da",
+  "source": "[[embed]][[/embed]]\n[[embed]] [[/embed]]",
+  "source_sha256": "96a6dd45c4df728f8b7701fa9c81cfc87c5f2e8faa9370e839761f94107ef47e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-embed-p08",
+  "html": "<p>[[embed]]unclosed</p>",
+  "html_sha256": "e3a039a7246f62a00088811fea84e2a9e686249cd8e888288cae27b7f5991251",
+  "source": "[[embed]]unclosed",
+  "source_sha256": "8a71919c2e85d2ab304b3e8911f665f5adc698d2db67d5ad191dc6036a5db14b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-embed-p09",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>\nb[[/embed]]",
+  "html_sha256": "7be920d1a34c95280c6916d2429a687e34792e8ddfb2f6f051621b27991dda32",
+  "source": "[[embed]]a[[/embed]]b[[/embed]]",
+  "source_sha256": "206a43a649c228259ecb66ef204f83d0c5e5ecada59a9792b6fac72e0fee5eaa",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-embed-p10",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+  "source": "[[embed]][[embed]]x[[/embed]]",
+  "source_sha256": "2c931c984357ea46d26350e1d0e92c8333da707724ecd0703f5bb7c38788b2dc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-embed-p11",
+  "html": "<p>[[embed ]]x[[/embed]]<br />\n[[embed]]x[[/embed ]]</p>",
+  "html_sha256": "33c0a151718fb121bdfce130b1620cbaa2df850fad692dc7f26029c9565cc829",
+  "source": "[[embed ]]x[[/embed]]\n[[embed]]x[[/embed ]]",
+  "source_sha256": "200680bc8db0f76cc3666fc0ff9dd2819033f586cb3eaa7ca5bbe1e520a577c3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-embed-p12",
+  "html": "<p><iframe src=\"http://example.com\" width=\"400\" height=\"300\"></iframe></p>",
+  "html_sha256": "301af8ccfbae5ec6904393360309463d6797146618186efe97b83c064a2e25ed",
+  "source": "[[embed]]\n<iframe src=\"http://example.com\" width=\"400\" height=\"300\"></iframe>\n[[/embed]]",
+  "source_sha256": "b204c3b8269d416d57a9b833f13a467cf0cc06c89237357c0afcae5060dae432",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-embed-p13",
+  "html": "<p><iframe src=\"https://example.com\" width=\"400\" height=\"300\"></iframe></p>",
+  "html_sha256": "623c5e6ffcb50d98678a9927c4c6103a958a4592e06b94ca9f86efbc7e3820f8",
+  "source": "[[embed]]\n<iframe src=\"https://example.com\" width=\"400\" height=\"300\"></iframe>\n[[/embed]]",
+  "source_sha256": "c6f9c560a4a8d2a6543fb95506dce9b3d823a53444f851832413a280d0da0129",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-embed-p14",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+  "source": "[[embed]]\n<iframe src=\"http://example.com\" onclick=\"alert(1)\"></iframe>\n[[/embed]]",
+  "source_sha256": "7a203e3f8842f19e07665fd5b95b91466c5db7fd3baa2c2030b59111e7bd7937",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-embed-p15",
+  "html": "<p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" frameborder=\"0\"></iframe></p>",
+  "html_sha256": "8df1900ecf972e127ce4308f16b6e325fd1f922d90207318379d0816802c783a",
+  "source": "[[embedvideo]]\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" frameborder=\"0\"></iframe>\n[[/embedvideo]]",
+  "source_sha256": "bc8f0458f846dccc1d3d407f22f020e7dbad763d46f1fcea5bfca6c96873fe73",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-embed-p16",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+  "source": "[[embed]]<iframe src=\"http://example.com\">fallback</iframe>[[/embed]]",
+  "source_sha256": "1e151d117fbd26b993634c77d06a0fd4b5936ebd8c577ec62b47b92a24864a18",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-embed-p17",
+  "html": "",
+  "html_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source": "[[embed]]<iframe src=\"javascript:alert(1)\"></iframe>[[/embed]]",
+  "source_sha256": "7426f605636d1381b05b5971246cce8e8d1a586e86d5280762fa79aa51309bed",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-embed-p18",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+  "source": "[[embed]]<a href=\"http://example.com\">hi</a>[[/embed]]",
+  "source_sha256": "0196cd4a6062d1a7b31c99139d6847445a2656c6a8e07964715e427ad7e6b8ac",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-embed-p19",
+  "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+  "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+  "source": "[[embed]]**bold**[[/embed]]",
+  "source_sha256": "13e05501f2c7917467a5e6242a722f728fcd4822f5f6b0de93bd1ce0fdac1827",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-embed-p20",
+  "html": "<p>pre</p>\n<div class=\"error-block\">Sorry, no match for the embedded content.</div>\npost",
+  "html_sha256": "557218e9e22b87f6f16ee1ec6a761b763bdb22983849e2b48477d0fe270745a6",
+  "source": "pre [[embed]]hello[[/embed]] post",
+  "source_sha256": "1f69bd3d6efb3e593043c87a28ab20c1aa425c43c138a76f323617073350dad2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

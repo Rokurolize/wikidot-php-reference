@@ -1,0 +1,22 @@
+{"id": "p01", "source": "[[button edit]]"}
+{"id": "p02", "source": "[[button edit-append]]\n[[button edit-sections]]"}
+{"id": "p03", "source": "[[button history]]\n[[button print]]\n[[button files]]"}
+{"id": "p04", "source": "[[button tags]]\n[[button source]]\n[[button talk]]\n[[button backlinks]]"}
+{"id": "p05", "source": "[[button edit_append]]\n[[button edit_sections]]"}
+{"id": "p06", "source": "[[button set-tags]]\n[[button set-tags text=\"Tag It\" tags=\"+a -b\"]]"}
+{"id": "p07", "source": "[[button rename]]\n[[button delete]]\n[[button parent]]\n[[button lock]]"}
+{"id": "p08", "source": "[[button edit-meta]]\n[[button watchers]]\n[[button unknown-type]]"}
+{"id": "p09", "source": "[[button edit text=\"Edit Page\"]]"}
+{"id": "p10", "source": "[[button edit text=\"Edit\" class=\"my-btn\" style=\"color: red;\"]]"}
+{"id": "p11", "source": "[[button edit id=\"x\" data-foo=\"bar\" title=\"t\"]]"}
+{"id": "p12", "source": "[[button edit text=\"\"]]"}
+{"id": "p13", "source": "[[button edit text=\"a<b>c&d'e\"]]"}
+{"id": "p14", "source": "[[BUTTON edit]]\n[[button EDIT]]\n[[button Edit_Sections]]"}
+{"id": "p15", "source": "[[button edit ]]"}
+{"id": "p16", "source": "[[button edit  ]]"}
+{"id": "p17", "source": "[[button edit x]]"}
+{"id": "p18", "source": "[[button edit text='single']]"}
+{"id": "p19", "source": "[[button edit\ntext=\"newline\"]]"}
+{"id": "p20", "source": "[[button edit\ttext=\"tab\"]]"}
+{"id": "p21", "source": "[[button]]\n[[button ]]"}
+{"id": "p22", "source": "[[button edit text=\"a\" text=\"b\"]]"}

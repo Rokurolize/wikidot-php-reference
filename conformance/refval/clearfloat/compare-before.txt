@@ -1,0 +1,61 @@
+Total=18 exact=0 trim_eq=9 fnorm_eq=12 diffs=6
+TRIM_EQ   p01 (muse-probe-refval-clearfloat-p01)
+  REF : '<div style="clear:both; height: 0px; font-size: 1px"></div>\n'
+  LIVE: '<div style="clear:both; height: 0px; font-size: 1px"></div>'
+TRIM_EQ   p02 (muse-probe-refval-clearfloat-p02)
+  REF : '<div style="clear:right; height: 0px; font-size: 1px"></div>\n'
+  LIVE: '<div style="clear:right; height: 0px; font-size: 1px"></div>'
+TRIM_EQ   p03 (muse-probe-refval-clearfloat-p03)
+  REF : '<div style="clear:left; height: 0px; font-size: 1px"></div>\n'
+  LIVE: '<div style="clear:left; height: 0px; font-size: 1px"></div>'
+FNORM_EQ  p04 (muse-probe-refval-clearfloat-p04)
+  REF : '<p>x</p>\n\n<div style="clear:both; height: 0px; font-size: 1px"></div>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<div style="clear:both; height: 0px; font-size: 1px"></div>\n<p>y</p>'
+FNORM_EQ  p05 (muse-probe-refval-clearfloat-p05)
+  REF : '<p>x</p>\n\n<div style="clear:right; height: 0px; font-size: 1px"></div>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<div style="clear:right; height: 0px; font-size: 1px"></div>\n<p>y</p>'
+FNORM_EQ  p06 (muse-probe-refval-clearfloat-p06)
+  REF : '<p>x</p>\n\n<div style="clear:left; height: 0px; font-size: 1px"></div>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<div style="clear:left; height: 0px; font-size: 1px"></div>\n<p>y</p>'
+TRIM_EQ   p07 (muse-probe-refval-clearfloat-p07)
+  REF : '<div style="clear:right; height: 0px; font-size: 1px"></div>\n<div style="clear:left; height: 0px; font-size: 1px"></div>\n<div style="clear:both; height: 0px; font-size: 1px"></div>\n'
+  LIVE: '<div style="clear:right; height: 0px; font-size: 1px"></div>\n<div style="clear:left; height: 0px; font-size: 1px"></div>\n<div style="clear:both; height: 0px; font-size: 1px"></div>'
+TRIM_EQ   p08 (muse-probe-refval-clearfloat-p08)
+  REF : '<p>x<br />\n~~~<br />\n~~<br />\n~<br />\ny</p>\n\n'
+  LIVE: '<p>x<br />\n~~~<br />\n~~<br />\n~<br />\ny</p>'
+TRIM_EQ   p09 (muse-probe-refval-clearfloat-p09)
+  REF : '<p>x<br />\n~~~~&#187;<br />\n~~~~&gt;&lt;<br />\n~~~~&gt;x<br />\ny</p>\n\n'
+  LIVE: '<p>x<br />\n~~~~&#187;<br />\n~~~~&gt;&lt;<br />\n~~~~&gt;x<br />\ny</p>'
+TRIM_EQ   p10 (muse-probe-refval-clearfloat-p10)
+  REF : '<p>x<br />\n~~~~ &gt;<br />\n~~~~&gt;<br />\n~~~~<br />\n~~~~<br />\ny</p>\n\n'
+  LIVE: '<p>x<br />\n~~~~ &gt;<br />\n~~~~&gt;<br />\n~~~~<br />\n~~~~<br />\ny</p>'
+TRIM_EQ   p11 (muse-probe-refval-clearfloat-p11)
+  REF : '<div style="clear:both; height: 0px; font-size: 1px"></div>\n<div style="clear:left; height: 0px; font-size: 1px"></div>\n'
+  LIVE: '<div style="clear:both; height: 0px; font-size: 1px"></div>\n<div style="clear:left; height: 0px; font-size: 1px"></div>'
+TRIM_EQ   p12 (muse-probe-refval-clearfloat-p12)
+  REF : '<div style="clear:right; height: 0px; font-size: 1px"></div>\n<div style="clear:both; height: 0px; font-size: 1px"></div>\n'
+  LIVE: '<div style="clear:right; height: 0px; font-size: 1px"></div>\n<div style="clear:both; height: 0px; font-size: 1px"></div>'
+DIFF      p13 (muse-probe-refval-clearfloat-p13)
+  SRC : '[[toc]]~~~~\n\n+ A'
+  REF : '<table style="margin:0; padding:0"><tr><td style="margin:0; padding:0"><div id="toc"><div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Fold</a><a style="display: none" href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)">Unfold</a></div><div class="title">Table of Contents</div><div id="toc-list">\n\t<div style="margin-left: 1em;"><a href="#toc0">A</a></div>\n</div></div></td></tr></table>\n\n<div style="clear:both; height: 0px; font-size: 1px"></div>\n\n<h1 id="toc0"><span>A</span></h1>\n'
+  LIVE: '<table style="margin:0; padding:0">\n<tr>\n<td style="margin:0; padding:0">\n<div id="toc">\n<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Fold</a><a style="display: none" href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)">Unfold</a></div>\n<div class="title">Table of Contents</div>\n<div id="toc-list">\n<div style="margin-left: 1em;"><a href="#toc0">A</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<div style="clear:both; height: 0px; font-size: 1px"></div>\n<h1 id="toc0"><span>A</span></h1>'
+DIFF      p14 (muse-probe-refval-clearfloat-p14)
+  SRC : '[[div]]\n~~~~>\n[[/div]]'
+  REF : '<div ><div style="clear:right; height: 0px; font-size: 1px"></div>\n</div>'
+  LIVE: '<div>\n<div style="clear:right; height: 0px; font-size: 1px"></div>\n</div>'
+DIFF      p15 (muse-probe-refval-clearfloat-p15)
+  SRC : '* item\n~~~~\n* item2'
+  REF : '<ul>\n<li>item</li>\n</ul><div style="clear:both; height: 0px; font-size: 1px"></div>\n<ul>\n<li>item2</li>\n</ul>'
+  LIVE: '<ul>\n<li>item</li>\n</ul>\n<div style="clear:both; height: 0px; font-size: 1px"></div>\n<ul>\n<li>item2</li>\n</ul>'
+DIFF      p16 (muse-probe-refval-clearfloat-p16)
+  SRC : '|| a ||\n~~~~\n|| b ||'
+  REF : '<table class="wiki-content-table">\n<tr>\n<td>a</td>\n</tr>\n</table><div style="clear:both; height: 0px; font-size: 1px"></div>\n<table class="wiki-content-table">\n<tr>\n<td>b</td>\n</tr>\n</table>'
+  LIVE: '<table class="wiki-content-table">\n<tr>\n<td>a</td>\n</tr>\n</table>\n<div style="clear:both; height: 0px; font-size: 1px"></div>\n<table class="wiki-content-table">\n<tr>\n<td>b</td>\n</tr>\n</table>'
+DIFF      p17 (muse-probe-refval-clearfloat-p17)
+  SRC : '[[code]]\n~~~~\n[[/code]]\n@@\n~~~~\n@@\nx'
+  REF : '\n<div class="code">\n<pre><code>~~~~</code></pre></div>\n\n<br />\n@@<div style="clear:both; height: 0px; font-size: 1px"></div>\n<p>@@<br />\nx</p>\n\n'
+  LIVE: '<div class="code">\n<pre><code>~~~~</code></pre></div>\n<br />\n@@\n<div style="clear:both; height: 0px; font-size: 1px"></div>\n<p>@@<br />\nx</p>'
+DIFF      p18 (muse-probe-refval-clearfloat-p18)
+  SRC : 'a _\n~~~~\nb'
+  REF : '<p>a<br />\n</p>\n\n<div style="clear:both; height: 0px; font-size: 1px"></div>\n<p>b</p>\n\n'
+  LIVE: '<p>a<br /></p>\n<div style="clear:both; height: 0px; font-size: 1px"></div>\n<p>b</p>'

@@ -1,0 +1,182 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refval-clearfloat-p01",
+  "html": "<div style=\"clear:both; height: 0px; font-size: 1px\"></div>",
+  "html_sha256": "9670d1167e9dd69b6cd05e59f3b209b33d15871363449e32397ae10dc4ab964c",
+  "source": "~~~~",
+  "source_sha256": "53e86e10d9d3f1f7ff63f93d2cfa5f9cadfe7b08ac161795bbabf0acb1d8a625",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-clearfloat-p02",
+  "html": "<div style=\"clear:right; height: 0px; font-size: 1px\"></div>",
+  "html_sha256": "8cf61ac9aa0545a64634f96d4c5cbcbbe366a7963d5c7485576b6c7cbc156cbc",
+  "source": "~~~~>",
+  "source_sha256": "ce10170d92079565eac19c60e5cbe9bc37c408fce5809755c788c41e69dce54e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-clearfloat-p03",
+  "html": "<div style=\"clear:left; height: 0px; font-size: 1px\"></div>",
+  "html_sha256": "b8545c2877bc8f395d7c0dc2be552dc1ba5b79ff459b02425fd1bd01bdcf8ef9",
+  "source": "~~~~<",
+  "source_sha256": "4a8c2e956522b505492587007317bfceae8e650f9eced2119e473de6bcad7e48",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-clearfloat-p04",
+  "html": "<p>x</p>\n<div style=\"clear:both; height: 0px; font-size: 1px\"></div>\n<p>y</p>",
+  "html_sha256": "d8121363579cc415901a1064e7a4fee44bda03566065eb62eaa72d64363208a6",
+  "source": "x\n~~~~\ny",
+  "source_sha256": "1075803af5a4513120ac1c51f2340fa847535ca1b4e41a4fcc1e764504cf88a9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-clearfloat-p05",
+  "html": "<p>x</p>\n<div style=\"clear:right; height: 0px; font-size: 1px\"></div>\n<p>y</p>",
+  "html_sha256": "52c35f2864d6680d1aee652adc3b5877ac316af46c9a9bff73a6a81e65eba4a4",
+  "source": "x\n~~~~>\ny",
+  "source_sha256": "1421de62e4af597a387bf59dcfcf7e2c979834f6a1917453ff589a0cd069ba9b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-clearfloat-p06",
+  "html": "<p>x</p>\n<div style=\"clear:left; height: 0px; font-size: 1px\"></div>\n<p>y</p>",
+  "html_sha256": "d5fab3084de688076ab5c6d532639fd7979532aa8799c24cbd1845fc6ed513a9",
+  "source": "x\n~~~~<\ny",
+  "source_sha256": "f70dda55bb3eb4979c17767aa14b24a14b044875dddb03c00709cba00c05181d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-clearfloat-p07",
+  "html": "<div style=\"clear:right; height: 0px; font-size: 1px\"></div>\n<div style=\"clear:left; height: 0px; font-size: 1px\"></div>\n<div style=\"clear:both; height: 0px; font-size: 1px\"></div>",
+  "html_sha256": "93fd76e628a006b2b863b99d9c8516b09823855cc436ec8166259024bdd5a41c",
+  "source": "~~~~~>\n~~~~~~<\n~~~~~~~~~~",
+  "source_sha256": "dd12594d5106a1f20d3304799e60b5fd768e5aa8ea39f5bdc4dd6a60931269d7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-clearfloat-p08",
+  "html": "<p>x<br />\n~~~<br />\n~~<br />\n~<br />\ny</p>",
+  "html_sha256": "adbc1148f10d7bc3407da1f32f3cabec1d548ee4894ef703a902f0ca68c06762",
+  "source": "x\n~~~\n~~\n~\ny",
+  "source_sha256": "d7bb6a561b19b058d289101b119b89c6ad427cc0a54d61892160ef5854720072",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-clearfloat-p09",
+  "html": "<p>x<br />\n~~~~&#187;<br />\n~~~~&gt;&lt;<br />\n~~~~&gt;x<br />\ny</p>",
+  "html_sha256": "f8c64b01c5f54c0a6c9f14ef25b749f1d8560ab5a725b133d4edba6b00ee6aac",
+  "source": "x\n~~~~>>\n~~~~><\n~~~~>x\ny",
+  "source_sha256": "4559eb0320769c1487037c3e2e6a9f6967fedf272055b08c613ef96ba87b5ebd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-clearfloat-p10",
+  "html": "<p>x<br />\n~~~~ &gt;<br />\n~~~~&gt;<br />\n~~~~<br />\n~~~~<br />\ny</p>",
+  "html_sha256": "391c83906093d1d4db06c3a2335c2edfe3408a49d9ccf03259e40f96e42313c7",
+  "source": "x\n~~~~ >\n~~~~> \n~~~~ \n ~~~~\ny",
+  "source_sha256": "bea8f229aeae7ad0b94a8795e27255f86eb25f415a2af53200a4819f2e26054d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-clearfloat-p11",
+  "html": "<div style=\"clear:both; height: 0px; font-size: 1px\"></div>\n<div style=\"clear:left; height: 0px; font-size: 1px\"></div>",
+  "html_sha256": "3a3d6926a79cf907cf99778fca5e8638ec4a31d3e1c9bbe2e7aca7f84c99581e",
+  "source": "~~~~\n~~~~<",
+  "source_sha256": "bbbce594cd96e8c58244c057c637385ccb73520c5485a913513621cf52825bd2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-clearfloat-p12",
+  "html": "<div style=\"clear:right; height: 0px; font-size: 1px\"></div>\n<div style=\"clear:both; height: 0px; font-size: 1px\"></div>",
+  "html_sha256": "83db0d90c19f0ba34626012ed4cc627e4ec2dcdb794792751dd0863db44af8ec",
+  "source": "~~~~>\n\n~~~~",
+  "source_sha256": "ae73157ea52b72c939280f7136547bb72358586761b2e33a68e4b765a056e0ac",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-clearfloat-p13",
+  "html": "<table style=\"margin:0; padding:0\">\n<tr>\n<td style=\"margin:0; padding:0\">\n<div id=\"toc\">\n<div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold</a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold</a></div>\n<div class=\"title\">Table of Contents</div>\n<div id=\"toc-list\">\n<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A</a></div>\n</div>\n</div>\n</td>\n</tr>\n</table>\n<div style=\"clear:both; height: 0px; font-size: 1px\"></div>\n<h1 id=\"toc0\"><span>A</span></h1>",
+  "html_sha256": "aea212ab2508f6dd2990207983af1264a5a80f7ea1e3fe5a9a207b949ed10017",
+  "source": "[[toc]]~~~~\n\n+ A",
+  "source_sha256": "0905b3a5498465e4782ce5b187b1c7d833b524595eb5e26c1adae04e3539910b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-clearfloat-p14",
+  "html": "<div>\n<div style=\"clear:right; height: 0px; font-size: 1px\"></div>\n</div>",
+  "html_sha256": "ca43f0ddd2f69ad7e467613e876381f3ceb5cc5596f33a0fb594a132b7375322",
+  "source": "[[div]]\n~~~~>\n[[/div]]",
+  "source_sha256": "e6e2d7ed93971fa4c8c615711c16cb1b82f14b1d06cdad0a7317f2a8e34d555c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-clearfloat-p15",
+  "html": "<ul>\n<li>item</li>\n</ul>\n<div style=\"clear:both; height: 0px; font-size: 1px\"></div>\n<ul>\n<li>item2</li>\n</ul>",
+  "html_sha256": "94819079b7524824a15e8016b763cd0297df9e5360bdb4652e6352d66efbf4a5",
+  "source": "* item\n~~~~\n* item2",
+  "source_sha256": "75487eb55704e6b5be6bcc776cc9e0f7d7916263f148aaaa6dbb6f0140b0b459",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-clearfloat-p16",
+  "html": "<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n</tr>\n</table>\n<div style=\"clear:both; height: 0px; font-size: 1px\"></div>\n<table class=\"wiki-content-table\">\n<tr>\n<td>b</td>\n</tr>\n</table>",
+  "html_sha256": "d869d34ea54fd78682dbbb861f1607e761c59050157f67093f74bf9e6e6a0ad1",
+  "source": "|| a ||\n~~~~\n|| b ||",
+  "source_sha256": "80001c528605d0d5cde214968f8565f4745b7488feb58e2852d11cd312b43723",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-clearfloat-p17",
+  "html": "<div class=\"code\">\n<pre><code>~~~~</code></pre></div>\n<br />\n@@\n<div style=\"clear:both; height: 0px; font-size: 1px\"></div>\n<p>@@<br />\nx</p>",
+  "html_sha256": "3824424dca83ec8efe234d3e0282af9fcc58453ff21bc24106efa4bd3ce030a3",
+  "source": "[[code]]\n~~~~\n[[/code]]\n@@\n~~~~\n@@\nx",
+  "source_sha256": "df413de94adea57da3d80555229b20c66acc9700b6fed5b65aba3eb322ba4ed1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-clearfloat-p18",
+  "html": "<p>a<br /></p>\n<div style=\"clear:both; height: 0px; font-size: 1px\"></div>\n<p>b</p>",
+  "html_sha256": "6e1f19d44ee93027570050140e85426080e26eba9f4b7bd6931ceebab91428ff",
+  "source": "a _\n~~~~\nb",
+  "source_sha256": "8ad108f072bb462747a22f9dd469930c1d66d205203dd0db4a69f96429461e63",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

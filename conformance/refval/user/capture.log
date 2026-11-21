@@ -1,0 +1,222 @@
+p01 -> muse-probe-refval-user-p01 stable=True saved_source_matches=True valid=True
+p02 -> muse-probe-refval-user-p02 stable=True saved_source_matches=True valid=True
+p03 -> muse-probe-refval-user-p03 stable=True saved_source_matches=True valid=True
+p04 -> muse-probe-refval-user-p04 stable=True saved_source_matches=True valid=True
+p05 -> muse-probe-refval-user-p05 stable=True saved_source_matches=True valid=True
+p06 -> muse-probe-refval-user-p06 stable=True saved_source_matches=True valid=True
+p07 -> muse-probe-refval-user-p07 stable=True saved_source_matches=True valid=True
+p08 -> muse-probe-refval-user-p08 stable=True saved_source_matches=True valid=True
+p09 -> muse-probe-refval-user-p09 stable=True saved_source_matches=True valid=True
+p10 -> muse-probe-refval-user-p10 stable=True saved_source_matches=True valid=True
+p11 -> muse-probe-refval-user-p11 stable=True saved_source_matches=True valid=True
+p12 -> muse-probe-refval-user-p12 stable=True saved_source_matches=True valid=True
+p13 -> muse-probe-refval-user-p13 stable=True saved_source_matches=True valid=True
+p14 -> muse-probe-refval-user-p14 stable=True saved_source_matches=True valid=True
+p15 -> muse-probe-refval-user-p15 stable=True saved_source_matches=True valid=True
+p16 -> muse-probe-refval-user-p16 stable=True saved_source_matches=True valid=True
+p17 -> muse-probe-refval-user-p17 stable=True saved_source_matches=True valid=True
+p18 -> muse-probe-refval-user-p18 stable=True saved_source_matches=True valid=True
+p19 -> muse-probe-refval-user-p19 stable=True saved_source_matches=True valid=True
+p20 -> muse-probe-refval-user-p20 stable=True saved_source_matches=True valid=True
+{
+ "p01": {
+  "fullname": "muse-probe-refval-user-p01",
+  "html": "<p><span class=\"printuser\"><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\">michal-frackowiak</a></span></p>",
+  "html_sha256": "6a80e00e8ead344ea31fa6f82337592417e8da41a32a5e61881cbeafecbd3a9f",
+  "source": "[[user michal-frackowiak]]",
+  "source_sha256": "41c8eb85fa7c3a22745d42d2840a156e0a6584982f16cab342022dddd876974d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-user-p02",
+  "html": "<p><span class=\"printuser avatarhover\"><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\"><img class=\"small\" src=\"https://www.wikidot.com/avatar.php?userid=1&amp;amp;size=small&amp;amp;timestamp=1795225963\" alt=\"michal-frackowiak\" style=\"background-image:url(https://www.wikidot.com/userkarma.php?u=1)\" /></a><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\">michal-frackowiak</a></span></p>",
+  "html_sha256": "a23fe3e6b0a7a991fdf2dbe2d8c99b8c32ba01df3df2abc45b2476c45a1c7811",
+  "source": "[[*user michal-frackowiak]]",
+  "source_sha256": "084044fe6ba256b019cdeb67308e6d66cddc1e521c26f316ce250d639d27c444",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-user-p03",
+  "html": "<p><span class=\"printuser\"><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\">michal-frackowiak</a></span></p>",
+  "html_sha256": "6a80e00e8ead344ea31fa6f82337592417e8da41a32a5e61881cbeafecbd3a9f",
+  "source": "[[user Michal Frackowiak]]",
+  "source_sha256": "acb817a99a78b4d2b0e33414d96a9bb4303c2d19d50dec8c0a281e1a432d9e9e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-user-p04",
+  "html": "<p><span class=\"printuser avatarhover\"><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\"><img class=\"small\" src=\"https://www.wikidot.com/avatar.php?userid=1&amp;amp;size=small&amp;amp;timestamp=1795225988\" alt=\"michal-frackowiak\" style=\"background-image:url(https://www.wikidot.com/userkarma.php?u=1)\" /></a><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\">michal-frackowiak</a></span></p>",
+  "html_sha256": "91920cb2e1c273c37231b0d4090fff883124f04ab842a8df301ac7f89a029be4",
+  "source": "[[*user Michal Frackowiak]]",
+  "source_sha256": "9d0b5a4811ece9c7b54b0cca5543176cda952e6cd84619d55caf1067516b36b3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-user-p05",
+  "html": "<p><span class=\"error-inline\"><em>nonexistent-refval-xyz-99999</em> does not match any existing user name</span></p>",
+  "html_sha256": "12c70e30f5813bcc4b9a7b2809c1288ad0d63218945d40ead6cfbdfaffc4aac3",
+  "source": "[[user nonexistent-refval-xyz-99999]]",
+  "source_sha256": "ebceb3e0a2001f7d0437770f3f92d2b868748c8a3ca4bf7c57cca6d947c5aa81",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-user-p06",
+  "html": "<p><span class=\"error-inline\"><em>nonexistent-refval-xyz-99999</em> does not match any existing user name</span></p>",
+  "html_sha256": "12c70e30f5813bcc4b9a7b2809c1288ad0d63218945d40ead6cfbdfaffc4aac3",
+  "source": "[[*user nonexistent-refval-xyz-99999]]",
+  "source_sha256": "fc128e0cbcad5908fee285532a9efde04f6f9348667a563e5c42c9d3999c4739",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-user-p07",
+  "html": "<p><span class=\"printuser\"><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\">michal-frackowiak</a></span></p>",
+  "html_sha256": "6a80e00e8ead344ea31fa6f82337592417e8da41a32a5e61881cbeafecbd3a9f",
+  "source": "[[USER michal-frackowiak]]",
+  "source_sha256": "86960e595c23b729c866994df456bbf1eb4bcc6d93130dc8b53cabea0b79cf44",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-user-p08",
+  "html": "<p><span class=\"printuser avatarhover\"><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\"><img class=\"small\" src=\"https://www.wikidot.com/avatar.php?userid=1&amp;amp;size=small&amp;amp;timestamp=1795226038\" alt=\"michal-frackowiak\" style=\"background-image:url(https://www.wikidot.com/userkarma.php?u=1)\" /></a><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\">michal-frackowiak</a></span></p>",
+  "html_sha256": "fe192c1bc3334d9f4de15d027e145564e4189ff0651302778c60b17be20a37da",
+  "source": "[[*User michal-frackowiak]]",
+  "source_sha256": "5ba65dff678db50e9cac8a5b73faf0c25e016cacecdf8aa4e476c1472dfa514c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-user-p09",
+  "html": "<p><span class=\"printuser\"><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\">michal-frackowiak</a></span></p>",
+  "html_sha256": "6a80e00e8ead344ea31fa6f82337592417e8da41a32a5e61881cbeafecbd3a9f",
+  "source": "[[user  michal-frackowiak]]",
+  "source_sha256": "41d9dd4de398b1f215643d755ed009295428ee50ab1d00687306f7af4a3fa5d1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-user-p10",
+  "html": "<p><span class=\"printuser\"><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\">michal-frackowiak</a></span></p>",
+  "html_sha256": "6a80e00e8ead344ea31fa6f82337592417e8da41a32a5e61881cbeafecbd3a9f",
+  "source": "[[user michal-frackowiak ]]",
+  "source_sha256": "5e63e942917bed54280774dd91a2fb78274f7ff2595314e77d89273c14cc6ec7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-user-p11",
+  "html": "<p>[[user]]<br />\n[[user ]]<br />\n[[*user]]<br />\n[[**user michal-frackowiak]]</p>",
+  "html_sha256": "6dfb74031536348c636adf10e9fab2dda28b4da5df2d6249f0366bb3b5629a27",
+  "source": "[[user]]\n[[user ]]\n[[*user]]\n[[**user michal-frackowiak]]",
+  "source_sha256": "f9ce3ac48634a9d09032745f13b451cca6aadcdcd1ba7176de0f96bb7274dd5c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-user-p12",
+  "html": "<p><span class=\"printuser\"><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\">michal-frackowiak</a></span></p>",
+  "html_sha256": "6a80e00e8ead344ea31fa6f82337592417e8da41a32a5e61881cbeafecbd3a9f",
+  "source": "[[user\tmichal-frackowiak]]",
+  "source_sha256": "7f38594b1ddc6898c8dfb866653970c9328dea165e728bbccc059119e0fbf0cb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-user-p13",
+  "html": "<p><span class=\"printuser\"><a href=\"https://www.wikidot.com/user:info/a-b\" onclick=\"WIKIDOT.page.listeners.userInfo(1232355); return false;\">A B</a></span></p>",
+  "html_sha256": "449a3306479ff3d0d57534c435a6ccdc12488a94ff46266e5fb39f6506cfd5d8",
+  "source": "[[user a\nb]]",
+  "source_sha256": "3a67a7b93f880affdc84b523c84952e320da1eca6b1c9040102fa470fcd78fb3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-user-p14",
+  "html": "<p>[[user a]b]]<br />\n<span class=\"error-inline\"><em>a</em> does not match any existing user name</span>]</p>",
+  "html_sha256": "085ceac2466973489af77aa3172c1e8ae98283a797dfb725d9f308f2ebdd8786",
+  "source": "[[user a]b]]\n[[user a]]]",
+  "source_sha256": "23ec7783e9261609cb643120de18ae990300f3f672fd5bc263a0afddcf2c3fee",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-user-p15",
+  "html": "<p><span class=\"error-inline\"><em>&lt;b&gt;xss&lt;/b&gt;</em> does not match any existing user name</span></p>",
+  "html_sha256": "c7035e5300916a05ba5512076ab12b2e8e5a2af0581b66768f473c70a2311ba3",
+  "source": "[[user <b>xss</b>]]",
+  "source_sha256": "4ae08f1aebc3c4ddca20709184229d2619833e3b5278418661b6c495f0bc623f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-user-p16",
+  "html": "<p><span class=\"printuser\"><a href=\"https://www.wikidot.com/user:info/a-b-c\" onclick=\"WIKIDOT.page.listeners.userInfo(7782305); return false;\">a-b-c</a></span></p>",
+  "html_sha256": "412329610a072646ed683ce8e95ce0b4f03e540204dc92bb14337564223fdb8e",
+  "source": "[[user a\"b&c]]",
+  "source_sha256": "a460427e2e28fb6bdf009e62c385d91d1699d6cdfd9c1be32a741448439ec847",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-user-p17",
+  "html": "<p><span class=\"error-inline\"><em>wikidot</em> does not match any existing user name</span><br />\n<span class=\"error-inline\"><em>wikidot</em> does not match any existing user name</span></p>",
+  "html_sha256": "0bfa4b4cb93a691374d3e9b999898dab5c5f259ba1b664473c550bd84c354e9f",
+  "source": "[[user wikidot]]\n[[*user wikidot]]",
+  "source_sha256": "8394298c1ff2e4e7c6e1bb0227bc4afd72ecc1145ba6dc66773943fc21358d58",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-user-p18",
+  "html": "<p>pre <span class=\"printuser\"><a href=\"https://www.wikidot.com/user:info/michal-frackowiak\" onclick=\"WIKIDOT.page.listeners.userInfo(1); return false;\">michal-frackowiak</a></span> post</p>",
+  "html_sha256": "eab8405a7eb4960fe9e1162f024e7fcbb6c81ac3a9d324065ae1ae4fe462f63d",
+  "source": "pre [[user michal-frackowiak]] post",
+  "source_sha256": "837a167c6ecd0068e872141483baa307c68809fd555f7b6d4ece71c4176c0ddb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-user-p19",
+  "html": "<p><span class=\"printuser\"><a href=\"https://www.wikidot.com/user:info/cafe\" onclick=\"WIKIDOT.page.listeners.userInfo(1426298); return false;\">Cafe</a></span></p>",
+  "html_sha256": "37f0f67a0b8ea0089335834df452594c06993bef51e5ab93977276557e44bd32",
+  "source": "[[user café]]",
+  "source_sha256": "c03c507772fc997f827022d30f323fb70d76b16ee4cc3ac20d663234b69e79fe",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-user-p20",
+  "html": "<div class=\"code\">\n<pre><code>[[user michal-frackowiak]]</code></pre></div>",
+  "html_sha256": "e9e5111938c5249b12b1b95c39ec09f7d4b2f8c649d8e75e7778f84f02ce61b2",
+  "source": "[[code]][[user michal-frackowiak]][[/code]]",
+  "source_sha256": "b5bc2113391f26b431b152af60699948869ee5e7af1950b103defe51a918cd20",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

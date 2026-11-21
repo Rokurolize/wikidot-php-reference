@@ -1,0 +1,20 @@
+{"id": "p01", "source": "[[social]]"}
+{"id": "p02", "source": "[[social digg]]"}
+{"id": "p03", "source": "[[social facebook]]"}
+{"id": "p04", "source": "[[social reddit]]"}
+{"id": "p05", "source": "[[social twitter]]"}
+{"id": "p06", "source": "[[social digg, reddit]]"}
+{"id": "p07", "source": "[[social digg reddit]]"}
+{"id": "p08", "source": "[[social facebook, twitter, reddit]]"}
+{"id": "p09", "source": "[[social unknownsite]]"}
+{"id": "p10", "source": "[[SOCIAL]]"}
+{"id": "p11", "source": "[[SOCIAL facebook]]"}
+{"id": "p12", "source": "[[social Facebook]]"}
+{"id": "p13", "source": "[[social ]]"}
+{"id": "p14", "source": "[[social  ]]"}
+{"id": "p15", "source": "[[social  facebook]]"}
+{"id": "p16", "source": "[[social facebook ]]"}
+{"id": "p17", "source": "[[social\tfacebook]]"}
+{"id": "p18", "source": "[[social\nfacebook]]"}
+{"id": "p19", "source": "pre [[social]] post"}
+{"id": "p20", "source": "[[social a]b]]\n[[social a]]]"}

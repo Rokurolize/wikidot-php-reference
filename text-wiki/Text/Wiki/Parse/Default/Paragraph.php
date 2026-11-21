@@ -69,9 +69,9 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
     public $conf = array(
         'skip' => array('blockquote', // are we sure about this one?
  'code', 'clearfloat', 
-            'heading', 'horiz', 'deflist', 'table', 
+            'heading', 'horiz', 'separator', 'deflist', 'table', 
             'tableadv', 'list', 'toc', 'center', 
-            'tabview', 'div', 'divalignleft', 
+            'tabview', 'div', 'divalign', 'divalignleft', 
             'divalignright', 'divaligncenter', 
             'divalignjustify', 'collapsible', 'note', 
             'math', 'module', 'module654', 

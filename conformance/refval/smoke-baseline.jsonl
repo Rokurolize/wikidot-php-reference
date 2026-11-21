@@ -1,0 +1,9 @@
+{"id":"code","output":"\n<div class=\"code\">\n<pre><code>$x = 1;<\/code><\/pre><\/div>\n\n"}
+{"id":"collapsible","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><p>hidden body<\/p>\n\n<\/div><\/div><\/div>"}
+{"id":"div","output":"<div  class=\"x\"><p>inside div<\/p>\n\n<\/div>"}
+{"id":"footnote","output":"<p>Text with a note<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1<\/a><\/sup> here.<\/p>\n\n<div class=\"footnotes-footer\"><div class=\"title\">Footnotes<\/div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1<\/a>. the note text<\/div><\/div>"}
+{"id":"include","output":"<p>Before<\/p>\n\n<p>TARGET-CONTENT-START<br \/>\nValue is {$marker}.<br \/>\nTARGET-CONTENT-END<\/p>\n\n<p>After<\/p>\n\n"}
+{"id":"link","output":"<p>A <a class=\"newpage\" href=\"\/some-page\">link text<\/a> and <a class=\"newpage\" href=\"\/missing-page\">missing-page<\/a> here.<\/p>\n\n"}
+{"id":"math","output":"<p>Math $x^2$ inline and:<\/p>\n\n<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"quote","output":"<blockquote><p>quoted line<br \/>\nmore quote<\/p>\n\n<\/blockquote>\n"}
+{"id":"table","output":"<table class=\"wiki-content-table\">\n<tr>\n<th>cell1<\/th>\n<th>cell2<\/th>\n<\/tr>\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table>"}

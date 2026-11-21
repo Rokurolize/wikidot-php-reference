@@ -45,6 +45,9 @@ class Text_Wiki_Render_Xhtml_Separator extends Text_Wiki_Render {
     function token($options)
     {
         $css = $this->formatConf(' class="%s"', 'css');
-        return "<div class=\"content-separator\" style=\"display: none:\"/>\n";
+        // REFVAL CORRECTION (2026-11-21): live serves an explicit closing
+        // </div> tag while preserving the literal "display: none:" typo
+        // (probes muse-probe-refval-separator-p01..p03, p11..p18).
+        return "<div class=\"content-separator\" style=\"display: none:\"></div>\n";
     }
 }

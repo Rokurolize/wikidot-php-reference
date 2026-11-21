@@ -1,0 +1,20 @@
+{"id": "p01", "source": "[[embed]]body[[/embed]]"}
+{"id": "p02", "source": "[[embedvideo]]body[[/embedvideo]]"}
+{"id": "p03", "source": "[[embedaudio]]body[[/embedaudio]]"}
+{"id": "p04", "source": "[[embedvideo]]body[[/embed]]"}
+{"id": "p05", "source": "[[embed]]body[[/embedvideo]]"}
+{"id": "p06", "source": "[[EMBED]]x[[/EMBED]]\n[[EmbedVideo]]x[[/EmbedAudio]]"}
+{"id": "p07", "source": "[[embed]][[/embed]]\n[[embed]] [[/embed]]"}
+{"id": "p08", "source": "[[embed]]unclosed"}
+{"id": "p09", "source": "[[embed]]a[[/embed]]b[[/embed]]"}
+{"id": "p10", "source": "[[embed]][[embed]]x[[/embed]]"}
+{"id": "p11", "source": "[[embed ]]x[[/embed]]\n[[embed]]x[[/embed ]]"}
+{"id": "p12", "source": "[[embed]]\n<iframe src=\"http://example.com\" width=\"400\" height=\"300\"></iframe>\n[[/embed]]"}
+{"id": "p13", "source": "[[embed]]\n<iframe src=\"https://example.com\" width=\"400\" height=\"300\"></iframe>\n[[/embed]]"}
+{"id": "p14", "source": "[[embed]]\n<iframe src=\"http://example.com\" onclick=\"alert(1)\"></iframe>\n[[/embed]]"}
+{"id": "p15", "source": "[[embedvideo]]\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" frameborder=\"0\"></iframe>\n[[/embedvideo]]"}
+{"id": "p16", "source": "[[embed]]<iframe src=\"http://example.com\">fallback</iframe>[[/embed]]"}
+{"id": "p17", "source": "[[embed]]<iframe src=\"javascript:alert(1)\"></iframe>[[/embed]]"}
+{"id": "p18", "source": "[[embed]]<a href=\"http://example.com\">hi</a>[[/embed]]"}
+{"id": "p19", "source": "[[embed]]**bold**[[/embed]]"}
+{"id": "p20", "source": "pre [[embed]]hello[[/embed]] post"}

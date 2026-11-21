@@ -1,0 +1,222 @@
+p01 -> muse-probe-refval-divalign-p01 stable=True saved_source_matches=True valid=True
+p02 -> muse-probe-refval-divalign-p02 stable=True saved_source_matches=True valid=True
+p03 -> muse-probe-refval-divalign-p03 stable=True saved_source_matches=True valid=True
+p04 -> muse-probe-refval-divalign-p04 stable=True saved_source_matches=True valid=True
+p05 -> muse-probe-refval-divalign-p05 stable=True saved_source_matches=True valid=True
+p06 -> muse-probe-refval-divalign-p06 stable=True saved_source_matches=True valid=True
+p07 -> muse-probe-refval-divalign-p07 stable=True saved_source_matches=True valid=True
+p08 -> muse-probe-refval-divalign-p08 stable=True saved_source_matches=True valid=True
+p09 -> muse-probe-refval-divalign-p09 stable=True saved_source_matches=True valid=True
+p10 -> muse-probe-refval-divalign-p10 stable=True saved_source_matches=True valid=True
+p11 -> muse-probe-refval-divalign-p11 stable=True saved_source_matches=True valid=True
+p12 -> muse-probe-refval-divalign-p12 stable=True saved_source_matches=True valid=True
+p13 -> muse-probe-refval-divalign-p13 stable=True saved_source_matches=True valid=True
+p14 -> muse-probe-refval-divalign-p14 stable=True saved_source_matches=True valid=True
+p15 -> muse-probe-refval-divalign-p15 stable=True saved_source_matches=True valid=True
+p16 -> muse-probe-refval-divalign-p16 stable=True saved_source_matches=True valid=True
+p17 -> muse-probe-refval-divalign-p17 stable=True saved_source_matches=True valid=True
+p18 -> muse-probe-refval-divalign-p18 stable=True saved_source_matches=True valid=True
+p19 -> muse-probe-refval-divalign-p19 stable=True saved_source_matches=True valid=True
+p20 -> muse-probe-refval-divalign-p20 stable=True saved_source_matches=True valid=True
+{
+ "p01": {
+  "fullname": "muse-probe-refval-divalign-p01",
+  "html": "<div style=\"text-align: center;\">\n<p>centered</p>\n</div>",
+  "html_sha256": "75377c248b578aaa4009ceedd73710f008af309e1d3c3f34e3abee3ff9d10dae",
+  "source": "[[=]]\ncentered\n[[/=]]",
+  "source_sha256": "a1dec8d89f6b75abf837f33d69c1fa37f32f025510b9d6c1d2efdb1a28d15ef4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-divalign-p02",
+  "html": "<div style=\"text-align: left;\">\n<p>left</p>\n</div>",
+  "html_sha256": "1bc9b1a9611e68541b25faa5c6f5acba22f833cba1e82ade6c349465412ed0ae",
+  "source": "[[<]]\nleft\n[[/<]]",
+  "source_sha256": "f2b55e2ac748d755f3b5a604d3f52b965e1dea27d5777ba2e720c745612fb841",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-divalign-p03",
+  "html": "<div style=\"text-align: right;\">\n<p>right</p>\n</div>",
+  "html_sha256": "b2d0f80b01978bf7e18e8daeb7949efb9afcf8502e102694787e0344998bf6e5",
+  "source": "[[>]]\nright\n[[/>]]",
+  "source_sha256": "bcbf6318eaf91c9f1b8e2c7a66aec23d34226b5c7768df04c6b3d8d0b512c411",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-divalign-p04",
+  "html": "<div style=\"text-align: justify;\">\n<p>justified</p>\n</div>",
+  "html_sha256": "f7fce81df658d66ec9d03b019f88ae87d4d041457d5e810d9160b443d6804ff0",
+  "source": "[[==]]\njustified\n[[/==]]",
+  "source_sha256": "fc9bb7953232c35a83ad0eff109d166ab874cf75a96ec5c2fcac4758f5915f0c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-divalign-p05",
+  "html": "<div style=\"text-align: justify;\">\n<p>x<br />\n[[/=]]</p>\n<p>[[=]]<br />\nx</p>\n</div>",
+  "html_sha256": "309ef8a6ab7e448c6c90df270d267643072be1bc369e1e38e2da6b571faf1bf0",
+  "source": "[[==]]\nx\n[[/=]]\n\n[[=]]\nx\n[[/==]]",
+  "source_sha256": "efb0bae1e9fb316963fdd5fab4273d9b1709b50636ab6b2e307f1ef2f7c2399b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-divalign-p06",
+  "html": "<div style=\"text-align: center;\"></div>",
+  "html_sha256": "fc368626031c5e33b181720bb9326d9e0935ab0a79dde37086150d08b175e709",
+  "source": "[[=]]\n[[/=]]",
+  "source_sha256": "dc9c661cb4eb647413ef2368e522d5ae2bec73a7f6a371822822eee8aae8d990",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-divalign-p07",
+  "html": "<div style=\"text-align: center;\"></div>",
+  "html_sha256": "fc368626031c5e33b181720bb9326d9e0935ab0a79dde37086150d08b175e709",
+  "source": "[[=]]\n\n[[/=]]",
+  "source_sha256": "f0964e00bfd62f221964a6b0948caa83898c3d57892757d4f2811ecaeba90420",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-divalign-p08",
+  "html": "<p>x<br /></p>\n<div style=\"text-align: center;\">\n<p>body</p>\n</div>\n<br />\ny",
+  "html_sha256": "73752e0b8074781905651db805e983b481f5e0c45c4c18b1485061aae2023fd2",
+  "source": "x\n[[=]]\nbody\n[[/=]]\ny",
+  "source_sha256": "8c5a20692a6adf0ab442789bcb3264760e5756dbd7671f94033b08d2d0aaf5a9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-divalign-p09",
+  "html": "<p>[[=]]<br />\nbody<br />\n[[/=]] tail</p>",
+  "html_sha256": "ff1accf58e932e8711851c77ee971d1b31831ac1b48d0d7158d8588594e69ac1",
+  "source": "[[=]]\nbody\n[[/=]] tail",
+  "source_sha256": "0c5238cca7c92b839f54c52010cc45ed15bbb094d8d276a9352623e554a857ae",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-divalign-p10",
+  "html": "<p>a<br />\n[[=]]<br />\nbody<br />\n[[/=]]</p>\n<p>x[[=]]<br />\nbody<br />\n[[/=]]</p>",
+  "html_sha256": "8196743d0e52c9351c1c89470c11417c540704720470b4342cc595e47b644101",
+  "source": "a\n [[=]]\nbody\n[[/=]]\n\nx[[=]]\nbody\n[[/=]]",
+  "source_sha256": "246c6a5f28159773a4a16d359f414680f944ad3915a574e3747266a25cd48e99",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-divalign-p11",
+  "html": "<p>[[=]] body<br />\n[[/=]]</p>\n<div style=\"text-align: center;\">\n<p>body</p>\n</div>",
+  "html_sha256": "f23e28b1cc6ebbbec14555ab5e6d3ced9b44053d66111c4aebb417a511a99221",
+  "source": "[[=]] body\n[[/=]]\n\n[[=]]\nbody[[/=]]",
+  "source_sha256": "8db4c66ab1140a614ba1500886d50fea48ddf936f4e59f8c2d98a294d3fa61d6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-divalign-p12",
+  "html": "<div style=\"text-align: center;\">\n<div style=\"text-align: left;\">\n<p>inner</p>\n</div>\n</div>",
+  "html_sha256": "dba1b076d45b7e4c9f3094e923eabea33391800b60e7f02fe5545c26f005137e",
+  "source": "[[=]]\n[[<]]\ninner\n[[/<]]\n[[/=]]",
+  "source_sha256": "ddcf0e60c3bdaabc6a8a49b1c1ed21fbc59450e0b079d18a4f320aaf1b82af82",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-divalign-p13",
+  "html": "<div style=\"text-align: center;\">\n<div style=\"text-align: center;\">\n<p>inner</p>\n</div>\n</div>",
+  "html_sha256": "cb22a49d22b578922c2817824ae4bfc0024e98c679616a5b94a99732e65aca66",
+  "source": "[[=]]\n[[=]]\ninner\n[[/=]]\n[[/=]]",
+  "source_sha256": "011212ee69ac82574239529222066e4056cf642695fc014294ed264dee027dda",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-divalign-p14",
+  "html": "<div style=\"text-align: center;\">\n<div style=\"text-align: center;\">\n<p>x</p>\n</div>\n<br />\ny</div>",
+  "html_sha256": "f53583ce04cf710e2433d55a74f6d6166d3d18de54d7d7565e6711645de9b9c0",
+  "source": "[[=]]\n[[=]]\nx\n[[/=]]\ny\n[[/=]]",
+  "source_sha256": "1525c96efd533c56b31895a989d5b1331d3fc6634115b8d7b5a45a240298d610",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-divalign-p15",
+  "html": "<div style=\"text-align: center;\">\n<p>[[=]]</p>\n</div>",
+  "html_sha256": "104392cc5d0c171064984ab2a07f82391cec7b61ec9fcb424fd07a2bb7c25a09",
+  "source": "[[=]]\n[[=]]\n[[/=]]",
+  "source_sha256": "1c7e2d4be9f7ee8c509c50477ac5ac54c68522a26154a3f19472dbf998288423",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-divalign-p16",
+  "html": "<div style=\"text-align: center;\">\n<p>[[/=]] extra</p>\n</div>",
+  "html_sha256": "5f3d5fbf53f45058d24cc2b4d22f4c7f389ad9b33b5b6fb24171234beff2c49e",
+  "source": "[[=]]\n[[/=]] extra\n[[/=]]",
+  "source_sha256": "a2a036d9c4328f8d464e22915ed83436b24969d4763b6ec3acad911f26a3e1d3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-divalign-p17",
+  "html": "<div style=\"text-align: center;\">\n<p>p1</p>\n<p>p2</p>\n</div>",
+  "html_sha256": "3c7e5ae341b1f37c5a5cefe26083e7fa9b2bb9574ebc86ccb4d715cb777e763a",
+  "source": "[[=]]\np1\n\np2\n[[/=]]",
+  "source_sha256": "9f4821044a8127f94e813a3937bf8acf95ced1d295866454e5082c2abc57293b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-divalign-p18",
+  "html": "<div style=\"text-align: center;\">\n<ul>\n<li>a</li>\n<li>b</li>\n</ul>\n<hr /></div>",
+  "html_sha256": "51ba5c405785419b54e9f736db14c28fe16ef00cbae9527e2ac04f0fa5485130",
+  "source": "[[=]]\n* a\n* b\n\n----\n[[/=]]",
+  "source_sha256": "891ac716e86f167983ffe9bfc3458d0b674c1c95c11171a5b29115ea7f78b33e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-divalign-p19",
+  "html": "<p>[[= class=&quot;x&quot;]]<br />\nbody<br />\n[[/=]]</p>\n<p>[[=]]<br />\nbody<br />\n[[/=]]</p>",
+  "html_sha256": "d0fd535528744c0ed2dd790d3b9098f1b382af0c351efbe9d843605e7bae1ca5",
+  "source": "[[= class=\"x\"]]\nbody\n[[/=]]\n\n[[=]] \nbody\n[[/=]]",
+  "source_sha256": "72ba79b46b105d6be408757bab92240eec5b636744859b64e87f639a360515c8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-divalign-p20",
+  "html": "<div style=\"text-align: center;\">\n<p><strong>bold</strong> body</p>\n</div>",
+  "html_sha256": "1fc0589d617ec49fc4699addfd64120f1c366d935a5a43bf14f37a900dc7a0d1",
+  "source": "[[=]]\n**bold** body\n[[/=]]",
+  "source_sha256": "67265793aa4463be94208684c626fd28bc7a78e81a2cdf863610988cf77a9a00",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

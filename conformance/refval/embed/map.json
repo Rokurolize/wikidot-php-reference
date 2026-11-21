@@ -1,0 +1,102 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refval-embed-p01",
+  "source": "[[embed]]body[[/embed]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-embed-p02",
+  "source": "[[embedvideo]]body[[/embedvideo]]",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-embed-p03",
+  "source": "[[embedaudio]]body[[/embedaudio]]",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-embed-p04",
+  "source": "[[embedvideo]]body[[/embed]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-embed-p05",
+  "source": "[[embed]]body[[/embedvideo]]",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-embed-p06",
+  "source": "[[EMBED]]x[[/EMBED]]\n[[EmbedVideo]]x[[/EmbedAudio]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-embed-p07",
+  "source": "[[embed]][[/embed]]\n[[embed]] [[/embed]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-embed-p08",
+  "source": "[[embed]]unclosed",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-embed-p09",
+  "source": "[[embed]]a[[/embed]]b[[/embed]]",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-embed-p10",
+  "source": "[[embed]][[embed]]x[[/embed]]",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-embed-p11",
+  "source": "[[embed ]]x[[/embed]]\n[[embed]]x[[/embed ]]",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-embed-p12",
+  "source": "[[embed]]\n<iframe src=\"http://example.com\" width=\"400\" height=\"300\"></iframe>\n[[/embed]]",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-embed-p13",
+  "source": "[[embed]]\n<iframe src=\"https://example.com\" width=\"400\" height=\"300\"></iframe>\n[[/embed]]",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-embed-p14",
+  "source": "[[embed]]\n<iframe src=\"http://example.com\" onclick=\"alert(1)\"></iframe>\n[[/embed]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-embed-p15",
+  "source": "[[embedvideo]]\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" frameborder=\"0\"></iframe>\n[[/embedvideo]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-embed-p16",
+  "source": "[[embed]]<iframe src=\"http://example.com\">fallback</iframe>[[/embed]]",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-embed-p17",
+  "source": "[[embed]]<iframe src=\"javascript:alert(1)\"></iframe>[[/embed]]",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-embed-p18",
+  "source": "[[embed]]<a href=\"http://example.com\">hi</a>[[/embed]]",
+  "action": "created"
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-embed-p19",
+  "source": "[[embed]]**bold**[[/embed]]",
+  "action": "created"
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-embed-p20",
+  "source": "pre [[embed]]hello[[/embed]] post",
+  "action": "created"
+ }
+}

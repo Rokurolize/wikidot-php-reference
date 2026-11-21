@@ -1,0 +1,87 @@
+{"id": "bt-01", "source": "[[button edit]]"}
+{"id": "bt-02", "source": "[[button edit text=\"Edit\"]]"}
+{"id": "bt-03", "source": "[[button edit text=\"Edit\" class=\"c\" style=\"s\"]]"}
+{"id": "bt-04", "source": "[[button edit id=\"x\"]]"}
+{"id": "bt-05", "source": "[[button edit_button]]"}
+{"id": "bt-06", "source": "[[button EDIT]]"}
+{"id": "bt-07", "source": "[[button Edit_Type]]"}
+{"id": "bt-08", "source": "[[button edit text=\"a\" text=\"b\"]]"}
+{"id": "bt-09", "source": "[[button edit  ]]"}
+{"id": "bt-10", "source": "[[button edit ]]"}
+{"id": "bt-11", "source": "[[button edit x]]"}
+{"id": "bt-12", "source": "[[button edit text='single']]"}
+{"id": "bt-13", "source": "[[button edit text=\"a b\" class=\"c\"]]"}
+{"id": "bt-14", "source": "[[button 123]]"}
+{"id": "bt-15", "source": "[[button a-b_c]]"}
+{"id": "bt-16", "source": "[[BUTTON edit]]"}
+{"id": "bt-17", "source": "[[button]]"}
+{"id": "bt-18", "source": "[[button ]]"}
+{"id": "bt-19", "source": "[[button edit"}
+{"id": "bt-20", "source": "[[button edit text=\"a]]"}
+{"id": "bt-21", "source": "[[button edit text=\"a\" extra=\"1\"]]"}
+{"id": "bt-22", "source": "[[button edit text=\"a\\\"b\"]]"}
+{"id": "bt-23", "source": "[[button edit\ntext=\"a\"]]"}
+{"id": "bt-24", "source": "pre [[button edit text=\"a\"]] post"}
+{"id": "bt-25", "source": "[[button edit]] [[button history]]"}
+{"id": "bt-26", "source": "[[button edit text=\"a\" ]]"}
+{"id": "bt-27", "source": "[[button edit  text=\"a\"]]"}
+{"id": "bt-28", "source": "[[button edit text=\"a|b\"]]"}
+{"id": "bt-29", "source": "[[button e]]"}
+{"id": "bt-30", "source": "[[button edit class=\"c\" text=\"t\" style=\"s\" type=\"x\"]]"}
+{"id": "bt-31", "source": "[[button edit text=\"\"]]"}
+{"id": "bt-32", "source": "[[button a1_-b]]"}
+{"id": "bt-33", "source": "[[code]][[button edit]][[/code]]"}
+{"id": "bt-34", "source": "[[button edit text=\"a\""}
+{"id": "bt-35", "source": "[[button edit[]]"}
+{"id": "bt-36", "source": "[[Button EDIT Text=\"x\"]]"}
+{"id": "bt-37", "source": "[[button edit text=\"a\" class=\"b\" style=\"c\" text=\"z\"]]"}
+{"id": "bt-38", "source": "[[button edit text=\"a\nb\"]]"}
+{"id": "bt-39", "source": "[[button edit text=\"a\"]]tail"}
+{"id": "bt-40", "source": "+ [[button edit]]"}
+{"id": "bt-41", "source": "[[div]][[button edit]][[/div]]"}
+{"id": "bt-42", "source": "[[button edit\ttext=\"a\"]]"}
+{"id": "bt-43", "source": "[[button edit text=\"a\" class=\"b\"]]"}
+{"id": "bt-x01", "source": "[[button edit-append]]"}
+{"id": "bt-x02", "source": "[[button edit-sections]]"}
+{"id": "bt-x03", "source": "[[button history]]"}
+{"id": "bt-x04", "source": "[[button print]]"}
+{"id": "bt-x05", "source": "[[button files]]"}
+{"id": "bt-x06", "source": "[[button tags]]"}
+{"id": "bt-x07", "source": "[[button source]]"}
+{"id": "bt-x08", "source": "[[button talk]]"}
+{"id": "bt-x09", "source": "[[button backlinks]]"}
+{"id": "bt-x10", "source": "[[button set-tags]]"}
+{"id": "bt-x11", "source": "[[button set-tags text=\"Tag It\" tags=\"+a -b\"]]"}
+{"id": "bt-x12", "source": "[[button rename]]"}
+{"id": "bt-x13", "source": "[[button delete]]"}
+{"id": "bt-x14", "source": "[[button parent]]"}
+{"id": "bt-x15", "source": "[[button lock]]"}
+{"id": "bt-x16", "source": "[[button edit-meta]]"}
+{"id": "bt-x17", "source": "[[button watchers]]"}
+{"id": "bt-x18", "source": "[[button edit_append]]"}
+{"id": "bt-x19", "source": "[[button edit_sections]]"}
+{"id": "bt-x20", "source": "[[button edit text=\"a<b>c&d'e\"]]"}
+{"id": "bt-x21", "source": "[[button edit class=\"c1 c2\" style=\"color:red\"]]"}
+{"id": "bt-x22", "source": "[[button unknown-type]]"}
+{"id": "p01", "source": "[[button edit]]"}
+{"id": "p02", "source": "[[button edit-append]]\n[[button edit-sections]]"}
+{"id": "p03", "source": "[[button history]]\n[[button print]]\n[[button files]]"}
+{"id": "p04", "source": "[[button tags]]\n[[button source]]\n[[button talk]]\n[[button backlinks]]"}
+{"id": "p05", "source": "[[button edit_append]]\n[[button edit_sections]]"}
+{"id": "p06", "source": "[[button set-tags]]\n[[button set-tags text=\"Tag It\" tags=\"+a -b\"]]"}
+{"id": "p07", "source": "[[button rename]]\n[[button delete]]\n[[button parent]]\n[[button lock]]"}
+{"id": "p08", "source": "[[button edit-meta]]\n[[button watchers]]\n[[button unknown-type]]"}
+{"id": "p09", "source": "[[button edit text=\"Edit Page\"]]"}
+{"id": "p10", "source": "[[button edit text=\"Edit\" class=\"my-btn\" style=\"color: red;\"]]"}
+{"id": "p11", "source": "[[button edit id=\"x\" data-foo=\"bar\" title=\"t\"]]"}
+{"id": "p12", "source": "[[button edit text=\"\"]]"}
+{"id": "p13", "source": "[[button edit text=\"a<b>c&d'e\"]]"}
+{"id": "p14", "source": "[[BUTTON edit]]\n[[button EDIT]]\n[[button Edit_Sections]]"}
+{"id": "p15", "source": "[[button edit ]]"}
+{"id": "p16", "source": "[[button edit  ]]"}
+{"id": "p17", "source": "[[button edit x]]"}
+{"id": "p18", "source": "[[button edit text='single']]"}
+{"id": "p19", "source": "[[button edit\ntext=\"newline\"]]"}
+{"id": "p20", "source": "[[button edit\ttext=\"tab\"]]"}
+{"id": "p21", "source": "[[button]]\n[[button ]]"}
+{"id": "p22", "source": "[[button edit text=\"a\" text=\"b\"]]"}

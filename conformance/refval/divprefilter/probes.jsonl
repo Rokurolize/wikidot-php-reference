@@ -1,0 +1,18 @@
+{"id": "p01", "source": "[[div]]\na\n[[/div]]\n[[div]]\nb\n[[/div]]"}
+{"id": "p02", "source": "[[div]]\na\n[[/div]]\n\n[[div]]\nb\n[[/div]]"}
+{"id": "p03", "source": "[[div]]\na\n[[/div]]\n\n\n[[div]]\nb\n[[/div]]"}
+{"id": "p04", "source": "[[div]]\na\n[[/div]]   [[div]]\nb\n[[/div]]"}
+{"id": "p05", "source": "[[div]]\na\n[[/div]]\t[[div]]\nb\n[[/div]]"}
+{"id": "p06", "source": "[[div]]\na\n[[/div]]\n[[div class=\"b\"]]\nb\n[[/div]]"}
+{"id": "p07", "source": "[[div]]\na\n[[/div]]\n[[div_]]\nb\n[[/div]]"}
+{"id": "p08", "source": "[[DIV]]\na\n[[/DIV]]\n[[DIV]]\nb\n[[/DIV]]"}
+{"id": "p09", "source": "[[/DIV]]\n[[DIV]]"}
+{"id": "p10", "source": "[[/Div]] [[dIv]]"}
+{"id": "p11", "source": "[[div]]\na\n[[/div]] x [[div]]\nb\n[[/div]]"}
+{"id": "p12", "source": "[[div]]\na\n[[/div]]\n[[span]]s[[/span]]"}
+{"id": "p13", "source": "[[div]]\na\n[[/div]]\n[[div]]\nb\n[[/div]]\n[[div]]\nc\n[[/div]]"}
+{"id": "p14", "source": "[[/div]] [[divx]]"}
+{"id": "p15", "source": "[[/div]] [[div"}
+{"id": "p16", "source": "[[div]]\n[[/div]]\n\n[[div]]\n[[/div]]"}
+{"id": "p17", "source": "[[div]]a[[/div]] [[div]]b[[/div]]"}
+{"id": "p18", "source": "[[size larger]]\n[[div class=\"outer\"]]\nheader\n[[div class=\"links\"]]\nlink\n[[/div]]\n[[div class=\"content\"]]\n[[/size]]\nbody\n[[/div]]\n[[/div]]"}

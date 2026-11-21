@@ -1,0 +1,365 @@
+{"id":"if-adj-anchor-around","output":"<p><a href=\"\/y\"><iframe src=\"http:\/\/example.org\/embed\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"1\" class=\"\" style=\"\"><\/iframe><\/a><\/p>\n\n"}
+{"id":"bibc-52-anchor-adjacency","output":"<p><a href=\"\/A\">x<a href=\"javascript:;\" class=\"bibcite\" id=\"bibcite-1\" onclick=\"WIKIDOT.page.utils.scrollToReference('bibitem-1')\">1<\/a>y<\/a><\/p>\n\n<div class=\"bibitems\"><div class=\"title\">Bibliography<\/div><div class=\"bibitem\" id=\"bibitem-1\">1. Title<\/div><\/div>"}
+{"id":"h18-anchor","output":"\n<h3 id=\"toc0\"><span><a href=\"\">anchor<\/a><\/span><\/h3>\n"}
+{"id":"toc50-author-anchor-collision","output":"<p><a name=\"toc1\"><\/a><\/p>\n\n\n<h1 id=\"toc0\"><span>One<\/span><\/h1>\n\n<h1 id=\"toc1\"><span>Two<\/span><\/h1>\n<p><a name=\"toc0\"><\/a><\/p>\n\n<table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold<\/a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold<\/a><\/div><div class=\"title\">Table of Contents<\/div><div id=\"toc-list\">\n\t<div style=\"margin-left: 1em;\"><a href=\"#toc0\">One<\/a><\/div>\n\t<div style=\"margin-left: 1em;\"><a href=\"#toc1\">Two<\/a><\/div>\n<\/div><\/div><\/td><\/tr><\/table>\n\n"}
+{"id":"lb37","output":"<ul>\n<li><strong>bold<\/strong> <em>italic<\/em> <span style=\"text-decoration: underline;\">under<\/span> <sup>sup<\/sup><\/li>\n<li><a class=\"newpage\" href=\"\/some-page\">link<\/a> and <a href=\"\/x\">anchor<\/a><\/li>\n<\/ul><br \/>\n"}
+{"id":"c64","output":"<p><span style=\"color: red\"><a href=\"x\">A<\/a><\/span><\/p>\n\n"}
+{"id":"s59","output":"<p><a href=\"https:\/\/example.com\"><strong>label<\/strong><\/a><br \/>\nx<\/p>\n\n"}
+{"id":"u50","output":"<p><a href=\"http:\/\/x\"><span style=\"text-decoration: underline;\">label<\/span><\/a><\/p>\n\n"}
+{"id":"u52","output":"<p><a href=\"#x\"><span style=\"text-decoration: underline;\">a<br \/>\nb<\/span><\/a><\/p>\n\n"}
+{"id":"sup59","output":"<p><a href=\"https:\/\/example.com\"><sup>label<\/sup><\/a><br \/>\nx<\/p>\n\n"}
+{"id":"typo69","output":"<p><a href=\"http:\/\/x\/a--b\">label<\/a><br \/>\nx<\/p>\n\n"}
+{"id":"a01","output":"<p><a name=\"strawberry\"><\/a><\/p>\n\n"}
+{"id":"a02","output":"<p><a name=\"_lemon-lime.2%20\"><\/a><\/p>\n\n"}
+{"id":"a03","output":"<p>[[#durian]]<\/p>\n\n"}
+{"id":"a04","output":"<p>[[# ]]<\/p>\n\n"}
+{"id":"a05","output":"<p>[ <a href=\"javascript:;\">a<\/a>]<\/p>\n\n"}
+{"id":"a06","output":"<p>[ <a href=\"javascript:;\">a<\/a>  ]<\/p>\n\n"}
+{"id":"a07","output":"<p>[<a href=\"javascript:;\">apple banana<\/a>]<\/p>\n\n"}
+{"id":"a08","output":"<p>[[# apple banana]]]<\/p>\n\n"}
+{"id":"a09","output":"<p>[<a href=\"javascript:;\">symbol$%_foo<\/a>]<\/p>\n\n"}
+{"id":"a10","output":"<p><a name=\"name\"><\/a>]<\/p>\n\n"}
+{"id":"a11","output":"<p><a class=\"newpage\" href=\"\/# a\"><\/a><br \/>\n<a class=\"newpage\" href=\"\/# a\">L<\/a><\/p>\n\n"}
+{"id":"a12","output":"<p><a name=\"top\"><\/a><br \/>\n<a href=\"#top\">jump<\/a><\/p>\n\n"}
+{"id":"a13","output":"<p><a href=\"\">Test<\/a><\/p>\n\n"}
+{"id":"a14","output":"<p><a href=\"\"><\/a><\/p>\n\n"}
+{"id":"a15","output":"<p><a href=\"some-page\">click<\/a><\/p>\n\n"}
+{"id":"a16","output":"<p><a href=\"some-page\">click<\/a><\/p>\n\n"}
+{"id":"a17","output":"<p><a href=\"https:\/\/example.com\">click<\/a><\/p>\n\n"}
+{"id":"a18","output":"<p><a href=\"https:\/\/example.com\" target=\"_blank\">click<\/a><\/p>\n\n"}
+{"id":"a19","output":"<p><a href=\"https:\/\/example.com\" target=\"_self\">click<\/a><\/p>\n\n"}
+{"id":"a20","output":"<p><a href=\"#something\">click<\/a><\/p>\n\n"}
+{"id":"a21","output":"<p><a href=\"#something\" target=\"_blank\">click<\/a><\/p>\n\n"}
+{"id":"a22","output":"<p><a href=\"\/local\/path\">click<\/a><\/p>\n\n"}
+{"id":"a23","output":"<p><a href=\"\/local\/path\" target=\"_blank\">click<\/a><\/p>\n\n"}
+{"id":"a24","output":"<p><a href=\"mailto:user@example.com\">mail<\/a><\/p>\n\n"}
+{"id":"a25","output":"<p><a href=\"ftp:\/\/files.example.com\/pub\">ftp<\/a><\/p>\n\n"}
+{"id":"a26","output":"<p><a href=\"javascript:alert-1\">xss<\/a><\/p>\n\n"}
+{"id":"a27","output":"<p><a href=\"javascript:alert-1\">xss2<\/a><\/p>\n\n"}
+{"id":"a28","output":"<p><a href=\"data:text-html-b-x-b\">data<\/a><\/p>\n\n"}
+{"id":"a29","output":"<p><a href=\"http:x-y\">upper-http<\/a><\/p>\n\n"}
+{"id":"a30","output":"<p><a href=\"http:x\">lead-sp<\/a><br \/>\n<a href=\"http:\/\/x\">trail-sp<\/a><\/p>\n\n"}
+{"id":"a31","output":"<p><a href=\"http:\/\/example.com\/a%20b\">sp1<\/a><br \/>\n<a href=\"\/a%20b\">sp2<\/a><br \/>\n<a href=\"#a%20b\">sp3<\/a><\/p>\n\n"}
+{"id":"a32","output":"<p><a href=\"https:\/\/example.com\/a%20b\/%E6%97%A5%E6%9C%AC%E8%AA%9E\">enc<\/a><\/p>\n\n"}
+{"id":"a33","output":"<p><a href=\"a:b\">c1<\/a><br \/>\n<a href=\"a-b\">c2<\/a><br \/>\n<a href=\"\">c3<\/a><br \/>\n<a href=\"\">c4<\/a><\/p>\n\n"}
+{"id":"a34","output":"<p><a href=\"803\">r1<\/a><br \/>\n<a class=\"\" href=\"\/x\">r2<\/a><br \/>\n<a href=\"\">r3<\/a><\/p>\n\n"}
+{"id":"a35","output":"<p><a href=\"https:\/\/example.com\" target=\"_blank\">star-ext<\/a><br \/>\n<a href=\"some-page\">star-slug<\/a><br \/>\n<a href=\"https:\/\/example.com\" target=\"_self\">star-override<\/a><\/p>\n\n"}
+{"id":"a36","output":"<p><a id=\"u-i\" class=\"c\" style=\"s\" role=\"r\" type=\"t\" data-x=\"d\" href=\"\/x\" target=\"_blank\">y<\/a><\/p>\n\n"}
+{"id":"a37","output":"<p><a id=\"u-i\" class=\"c\" style=\"s\" href=\"\/x\">y<\/a><\/p>\n\n"}
+{"id":"a38","output":"<p><a data-z=\"1\" data-a=\"2\" data-m=\"3\" href=\"\/x\">y<\/a><\/p>\n\n"}
+{"id":"a39","output":"<p><a data-x=\"1\" href=\"\/x\">y1<\/a><br \/>\n<a href=\"\/x\">y2<\/a><br \/>\n<a data-=\"1\" href=\"\/x\">y3<\/a><\/p>\n\n"}
+{"id":"a40","output":"<p><a href=\"\/x\">y<\/a><\/p>\n\n"}
+{"id":"a41","output":"<p><a href=\"\/x\">y<\/a><\/p>\n\n"}
+{"id":"a42","output":"<p><a id=\"u-i\" data-x=\"\" href=\"\">y1<\/a><br \/>\n<a class=\"a b\" href=\"\/x\">y2<\/a><br \/>\n<a href=\"\/x\">y3<\/a><br \/>\n<a href=\"\/u\">y4<\/a><\/p>\n\n"}
+{"id":"a43","output":"<p><a href=\"\/y\">UPPER<\/a><\/p>\n\n"}
+{"id":"a44","output":"<p><a href=\"\/x&quot;%20class='single'%20id=unquoted%20style%20=%20&quot;spaced\">quote-forms<\/a><\/p>\n\n"}
+{"id":"a45","output":"<p><a href=\"\">one<\/a><br \/>\nx <a href=\"\">one<\/a> y<br \/>\n<a href=\"\">one<\/a> <a href=\"\">two<\/a><br \/>\n<a href=\"\">one<\/a> <a href=\"\">two<\/a><\/p>\n\n"}
+{"id":"a46","output":"<p><a href=\"\/1\">x<\/a><a href=\"\/2\">y<\/a>z<br \/>\n<a href=\"\/1\"><\/a> <a href=\"\/2\">y<\/a><\/p>\n\n"}
+{"id":"a47","output":"<p>a[[a ]] b[[\/a]]c<\/p>\n\n"}
+{"id":"a48","output":"<p>[[anchor href=&quot;\/x&quot;]]txt[[\/anchor]]<br \/>\n[[*a href=&quot;\/x&quot;]]txt[[\/a]]<br \/>\n[[a href=&quot;\/x&quot;]]txt[[\/anchor]]<\/p>\n\n"}
+{"id":"a49","output":"<p>[[a href=&quot;<a href=\"http:\/\/example.com\">http:\/\/example.com<\/a>&quot;]]unterminated<\/p>\n\n<div ><p>inside<\/p>\n\n<\/div>"}
+{"id":"a50","output":"<p><a href=\"\/x\">txt<\/a>]<br \/>\n<a name=\"name\"><\/a>]<\/p>\n\n"}
+{"id":"a51","output":"<p><a href=\"\/x\"><br \/>\nline1<br \/>\nline2<br \/>\n<\/a><\/p>\n\n"}
+{"id":"a52","output":"<p><a href=\"\/x\">line1<\/a><\/p>\n\n<p><a href=\"\/x\">line2<\/a><\/p>\n\n"}
+{"id":"a53","output":"<a href=\"\">X<\/a>"}
+{"id":"a54","output":"<a href=\"https:\/\/example.com\"><sup>label<\/sup><\/a>"}
+{"id":"a55","output":"<p>PRE<a href=\"https:\/\/example.com\">x<\/a>POST<\/p>\n\n"}
+{"id":"a56","output":"<p>PRE<a href=\"\/x\">mid<\/a>POST<\/p>\n\n"}
+{"id":"a57","output":"<a href=\"some-page\">line1<br \/>\nline2<\/a>"}
+{"id":"a58","output":"<p><a href=\"http:\/\/x\/a--b\">label<\/a><br \/>\nx<\/p>\n\n"}
+{"id":"a59","output":"<p><a href=\"https:\/\/example.com\"><sup>label<\/sup><\/a><br \/>\nx<\/p>\n\n"}
+{"id":"a60","output":"<p><a href=\"http:\/\/x\"><span style=\"text-decoration: underline;\">label<\/span><\/a><\/p>\n\n"}
+{"id":"an-01","output":"<p><a name=\"strawberry\"><\/a><\/p>\n\n"}
+{"id":"an-02","output":"<p><a name=\"_lemon-lime.2%20\"><\/a><\/p>\n\n"}
+{"id":"an-03","output":"<p><a name=\"A\"><\/a><\/p>\n\n"}
+{"id":"an-04","output":"<p>[[#durian]]<\/p>\n\n"}
+{"id":"an-05","output":"<p>[[# ]]<\/p>\n\n"}
+{"id":"an-06","output":"<p>[<a href=\"javascript:;\"> <\/a>]<\/p>\n\n"}
+{"id":"an-07","output":"<p>[<a href=\"javascript:;\">a b<\/a>]<\/p>\n\n"}
+{"id":"an-08","output":"<p>[ <a href=\"javascript:;\">lead<\/a>]<\/p>\n\n"}
+{"id":"an-09","output":"<p>[<a href=\"javascript:;\">trail<\/a> ]<\/p>\n\n"}
+{"id":"an-10","output":"<p>[[# a b]]]<\/p>\n\n"}
+{"id":"an-11","output":"<p><a class=\"newpage\" href=\"\/# a b\"><\/a><\/p>\n\n"}
+{"id":"an-12","output":"<p>x[[# a b]]]y<\/p>\n\n"}
+{"id":"an-13","output":"<p><a name=\"good\"><\/a>]<\/p>\n\n"}
+{"id":"an-14","output":"<p>[   <a href=\"javascript:;\">tab-name<\/a>]<\/p>\n\n"}
+{"id":"an-15","output":"<p>[<a href=\"javascript:;\">a    b<\/a>]<\/p>\n\n"}
+{"id":"an-16","output":"<p><a name=\"%20\"><\/a><\/p>\n\n"}
+{"id":"an-17","output":"<p>[<a href=\"javascript:;\">a$b<\/a>]<\/p>\n\n"}
+{"id":"an-18","output":"<p>[<a href=\"javascript:;\">caf\u00e9<\/a>]<\/p>\n\n"}
+{"id":"an-19","output":"<p>pre <a name=\"mid\"><\/a> post<\/p>\n\n"}
+{"id":"an-20","output":"<p><a name=\"one\"><\/a><br \/>\n<a name=\"two\"><\/a><\/p>\n\n"}
+{"id":"an-21","output":"<p><a name=\"a\"><\/a> [<a href=\"javascript:;\">b c<\/a>] <a name=\"d\"><\/a><\/p>\n\n"}
+{"id":"an-22","output":"<p><a name=\"a\"><\/a>]]<\/p>\n\n"}
+{"id":"an-23","output":"<p>[<a href=\"javascript:;\">[[math<\/a>]x[[\/math]]]]<\/p>\n\n"}
+{"id":"an-24","output":"<p><a href=\"\/x\">body<\/a><\/p>\n\n"}
+{"id":"an-25","output":"<p><a href=\"\">body<\/a><\/p>\n\n"}
+{"id":"an-26","output":"<p>pre <a href=\"\/x\">body<\/a> post<\/p>\n\n"}
+{"id":"an-27","output":"<p><a href=\"\">body<\/a><\/p>\n\n"}
+{"id":"an-28","output":"<a href=\"\/x\">body<\/a>"}
+{"id":"an-29","output":"<a href=\"\/x\">body<\/a>"}
+{"id":"an-30","output":"pre<a href=\"\/x\">body<\/a>"}
+{"id":"an-31","output":"<p><a href=\"\/x\">body<\/a>post<\/p>\n\n"}
+{"id":"an-32","output":"<p><a href=\"\/x\">body<\/a>post<\/p>\n\n"}
+{"id":"an-33","output":"<p><a href=\"\/x\">body<\/a>post<\/p>\n\n"}
+{"id":"an-34","output":"<p><a href=\"\/1\">x<\/a><a href=\"\/2\">y<\/a>z<\/p>\n\n"}
+{"id":"an-35","output":"<p><a href=\"\/1\">x<\/a><a href=\"\/2\">y<\/a><\/p>\n\n"}
+{"id":"an-36","output":"<p><a href=\"\/1\">x<\/a><a href=\"\/2\">y<\/a> mid <a href=\"\/3\">w<\/a><\/p>\n\n"}
+{"id":"an-37","output":"<p><a href=\"\/x\">p1<\/a><\/p>\n\n<p><a href=\"\/x\">p2<\/a><\/p>\n\n"}
+{"id":"an-38","output":"<p><a href=\"\/x\">p1<\/p>\n\n<p>[[div]]p2<\/a><\/p>\n\n"}
+{"id":"an-39","output":"<p><a id=\"u-myid\" class=\"c\" style=\"s\" role=\"r\" type=\"t\" data-x=\"1\" data-y=\"2\" href=\"\/h\" target=\"_self\">b<\/a><\/p>\n\n"}
+{"id":"an-40","output":"<p><a href=\"\">b<\/a><\/p>\n\n"}
+{"id":"an-41","output":"<p><a id=\"u- u\" href=\"\">b<\/a><\/p>\n\n"}
+{"id":"an-42","output":"<p><a id=\"u-x\" href=\"\">b<\/a><\/p>\n\n"}
+{"id":"an-43","output":"<p><a id=\"u-x\" href=\"\">b<\/a><\/p>\n\n"}
+{"id":"an-44","output":"<p><a href=\"http:\/\/e.com\" target=\"_blank\">b<\/a><\/p>\n\n"}
+{"id":"an-45","output":"<p><a href=\"http:\/\/e.com\" target=\"_self\">b<\/a><\/p>\n\n"}
+{"id":"an-46","output":"<p><a href=\"some-page\">b<\/a><\/p>\n\n"}
+{"id":"an-47","output":"<p><a href=\"a:b-c\">b<\/a><\/p>\n\n"}
+{"id":"an-48","output":"<p><a href=\"#frag\">b<\/a><\/p>\n\n"}
+{"id":"an-49","output":"<p><a href=\"page-name-with-spaces\">b<\/a><\/p>\n\n"}
+{"id":"an-50","output":"<p><a href=\"http:e-com\">b<\/a><\/p>\n\n"}
+{"id":"an-51","output":"<p><a href=\"\/a%20b\">b<\/a><\/p>\n\n"}
+{"id":"an-52","output":"<p><a href=\"\/caf%C3%A9\">b<\/a><\/p>\n\n"}
+{"id":"an-53","output":"<p><a class=\"a b\" href=\"\">x<\/a><\/p>\n\n"}
+{"id":"an-54","output":"<p><a href=\"\">x<\/a><\/p>\n\n"}
+{"id":"an-55","output":"<p><a href=\"\/y\">t<\/a><\/p>\n\n"}
+{"id":"an-56","output":"<p>[[a href=&quot;\/x&quot;]]unclosed<\/p>\n\n"}
+{"id":"an-57","output":"<p>[[anchor]]x[[\/anchor]]<\/p>\n\n"}
+{"id":"an-58","output":"<p>[[a ]]x[[\/a]]<\/p>\n\n"}
+{"id":"an-59","output":"<p><a href=\"\/x\"><\/a><\/p>\n\n"}
+{"id":"an-60","output":"<p>x <a href=\"\/x\">y<\/a> z<\/p>\n\n"}
+{"id":"an-61","output":"<a href=\"\/x\">body<\/a>"}
+{"id":"an-62","output":"<a href=\"\/x\">body<\/a>"}
+{"id":"an-63","output":"<p><a href=\"\">x[[\/math]]&quot;]]b<\/a><\/p>\n\n"}
+{"id":"an-64","output":"<p><a href=\"\">x[[\/math]]&quot;]]b<\/a><\/p>\n\n"}
+{"id":"an-65","output":"<p><a href=\"\/x\">p1<\/p>\n\n<p>p2<\/a><\/p>\n\n"}
+{"id":"an-66","output":"<p><a href=\"\/x\">a<\/a> <a href=\"\/y\">b<\/a><\/p>\n\n"}
+{"id":"an-67","output":"<a href=\"\/1\">x[[a href=&quot;\/2&quot;]]y<\/a>"}
+{"id":"an-68","output":"\n<div class=\"code\">\n<pre><code>[[a href=&quot;\/x&quot;]]b[[\/a]]<\/code><\/pre><\/div>\n\n"}
+{"id":"an-69","output":"<p><a href=\"\/x\"><\/a><\/p>\n\n"}
+{"id":"an-70","output":"<p><a href=\"\/x\">body<\/a> tail<\/p>\n\n"}
+{"id":"an-71","output":"<p>lead <a href=\"\/x\">body<\/a><\/p>\n\n"}
+{"id":"an-72","output":"<p><a href=\"\/x\"><br \/>\nbody<br \/>\n<\/a><\/p>\n\n"}
+{"id":"an-73","output":"<a href=\"\/x\">body<\/a><a href=\"\/y\">more<\/a>"}
+{"id":"us-01","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-02","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-03","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-04","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-05","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-06","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-07","output":"<p>[[user]]<\/p>\n\n"}
+{"id":"us-08","output":"<p>[[user ]]<\/p>\n\n"}
+{"id":"us-09","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-10","output":"<p>[[user a]b]]<\/p>\n\n"}
+{"id":"us-11","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-12","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-13","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-14","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-15","output":"<p>[[user x]<\/p>\n\n"}
+{"id":"us-16","output":"<p>[[users x]]<\/p>\n\n"}
+{"id":"us-17","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-18","output":"<p>[[ user x]]<\/p>\n\n"}
+{"id":"us-19","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-20","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-21","output":"<p>[[*user]]<\/p>\n\n"}
+{"id":"us-22","output":"<p>[[**user x]]<\/p>\n\n"}
+{"id":"us-23","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-24","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-25","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-26","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-27","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-28","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-29","output":"\n<div class=\"code\">\n<pre><code>[[user a]]<\/code><\/pre><\/div>\n\n"}
+{"id":"us-30","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-31","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-32","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-33","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-34","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-35","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-36","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-37","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-38","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-39","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-40","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-41","error":"Error: Class \"Criteria\" not found"}
+{"id":"us-42","error":"Error: Class \"Criteria\" not found"}
+{"id":"bt-01","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-02","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >Edit<\/a><\/p>\n\n"}
+{"id":"bt-03","output":"<p><a class=\"c\" style=\"s\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >Edit<\/a><\/p>\n\n"}
+{"id":"bt-04","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-05","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-06","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-07","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-08","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >b<\/a><\/p>\n\n"}
+{"id":"bt-09","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-10","output":"<p>[[button edit ]]<\/p>\n\n"}
+{"id":"bt-11","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-12","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-13","output":"<p><a class=\"c\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a b<\/a><\/p>\n\n"}
+{"id":"bt-14","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-15","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-16","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-17","output":"<p>[[button]]<\/p>\n\n"}
+{"id":"bt-18","output":"<p>[[button ]]<\/p>\n\n"}
+{"id":"bt-19","output":"<p>[[button edit<\/p>\n\n"}
+{"id":"bt-20","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-21","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"bt-22","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a&quot;b<\/a><\/p>\n\n"}
+{"id":"bt-23","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"bt-24","output":"<p>pre <a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a> post<\/p>\n\n"}
+{"id":"bt-25","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a> <a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\" WIKIDOT.page.listeners.historyClick(event)\" >history<\/a><\/p>\n\n"}
+{"id":"bt-26","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"bt-27","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"bt-28","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a|b<\/a><\/p>\n\n"}
+{"id":"bt-29","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-30","output":"<p><a class=\"c\" style=\"s\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >t<\/a><\/p>\n\n"}
+{"id":"bt-31","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/p>\n\n"}
+{"id":"bt-32","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-33","output":"\n<div class=\"code\">\n<pre><code>[[button edit]]<\/code><\/pre><\/div>\n\n"}
+{"id":"bt-34","output":"<p>[[button edit text=&quot;a&quot;<\/p>\n\n"}
+{"id":"bt-35","output":"<p>[[button edit[]]<\/p>\n\n"}
+{"id":"bt-36","output":"<p><div class=\"error-block\">The button type is not recognized<\/div><\/p>\n\n"}
+{"id":"bt-37","output":"<p><a class=\"b\" style=\"c\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >z<\/a><\/p>\n\n"}
+{"id":"bt-38","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a\nb<\/a><\/p>\n\n"}
+{"id":"bt-39","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a>tail<\/p>\n\n"}
+{"id":"bt-40","output":"\n<h1 id=\"toc0\"><span><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a><\/span><\/h1>\n"}
+{"id":"bt-41","output":"<p>[[div]]<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >edit<\/a>[[\/div]]<\/p>\n\n"}
+{"id":"bt-42","output":"<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"bt-43","output":"<p><a class=\"b\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\" >a<\/a><\/p>\n\n"}
+{"id":"eb-01","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-02","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-03","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-04","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-05","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-06","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-07","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-08","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-09","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-10","output":"<p>[[embed]]unclosed<\/p>\n\n"}
+{"id":"eb-11","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div>b[[\/embed]]<\/p>\n\n"}
+{"id":"eb-12","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-13","output":"<p>[[embedx]]y[[\/embedx]]<\/p>\n\n"}
+{"id":"eb-14","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div> <div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-15","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-16","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-17","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-18","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-19","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-20","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div> b [[\/embed]]<\/p>\n\n"}
+{"id":"eb-21","output":"<p>[[div]]<div class=\"error-block\">Sorry, no match for the embedded content.<\/div>[[\/div]]<\/p>\n\n"}
+{"id":"eb-22","output":"<p>pre<div class=\"error-block\">Sorry, no match for the embedded content.<\/div>post<\/p>\n\n"}
+{"id":"eb-23","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-24","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-25","output":"<p>[[embedvideo]]<\/p>\n\n"}
+{"id":"eb-26","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-27","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-28","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div>c[[\/embed]]<\/p>\n\n"}
+{"id":"eb-29","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-30","output":"<p>[[embed ]]x[[\/embed]]<\/p>\n\n"}
+{"id":"eb-31","output":"<p>[[embed]]x[[\/embed ]]<\/p>\n\n"}
+{"id":"eb-32","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-33","output":"<p>a <div class=\"error-block\">Sorry, no match for the embedded content.<\/div> b <div class=\"error-block\">Sorry, no match for the embedded content.<\/div> c<\/p>\n\n"}
+{"id":"eb-34","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/td>\n<\/tr>\n<\/table>"}
+{"id":"eb-35","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-36","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div>y<div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-37","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><br \/>\n\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot;\u00fe<\/p>\n\n"}
+{"id":"eb-38","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-39","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-40","output":"<p><a href=\"\/x\"><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/a><\/p>\n\n"}
+{"id":"eb-41","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"eb-42","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"so-01","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot;\u00fe<\/p>\n\n"}
+{"id":"so-02","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22digg%22 \u00fe<\/p>\n\n"}
+{"id":"so-03","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22digg+reddit%22 \u00fe<\/p>\n\n"}
+{"id":"so-04","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22digg%22 \u00fe<\/p>\n\n"}
+{"id":"so-05","output":"<p>[[social ]]<\/p>\n\n"}
+{"id":"so-06","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22digg%22 \u00fe<\/p>\n\n"}
+{"id":"so-07","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22digg%22 \u00fe<\/p>\n\n"}
+{"id":"so-08","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22digg%22 \u00fe<\/p>\n\n"}
+{"id":"so-09","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22digg%22 \u00fe<\/p>\n\n"}
+{"id":"so-10","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%22 \u00fe \u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22b%22 \u00fe<\/p>\n\n"}
+{"id":"so-11","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%22b%22 \u00fe<\/p>\n\n"}
+{"id":"so-12","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%3Db%22 \u00fe<\/p>\n\n"}
+{"id":"so-13","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22caf%C3%A9%22 \u00fe<\/p>\n\n"}
+{"id":"so-14","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%7Eb%22 \u00fe<\/p>\n\n"}
+{"id":"so-15","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a_b-c.d%22 \u00fe<\/p>\n\n"}
+{"id":"so-16","output":"<p>pre \u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22x%22 \u00fe post<\/p>\n\n"}
+{"id":"so-17","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot;\u00fex\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot;\u00fe<\/p>\n\n"}
+{"id":"so-18","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%22 \u00fe]<\/p>\n\n"}
+{"id":"so-19","output":"<p>[[social a]b]]<\/p>\n\n"}
+{"id":"so-20","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a+b+c%22 \u00fe<\/p>\n\n"}
+{"id":"so-21","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot;\u00fe<\/p>\n\n"}
+{"id":"so-22","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%0Ab%22 \u00fe<\/p>\n\n"}
+{"id":"so-23","output":"<p>[[div]]\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22x%22 \u00fe[[\/div]]<\/p>\n\n"}
+{"id":"so-24","output":"\n<div class=\"code\">\n<pre><code>[[social x]]<\/code><\/pre><\/div>\n\n"}
+{"id":"so-25","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22%2520%22 \u00fe<\/p>\n\n"}
+{"id":"so-26","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%2Bb%22 \u00fe<\/p>\n\n"}
+{"id":"so-27","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%2Fb%22 \u00fe<\/p>\n\n"}
+{"id":"so-28","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%22 \u00fe<br \/>\nmore text<\/p>\n\n"}
+{"id":"so-29","output":"<p><a href=\"\/x\">\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot;\u00fe<\/a><\/p>\n\n"}
+{"id":"so-30","output":"<div class=\"wiki-note\"><p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22x%22 \u00fe<\/p>\n\n<\/div>"}
+{"id":"so-31","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%22 \u00fe<\/p>\n\n"}
+{"id":"so-32","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%220%22 \u00fe<\/p>\n\n"}
+{"id":"so-33","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%22 \u00fex<\/p>\n\n"}
+{"id":"so-34","output":"<p>x\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%22 \u00fe<\/p>\n\n"}
+{"id":"so-35","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%22 \u00fe<\/p>\n\n"}
+{"id":"so-36","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%22 \u00fe<\/p>\n\n<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22b%22 \u00fe<\/p>\n\n"}
+{"id":"so-37","output":"<p>[[social a] extra<\/p>\n\n"}
+{"id":"so-38","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%22 \u00fe<\/p>\n\n"}
+{"id":"so-39","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22%0Ca%22 \u00fe<\/p>\n\n"}
+{"id":"so-40","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%5Bb%22 \u00fe<\/p>\n\n"}
+{"id":"so-41","output":"\n<h1 id=\"toc0\"><span>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22a%22 \u00fe<\/span><\/h1>\n"}
+{"id":"so-42","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot; sites%3D%22x%22 \u00fe<\/p>\n\n"}
+{"id":"fi-01","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-02","output":"<p><a href=\"\/a.txt\">Label<\/a><\/p>\n\n"}
+{"id":"fi-03","output":"<p><a href=\"\/a.txt|\">a.txt|<\/a><\/p>\n\n"}
+{"id":"fi-04","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-05","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-06","output":"<p><a href=\"\/a.txt\">Label<\/a><\/p>\n\n"}
+{"id":"fi-07","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-08","output":"<p><a href=\"\/a.txt\">a|b<\/a><\/p>\n\n"}
+{"id":"fi-09","output":"<p>[[file a<br \/>\nb.txt]]<\/p>\n\n"}
+{"id":"fi-10","output":"<p>[[file a.txt|x<br \/>\ny]]<\/p>\n\n"}
+{"id":"fi-11","output":"<p>[[file ]]<\/p>\n\n"}
+{"id":"fi-12","output":"<p><a href=\"\/a.txt\">a.txt<\/a> <a href=\"\/b.txt\">L<\/a><\/p>\n\n"}
+{"id":"fi-13","output":"<p>[[div]]<a href=\"\/a.txt\">a.txt<\/a>[[\/div]]<\/p>\n\n"}
+{"id":"fi-14","output":"<p><a href=\"\/x\"><a href=\"\/a.txt\">L<\/a><\/a><\/p>\n\n"}
+{"id":"fi-15","output":"\n<div class=\"code\">\n<pre><code>[[file a.txt]]<\/code><\/pre><\/div>\n\n"}
+{"id":"fi-16","output":"<p><a href=\"\/my file.txt\">my file.txt<\/a><\/p>\n\n"}
+{"id":"fi-17","output":"<p><a href=\"\/a.txt\">Label With Spaces<\/a><\/p>\n\n"}
+{"id":"fi-18","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-19","output":"<p><a href=\"\/|x\">|x<\/a><\/p>\n\n"}
+{"id":"fi-20","output":"<p><a href=\"\/a\">b|c<\/a><\/p>\n\n"}
+{"id":"fi-21","output":"<p><a href=\"\/a\">a<\/a>]<\/p>\n\n"}
+{"id":"fi-22","output":"<p><a href=\"\/a]b\">a]b<\/a><\/p>\n\n"}
+{"id":"fi-23","output":"<p><a href=\"\/caf\u00e9.txt\">caf\u00e9.txt<\/a><\/p>\n\n"}
+{"id":"fi-24","output":"<p><a href=\"\/a.txt\">[[math<\/a>x[[\/math]]]]<\/p>\n\n"}
+{"id":"fi-25","output":"<p><a href=\"\/[[math\">[[math<\/a>x[[\/math]].txt]]<\/p>\n\n"}
+{"id":"fi-26","output":"<p>x<a href=\"\/a.txt\">L<\/a>y<\/p>\n\n"}
+{"id":"fi-27","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-28","output":"<p><a href=\"\/a.txt |\">a.txt |<\/a><\/p>\n\n"}
+{"id":"fi-29","output":"<p><a href=\"\/a.txt\">L<\/a><\/p>\n\n"}
+{"id":"fi-30","output":"<p><a href=\"\/A.TXT\">Label<\/a><\/p>\n\n"}
+{"id":"fi-31","output":"<table class=\"wiki-content-table\">\n<tr>\n<td><a href=\"\/a.txt\">a.txt<\/a><\/td>\n<\/tr>\n<\/table>"}
+{"id":"fi-32","output":"<ul>\n<li><a href=\"\/a.txt\">a.txt<\/a><\/li>\n<\/ul>"}
+{"id":"fi-33","output":"<p><a href=\"\/|\">|<\/a><\/p>\n\n"}
+{"id":"fi-34","output":"<p><a href=\"\/a.txt\">b<\/a><\/p>\n\n"}
+{"id":"fi-35","output":"<p><a href=\"\/a.txt\">b<\/a><\/p>\n\n"}
+{"id":"fi-36","output":"<p><a href=\"\/a.txt\">a.txt<\/a> and <a href=\"\/b.txt\">b.txt<\/a><\/p>\n\n"}
+{"id":"fi-37","output":"<p>\u00femodule &quot;wiki\/social\/SocialBookmarksModule&quot;\u00fe <a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-38","output":"<p><div class=\"error-block\">Sorry, no match for the embedded content.<\/div><\/p>\n\n"}
+{"id":"fi-39","output":"<div class=\"wiki-note\"><p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n<\/div>"}
+{"id":"fi-40","output":"<p><a href=\"\/a\">]x<\/a><\/p>\n\n"}
+{"id":"fi-41","output":"<p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n"}
+{"id":"fi-42","output":"<blockquote><p><a href=\"\/a.txt\">a.txt<\/a><\/p>\n\n<\/blockquote>\n"}
+{"id":"fi-43","output":"<p><a href=\"\/a.txt\">L<\/a><\/p>\n\n"}
+{"id":"smoke-code","output":"\n<div class=\"code\">\n<pre><code>$x = 1;<\/code><\/pre><\/div>\n\n"}
+{"id":"smoke-collapsible","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><p>hidden body<\/p>\n\n<\/div><\/div><\/div>"}
+{"id":"smoke-div","output":"<div  class=\"x\"><p>inside div<\/p>\n\n<\/div>"}
+{"id":"smoke-footnote","output":"<p>Text with a note<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1<\/a><\/sup> here.<\/p>\n\n<div class=\"footnotes-footer\"><div class=\"title\">Footnotes<\/div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1<\/a>. the note text<\/div><\/div>"}
+{"id":"smoke-include","output":"<p>Before<\/p>\n\n<p>TARGET-CONTENT-START<br \/>\nValue is {$marker}.<br \/>\nTARGET-CONTENT-END<\/p>\n\n<p>After<\/p>\n\n"}
+{"id":"smoke-link","output":"<p>A <a class=\"newpage\" href=\"\/some-page\">link text<\/a> and <a class=\"newpage\" href=\"\/missing-page\">missing-page<\/a> here.<\/p>\n\n"}
+{"id":"smoke-math","output":"<p>Math $x^2$ inline and:<\/p>\n\n<div class=\"error-block\">The equation has not been processed correctly. Most prabably it has syntax error(s).<\/div>"}
+{"id":"smoke-quote","output":"<blockquote><p>quoted line<br \/>\nmore quote<\/p>\n\n<\/blockquote>\n"}
+{"id":"smoke-table","output":"<table class=\"wiki-content-table\">\n<tr>\n<th>cell1<\/th>\n<th>cell2<\/th>\n<\/tr>\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table>"}

@@ -1,0 +1,123 @@
+p01 -> muse-probe-refval-user-p01 (created)
+p02 -> muse-probe-refval-user-p02 (created)
+p03 -> muse-probe-refval-user-p03 (created)
+p04 -> muse-probe-refval-user-p04 (created)
+p05 -> muse-probe-refval-user-p05 (created)
+p06 -> muse-probe-refval-user-p06 (created)
+p07 -> muse-probe-refval-user-p07 (created)
+p08 -> muse-probe-refval-user-p08 (created)
+p09 -> muse-probe-refval-user-p09 (created)
+p10 -> muse-probe-refval-user-p10 (created)
+p11 -> muse-probe-refval-user-p11 (created)
+p12 -> muse-probe-refval-user-p12 (created)
+p13 -> muse-probe-refval-user-p13 (created)
+p14 -> muse-probe-refval-user-p14 (created)
+p15 -> muse-probe-refval-user-p15 (created)
+p16 -> muse-probe-refval-user-p16 (created)
+p17 -> muse-probe-refval-user-p17 (created)
+p18 -> muse-probe-refval-user-p18 (created)
+p19 -> muse-probe-refval-user-p19 (created)
+p20 -> muse-probe-refval-user-p20 (created)
+20 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01": {
+  "fullname": "muse-probe-refval-user-p01",
+  "source": "[[user michal-frackowiak]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-user-p02",
+  "source": "[[*user michal-frackowiak]]",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-user-p03",
+  "source": "[[user Michal Frackowiak]]",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-user-p04",
+  "source": "[[*user Michal Frackowiak]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-user-p05",
+  "source": "[[user nonexistent-refval-xyz-99999]]",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-user-p06",
+  "source": "[[*user nonexistent-refval-xyz-99999]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-user-p07",
+  "source": "[[USER michal-frackowiak]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-user-p08",
+  "source": "[[*User michal-frackowiak]]",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-user-p09",
+  "source": "[[user  michal-frackowiak]]",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-user-p10",
+  "source": "[[user michal-frackowiak ]]",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-user-p11",
+  "source": "[[user]]\n[[user ]]\n[[*user]]\n[[**user michal-frackowiak]]",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-user-p12",
+  "source": "[[user\tmichal-frackowiak]]",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-user-p13",
+  "source": "[[user a\nb]]",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-user-p14",
+  "source": "[[user a]b]]\n[[user a]]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-user-p15",
+  "source": "[[user <b>xss</b>]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-user-p16",
+  "source": "[[user a\"b&c]]",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-user-p17",
+  "source": "[[user wikidot]]\n[[*user wikidot]]",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-user-p18",
+  "source": "pre [[user michal-frackowiak]] post",
+  "action": "created"
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-user-p19",
+  "source": "[[user café]]",
+  "action": "created"
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-user-p20",
+  "source": "[[code]][[user michal-frackowiak]][[/code]]",
+  "action": "created"
+ }
+}

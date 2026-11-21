@@ -1,0 +1,80 @@
+{"id": "sep-01", "source": "====\n"}
+{"id": "sep-02", "source": "===="}
+{"id": "sep-03", "source": "x\n====\ny\n"}
+{"id": "sep-04", "source": "x\n=====\ny\n"}
+{"id": "sep-05", "source": "x\n==========\ny\n"}
+{"id": "sep-06", "source": "x\n===\ny\n"}
+{"id": "sep-07", "source": "x\n==\ny\n"}
+{"id": "sep-08", "source": "x\n=\ny\n"}
+{"id": "sep-09", "source": "x\n===="}
+{"id": "sep-10", "source": "x\n==== \ny\n"}
+{"id": "sep-11", "source": "x\n ====\ny\n"}
+{"id": "sep-12", "source": "x\n====x\ny\n"}
+{"id": "sep-13", "source": "x\nx====\ny\n"}
+{"id": "sep-14", "source": "a ==== b\n"}
+{"id": "sep-15", "source": "= = = =\n"}
+{"id": "sep-16", "source": "x\n= text\ny\n"}
+{"id": "sep-17", "source": "x\n= ====\ny\n"}
+{"id": "sep-18", "source": "= ====\n"}
+{"id": "sep-19", "source": "x\n==== =\ny\n"}
+{"id": "sep-20", "source": "====\n====\n"}
+{"id": "sep-21", "source": "====\n\n====\n"}
+{"id": "sep-22", "source": "a\n====\nb\n====\nc\n"}
+{"id": "sep-23", "source": "----\n====\nx\n"}
+{"id": "sep-24", "source": "====\n----\nx\n"}
+{"id": "sep-25", "source": "~~~~\n====\nx\n"}
+{"id": "sep-26", "source": "x\n====\n~~~~\ny\n"}
+{"id": "sep-27", "source": "a _\n====\nb\n"}
+{"id": "sep-28", "source": "x\n====\n= centered\ny\n"}
+{"id": "sep-29", "source": "[[toc]]\n====\nx\n"}
+{"id": "sep-30", "source": "+ Head\n====\nx\n"}
+{"id": "sep-31", "source": "x\n====\n**bold**\n"}
+{"id": "sep-32", "source": "* item\n====\nx\n"}
+{"id": "sep-33", "source": "[[code]]\n====\n[[/code]]\nx\n"}
+{"id": "sep-34", "source": "@@\n====\n@@\nx\n"}
+{"id": "sep-35", "source": "[[div]]\n====\n[[/div]]\nx\n"}
+{"id": "sep-36", "source": "> quote\n====\nx\n"}
+{"id": "sep-37", "source": "[[code]]\nx\n[[/code]]\n====\ny\n"}
+{"id": "sep-38", "source": "x\n====\n"}
+{"id": "sep-39", "source": "\n====\nx\n"}
+{"id": "sep-40", "source": "x\n\n====\n\ny\n"}
+{"id": "sep-41", "source": "before\nsome ==== text\n====\nafter\n"}
+{"id": "sep-x01", "source": "x\n====\ny"}
+{"id": "sep-x02", "source": "x\n=====\n==========\ny"}
+{"id": "sep-x03", "source": "x\n===\n==\n=\ny"}
+{"id": "sep-x04", "source": "x\n==== \ny"}
+{"id": "sep-x05", "source": "x\n ====\ny"}
+{"id": "sep-x06", "source": "x\n====x\nx====\na ==== b\n= = = =\ny"}
+{"id": "sep-x07", "source": "x\n= ====\ny"}
+{"id": "sep-x08", "source": "= ===="}
+{"id": "sep-x09", "source": "x\n==== =\ny"}
+{"id": "sep-x10", "source": "====\n===="}
+{"id": "sep-x11", "source": "====\n\n===="}
+{"id": "sep-x12", "source": "----\n====\nx"}
+{"id": "sep-x13", "source": "[[div]]\n====\n[[/div]]"}
+{"id": "sep-x14", "source": "[[note]]\n====\n[[/note]]"}
+{"id": "sep-x15", "source": "[[=]]\n====\n[[/=]]"}
+{"id": "sep-x16", "source": "[[collapsible]]\n====\n[[/collapsible]]"}
+{"id": "sep-x17", "source": "* item\n====\n* item2"}
+{"id": "sep-x18", "source": "|| a ||\n====\n|| b ||"}
+{"id": "sep-x19", "source": "> quote\n====\nx"}
+{"id": "sep-x20", "source": "a _\n====\nb"}
+{"id": "sep-x21", "source": "[[toc]]====\n\n+ H"}
+{"id": "p01", "source": "===="}
+{"id": "p02", "source": "x\n====\ny"}
+{"id": "p03", "source": "x\n=====\n==========\ny"}
+{"id": "p04", "source": "x\n===\n==\n=\ny"}
+{"id": "p05", "source": "x\n==== \ny"}
+{"id": "p06", "source": "x\n ====\ny"}
+{"id": "p07", "source": "x\n====x\nx====\na ==== b\n= = = =\ny"}
+{"id": "p08", "source": "x\n= ====\ny"}
+{"id": "p09", "source": "= ===="}
+{"id": "p10", "source": "x\n==== =\ny"}
+{"id": "p11", "source": "====\n===="}
+{"id": "p12", "source": "====\n\n===="}
+{"id": "p13", "source": "----\n====\nx"}
+{"id": "p14", "source": "[[div]]\n====\n[[/div]]"}
+{"id": "p15", "source": "* item\n====\n* item2"}
+{"id": "p16", "source": "|| a ||\n====\n|| b ||"}
+{"id": "p17", "source": "[[code]]\n====\n[[/code]]\n@@\n====\n@@\nx"}
+{"id": "p18", "source": "a _\n====\nb"}

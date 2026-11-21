@@ -1,0 +1,222 @@
+p01 -> muse-probe-refval-note-p01 stable=True saved_source_matches=True valid=True
+p02 -> muse-probe-refval-note-p02 stable=True saved_source_matches=True valid=True
+p03 -> muse-probe-refval-note-p03 stable=True saved_source_matches=True valid=True
+p04 -> muse-probe-refval-note-p04 stable=True saved_source_matches=True valid=True
+p05 -> muse-probe-refval-note-p05 stable=True saved_source_matches=True valid=True
+p06 -> muse-probe-refval-note-p06 stable=True saved_source_matches=True valid=True
+p07 -> muse-probe-refval-note-p07 stable=True saved_source_matches=True valid=True
+p08 -> muse-probe-refval-note-p08 stable=True saved_source_matches=True valid=True
+p09 -> muse-probe-refval-note-p09 stable=True saved_source_matches=True valid=True
+p10 -> muse-probe-refval-note-p10 stable=True saved_source_matches=True valid=True
+p11 -> muse-probe-refval-note-p11 stable=True saved_source_matches=True valid=True
+p12 -> muse-probe-refval-note-p12 stable=True saved_source_matches=True valid=True
+p13 -> muse-probe-refval-note-p13 stable=True saved_source_matches=True valid=True
+p14 -> muse-probe-refval-note-p14 stable=True saved_source_matches=True valid=True
+p15 -> muse-probe-refval-note-p15 stable=True saved_source_matches=True valid=True
+p16 -> muse-probe-refval-note-p16 stable=True saved_source_matches=True valid=True
+p17 -> muse-probe-refval-note-p17 stable=True saved_source_matches=True valid=True
+p18 -> muse-probe-refval-note-p18 stable=True saved_source_matches=True valid=True
+p19 -> muse-probe-refval-note-p19 stable=True saved_source_matches=True valid=True
+p20 -> muse-probe-refval-note-p20 stable=True saved_source_matches=True valid=True
+{
+ "p01": {
+  "fullname": "muse-probe-refval-note-p01",
+  "html": "<div class=\"wiki-note\">\n<p>body</p>\n</div>",
+  "html_sha256": "91439f7c19157ae5873bef3e9b07a2cb48abcaee72a2ddf4008dc74bbfa9564e",
+  "source": "[[note]]\nbody\n[[/note]]",
+  "source_sha256": "ee91a463b98ff4c63f244f145bc33143e9c1607ffd6754b2b2608741163c612e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-note-p02",
+  "html": "<p>x</p>\n<div class=\"wiki-note\">\n<p>body</p>\n</div>\n<br />\ny",
+  "html_sha256": "304f849cda058cac4867d1ee6bcde5935d41347554fd8a2c841cf1554da167e6",
+  "source": "x\n[[note]]\nbody\n[[/note]]\ny",
+  "source_sha256": "bba4e662fffae121299dc234dfc50b4b5d997c53e128fa879c4b57d63b5ec13f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-note-p03",
+  "html": "<p>x</p>\n<div class=\"wiki-note\">\n<p>body</p>\n</div>\n<p>y</p>",
+  "html_sha256": "657e16abcbfa9485365da85952219d73ea2f306041a11081c06792fd6cf003d9",
+  "source": "x\n\n[[note]]\nbody\n[[/note]]\n\ny",
+  "source_sha256": "57b1618845ae37a58506da0521b54539bc8a438a420255b6b55475aae067b7a5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-note-p04",
+  "html": "<div class=\"wiki-note\"></div>",
+  "html_sha256": "9a7aba814e68bd36642c86ba8f78b6b879165628f80e16db0317e6e95e519edb",
+  "source": "[[note]]\n[[/note]]",
+  "source_sha256": "2e2c5f6c78bef07bfd3040c659008723ed61e63a54c18740eb43598f62b60417",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-note-p05",
+  "html": "<div class=\"wiki-note\"></div>",
+  "html_sha256": "9a7aba814e68bd36642c86ba8f78b6b879165628f80e16db0317e6e95e519edb",
+  "source": "[[note]]\n\n[[/note]]",
+  "source_sha256": "35b8c948868af7c2538163e37edb98aef076f8fff85dfffcb129d56538a9d742",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-note-p06",
+  "html": "<div class=\"wiki-note\">\n<p>line1<br />\nline2</p>\n</div>",
+  "html_sha256": "5b7f5e63ceb12572e3582877c6ac2255d4c7d687475cf528734d83b3b7b3b04c",
+  "source": "[[note]]\nline1\nline2\n[[/note]]",
+  "source_sha256": "202d205104c7f23ec5bcd2d23061ec8ee92a7d37bf12f48fa86dfc1e7b689921",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-note-p07",
+  "html": "<div class=\"wiki-note\">\n<p>p1</p>\n<p>p2</p>\n</div>",
+  "html_sha256": "6bde44f310454c5894f90be592048cb29b84ecb18d3b12268b2985ddfffb3164",
+  "source": "[[note]]\np1\n\np2\n[[/note]]",
+  "source_sha256": "8c24c4b5d9969ce3fc97f27141a2df6dc74241025866def16d9d3dd3ce06fba8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-note-p08",
+  "html": "<p>[[note]] body<br />\n[[/note]]</p>",
+  "html_sha256": "df852e87371dcb7fcd244f704c43ebf2930f265336537b818a90eb3058915ce7",
+  "source": "[[note]] body\n[[/note]]",
+  "source_sha256": "ba9b0d052a4fd764135c760a348df4c3356b21febb39b15265fdd9ecb21febe1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-note-p09",
+  "html": "<div class=\"wiki-note\">\n<p>body</p>\n</div>",
+  "html_sha256": "91439f7c19157ae5873bef3e9b07a2cb48abcaee72a2ddf4008dc74bbfa9564e",
+  "source": "[[note]]\nbody[[/note]]",
+  "source_sha256": "5531ada37ec57c4adc4c33484dd26bdb7d90c8347ced2594366de615debeaa2e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-note-p10",
+  "html": "<div class=\"wiki-note\">\n<p>body</p>\n</div>",
+  "html_sha256": "91439f7c19157ae5873bef3e9b07a2cb48abcaee72a2ddf4008dc74bbfa9564e",
+  "source": "[[NOTE]]\nbody\n[[/NOTE]]",
+  "source_sha256": "673059e5ed5087c793062d3ca1930056426d2facb66f57533c65c93267a32e1b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-note-p11",
+  "html": "<div class=\"wiki-note\">\n<p>body</p>\n</div>\n<div class=\"wiki-note\">\n<p>body</p>\n</div>",
+  "html_sha256": "987b43ef9b88f749f25ae80fb705f586efce4f6fc6634eb8b349edbbb6dabde7",
+  "source": "[[Note]]\nbody\n[[/note]]\n\n[[note]]\nbody\n[[/NOTE]]",
+  "source_sha256": "db8e2b599525f097095eb53465d50209b0e34ea72ec815e1e77579659aaf2a29",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-note-p12",
+  "html": "<div class=\"wiki-note\">\n<p>[[note]]<br />\ninner</p>\n</div>\n<br />\n[[/note]]",
+  "html_sha256": "b960ffd97d1e515daab84dd17dceadc9b764a07118dbd4189a2eb7e54f13fb6a",
+  "source": "[[note]]\n[[note]]\ninner\n[[/note]]\n[[/note]]",
+  "source_sha256": "b91648e713e0ad692f0761334b1145bf1613c03e0fb95f2549e641990dd589b4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-note-p13",
+  "html": "a\n<div class=\"wiki-note\">\n<p>b</p>\n</div>\nc",
+  "html_sha256": "30ceef691ebe7fd200f377412ba3b62a1231651a93d8164533c54ac5dc4df6b8",
+  "source": "a [[note]]\nb\n[[/note]] c",
+  "source_sha256": "69e0062b5b39231d79c19898e0d442a534cdcc64e1fd0a3c7ecc1bc25e93d8ef",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-note-p14",
+  "html": "<div class=\"wiki-note\">\n<p>a</p>\n</div>\nb[[/note]]",
+  "html_sha256": "4df2e771d325fabf4e727a710574d185e9dd44936b44cbbe17add80c6fd90731",
+  "source": "[[note]]\na[[/note]]b[[/note]]",
+  "source_sha256": "e046e8ef834792bec586efceba359d781d6e6ffb770a693d3531626010aa9571",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-note-p15",
+  "html": "<div class=\"wiki-note\">\n<p>body</p>\n</div>\n<div class=\"wiki-note\">\n<p>c</p>\n</div>",
+  "html_sha256": "555c27bef4904f8144e02573a82c9c59339bfcf083bd480e6739d6e876483c0f",
+  "source": "[[note]]\nbody\n[[/note]]\n[[note]]\nc\n[[/note]]",
+  "source_sha256": "50ad85b7a08819f874e29ab7e0443a6f1a2a518dac9eb64f641436389c2a8e6f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-note-p16",
+  "html": "<p>[[note class=&quot;x&quot;]]<br />\nbody<br />\n[[/note]]</p>\n<p>[[note_]]<br />\nbody<br />\n[[/note]]</p>",
+  "html_sha256": "38cf8613074eab4641d7f5e1738174a93e258f82c4e9b54a8836e4bc2f84c30c",
+  "source": "[[note class=\"x\"]]\nbody\n[[/note]]\n\n[[note_]]\nbody\n[[/note]]",
+  "source_sha256": "f6e8349d1a5723726d92308d5e4853b67d8a8069b2119e043093e585341023b7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-note-p17",
+  "html": "<p>[[note]]<br />\nbody<br />\n[[/note]]</p>\n<p>[[note]]<br />\nbody<br />\n[[/note ]]</p>",
+  "html_sha256": "589df3d0cb5786045479fa3e640483020219d3b6b8864d27c71df23845fce329",
+  "source": "[[note]] \nbody\n[[/note]]\n\n[[note]]\nbody\n[[/note ]]",
+  "source_sha256": "4269fe1c324f5e0e4d7327ceeed46a896c202c30c5247244c730d3ec11c7b5a3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-note-p18",
+  "html": "<div class=\"wiki-note\">\n<ul>\n<li>a</li>\n<li>b</li>\n</ul>\n</div>",
+  "html_sha256": "2198caa476444bc574aa0c4abbfc26ce31eda43476679e92db015196e5ecda03",
+  "source": "[[note]]\n* a\n* b\n[[/note]]",
+  "source_sha256": "baf90de981e9ff7fb75267951d7b31ff4a8402e4ec536ef0980d063aa2a6cb43",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-note-p19",
+  "html": "<div class=\"wiki-note\">\n<p><strong>bold</strong> and &#8212;&#8212;</p>\n</div>",
+  "html_sha256": "0da364a05d1ae61736fe3e1b28d20fdb89b8df43b30dcc15a238536f85979aa6",
+  "source": "[[note]]\n**bold** and ----\n[[/note]]",
+  "source_sha256": "6c9a6fa519550c94804ad7fdcbf60607d5e8b6e6f3fcc13c802869967a1bc520",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-note-p20",
+  "html": "<div class=\"wiki-note\">\n<div>\n<p>x</p>\n</div>\n</div>",
+  "html_sha256": "b36926de6687efb43b05d4d4548f14fff2c167cc5f19a95208573b05682beadb",
+  "source": "[[note]]\n[[div]]\nx\n[[/div]]\n[[/note]]",
+  "source_sha256": "ff5d972b5e30a3d9097c2c35cac657a54e705b68c2cf5da8576fd198e07219ca",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,83 @@
+{"id": "fi-01", "source": "[[file a.txt]]"}
+{"id": "fi-02", "source": "[[file a.txt|Label]]"}
+{"id": "fi-03", "source": "[[file a.txt|]]"}
+{"id": "fi-04", "source": "[[file a.txt| ]]"}
+{"id": "fi-05", "source": "[[file  a.txt  ]]"}
+{"id": "fi-06", "source": "[[file a.txt | Label ]]"}
+{"id": "fi-07", "source": "[[FILE a.txt]]"}
+{"id": "fi-08", "source": "[[file a.txt|a|b]]"}
+{"id": "fi-09", "source": "[[file a\nb.txt]]"}
+{"id": "fi-10", "source": "[[file a.txt|x\ny]]"}
+{"id": "fi-11", "source": "[[file ]]"}
+{"id": "fi-12", "source": "[[file a.txt]] [[file b.txt|L]]"}
+{"id": "fi-13", "source": "[[div]][[file a.txt]][[/div]]"}
+{"id": "fi-14", "source": "[[a href=\"/x\"]][[file a.txt|L]][[/a]]"}
+{"id": "fi-15", "source": "[[code]][[file a.txt]][[/code]]"}
+{"id": "fi-16", "source": "[[file my file.txt]]"}
+{"id": "fi-17", "source": "[[file a.txt|Label With Spaces]]"}
+{"id": "fi-18", "source": "[[file a.txt|  ]]"}
+{"id": "fi-19", "source": "[[file |x]]"}
+{"id": "fi-20", "source": "[[file a|b|c]]"}
+{"id": "fi-21", "source": "[[file a]]]"}
+{"id": "fi-22", "source": "[[file a]b]]"}
+{"id": "fi-23", "source": "[[file café.txt]]"}
+{"id": "fi-24", "source": "[[file a.txt|[[math]]x[[/math]]]]"}
+{"id": "fi-25", "source": "[[file [[math]]x[[/math]].txt]]"}
+{"id": "fi-26", "source": "x[[file a.txt|L]]y"}
+{"id": "fi-27", "source": "[[file a.txt]]\n"}
+{"id": "fi-28", "source": "[[file a.txt |]]"}
+{"id": "fi-29", "source": "[[file a.txt| L]]"}
+{"id": "fi-30", "source": "[[file A.TXT|Label]]"}
+{"id": "fi-31", "source": "|| [[file a.txt]] ||"}
+{"id": "fi-32", "source": "* [[file a.txt]]"}
+{"id": "fi-33", "source": "[[file |]]"}
+{"id": "fi-34", "source": "[[file a.txt|b]]"}
+{"id": "fi-35", "source": "[[file  a.txt|b  ]]"}
+{"id": "fi-36", "source": "[[file a.txt]] and [[file b.txt]]"}
+{"id": "fi-37", "source": "[[social]] [[file a.txt]]"}
+{"id": "fi-38", "source": "[[embed]][[file a.txt]][[/embed]]"}
+{"id": "fi-39", "source": "[[note]]\n[[file a.txt]]\n[[/note]]"}
+{"id": "fi-40", "source": "[[file a|]x]]"}
+{"id": "fi-41", "source": "[[file\ta.txt]]"}
+{"id": "fi-42", "source": "> [[file a.txt]]"}
+{"id": "fi-43", "source": "[[file a.txt|L]]"}
+{"id": "fi-x01", "source": "[[file other-page/a.txt]]"}
+{"id": "fi-x02", "source": "[[file other-page/a.txt|Label]]"}
+{"id": "fi-x03", "source": "[[file /other-page/a.txt]]"}
+{"id": "fi-x04", "source": "[[file /other-page/a.txt|Label]]"}
+{"id": "fi-x05", "source": "[[file a/b/c.txt]]"}
+{"id": "fi-x06", "source": "[[file a.txt|**bold**]]"}
+{"id": "fi-x07", "source": "[[file a.txt|//italic//]]"}
+{"id": "fi-x08", "source": "[[file a\"b.txt|c<d>e]]"}
+{"id": "fi-x09", "source": "[[file a&b.txt|x&y]]"}
+{"id": "fi-x10", "source": "[[file]]"}
+{"id": "fi-x11", "source": "[[file a.txt]]"}
+{"id": "fi-x12", "source": "[[file :other-page/a.txt]]"}
+{"id": "fi-x13", "source": "[[file :site:page/a.txt]]"}
+{"id": "fi-x14", "source": "[[file cat:page/a.txt]]"}
+{"id": "fi-x15", "source": "[[file cat:page/a.txt|Cat File]]"}
+{"id": "fi-x16", "source": "[[file https://example.com/a.txt]]"}
+{"id": "fi-x17", "source": "[[*file a.txt]]"}
+{"id": "fi-x18", "source": "[[file a.txt|Label with \"quotes\"]]"}
+{"id": "fi-x19", "source": "[[file my file.txt|My File]]"}
+{"id": "fi-x20", "source": "[[file a.txt|Label]] tail"}
+{"id": "p01", "source": "[[file a.txt]]"}
+{"id": "p02", "source": "[[file a.txt|Label]]"}
+{"id": "p03", "source": "[[file other-page/a.txt]]"}
+{"id": "p04", "source": "[[file other-page/a.txt|Label]]"}
+{"id": "p05", "source": "[[file /other-page/a.txt]]"}
+{"id": "p06", "source": "[[file cat:page/a.txt|Cat File]]"}
+{"id": "p07", "source": "[[file :site:page/a.txt]]"}
+{"id": "p08", "source": "[[file a.txt|]]"}
+{"id": "p09", "source": "[[file a.txt| ]]"}
+{"id": "p10", "source": "[[file a.txt | Label ]]"}
+{"id": "p11", "source": "[[file  a.txt  ]]"}
+{"id": "p12", "source": "[[file |x]]\n[[file |]]"}
+{"id": "p13", "source": "[[file a|b|c]]"}
+{"id": "p14", "source": "[[FILE a.txt]]\n[[File a.txt|Label]]"}
+{"id": "p15", "source": "[[file my file.txt|My File]]\n[[file café.txt]]"}
+{"id": "p16", "source": "[[file a.txt|**bold**]]"}
+{"id": "p17", "source": "[[file a\"b.txt|c<d>e]]"}
+{"id": "p18", "source": "[[file a\nb.txt]]\n[[file a.txt|x\ny]]"}
+{"id": "p19", "source": "[[file ]]\n[[file]]\n[[*file a.txt]]"}
+{"id": "p20", "source": "[[file\ta.txt]]\n[[file a]]]\n[[file a]b]]"}

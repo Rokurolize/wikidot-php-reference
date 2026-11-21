@@ -1,0 +1,135 @@
+p01 -> muse-probe-refval-button-p01 (created)
+p02 -> muse-probe-refval-button-p02 (created)
+p03 -> muse-probe-refval-button-p03 (created)
+p04 -> muse-probe-refval-button-p04 (created)
+p05 -> muse-probe-refval-button-p05 (created)
+p06 -> muse-probe-refval-button-p06 (created)
+p07 -> muse-probe-refval-button-p07 (created)
+p08 -> muse-probe-refval-button-p08 (created)
+p09 -> muse-probe-refval-button-p09 (created)
+p10 -> muse-probe-refval-button-p10 (created)
+p11 -> muse-probe-refval-button-p11 (created)
+p12 -> muse-probe-refval-button-p12 (created)
+p13 -> muse-probe-refval-button-p13 (created)
+p14 -> muse-probe-refval-button-p14 (created)
+p15 -> muse-probe-refval-button-p15 (created)
+p16 -> muse-probe-refval-button-p16 (created)
+p17 -> muse-probe-refval-button-p17 (created)
+p18 -> muse-probe-refval-button-p18 (created)
+p19 -> muse-probe-refval-button-p19 (created)
+p20 -> muse-probe-refval-button-p20 (created)
+p21 -> muse-probe-refval-button-p21 (created)
+p22 -> muse-probe-refval-button-p22 (created)
+22 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01": {
+  "fullname": "muse-probe-refval-button-p01",
+  "source": "[[button edit]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-button-p02",
+  "source": "[[button edit-append]]\n[[button edit-sections]]",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-button-p03",
+  "source": "[[button history]]\n[[button print]]\n[[button files]]",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-button-p04",
+  "source": "[[button tags]]\n[[button source]]\n[[button talk]]\n[[button backlinks]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-button-p05",
+  "source": "[[button edit_append]]\n[[button edit_sections]]",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-button-p06",
+  "source": "[[button set-tags]]\n[[button set-tags text=\"Tag It\" tags=\"+a -b\"]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-button-p07",
+  "source": "[[button rename]]\n[[button delete]]\n[[button parent]]\n[[button lock]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-button-p08",
+  "source": "[[button edit-meta]]\n[[button watchers]]\n[[button unknown-type]]",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-button-p09",
+  "source": "[[button edit text=\"Edit Page\"]]",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-button-p10",
+  "source": "[[button edit text=\"Edit\" class=\"my-btn\" style=\"color: red;\"]]",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-button-p11",
+  "source": "[[button edit id=\"x\" data-foo=\"bar\" title=\"t\"]]",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-button-p12",
+  "source": "[[button edit text=\"\"]]",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-button-p13",
+  "source": "[[button edit text=\"a<b>c&d'e\"]]",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-button-p14",
+  "source": "[[BUTTON edit]]\n[[button EDIT]]\n[[button Edit_Sections]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-button-p15",
+  "source": "[[button edit ]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-button-p16",
+  "source": "[[button edit  ]]",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-button-p17",
+  "source": "[[button edit x]]",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-button-p18",
+  "source": "[[button edit text='single']]",
+  "action": "created"
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-button-p19",
+  "source": "[[button edit\ntext=\"newline\"]]",
+  "action": "created"
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-button-p20",
+  "source": "[[button edit\ttext=\"tab\"]]",
+  "action": "created"
+ },
+ "p21": {
+  "fullname": "muse-probe-refval-button-p21",
+  "source": "[[button]]\n[[button ]]",
+  "action": "created"
+ },
+ "p22": {
+  "fullname": "muse-probe-refval-button-p22",
+  "source": "[[button edit text=\"a\" text=\"b\"]]",
+  "action": "created"
+ }
+}

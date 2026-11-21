@@ -1,0 +1,80 @@
+{"id": "so-01", "source": "[[social]]"}
+{"id": "so-02", "source": "[[social digg]]"}
+{"id": "so-03", "source": "[[social digg reddit]]"}
+{"id": "so-04", "source": "[[SOCIAL digg]]"}
+{"id": "so-05", "source": "[[social ]]"}
+{"id": "so-06", "source": "[[social  digg]]"}
+{"id": "so-07", "source": "[[social digg ]]"}
+{"id": "so-08", "source": "[[social\tdigg]]"}
+{"id": "so-09", "source": "[[social\ndigg]]"}
+{"id": "so-10", "source": "[[social a]] [[social b]]"}
+{"id": "so-11", "source": "[[social a\"b]]"}
+{"id": "so-12", "source": "[[social a=b]]"}
+{"id": "so-13", "source": "[[social café]]"}
+{"id": "so-14", "source": "[[social a~b]]"}
+{"id": "so-15", "source": "[[social a_b-c.d]]"}
+{"id": "so-16", "source": "pre [[social x]] post"}
+{"id": "so-17", "source": "[[social]]x[[social]]"}
+{"id": "so-18", "source": "[[social a]]]"}
+{"id": "so-19", "source": "[[social a]b]]"}
+{"id": "so-20", "source": "[[social a b c]]"}
+{"id": "so-21", "source": "[[social  ]]"}
+{"id": "so-22", "source": "[[social a\nb]]"}
+{"id": "so-23", "source": "[[div]][[social x]][[/div]]"}
+{"id": "so-24", "source": "[[code]][[social x]][[/code]]"}
+{"id": "so-25", "source": "[[social %20]]"}
+{"id": "so-26", "source": "[[social a+b]]"}
+{"id": "so-27", "source": "[[social a/b]]"}
+{"id": "so-28", "source": "[[social a]]\nmore text"}
+{"id": "so-29", "source": "[[a href=\"/x\"]][[social]][[/a]]"}
+{"id": "so-30", "source": "[[note]]\n[[social x]]\n[[/note]]"}
+{"id": "so-31", "source": "[[social \t a \t]]"}
+{"id": "so-32", "source": "[[social 0]]"}
+{"id": "so-33", "source": "[[social a]]x"}
+{"id": "so-34", "source": "x[[social a]]"}
+{"id": "so-35", "source": "[[social a]]\n"}
+{"id": "so-36", "source": "[[social a]]\n\n[[social b]]"}
+{"id": "so-37", "source": "[[social a] extra"}
+{"id": "so-38", "source": "[[social\u000ba]]"}
+{"id": "so-39", "source": "[[social\fa]]"}
+{"id": "so-40", "source": "[[social a[b]]"}
+{"id": "so-41", "source": "+ [[social a]]"}
+{"id": "so-42", "source": "[[social x]]"}
+{"id": "so-x01", "source": "[[social facebook]]"}
+{"id": "so-x02", "source": "[[social reddit]]"}
+{"id": "so-x03", "source": "[[social twitter]]"}
+{"id": "so-x04", "source": "[[social digg, reddit]]"}
+{"id": "so-x05", "source": "[[social facebook, twitter, reddit]]"}
+{"id": "so-x06", "source": "[[social facebook,twitter]]"}
+{"id": "so-x07", "source": "[[social del.icio.us]]"}
+{"id": "so-x08", "source": "[[social unknownsite]]"}
+{"id": "so-x09", "source": "[[SOCIAL]]"}
+{"id": "so-x10", "source": "[[SOCIAL facebook]]"}
+{"id": "so-x11", "source": "[[social Facebook]]"}
+{"id": "so-x12", "source": "[[social   facebook  ]]"}
+{"id": "so-x13", "source": "[[social]]\n[[social facebook]]"}
+{"id": "so-x14", "source": "pre [[social]] post"}
+{"id": "so-x15", "source": "[[div]]\n[[social]]\n[[/div]]"}
+{"id": "so-x16", "source": "[[note]]\n[[social]]\n[[/note]]"}
+{"id": "so-x17", "source": "[[social]]\n\n[[social]]"}
+{"id": "so-x18", "source": "[[social blinkbits, digg, fark]]"}
+{"id": "p01", "source": "[[social]]"}
+{"id": "p02", "source": "[[social digg]]"}
+{"id": "p03", "source": "[[social facebook]]"}
+{"id": "p04", "source": "[[social reddit]]"}
+{"id": "p05", "source": "[[social twitter]]"}
+{"id": "p06", "source": "[[social digg, reddit]]"}
+{"id": "p07", "source": "[[social digg reddit]]"}
+{"id": "p08", "source": "[[social facebook, twitter, reddit]]"}
+{"id": "p09", "source": "[[social unknownsite]]"}
+{"id": "p10", "source": "[[SOCIAL]]"}
+{"id": "p11", "source": "[[SOCIAL facebook]]"}
+{"id": "p12", "source": "[[social Facebook]]"}
+{"id": "p13", "source": "[[social ]]"}
+{"id": "p14", "source": "[[social  ]]"}
+{"id": "p15", "source": "[[social  facebook]]"}
+{"id": "p16", "source": "[[social facebook ]]"}
+{"id": "p17", "source": "[[social\tfacebook]]"}
+{"id": "p18", "source": "[[social\nfacebook]]"}
+{"id": "p19", "source": "pre [[social]] post"}
+{"id": "p20", "source": "[[social a]b]]\n[[social a]]]"}

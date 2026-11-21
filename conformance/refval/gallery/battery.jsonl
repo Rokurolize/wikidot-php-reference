@@ -1,0 +1,88 @@
+{"id": "ga-01", "source": "[[gallery]]"}
+{"id": "ga-02", "source": "[[gallery]]\n: a.png\n[[/gallery]]"}
+{"id": "ga-03", "source": "[[gallery]]\n: a.png\n: b.png\n[[/gallery]]"}
+{"id": "ga-04", "source": "[[gallery size=\"small\"]]\n: a.png\n[[/gallery]]"}
+{"id": "ga-05", "source": "[[gallery size=\"large\"]]"}
+{"id": "ga-06", "source": "[[gallery]]\n: a.png"}
+{"id": "ga-07", "source": "[[gallery]]\nnot a source\n[[/gallery]]"}
+{"id": "ga-08", "source": "[[gallery]]\n: a.png\nnot source\n[[/gallery]]"}
+{"id": "ga-09", "source": "x\n[[gallery]]\n: a\n[[/gallery]]"}
+{"id": "ga-10", "source": "x [[gallery]]\n: a\n[[/gallery]]"}
+{"id": "ga-11", "source": "[[GALLERY]]\n: a\n[[/GALLERY]]"}
+{"id": "ga-12", "source": "[[gallery size=\"small\" other=\"x\"]]\n: a\n[[/gallery]]"}
+{"id": "ga-13", "source": "[[gallery foo=\"bar\"]]\n: a\n[[/gallery]]"}
+{"id": "ga-14", "source": "[[gallery size=\"\"]]\n: a\n[[/gallery]]"}
+{"id": "ga-15", "source": "[[gallery size=\"0\"]]\n: a\n[[/gallery]]"}
+{"id": "ga-16", "source": "[[gallery size=small]]\n: a\n[[/gallery]]"}
+{"id": "ga-17", "source": "[[gallery]]\n:a.png\n[[/gallery]]"}
+{"id": "ga-18", "source": "[[gallery]]\n: \n[[/gallery]]"}
+{"id": "ga-19", "source": "[[gallery]]\n:  double space\n[[/gallery]]"}
+{"id": "ga-20", "source": "[[gallery]]\n: a.png\n: b.png"}
+{"id": "ga-21", "source": "[[gallery]]\n: a.png\n[[/gallery]]\ntail"}
+{"id": "ga-22", "source": "[[gallery]]\n: a.png\n[[/gallery]] extra"}
+{"id": "ga-23", "source": "[[gallery]]\n: a.png\n\n[[/gallery]]"}
+{"id": "ga-24", "source": "[[gallery]]\n: [[span]]x[[/span]]\n[[/gallery]]"}
+{"id": "ga-25", "source": "[[gallery]]\n: café.png\n[[/gallery]]"}
+{"id": "ga-26", "source": "[[gallery]]\n: a]b.png\n[[/gallery]]"}
+{"id": "ga-27", "source": "[[gallery a=\"1\" size=\"medium\" b=\"2\"]]\n: x\n[[/gallery]]"}
+{"id": "ga-28", "source": "[[gallery size=\"small\"]]\n: a\n: b\n: c\n[[/gallery]]"}
+{"id": "ga-29", "source": "[[gallery]]\n: a\n[[gallery]]\n: b\n[[/gallery]]"}
+{"id": "ga-30", "source": "[[gallery]]\n: a\n[[/gallery]]\n[[gallery]]\n: b\n[[/gallery]]"}
+{"id": "ga-31", "source": " [[gallery]]\n: a\n[[/gallery]]"}
+{"id": "ga-32", "source": "[[gallery]] \n: a\n[[/gallery]]"}
+{"id": "ga-33", "source": "[[gallery\t]]"}
+{"id": "ga-34", "source": "[[gallery ]]"}
+{"id": "ga-35", "source": "[[gallery]]\n: a\n: b\n[[/gallery]]\n: c\n[[/gallery]]"}
+{"id": "ga-36", "source": "[[gallery size=\"small\"]]\n: a\n[[/GALLERY]]"}
+{"id": "ga-37", "source": "[[gallery]]\n: a.png \n[[/gallery]]"}
+{"id": "ga-38", "source": "[[gallery]]\n: one.jpg\n[[/gallery]]"}
+{"id": "ga-39", "source": "text\n\n[[gallery]]\n: a\n[[/gallery]]"}
+{"id": "ga-40", "source": "[[gallery]]\n: [[code]]x[[/code]]\n[[/gallery]]"}
+{"id": "ga-41", "source": "[[gallery size=\"small\"]]\n: a\n[[/gallery]]\n[[gallery]]\n: b\n[[/gallery]]"}
+{"id": "ga-42", "source": "[[gallery  size=\"wide\"  ]]"}
+{"id": "ga-43", "source": "[[gallery\nsize=\"small\"]]\n: a\n[[/gallery]]"}
+{"id": "ga-44", "source": "[[gallery]]\n: a\n[[/gallery]]\n"}
+{"id": "ga-x01", "source": "[[gallery size=\"small\"]]"}
+{"id": "ga-x02", "source": "[[gallery size=\"medium\"]]\n: a.png\n[[/gallery]]"}
+{"id": "ga-x03", "source": "[[gallery size=\"thumbnail\"]]\n: a.png\n[[/gallery]]"}
+{"id": "ga-x04", "source": "[[gallery size=\"square\"]]\n: a.png\n[[/gallery]]"}
+{"id": "ga-x05", "source": "[[gallery size=\"original\"]]\n: a.png\n[[/gallery]]"}
+{"id": "ga-x06", "source": "[[gallery size=\"large\"]]\n: a.png\n[[/gallery]]"}
+{"id": "ga-x07", "source": "[[gallery size=\"mini\"]]\n: a.png\n[[/gallery]]"}
+{"id": "ga-x08", "source": "[[gallery]]\n: other-page/a.png\n[[/gallery]]"}
+{"id": "ga-x09", "source": "[[gallery]]\n: /other-page/a.png\n[[/gallery]]"}
+{"id": "ga-x10", "source": "[[gallery]]\n: https://example.com/a.png\n[[/gallery]]"}
+{"id": "ga-x11", "source": "[[gallery]]\n: *https://example.com/a.png\n[[/gallery]]"}
+{"id": "ga-x12", "source": "[[gallery]]\n: a.png link=\"https://example.com\"\n[[/gallery]]"}
+{"id": "ga-x13", "source": "[[gallery]]\n: a.png link=\"*https://example.com\"\n[[/gallery]]"}
+{"id": "ga-x14", "source": "[[gallery]]\n: a.png link=\"some-page\"\n[[/gallery]]"}
+{"id": "ga-x15", "source": "[[gallery]]\n: a.png alt=\"My Alt\" title=\"My Title\"\n[[/gallery]]"}
+{"id": "ga-x16", "source": "[[gallery order=\"name desc\" style=\"color:red\"]]\n: a.png\n[[/gallery]]"}
+{"id": "ga-x17", "source": "[[gallery]]\n: a.png\n: https://example.com/b.png\n[[/gallery]]"}
+{"id": "ga-x18", "source": "[[gallery]]\n: a.png \"quoted caption\"\n[[/gallery]]"}
+{"id": "ga-x19", "source": "[[gallery size=\"small\"]]\n: a.png\n: b.png\n[[/gallery]]"}
+{"id": "ga-x20", "source": "[[gallery]]\n: http://example.com/a.png link=\"http://example.org\"\n[[/gallery]]"}
+{"id": "p01", "source": "[[gallery]]"}
+{"id": "p02", "source": "[[gallery size=\"small\"]]"}
+{"id": "p03", "source": "[[gallery]]\n: a.png\n[[/gallery]]"}
+{"id": "p04", "source": "[[gallery]]\n: a.png\n: b.png\n[[/gallery]]"}
+{"id": "p05", "source": "[[gallery size=\"small\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p06", "source": "[[gallery size=\"medium\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p07", "source": "[[gallery size=\"square\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p08", "source": "[[gallery size=\"original\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p09", "source": "[[gallery size=\"large\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p10", "source": "[[gallery size=\"\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p11", "source": "[[gallery size=\"0\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p12", "source": "[[gallery]]\n: other-page/a.png\n[[/gallery]]"}
+{"id": "p13", "source": "[[gallery]]\n: /other-page/a.png\n[[/gallery]]"}
+{"id": "p14", "source": "[[gallery]]\n: https://example.com/a.png\n[[/gallery]]"}
+{"id": "p15", "source": "[[gallery]]\n: *https://example.com/a.png\n[[/gallery]]"}
+{"id": "p16", "source": "[[gallery]]\n: a.png link=\"https://example.com\"\n[[/gallery]]"}
+{"id": "p17", "source": "[[gallery]]\n: a.png link=\"*https://example.com\"\n[[/gallery]]"}
+{"id": "p18", "source": "[[gallery]]\n: a.png link=\"some-page\"\n[[/gallery]]"}
+{"id": "p19", "source": "[[gallery]]\n: a.png alt=\"My Alt\" title=\"My Title\"\n[[/gallery]]"}
+{"id": "p20", "source": "[[gallery]]\nnot a source\n[[/gallery]]"}
+{"id": "p21", "source": "[[gallery]]\n: a.png"}
+{"id": "p22", "source": "[[GALLERY]]\n: a.png\n[[/GALLERY]]"}
+{"id": "p23", "source": "[[gallery\nsize=\"small\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p24", "source": "x [[gallery]]\n: a.png\n[[/gallery]]"}

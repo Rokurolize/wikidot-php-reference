@@ -1,0 +1,20 @@
+{"id": "p01", "source": "[[=]]\ncentered\n[[/=]]"}
+{"id": "p02", "source": "[[<]]\nleft\n[[/<]]"}
+{"id": "p03", "source": "[[>]]\nright\n[[/>]]"}
+{"id": "p04", "source": "[[==]]\njustified\n[[/==]]"}
+{"id": "p05", "source": "[[==]]\nx\n[[/=]]\n\n[[=]]\nx\n[[/==]]"}
+{"id": "p06", "source": "[[=]]\n[[/=]]"}
+{"id": "p07", "source": "[[=]]\n\n[[/=]]"}
+{"id": "p08", "source": "x\n[[=]]\nbody\n[[/=]]\ny"}
+{"id": "p09", "source": "[[=]]\nbody\n[[/=]] tail"}
+{"id": "p10", "source": "a\n [[=]]\nbody\n[[/=]]\n\nx[[=]]\nbody\n[[/=]]"}
+{"id": "p11", "source": "[[=]] body\n[[/=]]\n\n[[=]]\nbody[[/=]]"}
+{"id": "p12", "source": "[[=]]\n[[<]]\ninner\n[[/<]]\n[[/=]]"}
+{"id": "p13", "source": "[[=]]\n[[=]]\ninner\n[[/=]]\n[[/=]]"}
+{"id": "p14", "source": "[[=]]\n[[=]]\nx\n[[/=]]\ny\n[[/=]]"}
+{"id": "p15", "source": "[[=]]\n[[=]]\n[[/=]]"}
+{"id": "p16", "source": "[[=]]\n[[/=]] extra\n[[/=]]"}
+{"id": "p17", "source": "[[=]]\np1\n\np2\n[[/=]]"}
+{"id": "p18", "source": "[[=]]\n* a\n* b\n\n----\n[[/=]]"}
+{"id": "p19", "source": "[[= class=\"x\"]]\nbody\n[[/=]]\n\n[[=]] \nbody\n[[/=]]"}
+{"id": "p20", "source": "[[=]]\n**bold** body\n[[/=]]"}

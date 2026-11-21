@@ -1,0 +1,182 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refval-horiz-p01",
+  "html": "<hr />",
+  "html_sha256": "8d951300a4f85ad615a1fb82ea82c7aabf98dbe8d2a53325b5ff239840535d06",
+  "source": "----",
+  "source_sha256": "bd64bb8efa5b3f27e6442f23600c3b516127ea17e23724b41e50da4c22883edd",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-horiz-p02",
+  "html": "<p>x</p>\n<hr />\n<p>y</p>",
+  "html_sha256": "339a359f0486a4a8b4b7b2ca59f7be712c68eb5f4c5c4b38481f4d5b22209d3a",
+  "source": "x\n----\ny",
+  "source_sha256": "ee71e6b6e1238ec2cf125ab6bf03457a61ed636244933018311be1c10318519e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-horiz-p03",
+  "html": "<p>x</p>\n<hr />\n<hr />\n<p>y</p>",
+  "html_sha256": "3766628cf865e1cfe07ebf2d3cf72e398380578b517797fb4dcfb8adc4f89d94",
+  "source": "x\n-----\n----------\ny",
+  "source_sha256": "7203f005ebcf70dec2f576191ed979ab6966a9aa71d3b79e387df2e62b193f2a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-horiz-p04",
+  "html": "<p>x<br />\n<span style=\"text-decoration: line-through;\">-<br /></span><br />\n-<br />\ny</p>",
+  "html_sha256": "e55db84f78da438412e422ef90ee7add1c0f1e577ecad9600f9d0f451743c913",
+  "source": "x\n---\n--\n-\ny",
+  "source_sha256": "0bdd2e3e4b9fa5f250c78dfcfc60b6b691f260e1378f6c6ec2924f5635e838ac",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-horiz-p05",
+  "html": "<p>x<br />\n&#8212;&#8212;<br />\ny</p>",
+  "html_sha256": "47af9bc25ab8994c34c4bcd0130e4381e8b4a24d56dceba7a355dd8c3453eb6e",
+  "source": "x\n---- \ny",
+  "source_sha256": "39d78a1db54d82fc26ab18ffe2396b9e84d865c8804eeb29eaf934e958c4b23c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-horiz-p06",
+  "html": "<p>x<br />\n&#8212;&#8212;<br />\ny</p>",
+  "html_sha256": "47af9bc25ab8994c34c4bcd0130e4381e8b4a24d56dceba7a355dd8c3453eb6e",
+  "source": "x\n----\t\ny",
+  "source_sha256": "1fbbf84569dbe406fc0f85fdf643cc945f4d5b619508de5a8dd536e78ee3f582",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-horiz-p07",
+  "html": "<p>x<br />\n&#8212;&#8212;<br />\ny</p>",
+  "html_sha256": "47af9bc25ab8994c34c4bcd0130e4381e8b4a24d56dceba7a355dd8c3453eb6e",
+  "source": "x\n ----\ny",
+  "source_sha256": "9b3473472b41d8700b50e44b998f239b06f280f03477990a0a8132107c6142a4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-horiz-p08",
+  "html": "<p>x<br />\n<span style=\"text-decoration: line-through;\">&#8212;x<br />\nx</span><span style=\"text-decoration: line-through;\"><br />\na -</span>- b<br />\n- - - -<br />\ny</p>",
+  "html_sha256": "78b2bb3b236f5127991161016806ef20435ac88a3adebeb397af37718463a0ac",
+  "source": "x\n----x\nx----\na ---- b\n- - - -\ny",
+  "source_sha256": "ee2cf8618b0da99f7773006e3c18cfa88dec7a0080dc8e6403648deb3caee4ee",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-horiz-p09",
+  "html": "<hr />\n<hr />",
+  "html_sha256": "177efa1445cb61a378bef3e0f43a982919261004f88268efcc094a1c4805f00e",
+  "source": "----\n----",
+  "source_sha256": "e962f187b5e0476437b8f73bf5c3e76d67ba66a4c864f1df13de22aee699c87a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-horiz-p10",
+  "html": "<hr />\n<hr />",
+  "html_sha256": "177efa1445cb61a378bef3e0f43a982919261004f88268efcc094a1c4805f00e",
+  "source": "----\n\n----",
+  "source_sha256": "da0c01de694ca364a63138fd47bdf6fdf0c3f9915ee1b7af61da6724a1f7a5d8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-horiz-p11",
+  "html": "<ul>\n<li>one</li>\n</ul>\n<hr />\n<ul>\n<li>two</li>\n</ul>",
+  "html_sha256": "e77f185d92f7c6552a8b8745e472ca339b5a62cf1874167f2a62e5a00047ebb9",
+  "source": "* one\n----\n* two",
+  "source_sha256": "0d5dbd2fb961d8776eb2611e7c1af70ad53e301226434529c83554f1fc32eaca",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-horiz-p12",
+  "html": "<table class=\"wiki-content-table\">\n<tr>\n<td>a</td>\n<td>b</td>\n</tr>\n</table>\n<hr />\n<table class=\"wiki-content-table\">\n<tr>\n<td>c</td>\n<td>d</td>\n</tr>\n</table>",
+  "html_sha256": "3de6f423b44d125a18ce058e55778ed09e4f7c4529f2044e770fc62f92a301e6",
+  "source": "|| a || b ||\n----\n|| c || d ||",
+  "source_sha256": "8273620f70bfa36e4d4c8299285b311eefec3f281845dbeab1e8da07262894c6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-horiz-p13",
+  "html": "<h1 id=\"toc0\"><span>Head</span></h1>\n<hr />\n<p>x</p>",
+  "html_sha256": "bf3afefa84179a2a724f4102c0d0f6d55d25d57fe8b12fcb95f1efbe62f601f2",
+  "source": "+ Head\n----\nx",
+  "source_sha256": "37992e7053f5b7eb379e7e7ede5d06afdcfa5d3af6af19820eb42f1def29c897",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-horiz-p14",
+  "html": "<blockquote>\n<p>quote</p>\n</blockquote>\n<hr />\n<p>x</p>",
+  "html_sha256": "68f709acd83cb4b4501162e190b3ad4b4db8dd89f7ba196cac8852b22db1e77a",
+  "source": "> quote\n----\nx",
+  "source_sha256": "0ad393b196c664c89b7994c1f4d4270bdf978945ff0741272a98cd9a55eb4f46",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-horiz-p15",
+  "html": "<div>\n<hr /></div>",
+  "html_sha256": "1da372bd1ce002d706040a44f7340c808f2e8aeafd18c9b387511be94881e951",
+  "source": "[[div]]\n----\n[[/div]]",
+  "source_sha256": "fb622f7ca2748a19abfe0edb54384dae68a1c2944ac1da2f3bc2e06f134a0df4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-horiz-p16",
+  "html": "<div class=\"code\">\n<pre><code>----</code></pre></div>\n<br />\n@@\n<hr />\n<p>@@<br />\nx</p>",
+  "html_sha256": "a8174091ed9d3530dfb8fbd0ac92b829c9520abe67ab709862469e8cbcda636c",
+  "source": "[[code]]\n----\n[[/code]]\n@@\n----\n@@\nx",
+  "source_sha256": "28a8e3fd2ca1758ce1a5e12928e13f4a5bf4db9d595381c47d19c4827dcd1066",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-horiz-p17",
+  "html": "<p>**a</p>\n<hr />\n<p>b**<br />\nx</p>",
+  "html_sha256": "731ffde941199b77bba6f781dbaa2851b6c71664275d51755df0a310459f0ebc",
+  "source": "**a\n----\nb**\nx",
+  "source_sha256": "6b6b4e7501af84dce91216d2b0d11cbd7a91aa17a5a2123d56b406c409c50a1e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-horiz-p18",
+  "html": "<p>x<br />\n————<br />\n––––<br />\ny</p>",
+  "html_sha256": "1550e70eb860b9b006fd032bf9edb9520b77e92bf89dac5a52d311e8c285d3d1",
+  "source": "x\n————\n––––\ny",
+  "source_sha256": "1713dfb42e6f3bd60503902d78d26d09b5338e5c752402d5227020df2eba1304",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

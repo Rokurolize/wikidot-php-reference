@@ -1,0 +1,102 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refval-social-p01",
+  "source": "[[social]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-social-p02",
+  "source": "[[social digg]]",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-social-p03",
+  "source": "[[social facebook]]",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-social-p04",
+  "source": "[[social reddit]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-social-p05",
+  "source": "[[social twitter]]",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-social-p06",
+  "source": "[[social digg, reddit]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-social-p07",
+  "source": "[[social digg reddit]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-social-p08",
+  "source": "[[social facebook, twitter, reddit]]",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-social-p09",
+  "source": "[[social unknownsite]]",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-social-p10",
+  "source": "[[SOCIAL]]",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-social-p11",
+  "source": "[[SOCIAL facebook]]",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-social-p12",
+  "source": "[[social Facebook]]",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-social-p13",
+  "source": "[[social ]]",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-social-p14",
+  "source": "[[social  ]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-social-p15",
+  "source": "[[social  facebook]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-social-p16",
+  "source": "[[social facebook ]]",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-social-p17",
+  "source": "[[social\tfacebook]]",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-social-p18",
+  "source": "[[social\nfacebook]]",
+  "action": "created"
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-social-p19",
+  "source": "pre [[social]] post",
+  "action": "created"
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-social-p20",
+  "source": "[[social a]b]]\n[[social a]]]",
+  "action": "created"
+ }
+}

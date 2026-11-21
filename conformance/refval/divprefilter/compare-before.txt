@@ -1,0 +1,65 @@
+Total=18 exact=1 trim_eq=6 fnorm_eq=6 diffs=12
+DIFF      p01 (muse-probe-refval-divprefilter-p01)
+  SRC : '[[div]]\na\n[[/div]]\n[[div]]\nb\n[[/div]]'
+  REF : '<div ><p>a</p>\n\n</div><div ><p>b</p>\n\n</div>'
+  LIVE: '<div>\n<p>a</p>\n</div>\n<div>\n<p>b</p>\n</div>'
+DIFF      p02 (muse-probe-refval-divprefilter-p02)
+  SRC : '[[div]]\na\n[[/div]]\n\n[[div]]\nb\n[[/div]]'
+  REF : '<div ><p>a</p>\n\n</div><div ><p>b</p>\n\n</div>'
+  LIVE: '<div>\n<p>a</p>\n</div>\n<div>\n<p>b</p>\n</div>'
+DIFF      p03 (muse-probe-refval-divprefilter-p03)
+  SRC : '[[div]]\na\n[[/div]]\n\n\n[[div]]\nb\n[[/div]]'
+  REF : '<div ><p>a</p>\n\n</div><div ><p>b</p>\n\n</div>'
+  LIVE: '<div>\n<p>a</p>\n</div>\n<div>\n<p>b</p>\n</div>'
+DIFF      p04 (muse-probe-refval-divprefilter-p04)
+  SRC : '[[div]]\na\n[[/div]]   [[div]]\nb\n[[/div]]'
+  REF : '<div ><p>a</p>\n\n</div><div ><p>b</p>\n\n</div>'
+  LIVE: '<div>\n<p>a</p>\n</div>\n<div>\n<p>b</p>\n</div>'
+DIFF      p05 (muse-probe-refval-divprefilter-p05)
+  SRC : '[[div]]\na\n[[/div]]\t[[div]]\nb\n[[/div]]'
+  REF : '<div ><p>a</p>\n\n</div><div ><p>b</p>\n\n</div>'
+  LIVE: '<div>\n<p>a</p>\n</div>\n<div>\n<p>b</p>\n</div>'
+DIFF      p06 (muse-probe-refval-divprefilter-p06)
+  SRC : '[[div]]\na\n[[/div]]\n[[div class="b"]]\nb\n[[/div]]'
+  REF : '<div ><p>a</p>\n\n</div><div  class="b"><p>b</p>\n\n</div>'
+  LIVE: '<div>\n<p>a</p>\n</div>\n<div class="b">\n<p>b</p>\n</div>'
+DIFF      p07 (muse-probe-refval-divprefilter-p07)
+  SRC : '[[div]]\na\n[[/div]]\n[[div_]]\nb\n[[/div]]'
+  REF : '<div ><p>a</p>\n\n</div><div >b</div>'
+  LIVE: '<div>\n<p>a</p>\n</div>\n<div>b</div>'
+DIFF      p08 (muse-probe-refval-divprefilter-p08)
+  SRC : '[[DIV]]\na\n[[/DIV]]\n[[DIV]]\nb\n[[/DIV]]'
+  REF : '<div ><p>a</p>\n\n</div><div ><p>b</p>\n\n</div>'
+  LIVE: '<div>\n<p>a</p>\n</div>\n<div>\n<p>b</p>\n</div>'
+TRIM_EQ   p09 (muse-probe-refval-divprefilter-p09)
+  REF : '<p>[[/div]][[div]]</p>\n\n'
+  LIVE: '<p>[[/div]][[div]]</p>'
+TRIM_EQ   p10 (muse-probe-refval-divprefilter-p10)
+  REF : '<p>[[/div]][[div]]</p>\n\n'
+  LIVE: '<p>[[/div]][[div]]</p>'
+DIFF      p11 (muse-probe-refval-divprefilter-p11)
+  SRC : '[[div]]\na\n[[/div]] x [[div]]\nb\n[[/div]]'
+  REF : '<div ><p>a</p>\n\n</div>x <div ><p>b</p>\n\n</div>'
+  LIVE: '<div>\n<p>a</p>\n</div>\nx\n<div>\n<p>b</p>\n</div>'
+DIFF      p12 (muse-probe-refval-divprefilter-p12)
+  SRC : '[[div]]\na\n[[/div]]\n[[span]]s[[/span]]'
+  REF : '<div ><p>a</p>\n\n</div><br />\n<span>s</span>'
+  LIVE: '<div>\n<p>a</p>\n</div>\n<br />\n<span>s</span>'
+DIFF      p13 (muse-probe-refval-divprefilter-p13)
+  SRC : '[[div]]\na\n[[/div]]\n[[div]]\nb\n[[/div]]\n[[div]]\nc\n[[/div]]'
+  REF : '<div ><p>a</p>\n\n</div><div ><p>b</p>\n\n</div><div ><p>c</p>\n\n</div>'
+  LIVE: '<div>\n<p>a</p>\n</div>\n<div>\n<p>b</p>\n</div>\n<div>\n<p>c</p>\n</div>'
+TRIM_EQ   p14 (muse-probe-refval-divprefilter-p14)
+  REF : '<p>[[/div]][[divx]]</p>\n\n'
+  LIVE: '<p>[[/div]][[divx]]</p>'
+TRIM_EQ   p15 (muse-probe-refval-divprefilter-p15)
+  REF : '<p>[[/div]][[div</p>\n\n'
+  LIVE: '<p>[[/div]][[div</p>'
+EXACT     p16 (muse-probe-refval-divprefilter-p16)
+TRIM_EQ   p17 (muse-probe-refval-divprefilter-p17)
+  REF : '<p>[[div]]a[[/div]][[div]]b[[/div]]</p>\n\n'
+  LIVE: '<p>[[div]]a[[/div]][[div]]b[[/div]]</p>'
+DIFF      p18 (muse-probe-refval-divprefilter-p18)
+  SRC : '[[size larger]]\n[[div class="outer"]]\nheader\n[[div class="links"]]\nlink\n[[/div]]\n[[div class="content"]]\n[[/size]]\nbody\n[[/div]]\n[[/div]]'
+  REF : '<p><span style="font-size:larger;"></p>\n\n<div  class="outer"><p>header</p>\n\n<div  class="links"><p>link</p>\n\n</div><div  class="content"><p></span><br />\nbody</p>\n\n</div></div>'
+  LIVE: '<div class="outer">\n<p><span style="font-size:larger;">header</span></p>\n<div class="links">\n<p><span style="font-size:larger;">link</span></p>\n</div>\n<div class="content">\n<p><br />\nbody</p>\n</div>\n</div>'

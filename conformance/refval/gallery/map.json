@@ -1,0 +1,122 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refval-gallery-p01",
+  "source": "[[gallery]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-gallery-p02",
+  "source": "[[gallery size=\"small\"]]",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-gallery-p03",
+  "source": "[[gallery]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-gallery-p04",
+  "source": "[[gallery]]\n: a.png\n: b.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-gallery-p05",
+  "source": "[[gallery size=\"small\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-gallery-p06",
+  "source": "[[gallery size=\"medium\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-gallery-p07",
+  "source": "[[gallery size=\"square\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-gallery-p08",
+  "source": "[[gallery size=\"original\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-gallery-p09",
+  "source": "[[gallery size=\"large\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-gallery-p10",
+  "source": "[[gallery size=\"\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-gallery-p11",
+  "source": "[[gallery size=\"0\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-gallery-p12",
+  "source": "[[gallery]]\n: other-page/a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-gallery-p13",
+  "source": "[[gallery]]\n: /other-page/a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-gallery-p14",
+  "source": "[[gallery]]\n: https://example.com/a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-gallery-p15",
+  "source": "[[gallery]]\n: *https://example.com/a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-gallery-p16",
+  "source": "[[gallery]]\n: a.png link=\"https://example.com\"\n[[/gallery]]",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-gallery-p17",
+  "source": "[[gallery]]\n: a.png link=\"*https://example.com\"\n[[/gallery]]",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-gallery-p18",
+  "source": "[[gallery]]\n: a.png link=\"some-page\"\n[[/gallery]]",
+  "action": "created"
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-gallery-p19",
+  "source": "[[gallery]]\n: a.png alt=\"My Alt\" title=\"My Title\"\n[[/gallery]]",
+  "action": "created"
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-gallery-p20",
+  "source": "[[gallery]]\nnot a source\n[[/gallery]]",
+  "action": "created"
+ },
+ "p21": {
+  "fullname": "muse-probe-refval-gallery-p21",
+  "source": "[[gallery]]\n: a.png",
+  "action": "created"
+ },
+ "p22": {
+  "fullname": "muse-probe-refval-gallery-p22",
+  "source": "[[GALLERY]]\n: a.png\n[[/GALLERY]]",
+  "action": "created"
+ },
+ "p23": {
+  "fullname": "muse-probe-refval-gallery-p23",
+  "source": "[[gallery\nsize=\"small\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p24": {
+  "fullname": "muse-probe-refval-gallery-p24",
+  "source": "x [[gallery]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ }
+}

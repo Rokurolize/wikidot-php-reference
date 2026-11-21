@@ -1,0 +1,88 @@
+{"id":"b08-list-hr-list","output":"<ul>\n<li>a<\/li>\n<\/ul><hr \/>\n<ul>\n<li>b<\/li>\n<\/ul>"}
+{"id":"x25-list-hr","output":"<ul>\n<li>one<\/li>\n<\/ul><hr \/>\n<ul>\n<li>two<\/li>\n<\/ul>"}
+{"id":"t35-40-interrupted-by-hr","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>A<\/td>\n<\/tr>\n<\/table><hr \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>B<\/td>\n<\/tr>\n<\/table>"}
+{"id":"x35-table-hr-table","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table><hr \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>c<\/td>\n<td>d<\/td>\n<\/tr>\n<\/table>"}
+{"id":"n38-19-before-hr","output":"<p>text<\/p>\n\n<hr \/>\n"}
+{"id":"n38-20-after-hr","output":"<hr \/>\n<p>text<\/p>\n\n"}
+{"id":"pg43-horiz-between","output":"<p>above<\/p>\n\n<hr \/>\n<p>below<\/p>\n\n"}
+{"id":"s33","output":"<p>**a<\/p>\n\n<hr \/>\n<p>b**<br \/>\nx<\/p>\n\n"}
+{"id":"strike-s35","output":"<hr \/>\n"}
+{"id":"sup33","output":"<p>^^a<\/p>\n\n<hr \/>\n<p>b^^<br \/>\nx<\/p>\n\n"}
+{"id":"typo08","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo10","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo12","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo14","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo16","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo18","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"typo84","output":"<p>before<\/p>\n\n<hr \/>\n<p>after&#8230;<br \/>\nx<\/p>\n\n"}
+{"id":"hz-01","output":"<hr \/>\n"}
+{"id":"hz-02","output":"<hr \/>\n"}
+{"id":"hz-03","output":"<p>x<\/p>\n\n<hr \/>\n<p>y<\/p>\n\n"}
+{"id":"hz-04","output":"<p>x<\/p>\n\n<hr \/>\n<p>y<\/p>\n\n"}
+{"id":"hz-05","output":"<p>x<\/p>\n\n<hr \/>\n<p>y<\/p>\n\n"}
+{"id":"hz-06","output":"<p>x<\/p>\n\n<hr \/>\n<p>y<\/p>\n\n"}
+{"id":"hz-07","output":"<p>x<\/p>\n\n<hr \/>\n<p>y<\/p>\n\n"}
+{"id":"hz-08","output":"<p>x<br \/>\n&#8212;-<br \/>\ny<\/p>\n\n"}
+{"id":"hz-09","output":"<p>x<br \/>\n&#8212;<br \/>\ny<\/p>\n\n"}
+{"id":"hz-10","output":"<p>x<br \/>\n-<br \/>\ny<\/p>\n\n"}
+{"id":"hz-11","output":"<p>x<\/p>\n\n<hr \/>\n"}
+{"id":"hz-12","output":"<p>x<br \/>\n&#8212;&#8212;<br \/>\ny<\/p>\n\n"}
+{"id":"hz-13","output":"<p>x<br \/>\n&#8212;&#8212;<br \/>\ny<\/p>\n\n"}
+{"id":"hz-14","output":"<p>x<br \/>\n&#8212;&#8212;<br \/>\ny<\/p>\n\n"}
+{"id":"hz-15","output":"<p>x<br \/>\n&#8212;&#8212;x<br \/>\ny<\/p>\n\n"}
+{"id":"hz-16","output":"<p>x<br \/>\nx&#8212;&#8212;<br \/>\ny<\/p>\n\n"}
+{"id":"hz-17","output":"<p>a &#8212;&#8212; b<\/p>\n\n"}
+{"id":"hz-18","output":"<p>- - - -<\/p>\n\n"}
+{"id":"hz-19","output":"<hr \/>\n<hr \/>\n"}
+{"id":"hz-20","output":"<hr \/>\n<hr \/>\n"}
+{"id":"hz-21","output":"<p>a<\/p>\n\n<hr \/>\n<p>b<\/p>\n\n<hr \/>\n<p>c<\/p>\n\n"}
+{"id":"hz-22","output":"<hr \/>\n<p><div class=\"content-separator\" style=\"display: none:\"\/>\n<\/p>\n\n"}
+{"id":"hz-23","output":"<table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold<\/a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold<\/a><\/div><div class=\"title\">Table of Contents<\/div><div id=\"toc-list\">\n<\/div><\/div><\/td><\/tr><\/table>\n\n<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"hz-24","output":"\n<h1 id=\"toc0\"><span>Head<\/span><\/h1>\n<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"hz-25","output":"<p>x<\/p>\n\n<hr \/>\n<p><strong>bold<\/strong><\/p>\n\n"}
+{"id":"hz-26","output":"<p>x<\/p>\n\n<hr \/>\n<p><span>s<\/span><\/p>\n\n"}
+{"id":"hz-27","output":"<p>x<\/p>\n\n<hr \/>\n<p>para one<\/p>\n\n<p>para two<\/p>\n\n"}
+{"id":"hz-28","output":"<ul>\n<li>item<\/li>\n<\/ul><hr \/>\n<p>x<\/p>\n\n"}
+{"id":"hz-29","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>cell<\/td>\n<\/tr>\n<\/table><hr \/>\n<p>x<\/p>\n\n"}
+{"id":"hz-30","output":"\n<div class=\"code\">\n<pre><code>----<\/code><\/pre><\/div>\n\n<br \/>\nx"}
+{"id":"hz-31","output":"<p>@@<\/p>\n\n<hr \/>\n<p>@@<br \/>\nx<\/p>\n\n"}
+{"id":"hz-32","output":"<div ><hr \/>\n<\/div><br \/>\nx"}
+{"id":"hz-33","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"hz-34","output":"<p>a<br \/>\n<br \/>\n<hr \/>\n<\/p>\n\n<p>b<\/p>\n\n"}
+{"id":"hz-35","output":"<hr \/>\n<p style=\"text-align: center;\">centered<\/p><p>x<\/p>\n\n"}
+{"id":"hz-36","output":"<div style=\"clear:both; height: 0px; font-size: 1px\"><\/div>\n<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"hz-37","output":"<p><div class=\"content-separator\" style=\"display: none:\"\/>\n<\/p>\n\n<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"hz-38","output":"<p>x<\/p>\n\n<hr \/>\n<p><div class=\"content-separator\" style=\"display: none:\"\/>\n<\/p>\n\n<p>y<\/p>\n\n"}
+{"id":"hz-39","output":"\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n<hr \/>\n<p>y<\/p>\n\n"}
+{"id":"hz-40","output":"<p><strong>a<\/strong><\/p>\n\n<hr \/>\n<p>y<\/p>\n\n"}
+{"id":"hz-41","output":"<p>x<\/p>\n\n<hr \/>\n\n<div class=\"code\">\n<pre><code>y<\/code><\/pre><\/div>\n\n"}
+{"id":"hz-42","output":"<p>before<br \/>\nsome &#8212;&#8212; text<\/p>\n\n<hr \/>\n<p>after<\/p>\n\n"}
+{"id":"hz-43","output":"<p>x<\/p>\n\n<hr \/>\n"}
+{"id":"hz-44","output":"<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"hz-45","output":"<p>x<\/p>\n\n<hr \/>\n<p>y<\/p>\n\n"}
+{"id":"hz-x01","output":"<div ><hr \/>\n<\/div>"}
+{"id":"hz-x02","output":"<div class=\"wiki-note\"><hr \/>\n<\/div>"}
+{"id":"hz-x03","output":"<p><div style=\"text-align: center;\"><\/p>\n\n<hr \/>\n<p><\/div><\/p>\n\n"}
+{"id":"hz-x04","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><hr \/>\n<\/div><\/div><\/div>"}
+{"id":"hz-x05","output":"<p>x<br \/>\n\u2014\u2014\u2014\u2014<br \/>\n\u2013\u2013\u2013\u2013<br \/>\ny<\/p>\n\n"}
+{"id":"hz-x06","output":"<table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold<\/a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold<\/a><\/div><div class=\"title\">Table of Contents<\/div><div id=\"toc-list\">\n\t<div style=\"margin-left: 1em;\"><a href=\"#toc0\">A<\/a><\/div>\n<\/div><\/div><\/td><\/tr><\/table>\n\n<hr \/>\n\n<h1 id=\"toc0\"><span>A<\/span><\/h1>\n"}
+{"id":"hz-x07","output":"<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/element-beta-min.js\"><\/script>\n<script type=\"text\/javascript\" src=\"\/common--javascript\/yahooui\/tabview-min.js\"><\/script><div id=\"wiki-tabview-0\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>T<\/em><\/a><\/li><\/ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><hr \/>\n<\/div><\/div><\/div><script type=\"text\/javascript\">\n(function(){\n\tvar tabView0 = new YAHOO.widget.TabView('wiki-tabview-0');\n})();\n<\/script>"}
+{"id":"hz-x08","output":"<p><span>&#8212;&#8212;<\/span><br \/>\n<a href=\"\/x\"><\/p>\n\n<hr \/>\n<p><\/a><\/p>\n\n"}
+{"id":"p01","output":"<hr \/>\n"}
+{"id":"p02","output":"<p>x<\/p>\n\n<hr \/>\n<p>y<\/p>\n\n"}
+{"id":"p03","output":"<p>x<\/p>\n\n<hr \/>\n<hr \/>\n<p>y<\/p>\n\n"}
+{"id":"p04","output":"<p>x<br \/>\n<span style=\"text-decoration: line-through;\">-<br \/>\n<\/span><br \/>\n-<br \/>\ny<\/p>\n\n"}
+{"id":"p05","output":"<p>x<br \/>\n&#8212;&#8212;<br \/>\ny<\/p>\n\n"}
+{"id":"p06","output":"<p>x<br \/>\n&#8212;&#8212;<br \/>\ny<\/p>\n\n"}
+{"id":"p07","output":"<p>x<br \/>\n&#8212;&#8212;<br \/>\ny<\/p>\n\n"}
+{"id":"p08","output":"<p>x<br \/>\n<span style=\"text-decoration: line-through;\">&#8212;x<br \/>\nx<\/span><span style=\"text-decoration: line-through;\"><br \/>\na -<\/span>- b<br \/>\n- - - -<br \/>\ny<\/p>\n\n"}
+{"id":"p09","output":"<hr \/>\n<hr \/>\n"}
+{"id":"p10","output":"<hr \/>\n<hr \/>\n"}
+{"id":"p11","output":"<ul>\n<li>one<\/li>\n<\/ul><hr \/>\n<ul>\n<li>two<\/li>\n<\/ul>"}
+{"id":"p12","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table><hr \/>\n<table class=\"wiki-content-table\">\n<tr>\n<td>c<\/td>\n<td>d<\/td>\n<\/tr>\n<\/table>"}
+{"id":"p13","output":"\n<h1 id=\"toc0\"><span>Head<\/span><\/h1>\n<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"p14","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n<hr \/>\n<p>x<\/p>\n\n"}
+{"id":"p15","output":"<div ><hr \/>\n<\/div>"}
+{"id":"p16","output":"\n<div class=\"code\">\n<pre><code>----<\/code><\/pre><\/div>\n\n<br \/>\n@@<hr \/>\n<p>@@<br \/>\nx<\/p>\n\n"}
+{"id":"p17","output":"<p>**a<\/p>\n\n<hr \/>\n<p>b**<br \/>\nx<\/p>\n\n"}
+{"id":"p18","output":"<p>x<br \/>\n\u2014\u2014\u2014\u2014<br \/>\n\u2013\u2013\u2013\u2013<br \/>\ny<\/p>\n\n"}

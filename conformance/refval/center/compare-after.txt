@@ -1,0 +1,58 @@
+Total=18 exact=0 trim_eq=3 fnorm_eq=15 diffs=3
+TRIM_EQ   p01 (muse-probe-refval-center-p01)
+  REF : '<p style="text-align: center;">hello</p>\n'
+  LIVE: '<p style="text-align: center;">hello</p>'
+TRIM_EQ   p02 (muse-probe-refval-center-p02)
+  REF : '<p style="text-align: center;">hello</p>\n<p>y</p>\n\n'
+  LIVE: '<p style="text-align: center;">hello</p>\n<p>y</p>'
+FNORM_EQ  p03 (muse-probe-refval-center-p03)
+  REF : '<p>x</p>\n\n<p style="text-align: center;">hello</p>\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;">hello</p>'
+FNORM_EQ  p04 (muse-probe-refval-center-p04)
+  REF : '<p>x</p>\n\n<p style="text-align: center;">hello</p>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;">hello</p>\n<p>y</p>'
+FNORM_EQ  p05 (muse-probe-refval-center-p05)
+  REF : '<p>x</p>\n\n<p style="text-align: center;">hello =</p>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;">hello =</p>\n<p>y</p>'
+FNORM_EQ  p06 (muse-probe-refval-center-p06)
+  REF : '<p>x</p>\n\n<p style="text-align: center;">a = b</p>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;">a = b</p>\n<p>y</p>'
+FNORM_EQ  p07 (muse-probe-refval-center-p07)
+  REF : '<p>x</p>\n\n<p style="text-align: center;"></p>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;"></p>\n<p>y</p>'
+FNORM_EQ  p08 (muse-probe-refval-center-p08)
+  REF : '<p>x</p>\n\n<p style="text-align: center;">padded</p>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;">padded</p>\n<p>y</p>'
+TRIM_EQ   p09 (muse-probe-refval-center-p09)
+  REF : '<p>x<br />\n= hello<br />\n== hello<br />\n=hello<br />\nx= hello<br />\ny</p>\n\n'
+  LIVE: '<p>x<br />\n= hello<br />\n== hello<br />\n=hello<br />\nx= hello<br />\ny</p>'
+FNORM_EQ  p10 (muse-probe-refval-center-p10)
+  REF : '<p>x</p>\n\n<p style="text-align: center;">a</p>\n<p style="text-align: center;">b</p>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;">a</p>\n<p style="text-align: center;">b</p>\n<p>y</p>'
+FNORM_EQ  p11 (muse-probe-refval-center-p11)
+  REF : '<p>x</p>\n\n<p style="text-align: center;">a</p>\n<p style="text-align: center;">b</p>\n<p style="text-align: center;">c</p>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;">a</p>\n<p style="text-align: center;">b</p>\n<p style="text-align: center;">c</p>\n<p>y</p>'
+FNORM_EQ  p12 (muse-probe-refval-center-p12)
+  REF : '<p>x</p>\n\n<p style="text-align: center;">a</p>\n<p style="text-align: center;">b</p>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;">a</p>\n<p style="text-align: center;">b</p>\n<p>y</p>'
+FNORM_EQ  p13 (muse-probe-refval-center-p13)
+  REF : '<p>x</p>\n\n<p style="text-align: center;"><strong>bold</strong> <em>italic</em> <a href="http://example.com">http://example.com</a></p>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;"><strong>bold</strong> <em>italic</em> <a href="http://example.com">http://example.com</a></p>\n<p>y</p>'
+DIFF      p14 (muse-probe-refval-center-p14)
+  SRC : '[[div]]\n= centered\n[[/div]]'
+  REF : '<div ><p style="text-align: center;">centered</p>\n</div>'
+  LIVE: '<div>\n<p style="text-align: center;">centered</p>\n</div>'
+DIFF      p15 (muse-probe-refval-center-p15)
+  SRC : '> quote\n= a\nx'
+  REF : '<blockquote><p>quote</p>\n\n</blockquote>\n<p style="text-align: center;">a</p>\n<p>x</p>\n\n'
+  LIVE: '<blockquote>\n<p>quote</p>\n</blockquote>\n<p style="text-align: center;">a</p>\n<p>x</p>'
+DIFF      p16 (muse-probe-refval-center-p16)
+  SRC : '* item\n= a\nx'
+  REF : '<ul>\n<li>item</li>\n</ul><p style="text-align: center;">a</p>\n<p>x</p>\n\n'
+  LIVE: '<ul>\n<li>item</li>\n</ul>\n<p style="text-align: center;">a</p>\n<p>x</p>'
+FNORM_EQ  p17 (muse-probe-refval-center-p17)
+  REF : '\n<div class="code">\n<pre><code>= a</code></pre></div>\n\n<br />\nx'
+  LIVE: '<div class="code">\n<pre><code>= a</code></pre></div>\n<br />\nx'
+FNORM_EQ  p18 (muse-probe-refval-center-p18)
+  REF : '<p>x</p>\n\n<p style="text-align: center;">a<br />\nb</p>\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;">a<br />\nb</p>\n<p>y</p>'

@@ -1,0 +1,82 @@
+{"id": "eb-01", "source": "[[embed]]body[[/embed]]"}
+{"id": "eb-02", "source": "[[embedvideo]]body[[/embedvideo]]"}
+{"id": "eb-03", "source": "[[embedaudio]]body[[/embedaudio]]"}
+{"id": "eb-04", "source": "[[embedvideo]]body[[/embed]]"}
+{"id": "eb-05", "source": "[[embed]]body[[/embedvideo]]"}
+{"id": "eb-06", "source": "[[embed]]  padded  [[/embed]]"}
+{"id": "eb-07", "source": "[[embed]]\n\nmultiline\n\n[[/embed]]"}
+{"id": "eb-08", "source": "[[EMBED]]x[[/EMBED]]"}
+{"id": "eb-09", "source": "[[EmbedVideo]]x[[/EmbedAudio]]"}
+{"id": "eb-10", "source": "[[embed]]unclosed"}
+{"id": "eb-11", "source": "[[embed]]a[[/embed]]b[[/embed]]"}
+{"id": "eb-12", "source": "[[embed]][[embed]]x[[/embed]]"}
+{"id": "eb-13", "source": "[[embedx]]y[[/embedx]]"}
+{"id": "eb-14", "source": "[[embed]]x[[/embed]] [[embed]]y[[/embed]]"}
+{"id": "eb-15", "source": "[[embed]] [[/embed]]"}
+{"id": "eb-16", "source": "[[embed]][[/embed]]"}
+{"id": "eb-17", "source": "[[embed]]a ] b[[/embed]]"}
+{"id": "eb-18", "source": "[[embed]]a [[/embedx]] b[[/embed]]"}
+{"id": "eb-19", "source": "[[embed]]a [[/embedvid]] b[[/embed]]"}
+{"id": "eb-20", "source": "[[embed]]a [[/embedaudio]] b [[/embed]]"}
+{"id": "eb-21", "source": "[[div]][[embed]]x[[/embed]][[/div]]"}
+{"id": "eb-22", "source": "pre[[embed]]x[[/embed]]post"}
+{"id": "eb-23", "source": "[[embed]]**bold**[[/embed]]"}
+{"id": "eb-24", "source": "[[embed]] [[user x]] [[/embed]]"}
+{"id": "eb-25", "source": "[[embedvideo]]"}
+{"id": "eb-26", "source": "[[embed]]x[[/embed]]\n\n[[embed]]y[[/embed]]"}
+{"id": "eb-27", "source": "[[embedaudio]]x[[/embedvideo]]"}
+{"id": "eb-28", "source": "[[embed]]a[[embed]]b[[/embed]]c[[/embed]]"}
+{"id": "eb-29", "source": "[[embed]]\t\n x \n\t[[/embed]]"}
+{"id": "eb-30", "source": "[[embed ]]x[[/embed]]"}
+{"id": "eb-31", "source": "[[embed]]x[[/embed ]]"}
+{"id": "eb-32", "source": "[[embed]][[file a.txt]][[/embed]]"}
+{"id": "eb-33", "source": "a [[embed]]x[[/embed]] b [[embed]]y[[/embed]] c"}
+{"id": "eb-34", "source": "|| [[embed]]x[[/embed]] ||"}
+{"id": "eb-35", "source": "[[embed]]\n[[/embed]]"}
+{"id": "eb-36", "source": "[[embedvideo]]x[[/embedvideo]]y[[embedaudio]]z[[/embedaudio]]"}
+{"id": "eb-37", "source": "[[embed]]x[[/embed]]\n[[social]]"}
+{"id": "eb-38", "source": "[[embed]][[code]]c[[/code]][[/embed]]"}
+{"id": "eb-39", "source": "[[embed]]long body with ]] inside[[/embed]]"}
+{"id": "eb-40", "source": "[[a href=\"/x\"]][[embed]]y[[/embed]][[/a]]"}
+{"id": "eb-41", "source": "[[embed]]x[[/embed]]"}
+{"id": "eb-42", "source": "[[embed]]line1\nline2[[/embed]]"}
+{"id": "eb-x01", "source": "[[embed]]\n<iframe src=\"http://example.com\" width=\"400\" height=\"300\"></iframe>\n[[/embed]]"}
+{"id": "eb-x02", "source": "[[embed]]\n<iframe src=\"https://example.com\" width=\"400\" height=\"300\"></iframe>\n[[/embed]]"}
+{"id": "eb-x03", "source": "[[embed]]\n<iframe src=\"http://example.com\" onclick=\"alert(1)\"></iframe>\n[[/embed]]"}
+{"id": "eb-x04", "source": "[[embedvideo]]\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" frameborder=\"0\"></iframe>\n[[/embedvideo]]"}
+{"id": "eb-x05", "source": "[[embedaudio]]\n<iframe width=\"100\" height=\"100\" src=\"https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/1\"></iframe>\n[[/embedaudio]]"}
+{"id": "eb-x06", "source": "[[embed]]<iframe src=\"http://example.com\"></iframe>[[/embed]]"}
+{"id": "eb-x07", "source": "[[embed]]<iframe src=\"http://example.com\" data-x=\"1\"></iframe>[[/embed]]"}
+{"id": "eb-x08", "source": "[[embed]]<iframe src=\"http://example.com\">fallback</iframe>[[/embed]]"}
+{"id": "eb-x09", "source": "[[embed]]<a href=\"http://example.com\">hi</a>[[/embed]]"}
+{"id": "eb-x10", "source": "[[embed]]<div class=\"x\">hi</div>[[/embed]]"}
+{"id": "eb-x11", "source": "[[embed]]\n<script type=\"text/javascript\" src=\"https://static.wikidot.com/common--misc/reflection.js\"></script>\n[[/embed]]"}
+{"id": "eb-x12", "source": "[[embed]]\n<iframe src=\"http://wikimapia.org/s/123\"></iframe>\n[[/embed]]"}
+{"id": "eb-x13", "source": "[[embed]]<iframe src=\"javascript:alert(1)\"></iframe>[[/embed]]"}
+{"id": "eb-x14", "source": "[[embed]]\n<object width=\"425\" height=\"344\"><param name=\"movie\" value=\"http://www.youtube.com/v/abc\"></param><embed src=\"http://www.youtube.com/v/abc\" type=\"application/x-shockwave-flash\" width=\"425\" height=\"344\"></embed></object>\n[[/embed]]"}
+{"id": "eb-x15", "source": "[[embed]]hello world[[/embed]]"}
+{"id": "eb-x16", "source": "[[embedvideo]]hello world[[/embedvideo]]"}
+{"id": "eb-x17", "source": "[[embedaudio]]hello world[[/embedaudio]]"}
+{"id": "eb-x18", "source": "[[embed]]<iframe src=\"http://example.com\" width=\"200\" height=\"100\" allow=\"fullscreen\"></iframe>[[/embed]]"}
+{"id": "eb-x19", "source": "pre [[embed]]hello[[/embed]] post"}
+{"id": "eb-x20", "source": "[[div]]\n[[embed]]hello[[/embed]]\n[[/div]]"}
+{"id": "p01", "source": "[[embed]]body[[/embed]]"}
+{"id": "p02", "source": "[[embedvideo]]body[[/embedvideo]]"}
+{"id": "p03", "source": "[[embedaudio]]body[[/embedaudio]]"}
+{"id": "p04", "source": "[[embedvideo]]body[[/embed]]"}
+{"id": "p05", "source": "[[embed]]body[[/embedvideo]]"}
+{"id": "p06", "source": "[[EMBED]]x[[/EMBED]]\n[[EmbedVideo]]x[[/EmbedAudio]]"}
+{"id": "p07", "source": "[[embed]][[/embed]]\n[[embed]] [[/embed]]"}
+{"id": "p08", "source": "[[embed]]unclosed"}
+{"id": "p09", "source": "[[embed]]a[[/embed]]b[[/embed]]"}
+{"id": "p10", "source": "[[embed]][[embed]]x[[/embed]]"}
+{"id": "p11", "source": "[[embed ]]x[[/embed]]\n[[embed]]x[[/embed ]]"}
+{"id": "p12", "source": "[[embed]]\n<iframe src=\"http://example.com\" width=\"400\" height=\"300\"></iframe>\n[[/embed]]"}
+{"id": "p13", "source": "[[embed]]\n<iframe src=\"https://example.com\" width=\"400\" height=\"300\"></iframe>\n[[/embed]]"}
+{"id": "p14", "source": "[[embed]]\n<iframe src=\"http://example.com\" onclick=\"alert(1)\"></iframe>\n[[/embed]]"}
+{"id": "p15", "source": "[[embedvideo]]\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" frameborder=\"0\"></iframe>\n[[/embedvideo]]"}
+{"id": "p16", "source": "[[embed]]<iframe src=\"http://example.com\">fallback</iframe>[[/embed]]"}
+{"id": "p17", "source": "[[embed]]<iframe src=\"javascript:alert(1)\"></iframe>[[/embed]]"}
+{"id": "p18", "source": "[[embed]]<a href=\"http://example.com\">hi</a>[[/embed]]"}
+{"id": "p19", "source": "[[embed]]**bold**[[/embed]]"}
+{"id": "p20", "source": "pre [[embed]]hello[[/embed]] post"}

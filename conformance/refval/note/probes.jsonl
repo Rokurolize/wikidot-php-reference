@@ -1,0 +1,20 @@
+{"id": "p01", "source": "[[note]]\nbody\n[[/note]]"}
+{"id": "p02", "source": "x\n[[note]]\nbody\n[[/note]]\ny"}
+{"id": "p03", "source": "x\n\n[[note]]\nbody\n[[/note]]\n\ny"}
+{"id": "p04", "source": "[[note]]\n[[/note]]"}
+{"id": "p05", "source": "[[note]]\n\n[[/note]]"}
+{"id": "p06", "source": "[[note]]\nline1\nline2\n[[/note]]"}
+{"id": "p07", "source": "[[note]]\np1\n\np2\n[[/note]]"}
+{"id": "p08", "source": "[[note]] body\n[[/note]]"}
+{"id": "p09", "source": "[[note]]\nbody[[/note]]"}
+{"id": "p10", "source": "[[NOTE]]\nbody\n[[/NOTE]]"}
+{"id": "p11", "source": "[[Note]]\nbody\n[[/note]]\n\n[[note]]\nbody\n[[/NOTE]]"}
+{"id": "p12", "source": "[[note]]\n[[note]]\ninner\n[[/note]]\n[[/note]]"}
+{"id": "p13", "source": "a [[note]]\nb\n[[/note]] c"}
+{"id": "p14", "source": "[[note]]\na[[/note]]b[[/note]]"}
+{"id": "p15", "source": "[[note]]\nbody\n[[/note]]\n[[note]]\nc\n[[/note]]"}
+{"id": "p16", "source": "[[note class=\"x\"]]\nbody\n[[/note]]\n\n[[note_]]\nbody\n[[/note]]"}
+{"id": "p17", "source": "[[note]] \nbody\n[[/note]]\n\n[[note]]\nbody\n[[/note ]]"}
+{"id": "p18", "source": "[[note]]\n* a\n* b\n[[/note]]"}
+{"id": "p19", "source": "[[note]]\n**bold** and ----\n[[/note]]"}
+{"id": "p20", "source": "[[note]]\n[[div]]\nx\n[[/div]]\n[[/note]]"}

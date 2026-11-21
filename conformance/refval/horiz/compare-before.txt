@@ -1,0 +1,61 @@
+Total=18 exact=0 trim_eq=9 fnorm_eq=12 diffs=6
+TRIM_EQ   p01 (muse-probe-refval-horiz-p01)
+  REF : '<hr />\n'
+  LIVE: '<hr />'
+FNORM_EQ  p02 (muse-probe-refval-horiz-p02)
+  REF : '<p>x</p>\n\n<hr />\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<hr />\n<p>y</p>'
+FNORM_EQ  p03 (muse-probe-refval-horiz-p03)
+  REF : '<p>x</p>\n\n<hr />\n<hr />\n<p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<hr />\n<hr />\n<p>y</p>'
+DIFF      p04 (muse-probe-refval-horiz-p04)
+  SRC : 'x\n---\n--\n-\ny'
+  REF : '<p>x<br />\n<span style="text-decoration: line-through;">-<br />\n</span><br />\n-<br />\ny</p>\n\n'
+  LIVE: '<p>x<br />\n<span style="text-decoration: line-through;">-<br /></span><br />\n-<br />\ny</p>'
+TRIM_EQ   p05 (muse-probe-refval-horiz-p05)
+  REF : '<p>x<br />\n&#8212;&#8212;<br />\ny</p>\n\n'
+  LIVE: '<p>x<br />\n&#8212;&#8212;<br />\ny</p>'
+TRIM_EQ   p06 (muse-probe-refval-horiz-p06)
+  REF : '<p>x<br />\n&#8212;&#8212;<br />\ny</p>\n\n'
+  LIVE: '<p>x<br />\n&#8212;&#8212;<br />\ny</p>'
+TRIM_EQ   p07 (muse-probe-refval-horiz-p07)
+  REF : '<p>x<br />\n&#8212;&#8212;<br />\ny</p>\n\n'
+  LIVE: '<p>x<br />\n&#8212;&#8212;<br />\ny</p>'
+TRIM_EQ   p08 (muse-probe-refval-horiz-p08)
+  REF : '<p>x<br />\n<span style="text-decoration: line-through;">&#8212;x<br />\nx</span><span style="text-decoration: line-through;"><br />\na -</span>- b<br />\n- - - -<br />\ny</p>\n\n'
+  LIVE: '<p>x<br />\n<span style="text-decoration: line-through;">&#8212;x<br />\nx</span><span style="text-decoration: line-through;"><br />\na -</span>- b<br />\n- - - -<br />\ny</p>'
+TRIM_EQ   p09 (muse-probe-refval-horiz-p09)
+  REF : '<hr />\n<hr />\n'
+  LIVE: '<hr />\n<hr />'
+TRIM_EQ   p10 (muse-probe-refval-horiz-p10)
+  REF : '<hr />\n<hr />\n'
+  LIVE: '<hr />\n<hr />'
+DIFF      p11 (muse-probe-refval-horiz-p11)
+  SRC : '* one\n----\n* two'
+  REF : '<ul>\n<li>one</li>\n</ul><hr />\n<ul>\n<li>two</li>\n</ul>'
+  LIVE: '<ul>\n<li>one</li>\n</ul>\n<hr />\n<ul>\n<li>two</li>\n</ul>'
+DIFF      p12 (muse-probe-refval-horiz-p12)
+  SRC : '|| a || b ||\n----\n|| c || d ||'
+  REF : '<table class="wiki-content-table">\n<tr>\n<td>a</td>\n<td>b</td>\n</tr>\n</table><hr />\n<table class="wiki-content-table">\n<tr>\n<td>c</td>\n<td>d</td>\n</tr>\n</table>'
+  LIVE: '<table class="wiki-content-table">\n<tr>\n<td>a</td>\n<td>b</td>\n</tr>\n</table>\n<hr />\n<table class="wiki-content-table">\n<tr>\n<td>c</td>\n<td>d</td>\n</tr>\n</table>'
+TRIM_EQ   p13 (muse-probe-refval-horiz-p13)
+  REF : '\n<h1 id="toc0"><span>Head</span></h1>\n<hr />\n<p>x</p>\n\n'
+  LIVE: '<h1 id="toc0"><span>Head</span></h1>\n<hr />\n<p>x</p>'
+DIFF      p14 (muse-probe-refval-horiz-p14)
+  SRC : '> quote\n----\nx'
+  REF : '<blockquote><p>quote</p>\n\n</blockquote>\n<hr />\n<p>x</p>\n\n'
+  LIVE: '<blockquote>\n<p>quote</p>\n</blockquote>\n<hr />\n<p>x</p>'
+DIFF      p15 (muse-probe-refval-horiz-p15)
+  SRC : '[[div]]\n----\n[[/div]]'
+  REF : '<div ><hr />\n</div>'
+  LIVE: '<div>\n<hr /></div>'
+DIFF      p16 (muse-probe-refval-horiz-p16)
+  SRC : '[[code]]\n----\n[[/code]]\n@@\n----\n@@\nx'
+  REF : '\n<div class="code">\n<pre><code>----</code></pre></div>\n\n<br />\n@@<hr />\n<p>@@<br />\nx</p>\n\n'
+  LIVE: '<div class="code">\n<pre><code>----</code></pre></div>\n<br />\n@@\n<hr />\n<p>@@<br />\nx</p>'
+FNORM_EQ  p17 (muse-probe-refval-horiz-p17)
+  REF : '<p>**a</p>\n\n<hr />\n<p>b**<br />\nx</p>\n\n'
+  LIVE: '<p>**a</p>\n<hr />\n<p>b**<br />\nx</p>'
+TRIM_EQ   p18 (muse-probe-refval-horiz-p18)
+  REF : '<p>x<br />\n————<br />\n––––<br />\ny</p>\n\n'
+  LIVE: '<p>x<br />\n————<br />\n––––<br />\ny</p>'

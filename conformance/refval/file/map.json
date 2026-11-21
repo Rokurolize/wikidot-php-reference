@@ -1,0 +1,102 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refval-file-p01",
+  "source": "[[file a.txt]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-file-p02",
+  "source": "[[file a.txt|Label]]",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-file-p03",
+  "source": "[[file other-page/a.txt]]",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-file-p04",
+  "source": "[[file other-page/a.txt|Label]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-file-p05",
+  "source": "[[file /other-page/a.txt]]",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-file-p06",
+  "source": "[[file cat:page/a.txt|Cat File]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-file-p07",
+  "source": "[[file :site:page/a.txt]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-file-p08",
+  "source": "[[file a.txt|]]",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-file-p09",
+  "source": "[[file a.txt| ]]",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-file-p10",
+  "source": "[[file a.txt | Label ]]",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-file-p11",
+  "source": "[[file  a.txt  ]]",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-file-p12",
+  "source": "[[file |x]]\n[[file |]]",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-file-p13",
+  "source": "[[file a|b|c]]",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-file-p14",
+  "source": "[[FILE a.txt]]\n[[File a.txt|Label]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-file-p15",
+  "source": "[[file my file.txt|My File]]\n[[file café.txt]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-file-p16",
+  "source": "[[file a.txt|**bold**]]",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-file-p17",
+  "source": "[[file a\"b.txt|c<d>e]]",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-file-p18",
+  "source": "[[file a\nb.txt]]\n[[file a.txt|x\ny]]",
+  "action": "created"
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-file-p19",
+  "source": "[[file ]]\n[[file]]\n[[*file a.txt]]",
+  "action": "created"
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-file-p20",
+  "source": "[[file\ta.txt]]\n[[file a]]]\n[[file a]b]]",
+  "action": "created"
+ }
+}

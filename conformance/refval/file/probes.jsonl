@@ -1,0 +1,20 @@
+{"id": "p01", "source": "[[file a.txt]]"}
+{"id": "p02", "source": "[[file a.txt|Label]]"}
+{"id": "p03", "source": "[[file other-page/a.txt]]"}
+{"id": "p04", "source": "[[file other-page/a.txt|Label]]"}
+{"id": "p05", "source": "[[file /other-page/a.txt]]"}
+{"id": "p06", "source": "[[file cat:page/a.txt|Cat File]]"}
+{"id": "p07", "source": "[[file :site:page/a.txt]]"}
+{"id": "p08", "source": "[[file a.txt|]]"}
+{"id": "p09", "source": "[[file a.txt| ]]"}
+{"id": "p10", "source": "[[file a.txt | Label ]]"}
+{"id": "p11", "source": "[[file  a.txt  ]]"}
+{"id": "p12", "source": "[[file |x]]\n[[file |]]"}
+{"id": "p13", "source": "[[file a|b|c]]"}
+{"id": "p14", "source": "[[FILE a.txt]]\n[[File a.txt|Label]]"}
+{"id": "p15", "source": "[[file my file.txt|My File]]\n[[file café.txt]]"}
+{"id": "p16", "source": "[[file a.txt|**bold**]]"}
+{"id": "p17", "source": "[[file a\"b.txt|c<d>e]]"}
+{"id": "p18", "source": "[[file a\nb.txt]]\n[[file a.txt|x\ny]]"}
+{"id": "p19", "source": "[[file ]]\n[[file]]\n[[*file a.txt]]"}
+{"id": "p20", "source": "[[file\ta.txt]]\n[[file a]]]\n[[file a]b]]"}

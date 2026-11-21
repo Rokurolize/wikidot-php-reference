@@ -1,0 +1,222 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refval-button-p01",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">edit</a></p>",
+  "html_sha256": "5eb53f364eb59d7051b88b28786f154ecb0b7043ed480ee5abe5ae6c0d7d9903",
+  "source": "[[button edit]]",
+  "source_sha256": "18eaaff42907aad81a2d05a013a0eda522ec1c22f86d1c45f14968fa91fe2ed1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-button-p02",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.append(event)\">append</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.toggleEditSections(event)\">edit sections</a></p>",
+  "html_sha256": "f83f74443291b45b1b518bdcff2ee8d1e0e2bd4b667df7954012a0f70fd2e19e",
+  "source": "[[button edit-append]]\n[[button edit-sections]]",
+  "source_sha256": "ef715b9581cb4b99f2e9a152ebcc59f3fa0ca615fe9fb90b30a86e5ff9edac62",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-button-p03",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.historyClick(event)\">history</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.printClick(event)\">print</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.filesClick(event)\">files</a></p>",
+  "html_sha256": "43e04c1af3e481172ec0eab7ef440e5501202bec38a4c5ba99ddb02dbb191b77",
+  "source": "[[button history]]\n[[button print]]\n[[button files]]",
+  "source_sha256": "328581fb30634b39440bf6daeed8d4c7d12936d7ed5868de19095fb3af8c58fe",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-button-p04",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editTags(event)\">tags</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.viewSourceClick(event)\">view source</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"window.location.href='/talk:'+WIKIREQUEST.info.pageUnixName\">talk</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.backlinksClick(event)\">backlinks</a></p>",
+  "html_sha256": "c34a3b6659740a5a835731fb88e57ff17ccc28eb1a2f72370000e1f127f7af6f",
+  "source": "[[button tags]]\n[[button source]]\n[[button talk]]\n[[button backlinks]]",
+  "source_sha256": "dec1af444f3047a6edebad6752a2178d7d362ecbeb8c1e4d32daaa0075e178d8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-button-p05",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.append(event)\">append</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.toggleEditSections(event)\">edit sections</a></p>",
+  "html_sha256": "f83f74443291b45b1b518bdcff2ee8d1e0e2bd4b667df7954012a0f70fd2e19e",
+  "source": "[[button edit_append]]\n[[button edit_sections]]",
+  "source_sha256": "a5c66f484b5c7aeb1152aed08ada730e635d20fcea6f1ea457ae8cdf4b9fed38",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-button-p06",
+  "html": "<div class=\"error-block\">You need to set text for set-tags button.</div>\n<br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.updateTagsByButton(event, '')\">Tag It</a>",
+  "html_sha256": "cbf427dc3a77ee7897b8770e8ad54fdb182f05b4c7f8ef9430c0590f43751d6d",
+  "source": "[[button set-tags]]\n[[button set-tags text=\"Tag It\" tags=\"+a -b\"]]",
+  "source_sha256": "5ee763c0ba81ba0bba8f1ce7096a1267d6dd9b80b48b26a0ec6818cd5771b17c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-button-p07",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.renamePage(event)\">rename</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.deletePage(event)\">delete</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.parentClick(event)\">parent</a><br /></p>\n<div class=\"error-block\"><em>lock</em> is not a valid button type</div>",
+  "html_sha256": "ce691dc9139331f58196fa5b1cde9a8c458121455e6e45dc5a00bfa6586701af",
+  "source": "[[button rename]]\n[[button delete]]\n[[button parent]]\n[[button lock]]",
+  "source_sha256": "7a3fb0ec139aaa0e9476323659660211c311659ac9b180abe36f3a524b69567b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-button-p08",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editMetaClick(event)\">edit meta</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.watchersClick(event)\">watchers</a><br /></p>\n<div class=\"error-block\"><em>unknown-type</em> is not a valid button type</div>",
+  "html_sha256": "e0061ff8f9b9ad9a8e6982ae6144548f55657915d9a517d4769e4c4fc70f672b",
+  "source": "[[button edit-meta]]\n[[button watchers]]\n[[button unknown-type]]",
+  "source_sha256": "ffa77d95fe330ee1dc0256680d0e0246fb0c620305edf14dd5311f60d1fbad36",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-button-p09",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">Edit Page</a></p>",
+  "html_sha256": "dda65a0cc20f0d388074837833dfdda6ff5d0bfb11d72fdb876dc100778a5aef",
+  "source": "[[button edit text=\"Edit Page\"]]",
+  "source_sha256": "28655f1cf96924d723a02a45184fb770fa245719ed3cbcdede2e282edb2b02fe",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-button-p10",
+  "html": "<p><a class=\"my-btn\" style=\"color: red;\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">Edit</a></p>",
+  "html_sha256": "ea4b7044cc0f0bc82c8b75c47f2d733032e55d3eedce0b7a64bbaec58f932fb3",
+  "source": "[[button edit text=\"Edit\" class=\"my-btn\" style=\"color: red;\"]]",
+  "source_sha256": "9aa5759553761caa425ddd24da7b075dda048f913054793f8d7415d5bde6d3f2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-button-p11",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">edit</a></p>",
+  "html_sha256": "5eb53f364eb59d7051b88b28786f154ecb0b7043ed480ee5abe5ae6c0d7d9903",
+  "source": "[[button edit id=\"x\" data-foo=\"bar\" title=\"t\"]]",
+  "source_sha256": "28386ac2cacecddcede771d1a6bc9cab05680ba9cbcba896eb524b010416747e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-button-p12",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">edit</a></p>",
+  "html_sha256": "5eb53f364eb59d7051b88b28786f154ecb0b7043ed480ee5abe5ae6c0d7d9903",
+  "source": "[[button edit text=\"\"]]",
+  "source_sha256": "a9f82eaec01263b5d7e34aa74c7f344cad79952ba58f46ba26a4f3f5ef20098e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-button-p13",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">a&lt;b&gt;c&amp;d'e</a></p>",
+  "html_sha256": "0f4a603cc358169375fae8018fb33342bd4e80154e14cc3d4e2f950e8e7736b9",
+  "source": "[[button edit text=\"a<b>c&d'e\"]]",
+  "source_sha256": "fc9d18a45473a34643f5c6701c43d0d9d90952e658a82d7a43c81c041a4a2cda",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-button-p14",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">edit</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">edit</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.toggleEditSections(event)\">edit sections</a></p>",
+  "html_sha256": "ecb73ddecb1cc32438c1131ca596c7d0f4cdda839dfd4aac5388eedfcc5e44f9",
+  "source": "[[BUTTON edit]]\n[[button EDIT]]\n[[button Edit_Sections]]",
+  "source_sha256": "bd50058014018fc3eb8e5f0470398d0b7cbe15904eae2cdc874b8f92cb390d3c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-button-p15",
+  "html": "<p>[[button edit ]]</p>",
+  "html_sha256": "c375ad0bf0f1a32df49ce1b7a02ee1114aa4d264a7293d3744f7c9251db638cd",
+  "source": "[[button edit ]]",
+  "source_sha256": "b4da3b5ba80faea3bfcd1e585bab8c07a4d18af7eb3ff165d3321f8ef8253053",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-button-p16",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">edit</a></p>",
+  "html_sha256": "5eb53f364eb59d7051b88b28786f154ecb0b7043ed480ee5abe5ae6c0d7d9903",
+  "source": "[[button edit  ]]",
+  "source_sha256": "66ddab6e17cac25c0c743634625dccc963cb9b30eea5f7f022990288b87b3853",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-button-p17",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">edit</a></p>",
+  "html_sha256": "5eb53f364eb59d7051b88b28786f154ecb0b7043ed480ee5abe5ae6c0d7d9903",
+  "source": "[[button edit x]]",
+  "source_sha256": "7cc3e6edf27161ab0d0ffe071ef3aad2f09546aba502592ef69edb4ef43791f2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-button-p18",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">edit</a></p>",
+  "html_sha256": "5eb53f364eb59d7051b88b28786f154ecb0b7043ed480ee5abe5ae6c0d7d9903",
+  "source": "[[button edit text='single']]",
+  "source_sha256": "003f36ccd84368415c271ec30720809609707492db603681c6e0e084c08cdf5e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-button-p19",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">newline</a></p>",
+  "html_sha256": "494d7260ce2663838cbfbaa782d31e11b981d540af8f5f5106e870de47e79328",
+  "source": "[[button edit\ntext=\"newline\"]]",
+  "source_sha256": "56e52e0229b5a14822db8118ceec027c3eabf914db6c68328d3646143b1523e4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-button-p20",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">tab</a></p>",
+  "html_sha256": "517a22ce5f28d6762f17e1522968b946e61fbfb8637fea3f406c5e8ca16fa0c9",
+  "source": "[[button edit\ttext=\"tab\"]]",
+  "source_sha256": "eab3158cb2719e6b7f113a475ee1cf1cf8fb98d8828860e8d297be78d541c348",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p21": {
+  "fullname": "muse-probe-refval-button-p21",
+  "html": "<p>[[button]]<br />\n[[button ]]</p>",
+  "html_sha256": "baeacd2794427db3e469116d0b35714dff9d63b027eb2feba020b891501f546c",
+  "source": "[[button]]\n[[button ]]",
+  "source_sha256": "9ac314a82408821a3a351e63415dfe5bec7be7d5c0f6eacbcb59a655167c5b7a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p22": {
+  "fullname": "muse-probe-refval-button-p22",
+  "html": "<p><a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.editClick(event)\">b</a></p>",
+  "html_sha256": "94e4970f6656d502a7516e6a726d8ae6661b0c4fa859bd4d414cfb256d0abd70",
+  "source": "[[button edit text=\"a\" text=\"b\"]]",
+  "source_sha256": "c8123ec1977263761a9a2d4b1be5e300872bd38fdb0059984a435b443cbf7606",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,123 @@
+p01 -> muse-probe-refval-note-p01 (created)
+p02 -> muse-probe-refval-note-p02 (created)
+p03 -> muse-probe-refval-note-p03 (created)
+p04 -> muse-probe-refval-note-p04 (created)
+p05 -> muse-probe-refval-note-p05 (created)
+p06 -> muse-probe-refval-note-p06 (created)
+p07 -> muse-probe-refval-note-p07 (created)
+p08 -> muse-probe-refval-note-p08 (created)
+p09 -> muse-probe-refval-note-p09 (created)
+p10 -> muse-probe-refval-note-p10 (created)
+p11 -> muse-probe-refval-note-p11 (created)
+p12 -> muse-probe-refval-note-p12 (created)
+p13 -> muse-probe-refval-note-p13 (created)
+p14 -> muse-probe-refval-note-p14 (created)
+p15 -> muse-probe-refval-note-p15 (created)
+p16 -> muse-probe-refval-note-p16 (created)
+p17 -> muse-probe-refval-note-p17 (created)
+p18 -> muse-probe-refval-note-p18 (created)
+p19 -> muse-probe-refval-note-p19 (created)
+p20 -> muse-probe-refval-note-p20 (created)
+20 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01": {
+  "fullname": "muse-probe-refval-note-p01",
+  "source": "[[note]]\nbody\n[[/note]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-note-p02",
+  "source": "x\n[[note]]\nbody\n[[/note]]\ny",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-note-p03",
+  "source": "x\n\n[[note]]\nbody\n[[/note]]\n\ny",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-note-p04",
+  "source": "[[note]]\n[[/note]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-note-p05",
+  "source": "[[note]]\n\n[[/note]]",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-note-p06",
+  "source": "[[note]]\nline1\nline2\n[[/note]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-note-p07",
+  "source": "[[note]]\np1\n\np2\n[[/note]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-note-p08",
+  "source": "[[note]] body\n[[/note]]",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-note-p09",
+  "source": "[[note]]\nbody[[/note]]",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-note-p10",
+  "source": "[[NOTE]]\nbody\n[[/NOTE]]",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-note-p11",
+  "source": "[[Note]]\nbody\n[[/note]]\n\n[[note]]\nbody\n[[/NOTE]]",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-note-p12",
+  "source": "[[note]]\n[[note]]\ninner\n[[/note]]\n[[/note]]",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-note-p13",
+  "source": "a [[note]]\nb\n[[/note]] c",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-note-p14",
+  "source": "[[note]]\na[[/note]]b[[/note]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-note-p15",
+  "source": "[[note]]\nbody\n[[/note]]\n[[note]]\nc\n[[/note]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-note-p16",
+  "source": "[[note class=\"x\"]]\nbody\n[[/note]]\n\n[[note_]]\nbody\n[[/note]]",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-note-p17",
+  "source": "[[note]] \nbody\n[[/note]]\n\n[[note]]\nbody\n[[/note ]]",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-note-p18",
+  "source": "[[note]]\n* a\n* b\n[[/note]]",
+  "action": "created"
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-note-p19",
+  "source": "[[note]]\n**bold** and ----\n[[/note]]",
+  "action": "created"
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-note-p20",
+  "source": "[[note]]\n[[div]]\nx\n[[/div]]\n[[/note]]",
+  "action": "created"
+ }
+}

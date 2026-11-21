@@ -1,0 +1,200 @@
+p01 -> muse-probe-refval-break-p01 stable=True saved_source_matches=True valid=True
+p02 -> muse-probe-refval-break-p02 stable=True saved_source_matches=True valid=True
+p03 -> muse-probe-refval-break-p03 stable=True saved_source_matches=True valid=True
+p04 -> muse-probe-refval-break-p04 stable=True saved_source_matches=True valid=True
+p05 -> muse-probe-refval-break-p05 stable=True saved_source_matches=True valid=True
+p06 -> muse-probe-refval-break-p06 stable=True saved_source_matches=True valid=True
+p07 -> muse-probe-refval-break-p07 stable=True saved_source_matches=True valid=True
+p08 -> muse-probe-refval-break-p08 stable=True saved_source_matches=True valid=True
+p09 -> muse-probe-refval-break-p09 stable=True saved_source_matches=True valid=True
+p10 -> muse-probe-refval-break-p10 stable=True saved_source_matches=True valid=True
+p11 -> muse-probe-refval-break-p11 stable=True saved_source_matches=True valid=True
+p12 -> muse-probe-refval-break-p12 stable=True saved_source_matches=True valid=True
+p13 -> muse-probe-refval-break-p13 stable=True saved_source_matches=True valid=True
+p14 -> muse-probe-refval-break-p14 stable=True saved_source_matches=True valid=True
+p15 -> muse-probe-refval-break-p15 stable=True saved_source_matches=True valid=True
+p16 -> muse-probe-refval-break-p16 stable=True saved_source_matches=True valid=True
+p17 -> muse-probe-refval-break-p17 stable=True saved_source_matches=True valid=True
+p18 -> muse-probe-refval-break-p18 stable=True saved_source_matches=True valid=True
+{
+ "p01": {
+  "fullname": "muse-probe-refval-break-p01",
+  "html": "<p>a<br />\nb</p>",
+  "html_sha256": "a9cbfe60373c4c33a399fbc904966ca82bc750eed50beb32adf283236c9a9dfa",
+  "source": "a _\nb",
+  "source_sha256": "ac28be49b32ec0ecceaba9b36d0e65418677e71d45813f83d768484c3e8942ad",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-break-p02",
+  "html": "a<br />\n<br />",
+  "html_sha256": "27d470a88c50cac88cdfc07fe134f01e6fd70c07a23d8b08f11479185526e211",
+  "source": "a _",
+  "source_sha256": "c245283240023322753f9061257e2266c9d03414aefec595c64dec3d6f0c19f7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-break-p03",
+  "html": "<p>a _<br />\nb</p>",
+  "html_sha256": "9f0d9f2d4885d5d8d514ca9892cece970b7da43c1907bf71041cf00615cfe483",
+  "source": "a _ \nb",
+  "source_sha256": "33048aa9943cbe2b0e89bcae9a9142ed00a42115ba0e32cfbd5a7fbc294275c1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-break-p04",
+  "html": "<p>a<br />\nb</p>",
+  "html_sha256": "a9cbfe60373c4c33a399fbc904966ca82bc750eed50beb32adf283236c9a9dfa",
+  "source": "a\t_\nb",
+  "source_sha256": "7c3bbae26d534e9981c329c6763dfd2f1b91229a86b8b48aba696f00fe332e75",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-break-p05",
+  "html": "<p>a _<br />\nb</p>",
+  "html_sha256": "9f0d9f2d4885d5d8d514ca9892cece970b7da43c1907bf71041cf00615cfe483",
+  "source": "a _ _\nb",
+  "source_sha256": "7f647e4b0000beee4bfc7e08acea3d564f3333fb65efa397ab1ec7c58e4986df",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-break-p06",
+  "html": "<p>a<br />\nb</p>",
+  "html_sha256": "a9cbfe60373c4c33a399fbc904966ca82bc750eed50beb32adf283236c9a9dfa",
+  "source": "a  _\nb",
+  "source_sha256": "ea26637a2997042a859f7653712f643c18610a60d4726a653032c64ba27bd8da",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-break-p07",
+  "html": "<p>a<br />\n<br />\n<br />\nb</p>",
+  "html_sha256": "3dd7d0e384d8800479d835b5c15b1b6bc0c12ad982f40d86fa660b53238641f2",
+  "source": "a _\n _\n _\nb",
+  "source_sha256": "ab214f64a9e3d88acff24bcb75474b5497939877b6bc308fa2d27c07703d1371",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-break-p08",
+  "html": "<p>a<br />\n<br />\nb</p>",
+  "html_sha256": "7ba0211c448c78764a8fc22a469dfc91fd5b155903b28ab59c1f7b2f0fbacf8c",
+  "source": "a _\n\nb",
+  "source_sha256": "5fcc36430b5ab890957b6f2a60fd6b7bb7ecf06989348dba29270529d395465b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-break-p09",
+  "html": "<p>a__<br />\n_<br />\na _x<br />\nb</p>",
+  "html_sha256": "4781aaba915fad0188dae1506f1d4216bfc8909f031f70f0709067886c4d12b4",
+  "source": "a__\n_\na _x\nb",
+  "source_sha256": "8ae9353aec0f0064dcd5f38106bd7a58aaed6ce258807f7b039f082c9b5d17af",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-break-p10",
+  "html": "<p>x<br />\n<br />\nb</p>",
+  "html_sha256": "6e51feadd30778e9ab3b1ef3dac8711401cae18c0c9416d4c3879bfb921bf7e5",
+  "source": "x\n _\nb",
+  "source_sha256": "2d8fd8d8de764966d409bf5c4f8af27b1af9ab8d8cd93f0f410a7aeb1bc6f801",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-break-p11",
+  "html": "<ul>\n<li>mango<br />\nmelon<br />\npineapple</li>\n<li>pear</li>\n</ul>",
+  "html_sha256": "a1474728280a2e2b03714072dd25f5c7c99eec34b89ddbaf0c08768829eaf8ec",
+  "source": "* mango _\nmelon _\npineapple\n* pear",
+  "source_sha256": "fef17e854317e22406d9345b87ee7cbb14d583cd3f0d2a06c6e1925683230ff1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-break-p12",
+  "html": "<table class=\"wiki-content-table\">\n<tr>\n<td>Apple<br />\nBanana</td>\n<td>Cherry_</td>\n<td>_Pineapple<br />\n<br />\n<br />\nMelon</td>\n</tr>\n</table>",
+  "html_sha256": "26146027389f5441e625df318248c071ad8171ee57bfdae3913f03340b4bf528",
+  "source": "|| Apple _\nBanana || Cherry_ || _Pineapple _\n _\n _\nMelon ||",
+  "source_sha256": "81e5be7e8a7d063f076fc9ac5fcbc1c784cacafdaf81198b12f5c8f17e63a1f9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-break-p13",
+  "html": "<h1 id=\"toc0\"><span>head _</span></h1>\n<p>x</p>",
+  "html_sha256": "146c7124d89b9cc84dcdbe3f9d7767483d190a040a39a3edd198d5a8c13d7fec",
+  "source": "+ head _\nx",
+  "source_sha256": "242f1e9a82f3f0d890c1360290f7b999adc427b97317250dd754228310ca873a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-break-p14",
+  "html": "<blockquote>\n<p>a<br />\nb</p>\n</blockquote>",
+  "html_sha256": "e3f1bbe46e75ed89267938833a5a9d033c8942f0e92e83246f31c4f7171a108a",
+  "source": "> a _\n> b",
+  "source_sha256": "4144b8fcdcb9d02057b32409db1888d799c8cb1158359786fb5907a239dfd76a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-break-p15",
+  "html": "<p><strong>a<br />\nb</strong><br />\n<span>c<br />\nd</span></p>",
+  "html_sha256": "733fb5dd384f6c5c85e4a098861c8ab03fbac795f7e298bd88e9e989656628db",
+  "source": "**a _\nb**\n[[span]]c _\nd[[/span]]",
+  "source_sha256": "4b7e69786cbd13b6a0155a591144d34fc4309a9ce6a3b2228198103db4c9c324",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-break-p16",
+  "html": "<div>\n<p>a<br />\nb</p>\n</div>",
+  "html_sha256": "fb75030e33d99a04b4d6d91bbd93ca35f856cdd16bce2c4ebd3566882077174a",
+  "source": "[[div]]\na _\nb\n[[/div]]",
+  "source_sha256": "24c1fd17b4848cbf536360e972fc812eba2268d42bf72831753c20c572401e9d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-break-p17",
+  "html": "a<br />\n<br />\n<hr />\n<p>b</p>",
+  "html_sha256": "5856ba4801b5b333c2fcf87aced8b3174c422f9c92858803a97ca7e8bc2237b2",
+  "source": "a _\n----\nb",
+  "source_sha256": "096f3ded26030667fc87359cbc14ae4afba48326f3fb5601c8b31a2439e07b8d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-break-p18",
+  "html": "<p>x</p>\n<p style=\"text-align: center;\">a<br />\nb</p>\n<p>y</p>",
+  "html_sha256": "a5829d61ae9d0fc91b44cb4e032b2cde31c874b1d1220c13c61f22dee36835d0",
+  "source": "x\n= a _\nb\ny",
+  "source_sha256": "3baca0bbe78ab26604e01add76bd3d58b2e798390f250f7e6cf8a8048171d2a2",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

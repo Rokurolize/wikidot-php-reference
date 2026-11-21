@@ -1,0 +1,92 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refval-separator-p01",
+  "source": "====",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-separator-p02",
+  "source": "x\n====\ny",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-separator-p03",
+  "source": "x\n=====\n==========\ny",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-separator-p04",
+  "source": "x\n===\n==\n=\ny",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-separator-p05",
+  "source": "x\n==== \ny",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-separator-p06",
+  "source": "x\n ====\ny",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-separator-p07",
+  "source": "x\n====x\nx====\na ==== b\n= = = =\ny",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-separator-p08",
+  "source": "x\n= ====\ny",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-separator-p09",
+  "source": "= ====",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-separator-p10",
+  "source": "x\n==== =\ny",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-separator-p11",
+  "source": "====\n====",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-separator-p12",
+  "source": "====\n\n====",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-separator-p13",
+  "source": "----\n====\nx",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-separator-p14",
+  "source": "[[div]]\n====\n[[/div]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-separator-p15",
+  "source": "* item\n====\n* item2",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-separator-p16",
+  "source": "|| a ||\n====\n|| b ||",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-separator-p17",
+  "source": "[[code]]\n====\n[[/code]]\n@@\n====\n@@\nx",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-separator-p18",
+  "source": "a _\n====\nb",
+  "action": "created"
+ }
+}

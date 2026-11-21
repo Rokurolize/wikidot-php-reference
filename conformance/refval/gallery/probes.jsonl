@@ -1,0 +1,24 @@
+{"id": "p01", "source": "[[gallery]]"}
+{"id": "p02", "source": "[[gallery size=\"small\"]]"}
+{"id": "p03", "source": "[[gallery]]\n: a.png\n[[/gallery]]"}
+{"id": "p04", "source": "[[gallery]]\n: a.png\n: b.png\n[[/gallery]]"}
+{"id": "p05", "source": "[[gallery size=\"small\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p06", "source": "[[gallery size=\"medium\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p07", "source": "[[gallery size=\"square\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p08", "source": "[[gallery size=\"original\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p09", "source": "[[gallery size=\"large\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p10", "source": "[[gallery size=\"\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p11", "source": "[[gallery size=\"0\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p12", "source": "[[gallery]]\n: other-page/a.png\n[[/gallery]]"}
+{"id": "p13", "source": "[[gallery]]\n: /other-page/a.png\n[[/gallery]]"}
+{"id": "p14", "source": "[[gallery]]\n: https://example.com/a.png\n[[/gallery]]"}
+{"id": "p15", "source": "[[gallery]]\n: *https://example.com/a.png\n[[/gallery]]"}
+{"id": "p16", "source": "[[gallery]]\n: a.png link=\"https://example.com\"\n[[/gallery]]"}
+{"id": "p17", "source": "[[gallery]]\n: a.png link=\"*https://example.com\"\n[[/gallery]]"}
+{"id": "p18", "source": "[[gallery]]\n: a.png link=\"some-page\"\n[[/gallery]]"}
+{"id": "p19", "source": "[[gallery]]\n: a.png alt=\"My Alt\" title=\"My Title\"\n[[/gallery]]"}
+{"id": "p20", "source": "[[gallery]]\nnot a source\n[[/gallery]]"}
+{"id": "p21", "source": "[[gallery]]\n: a.png"}
+{"id": "p22", "source": "[[GALLERY]]\n: a.png\n[[/GALLERY]]"}
+{"id": "p23", "source": "[[gallery\nsize=\"small\"]]\n: a.png\n[[/gallery]]"}
+{"id": "p24", "source": "x [[gallery]]\n: a.png\n[[/gallery]]"}

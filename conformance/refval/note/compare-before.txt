@@ -1,0 +1,72 @@
+Total=20 exact=2 trim_eq=3 fnorm_eq=5 diffs=15
+DIFF      p01 (muse-probe-refval-note-p01)
+  SRC : '[[note]]\nbody\n[[/note]]'
+  REF : '<div class="wiki-note"><p>body</p>\n\n</div>'
+  LIVE: '<div class="wiki-note">\n<p>body</p>\n</div>'
+DIFF      p02 (muse-probe-refval-note-p02)
+  SRC : 'x\n[[note]]\nbody\n[[/note]]\ny'
+  REF : '<p>x</p>\n\n<div class="wiki-note"><p>body</p>\n\n</div><br />\ny'
+  LIVE: '<p>x</p>\n<div class="wiki-note">\n<p>body</p>\n</div>\n<br />\ny'
+DIFF      p03 (muse-probe-refval-note-p03)
+  SRC : 'x\n\n[[note]]\nbody\n[[/note]]\n\ny'
+  REF : '<p>x</p>\n\n<div class="wiki-note"><p>body</p>\n\n</div><p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<div class="wiki-note">\n<p>body</p>\n</div>\n<p>y</p>'
+EXACT     p04 (muse-probe-refval-note-p04)
+EXACT     p05 (muse-probe-refval-note-p05)
+DIFF      p06 (muse-probe-refval-note-p06)
+  SRC : '[[note]]\nline1\nline2\n[[/note]]'
+  REF : '<div class="wiki-note"><p>line1<br />\nline2</p>\n\n</div>'
+  LIVE: '<div class="wiki-note">\n<p>line1<br />\nline2</p>\n</div>'
+DIFF      p07 (muse-probe-refval-note-p07)
+  SRC : '[[note]]\np1\n\np2\n[[/note]]'
+  REF : '<div class="wiki-note"><p>p1</p>\n\n<p>p2</p>\n\n</div>'
+  LIVE: '<div class="wiki-note">\n<p>p1</p>\n<p>p2</p>\n</div>'
+TRIM_EQ   p08 (muse-probe-refval-note-p08)
+  REF : '<p>[[note]] body<br />\n[[/note]]</p>\n\n'
+  LIVE: '<p>[[note]] body<br />\n[[/note]]</p>'
+DIFF      p09 (muse-probe-refval-note-p09)
+  SRC : '[[note]]\nbody[[/note]]'
+  REF : '<div class="wiki-note"><p>body</p>\n\n</div>'
+  LIVE: '<div class="wiki-note">\n<p>body</p>\n</div>'
+DIFF      p10 (muse-probe-refval-note-p10)
+  SRC : '[[NOTE]]\nbody\n[[/NOTE]]'
+  REF : '<div class="wiki-note"><p>body</p>\n\n</div>'
+  LIVE: '<div class="wiki-note">\n<p>body</p>\n</div>'
+DIFF      p11 (muse-probe-refval-note-p11)
+  SRC : '[[Note]]\nbody\n[[/note]]\n\n[[note]]\nbody\n[[/NOTE]]'
+  REF : '<div class="wiki-note"><p>body</p>\n\n</div><div class="wiki-note"><p>body</p>\n\n</div>'
+  LIVE: '<div class="wiki-note">\n<p>body</p>\n</div>\n<div class="wiki-note">\n<p>body</p>\n</div>'
+DIFF      p12 (muse-probe-refval-note-p12)
+  SRC : '[[note]]\n[[note]]\ninner\n[[/note]]\n[[/note]]'
+  REF : '<div class="wiki-note"><p>[[note]]<br />\ninner</p>\n\n</div><br />\n[[/note]]'
+  LIVE: '<div class="wiki-note">\n<p>[[note]]<br />\ninner</p>\n</div>\n<br />\n[[/note]]'
+DIFF      p13 (muse-probe-refval-note-p13)
+  SRC : 'a [[note]]\nb\n[[/note]] c'
+  REF : '<p>a <div class="wiki-note"></p>\n\n<p>b</p>\n\n</div> c'
+  LIVE: 'a\n<div class="wiki-note">\n<p>b</p>\n</div>\nc'
+DIFF      p14 (muse-probe-refval-note-p14)
+  SRC : '[[note]]\na[[/note]]b[[/note]]'
+  REF : '<div class="wiki-note"><p>a</p>\n\n</div>b[[/note]]'
+  LIVE: '<div class="wiki-note">\n<p>a</p>\n</div>\nb[[/note]]'
+DIFF      p15 (muse-probe-refval-note-p15)
+  SRC : '[[note]]\nbody\n[[/note]]\n[[note]]\nc\n[[/note]]'
+  REF : '<div class="wiki-note"><p>body</p>\n\n</div><div class="wiki-note"><p>c</p>\n\n</div>'
+  LIVE: '<div class="wiki-note">\n<p>body</p>\n</div>\n<div class="wiki-note">\n<p>c</p>\n</div>'
+FNORM_EQ  p16 (muse-probe-refval-note-p16)
+  REF : '<p>[[note class=&quot;x&quot;]]<br />\nbody<br />\n[[/note]]</p>\n\n<p>[[note_]]<br />\nbody<br />\n[[/note]]</p>\n\n'
+  LIVE: '<p>[[note class=&quot;x&quot;]]<br />\nbody<br />\n[[/note]]</p>\n<p>[[note_]]<br />\nbody<br />\n[[/note]]</p>'
+FNORM_EQ  p17 (muse-probe-refval-note-p17)
+  REF : '<p>[[note]]<br />\nbody<br />\n[[/note]]</p>\n\n<p>[[note]]<br />\nbody<br />\n[[/note ]]</p>\n\n'
+  LIVE: '<p>[[note]]<br />\nbody<br />\n[[/note]]</p>\n<p>[[note]]<br />\nbody<br />\n[[/note ]]</p>'
+DIFF      p18 (muse-probe-refval-note-p18)
+  SRC : '[[note]]\n* a\n* b\n[[/note]]'
+  REF : '<div class="wiki-note"><ul>\n<li>a</li>\n<li>b</li>\n</ul></div>'
+  LIVE: '<div class="wiki-note">\n<ul>\n<li>a</li>\n<li>b</li>\n</ul>\n</div>'
+DIFF      p19 (muse-probe-refval-note-p19)
+  SRC : '[[note]]\n**bold** and ----\n[[/note]]'
+  REF : '<div class="wiki-note"><p><strong>bold</strong> and &#8212;&#8212;</p>\n\n</div>'
+  LIVE: '<div class="wiki-note">\n<p><strong>bold</strong> and &#8212;&#8212;</p>\n</div>'
+DIFF      p20 (muse-probe-refval-note-p20)
+  SRC : '[[note]]\n[[div]]\nx\n[[/div]]\n[[/note]]'
+  REF : '<div class="wiki-note"><div ><p>x</p>\n\n</div></div>'
+  LIVE: '<div class="wiki-note">\n<div>\n<p>x</p>\n</div>\n</div>'

@@ -1,0 +1,82 @@
+{"id": "da-01", "source": "[[=]]\ncentered\n[[/=]]"}
+{"id": "da-02", "source": "[[<]]\nleft\n[[/<]]"}
+{"id": "da-03", "source": "[[>]]\nright\n[[/>]]"}
+{"id": "da-04", "source": "[[==]]\njustified\n[[/==]]"}
+{"id": "da-05", "source": "[[==]]\nx\n[[/=]]"}
+{"id": "da-06", "source": "[[=]]\nx\n[[/==]]"}
+{"id": "da-07", "source": "[[=]]\n[[/=]]"}
+{"id": "da-08", "source": "[[=]]\n\n[[/=]]"}
+{"id": "da-09", "source": "x\n[[=]]\nbody\n[[/=]]\ny"}
+{"id": "da-10", "source": "[[=]]\nbody\n[[/=]]"}
+{"id": "da-11", "source": "[[=]]\nbody\n[[/=]]\n"}
+{"id": "da-12", "source": "[[=]]\nbody\n[[/=]] tail"}
+{"id": "da-13", "source": " [[=]]\nbody\n[[/=]]"}
+{"id": "da-14", "source": "x[[=]]\nbody\n[[/=]]"}
+{"id": "da-15", "source": "[[=]]\n[[<]]\ninner\n[[/<]]\n[[/=]]"}
+{"id": "da-16", "source": "[[=]]\n[[=]]\ninner\n[[/=]]\n[[/=]]"}
+{"id": "da-17", "source": "[[=]]\na\n[[/=]]\n[[<]]\nb\n[[/<]]"}
+{"id": "da-18", "source": "[[=]]\nunterminated"}
+{"id": "da-19", "source": "[[=]] body\n[[/=]]"}
+{"id": "da-20", "source": "[[=]]\nbody[[/=]]"}
+{"id": "da-21", "source": "[[=]]\n[[/=]]\n[[/=]]"}
+{"id": "da-22", "source": "[[=]]\nline1\nline2\nline3\n[[/=]]"}
+{"id": "da-23", "source": "[[==]]\nlonger body here\n[[/==]]"}
+{"id": "da-24", "source": "[[=]]\n[[>]]\ndeep\n[[/>]]\nmid\n[[/=]]"}
+{"id": "da-25", "source": "[[<]]\n[[=]]\nx\n[[/=]]\n[[/<]]"}
+{"id": "da-26", "source": "[[=]]\n[[=]]\n[[/=]]\n[[/=]]"}
+{"id": "da-27", "source": "[[=]]\n**bold** body\n[[/=]]"}
+{"id": "da-28", "source": "[[=]]\n[[/=]] extra\n[[/=]]"}
+{"id": "da-29", "source": "[[=]]"}
+{"id": "da-30", "source": "[[=]]\n"}
+{"id": "da-31", "source": "[[>]]\n\n\n[[/>]]"}
+{"id": "da-32", "source": "[[=]]\nbody\n[[/=]]\n[[=]]\nmore\n[[/=]]"}
+{"id": "da-33", "source": "[[=]]\n[[code]]\nx\n[[/code]]\n[[/=]]"}
+{"id": "da-34", "source": "[[=]]\n[[=]]\n[[/=]]"}
+{"id": "da-35", "source": "[[=]]\nx\n[[/=]]\n[[/=]]"}
+{"id": "da-36", "source": "[[=<]]\nx\n[[/=<]]"}
+{"id": "da-37", "source": "[[==]]\n[[/==]]"}
+{"id": "da-38", "source": "[[<]]\nx[[/<]]"}
+{"id": "da-39", "source": "[[=]]\nbody\n[[/=]]\n\n[[>]]\nb2\n[[/>]]"}
+{"id": "da-40", "source": "[[=]]\n[[<]]\n[[/<]]\n[[/=]]"}
+{"id": "da-41", "source": "[[=]]\n[[<]]\n[[/=]]\n[[/<]]"}
+{"id": "da-42", "source": "[[=]]\n= centered line\n[[/=]]"}
+{"id": "da-43", "source": "[[>]]\n~~~~\n[[/>]]"}
+{"id": "da-44", "source": "[[=]]\n----\n[[/=]]"}
+{"id": "da-45", "source": "[[=]]\n[[=]]\nx\n[[/=]]\ny\n[[/=]]"}
+{"id": "da-46", "source": "[[=]]\n[[<]]\nx\n[[/<]]\ny\n[[/=]]"}
+{"id": "da-47", "source": "[[=]]\n[[=]]\nx\n[[/=]]\n[[/=]]"}
+{"id": "da-x01", "source": "[[=]]\np1\n\np2\n[[/=]]"}
+{"id": "da-x02", "source": "[[=]]\n* a\n* b\n[[/=]]"}
+{"id": "da-x03", "source": "[[=]]\n|| a || b ||\n[[/=]]"}
+{"id": "da-x04", "source": "[[=]]\n[[div]]\nin\n[[/div]]\n[[/=]]"}
+{"id": "da-x05", "source": "[[= class=\"x\"]]\nbody\n[[/=]]"}
+{"id": "da-x06", "source": "[[===]]\nbody\n[[/===]]"}
+{"id": "da-x07", "source": "[[=]] \nbody\n[[/=]]"}
+{"id": "da-x08", "source": "[[=]]\nbody\n [[/=]]"}
+{"id": "da-x09", "source": "[[=]]\nbody\n[[/=]]\n[[>]]\nright\n[[/>]]"}
+{"id": "da-x10", "source": "[[<]]\n[[>]]\n[[==]]\ndeep\n[[/==]]\n[[/>]]\n[[/<]]"}
+{"id": "da-x11", "source": "[[=]]\n= inline center\n[[/=]]"}
+{"id": "da-x12", "source": "[[=]]\n[[note]]\nin note\n[[/note]]\n[[/=]]"}
+{"id": "da-x13", "source": "[[div]]\n[[=]]\nin div\n[[/=]]\n[[/div]]"}
+{"id": "da-x14", "source": "[[=]]\n+ Heading\n[[/=]]"}
+{"id": "da-x15", "source": "[[=]]\n> quoted\n[[/=]]"}
+{"id": "p01", "source": "[[=]]\ncentered\n[[/=]]"}
+{"id": "p02", "source": "[[<]]\nleft\n[[/<]]"}
+{"id": "p03", "source": "[[>]]\nright\n[[/>]]"}
+{"id": "p04", "source": "[[==]]\njustified\n[[/==]]"}
+{"id": "p05", "source": "[[==]]\nx\n[[/=]]\n\n[[=]]\nx\n[[/==]]"}
+{"id": "p06", "source": "[[=]]\n[[/=]]"}
+{"id": "p07", "source": "[[=]]\n\n[[/=]]"}
+{"id": "p08", "source": "x\n[[=]]\nbody\n[[/=]]\ny"}
+{"id": "p09", "source": "[[=]]\nbody\n[[/=]] tail"}
+{"id": "p10", "source": "a\n [[=]]\nbody\n[[/=]]\n\nx[[=]]\nbody\n[[/=]]"}
+{"id": "p11", "source": "[[=]] body\n[[/=]]\n\n[[=]]\nbody[[/=]]"}
+{"id": "p12", "source": "[[=]]\n[[<]]\ninner\n[[/<]]\n[[/=]]"}
+{"id": "p13", "source": "[[=]]\n[[=]]\ninner\n[[/=]]\n[[/=]]"}
+{"id": "p14", "source": "[[=]]\n[[=]]\nx\n[[/=]]\ny\n[[/=]]"}
+{"id": "p15", "source": "[[=]]\n[[=]]\n[[/=]]"}
+{"id": "p16", "source": "[[=]]\n[[/=]] extra\n[[/=]]"}
+{"id": "p17", "source": "[[=]]\np1\n\np2\n[[/=]]"}
+{"id": "p18", "source": "[[=]]\n* a\n* b\n\n----\n[[/=]]"}
+{"id": "p19", "source": "[[= class=\"x\"]]\nbody\n[[/=]]\n\n[[=]] \nbody\n[[/=]]"}
+{"id": "p20", "source": "[[=]]\n**bold** body\n[[/=]]"}

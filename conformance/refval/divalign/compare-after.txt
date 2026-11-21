@@ -1,0 +1,72 @@
+Total=20 exact=2 trim_eq=3 fnorm_eq=5 diffs=15
+DIFF      p01 (muse-probe-refval-divalign-p01)
+  SRC : '[[=]]\ncentered\n[[/=]]'
+  REF : '<div style="text-align: center;"><p>centered</p>\n\n</div>'
+  LIVE: '<div style="text-align: center;">\n<p>centered</p>\n</div>'
+DIFF      p02 (muse-probe-refval-divalign-p02)
+  SRC : '[[<]]\nleft\n[[/<]]'
+  REF : '<div style="text-align: left;"><p>left</p>\n\n</div>'
+  LIVE: '<div style="text-align: left;">\n<p>left</p>\n</div>'
+DIFF      p03 (muse-probe-refval-divalign-p03)
+  SRC : '[[>]]\nright\n[[/>]]'
+  REF : '<div style="text-align: right;"><p>right</p>\n\n</div>'
+  LIVE: '<div style="text-align: right;">\n<p>right</p>\n</div>'
+DIFF      p04 (muse-probe-refval-divalign-p04)
+  SRC : '[[==]]\njustified\n[[/==]]'
+  REF : '<div style="text-align: justify;"><p>justified</p>\n\n</div>'
+  LIVE: '<div style="text-align: justify;">\n<p>justified</p>\n</div>'
+DIFF      p05 (muse-probe-refval-divalign-p05)
+  SRC : '[[==]]\nx\n[[/=]]\n\n[[=]]\nx\n[[/==]]'
+  REF : '<div style="text-align: justify;"><p>x<br />\n[[/=]]</p>\n\n<p>[[=]]<br />\nx</p>\n\n</div>'
+  LIVE: '<div style="text-align: justify;">\n<p>x<br />\n[[/=]]</p>\n<p>[[=]]<br />\nx</p>\n</div>'
+EXACT     p06 (muse-probe-refval-divalign-p06)
+EXACT     p07 (muse-probe-refval-divalign-p07)
+DIFF      p08 (muse-probe-refval-divalign-p08)
+  SRC : 'x\n[[=]]\nbody\n[[/=]]\ny'
+  REF : '<p>x<br />\n<div style="text-align: center;"></p>\n\n<p>body</p>\n\n</div><br />\ny'
+  LIVE: '<p>x<br /></p>\n<div style="text-align: center;">\n<p>body</p>\n</div>\n<br />\ny'
+TRIM_EQ   p09 (muse-probe-refval-divalign-p09)
+  REF : '<p>[[=]]<br />\nbody<br />\n[[/=]] tail</p>\n\n'
+  LIVE: '<p>[[=]]<br />\nbody<br />\n[[/=]] tail</p>'
+FNORM_EQ  p10 (muse-probe-refval-divalign-p10)
+  REF : '<p>a<br />\n[[=]]<br />\nbody<br />\n[[/=]]</p>\n\n<p>x[[=]]<br />\nbody<br />\n[[/=]]</p>\n\n'
+  LIVE: '<p>a<br />\n[[=]]<br />\nbody<br />\n[[/=]]</p>\n<p>x[[=]]<br />\nbody<br />\n[[/=]]</p>'
+DIFF      p11 (muse-probe-refval-divalign-p11)
+  SRC : '[[=]] body\n[[/=]]\n\n[[=]]\nbody[[/=]]'
+  REF : '<p>[[=]] body<br />\n[[/=]]</p>\n\n<div style="text-align: center;"><p>body</p>\n\n</div>'
+  LIVE: '<p>[[=]] body<br />\n[[/=]]</p>\n<div style="text-align: center;">\n<p>body</p>\n</div>'
+DIFF      p12 (muse-probe-refval-divalign-p12)
+  SRC : '[[=]]\n[[<]]\ninner\n[[/<]]\n[[/=]]'
+  REF : '<div style="text-align: center;"><div style="text-align: left;"><p>inner</p>\n\n</div></div>'
+  LIVE: '<div style="text-align: center;">\n<div style="text-align: left;">\n<p>inner</p>\n</div>\n</div>'
+DIFF      p13 (muse-probe-refval-divalign-p13)
+  SRC : '[[=]]\n[[=]]\ninner\n[[/=]]\n[[/=]]'
+  REF : '<div style="text-align: center;"><div style="text-align: center;"><p>inner</p>\n\n</div></div>'
+  LIVE: '<div style="text-align: center;">\n<div style="text-align: center;">\n<p>inner</p>\n</div>\n</div>'
+DIFF      p14 (muse-probe-refval-divalign-p14)
+  SRC : '[[=]]\n[[=]]\nx\n[[/=]]\ny\n[[/=]]'
+  REF : '<div style="text-align: center;"><div style="text-align: center;"><p>x</p>\n\n</div><br />\ny</div>'
+  LIVE: '<div style="text-align: center;">\n<div style="text-align: center;">\n<p>x</p>\n</div>\n<br />\ny</div>'
+DIFF      p15 (muse-probe-refval-divalign-p15)
+  SRC : '[[=]]\n[[=]]\n[[/=]]'
+  REF : '<div style="text-align: center;"><p>[[=]]</p>\n\n</div>'
+  LIVE: '<div style="text-align: center;">\n<p>[[=]]</p>\n</div>'
+DIFF      p16 (muse-probe-refval-divalign-p16)
+  SRC : '[[=]]\n[[/=]] extra\n[[/=]]'
+  REF : '<div style="text-align: center;"><p>[[/=]] extra</p>\n\n</div>'
+  LIVE: '<div style="text-align: center;">\n<p>[[/=]] extra</p>\n</div>'
+DIFF      p17 (muse-probe-refval-divalign-p17)
+  SRC : '[[=]]\np1\n\np2\n[[/=]]'
+  REF : '<div style="text-align: center;"><p>p1</p>\n\n<p>p2</p>\n\n</div>'
+  LIVE: '<div style="text-align: center;">\n<p>p1</p>\n<p>p2</p>\n</div>'
+DIFF      p18 (muse-probe-refval-divalign-p18)
+  SRC : '[[=]]\n* a\n* b\n\n----\n[[/=]]'
+  REF : '<div style="text-align: center;"><ul>\n<li>a</li>\n<li>b</li>\n</ul><hr />\n</div>'
+  LIVE: '<div style="text-align: center;">\n<ul>\n<li>a</li>\n<li>b</li>\n</ul>\n<hr /></div>'
+FNORM_EQ  p19 (muse-probe-refval-divalign-p19)
+  REF : '<p>[[= class=&quot;x&quot;]]<br />\nbody<br />\n[[/=]]</p>\n\n<p>[[=]]<br />\nbody<br />\n[[/=]]</p>\n\n'
+  LIVE: '<p>[[= class=&quot;x&quot;]]<br />\nbody<br />\n[[/=]]</p>\n<p>[[=]]<br />\nbody<br />\n[[/=]]</p>'
+DIFF      p20 (muse-probe-refval-divalign-p20)
+  SRC : '[[=]]\n**bold** body\n[[/=]]'
+  REF : '<div style="text-align: center;"><p><strong>bold</strong> body</p>\n\n</div>'
+  LIVE: '<div style="text-align: center;">\n<p><strong>bold</strong> body</p>\n</div>'

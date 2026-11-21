@@ -1,0 +1,147 @@
+p01 -> muse-probe-refval-gallery-p01 (created)
+p02 -> muse-probe-refval-gallery-p02 (created)
+p03 -> muse-probe-refval-gallery-p03 (created)
+p04 -> muse-probe-refval-gallery-p04 (created)
+p05 -> muse-probe-refval-gallery-p05 (created)
+p06 -> muse-probe-refval-gallery-p06 (created)
+p07 -> muse-probe-refval-gallery-p07 (created)
+p08 -> muse-probe-refval-gallery-p08 (created)
+p09 -> muse-probe-refval-gallery-p09 (created)
+p10 -> muse-probe-refval-gallery-p10 (created)
+p11 -> muse-probe-refval-gallery-p11 (created)
+p12 -> muse-probe-refval-gallery-p12 (created)
+p13 -> muse-probe-refval-gallery-p13 (created)
+p14 -> muse-probe-refval-gallery-p14 (created)
+p15 -> muse-probe-refval-gallery-p15 (created)
+p16 -> muse-probe-refval-gallery-p16 (created)
+p17 -> muse-probe-refval-gallery-p17 (created)
+p18 -> muse-probe-refval-gallery-p18 (created)
+p19 -> muse-probe-refval-gallery-p19 (created)
+p20 -> muse-probe-refval-gallery-p20 (created)
+p21 -> muse-probe-refval-gallery-p21 (created)
+p22 -> muse-probe-refval-gallery-p22 (created)
+p23 -> muse-probe-refval-gallery-p23 (created)
+p24 -> muse-probe-refval-gallery-p24 (created)
+24 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01": {
+  "fullname": "muse-probe-refval-gallery-p01",
+  "source": "[[gallery]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-gallery-p02",
+  "source": "[[gallery size=\"small\"]]",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-gallery-p03",
+  "source": "[[gallery]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-gallery-p04",
+  "source": "[[gallery]]\n: a.png\n: b.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-gallery-p05",
+  "source": "[[gallery size=\"small\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-gallery-p06",
+  "source": "[[gallery size=\"medium\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-gallery-p07",
+  "source": "[[gallery size=\"square\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-gallery-p08",
+  "source": "[[gallery size=\"original\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-gallery-p09",
+  "source": "[[gallery size=\"large\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-gallery-p10",
+  "source": "[[gallery size=\"\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-gallery-p11",
+  "source": "[[gallery size=\"0\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-gallery-p12",
+  "source": "[[gallery]]\n: other-page/a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-gallery-p13",
+  "source": "[[gallery]]\n: /other-page/a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-gallery-p14",
+  "source": "[[gallery]]\n: https://example.com/a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-gallery-p15",
+  "source": "[[gallery]]\n: *https://example.com/a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-gallery-p16",
+  "source": "[[gallery]]\n: a.png link=\"https://example.com\"\n[[/gallery]]",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-gallery-p17",
+  "source": "[[gallery]]\n: a.png link=\"*https://example.com\"\n[[/gallery]]",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-gallery-p18",
+  "source": "[[gallery]]\n: a.png link=\"some-page\"\n[[/gallery]]",
+  "action": "created"
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-gallery-p19",
+  "source": "[[gallery]]\n: a.png alt=\"My Alt\" title=\"My Title\"\n[[/gallery]]",
+  "action": "created"
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-gallery-p20",
+  "source": "[[gallery]]\nnot a source\n[[/gallery]]",
+  "action": "created"
+ },
+ "p21": {
+  "fullname": "muse-probe-refval-gallery-p21",
+  "source": "[[gallery]]\n: a.png",
+  "action": "created"
+ },
+ "p22": {
+  "fullname": "muse-probe-refval-gallery-p22",
+  "source": "[[GALLERY]]\n: a.png\n[[/GALLERY]]",
+  "action": "created"
+ },
+ "p23": {
+  "fullname": "muse-probe-refval-gallery-p23",
+  "source": "[[gallery\nsize=\"small\"]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ },
+ "p24": {
+  "fullname": "muse-probe-refval-gallery-p24",
+  "source": "x [[gallery]]\n: a.png\n[[/gallery]]",
+  "action": "created"
+ }
+}

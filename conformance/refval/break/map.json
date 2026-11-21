@@ -1,0 +1,92 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refval-break-p01",
+  "source": "a _\nb",
+  "action": "exists"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-break-p02",
+  "source": "a _",
+  "action": "exists"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-break-p03",
+  "source": "a _ \nb",
+  "action": "exists"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-break-p04",
+  "source": "a\t_\nb",
+  "action": "exists"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-break-p05",
+  "source": "a _ _\nb",
+  "action": "exists"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-break-p06",
+  "source": "a  _\nb",
+  "action": "exists"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-break-p07",
+  "source": "a _\n _\n _\nb",
+  "action": "exists"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-break-p08",
+  "source": "a _\n\nb",
+  "action": "exists"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-break-p09",
+  "source": "a__\n_\na _x\nb",
+  "action": "exists"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-break-p10",
+  "source": "x\n _\nb",
+  "action": "edited"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-break-p11",
+  "source": "* mango _\nmelon _\npineapple\n* pear",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-break-p12",
+  "source": "|| Apple _\nBanana || Cherry_ || _Pineapple _\n _\n _\nMelon ||",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-break-p13",
+  "source": "+ head _\nx",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-break-p14",
+  "source": "> a _\n> b",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-break-p15",
+  "source": "**a _\nb**\n[[span]]c _\nd[[/span]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-break-p16",
+  "source": "[[div]]\na _\nb\n[[/div]]",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-break-p17",
+  "source": "a _\n----\nb",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-break-p18",
+  "source": "x\n= a _\nb\ny",
+  "action": "created"
+ }
+}

@@ -1,0 +1,93 @@
+{"id":"after-heading","output":"<p style=\"text-align: center;\">H =<\/p>\n\n<div class=\"code\">\n<pre><code>x<\/code><\/pre><\/div>\n\n"}
+{"id":"adj-before-heading","output":"<p style=\"text-align: center;\">Heading =<\/p>\n"}
+{"id":"heading-cont","output":"<p style=\"text-align: center;\">headline<\/p>\n"}
+{"id":"fn47-header-note","output":"<p style=\"text-align: center;\">Header<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1<\/a><\/sup> =<\/p>\n<div class=\"footnotes-footer\"><div class=\"title\">Footnotes<\/div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1<\/a>. in header<\/div><\/div>"}
+{"id":"c45-heading-inside","output":"<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block<\/a><\/div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">\u2013&nbsp;hide&nbsp;block<\/a><\/div><div class=\"collapsible-block-content\"><p style=\"text-align: center;\">Heading =<\/p>\n<p>Body<\/p>\n\n<\/div><\/div><\/div>"}
+{"id":"adv07-after-heading","output":"<p style=\"text-align: center;\">Heading =<\/p>\n<table>\n<tr>\n<td>X<\/td>\n<\/tr>\n<\/table>"}
+{"id":"x31-table-heading-table","output":"<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<\/table><p style=\"text-align: center;\">Heading =<\/p>\n<table class=\"wiki-content-table\">\n<tr>\n<td>c<\/td>\n<td>d<\/td>\n<\/tr>\n<\/table>"}
+{"id":"x37-heading-then-table","output":"<p style=\"text-align: center;\">Heading =<\/p>\n<table class=\"wiki-content-table\">\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<tr>\n<td>c<\/td>\n<td>d<\/td>\n<\/tr>\n<\/table>"}
+{"id":"x39-adv-heading-adv","output":"<table>\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<tr>\n<td>c<\/td>\n<td>d<\/td>\n<\/tr>\n<\/table><p style=\"text-align: center;\">Heading =<\/p>\n<table>\n<tr>\n<td>a<\/td>\n<td>b<\/td>\n<\/tr>\n<tr>\n<td>c<\/td>\n<td>d<\/td>\n<\/tr>\n<\/table>"}
+{"id":"pg33-heading-above","output":"<p style=\"text-align: center;\">Heading =<\/p>\n<p>text after<\/p>\n\n"}
+{"id":"pg34-heading-below","output":"<p>text before<\/p>\n\n<p style=\"text-align: center;\">Heading =<\/p>\n"}
+{"id":"pg46-mixed-blocks","output":"<p>start<\/p>\n\n<p style=\"text-align: center;\">H =<\/p>\n<p>mid<\/p>\n\n<ul>\n<li>a<\/li>\n<li>b<\/li>\n<\/ul><p>end<\/p>\n\n"}
+{"id":"pg49-only-heading","output":"<p style=\"text-align: center;\">Heading =<\/p>\n"}
+{"id":"x23-text-heading-text","output":"<p>lead<\/p>\n\n<p style=\"text-align: center;\">Heading =<\/p>\n<p>tail<\/p>\n\n"}
+{"id":"x28-heading-text-list","output":"<p style=\"text-align: center;\">Heading =<\/p>\n<p>mid<\/p>\n\n<ul>\n<li>item<\/li>\n<\/ul>"}
+{"id":"x2-05-scored-span-then-heading","output":"<p><span>100<\/span><p style=\"text-align: center;\">H =<\/p>\n<\/p>\n\n<p>text<\/p>\n\n"}
+{"id":"iw43-70-interwiki-in-heading","output":"<p style=\"text-align: center;\">Heading <a href=\"https:\/\/en.wikipedia.org\/wiki\/Albert_Einstein\" onclick=\"window.open(this.href, '_blank'); return false;\">Albert<\/a><\/p>\n"}
+{"id":"s44","output":"<p style=\"text-align: center;\"><strong>Head<\/strong> =<\/p>\n<p>x<\/p>\n\n"}
+{"id":"em43","output":"<p style=\"text-align: center;\"><em>heading italic<\/em> =<\/p>\n"}
+{"id":"x53","output":"<p style=\"text-align: center;\"><strong>b<\/strong> <em>i<\/em> <span style=\"text-decoration: underline;\">u<\/span> <span style=\"text-decoration: line-through;\">s<\/span> <span style=\"color: red\">c<\/span> =<\/p>\n"}
+{"id":"x62","output":"<p style=\"text-align: center;\"><span style=\"color: red\"><strong>b<\/strong> <em>i<\/em><\/span> =<\/p>\n"}
+{"id":"tt51","output":"<p style=\"text-align: center;\"><tt>heading<\/tt><\/p>\n"}
+{"id":"sup44","output":"<p style=\"text-align: center;\"><sup>Head<\/sup> =<\/p>\n<p>x<\/p>\n\n"}
+{"id":"sub46","output":"<p style=\"text-align: center;\"><sub>heading<\/sub> =<\/p>\n"}
+{"id":"typo83","output":"<p style=\"text-align: center;\">Heading &#8212; &#8230; =<\/p>\n<p>x<\/p>\n\n"}
+{"id":"x106","output":"<p style=\"text-align: center;\"><sup>a<\/sup> <tt>b<\/tt> <sub>c<\/sub> =<\/p>\n"}
+{"id":"ce-01","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">hello<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-02","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">hello =<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-03","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a = b<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-04","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\"><\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-05","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\"><\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-06","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">padded<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-07","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">trailing<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-08","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\"><strong>bold<\/strong> text<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-09","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">caf\u00e9<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-10","output":"<p style=\"text-align: center;\">hello<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-11","output":"<p style=\"text-align: center;\">hello<\/p>\n"}
+{"id":"ce-12","output":"<p>x= hello<br \/>\ny<\/p>\n\n"}
+{"id":"ce-13","output":"<p>x<br \/>\n= hello<br \/>\ny<\/p>\n\n"}
+{"id":"ce-14","output":"<p>x<br \/>\n== hello<br \/>\ny<\/p>\n\n"}
+{"id":"ce-15","output":"<p>x<br \/>\n=hello<br \/>\ny<\/p>\n\n"}
+{"id":"ce-16","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">hello<\/p>\n"}
+{"id":"ce-17","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">hello<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-18","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p style=\"text-align: center;\">b<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-19","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p style=\"text-align: center;\">b<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-20","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p>text<\/p>\n\n<p style=\"text-align: center;\">b<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-21","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p style=\"text-align: center;\">b<\/p>\n<p style=\"text-align: center;\">c<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-22","output":"<table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.foldToc(event)\">Fold<\/a><a style=\"display: none\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.unfoldToc(event)\">Unfold<\/a><\/div><div class=\"title\">Table of Contents<\/div><div id=\"toc-list\">\n<\/div><\/div><\/td><\/tr><\/table>\n\n<p style=\"text-align: center;\">a<\/p>\n<p>x<\/p>\n\n"}
+{"id":"ce-23","output":"\n<h1 id=\"toc0\"><span>Head<\/span><\/h1>\n<p style=\"text-align: center;\">a<\/p>\n<p>x<\/p>\n\n"}
+{"id":"ce-24","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p><strong>bold<\/strong><\/p>\n\n"}
+{"id":"ce-25","output":"<ul>\n<li>item<\/li>\n<\/ul><p style=\"text-align: center;\">a<\/p>\n<p>x<\/p>\n\n"}
+{"id":"ce-26","output":"<div ><p style=\"text-align: center;\">a<\/p>\n<\/div><br \/>\nx"}
+{"id":"ce-27","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n<p style=\"text-align: center;\">a<\/p>\n<p>x<\/p>\n\n"}
+{"id":"ce-28","output":"\n<div class=\"code\">\n<pre><code>= a<\/code><\/pre><\/div>\n\n<br \/>\nx"}
+{"id":"ce-29","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">see<sup class=\"footnoteref\"><a id=\"footnoteref-1\" href=\"javascript:;\" class=\"footnoteref\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnote-1')\">1<\/a><\/sup> here<\/p>\n<p>y<\/p>\n\n<div class=\"footnotes-footer\"><div class=\"title\">Footnotes<\/div><div class=\"footnote-footer\" id=\"footnote-1\"><a href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('footnoteref-1')\">1<\/a>. n<\/div><\/div>"}
+{"id":"ce-30","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a [[math]]x[[\/math]] b<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-31","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\"><a href=\"http:\/\/example.com\">http:\/\/example.com<\/a><\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-32","output":"<hr \/>\n<p style=\"text-align: center;\">a<\/p>\n<p>x<\/p>\n\n"}
+{"id":"ce-33","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<hr \/>\n<p>y<\/p>\n\n"}
+{"id":"ce-34","output":"<p><div class=\"content-separator\" style=\"display: none:\"\/>\n<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p>x<\/p>\n\n"}
+{"id":"ce-35","output":"<div style=\"clear:both; height: 0px; font-size: 1px\"><\/div>\n<p style=\"text-align: center;\">a<\/p>\n<p>x<\/p>\n\n"}
+{"id":"ce-36","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<br \/>\nb<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-37","output":"<p>a<br \/>\n= c<br \/>\nd<\/p>\n\n"}
+{"id":"ce-38","output":"<p>para one<\/p>\n\n<p style=\"text-align: center;\">centered<\/p>\n<p>para two<\/p>\n\n"}
+{"id":"ce-39","output":"<p>para one<\/p>\n\n<p style=\"text-align: center;\">centered<\/p>\n<p>para two<\/p>\n\n"}
+{"id":"ce-40","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n"}
+{"id":"ce-41","output":"<p style=\"text-align: center;\">a<\/p>\n<p>x<\/p>\n\n"}
+{"id":"ce-42","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-43","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<hr \/>\n<p style=\"text-align: center;\">b<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-x01","output":"<p style=\"text-align: center;\">hello<\/p>\n"}
+{"id":"ce-x02","output":"<p style=\"text-align: center;\">hello<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-x03","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">hello<\/p>\n"}
+{"id":"ce-x04","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p style=\"text-align: center;\">b<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-x05","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p style=\"text-align: center;\">b<\/p>\n<p style=\"text-align: center;\">c<\/p>\n<p>y<\/p>\n\n"}
+{"id":"ce-x06","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\"><\/p>\n<p>y<\/p>\n\n"}
+{"id":"p01","output":"<p style=\"text-align: center;\">hello<\/p>\n"}
+{"id":"p02","output":"<p style=\"text-align: center;\">hello<\/p>\n<p>y<\/p>\n\n"}
+{"id":"p03","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">hello<\/p>\n"}
+{"id":"p04","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">hello<\/p>\n<p>y<\/p>\n\n"}
+{"id":"p05","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">hello =<\/p>\n<p>y<\/p>\n\n"}
+{"id":"p06","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a = b<\/p>\n<p>y<\/p>\n\n"}
+{"id":"p07","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\"><\/p>\n<p>y<\/p>\n\n"}
+{"id":"p08","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">padded<\/p>\n<p>y<\/p>\n\n"}
+{"id":"p09","output":"<p>x<br \/>\n= hello<br \/>\n== hello<br \/>\n=hello<br \/>\nx= hello<br \/>\ny<\/p>\n\n"}
+{"id":"p10","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p style=\"text-align: center;\">b<\/p>\n<p>y<\/p>\n\n"}
+{"id":"p11","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p style=\"text-align: center;\">b<\/p>\n<p style=\"text-align: center;\">c<\/p>\n<p>y<\/p>\n\n"}
+{"id":"p12","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<\/p>\n<p style=\"text-align: center;\">b<\/p>\n<p>y<\/p>\n\n"}
+{"id":"p13","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\"><strong>bold<\/strong> <em>italic<\/em> <a href=\"http:\/\/example.com\">http:\/\/example.com<\/a><\/p>\n<p>y<\/p>\n\n"}
+{"id":"p14","output":"<div ><p style=\"text-align: center;\">centered<\/p>\n<\/div>"}
+{"id":"p15","output":"<blockquote><p>quote<\/p>\n\n<\/blockquote>\n<p style=\"text-align: center;\">a<\/p>\n<p>x<\/p>\n\n"}
+{"id":"p16","output":"<ul>\n<li>item<\/li>\n<\/ul><p style=\"text-align: center;\">a<\/p>\n<p>x<\/p>\n\n"}
+{"id":"p17","output":"\n<div class=\"code\">\n<pre><code>= a<\/code><\/pre><\/div>\n\n<br \/>\nx"}
+{"id":"p18","output":"<p>x<\/p>\n\n<p style=\"text-align: center;\">a<br \/>\nb<\/p>\n<p>y<\/p>\n\n"}

@@ -1,0 +1,266 @@
+p01 -> muse-probe-refval-gallery-p01 stable=True saved_source_matches=True valid=True
+p02 -> muse-probe-refval-gallery-p02 stable=True saved_source_matches=True valid=True
+p03 -> muse-probe-refval-gallery-p03 stable=True saved_source_matches=True valid=True
+p04 -> muse-probe-refval-gallery-p04 stable=True saved_source_matches=True valid=True
+p05 -> muse-probe-refval-gallery-p05 stable=True saved_source_matches=True valid=True
+p06 -> muse-probe-refval-gallery-p06 stable=True saved_source_matches=True valid=True
+p07 -> muse-probe-refval-gallery-p07 stable=True saved_source_matches=True valid=True
+p08 -> muse-probe-refval-gallery-p08 stable=True saved_source_matches=True valid=True
+p09 -> muse-probe-refval-gallery-p09 stable=True saved_source_matches=True valid=True
+p10 -> muse-probe-refval-gallery-p10 stable=True saved_source_matches=True valid=True
+p11 -> muse-probe-refval-gallery-p11 stable=True saved_source_matches=True valid=True
+p12 -> muse-probe-refval-gallery-p12 stable=True saved_source_matches=True valid=True
+p13 -> muse-probe-refval-gallery-p13 stable=True saved_source_matches=True valid=True
+p14 -> muse-probe-refval-gallery-p14 stable=True saved_source_matches=True valid=True
+p15 -> muse-probe-refval-gallery-p15 stable=True saved_source_matches=True valid=True
+p16 -> muse-probe-refval-gallery-p16 stable=True saved_source_matches=True valid=True
+p17 -> muse-probe-refval-gallery-p17 stable=True saved_source_matches=True valid=True
+p18 -> muse-probe-refval-gallery-p18 stable=True saved_source_matches=True valid=True
+p19 -> muse-probe-refval-gallery-p19 stable=True saved_source_matches=True valid=True
+p20 -> muse-probe-refval-gallery-p20 stable=True saved_source_matches=True valid=True
+p21 -> muse-probe-refval-gallery-p21 stable=True saved_source_matches=True valid=True
+p22 -> muse-probe-refval-gallery-p22 stable=True saved_source_matches=True valid=True
+p23 -> muse-probe-refval-gallery-p23 stable=True saved_source_matches=True valid=True
+p24 -> muse-probe-refval-gallery-p24 stable=True saved_source_matches=True valid=True
+{
+ "p01": {
+  "fullname": "muse-probe-refval-gallery-p01",
+  "html": "<div class=\"error-block\">Sorry, we couldn't find any images attached to this page.</div>",
+  "html_sha256": "f223c7fd51553ce025cbc7608ffddd89fa46a9e4ea115ad9c22c023215a50714",
+  "source": "[[gallery]]",
+  "source_sha256": "2e1fa80e22bbbc83b0a8ce41a4793c4b84cb339a08b38ac307f3e04e680207d7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-gallery-p02",
+  "html": "<div class=\"error-block\">Sorry, we couldn't find any images attached to this page.</div>",
+  "html_sha256": "f223c7fd51553ce025cbc7608ffddd89fa46a9e4ea115ad9c22c023215a50714",
+  "source": "[[gallery size=\"small\"]]",
+  "source_sha256": "82d8e3ece1994d25669b7732409312e49a8eeca0f37377974eb5780b1442722f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-gallery-p03",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-213147\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p03/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p03/a.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-213147 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "2440ac53fca0b1eae4d3424ddb3be60b0eeaf546e7f115bee31c2c94d9b6e454",
+  "source": "[[gallery]]\n: a.png\n[[/gallery]]",
+  "source_sha256": "04481a1597017b6c7b2f727caca2b0fa3f3304c2f8a8ca5ba41f1613d016e22d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-gallery-p04",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-670643\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p04/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p04/a.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p04/b.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p04/b.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-670643 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "6ceff750d497dfd93ad64bc667d6ffea2c225e0b8712f9e92e89da3684ab6d01",
+  "source": "[[gallery]]\n: a.png\n: b.png\n[[/gallery]]",
+  "source_sha256": "e3a8280634b153e420ff0cbc56382c4cb2feaac39eb137f5ec76697ae1fcf49a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-gallery-p05",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-613214\">\n<div class=\"gallery-item small\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p05/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p05/a.png/small.jpg\" alt=\"\" class=\"gallery-image-size-small\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-613214 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "a17aee2bb667676d17393f59e6f40f27e0030141f29b4c7f51898e5186c5d998",
+  "source": "[[gallery size=\"small\"]]\n: a.png\n[[/gallery]]",
+  "source_sha256": "ae084c28f074c9a0a9a788aee39723b1bc09ff96cc1ef7baf95dca7f45f73a51",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-gallery-p06",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-198519\">\n<div class=\"gallery-item medium\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p06/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p06/a.png/medium.jpg\" alt=\"\" class=\"gallery-image-size-medium\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-198519 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "485c05faa70e1517742004ece8b3f854d1c7894548ae6b8e63a4da9cc1a4e8f9",
+  "source": "[[gallery size=\"medium\"]]\n: a.png\n[[/gallery]]",
+  "source_sha256": "634fa27750d80e924de9c24fc837cec6a8096df00ea75c2bae7e79a06cfb03a0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-gallery-p07",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-721400\">\n<div class=\"gallery-item square\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p07/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p07/a.png/square.jpg\" alt=\"\" class=\"gallery-image-size-square\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-721400 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "c688e37279d4143445c0fe00beb10c29f0257ae6fed502d3affc647d38ff56d9",
+  "source": "[[gallery size=\"square\"]]\n: a.png\n[[/gallery]]",
+  "source_sha256": "7de36e7168339c00041990ce696a61037ada7c2173d2e4d99ff0eed353a46c11",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-gallery-p08",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-293614\">\n<div class=\"gallery-item original\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p08/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p08/a.png\" alt=\"\" class=\"gallery-image-size-original\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-293614 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "75b7006686f65610b14abe79ecfddb613d5eeeeb3c20744a529e6ef1d2f1a86a",
+  "source": "[[gallery size=\"original\"]]\n: a.png\n[[/gallery]]",
+  "source_sha256": "c9d473058c848e6af416c41533864ceb37cef2cf5a58dcd8ba624280f789bfc8",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-gallery-p09",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-912276\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p09/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p09/a.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-912276 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "d6edcff6da4129cf0858794311b70a870b8ce4a1863655b45c8d8140b4c1bf46",
+  "source": "[[gallery size=\"large\"]]\n: a.png\n[[/gallery]]",
+  "source_sha256": "5cd096c916cc731785deb810a0ed20b643e3f935eb1fae33b645a3087cfa5a7a",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-gallery-p10",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-253604\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p10/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p10/a.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-253604 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "7b9128507aaafdf413eed47ea9f143c2a9a362025e38eb471b0139bc3c2488b0",
+  "source": "[[gallery size=\"\"]]\n: a.png\n[[/gallery]]",
+  "source_sha256": "fa8a237f74ddad5824c1ddc5b0ac17afe79e38119ea7aab33f7ffab81ea8df48",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-gallery-p11",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-902849\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p11/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p11/a.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-902849 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "654983814aed05e23afd17e7c811dc6a6e32fe3dfca39fa8da73a9ccf8f31b8c",
+  "source": "[[gallery size=\"0\"]]\n: a.png\n[[/gallery]]",
+  "source_sha256": "8bfe737fd7cae35171fa0d51074c8d4889004e58dd61594c599519809f0ac6e1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-gallery-p12",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-172410\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/other-page/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/other-page/a.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-172410 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "1b722b29415caeb02a68c5b3136192f9ca3605b389d9fe593bf3213b8215b1a5",
+  "source": "[[gallery]]\n: other-page/a.png\n[[/gallery]]",
+  "source_sha256": "4cb07875ba21c02f53c8f9d770b70994dd1aada2fe158a2ed20c5ba7e19f1108",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-gallery-p13",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-604741\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/other-page/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/other-page/a.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-604741 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "6abcb4263167b9af16312a4ac82afe60a712e953116ef7f2a50d34063e33b1c4",
+  "source": "[[gallery]]\n: /other-page/a.png\n[[/gallery]]",
+  "source_sha256": "8f0ab922a8dbe4587f911812237750789317f57ae7c426960288d5db547401b7",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-gallery-p14",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-885048\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://example.com/a.png\" class=\"with-lb\"><img src=\"https://example.com/a.png\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-885048 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "150955a0d353ef948f575a28b4d733e7cef002b261ea87e0ef7e5c345588e599",
+  "source": "[[gallery]]\n: https://example.com/a.png\n[[/gallery]]",
+  "source_sha256": "011628a1ce5cfad300a8662579edb45afad12b03150f1f945f00bf2e3db57968",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-gallery-p15",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-913983\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://example.com/a.png\" target=\"_blank\"><img src=\"https://example.com/a.png\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-913983 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "5733063b175385e5bb57587d0fa550734c1de0adbfddaf673b1357c91b27e352",
+  "source": "[[gallery]]\n: *https://example.com/a.png\n[[/gallery]]",
+  "source_sha256": "be14df965321be03fb5e10237b29ebab0ac13403ef9f84d5a1070691ca73eccc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-gallery-p16",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-19543\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://example.com\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p16/a.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-19543 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "480f247ddeb9e86bbc4a9f98e44a19c5fae04580364767ca0f4cfa8ff4b94049",
+  "source": "[[gallery]]\n: a.png link=\"https://example.com\"\n[[/gallery]]",
+  "source_sha256": "5eee88160bcc4d1445d2eeee4bb870d04ff4ee0b0ae1c760e27f8699c53017ab",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-gallery-p17",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-498927\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://example.com\" target=\"_blank\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p17/a.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-498927 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "7dbbb58bf1b66aa2be4535c77f08e095a21f7814bf86734d7956304b3afc714b",
+  "source": "[[gallery]]\n: a.png link=\"*https://example.com\"\n[[/gallery]]",
+  "source_sha256": "007229ed4d9db11b6b28abb1657ac45c3a25b1acdfcce0d713c8dfd59639c878",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-gallery-p18",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-122416\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"some-page\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p18/a.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-122416 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "1fa8ca0fe29d708feda880e90b188e06b2a8c264f5cc7dfd83156606fb56a0df",
+  "source": "[[gallery]]\n: a.png link=\"some-page\"\n[[/gallery]]",
+  "source_sha256": "f0b4fe1f3b2808c903639501d246567509231891d7212e3b372502227f027f90",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-gallery-p19",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-98424\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p19/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p19/a.png/thumbnail.jpg\" alt=\"My Alt\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-98424 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "51648dcac38c227629d9bd97a6dd8487fef337d9abdc577eed9ff7a503369773",
+  "source": "[[gallery]]\n: a.png alt=\"My Alt\" title=\"My Title\"\n[[/gallery]]",
+  "source_sha256": "5acb2afcfe2ea19ca5768c48c216cc78eefdc4168661fde155c32806383e3213",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-gallery-p20",
+  "html": "<div class=\"error-block\">Sorry, we couldn't find any images attached to this page.</div>\n<p>not a source<br />\n[[/gallery]]</p>",
+  "html_sha256": "ac74b14dbc7a5b6ed8e35becb413c682b8fbe97222e3a21af23d7944f36bf695",
+  "source": "[[gallery]]\nnot a source\n[[/gallery]]",
+  "source_sha256": "4d3c6f27e4b307194a782cb5d0d046cca79acbbdd4d43ffbf47cb58eed6b4307",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p21": {
+  "fullname": "muse-probe-refval-gallery-p21",
+  "html": "<div class=\"error-block\">Sorry, we couldn't find any images attached to this page.</div>",
+  "html_sha256": "f223c7fd51553ce025cbc7608ffddd89fa46a9e4ea115ad9c22c023215a50714",
+  "source": "[[gallery]]\n: a.png",
+  "source_sha256": "d0640e048bf4b64559239fefd0d6e469e0d3ab7323e51ef1bb5cf8b2b1184470",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p22": {
+  "fullname": "muse-probe-refval-gallery-p22",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-84031\">\n<div class=\"gallery-item thumbnail\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p22/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p22/a.png/thumbnail.jpg\" alt=\"\" class=\"gallery-image-size-thumbnail\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-84031 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "cddb67cd5f9f846773678fd7738be9de7f718a806dc48a6730693e5dffcf10b2",
+  "source": "[[GALLERY]]\n: a.png\n[[/GALLERY]]",
+  "source_sha256": "0b39c3f13face20c46e37fa250c5ab509cd336816b1996ee94b66c911451b98b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p23": {
+  "fullname": "muse-probe-refval-gallery-p23",
+  "html": "<div class=\"gallery-box\" id=\"gallery-box-510100\">\n<div class=\"gallery-item small\">\n<table>\n<tr>\n<td><a href=\"https://sandbox-for-codex.wdfiles.com/local--files/muse-probe-refval-gallery-p23/a.png\" class=\"with-lb\"><img src=\"https://sandbox-for-codex.wdfiles.com/local--resized-images/muse-probe-refval-gallery-p23/a.png/small.jpg\" alt=\"\" class=\"gallery-image-size-small\" /></a></td>\n</tr>\n</table>\n</div>\n</div>\n<script type=\"text/javascript\" src=\"https://d3g0gp89917ko0.cloudfront.net/v--1e049c54eb7c/common--javascript/lightbox-jquery.js\"></script>\n<script type=\"text/javascript\">\n//<![CDATA[\n\njQuery(function(){\njQuery('#gallery-box-510100 a.with-lb').lightBox();    \n});         \n//]]>\n</script>",
+  "html_sha256": "0accf0085ba345a2badc3bf564e4fa2a1733181902611c09c7fde79c7ff4c2ef",
+  "source": "[[gallery\nsize=\"small\"]]\n: a.png\n[[/gallery]]",
+  "source_sha256": "35da5c12fd0f4ca4fce85255a07366856b626f0ca8270bfc03b433920d8c48ef",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "p24": {
+  "fullname": "muse-probe-refval-gallery-p24",
+  "html": "x [[gallery]]<br />\n<p>[[/gallery]]</p>",
+  "html_sha256": "23cd127753cfa4f1d354e3ca23294502b5233c9f914891475ffc4994125a49d1",
+  "source": "x [[gallery]]\n: a.png\n[[/gallery]]",
+  "source_sha256": "b9de55bcb9d0138564c9a3da712c0598990a806f66bba11822f85414785a1bd9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

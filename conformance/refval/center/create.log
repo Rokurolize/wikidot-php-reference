@@ -1,0 +1,111 @@
+p01 -> muse-probe-refval-center-p01 (created)
+p02 -> muse-probe-refval-center-p02 (created)
+p03 -> muse-probe-refval-center-p03 (created)
+p04 -> muse-probe-refval-center-p04 (created)
+p05 -> muse-probe-refval-center-p05 (created)
+p06 -> muse-probe-refval-center-p06 (created)
+p07 -> muse-probe-refval-center-p07 (created)
+p08 -> muse-probe-refval-center-p08 (created)
+p09 -> muse-probe-refval-center-p09 (created)
+p10 -> muse-probe-refval-center-p10 (created)
+p11 -> muse-probe-refval-center-p11 (created)
+p12 -> muse-probe-refval-center-p12 (created)
+p13 -> muse-probe-refval-center-p13 (created)
+p14 -> muse-probe-refval-center-p14 (created)
+p15 -> muse-probe-refval-center-p15 (created)
+p16 -> muse-probe-refval-center-p16 (created)
+p17 -> muse-probe-refval-center-p17 (created)
+p18 -> muse-probe-refval-center-p18 (created)
+18 probe pages left in place on sandbox-for-codex; the tool never deletes pages.
+{
+ "p01": {
+  "fullname": "muse-probe-refval-center-p01",
+  "source": "= hello",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-center-p02",
+  "source": "= hello\ny",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-center-p03",
+  "source": "x\n= hello",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-center-p04",
+  "source": "x\n= hello\ny",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-center-p05",
+  "source": "x\n= hello =\ny",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-center-p06",
+  "source": "x\n= a = b\ny",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-center-p07",
+  "source": "x\n= \ny",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-center-p08",
+  "source": "x\n=  padded\ny",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-center-p09",
+  "source": "x\n = hello\n== hello\n=hello\nx= hello\ny",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-center-p10",
+  "source": "x\n= a\n= b\ny",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-center-p11",
+  "source": "x\n= a\n= b\n= c\ny",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-center-p12",
+  "source": "x\n= a\n\n= b\ny",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-center-p13",
+  "source": "x\n= **bold** //italic// http://example.com\ny",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-center-p14",
+  "source": "[[div]]\n= centered\n[[/div]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-center-p15",
+  "source": "> quote\n= a\nx",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-center-p16",
+  "source": "* item\n= a\nx",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-center-p17",
+  "source": "[[code]]\n= a\n[[/code]]\nx",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-center-p18",
+  "source": "x\n= a _\nb\ny",
+  "action": "created"
+ }
+}

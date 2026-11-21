@@ -1,0 +1,80 @@
+{"id": "sz70-size-crosses-div", "source": "[[size larger]]\n[[div class=\"outer\"]]\nheader\n[[div class=\"links\"]]\nlink\n[[/div]]\n[[div class=\"content\"]]\n[[/size]]\nbody\n[[/div]]\n[[/div]]"}
+{"id": "dp-01", "source": "[[/div]]\n[[div]]\nx\n[[/div]]"}
+{"id": "dp-02", "source": "[[/div]] [[div]]"}
+{"id": "dp-03", "source": "[[/div]]   [[div]]"}
+{"id": "dp-04", "source": "[[/div]]\t[[div]]"}
+{"id": "dp-05", "source": "[[/div]]\n\n\n[[div]]"}
+{"id": "dp-06", "source": "[[/div]][[div]]"}
+{"id": "dp-07", "source": "[[/div]] \n \t [[div]]"}
+{"id": "dp-08", "source": "[[/DIV]]\n[[DIV]]"}
+{"id": "dp-09", "source": "[[/Div]] [[dIv]]"}
+{"id": "dp-10", "source": "x[[/div]] [[div]]y"}
+{"id": "dp-11", "source": "[[/div]] [[span]]"}
+{"id": "dp-12", "source": "[[/div]] \n[[span]]"}
+{"id": "dp-13", "source": "[[div]]\nx\n[[/div]]"}
+{"id": "dp-14", "source": "[[/div]] [[div"}
+{"id": "dp-15", "source": "[[/div]]\n[[div"}
+{"id": "dp-16", "source": "[[/div]] [[div]]\na\n[[/div]] [[div]]\nb\n[[/div]]"}
+{"id": "dp-17", "source": "[[/div]] [[div]] [[div]]"}
+{"id": "dp-18", "source": "[[div]]\n[[/div]]\n\n[[div]]\n[[/div]]"}
+{"id": "dp-19", "source": "[[/div]] x [[div]]"}
+{"id": "dp-20", "source": "[[/div]]\n[[/div]] [[div]]"}
+{"id": "dp-21", "source": "[[/div]] [[div_]]"}
+{"id": "dp-22", "source": "[[/div]] [[div class=\"a\"]]"}
+{"id": "dp-23", "source": "[[/div]]\n[[div class=\"a\"]]\nx\n[[/div]]"}
+{"id": "dp-24", "source": "[[/div]]\r\n[[div]]"}
+{"id": "dp-25", "source": "[[/div]]\f[[div]]"}
+{"id": "dp-26", "source": "[[/div]]\u000b[[div]]"}
+{"id": "dp-27", "source": "[[/div]] [[div]] [[/div]] [[div]]"}
+{"id": "dp-28", "source": "text\n[[/div]]\n[[div]]\ntext"}
+{"id": "dp-29", "source": "[[/div]]  "}
+{"id": "dp-30", "source": "[[div]]"}
+{"id": "dp-31", "source": "[[/div]] [[div]]x[[/div]] [[div]]"}
+{"id": "dp-32", "source": "[[/div]]\n[[div]]\n[[/div]]\n[[div]]"}
+{"id": "dp-33", "source": "[[/div]] [[div]]\n[[/div]]\n[[div]]"}
+{"id": "dp-34", "source": "a [[/div]] b [[div]] c"}
+{"id": "dp-35", "source": "[[/div]]\t \n[[div]]"}
+{"id": "dp-36", "source": "[[/div]] [[div]] [[/div]]"}
+{"id": "dp-37", "source": "[[/div]][[div]][[/div]][[div]]"}
+{"id": "dp-38", "source": "[[/div]] [[div]]\n\n[[/div]] [[div]]"}
+{"id": "dp-39", "source": "[[/div]] [[div]]\ntail line"}
+{"id": "dp-40", "source": "[[div]]\ncontent\n[[/div]]   \n\n   [[div]]\nmore\n[[/div]]"}
+{"id": "dp-41", "source": "[[/div]] [[div]] [[div]] [[/div]] [[div]]"}
+{"id": "dp-42", "source": "[[/div]] [[divx]]"}
+{"id": "dp-43", "source": "[[/div]] [[di]]"}
+{"id": "dp-44", "source": "[[/div] ] [[div]]"}
+{"id": "dp-45", "source": "[[/div]] [[div]]\n[[/div]] [[div]]\n[[/div]] [[div]]"}
+{"id": "dp-x01", "source": "[[div]]\na\n[[/div]]\n[[div]]\nb\n[[/div]]"}
+{"id": "dp-x02", "source": "[[div]]\na\n[[/div]]\n\n[[div]]\nb\n[[/div]]"}
+{"id": "dp-x03", "source": "[[div]]\na\n[[/div]]   [[div]]\nb\n[[/div]]"}
+{"id": "dp-x04", "source": "[[div]]\na\n[[/div]]\t[[div]]\nb\n[[/div]]"}
+{"id": "dp-x05", "source": "[[div]]\na\n[[/div]]\n[[div class=\"b\"]]\nb\n[[/div]]"}
+{"id": "dp-x06", "source": "[[div]]\na\n[[/div]]\n[[div_]]\nb\n[[/div]]"}
+{"id": "dp-x07", "source": "[[DIV]]\na\n[[/DIV]]\n[[DIV]]\nb\n[[/DIV]]"}
+{"id": "dp-x08", "source": "[[/DIV]]\n[[DIV]]\nx\n[[/div]]"}
+{"id": "dp-x09", "source": "[[div]]\na\n[[/div]] x [[div]]\nb\n[[/div]]"}
+{"id": "dp-x10", "source": "[[div]]\na\n[[/div]]\n[[span]]s[[/span]]"}
+{"id": "dp-x11", "source": "[[div]]\na\n[[/div]]\n[[div]]\nb\n[[/div]]\n[[div]]\nc\n[[/div]]"}
+{"id": "dp-x12", "source": "[[/div]] [[divx]]"}
+{"id": "dp-x13", "source": "[[/div]] [[div"}
+{"id": "dp-x14", "source": "[[div]]\n[[/div]]\n\n[[div]]\n[[/div]]"}
+{"id": "dp-x15", "source": "[[div]]a[[/div]] [[div]]b[[/div]]"}
+{"id": "dp-x16", "source": "[[div]]\na\n[[/div]]\n\n\n[[div]]\nb\n[[/div]]"}
+{"id": "p01", "source": "[[div]]\na\n[[/div]]\n[[div]]\nb\n[[/div]]"}
+{"id": "p02", "source": "[[div]]\na\n[[/div]]\n\n[[div]]\nb\n[[/div]]"}
+{"id": "p03", "source": "[[div]]\na\n[[/div]]\n\n\n[[div]]\nb\n[[/div]]"}
+{"id": "p04", "source": "[[div]]\na\n[[/div]]   [[div]]\nb\n[[/div]]"}
+{"id": "p05", "source": "[[div]]\na\n[[/div]]\t[[div]]\nb\n[[/div]]"}
+{"id": "p06", "source": "[[div]]\na\n[[/div]]\n[[div class=\"b\"]]\nb\n[[/div]]"}
+{"id": "p07", "source": "[[div]]\na\n[[/div]]\n[[div_]]\nb\n[[/div]]"}
+{"id": "p08", "source": "[[DIV]]\na\n[[/DIV]]\n[[DIV]]\nb\n[[/DIV]]"}
+{"id": "p09", "source": "[[/DIV]]\n[[DIV]]"}
+{"id": "p10", "source": "[[/Div]] [[dIv]]"}
+{"id": "p11", "source": "[[div]]\na\n[[/div]] x [[div]]\nb\n[[/div]]"}
+{"id": "p12", "source": "[[div]]\na\n[[/div]]\n[[span]]s[[/span]]"}
+{"id": "p13", "source": "[[div]]\na\n[[/div]]\n[[div]]\nb\n[[/div]]\n[[div]]\nc\n[[/div]]"}
+{"id": "p14", "source": "[[/div]] [[divx]]"}
+{"id": "p15", "source": "[[/div]] [[div"}
+{"id": "p16", "source": "[[div]]\n[[/div]]\n\n[[div]]\n[[/div]]"}
+{"id": "p17", "source": "[[div]]a[[/div]] [[div]]b[[/div]]"}
+{"id": "p18", "source": "[[size larger]]\n[[div class=\"outer\"]]\nheader\n[[div class=\"links\"]]\nlink\n[[/div]]\n[[div class=\"content\"]]\n[[/size]]\nbody\n[[/div]]\n[[/div]]"}

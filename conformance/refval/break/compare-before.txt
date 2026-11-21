@@ -1,0 +1,57 @@
+Total=18 exact=2 trim_eq=12 fnorm_eq=12 diffs=6
+TRIM_EQ   p01 (muse-probe-refval-break-p01)
+  REF : '<p>a<br />\nb</p>\n\n'
+  LIVE: '<p>a<br />\nb</p>'
+TRIM_EQ   p02 (muse-probe-refval-break-p02)
+  REF : 'a<br />\n<br />\n'
+  LIVE: 'a<br />\n<br />'
+TRIM_EQ   p03 (muse-probe-refval-break-p03)
+  REF : '<p>a _<br />\nb</p>\n\n'
+  LIVE: '<p>a _<br />\nb</p>'
+DIFF      p04 (muse-probe-refval-break-p04)
+  SRC : 'a\t_\nb'
+  REF : '<p>a <br />\nb</p>\n\n'
+  LIVE: '<p>a<br />\nb</p>'
+TRIM_EQ   p05 (muse-probe-refval-break-p05)
+  REF : '<p>a _<br />\nb</p>\n\n'
+  LIVE: '<p>a _<br />\nb</p>'
+DIFF      p06 (muse-probe-refval-break-p06)
+  SRC : 'a  _\nb'
+  REF : '<p>a <br />\nb</p>\n\n'
+  LIVE: '<p>a<br />\nb</p>'
+TRIM_EQ   p07 (muse-probe-refval-break-p07)
+  REF : '<p>a<br />\n<br />\n<br />\nb</p>\n\n'
+  LIVE: '<p>a<br />\n<br />\n<br />\nb</p>'
+TRIM_EQ   p08 (muse-probe-refval-break-p08)
+  REF : '<p>a<br />\n<br />\nb</p>\n\n'
+  LIVE: '<p>a<br />\n<br />\nb</p>'
+TRIM_EQ   p09 (muse-probe-refval-break-p09)
+  REF : '<p>a__<br />\n_<br />\na _x<br />\nb</p>\n\n'
+  LIVE: '<p>a__<br />\n_<br />\na _x<br />\nb</p>'
+TRIM_EQ   p10 (muse-probe-refval-break-p10)
+  REF : '<p>x<br />\n<br />\nb</p>\n\n'
+  LIVE: '<p>x<br />\n<br />\nb</p>'
+EXACT     p11 (muse-probe-refval-break-p11)
+EXACT     p12 (muse-probe-refval-break-p12)
+TRIM_EQ   p13 (muse-probe-refval-break-p13)
+  REF : '\n<h1 id="toc0"><span>head _</span></h1>\n<p>x</p>\n\n'
+  LIVE: '<h1 id="toc0"><span>head _</span></h1>\n<p>x</p>'
+DIFF      p14 (muse-probe-refval-break-p14)
+  SRC : '> a _\n> b'
+  REF : '<blockquote><p>a<br />\nb</p>\n\n</blockquote>\n'
+  LIVE: '<blockquote>\n<p>a<br />\nb</p>\n</blockquote>'
+TRIM_EQ   p15 (muse-probe-refval-break-p15)
+  REF : '<p><strong>a<br />\nb</strong><br />\n<span>c<br />\nd</span></p>\n\n'
+  LIVE: '<p><strong>a<br />\nb</strong><br />\n<span>c<br />\nd</span></p>'
+DIFF      p16 (muse-probe-refval-break-p16)
+  SRC : '[[div]]\na _\nb\n[[/div]]'
+  REF : '<div ><p>a<br />\nb</p>\n\n</div>'
+  LIVE: '<div>\n<p>a<br />\nb</p>\n</div>'
+DIFF      p17 (muse-probe-refval-break-p17)
+  SRC : 'a _\n----\nb'
+  REF : '<p>a<br />\n<br />\n<hr />\n</p>\n\n<p>b</p>\n\n'
+  LIVE: 'a<br />\n<br />\n<hr />\n<p>b</p>'
+DIFF      p18 (muse-probe-refval-break-p18)
+  SRC : 'x\n= a _\nb\ny'
+  REF : '<p>x</p>\n\n<p style="text-align: center;">a<br />\nb</p><p>y</p>\n\n'
+  LIVE: '<p>x</p>\n<p style="text-align: center;">a<br />\nb</p>\n<p>y</p>'

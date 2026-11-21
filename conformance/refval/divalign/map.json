@@ -1,0 +1,102 @@
+{
+ "p01": {
+  "fullname": "muse-probe-refval-divalign-p01",
+  "source": "[[=]]\ncentered\n[[/=]]",
+  "action": "created"
+ },
+ "p02": {
+  "fullname": "muse-probe-refval-divalign-p02",
+  "source": "[[<]]\nleft\n[[/<]]",
+  "action": "created"
+ },
+ "p03": {
+  "fullname": "muse-probe-refval-divalign-p03",
+  "source": "[[>]]\nright\n[[/>]]",
+  "action": "created"
+ },
+ "p04": {
+  "fullname": "muse-probe-refval-divalign-p04",
+  "source": "[[==]]\njustified\n[[/==]]",
+  "action": "created"
+ },
+ "p05": {
+  "fullname": "muse-probe-refval-divalign-p05",
+  "source": "[[==]]\nx\n[[/=]]\n\n[[=]]\nx\n[[/==]]",
+  "action": "created"
+ },
+ "p06": {
+  "fullname": "muse-probe-refval-divalign-p06",
+  "source": "[[=]]\n[[/=]]",
+  "action": "created"
+ },
+ "p07": {
+  "fullname": "muse-probe-refval-divalign-p07",
+  "source": "[[=]]\n\n[[/=]]",
+  "action": "created"
+ },
+ "p08": {
+  "fullname": "muse-probe-refval-divalign-p08",
+  "source": "x\n[[=]]\nbody\n[[/=]]\ny",
+  "action": "created"
+ },
+ "p09": {
+  "fullname": "muse-probe-refval-divalign-p09",
+  "source": "[[=]]\nbody\n[[/=]] tail",
+  "action": "created"
+ },
+ "p10": {
+  "fullname": "muse-probe-refval-divalign-p10",
+  "source": "a\n [[=]]\nbody\n[[/=]]\n\nx[[=]]\nbody\n[[/=]]",
+  "action": "created"
+ },
+ "p11": {
+  "fullname": "muse-probe-refval-divalign-p11",
+  "source": "[[=]] body\n[[/=]]\n\n[[=]]\nbody[[/=]]",
+  "action": "created"
+ },
+ "p12": {
+  "fullname": "muse-probe-refval-divalign-p12",
+  "source": "[[=]]\n[[<]]\ninner\n[[/<]]\n[[/=]]",
+  "action": "created"
+ },
+ "p13": {
+  "fullname": "muse-probe-refval-divalign-p13",
+  "source": "[[=]]\n[[=]]\ninner\n[[/=]]\n[[/=]]",
+  "action": "created"
+ },
+ "p14": {
+  "fullname": "muse-probe-refval-divalign-p14",
+  "source": "[[=]]\n[[=]]\nx\n[[/=]]\ny\n[[/=]]",
+  "action": "created"
+ },
+ "p15": {
+  "fullname": "muse-probe-refval-divalign-p15",
+  "source": "[[=]]\n[[=]]\n[[/=]]",
+  "action": "created"
+ },
+ "p16": {
+  "fullname": "muse-probe-refval-divalign-p16",
+  "source": "[[=]]\n[[/=]] extra\n[[/=]]",
+  "action": "created"
+ },
+ "p17": {
+  "fullname": "muse-probe-refval-divalign-p17",
+  "source": "[[=]]\np1\n\np2\n[[/=]]",
+  "action": "created"
+ },
+ "p18": {
+  "fullname": "muse-probe-refval-divalign-p18",
+  "source": "[[=]]\n* a\n* b\n\n----\n[[/=]]",
+  "action": "created"
+ },
+ "p19": {
+  "fullname": "muse-probe-refval-divalign-p19",
+  "source": "[[= class=\"x\"]]\nbody\n[[/=]]\n\n[[=]] \nbody\n[[/=]]",
+  "action": "created"
+ },
+ "p20": {
+  "fullname": "muse-probe-refval-divalign-p20",
+  "source": "[[=]]\n**bold** body\n[[/=]]",
+  "action": "created"
+ }
+}
