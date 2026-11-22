@@ -40,6 +40,6 @@ class Text_Wiki_Render_Xhtml_Rawold extends Text_Wiki_Render {
 
     function token($options)
     {
-        return htmlspecialchars($options['text']);
+        return htmlspecialchars($options['text'], ENT_COMPAT, 'UTF-8');
     }
 }

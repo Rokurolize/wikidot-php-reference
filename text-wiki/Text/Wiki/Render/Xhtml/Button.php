@@ -111,9 +111,9 @@ class Text_Wiki_Render_Xhtml_Button extends Text_Wiki_Render {
     		$text = $defaultText[$type];
     	}
 
-    	$out = '<a class="'.htmlspecialchars($class).'" ';
+    	$out = '<a class="'.htmlspecialchars($class, ENT_COMPAT, 'UTF-8').'" ';
     	if($style){
-    		$out .= 'style="'.htmlspecialchars($style).'" ';	
+    		$out .= 'style="'.htmlspecialchars($style, ENT_COMPAT, 'UTF-8').'" ';	
     	} 
     	$out .= 'href="'.($hrefs[$type]?$hrefs[$type]:'javascript:;').'" ';
     	$out .= ($jsOnclick[$type]?'onclick="'.$jsOnclick[$type].'" ':' ');

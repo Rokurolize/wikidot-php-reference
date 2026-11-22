@@ -57,7 +57,13 @@ class Text_Wiki_Parse_Interwiki extends Text_Wiki_Parse {
             &$this, 'process'), $this->wiki->source);
         
         // described interwiki links
-        $tmp_regex = '/\[' . $this->regex . ' (.+?)\]/';
+        // The label may not contain a token delimiter (a token claimed
+        // by an earlier rule, such as a bare URL or an email address),
+        // an opening bracket, or a newline: live Wikidot leaves the
+        // whole form literal in those cases, with the tokens inside it
+        // rendering normally (CORRECTION-X44; the fossil's own Url rule
+        // already excludes the delimiter from its described labels).
+        $tmp_regex = '/\[' . $this->regex . ' ([^\\]\\[\n' . $this->wiki->delim . ']+)\]/';
         $this->wiki->source = preg_replace_callback($tmp_regex, array(
             &$this, 'processDescr'), $this->wiki->source);
     

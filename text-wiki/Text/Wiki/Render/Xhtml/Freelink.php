@@ -49,11 +49,11 @@ class Text_Wiki_Render_Xhtml_Freelink extends Text_Wiki_Render_Xhtml_Wikilink {
 
         // A bare external URL target is an external link, not a local slug.
         if ($url) {
-            $text = htmlspecialchars(trim($text));
+            $text = htmlspecialchars(trim($text), ENT_COMPAT, 'UTF-8');
             if ($nonbr) {
                 $text = str_replace(' ', '&nbsp;', $text);
             }
-            return '<a href="' . htmlspecialchars($url) . '">' . $text . '</a>';
+            return '<a href="' . htmlspecialchars($url, ENT_COMPAT, 'UTF-8') . '">' . $text . '</a>';
         }
 
         // The fossil site branch (cross-site http://site.URL_DOMAIN/page) is
@@ -61,7 +61,7 @@ class Text_Wiki_Render_Xhtml_Freelink extends Text_Wiki_Render_Xhtml_Wikilink {
         // live treats :: as a local slug. Kept for completeness only.
         if ($site) {
             $o = '<a href="http://' . $site . '.' . GlobalProperties::$URL_DOMAIN . '/' . $page . '">';
-            $o .= htmlspecialchars(trim($text));
+            $o .= htmlspecialchars(trim($text), ENT_COMPAT, 'UTF-8');
             $o .= '</a>';
             return $o;
         }
@@ -84,12 +84,12 @@ class Text_Wiki_Render_Xhtml_Freelink extends Text_Wiki_Render_Xhtml_Wikilink {
             $text = $page;
         }
 
-        $page = htmlspecialchars(trim($page));
+        $page = htmlspecialchars(trim($page), ENT_COMPAT, 'UTF-8');
         // C1: append the anchor (and a /#/ hash-route suffix) in BOTH the
         // existing and new-page branches. The inherited Wikilink renderer
         // dropped the anchor in the new-page branch; live and ftml keep it.
-        $suffix = htmlspecialchars(trim($anchor)) . htmlspecialchars(trim($extra));
-        $text = htmlspecialchars(trim($text));
+        $suffix = htmlspecialchars(trim($anchor), ENT_COMPAT, 'UTF-8') . htmlspecialchars(trim($extra), ENT_COMPAT, 'UTF-8');
+        $text = htmlspecialchars(trim($text), ENT_COMPAT, 'UTF-8');
         if ($nonbr) {
             $text = str_replace(' ', '&nbsp;', $text);
         }

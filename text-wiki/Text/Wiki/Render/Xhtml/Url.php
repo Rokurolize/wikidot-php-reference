@@ -72,7 +72,7 @@ class Text_Wiki_Render_Xhtml_Url extends Text_Wiki_Render {
             }
             return $out;
         }, $href);
-        $href = htmlspecialchars($href);
+        $href = htmlspecialchars($href, ENT_COMPAT, 'UTF-8');
         if($href=="#"){
         	$href="javascript:;";
         }
@@ -84,7 +84,7 @@ class Text_Wiki_Render_Xhtml_Url extends Text_Wiki_Render {
             // create alt text for the image
             if (! isset($text) || $text == '') {
                 $text = basename($href);
-                $text = htmlspecialchars($text);
+                $text = htmlspecialchars($text, ENT_COMPAT, 'UTF-8');
             }
 
             // generate an image tag
@@ -105,12 +105,12 @@ class Text_Wiki_Render_Xhtml_Url extends Text_Wiki_Render {
             }
 
             // generate a regular link (not an image)
-            $text = htmlspecialchars($text);
+            $text = htmlspecialchars($text, ENT_COMPAT, 'UTF-8');
             $css = $this->formatConf(' class="%s"', "css_$type");
             $output = "<a$css href=\"$href\"";
 
             if ($target) {
-                $target = htmlspecialchars($target);
+                $target = htmlspecialchars($target, ENT_COMPAT, 'UTF-8');
                 $output .= " target=\"$target\"";
             }
 

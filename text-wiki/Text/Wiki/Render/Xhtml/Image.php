@@ -194,7 +194,7 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
         // unset so it won't show up as an attribute
         unset($options['attr']['link']);
 
-        $output .= '<img src="' . htmlspecialchars($this->encodeNonAscii($src)) . '"';
+        $output .= '<img src="' . htmlspecialchars($this->encodeNonAscii($src), ENT_COMPAT, 'UTF-8') . '"';
 
         // get the CSS class but don't add it yet
         $css = "image";
@@ -219,15 +219,15 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
             // places it first so this loop emits it before style/class/alt.
 			if($key == "class" || $key == "alt"  || $key == "style"
 				|| $key=="width" || $key=="height" || $key=="title"){
-	            	$key = htmlspecialchars($key);
-            		$val = htmlspecialchars($val);
+	            	$key = htmlspecialchars($key, ENT_COMPAT, 'UTF-8');
+            		$val = htmlspecialchars($val, ENT_COMPAT, 'UTF-8');
             		$output .= " $key=\"$val\"";
 			}
         }
 
         // always add an "alt" attribute per Stephane Solliec
         if (! $alt) {
-            $alt = htmlspecialchars(basename($options['src']));
+            $alt = htmlspecialchars(basename($options['src']), ENT_COMPAT, 'UTF-8');
             $output .= " alt=\"$alt\"";
         }
 
@@ -241,7 +241,7 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
         if ($href) {
             // yes, add the href and return
             // R2-PARA correction C6: percent-encode non-ASCII URL bytes.
-            $href = htmlspecialchars($this->encodeNonAscii($href));
+            $href = htmlspecialchars($this->encodeNonAscii($href), ENT_COMPAT, 'UTF-8');
             $css = $this->formatConf(' class="%s"', 'css_link');
             // R2-PARA correction C8: the fossil emitted a stray space before
             // '>' on every anchor and padded the target attribute with a
