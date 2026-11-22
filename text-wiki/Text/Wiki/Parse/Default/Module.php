@@ -99,11 +99,28 @@ class Text_Wiki_Parse_Module extends Text_Wiki_Parse {
 
         $out = "\n\n" . $this->wiki->addToken($this->rule, $options) . "\n\n";
 
-        // C-SUSPECT-XRULE-3: when an earlier rule has claimed part of the
-        // body, live leaves that body and the literal closer in the source
-        // after the unknown-module error; the error token alone is not the
-        // whole claim.
-        if (strpos($body, $this->wiki->delim) !== false) {
+        // C-SUSPECT-XRULE-3: when an earlier *block* rule (Code) has claimed
+        // part of the body, live leaves that body and the literal closer in
+        // the source after the unknown-module error (probe
+        // muse-probe-suspect-xrule-x19-module-code); the error token alone is
+        // not the whole claim there.
+        // REFCORR7 (SUSPECT4-C S11 inc-mod / S14 inc-css): a Raw token in the
+        // body is different. Include splices @@...@@ into the module body and
+        // Raw claims it before Module runs; live consumes that token with the
+        // closer and emits only the module result (error block for an unknown
+        // module, a style element for css). The old delimiter test re-emitted
+        // the raw span and the literal [[/module]] into #page-content, which
+        // live never does. Re-emit only when the body holds a Code token, and
+        // leave a Raw-token body to the module token.
+        $reemit = false;
+        foreach ($this->wiki->tokens as $tid => $tok) {
+            if ($tok[0] === 'Code'
+                && strpos($body, $this->wiki->delim . $tid . $this->wiki->delim) !== false) {
+                $reemit = true;
+                break;
+            }
+        }
+        if ($reemit) {
             $out .= $matches[3] . '[[/module]]';
         }
 

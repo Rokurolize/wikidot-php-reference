@@ -98,9 +98,14 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
         // to "a  b". Removing the placeholder from the residual stream is
         // safe: the token stays in the token array (so indices and Date
         // format strings that reference it are unchanged) and its render
-        // would have been the empty string.
+        // would have been the empty string. REFCORR7 (idx-after): when the
+        // document carries a literal U+FFFD the recovery path walks the
+        // whole adjacent placeholder run and leaks every index, so the
+        // empty Raw placeholder must stay in the residual stream exactly
+        // as live keeps it; dropping it loses its leaked digit.
+        $hasUfffd = strpos($source, "\xEF\xBF\xBD") !== false;
         foreach ($this->wiki->tokens as $tid => $tok) {
-            if (is_array($tok) && $tok[0] === 'Raw' && isset($tok[1]['text'])
+            if (! $hasUfffd && is_array($tok) && $tok[0] === 'Raw' && isset($tok[1]['text'])
                 && $tok[1]['text'] === '') {
                 $source = str_replace($delim . $tid . $delim, '', $source);
             }

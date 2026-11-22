@@ -896,9 +896,10 @@ class Text_Wiki {
     * document index (the in-document id minus the document's first id,
     * plus one: live's counter presents the paragraph-end token as 2
     * where a fresh reference document numbers it 1) and does not render
-    * the placeholder; a second placeholder with nothing between them is
-    * swallowed the same way and its index is leaked too, which is how
-    * adjacent blocks merge. Any other literal delimiter is dropped.
+    * the placeholder; every further placeholder with nothing between it
+    * and the previous one is swallowed the same way and its index is
+    * leaked too, which is how an entire adjacent run merges. The walk
+    * stops at the first gap or non-placeholder byte. Any other literal delimiter is dropped.
     * Two or more literal delimiters in a row are dropped without a leak,
     * and the following placeholder still renders. The resulting HTML is
     * the input live's purifyHtml tidy pass repairs: it closes open
@@ -995,13 +996,15 @@ class Text_Wiki {
             if ($tok !== null && $fakeCount === 1) {
                 $html .= (string)($tok['id'] - $first + 1);
                 $after = $tok['next'];
-                $tok2 = ($after < $n) ? $this->matchOriginalToken($bytes, $origin, $after, $tokens) : null;
-                if ($tok2 !== null) {
-                    $html .= (string)($tok2['id'] - $first + 1);
-                    $i = $tok2['next'];
-                } else {
-                    $i = $after;
+                while ($after < $n) {
+                    $next = $this->matchOriginalToken($bytes, $origin, $after, $tokens);
+                    if ($next === null) {
+                        break;
+                    }
+                    $html .= (string)($next['id'] - $first + 1);
+                    $after = $next['next'];
                 }
+                $i = $after;
                 continue;
             }
             if ($fakeCount > 0) {

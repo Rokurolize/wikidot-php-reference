@@ -308,10 +308,23 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
                     // pairs with an uppercase closer but an uppercase opener
                     // never closes and absorbs the following text.
                     $closeTag = strtolower($m[4][0]);
+                    $closeUpper = ($m[4][0] !== $closeTag);
                     $residualBracket = (isset($m[5][0]) && $m[5][0] === ']');
                     $foundIdx = -1;
                     for ($i = count($stack) - 1; $i >= 0; $i--) {
-                        if ($stack[$i]['tag'] === $closeTag) {
+                        // REFCORR7 C-SUSPECT4A-2: a lowercase opener closes on
+                        // any closer once the close tag is case-folded, including
+                        // a cross-type uppercase closer (C11). A raw-case opener
+                        // is never a partner; when its own tag matches the closer
+                        // it absorbs that closer and shields lower openers.
+                        if ($stack[$i]['tag'] !== strtolower($stack[$i]['tag'])
+                            && strtolower($stack[$i]['tag']) === $closeTag) {
+                            break;
+                        }
+                        if ($stack[$i]['tag'] !== strtolower($stack[$i]['tag'])) {
+                            continue;
+                        }
+                        if ($stack[$i]['tag'] === $closeTag || $closeUpper) {
                             $foundIdx = $i;
                             break;
                         }
@@ -323,6 +336,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
                             'closeStart'      => $pos,
                             'closeLen'        => $len,
                             'residualBracket' => $residualBracket,
+                            'closeUpper'      => $closeUpper,
                         );
                         break;
                     }
@@ -351,6 +365,39 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
             $body = substr($source, $bodyStart, $bodyLen);
             $fullEnd = $matchedPair['closeStart'] + $matchedPair['closeLen'];
 
+            $synthetic7 = !empty($matchedPair['synthetic']);
+            $opUpper7 = ($op['tag'] !== strtolower($op['tag']));
+            if ($synthetic7 && !preg_match('/\[\[li(?:\s+[^\]]*)?\]\]/i', $body)) {
+                // REFCORR7 C-SUSPECT4A-4: a mixed/uppercase opener whose body
+                // has no item degrades to bare prose on live; the list wrapper
+                // is never built. Strip the swallowed block closers and leave
+                // the body in place.
+                if (preg_match('/\n\[\[\/(?:ul|ol)\]\]\n{2,}/i', $body)) {
+                    // A blank line after the degraded block keeps one break.
+                    $bare = preg_replace('/\n\[\[\/(?:ul|ol)\]\]\n{2,}/i', "\n", $body);
+                } elseif (preg_match('/\n\[\[\/(?:ul|ol)\]\]\n/i', $body)) {
+                    // A single newline after the closer is absorbed: the
+                    // following text joins the bare body directly.
+                    $bare = preg_replace('/\n\[\[\/(?:ul|ol)\]\]\n/i', '', $body);
+                } else {
+                    $bare = preg_replace('/\n?\[\[\/(?:ul|ol)\]\]\n?/i', '', $body);
+                }
+                if (strpos($bare, chr(255)) !== false) {
+                    $bare = trim($bare, "\n");
+                }
+                $source = substr($source, 0, $op['start']) . $bare . substr($source, $fullEnd);
+                continue;
+            }
+
+            $unclosed7 = false;
+            if ($synthetic7) {
+                if (preg_match_all('/\[\[\/(?:ul|ol)\]\]/i', $source, $cm7, PREG_OFFSET_CAPTURE)) {
+                    $lastCloser7 = end($cm7[0]);
+                    $tailAfterCloser7 = substr($source, $lastCloser7[1] + strlen($lastCloser7[0]));
+                    $unclosed7 = (!$op['scored'] && trim($tailAfterCloser7) === '');
+                }
+            }
+
             // REFCORR5 Batch 1: an uppercase opener's would-be closer is
             // swallowed into the last item rather than ending the list, and
             // the residual tail is absorbed there too (f06). Fold a run of
@@ -362,7 +409,13 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
                 if ($liClosePos !== false) {
                     $liClose = substr($body, $liClosePos, 7);
                     $tail = substr($body, $liClosePos + 7);
-                    $tail = preg_replace('/\n{3,}/', "\n\n", $tail);
+                    // REFCORR7 C-SUSPECT4A-3: live concatenates the absorbed
+                    // trailing text straight into the last item on an
+                    // uppercase opener, with no intervening newline or <br />.
+                    $trimmedTail = trim($tail);
+                    if ($trimmedTail !== '') {
+                        $tail = $trimmedTail;
+                    }
                     $body = substr($body, 0, $liClosePos) . $tail . $liClose;
                 }
             }
@@ -370,11 +423,20 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
             $replacement = $this->buildExplicitListBlock(
                 $op['tag'],
                 $op['scored'],
-                $op['attrs'],
+                $opUpper7 ? '' : $op['attrs'],
                 $body,
-                $matchedPair['residualBracket']
+                $matchedPair['residualBracket'],
+                $unclosed7,
+                $synthetic7
             );
 
+            if (!empty($matchedPair['closeUpper']) && $fullEnd < strlen($source)
+                && substr($source, $fullEnd, 1) !== "\n") {
+                // REFCORR7 C-SUSPECT4A-2: the line break that preceded a
+                // cross-type uppercase closer survives as the separator
+                // before the trailing text on live.
+                $replacement .= "\n";
+            }
             $source = substr($source, 0, $op['start']) . $replacement . substr($source, $fullEnd);
         }
 
@@ -385,7 +447,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
     /**
      * Builds the token sequence for a single matched [[ul]]/[[ol]] block.
      */
-    protected function buildExplicitListBlock($tag, $scored, $attrStr, $body, $residualBracket)
+    protected function buildExplicitListBlock($tag, $scored, $attrStr, $body, $residualBracket, $unclosed = false, $synthetic = false)
     {
         $attrs = $this->buildListAttrs($attrStr);
 
@@ -413,6 +475,22 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
         $nativeMap = array();
         $nativeCounter = 0;
         $body = $this->maskNativeListsInBody($body, $nativeMap, $nativeCounter);
+
+        // REFCORR7 C-SUSPECT4A-1: a mixed/uppercase opener nested inside a
+        // lowercase list is recognized but does not open a list on live; it
+        // closes the current item, and its would-be closer plus the item's
+        // now-redundant closer are swallowed, leaving the inner [[li]] items
+        // as ordinary siblings of the outer list.
+        $body = preg_replace_callback(
+            '/\[\[((?:ul|ol))(_)?(?:\s+[^\]]*)?\]\](.*?)\[\[\/\1\]\](\s*\[\[\/li\]\])?/is',
+            function ($m) {
+                if ($m[1] === strtolower($m[1])) {
+                    return $m[0];
+                }
+                return '[[/li]]' . $m[3];
+            },
+            $body
+        );
 
         $liPattern = '/\[\[li(?:\s+([^\s\]][^\]]*))?\]\](.*?)\[\[\/li\]\](\])?/is'; // REFCORR5 Batch 1: [[LI]]..[[/LI]] items
         $hasLi = (preg_match($liPattern, $body) === 1);
@@ -477,7 +555,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
 
             $survivingCount = 0;
             foreach ($items as $item) {
-                $formatted = $this->formatExplicitLiItem($item, $nestedMap, $nativeMap);
+                $formatted = $this->formatExplicitLiItem($item, $nestedMap, $nativeMap, $unclosed);
                 if ($formatted !== '') {
                     $emittedItems .= $formatted;
                     $survivingCount++;
@@ -495,6 +573,12 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
                 'attrs'     => $attrs,
                 'scored'    => $scored,
             ));
+            if ($unclosed) {
+                // REFCORR7 C-SUSPECT4A-3: a mixed/uppercase opener at end of
+                // source yields an unclosed list: no item/list end tokens and
+                // no boundary follower, exactly the live truncated bytes.
+                return $startTok . $emittedItems;
+            }
             $endTok = $this->wiki->addToken($this->rule, array(
                 'type'      => 'explicit_list_end',
                 'list_type' => $tag,
@@ -506,6 +590,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
                 'end_tok' => $endTok,
                 'end_key' => $endKey,
                 'scored'  => $scored,
+                'synth'   => $synthetic,
             );
 
             return $startTok . $emittedItems . $endTok . $trailAfterClose;
@@ -566,6 +651,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
                 'end_tok' => $endTok,
                 'end_key' => $endKey,
                 'scored'  => $scored,
+                'synth'   => $synthetic,
             );
 
             return $startTok . $wStart . $innerContent . $wEnd . $endTok . $trailAfterClose;
@@ -592,6 +678,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
             'end_tok' => $endTok,
             'end_key' => $endKey,
             'scored'  => $scored,
+            'synth'   => $synthetic,
         );
 
         return $startTok . $noneStart . $restoredBody . $noneEnd . $endTok . $trailAfterClose;
@@ -600,7 +687,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
     /**
      * Formats a single [[li...]]...[[/li]] item and any sibling nested lists attached to it.
      */
-    protected function formatExplicitLiItem($item, $nestedMap, $nativeMap)
+    protected function formatExplicitLiItem($item, $nestedMap, $nativeMap, $unclosed = false)
     {
         $b = $item['body'];
         $b = preg_replace('/^[ \t]+|[ \t]+$/', '', $b);
@@ -664,7 +751,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
             'attrs' => $item['attrs'],
             'lead'  => $leadAfterLiOpen,
         ));
-        $liEnd = $this->wiki->addToken($this->rule, array(
+        $liEnd = $unclosed ? '' : $this->wiki->addToken($this->rule, array(
             'type' => 'explicit_item_end',
             'lead' => $leadBeforeLiClose,
         ));
@@ -806,7 +893,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
             }
 
             if (preg_match('/^\n*$/', $rest)) {
-                if (!$scored) {
+                if (!$scored && empty($info['synth'])) {
                     $brTok = $this->wiki->addToken('Newline', array());
                     $source = substr($source, 0, $afterEnd) . $brTok . $rest;
                 }

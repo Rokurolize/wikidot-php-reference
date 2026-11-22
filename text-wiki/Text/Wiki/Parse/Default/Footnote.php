@@ -53,6 +53,30 @@ class Text_Wiki_Parse_Footnote extends Text_Wiki_Parse {
    	 	
 	    	$content = trim($matches[1]);
 
+	    // REFCORR7: an empty-Raw placeholder is the byte string
+	    // \xFF<id>\xFF naming a token ['Raw', ['text' => '']] whose render
+	    // is nothing (Tighten deletes it; the Raw renderer emits no bytes).
+	    // A body made only of such placeholders is empty on live (S4C
+	    // fn-empty, fn-ws): strip them from the stored body so the existing
+	    // `$body !== ''` emptiness test in Footnoteitem::token sees empty.
+	    // The literal remainder survives (fn-six keeps "@@"), and a
+	    // non-empty Raw token (fn-free's "x") is left intact. The same
+	    // stripping is mirrored in LeanFtml.NotesRules.footnoteProcess,
+	    // so the compared footnotes state stays byte-identical across
+	    // the two sides; no token entry is added or reindexed.
+	    $delim = preg_quote($this->wiki->delim, '/');
+	    $content = preg_replace_callback(
+	        '/' . $delim . '(\d+)' . $delim . '/',
+	        function ($m) {
+	            $tok = $this->wiki->tokens[(int) $m[1]] ?? null;
+	            if ($tok !== null && $tok[0] === 'Raw'
+	                && isset($tok[1]['text']) && $tok[1]['text'] === '') {
+	                return '';
+	            }
+	            return $m[0];
+	        },
+	        $content);
+
 	    $this->wiki->vars['footnotes'][$id-1] = $content;
         $options = array('id'=>$id);
        

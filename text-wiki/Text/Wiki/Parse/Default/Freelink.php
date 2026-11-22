@@ -190,9 +190,13 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         $slugSource = $raw;
         // C4: strip a leading _default: BEFORE transliteration (REFCORR5
         // Batch 5). Running the table first corrupts _default: into _: and
-        // the prefix no longer strips.
-        if (preg_match('/^_default:/i', $slugSource)) {
-            $slugSource = substr($slugSource, 9);
+        // the prefix no longer strips. REFCORR7: live tolerates leading
+        // space/tab before the category, so the anchored match consumes that
+        // run as part of the prefix and drops the matched byte count; a
+        // non-leading prefix and a generic colon prefix still do not match,
+        // and the bare form still strips exactly nine bytes as before.
+        if (preg_match('/^[ \t]*_default:/i', $slugSource, $defPrefix)) {
+            $slugSource = substr($slugSource, strlen($defPrefix[0]));
         }
         if (preg_match('/[^\x00-\x7F]/u', $slugSource)) {
             $slugSource = freelink_transliterate($slugSource);
