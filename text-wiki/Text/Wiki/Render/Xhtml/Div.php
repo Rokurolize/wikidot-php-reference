@@ -37,6 +37,16 @@ class Text_Wiki_Render_Xhtml_Div extends Text_Wiki_Render {
      */
     
     function token($options) {
+        // REFCORR2 correction C-STAGE2-2: a pair the parse flagged
+        // 'vanished' (an empty div with no effective attribute)
+        // renders no tags; the pair still bounds the surrounding
+        // text segments, which is what leaves the following text
+        // outside a paragraph on live. Record:
+        // conformance-refphp/contain/CORRECTION-CSTAGE2-2.md.
+        if (!empty($options['vanished'])) {
+            return '';
+        }
+
         if ($options['type'] == 'start') {
             $args = $options['args'];
             $argstr = '';

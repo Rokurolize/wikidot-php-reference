@@ -129,29 +129,58 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
                 }
             }
         }
-        ksort($args);
-
-        // An empty div whose head carries no effective attribute vanishes
-        // on live and in ftml; the surrounding blank line remains.
-        $effective = false;
-        foreach ($args as $value) {
-            if (trim($value) !== '') {
-                $effective = true;
-                break;
+        // REFCORR2 correction C-STAGE2-1: live emits a div's attributes
+        // in a fixed order, id, class, style, role, type, followed by
+        // the data-* attributes in authored order (probes
+        // muse-probe-refcorr2-diva-a1 to a8, all valid, stable and
+        // source-matching). The fossil's ksort sorted every key by
+        // name, which puts class before id and sorts the data-*
+        // attributes among themselves; the order is therefore built
+        // explicitly here, where the authored data-* order is still
+        // available. Record:
+        // conformance-refphp/contain/CORRECTION-CSTAGE2-1.md.
+        $ordered = array();
+        foreach (array('id', 'class', 'style', 'role', 'type') as $key) {
+            if (array_key_exists($key, $args)) {
+                $ordered[$key] = $args[$key];
             }
         }
-        if (!$effective && trim($content) === '') {
-            return $matches[1] . $matches[1];
+        foreach ($args as $key => $value) {
+            if (strpos($key, 'data-') === 0) {
+                $ordered[$key] = $value;
+            }
         }
+        $args = $ordered;
+
         foreach ($args as $key => $value) {
             if (trim($value) === '') {
                 unset($args[$key]);
             }
         }
 
-        $start = $this->wiki->addToken($this->rule, array(
-            'args' => $args, 'type' => 'start'));
-        $end = $this->wiki->addToken($this->rule, array('type' => 'end'));
+        // REFCORR2 correction C-STAGE2-2: an empty div whose head
+        // carries no effective attribute is suppressed on live, but
+        // the suppressed pair still counts as a block boundary for
+        // what follows: the text after it is not paragraph-wrapped
+        // and a leading newline becomes a break (probes
+        // muse-probe-refcorr2-divn-s5, s10, s11 and the R2
+        // empty-plain and score-empty captures). The earlier
+        // reference returned only the doubled leading newline and
+        // claimed no tokens, which made the following text a fresh
+        // paragraph. The pair is now claimed with a 'vanished' flag
+        // and the renderer suppresses the tags instead. Record:
+        // conformance-refphp/contain/CORRECTION-CSTAGE2-2.md.
+        $vanished = ($args === array()) && trim($content) === '';
+
+        $startOpts = array('args' => $args, 'type' => 'start');
+        $endOpts = array('type' => 'end');
+        if ($vanished) {
+            $startOpts['vanished'] = true;
+            $endOpts['vanished'] = true;
+        }
+
+        $start = $this->wiki->addToken($this->rule, $startOpts);
+        $end = $this->wiki->addToken($this->rule, $endOpts);
 
         if ($score !== '') {
             // The scored [[div_]] form strips paragraphs: blank-line runs
