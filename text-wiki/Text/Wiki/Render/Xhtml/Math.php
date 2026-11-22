@@ -38,6 +38,14 @@ class Text_Wiki_Render_Xhtml_Math extends Text_Wiki_Render {
     function token($options) {
         $content = $options['content'];
         $type = $options['type'];
+        // REFCORR3 C-SUSPECT-SERVING-1: an empty or upper-case type is
+        // rejected on live, with the equation counter already advanced at
+        // parse time. This branch needs no LatexRenderer and is reachable
+        // in the harness; the probe bytes are
+        // muse-probe-suspect-serving-math-types-ids.
+        if (! preg_match('/^[a-z][a-z0-9]*$/', (string) $type)) {
+            return '<div class="error-block">' . _('Unsupported math environment "' . $type . '"') . '</div>';
+        }
         $hashcode = md5($content . '..' . $type);
         $runData = Ozone::getRunData();
         $site = $runData->getTemp('site');
@@ -57,11 +65,12 @@ class Text_Wiki_Render_Xhtml_Math extends Text_Wiki_Render {
             $renderer->setTmpDir($tmpDir);
             $renderer->setOutputDir($dir);
             
-            if ($type == 'eqnarray') {
-                $content2 = "\\begin{eqnarray*}\n" . $content . "\n\\end{eqnarray*}";
-            } else {
-                $content2 = "\\begin{equation*}\n" . $content . "\n\\end{equation}";
-            }
+            // REFCORR3 C-SUSPECT-SERVING-1: the environment is whatever
+            // lower-case name the author gave (align, gather, equation,
+            // eqnarray, ...) — the PNG-stub scratch copy's latex-env.log
+            // records live asking for exactly \begin{TYPE} ... \end{TYPE}.
+            // The old whitelist forced eqnarray*/equation* envelopes.
+            $content2 = "\\begin{" . $type . "} " . $content . " \\end{" . $type . "}";
             $renderer->render($content2, $hashcode);
         }
         

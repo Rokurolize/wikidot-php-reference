@@ -114,16 +114,24 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
             );
         }
 
-        // live drops a whitespace-only item unless a deeper item follows it;
-        // a run with no surviving items leaves no list behind at all
+        // REFCORR3 C-SUSPECT-LISTTABLE-6: a whitespace-only item survives
+        // only when a SURVIVING deeper item follows it. The old test read the
+        // unfiltered next line, so stacked empty items left a spurious parent
+        // behind; live emits no list at all for that shape. A backward
+        // fixpoint over the raw items is the minimal correction; R2's empty
+        // parent with a real child still survives.
         $items = array();
         $total = count($raw);
-        foreach ($raw as $index => $item) {
-            $empty = (trim($item['body']) === '');
-            $hasChild = ($index + 1 < $total
-                && $raw[$index + 1]['depth'] > $item['depth']);
-            if (! $empty || $hasChild) {
-                $items[] = $item;
+        $survive = array_fill(0, $total, false);
+        for ($i = $total - 1; $i >= 0; $i--) {
+            $empty = (trim($raw[$i]['body']) === '');
+            $hasSurvivingChild = ($i + 1 < $total && $survive[$i + 1]
+                && $raw[$i + 1]['depth'] > $raw[$i]['depth']);
+            $survive[$i] = (! $empty || $hasSurvivingChild);
+        }
+        for ($i = 0; $i < $total; $i++) {
+            if ($survive[$i]) {
+                $items[] = $raw[$i];
             }
         }
         if (count($items) === 0) {
@@ -763,6 +771,26 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
                 if ($nextChar !== '' && $nextChar !== $delim && substr($rest, 1, 3) !== '[[/') {
                     $this->wiki->tokens[$endKey][1]['trail'] = "\n";
                     $source = substr($source, 0, $afterEnd) . substr($rest, 1);
+                    continue;
+                }
+            }
+
+            // REFCORR3 C-SUSPECT-G15-1: after an explicit list and a blank
+            // line, live emits the FIRST following prose run bare after a
+            // <br />, not wrapped in <p>. The single-newline case above is
+            // already bare on both sides; a blank line is not. Consume the
+            // whole newline run, put explicit_br_no_nl plus explicit_raw_nl
+            // tokens between the closer and the prose (so Paragraph never
+            // forms a fresh plain-text match), and give the closer a trailing
+            // newline. Scored token followers are left to the existing paths.
+            if (preg_match('/^\n{2,}/', $rest, $nm)) {
+                $nlLen = strlen($nm[0]);
+                $nextChar = isset($rest[$nlLen]) ? $rest[$nlLen] : '';
+                if ($nextChar !== '' && $nextChar !== $delim && substr($rest, $nlLen, 3) !== '[[/') {
+                    $brTok = $this->wiki->addToken($this->rule, array('type' => 'explicit_br_no_nl'));
+                    $nlTok = $this->wiki->addToken($this->rule, array('type' => 'explicit_raw_nl'));
+                    $this->wiki->tokens[$endKey][1]['trail'] = "\n";
+                    $source = substr($source, 0, $afterEnd) . $brTok . $nlTok . substr($rest, $nlLen);
                     continue;
                 }
             }

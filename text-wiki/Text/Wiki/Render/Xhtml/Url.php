@@ -96,13 +96,16 @@ class Text_Wiki_Render_Xhtml_Url extends Text_Wiki_Render {
             // R2-inline1 C3: live's Wikidot renderer spells the new-tab clause
             // as target="_blank" (corpus pin
             // test/link/star-killed-autolink-fallback/wikidot.html); the fossil
-            // emitted an onclick window.open fragment. The authored target is
-            // suppressed on on-page anchors and mailto: links, as before.
+            // emitted an onclick window.open fragment.
+            // REFCORR3 C-SUSPECT-INLINE-1/2: the fossil's extra suppression of
+            // the authored target on on-page anchors and mailto: links is NOT
+            // live behavior. Fresh probes muse-probe-suspect-inline-url-anchor-star,
+            // -url-anchor-star2, -url-mailto-lower and -url-mailto-star2 show live
+            // keeping target="_blank" on all four, while the reference dropped it;
+            // the unstarred controls keep no target on both sides. The suppression
+            // block is therefore removed. The "#" -> "javascript:;" substitution
+            // above is unaffected. The HTMLCHARS ENT_COMPAT escapes are kept.
             $target = isset($options['target']) ? $options['target'] : $this->getConf('target');
-            if ($href[0] == '#' ||
-            	strtolower(substr($href, 0, 7)) == 'mailto:') {
-                $target = '';
-            }
 
             // generate a regular link (not an image)
             $text = htmlspecialchars($text, ENT_COMPAT, 'UTF-8');

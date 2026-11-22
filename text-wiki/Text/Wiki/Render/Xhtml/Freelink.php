@@ -53,7 +53,14 @@ class Text_Wiki_Render_Xhtml_Freelink extends Text_Wiki_Render_Xhtml_Wikilink {
             if ($nonbr) {
                 $text = str_replace(' ', '&nbsp;', $text);
             }
-            return '<a href="' . htmlspecialchars($url, ENT_COMPAT, 'UTF-8') . '">' . $text . '</a>';
+            // REFCORR3 C-SUSPECT-SERVING-2: the parse rule puts target
+            // "_blank" on a starred URL; a plain URL has no target option
+            // and its pinned output is unchanged.
+            $target = isset($options['target']) ? $options['target'] : '';
+            $targetAttr = $target !== ''
+                ? ' target="' . htmlspecialchars($target, ENT_COMPAT, 'UTF-8') . '"'
+                : '';
+            return '<a' . $targetAttr . ' href="' . htmlspecialchars($url, ENT_COMPAT, 'UTF-8') . '">' . $text . '</a>';
         }
 
         // The fossil site branch (cross-site http://site.URL_DOMAIN/page) is

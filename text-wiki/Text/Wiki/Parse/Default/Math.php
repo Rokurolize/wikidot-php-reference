@@ -76,10 +76,15 @@ class Text_Wiki_Parse_Math extends Text_Wiki_Parse {
 	    }
 	    
 	    $args = $this->getAttrs($matches[2]);
-	   	$type = $args['type'];
-	   	if(!$type || !in_array($type, array('equation', 'eqnarray'))){
-	   		$type = 'equation';
-	   	}	
+	   	// REFCORR3 C-SUSPECT-SERVING-1: live preserves any arbitrary
+	   	// lower-case environment name, defaults an ABSENT type to "align",
+	   	// and rejects an empty or upper-case value with an error block. The
+	   	// old two-name whitelist silently collapsed everything else to
+	   	// "equation". The decision (and the render's validation) is by the
+	   	// value's case, so the raw value is kept here for the renderer;
+	   	// the equation counter above has already advanced for every block,
+	   	// including rejected ones, as live's ids 3/4 show.
+	   	$type = array_key_exists('type', $args) ? $args['type'] : 'align';
     	
         $options = array('label'=>$label, 'content'=>$content, 'id'=>$id, 'type' => $type);
         self::$equationsArray[$label] = $id;

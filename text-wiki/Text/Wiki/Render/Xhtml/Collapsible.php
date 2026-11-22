@@ -37,7 +37,12 @@ class Text_Wiki_Render_Xhtml_Collapsible extends Text_Wiki_Render {
         if (!isset($text) || $text === '' || $text === '0') {
             $text = $show ? '+ show block' : "\xE2\x80\x93 hide block";
         }
-        $text = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+        // SUSPECT-INTERACT C1: live leaves a single quote raw in a label
+        // (probe muse-probe-suspect-interact-c1-coll-apostrophe: live
+        // "it's"/"don't" versus the former ENT_QUOTES "it&#039;s"/
+        // "don&#039;t"). ENT_COMPAT keeps the other escapes and the
+        // ordered replacement passes below unchanged.
+        $text = htmlspecialchars($text, ENT_COMPAT, 'UTF-8');
         $text = str_replace(
             array(' ', "\t", "\n", "\r"),
             array('&nbsp;', '&nbsp;&nbsp;&nbsp;&nbsp;', ' ', ''),

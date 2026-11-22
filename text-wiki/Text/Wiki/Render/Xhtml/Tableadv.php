@@ -13,7 +13,8 @@
  * Advanced table renderer, corrected against live Wikidot behavior.
  *
  * The advanced table form carries no automatic css class; only authored
- * attributes are emitted, sorted by name. Tag bodies are laid out with the
+ * attributes are emitted, in the wikidot rank order fixed at parse time
+ * (REFCORR3 C-R45-1). Tag bodies are laid out with the
  * newlines live uses, and a header cell close is determined by the token's
  * header flag set from the authored closer name.
  */
@@ -28,7 +29,9 @@ class Text_Wiki_Render_Xhtml_Tableadv extends Text_Wiki_Render {
         $rendered = '';
         foreach ($attrs as $key => $value) {
             $rendered .= ' ' . $key . '="'
-                . htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')
+                // REFCORR3 C-SUSPECT-LISTTABLE-7: live leaves apostrophes
+                // raw in attribute values, as List's renderer already does.
+                . htmlspecialchars((string)$value, ENT_COMPAT, 'UTF-8')
                 . '"';
         }
         $header = !empty($options['header']);

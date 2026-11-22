@@ -86,7 +86,12 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
         
         // convert the list of recognized schemes to a regex OR,
         $schemes = $this->getConf('schemes', $default['schemes']);
-        $this->url = str_replace('#delim#', $this->wiki->delim, '#(?:' . (is_array($schemes) ? implode('|', $schemes) : $schemes) . ')://' . $this->getConf('host_regexp', $default['host_regexp']) . $this->getConf('path_regexp', $default['path_regexp']) . '#');
+        // REFCORR3 C-SUSPECT-SERVING-3: anchor the scheme at the head of the
+        // link value. The old unanchored pattern claimed a value whose only
+        // valid scheme appears embedded later (link="://x http://example.com/y")
+        // and rendered a malformed clickable image; live leaves the whole
+        // opener literal. The accepted controls (http, gopher) are unchanged.
+        $this->url = str_replace('#delim#', $this->wiki->delim, '#^(?:' . (is_array($schemes) ? implode('|', $schemes) : $schemes) . ')://' . $this->getConf('host_regexp', $default['host_regexp']) . $this->getConf('path_regexp', $default['path_regexp']) . '#');
     }
 
     /**

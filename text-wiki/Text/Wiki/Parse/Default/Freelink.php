@@ -138,6 +138,17 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         $leadingSpace = (bool) preg_match('/^[ \t]/', $raw);
         $trimmed = trim($raw);
 
+        // REFCORR3 C-SUSPECT-SERVING-2: a leading star is live's new-tab
+        // marker on an external URL triple link, not part of the target. The
+        // old test passed the starred target to freelink_is_url, so it was
+        // slugified into a local newpage link. Only the starred URL branch
+        // changes; plain URLs and local star-prefixed page names stay as-is.
+        $starUrl = false;
+        if (! $leadingSpace && isset($trimmed[0]) && $trimmed[0] === '*') {
+            $starUrl = true;
+            $trimmed = substr($trimmed, 1);
+        }
+
         // C5: a bare, non-leading-space URL is an external link. The label is
         // the URL itself when no pipe label was authored.
         $url = null;
@@ -157,6 +168,11 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
                 'url' => $url,
                 'textFromTitle' => null,
             );
+            // Only a starred URL adds the target option, so the pinned
+            // plain-URL token shape is byte-unchanged.
+            if ($starUrl) {
+                $options['target'] = '_blank';
+            }
             return $this->wiki->addToken($this->rule, $options);
         }
 

@@ -19,8 +19,9 @@
  * [[hcell ...]] blocks. Whitespace between the blocks is discarded. A table
  * with no row, a row with no cell, or any non-row or non-cell text in those
  * bodies is not a table at all and stays literal. The closer name decides
- * whether a cell renders as a header cell, so [[cell]]x[[/hcell]] is a header
- * and [[hcell]]x[[/cell]] is not. Attribute heads tolerate a quoted ]] on a
+ * whether a cell renders as a header cell, but only the exact lower-case
+ * [[/hcell]] does: [[cell]]X[[/HCELL]] is a plain cell on live (REFCORR3
+ * C-SUSPECT-LISTTABLE-2). Attribute heads tolerate a quoted ]] on a
  * table, while row and cell heads use the plain token grammar. Nested tables
  * are handled recursively before the enclosing rows and cells are split.
  */
@@ -29,9 +30,10 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
     public $regex = '~\[\[table((?:"[^"]*"|[^\]])*)\]\]((?:(?R)|.)*?)\[\[/table\]\]~si';
 
     // The Wikitext safe-attribute allowlist, lower-case names only at this
-    // block level; data- and aria- names are allowed with a safe suffix.
+    // block level; data- names are allowed. aria- names and align are dropped
+    // on live (REFCORR3 C-R45-2, C-R45-3).
     private $safeAttrs = array(
-        'accept', 'align', 'alt', 'autocapitalize', 'autoplay', 'background',
+        'accept', 'alt', 'autocapitalize', 'autoplay', 'background',
         'bgcolor', 'border', 'buffered', 'checked', 'cite', 'class', 'cols',
         'colspan', 'contenteditable', 'controls', 'coords', 'datetime',
         'decoding', 'default', 'dir', 'dirname', 'disabled', 'download',
@@ -75,7 +77,10 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
             }
             $cellsOut = '';
             foreach ($cells as $cell) {
-                $isHeader = (strtolower($cell[4]) === 'hcell');
+                // REFCORR3 C-SUSPECT-LISTTABLE-2: the opener grammar stays
+                // case-insensitive, but header-ness comes only from the exact
+                // lower-case closer. An upper-case [[/HCELL]] is a plain cell.
+                $isHeader = ($cell[4] === 'hcell');
                 $attrs = $this->buildAttrs($cell[2], 'cell');
                 $content = $cell[3];
                 // Keep paragraph boundaries when the authored body carries
@@ -132,10 +137,9 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
         if (strpos($key, 'data-') === 0) {
             return true;
         }
-        if (strpos($key, 'aria-') === 0) {
-            $suffix = substr($key, 5);
-            return $suffix !== '' && preg_match('/^[A-Za-z0-9-]+$/', $suffix) === 1;
-        }
+        // REFCORR3 C-R45-2 / C-SUSPECT-LISTTABLE-8: live drops aria-*
+        // attributes on advanced tables; the ftml ranking's "other" class
+        // does not rescue them. No aria- branch here.
         return in_array($key, $this->safeAttrs, true);
     }
 
@@ -171,7 +175,25 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
             }
             $attrs[$key] = $normalized;
         }
-        ksort($attrs);
+        // REFCORR3 C-R45-1: live orders attributes by a fixed wikidot rank
+        // (id, class, style, role, type, then data-* in authored order, then
+        // the remaining attributes in authored order), not by name. The
+        // fossil's ksort put colspan before data-name; MEASURE-TABLE showed
+        // ftml already emits live's raw order. uksort is stable in PHP 8,
+        // so equal-ranked keys keep their authored order.
+        $rank = function ($key) {
+            $named = array('id' => 0, 'class' => 1, 'style' => 2,
+                'role' => 3, 'type' => 4);
+            if (isset($named[$key])) {
+                return $named[$key];
+            }
+            return strpos($key, 'data-') === 0 ? 5 : 6;
+        };
+        uksort($attrs, function ($a, $b) use ($rank) {
+            $ra = $rank($a);
+            $rb = $rank($b);
+            return $ra === $rb ? 0 : ($ra < $rb ? -1 : 1);
+        });
         return $attrs;
     }
 }

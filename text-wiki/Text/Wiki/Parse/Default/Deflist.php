@@ -130,9 +130,19 @@ class Text_Wiki_Parse_Deflist extends Text_Wiki_Parse {
 
     function termRendersEmpty($term)
     {
-        // Inline rules that render to nothing (notably Comment) have
-        // already become delimiter-wrapped token placeholders at this
-        // point in the pipeline, so strip those before testing emptiness.
-        return trim(preg_replace('/\xFF\d+\xFF/', '', $term)) === '';
+        // REFCORR3 C-SUSPECT-LISTTABLE-1: of the inline rules that have
+        // already become delimiter-wrapped placeholders at this point, only
+        // Comment renders to nothing on live. Anchor, User and Bibcite
+        // placeholders keep a visible <dt>. Strip only Comment's.
+        $wiki = $this->wiki;
+        $stripped = preg_replace_callback('/\xFF(\d+)\xFF/',
+            function ($m) use ($wiki) {
+                $id = (int) $m[1];
+                if (isset($wiki->tokens[$id]) && $wiki->tokens[$id][0] === 'Comment') {
+                    return '';
+                }
+                return $m[0];
+            }, $term);
+        return trim($stripped) === '';
     }
 }

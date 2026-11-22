@@ -41,13 +41,20 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
             while ($j < $n && $src[$j] === '@') $j++;
             $run = $j - $i;
             if ($run > 2) {
-                // A run of three or more @ with no separate closer is itself
-                // the whole construct (ftml's meta-raw special cases).
+                // A run of four or more @ with no closer on its own line is
+                // itself the whole construct (ftml's meta-raw special cases).
+                // C-SUSPECT-RAWHEAD-1/4: a bare run of exactly three is NOT
+                // consumed here — live keeps all three @ (bare-at3) and a
+                // three-run still forms a cross-line raw when a closer exists
+                // (xline-open3, xline-open3b). Only run>=4 keeps the
+                // line-confined early exit. The kept count is $run for a bare
+                // three-run and $run-4 otherwise (bare-at5/6/7).
                 $close = strpos($src, '@@', $j);
                 $nl = strpos($src, "\n", $j);
                 $lineEnd = $nl === false ? $n : $nl;
-                if ($close === false || $close >= $lineEnd) {
-                    $out .= str_repeat('@', max(0, $run - 4));
+                if ($close === false || ($run >= 4 && $close >= $lineEnd)) {
+                    $keep = ($run === 3) ? 3 : $run - 4;
+                    $out .= str_repeat('@', $keep);
                     $i = $j;
                     continue;
                 }
@@ -65,17 +72,35 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                 continue;
             }
             // Cross-line forms: @@\n@@ -> " ", @@x\n@@ -> Raw(x).
-            if (substr($body, -1) === "\n" && $closeRun === 2) {
-                $trimmed = rtrim($body, "\n");
-                if (strpos($trimmed, "\n") === false) {
-                    if ($trimmed === '') {
-                        $out .= ' ';
-                    } else {
-                        $out .= $this->wiki->addToken($this->rule, array('text' => $trimmed));
-                    }
-                    $i = $k;
-                    continue;
+            // C-SUSPECT-RAWHEAD-2: a closer run of two or more on the next
+            // line is a close; bytes beyond the first two are literal @
+            // (xline-close3 -> one, xline-close4 -> two).
+            // C-SUSPECT-RAWHEAD-3: the body must contain exactly one newline,
+            // its trailing one; rtrim of several newlines is not live
+            // (xline-two-nl and xline-empty2 abort instead of matching).
+            // C-SUSPECT-RAWHEAD-4: a three-run opener's extra @ belongs to the
+            // body (xline-open3/3b -> Raw("@x")); run>=4 never reaches here.
+            if (substr($body, -1) === "\n" && substr_count($body, "\n") === 1
+                && $closeRun >= 2) {
+                $trimmed = substr($body, 0, -1);
+                if ($trimmed === '') {
+                    $out .= ' ';
+                } else {
+                    // $lead is assigned below the cross-line branch in the
+                    // original scanner; recompute the opener's extra @ here.
+                    $text = (($run - 2) === 1 ? '@' : '') . $trimmed;
+                    $out .= $this->wiki->addToken($this->rule, array('text' => $text));
                 }
+                if ($closeRun > 2) {
+                    // The consumed cross-line newline surfaces as one space
+                    // before the literal extra @ (xline-close3/3b/4 and
+                    // xline-close3-nospace: the space is present even with no
+                    // source space after the closer run).
+                    $out .= ' ';
+                    $out .= str_repeat('@', $closeRun - 2);
+                }
+                $i = $k;
+                continue;
             }
             // A newline anywhere else in the body aborts the construct.
             if (strpos($body, "\n") !== false) {
