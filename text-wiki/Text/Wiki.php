@@ -865,6 +865,231 @@ class Text_Wiki {
 
     /**
     *
+    * Render a document whose post-parse text contains a literal U+FFFD.
+    *
+    * pre() turns every U+FFFD into the delimiter byte, so a literal
+    * character is indistinguishable from a placeholder afterwards. This
+    * path escapes the same way pre() does, but remembers which delimiter
+    * bytes were original placeholders and which were literal characters.
+    * A real placeholder is still rendered. One literal delimiter sitting
+    * immediately in front of a placeholder leaks that token's fresh-
+    * document index (the in-document id minus the document's first id,
+    * plus one: live's counter presents the paragraph-end token as 2
+    * where a fresh reference document numbers it 1) and does not render
+    * the placeholder; a second placeholder with nothing between them is
+    * swallowed the same way and its index is leaked too, which is how
+    * adjacent blocks merge. Any other literal delimiter is dropped.
+    * Two or more literal delimiters in a row are dropped without a leak,
+    * and the following placeholder still renders. The resulting HTML is
+    * the input live's purifyHtml tidy pass repairs: it closes open
+    * blocks, drops an empty paragraph, removes a stray end tag, collapses
+    * the space a dropped character left behind, and turns a paragraph end
+    * trapped inside a heading into the break sequence live serves.
+    *
+    * @access private
+    *
+    * @param string $format The already-normalized format name.
+    *
+    * @return string The repaired XHTML, trimmed the way a page-content
+    * capture is stripped.
+    *
+    */
+
+    function renderLiteralUfffdRecovery($format)
+    {
+        foreach (array_keys($this->parseObj) as $rule) {
+            $this->loadRenderObj($format, $rule);
+        }
+
+        $orig = "\xEE\x80\x80"; // U+E000, stands in for an original delimiter
+        $fake = "\xEE\x80\x81"; // U+E001, stands in for a literal U+FFFD
+        $ufffd = "\xEF\xBF\xBD";
+        $src = str_replace($this->delim, $orig, $this->source);
+        $src = str_replace($ufffd, $fake, $src);
+
+        $type = HTML_SPECIALCHARS;
+        $quotes = ENT_COMPAT | ENT_SUBSTITUTE;
+        if (is_object($this->formatObj[$format])) {
+            $type = $this->formatObj[$format]->getConf('translate', HTML_ENTITIES);
+            $quotes = $this->formatObj[$format]->getConf('quotes', ENT_COMPAT) | ENT_SUBSTITUTE;
+            $charset = $this->formatObj[$format]->getConf('charset', 'UTF-8');
+        }
+        if ($type === HTML_ENTITIES) {
+            $src = @htmlentities($src, $quotes, $charset);
+        } elseif ($type === HTML_SPECIALCHARS) {
+            $src = @htmlspecialchars($src, $quotes);
+        }
+        // ENT_SUBSTITUTE on any other invalid byte yields U+FFFD, which
+        // pre() would also turn back into a delimiter.
+        $src = str_replace($ufffd, $fake, $src);
+
+        $bytes = '';
+        $origin = '';
+        $len = strlen($src);
+        $origLen = strlen($orig);
+        $fakeLen = strlen($fake);
+        for ($i = 0; $i < $len; ) {
+            if (substr($src, $i, $origLen) === $orig) {
+                $bytes .= $this->delim;
+                $origin .= 'O';
+                $i += $origLen;
+            } elseif (substr($src, $i, $fakeLen) === $fake) {
+                $bytes .= $this->delim;
+                $origin .= 'F';
+                $i += $fakeLen;
+            } else {
+                $bytes .= $src[$i];
+                $origin .= 'T';
+                $i++;
+            }
+        }
+
+        $tokens = $this->tokens;
+        $first = $tokens ? min(array_keys($tokens)) : 0;
+        $n = strlen($bytes);
+        $html = '';
+        $i = 0;
+        while ($i < $n) {
+            if ($bytes[$i] !== $this->delim) {
+                $j = $i;
+                while ($j < $n && $bytes[$j] !== $this->delim) {
+                    $j++;
+                }
+                $html .= substr($bytes, $i, $j - $i);
+                $i = $j;
+                continue;
+            }
+            $tok = $this->matchOriginalToken($bytes, $origin, $i, $tokens);
+            if ($tok !== null) {
+                $html .= $this->renderTokenId($tok['id']);
+                $i = $tok['next'];
+                continue;
+            }
+            $j = $i;
+            $fakeCount = 0;
+            while ($j < $n && $bytes[$j] === $this->delim && $origin[$j] === 'F') {
+                $fakeCount++;
+                $j++;
+            }
+            $tok = ($j < $n) ? $this->matchOriginalToken($bytes, $origin, $j, $tokens) : null;
+            if ($tok !== null && $fakeCount === 1) {
+                $html .= (string)($tok['id'] - $first + 1);
+                $after = $tok['next'];
+                $tok2 = ($after < $n) ? $this->matchOriginalToken($bytes, $origin, $after, $tokens) : null;
+                if ($tok2 !== null) {
+                    $html .= (string)($tok2['id'] - $first + 1);
+                    $i = $tok2['next'];
+                } else {
+                    $i = $after;
+                }
+                continue;
+            }
+            if ($fakeCount > 0) {
+                $i = $j;
+                continue;
+            }
+            $i++;
+        }
+
+        $this->source = $bytes;
+        return $this->purifyRecoveredHtml($html);
+    }
+
+    /**
+    *
+    * A real placeholder is an original delimiter, digits, and an original
+    * delimiter, naming a token this document actually created.
+    *
+    * @access private
+    *
+    * @return array|null id and the index just past the closing delimiter.
+    *
+    */
+
+    function matchOriginalToken($bytes, $origin, $i, $tokens)
+    {
+        $n = strlen($bytes);
+        if ($i >= $n || $bytes[$i] !== $this->delim || $origin[$i] !== 'O') {
+            return null;
+        }
+        $j = $i + 1;
+        if ($j >= $n || !ctype_digit($bytes[$j])) {
+            return null;
+        }
+        $k = $j;
+        while ($k < $n && ctype_digit($bytes[$k])) {
+            $k++;
+        }
+        if ($k >= $n || $bytes[$k] !== $this->delim || $origin[$k] !== 'O') {
+            return null;
+        }
+        $id = (int)substr($bytes, $j, $k - $j);
+        if (!isset($tokens[$id])) {
+            return null;
+        }
+        return array('id' => $id, 'next' => $k + 1);
+    }
+
+    /**
+    *
+    * Render one token id, or nothing when that rule has no renderer.
+    *
+    * @access private
+    *
+    * @param int $id The token id.
+    *
+    * @return string
+    *
+    */
+
+    function renderTokenId($id)
+    {
+        $rule = $this->tokens[$id][0];
+        $opts = $this->tokens[$id][1];
+        if (!isset($this->renderObj[$rule]) || !is_object($this->renderObj[$rule])) {
+            return '';
+        }
+        return $this->renderObj[$rule]->token($opts);
+    }
+
+    /**
+    *
+    * Live's purifyHtml: wrap the fragment, run tidy as XHTML with no
+    * indent and no wrap, and return the body. The capture extractor
+    * strips the page-content text, so the body is trimmed.
+    *
+    * @access private
+    *
+    * @param string $code The unrepaired fragment.
+    *
+    * @return string
+    *
+    */
+
+    function purifyRecoveredHtml($code)
+    {
+        $tidy = '/usr/bin/tidy';
+        if (!is_executable($tidy)) {
+            return $code;
+        }
+        $head = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  <head>    <title>Just A Wrapper</title><meta http-equiv="content-type" content="text/html;charset=UTF-8"/>  </head> <!--wrapdelimiter--><body>';
+        $tail = ' </body><!--wrapdelimiter--></html>';
+        $tmp = tempnam(sys_get_temp_dir(), 'ufffd');
+        file_put_contents($tmp, $head . $code . $tail);
+        $cmd = $tidy . ' -q -utf8 --doctype strict --indent no --output-xhtml yes --wrap 0 --show-warnings no --show-errors 0 ' . escapeshellarg($tmp) . ' 2>/dev/null';
+        $cleaned = shell_exec($cmd);
+        unlink($tmp);
+        if (!is_string($cleaned) || strpos($cleaned, '<!--wrapdelimiter-->') === false) {
+            return $code;
+        }
+        $parts = explode('<!--wrapdelimiter-->', $cleaned);
+        $out = $parts[1];
+        $out = str_replace(array('<body>', '</body>'), '', $out);
+        return trim($out);
+    }
+
+    /**
+    *
     * Renders tokens back into the source text, based on the requested format.
     *
     * @access public
@@ -898,6 +1123,13 @@ class Text_Wiki {
         	return $result;
         }
 
+        // A literal U+FFFD in post-parse text collides with the delimiter
+        // bytes once pre() runs (R-UFFFD-1). Live recovers that stream and
+        // then tidy-repairs it (WikiTransformation::purifyHtml). Documents
+        // with no literal U+FFFD take the original loop unchanged.
+        if (strpos($this->source, "\xEF\xBF\xBD") !== false) {
+            $output .= $this->renderLiteralUfffdRecovery($format);
+        } else {
         // pre-rendering activity
         if (is_object($this->formatObj[$format])) {
             $output .= $this->formatObj[$format]->pre();
@@ -950,6 +1182,7 @@ class Text_Wiki {
                     $output .= $char;
                 }
             }
+        }
         }
 
         // post-rendering activity

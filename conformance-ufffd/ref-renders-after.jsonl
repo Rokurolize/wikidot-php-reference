@@ -1,0 +1,36 @@
+{"id":"control","output":"<p>alpha bravo charlie delta<\/p>\n\n"}
+{"id":"plain-mid","output":"<p>alpha bravo charlie delta<\/p>"}
+{"id":"plain-start","output":"<p>bravo charlie delta<\/p>"}
+{"id":"plain-end","output":"<p>alpha bravo charlie 2<\/p>"}
+{"id":"plain-only","output":"<p>2<\/p>"}
+{"id":"pair-text","output":"<p>alpha bravo charlie delta<\/p>"}
+{"id":"pair-digits","output":"<p>alpha 42 charlie delta<\/p>"}
+{"id":"near-token","output":"<p>alpha <strong>boldone<\/strong> beta gamma <strong>boldtwo<\/strong> delta epsilon<\/p>"}
+{"id":"swallow-bold","output":"<p>alpha beta <strong>boldswallowed<\/strong> gamma delta<\/p>"}
+{"id":"inside-bold","output":"<p>alpha <strong>bold inside<\/strong> omega tail<\/p>"}
+{"id":"entity-dec","output":"<p>alpha &amp;#65533; bravo charlie<\/p>\n\n"}
+{"id":"entity-hex","output":"<p>alpha &amp;#xFFFD; bravo charlie<\/p>\n\n"}
+{"id":"code-token","output":"\n<div class=\"code\">\n<pre><code>x \ufffd y<\/code><\/pre><\/div>\n\n<p>after alpha bravo<\/p>\n\n"}
+{"id":"raw-token","output":"<p>[[raw]]x y[[\/raw]] after alpha bravo<\/p>"}
+{"id":"heading","output":"<h1 id=\"toc0\"><span>Head Word<\/span><\/h1>\n<p>alpha bravo charlie<\/p>"}
+{"id":"second-para","output":"<p>first para alpha<\/p>\n<p>second para bravo tail<\/p>"}
+{"id":"list-item","output":"<ul>\n<li>item one<\/li>\n<li>item two tail<\/li>\n<\/ul>"}
+{"id":"inc-target","output":"<p>included alpha bravo tail end<\/p>"}
+{"id":"includer","output":"<p>before text [[include muse-probe-ufffd-inc-target]] after text<\/p>\n\n"}
+{"id":"end-after-bold","output":"<p>alpha <strong>bold<\/strong> 2<\/p>"}
+{"id":"end-first-para","output":"<p>alpha 23bravo charlie<\/p>"}
+{"id":"end-both-para","output":"<p>alpha 23bravo 4<\/p>"}
+{"id":"only-two","output":""}
+{"id":"pair-zero","output":"<p>alpha 0 bravo charlie<\/p>"}
+{"id":"digits-text","output":"<p>alpha 42 bravo charlie<\/p>"}
+{"id":"unclosed-digits","output":"<p>alpha 42 bravo charlie<\/p>"}
+{"id":"end-list","output":"<ul>\n<li>item one 34item two<\/li>\n<\/ul>"}
+{"id":"end-heading","output":"<h1 id=\"toc0\"><span>Head Word 23body alpha bravo<br \/>\n<br \/><\/span><\/h1>"}
+{"id":"start-bold-after","output":"<p><strong>bold<\/strong> tail end<\/p>"}
+{"id":"mid-no-space","output":"<p>alphabravo charlie<\/p>"}
+{"id":"end-no-space","output":"<p>alpha bravo2<\/p>"}
+{"id":"spaces-control","output":"<p>alpha bravo charlie delta<\/p>\n\n"}
+{"id":"fake-after-bold","output":"<p>alpha <strong>bold<\/strong> omega tail<\/p>"}
+{"id":"fake-before-bold","output":"<p>alpha 3bold omega tail<\/p>"}
+{"id":"fake-space-fake","output":"<p>alpha bravo charlie<\/p>"}
+{"id":"fake-digit-mid","output":"<p>alpha 9 bravo<\/p>\n<p>charlie delta<\/p>"}
