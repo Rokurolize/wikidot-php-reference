@@ -45,22 +45,12 @@ class Text_Wiki_Render_Xhtml_Date extends Text_Wiki_Render {
         return ($negative && $digits !== '0' ? '-' : '') . $digits;
      }
 
-    // The format class keeps only unreserved ASCII bytes and percent-encodes every other byte, with live's raw-escape placeholders represented as %FF<number>%FF.
+    // The format class keeps only unreserved ASCII bytes and percent-encodes every other byte. REFCORR5 Batch 4: the former special case that turned a literal @@<digits>@@ into %FF<digits>%FF was fabricated; real Raw-placeholder delimiter bytes (0xFF) already encode to %FF under this generic loop, while literal @@ encodes to %40%40 as live does.
     function encodeFormat($format){
         $out = '';
         $len = strlen($format);
         for ($i = 0; $i < $len; $i++) {
             $byte = $format[$i];
-            if ($byte === '@' && $i + 1 < $len && $format[$i + 1] === '@') {
-                $j = $i + 2;
-                $digits = '';
-                while ($j < $len && $format[$j] >= '0' && $format[$j] <= '9') { $digits .= $format[$j]; $j++; }
-                if ($digits !== '' && $j + 1 < $len && $format[$j] === '@' && $format[$j + 1] === '@') {
-                    $out .= '%FF' . $digits . '%FF';
-                    $i = $j + 1;
-                    continue;
-                }
-            }
             if (($byte >= 'A' && $byte <= 'Z') || ($byte >= 'a' && $byte <= 'z') || ($byte >= '0' && $byte <= '9') || $byte === '-' || $byte === '_' || $byte === '.' || $byte === '~') {
                 $out .= $byte;
             } else {

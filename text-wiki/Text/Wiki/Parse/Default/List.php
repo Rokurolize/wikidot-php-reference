@@ -251,7 +251,9 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
     function parse()
     {
         parent::parse();
-        if (strpos($this->wiki->source, '[[ul') !== false || strpos($this->wiki->source, '[[ol') !== false) {
+        // REFCORR5 Batch 1: recognition is case-insensitive. An uppercase
+        // [[UL]] opener must still enter list mode (it never closes on live).
+        if (stripos($this->wiki->source, '[[ul') !== false || stripos($this->wiki->source, '[[ol') !== false) {
             $this->parseExplicitLists();
         }
     }
@@ -264,7 +266,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
         $this->explicitBlocks = array();
         $source = $this->wiki->source;
 
-        $tagPattern = '/\[\[(ul|ol)(_)?(?:\s+([^\s\]][^\]]*))?\]\]|\[\[\/(ul|ol)\]\](\])?/';
+        $tagPattern = '/\[\[(ul|ol)(_)?(?:\s+([^\s\]][^\]]*))?\]\]|\[\[\/(ul|ol)\]\](\])?/i'; // REFCORR5 Batch 1: case-insensitive recognition
 
         $guard = 0;
         while ($guard++ < 500) {
@@ -274,12 +276,25 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
 
             $stack = array();
             $matchedPair = null;
+            $firstUpperOpener = null;
 
             foreach ($matches as $m) {
                 $pos = $m[0][1];
                 $len = strlen($m[0][0]);
 
                 if (isset($m[1][0]) && $m[1][0] !== '') {
+                    // REFCORR5 Batch 1: keep the first mixed/uppercase opener;
+                    // live enters list mode for it but never closes, so the
+                    // body runs to end of source when no closer pairs.
+                    if ($firstUpperOpener === null && strtolower($m[1][0]) !== $m[1][0]) {
+                        $firstUpperOpener = array(
+                            'tag'     => $m[1][0],
+                            'scored'  => (isset($m[2][0]) && $m[2][0] === '_'),
+                            'attrs'   => isset($m[3][0]) ? $m[3][0] : '',
+                            'start'   => $pos,
+                            'openLen' => $len,
+                        );
+                    }
                     $stack[] = array(
                         'tag'     => $m[1][0],
                         'scored'  => (isset($m[2][0]) && $m[2][0] === '_'),
@@ -288,7 +303,11 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
                         'openLen' => $len,
                     );
                 } else {
-                    $closeTag = $m[4][0];
+                    // REFCORR5 Batch 1: the opener stack keeps the raw case
+                    // while the closer is lowercased, so a lowercase opener
+                    // pairs with an uppercase closer but an uppercase opener
+                    // never closes and absorbs the following text.
+                    $closeTag = strtolower($m[4][0]);
                     $residualBracket = (isset($m[5][0]) && $m[5][0] === ']');
                     $foundIdx = -1;
                     for ($i = count($stack) - 1; $i >= 0; $i--) {
@@ -311,7 +330,19 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
             }
 
             if ($matchedPair === null) {
-                break;
+                if ($firstUpperOpener !== null) {
+                    // An uppercase opener that never pairs still forms an
+                    // unclosed list: its body is the residual source to EOF.
+                    $matchedPair = array(
+                        'opener'          => $firstUpperOpener,
+                        'closeStart'      => strlen($source),
+                        'closeLen'        => 0,
+                        'residualBracket' => false,
+                        'synthetic'       => true,
+                    );
+                } else {
+                    break;
+                }
             }
 
             $op = $matchedPair['opener'];
@@ -319,6 +350,22 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
             $bodyLen = $matchedPair['closeStart'] - $bodyStart;
             $body = substr($source, $bodyStart, $bodyLen);
             $fullEnd = $matchedPair['closeStart'] + $matchedPair['closeLen'];
+
+            // REFCORR5 Batch 1: an uppercase opener's would-be closer is
+            // swallowed into the last item rather than ending the list, and
+            // the residual tail is absorbed there too (f06). Fold a run of
+            // three or more newlines left by the removed closer to two, the
+            // live shape of a swallowed closer followed by a paragraph.
+            if (!empty($matchedPair['synthetic'])) {
+                $body = preg_replace('/\[\[\/(?:ul|ol)\]\]/i', '', $body);
+                $liClosePos = strripos($body, '[[/li]]');
+                if ($liClosePos !== false) {
+                    $liClose = substr($body, $liClosePos, 7);
+                    $tail = substr($body, $liClosePos + 7);
+                    $tail = preg_replace('/\n{3,}/', "\n\n", $tail);
+                    $body = substr($body, 0, $liClosePos) . $tail . $liClose;
+                }
+            }
 
             $replacement = $this->buildExplicitListBlock(
                 $op['tag'],
@@ -367,7 +414,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
         $nativeCounter = 0;
         $body = $this->maskNativeListsInBody($body, $nativeMap, $nativeCounter);
 
-        $liPattern = '/\[\[li(?:\s+([^\s\]][^\]]*))?\]\](.*?)\[\[\/li\]\](\])?/s';
+        $liPattern = '/\[\[li(?:\s+([^\s\]][^\]]*))?\]\](.*?)\[\[\/li\]\](\])?/is'; // REFCORR5 Batch 1: [[LI]]..[[/LI]] items
         $hasLi = (preg_match($liPattern, $body) === 1);
 
         $trailAfterClose = $residualBracket ? "\n]" : '';

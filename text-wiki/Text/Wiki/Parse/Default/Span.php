@@ -79,7 +79,10 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
         $args = array();
         // Live puts id first and then preserves source order for the rest.
         if (isset($attr['id']) && $attr['id'] !== '') {
-            $args['id'] = 'u-' . $attr['id'];
+            // REFCORR5 Batch 8 (p14): live does not double an author-supplied
+            // u- prefix.
+            $args['id'] = (strpos($attr['id'], 'u-') === 0)
+                ? $attr['id'] : 'u-' . $attr['id'];
         }
         foreach ($attr as $key => $value) {
             if ($key === 'id' || $value === '') {

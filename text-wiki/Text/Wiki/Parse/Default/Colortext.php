@@ -47,7 +47,13 @@ class Text_Wiki_Parse_Colortext extends Text_Wiki_Parse {
      * 
      */
     
-    public $regex = '/\#\#(.+?)\|(.+?)\#\#/';
+    // REFCORR5 Batch 2: validate the color spec at parse time, matching
+    // live's normalizeColor admission set. An invalid spec leaves the whole
+    // construct literal so earlier tokens in it render normally, HTML
+    // metacharacters are escaped by pre(), and Tighten cannot hoist its
+    // spaces; a rejected opener also lets the lazy scan reach a later valid
+    // span on the same line.
+    public $regex = '/##([A-Za-z0-9#(),\- \t]+)\|(.+?)##/';
 
     /**
      * 

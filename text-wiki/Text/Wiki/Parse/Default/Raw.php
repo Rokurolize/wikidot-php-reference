@@ -52,9 +52,27 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                 $close = strpos($src, '@@', $j);
                 $nl = strpos($src, "\n", $j);
                 $lineEnd = $nl === false ? $n : $nl;
-                if ($close === false || ($run >= 4 && $close >= $lineEnd)) {
-                    $keep = ($run === 3) ? 3 : $run - 4;
-                    $out .= str_repeat('@', $keep);
+                // REFCORR5 Batch 6: a 4+ run is its own empty-Raw construct
+                // even when a later @@ sits on the same line, provided that
+                // later run is itself 4+ (the p22 forge shape
+                // @@@@@@123@@@@@@). A surplus same-line closer run of 2
+                // stays the scanner's literal trailing-@ shaping (trail-4).
+                $closeRun = 0;
+                if ($close !== false) {
+                    $cr = $close;
+                    while ($cr < $n && $src[$cr] === '@') { $closeRun++; $cr++; }
+                }
+                if ($close === false || ($run >= 4 && ($close >= $lineEnd || $closeRun >= 4))) {
+                    // REFCORR5 Batch 6 (C-RAW-COMPOSITE-1): a run of four or
+                    // more @ is one empty Raw token (elided at render)
+                    // followed by run-4 literal @ bytes, exactly once per
+                    // run. A bare three-run stays literal with no token.
+                    if ($run === 3) {
+                        $out .= '@@@';
+                    } else {
+                        $out .= $this->wiki->addToken($this->rule, array('text' => ''));
+                        $out .= str_repeat('@', $run - 4);
+                    }
                     $i = $j;
                     continue;
                 }

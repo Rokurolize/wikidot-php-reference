@@ -45,7 +45,9 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
 	// empty (live probe empty-nested renders nothing). Matching innermost pairs
 	// first and letting parse() recurse gives the same nesting for non-empty
 	// pairs while letting the empty-body suppression below apply inside-out.
-	public $regex = '/\[\[size\s([^\]]+)\]\]((?:(?!\[\[size\s).)*?)\[\[\/size\]\]/msi'; 
+	// REFCORR5 Batch 8 (p26): a recursive body lets a valid outer pair claim a
+	// span containing an invalid inner pair, which stays literal in the body.
+	public $regex = '/\[\[size\s([^\]]+)\]\]((?:(?R)|.)*?)\[\[\/size\]\]/msi'; 
     /**
     * 
     * Generates a token entry for the matched text.  Token options are:

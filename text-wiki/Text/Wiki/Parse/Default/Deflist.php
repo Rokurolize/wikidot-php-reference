@@ -133,12 +133,21 @@ class Text_Wiki_Parse_Deflist extends Text_Wiki_Parse {
         // REFCORR3 C-SUSPECT-LISTTABLE-1: of the inline rules that have
         // already become delimiter-wrapped placeholders at this point, only
         // Comment renders to nothing on live. Anchor, User and Bibcite
-        // placeholders keep a visible <dt>. Strip only Comment's.
+        // placeholders keep a visible <dt>. REFCORR5 Batch 6 adds the
+        // composite's empty Raw token, which also renders to nothing, so a
+        // term made only of that placeholder must omit its <dt> just as a
+        // Comment-only term does.
         $wiki = $this->wiki;
         $stripped = preg_replace_callback('/\xFF(\d+)\xFF/',
             function ($m) use ($wiki) {
                 $id = (int) $m[1];
-                if (isset($wiki->tokens[$id]) && $wiki->tokens[$id][0] === 'Comment') {
+                if (! isset($wiki->tokens[$id])) {
+                    return $m[0];
+                }
+                if ($wiki->tokens[$id][0] === 'Comment') {
+                    return '';
+                }
+                if ($wiki->tokens[$id][0] === 'Raw' && $wiki->tokens[$id][1]['text'] === '') {
                     return '';
                 }
                 return $m[0];

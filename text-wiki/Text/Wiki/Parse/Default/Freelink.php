@@ -187,14 +187,14 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         // C6: non-ASCII page names go through ftml's explicit transliteration
         // table; unmapped characters act as separators, as on live.
         $slugSource = $raw;
-        if (preg_match('/[^\x00-\x7F]/u', $slugSource)) {
-            $slugSource = freelink_transliterate($slugSource);
-        }
-
-        // C4: a leading _default: is a category marker, not part of the slug,
-        // and a leading underscore is otherwise preserved (nonbr is dropped).
+        // C4: strip a leading _default: BEFORE transliteration (REFCORR5
+        // Batch 5). Running the table first corrupts _default: into _: and
+        // the prefix no longer strips.
         if (preg_match('/^_default:/i', $slugSource)) {
             $slugSource = substr($slugSource, 9);
+        }
+        if (preg_match('/[^\x00-\x7F]/u', $slugSource)) {
+            $slugSource = freelink_transliterate($slugSource);
         }
         $page = WDStringUtils::toUnixName($slugSource);
 
@@ -721,7 +721,10 @@ function freelink_transliterate($s)
     $out = '';
     $chars = preg_split('//u', $s, -1, PREG_SPLIT_NO_EMPTY);
     foreach ($chars as $ch) {
-        if ($ch === '#' || $ch === ':' || $ch === '/' || $ch === ' ' || $ch === '_' || $ch === '-') {
+        // REFCORR5 Batch 5: ASCII alphanumerics pass through untouched; the
+        // table and the separator fallback are for non-ASCII only.
+        if (preg_match('/^[A-Za-z0-9]$/D', $ch) ||
+            $ch === '#' || $ch === ':' || $ch === '/' || $ch === ' ' || $ch === '_' || $ch === '-') {
             $out .= $ch;
             continue;
         }

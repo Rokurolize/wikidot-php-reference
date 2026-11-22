@@ -16,6 +16,8 @@ class Text_Wiki_Render_Xhtml_Raw extends Text_Wiki_Render {
 
     function token($options)
     {
+        // REFCORR5 Batch 6: the composite empty Raw token renders as nothing.
+        if ($options['text'] === '') return '';
         return '<span style="white-space: pre-wrap;">'
             . wikidotEscapeRaw($options['text'])
             . '</span>';

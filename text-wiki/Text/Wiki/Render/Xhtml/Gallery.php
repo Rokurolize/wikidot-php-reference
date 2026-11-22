@@ -69,6 +69,9 @@ class Text_Wiki_Render_Xhtml_Gallery extends Text_Wiki_Render {
       		$out = '<div class="gallery-box">';
       		
       		foreach($sources as $row){
+      			// REFCORR5 Batch 8 (p20): the star target is per row; the fossil
+      			// let a starred row leak target="_blank" into every later row.
+      			$target = '';
       			if(!preg_match("/^: /", $row)){
       				continue;
       			}

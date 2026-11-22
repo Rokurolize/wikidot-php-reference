@@ -90,11 +90,25 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
         // Fossil behavior: remove all remaining newlines.
         $source = str_replace("\n", '', $source);
 
+        $delim = $this->wiki->delim;
+
+        // REFCORR5 Batch 6: an empty Raw token renders as nothing, so its
+        // placeholder must be transparent to the horizontal-space collapse
+        // below. Without this, "a @@@@ b" would move from the pinned "a b"
+        // to "a  b". Removing the placeholder from the residual stream is
+        // safe: the token stays in the token array (so indices and Date
+        // format strings that reference it are unchanged) and its render
+        // would have been the empty string.
+        foreach ($this->wiki->tokens as $tid => $tok) {
+            if (is_array($tok) && $tok[0] === 'Raw' && isset($tok[1]['text'])
+                && $tok[1]['text'] === '') {
+                $source = str_replace($delim . $tid . $delim, '', $source);
+            }
+        }
+
         // Fold residual horizontal whitespace runs to one space. Token
         // delimiters hold no spaces or tabs, so tokenized bodies survive.
         $source = preg_replace('/[ \t]+/', ' ', $source);
-
-        $delim = $this->wiki->delim;
 
         // Move an edge space out of an inline color scope. Hoisting the
         // leading space to before the opener and ejecting the trailing space

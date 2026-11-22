@@ -26,7 +26,12 @@ class Text_Wiki_Render_Xhtml_Email extends Text_Wiki_Render {
         $text = $options['text'];
         
         $out = '<span class="wiki-email">';
-        $out .= str_replace('@', '|', strrev($email) . '#' . strrev($text));
+        // REFCORR5 Batch 3 (C-SUSPECT-EMAIL-1/-2): live escapes the reversed
+        // and joined string with ENT_NOQUOTES and substitutes invalid bytes
+        // (including raw token delimiter bytes) with U+FFFD. Quotes stay raw.
+        $out .= htmlspecialchars(
+            str_replace('@', '|', strrev($email) . '#' . strrev($text)),
+            ENT_NOQUOTES | ENT_SUBSTITUTE, 'UTF-8');
         $out .= '</span>';
         
         return $out;
