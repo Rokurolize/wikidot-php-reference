@@ -243,7 +243,10 @@ class Text_Wiki_Parse_Url extends Text_Wiki_Parse {
         		$options['target']='_blank';
         }
         // tokenize
-        return $matches[1] . $this->wiki->addToken($this->rule, $options) . $trailing;
+        // REFCORR6: the token claims only the URL bytes (and a leading
+        // star), while $matches[1] and $trailing are returned outside it.
+        $claimed = ((isset($matches[2]) && $matches[2] === '*') ? '*' : '') . $url;
+        return $matches[1] . $this->wiki->addToken($this->rule, $options, false, $claimed) . $trailing;
     }
 
     /**
@@ -276,6 +279,15 @@ class Text_Wiki_Parse_Url extends Text_Wiki_Parse {
         if (isset($matches[3]) && strpos($matches[3], '[[$') !== false) {
             return $matches[0];
         }
+        // REFCORR6 C-SUSPECT3-1 (m1-code): a described match that has
+        // swallowed the math closer's `$]` fragment must yield, so
+        // Mathinline can claim the whole `[[$ ... $]]` body live
+        // preserves. Narrowed deliberately to the math surface: a
+        // generic `]]` guard would also stop unrelated described URLs
+        // from being claimed and move cases outside this correction.
+        if (strpos($matches[0], '$]') !== false) {
+            return $matches[0];
+        }
         // set options
         $options = array(
             'type' => 'descr',
@@ -287,8 +299,8 @@ class Text_Wiki_Parse_Url extends Text_Wiki_Parse {
         		$options['target']='_blank';
         }
         
-        // tokenize
-        return $this->wiki->addToken($this->rule, $options);
+        // tokenize; the described form is claimed whole (REFCORR6).
+        return $this->wiki->addToken($this->rule, $options, false, $matches[0]);
     }
     
      function processPV(&$matches)
@@ -304,7 +316,7 @@ class Text_Wiki_Parse_Url extends Text_Wiki_Parse {
         		$options['target']='_blank';
         }
         
-        // tokenize
-        return $this->wiki->addToken($this->rule, $options);
+        // tokenize; the %%var%% described form is claimed whole (REFCORR6).
+        return $this->wiki->addToken($this->rule, $options, false, $matches[0]);
     }
 }

@@ -181,7 +181,8 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
             if ($starUrl) {
                 $options['target'] = '_blank';
             }
-            return $this->wiki->addToken($this->rule, $options);
+            // REFCORR6: the whole triple-bracket form is the claimed span.
+            return $this->wiki->addToken($this->rule, $options, false, $matches[0]);
         }
 
         // C6: non-ASCII page names go through ftml's explicit transliteration
@@ -226,7 +227,8 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
             'url' => null,
             'textFromTitle' => (trim($labelRaw) === '|') ? true : null,
         );
-        return $this->wiki->addToken($this->rule, $options);
+        // REFCORR6: the whole triple-bracket form is the claimed span.
+        return $this->wiki->addToken($this->rule, $options, false, $matches[0]);
     }
 }
 

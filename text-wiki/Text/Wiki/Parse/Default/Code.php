@@ -90,6 +90,10 @@ class Text_Wiki_Parse_Code extends Text_Wiki_Parse {
                 'attr' => $attr);
         }
         
-        return "\n\n" . $this->wiki->addToken($this->rule, $options) . $matches[3];
+        // REFCORR6: the trailing whitespace group is returned outside
+        // the token; the claimed span is the rest of the whole match,
+        // i.e. the authored [[code ...]] ... [[/code]] form.
+        $claimed = substr($matches[0], 0, strlen($matches[0]) - strlen($matches[3]));
+        return "\n\n" . $this->wiki->addToken($this->rule, $options, false, $claimed) . $matches[3];
     }
 }

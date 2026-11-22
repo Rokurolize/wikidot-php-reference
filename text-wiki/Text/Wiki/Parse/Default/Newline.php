@@ -65,8 +65,10 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
     
     function process($matches)
     {    
+        // REFCORR6: the token claims only the LF; $matches[1] is the
+        // preceding character and is returned outside the token.
         return $matches[1] .
-            $this->wiki->addToken($this->rule)
+            $this->wiki->addToken($this->rule, array(), false, "\n")
            ;// . $matches[2];
     }
 }

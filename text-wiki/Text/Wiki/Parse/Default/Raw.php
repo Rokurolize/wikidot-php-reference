@@ -70,7 +70,9 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                     if ($run === 3) {
                         $out .= '@@@';
                     } else {
-                        $out .= $this->wiki->addToken($this->rule, array('text' => ''));
+                        // REFCORR6: this empty Raw claims four @ bytes;
+                        // the run's surplus is returned outside the token.
+                        $out .= $this->wiki->addToken($this->rule, array('text' => ''), false, str_repeat('@', 4));
                         $out .= str_repeat('@', $run - 4);
                     }
                     $i = $j;
@@ -107,7 +109,8 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                     // $lead is assigned below the cross-line branch in the
                     // original scanner; recompute the opener's extra @ here.
                     $text = (($run - 2) === 1 ? '@' : '') . $trimmed;
-                    $out .= $this->wiki->addToken($this->rule, array('text' => $text));
+                    // REFCORR6: exact consumed source span of the scanner.
+                    $out .= $this->wiki->addToken($this->rule, array('text' => $text), false, substr($src, $i, $k - $i));
                 }
                 if ($closeRun > 2) {
                     // The consumed cross-line newline surfaces as one space
@@ -150,11 +153,11 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                 // The closer run is an empty raw plus an opener for whatever
                 // follows; the body is still a raw span, and the extra @ are
                 // left as literal text (live probe raw-adjacent).
-                $out .= $this->wiki->addToken($this->rule, array('text' => $body));
+                $out .= $this->wiki->addToken($this->rule, array('text' => $body), false, substr($src, $i, $k - $i));
                 $out .= str_repeat('@', $trail);
             } else {
                 $text = ($lead === 1 ? '@' : '') . $body;
-                $out .= $this->wiki->addToken($this->rule, array('text' => $text));
+                $out .= $this->wiki->addToken($this->rule, array('text' => $text), false, substr($src, $i, $k - $i));
                 if ($trail === 1) $out .= '@';
             }
             $i = $k;
@@ -164,6 +167,6 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
 
     function process($matches) {
         $options = array('text' => $matches[1]);
-        return $this->wiki->addToken($this->rule, $options);
+        return $this->wiki->addToken($this->rule, $options, false, $matches[0]);
     }
 }

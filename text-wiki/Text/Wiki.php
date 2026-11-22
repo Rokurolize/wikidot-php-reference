@@ -270,6 +270,25 @@ class Text_Wiki {
 
     /**
     *
+    * REFCORR6 C-SUSPECT3-1: the exact authored source span each token
+    * claimed, keyed by the same id as $tokens, as passed by the
+    * claiming rule's addToken call. Kept parallel to $tokens rather
+    * than stored inside a token entry so the compared [rule, options]
+    * wire shape stays byte-identical for every stage and CAPSTONE.
+    * Only Mathinline reads it, when it expands placeholders back to
+    * their original source text. A rule that does not supply a span
+    * has no entry here and Mathinline falls back to option values.
+    *
+    * @access public
+    *
+    * @var array
+    *
+    */
+
+    public $tokenSource = array();
+
+    /**
+    *
     * The source text to which rules will be applied.
     *
     * This text will be transformed in-place, which means that it will
@@ -841,8 +860,9 @@ class Text_Wiki {
         // set the object property for the source text
         $this->source = $text;
 
-        // reset the tokens.
+        // reset the tokens and their REFCORR6 source spans.
         $this->tokens = array();
+        $this->tokenSource = array();
 
         // apply the parse() method of each requested rule to the source
         // text.
@@ -1265,6 +1285,11 @@ class Text_Wiki {
     * @param boolean $id_only If true, return only the token number, not
     * a delimited token string.
     *
+    * @param string|null $sourceText REFCORR6: the exact authored source
+    * span this token replaces, supplied by the claiming rule from the
+    * $matches groups its callback received. Stored in $tokenSource, not
+    * in $tokens, and read only by Mathinline's recursive expansion.
+    *
     * @return string|int By default, return the number of the
     * newly-created token array element with a delimiter prefix and
     * suffix; however, if $id_only is set to true, return only the token
@@ -1272,7 +1297,7 @@ class Text_Wiki {
     *
     */
 
-    function addToken($rule, $options = array(), $id_only = false)
+    function addToken($rule, $options = array(), $id_only = false, $sourceText = null)
     {
         // increment the token ID number.  note that if you parse
         // multiple times with the same Text_Wiki object, the ID number
@@ -1292,6 +1317,13 @@ class Text_Wiki {
             0 => $rule,
             1 => $options
         );
+
+        // REFCORR6: remember the exact source span the claiming rule
+        // replaced. Null means the call site did not supply one; the
+        // compared token entry above is deliberately unchanged.
+        if ($sourceText !== null) {
+            $this->tokenSource[$id] = $sourceText;
+        }
 
         // return a value
         if ($id_only) {

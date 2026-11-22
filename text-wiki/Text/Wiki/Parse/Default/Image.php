@@ -219,6 +219,8 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
             $options['src'] = $src;
         }
         
-        return ($align ? "\n\n" : '') . $this->wiki->addToken($this->rule, $options) . ($align ? "\n\n" : '');
+        // REFCORR6: the alignment newlines are returned outside the
+        // token; the claimed source span is the whole [[image ...]].
+        return ($align ? "\n\n" : '') . $this->wiki->addToken($this->rule, $options, false, $matches[0]) . ($align ? "\n\n" : '');
     }
 }

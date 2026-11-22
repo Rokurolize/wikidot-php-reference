@@ -68,7 +68,8 @@ class Text_Wiki_Parse_Email extends Text_Wiki_Parse {
             'text' => $matches[0]
         );
         
-        return $this->wiki->addToken($this->rule, $options);
+        // REFCORR6: the whole address is the claimed source span.
+        return $this->wiki->addToken($this->rule, $options, false, $matches[0]);
     }
     
 	function processDescr(&$matches){
@@ -77,7 +78,9 @@ class Text_Wiki_Parse_Email extends Text_Wiki_Parse {
             'text' => $matches[2]
         );
         
-        return $this->wiki->addToken($this->rule, $options);
+        // REFCORR6: the brackets and address are authored source and
+        // live keeps them in a math body; claim the whole `[addr label]`.
+        return $this->wiki->addToken($this->rule, $options, false, $matches[0]);
     }
    
 }

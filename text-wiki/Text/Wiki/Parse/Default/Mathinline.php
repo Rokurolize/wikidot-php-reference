@@ -32,6 +32,79 @@
 class Text_Wiki_Parse_Mathinline extends Text_Wiki_Parse {
 
     /**
+    * REFCORR6 C-SUSPECT3-1: the four rules the M1 battery proves make
+    * live suppress the whole formula wherever they occur in the body,
+    * including inside a described email's or URL's claimed source.
+    */
+    public static $suppressRules = array('Freelink', 'Raw', 'Newline', 'Image');
+
+    /**
+    * REFCORR6: the one-level option-value replacement retained as a
+    * fallback for a token whose addToken call did not carry a source
+    * span. It is the pre-correction behavior and keeps every rule the
+    * battery does not exercise byte-identical.
+    */
+    function optionReplacement($token)
+    {
+        $options = isset($token[1]) && is_array($token[1]) ? $token[1] : array();
+        if (isset($options['text']) && is_string($options['text'])) {
+            return $options['text'];
+        }
+        if (isset($options['href']) && is_string($options['href'])) {
+            return $options['href'];
+        }
+        return '';
+    }
+
+    /**
+    * REFCORR6: expand every placeholder in $bytes back to its token's
+    * original authored source text, recursively. Returns
+    * array($suppressed, $expandedBytes); a suppressed result means the
+    * whole formula is to be rendered as "$$". $seen bounds recursion on
+    * a cyclic placeholder chain, and $depth bounds accidental deep
+    * nesting; unknown tokens stay as literal placeholder bytes.
+    */
+    function expandSource($bytes, $seen, $depth)
+    {
+        if ($depth > 64 || strpos($bytes, $this->wiki->delim) === false
+            || !preg_match_all('/\xFF(\d+)\xFF/', $bytes, $ph, PREG_OFFSET_CAPTURE)) {
+            return array(false, $bytes);
+        }
+        $out = '';
+        $pos = 0;
+        foreach ($ph[0] as $i => $hit) {
+            $whole = $hit[0];
+            $start = $hit[1];
+            if ($start > $pos) {
+                $out .= substr($bytes, $pos, $start - $pos);
+            }
+            $tid = $ph[1][$i][0];
+            $token = isset($this->wiki->tokens[$tid]) ? $this->wiki->tokens[$tid] : null;
+            $name = ($token !== null && isset($token[0])) ? $token[0] : '';
+            if (in_array($name, self::$suppressRules, true)) {
+                return array(true, '');
+            }
+            if ($token === null || isset($seen[$tid])) {
+                $out .= $whole;
+            } elseif (isset($this->wiki->tokenSource[$tid])) {
+                $next = $seen;
+                $next[$tid] = true;
+                list($suppressed, $replacement) = $this->expandSource(
+                    $this->wiki->tokenSource[$tid], $next, $depth + 1);
+                if ($suppressed) {
+                    return array(true, '');
+                }
+                $out .= $replacement;
+            } else {
+                $out .= $this->optionReplacement($token);
+            }
+            $pos = $start + strlen($whole);
+        }
+        $out .= substr($bytes, $pos);
+        return array(false, $out);
+    }
+
+    /**
     * 
     * The regular expression used to find source text matching this
     * rule.
@@ -64,43 +137,20 @@ class Text_Wiki_Parse_Mathinline extends Text_Wiki_Parse {
 
         // Earlier rules have already replaced their own spans with
         // \xFF<token-id>\xFF placeholders by the time this late rule runs.
-        // ftml's legacy math collector and live Wikidot both suppress the
-        // whole LaTeX body when a line break or a raw region occurs inside
-        // [[$ ... $]], rendering an empty formula ("$$"). Comments are
-        // elided by their own rule and leave no placeholder, so they do not
-        // suppress. Resolve each placeholder through the token table rather
-        // than guessing from the bytes.
-        if (strpos($content, $this->wiki->delim) !== false
-            && preg_match_all('/\xFF(\d+)\xFF/', $content, $ph)) {
-            foreach ($ph[0] as $i => $whole) {
-                $tid = $ph[1][$i];
-                if (!isset($this->wiki->tokens[$tid])) {
-                    continue;
-                }
-                $token = $this->wiki->tokens[$tid];
-                $name = isset($token[0]) ? $token[0] : '';
-                $options = isset($token[1]) && is_array($token[1]) ? $token[1] : array();
-                // A line break or a raw region anywhere in the body makes
-                // live suppress the whole formula to "$$".
-                if (in_array($name, array('Newline', 'Raw'), true)) {
-                    $content = '';
-                    break;
-                }
-                // Other earlier-rule spans (notably a bare URL) contribute
-                // their literal text to the LaTeX source, which live renders.
-                if (isset($options['text']) && is_string($options['text'])) {
-                    $replacement = $options['text'];
-                } elseif (isset($options['href']) && is_string($options['href'])) {
-                    $replacement = $options['href'];
-                } else {
-                    $replacement = '';
-                }
-                $content = str_replace($whole, $replacement, $content);
-            }
+        // REFCORR6 C-SUSPECT3-1: live preserves the trimmed authored body
+        // and expands each placeholder back to that token's original
+        // source text, recursively, suppressing the whole formula to
+        // "$$" for a Freelink, Raw, Newline or Image token at any depth.
+        // Comments are elided by their own rule and leave no placeholder,
+        // so they do not suppress.
+        list($suppressed, $content) = $this->expandSource($content, array(), 0);
+        if ($suppressed) {
+            $content = '';
         }
 
         $options = array('content'=>$content);
 
-        return $this->wiki->addToken($this->rule, $options);
+        // REFCORR6: the whole [[$ ... $]] match is this token's source.
+        return $this->wiki->addToken($this->rule, $options, false, $matches[0]);
     }
 }
