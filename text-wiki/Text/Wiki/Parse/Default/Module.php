@@ -121,7 +121,15 @@ class Text_Wiki_Parse_Module extends Text_Wiki_Parse {
             }
         }
         if ($reemit) {
-            $out .= $matches[3] . '[[/module]]';
+            // REFCORR9 C-R5B-P3-3: the opener/closer regex is case-insensitive
+            // (/ism), so the authored closer spelling must survive the Code-
+            // token re-emit. The regex match ends at the closer, whose ASCII
+            // byte length is fixed at 11 ([[/module]]); carry those exact
+            // matched bytes instead of concatenating a hard-coded lowercase
+            // literal. The Code-only gate above (REFCORR7 Raw suppression,
+            // REFCORR8 narrowing) and the token wire shape are unchanged.
+            $closer = substr($matches[0], -11);
+            $out .= $matches[3] . $closer;
         }
 
         return $out;

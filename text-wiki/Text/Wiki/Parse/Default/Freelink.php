@@ -188,14 +188,34 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         // C6: non-ASCII page names go through ftml's explicit transliteration
         // table; unmapped characters act as separators, as on live.
         $slugSource = $raw;
+        // REFCORR9 C-R5B-P2-4: a leading star is the new-tab marker consumed
+        // on $trimmed above (REFCORR3), not a whitespace byte. Ordering fix:
+        // consume that same single marker on the slug source before the
+        // anchored category strip, under the identical no-leading-space
+        // guard, so a leading star can no longer defeat the strip. The byte
+        // check is on $slugSource itself (not $starUrl) because trim()'s
+        // default charlist is wider than the [ \t] leading-space test. The
+        // display-text path still reads $raw unchanged.
+        if (! $leadingSpace && isset($slugSource[0]) && $slugSource[0] === '*') {
+            $slugSource = substr($slugSource, 1);
+        }
         // C4: strip a leading _default: BEFORE transliteration (REFCORR5
         // Batch 5). Running the table first corrupts _default: into _: and
         // the prefix no longer strips. REFCORR7: live tolerates leading
         // space/tab before the category, so the anchored match consumes that
-        // run as part of the prefix and drops the matched byte count; a
-        // non-leading prefix and a generic colon prefix still do not match,
-        // and the bare form still strips exactly nine bytes as before.
-        if (preg_match('/^[ \t]*_default:/i', $slugSource, $defPrefix)) {
+        // run as part of the prefix and drops the matched byte count. REFCORR8
+        // widens that run to exactly the five whitespace shapes cached live:
+        // 0x09 tab, 0x0B vertical tab, 0x20 space, UTF-8 C2 A0 (U+00A0) and
+        // UTF-8 E3 80 80 (U+3000). REFCORR9 adds exactly three more
+        // live-cached lead shapes before the category: 0x0C form feed
+        // (C-R5B-P2-1), UTF-8 E2 80 A8 U+2028 (C-R5B-P2-2) and UTF-8 EF BB BF
+        // U+FEFF BOM (C-R5B-P2-3). No other Unicode whitespace is admitted.
+        // The regex stays byte-oriented (no /u) so a malformed UTF-8 subject
+        // anywhere cannot turn the strip off, and strlen($defPrefix[0]) still
+        // removes exactly the matched byte count; the zero-whitespace bare
+        // form strips nine bytes, a non-leading `_default:` and a generic
+        // colon prefix still do not match.
+        if (preg_match('/^(?:[\x09\x0B\x0C\x20]|\xC2\xA0|\xE3\x80\x80|\xE2\x80\xA8|\xEF\xBB\xBF)*_default:/i', $slugSource, $defPrefix)) {
             $slugSource = substr($slugSource, strlen($defPrefix[0]));
         }
         if (preg_match('/[^\x00-\x7F]/u', $slugSource)) {

@@ -59,7 +59,23 @@ class Text_Wiki_Render_Xhtml_Footnoteitem extends Text_Wiki_Render {
             // state the block render reads is available here.
             $footnotes = $this->wiki->vars['footnotes'] ?? array();
             $body = $footnotes[$id - 1] ?? '';
-            if ($body !== '') {
+            // REFCORR9: derive the separator space from the visible body
+            // (empty-Raw placeholders stripped, then trimmed) rather than
+            // the raw stored bytes, so the retained placeholder-bearing
+            // newline emits <br /> with no stray leading space.
+            $delim = preg_quote($this->wiki->delim, '/');
+            $visible = preg_replace_callback(
+                '/' . $delim . '(\d+)' . $delim . '/',
+                function ($m) {
+                    $tok = $this->wiki->tokens[(int) $m[1]] ?? null;
+                    if ($tok !== null && $tok[0] === 'Raw'
+                        && isset($tok[1]['text']) && $tok[1]['text'] === '') {
+                        return '';
+                    }
+                    return $m[0];
+                },
+                $body);
+            if (trim($visible) !== '') {
                 $out .= ' ';
             }
             return $out;

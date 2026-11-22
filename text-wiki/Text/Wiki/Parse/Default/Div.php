@@ -69,6 +69,17 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
         if ($value === '') {
             return '';
         }
+        // REFCORR9 C-R5B-R1-1: a 0xFF token placeholder in an authored id
+        // must reach the render clear arm so a placeholder-consumed id
+        // shell serves id="" on live, while a whitespace-only authored id
+        // keeps the bare u- shell and serves id="u-" (R5R1-D1). Returning
+        // the placeholder-bearing value unchanged here is what the /u
+        // collapse below would preserve on a valid UTF-8 value; an
+        // authored value that already starts with u- keeps the historic
+        // collapse-to-null path (the caller drops that id).
+        if (strpos($value, "\xFF") !== false && strpos($value, 'u-') !== 0) {
+            return $value;
+        }
         if (preg_match('/^\s/u', $value)) {
             $leading = true;
         } else {
@@ -110,6 +121,12 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
         // fossil kept only class and style and stripped hidden styles, both
         // of which live contradicts.
         $args = array();
+        // REFCORR8 C-R5-P1-1: carry, outside the compared token options,
+        // whether each stored key came from a non-empty authored value.
+        // A value authored non-empty but normalizing to empty (e.g. a
+        // whitespace-only class) is still a real attribute and renders as
+        // class=""; only a literally empty authored value is unset.
+        $authoredValue = array();
         foreach ($attr as $key => $value) {
             if ($key === 'id') {
                 $id = $this->isolateId($value);
@@ -122,11 +139,23 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
                     $normalized = rtrim($normalized, " \t");
                 }
                 $args[$key] = $normalized;
+                $authoredValue[$key] = ($value !== '');
             } elseif (strpos($key, 'data-') === 0) {
                 $lkey = strtolower($key);
-                if (!array_key_exists($lkey, $args)) {
-                    $args[$lkey] = $this->normalizeValue($value);
-                }
+                // REFCORR8 C-R5-P1-2: case-variant duplicate data-*
+                // keys are last-wins on live, not first-wins. The
+                // lowercase key is unchanged; only the collision
+                // tie-break moves to the later authored value.
+                $args[$lkey] = $this->normalizeValue($value);
+                // REFCORR9 C-R5B-P1-5: a later case-variant authored-empty
+                // value must not clear the authored-nonempty record for the
+                // same lowercased key. Live keeps the last (empty) value as
+                // an attribute when an earlier variant authored a nonempty
+                // value; the reference's empty-unset dropped it because the
+                // flag was overwritten to false. Keep the last-wins value
+                // itself and make only the authored flag monotone across
+                // case-variant duplicates.
+                $authoredValue[$lkey] = !empty($authoredValue[$lkey]) || ($value !== '');
             }
         }
         // REFCORR2 correction C-STAGE2-1: live emits a div's attributes
@@ -153,7 +182,7 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
         $args = $ordered;
 
         foreach ($args as $key => $value) {
-            if (trim($value) === '') {
+            if (trim($value) === '' && empty($authoredValue[$key])) {
                 unset($args[$key]);
             }
         }

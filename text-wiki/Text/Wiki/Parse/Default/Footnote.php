@@ -65,6 +65,9 @@ class Text_Wiki_Parse_Footnote extends Text_Wiki_Parse {
 	    // so the compared footnotes state stays byte-identical across
 	    // the two sides; no token entry is added or reindexed.
 	    $delim = preg_quote($this->wiki->delim, '/');
+	    // REFCORR9: save the pre-strip (placeholder-bearing) remainder so a
+	    // lone newline separator can render as a rule-level <br />.
+	    $rawRemainder = $content;
 	    $content = preg_replace_callback(
 	        '/' . $delim . '(\d+)' . $delim . '/',
 	        function ($m) {
@@ -76,6 +79,19 @@ class Text_Wiki_Parse_Footnote extends Text_Wiki_Parse {
 	            return $m[0];
 	        },
 	        $content);
+	    // REFCORR8 (C-R5-R3-1): re-trim the remainder after the empty-Raw
+	    // strip (REFCORR7 trimmed only before the strip).
+	    // REFCORR9 (C-R5B-R3-1 = C-R5B-P4-1): when the strip leaves exactly
+	    // one authored newline (optionally flanked by horizontal space), the
+	    // Newline rule needs an inline byte before the LF to emit <br />.
+	    // Keep the pre-strip placeholder-bearing body for that one shape;
+	    // Footnoteitem derives its separator space from the visible body so
+	    // no stray space appears. All other remainders keep REFCORR8.
+	    if (preg_match('/^[ \t]*\n[ \t]*$/D', $content)) {
+	        $content = $rawRemainder;
+	    } else {
+	        $content = trim($content);
+	    }
 
 	    $this->wiki->vars['footnotes'][$id-1] = $content;
         $options = array('id'=>$id);
