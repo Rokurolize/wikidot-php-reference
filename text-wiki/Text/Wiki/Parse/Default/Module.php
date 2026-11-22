@@ -96,7 +96,17 @@ class Text_Wiki_Parse_Module extends Text_Wiki_Parse {
 
         $options = array('moduleName' => $moduleName, 'attr' => $attr, 
             'module_body' => $body);
-        
-        return "\n\n" . $this->wiki->addToken($this->rule, $options) . "\n\n";
+
+        $out = "\n\n" . $this->wiki->addToken($this->rule, $options) . "\n\n";
+
+        // C-SUSPECT-XRULE-3: when an earlier rule has claimed part of the
+        // body, live leaves that body and the literal closer in the source
+        // after the unknown-module error; the error token alone is not the
+        // whole claim.
+        if (strpos($body, $this->wiki->delim) !== false) {
+            $out .= $matches[3] . '[[/module]]';
+        }
+
+        return $out;
     }
 }

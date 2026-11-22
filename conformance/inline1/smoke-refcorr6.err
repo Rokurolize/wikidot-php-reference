@@ -1,0 +1,10 @@
+PHP Warning:  Undefined array key "footnotes" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-refcorr6/ref-php/text-wiki/Text/Wiki/Parse/Default/Footnote.php on line 48
+Warning: Undefined array key "footnotes" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-refcorr6/ref-php/text-wiki/Text/Wiki/Parse/Default/Footnote.php on line 48
+PHP Warning:  Undefined array key 2 in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-refcorr6/ref-php/text-wiki/Text/Wiki/Parse/Default/Footnoteblock.php on line 86
+Warning: Undefined array key 2 in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-refcorr6/ref-php/text-wiki/Text/Wiki/Parse/Default/Footnoteblock.php on line 86
+PHP Warning:  Undefined array key "title" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-refcorr6/ref-php/text-wiki/Text/Wiki/Parse/Default/Footnoteblock.php on line 87
+Warning: Undefined array key "title" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-refcorr6/ref-php/text-wiki/Text/Wiki/Parse/Default/Footnoteblock.php on line 87
+PHP Warning:  Undefined array key "label" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-refcorr6/ref-php/text-wiki/Text/Wiki/Render/Xhtml/Footnote.php on line 40
+Warning: Undefined array key "label" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-refcorr6/ref-php/text-wiki/Text/Wiki/Render/Xhtml/Footnote.php on line 40
+PHP Warning:  Undefined array key "math_id" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-refcorr6/ref-php/text-wiki/Text/Wiki/Parse/Default/Math.php on line 65
+Warning: Undefined array key "math_id" in /home/roku/.local/state/wikijump/muse-bhl/lean-ftml-refcorr6/ref-php/text-wiki/Text/Wiki/Parse/Default/Math.php on line 65

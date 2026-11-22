@@ -113,13 +113,15 @@ class Text_Wiki_Render_Xhtml_Toc extends Text_Wiki_Render {
             $pad = ($level - $this->min);
             $html .= " style=\"margin-left: {$pad}em;\">";
 			
-			$d = utf8_encode("\xFC");
+			// C-SUSPECT-XRULE-4: an out-of-band NUL pair cannot be authored.
+			$d = "\x00";
             $html .= "<a href=\"#$id\">$d$d";
             return $html;
             break;
 
         case 'item_end':
-        	$d = utf8_encode("\xFC");
+        	// C-SUSPECT-XRULE-4: same sentinel as item_start.
+        	$d = "\x00";
             return "$d$d</a></div>";
             break;
         }

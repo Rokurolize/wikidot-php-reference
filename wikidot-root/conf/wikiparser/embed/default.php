@@ -6,8 +6,8 @@ $patterns = array(
 	'<noscript><a href="http://del\.icio\.us/[^"]*">[^<>]*</a></noscript>)?$;s',
 	// del.icio.us "Save This Page"
 	'del_save' => ';^<a href="http://del\.icio\.us/post" onclick="window\.open\(\'http://del.icio.us/post[^"]*">[^<>]+</a>$;s',
-	// digg
-	'digg' => ';^<script language="JavaScript" src="http://digg.com/diggjs/[^"]*" type="text/javascript"></script>$;s',
+	// C-SUSPECT-CODEEMBED-1: live's deployed allowlist has retired the
+	// old digg script entry; the fossil config's entry is removed here.
 	// digg this
 	'digg_this' => ';^<script>\s*digg_url\s*=\s*[\'"][^\'"]+[\'"]\;\s*</script>\s*<script src="http://digg.com/api/diggthis.js">\s*</script>\s*$;s',
 	
@@ -43,10 +43,10 @@ $patterns = array(
 	'zohosheer-range' => ';^<iframe src=(\'|")http://(www\.zohosheet|sheet\.zoho)\.com/[^\'"]+(\'|") frameborder=(\'|")[0-9]+(\'|") style=(\'|")height:[0-9]+px\;\s*width:[0-9]+px(\'|") marginwidth=(\'|")0(\'|") marginheight=(\'|")0(\'|") scrolling=(\'|")auto(\'|")>\s*</iframe>$;s',
 	'zohowriter' => ';^<script src="http://(www\.zohowriter|writer\.zoho)\.com/public/[^"]+"></script>$;si',
 	'zohoshow' => ';^<iframe src="http://(www\.zohoshow|show\.zoho)\.com/[^"]+" height=(\'|")[0-9]+(\'|") width=(\'|")[0-9]+(\'|") name="[^"]+" scrolling=(\'|")?no(\'|")? frameBorder=(\'|")0(\'|")\s*></iframe>$;si',
-	'zohopolls' =>';<iframe\s+(frameborder=(\'|")0(\'|")\s*)?\s*src=(\'|")http://zohopolls\.com/[^\'"]+(\'|") width=(\'|")[0-9]+(\'|") height=(\'|")[0-9]+(\'|")></iframe>$;si',
-	'zoho-generic' =>';<iframe\s+(frameborder=(\'|")0(\'|")\s*)?\s*src=(\'|")http://[a-z0-9]+\.zoho\.com/[^\'"]+(\'|") width=(\'|")[0-9]+(\'|") height=(\'|")[0-9]+(\'|")></iframe>$;si',
+	'zohopolls' =>';^<iframe\s+(frameborder=(\'|")0(\'|")\s*)?\s*src=(\'|")http://zohopolls\.com/[^\'"]+(\'|") width=(\'|")[0-9]+(\'|") height=(\'|")[0-9]+(\'|")></iframe>$;si',
+	'zoho-generic' =>';^<iframe\s+(frameborder=(\'|")0(\'|")\s*)?\s*src=(\'|")http://[a-z0-9]+\.zoho\.com/[^\'"]+(\'|") width=(\'|")[0-9]+(\'|") height=(\'|")[0-9]+(\'|")></iframe>$;si',
 	'editgrid' => ';^<div style="[^"]+">\s*<a style="[^"]+" href="http://www\.editgrid\.com/[^"]+" target="_blank">EditGrid Spreadsheet</a> by <a style="[^"]+" href="http://www\.editgrid\.com/[^"]*" target="_blank">[^<>]*</a>\.?</div>\s*((<iframe frameborder="0" src="http://www.editgrid.com/publish/[^"]+" style="[^"]*">(&nbsp\;)?</iframe>)|(<script type="text/javascript" src="http://www\.editgrid\.com/[^"]*">(&nbsp\;)?</script>))$;s',
-	'photobucketwidget' => ';<embed type="application/x-shockwave-flash" wmode="transparent" src="http://[a-z0-9]+.photobucket.com/pbwidget.swf\?[^"]+" height="[0-9]+" width="[0-9]+"></embed>$;',
+	'photobucketwidget' => ';^<embed type="application/x-shockwave-flash" wmode="transparent" src="http://[a-z0-9]+.photobucket.com/pbwidget.swf\?[^"]+" height="[0-9]+" width="[0-9]+"></embed>$;',
 	
 	'picassa' => ';^<div\s+style="[^"]+"><div style="[^"]*"><a href="http://picasaweb\.google\.com/[^"]+"><img src="http://[a-z0-9]+\.google\.com/[^"]*" width="[0-9]+" height="[0-9]+" style="[^"]+"></a></div><a href="http://picasaweb\.google\.com/[^"]*"><div style="[^"]+">[^<]+</div></a><div style="[^"]*"></div></div>$;si',
 	'meebowidget' => ';^(<!\-\-[^\-]+\-\->)?\s*<embed src="http://widget\.meebo\.com/mm.swf?[^"]+" type="application/x-shockwave-flash" wmode="transparent" width="[0-9]+" height="[0-9]+"></embed>$;si',
@@ -63,7 +63,10 @@ $patterns = array(
 	'motionbased' => ';^<iframe\s+src="http://trail\.motionbased\.com/[^"]+"[^>]*>\s*</iframe>$;si',
 	'widgetbox-panel' => ';^<script type="text/javascript" src="http://widgetserver\.com/syndication/[^"]+">\s*</script>(<noscript>([^<>]*|<a href="http://www\.widgetbox\.com/[^>"]*">[^<>]*</a>|<a href="http://www\.widgetbox\.com">[^<>]*</a>)*</noscript>)?$;si',
 	'polldaddy' => ';^<script\s*language="javascript"\s*src="http://www\.polldaddy\.com/p/[^"]+">\s*</script>\s*<noscript>\s*<a href ="http://www\.polldaddy\.com/[^"]+"\s*>[^<]*</a>\s*</noscript>$;si',
-	'anyiframe' => ';^<iframe(\s+[a-z0-9_]+\s*=\s*"[^"]*")+>\s*</iframe>$;si',
+	// C-SUSPECT-CODEEMBED-3: live's generic iframe pattern is not
+	// double-quote-only; a single-quoted script-scheme src must reach
+	// the renderer's src check and render empty.
+	'anyiframe' => ';^<iframe(\s+[a-z0-9_]+\s*=\s*[\'"][^\'"]*[\'"])+>\s*</iframe>$;si',
 	'mybloglog' => ';^<script\s+type=(\'|")text/javascript(\'|") src=(\'|")http://[a-z0-9]+\.mybloglog\.com/[^\'"]+(\'|")>\s*</script>$;si',
 	'revver' => ';^<script\s+src="http://[a-z]+\.revver\.com/player/[^"]+"\s+type="text/javascript">\s*</script>$;si',
 	'youtube' => ';^<embed[^>]*?src="http://video\.google\.com/googleplayer\.swf[^"]+"[^>]*>\s*</embed>$;is',

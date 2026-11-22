@@ -106,6 +106,15 @@ class Text_Wiki_Parse_Anchor extends Text_Wiki_Parse {
 
             $out .= substr($source, $cursor, $fullStart - $cursor);
 
+            // C-SUSPECT-XRULE-6: an earlier rule's placeholder in the name
+            // leaves the whole bracket form literal on live, with the inner
+            // token resolving in place.
+            if (strpos($name, $this->wiki->delim) !== false) {
+                $out .= $m[0][0];
+                $cursor = $fullStart + $fullLen;
+                continue;
+            }
+
             if (trim($name) === '') {
                 $out .= $m[0][0];
                 $cursor = $fullStart + $fullLen;

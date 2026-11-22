@@ -1,0 +1,11 @@
+# ADJUDICATION C-SUSPECT-CODEEMBED-9 — the gallery link's bare ampersand is tidy-side (REFCORR4 lane, 2026-11-22)
+
+Status: ADJUDICATED AND DISPOSED, no reference edit. The probe muse-probe-suspect-codeembed-gs-link-amp (valid, stable, saved-source-matching; capture in the SUSPECT-CODEEMBED lane's conformance-suspect-codeembed/captures2.json) shows `<a href="x&amp;y" class="with-lb">` on live where the reference writes `<a href="x&y" class="with-lb">` from Render/Xhtml/Gallery.php's raw `$href` interpolation. The question this lane had to settle first is whether that serialization belongs to the Embed/Gallery rule's own render or to the Stage 2 tidy repair pass; the evidence says Stage 2, so the rule is left untouched.
+
+## The evidence base
+
+GAP-LEDGER.md's external-library inventory says libtidy behind WikiTransformation::purifyHtml is the Stage 2 boundary and that where a behavior belongs to an external library the actual library must be the oracle; its LIBTIDY VERSION GAP CLOSED entry narrows live's binding to the {5.4, 5.8} equivalence class, driven without tidyCleanAndRepair and with entity preservation, and names /usr/bin/tidy 5.8.0 as the right local oracle. stage2/G2-SCOPE.md's T1 states that Stage 2 re-serializes tags canonically, and stage2/stage2-model/Stage2.lean's parseAndNormAttrs copies attribute values through verbatim (only newline removal on src/href and whitespace collapse elsewhere), so the Stage 1 reference's raw `x&y` reaches the serializer unchanged. A firsthand read-only oracle run of tidy 5.8.0 with -asxhtml, --indent no and -utf8 on `<p><a href="x&y" class="with-lb">z</a></p>` emits `href="x&amp;y"` and warns `unescaped & or unknown entity "&y"`; the same run on an already-escaped `href="x&amp;y"` emits `href="x&amp;y"` unchanged. That is exactly the live/reference gap, and it also shows why a rule-level escape would be wrong: it would double-escape an authored `&amp;` before Stage 2 saw it.
+
+## Disposition
+
+C-SUSPECT-CODEEMBED-9 is a Stage 2 serialization consequence, not a Gallery rule defect. No PHP file is edited for it, no mirror change is owed, and the case stays in the Stage 2 evidence family rather than in the Embed sanitization corrections. The other eight CODEEMBED candidates are handled in this batch's rule-level corrections.

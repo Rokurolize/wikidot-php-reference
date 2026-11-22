@@ -100,7 +100,11 @@ class Text_Wiki_Render_Xhtml_Gallery extends Text_Wiki_Render {
 					$photo = $flickr->photos_getInfo($photoId, $secret);
 					
 					if($photo == null){
-						return '<div class="error-block">Error fetching flickr image (id: '.$photoId.') info. ' .
+						// C-SUSPECT-CODEEMBED-8: live serves the unsprintf'd
+						// template text verbatim when the anchored flickr id
+						// regex fails; the reference follows live rather than
+						// interpolating the empty id.
+						return '<div class="error-block">Error fetching flickr image (id: $s) info. ' .
 								'The file does not exist, is private or other problem.</div>';
 					}
 					

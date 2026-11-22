@@ -51,7 +51,17 @@ class Text_Wiki_Render_Xhtml_Div extends Text_Wiki_Render {
             $args = $options['args'];
             $argstr = '';
             foreach ($args as $key => $value) {
-                $argstr .= ' ' . $key . '="' . $value . '"';
+                // REFCORR4 Batch C: live escapes attribute values with
+                // ENT_COMPAT, and clears any value carrying a token
+                // placeholder to empty with the key kept. An id whose
+                // placeholder was consumed by isolateId is left as the
+                // bare u- shell, which is cleared the same way.
+                if (strpos($value, "\xFF") !== false ||
+                        ($key === 'id' && $value === 'u-')) {
+                    $value = '';
+                }
+                $argstr .= ' ' . $key . '="' .
+                    htmlspecialchars($value, ENT_COMPAT, 'UTF-8') . '"';
             }
             // R4-corr correction (fossil artifact): the fossil's literal
             // "<div " carried a space the argument string does not need:

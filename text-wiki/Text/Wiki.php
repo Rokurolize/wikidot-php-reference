@@ -1193,7 +1193,8 @@ class Text_Wiki {
 		// this is a nasty hack... should be put somewhere else, e.g. Postfilter?
 		
 		// fix TOC tags within entries
-		$d = utf8_encode("\xFC");
+		// C-SUSPECT-XRULE-4: NUL pair matches Render/Xhtml/Toc.php's sentinel.
+		$d = "\x00";
 		$output = preg_replace_callback("/$d$d(.*?)$d$d/s", array($this, 'strip'), $output);
 
         // return the rendered source text.

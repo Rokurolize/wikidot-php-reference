@@ -27,7 +27,13 @@ class Text_Wiki_Parse_Form extends Text_Wiki_Parse {
     function process($matches) {
         $lines = explode("\n", $matches[0]);
         $out = '';
+        // C-SUSPECT-XRULE-2: Code claims before Form, so its placeholder can
+        // land in a form body line. Live renders that line blank; the
+        // delimiter-wrapped decimal placeholder must not leak into the
+        // per-line Raw token's text.
+        $delim = preg_quote($this->wiki->delim, '/');
         foreach ($lines as $idx => $line) {
+            $line = preg_replace('/' . $delim . '\d+' . $delim . '/', '', $line);
             if ($line !== '') {
                 $out .= $this->wiki->addToken($this->rule, array('text' => $line));
             } else {

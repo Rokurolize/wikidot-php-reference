@@ -58,26 +58,33 @@ class Text_Wiki_Render_Xhtml_Embed extends Text_Wiki_Render {
         foreach ($this->_patterns as $pattern) {
             if (preg_match($pattern, $content)) {
                 $content = preg_replace('/language="JavaScript[^"]*"/i', '', $content);
-                // a dangerous scheme in the src attribute makes the
-                // whole embed render empty on live Wikidot
-                if (preg_match('/\bsrc\s*=\s*"([^"]*)"/i', $content, $sm)) {
-                    $srcScheme = strtolower(trim($sm[1]));
+                // C-SUSPECT-CODEEMBED-6: an event handler is rejected even
+                // when glued to the preceding attribute with no whitespace.
+                // C-SUSPECT-CODEEMBED-2: the event check precedes the src
+                // check, so content with both fires the error block.
+                $eventpattern = 'on[a-z]+';
+                $eventpattern = ';<[^>]*\s*' . $eventpattern . '\s*=[^>]+>;si';
+                if (preg_match($eventpattern, $content)) {
+                    break;
+                }
+                // C-SUSPECT-CODEEMBED-3/4: src accepts either quote style,
+                // and a word boundary that excludes '-' keeps data-src out;
+                // a real script-scheme src still renders empty (se02/se06).
+                if (preg_match("/(?<![a-zA-Z0-9_-])src\s*=\s*([\"'])([^\"']*)\\1/i", $content, $sm)) {
+                    $srcScheme = strtolower(trim($sm[2]));
                     if (strpos($srcScheme, 'javascript:') === 0 || strpos($srcScheme, 'vbscript:') === 0) {
                         return '';
                     }
                 }
-                // check for js events
-                $eventpattern = 'on[a-z]+';
-                $eventpattern = ';<[^>]*\s+' . $eventpattern . '\s*=[^>]+>;si';
-                if (preg_match($eventpattern, $content)) {
-                    break;
-                }
-                // a dangerous scheme in any other attribute value
-                // falls through to the no-match error on live Wikidot
+                // C-SUSPECT-CODEEMBED-5: the generic contains test applies
+                // to other attributes only; src is prefix-tested above.
                 $badScheme = false;
-                if (preg_match_all('/[a-zA-Z0-9_-]+\s*=\s*"([^"]*)"/', $content, $am)) {
-                    foreach ($am[1] as $attrValue) {
-                        $lv = strtolower($attrValue);
+                if (preg_match_all('/(?<![a-zA-Z0-9_-])([a-zA-Z0-9_-]+)\s*=\s*"([^"]*)"/i', $content, $am, PREG_SET_ORDER)) {
+                    foreach ($am as $attr) {
+                        if (strtolower($attr[1]) === 'src') {
+                            continue;
+                        }
+                        $lv = strtolower($attr[2]);
                         if (strpos($lv, 'javascript:') !== false || strpos($lv, 'vbscript:') !== false) {
                             $badScheme = true;
                             break;

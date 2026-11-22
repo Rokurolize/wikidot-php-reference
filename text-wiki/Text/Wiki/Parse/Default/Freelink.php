@@ -99,6 +99,14 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
      */
     function process($matches)
     {
+        // C-SUSPECT-XRULE-1: an earlier rule's placeholder inside the target
+        // (or label) means the bracket form is not a link on live. Bail out
+        // with the whole match literal, following the Image rule's guard,
+        // so the inner token resolves normally in the source.
+        if (strpos($matches[0], $this->wiki->delim) !== false) {
+            return $matches[0];
+        }
+
         $raw = isset($matches[1]) ? $matches[1] : '';
         $labelRaw = isset($matches[2]) ? $matches[2] : '';
 

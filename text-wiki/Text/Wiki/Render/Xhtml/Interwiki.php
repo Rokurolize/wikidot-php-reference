@@ -60,7 +60,9 @@ class Text_Wiki_Render_Xhtml_Interwiki extends Text_Wiki_Render {
         if (isset($this->conf['sites'][$site])) {
             $href = $this->conf['sites'][$site];
         } else {
-            return $text;
+            // REFCORR4 Batch C: live escapes the unknown-site fallback
+            // with ENT_COMPAT (probe p16/f10); the fossil returned it raw.
+            return htmlspecialchars($text, ENT_COMPAT, 'UTF-8');
         }
 
         // old form where page is at end,
