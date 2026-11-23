@@ -438,9 +438,16 @@ $2$3[[/li]]
                         // all, pair it with the outermost opener instead;
                         // the inner tags stay literal in the none-item
                         // body and are protected from rescanning above.
+                        // The override is same-type only (the closer's
+                        // tag equals the outermost opener's tag): the
+                        // cross-type pairings of the REFCORR7/9/13
+                        // raw-case machinery are untouched by it (the
+                        // refcorr9 p1_3 wire shape keeps its snapshot-39
+                        // outcome, verified when the narrowing landed).
                         if ($foundIdx > 0) {
                             $bottom = $stack[0];
                             if ($bottom['tag'] === strtolower($bottom['tag'])
+                                && $closeTag === $bottom['tag']
                                 && stripos(substr($source, $bottom['start'],
                                     $pos - $bottom['start']), '[[/li]]') === false) {
                                 $foundIdx = 0;
