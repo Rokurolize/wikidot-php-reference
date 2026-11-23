@@ -314,6 +314,24 @@ $2$3[[/li]]
             $source
         );
 
+        // REFCORR13 symmetric nested-boundary rule. A nested opener's own
+        // case decides its fate regardless of the outer opener's case: a
+        // lowercase nested ul/ol is a genuine list (so a raw-case outer that
+        // cannot pair closes before it), while a raw-case nested ul/ol is an
+        // item boundary whose tags are consumed and whose following LI becomes
+        // a sibling item. REFCORR8/9 normalized only two of the four case
+        // combinations; these two rewrites add the missing symmetric siblings
+        // (raw outer + lowercase nested, and lowercase outer + raw nested).
+        $source = preg_replace(
+            '/^(\s*)\[\[(UL|OL)(?:_)?(?:\s+[^\]]*)?\]\]\n(\[\[LI(?:\s+[^\]]*)?\]\][^\n\[]*)\[\[(ul|ol)(?:_)?(?:\s+[^\]]*)?\]\]\n(\[\[[Ll][Ii](?:\s+[^\]]*)?\]\].*?\[\[\/(?:ul|ol)\]\])\s*\[\[\/[Ll][Ii]\]\]\n\[\[\/(?:UL|OL)\]\](.*)$/s',
+            "$1[[ul]]\n$3[[/LI]]\n[[/ul]]\n[[$4]]\n$5$6",
+            $source
+        );
+        $source = preg_replace(
+            '/^(\s*)\[\[(ul|ol)\]\]\n(\[\[[Ll][Ii](?:\s+[^\]]*)?\]\][^\n\[]*)\[\[(UL|OL)(?:_)?(?:\s+[^\]]*)?\]\]\n(\[\[[Ll][Ii](?:\s+[^\]]*)?\]\].*?\[\[\/[Ll][Ii]\]\])\n\[\[\/(?:UL|OL)\]\]\n\[\[\/[Ll][Ii]\]\]\n\[\[\/(?:ul|ol)\]\](.*)$/s',
+            "$1[[$2]]\n$3[[/LI]]\n$5\n[[/$2]]$6",
+            $source
+        );
         $tagPattern = '/\[\[(ul|ol)(_)?(?:\s+([^\s\]][^\]]*))?\]\]|\[\[\/(ul|ol)\]\](\])?/i'; // REFCORR5 Batch 1: case-insensitive recognition
 
         $guard = 0;
@@ -509,26 +527,22 @@ $2$3[[/li]]
                     $tail12 = substr($tail12, 1);
                 }
                 $tail12 = rtrim($tail12);
-                // The surviving final block closer ends the literal tail;
-                // trailing prose after it stays INSIDE the absorbing item.
-                $leftover12 = '';
-                if (preg_match('/^(.*\[\[\/(?:ul|ol)\]\])(.*)$/is', $tail12, $lm12)) {
-                    $literalTail12 = $lm12[1];
-                    $leftover12 = $lm12[2];
-                } else {
-                    $literalTail12 = $tail12;
-                }
-                // Only a [[footnoteblock]] (and any material following it) is
-                // hoisted past the list-end token; plain trailing prose is not.
-                // By the time this rule runs the Footnoteblock rule has already
-                // replaced the marker with one of this wiki's \xFF-number-\xFF
-                // placeholders, so find it by token identity, not by literal
-                // text. A literal marker (defensive) is honoured too.
-                $insideProse12 = $leftover12;
+                // REFCORR13 symmetric hoist rule: a [[footnoteblock]] marker
+                // anywhere in the post-failed-closer tail is hoisted past the
+                // list-end token, not only a marker that happens to sit after
+                // the surviving final block closer. Scan the whole tail, split
+                // at the first marker, then apply the final-closer split to the
+                // bytes before it. By the time this rule runs the Footnoteblock
+                // rule has tokenised the marker to a \xFF-number-\xFF
+                // placeholder, so find it by token identity; a literal marker
+                // (defensive) is honoured too. The bytes before the marker keep
+                // their trailing LF: it is the Newline witness live emits as
+                // <br />, so no rtrim is applied here (C-R5F-P1-2/-3).
+                $insideAll12 = $tail12;
                 $afterList12 = '';
                 $hoistPos12 = null;
                 $delim12 = preg_quote($this->wiki->delim, '/');
-                if (preg_match_all('/' . $delim12 . '(\d+)' . $delim12 . '/', $leftover12, $pm12, PREG_OFFSET_CAPTURE)) {
+                if (preg_match_all('/' . $delim12 . '(\d+)' . $delim12 . '/', $tail12, $pm12, PREG_OFFSET_CAPTURE)) {
                     foreach ($pm12[1] as $pi => $tokId12) {
                         $tk12 = isset($this->wiki->tokens[(int)$tokId12[0]])
                             ? $this->wiki->tokens[(int)$tokId12[0]] : null;
@@ -540,14 +554,22 @@ $2$3[[/li]]
                 }
                 if ($hoistPos12 === null) {
                     $fm12 = array();
-                    if (preg_match('/\[\[footnoteblock\]\]/i', $leftover12, $fm12, PREG_OFFSET_CAPTURE)) {
+                    if (preg_match('/\[\[footnoteblock\]\]/i', $tail12, $fm12, PREG_OFFSET_CAPTURE)) {
                         $hoistPos12 = $fm12[0][1];
                     }
                 }
                 if ($hoistPos12 !== null) {
-                    $insideProse12 = rtrim(substr($leftover12, 0, $hoistPos12));
-                    $afterList12 = substr($leftover12, $hoistPos12);
+                    $insideAll12 = substr($tail12, 0, $hoistPos12);
+                    $afterList12 = substr($tail12, $hoistPos12);
                 }
+                $leftover12 = '';
+                if (preg_match('/^(.*\[\[\/(?:ul|ol)\]\])(.*)$/is', $insideAll12, $lm12)) {
+                    $literalTail12 = $lm12[1];
+                    $leftover12 = $lm12[2];
+                } else {
+                    $literalTail12 = $insideAll12;
+                }
+                $insideProse12 = $leftover12;
                 // When a nested raw-case opener was flattened, the C1 regex
                 // matched the nested item's closer as its "failed" closer, so
                 // the tail still begins with the redundant outer item closer
@@ -557,7 +579,7 @@ $2$3[[/li]]
                 // On a non-nested tail this prefix is empty, so the guard is
                 // behaviour-neutral for every prior adjacency control.
                 $literalTail12 = preg_replace(
-                    '/^(?:\s*\[\[\/li\]\]|\s*\[\[\/(?:ul|ol)\]\])+/i',
+                    '/^(?:\s*\[\[\/li\]\]|\s*\[\[\/(?:ul|ol)\]\])+\s*/i',
                     '',
                     $literalTail12
                 );

@@ -53,23 +53,6 @@ class Text_Wiki_Parse_Footnote extends Text_Wiki_Parse {
    	 	
 	    	$content = trim($matches[1]);
 
-	    // REFCORR11 — the live C0-control filter is UNCONDITIONAL, not
-	    // branch-local. PHP trim's default charlist excludes form feed (12),
-	    // so the old REFCORR10 fallback branch left an FF in the stored body
-	    // before a double-LF run or with no authored LF (C-R5D-R3-1 / R3D-F2).
-	    // Drop the class once, before the break decision and the visible
-	    // projection, so both branches store an already-pure body. Empty-Raw
-	    // placeholders (0xFF<id>0xFF) and TAB/LF/CR are untouched, so the
-	    // single-authored-break witness R3D-F3 still emits its <br />.
-	    // REFCORR12 — narrow the class to the live-discarded set D = the C0
-	    // bytes below 0x20 except TAB (9), LF (10), CR (13) and ESC (27):
-	    // [\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]. Live keeps ESC verbatim in a
-	    // footnote body (C-R5E-P4-1 / C-R5E-S1-2), so the REFCORR11 upper range
-	    // 0x0E-0x1F was too wide by one byte; the Tighten residual class already
-	    // uses this exact narrower set. VT, FF and the other discarded bytes
-	    // are still dropped on every branch.
-	    $content = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $content);
-
 	    // REFCORR10 — one general token-aware live rule for the footnote body.
 	    // The stored body is re-parsed as wiki source by Footnoteblock::process,
 	    // so empty-Raw placeholders must be kept wherever an authored LF needs
@@ -90,15 +73,27 @@ class Text_Wiki_Parse_Footnote extends Text_Wiki_Parse {
 	            },
 	            $text);
 	    };
-	    $visible = $stripEmptyRaw($content);
-	    // After the unconditional REFCORR11 control drop, the break test now
-	    // decides ONLY placeholder retention: keep the placeholder-bearing
-	    // control-pure body for a single authored LF (a LF with a non-LF byte
-	    // on each side) so Newline emits <br />. Double-LF runs, bare/edge LFs
-	    // and no-LF bodies have no live <br /> and take the trimmed visible
-	    // path. The control filter above is common to both branches.
+	    // REFCORR13 C-R5F-R3-3: the authored-break predicate runs on the
+	    // control-BEARING trimmed body, before the live-discarded C0 class is
+	    // dropped. Live stores the raw trimmed body; Stage 2 purifyHtml drops
+	    // discarded C0 bytes only from the emitted text, so a bare FF (or VT,
+	    // or any other live-discarded byte) immediately before a single LF is
+	    // a real inline witness for the Newline rule and yields a rule-level
+	    // <br />. REFCORR11/12 dropped the class BEFORE this test, erasing the
+	    // sole non-LF witness and losing the <br /> (C-R5F-R3-3, R3F-16).
+	    // The predicate still decides ONLY placeholder retention; keep the
+	    // placeholder- and control-bearing body for a single authored LF.
 	    if (!preg_match('/[^\n]\n(?!\n)/', $content)) {
-	        $content = trim($visible);
+	        // Double-LF runs, bare/edge LFs and no-LF bodies have no live
+	        // <br /> and take the trimmed visible path. REFCORR12's class D is
+	        // the live-discarded C0 set below 0x20 except TAB (9), LF (10),
+	        // CR (13) and ESC (27):
+	        // [\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]. Dropping it here (not
+	        // before the predicate) keeps every cached REFCORR11/12 shape
+	        // byte-identical: ESC is retained verbatim, VT/FF and the rest are
+	        // removed on this fallback branch exactly as before.
+	        $content = trim($stripEmptyRaw(
+	            preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $content)));
 	    }
 
 	    $this->wiki->vars['footnotes'][$id-1] = $content;

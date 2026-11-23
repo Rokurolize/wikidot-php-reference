@@ -66,7 +66,12 @@ $patterns = array(
 	// C-SUSPECT-CODEEMBED-3: live's generic iframe pattern is not
 	// double-quote-only; a single-quoted script-scheme src must reach
 	// the renderer's src check and render empty.
-	'anyiframe' => ';^<iframe(\s+[a-z0-9_]+\s*=\s*[\'"][^\'"]*[\'"])+>\s*</iframe>$;si',
+	// REFCORR13 D02/D03/D04: live's generic iframe allowlist accepts
+	// valueless boolean attributes, requires the two quotes of an
+	// attribute value to match, and excludes '_' from attribute names.
+	// The alternative quote subpatterns give a backreference-free
+	// matched-quote test; the '?' makes the whole value clause optional.
+	'anyiframe' => ';^<iframe(\s+[a-z0-9]+(\s*=\s*("[^"]*"|\'[^\']*\'))?)+>\s*</iframe>$;si',
 	'mybloglog' => ';^<script\s+type=(\'|")text/javascript(\'|") src=(\'|")http://[a-z0-9]+\.mybloglog\.com/[^\'"]+(\'|")>\s*</script>$;si',
 	'revver' => ';^<script\s+src="http://[a-z]+\.revver\.com/player/[^"]+"\s+type="text/javascript">\s*</script>$;si',
 	'youtube' => ';^<embed[^>]*?src="http://video\.google\.com/googleplayer\.swf[^"]+"[^>]*>\s*</embed>$;is',

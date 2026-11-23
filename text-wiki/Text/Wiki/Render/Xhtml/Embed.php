@@ -63,7 +63,13 @@ class Text_Wiki_Render_Xhtml_Embed extends Text_Wiki_Render {
                 // C-SUSPECT-CODEEMBED-2: the event check precedes the src
                 // check, so content with both fires the error block.
                 $eventpattern = 'on[a-z]+';
-                $eventpattern = ';<[^>]*\s*' . $eventpattern . '\s*=[^>]+>;si';
+                // REFCORR13 D01: the event name must start at a word
+                // boundary. Live accepts longdesc, content and
+                // 1onclick (their `on` is glued to a preceding word
+                // byte) while still rejecting an `onclick` glued to a
+                // closing quote. PHP `\b` at the leading `o` is exactly
+                // the negative lookbehind (?<![A-Za-z0-9_]).
+                $eventpattern = ';<[^>]*\b' . $eventpattern . '\s*=[^>]+>;si';
                 if (preg_match($eventpattern, $content)) {
                     break;
                 }

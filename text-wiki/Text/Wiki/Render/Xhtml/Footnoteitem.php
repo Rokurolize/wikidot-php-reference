@@ -75,7 +75,13 @@ class Text_Wiki_Render_Xhtml_Footnoteitem extends Text_Wiki_Render {
                     return $m[0];
                 },
                 $body);
-            if (preg_match('/^[^\n]*[^ \t\n\r\x0B\x0C]/s', $visible)) {
+            // REFCORR13 C-R5F-R3-3: once the single-break branch keeps the
+            // live-discarded control byte as its inline witness, the fossil
+            // `[^ \t\n\r\x0B\x0C]` class is too narrow: live excludes every
+            // byte of the discarded set D from the separator decision, so a
+            // SOH/FF/etc. witness supplies no separator space (R3E-03, R3F-16),
+            // while ESC 0x1B is kept and still spaces a literal ESC body.
+            if (preg_match('/^[^\n]*[^\x00-\x1A\x1C-\x20]/s', $visible)) {
                 $out .= ' ';
             }
             return $out;

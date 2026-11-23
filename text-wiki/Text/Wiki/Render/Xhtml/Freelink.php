@@ -49,6 +49,10 @@ class Text_Wiki_Render_Xhtml_Freelink extends Text_Wiki_Render_Xhtml_Wikilink {
 
         // A bare external URL target is an external link, not a local slug.
         if ($url) {
+            // REFCORR13 D07: an empty pipe label falls back to the slugified URL page name, as on live, instead of emitting an empty anchor.
+            if ($textFromTitle && trim($text) === '') {
+                $text = $page;
+            }
             $text = htmlspecialchars(trim($text), ENT_COMPAT, 'UTF-8');
             if ($nonbr) {
                 $text = str_replace(' ', '&nbsp;', $text);
@@ -60,7 +64,16 @@ class Text_Wiki_Render_Xhtml_Freelink extends Text_Wiki_Render_Xhtml_Wikilink {
             $targetAttr = $target !== ''
                 ? ' target="' . htmlspecialchars($target, ENT_COMPAT, 'UTF-8') . '"'
                 : '';
-            return '<a' . $targetAttr . ' href="' . htmlspecialchars($url, ENT_COMPAT, 'UTF-8') . '">' . $text . '</a>';
+            // REFCORR13 C-R5F-R2-4 plus D06: live percent-encodes every non-ASCII byte of the external Freelink href and keeps the peeled #fragment or /#/route suffix; the reference kept them raw or dropped them. Apply Url.php's bytewise encoder to the target plus suffix before the ENT_COMPAT escape; the authored label is untouched.
+            $hrefUrl = preg_replace_callback('/[^\x00-\x7F]/', function ($m) {
+                $bytes = unpack('C*', $m[0]);
+                $out = '';
+                foreach ($bytes as $byte) {
+                    $out .= '%' . strtoupper(str_pad(dechex($byte), 2, '0', STR_PAD_LEFT));
+                }
+                return $out;
+            }, $url . $anchor . $extra);
+            return '<a' . $targetAttr . ' href="' . htmlspecialchars($hrefUrl, ENT_COMPAT, 'UTF-8') . '">' . $text . '</a>';
         }
 
         // The fossil site branch (cross-site http://site.URL_DOMAIN/page) is

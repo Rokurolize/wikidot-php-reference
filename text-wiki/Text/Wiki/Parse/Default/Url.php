@@ -285,7 +285,13 @@ class Text_Wiki_Parse_Url extends Text_Wiki_Parse {
         // preserves. Narrowed deliberately to the math surface: a
         // generic `]]` guard would also stop unrelated described URLs
         // from being claimed and move cases outside this correction.
-        if (strpos($matches[0], '$]') !== false) {
+        // REFCORR13 D05: the REFCORR6 `$]` yield is a math-surface
+        // guard. It fires only when the described match has swallowed
+        // the math closer's `$]]` tail (the doubled `]]` before `$]`),
+        // as in the m1-code pin. A plain described link ending in `$`
+        // has no doubled closer and must be claimed normally.
+        if (strpos($matches[0], '$]') !== false &&
+                strpos($matches[0], ']]') !== false) {
             return $matches[0];
         }
         // set options

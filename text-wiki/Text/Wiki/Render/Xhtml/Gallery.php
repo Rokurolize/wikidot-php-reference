@@ -170,7 +170,17 @@ class Text_Wiki_Render_Xhtml_Gallery extends Text_Wiki_Render {
 		            $href = $osrc;
 		        }
 
-		      	$out .= '<div class="gallery-item '.$size.'">';	
+		      	// REFCORR13 D09: live maps script/data URL schemes in a
+	      	// link= to '#', case-insensitively, and leaves mailto: and
+	      	// other schemes intact. Apply after any external-source
+	      	// link override and before the href is emitted.
+	      	$lowerHref = strtolower($href);
+	      	if (strpos($lowerHref, 'javascript:') === 0 ||
+	      	    strpos($lowerHref, 'vbscript:') === 0 ||
+	      	    strpos($lowerHref, 'data:') === 0) {
+	      		$href = '#';
+	      	}
+	      	$out .= '<div class="gallery-item '.$size.'">';	
     				$out .= '<table><tr><td>';
     				$out .= '<a href="'.$href.'" '.$target.'>';
     				$alt = isset($attr['alt']) ? htmlspecialchars($attr['alt'], ENT_COMPAT, 'UTF-8') : '';

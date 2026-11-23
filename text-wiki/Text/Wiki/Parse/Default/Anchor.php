@@ -411,7 +411,12 @@ class Text_Wiki_Parse_Anchor extends Text_Wiki_Parse {
                 } else {
                     $normHref = $this->normalizeAttrValue($hrefRest);
                     $normHref = str_replace(' ', '%20', $normHref);
-                    $normHref = preg_replace_callback('/[^\x00-\x7F]/', function ($m) {
+                    // REFCORR13: after normalizeAttrValue keeps ESC, live
+                    // percent-encodes it in a verbatim href (#a\x1b b becomes
+                    // #a%1Bb, C-R5F-R3-2). Encode every non-printable byte —
+                    // C0 controls, DEL and non-ASCII — one %XX per byte; the
+                    // printable ASCII bytes and the '#' lead pass through.
+                    $normHref = preg_replace_callback('/[^\x20-\x7E]/', function ($m) {
                         $bytes = unpack('C*', $m[0]);
                         $enc = '';
                         foreach ($bytes as $b) {
@@ -450,13 +455,18 @@ class Text_Wiki_Parse_Anchor extends Text_Wiki_Parse {
 
     /**
     *
-    * Strips C0 control bytes (except \t, \n, \r) and DEL, then collapses runs
-    * of ASCII whitespace to a single space and trims both ends.
+    * REFCORR13: strips the live-discarded C0 class D — every byte below 0x20
+    * except TAB 9, LF 10, CR 13 and ESC 27 — then collapses runs of ASCII
+    * whitespace to a single space and trims both ends. DEL 0x7F is kept. The
+    * former [\x00-\x08\x0B\x0C\x0E-\x1F\x7F] also removed ESC, but live
+    * keeps ESC in an id (C-R5F-R3-1) and percent-encodes it in a verbatim
+    * href (C-R5F-R3-2); D is the same class REFCORR12 narrowed in the notes
+    * rules and R13 narrows in Div/Span/Image.
     *
     */
     function normalizeAttrValue($val)
     {
-        $clean = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/', '', $val);
+        $clean = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $val);
         $clean = preg_replace('/[ \t\n\r]+/', ' ', $clean);
         return trim($clean, ' ');
     }

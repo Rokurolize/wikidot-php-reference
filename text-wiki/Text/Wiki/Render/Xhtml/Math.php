@@ -43,8 +43,23 @@ class Text_Wiki_Render_Xhtml_Math extends Text_Wiki_Render {
         // parse time. This branch needs no LatexRenderer and is reachable
         // in the harness; the probe bytes are
         // muse-probe-suspect-serving-math-types-ids.
-        if (! preg_match('/^[a-z][a-z0-9]*$/', (string) $type)) {
-            return '<div class="error-block">' . _('Unsupported math environment "' . $type . '"') . '</div>';
+        // REFCORR13 R13-AGY2 D08: this SUPERSEDES the R13-MATHNOTES
+        // `^[a-z]+$` acceptance rule (which fixed the round-5f `align2`
+        // witness but was wrong in the other direction). Live strips every
+        // `*` from the authored name FIRST, then checks a fixed AMS/LaTeX
+        // allowlist measured on live: equation, align, gather, eqnarray,
+        // multline and split. Cached witnesses: `align*`, `gather*` and
+        // `equation*` are accepted with the star removed in the envelope;
+        // `eqnarray`, `multline` and `split` are accepted; `foobar`,
+        // `flalign` and the round-5f `align2` are rejected; `a*b` is
+        // rejected with the stripped name `ab` in the error block. No trim
+        // and no case folding happen: `align ` and `ALIGN` stay unsupported.
+        // The counter and the verbatim stored token value are untouched.
+        $env = str_replace('*', '', (string) $type);
+        $amsEnvironments = array('equation', 'align', 'gather', 'eqnarray',
+            'multline', 'split');
+        if (! in_array($env, $amsEnvironments, true)) {
+            return '<div class="error-block">' . _('Unsupported math environment "' . $env . '"') . '</div>';
         }
         $hashcode = md5($content . '..' . $type);
         $runData = Ozone::getRunData();
@@ -65,12 +80,11 @@ class Text_Wiki_Render_Xhtml_Math extends Text_Wiki_Render {
             $renderer->setTmpDir($tmpDir);
             $renderer->setOutputDir($dir);
             
-            // REFCORR3 C-SUSPECT-SERVING-1: the environment is whatever
-            // lower-case name the author gave (align, gather, equation,
-            // eqnarray, ...) — the PNG-stub scratch copy's latex-env.log
-            // records live asking for exactly \begin{TYPE} ... \end{TYPE}.
-            // The old whitelist forced eqnarray*/equation* envelopes.
-            $content2 = "\\begin{" . $type . "} " . $content . " \\end{" . $type . "}";
+            // REFCORR13 R13-AGY2 D08: the envelope uses the star-stripped
+            // allowlist name (`align*` -> `align`), exactly the live value.
+            // The MathJax/PNG wrapper shape itself remains the known external
+            // LatexRenderer serving boundary and is deliberately NOT changed.
+            $content2 = "\\begin{" . $env . "} " . $content . " \\end{" . $env . "}";
             $renderer->render($content2, $hashcode);
         }
         

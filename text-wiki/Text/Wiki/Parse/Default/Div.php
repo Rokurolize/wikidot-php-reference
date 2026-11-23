@@ -55,7 +55,14 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
      * normalize_wikidot_html_attribute_value.
      */
     function normalizeValue($value) {
-        $value = preg_replace('/[\x00-\x1F\x7F]/', '', $value);
+        // REFCORR13: the live-discarded C0 class D is every byte below 0x20
+        // except TAB 9, LF 10, CR 13 and ESC 27; DEL 0x7F is kept too. The
+        // former wide [\x00-\x1F\x7F] dropped ESC and DEL, but live serves
+        // both verbatim in the same attribute value (C-R5F-S1-1, witnesses
+        // s07 type="A\x1bB" and s08 data-x="A\x7fB"). D is the same class
+        // REFCORR12 narrowed in Footnote/Bibitem/Bibliography/Tighten; the
+        // whitespace collapse and the REFCORR12 trailing rtrim are unchanged.
+        $value = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $value);
         $value = preg_replace('/[ \t\r\n]+/', ' ', $value);
         $value = ltrim($value, ' ');
         // REFCORR12 general rule: the Wikidot attribute-value normalizer

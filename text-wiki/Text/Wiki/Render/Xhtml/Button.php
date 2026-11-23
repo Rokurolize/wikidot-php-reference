@@ -97,7 +97,12 @@ class Text_Wiki_Render_Xhtml_Button extends Text_Wiki_Render {
     		return '<div class="error-block"><em>'.$type.'</em> is not a valid button type</div>';	
     	}
     	
-    	if($type === 'set-tags' && !$text){
+    	// REFCORR13 R13-AGY2 D10: live guards only an ABSENT `text` attribute
+    	// (a null/isset test), not a falsy one. `text="0"` and `text=""` pass
+    	// here, then the falsy default at line 110 finds no `set-tags` entry in
+    	// $defaultText and leaves an empty label, yielding `<a></a>` on live.
+    	// Cached witnesses: muse-probe-agy-hunt-m08a/m08b.
+    	if($type === 'set-tags' && !isset($text)){
     		return '<div class="error-block">You need to set text for set-tags button.</div>';	
     	}
     	

@@ -222,10 +222,24 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
             // The trim stays after every acceptance guard so the C3
             // leading-space rejection, the scheme anchoring and the `*`
             // new-tab strip still see the authored bytes.
-            foreach (array('link', 'width', 'class') as $trimKey) {
+            // REFCORR13: the accepted technical/presentation keys are
+            // link, width, class, style and height (C-R5F-P3-1/2 and
+            // C-R5F-R2-2/3 add style and height to the REFCORR12 three).
+            // Each value first drops the live-discarded C0 class D — every
+            // byte below 0x20 except TAB 9, LF 10, CR 13 and ESC 27, with
+            // DEL kept — which is why an interior form feed vanishes on
+            // live (C-R5F-S1-3), then loses one trailing ctype_space / PCRE
+            // \s run. The text/label keys title and alt stay byte-verbatim
+            // (title with ESC is byte-clear under S12); size is dropped by
+            // both sides. Every acceptance guard above still sees the
+            // authored bytes.
+            foreach (array('link', 'width', 'class', 'style', 'height') as $trimKey) {
                 if (isset($options['attr'][$trimKey])) {
+                    $clean = preg_replace(
+                        '/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '',
+                        $options['attr'][$trimKey]);
                     $options['attr'][$trimKey] =
-                        rtrim($options['attr'][$trimKey], " \t\n\r\f\v");
+                        rtrim($clean, " \t\n\r\f\v");
                 }
             }
         }
