@@ -52,30 +52,36 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                 $close = strpos($src, '@@', $j);
                 $nl = strpos($src, "\n", $j);
                 $lineEnd = $nl === false ? $n : $nl;
-                // REFCORR5 Batch 6: a 4+ run is its own empty-Raw construct
-                // even when a later @@ sits on the same line, provided that
-                // later run is itself 4+ (the p22 forge shape
-                // @@@@@@123@@@@@@). A surplus same-line closer run of 2
-                // stays the scanner's literal trailing-@ shaping (trail-4).
+                // REFCORR5 Batch 6, threshold corrected by REFCORR14: a 4+
+                // run is its own empty-Raw construct even when a later @@
+                // sits on the same line, provided that later run is itself
+                // 2+ (the p22 forge shape @@@@@@123@@@@@@ and the W-EQ shape
+                // @@@@a@@@b@@). A lone short closer with no later run stays
+                // the scanner's literal trailing-@ shaping (trail-4).
                 $closeRun = 0;
                 if ($close !== false) {
                     $cr = $close;
                     while ($cr < $n && $src[$cr] === '@') { $closeRun++; $cr++; }
                 }
-                // REFCORR10: a closer run of two or three bytes is only a
-                // final closer when no later 4+ run follows on the same line.
-                // With a later 4+ run, the ftml finish_double_at_raw
-                // re-association claims that later run as the real closer and
-                // leaves the intervening text in a Raw span (C-R5C-S1-2), so
-                // this opener must take the empty-Raw early exit and be
-                // re-scanned rather than emitting the short-run surplus here.
+                // REFCORR10, threshold corrected by REFCORR14: a closer run
+                // of two or three bytes is only a final closer when no later
+                // 2+ run follows on the same line. With a later run, the ftml
+                // finish_double_at_raw re-association claims that later run
+                // as the real closer and leaves the intervening text in a Raw
+                // span (C-R5C-S1-2), so this opener must take the empty-Raw
+                // early exit and be re-scanned rather than emitting the
+                // short-run surplus here. Live W-EQ (`@@@@a@@@b@@`,
+                // `<p>a<span style="white-space: pre-wrap;">@b</span></p>`)
+                // shows the later run need only be two bytes; the old
+                // `$q - $p >= 4` and the mirror's `4 <= n` were both too
+                // strict and are lowered to two symmetrically.
                 $laterQuad = false;
                 if ($close !== false && $closeRun <= 3) {
                     $scan = $close + $closeRun;
                     while (($p = strpos($src, '@@', $scan)) !== false && $p < $lineEnd) {
                         $q = $p;
                         while ($q < $n && $src[$q] === '@') $q++;
-                        if ($q - $p >= 4) { $laterQuad = true; break; }
+                        if ($q - $p >= 2) { $laterQuad = true; break; }
                         $scan = $q;
                     }
                 }
