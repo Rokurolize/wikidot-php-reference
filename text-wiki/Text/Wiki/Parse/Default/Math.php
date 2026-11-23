@@ -161,7 +161,7 @@ class Text_Wiki_Parse_Math extends Text_Wiki_Parse {
         if (array_key_exists($bk, $memo)) {
             return $memo[$bk];
         }
-        if (!preg_match('/\G\[\[math(\s+[a-z0-9_]*?)?((?:\s+[a-z0-9]+="[^"]*")*)\s*\]\]/i', $src, $om, 0, $p)) {
+        if (!preg_match('/\G\[\[math(\s+[a-z0-9_]*?)?((?:\s+[a-z0-9]+="[^"]*"))*\s*\]\]/i', $src, $om, 0, $p)) {
             return $memo[$bk] = false;
         }
         $bodyStart = $p + strlen($om[0]);
@@ -175,7 +175,7 @@ class Text_Wiki_Parse_Math extends Text_Wiki_Parse {
         $matches = array(
             substr($src, $p, $c[1] - $p),
             isset($om[1]) ? $om[1] : '',
-            $om[2],
+            isset($om[2]) ? $om[2] : '',
             substr($src, $bodyStart, $c[0] - $bodyStart),
             $c[2]);
         return $memo[$bk] = array($c[1], $matches);
@@ -215,7 +215,7 @@ class Text_Wiki_Parse_Math extends Text_Wiki_Parse {
             }
         }
         $nextOpen = strpos($src, '[[', $pos + 1);
-        $nextClose = strpos($src, "\n[[/math]]", $pos + 1);
+        $nextClose = stripos($src, "\n[[/math]]", $pos + 1);
         if ($nextOpen === false && $nextClose === false) {
             return $memo[$sk] = false;
         }
