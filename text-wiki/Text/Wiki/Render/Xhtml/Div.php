@@ -53,11 +53,14 @@ class Text_Wiki_Render_Xhtml_Div extends Text_Wiki_Render {
             foreach ($args as $key => $value) {
                 // REFCORR4 Batch C: live escapes attribute values with
                 // ENT_COMPAT, and clears any value carrying a token
-                // placeholder to empty with the key kept. An id whose
-                // placeholder was consumed by isolateId is left as the
-                // bare u- shell, which is cleared the same way.
-                if (strpos($value, "\xFF") !== false ||
-                        ($key === 'id' && $value === 'u-')) {
+                // placeholder to empty with the key kept. REFCORR8
+                // (C-R5-R1-1) narrows this: the bare u- shell that
+                // isolateId leaves for a whitespace-only authored id is
+                // NOT a placeholder carrier on live and is emitted
+                // verbatim (id="u-"). Only the 0xFF placeholder arm
+                // clears. R5R1-D1 live bytes:
+                //   <div id="u-">\n<p>body</p>\n</div>.
+                if (strpos($value, "\xFF") !== false) {
                     $value = '';
                 }
                 $argstr .= ' ' . $key . '="' .

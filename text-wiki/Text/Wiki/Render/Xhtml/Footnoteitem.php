@@ -59,10 +59,10 @@ class Text_Wiki_Render_Xhtml_Footnoteitem extends Text_Wiki_Render {
             // state the block render reads is available here.
             $footnotes = $this->wiki->vars['footnotes'] ?? array();
             $body = $footnotes[$id - 1] ?? '';
-            // REFCORR9: derive the separator space from the visible body
-            // (empty-Raw placeholders stripped, then trimmed) rather than
-            // the raw stored bytes, so the retained placeholder-bearing
-            // newline emits <br /> with no stray leading space.
+            // REFCORR10 — separator space iff the visible body has a
+            // non-whitespace byte before its first authored line break. A body
+            // whose first line is empty (starts with a break) gets no space,
+            // matching live; literal/NBSP first-line text keeps the space.
             $delim = preg_quote($this->wiki->delim, '/');
             $visible = preg_replace_callback(
                 '/' . $delim . '(\d+)' . $delim . '/',
@@ -75,7 +75,7 @@ class Text_Wiki_Render_Xhtml_Footnoteitem extends Text_Wiki_Render {
                     return $m[0];
                 },
                 $body);
-            if (trim($visible) !== '') {
+            if (preg_match('/^[^\n]*[^ \t\n\r\x0B\x0C]/s', $visible)) {
                 $out .= ' ';
             }
             return $out;

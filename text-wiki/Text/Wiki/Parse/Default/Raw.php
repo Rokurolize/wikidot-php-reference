@@ -62,7 +62,24 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                     $cr = $close;
                     while ($cr < $n && $src[$cr] === '@') { $closeRun++; $cr++; }
                 }
-                if ($close === false || ($run >= 4 && ($close >= $lineEnd || $closeRun >= 4))) {
+                // REFCORR10: a closer run of two or three bytes is only a
+                // final closer when no later 4+ run follows on the same line.
+                // With a later 4+ run, the ftml finish_double_at_raw
+                // re-association claims that later run as the real closer and
+                // leaves the intervening text in a Raw span (C-R5C-S1-2), so
+                // this opener must take the empty-Raw early exit and be
+                // re-scanned rather than emitting the short-run surplus here.
+                $laterQuad = false;
+                if ($close !== false && $closeRun <= 3) {
+                    $scan = $close + $closeRun;
+                    while (($p = strpos($src, '@@', $scan)) !== false && $p < $lineEnd) {
+                        $q = $p;
+                        while ($q < $n && $src[$q] === '@') $q++;
+                        if ($q - $p >= 4) { $laterQuad = true; break; }
+                        $scan = $q;
+                    }
+                }
+                if ($close === false || ($run >= 4 && ($close >= $lineEnd || $closeRun >= 4 || $laterQuad))) {
                     // REFCORR5 Batch 6 (C-RAW-COMPOSITE-1): a run of four or
                     // more @ is one empty Raw token (elided at render)
                     // followed by run-4 literal @ bytes, exactly once per
@@ -156,12 +173,24 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                 // For a closer run of two or three bytes the literal count
                 // equals the closer run length (trail + 2); longer runs keep
                 // the established shed-four shaping.
-                $out .= str_repeat('@', $trail <= 1 ? $trail + 2 : max(0, $trail - 2));
+                // REFCORR10 general surplus formula: a final closer run of
+                // length c emits c literal bytes when c is two or three and
+                // c-4 when c is four or more. In terms of trail = c-2 this
+                // is trail<=1 ? trail+2 : trail-2, unchanged on every cached
+                // bare case; it is factored out so the general rule is
+                // explicit and shared with the mirror.
+                $out .= str_repeat('@', $this->surplusCloser($closeRun));
             } elseif ($trail >= 2) {
                 // The closer run is an empty raw plus an opener for whatever
                 // follows; the body is still a raw span, and the extra @ are
                 // left as literal text (live probe raw-adjacent).
-                $out .= $this->wiki->addToken($this->rule, array('text' => $body), false, substr($src, $i, $k - $i));
+                // REFCORR10: a three-run opener's extra @ belongs to the span
+                // body in every branch, not just the plain-claim branch. With
+                // a later 4+ run, lead=1 here (the short run re-scanned as the
+                // opener) and the leading @ is body, giving @ B + two literal
+                // @ after the later closer, exactly as live (C-R5C-S1-2).
+                $text = ($lead === 1 ? '@' : '') . $body;
+                $out .= $this->wiki->addToken($this->rule, array('text' => $text), false, substr($src, $i, $k - $i));
                 $out .= str_repeat('@', $trail);
             } else {
                 $text = ($lead === 1 ? '@' : '') . $body;
@@ -176,5 +205,15 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
     function process($matches) {
         $options = array('text' => $matches[1]);
         return $this->wiki->addToken($this->rule, $options, false, $matches[0]);
+    }
+
+    // REFCORR10: the general surplus-closer formula for a FINAL closer run of
+    // length c after a 4+-opener body. Two- and three-byte runs stay fully
+    // literal (the opener is already its own empty Raw); runs of four or more
+    // shed four bytes as an empty Raw and leave c-4 literal. Derived from the
+    // cached bare cases c=2 (ZQ@@), c=3 (ZQ@@@), c=4 (ZQ) and c=5 (@ZQ@).
+    private function surplusCloser($closeRun) {
+        $c = $closeRun;
+        return $c <= 3 ? $c : max(0, $c - 4);
     }
 }

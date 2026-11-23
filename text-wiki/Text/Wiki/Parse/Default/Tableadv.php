@@ -149,13 +149,19 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
         foreach ($parsed as $key => $value) {
             // REFCORR8 C-R5-P3-2 folds a data-* key to lower case; REFCORR9
             // C-R5B-P3-2 admits `_` in the data-* key grammar, which the
-            // general block-head grammar deliberately still rejects. The
-            // recognised prefix stays the exact lower-case `data-`, so an
-            // upper-case DATA- prefix, aria-*, align and every other non-data
-            // key keep their settled behavior.
+            // general block-head grammar deliberately still rejects. REFCORR10
+            // generalizes the folded data-* suffix to the live-observed key
+            // class [a-z0-9._-]: lower-case letters, digits, underscore,
+            // hyphen and dot. This is the union of every cached live key shape
+            // (foo, 9foo, foo_, foo_bar-baz, foo.bar); the added dot byte is
+            // the sole generalization demanded by C-R5C-P3-1. The recognised
+            // prefix stays the exact lower-case `data-`, so an upper-case
+            // DATA- prefix, aria-*, align and every other non-data key keep
+            // their settled behavior, and the general advKeyOk class is not
+            // widened.
             if (strpos($key, 'data-') === 0) {
                 $key = strtolower($key);
-                if (preg_match('/^data-[a-z0-9_-]*$/', $key) !== 1) {
+                if (preg_match('/^data-[a-z0-9._-]*$/', $key) !== 1) {
                     continue;
                 }
             } else if (preg_match('/^[a-z][a-z0-9-]*$/', $key) !== 1) {

@@ -53,44 +53,36 @@ class Text_Wiki_Parse_Footnote extends Text_Wiki_Parse {
    	 	
 	    	$content = trim($matches[1]);
 
-	    // REFCORR7: an empty-Raw placeholder is the byte string
-	    // \xFF<id>\xFF naming a token ['Raw', ['text' => '']] whose render
-	    // is nothing (Tighten deletes it; the Raw renderer emits no bytes).
-	    // A body made only of such placeholders is empty on live (S4C
-	    // fn-empty, fn-ws): strip them from the stored body so the existing
-	    // `$body !== ''` emptiness test in Footnoteitem::token sees empty.
-	    // The literal remainder survives (fn-six keeps "@@"), and a
-	    // non-empty Raw token (fn-free's "x") is left intact. The same
-	    // stripping is mirrored in LeanFtml.NotesRules.footnoteProcess,
-	    // so the compared footnotes state stays byte-identical across
-	    // the two sides; no token entry is added or reindexed.
+	    // REFCORR10 — one general token-aware live rule for the footnote body.
+	    // The stored body is re-parsed as wiki source by Footnoteblock::process,
+	    // so empty-Raw placeholders must be kept wherever an authored LF needs
+	    // an inline witness byte for the Newline rule to emit <br />. Emptiness
+	    // and the separator space are decided from the visible projection: the
+	    // same body with empty-Raw placeholders removed (Footnoteitem::token).
 	    $delim = preg_quote($this->wiki->delim, '/');
-	    // REFCORR9: save the pre-strip (placeholder-bearing) remainder so a
-	    // lone newline separator can render as a rule-level <br />.
-	    $rawRemainder = $content;
-	    $content = preg_replace_callback(
-	        '/' . $delim . '(\d+)' . $delim . '/',
-	        function ($m) {
-	            $tok = $this->wiki->tokens[(int) $m[1]] ?? null;
-	            if ($tok !== null && $tok[0] === 'Raw'
-	                && isset($tok[1]['text']) && $tok[1]['text'] === '') {
-	                return '';
-	            }
-	            return $m[0];
-	        },
-	        $content);
-	    // REFCORR8 (C-R5-R3-1): re-trim the remainder after the empty-Raw
-	    // strip (REFCORR7 trimmed only before the strip).
-	    // REFCORR9 (C-R5B-R3-1 = C-R5B-P4-1): when the strip leaves exactly
-	    // one authored newline (optionally flanked by horizontal space), the
-	    // Newline rule needs an inline byte before the LF to emit <br />.
-	    // Keep the pre-strip placeholder-bearing body for that one shape;
-	    // Footnoteitem derives its separator space from the visible body so
-	    // no stray space appears. All other remainders keep REFCORR8.
-	    if (preg_match('/^[ \t]*\n[ \t]*$/D', $content)) {
-	        $content = $rawRemainder;
+	    $stripEmptyRaw = function ($text) use ($delim) {
+	        return preg_replace_callback(
+	            '/' . $delim . '(\d+)' . $delim . '/',
+	            function ($m) {
+	                $tok = $this->wiki->tokens[(int) $m[1]] ?? null;
+	                if ($tok !== null && $tok[0] === 'Raw'
+	                    && isset($tok[1]['text']) && $tok[1]['text'] === '') {
+	                    return '';
+	                }
+	                return $m[0];
+	            },
+	            $text);
+	    };
+	    $visible = $stripEmptyRaw($content);
+	    // Preserve the placeholder-bearing body exactly when it carries a
+	    // single authored line break: a LF with a non-LF byte on each side.
+	    // Double-LF runs and bare/edge LFs have no live <br /> and take the
+	    // trimmed visible path. C0 controls other than TAB/LF/CR are dropped,
+	    // matching live purifyHtml (notably form feed).
+	    if (preg_match('/[^\n]\n(?!\n)/', $content)) {
+	        $content = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F]/', '', $content);
 	    } else {
-	        $content = trim($content);
+	        $content = trim($visible);
 	    }
 
 	    $this->wiki->vars['footnotes'][$id-1] = $content;
