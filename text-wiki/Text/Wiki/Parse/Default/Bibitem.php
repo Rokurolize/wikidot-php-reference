@@ -68,6 +68,15 @@ class Text_Wiki_Parse_Bibitem extends Text_Wiki_Parse {
                 return $m[0];
             },
             $content);
+        // REFCORR8 (C-R5-R3-2): re-trim the visible remainder after the
+        // empty-Raw strip. REFCORR7 trimmed only before the strip and kept
+        // the body verbatim, so two placeholders separated by whitespace
+        // left a stray space that made 'empty' false and the body non-empty;
+        // live folds both to empty. vars['bibitems'][$label] was set above
+        // and stays byte-identical, so compared state is unchanged and no
+        // compared field is added; only the emitted body and flag change.
+        $visible = trim($visible);
+        $content = $visible;
         return $this->wiki->addToken($this->rule, 
                 array(
                     'label' => $label, 

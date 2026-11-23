@@ -286,12 +286,12 @@ $3$4',
         // with a none-item inner list and literal trailing closers. Normalize
         // that skeleton before pairing.
         $source = preg_replace(
-            '/^\s*(\[\[(?:ul|ol)\]\])\n(\[\[li\]\][^\n]*)\n(\[\[ol\]\])\n(\[\[li\]\][^\n]*)\[\[\/li\]\]\n\[\[\/(?:UL|OL)\]\](.*?)\n\[\[\/(?:ul|ol)\]\]\n\[\[\/li\]\]\n\[\[\/(?:ul|ol)\]\](.*)$/s',
+            '/^\s*(\[\[(?:ul|ol)\]\])\n(\[\[li\]\][^\n]*)\n\[\[(ul|ol)\]\]\n(\[\[li\]\].*?)\[\[\/li\]\]\n\[\[\/(?:UL|OL)\]\](.*?)\n\[\[\/(?:ul|ol)\]\]\n\[\[\/li\]\]\n\[\[\/(?:ul|ol)\]\](.*)$/s',
             '$1
 $2
-$3
+[[$3]]
 $4
-[[/ol]] $5[[/li]]
+[[/$3]] $5[[/li]]
 [[/ul]] [[/li]]
 [[/ul]]$6',
             $source
@@ -305,7 +305,7 @@ $4
         // this is disjoint from the C-R5-S1-01 rewrite, which requires a
         // lowercase inner opener and yields two sibling lists.
         $source = preg_replace(
-            '/^\s*\[\[(?:UL|OL)(?:_)?(?:\s+[^\]]*)?\]\]\n(\[\[li\]\][^\n]*)\n\[\[(?:UL|OL)\]\]\n(\[\[li\]\][^\n]*)\[\[\/li\]\]\n\[\[\/(?:UL|OL)\]\]\n\[\[\/li\]\]\n\[\[\/(?:ul|ol)\]\]([^\n]*)\s*$/s',
+            '/^\s*\[\[(?:UL|OL)(?:_)?(?:\s+[^\]]*)?\]\]\n(\[\[li\]\][^\n]*)\n\[\[(?:UL|OL)(?:_)?(?:\s+[^\]]*)?\]\]\n(\[\[li\]\][^\n]*)\[\[\/li\]\]\n\[\[\/(?:UL|OL)\]\]\n\[\[\/li\]\]\n\[\[\/(?:ul|ol)\]\](.*?)\s*$/s',
             '[[ul_]]
 $1
 [[/li]]
@@ -451,6 +451,25 @@ $2$3[[/li]]
                     $tailAfterCloser7 = substr($source, $lastCloser7[1] + strlen($lastCloser7[0]));
                     $unclosed7 = ((!$op['scored'] || $opUpper7) && trim($tailAfterCloser7) === '');
                 }
+                // REFCORR10 general rule: a nested list in a raw-case opener's
+                // body supplies following content, so the outer list closes
+                // even when its own would-be closer is the last non-space text.
+                $hasNestedListTok = false;
+                $d = preg_quote($this->wiki->delim, '/');
+                if (preg_match_all('/' . $d . '(\d+)' . $d . '/', $body, $tmTok)) {
+                    foreach ($tmTok[1] as $tokKey) {
+                        $tk = isset($this->wiki->tokens[(int)$tokKey]) ? $this->wiki->tokens[(int)$tokKey] : null;
+                        if ($tk !== null && $tk[0] === $this->rule && isset($tk[1]['type'])
+                            && in_array($tk[1]['type'], array('explicit_list_start', 'bullet_list_start', 'number_list_start'), true)) {
+                            $hasNestedListTok = true;
+                            break;
+                        }
+                    }
+                }
+                if ($unclosed7 && (preg_match('/\[\[(?:ul|ol)(?:_)?(?:\s+[^\]]*)?\]\]/i', $body)
+                        || $hasNestedListTok)) {
+                    $unclosed7 = false;
+                }
             }
 
             // REFCORR5 Batch 1: an uppercase opener's would-be closer is
@@ -466,7 +485,7 @@ $2$3[[/li]]
             // pairs both LI markers and leaves the list unclosed, so emit the
             // one-item closed token sequence directly for this exact skeleton.
             if (!empty($matchedPair['synthetic'])
-                && preg_match('/^\n\[\[LI\]\]([^\n]*)\[\[\/LI\]\]\n\[\[\/(?:UL|OL)\]\]\n(\[\[LI\]\].*)$/s', $body, $c1m)) {
+                && preg_match('/^\n\[\[li(?:\s+[^\]]*)?\]\](.*?)\[\[\/li\]\]\n\[\[\/(?:ul|ol)\]\]\n(\[\[li(?:\s+[^\]]*)?\]\].*)$/is', $body, $c1m)) {
                 $literalBody = $c1m[1] . rtrim($c1m[2]);
                 $start9 = $this->wiki->addToken($this->rule, array(
                     'type' => 'explicit_list_start',
@@ -640,8 +659,34 @@ $2$3[[/li]]
             }
 
             $survivingCount = 0;
+            $siblingAfter = '';
             foreach ($items as $item) {
-                $formatted = $this->formatExplicitLiItem($item, $nestedMap, $nativeMap, $unclosed);
+                // REFCORR10 general rule: an EMPTY item cannot hold a nested
+                // list. Keep the empty item with one break and emit the
+                // attached nested lists as siblings after this list closes.
+                $nestedPhs = array();
+                foreach (array_merge(array($item['body']), $item['attached_nested']) as $srcPart) {
+                    if (preg_match_all('/\x02EXPLIST_\d+\x03/', $srcPart, $pm)) {
+                        foreach ($pm[0] as $ph) {
+                            $nestedPhs[] = $ph;
+                        }
+                    }
+                }
+                $bodyNoPh = preg_replace('/\s|\x02EXPLIST_\d+\x03/', '', $item['body']);
+                if ($bodyNoPh === '' && count($nestedPhs) > 0) {
+                    $emptyBr = $this->wiki->addToken($this->rule, array('type' => 'explicit_br_no_nl'));
+                    $emptyLiStart = $this->wiki->addToken($this->rule, array('type' => 'explicit_item_start', 'attrs' => $item['attrs'], 'lead' => ''));
+                    $emptyLiEnd = $unclosed ? '' : $this->wiki->addToken($this->rule, array('type' => 'explicit_item_end', 'lead' => ''));
+                    $emittedItems .= $emptyLiStart . $emptyBr . $emptyLiEnd;
+                    $survivingCount++;
+                    foreach ($nestedPhs as $ph) {
+                        $nInfo = $nestedMap[$ph];
+                        $this->wiki->tokens[$nInfo['end_key']][1]['trail'] = "\n";
+                        $siblingAfter .= $nInfo['str'];
+                    }
+                    continue;
+                }
+                $formatted = $this->formatExplicitLiItem($item, $nestedMap, $nativeMap, $unclosed, $scored);
                 if ($formatted !== '') {
                     $emittedItems .= $formatted;
                     $survivingCount++;
@@ -679,7 +724,11 @@ $2$3[[/li]]
                 'synth'   => $synthetic,
             );
 
-            return $startTok . $emittedItems . $endTok . $trailAfterClose;
+            $siblingTail = '';
+            if ($siblingAfter !== '') {
+                $siblingTail = $this->wiki->addToken($this->rule, array('type' => 'explicit_raw_nl')) . $siblingAfter . $this->wiki->addToken('Newline', array());
+            }
+            return $startTok . $emittedItems . $endTok . $trailAfterClose . $siblingTail;
         }
 
         $trimmedBody = trim($body);
@@ -773,7 +822,7 @@ $2$3[[/li]]
     /**
      * Formats a single [[li...]]...[[/li]] item and any sibling nested lists attached to it.
      */
-    protected function formatExplicitLiItem($item, $nestedMap, $nativeMap, $unclosed = false)
+    protected function formatExplicitLiItem($item, $nestedMap, $nativeMap, $unclosed = false, $scored = false)
     {
         $b = $item['body'];
         $b = preg_replace('/^[ \t]+|[ \t]+$/', '', $b);
@@ -790,7 +839,12 @@ $2$3[[/li]]
             $b = $this->wiki->addToken($this->rule, array('type' => 'explicit_br_no_nl'));
         }
         if ($b === '' && count($item['attached_nested']) === 0) {
-            return '';
+            // REFCORR10 general rule: an unclosed SCORED opener keeps an empty
+            // item rather than dissolving the whole list. The scored flag
+            // suppresses the trailing break, so the item is bare <li>.
+            if (!($unclosed && $scored)) {
+                return '';
+            }
         }
 
         $leadAfterLiOpen = '';

@@ -84,6 +84,18 @@ class Text_Wiki_Parse_Module extends Text_Wiki_Parse {
         $con = $matches[0];
         
         if (preg_match_all('/^\[\[module\s([a-z0-9_\-\/]+)(\s+.*?)?\]\]/smi', $con, $dummy) > 1) {
+            // REFCORR10 general nested-module rule: consumption through
+            // trailing closers applies to EVERY nested module opener, not
+            // only one whose own tail already ends in a newline. The
+            // established F13 composition lets Module claim each line-
+            // terminated inner opener and Module654 then claim the outer
+            // one through the final closer. An inline inner opener has no
+            // newline after its ]], so Module's opener grammar cannot claim
+            // it and the outer lazy body stops at the inner closer, leaving
+            // the outer closer literal (C-R5C-P3-2). Give every inline nested
+            // opener the newline its grammar requires so the same composition
+            // consumes one closer per opener and no residual closer survives.
+            $con = preg_replace('/^(\[\[module[^\]]*\]\])(?! *\n)/mi', "$1\n", $con);
             return preg_replace('/^\[\[module/', '[[module654', $con);
         }
         

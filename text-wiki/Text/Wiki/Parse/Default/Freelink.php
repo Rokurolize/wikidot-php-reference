@@ -134,11 +134,19 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         // yields an empty page with anchor #a, which live renders as /#a.
         $anchor = '';
         $extra = '';
-        if (strpos($raw, '/#/') !== false) {
+        // REFCORR10-HASHROUTE: the no-label display text is the authored
+        // target up to the route or anchor marker. For a `/#/` route the
+        // explode() peel consumes the slash that precedes the separator, so
+        // keep that one byte in $textRaw for the display while $raw and
+        // $extra still drive the page slug and href exactly as before.
+        $textRaw = $raw;
+        if (($routePos = strpos($raw, '/#/')) !== false) {
+            $textRaw = substr($raw, 0, $routePos + 1);
             list($base, $rest) = explode('/#/', $raw, 2);
             $raw = $base;
             $extra = '#/' . $rest;
         } elseif (($hashPos = strpos($raw, '#')) !== false) {
+            $textRaw = substr($raw, 0, $hashPos);
             $anchor = rtrim(substr($raw, $hashPos));
             $raw = substr($raw, 0, $hashPos);
         }
@@ -188,34 +196,32 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         // C6: non-ASCII page names go through ftml's explicit transliteration
         // table; unmapped characters act as separators, as on live.
         $slugSource = $raw;
-        // REFCORR9 C-R5B-P2-4: a leading star is the new-tab marker consumed
-        // on $trimmed above (REFCORR3), not a whitespace byte. Ordering fix:
-        // consume that same single marker on the slug source before the
-        // anchored category strip, under the identical no-leading-space
-        // guard, so a leading star can no longer defeat the strip. The byte
-        // check is on $slugSource itself (not $starUrl) because trim()'s
-        // default charlist is wider than the [ \t] leading-space test. The
-        // display-text path still reads $raw unchanged.
-        if (! $leadingSpace && isset($slugSource[0]) && $slugSource[0] === '*') {
-            $slugSource = substr($slugSource, 1);
-        }
         // C4: strip a leading _default: BEFORE transliteration (REFCORR5
         // Batch 5). Running the table first corrupts _default: into _: and
-        // the prefix no longer strips. REFCORR7: live tolerates leading
-        // space/tab before the category, so the anchored match consumes that
-        // run as part of the prefix and drops the matched byte count. REFCORR8
-        // widens that run to exactly the five whitespace shapes cached live:
-        // 0x09 tab, 0x0B vertical tab, 0x20 space, UTF-8 C2 A0 (U+00A0) and
-        // UTF-8 E3 80 80 (U+3000). REFCORR9 adds exactly three more
-        // live-cached lead shapes before the category: 0x0C form feed
-        // (C-R5B-P2-1), UTF-8 E2 80 A8 U+2028 (C-R5B-P2-2) and UTF-8 EF BB BF
-        // U+FEFF BOM (C-R5B-P2-3). No other Unicode whitespace is admitted.
-        // The regex stays byte-oriented (no /u) so a malformed UTF-8 subject
-        // anywhere cannot turn the strip off, and strlen($defPrefix[0]) still
-        // removes exactly the matched byte count; the zero-whitespace bare
-        // form strips nine bytes, a non-leading `_default:` and a generic
-        // colon prefix still do not match.
-        if (preg_match('/^(?:[\x09\x0B\x0C\x20]|\xC2\xA0|\xE3\x80\x80|\xE2\x80\xA8|\xEF\xBB\xBF)*_default:/i', $slugSource, $defPrefix)) {
+        // the prefix no longer strips. REFCORR10 replaces the enumerated
+        // per-byte lead list (REFCORR7/8/9) with the single general rule the
+        // live evidence converges on: the material tolerated before a leading
+        // `_default:` is a run of Unicode White_Space characters, the U+FEFF
+        // BOM, or the `*` new-tab marker (REFCORR9's single-star ordering fix
+        // is subsumed, and multiplicity from C-R5C-P2-7 falls out of the run).
+        // The admitted code points are the Unicode White_Space property
+        // {U+0009..U+000D, U+0020, U+0085, U+00A0, U+1680, U+2000..U+200A,
+        // U+2028, U+2029, U+202F, U+205F, U+3000} plus U+FEFF and U+002A;
+        // every byte shape cached live (09, 0B, 0C, 20, C2 A0, E3 80 80,
+        // E2 80 A8, E2 80 A9, E2 80 83, E2 80 89, E2 80 AF, EF BB BF and
+        // 2A) is a member and byte-zero NUL is not. The class is written as
+        // byte-oriented UTF-8 ranges (no /u) so a malformed UTF-8 tail cannot
+        // turn the strip off, preserving the REFCORR8 invariant; the code-point
+        // form `'/^[\p{White_Space}\x{FEFF}\x{2A}]*_default:/iu'` was measured
+        // to return false on such a subject and is deliberately rejected.
+        // Unevidenced White_Space members (0A, 0D, 85, 1680, 2000-2002,
+        // 2004-2008, 200A, 205F) are admitted only by the principled class;
+        // that limitation is recorded in CORRECTION-REFCORR10-FREELINK-GENERAL.
+        // strlen($defPrefix[0]) still removes exactly the matched byte count;
+        // the zero-lead bare form strips nine bytes, a non-leading `_default:`
+        // and a generic colon prefix still do not match, and the display-text
+        // path still reads $raw unchanged.
+        if (preg_match('/^(?:[\x09\x0A\x0B\x0C\x0D\x20\x2A]|\xC2[\x85\xA0]|\xE1\x9A\x80|\xE2\x80[\x80-\x8A\xA8\xA9\xAF]|\xE2\x81\x9F|\xE3\x80\x80|\xEF\xBB\xBF)*_default:/i', $slugSource, $defPrefix)) {
             $slugSource = substr($slugSource, strlen($defPrefix[0]));
         }
         if (preg_match('/[^\x00-\x7F]/u', $slugSource)) {
@@ -226,7 +232,7 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         if ($labelRaw === '') {
             // No pipe label: live strips a category prefix from the display
             // text but keeps the rest of the authored target.
-            $text = $raw;
+            $text = $textRaw;
             // A leading : or / is part of the authored display text on live
             // (e.g. [[[:scp-wiki : system : Recent Changes]]]), so only a
             // category prefix after a real page name is stripped here.

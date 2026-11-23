@@ -36,7 +36,12 @@ class Text_Wiki_Parse_Mathinline extends Text_Wiki_Parse {
     * live suppress the whole formula wherever they occur in the body,
     * including inside a described email's or URL's claimed source.
     */
-    public static $suppressRules = array('Freelink', 'Raw', 'Newline', 'Image');
+    // REFCORR8 C-R5-P2-4: a Date token suppresses the whole formula on
+    // live (`[[$x [[date 0]] y$]]` -> `<span class="math-inline">$$</span>`),
+    // just like the REFCORR6 four. The check in expandSource is recursive,
+    // so a Date at any depth suppresses; the four-rule set is otherwise
+    // unchanged, as is the recursive source-span expansion itself.
+    public static $suppressRules = array('Freelink', 'Raw', 'Newline', 'Image', 'Date');
 
     /**
     * REFCORR6: the one-level option-value replacement retained as a

@@ -69,15 +69,15 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
         if ($value === '') {
             return '';
         }
-        // REFCORR9 C-R5B-R1-1: a 0xFF token placeholder in an authored id
-        // must reach the render clear arm so a placeholder-consumed id
-        // shell serves id="" on live, while a whitespace-only authored id
-        // keeps the bare u- shell and serves id="u-" (R5R1-D1). Returning
-        // the placeholder-bearing value unchanged here is what the /u
-        // collapse below would preserve on a valid UTF-8 value; an
-        // authored value that already starts with u- keeps the historic
-        // collapse-to-null path (the caller drops that id).
-        if (strpos($value, "\xFF") !== false && strpos($value, 'u-') !== 0) {
+        // REFCORR10 general rule: an authored id whose body carries a 0xFF
+        // token placeholder is preserved verbatim for ANY body, including
+        // one that already starts with u-, so the render's single 0xFF
+        // clear arm emits id="" with the key kept (C-R5C-R1-1, C-R5C-S1-1).
+        // The former u- prefix exclusion made the /u collapse return null
+        // and the caller drop the id, contradicting live. A whitespace-only
+        // authored id has no placeholder and still isolates to the bare
+        // u- shell (R5R1-D1), which the render emits verbatim.
+        if (strpos($value, "\xFF") !== false) {
             return $value;
         }
         if (preg_match('/^\s/u', $value)) {
