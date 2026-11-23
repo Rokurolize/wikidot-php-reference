@@ -26,8 +26,12 @@
 class WDStringUtils {
 	
 	public static $CONVERT_ARRAY = array( 
+			// REFCORR13 R13-AGY2 D12: the duplicate `Ä` key collapsed under
+			// PHP array-literal last-key-wins to `Ä => A`, so `Äpfel` slugified
+			// to `apfel` while `äpfel` slugified to `aepfel`. One `Ä => Ae`
+			// restores the upper/lower transliteration symmetry.
 			'À'=>'A','À'=>'A','Á'=>'A','Á'=>'A','Â'=>'A','Â'=>'A',
-			'Ã'=>'A','Ã'=>'A','Ä'=>'Ae','Ä'=>'A','Å'=>'A','Å'=>'A',
+			'Ã'=>'A','Ã'=>'A','Ä'=>'Ae','Å'=>'A','Å'=>'A',
 			'Æ'=>'Ae','Æ'=>'AE',			
 			'Ā'=>'A','Ą'=>'A','Ă'=>'A',			
 			'Ç'=>'C','Ç'=>'C','Ć'=>'C','Č'=>'C','Ĉ'=>'C','Ċ'=>'C',
@@ -41,7 +45,10 @@ class WDStringUtils {
 			'Ĳ'=>'IJ',
 			'Ĵ'=>'J',
 			'Ķ'=>'K',
-			'Ł'=>'K','Ľ'=>'K','Ĺ'=>'K','Ļ'=>'K','Ŀ'=>'K',
+			// REFCORR13 R13-AGY2 D12: the fossil typo mapped `Ł` to `K`;
+			// live resolves `Łukasz` to the user `lukasz`, i.e. `Ł -> l`.
+			// strtolower() below folds this `L` to `l`.
+			'Ł'=>'L','Ľ'=>'K','Ĺ'=>'K','Ļ'=>'K','Ŀ'=>'K',
 			'Ñ'=>'N','Ñ'=>'N','Ń'=>'N','Ň'=>'N','Ņ'=>'N','Ŋ'=>'N',
 			'Ò'=>'O','Ò'=>'O','Ó'=>'O','Ó'=>'O','Ô'=>'O','Ô'=>'O','Õ'=>'O','Õ'=>'O',
 			'Ö'=>'Oe','Ö'=>'Oe',
@@ -81,7 +88,10 @@ class WDStringUtils {
 			'ø'=>'o','ō'=>'o','ő'=>'o','ŏ'=>'o',
 			'œ'=>'oe',
 			'ŕ'=>'r','ř'=>'r','ŗ'=>'r',
-			'š'=>'s',
+			// REFCORR13 R13-AGY2 D12: the lowercase `ś` entry was missing
+			// (only `š` was present), so `ślimak` slugified to `limak`.
+			// Live resolves the user `slimak`, i.e. `ś -> s`.
+			'ś'=>'s','š'=>'s',
 			'ù'=>'u','ú'=>'u','û'=>'u','ü'=>'ue','ū'=>'u',
 			'ü'=>'ue',
 			'ů'=>'u','ű'=>'u','ŭ'=>'u','ũ'=>'u','ų'=>'u',

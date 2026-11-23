@@ -106,7 +106,12 @@ class Text_Wiki_Parse_Tabview extends Text_Wiki_Parse {
 
     protected function _tabTitle($text) {
         $text = trim($text);
-        if ($text === '') {
+        // REFCORR13 R13-AGY2 D11: live uses a PHP falsy test here, not a
+        // strict empty-string test, so the positional `[[tab 0]]` and the
+        // `[[tab title="0"]]` forms both default to `untitled`. The strict
+        // `=== ''` kept `"0"` as a visible label. Cached witnesses:
+        // muse-probe-agy-hunt-m09a/m09b.
+        if (! $text) {
             return 'untitled';
         }
         if (preg_match('/@@.*@@|@<.*>@/s', $text) || strpos($text, "\xFF") !== false) {

@@ -182,14 +182,17 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
             } else {
                 $text = substr($labelRaw, 1);
             }
+            // REFCORR13 D06/D07: keep the peeled #fragment or /#/route in the external href, and fall back to the slugified URL text on an empty pipe label.
+            $emptyPipe = (trim($labelRaw) === '|');
+            $urlSlug = WDStringUtils::toUnixName($trimmed);
             $options = array(
                 'site' => null,
-                'page' => '',
+                'page' => $emptyPipe ? $urlSlug : '',
                 'text' => $text,
-                'anchor' => '',
-                'extra' => '',
+                'anchor' => $anchor,
+                'extra' => ($extra !== '' ? '/' . $extra : ''),
                 'url' => $url,
-                'textFromTitle' => null,
+                'textFromTitle' => $emptyPipe ? true : null,
             );
             // Only a starred URL adds the target option, so the pinned
             // plain-URL token shape is byte-unchanged.
@@ -210,7 +213,8 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         // Byte-zero NUL (U+0000) and every other C0/C1 control outside White_Space and Cf are excluded by construction, so NUL stays excluded and no live-rejected control is admitted while the White_Space controls remain admitted exactly as before; the multi-hash rejection added in REFCORR11 is untouched.
         // The class stays byte-oriented UTF-8 ranges (no /u) so a malformed UTF-8 tail cannot turn the strip off, preserving the REFCORR8 invariant; the code-point form with the Unicode property escapes and /u was measured to return false on such a subject and is deliberately rejected.
         // strlen($defPrefix[0]) still removes exactly the matched byte count; the zero-lead bare form strips nine bytes, a non-leading `_default:` and a generic colon prefix still do not match, and the display-text path still reads $raw unchanged.
-        if (preg_match('/^(?:[\x09-\x0D]|\x20|\x2A|\xC2\x85|\xC2\xA0|\xC2\xAD|\xD8[\x80-\x85]|\xD8\x9C|\xDB\x9D|\xDC\x8F|\xE0\xA2[\x90-\x91]|\xE0\xA3\xA2|\xE1\x9A\x80|\xE1\xA0\x8E|\xE2\x80[\x80-\x8F]|\xE2\x80[\xA8-\xAF]|\xE2\x81[\x9F-\xA4]|\xE2\x81[\xA6-\xAF]|\xE3\x80\x80|\xEF\xBB\xBF|\xEF\xBF[\xB9-\xBB]|\xF0\x91\x82\xBD|\xF0\x91\x83\x8D|\xF0\x93\x90[\xB0-\xBF]|\xF0\x9B\xB2[\xA0-\xA3]|\xF0\x9D\x85[\xB3-\xBA]|\xF3\xA0\x80\x81|\xF3\xA0\x80[\xA0-\xBF]|\xF3\xA0\x81[\x80-\xBF])*_default:/i', $slugSource, $defPrefix)) {
+        // REFCORR13 (C-R5F-P2-1 / C-R5F-R2-1 / C-R5F-S2-1): round 5f measures live stripping exactly two further lead bytes that the REFCORR12 general predicate excluded. U+2065 (E2 81 A5) is the unassigned gap between the admitted U+2060..U+2064 and U+2066..U+206F Cf arms (live href /x against reference /_default:x); U+001B ESC (Cc) is admitted by live as a lead (live href /x against reference /default:x), falsifying the REFCORR12 assumption that every C0/C1 control outside White_Space and Cf is live-rejected. The ASCII alternation gains the single \x1B branch and the two disjoint E2 81 Cf arms gain the single E2 81 A5 branch, an evidence-bounded two-code-point extension of the certified 196-code-point class. Byte-zero NUL stays excluded, every other C0/C1 control stays excluded, the class stays byte-oriented UTF-8 with no /u so the REFCORR8 malformed-tail invariant holds, and the REFCORR11 uniform multi-hash rejection is untouched. The mirror isDefaultLeadCp is extended by the same two code points so the byte form and the code-point form stay symmetric.
+        if (preg_match('/^(?:[\x09-\x0D]|\x1B|\x20|\x2A|\xC2\x85|\xC2\xA0|\xC2\xAD|\xD8[\x80-\x85]|\xD8\x9C|\xDB\x9D|\xDC\x8F|\xE0\xA2[\x90-\x91]|\xE0\xA3\xA2|\xE1\x9A\x80|\xE1\xA0\x8E|\xE2\x80[\x80-\x8F]|\xE2\x80[\xA8-\xAF]|\xE2\x81[\x9F-\xA4]|\xE2\x81\xA5|\xE2\x81[\xA6-\xAF]|\xE3\x80\x80|\xEF\xBB\xBF|\xEF\xBF[\xB9-\xBB]|\xF0\x91\x82\xBD|\xF0\x91\x83\x8D|\xF0\x93\x90[\xB0-\xBF]|\xF0\x9B\xB2[\xA0-\xA3]|\xF0\x9D\x85[\xB3-\xBA]|\xF3\xA0\x80\x81|\xF3\xA0\x80[\xA0-\xBF]|\xF3\xA0\x81[\x80-\xBF])*_default:/i', $slugSource, $defPrefix)) {
             $slugSource = substr($slugSource, strlen($defPrefix[0]));
         }
         if (preg_match('/[^\x00-\x7F]/u', $slugSource)) {

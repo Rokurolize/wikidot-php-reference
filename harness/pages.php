@@ -22,6 +22,11 @@ function ref_page_map() {
         // Root-owned stub, disclosed in conformance-refphp/R2-LINK.md.
         'muse-probe-r2link-free-exists' => "FREELINK TARGET ONE",
         'muse-probe-r2link-free-exists2' => "FREELINK TARGET TWO",
+        // REFCORR13 R13-AGY2 D13: the pre-created live sandbox target used by
+        // muse-probe-agy-hunt-h06a; its authored title is registered in
+        // ozone-stubs.php's REF_PAGE_TITLES so a textFromTitle freelink
+        // resolves it instead of falling back to `newpage` + slug.
+        'muse-probe-agy-hunt-title-target' => "Title target",
         // R2-notes stage: the run-owned include target used by root's focused
         // include-content probe (muse-probe-r2notes-x-inc-holder). Its source is
         // byte-identical to the live sandbox page muse-probe-r2notes-x-inc-src,

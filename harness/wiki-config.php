@@ -8,9 +8,15 @@
 // The fossil registers a global page-existence callback for freelinks.
 // The reference harness treats a fixed in-memory page set as existing;
 // R2 will wire it to the differential corpus's page set.
+// REFCORR13 R13-AGY2 D13: the callback's truthy value is the PAGE ID the
+// render rules pass to DB_PagePeer::selectByPrimaryKey(), not a bare bool.
+// Returning true here was what made textFromTitle resolution unreachable.
 $GLOBALS['REF_EXISTING_PAGES'] = array();
 function wikiPageExists($page) {
-    return in_array($page, $GLOBALS['REF_EXISTING_PAGES'], true);
+    if (in_array($page, $GLOBALS['REF_EXISTING_PAGES'], true)) {
+        return function_exists('ref_page_id') ? ref_page_id($page) : 1;
+    }
+    return false;
 }
 
 function ref_configure_wiki($wiki) {
