@@ -57,7 +57,18 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
     function normalizeValue($value) {
         $value = preg_replace('/[\x00-\x1F\x7F]/', '', $value);
         $value = preg_replace('/[ \t\r\n]+/', ' ', $value);
-        return ltrim($value, ' ');
+        $value = ltrim($value, ' ');
+        // REFCORR12 general rule: the Wikidot attribute-value normalizer
+        // (ftml normalize_wikidot_html_attribute_value) also drops the
+        // trailing whitespace run, not only the leading one. The former
+        // ltrim-only shape left a trailing space on every normalized key
+        // except class, which the caller rtrimmed separately; live rtrims
+        // the whole family, so type/style/role/data-* carried one byte the
+        // live page does not (C-R5E-R1-1). The collapse above already turns
+        // any trailing space/tab/CR/LF run into one space, so this final
+        // rtrim over the ctype_space / PCRE \s byte set completes the
+        // normalization uniformly for every key.
+        return rtrim($value, " \t\n\r\v\f");
     }
 
     /**
@@ -136,6 +147,9 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
             } elseif ($key === 'class' || $key === 'style' || $key === 'role' || $key === 'type') {
                 $normalized = $this->normalizeValue($value);
                 if ($key === 'class') {
+                    // REFCORR12: now redundant — normalizeValue right-trims
+                    // every normalized value — but retained so the class
+                    // branch stays byte-identical for every cached case.
                     $normalized = rtrim($normalized, " \t");
                 }
                 $args[$key] = $normalized;

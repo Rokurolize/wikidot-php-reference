@@ -484,55 +484,120 @@ $2$3[[/li]]
             // the list is closed. The generic synthetic tail absorption below
             // pairs both LI markers and leaves the list unclosed, so emit the
             // one-item closed token sequence directly for this exact skeleton.
-            // REFCORR11 R11-LIST GENERAL post-failed-close adjacency rule.
-            // The failed block closer of a raw-case opener is followed on live
-            // by a single item whose literal tail runs to the end of the body,
-            // no matter what material sits between that closer and the next
-            // raw-case [[LI]] marker. The old C1 guard demanded a bare closer
-            // immediately followed by one LF and then the LI, so a residual
-            // bracket, a blank line, a collected footnote block or any other
-            // block marker defeated it and fell through to the generic two-item
-            // absorption branch. Generalise the adjacency to: after the failed
-            // closer, take everything up to and including the first following
-            // LI marker and its payload as the literal tail, tolerating ANY
-            // intervening bytes. One leading LF (the closer's own line end)
-            // is consumed; everything else is preserved verbatim.
+            // REFCORR12 R12-LIST GENERAL nested-list / trailing-prose rule.
+            // REFCORR11 generalized the post-failed-close adjacency to tolerate
+            // any intervening bytes, but it made two rule-level mistakes that
+            // rounds 5e confirmed. First, it split the literal tail at the
+            // surviving final block closer and appended everything after that
+            // closer AFTER the list-end token; live keeps trailing prose INSIDE
+            // the last item and hoists only a [[footnoteblock]] past the list.
+            // Second, it kept a nested raw-case [[UL]]/[[OL]] opener inside the
+            // first item's literal body; live flattens that nested opener into
+            // sibling items. The single coherent generalization is: a raw-case
+            // opener with a failed closer emits one list, in which a nested
+            // raw-case block opener is an ITEM BOUNDARY (it closes the current
+            // item and the next [[LI]] becomes a sibling), the item at the
+            // failed closer absorbs the tail literally through the final
+            // surviving closer plus all trailing prose, and only a
+            // [[footnoteblock]] in that trailing material is emitted after the
+            // list so its footer renders outside the list on live.
             if (!empty($matchedPair['synthetic'])
                 && preg_match('/^\n\[\[li(?:\s+[^\]]*)?\]\](.*?)\[\[\/li\]\]\n\[\[\/(?:ul|ol)\]\](.*?\[\[li(?:\s+[^\]]*)?\]\].*)$/is', $body, $c1m)) {
-                $tail11 = $c1m[2];
-                if (substr($tail11, 0, 1) === "\n") {
-                    $tail11 = substr($tail11, 1);
+                $pre12 = $c1m[1];
+                $tail12 = $c1m[2];
+                if (substr($tail12, 0, 1) === "\n") {
+                    $tail12 = substr($tail12, 1);
                 }
-                $tail11 = rtrim($tail11);
+                $tail12 = rtrim($tail12);
                 // The surviving final block closer ends the literal tail;
-                // anything after it (a [[footnoteblock]], trailing prose,
-                // another block marker) is not part of the item and must be
-                // processed by the normal pipeline after the list.
-                $leftover11 = '';
-                if (preg_match('/^(.*\[\[\/(?:ul|ol)\]\])(.*)$/is', $tail11, $lm11)) {
-                    $literalTail11 = $lm11[1];
-                    $leftover11 = $lm11[2];
+                // trailing prose after it stays INSIDE the absorbing item.
+                $leftover12 = '';
+                if (preg_match('/^(.*\[\[\/(?:ul|ol)\]\])(.*)$/is', $tail12, $lm12)) {
+                    $literalTail12 = $lm12[1];
+                    $leftover12 = $lm12[2];
                 } else {
-                    $literalTail11 = $tail11;
+                    $literalTail12 = $tail12;
                 }
-                $literalBody = $c1m[1] . $literalTail11;
-                $start9 = $this->wiki->addToken($this->rule, array(
+                // Only a [[footnoteblock]] (and any material following it) is
+                // hoisted past the list-end token; plain trailing prose is not.
+                // By the time this rule runs the Footnoteblock rule has already
+                // replaced the marker with one of this wiki's \xFF-number-\xFF
+                // placeholders, so find it by token identity, not by literal
+                // text. A literal marker (defensive) is honoured too.
+                $insideProse12 = $leftover12;
+                $afterList12 = '';
+                $hoistPos12 = null;
+                $delim12 = preg_quote($this->wiki->delim, '/');
+                if (preg_match_all('/' . $delim12 . '(\d+)' . $delim12 . '/', $leftover12, $pm12, PREG_OFFSET_CAPTURE)) {
+                    foreach ($pm12[1] as $pi => $tokId12) {
+                        $tk12 = isset($this->wiki->tokens[(int)$tokId12[0]])
+                            ? $this->wiki->tokens[(int)$tokId12[0]] : null;
+                        if ($tk12 !== null && isset($tk12[0]) && $tk12[0] === 'Footnoteblock') {
+                            $hoistPos12 = $pm12[0][$pi][1];
+                            break;
+                        }
+                    }
+                }
+                if ($hoistPos12 === null) {
+                    $fm12 = array();
+                    if (preg_match('/\[\[footnoteblock\]\]/i', $leftover12, $fm12, PREG_OFFSET_CAPTURE)) {
+                        $hoistPos12 = $fm12[0][1];
+                    }
+                }
+                if ($hoistPos12 !== null) {
+                    $insideProse12 = rtrim(substr($leftover12, 0, $hoistPos12));
+                    $afterList12 = substr($leftover12, $hoistPos12);
+                }
+                // When a nested raw-case opener was flattened, the C1 regex
+                // matched the nested item's closer as its "failed" closer, so
+                // the tail still begins with the redundant outer item closer
+                // and the real failed outer block closer. Live consumes those
+                // boundary tokens; strip a leading run of item/block closers
+                // (and their surrounding whitespace) from the literal tail.
+                // On a non-nested tail this prefix is empty, so the guard is
+                // behaviour-neutral for every prior adjacency control.
+                $literalTail12 = preg_replace(
+                    '/^(?:\s*\[\[\/li\]\]|\s*\[\[\/(?:ul|ol)\]\])+/i',
+                    '',
+                    $literalTail12
+                );
+                // A nested raw-case ul/ol opener or closer never opens a
+                // nested list on live: it is absorbed into the item stream as
+                // a boundary. Strip those tags, then split the pre-closer
+                // region into sibling item bodies at every [[LI]] marker.
+                $preFlat12 = preg_replace_callback(
+                    '/\[\[(\/?)(ul|ol)(_)?(?:\s+[^\]]*)?\]\]/i',
+                    function ($m) {
+                        return ($m[2] === strtolower($m[2])) ? $m[0] : '';
+                    },
+                    $pre12
+                );
+                $segs12 = preg_split('/\[\[li(?:\s+[^\]]*)?\]\]/i', $preFlat12);
+                foreach ($segs12 as $k => $seg12) {
+                    $segs12[$k] = rtrim(preg_replace('/\[\[\/li\]\]/i', '', $seg12));
+                }
+                $absorbBody12 = array_pop($segs12) . $literalTail12 . $insideProse12;
+                $start12 = $this->wiki->addToken($this->rule, array(
                     'type' => 'explicit_list_start',
                     'list_type' => $op['tag'],
                     'attrs' => array(),
                     'scored' => $op['scored'],
                 ));
-                $liStart9 = $this->wiki->addToken($this->rule, array(
+                $liStart12 = $this->wiki->addToken($this->rule, array(
                     'type' => 'explicit_item_start', 'attrs' => array(), 'lead' => '',
                 ));
-                $liEnd9 = $this->wiki->addToken($this->rule, array(
+                $liEnd12 = $this->wiki->addToken($this->rule, array(
                     'type' => 'explicit_item_end', 'lead' => '',
                 ));
-                $end9 = $this->wiki->addToken($this->rule, array(
+                $end12 = $this->wiki->addToken($this->rule, array(
                     'type' => 'explicit_list_end',
                     'list_type' => $op['tag'], 'trail' => '', 'scored' => $op['scored'],
                 ));
-                $replacement = $start9 . $liStart9 . $literalBody . $liEnd9 . $end9 . $leftover11;
+                $replacement = $start12;
+                foreach ($segs12 as $seg12) {
+                    $replacement .= $liStart12 . $seg12 . $liEnd12;
+                }
+                $replacement .= $liStart12 . $absorbBody12 . $liEnd12 . $end12 . $afterList12;
                 $source = substr($source, 0, $op['start']) . $replacement . substr($source, $fullEnd);
                 continue;
             }

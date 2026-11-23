@@ -213,9 +213,20 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
             // all untouched. The byte set is the rule's own ctype_space / PCRE
             // \s class {space, tab, LF, VT, FF, CR}, the same set the leading-
             // whitespace guard above rejects, and it removes an entire run.
-            if (isset($options['attr']['link'])) {
-                $options['attr']['link'] =
-                    rtrim($options['attr']['link'], " \t\n\r\f\v");
+            // REFCORR12 general rule: the accepted technical attributes
+            // link, width and class are right-trimmed over the same ctype_space
+            // / PCRE \s byte set at this single consumer point (C-R5D-P3-1,
+            // C-R5E-P3-1/2/3). The text/label attributes title, alt, style,
+            // height and size keep their authored whitespace byte-for-byte,
+            // which is the boundary evidence of P3E-06/P3E-07 and P3E-10.
+            // The trim stays after every acceptance guard so the C3
+            // leading-space rejection, the scheme anchoring and the `*`
+            // new-tab strip still see the authored bytes.
+            foreach (array('link', 'width', 'class') as $trimKey) {
+                if (isset($options['attr'][$trimKey])) {
+                    $options['attr'][$trimKey] =
+                        rtrim($options['attr'][$trimKey], " \t\n\r\f\v");
+                }
             }
         }
         

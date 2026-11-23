@@ -47,16 +47,19 @@ class Text_Wiki_Parse_Bibitem extends Text_Wiki_Parse {
         $content = trim(str_replace("\n", " ", $content));
         $this->wiki->vars['bibitems'][$label] = $content;
         // REFCORR11 — apply the same unconditional live C0-control filter the
-        // footnote branch applies: purifyHtml drops every byte below 0x20
-        // except TAB (9), LF (10) and CR (13) from the emitted body on every
-        // shape. PHP trim excludes form feed (12), so a FF between two empty
-        // Raw placeholders survived the REFCORR8 strip-and-retrim, kept the
-        // 'empty' flag false and emitted a separator space (C-R5D-R3-2),
-        // where live settles an empty entry. Drop the class here, before the
-        // empty-Raw strip and re-trim; vars['bibitems'][$label] above stays
-        // byte-identical so the compared state and token wire shape do not
-        // change. TAB, LF-derived spaces, CR and NBSP are all preserved.
-        $content = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F]/', '', $content);
+        // footnote branch applies, before the empty-Raw strip and re-trim;
+        // PHP trim excludes form feed (12), so a FF between two empty Raw
+        // placeholders survived REFCORR8 as a non-empty body and separator
+        // space (C-R5D-R3-2) where live settles an empty entry.
+        // vars['bibitems'][$label] above stays byte-identical so the compared
+        // state and token wire shape do not change. TAB, LF-derived spaces,
+        // CR and NBSP are all preserved.
+        // REFCORR12 — narrow to the live-discarded set D = C0 bytes below 0x20
+        // except TAB (9), LF (10), CR (13) and ESC (27), i.e.
+        // [\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]. Live keeps ESC in a note body
+        // (C-R5E-P4-1 / C-R5E-S1-2), so the REFCORR11 upper range was one byte
+        // too wide; FF and the rest of D are still dropped on every shape.
+        $content = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $content);
         $id = count($this->wiki->vars['bibitemIds']) + 1;
         $this->wiki->vars['bibitemIds'][$label] = $id;
         // R2-notes: live renders an empty entry as "N." with no trailing

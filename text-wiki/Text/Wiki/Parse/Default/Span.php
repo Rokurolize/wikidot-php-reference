@@ -75,8 +75,30 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
         // horizontal whitespace is trimmed.
         $content = trim($matches[2], " \t");
 
-        $attr = $this->getAttrs(trim($matches[1]));
+        $attrText = isset($matches[1]) ? $matches[1] : '';
+        $attr = $this->getAttrs(trim($attrText));
         $args = array();
+        // REFCORR12 general rule: a data-* attribute whose authored value is
+        // non-empty keeps its key even when the captured value empties after
+        // a nested-rule placeholder interaction. getAttrs (Parse.php:224-247)
+        // assigns the empty substring when the value's closing quote was not
+        // captured, and the former `$value === ''` skip then dropped the key;
+        // live keeps it and emits data-x="" (C-R5E-R1-3). This records which
+        // keys were authored non-empty from the raw opener text; the regex
+        // deliberately allows an unterminated quote because Span's opener
+        // capture stops at the first `]`. id and class/style/role/type are
+        // intentionally not given this retention: cached live rows
+        // R5DR1-S1 (id) and R5BR1-S1 (class) drop their key on the same
+        // placeholder shape, so only the data-* family is affected.
+        $authoredNonEmpty = array();
+        if (preg_match_all('/([A-Za-z][A-Za-z0-9_-]*)\s*=\s*"([^"]*)/',
+                $attrText, $am, PREG_SET_ORDER)) {
+            foreach ($am as $m) {
+                if ($m[2] !== '') {
+                    $authoredNonEmpty[strtolower($m[1])] = true;
+                }
+            }
+        }
         // Live puts id first and then preserves source order for the rest.
         if (isset($attr['id']) && $attr['id'] !== '') {
             // REFCORR5 Batch 8 (p14): live does not double an author-supplied
@@ -85,7 +107,17 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
                 ? $attr['id'] : 'u-' . $attr['id'];
         }
         foreach ($attr as $key => $value) {
-            if ($key === 'id' || $value === '') {
+            if ($key === 'id') {
+                continue;
+            }
+            if ($value === '') {
+                $lkey = strtolower($key);
+                if (strpos($key, 'data-') === 0
+                    && !empty($authoredNonEmpty[$lkey])) {
+                    // Key kept with an empty value; the render's 0xFF clear
+                    // arm emits data-x="" with the key present, as live does.
+                    $args[$lkey] = $value;
+                }
                 continue;
             }
             if ($key === 'class' || $key === 'style'

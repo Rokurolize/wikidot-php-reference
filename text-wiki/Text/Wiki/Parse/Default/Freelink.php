@@ -203,41 +203,14 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         // C6: non-ASCII page names go through ftml's explicit transliteration
         // table; unmapped characters act as separators, as on live.
         $slugSource = $raw;
-        // C4: strip a leading _default: BEFORE transliteration (REFCORR5
-        // Batch 5). Running the table first corrupts _default: into _: and
-        // the prefix no longer strips. REFCORR10 replaces the enumerated
-        // per-byte lead list (REFCORR7/8/9) with the single general rule the
-        // live evidence converges on: the material tolerated before a leading
-        // `_default:` is a run of Unicode White_Space characters, the U+FEFF
-        // BOM, or the `*` new-tab marker (REFCORR9's single-star ordering fix
-        // is subsumed, and multiplicity from C-R5C-P2-7 falls out of the run).
-        // The admitted code points are the Unicode White_Space property
-        // {U+0009..U+000D, U+0020, U+0085, U+00A0, U+1680, U+2000..U+200A,
-        // U+2028, U+2029, U+202F, U+205F, U+3000} plus U+FEFF and U+002A,
-        // and REFCORR11 adds exactly two live-evidenced Unicode Cf format
-        // characters: U+200B ZERO WIDTH SPACE (C-R5D-P2-1) and U+2060 WORD
-        // JOINER (C-R5D-P2-2). Every byte shape cached live (09, 0B, 0C, 20,
-        // C2 A0, E3 80 80, E2 80 A8, E2 80 A9, E2 80 83, E2 80 89, E2 80 AF,
-        // EF BB BF, 2A, and now E2 80 8B and E2 81 A0) is a member and
-        // byte-zero NUL is not. The two new members are added as the single
-        // immediate successors of U+200A and U+205F (byte ranges E2 80
-        // [\x80-\x8B] and E2 81 [\x9F\xA0]), NOT by admitting all of Unicode
-        // category Cf: sibling format characters with no cached live capture
-        // (U+200C ZWNJ, U+200D ZWJ, U+2061..U+2064) are deliberately excluded.
-        // The class stays byte-oriented UTF-8 ranges (no /u) so a malformed
-        // UTF-8 tail cannot turn the strip off, preserving the REFCORR8
-        // invariant; the code-point form
-        // `'/^[\p{White_Space}\x{FEFF}\x{2A}]*_default:/iu'` was measured to
-        // return false on such a subject and is deliberately rejected.
-        // Unevidenced White_Space members (0A, 0D, 85, 1680, 2000-2002,
-        // 2004-2008, 200A, 205F) are admitted only by the principled class;
-        // that limitation is recorded in CORRECTION-REFCORR10-FREELINK-GENERAL
-        // and the Cf restriction in CORRECTION-REFCORR11-FREELINK.
-        // strlen($defPrefix[0]) still removes exactly the matched byte count;
-        // the zero-lead bare form strips nine bytes, a non-leading `_default:`
-        // and a generic colon prefix still do not match, and the display-text
-        // path still reads $raw unchanged.
-        if (preg_match('/^(?:[\x09\x0A\x0B\x0C\x0D\x20\x2A]|\xC2[\x85\xA0]|\xE1\x9A\x80|\xE2\x80[\x80-\x8B\xA8\xA9\xAF]|\xE2\x81[\x9F\xA0]|\xE3\x80\x80|\xEF\xBB\xBF)*_default:/i', $slugSource, $defPrefix)) {
+        // C4: strip a leading _default: BEFORE transliteration (REFCORR5 Batch 5); running the table first corrupts _default: into _: and the prefix no longer strips.
+        // REFCORR12 replaces the REFCORR10/REFCORR11 enumerated and byte-successor lead lists with ONE general lead predicate, symmetric with the mirror: the material tolerated before a leading `_default:` is a run of Unicode format (category Cf) characters, Unicode White_Space characters, the U+FEFF BOM, or the `*` new-tab marker, and nothing else.
+        // The pinned Cf set is the full Unicode 17.0 category (U+00AD, U+0600..U+0605, U+061C, U+06DD, U+070F, U+0890..U+0891, U+08E2, U+180E, U+200B..U+200F, U+202A..U+202E, U+2060..U+2064, U+2066..U+206F, U+FEFF, U+FFF9..U+FFFB, U+110BD, U+110CD, U+13430..U+1343F, U+1BCA0..U+1BCA3, U+1D173..U+1D17A, U+E0001, U+E0020..U+E007F) and the White_Space set is {U+0009..U+000D, U+0020, U+0085, U+00A0, U+1680, U+2000..U+200A, U+2028, U+2029, U+202F, U+205F, U+3000}; U+FEFF is both BOM and Cf and U+002A is the star marker.
+        // This generalisation is forced by round 5e: C-R5E-R2-1..5 and C-R5E-P2-1/2 measure live strip of U+200C, U+200D, U+2061, U+2064 and a mixed U+200B+U+200C run, each an immediate sibling of a REFCORR11 endpoint, so a further byte-successor extension is too narrow; admitting the whole Cf class is the single rule that matches every live-evidenced lead.
+        // Byte-zero NUL (U+0000) and every other C0/C1 control outside White_Space and Cf are excluded by construction, so NUL stays excluded and no live-rejected control is admitted while the White_Space controls remain admitted exactly as before; the multi-hash rejection added in REFCORR11 is untouched.
+        // The class stays byte-oriented UTF-8 ranges (no /u) so a malformed UTF-8 tail cannot turn the strip off, preserving the REFCORR8 invariant; the code-point form with the Unicode property escapes and /u was measured to return false on such a subject and is deliberately rejected.
+        // strlen($defPrefix[0]) still removes exactly the matched byte count; the zero-lead bare form strips nine bytes, a non-leading `_default:` and a generic colon prefix still do not match, and the display-text path still reads $raw unchanged.
+        if (preg_match('/^(?:[\x09-\x0D]|\x20|\x2A|\xC2\x85|\xC2\xA0|\xC2\xAD|\xD8[\x80-\x85]|\xD8\x9C|\xDB\x9D|\xDC\x8F|\xE0\xA2[\x90-\x91]|\xE0\xA3\xA2|\xE1\x9A\x80|\xE1\xA0\x8E|\xE2\x80[\x80-\x8F]|\xE2\x80[\xA8-\xAF]|\xE2\x81[\x9F-\xA4]|\xE2\x81[\xA6-\xAF]|\xE3\x80\x80|\xEF\xBB\xBF|\xEF\xBF[\xB9-\xBB]|\xF0\x91\x82\xBD|\xF0\x91\x83\x8D|\xF0\x93\x90[\xB0-\xBF]|\xF0\x9B\xB2[\xA0-\xA3]|\xF0\x9D\x85[\xB3-\xBA]|\xF3\xA0\x80\x81|\xF3\xA0\x80[\xA0-\xBF]|\xF3\xA0\x81[\x80-\xBF])*_default:/i', $slugSource, $defPrefix)) {
             $slugSource = substr($slugSource, strlen($defPrefix[0]));
         }
         if (preg_match('/[^\x00-\x7F]/u', $slugSource)) {

@@ -81,6 +81,16 @@ class Text_Wiki_Parse_Bibliography extends Text_Wiki_Parse {
                     // residual body line to a single space, including a
                     // leading tab after the colon; non-breaking spaces are
                     // left alone.
+                    // REFCORR12 — drop the live-discarded C0 set D before that
+                    // fold. PCRE \s includes FF (12) and VT (11), both in D,
+                    // so folding first would turn an FF into an ordinary space
+                    // that Tighten.php:99 can no longer remove; live purifies
+                    // the FF itself (C-R5E-S1-3). D is the C0 range below 0x20
+                    // except TAB (9), LF (10), CR (13) and ESC (27), the same
+                    // class the footnote, bibitem and Tighten paths use; TAB
+                    // and CR are kept and still fold to one space, and ESC is
+                    // kept verbatim.
+                    $text = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $text);
                     $replacement = preg_replace('/\s+/', ' ', $text);
                     $prev = 'res';
                 }

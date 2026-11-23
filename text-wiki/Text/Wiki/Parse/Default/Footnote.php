@@ -54,16 +54,21 @@ class Text_Wiki_Parse_Footnote extends Text_Wiki_Parse {
 	    	$content = trim($matches[1]);
 
 	    // REFCORR11 — the live C0-control filter is UNCONDITIONAL, not
-	    // branch-local. purifyHtml drops every control byte below 0x20 except
-	    // TAB (9), LF (10) and CR (13) from the emitted body on every shape.
-	    // PHP trim's default charlist excludes form feed (12), so the old
-	    // REFCORR10 fallback branch left an FF in the stored body before a
-	    // double-LF run or with no authored LF at all (C-R5D-R3-1 / R3D-F2).
-	    // Drop the whole class once, before the break decision and the visible
+	    // branch-local. PHP trim's default charlist excludes form feed (12),
+	    // so the old REFCORR10 fallback branch left an FF in the stored body
+	    // before a double-LF run or with no authored LF (C-R5D-R3-1 / R3D-F2).
+	    // Drop the class once, before the break decision and the visible
 	    // projection, so both branches store an already-pure body. Empty-Raw
 	    // placeholders (0xFF<id>0xFF) and TAB/LF/CR are untouched, so the
 	    // single-authored-break witness R3D-F3 still emits its <br />.
-	    $content = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F]/', '', $content);
+	    // REFCORR12 — narrow the class to the live-discarded set D = the C0
+	    // bytes below 0x20 except TAB (9), LF (10), CR (13) and ESC (27):
+	    // [\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]. Live keeps ESC verbatim in a
+	    // footnote body (C-R5E-P4-1 / C-R5E-S1-2), so the REFCORR11 upper range
+	    // 0x0E-0x1F was too wide by one byte; the Tighten residual class already
+	    // uses this exact narrower set. VT, FF and the other discarded bytes
+	    // are still dropped on every branch.
+	    $content = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $content);
 
 	    // REFCORR10 — one general token-aware live rule for the footnote body.
 	    // The stored body is re-parsed as wiki source by Footnoteblock::process,
