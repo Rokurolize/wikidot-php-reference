@@ -340,12 +340,41 @@ $2$3[[/li]]
                 break;
             }
 
+            // REFCORR16: regions already emitted as none-item bodies are
+            // literal text; list tags inside them must not pair in later
+            // iterations (a none-item's body is never rescanned for
+            // lists on live).
+            $noneSpans = array();
+            $delimEsc = preg_quote($this->wiki->delim, '/');
+            if (preg_match_all('/' . $delimEsc . '(\\d+)' . $delimEsc . '/', $source, $tm2, PREG_OFFSET_CAPTURE)) {
+                $openNone = null;
+                foreach ($tm2[0] as $idx2 => $whole2) {
+                    $tok2 = isset($this->wiki->tokens[(int)$tm2[1][$idx2][0]])
+                        ? $this->wiki->tokens[(int)$tm2[1][$idx2][0]] : null;
+                    if ($tok2 === null || $tok2[0] !== $this->rule) {
+                        continue;
+                    }
+                    $ty2 = isset($tok2[1]['type']) ? $tok2[1]['type'] : '';
+                    if ($ty2 === 'explicit_none_item_start') {
+                        $openNone = $whole2[1] + strlen($whole2[0]);
+                    } elseif ($ty2 === 'explicit_none_item_end' && $openNone !== null) {
+                        $noneSpans[] = array($openNone, $whole2[1]);
+                        $openNone = null;
+                    }
+                }
+            }
+
             $stack = array();
             $matchedPair = null;
             $firstUpperOpener = null;
 
             foreach ($matches as $m) {
                 $pos = $m[0][1];
+                foreach ($noneSpans as $ns) {
+                    if ($pos >= $ns[0] && $pos < $ns[1]) {
+                        continue 2;
+                    }
+                }
                 $len = strlen($m[0][0]);
 
                 if (isset($m[1][0]) && $m[1][0] !== '') {
@@ -399,6 +428,24 @@ $2$3[[/li]]
                         }
                     }
                     if ($foundIdx !== -1) {
+                        // REFCORR16: a list whose whole span holds no
+                        // complete item is a none-item on live, and its
+                        // body is literal text: a nested opener inside it
+                        // does not open a nested list (the colmod shape
+                        // of the package 2.1 holdout, h068). When this
+                        // closer would pair with an inner opener while
+                        // the outermost open list has seen no [[/li]] at
+                        // all, pair it with the outermost opener instead;
+                        // the inner tags stay literal in the none-item
+                        // body and are protected from rescanning above.
+                        if ($foundIdx > 0) {
+                            $bottom = $stack[0];
+                            if ($bottom['tag'] === strtolower($bottom['tag'])
+                                && stripos(substr($source, $bottom['start'],
+                                    $pos - $bottom['start']), '[[/li]]') === false) {
+                                $foundIdx = 0;
+                            }
+                        }
                         $opener = $stack[$foundIdx];
                         $matchedPair = array(
                             'opener'          => $opener,
