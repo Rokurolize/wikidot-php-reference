@@ -150,8 +150,16 @@ class Text_Wiki_Parse_Url extends Text_Wiki_Parse {
         // Described-reference (named) URLs.
         // 
         
-        // the regular expression for this kind of URL
-        $tmp_regex = '/\[(\*)?((?:' . $this->regexLiberal . ')|(?:#[a-zA-Z0-9_\-%]*)|(?:\/[^ \\t\\n\"\''.$this->wiki->delim.']*)) ([^\]'.$this->wiki->delim.']+)\]/';
+        // the regular expression for this kind of URL.
+        // REFCORR16: the anchor alternative must not claim the reserved
+        // parser-function heads #expr and #ifexpr: in [[#expr ...]] and
+        // [[#ifexpr ...]] the inner bracket span is a parser function,
+        // not an anchor link, and this rule mangled both into
+        // <a href="#expr"> anchors. Their expression evaluation is a
+        // separate unmodeled remainder (EXPR-EVAL); with the heads
+        // excluded here the constructs pass through as literal text,
+        // as [[#if]] did before its own evaluation was modeled.
+        $tmp_regex = '/\[(\*)?((?:' . $this->regexLiberal . ')|(?:#(?!(?:ifexpr|expr)[\s\]])[a-zA-Z0-9_\-%]*)|(?:\/[^ \\t\\n\"\''.$this->wiki->delim.']*)) ([^\]'.$this->wiki->delim.']+)\]/';
         
         // use a custom callback processing method to generate
         // the replacement text for matches.

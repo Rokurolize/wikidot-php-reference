@@ -222,6 +222,54 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
         return false;
     }
 
+    /**
+     * Whether a paragraph run is a block lead-in: it holds at least one
+     * token of a skipped block rule, and no literal text segment sits
+     * at block depth zero after the first such token.
+     */
+    protected function runIsBlockLead($run) {
+        $delim = $this->wiki->delim;
+        $quoted = preg_quote($delim, '/');
+        $parts = preg_split('/(' . $quoted . '[0-9]+' . $quoted . ')/',
+            $run, -1, PREG_SPLIT_DELIM_CAPTURE);
+        $skip = $this->getConf('skip', array());
+        // The divalign family is excepted: a lead before an alignment
+        // block wraps on live (diag d31 and d43, holdout h019 and
+        // h101), unlike the div, table, collapsible and list lead-ins
+        // measured bare. Alignment blocks keep the fossil wrap.
+        $skip = array_diff($skip, array('divalign', 'divalignleft',
+            'divalignright', 'divaligncenter', 'divalignjustify'));
+        $seenBlock = false;
+        $depth = 0;
+        foreach ($parts as $part) {
+            if ($part === '') {
+                continue;
+            }
+            if (preg_match('/^' . $quoted . '([0-9]+)' . $quoted . '$/', $part, $km)) {
+                $tok = isset($this->wiki->tokens[(int)$km[1]])
+                    ? $this->wiki->tokens[(int)$km[1]] : null;
+                if ($tok === null
+                    || !in_array(strtolower($tok[0]), $skip, true)) {
+                    continue;
+                }
+                $type = isset($tok[1]['type']) ? $tok[1]['type'] : '';
+                if ($type === 'start' || substr($type, -6) === '_start') {
+                    $depth++;
+                } elseif ($type === 'end' || substr($type, -4) === '_end') {
+                    if ($depth > 0) {
+                        $depth--;
+                    }
+                }
+                $seenBlock = true;
+                continue;
+            }
+            if ($seenBlock && $depth === 0 && trim($part) !== '') {
+                return false;
+            }
+        }
+        return $seenBlock;
+    }
+
     function process($matches) {
         $delim = $this->wiki->delim;
 
@@ -237,6 +285,19 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
             if (in_array($plain, $leads, true)) {
                 return $matches[0];
             }
+        }
+
+        // REFCORR16: a run that leads into a block stays bare. When a
+        // run holds a token of a paragraph-skipped block rule and every
+        // literal text segment is either ahead of the first such token
+        // (the lead) or inside a block span, live serves the run
+        // unwrapped: the lead line of a [[table]] block (h132), of a
+        // || table (h155), of a same-line collapsible (h146), and the
+        // stray-closer lead glued to a div opener (d42) are all bare on
+        // live, where the fossil wrapped any run not starting with a
+        // delimiter.
+        if ($this->runIsBlockLead($matches[0])) {
+            return $matches[0];
         }
 
         // was anything there?
