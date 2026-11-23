@@ -48,6 +48,14 @@ class Text_Wiki_Render_Xhtml_Span extends Text_Wiki_Render {
             $args = $options['args'];
             $argstr = '';
             foreach ($args as $key => $value) {
+                // REFCORR12: the uniform placeholder arm already present in
+                // the Div renderer. A value carrying a 0xFF token marker
+                // renders as the empty string with the key kept, so an
+                // authored data-x whose value was a nested rule emits
+                // data-x="" on live rather than a bare <span> (C-R5E-R1-3).
+                if (strpos($value, "\xFF") !== false) {
+                    $value = '';
+                }
                 $argstr .= ' ' . $key . '="'
                     . htmlspecialchars($value, ENT_COMPAT, 'UTF-8') . '"';
             }
