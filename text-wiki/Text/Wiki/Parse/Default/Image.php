@@ -238,8 +238,9 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
                     $clean = preg_replace(
                         '/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '',
                         $options['attr'][$trimKey]);
-                    $options['attr'][$trimKey] =
-                        rtrim($clean, " \t\n\r\f\v");
+                    $options['attr'][$trimKey] = ($trimKey === 'style')
+                        ? trim($clean, " \t\n\r\f\v")
+                        : rtrim($clean, " \t\n\r\f\v");
                 }
             }
         }

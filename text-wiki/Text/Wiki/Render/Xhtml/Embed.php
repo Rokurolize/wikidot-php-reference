@@ -69,7 +69,7 @@ class Text_Wiki_Render_Xhtml_Embed extends Text_Wiki_Render {
                 // byte) while still rejecting an `onclick` glued to a
                 // closing quote. PHP `\b` at the leading `o` is exactly
                 // the negative lookbehind (?<![A-Za-z0-9_]).
-                $eventpattern = ';<[^>]*\b' . $eventpattern . '\s*=[^>]+>;si';
+                $eventpattern = ';<[^>]*?(?<![A-Za-z0-9])' . $eventpattern . '\s*=[^>]+>;si';
                 if (preg_match($eventpattern, $content)) {
                     break;
                 }
@@ -82,23 +82,25 @@ class Text_Wiki_Render_Xhtml_Embed extends Text_Wiki_Render {
                         return '';
                     }
                 }
-                // C-SUSPECT-CODEEMBED-5: the generic contains test applies
-                // to other attributes only; src is prefix-tested above.
+                // C-SUSPECT-CODEEMBED-5 / REFCORR15: the generic contains test applies
+                // to other attributes (both single and double quoted, including data:);
+                // live renders empty ('') on dangerous non-src schemes (C-R5G-R2-2,
+                // C-R5H-R2-4, C-R5H-R2-5).
                 $badScheme = false;
-                if (preg_match_all('/(?<![a-zA-Z0-9_-])([a-zA-Z0-9_-]+)\s*=\s*"([^"]*)"/i', $content, $am, PREG_SET_ORDER)) {
+                if (preg_match_all('/(?<![a-zA-Z0-9_-])([a-zA-Z0-9_-]+)\s*=\s*(["\'])((?:(?!\2).)*)\2/is', $content, $am, PREG_SET_ORDER)) {
                     foreach ($am as $attr) {
                         if (strtolower($attr[1]) === 'src') {
                             continue;
                         }
-                        $lv = strtolower($attr[2]);
-                        if (strpos($lv, 'javascript:') !== false || strpos($lv, 'vbscript:') !== false) {
+                        $lv = strtolower($attr[3]);
+                        if (strpos($lv, 'javascript:') !== false || strpos($lv, 'vbscript:') !== false || strpos($lv, 'data:') !== false) {
                             $badScheme = true;
                             break;
                         }
                     }
                 }
                 if ($badScheme) {
-                    break;
+                    return '';
                 }
                 return $content;
             }

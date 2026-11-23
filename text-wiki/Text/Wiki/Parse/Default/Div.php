@@ -246,12 +246,114 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
     }
 
     function parse() {
-        $oldSource = $this->wiki->source;
-        $this->wiki->source = preg_replace_callback($this->regex, array(
-            &$this, 'process'), $this->wiki->source);
-        if ($oldSource != $this->wiki->source) {
-            $this->parse();
+        do {
+            $oldSource = $this->wiki->source;
+            $this->wiki->source = $this->_parseOnce($oldSource);
+        } while ($oldSource != $this->wiki->source);
+    }
+
+    /**
+     * Linear-time single pass matching the exact outermost (?R) pairs of
+     * $this->regex without PCRE recursive backtracking wipes on long or
+     * unbalanced [[div]] blocks (REFCORR15).
+     */
+    private function _parseOnce($src) {
+        if (stripos($src, '[[div') === false || stripos($src, '[[/div]]') === false) {
+            return $src;
         }
+        $n = strlen($src);
+        $events = array();
+        $cursor = 0;
+        $noMoreOpenerEnd = false;
+        while ($cursor < $n) {
+            $opPos = $noMoreOpenerEnd ? false : stripos($src, '[[div', $cursor);
+            $clPos = stripos($src, '[[/div]]', $cursor);
+            if ($opPos === false && $clPos === false) {
+                break;
+            }
+            if ($clPos !== false && ($opPos === false || $clPos < $opPos)) {
+                if (preg_match('/\G\[\[\/div\]\] */i', $src, $cm, 0, $clPos)) {
+                    $end = $clPos + strlen($cm[0]);
+                    $events[] = array('type' => 'C', 'start' => $clPos, 'end' => $end);
+                    $cursor = $end;
+                } else {
+                    $cursor = $clPos + 8;
+                }
+            } else {
+                if (preg_match('/\G\[\[div(_?)(\s.*?)?\]\] *\n/msi', $src, $om, 0, $opPos)) {
+                    $leadNl = ($opPos > $cursor && $src[$opPos - 1] === "\n") ? "\n" : '';
+                    $evStart = ($leadNl !== '') ? $opPos - 1 : $opPos;
+                    $evEnd = $opPos + strlen($om[0]);
+                    $events[] = array(
+                        'type' => 'O',
+                        'start' => $evStart,
+                        'end' => $evEnd,
+                        'leadNl' => $leadNl,
+                        'underscore' => $om[1],
+                        'attrs' => isset($om[2]) ? $om[2] : '',
+                    );
+                    $cursor = $evEnd;
+                } else {
+                    if (preg_match('/\G\[\[div_?\s/i', $src, $_wsCheck, 0, $opPos)) {
+                        $noMoreOpenerEnd = true;
+                    }
+                    $cursor = $opPos + 5;
+                }
+            }
+        }
+        $nEv = count($events);
+        if ($nEv < 2) {
+            return $src;
+        }
+        $closersFrom = array_fill(0, $nEv + 1, 0);
+        for ($k = $nEv - 1; $k >= 0; $k--) {
+            $closersFrom[$k] = $closersFrom[$k + 1] + ($events[$k]['type'] === 'C' ? 1 : 0);
+        }
+        $out = '';
+        $lastCopied = 0;
+        $idx = 0;
+        while ($idx < $nEv) {
+            $openEv = $events[$idx];
+            if ($openEv['type'] !== 'O' || $closersFrom[$idx + 1] < 1) {
+                $idx++;
+                continue;
+            }
+            $depth = 0;
+            $matchCloseIdx = -1;
+            for ($j = $idx + 1; $j < $nEv; $j++) {
+                if ($events[$j]['type'] === 'O') {
+                    if ($closersFrom[$j + 1] >= $depth + 2) {
+                        $depth++;
+                    }
+                } else {
+                    if ($depth === 0) {
+                        $matchCloseIdx = $j;
+                        break;
+                    }
+                    $depth--;
+                }
+            }
+            if ($matchCloseIdx === -1) {
+                $idx++;
+                continue;
+            }
+            $closeEv = $events[$matchCloseIdx];
+            $matches = array(
+                substr($src, $openEv['start'], $closeEv['end'] - $openEv['start']),
+                $openEv['leadNl'],
+                $openEv['underscore'],
+                $openEv['attrs'],
+                substr($src, $openEv['end'], $closeEv['start'] - $openEv['end']),
+            );
+            $out .= substr($src, $lastCopied, $openEv['start'] - $lastCopied);
+            $out .= $this->process($matches);
+            $lastCopied = $closeEv['end'];
+            $idx = $matchCloseIdx + 1;
+        }
+        if ($lastCopied === 0) {
+            return $src;
+        }
+        return $out . substr($src, $lastCopied);
     }
 
 }

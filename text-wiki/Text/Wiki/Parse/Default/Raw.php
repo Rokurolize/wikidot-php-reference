@@ -31,6 +31,25 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
         $out = '';
         $i = 0;
         while ($i < $n) {
+            // REFCORR15: single left-to-right pass over @<...>@ and @@...@@ so
+            // earlier @< wins over interior @@@@ (formraw basic AT4: @<@@@@>@)
+            // and earlier @@ wins over interior @<...>@ (@@foo @< >@ bar@@).
+            if ($src[$i] === '@' && $i + 1 < $n && $src[$i + 1] === '<'
+                && !($i > 0 && $src[$i - 1] === '@')) {
+                $close = strpos($src, '>@', $i + 2);
+                $nl = strpos($src, "\n", $i + 2);
+                if ($close !== false && ($nl === false || $close < $nl)) {
+                    $body = substr($src, $i + 2, $close - ($i + 2));
+                    $out .= $this->wiki->addToken(
+                        $this->rule,
+                        array('text' => $body),
+                        false,
+                        substr($src, $i, $close + 2 - $i)
+                    );
+                    $i = $close + 2;
+                    continue;
+                }
+            }
             if ($src[$i] !== '@' || $i + 1 >= $n || $src[$i + 1] !== '@'
                 || ($i > 0 && $src[$i - 1] === '@')) {
                 $out .= $src[$i];

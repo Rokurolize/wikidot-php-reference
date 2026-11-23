@@ -44,6 +44,110 @@ class Text_Wiki_Parse_Iftags extends Text_Wiki_Parse {
     *
     */
     
+    function parse()
+    {
+        $this->evalHashIf();
+        parent::parse();
+    }
+
+    /**
+     * REFCORR15: resolve Wikidot's [[#if cond | true | false]] parser function
+     * before Comment, Div, Anchor, Url, and Paragraph rules run (while already
+     * after Code/Html/Raw tokenization).
+     */
+    private function evalHashIf()
+    {
+        $src = $this->wiki->source;
+        if (strpos($src, '[[#if') === false) {
+            return;
+        }
+        for ($pass = 0; $pass < 64; $pass++) {
+            $n = strlen($src);
+            $out = '';
+            $lastCopied = 0;
+            $cursor = 0;
+            $changed = false;
+            while ($cursor < $n) {
+                $pos = strpos($src, '[[#if', $cursor);
+                if ($pos === false) {
+                    break;
+                }
+                if ($pos + 5 >= $n || ($src[$pos + 5] !== ' ' && $src[$pos + 5] !== "\t")) {
+                    $cursor = $pos + 5;
+                    continue;
+                }
+                $bodyStart = $pos + 6;
+                $closePos = strpos($src, ']]', $bodyStart);
+                if ($closePos === false) {
+                    break;
+                }
+                $interior = substr($src, $bodyStart, $closePos - $bodyStart);
+                // If an inner [[#if starts before ]], jump to it so innermost resolves first.
+                $innerIf = strpos($interior, '[[#if');
+                if ($innerIf !== false) {
+                    $cursor = $bodyStart + $innerIf;
+                    continue;
+                }
+                // Guard against unclosed or crossing [[...]] link brackets inside the body.
+                if (strpos($interior, '[[') !== false) {
+                    $cursor = $pos + 5;
+                    continue;
+                }
+                $intLen = strlen($interior);
+                $firstSep = null;
+                $lastSep = null;
+                $sepCount = 0;
+                for ($k = 1; $k < $intLen - 1; $k++) {
+                    if ($interior[$k] === '|'
+                        && ($interior[$k - 1] === ' ' || $interior[$k - 1] === "\t")
+                        && ($interior[$k + 1] === ' ' || $interior[$k + 1] === "\t")) {
+                        if ($firstSep === null) {
+                            $firstSep = $k;
+                        }
+                        $lastSep = $k;
+                        $sepCount++;
+                    }
+                }
+                if ($sepCount === 0) {
+                    $condTrim = trim($interior, " \t");
+                    if ($condTrim === '' || $condTrim === '0' || $condTrim === '1'
+                        || strpos($condTrim, '0|') === 0 || strpos($condTrim, '1|') === 0
+                        || strpos($condTrim, '0 |') === 0 || strpos($condTrim, '1 |') === 0) {
+                        $replacement = '';
+                    } else {
+                        $cursor = $pos + 5;
+                        continue;
+                    }
+                } else {
+                    $condition = substr($interior, 0, $firstSep);
+                    $cLen = strlen($condition);
+                    $authored = ($cLen > 0 && ($condition[$cLen - 1] === ' ' || $condition[$cLen - 1] === "\t"))
+                        ? substr($condition, 0, -1)
+                        : $condition;
+                    $semantic = trim($condition, " \t");
+                    $truth = ($authored !== '' && $semantic !== '0'
+                        && $semantic !== 'null' && strcasecmp($semantic, 'false') !== 0);
+                    $whenTrue = ($sepCount > 1)
+                        ? substr($interior, $firstSep + 1, $lastSep - $firstSep - 1)
+                        : substr($interior, $firstSep + 1);
+                    $whenFalse = ($sepCount > 1)
+                        ? substr($interior, $lastSep + 1)
+                        : '';
+                    $replacement = trim($truth ? $whenTrue : $whenFalse, ' ');
+                }
+                $out .= substr($src, $lastCopied, $pos - $lastCopied) . $replacement;
+                $lastCopied = $closePos + 2;
+                $cursor = $lastCopied;
+                $changed = true;
+            }
+            if (!$changed) {
+                break;
+            }
+            $src = $out . substr($src, $lastCopied);
+        }
+        $this->wiki->source = $src;
+    }
+
     function process($matches)
     {
     	$page = $this->wiki->vars['page'];
