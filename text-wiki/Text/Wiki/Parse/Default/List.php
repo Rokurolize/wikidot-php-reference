@@ -484,9 +484,38 @@ $2$3[[/li]]
             // the list is closed. The generic synthetic tail absorption below
             // pairs both LI markers and leaves the list unclosed, so emit the
             // one-item closed token sequence directly for this exact skeleton.
+            // REFCORR11 R11-LIST GENERAL post-failed-close adjacency rule.
+            // The failed block closer of a raw-case opener is followed on live
+            // by a single item whose literal tail runs to the end of the body,
+            // no matter what material sits between that closer and the next
+            // raw-case [[LI]] marker. The old C1 guard demanded a bare closer
+            // immediately followed by one LF and then the LI, so a residual
+            // bracket, a blank line, a collected footnote block or any other
+            // block marker defeated it and fell through to the generic two-item
+            // absorption branch. Generalise the adjacency to: after the failed
+            // closer, take everything up to and including the first following
+            // LI marker and its payload as the literal tail, tolerating ANY
+            // intervening bytes. One leading LF (the closer's own line end)
+            // is consumed; everything else is preserved verbatim.
             if (!empty($matchedPair['synthetic'])
-                && preg_match('/^\n\[\[li(?:\s+[^\]]*)?\]\](.*?)\[\[\/li\]\]\n\[\[\/(?:ul|ol)\]\]\n(\[\[li(?:\s+[^\]]*)?\]\].*)$/is', $body, $c1m)) {
-                $literalBody = $c1m[1] . rtrim($c1m[2]);
+                && preg_match('/^\n\[\[li(?:\s+[^\]]*)?\]\](.*?)\[\[\/li\]\]\n\[\[\/(?:ul|ol)\]\](.*?\[\[li(?:\s+[^\]]*)?\]\].*)$/is', $body, $c1m)) {
+                $tail11 = $c1m[2];
+                if (substr($tail11, 0, 1) === "\n") {
+                    $tail11 = substr($tail11, 1);
+                }
+                $tail11 = rtrim($tail11);
+                // The surviving final block closer ends the literal tail;
+                // anything after it (a [[footnoteblock]], trailing prose,
+                // another block marker) is not part of the item and must be
+                // processed by the normal pipeline after the list.
+                $leftover11 = '';
+                if (preg_match('/^(.*\[\[\/(?:ul|ol)\]\])(.*)$/is', $tail11, $lm11)) {
+                    $literalTail11 = $lm11[1];
+                    $leftover11 = $lm11[2];
+                } else {
+                    $literalTail11 = $tail11;
+                }
+                $literalBody = $c1m[1] . $literalTail11;
                 $start9 = $this->wiki->addToken($this->rule, array(
                     'type' => 'explicit_list_start',
                     'list_type' => $op['tag'],
@@ -503,7 +532,7 @@ $2$3[[/li]]
                     'type' => 'explicit_list_end',
                     'list_type' => $op['tag'], 'trail' => '', 'scored' => $op['scored'],
                 ));
-                $replacement = $start9 . $liStart9 . $literalBody . $liEnd9 . $end9;
+                $replacement = $start9 . $liStart9 . $literalBody . $liEnd9 . $end9 . $leftover11;
                 $source = substr($source, 0, $op['start']) . $replacement . substr($source, $fullEnd);
                 continue;
             }

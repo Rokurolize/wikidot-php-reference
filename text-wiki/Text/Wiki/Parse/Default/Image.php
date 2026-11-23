@@ -198,6 +198,25 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
                 } elseif (in_array('Wikilink', $this->wiki->disable)) {    //         return $matches[0]; // Wikilink disabled
                 }
             }
+
+            // REFCORR11 C-R5D-P3-1: an accepted Image link value is
+            // right-trimmed of trailing whitespace before it becomes the
+            // anchor href. The fossil's getAttrs (Parse.php 224-247) keeps
+            // every byte before the closing quote, so an authored trailing
+            // space survived into href while live serves the trimmed URL.
+            // This trims only the `link` value, after every acceptance guard
+            // (the leading-space rejection and the scheme anchoring above
+            // still see the authored bytes) and before token emission. title,
+            // style, class, alt, height, width and size, the `*` new-tab
+            // handling, the _blank target, the C3 leading-space rejection,
+            // the REFCORR3 scheme anchoring and the HTMLCHARS escaping are
+            // all untouched. The byte set is the rule's own ctype_space / PCRE
+            // \s class {space, tab, LF, VT, FF, CR}, the same set the leading-
+            // whitespace guard above rejects, and it removes an entire run.
+            if (isset($options['attr']['link'])) {
+                $options['attr']['link'] =
+                    rtrim($options['attr']['link'], " \t\n\r\f\v");
+            }
         }
         
         $align = $matches[2];

@@ -203,9 +203,42 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
      *
      */
      
+    /**
+     * R11-CONCAT: whether a paragraph run holds a div opener token.
+     * Combined with the recorded continued-div lead, this identifies the
+     * one run whose preceding text must stay bare on live.
+     */
+    protected function runHasBlockStart($run) {
+        $delim = preg_quote($this->wiki->delim, '/');
+        if (! preg_match_all('/' . $delim . '([0-9]+)' . $delim . '/', $run, $ms)) {
+            return false;
+        }
+        foreach ($ms[1] as $id) {
+            $tok = isset($this->wiki->tokens[$id]) ? $this->wiki->tokens[$id] : null;
+            if ($tok !== null && $tok[0] === 'Div') {
+                return true;
+            }
+        }
+        return false;
+    }
+
     function process($matches) {
         $delim = $this->wiki->delim;
-        
+
+        // R11-CONCAT: a continued block boundary keeps the leading text bare
+        // (no <p> wrapper). Narrowed to a run that both holds a div opener
+        // and whose plain text was recorded by Concatlines, so authored
+        // same-line openers keep their pinned paragraph wrapper.
+        $leads = isset($this->wiki->vars['continued_div_leads'])
+            ? $this->wiki->vars['continued_div_leads'] : array();
+        if (! empty($leads) && $this->runHasBlockStart($matches[0])) {
+            $pp = '/' . preg_quote($delim, '/') . '[0-9]+' . preg_quote($delim, '/') . '/';
+            $plain = trim(preg_replace($pp, '', $matches[0]), " \t\n\r");
+            if (in_array($plain, $leads, true)) {
+                return $matches[0];
+            }
+        }
+
         // was anything there?
         if (trim($matches[0]) == '') {
             return '';

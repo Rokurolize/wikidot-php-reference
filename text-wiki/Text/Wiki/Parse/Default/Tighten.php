@@ -90,6 +90,14 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
         // Fossil behavior: remove all remaining newlines.
         $source = str_replace("\n", '', $source);
 
+        // R11-CONCAT: live's purifyHtml drops the discarded C0 control set
+        // from residual plain text (0x00-0x08, 0x0B, 0x0C, 0x0E-0x1A,
+        // 0x1C-0x1F): TAB, LF, CR and ESC are kept. The same byte class the
+        // Size rule already uses; form feed 12 is the round-5d witness. Token
+        // placeholders hold only 0xFF and digits, so no token body is touched.
+        // Drop here as well as in the footnote body path so both seams agree.
+        $source = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $source);
+
         $delim = $this->wiki->delim;
 
         // REFCORR5 Batch 6: an empty Raw token renders as nothing, so its

@@ -53,6 +53,18 @@ class Text_Wiki_Parse_Footnote extends Text_Wiki_Parse {
    	 	
 	    	$content = trim($matches[1]);
 
+	    // REFCORR11 — the live C0-control filter is UNCONDITIONAL, not
+	    // branch-local. purifyHtml drops every control byte below 0x20 except
+	    // TAB (9), LF (10) and CR (13) from the emitted body on every shape.
+	    // PHP trim's default charlist excludes form feed (12), so the old
+	    // REFCORR10 fallback branch left an FF in the stored body before a
+	    // double-LF run or with no authored LF at all (C-R5D-R3-1 / R3D-F2).
+	    // Drop the whole class once, before the break decision and the visible
+	    // projection, so both branches store an already-pure body. Empty-Raw
+	    // placeholders (0xFF<id>0xFF) and TAB/LF/CR are untouched, so the
+	    // single-authored-break witness R3D-F3 still emits its <br />.
+	    $content = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F]/', '', $content);
+
 	    // REFCORR10 — one general token-aware live rule for the footnote body.
 	    // The stored body is re-parsed as wiki source by Footnoteblock::process,
 	    // so empty-Raw placeholders must be kept wherever an authored LF needs
@@ -74,14 +86,13 @@ class Text_Wiki_Parse_Footnote extends Text_Wiki_Parse {
 	            $text);
 	    };
 	    $visible = $stripEmptyRaw($content);
-	    // Preserve the placeholder-bearing body exactly when it carries a
-	    // single authored line break: a LF with a non-LF byte on each side.
-	    // Double-LF runs and bare/edge LFs have no live <br /> and take the
-	    // trimmed visible path. C0 controls other than TAB/LF/CR are dropped,
-	    // matching live purifyHtml (notably form feed).
-	    if (preg_match('/[^\n]\n(?!\n)/', $content)) {
-	        $content = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F]/', '', $content);
-	    } else {
+	    // After the unconditional REFCORR11 control drop, the break test now
+	    // decides ONLY placeholder retention: keep the placeholder-bearing
+	    // control-pure body for a single authored LF (a LF with a non-LF byte
+	    // on each side) so Newline emits <br />. Double-LF runs, bare/edge LFs
+	    // and no-LF bodies have no live <br /> and take the trimmed visible
+	    // path. The control filter above is common to both branches.
+	    if (!preg_match('/[^\n]\n(?!\n)/', $content)) {
 	        $content = trim($visible);
 	    }
 
