@@ -240,6 +240,7 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
         $skip = array_diff($skip, array('divalign', 'divalignleft',
             'divalignright', 'divaligncenter', 'divalignjustify'));
         $seenBlock = false;
+        $seenLead = false;
         $depth = 0;
         foreach ($parts as $part) {
             if ($part === '') {
@@ -255,19 +256,30 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
                 $type = isset($tok[1]['type']) ? $tok[1]['type'] : '';
                 if ($type === 'start' || substr($type, -6) === '_start') {
                     $depth++;
+                    // Only a block-opening token can be the block a
+                    // lead runs into: the measured bare runs lead
+                    // into a div, table, collapsible or list start.
+                    // A skip-listed inline token (an image inside a
+                    // prose run) opens no span and does not qualify.
+                    $seenBlock = true;
                 } elseif ($type === 'end' || substr($type, -4) === '_end') {
                     if ($depth > 0) {
                         $depth--;
                     }
                 }
-                $seenBlock = true;
                 continue;
             }
-            if ($seenBlock && $depth === 0 && trim($part) !== '') {
+            if (trim($part) === '') {
+                continue;
+            }
+            if ($seenBlock && $depth === 0) {
                 return false;
             }
+            if (! $seenBlock) {
+                $seenLead = true;
+            }
         }
-        return $seenBlock;
+        return $seenBlock && $seenLead;
     }
 
     function process($matches) {
