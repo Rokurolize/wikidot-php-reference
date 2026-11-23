@@ -40,6 +40,11 @@ class Text_Wiki_Parse_Concatlines extends Text_Wiki_Parse {
         if (strpos($source, "\\\n") === false) {
             return;
         }
+        // R11-CONCAT: a continued line whose next line is a standalone div
+        // opener is a continued block boundary on live. Record the plain lead
+        // text of such a line in a non-compared side channel so Paragraph can
+        // leave it bare (no <p> wrapper); the opener still owns its block.
+        $this->wiki->vars['continued_div_leads'] = array();
         $out = '';
         $length = strlen($source);
         $index = 0;
@@ -51,7 +56,17 @@ class Text_Wiki_Parse_Concatlines extends Text_Wiki_Parse {
                     : substr($source, $index + 2, $lineEnd - $index - 2);
                 $marker = trim($line, " \t");
                 if (preg_match('/^\[\[div_?(?:[ \t].*)?\]\]$/i', $marker)) {
-                    $out .= "\n";
+                    $lineStart = strrpos($out, "\n");
+                    $lead = ($lineStart === false)
+                        ? $out : substr($out, $lineStart + 1);
+                    $lead = trim($lead, " \t");
+                    if (! in_array($lead, $this->wiki->vars['continued_div_leads'], true)) {
+                        $this->wiki->vars['continued_div_leads'][] = $lead;
+                    }
+                    // Join the continuation with one space, as live does: the
+                    // opener no longer gets a blank-line boundary from the
+                    // doubled leading newline of Div::process.
+                    $out .= " ";
                 }
                 $index += 2;
                 continue;

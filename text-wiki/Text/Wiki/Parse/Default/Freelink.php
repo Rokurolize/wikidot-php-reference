@@ -120,12 +120,19 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         }
 
         // C1/C2: malformed multi-hash targets stay literal, matching live and
-        // the ftml corpus pins (home###, a##b, a#b#c). A /#/ hash route is the
-        // one exception and is handled below.
-        if (strpos($raw, '##') !== false && strpos($raw, '/#/') === false) {
+        // the ftml corpus pins (home###, a##b, a#b#c). REFCORR11: the old
+        // `&& strpos($raw, '/#/') === false` exemption let a single /#/ route
+        // carry a second hash byte; live rejects every two-hash target even
+        // when a /#/ route is present (C-R5D-P2-13 / C-R5D-R2-1 = foo/#/bar#baz,
+        // C-R5D-R2-2 = a/#/b/#/c), while a single-route target (foo/#/bar,
+        // foo/#/, /#/bar) carries exactly one hash and still links. Both
+        // guards therefore reject uniformly on the raw target; the route peel
+        // below still produces the href and the foo/ auto label for the
+        // single-hash route.
+        if (strpos($raw, '##') !== false) {
             return $matches[0];
         }
-        if (substr_count($raw, '#') > 1 && strpos($raw, '/#/') === false) {
+        if (substr_count($raw, '#') > 1) {
             return $matches[0];
         }
 
@@ -206,22 +213,31 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         // is subsumed, and multiplicity from C-R5C-P2-7 falls out of the run).
         // The admitted code points are the Unicode White_Space property
         // {U+0009..U+000D, U+0020, U+0085, U+00A0, U+1680, U+2000..U+200A,
-        // U+2028, U+2029, U+202F, U+205F, U+3000} plus U+FEFF and U+002A;
-        // every byte shape cached live (09, 0B, 0C, 20, C2 A0, E3 80 80,
-        // E2 80 A8, E2 80 A9, E2 80 83, E2 80 89, E2 80 AF, EF BB BF and
-        // 2A) is a member and byte-zero NUL is not. The class is written as
-        // byte-oriented UTF-8 ranges (no /u) so a malformed UTF-8 tail cannot
-        // turn the strip off, preserving the REFCORR8 invariant; the code-point
-        // form `'/^[\p{White_Space}\x{FEFF}\x{2A}]*_default:/iu'` was measured
-        // to return false on such a subject and is deliberately rejected.
+        // U+2028, U+2029, U+202F, U+205F, U+3000} plus U+FEFF and U+002A,
+        // and REFCORR11 adds exactly two live-evidenced Unicode Cf format
+        // characters: U+200B ZERO WIDTH SPACE (C-R5D-P2-1) and U+2060 WORD
+        // JOINER (C-R5D-P2-2). Every byte shape cached live (09, 0B, 0C, 20,
+        // C2 A0, E3 80 80, E2 80 A8, E2 80 A9, E2 80 83, E2 80 89, E2 80 AF,
+        // EF BB BF, 2A, and now E2 80 8B and E2 81 A0) is a member and
+        // byte-zero NUL is not. The two new members are added as the single
+        // immediate successors of U+200A and U+205F (byte ranges E2 80
+        // [\x80-\x8B] and E2 81 [\x9F\xA0]), NOT by admitting all of Unicode
+        // category Cf: sibling format characters with no cached live capture
+        // (U+200C ZWNJ, U+200D ZWJ, U+2061..U+2064) are deliberately excluded.
+        // The class stays byte-oriented UTF-8 ranges (no /u) so a malformed
+        // UTF-8 tail cannot turn the strip off, preserving the REFCORR8
+        // invariant; the code-point form
+        // `'/^[\p{White_Space}\x{FEFF}\x{2A}]*_default:/iu'` was measured to
+        // return false on such a subject and is deliberately rejected.
         // Unevidenced White_Space members (0A, 0D, 85, 1680, 2000-2002,
         // 2004-2008, 200A, 205F) are admitted only by the principled class;
-        // that limitation is recorded in CORRECTION-REFCORR10-FREELINK-GENERAL.
+        // that limitation is recorded in CORRECTION-REFCORR10-FREELINK-GENERAL
+        // and the Cf restriction in CORRECTION-REFCORR11-FREELINK.
         // strlen($defPrefix[0]) still removes exactly the matched byte count;
         // the zero-lead bare form strips nine bytes, a non-leading `_default:`
         // and a generic colon prefix still do not match, and the display-text
         // path still reads $raw unchanged.
-        if (preg_match('/^(?:[\x09\x0A\x0B\x0C\x0D\x20\x2A]|\xC2[\x85\xA0]|\xE1\x9A\x80|\xE2\x80[\x80-\x8A\xA8\xA9\xAF]|\xE2\x81\x9F|\xE3\x80\x80|\xEF\xBB\xBF)*_default:/i', $slugSource, $defPrefix)) {
+        if (preg_match('/^(?:[\x09\x0A\x0B\x0C\x0D\x20\x2A]|\xC2[\x85\xA0]|\xE1\x9A\x80|\xE2\x80[\x80-\x8B\xA8\xA9\xAF]|\xE2\x81[\x9F\xA0]|\xE3\x80\x80|\xEF\xBB\xBF)*_default:/i', $slugSource, $defPrefix)) {
             $slugSource = substr($slugSource, strlen($defPrefix[0]));
         }
         if (preg_match('/[^\x00-\x7F]/u', $slugSource)) {

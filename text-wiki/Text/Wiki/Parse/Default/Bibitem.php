@@ -46,6 +46,17 @@ class Text_Wiki_Parse_Bibitem extends Text_Wiki_Parse {
         $content = $matches[2];
         $content = trim(str_replace("\n", " ", $content));
         $this->wiki->vars['bibitems'][$label] = $content;
+        // REFCORR11 — apply the same unconditional live C0-control filter the
+        // footnote branch applies: purifyHtml drops every byte below 0x20
+        // except TAB (9), LF (10) and CR (13) from the emitted body on every
+        // shape. PHP trim excludes form feed (12), so a FF between two empty
+        // Raw placeholders survived the REFCORR8 strip-and-retrim, kept the
+        // 'empty' flag false and emitted a separator space (C-R5D-R3-2),
+        // where live settles an empty entry. Drop the class here, before the
+        // empty-Raw strip and re-trim; vars['bibitems'][$label] above stays
+        // byte-identical so the compared state and token wire shape do not
+        // change. TAB, LF-derived spaces, CR and NBSP are all preserved.
+        $content = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F]/', '', $content);
         $id = count($this->wiki->vars['bibitemIds']) + 1;
         $this->wiki->vars['bibitemIds'][$label] = $id;
         // R2-notes: live renders an empty entry as "N." with no trailing
