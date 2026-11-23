@@ -57,7 +57,8 @@ class Text_Wiki_Render_Xhtml_Math extends Text_Wiki_Render {
         // The counter and the verbatim stored token value are untouched.
         $env = str_replace('*', '', (string) $type);
         $amsEnvironments = array('equation', 'align', 'gather', 'eqnarray',
-            'multline', 'split');
+            'multline', 'split', 'alignat', 'gathered', 'aligned',
+            'alignedat', 'cases');
         if (! in_array($env, $amsEnvironments, true)) {
             return '<div class="error-block">' . _('Unsupported math environment "' . $env . '"') . '</div>';
         }

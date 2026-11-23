@@ -61,6 +61,52 @@ class Text_Wiki_Parse_Strikethrough extends Text_Wiki_Parse {
      *
      */
     
+    function parse() {
+        $src = $this->wiki->source;
+        $n = strlen($src);
+        $delim = $this->wiki->delim;
+        $out = '';
+        $offset = 0;
+        while ($offset < $n && preg_match($this->regex, $src, $m, PREG_OFFSET_CAPTURE, $offset)) {
+            $matchStr = $m[0][0];
+            $matchPos = $m[0][1];
+            $body = $m[1][0];
+            // REFCORR15 (S_diag d30): Span::parse() trims trailing spaces before
+            // [[/span]], gluing a literal `--` to the Span `end` placeholder
+            // (\xffN\xff). Reject an opening `--` immediately followed by a Span
+            // `end` token so `--` cannot pair across [[/span]].
+            $rejectSpanEnd = false;
+            if ($delim !== '' && $body !== '' && $body[0] === $delim) {
+                $closeDelim = strpos($body, $delim, 1);
+                if ($closeDelim !== false && $closeDelim > 1) {
+                    $tokId = substr($body, 1, $closeDelim - 1);
+                    if (ctype_digit($tokId)) {
+                        $idNum = (int) $tokId;
+                        if (isset($this->wiki->tokens[$idNum])
+                            && $this->wiki->tokens[$idNum][0] === 'Span'
+                            && isset($this->wiki->tokens[$idNum][1]['type'])
+                            && $this->wiki->tokens[$idNum][1]['type'] === 'end') {
+                            $rejectSpanEnd = true;
+                        }
+                    }
+                }
+            }
+            if ($rejectSpanEnd) {
+                $out .= substr($src, $offset, $matchPos - $offset + 2);
+                $offset = $matchPos + 2;
+                continue;
+            }
+            $out .= substr($src, $offset, $matchPos - $offset);
+            $out .= $this->process(array($matchStr, $body));
+            $offset = $matchPos + strlen($matchStr);
+        }
+        if ($offset === 0) {
+            return;
+        }
+        $out .= substr($src, $offset);
+        $this->wiki->source = $out;
+    }
+
     function process($matches) {
         $start = $this->wiki->addToken($this->rule, array(
             'type' => 'start'));

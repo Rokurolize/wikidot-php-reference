@@ -20,8 +20,12 @@ require_once dirname(__DIR__) . '/wikidot-root/lib/WDStringUtils.php';
 require_once __DIR__ . '/ozone-stubs.php';
 require_once $root . '/Text/Wiki.php';
 require_once $root . '/Text/Wiki/Parse/Default/Math.php';
+require_once $root . '/Text/Wiki/Parse/Default/Tabview.php';
 require_once __DIR__ . '/wiki-config.php';
 require_once __DIR__ . '/pages.php';
+
+$tabCounterProp = new ReflectionProperty('Text_Wiki_Parse_Tabview', '_counter');
+$tabCounterProp->setAccessible(true);
 
 $mode = $argv[1] ?? 'expand';
 $GLOBALS['REF_PAGES'] = ref_page_map();
@@ -41,6 +45,7 @@ while (($line = fgets(STDIN)) !== false) {
     // Root-owned harness matter, disclosed in conformance-refphp/R2-LINK.md;
     // transform.php is unaffected because it renders one document per run.
     Text_Wiki_Parse_Math::$equationsArray = array();
+    $tabCounterProp->setValue(null, 0);
     // R2-next: optional per-case page tags for the Iftags rule, R2-notes:
     // always inject a page object, with an empty tag set when the case has no
     // "tags" array. The Iftags parse rule drops its whole body when vars['page']

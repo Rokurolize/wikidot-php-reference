@@ -172,13 +172,22 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
             $trimmed = substr($trimmed, 1);
         }
 
-        // C5: a bare, non-leading-space URL is an external link. The label is
-        // the URL itself when no pipe label was authored.
+        // C5 / REFCORR15: a bare, non-leading-space URL or an absolute
+        // leading-slash /path is rendered as a direct href (no newpage class
+        // or slugification). For /path, spaces become %20 in href while no-pipe
+        // label preserves the trimmed target; label for URLs is $url itself.
         $url = null;
+        $isAbsPath = freelink_is_abs_path($trimmed);
         if (! $leadingSpace && freelink_is_url($trimmed)) {
             $url = $trimmed;
+        } elseif ($isAbsPath) {
+            $url = (strpos($trimmed, ' ') !== false)
+                ? str_replace(' ', '%20', $trimmed)
+                : $trimmed;
+        }
+        if ($url !== null) {
             if ($labelRaw === '') {
-                $text = $url;
+                $text = $isAbsPath ? $trimmed : $url;
             } else {
                 $text = substr($labelRaw, 1);
             }
@@ -221,6 +230,9 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
             $slugSource = freelink_transliterate($slugSource);
         }
         $page = WDStringUtils::toUnixName($slugSource);
+        if (strlen($page) > 60) {
+            $page = rtrim(substr($page, 0, 60), '-');
+        }
 
         if ($labelRaw === '') {
             // No pipe label: live strips a category prefix from the display
@@ -269,6 +281,11 @@ function freelink_is_url($s)
         }
     }
     return false;
+}
+
+function freelink_is_abs_path($s)
+{
+    return isset($s[0]) && $s[0] === '/';
 }
 
 function freelink_transliterate($s)

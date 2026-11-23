@@ -174,7 +174,7 @@ class Text_Wiki_Render_Xhtml_Gallery extends Text_Wiki_Render {
 	      	// link= to '#', case-insensitively, and leaves mailto: and
 	      	// other schemes intact. Apply after any external-source
 	      	// link override and before the href is emitted.
-	      	$lowerHref = strtolower($href);
+	      	$lowerHref = strtolower(ltrim($href));
 	      	if (strpos($lowerHref, 'javascript:') === 0 ||
 	      	    strpos($lowerHref, 'vbscript:') === 0 ||
 	      	    strpos($lowerHref, 'data:') === 0) {

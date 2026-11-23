@@ -60,7 +60,7 @@ class Text_Wiki_Parse_Emphasis extends Text_Wiki_Parse {
     // lazy body so the earliest closer wins; process() rejects a
     // whitespace-padded body (live keeps // padded // literal) and returns
     // nothing for an empty body, which is where the drop happens.
-    public $regex =  "/\/\/(.*)\/\//U";
+    public $regex = "/\/\/\/\/|\/\/([^\s](?:.*[^\s])?)\/\//U";
 
     /**
     * 
@@ -81,7 +81,7 @@ class Text_Wiki_Parse_Emphasis extends Text_Wiki_Parse {
     
     function process($matches)
     {
-        $body = $matches[1];
+        $body = isset($matches[1]) ? $matches[1] : '';
         // R2-INLINE2 C1: an empty body between two adjacent // markers is a
         // real first-fit pair on live and renders as nothing; returning ''
         // consumes both markers and emits no token pair. Verified against
