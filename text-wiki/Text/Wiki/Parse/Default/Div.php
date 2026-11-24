@@ -233,12 +233,69 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
         $end = $this->wiki->addToken($this->rule, $endOpts);
 
         if ($score !== '') {
-            // The scored [[div_]] form strips paragraphs: blank-line runs
-            // vanish, leading and trailing newlines go, and single newlines
-            // remain for the Linebreak rule to turn into <br />.
-            $body = trim($content, "\r\n");
-            $body = preg_replace('/\n[ \t]*(?:\n[ \t]*)+/', '', $body);
-            return $matches[1] . $start . $body . $end;
+            // Tokenize nested [[div]]/[[div_]] inside a scored div before
+            // blank-line stripping collapses line breaks across children.
+            if (stripos($content, '[[div') !== false && stripos($content, '[[/div]]') !== false) {
+                do {
+                    $oldInner = $content;
+                    $content = $this->_parseOnce($oldInner);
+                } while ($oldInner !== $content);
+            }
+            // The scored [[div_]] form strips paragraphs at its own level:
+            // strip blank-line runs and edge newlines ONLY at child-Div depth 0
+            // so nested unscored [[div]] blocks keep their \n\n wrappers (h068).
+            $delim = $this->wiki->delim;
+            $q = preg_quote($delim, '/');
+            $parts = preg_split('/(' . $q . '[0-9]+' . $q . ')/', $content, -1, PREG_SPLIT_DELIM_CAPTURE);
+            $divDepth = 0;
+            $body = '';
+            $d0Buf = '';
+            $flushD0 = function ($s, $isFirst, $isLast) {
+                $s = preg_replace('/\n[ \t]*(?:\n[ \t]*)+/', '', $s);
+                if ($isFirst) {
+                    $s = ltrim($s, "\r\n");
+                }
+                if ($isLast) {
+                    $s = rtrim($s, "\r\n");
+                }
+                return $s;
+            };
+            $seenAny = false;
+            $nParts = count($parts);
+            foreach ($parts as $pi => $part) {
+                if ($part === '') {
+                    continue;
+                }
+                if (preg_match('/^' . $q . '([0-9]+)' . $q . '$/', $part, $km)) {
+                    $tid = (int)$km[1];
+                    $tok = isset($this->wiki->tokens[$tid]) ? $this->wiki->tokens[$tid] : null;
+                    if ($tok !== null && $tok[0] === 'Div' && isset($tok[1]['type'])) {
+                        if ($tok[1]['type'] === 'start') {
+                            if ($divDepth === 0) {
+                                $body .= $flushD0($d0Buf, !$seenAny, false);
+                                $d0Buf = '';
+                                $seenAny = true;
+                            }
+                            $divDepth++;
+                            $body .= $part;
+                            continue;
+                        } elseif ($tok[1]['type'] === 'end' && $divDepth > 0) {
+                            $divDepth--;
+                            $body .= $part;
+                            continue;
+                        }
+                    }
+                }
+                if ($divDepth === 0) {
+                    $d0Buf .= $part;
+                } else {
+                    $body .= $part;
+                }
+            }
+            if ($d0Buf !== '') {
+                $body .= $flushD0($d0Buf, !$seenAny, true);
+            }
+            return $matches[1] . $matches[1] . $start . $body . $end;
         }
 
         return $matches[1] . $matches[1] . $start . "\n\n" . $content . "\n\n" . $end;
