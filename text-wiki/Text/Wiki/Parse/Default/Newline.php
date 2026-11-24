@@ -83,7 +83,21 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
         foreach ($ms as $m) {
             $off = $m[0][1];
             $out .= substr($src, $last, $off - $last);
-            if ($this->_betweenBlocks($src, $off, strlen($m[0][0]))) {
+            $end = $off + strlen($m[0][0]);
+            // REFCORR19 F4(b): a scored-div ([[div_]]) component body is
+            // re-inserted into the source stream by the Div parse rule, so
+            // the newlines that merely indent its block closers reach this
+            // rule and are served as breaks. Live closes those divs with no
+            // <br> at all (fragment:scp-7943-1 top-box, firsthand raw HTML).
+            // An authored line break between two text lines (foo\nbar) is
+            // still served, so only a newline whose next non-whitespace
+            // item is a block-closing token is absorbed.
+            if ($this->_beforeBlockClose($src, $end)) {
+                // Consume the LF as indentation, not as a break: leaving it
+                // in the stream makes the later Paragraph rule wrap the
+                // following div closer in a spurious <p>.
+                $out .= $m[1][0];
+            } elseif ($this->_betweenBlocks($src, $off, strlen($m[0][0]))) {
                 $out .= $m[0][0];
             } else {
                 $out .= $this->process(array($m[0][0], $m[1][0]));
@@ -134,6 +148,51 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
         }
         $tok = isset($this->wiki->tokens[(int)$id]) ? $this->wiki->tokens[(int)$id] : null;
         return $tok === null ? null : strtolower($tok[0]);
+    }
+
+    /**
+     * REFCORR19 F4(b): return the full token whose delimiter begins at or
+     * after $pos (skipping only horizontal whitespace), or null. Unlike
+     * _tokenRuleAt() this does not require the character immediately before
+     * the newline to be a delimiter: in a scored-div body the preceding
+     * character is authored text ("7943"), which is exactly the leaking
+     * shape.
+     */
+    private function _nextBlockToken($src, $pos)
+    {
+        $delim = $this->wiki->delim;
+        $n = strlen($src);
+        while ($pos < $n && ($src[$pos] === ' ' || $src[$pos] === "\t" || $src[$pos] === "\r")) {
+            $pos++;
+        }
+        if ($pos >= $n || $src[$pos] !== $delim) {
+            return null;
+        }
+        $end = strpos($src, $delim, $pos + 1);
+        if ($end === false) {
+            return null;
+        }
+        $id = substr($src, $pos + 1, $end - $pos - 1);
+        if (!preg_match('/^\d+$/', $id)) {
+            return null;
+        }
+        return isset($this->wiki->tokens[(int)$id]) ? $this->wiki->tokens[(int)$id] : null;
+    }
+
+    /**
+     * REFCORR19 F4(b): true when the newline is immediately followed (after
+     * indentation only) by a div closer. Live emits no break before a div
+     * close in a scored-div component body; an authored break between two
+     * text runs is not followed by a token and is left served.
+     */
+    private function _beforeBlockClose($src, $pos)
+    {
+        $tok = $this->_nextBlockToken($src, $pos);
+        if ($tok === null || strtolower($tok[0]) !== 'div') {
+            return false;
+        }
+        $opts = isset($tok[1]) && is_array($tok[1]) ? $tok[1] : array();
+        return isset($opts['type']) && $opts['type'] === 'end';
     }
 
     private function _betweenBlocks($src, $off, $len)

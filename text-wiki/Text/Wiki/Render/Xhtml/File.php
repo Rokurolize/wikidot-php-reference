@@ -38,6 +38,38 @@ class Text_Wiki_Render_Xhtml_File extends Text_Wiki_Render {
     *
     */
 
+    // REFCORR19 F1: a file link without an explicit page must carry the
+    // current page's segment (/local--files/<page>/<file>), as live does.
+    // Production supplies vars['pageName']; the offline harness supplies
+    // the page through vars['page'] instead.
+    private function pageSegment()
+    {
+        if (isset($this->wiki->vars['pageName']) && $this->wiki->vars['pageName'] !== '') {
+            return $this->wiki->vars['pageName'];
+        }
+        $page = isset($this->wiki->vars['page']) ? $this->wiki->vars['page'] : null;
+        if (is_object($page)) {
+            foreach (array('getName', 'getUnixName', 'getPageName') as $method) {
+                if (method_exists($page, $method)) {
+                    $name = $page->$method();
+                    if ($name !== null && $name !== '') {
+                        return $name;
+                    }
+                }
+            }
+            if (method_exists($page, 'getTitleOrUnixName')) {
+                $name = $page->getTitleOrUnixName();
+                if ($name !== null && $name !== '') {
+                    return $name;
+                }
+            }
+            if (isset($page->name) && $page->name !== '') {
+                return $page->name;
+            }
+        }
+        return '';
+    }
+
     function token($options)
     {
         $file = $options['file'];
@@ -54,7 +86,7 @@ class Text_Wiki_Render_Xhtml_File extends Text_Wiki_Render {
         					'Sorry, local files without page name specified not allowed. ' .
         					'Use [[file <em>pagename</em>/<em>filename</em>]]</span>';	
         		}
-        		$file = $this->getConf('base', '/') . $this->encodePath($file);
+        		$file = "/local--files/".$this->pageSegment() .'/'. $this->encodePath($file);
         }
         
         $output = '<a href="'.htmlspecialchars($file, ENT_COMPAT, 'UTF-8').'">'.htmlspecialchars($anchor, ENT_COMPAT, 'UTF-8').'</a>';

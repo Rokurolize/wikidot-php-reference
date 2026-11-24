@@ -67,6 +67,12 @@ class RefPage {
     public function getTitleOrUnixName() {
         return $this->title !== null ? $this->title : $this->name;
     }
+    // REFCORR19 F1 repair: the page's unix name is the URL segment the
+    // file/image builders need (pageSegment() in Image.php/File.php asks
+    // for it by these names). Without the accessors the helper fell back
+    // to getTitleOrUnixName() and emitted the page TITLE as the segment.
+    public function getUnixName() { return $this->name; }
+    public function getName() { return $this->name; }
 }
 
 // Math parse rule throws this on \include / \input in an equation body; the
@@ -117,13 +123,44 @@ class DB_PagePeer {
     }
     // REFCORR13 R13-AGY2 D13: previously missing. The render rules call
     // selectByPrimaryKey($exists) for a textFromTitle freelink/wikilink.
+    // REFCORR19 F9: the census's existence view is the full corpus set
+    // (CENSUS_EXISTING_JSON -> REF_EXISTING_PAGES) and its titles are the
+    // authored titles (CENSUS_TITLES_JSON -> REF_PAGE_TITLES), while REF_PAGES
+    // holds only the ~10-page include/title closure. wikiPageExists() now
+    // hands the render rules the page NAME as the existence value, so resolve
+    // by name here and return a RefPage carrying that page's title. Never
+    // return null for a page the existence callback declared: the render
+    // rules dereference getTitleOrUnixName() unconditionally on that path,
+    // and a null was the KO/JP/CN fatal (91/32/15 per 1000).
     public function selectByPrimaryKey($id) {
         $pages = $GLOBALS['REF_PAGES'] ?? array();
         $titles = $GLOBALS['REF_PAGE_TITLES'] ?? array();
+        if (is_string($id)) {
+            if (array_key_exists($id, $pages)) {
+                return new RefPage($pages[$id], ref_page_id($id), array(),
+                    $titles[$id] ?? null, $id);
+            }
+            $existing = $GLOBALS['REF_EXISTING_PAGES'] ?? array();
+            if (in_array($id, $existing, true)) {
+                return new RefPage('', ref_page_id($id), array(),
+                    $titles[$id] ?? null, $id);
+            }
+            return null;
+        }
         foreach ($pages as $name => $source) {
             if (ref_page_id($name) === (int) $id) {
                 return new RefPage($source, (int) $id, array(),
                     $titles[$name] ?? null, $name);
+            }
+        }
+        // Best-effort fallback for any caller still supplying a legacy
+        // small-integer id for a corpus page outside REF_PAGES: the id is
+        // lossy but a resolved name/title is still better than a fatal.
+        $existing = $GLOBALS['REF_EXISTING_PAGES'] ?? array();
+        foreach ($existing as $name) {
+            if (ref_page_id((string) $name) === (int) $id) {
+                return new RefPage('', (int) $id, array(),
+                    $titles[$name] ?? null, (string) $name);
             }
         }
         return null;
@@ -186,6 +223,11 @@ class ModuleManager {
         // REFCORR13 R13-AGY2 D14: nine measured standard live modules.
         'newpage', 'childpages', 'pagecalendar', 'wantedpages',
         'orphanedpages', 'countpages', 'search', 'members', 'files',
+        // REFCORR19 F3: the standing unregistered set. Their content is
+        // produced at Wikidot's caller-runtime module layer; offline the
+        // census driver emits no module body for them either, so registering
+        // them removes the spurious "No such module" error block.
+        'listusers', 'mailform', 'comments', 'themepreviewer',
     );
     public static function instance() {
         if (self::$inst === null) {

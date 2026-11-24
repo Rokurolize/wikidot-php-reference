@@ -47,6 +47,40 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
     *
     */
 
+    // REFCORR19 F1: the resized-image and file URL builders must carry the
+    // current page's segment. Production populates vars['pageName']; the
+    // offline harness supplies the page through vars['page'] instead, so
+    // consult both rather than silently emitting a double slash.
+    private function pageSegment()
+    {
+        if (isset($this->wiki->vars['pageName']) && $this->wiki->vars['pageName'] !== '') {
+            return $this->wiki->vars['pageName'];
+        }
+        $page = isset($this->wiki->vars['page']) ? $this->wiki->vars['page'] : null;
+        if (is_object($page)) {
+            foreach (array('getName', 'getUnixName', 'getPageName') as $method) {
+                if (method_exists($page, $method)) {
+                    $name = $page->$method();
+                    if ($name !== null && $name !== '') {
+                        return $name;
+                    }
+                }
+            }
+            // The offline RefPage keeps the unix name in a private field;
+            // its public title accessor is the last resort before empty.
+            if (method_exists($page, 'getTitleOrUnixName')) {
+                $name = $page->getTitleOrUnixName();
+                if ($name !== null && $name !== '') {
+                    return $name;
+                }
+            }
+            if (isset($page->name) && $page->name !== '') {
+                return $page->name;
+            }
+        }
+        return '';
+    }
+
     // R2-PARA correction C6: live percent-encodes non-ASCII bytes in the
     // emitted src and href URLs but keeps the authored spelling in the alt
     // text (probe p12 and pin image/nonascii-filename). This encodes only
@@ -153,14 +187,14 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
 		      		
 	       		if($size){
 	        			$src = "/local--resized-images/".
-					$this->wiki->vars['pageName'].'/'.$src.'/'.$size.'.jpg';
+					$this->pageSegment().'/'.$src.'/'.$size.'.jpg';
 					if($options['attr']['link'] == null){
             				// link to the original image
             				$srch = preg_replace("/^\//", '', $options['src']);
-            				$options['attr']['link'] = 	"/local--files/".$this->wiki->vars['pageName'] .'/'. $srch;
+            				$options['attr']['link'] = 	"/local--files/".$this->pageSegment() .'/'. $srch;
             			}	
 	            	}else{
-	         		$src = "/local--files/".$this->wiki->vars['pageName'] .'/'. $src;
+	         		$src = "/local--files/".$this->pageSegment() .'/'. $src;
 	         	}
             }
         }

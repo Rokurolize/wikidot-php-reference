@@ -262,6 +262,15 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
             'url' => null,
             'textFromTitle' => (trim($labelRaw) === '|') ? true : null,
         );
+        // REFCORR19 F7: carry the leading-star marker into the render rule
+        // for a LOCAL target. The star is already stripped from the target
+        // slug above and kept in the authored label, so this is the only
+        // way the renderer can tell a starred local link from a plain one
+        // (a labelled star has no "*" left in its text). Starred URLs take
+        // the external branch and keep their own target="_blank" handling.
+        if ($starUrl) {
+            $options['star'] = true;
+        }
         // REFCORR6: the whole triple-bracket form is the claimed span.
         return $this->wiki->addToken($this->rule, $options, false, $matches[0]);
     }
