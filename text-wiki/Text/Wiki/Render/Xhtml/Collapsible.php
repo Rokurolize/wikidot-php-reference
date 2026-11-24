@@ -87,15 +87,22 @@ class Text_Wiki_Render_Xhtml_Collapsible extends Text_Wiki_Render {
             }
         }
 
+        $ls = !empty($options['label_size'])
+            ? '<span style="font-size:' . $options['label_size'] . ';">'
+            : null;
+        $wrapLabel = function ($html) use ($ls) {
+            return $ls === null ? $html : $ls . $html . '</span>';
+        };
+
         $hideB = '<div class="collapsible-block-unfolded-link">'
-            . '<a class="collapsible-block-link" href="javascript:;">' . $hide . '</a>'
+            . $wrapLabel('<a class="collapsible-block-link" href="javascript:;">' . $hide . '</a>')
             . '</div>';
 
         if (isset($options['type']) && $options['type'] === 'start') {
             $out = '<div class="collapsible-block">';
             $out .= '<div class="collapsible-block-folded"'
                 . ($folded ? '' : ' style="display:none"') . '>'
-                . '<a class="collapsible-block-link" href="javascript:;">' . $show . '</a>'
+                . $wrapLabel('<a class="collapsible-block-link" href="javascript:;">' . $show . '</a>')
                 . '</div>';
             $out .= '<div class="collapsible-block-unfolded"'
                 . ($folded ? ' style="display:none"' : '') . '>';
