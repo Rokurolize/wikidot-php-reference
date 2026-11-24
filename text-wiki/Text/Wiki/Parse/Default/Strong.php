@@ -61,7 +61,7 @@ class Text_Wiki_Parse_Strong extends Text_Wiki_Parse {
     // test/bold/empty-pair-feeds-later-rule). The added empty alternative lets
     // the pair match; process() emits no tokens for it, so nothing renders and
     // the surrounding line structure is untouched.
-    public $regex = "/\*\*([^\s\n](?:.*[^\s\n])?|)\*\*/U";
+    public $regex = "/\*\*\*\*|\*\*([^\s\n](?:.*[^\s\n])?)\*\*/U";
 
     /**
      * 
@@ -80,9 +80,10 @@ class Text_Wiki_Parse_Strong extends Text_Wiki_Parse {
      */
     
     function process($matches) {
+        $body = isset($matches[1]) ? $matches[1] : '';
         // R2-inline2 correction C1 (continued): an empty body consumes the
         // four markers but emits no start/end tokens, matching live and ftml.
-        if ($matches[1] === '') {
+        if ($body === '') {
             return '';
         }
         $start = $this->wiki->addToken($this->rule, array(
@@ -91,6 +92,6 @@ class Text_Wiki_Parse_Strong extends Text_Wiki_Parse {
         $end = $this->wiki->addToken($this->rule, array(
             'type' => 'end'));
         
-        return $start . $matches[1] . $end;
+        return $start . $body . $end;
     }
 }
