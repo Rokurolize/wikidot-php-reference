@@ -345,6 +345,22 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
      * the breaks bare ahead of the rule) or a module. A break run ahead of
      * a bare block end still wraps (probe V1), and scored contexts are
      * unaffected (probe V12: inside [[div_]] no paragraph forms at all).
+     * REFCORR18: the type-absent standalone class was enumerated over the
+     * whole skip list after the REFCORR17 adjudication found the Separator
+     * token unmeasured. Among run-joining tokens (whose replacement does
+     * not isolate them behind a blank line) exactly two are type-absent:
+     * the horizontal rule and the separator. Live bares a break lead ahead
+     * of a horizontal rule (probe V3) but WRAPS it ahead of a separator:
+     * the raw live capture of muse-probe-refcorr17-sep serves
+     * <p><br /><br /><br /></p> ahead of the content-separator div, where
+     * snapshot-42 left the breaks bare. The separator is therefore
+     * excluded by name beside the image exclusion below. Every other skip
+     * kind is either start-typed (the measured opener class), isolated
+     * behind "\n\n" by its own process() replacement so it can never
+     * share a run with a break lead (code, math, module, module654,
+     * clearfloat, toc, gallery, center), or not yet tokenized when the
+     * Paragraph rule runs (plain tables, definition lists, bullet lists),
+     * so no other kind can reach this test in the lead position.
      */
     protected function runIsEmptyLeadBlockLead($run) {
         $delim = $this->wiki->delim;
@@ -377,6 +393,7 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
                     $sub = isset($tok[1]['type']) ? $tok[1]['type'] : '';
                     if (in_array($rule, $skip, true)
                         && $rule !== 'image'
+                        && $rule !== 'separator'
                         && ($sub === 'start' || substr($sub, -6) === '_start'
                             || $sub === '')) {
                         // A start-typed token opens a span (depth 1); a
