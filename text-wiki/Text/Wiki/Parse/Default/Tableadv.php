@@ -61,7 +61,9 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
         if (count($rows) === 0) {
             return $matches[0];
         }
-        if (trim(preg_replace($rowRe, '', $body)) !== '') {
+        $outsideRows = preg_replace($rowRe, '', $body);
+        $outsideRows = preg_replace('~\[\[table(?:"[^"]*"|[^\]])*\]\]~si', '', $outsideRows);
+        if (trim($outsideRows) !== '') {
             return $matches[0];
         }
 
@@ -136,7 +138,16 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
                 continue;
             }
             $out .= substr($src, $last, $cand - $last);
-            $out .= $this->process($m[1]);
+            $rep = $this->process($m[1]);
+            if ($rep !== $m[1][0]) {
+                if ($cand > 0 && $src[$cand - 1] === "\n") {
+                    $rep = "\n" . $rep;
+                }
+                if ($m[0] < $n && $src[$m[0]] === "\n") {
+                    $rep .= "\n";
+                }
+            }
+            $out .= $rep;
             $last = $m[0];
             $pos = $m[0];
         }
@@ -168,7 +179,7 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
         if (array_key_exists($sk, $memo)) {
             return $memo[$sk];
         }
-        if (preg_match('/\G\[\[\/table\]\]/i', $src, $cm, 0, $pos)) {
+        if (preg_match('/\G\[\[\/table\]\][ \t]*/i', $src, $cm, 0, $pos)) {
             return $memo[$sk] = array($pos, $pos + strlen($cm[0]));
         }
         if (stripos($src, '[[table', $pos) === $pos) {
