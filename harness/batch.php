@@ -37,6 +37,9 @@ while (($line = fgets(STDIN)) !== false) {
     $case = json_decode($line, true);
     $id = $case['id'];
     $src = $case['source'];
+    if (function_exists('ref_reset_stubs')) {
+        ref_reset_stubs();
+    }
     // R2-link: equation labels are document-local on live Wikidot. The
     // fossil's Text_Wiki_Parse_Math::$equationsArray is static and would
     // otherwise leak labels and numbers between independent batch cases,
@@ -66,7 +69,13 @@ while (($line = fgets(STDIN)) !== false) {
             $wiki->vars['page'] = new RefPage('', 0, $caseTags);
             $wiki->parse($src);
             $out = $wiki->source;
-            echo json_encode(array('id' => $id, 'output' => $out)), "\n";
+            $resp = array('id' => $id, 'output' => $out);
+            $stubsHit = function_exists('ref_stubs_hit') ? ref_stubs_hit() : array();
+            if (!empty($stubsHit)) {
+                $resp['stub_mediated'] = true;
+                $resp['stubs'] = $stubsHit;
+            }
+            echo json_encode($resp), "\n";
         } elseif ($mode === 'tokens') {
             $wiki = ref_configure_wiki(new Text_Wiki());
             // R2-notes: defensive per-case reset of footnote/bibliography
@@ -81,8 +90,13 @@ while (($line = fgets(STDIN)) !== false) {
             $wiki->vars['bibitemIds'] = array();
             $wiki->vars['page'] = new RefPage('', 0, $caseTags);
             $wiki->parse($src);
-            echo json_encode(array('id' => $id,
-                'output' => json_encode($wiki->tokens))), "\n";
+            $resp = array('id' => $id, 'output' => json_encode($wiki->tokens));
+            $stubsHit = function_exists('ref_stubs_hit') ? ref_stubs_hit() : array();
+            if (!empty($stubsHit)) {
+                $resp['stub_mediated'] = true;
+                $resp['stubs'] = $stubsHit;
+            }
+            echo json_encode($resp), "\n";
         } else {
             $wiki = ref_configure_wiki(new Text_Wiki());
             // R2-notes defensive per-case footnote/bibliography state reset
@@ -92,10 +106,22 @@ while (($line = fgets(STDIN)) !== false) {
             $wiki->vars['bibitemIds'] = array();
             $wiki->vars['page'] = new RefPage('', 0, $caseTags);
             $out = $wiki->transform($src, 'Xhtml');
-            echo json_encode(array('id' => $id, 'output' => $out)), "\n";
+            $resp = array('id' => $id, 'output' => $out);
+            $stubsHit = function_exists('ref_stubs_hit') ? ref_stubs_hit() : array();
+            if (!empty($stubsHit)) {
+                $resp['stub_mediated'] = true;
+                $resp['stubs'] = $stubsHit;
+            }
+            echo json_encode($resp), "\n";
         }
     } catch (Throwable $e) {
-        echo json_encode(array('id' => $id,
-            'error' => get_class($e) . ': ' . $e->getMessage())), "\n";
+        $resp = array('id' => $id,
+            'error' => get_class($e) . ': ' . $e->getMessage());
+        $stubsHit = function_exists('ref_stubs_hit') ? ref_stubs_hit() : array();
+        if (!empty($stubsHit)) {
+            $resp['stub_mediated'] = true;
+            $resp['stubs'] = $stubsHit;
+        }
+        echo json_encode($resp), "\n";
     }
 }

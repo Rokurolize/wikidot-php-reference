@@ -200,3 +200,218 @@ class ModuleManager {
         return $moduleName;
     }
 }
+
+// ============================================================================
+// Criteria-drain harness stub package: user-dependent and external-media
+// services (User/Image/Gallery render paths) + per-case stub-mediation log.
+// Behavior matches live-observed Wikidot captures in conformance-agy-hunt and
+// scp-wiki-translation; every case hitting any of these stubs is flagged via
+// $GLOBALS['REF_STUBS_HIT'] so stub-mediated runs never mix silently with
+// direct agreement.
+// ============================================================================
+
+$GLOBALS['REF_STUBS_HIT'] = array();
+
+if (!function_exists('ref_reset_stubs')) {
+    function ref_reset_stubs() {
+        $GLOBALS['REF_STUBS_HIT'] = array();
+    }
+}
+
+if (!function_exists('ref_record_stub')) {
+    function ref_record_stub($name) {
+        if (!isset($GLOBALS['REF_STUBS_HIT']) || !is_array($GLOBALS['REF_STUBS_HIT'])) {
+            $GLOBALS['REF_STUBS_HIT'] = array();
+        }
+        if (!in_array($name, $GLOBALS['REF_STUBS_HIT'], true)) {
+            $GLOBALS['REF_STUBS_HIT'][] = $name;
+        }
+    }
+}
+
+if (!function_exists('ref_stubs_hit')) {
+    function ref_stubs_hit() {
+        return $GLOBALS['REF_STUBS_HIT'] ?? array();
+    }
+}
+
+if (!function_exists('ref_user_id')) {
+    function ref_user_id($unixName) {
+        return 100000 + (crc32((string) $unixName) & 0x7fffffff) % 9000000;
+    }
+}
+
+class Criteria {
+    private $conditions = array();
+    private $orders = array();
+
+    public function add($column, $value = null, $comparison = '=') {
+        $this->conditions[$column] = array(
+            'value' => $value,
+            'comparison' => $comparison,
+        );
+    }
+
+    public function addOrderAscending($column) {
+        $this->orders[] = array('asc', $column);
+    }
+
+    public function addOrderDescending($column) {
+        $this->orders[] = array('desc', $column);
+    }
+
+    public function getCondition($column, $default = null) {
+        if (array_key_exists($column, $this->conditions)) {
+            return $this->conditions[$column]['value'];
+        }
+        return $default;
+    }
+}
+
+class RefOzoneUser {
+    private $id;
+    private $name;
+    private $unixName;
+
+    public function __construct($id, $name, $unixName) {
+        $this->id = (int) $id;
+        $this->name = (string) $name;
+        $this->unixName = (string) $unixName;
+    }
+
+    public function getUserId() { return $this->id; }
+    public function getName() { return $this->name; }
+    public function getUnixName() { return $this->unixName; }
+}
+
+class DB_OzoneUserPeer {
+    private static $inst = null;
+
+    public static function instance() {
+        if (self::$inst === null) {
+            self::$inst = new DB_OzoneUserPeer();
+        }
+        return self::$inst;
+    }
+
+    public function selectOne($criteria) {
+        ref_record_stub('user');
+        $unixName = ($criteria instanceof Criteria)
+            ? (string) $criteria->getCondition('unix_name', '')
+            : '';
+        if (isset($GLOBALS['REF_USERS']) && is_array($GLOBALS['REF_USERS'])
+            && array_key_exists($unixName, $GLOBALS['REF_USERS'])) {
+            $u = $GLOBALS['REF_USERS'][$unixName];
+            if ($u === null || $u === false) {
+                return null;
+            }
+            if ($u instanceof RefOzoneUser) {
+                return $u;
+            }
+            if (is_array($u)) {
+                return new RefOzoneUser(
+                    $u['id'] ?? ref_user_id($unixName),
+                    $u['name'] ?? $unixName,
+                    $u['unix_name'] ?? $unixName
+                );
+            }
+        }
+        if ($unixName === '') {
+            return null;
+        }
+        return new RefOzoneUser(ref_user_id($unixName), $unixName, $unixName);
+    }
+}
+
+class WDRenderUtils {
+    public static function renderUser($user, $options = array()) {
+        $id = (int) $user->getUserId();
+        $unix = htmlspecialchars((string) $user->getUnixName(), ENT_COMPAT, 'UTF-8');
+        $name = htmlspecialchars((string) $user->getName(), ENT_COMPAT, 'UTF-8');
+        $href = 'https://www.wikidot.com/user:info/' . $unix;
+        $onclick = 'WIKIDOT.page.listeners.userInfo(' . $id . '); return false;';
+        if (!empty($options['image'])) {
+            return '<span class="printuser avatarhover"><a href="' . $href
+                . '" onclick="' . $onclick . '"><img class="small" src="https://www.wikidot.com/avatar.php?userid='
+                . $id . '&amp;amp;size=small&amp;amp;timestamp=0" alt="' . $name
+                . '" style="background-image:url(https://www.wikidot.com/userkarma.php?u='
+                . $id . ')" /></a><a href="' . $href . '" onclick="' . $onclick
+                . '">' . $name . '</a></span>';
+        }
+        return '<span class="printuser"><a href="' . $href . '" onclick="'
+            . $onclick . '">' . $name . '</a></span>';
+    }
+}
+
+class RefFile {
+    private $filename;
+
+    public function __construct($filename) {
+        $this->filename = (string) $filename;
+    }
+
+    public function getFilename() { return $this->filename; }
+}
+
+class DB_FilePeer {
+    private static $inst = null;
+
+    public static function instance() {
+        if (self::$inst === null) {
+            self::$inst = new DB_FilePeer();
+        }
+        return self::$inst;
+    }
+
+    private function lookupFiles($criteria) {
+        $pageId = ($criteria instanceof Criteria) ? $criteria->getCondition('page_id', null) : null;
+        if ($pageId !== null && isset($GLOBALS['REF_FILES']) && is_array($GLOBALS['REF_FILES'])
+            && array_key_exists($pageId, $GLOBALS['REF_FILES'])) {
+            $out = array();
+            foreach ((array) $GLOBALS['REF_FILES'][$pageId] as $item) {
+                $out[] = ($item instanceof RefFile) ? $item : new RefFile($item);
+            }
+            return $out;
+        }
+        return array();
+    }
+
+    public function selectOne($criteria) {
+        ref_record_stub('file:first');
+        $files = $this->lookupFiles($criteria);
+        return empty($files) ? null : $files[0];
+    }
+
+    public function select($criteria) {
+        ref_record_stub('file:gallery');
+        return $this->lookupFiles($criteria);
+    }
+}
+
+class FlickrHandler {
+    private static $inst = null;
+
+    public static function instance() {
+        if (self::$inst === null) {
+            self::$inst = new FlickrHandler();
+        }
+        return self::$inst;
+    }
+
+    public function photos_getInfo($photoId, $secret = null) {
+        ref_record_stub('flickr');
+        if (isset($GLOBALS['REF_FLICKR']) && is_array($GLOBALS['REF_FLICKR'])
+            && array_key_exists($photoId, $GLOBALS['REF_FLICKR'])) {
+            return $GLOBALS['REF_FLICKR'][$photoId];
+        }
+        return null;
+    }
+
+    public function buildPhotoURL($photo, $size = null) {
+        if (is_array($photo) && isset($photo['_attributes']['server'], $photo['_attributes']['id'], $photo['_attributes']['secret'])) {
+            return 'http://static.flickr.com/' . $photo['_attributes']['server'] . '/'
+                . $photo['_attributes']['id'] . '_' . $photo['_attributes']['secret'] . '.jpg';
+        }
+        return '';
+    }
+}
