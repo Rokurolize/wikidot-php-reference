@@ -98,10 +98,16 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
         if (preg_match('/^[ \t]+/', $matches[2], $sm)) {
             $leadSpace = $sm[0];
         }
-        if (preg_match('/[ \t]+$/', substr($matches[2], strlen($leadSpace)), $sm)) {
+        $tailAfterLead = substr($matches[2], strlen($leadSpace));
+        if (!preg_match('/(?:^|\n)[ \t]*[*#]+[ \t]+$/', $matches[2])
+            && preg_match('/[ \t]+$/', $tailAfterLead, $sm)) {
             $trailSpace = $sm[0];
         }
-        $content = trim($matches[2], " \t");
+        $content = substr(
+            $matches[2],
+            strlen($leadSpace),
+            strlen($matches[2]) - strlen($leadSpace) - strlen($trailSpace)
+        );
 
         $attrText = isset($matches[1]) ? $matches[1] : '';
         $attr = $this->getAttrs(trim($attrText));
