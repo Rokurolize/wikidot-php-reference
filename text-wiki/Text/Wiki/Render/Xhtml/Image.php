@@ -105,7 +105,7 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
 			$photo = $flickr->photos_getInfo($photoId, $secret);
 			
 			if($photo == null){
-				return '<div class="error-block">'.sprintf(_('Error fetching flickr image (id: %s) info. The file does not exist, is private or other problem.'),$photoId).'</div>';
+				return '<span class="error-inline">'.sprintf(_('Cannot fetch Flickr photo (id: %s). The photo either does not exist, or is private'),$photoId).'</span>';
 			}
 			
 			$src = $flickr->buildPhotoURL($photo, $size); //"http://static.flickr.com/".$photo['_attributes']['server']."/".$photo['_attributes']['id']."_".$photo['_attributes']['secret'].".jpg"; 	
