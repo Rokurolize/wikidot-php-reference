@@ -330,6 +330,21 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
      * R-BR-BLOCK: a run with no literal text at depth zero before a
      * non-divalign skipped block opener is layout (empty @@@@ Raw tokens and
      * Newline break tokens leading into [[tabview]]/[[div]] etc.), not a <p>.
+     * REFCORR17: explicit Break tokens (` _` lines) are layout in the lead
+     * too. A run whose only depth-zero content ahead of the block opener is
+     * break lines is left bare by live Wikidot (fresh holdout h257, a break
+     * line between an opening [[div]] and a nested [[div]]; h273, break
+     * lines running into the footnoteblock at page end), where the fossil
+     * wrapped the breaks in a paragraph. A break-only run with no block
+     * opener inside the run still wraps (corpus page file-scp-9224-194b,
+     * whose blank-line-bounded break live serves as <p><br /></p>), so the
+     * block-opener requirement stands; only the lead's token class widens.
+     * The qualifying block token is any non-divalign skipped token that is
+     * not end-typed and not an image: a start-typed opener, or a standalone
+     * block token such as a horizontal rule (probe V3, where live serves
+     * the breaks bare ahead of the rule) or a module. A break run ahead of
+     * a bare block end still wraps (probe V1), and scored contexts are
+     * unaffected (probe V12: inside [[div_]] no paragraph forms at all).
      */
     protected function runIsEmptyLeadBlockLead($run) {
         $delim = $this->wiki->delim;
@@ -353,7 +368,7 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
                 }
                 $rule = strtolower($tok[0]);
                 if (! $seenBlockStart) {
-                    if ($rule === 'newline') {
+                    if ($rule === 'newline' || $rule === 'break') {
                         continue;
                     }
                     if ($rule === 'raw' && (!isset($tok[1]['text']) || $tok[1]['text'] === '')) {
@@ -361,9 +376,20 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
                     }
                     $sub = isset($tok[1]['type']) ? $tok[1]['type'] : '';
                     if (in_array($rule, $skip, true)
-                        && ($sub === 'start' || substr($sub, -6) === '_start')) {
+                        && $rule !== 'image'
+                        && ($sub === 'start' || substr($sub, -6) === '_start'
+                            || $sub === '')) {
+                        // A start-typed token opens a span (depth 1); a
+                        // standalone block token (a horizontal rule, a
+                        // module) opens none but still ends the lead:
+                        // live leaves break lines bare ahead of it too
+                        // (REFCORR17 probe V3). An end-typed token does
+                        // not qualify (probe V1: a break run ahead of a
+                        // bare [[/div]] still wraps).
                         $seenBlockStart = true;
-                        $depth = 1;
+                        if ($sub !== '') {
+                            $depth = 1;
+                        }
                         continue;
                     }
                     return false;
