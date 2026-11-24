@@ -70,13 +70,31 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
         $labelSize = null;
         $delim = $this->wiki->delim;
         $q = preg_quote($delim, '/');
-        if (preg_match('/^' . $q . '(\d+)' . $q . '/', $content, $mm)) {
-            $eid = (int)$mm[1];
-            $et = isset($this->wiki->tokens[$eid]) ? $this->wiki->tokens[$eid] : null;
-            if ($et && $et[0] === 'Size' && isset($et[1]['type']) && $et[1]['type'] === 'end') {
+        // REFCORR19 F11/#03: generalize the size/opener crossing fix. Only
+        // reattach when a Size START token immediately precedes this
+        // collapsible opener (whitespace between them is invisible to the
+        // token stream); then find its matching Size END anywhere in the
+        // collapsible content. Unrelated size spans inside a collapsible
+        // body must be left alone (news-03-2017 regression guard).
+        $sid = null;
+        if (!empty($this->wiki->tokens)) {
+            $lastId = count($this->wiki->tokens) - 1;
+            $lt = $this->wiki->tokens[$lastId];
+            if ($lt[0] === 'Size' && isset($lt[1]['type']) && $lt[1]['type'] === 'start') {
+                $sid = $lastId;
+            }
+        }
+        if ($sid !== null && preg_match_all('/' . $q . '(\d+)' . $q . '/', $content, $ms)) {
+            foreach ($ms[1] as $candidate) {
+                $eid = (int) $candidate;
+                $et = isset($this->wiki->tokens[$eid]) ? $this->wiki->tokens[$eid] : null;
+                if (!$et || $et[0] !== 'Size' || !isset($et[1]['type'])
+                    || $et[1]['type'] !== 'end') {
+                    continue;
+                }
                 $sizeDepth = 0;
-                $sid = null;
-                for ($j = $eid - 1; $j >= 0; $j--) {
+                $match = null;
+                for ($j = $eid - 1; $j >= $sid; $j--) {
                     $t = $this->wiki->tokens[$j];
                     if ($t[0] !== 'Size' || !isset($t[1]['type'])) {
                         continue;
@@ -85,16 +103,17 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
                         $sizeDepth++;
                     } elseif ($t[1]['type'] === 'start') {
                         if ($sizeDepth === 0) {
-                            $sid = $j;
+                            $match = $j;
                             break;
                         }
                         $sizeDepth--;
                     }
                 }
-                if ($sid !== null) {
+                if ($match === $sid) {
                     $labelSize = $this->wiki->tokens[$sid][1]['size'];
                     $this->wiki->tokens[$sid][1]['type'] = 'suppressed';
                     $this->wiki->tokens[$eid][1]['type'] = 'suppressed';
+                    break;
                 }
             }
         }

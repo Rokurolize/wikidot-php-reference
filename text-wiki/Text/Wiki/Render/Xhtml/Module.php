@@ -37,6 +37,15 @@ class Text_Wiki_Render_Xhtml_Module extends Text_Wiki_Render {
     
     function token($options) {
         $moduleName = $options['moduleName'];
+        // REFCORR19 F3: these modules' bodies are caller-runtime output on
+        // live Wikidot (user lists, mail forms, comment threads, theme
+        // previews). The offline census driver emits no body for them; the
+        // reference therefore emits nothing instead of a "No such module"
+        // error block. Email dispatch is a no-op by programme ruling.
+        $callerRuntime = array('listusers', 'mailform', 'comments', 'themepreviewer');
+        if (in_array(strtolower($moduleName), $callerRuntime, true)) {
+            return '';
+        }
         $siteName = $GLOBALS['site']->getUnixName();
         // check if the site is allowed to use this module
         $mm = ModuleManager::instance();

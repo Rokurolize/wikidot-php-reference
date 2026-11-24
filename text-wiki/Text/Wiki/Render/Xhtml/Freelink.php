@@ -46,6 +46,10 @@ class Text_Wiki_Render_Xhtml_Freelink extends Text_Wiki_Render_Xhtml_Wikilink {
         $site = isset($options['site']) ? $options['site'] : null;
         $nonbr = !empty($options['nonbr']);
         $textFromTitle = !empty($options['textFromTitle']);
+        // REFCORR19 F7: the parse rule marks a leading-star local triple
+        // link. Its target is a normal page slug, so the missing-target
+        // branch below applies live's newpage class to it explicitly.
+        $starLocal = !empty($options['star']);
 
         // A bare external URL target is an external link, not a local slug.
         if ($url) {
@@ -147,6 +151,15 @@ class Text_Wiki_Render_Xhtml_Freelink extends Text_Wiki_Render_Xhtml_Wikilink {
             $href = sprintf($href, $page . $suffix);
         }
         $css = $this->formatConf(' class="%s"', 'css_new');
+        if ($starLocal && trim($css) === '') {
+            // REFCORR19 F7: a starred local triple link to a page that does
+            // not exist must still carry class="newpage" on live. The
+            // harness supplies css_new="newpage", so this literal is a
+            // fallback for callers that have not configured that class;
+            // the shared unstarred branch and the existing-target branch
+            // are untouched, and no target="_blank" is added here.
+            $css = ' class="newpage"';
+        }
         $new = $this->getConf('new_text');
         $pos = $this->getConf('new_text_pos');
         if (! $pos || ! $new) {

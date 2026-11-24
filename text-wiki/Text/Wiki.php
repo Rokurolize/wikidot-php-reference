@@ -65,6 +65,10 @@ class Text_Wiki {
     	'Iftags',
     
         'Comment',
+        // REFCORR19 F10: evaluate [[#expr]] / [[#ifexpr]] before the inline
+        // rules so branch text is still parsed as wikitext.
+        'Expr',
+        'Ifexpr',
         'Iframe',
     	'Date',
         'Math',
@@ -80,7 +84,7 @@ class Text_Wiki {
         'Bibliography',
         'Bibcite',
  //       'Function',
- //       'Html',   
+        'Html',
         'Divprefilter',
  //       'Embed',
         'Anchor',
@@ -142,8 +146,9 @@ class Text_Wiki {
     *
     */
 
+    // REFCORR19 F2: the Html rule is active again so [[html]] blocks can be
+    // modeled as live's html-block-iframe instead of literal source text.
     public $disable = array(
-        'Html'
     );
 
     /**

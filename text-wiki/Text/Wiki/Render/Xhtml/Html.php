@@ -38,8 +38,32 @@ class Text_Wiki_Render_Xhtml_Html extends Text_Wiki_Render {
     *
     */
 
+    public $conf = array(
+        // Live submits the block body to a snippet service and embeds the
+        // returned URL. The census/FTML handle returns this fixed stand-in;
+        // production overrides the conf with the real snippet URL.
+        'src' => 'https://example.com/',
+        'class' => 'html-block-iframe'
+    );
+
     function token($options)
     {
-        return $options['text'];
+        // REFCORR19 F2: live (and FTML) render [[html]] as an iframe with the
+        // html-block-iframe class, not as literal source text.
+        $src = $this->getConf('src');
+        $class = $this->getConf('class');
+        if (!empty($options['class'])) {
+            $class = trim($options['class'] . ' ' . $class);
+        }
+        $parts = array(
+            'src="' . htmlspecialchars($src, ENT_COMPAT, 'UTF-8') . '"',
+            'allowtransparency="true"',
+            'frameborder="0"'
+        );
+        if (!empty($options['style'])) {
+            $parts[] = 'style="' . htmlspecialchars($options['style'], ENT_COMPAT, 'UTF-8') . '"';
+        }
+        $parts[] = 'class="' . htmlspecialchars($class, ENT_COMPAT, 'UTF-8') . '"';
+        return '<iframe ' . implode(' ', $parts) . '></iframe>';
     }
 }

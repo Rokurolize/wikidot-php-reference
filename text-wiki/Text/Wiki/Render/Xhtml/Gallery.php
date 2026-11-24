@@ -40,6 +40,39 @@ class Text_Wiki_Render_Xhtml_Gallery extends Text_Wiki_Render {
     *
     */
  
+    /**
+     * REFCORR19 F8: a gallery item line may contain already-tokenized
+     * nested rules (Span, Size, ... run before Gallery in the parse order).
+     * Their placeholders are raw 0xFF-delimited byte sequences, so splicing
+     * them straight into a generated image href/src emits invalid UTF-8
+     * (witness ga-24, ": [[span]]x[[/span]]"). Resolve each placeholder to
+     * the item's real text: the authored source span when the claiming rule
+     * recorded one, else the token's own text, else its rendered content
+     * with markup stripped.
+     */
+    private function itemText($value)
+    {
+        if (!is_string($value) || strpos($value, $this->wiki->delim) === false) {
+            return $value;
+        }
+        $delim = preg_quote($this->wiki->delim, '/');
+        return preg_replace_callback('/' . $delim . '(\d+)' . $delim . '/', function ($m) {
+            $id = (int)$m[1];
+            if (isset($this->wiki->tokenSource[$id])
+                && is_string($this->wiki->tokenSource[$id])) {
+                return $this->wiki->tokenSource[$id];
+            }
+            if (isset($this->wiki->tokens[$id][1]['text'])
+                && is_string($this->wiki->tokens[$id][1]['text'])) {
+                return $this->wiki->tokens[$id][1]['text'];
+            }
+            if (isset($this->wiki->tokens[$id])) {
+                return strip_tags($this->wiki->renderTokenId($id));
+            }
+            return '';
+        }, $value);
+    }
+
     function token($options)
     {
     
@@ -86,7 +119,10 @@ class Text_Wiki_Render_Xhtml_Gallery extends Text_Wiki_Render {
       				 $attr = $this->getAttrs(substr($row, $pos+1));	
       			}
       			
-      			// SINGLE IMAGE PROCESSING BEGINS
+      			// REFCORR19 F8: resolve tokenized nested rules in the item source to
+       			// their real text before splicing it into the generated URLs.
+       			$src = $this->itemText($src);
+       			// SINGLE IMAGE PROCESSING BEGINS
 
 				if($src && $src[0] == '*'){
 					$src = substr($src, 1);
