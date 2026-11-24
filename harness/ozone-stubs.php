@@ -67,6 +67,12 @@ class RefPage {
     public function getTitleOrUnixName() {
         return $this->title !== null ? $this->title : $this->name;
     }
+    // REFCORR19 F1 repair: the page's unix name is the URL segment the
+    // file/image builders need (pageSegment() in Image.php/File.php asks
+    // for it by these names). Without the accessors the helper fell back
+    // to getTitleOrUnixName() and emitted the page TITLE as the segment.
+    public function getUnixName() { return $this->name; }
+    public function getName() { return $this->name; }
 }
 
 // Math parse rule throws this on \include / \input in an equation body; the
