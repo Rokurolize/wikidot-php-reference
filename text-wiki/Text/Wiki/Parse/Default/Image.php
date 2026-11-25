@@ -112,6 +112,13 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
      */
     
     function process($matches) {
+        // REFCORR27 C3: a line break immediately after the image opener is
+        // head whitespace on live, not part of the file name. The scorpion-pit
+        // corpus page authors `[[image `, then breaks the line before the URL;
+        // live serves the image normally. Space-only empty-head behavior is
+        // unchanged because this trims the same whitespace the fossil later
+        // treats as the source/attribute separator only when it is leading.
+        $matches[3] = ltrim($matches[3], "\r\n");
         // R2-PARA correction C7: a complete raw inline construct (`@@...@@`)
         // in the opener head makes live reject the whole image block and
         // leave the opener literal, with the raw token rendered in place
@@ -183,6 +190,16 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
             // live; the whole opener stays literal (probes p03 and p04, pin
             // image/basic's `link=" https://..."` row). The fossil accepted
             // it and emitted a broken href with a leading space.
+            // REFCORR27 C3: unlike a leading space or tab (the settled C3
+            // rejection), a line break at the start of a quoted link value is
+            // consumed as image-head line folding on live. scorpion-pit breaks
+            // the line immediately after link=" and live uses the URL without
+            // the break. Remove CR/LF before the leading-whitespace guard;
+            // literal spaces and tabs still reject the opener exactly as C3
+            // pinned them.
+            if (isset($options['attr']['link'])) {
+                $options['attr']['link'] = ltrim($options['attr']['link'], "\r\n");
+            }
             if (isset($options['attr']['link']) && $options['attr']['link'] !== ''
                 && ctype_space($options['attr']['link'][0])) {
                 return $matches[0];

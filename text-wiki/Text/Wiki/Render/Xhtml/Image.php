@@ -214,7 +214,14 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
                 // fragment on live, while the fossil prepended '/', turning
                 // `link="#x"` into `href="/#x"` (probe p08, pin image/basic).
                 $linkValue = $options['attr']['link'];
-                if (isset($linkValue[0]) && $linkValue[0] === '#') {
+                if ($linkValue === '#') {
+                    // REFCORR27 C2: the exact empty fragment is not a fragment
+                    // navigation target on live. Corpus page scp-4893 authors
+                    // repeated link="#" image flowers and cached live serves
+                    // href="javascript:;" for each one, while non-empty
+                    // fragments such as #x keep the pinned bare-fragment form.
+                    $href = 'javascript:;';
+                } elseif (isset($linkValue[0]) && $linkValue[0] === '#') {
                     $href = $linkValue;
                 } else {
                     $href = '/'.$linkValue;
