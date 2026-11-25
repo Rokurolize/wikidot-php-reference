@@ -679,6 +679,15 @@ $2$3[[/li]]
             }
 
             if (!empty($matchedPair['synthetic'])) {
+                // REFCORR22 R5: adjacency, not the raw-case opener alone,
+                // decides whether the swallowed prose joins the last item.
+                // The settled REFCORR7 sibling `[[/OL]]AFTER` concatenates,
+                // while live's f06 shape has a blank line after the swallowed
+                // closer and preserves one line break before AFTER.
+                $blankAfterSwallowedClose = (bool) preg_match(
+                    '/\[\[\/li\]\]\s*\[\[\/(?:ul|ol)\]\][^\S\n]*\n[^\S\n]*\n/is',
+                    $body
+                );
                 $body = preg_replace('/\[\[\/(?:ul|ol)\]\]/i', '', $body);
                 $liClosePos = strripos($body, '[[/li]]');
                 if ($liClosePos !== false) {
@@ -690,6 +699,9 @@ $2$3[[/li]]
                     $trimmedTail = trim($tail);
                     if ($trimmedTail !== '' || ($opUpper7 && $op['scored'])) {
                         $tail = $trimmedTail;
+                        if ($blankAfterSwallowedClose && $trimmedTail !== '') {
+                            $tail = "\n" . $tail;
+                        }
                     }
                     $body = substr($body, 0, $liClosePos) . $tail . $liClose;
                 }

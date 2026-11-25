@@ -1,0 +1,42 @@
+{
+  "agy-x03-email-url-label": {
+    "html": "<p><span class=\"wiki-email\">moc.b|a#�3�</span></p>",
+    "source": "[a@b.com http://example.com]",
+    "html_sha256": "fa00ffe43f3a14741384cfba4fddf5cfd95a8569b56ee3a6123fd8b1f5d8385a",
+    "source_sha256": "e2dd88e3df44a647a1021753aed2c42bdccfcd6d853a585d966b6648d3391bbd",
+    "evidence": "m1-ftml-measure retained live byte",
+    "valid": true,
+    "stable": true,
+    "saved_source_matches": true
+  },
+  "agy-x05-email-raw-label": {
+    "html": "<p><span class=\"wiki-email\">moc.b|a#�1�</span></p>",
+    "source": "[a@b.com @@raw@@]",
+    "html_sha256": "eff00ed810f59094287c14d03dffb52694effc5c12cc8b6e42f4d0afbc635e5d",
+    "source_sha256": "e21239977e54f1d4303d56858e2b5c5707b6312dffd00fdc2f3394ce1252d53f",
+    "evidence": "m1-ftml-measure retained live byte",
+    "valid": true,
+    "stable": true,
+    "saved_source_matches": true
+  },
+  "agy-p22-date-at-forge": {
+    "html": "<p><span class=\"odate time_0 format_%FF1%FF%40%40123%FF2%FF%40%40\">01 Jan 1970 00:00</span></p>",
+    "source": "[[date 0 format=\"@@@@@@123@@@@@@\"]]",
+    "html_sha256": "7509cfb53f58f68c1f5533498600c5f8a6c37f949a66a05ea9d27ce09fc4291f",
+    "source_sha256": "6a45af0c05b6c7b0b14ee39478e64131ed89dff9a462b5687b262ffd093b7eb9",
+    "evidence": "m1-ftml-measure retained live byte",
+    "valid": true,
+    "stable": true,
+    "saved_source_matches": true
+  },
+  "agy-x02-raw-in-date": {
+    "html": "<p><span class=\"odate time_0 format_a%FF1%FFb\">01 Jan 1970 00:00</span> and <span class=\"odate time_0 format_a%FF2%FFb\">01 Jan 1970 00:00</span></p>",
+    "source": "[[date 0 format=\"a@@raw@@b\"]] and [[date 0 format=\"a@@@@b\"]]",
+    "html_sha256": "183abfc6e3ef4797ee0e6ba77c0c9e353a6c21fb6ecb25f5d12bac7ef5c68858",
+    "source_sha256": "77effdfa82c2fc767930b53d69a7223535097043f9cd7809543cd603ed043e0b",
+    "evidence": "m1-ftml-measure retained live byte",
+    "valid": true,
+    "stable": true,
+    "saved_source_matches": true
+  }
+}

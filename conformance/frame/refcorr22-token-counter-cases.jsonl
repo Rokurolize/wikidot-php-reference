@@ -1,0 +1,4 @@
+{"id": "agy-x03-email-url-label", "source": "[a@b.com http://example.com]"}
+{"id": "agy-x05-email-raw-label", "source": "[a@b.com @@raw@@]"}
+{"id": "agy-p22-date-at-forge", "source": "[[date 0 format=\"@@@@@@123@@@@@@\"]]"}
+{"id": "agy-x02-raw-in-date", "source": "[[date 0 format=\"a@@raw@@b\"]] and [[date 0 format=\"a@@@@b\"]]"}

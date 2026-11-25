@@ -12,8 +12,13 @@ $patterns = array(
 	'digg_this' => ';^<script>\s*digg_url\s*=\s*[\'"][^\'"]+[\'"]\;\s*</script>\s*<script src="http://digg.com/api/diggthis.js">\s*</script>\s*$;s',
 	
 	//'statcounter' => ';^(<!\-\- Start of StatCounter Code \-\->\s*)?<script type="text/javascript" language="javascript">\s*<!\-\-\s*[^<]+</script>\s*<script type="text/javascript" language="javascript"\s*src="https://secure.statcounter.com/counter/counter.js"></script><noscript><a\s*href="http://www.statcounter.com/" target="_blank"><img[^>]*</a>\s*</noscript>\s*(<!\-\- End of StatCounter Code \-\->)?$;si'
-	'statcounter' => ';^(<!\-\- Start of StatCounter Code \-\->\s*)?<script type="text/javascript"( language="javascript")?>\s*(<!\-\-)?\s*(\s*var sc_[a-z0-9_ =",]+ *\;)*\s*(//\-\->)?\s*</script>\s*<script type="text/javascript"( language="javascript")?\s*src="https?://(secure|www)\.statcounter\.com/[^"]+"></script>\s*<noscript>(<div class="statcounter">)?(<a\s+(class="statcounter")?\s*href="http://www\.statcounter\.com/"( target="_blank")?>)?<img[^>]*>(</a>)?\s*(</div>)?\s*</noscript>\s*(<!\-\- End of StatCounter Code \-\->)?(\s*<br/?>\s*<a href="http://[a-z0-9]+\.statcounter\.com/project/standard/stats\.php[^"]+">[^<]*</a>)?$;si'
-	,'statcounter_html' => ';^(<!\-\- Start of StatCounter Code \-\->\s*)?\s*(<a\s+href="http://www\.statcounter\.com/" target="_blank">)?<img[^>]*>(</a>)?\s*(<!\-\- End of StatCounter Code \-\->)?(\s*<br/?>\s*<a href="http://[a-z0-9]+\.statcounter\.com/project/standard/stats\.php[^"]+">[^<]*</a>)?$;si',
+	'statcounter' => ';^(<!\-\- Start of StatCounter Code \-\->\s*)?<script type="text/javascript"( language="javascript")?>\s*(<!\-\-)?\s*(\s*var sc_[a-z0-9_ =",]+ *\;)*\s*(//\-\->)?\s*</script>\s*<script type="text/javascript"( language="javascript")?\s*src="https?://(secure|www)\.statcounter\.com/[^"]+"></script>\s*<noscript>(<div class="statcounter">)?(<a\s+(class="statcounter")?\s*href="http://www\.statcounter\.com/"( target="_blank")?>)?<img[^>]*>(</a>)?\s*(</div>)?\s*</noscript>\s*(<!\-\- End of StatCounter Code \-\->)?(\s*<br/?>\s*<a href="http://[a-z0-9]+\.statcounter\.com/project/standard/stats\.php[^"]+">[^<]*</a>)?$;si',
+	// REFCORR22 R3: live's deployed allowlist no longer accepts the
+	// standalone HTML-only statcounter form. Eight fresh valid/stable probes
+	// (bare img, data-src/http or javascript, real src/http or javascript,
+	// statcounter-domain img, anchored and comment-framed forms) all serve
+	// the no-match error block, so retaining this fossil pattern incorrectly
+	// admits arbitrary <img> HTML before the sanitizer.
 	
 	//feedblitz - subscribe
 	'fb' => ';^<form Method="POST" action="http://www\.feedblitz\.com/f/[^"]*">\s*[^<]*(<br/?>)?<input name="EMAIL" maxlength="255" type="text" size="30" value="">(<br/?>)?\s*<input name="FEEDID"[^>]*>\s*<input type="submit" value="[^"]*">\s*(<br>(<a href="http://www\.feedblitz\.com/f\?preview[^"]+">Preview</a> \| )?Powered by <a href="http://www\.feedblitz\.com">FeedBlitz</a>)?</form>$;s',

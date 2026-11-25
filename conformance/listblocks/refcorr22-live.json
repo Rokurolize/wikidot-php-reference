@@ -1,0 +1,20 @@
+{
+  "agy-f06-ul-upper-after": {
+    "html": "<ul>\n<li>A</li>\n<li>B<br />\nAFTER</li>\n</ul>",
+    "source": "[[UL]]\n[[LI]]A[[/LI]]\n[[LI]]B[[/LI]]\n[[/UL]]\n\nAFTER",
+    "html_sha256": "b7bd195320b29fe62b6b1b71e9dbc5495164cc2a3f0ebcfe37a9d2df23186086",
+    "source_sha256": "641b7a06799fe69ef7d6694c935f1621cdb089fcd3b1aed4eb69de9de2f0176b",
+    "evidence": "m1 retained live byte, originally muse-probe-agy-suspect-f06-ul-upper-after",
+    "valid": true,
+    "stable": true,
+    "saved_source_matches": true
+  },
+  "s4a-l3b-adjacent-control": {
+    "html": "<ul>\n<li>aAFTER</li>\n</ul>",
+    "source": "[[OL data-x=\"1\"]]\n[[li]]a[[/li]]\n[[/OL]]AFTER",
+    "evidence": "conformance-suspect4a cached live capture s4a-l3b",
+    "valid": true,
+    "stable": true,
+    "saved_source_matches": true
+  }
+}

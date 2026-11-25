@@ -1,0 +1,29 @@
+# CORRECTION REFCORR22 — m1 reference findings
+
+Status: APPLIED in this tree on branch `refcorr22/m1-findings`. The measured inputs and verdict bytes are retained in the m1 lane (`lanes/m1-ftml-measure/outputs/`). Fresh sandbox evidence was needed only for R3 and is cached in `conformance/refval/embed/refcorr22-captures.json`; every fresh capture there is valid, stable and saved-source-matching.
+
+## R1 — document-local placeholder numbering
+
+`Text_Wiki::addToken()` kept its counter in a function-local `static`, so the counter survived both repeated parses and independent `Text_Wiki` instances in one PHP process. `parse()` reset the token array but not the counter; batch cases therefore emitted process-positional placeholder digits while live numbers placeholders within one render. Firsthand single-render checks also showed that live's first visible index is one higher than the fossil's zero-based fresh counter (for example x03's URL placeholder is `%FF3%FF`, not `%FF2%FF`). The correction makes the counter instance state (`Text_Wiki::$nextTokenId`), initializes and resets it to one in `parse()`, and removes the function static. This is reference-core counter ownership, not a batch-harness patch: independent documents must not share numbering merely because they share a PHP process.
+
+Pins: `conformance/frame/refcorr22-token-counter-cases.jsonl` and `refcorr22-token-counter-live.json`. All four m1 placeholder shapes render with live indices in one batch process.
+
+## R2 — Tableadv recursive-head backtracking
+
+The no-newline witnesses depend on PCRE backtracking inside the ambiguous quoted head `[[table"]][[/table]]"]]`: the first greedy quoted-head parse can consume the outer closer, but backtracking eventually treats the quote as a one-byte head atom, pairs the nested closer inside the quoted text, and leaves `"]]` as outer cell text. The REFCORR16 linear scanner tried only its first complete nested-block match and therefore dropped the outer construct to a literal paragraph in the full pipeline. The recursive pattern itself is the behavioral grammar. The correction uses that grammar through `preg_replace_callback` for inputs up to 8192 bytes and keeps the linear scanner as the large-input fallback that avoids PCRE recursion failure on corpus-scale pages. `processPreserveBoundary()` keeps the direct-regex path byte-compatible with the scanner's boundary-newline treatment.
+
+Pins: `conformance/table/tableadv/refcorr22-cases.jsonl` and `refcorr22-expected.json`; all 14 m1 witnesses now parse. In the pre-existing 60-case Tableadv battery, the only head-to-head movement is `adv06-midline-table`, which restores the space before ` tail` swallowed by the scanner; the directory's retained `compare-final.txt` already records the spaced reference shape.
+
+## R3 — retired HTML-only statcounter embed and pure error frame
+
+The target was not primarily a `data-src` boundary failure. The broad fossil `statcounter_html` allowlist pattern matches any `<img[^>]*>`, so the bare `<img data-src="javascript:alert(1)">` entered the sanitizer and the dangerous non-`src` attribute path returned the empty string; Paragraph then framed that empty render as `<p></p>`. Eight fresh live probes (`muse-probe-r2refcorr-embed-*`: bare image, `data-src` with http and javascript, real `src` with http and javascript, a statcounter-domain image, an anchored statcounter form, and the comment-framed form) all serve the no-match error block. Live's deployed allowlist therefore no longer admits the fossil standalone HTML-only statcounter form. The active `statcounter_html` pattern is removed from `wikidot-root/conf/wikiparser/embed/default.php` rather than replaced with an invented restriction.
+
+Once the correct no-match block was produced, the reference still wrapped a standalone block-level error div in `<p>`. Live's purifyHtml/tidy pass drops that wrapper for the pure case; `/usr/bin/tidy` confirms the same repair on the exact fragment. `Text_Wiki::render()` now performs the narrow exact pure-paragraph repair for the Embed no-match block. The broader mixed inline div-splitting problem is not claimed here: successful iframe embeds keep live's `<p><iframe...></iframe></p>` shape, while mixed text/error runs remain a documented frame residual outside this item.
+
+Pins: `conformance/refval/embed/refcorr22-cases.jsonl` and `refcorr22-captures.json` (fresh, valid/stable/source-matching). All eight probes and the m1 data-src shape byte-match live after canonical outer-newline stripping.
+
+## R5 — blank-line absorption in an unterminated uppercase list
+
+The synthetic raw-case opener path correctly swallowed its non-pairing uppercase closer into the last item, but it trimmed all trailing whitespace before appending absorbed prose. That concatenated `AFTER` directly onto `B`. The retained live evidence separates two adjacency classes: the REFCORR7 sibling `[[/OL]]AFTER` concatenates (`<li>aAFTER</li>`), while f06 has a blank line after the swallowed closer and preserves one item-internal break (`<li>B<br />\nAFTER</li>`). The correction detects the blank-line-after-swallowed-closer form before closers are stripped and reintroduces exactly one newline before the trimmed prose.
+
+Pins: `conformance/listblocks/refcorr22-cases.jsonl` and `refcorr22-live.json`, including both f06 and the adjacent-text control. Both render to their retained live bytes.

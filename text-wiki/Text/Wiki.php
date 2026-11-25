@@ -275,6 +275,22 @@ class Text_Wiki {
 
     /**
     *
+    * The next token id for this document. Token numbering is document-local:
+    * a fresh parse starts at one even when several independent documents are
+    * rendered in one PHP process. The fossil kept this counter in a function
+    * static, which leaked numbering across batch cases and made placeholder
+    * digits visible in Email and Date output diverge from live.
+    *
+    * @access public
+    *
+    * @var int
+    *
+    */
+
+    public $nextTokenId = 1;
+
+    /**
+    *
     * REFCORR6 C-SUSPECT3-1: the exact authored source span each token
     * claimed, keyed by the same id as $tokens, as passed by the
     * claiming rule's addToken call. Kept parallel to $tokens rather
@@ -868,6 +884,7 @@ class Text_Wiki {
         // reset the tokens and their REFCORR6 source spans.
         $this->tokens = array();
         $this->tokenSource = array();
+        $this->nextTokenId = 1;
 
         // apply the parse() method of each requested rule to the source
         // text.
@@ -1218,6 +1235,15 @@ class Text_Wiki {
             $output .= $this->formatObj[$format]->post();
         }
 
+        // REFCORR22 R3: live's purifyHtml/tidy pass cannot keep a block-level
+        // error div inside a paragraph. When the paragraph consists solely of
+        // the Embed no-match block, tidy drops the paragraph wrapper. The
+        // generic div-splitting problem is much wider and remains a frame
+        // concern; this exact pure-paragraph repair is the measured Embed
+        // boundary and does not alter mixed inline runs.
+        $embedNoMatch = '<div class="error-block">Sorry, no match for the embedded content.</div>';
+        $output = str_replace('<p>' . $embedNoMatch . '</p>', $embedNoMatch, $output);
+
 		// this is a nasty hack... should be put somewhere else, e.g. Postfilter?
 		
 		// fix TOC tags within entries
@@ -1307,15 +1333,10 @@ class Text_Wiki {
 
     function addToken($rule, $options = array(), $id_only = false, $sourceText = null)
     {
-        // increment the token ID number.  note that if you parse
-        // multiple times with the same Text_Wiki object, the ID number
-        // will not reset to zero.
-        static $id;
-        if (! isset($id)) {
-            $id = 0;
-        } else {
-            $id ++;
-        }
+        // Increment this document's token id. parse() resets it with the
+        // token array, so independent renders in one PHP process number their
+        // placeholders independently as live does.
+        $id = $this->nextTokenId++;
 
         // force the options to be an array
         settype($options, 'array');
