@@ -1,1 +1,1 @@
-6e38a081309204c19c5577adfec0c21b29a28e4f6149532ce26887916592aba1  text-wiki/Text/Wiki/Parse/Default/Span.php
+b0c5923b73e10e89d0b5d5327254eb8ba92569e8ec7674887a785f9aebf9a2e7  text-wiki/Text/Wiki/Parse/Default/Span.php

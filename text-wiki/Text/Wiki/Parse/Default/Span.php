@@ -173,7 +173,7 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
         // Span sibling of REFCORR29's whitespace-only Size atom. A truly
         // empty attributed span remains visible (test/span/empty-id-preserved),
         // while an unattributed one is still elided.
-        if (preg_match('/^[ \t]+$/', $matches[2]) === 1 && !empty($args)) {
+        if (preg_match('/\A[ \t]+\z/', $matches[2]) === 1 && !empty($args)) {
             return $this->wiki->addToken($this->rule, array('type' => 'empty'));
         }
         if (trim($content) === '' && empty($args)) {
