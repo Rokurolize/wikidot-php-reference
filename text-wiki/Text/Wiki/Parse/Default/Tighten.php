@@ -112,10 +112,32 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
         // empty Raw placeholder must stay in the residual stream exactly
         // as live keeps it; dropping it loses its leaked digit.
         $hasUfffd = strpos($source, "\xEF\xBF\xBD") !== false;
-        foreach ($this->wiki->tokens as $tid => $tok) {
-            if (! $hasUfffd && is_array($tok) && $tok[0] === 'Raw' && isset($tok[1]['text'])
-                && $tok[1]['text'] === '') {
-                $source = str_replace($delim . $tid . $delim, '', $source);
+        if (! $hasUfffd) {
+            $emptyRawIds = array();
+            foreach ($this->wiki->tokens as $tid => $tok) {
+                if (is_array($tok) && $tok[0] === 'Raw' && isset($tok[1]['text'])
+                    && $tok[1]['text'] === '') {
+                    $emptyRawIds[(int)$tid] = true;
+                }
+            }
+            if (! empty($emptyRawIds)) {
+                // REFCORR22 R1 consequence: placeholders must be scanned at
+                // token boundaries. Plain str_replace also matched across the
+                // boundary of two adjacent placeholders — in
+                // ÿ92ÿ10ÿ93ÿ the closing delimiter of token 92,
+                // the literal text "10", and the opening delimiter of token
+                // 93 look like empty-Raw placeholder 10. Deleting that false
+                // overlap welded the neighbors into the nonexistent token
+                // 9293. preg_replace_callback consumes real placeholders
+                // left-to-right, so an overlap beginning inside another
+                // placeholder is never eligible.
+                $source = preg_replace_callback(
+                    '/\xFF(\d+)\xFF/',
+                    function ($m) use ($emptyRawIds) {
+                        return isset($emptyRawIds[(int)$m[1]]) ? '' : $m[0];
+                    },
+                    $source
+                );
             }
         }
 
