@@ -133,8 +133,17 @@ this is intentionally not a global re-indenting purify pass.
   font-size control is byte-exact, and the already exact `size-value-matrix`
   remains byte-exact; TOC-family agreement is 6/6 and Size-family
   agreement is 2/2.
-- Full EN corpus movement is recorded in the lane RESULT.md and corpus movement
-  artifacts.
+- Full EN corpus after the widened trigger: **25,534/25,534 rows**, zero errors,
+  **788** output-hash movements from snapshot-53. The previous narrow-trigger
+  round had 493 movements; all **295** rows beyond that set have a pre-correction
+  span-at-paragraph-end trigger and are byte-identical to applying the measured
+  libtidy purify oracle to the pre-correction output. A direct narrow-to-widened
+  register comparison shows **299** rows affected by widening (the 295 new rows
+  plus 4 already-moving rows whose repair broadened), with **0** unattributed.
+  Across all 788 movements: oracle equality **784/784** where a purify trigger
+  exists, zero unexplained rows, zero strict/userdb regressions, zero class
+  regressions, and zero numeric-entity decreases. Details are in the lane
+  RESULT.md and corpus movement artifacts.
 
 ## Non-defect residuals explicitly not corrected
 
