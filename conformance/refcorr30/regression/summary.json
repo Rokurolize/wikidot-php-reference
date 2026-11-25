@@ -36,7 +36,9 @@
  {
   "name": "span",
   "cases": 61,
-  "diff": [],
+  "diff": [
+   "s57-span-block-content"
+  ],
   "stderr_bytes": 0
  }
 ]

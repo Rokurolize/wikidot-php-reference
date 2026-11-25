@@ -55,7 +55,7 @@
 {"id":"s54-span-in-list","output":"<ul>\n<li><span>item</span></li>\n</ul>"}
 {"id":"s55-span-in-code","output":"\n<div class=\"code\">\n<pre><code>[[span]]literal[[/span]]</code></pre></div>\n\n"}
 {"id":"s56-span-in-iftags","output":"<p><span>kept</span></p>\n\n"}
-{"id":"s57-span-block-content","output":"<p><span>+ head</p>\n\n<ul>\n<li>list</span></li>\n</ul>"}
+{"id":"s57-span-block-content","output":"<p><span>+ head</span></p>\n<ul>\n<li><span>list</span></li>\n</ul>"}
 {"id":"s58-span-attr-entity","output":"<p><span>X</span></p>\n\n"}
 {"id":"s59-span-class-empty","output":"<p><span>X</span></p>\n\n"}
 {"id":"s60-span-style-empty","output":"<p><span>X</span></p>\n\n"}

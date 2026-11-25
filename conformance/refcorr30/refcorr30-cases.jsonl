@@ -5,3 +5,5 @@
 {"id":"r30-span-font-size-blank","source":"[[span style=\"font-size:medium\"]]line1\n\nline2[[/span]]"}
 {"id":"r30-size-blank-entities","source":"[[size 90%]]alpha... -- one\n\nbeta[[/size]]"}
 {"id":"r30-span-whitespace-only","source":"A\n[[span style=\"font-size:140%;\"]] [[/span]]\nB"}
+{"id":"r30-span-class-blank","source":"[[span class=\"cross-a\"]]line1\n\nline2[[/span]]"}
+{"id":"r30-span-color-blank","source":"[[span style=\"color:red;\"]]line1\n\nline2[[/span]]"}

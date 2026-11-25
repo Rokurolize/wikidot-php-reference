@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the REFCORR30 TOC-title, Size blank-line, and whitespace-only Span regression pins."""
+"""Verify the REFCORR30 TOC-title, span-crossing, and whitespace-only Span regression pins."""
 import json, subprocess, sys, os
 ROOT=os.path.abspath(os.path.join(os.path.dirname(__file__),'../..'))
 BASE=os.path.dirname(__file__)

@@ -1220,12 +1220,12 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
     }
 
     /**
-     * Whether a font-size span is still open at a paragraph end. Size is an
-     * inline construct, but Stage 1 can pair it across a blank line; live's
+     * Whether any span element is still open at a paragraph end. Span-like
+     * inline constructs can pair across a blank line in Stage 1; live's
      * purifyHtml repair closes and reopens the span in the separate
      * paragraphs instead of emitting crossing tags.
      */
-    function outputHasSizeParagraphCrossing($html)
+    function outputHasSpanParagraphCrossing($html)
     {
         if (! preg_match_all('/<(\/?)(span|p)\b([^>]*)>/i', $html, $matches, PREG_SET_ORDER)) {
             return false;
@@ -1235,15 +1235,11 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
             $closing = $m[1] === '/';
             $tag = strtolower($m[2]);
             if (! $closing) {
-                $type = $tag;
-                if ($tag === 'span' && strpos($m[3], 'font-size:') !== false) {
-                    $type = 'size';
-                }
-                $stack[] = $type;
+                $stack[] = $tag;
                 continue;
             }
             if ($tag === 'p') {
-                if (in_array('size', $stack, true)) {
+                if (in_array('span', $stack, true)) {
                     return true;
                 }
                 while ($stack) {
@@ -1256,7 +1252,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
             // closing span: pop it when well-formed, otherwise leave the
             // stack intact so a following block boundary still reports the
             // crossing that made it malformed.
-            if ($stack && (end($stack) === 'span' || end($stack) === 'size')) {
+            if ($stack && end($stack) === 'span') {
                 array_pop($stack);
             }
         }
@@ -1385,12 +1381,12 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         // WikiTransformation::purifyHtml. The reference models the common
         // whitespace consequences in Tighten, but two render-time surfaces
         // still need the real repair pass: whitespace inside a TOC title
-        // (generated from an attribute after Tighten has run) and a Size
+        // (generated from an attribute after Tighten has run) and any span
         // scope left open across a paragraph boundary. Apply the existing
         // tidy-backed purifier only when one of those unrepaired shapes is
         // present, so well-formed documents keep their established frame.
         if ($this->outputHasUnpurifiedTocTitleWhitespace($output)
-            || $this->outputHasSizeParagraphCrossing($output)) {
+            || $this->outputHasSpanParagraphCrossing($output)) {
             $output = $this->purifyRecoveredHtml($output);
         }
 

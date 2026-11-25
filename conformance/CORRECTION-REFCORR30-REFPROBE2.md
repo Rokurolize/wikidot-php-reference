@@ -57,9 +57,9 @@ because every rendered fragment passes through
 `WikiTransformation::purifyHtml`; local libtidy reproduction of that pass
 matches the live bytes exactly.
 
-### R30-PURIFY-2 — Size scopes crossing block boundaries need HTML repair
+### R30-PURIFY-2 — Span scopes crossing block boundaries need HTML repair
 
-A size body containing a blank line produced crossing tags in the
+A size or explicit span body containing a blank line produced crossing tags in the
 pre-correction reference, for example
 `<span style="font-size:90%;">line1</p>...<p>line2</span>`. Live serves two
 well-formed paragraphs and reopens the size span in the second paragraph. The
@@ -69,10 +69,14 @@ local libtidy reproduction of live's purify pass matches every live byte.
 
 The same repair also resolves the already-recorded Size cross-block probes
 `list-in-size` and `size-crosses-div`: the corrected reference now matches those
-valid live captures exactly. This supersedes the older statement that those
-crossings had to remain unrepaired in the sequential token model. It does not
-rewrite the Size parse or render rules and does not claim a general Stage-2
-implementation.
+valid live captures exactly. The independent content verifier supplied two further
+witnesses, `[[span class="cross-a"]]line1\n\nline2[[/span]]` and
+`[[span style="color:red;"]]line1\n\nline2[[/span]]`; live's always-on purify
+re-nests both while the first REFCORR30 detector missed them. The detector is
+therefore widened from font-size spans to any `<span>` still open at a paragraph
+end. It does not rewrite Span/Size parse or render rules and does not claim a
+general Stage-2 implementation; it fires only when the served tag stream is
+already malformed in this way.
 
 ### Correction mechanism
 
@@ -81,8 +85,9 @@ sentinel strip:
 
 1. a generated TOC title whose raw whitespace differs from the whitespace
    collapse/trim that purifyHtml applies; or
-2. a font-size span still open at a paragraph end, whether produced by
-   `[[size]]` or by an explicit span style.
+2. any span element still open at a paragraph end, whether produced by
+   `[[size]]`, an explicit font-size/class/color span, or another span-bearing
+   inline construct.
 
 Only then does it invoke the reference's `purifyRecoveredHtml()` path. That
 path now uses PHP FFI against libtidy 5.8.0 with the same binding shape as
@@ -98,26 +103,30 @@ this is intentionally not a global re-indenting purify pass.
 
 - `conformance/refcorr30/refcorr30-cases.jsonl` — two positive live matrices,
   two explicit/font-entity positive controls, the horizontal-whitespace-only attributed
-  Span positive control, and two negative controls.
+  Span positive control, two verifier-named class/color span-crossing witnesses,
+  and two negative controls.
 - `conformance/refcorr30/refcorr30-expected.json` — byte-level corrected output;
-  all five positive pins are exact live bytes.
+  the seven probe-backed positive pins are exact live bytes; the two widened
+  class/color witnesses pin the verifier-provided purify-oracle bytes and cite
+  `refcorr30-widened-witnesses.json`.
 - `conformance/refcorr30/refcorr30-captures.json` — the raw valid focused live
   captures cited by the pins.
 - `conformance/refcorr30/verify_refcorr30.py` — executable checker.
-  Current result: **7/7 exact**.
+  Current result: **9/9 exact**.
 
 ## Validation
 
-- REFCORR30 pins: **7/7 exact**.
+- REFCORR30 pins: **9/9 exact**.
 - Frozen gates after correction: `S_local_71` **71/71**, `S_diag_44` **44/44**,
   `S_holdout_step4_150` **150/150**, and `S_holdout_fresh_150` **150/150**, zero
   diffs in each set.
 - Battery regression comparison using the same checkout with only
   `Text/Wiki.php` swapped to its pre-correction bytes: code 68/68 unchanged,
   TOC 56/56 unchanged, gallery 88/88 unchanged, explicit lists 50/50 unchanged,
-  and Span 61/61 unchanged; Size changes only in the three cross-block cases `sz69-list-in-size`,
+  and Span changes only in `s57-span-block-content`, the same cross-block repair
+  class; Size changes only in the three cross-block cases `sz69-list-in-size`,
   `sz70-size-crosses-div`, and `sz75-list-bold-close`. The first two have prior
-  valid live probes and now match those live bytes exactly; the third is the
+  valid live probes and now match those live bytes exactly; the others are the
   same repair class.
 - Main sweep after correction: `toc-attr-duplicate-case` and
   `size-nested-linebreaks` are now strict byte-exact, the fresh explicit-Span
@@ -140,5 +149,5 @@ this is intentionally not a global re-indenting purify pass.
   is the documented harness environment boundary; random gallery chrome,
   lightbox scripts, wdfiles URLs, and pretty-print whitespace are serving
   surfaces. Item image/link/literal signatures agree.
-- General cross-rule inline re-nesting outside the detected font-size repair
-  shapes remains later-rule/root-owned Stage-2 scope.
+- General cross-rule inline re-nesting outside the detected span-at-paragraph-end
+  repair shape remains later-rule/root-owned Stage-2 scope.
