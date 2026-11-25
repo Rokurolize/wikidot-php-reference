@@ -45,6 +45,8 @@ class Text_Wiki_Render_Xhtml_Button extends Text_Wiki_Render {
     		'parent',
     		'edit-meta',
     		'watchers',
+    		'site-tools',
+    		'lock-page',
     		'set-tags'
 
     	);
@@ -64,7 +66,9 @@ class Text_Wiki_Render_Xhtml_Button extends Text_Wiki_Render {
     		'delete' => _('delete'),
     		'parent' => _('parent'),
     		'edit-meta' => _('edit meta'),
-    		'watchers' => _('watchers')
+    		'watchers' => _('watchers'),
+    		'site-tools' => _('site tools'),
+    		'lock-page' => _('lock page')
     		
     	);
     	
@@ -84,6 +88,8 @@ class Text_Wiki_Render_Xhtml_Button extends Text_Wiki_Render {
     		'parent' => 'WIKIDOT.page.listeners.parentClick(event)',
     		'edit-meta' => 'WIKIDOT.page.listeners.editMetaClick(event)',
     		'watchers' => 'WIKIDOT.page.listeners.watchersClick(event)',
+    		'site-tools' => 'WIKIDOT.page.listeners.siteTools(event)',
+    		'lock-page' => 'WIKIDOT.page.listeners.blockClick(event)',
     		'set-tags' => "WIKIDOT.page.listeners.updateTagsByButton(event, '')"
 
     	);

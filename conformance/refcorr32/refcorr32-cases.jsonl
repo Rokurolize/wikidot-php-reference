@@ -1,0 +1,11 @@
+{"id": "r32-size-edge-matrix", "source": "S1 both edges\nA[[size 60%]] x [[/size]]B\nS2 leading\nA[[size 60%]] x[[/size]]B\nS3 trailing\nA[[size 60%]]x [[/size]]B"}
+{"id": "r32-button-matrix", "source": "B1 site-tools\n[[button site-tools]]\nB2 lock-page\n[[button lock-page]]\nB3 underscore normalization\n[[button site_tools]]\n[[button lock_page]]"}
+{"id": "r32-size-edge-end-negative", "source": "A[[size 60%]]x [[/size]]"}
+{"id": "r32-size-wsonly-negative", "source": "A\n[[size 60%]] [[/size]]\nB"}
+{"id": "r32-size-internal-lineend-negative", "source": "[[size 60%]]a   \nb[[/size]]"}
+{"id": "r32-button-invalid-negative", "source": "[[button lock]]\n[[button sitetools]]"}
+{"id": "r32-break-mid-document-negative", "source": "A\n _\n _\n _\nB"}
+{"id": "r32-span-trailing-space-newline", "source": "[[span class=\"x\"]]\nx \n[[/span]]"}
+{"id": "r32-freelink-categorized-case", "source": "[[[/decomm:723-D-1-testing-log |x]]]"}
+{"id": "r32-freelink-bare-case-negative", "source": "[[[/Under]]"}
+{"id": "r32-span-sameline-edge-negative", "source": "A[[span class=\"x\"]]x [[/span]]B"}

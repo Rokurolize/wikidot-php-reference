@@ -108,6 +108,23 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
         // an empty <span>. Consuming the whole construct also lets the
         // recursive parse() collapse nested pairs that become empty.
         $content = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $content);
+        // REFCORR32: horizontal whitespace at the inline scope edge is not
+        // content of the size span. Live hoists a leading space before the
+        // element and ejects a trailing space after it; JP corpus witnesses
+        // in not-fade-away show both shapes with following text. Internal
+        // line-end spaces still use the settled strip below. Keep these
+        // bytes outside the token pair so the final Tighten pass can drop
+        // them when the scope sits at a paragraph edge.
+        $leadSpace = '';
+        $trailSpace = '';
+        if (preg_match('/\A[ \t]+/', $content, $edgeMatch)) {
+            $leadSpace = $edgeMatch[0];
+            $content = substr($content, strlen($leadSpace));
+        }
+        if (preg_match('/[ \t]+\z/', $content, $edgeMatch)) {
+            $trailSpace = $edgeMatch[0];
+            $content = substr($content, 0, -strlen($trailSpace));
+        }
         $stripped = '';
         $offset = 0;
         $contentLen = strlen($content);
@@ -184,7 +201,7 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
                 . substr($content, $split)
                 . $this->wiki->addToken($this->rule, array('type' => 'end'));
         }
-        return $start . $content  .$end;
+        return $leadSpace . $start . $content . $end . $trailSpace;
 
     }
 

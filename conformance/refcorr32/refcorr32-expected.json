@@ -1,0 +1,46 @@
+{
+ "r32-size-edge-matrix": {
+  "html": "<p>S1 both edges<br />\nA <span style=\"font-size:60%;\">x</span> B<br />\nS2 leading<br />\nA <span style=\"font-size:60%;\">x</span>B<br />\nS3 trailing<br />\nA<span style=\"font-size:60%;\">x</span> B</p>",
+  "evidence": "positive matrix: corpus witness and valid/stable/source-matched sandbox probe where applicable"
+ },
+ "r32-button-matrix": {
+  "html": "<p>B1 site-tools<br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.siteTools(event)\" >site tools</a><br />\nB2 lock-page<br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.blockClick(event)\" >lock page</a><br />\nB3 underscore normalization<br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.siteTools(event)\" >site tools</a><br />\n<a class=\"wiki-standalone-button\" href=\"javascript:;\" onclick=\"WIKIDOT.page.listeners.blockClick(event)\" >lock page</a></p>",
+  "evidence": "positive matrix: corpus witness and valid/stable/source-matched sandbox probe where applicable"
+ },
+ "r32-size-edge-end-negative": {
+  "html": "<p>A<span style=\"font-size:60%;\">x</span></p>",
+  "evidence": "negative control: settled pre-REFCORR32 behavior must remain unchanged"
+ },
+ "r32-size-wsonly-negative": {
+  "html": "<p>A<br />\n<br />\nB</p>",
+  "evidence": "negative control: settled pre-REFCORR32 behavior must remain unchanged"
+ },
+ "r32-size-internal-lineend-negative": {
+  "html": "<p><span style=\"font-size:60%;\">a<br />\nb</span></p>",
+  "evidence": "negative control: settled pre-REFCORR32 behavior must remain unchanged"
+ },
+ "r32-button-invalid-negative": {
+  "html": "<p><div class=\"error-block\"><em>lock</em> is not a valid button type</div><br />\n<div class=\"error-block\"><em>sitetools</em> is not a valid button type</div></p>",
+  "evidence": "negative control: settled pre-REFCORR32 behavior must remain unchanged"
+ },
+ "r32-break-mid-document-negative": {
+  "html": "<p>A<br />\n<br />\n<br />\n<br />\nB</p>",
+  "evidence": "negative control: settled pre-REFCORR32 behavior must remain unchanged"
+ },
+ "r32-span-trailing-space-newline": {
+  "html": "<p><span class=\"x\"><br />\nx<br />\n</span></p>",
+  "evidence": "positive: JP corpus sleep-beneath-the-stars trailing-space-before-newline shape"
+ },
+ "r32-freelink-categorized-case": {
+  "html": "<p><a href=\"/decomm:723-d-1-testing-log\">x</a></p>",
+  "evidence": "positive: JP corpus old:decomm:scp-723-d lowercases categorized absolute target"
+ },
+ "r32-freelink-bare-case-negative": {
+  "html": "<p>[[[/Under]]</p>",
+  "evidence": "negative control: JP corpus the-time-after-time-password-hub preserves bare /Under case"
+ },
+ "r32-span-sameline-edge-negative": {
+  "html": "<p>A<span class=\"x\">x</span> B</p>",
+  "evidence": "negative control: settled same-line Span trailing-space ejection remains intact"
+ }
+}
