@@ -238,7 +238,12 @@ class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
                     $clean = preg_replace(
                         '/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '',
                         $options['attr'][$trimKey]);
-                    $options['attr'][$trimKey] = ($trimKey === 'style')
+                    // REFCORR28 R28-IMG-1: live trims leading whitespace
+                    // from width, height and class as well as the trailing
+                    // run (probe I04 and r28x T01). link keeps the earlier
+                    // asymmetric boundary because a leading-space link is
+                    // rejected before this normalization point.
+                    $options['attr'][$trimKey] = ($trimKey !== 'link')
                         ? trim($clean, " \t\n\r\f\v")
                         : rtrim($clean, " \t\n\r\f\v");
                 }

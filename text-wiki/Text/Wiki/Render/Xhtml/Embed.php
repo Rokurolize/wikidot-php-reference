@@ -82,26 +82,13 @@ class Text_Wiki_Render_Xhtml_Embed extends Text_Wiki_Render {
                         return '';
                     }
                 }
-                // C-SUSPECT-CODEEMBED-5 / REFCORR15: the generic contains test applies
-                // to other attributes (both single and double quoted, including data:);
-                // live renders empty ('') on dangerous non-src schemes (C-R5G-R2-2,
-                // C-R5H-R2-4, C-R5H-R2-5).
-                $badScheme = false;
-                if (preg_match_all('/(?<![a-zA-Z0-9_-])([a-zA-Z0-9_-]+)\s*=\s*(["\'])((?:(?!\2).)*)\2/is', $content, $am, PREG_SET_ORDER)) {
-                    foreach ($am as $attr) {
-                        if (strtolower($attr[1]) === 'src') {
-                            continue;
-                        }
-                        $lv = strtolower($attr[3]);
-                        if (strpos($lv, 'javascript:') !== false || strpos($lv, 'vbscript:') !== false || strpos($lv, 'data:') !== false) {
-                            $badScheme = true;
-                            break;
-                        }
-                    }
-                }
-                if ($badScheme) {
-                    return '';
-                }
+                // REFCORR28 R28-EMBED-1: live does not suppress a generic
+                // iframe merely because a non-src attribute contains a
+                // javascript:, vbscript: or data: spelling. Five fresh
+                // probes (foo/action/data/name/href on
+                // muse-probe-refprobe-r28x-embed-non-src-schemes) all pass
+                // verbatim; the real src check above remains the only
+                // scheme-specific suppression arm.
                 return $content;
             }
         }

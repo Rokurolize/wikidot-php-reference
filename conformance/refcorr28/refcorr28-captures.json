@@ -1,0 +1,62 @@
+{
+ "image-width-height": {
+  "fullname": "muse-probe-refprobe-r28-image-width-height",
+  "html": "I01 <img src=\"https://example.com/a.png\" height=\"120\" width=\"200\" alt=\"a.png\" class=\"image\" /><br />\nI02 <img src=\"https://example.com/a.png\" height=\"-5\" width=\"abc\" alt=\"a.png\" class=\"image\" /><br />\nI03 <img src=\"https://example.com/a.png\" height=\"3em\" width=\"50%\" alt=\"a.png\" class=\"image\" /><br />\nI04 <img src=\"https://example.com/a.png\" height=\"30\" width=\"20\" alt=\"a.png\" class=\"image\" /><br />\nI05 <img src=\"https://example.com/a.png\" height=\"\" width=\"\" alt=\"a.png\" class=\"image\" /><br />\nI06 <img src=\"https://example.com/a.png\" height=\"40\" width=\"20\" alt=\"a.png\" class=\"image\" />",
+  "html_sha256": "116ea71ac9ba43018a60ea4229b3cac4efdcd358aaa2692399b8f424f74e918a",
+  "source": "I01 [[image https://example.com/a.png width=\"200\" height=\"120\"]]\nI02 [[image https://example.com/a.png width=\"abc\" height=\"-5\"]]\nI03 [[image https://example.com/a.png width=\"50%\" height=\"3em\"]]\nI04 [[image https://example.com/a.png width=\" 20 \" height=\" 30 \"]]\nI05 [[image https://example.com/a.png width=\"\" height=\"\"]]\nI06 [[image https://example.com/a.png width=\"10\" width=\"20\" height=\"30\" height=\"40\"]]",
+  "source_sha256": "fd0d39fbbc063dc8e3643dc566e6a766bd8371d51a74fad8c89bae372c2bd26e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "image-links": {
+  "fullname": "muse-probe-refprobe-r28-image-links",
+  "html": "I30 <a href=\"https://example.com/target\"><img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /></a><br />\nI31 <a href=\"https://example.com/target\" target=\"_blank\"><img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /></a><br />\nI32 [[image <a href=\"https://example.com/a.png\">https://example.com/a.png</a> link=&quot;HTTPS://example.com/target&quot;]]<br />\nI33 <a href=\"/some-page\"><img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /></a><br />\nI34 <a href=\"#frag\"><img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /></a><br />\nI35 <a href=\"/\"><img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /></a><br />\nI36 <a href=\"/javascript:alert(1)\"><img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /></a><br />\nI37 <a href=\"http://bad%20host/x\"><img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /></a><br />\nI38 <a href=\"/example.com/protocol-relative\"><img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /></a>",
+  "html_sha256": "a05d901fdf8fabaf9e4ad9534410e7aa1b4632cc22661ad42c11152392e2ece8",
+  "source": "I30 [[image https://example.com/a.png link=\"https://example.com/target\"]]\nI31 [[image https://example.com/a.png link=\"*https://example.com/target\"]]\nI32 [[image https://example.com/a.png link=\"HTTPS://example.com/target\"]]\nI33 [[image https://example.com/a.png link=\"some-page\"]]\nI34 [[image https://example.com/a.png link=\"#frag\"]]\nI35 [[image https://example.com/a.png link=\"\"]]\nI36 [[image https://example.com/a.png link=\"javascript:alert(1)\"]]\nI37 [[image https://example.com/a.png link=\"http://bad host/x\"]]\nI38 [[image https://example.com/a.png link=\"//example.com/protocol-relative\"]]",
+  "source_sha256": "9a35513753e571565039f75cfd3fad6338eba31687530248276d7ba0dd3c5d81",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "span-attrs": {
+  "fullname": "muse-probe-refprobe-r28-span-attrs",
+  "html": "<p>S01 <span id=\"u-i\" class=\"c\" style=\"color:red\" role=\"note\" type=\"t\" data-x=\"v\">X</span><br />\nS02 <span data-x=\"\">X</span><br />\nS03 <span class=\"b\" data-x=\"2\">X</span><br />\nS04 <span>X</span><br />\nS05 <span data-mixed=\"v\" data-upper=\"x\">X</span><br />\nS06 <span>X</span></p>",
+  "html_sha256": "03c219c5ce07d2b8b4bd148f60c3f32f8dccc882a7149a8277ad605bc2a4eacd",
+  "source": "S01 [[span class=\"c\" id=\"i\" style=\"color:red\" role=\"note\" type=\"t\" data-x=\"v\"]]X[[/span]]\nS02 [[span class=\"\" id=\"\" style=\"\" role=\"\" type=\"\" data-x=\"\"]]X[[/span]]\nS03 [[span class=\"a\" class=\"b\" data-x=\"1\" data-x=\"2\"]]X[[/span]]\nS04 [[span CLASS=\"upper\" ID=\"upperid\" STYLE=\"color:red\" DATA-X=\"upperdata\"]]X[[/span]]\nS05 [[span data-Mixed=\"v\" data-UPPER=\"x\"]]X[[/span]]\nS06 [[span onclick=\"alert(1)\" href=\"x\" unknown=\"u\"]]X[[/span]]",
+  "source_sha256": "873faa894ea7894a572d7e753e52793f0cf0f9fca89161278df37bec70827d12",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "embed-schemes": {
+  "fullname": "muse-probe-refprobe-r28-embed-schemes",
+  "html": "<p>E10<br />\nE11<br />\nE12 <iframe src=\"data:text/html,x\"></iframe><br />\nE13</p>\n<div class=\"error-block\">Sorry, no match for the embedded content.</div>\n<br />\nE14 <iframe src=\"xjavascript:alert(1)\"></iframe><br />\nE15 <iframe href=\"javascript:alert(1)\" src=\"http://example.com\"></iframe>",
+  "html_sha256": "3453f0ab5f9323c6b6160ac54a2706f1bd25525c66fef1391b1f16fa56217148",
+  "source": "E10 [[embed]]<iframe src=\"javascript:alert(1)\"></iframe>[[/embed]]\nE11 [[embed]]<iframe src=\"vbscript:alert(1)\"></iframe>[[/embed]]\nE12 [[embed]]<iframe src=\"data:text/html,x\"></iframe>[[/embed]]\nE13 [[embed]]<iframe data-src=\"javascript:alert(1)\" src=\"http://example.com\"></iframe>[[/embed]]\nE14 [[embed]]<iframe src=\"xjavascript:alert(1)\"></iframe>[[/embed]]\nE15 [[embed]]<iframe href=\"javascript:alert(1)\" src=\"http://example.com\"></iframe>[[/embed]]",
+  "source_sha256": "eb33b98d17e9070664ffe316b350ff47caf3ea1f7f0a868b5c89ae4ad75980f0",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "image-attr-trim-more": {
+  "fullname": "muse-probe-refprobe-r28x-image-attr-trim-more",
+  "html": "T01 <img src=\"https://example.com/a.png\" class=\"one two\" alt=\"a.png\" /><br />\nT02 <img src=\"https://example.com/a.png\" style=\"color:red;\" alt=\"a.png\" class=\"image\" /><br />\nT03 <img src=\"https://example.com/a.png\" height=\"30\" width=\"20\" alt=\"a.png\" class=\"image\" /><br />\nT04 <img src=\"https://example.com/a.png\" title=\" T \" alt=\" A \" class=\"image\" />",
+  "html_sha256": "9809d03487889c779d2fc9260f9df33d79f7a6e6647391215d7d7f698653280b",
+  "source": "T01 [[image https://example.com/a.png class=\" one two \"]]\nT02 [[image https://example.com/a.png style=\" color:red; \"]]\nT03 [[image https://example.com/a.png width=\" 20 \" height=\" 30 \"]]\nT04 [[image https://example.com/a.png title=\" T \" alt=\" A \"]]",
+  "source_sha256": "50cf57a1579f70d15a7ab8eda882036885f3df2983d564b4f57e9cb9588e09df",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "embed-non-src-schemes": {
+  "fullname": "muse-probe-refprobe-r28x-embed-non-src-schemes",
+  "html": "<p>N01 <iframe foo=\"javascript:alert(1)\" src=\"http://example.com\"></iframe><br />\nN02 <iframe action=\"javascript:alert(1)\" src=\"http://example.com\"></iframe><br />\nN03 <iframe data=\"data:text/html,x\" src=\"http://example.com\"></iframe><br />\nN04 <iframe name=\"vbscript:msgbox\" src=\"http://example.com\"></iframe><br />\nN05 <iframe href=\"data:text/html,x\" src=\"http://example.com\"></iframe></p>",
+  "html_sha256": "a68ccbbf8594c27bffb45ee2c3a8ba5c0fb5373edcbde754549cfb907ee33038",
+  "source": "N01 [[embed]]<iframe foo=\"javascript:alert(1)\" src=\"http://example.com\"></iframe>[[/embed]]\nN02 [[embed]]<iframe action=\"javascript:alert(1)\" src=\"http://example.com\"></iframe>[[/embed]]\nN03 [[embed]]<iframe data=\"data:text/html,x\" src=\"http://example.com\"></iframe>[[/embed]]\nN04 [[embed]]<iframe name=\"vbscript:msgbox\" src=\"http://example.com\"></iframe>[[/embed]]\nN05 [[embed]]<iframe href=\"data:text/html,x\" src=\"http://example.com\"></iframe>[[/embed]]",
+  "source_sha256": "3278d0d902a342a7f4d6400115ae5a01da307abdf54a686721c378666d7246d4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

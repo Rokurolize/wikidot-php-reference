@@ -1,0 +1,27 @@
+{
+ "r28-img-dimension-class-trim": {
+  "html": "T01 <img src=\"https://example.com/a.png\" class=\"one two\" alt=\"a.png\" /><br />\nT02 <img src=\"https://example.com/a.png\" style=\"color:red;\" alt=\"a.png\" class=\"image\" /><br />\nT03 <img src=\"https://example.com/a.png\" height=\"30\" width=\"20\" alt=\"a.png\" class=\"image\" /><br />\nT04 <img src=\"https://example.com/a.png\" title=\" T \" alt=\" A \" class=\"image\" />",
+  "html_sha256": "9809d03487889c779d2fc9260f9df33d79f7a6e6647391215d7d7f698653280b",
+  "evidence": "muse-probe-refprobe-r28x-image-attr-trim-more (valid/stable/source-matched); live T01-T04"
+ },
+ "r28-img-link-space": {
+  "html": "<a href=\"http://bad%20host/x\"><img src=\"https://example.com/a.png\" alt=\"a.png\" class=\"image\" /></a>",
+  "html_sha256": "677dfc5ebf57a75a32ad7eb1b726a5182add193516acb2a3cc070af86878d7d7",
+  "evidence": "muse-probe-refprobe-r28-image-links (valid/stable/source-matched); live I37"
+ },
+ "r28-span-empty-data": {
+  "html": "<p><span data-x=\"\">X</span></p>",
+  "html_sha256": "d39a8ecd8b9b3ebcafc577222a50023cdb81721f71b69e3f2ec567e942473674",
+  "evidence": "muse-probe-refprobe-r28-span-attrs (valid/stable/source-matched); live S02"
+ },
+ "r28-embed-non-src-schemes": {
+  "html": "<p>N01 <iframe foo=\"javascript:alert(1)\" src=\"http://example.com\"></iframe><br />\nN02 <iframe action=\"javascript:alert(1)\" src=\"http://example.com\"></iframe><br />\nN03 <iframe data=\"data:text/html,x\" src=\"http://example.com\"></iframe><br />\nN04 <iframe name=\"vbscript:msgbox\" src=\"http://example.com\"></iframe><br />\nN05 <iframe href=\"data:text/html,x\" src=\"http://example.com\"></iframe></p>",
+  "html_sha256": "a68ccbbf8594c27bffb45ee2c3a8ba5c0fb5373edcbde754549cfb907ee33038",
+  "evidence": "muse-probe-refprobe-r28x-embed-non-src-schemes (valid/stable/source-matched); live N01-N05 plus r28 embed-schemes E15"
+ },
+ "r28-embed-src-js-control": {
+  "html": "<p></p>",
+  "html_sha256": "fe04a9dc88d3f3be8d4f6bc63a9a80f45a4c6d8460e7551dab849457c091920a",
+  "evidence": "conformance/refval/embed probes2 se02/se04/se06; negative control for the retained src suppression arm"
+ }
+}

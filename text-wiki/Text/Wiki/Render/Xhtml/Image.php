@@ -275,6 +275,10 @@ class Text_Wiki_Render_Xhtml_Image extends Text_Wiki_Render {
         if ($href) {
             // yes, add the href and return
             // R2-PARA correction C6: percent-encode non-ASCII URL bytes.
+            // REFCORR28 R28-IMG-2: live also percent-encodes an interior
+            // ASCII space in an external image link (probe
+            // muse-probe-refprobe-r28-image-links I37).
+            $href = str_replace(' ', '%20', $href);
             $href = htmlspecialchars($this->encodeNonAscii($href), ENT_COMPAT, 'UTF-8');
             $css = $this->formatConf(' class="%s"', 'css_link');
             // R2-PARA correction C8: the fossil emitted a stray space before
