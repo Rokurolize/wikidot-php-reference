@@ -1,0 +1,72 @@
+{
+  "tableadv-aligncenter-cell": {
+    "html": "<table>\n<tr>\n<td>[[table&quot;]][[/table]]&quot;]]</td>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell align=\"center\"]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-aligncenter-hcell": {
+    "html": "<table>\n<tr>\n<th>[[table&quot;]][[/table]]&quot;]]</th>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell align=\"center\"]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-cell-cell": {
+    "html": "<table>\n<tr>\n<td>[[table&quot;]][[/table]]&quot;]]</td>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-cell-hcell": {
+    "html": "<table>\n<tr>\n<th>[[table&quot;]][[/table]]&quot;]]</th>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-colspan0-cell": {
+    "html": "<table>\n<tr>\n<td>[[table&quot;]][[/table]]&quot;]]</td>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell colspan=\"0\"]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-colspan0-hcell": {
+    "html": "<table>\n<tr>\n<th>[[table&quot;]][[/table]]&quot;]]</th>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell colspan=\"0\"]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-colspan2-cell": {
+    "html": "<table>\n<tr>\n<td colspan=\"2\">[[table&quot;]][[/table]]&quot;]]</td>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell colspan=\"2\"]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-colspan2-hcell": {
+    "html": "<table>\n<tr>\n<th colspan=\"2\">[[table&quot;]][[/table]]&quot;]]</th>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell colspan=\"2\"]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-colspanabc-cell": {
+    "html": "<table>\n<tr>\n<td colspan=\"abc\">[[table&quot;]][[/table]]&quot;]]</td>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell colspan=\"abc\"]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-colspanabc-hcell": {
+    "html": "<table>\n<tr>\n<th colspan=\"abc\">[[table&quot;]][[/table]]&quot;]]</th>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell colspan=\"abc\"]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-foo-cell": {
+    "html": "<table>\n<tr>\n<td>[[table&quot;]][[/table]]&quot;]]</td>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell foo=\"1\"]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-foo-hcell": {
+    "html": "<table>\n<tr>\n<th>[[table&quot;]][[/table]]&quot;]]</th>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[cell foo=\"1\"]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-hcell-cell": {
+    "html": "<table>\n<tr>\n<td>[[table&quot;]][[/table]]&quot;]]</td>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[hcell]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  },
+  "tableadv-hcell-hcell": {
+    "html": "<table>\n<tr>\n<th>[[table&quot;]][[/table]]&quot;]]</th>\n</tr>\n</table>",
+    "source": "[[table]][[row]][[hcell]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]",
+    "evidence": "settled recursive-pattern Tableadv witness semantics; m1 ftml-canonical byte"
+  }
+}

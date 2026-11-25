@@ -1,0 +1,14 @@
+{"id": "tableadv-aligncenter-cell", "source": "[[table]][[row]][[cell align=\"center\"]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]"}
+{"id": "tableadv-aligncenter-hcell", "source": "[[table]][[row]][[cell align=\"center\"]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]"}
+{"id": "tableadv-cell-cell", "source": "[[table]][[row]][[cell]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]"}
+{"id": "tableadv-cell-hcell", "source": "[[table]][[row]][[cell]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]"}
+{"id": "tableadv-colspan0-cell", "source": "[[table]][[row]][[cell colspan=\"0\"]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]"}
+{"id": "tableadv-colspan0-hcell", "source": "[[table]][[row]][[cell colspan=\"0\"]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]"}
+{"id": "tableadv-colspan2-cell", "source": "[[table]][[row]][[cell colspan=\"2\"]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]"}
+{"id": "tableadv-colspan2-hcell", "source": "[[table]][[row]][[cell colspan=\"2\"]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]"}
+{"id": "tableadv-colspanabc-cell", "source": "[[table]][[row]][[cell colspan=\"abc\"]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]"}
+{"id": "tableadv-colspanabc-hcell", "source": "[[table]][[row]][[cell colspan=\"abc\"]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]"}
+{"id": "tableadv-foo-cell", "source": "[[table]][[row]][[cell foo=\"1\"]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]"}
+{"id": "tableadv-foo-hcell", "source": "[[table]][[row]][[cell foo=\"1\"]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]"}
+{"id": "tableadv-hcell-cell", "source": "[[table]][[row]][[hcell]][[table\"]][[/table]]\"]][[/cell]][[/row]][[/table]]"}
+{"id": "tableadv-hcell-hcell", "source": "[[table]][[row]][[hcell]][[table\"]][[/table]]\"]][[/hcell]][[/row]][[/table]]"}

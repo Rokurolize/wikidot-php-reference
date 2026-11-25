@@ -1,0 +1,8 @@
+{"id": "img-bare", "source": "[[embed]]<img>[[/embed]]"}
+{"id": "img-data-src-http", "source": "[[embed]]<img data-src=\"http://example.com/x.png\">[[/embed]]"}
+{"id": "img-data-src-js", "source": "[[embed]]<img data-src=\"javascript:alert(1)\">[[/embed]]"}
+{"id": "img-src-http", "source": "[[embed]]<img src=\"http://example.com/x.png\">[[/embed]]"}
+{"id": "img-src-js", "source": "[[embed]]<img src=\"javascript:alert(1)\">[[/embed]]"}
+{"id": "img-statcounter", "source": "[[embed]]<img src=\"http://www.statcounter.com/counter/counter.js\">[[/embed]]"}
+{"id": "img-stat-anchored", "source": "[[embed]]<a href=\"http://www.statcounter.com/\" target=\"_blank\"><img src=\"http://www.statcounter.com/x.png\"></a>[[/embed]]"}
+{"id": "img-stat-full", "source": "[[embed]]<!-- Start of StatCounter Code --><a href=\"http://www.statcounter.com/\" target=\"_blank\"><img src=\"http://www.statcounter.com/x.png\" alt=\"stat\"></a><!-- End of StatCounter Code -->[[/embed]]"}

@@ -1,0 +1,82 @@
+{
+  "img-bare": {
+    "fullname": "muse-probe-r2refcorr-embed-img-bare",
+    "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+    "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+    "source": "[[embed]]<img>[[/embed]]",
+    "source_sha256": "1f46926519774713b07bf0ca75dbfbe3cf555ad85f283ba125c3118c7a538acd",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "img-data-src-http": {
+    "fullname": "muse-probe-r2refcorr-embed-img-data-src-http",
+    "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+    "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+    "source": "[[embed]]<img data-src=\"http://example.com/x.png\">[[/embed]]",
+    "source_sha256": "7daabc9875b3ef2ca128346b6a79993ddabe71f300206d46a25ccc22791e94c6",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "img-data-src-js": {
+    "fullname": "muse-probe-r2refcorr-embed-img-data-src-js",
+    "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+    "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+    "source": "[[embed]]<img data-src=\"javascript:alert(1)\">[[/embed]]",
+    "source_sha256": "4307f2cd85c01c73a599e5aebee7ecb3b48b8c84c7ae91aa4e314b9dfdcb631c",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "img-src-http": {
+    "fullname": "muse-probe-r2refcorr-embed-img-src-http",
+    "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+    "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+    "source": "[[embed]]<img src=\"http://example.com/x.png\">[[/embed]]",
+    "source_sha256": "152509deda49b9af18c14ce3aa4c8fbe8584f393296693bee3ed49e0617b5225",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "img-src-js": {
+    "fullname": "muse-probe-r2refcorr-embed-img-src-js",
+    "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+    "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+    "source": "[[embed]]<img src=\"javascript:alert(1)\">[[/embed]]",
+    "source_sha256": "78beb6809204fab213fa126428d8295e9f06f0c74697aafb19b7be0fbd5e056b",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "img-statcounter": {
+    "fullname": "muse-probe-r2refcorr-embed-img-statcounter",
+    "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+    "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+    "source": "[[embed]]<img src=\"http://www.statcounter.com/counter/counter.js\">[[/embed]]",
+    "source_sha256": "e76e90095574d55e06a860d168a6000057d14b353806316200e4f45b6c263278",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "img-stat-anchored": {
+    "fullname": "muse-probe-r2refcorr-embed-img-stat-anchored",
+    "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+    "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+    "source": "[[embed]]<a href=\"http://www.statcounter.com/\" target=\"_blank\"><img src=\"http://www.statcounter.com/x.png\"></a>[[/embed]]",
+    "source_sha256": "414bc895adf260e1748ed4eecbd9ace09656828387b5cc74b9d01334176d2cf3",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "img-stat-full": {
+    "fullname": "muse-probe-r2refcorr-embed-img-stat-full",
+    "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>",
+    "html_sha256": "0d94a629bbda9bb7b87fcaf86579d5195ffef1ffcfd644fd09babead0f4c04b0",
+    "source": "[[embed]]<!-- Start of StatCounter Code --><a href=\"http://www.statcounter.com/\" target=\"_blank\"><img src=\"http://www.statcounter.com/x.png\" alt=\"stat\"></a><!-- End of StatCounter Code -->[[/embed]]",
+    "source_sha256": "afd2485f295ec73cfdd30fdc2b5ce7fb6649f10f0906c0ea91e3cb9328e811a3",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  }
+}

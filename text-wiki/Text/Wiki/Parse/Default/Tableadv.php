@@ -113,7 +113,43 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
     }
 
     function parse() {
+        // REFCORR22 R2: the recursive expression is the behavioral grammar.
+        // It backtracks inside ambiguous quoted table heads, so the
+        // no-newline quote witnesses pair their nested opener with the close
+        // inside the quoted text and leave the trailing quote/brackets in the
+        // outer cell. The linear scanner below is retained as the large-input
+        // fallback that avoids PCRE recursion failure on corpus-scale pages;
+        // small inputs use the grammar itself rather than the scanner's
+        // first-nested-match approximation.
+        if (strlen($this->wiki->source) <= 8192) {
+            $replaced = preg_replace_callback(
+                $this->regex,
+                array(&$this, 'processPreserveBoundary'),
+                $this->wiki->source
+            );
+            if ($replaced !== null) {
+                $this->wiki->source = $replaced;
+                return;
+            }
+        }
         $this->wiki->source = $this->_scanTableadv($this->wiki->source);
+    }
+
+    /**
+     * preg_replace_callback consumes the regex's optional boundary newlines
+     * as part of the match, while the scanner preserves the adjoining source
+     * newlines around a tokenized block. Keep the two paths byte-compatible.
+     */
+    function processPreserveBoundary($matches)
+    {
+        $replacement = $this->process($matches);
+        if (substr($matches[0], 0, 1) === "\n") {
+            $replacement = "\n" . $replacement;
+        }
+        if (substr($matches[0], -1) === "\n") {
+            $replacement .= "\n";
+        }
+        return $replacement;
     }
 
     /**
