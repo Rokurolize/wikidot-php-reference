@@ -2,7 +2,9 @@
 
 Status: APPLIED in this tree on branch `refcorr24/tableadv-threshold` against
 snapshot-48 (`09bb79184b23641e878e72deb7f7ebe0a8284d2d`). Base is the
-`refcorr24/tableadv-threshold` branch with zero predecessor commits.
+`refcorr24/tableadv-threshold` branch with zero predecessor commits. PR
+https://github.com/Rokurolize/wikidot-php-reference/pull/20 — open, not merged,
+not tagged.
 
 ## The question
 
