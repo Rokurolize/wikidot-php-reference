@@ -28,7 +28,7 @@
 
 class Text_Wiki_Parse_Tabview extends Text_Wiki_Parse {
     
-    private static $_counter = 0;
+    private $_tabviewCounter = 0;
     
     /**
      * 
@@ -53,7 +53,7 @@ class Text_Wiki_Parse_Tabview extends Text_Wiki_Parse {
         $this->_tabs = array();
         $this->_tabCounter = 0;
         
-        $elId = self::$_counter;
+        $elId = $this->_tabviewCounter;
         
         $content = $matches[2];
         
@@ -88,7 +88,7 @@ class Text_Wiki_Parse_Tabview extends Text_Wiki_Parse {
         $end = $this->wiki->addToken($this->rule, array(
             'type' => 'end', 'tabviewId' => $elId));
         
-        self::$_counter++;
+        $this->_tabviewCounter++;
         
         return $matches[1] . $matches[1] . $start . "\n\n" . $content . "\n\n" . $end;
     
@@ -142,7 +142,7 @@ class Text_Wiki_Parse_Tabview extends Text_Wiki_Parse {
         $content = $matches[3];
         $startTabToken = $this->wiki->addToken($this->rule, array(
             'type' => 'tabStart', 
-            'tabviewId' => self::$_counter, 
+            'tabviewId' => $this->_tabviewCounter,
             'tabId' => $this->_tabCounter));
         $this->_tabCounter++;
         return $startTabToken . "\n\n" . $content . "\n\n" . $this->_endTabToken;

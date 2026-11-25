@@ -20,9 +20,8 @@
 //   bytes that plain json_encode would silently drop.
 //
 // Per-case construction mirrors batch.php exactly: a fresh Text_Wiki
-// per case built through ref_configure_wiki, the Math static
-// equations array reset, the defensive footnote/bibliography var
-// resets, a RefPage injected with the case's tags (always, empty
+// per case built through ref_configure_wiki, the defensive
+// footnote/bibliography var resets, a RefPage injected with the case's tags (always, empty
 // when the case has none), and CRLF -> LF input normalization.
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_WARNING);
 ini_set('display_errors', 'stderr');
@@ -34,7 +33,6 @@ ini_set('include_path', $root . PATH_SEPARATOR
 require_once dirname(__DIR__) . '/wikidot-root/lib/WDStringUtils.php';
 require_once __DIR__ . '/ozone-stubs.php';
 require_once $root . '/Text/Wiki.php';
-require_once $root . '/Text/Wiki/Parse/Default/Math.php';
 require_once __DIR__ . '/wiki-config.php';
 require_once __DIR__ . '/pages.php';
 
@@ -70,7 +68,6 @@ while (($line = fgets(STDIN)) !== false) {
     $case = json_decode($line, true);
     $id = $case['id'];
     $src = $case['source'];
-    Text_Wiki_Parse_Math::$equationsArray = array();
     $caseTags = (isset($case['tags']) && is_array($case['tags'])) ? $case['tags'] : array();
     $src = str_replace("\r\n", "\n", $src);
     try {

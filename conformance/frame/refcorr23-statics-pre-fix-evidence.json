@@ -1,0 +1,281 @@
+{
+ "code-highlighter": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "pair_len": 344,
+  "pair_sha256": "953d8e2b7031f96af261824809a974692ae8b9de609b15e40cf2381a24ae3011",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "solo_len": 344,
+  "solo_sha256": "953d8e2b7031f96af261824809a974692ae8b9de609b15e40cf2381a24ae3011"
+ },
+ "collapsible": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [
+    1
+   ],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "pair_len": 419,
+  "pair_sha256": "a332391e6c93d52412fdf503a003192df0278255432d20e6066f8c9e4858d6cc",
+  "solo_facts": {
+   "collapsible_counts": [
+    0
+   ],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "solo_len": 419,
+  "solo_sha256": "a332391e6c93d52412fdf503a003192df0278255432d20e6066f8c9e4858d6cc"
+ },
+ "filepeer": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [
+    "file:gallery"
+   ],
+   "tabview_ids": []
+  },
+  "pair_len": 88,
+  "pair_sha256": "f223c7fd51553ce025cbc7608ffddd89fa46a9e4ea115ad9c22c023215a50714",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [
+    "file:gallery"
+   ],
+   "tabview_ids": []
+  },
+  "solo_len": 88,
+  "solo_sha256": "f223c7fd51553ce025cbc7608ffddd89fa46a9e4ea115ad9c22c023215a50714"
+ },
+ "flickrhandler": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [
+    "flickr"
+   ],
+   "tabview_ids": []
+  },
+  "pair_len": 117,
+  "pair_sha256": "9c889288b5454cc910fb6edf9f15f77e88a3af3a3fb38f0019aa78c23e0b395e",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [
+    "flickr"
+   ],
+   "tabview_ids": []
+  },
+  "solo_len": 117,
+  "solo_sha256": "9c889288b5454cc910fb6edf9f15f77e88a3af3a3fb38f0019aa78c23e0b395e"
+ },
+ "freelink": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "pair_len": 51,
+  "pair_sha256": "3cbf7daebbc9223d42c6ffc7e88a38f2bdf295ae36617be303d08213175af1a6",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "solo_len": 51,
+  "solo_sha256": "3cbf7daebbc9223d42c6ffc7e88a38f2bdf295ae36617be303d08213175af1a6"
+ },
+ "heading": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "pair_len": 77,
+  "pair_sha256": "74eabd82b16022740e548c02dbef24352f7fc20b63be0c00e5dbc17cf834562e",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "solo_len": 77,
+  "solo_sha256": "74eabd82b16022740e548c02dbef24352f7fc20b63be0c00e5dbc17cf834562e"
+ },
+ "math": {
+  "b_pair_equals_solo": false,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "pair_len": 115,
+  "pair_output": "<p>ref <a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-1')\">1</a></p>\n\n",
+  "pair_sha256": "4b6b3d42508c0449af38262ff0cae06f4c97eca6b8a81cc2df0d60a54712ed32",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "solo_len": 113,
+  "solo_output": "<p>ref <a class=\"eref\" href=\"javascript:;\" onclick=\"WIKIDOT.page.utils.scrollToReference('equation-')\"></a></p>\n\n",
+  "solo_sha256": "33618656aa784ba91ed48d6ce7ac2b6779d3d8f0b82f23e2d9ac95c15a72c7a7"
+ },
+ "mathinline": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "pair_len": 68,
+  "pair_sha256": "dc68555b6596056454a63a0cb618ad4b10ae503aacd731489ed26df20aa42a33",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "solo_len": 68,
+  "solo_sha256": "dc68555b6596056454a63a0cb618ad4b10ae503aacd731489ed26df20aa42a33"
+ },
+ "modulemanager": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "pair_len": 15,
+  "pair_sha256": "5153184a7dd30be5f9e2e4850911ff9bdccad3d05f255b47d4bfe5704970947b",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "solo_len": 15,
+  "solo_sha256": "5153184a7dd30be5f9e2e4850911ff9bdccad3d05f255b47d4bfe5704970947b"
+ },
+ "newline": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "pair_len": 59,
+  "pair_sha256": "b6c2d352397205cd1fa5767008ad51d7a4749809dc3331359d25a944d55321cb",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "solo_len": 59,
+  "solo_sha256": "b6c2d352397205cd1fa5767008ad51d7a4749809dc3331359d25a944d55321cb"
+ },
+ "pagepeer": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "pair_len": 100,
+  "pair_sha256": "4ca6e75e87792ba8c36a0b706a3e040ea010db5b002abe1c15000e1eb106bd0d",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": []
+  },
+  "solo_len": 100,
+  "solo_sha256": "4ca6e75e87792ba8c36a0b706a3e040ea010db5b002abe1c15000e1eb106bd0d"
+ },
+ "tabview": {
+  "b_pair_equals_solo": false,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  "pair_len": 522,
+  "pair_output": "<script type=\"text/javascript\" src=\"/common--javascript/yahooui/element-beta-min.js\"></script>\n<script type=\"text/javascript\" src=\"/common--javascript/yahooui/tabview-min.js\"></script><div id=\"wiki-tabview-1\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>Second</em></a></li></ul><div class=\"yui-content\"><div id=\"wiki-tab-1-0\"><p>second</p>\n\n</div></div></div><script type=\"text/javascript\">\n(function(){\n\tvar tabView1 = new YAHOO.widget.TabView('wiki-tabview-1');\n})();\n</script>",
+  "pair_sha256": "b9a6db8d35f3b5967823d3b90ae7451ddb2479c2edecb995788834134e103c2c",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [],
+   "tabview_ids": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "solo_len": 522,
+  "solo_output": "<script type=\"text/javascript\" src=\"/common--javascript/yahooui/element-beta-min.js\"></script>\n<script type=\"text/javascript\" src=\"/common--javascript/yahooui/tabview-min.js\"></script><div id=\"wiki-tabview-0\" class=\"yui-navset\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>Second</em></a></li></ul><div class=\"yui-content\"><div id=\"wiki-tab-0-0\"><p>second</p>\n\n</div></div></div><script type=\"text/javascript\">\n(function(){\n\tvar tabView0 = new YAHOO.widget.TabView('wiki-tabview-0');\n})();\n</script>",
+  "solo_sha256": "f8b89368b4861930196ab8dea47179fdaf49515af787b9142f776dd48e3ffb19"
+ },
+ "userpeer": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [
+    "user"
+   ],
+   "tabview_ids": []
+  },
+  "pair_len": 175,
+  "pair_sha256": "6da603a2ee86baa5cf0484dc9d3139874e80286ac6aeac1ba979ed0d92a526fb",
+  "solo_facts": {
+   "collapsible_counts": [],
+   "equations": [],
+   "stub_hits": [
+    "user"
+   ],
+   "tabview_ids": []
+  },
+  "solo_len": 175,
+  "solo_sha256": "6da603a2ee86baa5cf0484dc9d3139874e80286ac6aeac1ba979ed0d92a526fb"
+ }
+}
