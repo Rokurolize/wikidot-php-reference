@@ -51,6 +51,20 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
     function process($matches) {
         $head = $matches[1];
         $body = $matches[2];
+        // REFCORR27 C1: comments are invisible to the advanced-table grammar.
+        // Comment leaves an opaque empty token behind when the comment was the
+        // only text on an indented line (so paragraph framing outside tables is
+        // preserved). Inside a table body that placeholder is not row/cell
+        // text on live: note-immortality-amulet has exactly such a comment
+        // between two rows, and live parses the nested table while the token
+        // made this rule reject the whole outer table as non-row text.
+        $delim = preg_quote($this->wiki->delim, '/');
+        $body = preg_replace_callback('/' . $delim . '([0-9]+)' . $delim . '/',
+            function ($m) {
+                $token = isset($this->wiki->tokens[(int)$m[1]])
+                    ? $this->wiki->tokens[(int)$m[1]] : null;
+                return ($token !== null && $token[0] === 'Comment') ? '' : $m[0];
+            }, $body);
         // Nested tables are converted to opaque tokens before the enclosing
         // body is split into rows, so inner [[row]] and [[cell]] never leak
         // into the outer row or cell grammar.

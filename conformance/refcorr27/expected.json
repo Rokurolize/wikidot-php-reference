@@ -1,0 +1,45 @@
+{
+ "tableadv-comment-indented-line": {
+  "html": " <table>\n<tr>\n<td style=\"border: 2px solid black\"><table>\n<tr>\n<td>x</td>\n</tr>\n<tr>\n<td>y</td>\n</tr>\n</table></td>\n</tr>\n</table>",
+  "assert": [
+   "<table>",
+   "<td style=\"border: 2px solid black\"><table>",
+   "<td>y</td>"
+  ],
+  "mechanism": "C1",
+  "live_witness": "note-immortality-amulet"
+ },
+ "image-link-empty-fragment": {
+  "html": "<a href=\"javascript:;\"><img src=\"/local--files//flower.png\" width=\"18\" alt=\"flower.png\" class=\"image\" /></a>",
+  "assert": [
+   "<a href=\"javascript:;\"><img",
+   "alt=\"flower.png\" class=\"image\" />"
+  ],
+  "mechanism": "C2",
+  "live_witness": "scp-4893"
+ },
+ "image-link-nonempty-fragment-control": {
+  "html": "<a href=\"#x\"><img src=\"/local--files//flower.png\" width=\"18\" alt=\"flower.png\" class=\"image\" /></a>",
+  "assert": [
+   "<a href=\"#x\"><img"
+  ],
+  "mechanism": "C2-control",
+  "live_witness": null
+ },
+ "image-head-link-line-fold": {
+  "html": "<a href=\"https://scp-wiki.wikidot.com/local--files/scorpion-pit/SCP-748-5.webp\"><img src=\"https://scp-wiki.wikidot.com/local--files/scorpion-pit/SCP-748-5.webp\" height=\"700px\" alt=\"SCP-748-5.webp\" class=\"image\" /></a>",
+  "assert": [
+   "<a href=\"https://scp-wiki.wikidot.com/local--files/scorpion-pit/SCP-748-5.webp\"><img src=\"https://scp-wiki.wikidot.com/local--files/scorpion-pit/SCP-748-5.webp\" height=\"700px\""
+  ],
+  "mechanism": "C3",
+  "live_witness": "scorpion-pit"
+ },
+ "image-link-leading-space-control": {
+  "html": "<p>[[image x.png link=&quot; <a href=\"https://example.com/x\">https://example.com/x</a>&quot;]]</p>\n\n",
+  "assert": [
+   "[[image x.png link=&quot;"
+  ],
+  "mechanism": "C3-control",
+  "live_witness": null
+ }
+}
