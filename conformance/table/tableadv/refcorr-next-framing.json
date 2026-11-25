@@ -1,0 +1,50 @@
+{
+ "mini-after-table": {
+  "assert": [
+   "</table><p><span style=\"white-space: pre-wrap;\">&#32;</span></p><div"
+  ],
+  "kind": "mini"
+ },
+ "mini-before-table": {
+  "assert": [
+   "<span style=\"white-space: pre-wrap;\">&#32;</span></p><table"
+  ],
+  "kind": "mini"
+ },
+ "mini-block-boundary": {
+  "assert": [
+   "</table><div"
+  ],
+  "kind": "mini"
+ },
+ "7ring": {
+  "assert": [
+   "</table><p><span style=\"white-space: pre-wrap;\">&#32;</span><br />"
+  ],
+  "kind": "corpus"
+ },
+ "a-brief-overview-of-antimemetic-hazards": {
+  "assert": [
+   "</table><div"
+  ],
+  "kind": "corpus"
+ },
+ "a-symphony-of-iron-and-steel": {
+  "assert": [
+   "<span style=\"white-space: pre-wrap;\">&#32;</span></p><table"
+  ],
+  "kind": "corpus"
+ },
+ "fragment:scp-3272-1": {
+  "assert": [
+   "</table><p><span style=\"white-space: pre-wrap;\">&#32;</span></p><table"
+  ],
+  "kind": "corpus"
+ },
+ "fragment:scp-5153-2": {
+  "assert": [
+   "</table><p><span style=\"white-space: pre-wrap;\">&#32;</span></p><div"
+  ],
+  "kind": "corpus"
+ }
+}
