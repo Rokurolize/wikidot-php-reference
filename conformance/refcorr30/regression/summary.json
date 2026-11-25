@@ -32,5 +32,11 @@
   "cases": 50,
   "diff": [],
   "stderr_bytes": 0
+ },
+ {
+  "name": "span",
+  "cases": 61,
+  "diff": [],
+  "stderr_bytes": 0
  }
 ]

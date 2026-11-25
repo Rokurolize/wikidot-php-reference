@@ -28,5 +28,10 @@
   "html": "<p><span style=\"font-size:90%;\">alpha&#8230; &#8212; one</span></p>\n<p><span style=\"font-size:90%;\">beta</span></p>",
   "html_sha256": "1ddf6e5004b7a42f8ddfc08a5d76fe3f2c2171886b00212a71b9e70bfe93a5a2",
   "evidence": "muse-probe-refprobe2-r30y-size-blank-entities (valid/stable/source-matched); purify preserves numeric entities while repairing the blank-line size scope"
+ },
+ "r30-span-whitespace-only": {
+  "html": "<p>A<br />\n<br />\nB</p>",
+  "html_sha256": "9bc8e24e15f1fca42fb3ce31ff30054fb7674aa29fd4f0b1cf7545107083264e",
+  "evidence": "muse-probe-jpcensus-wsspan-single (valid/stable/source-matched); whitespace-only attributed Span is an invisible atom, preserving the middle-line break without serving an empty span"
  }
 }

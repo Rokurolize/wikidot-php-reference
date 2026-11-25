@@ -58,5 +58,15 @@
   "saved_source_matches": true,
   "stable": true,
   "valid": true
+ },
+ "wsspan-single": {
+  "fullname": "muse-probe-jpcensus-wsspan-single",
+  "html": "<p>A<br />\n<br />\nB</p>",
+  "html_sha256": "9bc8e24e15f1fca42fb3ce31ff30054fb7674aa29fd4f0b1cf7545107083264e",
+  "source": "A\n[[span style=\"font-size:140%;\"]] [[/span]]\nB",
+  "source_sha256": "dc20958c1507354a4f6f5c4f6b3b0cec02dc409a64f8e269470ea1a70734bfa6",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
  }
 }

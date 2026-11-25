@@ -9,10 +9,11 @@ state). The correction round is named REFCORR30 in the lane record.
 The sweep created twenty run-owned probe pages on `sandbox-for-codex.wikidot.com`
 under `muse-probe-refprobe2-r30-*`, four focused pages under
 `muse-probe-refprobe2-r30x-*`, and two explicit/font-entity controls under
-`muse-probe-refprobe2-r30y-*`; all are left in place. Every accepted capture is
+`muse-probe-refprobe2-r30y-*`, plus the coordinator-named
+`muse-probe-jpcensus-wsspan-single` capture; all are left in place. Every accepted capture is
 `valid=true`, `stable=true`, and `saved_source_matches=true`. Raw HTML governed;
 the campaign entity-decoding norm was not used to decide contested bytes. The
-six decisive focused captures are copied into
+seven decisive focused captures are copied into
 `conformance/refcorr30/refcorr30-captures.json`.
 
 Most of the matrix agreed once already-settled frame and environment surfaces
@@ -25,6 +26,22 @@ serving chrome (random gallery ids, lightbox scripts, wdfiles host, and pretty
 printing); their normalized image/link/literal signatures are identical.
 
 ## Confirmed defects and correction
+
+### R30-SPAN-1 — attributed whitespace-only Span is an invisible atom
+
+Live probe `muse-probe-jpcensus-wsspan-single` renders
+`A\n[[span style="font-size:140%;"]] [[/span]]\nB` as
+`<p>A<br />\n<br />\nB</p>`. The attributed Span neither serves an empty
+`<span>` nor disappears as source text: the invisible atom still occupies its
+line while Newline and Paragraph run, which is the Span sibling of REFCORR29's
+whitespace-only Size atom. The pre-correction reference emitted
+`<span style="font-size:140%;"></span>` on that line.
+
+`Parse/Default/Span.php` now returns a Span token of type `empty` only when
+the body is non-empty but whitespace-only and the opener retains at least one
+live-whitelisted attribute. The renderer emits nothing for that token type. A
+truly empty attributed span is still kept, and unattributed empty-span elision
+is unchanged.
 
 ### R30-PURIFY-1 — render-generated TOC title whitespace bypasses Tighten
 
@@ -80,24 +97,25 @@ this is intentionally not a global re-indenting purify pass.
 ## Pins
 
 - `conformance/refcorr30/refcorr30-cases.jsonl` — two positive live matrices,
-  two explicit/font-entity positive controls, and two negative controls.
+  two explicit/font-entity positive controls, the whitespace-only attributed
+  Span positive control, and two negative controls.
 - `conformance/refcorr30/refcorr30-expected.json` — byte-level corrected output;
-  all four positive pins are exact live bytes.
+  all five positive pins are exact live bytes.
 - `conformance/refcorr30/refcorr30-captures.json` — the raw valid focused live
   captures cited by the pins.
 - `conformance/refcorr30/verify_refcorr30.py` — executable checker.
-  Current result: **6/6 exact**.
+  Current result: **7/7 exact**.
 
 ## Validation
 
-- REFCORR30 pins: **6/6 exact**.
+- REFCORR30 pins: **7/7 exact**.
 - Frozen gates after correction: `S_local_71` **71/71**, `S_diag_44` **44/44**,
   `S_holdout_step4_150` **150/150**, and `S_holdout_fresh_150` **150/150**, zero
   diffs in each set.
 - Battery regression comparison using the same checkout with only
   `Text/Wiki.php` swapped to its pre-correction bytes: code 68/68 unchanged,
   TOC 56/56 unchanged, gallery 88/88 unchanged, explicit lists 50/50 unchanged,
-  and Size changes only in the three cross-block cases `sz69-list-in-size`,
+  and Span 61/61 unchanged; Size changes only in the three cross-block cases `sz69-list-in-size`,
   `sz70-size-crosses-div`, and `sz75-list-bold-close`. The first two have prior
   valid live probes and now match those live bytes exactly; the third is the
   same repair class.

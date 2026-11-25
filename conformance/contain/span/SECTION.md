@@ -11,3 +11,13 @@ Remaining disagreements and their dispositions. SPAN-F1 is a candidate ftml dive
 Questions asked and assumptions proceeded on. The first question was whether the fossil brief's `%%...%%` hypothesis should be implemented; the assumption was no, and p19 plus ftml's delayed-placeholder code confirmed that `%%` is not a span. The second was whether attribute values containing a bare apostrophe are escaped; the assumption was `ENT_COMPAT`, which leaves apostrophes raw in line with the loop's earlier live finding on heading text, and this shape was not separately probed because all four attribute probes covered ampersands, double quotes, key casing and empty values. The third was whether the score span should be matched despite the paragraph-suppression requirement; the assumption was no, because emitting Span tokens without removing the enclosing paragraph would still disagree with live and would exceed the two-file scope, so it is recorded as a residual for root. The fourth was ftml's delayed-attribute marker case where `class="@@a@@"` yields `class=""` on the wikidot surface; the reference cannot model that marker without the delayed-attribute subsystem, so it is left as serving-layer scope with no live probe. No ftml file, shared harness file, other rule file or git state was changed, no git identity or author variables were set, and the probe pages were left in place as listed above.
 
 COMPLETE
+
+REFCORR30 addendum (2026-11-26). The coordinator-named JP census probe
+`muse-probe-jpcensus-wsspan-single` settled one narrow whitespace-only shape
+that the original empty-span settlement did not cover: an attributed body of
+only whitespace is an invisible atom on live. `Parse/Default/Span.php` now
+emits a token of type `empty` for that shape, so the renderer serves no span
+while the atom still preserves its line position for Newline and Paragraph.
+Truly empty attributed spans remain visible and unattributed elision is
+unchanged. The correction is byte-exact against the probe and the 61-case Span
+battery is otherwise unchanged.
