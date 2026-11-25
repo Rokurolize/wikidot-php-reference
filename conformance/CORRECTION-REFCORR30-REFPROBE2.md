@@ -8,11 +8,11 @@ state). The correction round is named REFCORR30 in the lane record.
 
 The sweep created twenty run-owned probe pages on `sandbox-for-codex.wikidot.com`
 under `muse-probe-refprobe2-r30-*`, four focused pages under
-`muse-probe-refprobe2-r30x-*`, and one explicit-Span control under
+`muse-probe-refprobe2-r30x-*`, and two explicit/font-entity controls under
 `muse-probe-refprobe2-r30y-*`; all are left in place. Every accepted capture is
 `valid=true`, `stable=true`, and `saved_source_matches=true`. Raw HTML governed;
 the campaign entity-decoding norm was not used to decide contested bytes. The
-five decisive focused captures are copied into
+six decisive focused captures are copied into
 `conformance/refcorr30/refcorr30-captures.json`.
 
 Most of the matrix agreed once already-settled frame and environment surfaces
@@ -67,26 +67,30 @@ sentinel strip:
 2. a font-size span still open at a paragraph end, whether produced by
    `[[size]]` or by an explicit span style.
 
-Only then does it invoke the reference's existing tidy-backed
-`purifyRecoveredHtml()` path, which wraps the fragment in the same strict XHTML
-body shape used by live and extracts the repaired body. Well-formed documents
+Only then does it invoke the reference's `purifyRecoveredHtml()` path. That
+path now uses PHP FFI against libtidy 5.8.0 with the same binding shape as
+live's ext/tidy call: strict XHTML wrapper, UTF-8 input/output, `indent=false`,
+`output-xhtml=true`, `wrap=0`, `preserve-entities=yes`, parse followed by two
+save passes, and crucially no `tidyCleanAndRepair`. This is the measured live
+oracle; the stock tidy CLI is not, because it performs an additional repair
+pass and decodes numeric entities. Well-formed documents
 that do not contain one of those shapes keep the established reference frame;
 this is intentionally not a global re-indenting purify pass.
 
 ## Pins
 
 - `conformance/refcorr30/refcorr30-cases.jsonl` — two positive live matrices,
-  one explicit-Span positive control, and two negative controls.
+  two explicit/font-entity positive controls, and two negative controls.
 - `conformance/refcorr30/refcorr30-expected.json` — byte-level corrected output;
-  all three positive pins are exact live bytes.
+  all four positive pins are exact live bytes.
 - `conformance/refcorr30/refcorr30-captures.json` — the raw valid focused live
   captures cited by the pins.
 - `conformance/refcorr30/verify_refcorr30.py` — executable checker.
-  Current result: **5/5 exact**.
+  Current result: **6/6 exact**.
 
 ## Validation
 
-- REFCORR30 pins: **5/5 exact**.
+- REFCORR30 pins: **6/6 exact**.
 - Frozen gates after correction: `S_local_71` **71/71**, `S_diag_44` **44/44**,
   `S_holdout_step4_150` **150/150**, and `S_holdout_fresh_150` **150/150**, zero
   diffs in each set.

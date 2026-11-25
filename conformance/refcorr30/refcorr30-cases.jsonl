@@ -3,3 +3,4 @@
 {"id":"r30-toc-title-control","source":"[[toc title=\"Control\"]]\n\n+ Alpha"}
 {"id":"r30-size-single-newline-control","source":"[[size 90%]]line1\nline2[[/size]]"}
 {"id":"r30-span-font-size-blank","source":"[[span style=\"font-size:medium\"]]line1\n\nline2[[/span]]"}
+{"id":"r30-size-blank-entities","source":"[[size 90%]]alpha... -- one\n\nbeta[[/size]]"}

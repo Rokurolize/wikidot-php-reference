@@ -1113,17 +1113,84 @@ class Text_Wiki {
 
     function purifyRecoveredHtml($code)
     {
-        $tidy = '/usr/bin/tidy';
-        if (!is_executable($tidy)) {
+        if (!class_exists('FFI')) {
             return $code;
         }
+        static $ffi = null;
+        static $ffiFailed = false;
+        if ($ffiFailed) {
+            return $code;
+        }
+        if ($ffi === null) {
+            $def = '
+typedef unsigned int uint;
+typedef unsigned char byte;
+typedef struct _TidyBuffer { void* allocator; byte* bp; uint size; uint allocated; uint next; } TidyBuffer;
+typedef void* TidyDoc;
+TidyDoc tidyCreate(void);
+void tidyRelease(TidyDoc tdoc);
+int tidySetCharEncoding(TidyDoc tdoc, const char* encnam);
+int tidyOptSetInt(TidyDoc tdoc, int optid, unsigned long val);
+int tidyOptSetBool(TidyDoc tdoc, int optid, int val);
+int tidyOptGetIdForName(const char* optnam);
+void tidyBufInit(TidyBuffer* buf);
+void tidyBufFree(TidyBuffer* buf);
+void tidyBufAppend(TidyBuffer* buf, void* vp, uint size);
+int tidyParseBuffer(TidyDoc tdoc, TidyBuffer* buf);
+int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
+';
+            $lib = is_file('/usr/lib/x86_64-linux-gnu/libtidy.so.58')
+                ? '/usr/lib/x86_64-linux-gnu/libtidy.so.58'
+                : 'libtidy.so.58';
+            try {
+                $ffi = FFI::cdef($def, $lib);
+            } catch (Throwable $e) {
+                $ffiFailed = true;
+                return $code;
+            }
+        }
+
         $head = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  <head>    <title>Just A Wrapper</title><meta http-equiv="content-type" content="text/html;charset=UTF-8"/>  </head> <!--wrapdelimiter--><body>';
         $tail = ' </body><!--wrapdelimiter--></html>';
-        $tmp = tempnam(sys_get_temp_dir(), 'ufffd');
-        file_put_contents($tmp, $head . $code . $tail);
-        $cmd = $tidy . ' -q -utf8 --doctype strict --indent no --output-xhtml yes --wrap 0 --show-warnings no --show-errors 0 ' . escapeshellarg($tmp) . ' 2>/dev/null';
-        $cleaned = shell_exec($cmd);
-        unlink($tmp);
+        $wrapped = $head . $code . $tail;
+        $len = strlen($wrapped);
+
+        try {
+            $doc = $ffi->tidyCreate();
+            $ffi->tidySetCharEncoding($doc, 'UTF8');
+            $ffi->tidyOptSetInt($doc, $ffi->tidyOptGetIdForName('indent'), 0);
+            $ffi->tidyOptSetBool($doc, $ffi->tidyOptGetIdForName('output-xhtml'), 1);
+            $ffi->tidyOptSetInt($doc, $ffi->tidyOptGetIdForName('wrap'), 0);
+            $ffi->tidyOptSetBool($doc, $ffi->tidyOptGetIdForName('preserve-entities'), 1);
+            $ffi->tidyOptSetBool($doc, $ffi->tidyOptGetIdForName('show-warnings'), 0);
+            $ffi->tidyOptSetInt($doc, $ffi->tidyOptGetIdForName('show-errors'), 0);
+
+            $inbuf = $ffi->new('TidyBuffer');
+            $ffi->tidyBufInit(FFI::addr($inbuf));
+            $input = $ffi->new('char[' . $len . ']');
+            FFI::memcpy($input, $wrapped, $len);
+            $ffi->tidyBufAppend(FFI::addr($inbuf), $input, $len);
+            $ffi->tidyParseBuffer($doc, FFI::addr($inbuf));
+
+            $save1 = $ffi->new('TidyBuffer');
+            $save2 = $ffi->new('TidyBuffer');
+            $ffi->tidyBufInit(FFI::addr($save1));
+            $ffi->tidyBufInit(FFI::addr($save2));
+            // The two saves mirror ext/tidy's update-properties pass and the
+            // later cast to string. In particular there is deliberately no
+            // tidyCleanAndRepair call; the CLI performs one and is not the
+            // live oracle.
+            $ffi->tidySaveBuffer($doc, FFI::addr($save1));
+            $ffi->tidySaveBuffer($doc, FFI::addr($save2));
+            $cleaned = FFI::string($save2->bp, $save2->size);
+            $ffi->tidyBufFree(FFI::addr($inbuf));
+            $ffi->tidyBufFree(FFI::addr($save1));
+            $ffi->tidyBufFree(FFI::addr($save2));
+            $ffi->tidyRelease($doc);
+        } catch (Throwable $e) {
+            return $code;
+        }
+
         if (!is_string($cleaned) || strpos($cleaned, '<!--wrapdelimiter-->') === false) {
             return $code;
         }

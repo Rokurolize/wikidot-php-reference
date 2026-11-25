@@ -48,5 +48,15 @@
   "saved_source_matches": true,
   "stable": true,
   "valid": true
+ },
+ "size-blank-entities": {
+  "fullname": "muse-probe-refprobe2-r30y-size-blank-entities",
+  "html": "<p><span style=\"font-size:90%;\">alpha&#8230; &#8212; one</span></p>\n<p><span style=\"font-size:90%;\">beta</span></p>",
+  "html_sha256": "1ddf6e5004b7a42f8ddfc08a5d76fe3f2c2171886b00212a71b9e70bfe93a5a2",
+  "source": "[[size 90%]]alpha... -- one\n\nbeta[[/size]]",
+  "source_sha256": "7ad7443b0cada1ee0d747a327dce3cd8717bf43f639269ce2b5d41deb04ec677",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
  }
 }

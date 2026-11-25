@@ -2,17 +2,20 @@
  {
   "name": "code",
   "cases": 68,
-  "diff": []
+  "diff": [],
+  "stderr_bytes": 0
  },
  {
   "name": "toc",
   "cases": 56,
-  "diff": []
+  "diff": [],
+  "stderr_bytes": 0
  },
  {
   "name": "gallery",
   "cases": 88,
-  "diff": []
+  "diff": [],
+  "stderr_bytes": 0
  },
  {
   "name": "size",
@@ -21,11 +24,13 @@
    "sz69-list-in-size",
    "sz70-size-crosses-div",
    "sz75-list-bold-close"
-  ]
+  ],
+  "stderr_bytes": 0
  },
  {
   "name": "listblocks",
   "cases": 50,
-  "diff": []
+  "diff": [],
+  "stderr_bytes": 0
  }
 ]

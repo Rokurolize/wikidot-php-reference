@@ -23,5 +23,10 @@
   "html": "<p><span style=\"font-size:medium\">line1</span></p>\n<p><span style=\"font-size:medium\">line2</span></p>",
   "html_sha256": "08247d4a4576dcd9e78a9c50c18d46b7b86271b305b448d53c3610ddc99d5488",
   "evidence": "muse-probe-refprobe2-r30y-span-font-size-blank (valid/stable/source-matched); explicit Span font-size blank-line re-nesting"
+ },
+ "r30-size-blank-entities": {
+  "html": "<p><span style=\"font-size:90%;\">alpha&#8230; &#8212; one</span></p>\n<p><span style=\"font-size:90%;\">beta</span></p>",
+  "html_sha256": "1ddf6e5004b7a42f8ddfc08a5d76fe3f2c2171886b00212a71b9e70bfe93a5a2",
+  "evidence": "muse-probe-refprobe2-r30y-size-blank-entities (valid/stable/source-matched); purify preserves numeric entities while repairing the blank-line size scope"
  }
 }
