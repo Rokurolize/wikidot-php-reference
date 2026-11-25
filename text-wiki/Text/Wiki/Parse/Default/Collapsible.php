@@ -43,7 +43,7 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
      * 
      */
     
-    public $regex = '/(\n)?\[\[collapsible(\s.*?)?\]\](.*?)\[\[\/collapsible\]\] */msi';
+    public $regex = '/(\xFF\d+\xFF)?(\n)?\[\[collapsible(\s.*?)?\]\](.*?)\[\[\/collapsible\]\] */msi';
 
     /**
      * 
@@ -62,63 +62,58 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
     
     function process($matches) {
         
-        $content = $matches[3];
+        $content = $matches[4];
 
         // When [[size ...]][[collapsible ...]][[/size]] wraps only the opener,
         // transfer font-size to Collapsible's fold labels and suppress the
         // dangling Size pair while keeping token delimiters for Newline.
+        // Unrelated size spans inside a collapsible body must be left alone
+        // (news-03-2017 regression guard).
         $labelSize = null;
         $delim = $this->wiki->delim;
         $q = preg_quote($delim, '/');
-        // REFCORR19 F11/#03: generalize the size/opener crossing fix. Only
-        // reattach when a Size START token immediately precedes this
-        // collapsible opener (whitespace between them is invisible to the
-        // token stream); then find its matching Size END anywhere in the
-        // collapsible content. Unrelated size spans inside a collapsible
-        // body must be left alone (news-03-2017 regression guard).
         $sid = null;
-        if (!empty($this->wiki->tokens)) {
-            $lastId = count($this->wiki->tokens) - 1;
-            $lt = $this->wiki->tokens[$lastId];
-            if ($lt[0] === 'Size' && isset($lt[1]['type']) && $lt[1]['type'] === 'start') {
-                $sid = $lastId;
+        if ($matches[1] !== ''
+            && preg_match('/^' . $q . '(\d+)' . $q . '$/', $matches[1], $sm)) {
+            $candidateSid = (int)$sm[1];
+            $st = isset($this->wiki->tokens[$candidateSid])
+                ? $this->wiki->tokens[$candidateSid] : null;
+            if ($st && $st[0] === 'Size' && isset($st[1]['type'])
+                && $st[1]['type'] === 'start') {
+                $sid = $candidateSid;
             }
         }
-        if ($sid !== null && preg_match_all('/' . $q . '(\d+)' . $q . '/', $content, $ms)) {
-            foreach ($ms[1] as $candidate) {
-                $eid = (int) $candidate;
+        if ($sid !== null
+            && preg_match_all('/' . $q . '(\d+)' . $q . '/', $content, $ms, PREG_OFFSET_CAPTURE)) {
+            $sizeDepth = 1;
+            foreach ($ms[1] as $mi => $candidate) {
+                $eid = (int)$candidate[0];
+                $pos = $ms[0][$mi][1];
                 $et = isset($this->wiki->tokens[$eid]) ? $this->wiki->tokens[$eid] : null;
-                if (!$et || $et[0] !== 'Size' || !isset($et[1]['type'])
-                    || $et[1]['type'] !== 'end') {
+                if (!$et || $et[0] !== 'Size' || !isset($et[1]['type'])) {
                     continue;
                 }
-                $sizeDepth = 0;
-                $match = null;
-                for ($j = $eid - 1; $j >= $sid; $j--) {
-                    $t = $this->wiki->tokens[$j];
-                    if ($t[0] !== 'Size' || !isset($t[1]['type'])) {
-                        continue;
-                    }
-                    if ($t[1]['type'] === 'end') {
-                        $sizeDepth++;
-                    } elseif ($t[1]['type'] === 'start') {
-                        if ($sizeDepth === 0) {
-                            $match = $j;
-                            break;
-                        }
-                        $sizeDepth--;
-                    }
+                if ($et[1]['type'] === 'start') {
+                    $sizeDepth++;
+                    continue;
                 }
-                if ($match === $sid) {
-                    $labelSize = $this->wiki->tokens[$sid][1]['size'];
-                    $this->wiki->tokens[$sid][1]['type'] = 'suppressed';
-                    $this->wiki->tokens[$eid][1]['type'] = 'suppressed';
+                if ($et[1]['type'] !== 'end') {
+                    continue;
+                }
+                $sizeDepth--;
+                if ($sizeDepth === 0) {
+                    $beforeEnd = substr($content, 0, $pos);
+                    if (trim($beforeEnd) === '') {
+                        $labelSize = $this->wiki->tokens[$sid][1]['size'];
+                        $this->wiki->tokens[$sid][1]['type'] = 'suppressed';
+                        $this->wiki->tokens[$eid][1]['type'] = 'suppressed';
+                    }
                     break;
                 }
             }
         }
 
-        $attr = $this->getAttrs(trim($matches[2]));
+        $attr = $this->getAttrs(trim($matches[3]));
 
         $options = array('args' => $attr, 'type' => 'start',
             'count' => self::$count, 'label_size' => $labelSize);
@@ -129,7 +124,7 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
             'args' => $attr, 'type' => 'end',
             'count' => self::$count, 'label_size' => $labelSize));
         self::$count++;
-        return $matches[1] . $matches[1] . $start . "\n\n" . $content . "\n\n" . $end;
+        return $matches[1] . $matches[2] . $matches[2] . $start . "\n\n" . $content . "\n\n" . $end;
     
     }
 
