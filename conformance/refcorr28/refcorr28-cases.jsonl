@@ -1,0 +1,5 @@
+{"id":"r28-img-dimension-class-trim","source":"T01 [[image https://example.com/a.png class=\" one two \"]]\nT02 [[image https://example.com/a.png style=\" color:red; \"]]\nT03 [[image https://example.com/a.png width=\" 20 \" height=\" 30 \"]]\nT04 [[image https://example.com/a.png title=\" T \" alt=\" A \"]]"}
+{"id":"r28-img-link-space","source":"[[image https://example.com/a.png link=\"http://bad host/x\"]]"}
+{"id":"r28-span-empty-data","source":"[[span data-x=\"\"]]X[[/span]]"}
+{"id":"r28-embed-non-src-schemes","source":"N01 [[embed]]<iframe foo=\"javascript:alert(1)\" src=\"http://example.com\"></iframe>[[/embed]]\nN02 [[embed]]<iframe action=\"javascript:alert(1)\" src=\"http://example.com\"></iframe>[[/embed]]\nN03 [[embed]]<iframe data=\"data:text/html,x\" src=\"http://example.com\"></iframe>[[/embed]]\nN04 [[embed]]<iframe name=\"vbscript:msgbox\" src=\"http://example.com\"></iframe>[[/embed]]\nN05 [[embed]]<iframe href=\"data:text/html,x\" src=\"http://example.com\"></iframe>[[/embed]]"}
+{"id":"r28-embed-src-js-control","source":"[[embed]]<iframe src=\"javascript:alert(1)\"></iframe>[[/embed]]"}

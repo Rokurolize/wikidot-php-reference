@@ -146,10 +146,11 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
             }
             if ($value === '') {
                 $lkey = strtolower($key);
-                if (strpos($key, 'data-') === 0
-                    && !empty($authoredNonEmpty[$lkey])) {
-                    // Key kept with an empty value; the render's 0xFF clear
-                    // arm emits data-x="" with the key present, as live does.
+                if (strpos($key, 'data-') === 0) {
+                    // REFCORR28 R28-SPAN-1: live retains an explicitly empty
+                    // data-* attribute even when no raw placeholder was
+                    // involved (muse-probe-refprobe-r28-span-attrs S02). The
+                    // other whitelisted empty values are still dropped.
                     $args[$lkey] = $value;
                 }
                 continue;
