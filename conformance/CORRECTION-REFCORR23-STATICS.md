@@ -4,15 +4,19 @@ Status: APPLIED in this tree on branch `refcorr23/statics-audit`. The audit swee
 
 ## LEAKS-AND-MATTERS — fixed at reference-core ownership
 
+The follow-up wire review established that Collapsible also matters: although its count is invisible in HTML, the Lean-facing token wire serializes it.
+
 1. **`Text_Wiki_Parse_Math::$equationsArray`**. Before correction a document containing only `ref [[eref eq]]` rendered an empty target (`equation-`) when isolated, but after an unrelated document defining `[[math eq]]` in the same PHP process it rendered `equation-1` with visible number `1`. That contradicts the live-settled Equationreference record: the label map belongs to one page, an undefined label is empty, and forward references resolve only inside the same document. The map is now `Text_Wiki` instance state at `vars['equationsArray']`; `Equationreference` reads that document-local registry. The stale unused static read in the Footnote renderer was removed. This is not a harness patch: the per-case resets were removed from `batch.php`, `render-restricted.php`, `state-restricted.php`, and `prefix-source.php`, and the state driver now serializes the same instance registry in its existing wire shape. In-document behavior is unchanged: forward references still resolve and duplicate labels resolve to the last definition.
 
 2. **`Text_Wiki_Parse_Tabview::$_counter`**. Before correction the isolated tabview document used `wiki-tabview-0`, `wiki-tab-0-0`, and `tabView0`; after an unrelated tabview document in the same process it used the corresponding `1` forms. Live does not carry a PHP-process counter across page requests: retained live captures have fresh request-local random tabview identifiers. The reference keeps its established deterministic numeric shape, but the counter is now parse-rule instance state (`$_tabviewCounter`), so it resets with each fresh `Text_Wiki` document while still numbering multiple tabviews within one document. The batch harness's reflection reset was removed.
+
+3. **`Text_Wiki_Parse_Collapsible::$count`**. The count is not used by the live-shaped HTML renderer, but it is serialized in the Lean-facing token wire. It therefore must be document-local even though HTML is byte-stable. The static property is now instance state on the Collapsible parse object; counts still advance across multiple collapsibles inside one document and reset for the next document.
 
 ## Other classified sites
 
 | Site | Verdict | Evidence and disposition |
 |---|---|---|
-| `Text_Wiki_Parse_Collapsible::$count` | **LEAKS-BUT-UNOBSERVABLE** | The static still increments across documents: the pin facts show B's token `count` as 0 solo and 1 after A. The corrected Xhtml renderer intentionally does not consume `count` (R2-CONTAIN C1), so B's render is byte-identical in the two runs. Because the final render output is unobservable, this lane did not rewrite the token option and change diagnostic token streams. |
+| `Text_Wiki_Parse_Collapsible::$count` | **LEAKS-AND-MATTERS — fixed** | Initial HTML-only classification was refuted by wire review. Before the Collapsible fix, two identical one-block documents serialized `count: 0` solo and `count: 1` for the second in one process (`collapsible-wire` pre-fix token SHA-256 `1f7340ee...` versus `cb0a70b5...`). Rendered HTML was byte-stable, but `state-restricted.php`, `prefix-source.php`, and batch tokens mode expose the token table, so the wire was not document-local. The counter is now parse-rule instance state (`$collapsibleCount`); the wire pin is byte-equal post-fix. |
 | `Newline.php` function-static `$skip` | **LEAKS-BUT-UNOBSERVABLE** | This is a lazily initialized cache of the fixed pipeline's block-rule skip list, not document data. Its value is configuration-derived and identical for every document in the reference pipeline; the tableadjacency pair renders byte-identically. It is not accumulated parse state. |
 | `Freelink.php` function-static `$map` | **NO-LEAK** | The transliteration map is initialized once and has no assignment or mutation anywhere in the parse/render path. A pair exercising Łukasz and Greek transliteration renders byte-identically. |
 | `Text_Wiki_Parse_Mathinline::$suppressRules` | **NO-LEAK** | Fixed rule configuration (`Freelink`, `Raw`, `Newline`, `Image`, `Date`); no writes exist. The Mathinline pair renders byte-identically. |
@@ -31,6 +35,6 @@ Status: APPLIED in this tree on branch `refcorr23/statics-audit`. The audit swee
 
 ## Regression evidence
 
-- `python3 conformance/frame/refcorr23-verify-statics.py` is green for 13 scenarios after the fix; before the fix the Tabview and Math scenarios failed the byte-equality invariant with the exact evidence above.
+- `python3 conformance/frame/refcorr23-verify-statics.py` is green for 14 scenarios after the fixes; before the fixes Tabview and Math failed render byte equality, and Collapsible-wire failed token-table byte equality.
 - Existing focused batteries are byte-identical at the snapshot-47 base and the corrected tree: Equationreference 57 render records and 57 token records, Tabview 54 render records and 54 token records, and Collapsible 57 render records and 57 token records. The R3 restricted-state driver is also byte-identical on the 57 Equationreference cases, so the Lean-mirroring wire shape did not move.
 - Focused in-document smoke checks retain multiple-tabview numbering (`0`, then `1`), forward equation resolution, and duplicate-label last-definition resolution.

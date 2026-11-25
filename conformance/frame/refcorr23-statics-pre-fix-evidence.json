@@ -41,6 +41,22 @@
   "solo_len": 419,
   "solo_sha256": "a332391e6c93d52412fdf503a003192df0278255432d20e6066f8c9e4858d6cc"
  },
+ "collapsible-wire": {
+  "b_pair_equals_solo": true,
+  "pair_facts": {
+   "collapsible_counts": [
+    1
+   ]
+  },
+  "pair_tokens_sha256": "cb0a70b58ddc5b2f946411073fbd84fcccc14ec6ad1e727fa7d5ce12b46c7c04",
+  "solo_facts": {
+   "collapsible_counts": [
+    0
+   ]
+  },
+  "solo_tokens_sha256": "1f7340ee2837498c24c9e38461491ccc2013c55a0d750abfaa0b866dac3baa74",
+  "tokens_pair_equals_solo": false
+ },
  "filepeer": {
   "b_pair_equals_solo": true,
   "pair_facts": {

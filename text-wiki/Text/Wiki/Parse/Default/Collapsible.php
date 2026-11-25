@@ -30,7 +30,7 @@
 
 class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
 
-    static $count = 0;
+    private $collapsibleCount = 0;
     
     /**
      * 
@@ -173,14 +173,14 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
         $attr = $this->getAttrs(trim($matches[3]));
 
         $options = array('args' => $attr, 'type' => 'start',
-            'count' => self::$count, 'label_size' => $labelSize);
+            'count' => $this->collapsibleCount, 'label_size' => $labelSize);
 
         $start = $this->wiki->addToken($this->rule, $options);
 
         $end = $this->wiki->addToken($this->rule, array(
             'args' => $attr, 'type' => 'end',
-            'count' => self::$count, 'label_size' => $labelSize));
-        self::$count++;
+            'count' => $this->collapsibleCount, 'label_size' => $labelSize));
+        $this->collapsibleCount++;
         return $matches[1] . $matches[2] . $matches[2] . $start . "\n\n" . $content . "\n\n" . $end . $outerStart;
     
     }

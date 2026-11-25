@@ -25,6 +25,11 @@ $scenarios = array(
         'a' => "[[collapsible]]\nseed\n[[/collapsible]]",
         'b' => "[[collapsible]]\nsecond\n[[/collapsible]]",
     ),
+    'collapsible-wire' => array(
+        'a' => "[[collapsible]]\nsame\n[[/collapsible]]",
+        'b' => "[[collapsible]]\nsame\n[[/collapsible]]",
+        'wire' => true,
+    ),
     'tabview' => array(
         'a' => "[[tabview]]\n[[tab Seed]]\nseed\n[[/tab]]\n[[/tabview]]",
         'b' => "[[tabview]]\n[[tab Second]]\nsecond\n[[/tab]]\n[[/tabview]]",
@@ -83,7 +88,8 @@ if (!isset($scenarios[$scenario]) || !in_array($mode, array('solo', 'pair'), tru
     exit(2);
 }
 
-function ref_statics_render($source, $pageName) {
+function ref_statics_render($source, $pageName, $wire = false) {
+    $GLOBALS['REF_STATICS_WIRE'] = $wire;
     $wiki = ref_configure_wiki(new Text_Wiki());
     $wiki->vars['footnotes'] = array();
     $wiki->vars['bibitems'] = array();
@@ -111,6 +117,10 @@ function ref_statics_render($source, $pageName) {
     if (isset($wiki->vars['equationsArray']) && is_array($wiki->vars['equationsArray'])) {
         $facts['equations'] = $wiki->vars['equationsArray'];
     }
+    if (!empty($GLOBALS['REF_STATICS_WIRE'])) {
+        $facts['tokens_json'] = json_encode($wiki->tokens, JSON_INVALID_UTF8_SUBSTITUTE);
+        $facts['tokens_sha256'] = hash('sha256', $facts['tokens_json']);
+    }
     return array('output' => $out, 'facts' => $facts, 'wiki' => $wiki);
 }
 
@@ -118,11 +128,12 @@ $spec = $scenarios[$scenario];
 $pageName = isset($spec['pageName']) ? $spec['pageName'] : null;
 $result = array('scenario' => $scenario, 'mode' => $mode);
 if ($mode === 'pair') {
-    $a = ref_statics_render($spec['a'], $pageName);
+    $wire = !empty($spec['wire']);
+    $a = ref_statics_render($spec['a'], $pageName, $wire);
     $result['a_output'] = $a['output'];
     $result['a_facts'] = $a['facts'];
 }
-$b = ref_statics_render($spec['b'], $pageName);
+$b = ref_statics_render($spec['b'], $pageName, isset($wire) ? $wire : !empty($spec['wire']));
 $result['b_output'] = $b['output'];
 $result['b_facts'] = $b['facts'];
 echo json_encode($result, JSON_INVALID_UTF8_SUBSTITUTE), "\n";

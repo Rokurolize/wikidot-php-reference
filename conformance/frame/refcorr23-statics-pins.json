@@ -1,7 +1,7 @@
 {
  "driver": "harness/statics-probe.php SCENARIO solo|pair",
- "format": "refcorr23-statics-pin-v1",
- "invariant": "pair.b_output byte-equals solo.b_output; digest is solo.b_output SHA-256",
+ "format": "refcorr23-statics-pin-v2",
+ "invariant": "pair.b_output byte-equals solo.b_output; wire scenarios also require token-table JSON byte equality",
  "scenarios": {
   "code-highlighter": {
    "pair_equals_solo": true,
@@ -23,7 +23,7 @@
    "pair_equals_solo": true,
    "pair_facts": {
     "collapsible_counts": [
-     1
+     0
     ],
     "equations": [],
     "stub_hits": [],
@@ -38,6 +38,32 @@
     "tabview_ids": []
    },
    "solo_sha256": "a332391e6c93d52412fdf503a003192df0278255432d20e6066f8c9e4858d6cc"
+  },
+  "collapsible-wire": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [
+     0
+    ],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": [],
+    "tokens_json": "{\"1\":[\"Collapsible\",{\"args\":[],\"type\":\"start\",\"count\":0,\"label_size\":null}],\"2\":[\"Collapsible\",{\"args\":[],\"type\":\"end\",\"count\":0,\"label_size\":null}],\"3\":[\"Paragraph\",{\"type\":\"start\"}],\"4\":[\"Paragraph\",{\"type\":\"end\"}],\"5\":[\"Typography\",{\"char\":\"``\"}],\"6\":[\"Typography\",{\"char\":\"''\"}],\"7\":[\"Typography\",{\"char\":\",,\"}],\"8\":[\"Typography\",{\"char\":\"''\"}],\"9\":[\"Typography\",{\"char\":\"`\"}],\"10\":[\"Typography\",{\"char\":\"'\"}],\"11\":[\"Typography\",{\"char\":\"<<\"}],\"12\":[\"Typography\",{\"char\":\">>\"}],\"13\":[\"Typography\",{\"char\":\" \"}],\"14\":[\"Typography\",{\"char\":\" \"}],\"15\":[\"Typography\",{\"char\":\"...\"}],\"16\":[\"Typography\",{\"char\":\"--\"}],\"17\":[\"Typography\",{\"char\":\"---\"}]}",
+    "tokens_sha256": "1f7340ee2837498c24c9e38461491ccc2013c55a0d750abfaa0b866dac3baa74"
+   },
+   "solo_facts": {
+    "collapsible_counts": [
+     0
+    ],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": [],
+    "tokens_json": "{\"1\":[\"Collapsible\",{\"args\":[],\"type\":\"start\",\"count\":0,\"label_size\":null}],\"2\":[\"Collapsible\",{\"args\":[],\"type\":\"end\",\"count\":0,\"label_size\":null}],\"3\":[\"Paragraph\",{\"type\":\"start\"}],\"4\":[\"Paragraph\",{\"type\":\"end\"}],\"5\":[\"Typography\",{\"char\":\"``\"}],\"6\":[\"Typography\",{\"char\":\"''\"}],\"7\":[\"Typography\",{\"char\":\",,\"}],\"8\":[\"Typography\",{\"char\":\"''\"}],\"9\":[\"Typography\",{\"char\":\"`\"}],\"10\":[\"Typography\",{\"char\":\"'\"}],\"11\":[\"Typography\",{\"char\":\"<<\"}],\"12\":[\"Typography\",{\"char\":\">>\"}],\"13\":[\"Typography\",{\"char\":\" \"}],\"14\":[\"Typography\",{\"char\":\" \"}],\"15\":[\"Typography\",{\"char\":\"...\"}],\"16\":[\"Typography\",{\"char\":\"--\"}],\"17\":[\"Typography\",{\"char\":\"---\"}]}",
+    "tokens_sha256": "1f7340ee2837498c24c9e38461491ccc2013c55a0d750abfaa0b866dac3baa74"
+   },
+   "solo_sha256": "129820900540c500916bc2332fdb516cd097e8d7c67a6bf16b3fec728b215081",
+   "solo_tokens_sha256": "1f7340ee2837498c24c9e38461491ccc2013c55a0d750abfaa0b866dac3baa74",
+   "tokens_pair_equals_solo": true
   },
   "filepeer": {
    "pair_equals_solo": true,

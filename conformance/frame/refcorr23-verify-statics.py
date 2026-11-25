@@ -31,9 +31,14 @@ for scenario, expected in sorted(pins["scenarios"].items()):
     digest = hashlib.sha256(solo.encode("utf-8")).hexdigest()
     if pair != solo:
         failures.append(f"{scenario}: pair output differs from solo output")
+    if "tokens_pair_equals_solo" in expected:
+        st = got["solo"]["b_facts"].get("tokens_json")
+        pt = got["pair"]["b_facts"].get("tokens_json")
+        if st is None or pt is None or st != pt:
+            failures.append(f"{scenario}: pair token wire differs from solo token wire")
     if digest != expected["solo_sha256"]:
         failures.append(f"{scenario}: solo digest {digest} != pinned {expected['solo_sha256']}")
-    if not expected["pair_equals_solo"]:
+    if not expected["pair_equals_solo"] or ("tokens_pair_equals_solo" in expected and not expected["tokens_pair_equals_solo"]):
         failures.append(f"{scenario}: pin record itself is not green")
 if failures:
     print("REFCORR23 statics pin failures:", file=sys.stderr)
