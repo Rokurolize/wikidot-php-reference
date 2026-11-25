@@ -31,7 +31,6 @@
 
 class Text_Wiki_Parse_Math extends Text_Wiki_Parse {
 
-    static $equationsArray = array();
     
     /**
     * 
@@ -101,8 +100,12 @@ class Text_Wiki_Parse_Math extends Text_Wiki_Parse {
 	   	// handling are untouched.
 	   	$type = array_key_exists('type', $args) ? $args['type'] : 'equation';
     	
+        if (!isset($this->wiki->vars['equationsArray'])
+            || !is_array($this->wiki->vars['equationsArray'])) {
+            $this->wiki->vars['equationsArray'] = array();
+        }
         $options = array('label'=>$label, 'content'=>$content, 'id'=>$id, 'type' => $type);
-        self::$equationsArray[$label] = $id;
+        $this->wiki->vars['equationsArray'][$label] = $id;
         $id++;
         return "\n\n".$this->wiki->addToken($this->rule, $options)."\n\n";
     }

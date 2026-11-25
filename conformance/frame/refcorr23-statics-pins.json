@@ -1,0 +1,269 @@
+{
+ "driver": "harness/statics-probe.php SCENARIO solo|pair",
+ "format": "refcorr23-statics-pin-v2",
+ "invariant": "pair.b_output byte-equals solo.b_output; wire scenarios also require token-table JSON byte equality",
+ "scenarios": {
+  "code-highlighter": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_sha256": "953d8e2b7031f96af261824809a974692ae8b9de609b15e40cf2381a24ae3011"
+  },
+  "collapsible": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [
+     0
+    ],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [
+     0
+    ],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_sha256": "a332391e6c93d52412fdf503a003192df0278255432d20e6066f8c9e4858d6cc"
+  },
+  "collapsible-wire": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [
+     0
+    ],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": [],
+    "tokens_json": "{\"1\":[\"Collapsible\",{\"args\":[],\"type\":\"start\",\"count\":0,\"label_size\":null}],\"2\":[\"Collapsible\",{\"args\":[],\"type\":\"end\",\"count\":0,\"label_size\":null}],\"3\":[\"Paragraph\",{\"type\":\"start\"}],\"4\":[\"Paragraph\",{\"type\":\"end\"}],\"5\":[\"Typography\",{\"char\":\"``\"}],\"6\":[\"Typography\",{\"char\":\"''\"}],\"7\":[\"Typography\",{\"char\":\",,\"}],\"8\":[\"Typography\",{\"char\":\"''\"}],\"9\":[\"Typography\",{\"char\":\"`\"}],\"10\":[\"Typography\",{\"char\":\"'\"}],\"11\":[\"Typography\",{\"char\":\"<<\"}],\"12\":[\"Typography\",{\"char\":\">>\"}],\"13\":[\"Typography\",{\"char\":\" \"}],\"14\":[\"Typography\",{\"char\":\" \"}],\"15\":[\"Typography\",{\"char\":\"...\"}],\"16\":[\"Typography\",{\"char\":\"--\"}],\"17\":[\"Typography\",{\"char\":\"---\"}]}",
+    "tokens_sha256": "1f7340ee2837498c24c9e38461491ccc2013c55a0d750abfaa0b866dac3baa74"
+   },
+   "solo_facts": {
+    "collapsible_counts": [
+     0
+    ],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": [],
+    "tokens_json": "{\"1\":[\"Collapsible\",{\"args\":[],\"type\":\"start\",\"count\":0,\"label_size\":null}],\"2\":[\"Collapsible\",{\"args\":[],\"type\":\"end\",\"count\":0,\"label_size\":null}],\"3\":[\"Paragraph\",{\"type\":\"start\"}],\"4\":[\"Paragraph\",{\"type\":\"end\"}],\"5\":[\"Typography\",{\"char\":\"``\"}],\"6\":[\"Typography\",{\"char\":\"''\"}],\"7\":[\"Typography\",{\"char\":\",,\"}],\"8\":[\"Typography\",{\"char\":\"''\"}],\"9\":[\"Typography\",{\"char\":\"`\"}],\"10\":[\"Typography\",{\"char\":\"'\"}],\"11\":[\"Typography\",{\"char\":\"<<\"}],\"12\":[\"Typography\",{\"char\":\">>\"}],\"13\":[\"Typography\",{\"char\":\" \"}],\"14\":[\"Typography\",{\"char\":\" \"}],\"15\":[\"Typography\",{\"char\":\"...\"}],\"16\":[\"Typography\",{\"char\":\"--\"}],\"17\":[\"Typography\",{\"char\":\"---\"}]}",
+    "tokens_sha256": "1f7340ee2837498c24c9e38461491ccc2013c55a0d750abfaa0b866dac3baa74"
+   },
+   "solo_sha256": "129820900540c500916bc2332fdb516cd097e8d7c67a6bf16b3fec728b215081",
+   "solo_tokens_sha256": "1f7340ee2837498c24c9e38461491ccc2013c55a0d750abfaa0b866dac3baa74",
+   "tokens_pair_equals_solo": true
+  },
+  "filepeer": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [
+     "file:gallery"
+    ],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [
+     "file:gallery"
+    ],
+    "tabview_ids": []
+   },
+   "solo_sha256": "f223c7fd51553ce025cbc7608ffddd89fa46a9e4ea115ad9c22c023215a50714"
+  },
+  "flickrhandler": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [
+     "flickr"
+    ],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [
+     "flickr"
+    ],
+    "tabview_ids": []
+   },
+   "solo_sha256": "9c889288b5454cc910fb6edf9f15f77e88a3af3a3fb38f0019aa78c23e0b395e"
+  },
+  "freelink": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_sha256": "3cbf7daebbc9223d42c6ffc7e88a38f2bdf295ae36617be303d08213175af1a6"
+  },
+  "heading": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_sha256": "74eabd82b16022740e548c02dbef24352f7fc20b63be0c00e5dbc17cf834562e"
+  },
+  "math": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_sha256": "33618656aa784ba91ed48d6ce7ac2b6779d3d8f0b82f23e2d9ac95c15a72c7a7"
+  },
+  "mathinline": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_sha256": "dc68555b6596056454a63a0cb618ad4b10ae503aacd731489ed26df20aa42a33"
+  },
+  "modulemanager": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_sha256": "5153184a7dd30be5f9e2e4850911ff9bdccad3d05f255b47d4bfe5704970947b"
+  },
+  "newline": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_sha256": "b6c2d352397205cd1fa5767008ad51d7a4749809dc3331359d25a944d55321cb"
+  },
+  "pagepeer": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": []
+   },
+   "solo_sha256": "4ca6e75e87792ba8c36a0b706a3e040ea010db5b002abe1c15000e1eb106bd0d"
+  },
+  "tabview": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [],
+    "tabview_ids": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "solo_sha256": "f8b89368b4861930196ab8dea47179fdaf49515af787b9142f776dd48e3ffb19"
+  },
+  "userpeer": {
+   "pair_equals_solo": true,
+   "pair_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [
+     "user"
+    ],
+    "tabview_ids": []
+   },
+   "solo_facts": {
+    "collapsible_counts": [],
+    "equations": [],
+    "stub_hits": [
+     "user"
+    ],
+    "tabview_ids": []
+   },
+   "solo_sha256": "6da603a2ee86baa5cf0484dc9d3139874e80286ac6aeac1ba979ed0d92a526fb"
+  }
+ }
+}

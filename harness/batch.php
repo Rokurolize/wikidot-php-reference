@@ -19,13 +19,8 @@ ini_set('include_path', $root . PATH_SEPARATOR
 require_once dirname(__DIR__) . '/wikidot-root/lib/WDStringUtils.php';
 require_once __DIR__ . '/ozone-stubs.php';
 require_once $root . '/Text/Wiki.php';
-require_once $root . '/Text/Wiki/Parse/Default/Math.php';
-require_once $root . '/Text/Wiki/Parse/Default/Tabview.php';
 require_once __DIR__ . '/wiki-config.php';
 require_once __DIR__ . '/pages.php';
-
-$tabCounterProp = new ReflectionProperty('Text_Wiki_Parse_Tabview', '_counter');
-$tabCounterProp->setAccessible(true);
 
 $mode = $argv[1] ?? 'expand';
 $GLOBALS['REF_PAGES'] = ref_page_map();
@@ -40,15 +35,6 @@ while (($line = fgets(STDIN)) !== false) {
     if (function_exists('ref_reset_stubs')) {
         ref_reset_stubs();
     }
-    // R2-link: equation labels are document-local on live Wikidot. The
-    // fossil's Text_Wiki_Parse_Math::$equationsArray is static and would
-    // otherwise leak labels and numbers between independent batch cases,
-    // which corrupts eref differentials (a label defined in one case would
-    // resolve in a later case that has no such equation). Reset it per case.
-    // Root-owned harness matter, disclosed in conformance-refphp/R2-LINK.md;
-    // transform.php is unaffected because it renders one document per run.
-    Text_Wiki_Parse_Math::$equationsArray = array();
-    $tabCounterProp->setValue(null, 0);
     // R2-next: optional per-case page tags for the Iftags rule, R2-notes:
     // always inject a page object, with an empty tag set when the case has no
     // "tags" array. The Iftags parse rule drops its whole body when vars['page']
@@ -80,9 +66,7 @@ while (($line = fgets(STDIN)) !== false) {
             $wiki = ref_configure_wiki(new Text_Wiki());
             // R2-notes: defensive per-case reset of footnote/bibliography
             // document state. Text_Wiki::$vars is an instance property and
-            // each case gets a fresh Text_Wiki, so no leak was observed; the
-            // only process-static in this family's path is Math's label array
-            // (reset above, and also read by the Footnote render rule). These
+            // each case gets a fresh Text_Wiki, so no leak was observed. These
             // lines are behaviour-neutral insurance and are disclosed in
             // conformance-refphp/R2-NOTES.md.
             $wiki->vars['footnotes'] = array();

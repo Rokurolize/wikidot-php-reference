@@ -57,7 +57,6 @@ ini_set('include_path', $root . PATH_SEPARATOR
 require_once dirname(__DIR__) . '/wikidot-root/lib/WDStringUtils.php';
 require_once __DIR__ . '/ozone-stubs.php';
 require_once $root . '/Text/Wiki.php';
-require_once $root . '/Text/Wiki/Parse/Default/Math.php';
 require_once __DIR__ . '/wiki-config.php';
 require_once __DIR__ . '/pages.php';
 
@@ -119,12 +118,10 @@ while (($line = fgets(STDIN)) !== false) {
         // array, always injected, empty when the case has none), because
         // Iftags reads vars['page']->getTagsAsArray(); an empty page
         // object here would silently drop every positively tagged body.
-        // Math's equations map is a process-wide static, reset per case
-        // exactly as batch.php resets it, so cases cannot leak into
-        // each other.
+        // Math's equations map is document instance state, so independent
+        // cases cannot leak labels into each other.
         $caseTags = (isset($case['tags']) && is_array($case['tags'])) ? $case['tags'] : array();
         $wiki->vars['page'] = new RefPage('', 0, $caseTags);
-        Text_Wiki_Parse_Math::$equationsArray = array();
         $wiki->parse($src);
         // Split the post-parse source on the delimiter byte: parts
         // alternate text / token id / text / ... / text.
@@ -144,8 +141,10 @@ while (($line = fgets(STDIN)) !== false) {
         // the same two fields with their empty values (the map empty,
         // the counter null) because Math never runs there.
         $equations = array();
-        foreach (Text_Wiki_Parse_Math::$equationsArray as $label => $mid) {
-            $equations[] = array((string) $label, $mid);
+        if (isset($wiki->vars['equationsArray']) && is_array($wiki->vars['equationsArray'])) {
+            foreach ($wiki->vars['equationsArray'] as $label => $mid) {
+                $equations[] = array((string) $label, $mid);
+            }
         }
         // R3.6 disclosed compared-state extension (second in the R3.4
         // pattern): the NOTES family's document state joins the

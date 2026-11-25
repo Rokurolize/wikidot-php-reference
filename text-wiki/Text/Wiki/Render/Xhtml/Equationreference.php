@@ -38,8 +38,10 @@ class Text_Wiki_Render_Xhtml_Equationreference extends Text_Wiki_Render {
     
     function token($options) {
         $label = $options['label'];
-        $refs = Text_Wiki_Parse_Math::$equationsArray;
-        $id = $refs[$label];
+        $refs = isset($this->wiki->vars['equationsArray'])
+            && is_array($this->wiki->vars['equationsArray'])
+            ? $this->wiki->vars['equationsArray'] : array();
+        $id = isset($refs[$label]) ? $refs[$label] : null;
         $idPrefix = $this->wiki->getRenderConf('xhtml', 'math', 'id_prefix');
         $out = '<a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference(\'equation-' . $idPrefix . $id . '\')">' . $id . '</a>';
         
