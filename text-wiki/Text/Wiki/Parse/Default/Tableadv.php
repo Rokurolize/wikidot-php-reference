@@ -132,10 +132,23 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
         // the grammar runs at corpus scale without changing global PCRE state.
         $oldJit = ini_get('pcre.jit');
         ini_set('pcre.jit', '0');
+        // REFCORR-next framing: PREG_OFFSET_CAPTURE lets the callback see
+        // where the match sits in the source, so processPreserveBoundary()
+        // can reproduce the scanner's boundary-newline treatment. Without
+        // the offset the callback only sees $matches[0] (which starts at
+        // `[[table` and ends at `]]`), never the adjoining source newlines,
+        // so the guard in processPreserveBoundary() was dead code and the
+        // regex path dropped the scanner's blank line around a tokenized
+        // table. That blank line is what makes the following spacer line a
+        // new paragraph on live, rather than a <br /> inside the table's
+        // paragraph. The grammar itself is unchanged.
         $replaced = preg_replace_callback(
             $this->regex,
             array(&$this, 'processPreserveBoundary'),
-            $this->wiki->source
+            $this->wiki->source,
+            -1,
+            $matchCount,
+            PREG_OFFSET_CAPTURE
         );
         ini_set('pcre.jit', $oldJit);
         if ($replaced !== null) {
@@ -148,18 +161,34 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
     }
 
     /**
-     * preg_replace_callback consumes the regex's optional boundary newlines
-     * as part of the match, while the scanner preserves the adjoining source
-     * newlines around a tokenized block. Keep the two paths byte-compatible.
+     * Keep the direct regex path byte-compatible with the scanner's
+     * boundary-newline treatment. The scanner (_scanTableadv) adds one "\n"
+     * before and after a replaced table when the source has one there;
+     * that blank line is what lets the Paragraph rule close the paragraph
+     * around a table and start a fresh one for an adjacent spacer line,
+     * matching live. With PREG_OFFSET_CAPTURE the callback can see the
+     * match offset in $this->wiki->source and reproduce exactly that, while
+     * leaving the regex, process() and path selection untouched.
      */
     function processPreserveBoundary($matches)
     {
-        $replacement = $this->process($matches);
-        if (substr($matches[0], 0, 1) === "\n") {
-            $replacement = "\n" . $replacement;
+        $full = $matches[0][0];
+        $offset = $matches[0][1];
+        $plain = array();
+        foreach ($matches as $k => $m) {
+            $plain[$k] = $m[0];
         }
-        if (substr($matches[0], -1) === "\n") {
-            $replacement .= "\n";
+        $replacement = $this->process($plain);
+        if ($replacement !== $full) {
+            $src = $this->wiki->source;
+            $n = strlen($src);
+            if ($offset > 0 && $src[$offset - 1] === "\n") {
+                $replacement = "\n" . $replacement;
+            }
+            $end = $offset + strlen($full);
+            if ($end < $n && $src[$end] === "\n") {
+                $replacement .= "\n";
+            }
         }
         return $replacement;
     }
