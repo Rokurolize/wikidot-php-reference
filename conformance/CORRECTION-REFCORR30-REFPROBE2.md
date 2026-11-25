@@ -27,7 +27,7 @@ printing); their normalized image/link/literal signatures are identical.
 
 ## Confirmed defects and correction
 
-### R30-SPAN-1 — attributed whitespace-only Span is an invisible atom
+### R30-SPAN-1 — attributed horizontal-whitespace-only Span is an invisible atom
 
 Live probe `muse-probe-jpcensus-wsspan-single` renders
 `A\n[[span style="font-size:140%;"]] [[/span]]\nB` as
@@ -38,7 +38,7 @@ whitespace-only Size atom. The pre-correction reference emitted
 `<span style="font-size:140%;"></span>` on that line.
 
 `Parse/Default/Span.php` now returns a Span token of type `empty` only when
-the body is non-empty but whitespace-only and the opener retains at least one
+the body is non-empty horizontal whitespace and the opener retains at least one
 live-whitelisted attribute. The renderer emits nothing for that token type. A
 truly empty attributed span is still kept, and unattributed empty-span elision
 is unchanged.
