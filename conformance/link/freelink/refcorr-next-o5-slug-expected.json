@@ -1,0 +1,82 @@
+{
+  "o5-curly": {
+    "source": "[[[A Former O5’s Guide on How to Eat Lead and Destroy All of Your Retirement Plans]]]",
+    "source_sha256": "ed528f51935a64e89f7dfe714b678ce72f85dbaee20ea20108c3f99d3fb48383",
+    "live_href": "/a-former-o5s-guide-on-how-to-eat-lead-and-destroy-all-of-you",
+    "live_page": "adamantine-temptations-hub",
+    "evidence_kind": "cached-live-anchor",
+    "evidence": "cached-live adamantine-temptations-hub html.xmlrpc.html anchor href=/a-former-o5s-guide-on-how-to-eat-lead-and-destroy-all-of-you",
+    "expected_html": "<p><a class=\"newpage\" href=\"/a-former-o5s-guide-on-how-to-eat-lead-and-destroy-all-of-you\">A Former O5’s Guide on How to Eat Lead and Destroy All of Your Retirement Plans</a></p>",
+    "expected_html_sha256": "def017b3cd88c280161708f066cf847d81e61f3b5b9cc9fb207221d1ac436a49"
+  },
+  "end-world-curly": {
+    "source": "[[[Maybe the End of the World isn’t as Bad as it Sounds.]]]",
+    "source_sha256": "749026f45f3fdfdcba4c2dcdb705b3b4391cd944520463a05d9fc41cc9b4f922",
+    "live_href": "/maybe-the-end-of-the-world-isnt-as-bad-as-it-sounds",
+    "live_page": "just-fragments-hub",
+    "evidence_kind": "cached-live-anchor",
+    "evidence": "cached-live just-fragments-hub html.xmlrpc.html anchor href=/maybe-the-end-of-the-world-isnt-as-bad-as-it-sounds",
+    "expected_html": "<p><a class=\"newpage\" href=\"/maybe-the-end-of-the-world-isnt-as-bad-as-it-sounds\">Maybe the End of the World isn’t as Bad as it Sounds.</a></p>",
+    "expected_html_sha256": "160f1ac91a60f4e413707ca9af0930c45da0d373abaa92379d727423c53820fb"
+  },
+  "davids-proposal-curly": {
+    "source": "[[[Abraka David’s Proposal]]]",
+    "source_sha256": "81924e555a29ecdb3ad396b3f93090b97ef3731ac704a0727ce855455fa7828c",
+    "live_href": "/abraka-davids-proposal",
+    "live_page": "this-essay-is-no-joke",
+    "evidence_kind": "cached-live-anchor",
+    "evidence": "cached-live this-essay-is-no-joke html.xmlrpc.html anchor href=/abraka-davids-proposal",
+    "expected_html": "<p><a class=\"newpage\" href=\"/abraka-davids-proposal\">Abraka David’s Proposal</a></p>",
+    "expected_html_sha256": "02ad0c09bcca07abfe01fc92d1134a4a60ba69be330bc03ca8a64bf01fd59969"
+  },
+  "kill-idea-curly": {
+    "source": "[[[You Can’t Kill The Idea of Me]]]",
+    "source_sha256": "8f8f4dcfa2fc24362d749f46d3f4dcad3459bb563c8ee3c7fab5f8b2bb29fdd1",
+    "live_href": "/you-cant-kill-the-idea-of-me",
+    "live_page": "merehrabs-musings",
+    "evidence_kind": "cached-live-anchor",
+    "evidence": "cached-live merehrabs-musings html.xmlrpc.html anchor href=/you-cant-kill-the-idea-of-me",
+    "expected_html": "<p><a class=\"newpage\" href=\"/you-cant-kill-the-idea-of-me\">You Can’t Kill The Idea of Me</a></p>",
+    "expected_html_sha256": "cdd05bbd8579cd9f850f8c94308c63fa06c7161b8902193c8ce569fdddf26fb1"
+  },
+  "lions-den-curly": {
+    "source": "[[[Below the Lion’s Den]]]",
+    "source_sha256": "caa919279b04aff13abe920f72a95f5b5454e407ad1e3c65bce2d0795ff6efa5",
+    "live_href": "/below-the-lions-den",
+    "live_page": "strange-matter-writes",
+    "evidence_kind": "cached-live-anchor",
+    "evidence": "cached-live strange-matter-writes html.xmlrpc.html anchor href=/below-the-lions-den",
+    "expected_html": "<p><a class=\"newpage\" href=\"/below-the-lions-den\">Below the Lion’s Den</a></p>",
+    "expected_html_sha256": "b311d67648faf78a06efd926bea2186aad53aa3b1253339f49f4ba15712ef725"
+  },
+  "worlds-idiots-curly": {
+    "source": "[[[World’s Biggest Idiots]]]",
+    "source_sha256": "2afe636b55362ee3f55478eb5a552c292796e7a04b6c28eef209c52e1c95ceae",
+    "live_href": "/worlds-biggest-idiots",
+    "live_page": "adamantine-temptations-hub",
+    "evidence_kind": "cached-live-anchor",
+    "evidence": "cached-live adamantine-temptations-hub html.xmlrpc.html anchor href=/worlds-biggest-idiots",
+    "expected_html": "<p><a class=\"newpage\" href=\"/worlds-biggest-idiots\">World’s Biggest Idiots</a></p>",
+    "expected_html_sha256": "f0a0ee380d6a23c16bef54e0d5c0e8122f6efcb7f592e47a9367e79014e9bfeb"
+  },
+  "red-starfish-curly": {
+    "source": "[[[Who’s Afraid of a Red Starfish En Blues]]]",
+    "source_sha256": "29ceaa5c4cf96c25da97fb3f8c1bc8c90d73709084dc3a72c251675b1cb7d84c",
+    "live_href": "/whos-afraid-of-a-red-starfish-en-blues",
+    "live_page": "news-05-2025",
+    "evidence_kind": "cached-live-anchor",
+    "evidence": "cached-live news-05-2025 html.xmlrpc.html anchor href=/whos-afraid-of-a-red-starfish-en-blues",
+    "expected_html": "<p><a class=\"newpage\" href=\"/whos-afraid-of-a-red-starfish-en-blues\">Who’s Afraid of a Red Starfish En Blues</a></p>",
+    "expected_html_sha256": "f4d0b6bc8a89ba10672912f452bc08cd486b683b8c0ba35d6aa867e50df699df"
+  },
+  "straight-apostrophe-control": {
+    "source": "[[[War is Child's Play]]]",
+    "source_sha256": "bfc772f53dd70e5fda817fcff24aa96e41d2ac056750093ef9e8a945adbb299e",
+    "live_href": "/war-is-child-s-play",
+    "live_page": "let-s-go-again-shall-we",
+    "evidence_kind": "cached-live-anchor",
+    "evidence": "cached-live let-s-go-again-shall-we html.xmlrpc.html anchor href=/war-is-child-s-play",
+    "expected_html": "<p><a class=\"newpage\" href=\"/war-is-child-s-play\">War is Child's Play</a></p>",
+    "expected_html_sha256": "94e79a6781442519e34f7ae0fe7a5c8dc8c7bb473dbb1cd07ff552f2df1cccfe"
+  }
+}

@@ -1,0 +1,19 @@
+{"id": "a-real-5018-empty", "source": "@<>@"}
+{"id": "a-real-6200-gtrun", "source": "@<>>>@ {{zrainer119}}"}
+{"id": "a-real-adult-angles", "source": "@<<< [[[SCP-xxxw]]] | SCP-xxxx | [[[SCP-xxxy]]] >>>@"}
+{"id": "a-real-adult-include", "source": "@<[[include component:adult-splash slug=scp-xxxx]]>@"}
+{"id": "a-real-advanced-at", "source": "@<@@ @@>@"}
+{"id": "a-real-beast-ellipsis", "source": "@<...>@"}
+{"id": "a-real-canon-entity-gt", "source": "[[span style=\"color:#3c4d00\"]]@<&gt;>@ An exception to SCP-8402's anomaly is the thin coating of hypnum moss (//Hypnum cupressiforme//) growing from its back, shoulders, and upper arms; as this is one of the only universally observable traits of SCP-8402, staff typically refer to the entity as \"Mossback\".[[/span]]"}
+{"id": "a-real-exactly-spaces", "source": "@<        >@\"Father Piero,\" he greeted."}
+{"id": "a-real-hide-tags-include", "source": "@<[[include :scp-wiki:component:hide-tags]]>@"}
+{"id": "a-real-hornby-stars", "source": "@<**Title:** (Work Title)>@"}
+{"id": "a-real-vasilisa-nbsp", "source": "@< &nbsp; >@"}
+{"id": "a-syn-at4-inside", "source": "@<@@@@>@"}
+{"id": "a-syn-basic", "source": "@<**bold** //em// [[div]]>@"}
+{"id": "a-syn-doubleat-outside", "source": "@@foo @<x>@ bar@@"}
+{"id": "a-syn-empty", "source": "@<>@"}
+{"id": "a-syn-entity-amp", "source": "@<&amp;>@"}
+{"id": "a-syn-entity-gt", "source": "@<&gt;>@"}
+{"id": "a-syn-glued-gt", "source": "@<a>>@ tail"}
+{"id": "a-syn-unclosed-line", "source": "@<abc\ndef>@"}

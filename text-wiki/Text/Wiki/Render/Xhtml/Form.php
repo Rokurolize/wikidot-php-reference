@@ -9,8 +9,12 @@
  * per line, so this renderer emits the same pre-wrap span as the Raw rule.
  */
 if (!function_exists('wikidotEscapeRaw')) {
-    function wikidotEscapeRaw($s) {
-        return strtr($s, array(
+    // Canonical definition: Render/Xhtml/Form.php is loaded before Raw.php,
+    // so this is the copy that actually runs. REFCORR-NEXT (m2 FIX 1) adds
+    // the optional angle-raw NBSP serialization; Form's own calls pass no
+    // flag and therefore keep the original table.
+    function wikidotEscapeRaw($s, $angle = false) {
+        $table = array(
             ' ' => '&#32;',
             "\0" => ' ',
             '>' => '&gt;',
@@ -18,7 +22,9 @@ if (!function_exists('wikidotEscapeRaw')) {
             '&' => '&amp;',
             "'" => "'",
             '"' => '&quot;',
-        ));
+        );
+        if ($angle) $table["\u{00A0}"] = '&nbsp;';
+        return strtr($s, $table);
     }
 }
 

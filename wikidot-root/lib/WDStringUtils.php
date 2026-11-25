@@ -26,6 +26,15 @@
 class WDStringUtils {
 	
 	public static $CONVERT_ARRAY = array( 
+			// REFCORR-NEXT (m2 FIX 2): live deletes U+2019 (right single
+			// quotation mark / curly apostrophe) during slugification, so
+			// "O5’s" -> o5s rather than o5-s. Independent cached-live anchors
+			// confirm deletion (isn’t->isnt, David’s->davids, O5’s->o5s). The
+			// straight apostrophe U+0027 is NOT deleted: live keeps the
+			// generic punctuation->hyphen rule ("War is Child's Play" ->
+			// war-is-child-s-play), so it has no entry here. Deleting before
+			// the 60-byte freelink cut also shifts that cut one byte later.
+			'’'=>'',
 			// REFCORR13 R13-AGY2 D12: the duplicate `Ä` key collapsed under
 			// PHP array-literal last-key-wins to `Ä => A`, so `Äpfel` slugified
 			// to `apfel` while `äpfel` slugified to `aepfel`. One `Ä => Ae`
