@@ -91,8 +91,51 @@ diffs.
 
 ### Full corpus
 
-PENDING — filled in from `corpus-run-final/run-summary.json` and the movement
-analysis after the run completes.
+Command (from the lane directory):
+
+```bash
+python3 /home/roku/.local/state/wikijump/muse-bhl/criteria-drain/run_corpus.py \
+  --checkout /home/roku/.local/state/wikijump/muse-bhl/post-agy-finish/tadv-reference \
+  --out-dir /home/roku/.local/state/wikijump/muse-bhl/post-agy-finish/lanes/tadv-threshold/corpus-run-final \
+  --workers 6
+```
+
+Result in `corpus-run-final/run-summary.json`: **25,534 pages, zero errors,
+362.24 s**, checkout `6d552f01` (the REFCORR24 commit). Outcome/class counts are
+unchanged from the snapshot-48 baseline: `clean` 25,392; `near-empty-short-render`
+95; `empty-postparse-nonempty` 5; `clean-empty-source` 13; `empty-token-only` 29.
+API-scored pages 25,435 with **107 strict** and **136 userdb-masked** tidy-oracle
+matches; the pure+user slice is **95 / 122**. These are the same numbers as the
+base register.
+
+Movement comparison (`tools/score_gates.py`-style register diff, recorded in the
+lane's `corpus-movement-analysis.json`, `corpus-movement-classified.json` and
+`corpus-movement-pages.txt`) against the snapshot-48 register at
+`lanes/r3-statics/corpus-run-collapsible-final/register.jsonl` (git head
+`a3917ec`, whose tree is byte-identical to `09bb791`):
+
+- class movements: **0**
+- tidy score movements: **0**
+- error records: **0**
+- output-hash movements: **194**, all re-rendered in isolation in both the base
+  checkout and this checkout; **194/194** genuinely differ in isolation, so none
+  is a batch artifact.
+
+Every one of the 194 pages carries advanced-table source. The classifier labels
+all 194 `tableadv-frame` and finds no `manual` or `manual_or_mixed_review` page;
+157 also carry date/email constructs incidentally, but `normalized_same` is false
+for all 194, so none is a placeholder-numbering-only change. The exact movement
+is the definitional path's boundary-newline handling replacing the scanner's at
+table-adjacent block boundaries: 82 pages unwrap a `<p>…</p>` immediately *after*
+a `</table>` into a `<br />`, 36 do so immediately *before* a `<table>`, 10 unwrap
+an adjacent paragraph, 27 gain a `<br />` at a block boundary, and 39 show the
+same one-line whitespace framing variant. These are the same two path
+semantics that REFCORR22 already recorded for `adv06-midline-table`: the
+recursive grammar and the linear scanner preserve adjoining source newlines
+differently. No page newly matches or stops matching the live oracle under
+either the strict or the userdb-masked score, which is why the gate and corpus
+scores stay green. The complete per-page list with category and diff context is
+in the lane's `corpus-movement-pages.txt`.
 
 ## Residual
 
