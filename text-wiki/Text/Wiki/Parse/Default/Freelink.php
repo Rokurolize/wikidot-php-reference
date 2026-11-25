@@ -181,9 +181,14 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
         if (! $leadingSpace && freelink_is_url($trimmed)) {
             $url = $trimmed;
         } elseif ($isAbsPath) {
-            $url = (strpos($trimmed, ' ') !== false)
-                ? str_replace(' ', '%20', $trimmed)
-                : $trimmed;
+            // REFCORR32: categorized absolute page targets still canonicalize
+            // page-slug case on live (JP old:decomm:scp-723-d). Bare paths
+            // such as /Under remain case-preserved, so this is limited to
+            // colon-bearing targets.
+            $absTarget = strpos($trimmed, ':') !== false ? strtolower($trimmed) : $trimmed;
+            $url = (strpos($absTarget, ' ') !== false)
+                ? str_replace(' ', '%20', $absTarget)
+                : $absTarget;
         }
         if ($url !== null) {
             if ($labelRaw === '') {

@@ -100,7 +100,7 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
         }
         $tailAfterLead = substr($matches[2], strlen($leadSpace));
         if (!preg_match('/(?:^|\n)[ \t]*[*#]+[ \t]+$/', $matches[2])
-            && preg_match('/[ \t]+$/', $tailAfterLead, $sm)) {
+            && preg_match('/[ \t]+\z/', $tailAfterLead, $sm)) {
             $trailSpace = $sm[0];
         }
         $content = substr(
