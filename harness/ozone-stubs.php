@@ -228,6 +228,11 @@ class ModuleManager {
         // census driver emits no module body for them either, so registering
         // them removes the spurious "No such module" error block.
         'listusers', 'mailform', 'comments', 'themepreviewer',
+        'whoinvited', 'recentthreads', 'recentposts', 'managesite',
+        'forumcategory', 'forumnewthread', 'forumstart', 'forumthread',
+        'frontforum', 'membershipapply', 'sitechanges', 'userinfo',
+        'listdrafts', 'watchers', 'miniactivethreads', 'minirecentposts',
+        'minirecentthreads',
     );
     public static function instance() {
         if (self::$inst === null) {
