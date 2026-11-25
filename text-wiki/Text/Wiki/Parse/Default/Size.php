@@ -108,7 +108,25 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
         // an empty <span>. Consuming the whole construct also lets the
         // recursive parse() collapse nested pairs that become empty.
         $content = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $content);
-        $content = preg_replace('/[ \t]+(?=\n|$)/', '', $content);
+        $stripped = '';
+        $offset = 0;
+        $contentLen = strlen($content);
+        while ($offset < $contentLen) {
+            $lineEnd = strpos($content, "\n", $offset);
+            $hasNewline = $lineEnd !== false;
+            if (!$hasNewline) {
+                $lineEnd = $contentLen;
+            }
+            $line = substr($content, $offset, $lineEnd - $offset);
+            if (preg_match('/^[ \t]+$/', $line) && $hasNewline) {
+                $line = ' ';
+            } else {
+                $line = preg_replace('/[ \t]+$/', '', $line);
+            }
+            $stripped .= $line . ($hasNewline ? "\n" : '');
+            $offset = $lineEnd + 1;
+        }
+        $content = $stripped;
         if($content === ''){
             return '';
         }
@@ -136,7 +154,7 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
                 $nextStart = $lineEnd + 1;
                 if ($nextStart < $contentLen
                     && substr($content, $nextStart, 2) === '= ') {
-                    $split = $lineStart - 1;
+                    $split = $lineStart;
                     break;
                 }
             }
@@ -156,7 +174,8 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
         
         if ($split !== null) {
             return $start . substr($content, 0, $split) . $end
-                . substr($content, $split);
+                . substr($content, $split)
+                . $this->wiki->addToken($this->rule, array('type' => 'end'));
         }
         return $start . $content  .$end;
 

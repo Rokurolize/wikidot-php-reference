@@ -1,0 +1,22 @@
+{
+ "sz-divalign-container": {
+  "fullname": "muse-probe-s3-coll03-sz-divalign-container",
+  "html": "<p><span style=\"font-size:75%;\"><br /></span></p>\n<div style=\"text-align: center;\"><span style=\"font-size:75%;\"><br />\n<br /></span>\n<p><span style=\"font-size:75%;\">A<br /></span></p>\n<p style=\"text-align: center;\">B</p>\n<p>C</p>\n</div>\n<br />",
+  "html_sha256": "0ef2111bbde20f29a76fa808c97ecd65ca5a60c68711317a4fce7c548bc50b56",
+  "source": "[[size 75%]]\n[[=]]\nA\n@@@@\n= B\nC\n[[/=]]\n[[/size]]",
+  "source_sha256": "cd2e0e3736d0fef580bfdd2dc49156a74fb3c6a1b09cc59b084540e584f05175",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "sz-quote-blank": {
+  "fullname": "muse-probe-s3-coll03-sz-quote-blank",
+  "html": "<blockquote>\n<p><span style=\"font-size:75%;\">a<br />\n<br />\nb</span></p>\n</blockquote>",
+  "html_sha256": "b62feb0b916f9672bb1c16849de4b243e3922904f7472530bf96ab7c2b30cecd",
+  "source": "[[size 75%]]\n> a\n>  \n> b\n[[/size]]",
+  "source_sha256": "101425c60db05f2da8d79f4e5d7d4dbab2935c13089a92330e462e9b32e13ab9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

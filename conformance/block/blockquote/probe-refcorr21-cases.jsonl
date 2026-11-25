@@ -1,0 +1,3 @@
+{"id": "bq-blank-plain-two-space", "source": "> a\n>  \n> b"}
+{"id": "bq-blank-plain-one-space", "source": "> a\n> \n> b"}
+{"id": "bq-blank-plain-three-space", "source": "> a\n>   \n> b"}

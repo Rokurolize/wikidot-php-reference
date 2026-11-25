@@ -1,0 +1,32 @@
+{
+ "bq-blank-plain-two-space": {
+  "fullname": "muse-probe-r1-refcorr21-bq-blank-plain-two-space",
+  "html": "<blockquote>\n<p>a<br />\n<br />\nb</p>\n</blockquote>",
+  "html_sha256": "adcc94ef305cf565321f62620c816a252d624dec45510399ee6a4945676f78ae",
+  "source": "> a\n>  \n> b",
+  "source_sha256": "42c0404711e169f99dbff21eac66f24334e5f9ef1b8239fe314c79bbb71463fb",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "bq-blank-plain-one-space": {
+  "fullname": "muse-probe-r1-refcorr21-bq-blank-plain-one-space",
+  "html": "<blockquote>\n<p>a</p>\n<p>b</p>\n</blockquote>",
+  "html_sha256": "b16628c9ad4497daca02e4d603f2a0d8a1a690475aa4fc007069ea7e36712193",
+  "source": "> a\n> \n> b",
+  "source_sha256": "e0ed67502d1f44d3e055e1738ede28b5e56cb3dcb002684bf100a3627278aa50",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "bq-blank-plain-three-space": {
+  "fullname": "muse-probe-r1-refcorr21-bq-blank-plain-three-space",
+  "html": "<blockquote>\n<p>a<br />\n<br />\nb</p>\n</blockquote>",
+  "html_sha256": "adcc94ef305cf565321f62620c816a252d624dec45510399ee6a4945676f78ae",
+  "source": "> a\n>   \n> b",
+  "source_sha256": "d84659d04d511f0526cb420ee90cc12f4d03b8e303a3ac2e14846953774cda24",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
