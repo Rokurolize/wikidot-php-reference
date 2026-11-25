@@ -40,9 +40,16 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                 $nl = strpos($src, "\n", $i + 2);
                 if ($close !== false && ($nl === false || $close < $nl)) {
                     $body = substr($src, $i + 2, $close - ($i + 2));
+                    // REFCORR-NEXT (m2 FIX 1): live Wikidot decodes
+                    // semicolon-terminated HTML entities in the angle-raw
+                    // body before the raw-escape/serialize step. ftml mirrors
+                    // this in decode_semicolon_entities(); the @@...@@ form
+                    // deliberately does not decode. Single left-to-right
+                    // pass, unknown/unterminated entities preserved.
+                    $body = wikidotDecodeRawEntities($body);
                     $out .= $this->wiki->addToken(
                         $this->rule,
-                        array('text' => $body),
+                        array('text' => $body, 'angle' => true),
                         false,
                         substr($src, $i, $close + 2 - $i)
                     );
@@ -240,5 +247,66 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
     private function surplusCloser($closeRun) {
         $c = $closeRun;
         return $c <= 3 ? $c : max(0, $c - 4);
+    }
+}
+
+if (!function_exists('wikidotDecodeRawEntities')) {
+    /**
+     * REFCORR-NEXT (m2 FIX 1). Mirror of ftml's
+     * parsing/rule/impls/entity.rs::decode_semicolon_entities(), which live
+     * Wikidot applies to @<...>@ bodies: one left-to-right pass; for each
+     * '&' the next ';' ends the candidate entity body, and only a body that
+     * names a real HTML entity (named or numeric, with the semicolon) is
+     * replaced. The decoded text is never re-scanned, so '&amp;gt;' becomes
+     * the literal text '&gt;' rather than '>'. Unknown and unterminated
+     * entities stay byte-identical. The @@...@@ form does not call this.
+     */
+    function wikidotDecodeRawEntities($s) {
+        $offset = 0;
+        $start = 0;
+        $out = null;
+        while (($amp = strpos($s, '&', $offset)) !== false) {
+            $semi = strpos($s, ';', $amp + 1);
+            if ($semi === false) break;
+            $body = substr($s, $amp + 1, $semi - ($amp + 1));
+            $decoded = wikidotDecodeRawEntityBody($body);
+            if ($decoded !== null) {
+                if ($out === null) $out = '';
+                $out .= substr($s, $start, $amp - $start) . $decoded;
+                $start = $semi + 1;
+            }
+            $offset = $semi + 1;
+        }
+        if ($out === null) return $s;
+        return $out . substr($s, $start);
+    }
+
+    /**
+     * Decode one semicolon-delimited entity body, or return null when the
+     * body is not a real entity. Numeric spellings are restricted to the
+     * ftml/live forms: '#' followed by decimal digits, or '#x' followed by
+     * hex digits. PHP's html_entity_decode is used as the WHATWG name table.
+     */
+    function wikidotDecodeRawEntityBody($body) {
+        if ($body === '') return null;
+        // A candidate body cannot itself contain an ampersand: ftml's scan
+        // takes the next ';' as the candidate end and rejects such a body,
+        // and PHP would otherwise decode a semicolon-less trailing entity
+        // (e.g. '&gt&gt;'). Stay on the conservative, witnessed side.
+        if (strpos($body, '&') !== false) return null;
+        if ($body[0] === '#') {
+            $rest = substr($body, 1);
+            $hex = (strlen($rest) > 1 && $rest[0] === 'x');
+            $digits = $hex ? substr($rest, 1) : $rest;
+            if ($digits === '') return null;
+            if ($hex) {
+                if (!ctype_xdigit($digits)) return null;
+            } else {
+                if (!ctype_digit($digits)) return null;
+            }
+        }
+        $candidate = '&' . $body . ';';
+        $decoded = html_entity_decode($candidate, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        return ($decoded === $candidate) ? null : $decoded;
     }
 }

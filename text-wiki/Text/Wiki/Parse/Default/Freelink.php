@@ -300,6 +300,13 @@ function freelink_is_abs_path($s)
 function freelink_transliterate($s)
 {
     static $map = array(
+        // REFCORR-NEXT (m2 FIX 2): live deletes U+2019 during slugification
+        // (O5’s -> o5s; independent witnesses isn’t->isnt, David’s->davids),
+        // rather than routing it through the unmapped-character -> ' '
+        // separator fallback, which produced o5-s. The straight apostrophe
+        // U+0027 is ASCII and stays on the pass-through arm, so live's
+        // "War is Child's Play" -> war-is-child-s-play is preserved.
+        '’' => '',
         'À' => 'a',
         'Á' => 'a',
         'Â' => 'a',
