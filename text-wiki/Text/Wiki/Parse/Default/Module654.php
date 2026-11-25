@@ -67,12 +67,20 @@ class Text_Wiki_Parse_Module654 extends Text_Wiki_Parse {
      */
     
     function process($matches) {
-        
+        $rawBody = isset($matches[3]) ? $matches[3] : '';
         $moduleName = trim($matches[1]);
         
         // are there additional attribute arguments?
         $attr = trim($matches[2]);
         
+        if ($rawBody !== '' && $this->textHasTokenRule($rawBody, 'Html')) {
+            $options = array('moduleName' => $moduleName, 'attr' => $attr,
+                'module_body' => '');
+            $closer = substr($matches[0], -11);
+            return "\n\n" . $this->wiki->addToken($this->rule, $options) . "\n\n"
+                . $rawBody . $closer;
+        }
+
         $body = trim($matches[3]); // optional module "body" between tags
         
 
