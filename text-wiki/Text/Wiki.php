@@ -1134,6 +1134,69 @@ class Text_Wiki {
     }
 
     /**
+     * Whether a rendered TOC title still carries whitespace that live's
+     * purifyHtml pass would collapse. Toc titles are produced at render time
+     * from an attribute, so Tighten's residual-text whitespace fold never
+     * reaches them.
+     */
+    function outputHasUnpurifiedTocTitleWhitespace($html)
+    {
+        if (! preg_match_all('/<div id="toc"(?:\s[^>]*)?>\s*<div id="toc-action-bar">.*?<\/div>\s*<div class="title">(.*?)<\/div>/s', $html, $matches)) {
+            return false;
+        }
+        foreach ($matches[1] as $title) {
+            if (trim(preg_replace('/\s+/', ' ', $title)) !== $title) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Whether a font-size span is still open at a paragraph end. Size is an
+     * inline construct, but Stage 1 can pair it across a blank line; live's
+     * purifyHtml repair closes and reopens the span in the separate
+     * paragraphs instead of emitting crossing tags.
+     */
+    function outputHasSizeParagraphCrossing($html)
+    {
+        if (! preg_match_all('/<(\/?)(span|p)\b([^>]*)>/i', $html, $matches, PREG_SET_ORDER)) {
+            return false;
+        }
+        $stack = array();
+        foreach ($matches as $m) {
+            $closing = $m[1] === '/';
+            $tag = strtolower($m[2]);
+            if (! $closing) {
+                $type = $tag;
+                if ($tag === 'span' && strpos($m[3], 'font-size:') !== false) {
+                    $type = 'size';
+                }
+                $stack[] = $type;
+                continue;
+            }
+            if ($tag === 'p') {
+                if (in_array('size', $stack, true)) {
+                    return true;
+                }
+                while ($stack) {
+                    if (array_pop($stack) === 'p') {
+                        break;
+                    }
+                }
+                continue;
+            }
+            // closing span: pop it when well-formed, otherwise leave the
+            // stack intact so a following block boundary still reports the
+            // crossing that made it malformed.
+            if ($stack && (end($stack) === 'span' || end($stack) === 'size')) {
+                array_pop($stack);
+            }
+        }
+        return false;
+    }
+
+    /**
     *
     * Renders tokens back into the source text, based on the requested format.
     *
@@ -1250,6 +1313,19 @@ class Text_Wiki {
 		// C-SUSPECT-XRULE-4: NUL pair matches Render/Xhtml/Toc.php's sentinel.
 		$d = "\x00";
 		$output = preg_replace_callback("/$d$d(.*?)$d$d/s", array($this, 'strip'), $output);
+
+        // REFCORR30: live passes every rendered fragment through
+        // WikiTransformation::purifyHtml. The reference models the common
+        // whitespace consequences in Tighten, but two render-time surfaces
+        // still need the real repair pass: whitespace inside a TOC title
+        // (generated from an attribute after Tighten has run) and a Size
+        // scope left open across a paragraph boundary. Apply the existing
+        // tidy-backed purifier only when one of those unrepaired shapes is
+        // present, so well-formed documents keep their established frame.
+        if ($this->outputHasUnpurifiedTocTitleWhitespace($output)
+            || $this->outputHasSizeParagraphCrossing($output)) {
+            $output = $this->purifyRecoveredHtml($output);
+        }
 
         // return the rendered source text.
         return $output;

@@ -1,0 +1,31 @@
+[
+ {
+  "name": "code",
+  "cases": 68,
+  "diff": []
+ },
+ {
+  "name": "toc",
+  "cases": 56,
+  "diff": []
+ },
+ {
+  "name": "gallery",
+  "cases": 88,
+  "diff": []
+ },
+ {
+  "name": "size",
+  "cases": 80,
+  "diff": [
+   "sz69-list-in-size",
+   "sz70-size-crosses-div",
+   "sz75-list-bold-close"
+  ]
+ },
+ {
+  "name": "listblocks",
+  "cases": 50,
+  "diff": []
+ }
+]

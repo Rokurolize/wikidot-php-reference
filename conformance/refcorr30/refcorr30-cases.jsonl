@@ -1,0 +1,5 @@
+{"id":"r30-toc-title-space-matrix","source":"[[toc title=\" leading\"]]\n\n+ A\n\n[[toc title=\"trailing \"]]\n\n+ B\n\n[[toc title=\"in  ner\"]]\n\n+ C\n\n[[toc title=\"   \"]]\n\n+ D\n\n[[toc title=\"\ttabbed\t\"]]\n\n+ E\n\n[[toc title=\"  padded  \"]]\n\n+ F"}
+{"id":"r30-size-blank-matrix","source":"S1 two-blank\n[[size 90%]]a\n\n\nb[[/size]]\nS2 leading-blank\n[[size 90%]]\n\na[[/size]]\nS3 trailing-blank\n[[size 90%]]a\n\n[[/size]]\nS4 three-paragraphs\n[[size large]]a\n\nb\n\nc[[/size]]\nS5 nested-inner-cross\n[[size 90%]]a[[size 80%]]x\n\ny[[/size]]b[[/size]]\nS6 single-newline-control\n[[size 90%]]a\nb[[/size]]"}
+{"id":"r30-toc-title-control","source":"[[toc title=\"Control\"]]\n\n+ Alpha"}
+{"id":"r30-size-single-newline-control","source":"[[size 90%]]line1\nline2[[/size]]"}
+{"id":"r30-span-font-size-blank","source":"[[span style=\"font-size:medium\"]]line1\n\nline2[[/span]]"}
