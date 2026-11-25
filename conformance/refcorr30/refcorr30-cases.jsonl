@@ -7,3 +7,5 @@
 {"id":"r30-span-whitespace-only","source":"A\n[[span style=\"font-size:140%;\"]] [[/span]]\nB"}
 {"id":"r30-span-class-blank","source":"[[span class=\"cross-a\"]]line1\n\nline2[[/span]]"}
 {"id":"r30-span-color-blank","source":"[[span style=\"color:red;\"]]line1\n\nline2[[/span]]"}
+{"id":"r30-span-class-single-newline-control","source":"[[span class=\"cross-a\"]]line1\nline2[[/span]]"}
+{"id":"r30-span-color-single-newline-control","source":"[[span style=\"color:red;\"]]line1\nline2[[/span]]"}

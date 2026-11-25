@@ -104,7 +104,7 @@ this is intentionally not a global re-indenting purify pass.
 - `conformance/refcorr30/refcorr30-cases.jsonl` — two positive live matrices,
   two explicit/font-entity positive controls, the horizontal-whitespace-only attributed
   Span positive control, two verifier-named class/color span-crossing witnesses,
-  and two negative controls.
+  and four negative controls.
 - `conformance/refcorr30/refcorr30-expected.json` — byte-level corrected output;
   the seven probe-backed positive pins are exact live bytes; the two widened
   class/color witnesses pin the verifier-provided purify-oracle bytes and cite
@@ -112,11 +112,11 @@ this is intentionally not a global re-indenting purify pass.
 - `conformance/refcorr30/refcorr30-captures.json` — the raw valid focused live
   captures cited by the pins.
 - `conformance/refcorr30/verify_refcorr30.py` — executable checker.
-  Current result: **9/9 exact**.
+  Current result: **11/11 exact**.
 
 ## Validation
 
-- REFCORR30 pins: **9/9 exact**.
+- REFCORR30 pins: **11/11 exact**.
 - Frozen gates after correction: `S_local_71` **71/71**, `S_diag_44` **44/44**,
   `S_holdout_step4_150` **150/150**, and `S_holdout_fresh_150` **150/150**, zero
   diffs in each set.

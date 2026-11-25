@@ -39,5 +39,13 @@
  },
  "r30-span-color-blank": {
   "html": "<p><span style=\"color:red;\">line1</span></p>\n<p><span style=\"color:red;\">line2</span></p>"
+ },
+ "r30-span-class-single-newline-control": {
+  "html": "<p><span class=\"cross-a\">line1<br />\nline2</span></p>",
+  "evidence": "negative no-trigger control; well-formed single-newline span keeps the established reference frame"
+ },
+ "r30-span-color-single-newline-control": {
+  "html": "<p><span style=\"color:red;\">line1<br />\nline2</span></p>",
+  "evidence": "negative no-trigger control; well-formed single-newline span keeps the established reference frame"
  }
 }

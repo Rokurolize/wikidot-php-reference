@@ -11,5 +11,9 @@
   "oracle_html": "<p><span style=\"color:red;\">line1</span></p>\n<p><span style=\"color:red;\">line2</span></p>",
   "evidence": "verifier witness B; settled live purifyHtml model, no fresh fetch"
  },
- "verification_record": "/home/roku/.local/state/wikijump/muse-bhl/verify-refprobe2-content/VERIFY-REFPROBE2-CONTENT.md"
+ "verification_record": "/home/roku/.local/state/wikijump/muse-bhl/verify-refprobe2-content/VERIFY-REFPROBE2-CONTENT.md",
+ "negative_controls": {
+  "r30-span-class-single-newline-control": "well-formed class span; no purify trigger, frame unchanged",
+  "r30-span-color-single-newline-control": "well-formed color span; no purify trigger, frame unchanged"
+ }
 }
