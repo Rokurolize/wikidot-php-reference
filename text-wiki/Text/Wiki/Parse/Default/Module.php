@@ -41,6 +41,10 @@ class Text_Wiki_Parse_Module extends Text_Wiki_Parse {
      * 
      */
     
+    // REFCORR29: the body closer is a block closer and is line-start
+    // anchored on live. Without the anchor a quoted example such as
+    // "> [[/module]]" later in the page closes an earlier standalone
+    // module and swallows the intervening body (JP corpus oem-hub).
     // R2 MODULE CORRECTION (2026-11-20): the fossil's optional body group used
     // (.*?), so an empty body still consumed the [[/module]] closer. Live
     // leaves that closer as literal text for both unknown and known modules
@@ -50,7 +54,7 @@ class Text_Wiki_Parse_Module extends Text_Wiki_Parse {
     // same literal closer). Requiring one or more body characters makes the
     // closer survive when the body is empty; non-empty bodies and all other
     // matching behavior are unchanged.
-    public $regex = "/^\[\[module\s([a-z0-9_\-\/]+)(\s+.*?)?\]\] *\n(?:(.+?)\[\[\/module\]\])?/ism";
+    public $regex = "/^\[\[module\s([a-z0-9_\-\/]+)(\s+.*?)?\]\] *\n(?:(.+?)^\[\[\/module\]\])?/ism";
 
     /**
      * 

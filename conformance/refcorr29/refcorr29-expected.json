@@ -1,0 +1,38 @@
+{
+  "r29-div-scored-blockquote": {
+    "html": "<div class=\"red\"><blockquote><p>one</p>\n\n<p>two</p>\n\n</blockquote>\n</div>"
+  },
+  "r29-embed-alexa": {
+    "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>"
+  },
+  "r29-embed-google-gadget": {
+    "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>"
+  },
+  "r29-embed-legacy-youtube-object": {
+    "html": "<div class=\"error-block\">Sorry, no match for the embedded content.</div>"
+  },
+  "r29-list-nested-next-line": {
+    "html": "<ul>\n<li style=\"color: red;\">item2<br />\n<ol>\n<li>item2.1</li>\n<li>item2.2</li>\n</ol>\n</li>\n</ul><br />"
+  },
+  "r29-list-nested-same-line": {
+    "html": "<ul>\n<li>x<ul>\n<li>y</li>\n</ul>\n</li>\n</ul><br />"
+  },
+  "r29-module-quoted-closer": {
+    "html": "<div style=\"text-align: right;\">þmodule \"Rate\"þ</div><br />\nbody<blockquote><p>[[module CSS]]<br />\nx<br />\n[[/module]]</p>\n\n</blockquote>\n<p>tail</p>"
+  },
+  "r29-size-empty-nonzero": {
+    "html": "<p>A<br />\n<br />\nB</p>"
+  },
+  "r29-size-empty-nospace": {
+    "html": "<p>A<br />\n<br />\nB</p>"
+  },
+  "r29-size-empty-single": {
+    "html": "<p>A<br />\n<br />\nB</p>"
+  },
+  "r29-size-empty-two": {
+    "html": "<p>A<br />\n<br />\n<br />\nB</p>"
+  },
+  "r29-size-empty-two-blank": {
+    "html": "<p>A<br />\n<br />\n</p>\n\n<p>B</p>"
+  }
+}
