@@ -248,6 +248,7 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
             $q = preg_quote($delim, '/');
             $parts = preg_split('/(' . $q . '[0-9]+' . $q . ')/', $content, -1, PREG_SPLIT_DELIM_CAPTURE);
             $divDepth = 0;
+            $quoteDepth = 0;
             $body = '';
             $d0Buf = '';
             $flushD0 = function ($s, $isFirst, $isLast) {
@@ -271,7 +272,7 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
                     $tok = isset($this->wiki->tokens[$tid]) ? $this->wiki->tokens[$tid] : null;
                     if ($tok !== null && $tok[0] === 'Div' && isset($tok[1]['type'])) {
                         if ($tok[1]['type'] === 'start') {
-                            if ($divDepth === 0) {
+                            if ($divDepth === 0 && $quoteDepth === 0) {
                                 $body .= $flushD0($d0Buf, !$seenAny, false);
                                 $d0Buf = '';
                                 $seenAny = true;
@@ -285,8 +286,29 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
                             continue;
                         }
                     }
+                    // REFCORR29: Blockquote runs are already tokenized before
+                    // Div. Blank lines inside them are quote paragraph
+                    // separators, not scored-div layout whitespace, so the
+                    // stripper must treat the quote body as opaque too
+                    // (JP corpus colors).
+                    if ($tok !== null && $tok[0] === 'Blockquote' && isset($tok[1]['type'])) {
+                        if ($tok[1]['type'] === 'start') {
+                            if ($divDepth === 0 && $quoteDepth === 0) {
+                                $body .= $flushD0($d0Buf, !$seenAny, false);
+                                $d0Buf = '';
+                                $seenAny = true;
+                            }
+                            $quoteDepth++;
+                            $body .= $part;
+                            continue;
+                        } elseif ($tok[1]['type'] === 'end' && $quoteDepth > 0) {
+                            $quoteDepth--;
+                            $body .= $part;
+                            continue;
+                        }
+                    }
                 }
-                if ($divDepth === 0) {
+                if ($divDepth === 0 && $quoteDepth === 0) {
                     $d0Buf .= $part;
                 } else {
                     $body .= $part;

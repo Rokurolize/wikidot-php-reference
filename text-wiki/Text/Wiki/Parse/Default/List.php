@@ -1045,12 +1045,18 @@ $2$3[[/li]]
             $nlTok = $this->wiki->addToken($this->rule, array('type' => 'explicit_raw_nl'));
             $leadBeforeLiClose = "\n";
             $b = $prefixText . $nlTok . $natInfo['str'];
-        } elseif (preg_match('/^(.*?)\n(\x02EXPLIST_\d+\x03)\s*$/s', $b, $em)) {
+        } elseif (preg_match('/^(.*?)(\s*)(\x02EXPLIST_\d+\x03)\s*$/s', $b, $em)) {
+            // REFCORR29: when a nested explicit list is the final structural
+            // child, indentation before its placeholder and same-line opener
+            // forms have the same close discipline as the exact-newline form:
+            // the parent item close is structural and no trailing visible
+            // break follows the nested list (JP wiki-syntax:lists/side). A
+            // same-line nested opener does not add a break before the child.
             $prefixText = $em[1];
-            $ph = $em[2];
+            $ph = $em[3];
             $nInfo = $nestedMap[$ph];
             $this->wiki->tokens[$nInfo['end_key']][1]['trail'] = "\n";
-            $brTok = $this->wiki->addToken('Newline', array());
+            $brTok = ($em[2] === '') ? '' : $this->wiki->addToken('Newline', array());
             $b = $prefixText . $brTok . $nInfo['str'];
         } else {
             if (substr($b, -1) === "\n") {

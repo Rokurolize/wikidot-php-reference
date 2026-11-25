@@ -127,8 +127,15 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
             $offset = $lineEnd + 1;
         }
         $content = $stripped;
-        if($content === ''){
-            return '';
+        if($content === '' || $this->_onlyEmptySizeAtoms($content)){
+            // REFCORR29: live does not serve the empty element, but the
+            // whitespace-only construct is still an inline atom while the
+            // Newline and Paragraph rules run. JP corpus pages use such
+            // size-only lines as vertical spacing; deleting the construct
+            // here collapses adjacent source newlines and loses live's
+            // <br /> / empty-paragraph framing. Claim it with a token whose
+            // renderer emits nothing instead.
+            return $this->wiki->addToken($this->rule, array('type' => 'empty'));
         }
 
         $split = null;
@@ -179,6 +186,27 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
         }
         return $start . $content  .$end;
 
+    }
+
+    /**
+     * Whether a nested Size body consists only of horizontal whitespace and
+     * empty-size placeholder atoms already produced by this rule. Such a
+     * body is itself invisible, but must retain one atom for line framing;
+     * without this recursion the nested empty-pair suppression settled in
+     * R2-contain would regress to an empty outer span.
+     */
+    private function _onlyEmptySizeAtoms($content) {
+        $rest = preg_replace_callback(
+            '/' . preg_quote($this->wiki->delim, '/') . '([0-9]+)'
+                . preg_quote($this->wiki->delim, '/') . '/',
+            function ($m) {
+                $token = isset($this->wiki->tokens[(int)$m[1]])
+                    ? $this->wiki->tokens[(int)$m[1]] : null;
+                return ($token !== null && $token[0] === 'Size'
+                    && isset($token[1]['type']) && $token[1]['type'] === 'empty')
+                    ? '' : $m[0];
+            }, $content);
+        return $rest !== $content && preg_match('/^[ \t]*$/', $rest) === 1;
     }
     
     function parse(){
