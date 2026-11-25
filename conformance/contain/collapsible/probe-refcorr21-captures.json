@@ -1,0 +1,32 @@
+{
+ "coll-cross-inner": {
+  "fullname": "muse-probe-s3-coll03-coll-cross-inner",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:120%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:120%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></span></div>\n<div class=\"collapsible-block-content\">\n<p><span style=\"font-size:120%;\">hello</span></p>\n</div>\n</div>\n</div>",
+  "html_sha256": "8641090dda6c146fc7c4914cafa4fd5892d7a4c7d0cc376f66f47d727d1e0ad3",
+  "source": "[[size 120%]][[collapsible]]hello[[/size]][[/collapsible]]",
+  "source_sha256": "397aab00b989c9cbe75e9b45586fcd020239d029c07f0b9eac7bafb9a295be73",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "coll-nested-whole": {
+  "fullname": "muse-probe-s3-coll03-coll-nested-whole",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:120%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:120%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></span></div>\n<div class=\"collapsible-block-content\">\n<p><span style=\"font-size:120%;\">hello</span></p>\n</div>\n</div>\n</div>",
+  "html_sha256": "8641090dda6c146fc7c4914cafa4fd5892d7a4c7d0cc376f66f47d727d1e0ad3",
+  "source": "[[size 120%]][[collapsible]]hello[[/collapsible]][[/size]]",
+  "source_sha256": "93b9b5521e9d1835a2a3ffd3a1bc3184761ec50c0f3d51fa235cacb5bd402911",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "coll-generalized-late": {
+  "fullname": "muse-probe-s3-coll03-coll-generalized-late",
+  "html": "<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:120%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">S</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:120%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">H</a></span></div>\n<div class=\"collapsible-block-content\">\n<p><span style=\"font-size:120%;\">hello</span></p>\n</div>\n</div>\n</div>\n<span style=\"font-size:120%;\"><br /></span>",
+  "html_sha256": "2ee96c210ae8bf11cdcc6906c080875ca13107fdadae22d437066e5475f38fc4",
+  "source": "[[size 120%]][[collapsible show=\"S\" hide=\"H\"]]\nhello\n[[/collapsible]]\n[[/size]]",
+  "source_sha256": "42f83292b48464a15269e39fefa665d2e087734e319ccfe1b09f03e534ddac73",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

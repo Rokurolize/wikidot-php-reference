@@ -1,0 +1,3 @@
+{"id": "coll-cross-inner", "source": "[[size 120%]][[collapsible]]hello[[/size]][[/collapsible]]"}
+{"id": "coll-nested-whole", "source": "[[size 120%]][[collapsible]]hello[[/collapsible]][[/size]]"}
+{"id": "coll-generalized-late", "source": "[[size 120%]][[collapsible show=\"S\" hide=\"H\"]]\nhello\n[[/collapsible]]\n[[/size]]"}
