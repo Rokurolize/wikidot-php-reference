@@ -122,5 +122,44 @@ diffs.
 
 ### Full corpus
 
-See RESULT.md in the lane for the 25,534-page corpus run and the per-movement
-adjudication against cached live. Digest: (to be filled after the run).
+Command (from the lane directory):
+
+```bash
+python3 /home/roku/.local/state/wikijump/muse-bhl/criteria-drain/run_corpus.py \
+  --checkout /home/roku/.local/state/wikijump/muse-bhl/post-agy-finish/r5-reference \
+  --out-dir /home/roku/.local/state/wikijump/muse-bhl/post-agy-finish/lanes/r5-framing/corpus-run-final \
+  --workers 6
+```
+
+Result in `corpus-run-final/run-summary.json`: **25,534 pages, zero errors,
+339.8 s**, checkout `f219ea14` (the fix commit). Outcome/class counts are
+identical to the pristine snapshot-49 baseline: `clean` 25,392;
+`near-empty-short-render` 95; `empty-postparse-nonempty` 5;
+`clean-empty-source` 13; `empty-token-only` 29. API-scored 25,435 with 107
+strict and 136 userdb-masked tidy matches; the pure+user slice is 95 / 122 —
+the same scores as the baseline register. Class movements **0**, tidy score
+movements **0**, error records **0**.
+
+Output-hash movements against the pristine snapshot-49 register
+(`lanes/tadv-threshold/corpus-run-final/register.jsonl`, git head `6d552f01`,
+tree identical to snapshot-49): **221**. Of these, 186 are pages from the
+REFCORR24 194-movement list (185 byte-identical to the snapshot-48
+scanner-based output) and 35 are newly moved small pages below the old split —
+the below-threshold scope witnesses. Every movement was re-rendered in
+isolation in the baseline, the fixed tree and with the forced linear scanner;
+all 221 are scanner-aligned under the conformance canon (220 byte-identical to
+the forced scanner, one differing only by one serving-layer newline, canonically
+equal), none is a batch artifact. Judged on raw cached-live framing bytes:
+
+- **214** movements move the table-adjacent framing distance to live down;
+- **6** are framing-neutral to live (the same mechanism at a boundary where
+  live keeps neither a break nor an empty paragraph; the fixed output equals
+  the forced scanner's on all six);
+- **1** (`the-barrow-station-incident-part-ii`) has no cached live capture (its
+  live page now 404s); it is a byte-exact restoration of the snapshot-48
+  scanner output, `</table><br /><div>` → `</table><div>`, the same category the
+  verifier settled on `a-brief-overview-of-antimemetic-hazards`, and is
+  adjudicated by that pin category.
+- **0** unexplained or live-diverging movements.
+
+Full per-page adjudication: `lanes/r5-framing/movement-adjudication-final.json`.
