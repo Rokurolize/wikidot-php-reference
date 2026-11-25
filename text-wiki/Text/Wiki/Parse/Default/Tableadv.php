@@ -113,25 +113,37 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
     }
 
     function parse() {
-        // REFCORR22 R2: the recursive expression is the behavioral grammar.
-        // It backtracks inside ambiguous quoted table heads, so the
-        // no-newline quote witnesses pair their nested opener with the close
-        // inside the quoted text and leave the trailing quote/brackets in the
-        // outer cell. The linear scanner below is retained as the large-input
-        // fallback that avoids PCRE recursion failure on corpus-scale pages;
-        // small inputs use the grammar itself rather than the scanner's
-        // first-nested-match approximation.
-        if (strlen($this->wiki->source) <= 8192) {
-            $replaced = preg_replace_callback(
-                $this->regex,
-                array(&$this, 'processPreserveBoundary'),
-                $this->wiki->source
-            );
-            if ($replaced !== null) {
-                $this->wiki->source = $replaced;
-                return;
-            }
+        // REFCORR22 R2 established the recursive expression as the behavioral
+        // grammar: it backtracks inside ambiguous quoted table heads, pairing
+        // the nested opener with the close inside the quoted text and leaving
+        // the trailing quote/brackets in the outer cell. REFCORR24 removes the
+        // 8192-byte split that sent larger inputs to the linear scanner, whose
+        // first-nested-match head approximation left those same quoted-head
+        // tables literal. Fresh live evidence (the muse-probe-tadv-thr-*
+        // witnesses, stage sizes 8100..16000) shows Wikidot parses them at
+        // every size, so the grammar must run at every size too.
+        //
+        // The only reason the grammar was withheld from large inputs was
+        // PCRE JIT stack exhaustion (PREG_JIT_STACKLIMIT_ERROR), not a grammar
+        // mismatch. The JIT compiler's fixed stack is the limiting resource;
+        // the interpreted PCRE path honors the much larger
+        // pcre.backtrack_limit / pcre.recursion_limit and completes the same
+        // match. Disable JIT only for this call and restore it immediately, so
+        // the grammar runs at corpus scale without changing global PCRE state.
+        $oldJit = ini_get('pcre.jit');
+        ini_set('pcre.jit', '0');
+        $replaced = preg_replace_callback(
+            $this->regex,
+            array(&$this, 'processPreserveBoundary'),
+            $this->wiki->source
+        );
+        ini_set('pcre.jit', $oldJit);
+        if ($replaced !== null) {
+            $this->wiki->source = $replaced;
+            return;
         }
+        // Retain the linear scanner solely as a last-resort fallback if PCRE
+        // itself reports an error even on the interpreted path.
         $this->wiki->source = $this->_scanTableadv($this->wiki->source);
     }
 
