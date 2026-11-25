@@ -1113,17 +1113,84 @@ class Text_Wiki {
 
     function purifyRecoveredHtml($code)
     {
-        $tidy = '/usr/bin/tidy';
-        if (!is_executable($tidy)) {
+        if (!class_exists('FFI')) {
             return $code;
         }
+        static $ffi = null;
+        static $ffiFailed = false;
+        if ($ffiFailed) {
+            return $code;
+        }
+        if ($ffi === null) {
+            $def = '
+typedef unsigned int uint;
+typedef unsigned char byte;
+typedef struct _TidyBuffer { void* allocator; byte* bp; uint size; uint allocated; uint next; } TidyBuffer;
+typedef void* TidyDoc;
+TidyDoc tidyCreate(void);
+void tidyRelease(TidyDoc tdoc);
+int tidySetCharEncoding(TidyDoc tdoc, const char* encnam);
+int tidyOptSetInt(TidyDoc tdoc, int optid, unsigned long val);
+int tidyOptSetBool(TidyDoc tdoc, int optid, int val);
+int tidyOptGetIdForName(const char* optnam);
+void tidyBufInit(TidyBuffer* buf);
+void tidyBufFree(TidyBuffer* buf);
+void tidyBufAppend(TidyBuffer* buf, void* vp, uint size);
+int tidyParseBuffer(TidyDoc tdoc, TidyBuffer* buf);
+int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
+';
+            $lib = is_file('/usr/lib/x86_64-linux-gnu/libtidy.so.58')
+                ? '/usr/lib/x86_64-linux-gnu/libtidy.so.58'
+                : 'libtidy.so.58';
+            try {
+                $ffi = FFI::cdef($def, $lib);
+            } catch (Throwable $e) {
+                $ffiFailed = true;
+                return $code;
+            }
+        }
+
         $head = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  <head>    <title>Just A Wrapper</title><meta http-equiv="content-type" content="text/html;charset=UTF-8"/>  </head> <!--wrapdelimiter--><body>';
         $tail = ' </body><!--wrapdelimiter--></html>';
-        $tmp = tempnam(sys_get_temp_dir(), 'ufffd');
-        file_put_contents($tmp, $head . $code . $tail);
-        $cmd = $tidy . ' -q -utf8 --doctype strict --indent no --output-xhtml yes --wrap 0 --show-warnings no --show-errors 0 ' . escapeshellarg($tmp) . ' 2>/dev/null';
-        $cleaned = shell_exec($cmd);
-        unlink($tmp);
+        $wrapped = $head . $code . $tail;
+        $len = strlen($wrapped);
+
+        try {
+            $doc = $ffi->tidyCreate();
+            $ffi->tidySetCharEncoding($doc, 'UTF8');
+            $ffi->tidyOptSetInt($doc, $ffi->tidyOptGetIdForName('indent'), 0);
+            $ffi->tidyOptSetBool($doc, $ffi->tidyOptGetIdForName('output-xhtml'), 1);
+            $ffi->tidyOptSetInt($doc, $ffi->tidyOptGetIdForName('wrap'), 0);
+            $ffi->tidyOptSetBool($doc, $ffi->tidyOptGetIdForName('preserve-entities'), 1);
+            $ffi->tidyOptSetBool($doc, $ffi->tidyOptGetIdForName('show-warnings'), 0);
+            $ffi->tidyOptSetInt($doc, $ffi->tidyOptGetIdForName('show-errors'), 0);
+
+            $inbuf = $ffi->new('TidyBuffer');
+            $ffi->tidyBufInit(FFI::addr($inbuf));
+            $input = $ffi->new('char[' . $len . ']');
+            FFI::memcpy($input, $wrapped, $len);
+            $ffi->tidyBufAppend(FFI::addr($inbuf), $input, $len);
+            $ffi->tidyParseBuffer($doc, FFI::addr($inbuf));
+
+            $save1 = $ffi->new('TidyBuffer');
+            $save2 = $ffi->new('TidyBuffer');
+            $ffi->tidyBufInit(FFI::addr($save1));
+            $ffi->tidyBufInit(FFI::addr($save2));
+            // The two saves mirror ext/tidy's update-properties pass and the
+            // later cast to string. In particular there is deliberately no
+            // tidyCleanAndRepair call; the CLI performs one and is not the
+            // live oracle.
+            $ffi->tidySaveBuffer($doc, FFI::addr($save1));
+            $ffi->tidySaveBuffer($doc, FFI::addr($save2));
+            $cleaned = FFI::string($save2->bp, $save2->size);
+            $ffi->tidyBufFree(FFI::addr($inbuf));
+            $ffi->tidyBufFree(FFI::addr($save1));
+            $ffi->tidyBufFree(FFI::addr($save2));
+            $ffi->tidyRelease($doc);
+        } catch (Throwable $e) {
+            return $code;
+        }
+
         if (!is_string($cleaned) || strpos($cleaned, '<!--wrapdelimiter-->') === false) {
             return $code;
         }
@@ -1131,6 +1198,65 @@ class Text_Wiki {
         $out = $parts[1];
         $out = str_replace(array('<body>', '</body>'), '', $out);
         return trim($out);
+    }
+
+    /**
+     * Whether a rendered TOC title still carries whitespace that live's
+     * purifyHtml pass would collapse. Toc titles are produced at render time
+     * from an attribute, so Tighten's residual-text whitespace fold never
+     * reaches them.
+     */
+    function outputHasUnpurifiedTocTitleWhitespace($html)
+    {
+        if (! preg_match_all('/<div id="toc"(?:\s[^>]*)?>\s*<div id="toc-action-bar">.*?<\/div>\s*<div class="title">(.*?)<\/div>/s', $html, $matches)) {
+            return false;
+        }
+        foreach ($matches[1] as $title) {
+            if (trim(preg_replace('/\s+/', ' ', $title)) !== $title) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Whether any span element is still open at a paragraph end. Span-like
+     * inline constructs can pair across a blank line in Stage 1; live's
+     * purifyHtml repair closes and reopens the span in the separate
+     * paragraphs instead of emitting crossing tags.
+     */
+    function outputHasSpanParagraphCrossing($html)
+    {
+        if (! preg_match_all('/<(\/?)(span|p)\b([^>]*)>/i', $html, $matches, PREG_SET_ORDER)) {
+            return false;
+        }
+        $stack = array();
+        foreach ($matches as $m) {
+            $closing = $m[1] === '/';
+            $tag = strtolower($m[2]);
+            if (! $closing) {
+                $stack[] = $tag;
+                continue;
+            }
+            if ($tag === 'p') {
+                if (in_array('span', $stack, true)) {
+                    return true;
+                }
+                while ($stack) {
+                    if (array_pop($stack) === 'p') {
+                        break;
+                    }
+                }
+                continue;
+            }
+            // closing span: pop it when well-formed, otherwise leave the
+            // stack intact so a following block boundary still reports the
+            // crossing that made it malformed.
+            if ($stack && end($stack) === 'span') {
+                array_pop($stack);
+            }
+        }
+        return false;
     }
 
     /**
@@ -1250,6 +1376,19 @@ class Text_Wiki {
 		// C-SUSPECT-XRULE-4: NUL pair matches Render/Xhtml/Toc.php's sentinel.
 		$d = "\x00";
 		$output = preg_replace_callback("/$d$d(.*?)$d$d/s", array($this, 'strip'), $output);
+
+        // REFCORR30: live passes every rendered fragment through
+        // WikiTransformation::purifyHtml. The reference models the common
+        // whitespace consequences in Tighten, but two render-time surfaces
+        // still need the real repair pass: whitespace inside a TOC title
+        // (generated from an attribute after Tighten has run) and any span
+        // scope left open across a paragraph boundary. Apply the existing
+        // tidy-backed purifier only when one of those unrepaired shapes is
+        // present, so well-formed documents keep their established frame.
+        if ($this->outputHasUnpurifiedTocTitleWhitespace($output)
+            || $this->outputHasSpanParagraphCrossing($output)) {
+            $output = $this->purifyRecoveredHtml($output);
+        }
 
         // return the rendered source text.
         return $output;

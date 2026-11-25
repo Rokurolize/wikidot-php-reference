@@ -166,8 +166,16 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
                 $args[strtolower($key)] = $this->normalizeValue($value);
             }
         }
-        // An unattributed empty span is elided on live; an attributed one
-        // is kept (test/span/empty-id-preserved).
+        // REFCORR30: an attributed horizontal-whitespace-only body is an
+        // invisible atom on live, not a served empty element and not deleted
+        // text. Keeping one token preserves the line position for
+        // Newline/Paragraph while the renderer emits nothing. This is the
+        // Span sibling of REFCORR29's whitespace-only Size atom. A truly
+        // empty attributed span remains visible (test/span/empty-id-preserved),
+        // while an unattributed one is still elided.
+        if (preg_match('/\A[ \t]+\z/', $matches[2]) === 1 && !empty($args)) {
+            return $this->wiki->addToken($this->rule, array('type' => 'empty'));
+        }
         if (trim($content) === '' && empty($args)) {
             return '';
         }

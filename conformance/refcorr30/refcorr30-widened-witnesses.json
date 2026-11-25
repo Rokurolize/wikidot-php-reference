@@ -1,0 +1,19 @@
+{
+ "r30-span-class-blank": {
+  "source": "[[span class=\"cross-a\"]]line1\n\nline2[[/span]]",
+  "pristine_html": "<p><span class=\"cross-a\">line1</p>\n\n<p>line2</span></p>",
+  "oracle_html": "<p><span class=\"cross-a\">line1</span></p>\n<p><span class=\"cross-a\">line2</span></p>",
+  "evidence": "verifier witness A; settled live purifyHtml model, no fresh fetch"
+ },
+ "r30-span-color-blank": {
+  "source": "[[span style=\"color:red;\"]]line1\n\nline2[[/span]]",
+  "pristine_html": "<p><span style=\"color:red;\">line1</p>\n\n<p>line2</span></p>",
+  "oracle_html": "<p><span style=\"color:red;\">line1</span></p>\n<p><span style=\"color:red;\">line2</span></p>",
+  "evidence": "verifier witness B; settled live purifyHtml model, no fresh fetch"
+ },
+ "verification_record": "/home/roku/.local/state/wikijump/muse-bhl/verify-refprobe2-content/VERIFY-REFPROBE2-CONTENT.md",
+ "negative_controls": {
+  "r30-span-class-single-newline-control": "well-formed class span; no purify trigger, frame unchanged",
+  "r30-span-color-single-newline-control": "well-formed color span; no purify trigger, frame unchanged"
+ }
+}
