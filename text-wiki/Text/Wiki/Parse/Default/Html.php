@@ -51,7 +51,7 @@ class Text_Wiki_Parse_Html extends Text_Wiki_Parse {
     // as the legacy <html> ... </html> form the rule originally handled.
     // Group 1/2 are the legacy body/trailer; group 3/4 the [[html]] body and
     // trailer.
-    public $regex = '/\[\[html(?:\s+[^\]\n]*)?\]\][ \t]*\n?(.*?)\n?[ \t]*\[\[\/html\]\](\s|$)/Umsi';
+    public $regex = '/\[\[html(?:\s+[^\]\n]*)?\]\][ \t]*\n?(.*?)\n?[ \t]*\[\[\/html\]\](\s|$)/msi';
 
     /**
     * 

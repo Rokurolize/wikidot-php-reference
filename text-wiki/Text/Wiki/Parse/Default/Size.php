@@ -113,6 +113,39 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
             return '';
         }
 
+        $split = null;
+        $seenVisible = false;
+        $lineStart = 0;
+        $contentLen = strlen($content);
+        $emptyRawLine = '/^' . preg_quote($this->wiki->delim, '/')
+            . '(\d+)' . preg_quote($this->wiki->delim, '/') . '$/';
+        while ($lineStart < $contentLen) {
+            $lineEnd = strpos($content, "\n", $lineStart);
+            if ($lineEnd === false) {
+                $lineEnd = $contentLen;
+            }
+            $line = substr($content, $lineStart, $lineEnd - $lineStart);
+            $isEmptyRaw = false;
+            if (preg_match($emptyRawLine, $line, $rawMatch)
+                && isset($this->wiki->tokens[(int)$rawMatch[1]])
+                && $this->wiki->tokens[(int)$rawMatch[1]][0] === 'Raw'
+                && $this->wiki->tokens[(int)$rawMatch[1]][1]['text'] === '') {
+                $isEmptyRaw = true;
+            }
+            if ($seenVisible && $isEmptyRaw) {
+                $nextStart = $lineEnd + 1;
+                if ($nextStart < $contentLen
+                    && substr($content, $nextStart, 2) === '= ') {
+                    $split = $lineStart - 1;
+                    break;
+                }
+            }
+            if (!$isEmptyRaw && trim($line) !== '') {
+                $seenVisible = true;
+            }
+            $lineStart = $lineEnd + 1;
+        }
+
         $options = array('size'=>$size, 'type'=>'start');
       	
         $start = $this->wiki->addToken($this->rule, $options);
@@ -121,6 +154,10 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
             $this->rule, array('type' => 'end')
         );
         
+        if ($split !== null) {
+            return $start . substr($content, 0, $split) . $end
+                . substr($content, $split);
+        }
         return $start . $content  .$end;
 
     }

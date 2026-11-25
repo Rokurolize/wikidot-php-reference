@@ -174,6 +174,17 @@ class Text_Wiki_Parse {
         return $matches[0];
     }
 
+    function textHasTokenRule($text, $rule)
+    {
+        foreach ($this->wiki->tokens as $tid => $tok) {
+            if ($tok[0] === $rule
+                && strpos($text, $this->wiki->delim . $tid . $this->wiki->delim) !== false) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     /**
     *
     * Simple method to safely get configuration key values.

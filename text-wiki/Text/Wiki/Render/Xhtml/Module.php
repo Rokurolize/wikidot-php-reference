@@ -42,7 +42,14 @@ class Text_Wiki_Render_Xhtml_Module extends Text_Wiki_Render {
         // previews). The offline census driver emits no body for them; the
         // reference therefore emits nothing instead of a "No such module"
         // error block. Email dispatch is a no-op by programme ruling.
-        $callerRuntime = array('listusers', 'mailform', 'comments', 'themepreviewer');
+        $callerRuntime = array(
+            'listusers', 'mailform', 'comments', 'themepreviewer',
+            'whoinvited', 'recentthreads', 'recentposts', 'managesite',
+            'forumcategory', 'forumnewthread', 'forumstart', 'forumthread',
+            'frontforum', 'membershipapply', 'sitechanges', 'userinfo',
+            'listdrafts', 'watchers', 'miniactivethreads', 'minirecentposts',
+            'minirecentthreads',
+        );
         if (in_array(strtolower($moduleName), $callerRuntime, true)) {
             return '';
         }

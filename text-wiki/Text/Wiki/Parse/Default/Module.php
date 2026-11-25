@@ -80,6 +80,17 @@ class Text_Wiki_Parse_Module extends Text_Wiki_Parse {
     }
 
     function process($matches) {
+        $rawBody = isset($matches[3]) ? $matches[3] : '';
+        if ($rawBody !== '' && $this->textHasTokenRule($rawBody, 'Html')) {
+            $moduleName = trim($matches[1]);
+            $attr = trim($matches[2]);
+            $options = array('moduleName' => $moduleName, 'attr' => $attr,
+                'module_body' => '');
+            $closer = substr($matches[0], -11);
+            return "\n\n" . $this->wiki->addToken($this->rule, $options) . "\n\n"
+                . $rawBody . $closer;
+        }
+
         // check if not containing another module!!!
         $con = $matches[0];
         
