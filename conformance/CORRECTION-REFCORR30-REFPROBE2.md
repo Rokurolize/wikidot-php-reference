@@ -97,7 +97,7 @@ this is intentionally not a global re-indenting purify pass.
 ## Pins
 
 - `conformance/refcorr30/refcorr30-cases.jsonl` — two positive live matrices,
-  two explicit/font-entity positive controls, the whitespace-only attributed
+  two explicit/font-entity positive controls, the horizontal-whitespace-only attributed
   Span positive control, and two negative controls.
 - `conformance/refcorr30/refcorr30-expected.json` — byte-level corrected output;
   all five positive pins are exact live bytes.

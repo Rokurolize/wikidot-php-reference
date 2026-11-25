@@ -166,14 +166,14 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
                 $args[strtolower($key)] = $this->normalizeValue($value);
             }
         }
-        // REFCORR30: an attributed whitespace-only body is an invisible atom
-        // on live, not a served empty element and not deleted text. Keeping
-        // one token preserves the line position for Newline/Paragraph while
-        // the renderer emits nothing. This is the Span sibling of REFCORR29's
-        // whitespace-only Size atom. A truly empty attributed span remains
-        // visible (test/span/empty-id-preserved), while an unattributed one
-        // is still elided.
-        if ($matches[2] !== '' && trim($matches[2]) === '' && !empty($args)) {
+        // REFCORR30: an attributed horizontal-whitespace-only body is an
+        // invisible atom on live, not a served empty element and not deleted
+        // text. Keeping one token preserves the line position for
+        // Newline/Paragraph while the renderer emits nothing. This is the
+        // Span sibling of REFCORR29's whitespace-only Size atom. A truly
+        // empty attributed span remains visible (test/span/empty-id-preserved),
+        // while an unattributed one is still elided.
+        if (preg_match('/^[ \t]+$/', $matches[2]) === 1 && !empty($args)) {
             return $this->wiki->addToken($this->rule, array('type' => 'empty'));
         }
         if (trim($content) === '' && empty($args)) {

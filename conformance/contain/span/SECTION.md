@@ -14,8 +14,7 @@ COMPLETE
 
 REFCORR30 addendum (2026-11-26). The coordinator-named JP census probe
 `muse-probe-jpcensus-wsspan-single` settled one narrow whitespace-only shape
-that the original empty-span settlement did not cover: an attributed body of
-only whitespace is an invisible atom on live. `Parse/Default/Span.php` now
+that the original empty-span settlement did not cover: an attributed body of only horizontal whitespace is an invisible atom on live. `Parse/Default/Span.php` now
 emits a token of type `empty` for that shape, so the renderer serves no span
 while the atom still preserves its line position for Newline and Paragraph.
 Truly empty attributed spans remain visible and unattributed elision is
