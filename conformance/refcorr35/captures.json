@@ -1,0 +1,62 @@
+{
+ "HUNTAT-S1-VALID": {
+  "fullname": "muse-probe-hunt-at-malformed-heads",
+  "html": "<table style=\"border-collapse:collapse; margin:0 auto;\">\n<tr>\n<td>S1-CELL</td>\n</tr>\n</table>",
+  "html_sha256": "13cdf6486c4435ecb5d253c8efe913682db5e1cd727358a57038460216ead3be",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "one grouped saved sandbox page, six labeled shapes, two anonymous GETs, byte-exact saved-source verification"
+ },
+ "HUNTAT-S2-WIDTH": {
+  "fullname": "muse-probe-hunt-at-malformed-heads",
+  "html": "<table>\n<tr>\n<td style=\"border: 1px solid black;\" colspan=\"2&quot; width: 50%\">S2-CELL</td>\n</tr>\n</table>",
+  "html_sha256": "c03d994cd12f2f9f6877d1df3ec27a4fd3e1e27a4a715084cd9c4d1a1e8e0e6a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "one grouped saved sandbox page, six labeled shapes, two anonymous GETs, byte-exact saved-source verification"
+ },
+ "HUNTAT-S3-SPACING": {
+  "fullname": "muse-probe-hunt-at-malformed-heads",
+  "html": "<table>\n<tr>\n<td style=\"margin:0; font-size:120%; padding: 0.5em; line-height: 1.75em;\">S3-CELL</td>\n</tr>\n</table>",
+  "html_sha256": "8bfdc631418e5a430278183664f6b0d1abc3413bed39b59340c14e8285e7036b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "one grouped saved sandbox page, six labeled shapes, two anonymous GETs, byte-exact saved-source verification"
+ },
+ "HUNTAT-S4-NESTED": {
+  "fullname": "muse-probe-hunt-at-malformed-heads",
+  "html": "<table>\n<tr>\n<td>\n<p>OUTER-S4</p>\n<table>\n<tr>\n<td>INNER-S4</td>\n</tr>\n</table>\n</td>\n</tr>\n</table>",
+  "html_sha256": "092c47c39ccbf9fff2fde71771b3899869076f3796722ed8895c2e43e45219c4",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "one grouped saved sandbox page, six labeled shapes, two anonymous GETs, byte-exact saved-source verification"
+ },
+ "HUNTAT-S5-DQUOTE": {
+  "fullname": "muse-probe-hunt-at-malformed-heads",
+  "html": "<table style=\"border-collapse:collapse; margin:0 auto;&quot;\">\n<tr>\n<td>S5-CELL</td>\n</tr>\n</table>",
+  "html_sha256": "eae3e562f08f8230e1c363d213287a6c1929474e8fe687b3c7d073ec4903adf1",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "one grouped saved sandbox page, six labeled shapes, two anonymous GETs, byte-exact saved-source verification"
+ },
+ "HUNTAT-S6-DQUOTE-NESTED": {
+  "fullname": "muse-probe-hunt-at-malformed-heads",
+  "html": "<table style=\"border-collapse:collapse; margin:0 auto;&quot;\">\n<tr>\n<td>S6-CELL</td>\n</tr>\n</table>",
+  "html_sha256": "69da704cc0eb1f6d8544c8007a9ef0d5edba07411a1c583c84acfecbb44bac47",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "one grouped saved sandbox page, six labeled shapes, two anonymous GETs, byte-exact saved-source verification"
+ }
+}

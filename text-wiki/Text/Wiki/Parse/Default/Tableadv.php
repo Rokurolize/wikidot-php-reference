@@ -24,10 +24,18 @@
  * C-SUSPECT-LISTTABLE-2). Attribute heads tolerate a quoted ]] on a
  * table, while row and cell heads use the plain token grammar. Nested tables
  * are handled recursively before the enclosing rows and cells are split.
+ *
+ * REFCORR35: a terminal doubled quote in a table head (`style="a;""`) is
+ * salvaged on live as a quoted value plus one literal quote inside that
+ * value; it is not an unbalanced opener that may consume a quote from a
+ * later block. The doubled-quote alternative is tried first so the head
+ * ends at the real `]]`. REFCORR35 also keeps line breaks inside attribute
+ * values as whitespace for normalizeValue() instead of deleting them as
+ * control bytes: live serializes a newline in a style value as one space.
  */
 class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
 
-    public $regex = '~\[\[table((?:"[^"]*"|[^\]])*)\]\]((?:(?R)|.)*?)\[\[/table\]\]~si';
+    public $regex = '~\[\[table((?:"[^"]*""|"[^"]*"|[^\]])*)\]\]((?:(?R)|.)*?)\[\[/table\]\]~si';
 
     // The Wikitext safe-attribute allowlist, lower-case names only at this
     // block level; data- names are allowed. aria- names and align are dropped
@@ -76,7 +84,7 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
             return $matches[0];
         }
         $outsideRows = preg_replace($rowRe, '', $body);
-        $outsideRows = preg_replace('~\[\[table(?:"[^"]*"|[^\]])*\]\]~si', '', $outsideRows);
+        $outsideRows = preg_replace('~\[\[table(?:"[^"]*""|"[^"]*"|[^\]])*\]\]~si', '', $outsideRows);
         if (trim($outsideRows) !== '') {
             return $matches[0];
         }
@@ -250,14 +258,14 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
         if (array_key_exists($bk, $memo)) {
             return $memo[$bk];
         }
-        if (!preg_match('/\G\[\[table((?:"[^"]*"|[^\]])*)\]\]/si', $src, $om, 0, $p)) {
+        if (!preg_match('/\G\[\[table((?:"[^"]*""|"[^"]*"|[^\]])*)\]\]/si', $src, $om, 0, $p)) {
             return $memo[$bk] = false;
         }
         $bodyStart = $p + strlen($om[0]);
         if (stripos($src, '[[/table]]', $bodyStart) === false) {
             return $memo[$bk] = false;
         }
-        $c = $this->_tableadvBody($src, $bodyStart, $memo);
+        $c = $this->_tableadvBody($src, $bodyStart, $memo, $bodyStart);
         if ($c === false) {
             return $memo[$bk] = false;
         }
@@ -265,13 +273,32 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
         return $memo[$bk] = array($c[1], $matches);
     }
 
-    private function _tableadvBody($src, $pos, &$memo) {
+    private function _tableadvBody($src, $pos, &$memo, $bodyStart = null) {
         $sk = 's' . $pos;
         if (array_key_exists($sk, $memo)) {
             return $memo[$sk];
         }
         if (preg_match('/\G\[\[\/table\]\][ \t]*/i', $src, $cm, 0, $pos)) {
             return $memo[$sk] = array($pos, $pos + strlen($cm[0]));
+        }
+        // REFCORR35: when a nested opener is the first content of an enclosing
+        // table body (only whitespace before it), live demotes that opener to
+        // literal text and closes the enclosing table at the first available
+        // closer. PCRE's recursive body and the old scanner instead consumed
+        // that closer for the nested block and paired the outer with a later
+        // table's closer, leaving consecutive tables literal. Only this
+        // leading-opener shape is demoted; a nested table inside a row or
+        // cell keeps its own closer and its normal nested structure.
+        if ($bodyStart !== null && $pos === $bodyStart) {
+            $nextTable = stripos($src, '[[table', $pos);
+            if ($nextTable !== false
+                && trim(substr($src, $bodyStart, $nextTable - $bodyStart)) === '') {
+                $closer = stripos($src, '[[/table]]', $nextTable);
+                if ($closer !== false) {
+                    preg_match('/\G\[\[\/table\]\][ \t]*/i', $src, $cm, 0, $closer);
+                    return $memo[$sk] = array($closer, $closer + strlen($cm[0]));
+                }
+            }
         }
         if (stripos($src, '[[table', $pos) === $pos) {
             $sub = $this->_tableadvBlock($src, $pos, $memo);
@@ -290,7 +317,12 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
     }
 
     private function normalizeValue($value) {
-        $value = preg_replace('/[\x00-\x1F\x7F]/', '', $value);
+        // REFCORR35: tab, LF and CR are whitespace to be collapsed to a
+        // single space, not control bytes to delete. The live probe's
+        // spacing-only shape serializes `padding: 0.5em;\nline-height:` as
+        // `padding: 0.5em; line-height:`; deleting the newline produced the
+        // no-space form. Other C0 bytes and DEL stay invisible as before.
+        $value = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/', '', $value);
         $value = preg_replace('/\s+/u', ' ', $value);
         return trim($value);
     }

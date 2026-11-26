@@ -1,0 +1,6 @@
+{"id": "HUNTAT-S1-VALID", "source": "[[table style=\"border-collapse:collapse; margin:0 auto;\"]]\n[[row]]\n[[cell]]\nS1-CELL\n[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "HUNTAT-S2-WIDTH", "source": "[[table]]\n[[row]]\n[[cell style=\"border: 1px solid black;\" colspan=\"2\" width: 50%\"]]\nS2-CELL\n[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "HUNTAT-S3-SPACING", "source": "[[table]]\n[[row]]\n[[cell style=\"margin:0; font-size:120%; padding: 0.5em;\nline-height: 1.75em;\"]]\nS3-CELL\n[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "HUNTAT-S4-NESTED", "source": "[[table]]\n[[row]]\n[[cell]]\nOUTER-S4\n[[table]]\n[[row]]\n[[cell]]\nINNER-S4\n[[/cell]]\n[[/row]]\n[[/table]]\n[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "HUNTAT-S5-DQUOTE", "source": "[[table style=\"border-collapse:collapse; margin:0 auto;\"\"]]\n[[row]]\n[[cell]]\nS5-CELL\n[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "HUNTAT-S6-DQUOTE-NESTED", "source": "[[table style=\"border-collapse:collapse; margin:0 auto;\"\"]]\n[[table]]\n[[row]]\n[[cell]]\nS6-CELL\n[[/cell]]\n[[/row]]\n[[/table]]"}
