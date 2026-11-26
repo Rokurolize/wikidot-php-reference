@@ -68,7 +68,7 @@ class Text_Wiki_Render_Xhtml_Freelink extends Text_Wiki_Render_Xhtml_Wikilink {
             $targetAttr = $target !== ''
                 ? ' target="' . htmlspecialchars($target, ENT_COMPAT, 'UTF-8') . '"'
                 : '';
-            // REFCORR13 C-R5F-R2-4 plus D06: live percent-encodes every non-ASCII byte of the external Freelink href and keeps the peeled #fragment or /#/route suffix; the reference kept them raw or dropped them. Apply Url.php's bytewise encoder to the target plus suffix before the ENT_COMPAT escape; the authored label is untouched.
+            // REFCORR13 C-R5F-R2-4 plus D06: live percent-encodes every non-ASCII byte of the external Freelink href and keeps the peeled #fragment or /#/route suffix; the reference kept them raw or dropped them. Apply Url.php's bytewise encoder to the target plus suffix before the ENT_COMPAT escape; the authored label is untouched. REFCORR31: live gives that peeled suffix one escaping pass before the whole-href pass, so fragment ampersands are double-encoded while pre-fragment query ampersands and local-page anchors remain single-encoded.
             $hrefUrl = preg_replace_callback('/[^\x00-\x7F]/', function ($m) {
                 $bytes = unpack('C*', $m[0]);
                 $out = '';
@@ -76,7 +76,9 @@ class Text_Wiki_Render_Xhtml_Freelink extends Text_Wiki_Render_Xhtml_Wikilink {
                     $out .= '%' . strtoupper(str_pad(dechex($byte), 2, '0', STR_PAD_LEFT));
                 }
                 return $out;
-            }, $url . $anchor . $extra);
+            }, $url
+                . htmlspecialchars($anchor, ENT_COMPAT, 'UTF-8')
+                . htmlspecialchars($extra, ENT_COMPAT, 'UTF-8'));
             return '<a' . $targetAttr . ' href="' . htmlspecialchars($hrefUrl, ENT_COMPAT, 'UTF-8') . '">' . $text . '</a>';
         }
 
