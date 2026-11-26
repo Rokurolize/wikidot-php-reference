@@ -1260,6 +1260,73 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
     }
 
     /**
+     * Whether a paired-token inline element crosses a block-element boundary. The
+     * scan is limited to the tags emitted by the span and inline-format pair
+     * rules: crossings with block structure are this family, inline-inline
+     * crossing is separate, and well-formed documents are left in the reference
+     * frame.
+     */
+    function outputHasInlineBlockCrossing($html)
+    {
+        $scan = preg_replace('/<(script|style)\b[^>]*>.*?<\/\1\s*>/is', '', $html);
+        if (! preg_match_all('/<(\/?)([a-z][a-z0-9]*)\b([^>]*)>/i', $scan, $matches, PREG_SET_ORDER)) {
+            return false;
+        }
+        $inline = array_flip(array(
+            'em', 'span', 'strong', 'sub', 'sup', 'tt'
+        ));
+        $block = array_flip(array(
+            'address', 'article', 'aside', 'blockquote', 'dd', 'details', 'div',
+            'dl', 'dt', 'fieldset', 'figcaption', 'figure', 'footer', 'form',
+            'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'li', 'main', 'nav',
+            'ol', 'p', 'pre', 'section', 'table', 'tbody', 'td', 'tfoot', 'th',
+            'thead', 'tr', 'ul'
+        ));
+        $void = array_flip(array(
+            'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link',
+            'meta', 'param', 'source', 'track', 'wbr'
+        ));
+        $stack = array();
+        foreach ($matches as $m) {
+            $closing = $m[1] === '/';
+            $tag = strtolower($m[2]);
+            if (isset($void[$tag]) || preg_match('/\/\s*$/', $m[3])) {
+                continue;
+            }
+            if (! $closing) {
+                if (isset($block[$tag])) {
+                    foreach ($stack as $open) {
+                        if (isset($inline[$open])) {
+                            return true;
+                        }
+                    }
+                }
+                $stack[] = $tag;
+                continue;
+            }
+            $pos = -1;
+            for ($i = count($stack) - 1; $i >= 0; $i--) {
+                if ($stack[$i] === $tag) {
+                    $pos = $i;
+                    break;
+                }
+            }
+            if ($pos < 0) {
+                continue;
+            }
+            if (isset($block[$tag])) {
+                for ($i = count($stack) - 1; $i > $pos; $i--) {
+                    if (isset($inline[$stack[$i]])) {
+                        return true;
+                    }
+                }
+            }
+            array_splice($stack, $pos);
+        }
+        return false;
+    }
+
+    /**
     *
     * Renders tokens back into the source text, based on the requested format.
     *
@@ -1386,7 +1453,8 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         // tidy-backed purifier only when one of those unrepaired shapes is
         // present, so well-formed documents keep their established frame.
         if ($this->outputHasUnpurifiedTocTitleWhitespace($output)
-            || $this->outputHasSpanParagraphCrossing($output)) {
+            || $this->outputHasSpanParagraphCrossing($output)
+            || $this->outputHasInlineBlockCrossing($output)) {
             $output = $this->purifyRecoveredHtml($output);
         }
 

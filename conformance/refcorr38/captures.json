@@ -1,0 +1,142 @@
+{
+ "probe-blocks": {
+  "fullname": "muse-probe-hunt-pair-blocks",
+  "html": "<p>L-bq-content-start</p>\n<blockquote>\n<p><span style=\"color: red; background: yellow\"><br />\nxbqcontent<br /></span></p>\n</blockquote>\n<p>L-bq-content-end</p>\n<p>L-bq-minimal-start</p>\n<blockquote>\n<p><span><br /></span></p>\n</blockquote>\n<p>L-bq-minimal-end</p>\n<p>L-deflist-span-start</p>\n<dl>\n<dt>termopen</dt>\n<dd><span style=\"color: red; background: yellow\">opentext</span></dd>\n<dt><span style=\"color: red; background: yellow\">termmid</span></dt>\n<dd><span style=\"color: red; background: yellow\">xdefcontent</span></dd>\n<dt><span style=\"color: red; background: yellow\">termclose</span></dt>\n<dd></dd>\n</dl>\n<p>L-deflist-span-end</p>\n<p>L-simple-table-span-start</p>\n<table class=\"wiki-content-table\">\n<tr>\n<td></td>\n</tr>\n<tr>\n<td>xtablecontent</td>\n</tr>\n<tr>\n<td></td>\n</tr>\n</table>\n<p>L-simple-table-span-end</p>\n<p>L-adv-table-span-start</p>\n<table>\n<tr>\n<td></td>\n<td>xadvcontent</td>\n<td></td>\n</tr>\n</table>\n<p>L-adv-table-span-end</p>\n<p>L-paragraph-lines-start</p>\n<p><span style=\"color: red; background: yellow\"><br />\nxparacontent<br /></span></p>\n<p>L-paragraph-lines-end</p>\n<p>L-paragraph-blank-start</p>\n<p><span style=\"color: red; background: yellow\">xparablank</span></p>\n<p>L-paragraph-blank-end</p>",
+  "html_sha256": "02bcfa08afbe311f8579a17ed6539d287900b34d33832553344d85cb232be734",
+  "saved_source_matches": true,
+  "source": "L-bq-content-start\n\n> [[span style=\"color: red; background: yellow\"]]\n> xbqcontent\n> [[/span]]\n\nL-bq-content-end\n\nL-bq-minimal-start\n\n> [[span]]\n> [[/span]]\n\nL-bq-minimal-end\n\nL-deflist-span-start\n\n: termopen : [[span style=\"color: red; background: yellow\"]]opentext\n: termmid : xdefcontent\n: termclose : [[/span]]\n\nL-deflist-span-end\n\nL-simple-table-span-start\n\n|| [[span style=\"color: red; background: yellow\"]] ||\n|| xtablecontent ||\n|| [[/span]] ||\n\nL-simple-table-span-end\n\nL-adv-table-span-start\n\n[[table]][[row]][[cell]][[span style=\"color: red; background: yellow\"]][[/cell]][[cell]]xadvcontent[[/cell]][[cell]][[/span]][[/cell]][[/row]][[/table]]\n\nL-adv-table-span-end\n\nL-paragraph-lines-start\n\n[[span style=\"color: red; background: yellow\"]]\nxparacontent\n[[/span]]\n\nL-paragraph-lines-end\n\nL-paragraph-blank-start\n\n[[span style=\"color: red; background: yellow\"]]\n\nxparablank\n\n[[/span]]\n\nL-paragraph-blank-end",
+  "source_sha256": "775644f7e63e96d2f81addcf6cfd577a574be49bd372a006c95a61da68bda2b0",
+  "stable": true,
+  "valid": true
+ },
+ "probe-divcross": {
+  "fullname": "muse-probe-hunt-pair-divcross",
+  "html": "<p>L-div-list-start</p>\n<ul>\n<li>xdivlist</li>\n</ul>\n<p>L-div-list-end</p>\n<p>L-div-heading-start</p>\n<h1 id=\"toc0\"><span>[[div]]</span></h1>\n<h1 id=\"toc1\"><span>xdivheading</span></h1>\n<h1 id=\"toc2\"><span>[[/div]]</span></h1>\n<p>L-div-heading-end</p>\n<p>L-div-center-start</p>\n<p style=\"text-align: center;\"></p>\n<div>\n<p style=\"text-align: center;\">xdivcenter</p>\n<p style=\"text-align: center;\"></p>\n</div>\n<p>L-div-center-end</p>\n<p>L-div-bq-start</p>\n<blockquote>\n<div>\n<p>xdivbq</p>\n</div>\n</blockquote>\n<p>L-div-bq-end</p>\n<p>L-cross-list-heading-start</p>\n<h1 id=\"toc3\"></h1>\n<p>L-cross-list-heading-end</p>\n<p>L-cross-list-center-start</p>\n<p style=\"text-align: center;\"></p>\n<p>L-cross-list-center-end</p>\n<p>L-cross-div-body-start</p>\n<p>alpha702<br />\nbeta702</p>\n<h1 id=\"toc4\"></h1>\n<p>L-cross-div-body-end</p>",
+  "html_sha256": "412e09d838409f0213861282685c7dfe02f6f8acb4bfbfdd0c90f54bfcf087e4",
+  "saved_source_matches": true,
+  "source": "L-div-list-start\n\n* [[div]]\n* xdivlist\n* [[/div]]\n\nL-div-list-end\n\nL-div-heading-start\n\n+ [[div]]\n+ xdivheading\n+ [[/div]]\n\nL-div-heading-end\n\nL-div-center-start\n\n= [[div]]\n= xdivcenter\n= [[/div]]\n\nL-div-center-end\n\nL-div-bq-start\n\n> [[div]]\n> xdivbq\n> [[/div]]\n\nL-div-bq-end\n\nL-cross-list-heading-start\n\n* [[span]]\n+ [[/span]]\n\nL-cross-list-heading-end\n\nL-cross-list-center-start\n\n* [[span]]\n= [[/span]]\n\nL-cross-list-center-end\n\nL-cross-div-body-start\n\n* [[div]]\nalpha702\nbeta702\n+ [[/div]]\n\nL-cross-div-body-end",
+  "source_sha256": "4142edb61bd0574414fa46ae0d3aedb57d2e08e30bbc4b4e51daa97db7f9be4e",
+  "stable": true,
+  "valid": true
+ },
+ "probe-inline": {
+  "fullname": "muse-probe-hunt-pair-inline",
+  "html": "<p>L-strong-start</p>\n<ul>\n<li><strong>xstrong</strong></li>\n</ul>\n<p>L-strong-end</p>\n<p>L-em-start</p>\n<ul>\n<li><em>xem</em></li>\n</ul>\n<p>L-em-end</p>\n<p>L-underline-start</p>\n<ul>\n<li><span style=\"text-decoration: underline;\">xunderline</span></li>\n</ul>\n<p>L-underline-end</p>\n<p>L-strike-start</p>\n<ul>\n<li><span style=\"text-decoration: line-through;\">xstrike</span></li>\n</ul>\n<p>L-strike-end</p>\n<p>L-tt-start</p>\n<ul>\n<li><tt>xtt</tt></li>\n</ul>\n<p>L-tt-end</p>\n<p>L-sup-start</p>\n<ul>\n<li><sup>xsup</sup></li>\n</ul>\n<p>L-sup-end</p>\n<p>L-sub-start</p>\n<ul>\n<li><sub>xsub</sub></li>\n</ul>\n<p>L-sub-end</p>",
+  "html_sha256": "0fb70cf45ac6cb2c1b729c660e2ba48eede6e75facfb6bc3c8f2efd12720d616",
+  "saved_source_matches": true,
+  "source": "L-strong-start\n\n* **\n* xstrong\n* **\n\nL-strong-end\n\nL-em-start\n\n* //\n* xem\n* //\n\nL-em-end\n\nL-underline-start\n\n* __\n* xunderline\n* __\n\nL-underline-end\n\nL-strike-start\n\n* --\n* xstrike\n* --\n\nL-strike-end\n\nL-tt-start\n\n* {{\n* xtt\n* }}\n\nL-tt-end\n\nL-sup-start\n\n* ^^\n* xsup\n* ^^\n\nL-sup-end\n\nL-sub-start\n\n* ,,\n* xsub\n* ,,\n\nL-sub-end",
+  "source_sha256": "80310f4a31cb318b6deb272a3e75c9bc98e474e83a7eb1b7bfad1818c4b76fd6",
+  "stable": true,
+  "valid": true
+ },
+ "probe-task31": {
+  "fullname": "muse-probe-hunt-pair-task31",
+  "html": "<p>L-list-content-start</p>\n<ul>\n<li><span style=\"color: red; background: yellow\">xlistcontent</span></li>\n</ul>\n<p>L-list-content-end</p>\n<p>L-list-minimal-start</p>\n<p>L-list-minimal-end</p>\n<p>L-heading-content-start</p>\n<h1 id=\"toc0\"></h1>\n<h1 id=\"toc1\"><span>xheadingcontent</span></h1>\n<h1 id=\"toc2\"></h1>\n<p>L-heading-content-end</p>\n<p>L-center-minimal-start</p>\n<p style=\"text-align: center;\"></p>\n<p style=\"text-align: center;\"></p>\n<p>L-center-minimal-end</p>\n<p>L-center-content-start</p>\n<p style=\"text-align: center;\"></p>\n<p style=\"text-align: center;\"><span>xcentercontent</span></p>\n<p style=\"text-align: center;\"></p>\n<p>L-center-content-end</p>",
+  "html_sha256": "b1b2081239499e41f92b2d8c796904d7569afbd1e87c45589a71b4d1604e4b86",
+  "saved_source_matches": true,
+  "source": "L-list-content-start\n\n* [[span style=\"color: red; background: yellow\"]]\n* xlistcontent\n* [[/span]]\n\nL-list-content-end\n\nL-list-minimal-start\n\n* [[span]]\n* [[/span]]\n\nL-list-minimal-end\n\nL-heading-content-start\n\n+ [[span style=\"color: red; background: yellow\"]]\n+ xheadingcontent\n+ [[/span]]\n\nL-heading-content-end\n\nL-center-minimal-start\n\n= [[span]]\n= [[/span]]\n\nL-center-minimal-end\n\nL-center-content-start\n\n= [[span]]\n= xcentercontent\n= [[/span]]\n\nL-center-content-end",
+  "source_sha256": "4e7b15718bae096b5b7a686f103e7fef79f2a0902290bf9d578227005f5d12c0",
+  "stable": true,
+  "valid": true
+ },
+ "x102": {
+  "fullname": "muse-probe-r2in3-x-x102",
+  "html": "<ul>\n<li><sup>a</sup></li>\n<li><sup>b</sup> c</li>\n<li>d and * <tt>e</tt></li>\n<li><tt>f</tt> g</li>\n</ul>",
+  "html_sha256": "01dc16a5ec7237af777228cd6227c56982bb12e0418d72beae76130baa4eaab3",
+  "saved_source_matches": true,
+  "source": "* ^^a\n* b^^ c\n* d and * {{e\n* f}} g",
+  "source_sha256": "80dbb6a7eb21ecea9b6347844a427d42bc2e811a704f423aed5dfcf3fb99c0bf",
+  "stable": true,
+  "valid": true
+ },
+ "x37-span-in-item": {
+  "fullname": "muse-probe-r2list-x-x37-span-in-item",
+  "html": "<p><span>A</span></p>\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>",
+  "html_sha256": "96d15a788edab551e859e833d01561596aa3da4ec8943eb73b6e4a2f8a23d220",
+  "saved_source_matches": true,
+  "source": "[[span class=a]]A[[/span]]\n* one\n* two",
+  "source_sha256": "4b0ba3f7343186598f271a648d35e51ee886b3ae52e4b5529294adc82d5db4d0",
+  "stable": true,
+  "valid": true
+ },
+ "x38-span-cross-item": {
+  "fullname": "muse-probe-r2list-x-x38-span-cross-item",
+  "html": "<ul>\n<li><span>one</span></li>\n<li><span>two</span></li>\n</ul>",
+  "html_sha256": "6b276d5e9f8af56b0976f3413034cec45012dbe8e9c205f98d0698703dbc5c4c",
+  "saved_source_matches": true,
+  "source": "* [[span class=a]]one\n* two[[/span]]",
+  "source_sha256": "bda0477b86a3722fda6f6e08d07d7a4f8a6fe2318a8e3c1c034c7d79a4ed6096",
+  "stable": true,
+  "valid": true
+ },
+ "x39-size-cross-item": {
+  "fullname": "muse-probe-r2list-x-x39-size-cross-item",
+  "html": "<ul>\n<li><span style=\"font-size:12px;\">one</span></li>\n<li><span style=\"font-size:12px;\">two</span></li>\n</ul>",
+  "html_sha256": "46e6926e92aa570b945e98bf2faf066354e66f34b0d53997babd1a8cd23b3837",
+  "saved_source_matches": true,
+  "source": "* [[size 12px]]one\n* two[[/size]]",
+  "source_sha256": "13f2674d599bd56afa7dabe37934e73ee51171234c07bb0807e4ab92b0c30132",
+  "stable": true,
+  "valid": true
+ },
+ "x40-color-cross-item": {
+  "fullname": "muse-probe-r2list-x-x40-color-cross-item",
+  "html": "<ul>\n<li><span style=\"color: red\">one</span></li>\n<li><span style=\"color: red\">two</span></li>\n</ul>",
+  "html_sha256": "f929fd98644ccd6e48539040bee5f3f824ed4eeb62db58129411a44a95fadf3d",
+  "saved_source_matches": true,
+  "source": "* ##red|one\n* two##",
+  "source_sha256": "faa9332c9fb883b2bf79a6e1d18146eceb3c5a8167b59b7cf6ef486961aad425",
+  "stable": true,
+  "valid": true
+ },
+ "x41-strike-in-item": {
+  "fullname": "muse-probe-r2list-x-x41-strike-in-item",
+  "html": "<ul>\n<li><span style=\"text-decoration: line-through;\">one</span></li>\n<li>two</li>\n</ul>",
+  "html_sha256": "88d53919da43aad6fe6274e9b9da9feffe5a55d29531343b54a3ed00b98a6315",
+  "saved_source_matches": true,
+  "source": "* --one--\n* two",
+  "source_sha256": "c8852d7438470e5af721f06b40bf7c6a095ea360fe3f5830aea29f3e8a1629ca",
+  "stable": true,
+  "valid": true
+ },
+ "x43": {
+  "fullname": "muse-probe-r2in2-x-x43",
+  "html": "<p><strong>a</strong> <strong>b</strong> <em>c</em> <em>d</em> <span style=\"text-decoration: underline;\">e</span> <span style=\"text-decoration: underline;\">f</span> <span style=\"text-decoration: line-through;\">g</span> <span style=\"text-decoration: line-through;\">h</span></p>",
+  "html_sha256": "43ec715f5b0822857d4ae4db2ec5f4f6beaea36ed30bd17fbcfd696fa8fc25ae",
+  "saved_source_matches": true,
+  "source": "**a** **b** //c// //d// __e__ __f__ --g-- --h--",
+  "source_sha256": "bce7a4fb338f40d0ced189d3f9118f6c33998797dcd143da86f5266197dd61ab",
+  "stable": true,
+  "valid": true
+ },
+ "x60": {
+  "fullname": "muse-probe-r2in2-x-x60",
+  "html": "<ul>\n<li><strong>a</strong></li>\n<li><strong>b</strong></li>\n<li>c</li>\n</ul>",
+  "html_sha256": "ae53b03834d08b1660b5db452794776217b1b2ef3da8ddfa97767dc7ea7a5e95",
+  "saved_source_matches": true,
+  "source": "* **a\n* b**\n* c",
+  "source_sha256": "bda66505d51bfbde82e5de7a639b04f5853f33b87b315805d638f46431e59383",
+  "stable": true,
+  "valid": true
+ },
+ "y01-bold-crosses-cell": {
+  "fullname": "muse-probe-r2table-x-y01-bold-crosses-cell",
+  "html": "<table class=\"wiki-content-table\">\n<tr>\n<td><strong>A1</strong></td>\n<td>B2</td>\n<td>C3</td>\n</tr>\n</table>\n<p>x</p>",
+  "html_sha256": "f50be40ca0697146dff7c3b5a37592c7317c3d3a7c07054d58ff5c4ae4cf8c5f",
+  "saved_source_matches": true,
+  "source": "|| **A1 || B2** || C3 ||\nx",
+  "source_sha256": "bd673db9249a0794ab508033b071851cc2f595d40ff8dc2ef0ec309ed894637e",
+  "stable": true,
+  "valid": true
+ },
+ "y10-bold-crosses-adv-cells": {
+  "fullname": "muse-probe-r2table-x-y10-bold-crosses-adv-cells",
+  "html": "<table>\n<tr>\n<td><strong>A1</strong></td>\n<td>B2</td>\n</tr>\n</table>\n<p>x</p>",
+  "html_sha256": "abf5b91127b274ec4c2996e8b878d9d2875cbb6b094a14dbe3c7289d44c6deb4",
+  "saved_source_matches": true,
+  "source": "[[table]][[row]][[cell]]**A1[[/cell]][[cell]]B2**[[/cell]][[/row]][[/table]]\nx",
+  "source_sha256": "9d11ae8117332df4b39cfa09242da0294a061605398111d619d5e9d840840c46",
+  "stable": true,
+  "valid": true
+ }
+}

@@ -99,7 +99,10 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
             $leadSpace = $sm[0];
         }
         $tailAfterLead = substr($matches[2], strlen($leadSpace));
-        if (!preg_match('/(?:^|\n)[ \t]*[*#]+[ \t]+$/', $matches[2])
+        $preservesBlockMarkerEdge = preg_match('/(?:^|\n)[ \t]*[*#]+[ \t]+$/', $matches[2]) === 1
+            || preg_match('/(?:^|\n):[^\n]* :[ \t]+$/', $matches[2]) === 1
+            || preg_match('/(?:^|\n)=[ \t]+$/', $matches[2]) === 1;
+        if (!$preservesBlockMarkerEdge
             && preg_match('/[ \t]+\z/', $tailAfterLead, $sm)) {
             $trailSpace = $sm[0];
         }
@@ -192,7 +195,7 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
         $endOptions = array('type' => 'end');
         if ($trailSpace !== '') {
             $endOptions['edge_trail'] = $trailSpace;
-        } elseif (preg_match('/(?:^|\n)[ \t]*[*#]+[ \t]+$/', $matches[2]) === 1) {
+        } elseif ($preservesBlockMarkerEdge) {
             $endOptions['preserve_trailing_edge'] = true;
         }
         $end = $this->wiki->addToken($this->rule, $endOptions);
