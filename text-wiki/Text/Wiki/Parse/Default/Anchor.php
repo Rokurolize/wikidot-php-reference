@@ -299,7 +299,8 @@ class Text_Wiki_Parse_Anchor extends Text_Wiki_Parse {
                 }
             }
 
-            if (!$scored && strpos($body, "\n\n") !== false && strpos($body, '[[') === false
+            $blockLedBare = preg_match('/\[\[\/(?:div|divalign|=|>|collapsible)\]\]\n$/i', $out) === 1;
+            if (!$scored && !$blockLedBare && strpos($body, "\n\n") !== false && strpos($body, '[[') === false
                 && preg_match('/^\s*\|\|/m', $body) !== 1) {
                 // Paragraph split inside plain [[a ...]]...[[/a]]: wrap each paragraph run.
                 $parts = preg_split('/(\n{2,})/', $body, -1, PREG_SPLIT_DELIM_CAPTURE);
