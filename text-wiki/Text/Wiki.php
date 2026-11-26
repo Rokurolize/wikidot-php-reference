@@ -1413,6 +1413,9 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
                                 . $sizeOpen;
                         }
                     }
+                    if ($rule === 'Horiz' && isset($opts['loose_scope_breaks'])) {
+                        $output .= '<br />' . "\n" . '<br />' . "\n";
+                    }
                     $output .= $this->renderObj[$rule]->token($opts);
                     $in_delim = false;
 

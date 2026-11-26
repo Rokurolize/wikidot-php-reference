@@ -184,8 +184,11 @@ class Text_Wiki_Parse_Table extends Text_Wiki_Parse {
                         )
                     );
                     
-                    // ...add the content...
-                    $return .= trim($cell[$i]);
+                    // ...add the content. Edge spaces stay in the token
+                    // stream while inline rules run: live uses them for
+                    // subscript/typography ownership at a cell boundary,
+                    // then Tighten removes them before rendering.
+                    $return .= $cell[$i];
                     
                     // ...and end the cell.
                     $return .= $this->wiki->addToken(

@@ -205,6 +205,14 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
                 $source = preg_replace('/ +' . $pattern . '/', $literal, $source);
                 continue;
             }
+            if ($tok[0] === 'Table' && isset($tok[1]['type'])) {
+                if ($tok[1]['type'] === 'cell_start') {
+                    $source = preg_replace('/' . $pattern . '[ \t]+/', $literal, $source);
+                } elseif ($tok[1]['type'] === 'cell_end') {
+                    $source = preg_replace('/[ \t]+' . $pattern . '/', $literal, $source);
+                }
+                continue;
+            }
             if ($tok[0] !== 'Paragraph') {
                 continue;
             }
