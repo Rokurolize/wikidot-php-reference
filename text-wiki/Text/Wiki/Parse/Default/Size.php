@@ -189,11 +189,18 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
         }
 
         $options = array('size'=>$size, 'type'=>'start');
+        if ($leadSpace !== '') {
+            $options['edge_lead'] = $leadSpace;
+        }
       	
         $start = $this->wiki->addToken($this->rule, $options);
 
+        $endOptions = array('type' => 'end');
+        if ($trailSpace !== '') {
+            $endOptions['edge_trail'] = $trailSpace;
+        }
         $end = $this->wiki->addToken(
-            $this->rule, array('type' => 'end')
+            $this->rule, $endOptions
         );
         
         if ($split !== null) {

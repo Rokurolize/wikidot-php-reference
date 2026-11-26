@@ -145,22 +145,38 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
         // delimiters hold no spaces or tabs, so tokenized bodies survive.
         $source = preg_replace('/[ \t]+/', ' ', $source);
 
-        // Move an edge space out of an inline color scope. Hoisting the
-        // leading space to before the opener and ejecting the trailing space
-        // to after the closer is what live's Stage 2 repair does; the
-        // paragraph-edge pass below drops the space when the scope sits at
-        // a paragraph boundary.
-        foreach ($this->wiki->tokens as $tid => $tok) {
-            if (! is_array($tok)) {
-                continue;
+        // Move an edge space out of an inline scope. Hoisting the leading
+        // space to before the opener and ejecting the trailing space to after
+        // the closer is what live's Stage 2 repair does; the paragraph-edge
+        // pass below drops the space when the scope sits at a paragraph
+        // boundary. REFCORR34 extends the color owner's settled move to
+        // Span/Size and the paired inline markers, and repeats it because a
+        // space leaving an inner span can be exposed immediately inside an
+        // outer strong/emphasis scope and must propagate outward as well.
+        $edgeInlineRules = array(
+            'Colortext' => true, 'Span' => true, 'Size' => true,
+            'Strong' => true, 'Emphasis' => true, 'Underline' => true,
+            'Strikethrough' => true, 'Tt' => true,
+            'Superscript' => true, 'Subscript' => true,
+        );
+        for ($edgePass = 0; $edgePass < 8; $edgePass++) {
+            $beforeEdgePass = $source;
+            foreach ($this->wiki->tokens as $tid => $tok) {
+                if (! is_array($tok) || ! isset($edgeInlineRules[$tok[0]])) {
+                    continue;
+                }
+                $literal = $delim . $tid . $delim;
+                $pattern = preg_quote($literal, '/');
+                $type = isset($tok[1]['type']) ? $tok[1]['type'] : '';
+                if ($type === 'start') {
+                    $source = preg_replace('/' . $pattern . ' /', ' ' . $literal, $source);
+                } elseif ($type === 'end'
+                    && empty($tok[1]['preserve_trailing_edge'])) {
+                    $source = preg_replace('/ ' . $pattern . '/', $literal . ' ', $source);
+                }
             }
-            $literal = $delim . $tid . $delim;
-            $pattern = preg_quote($literal, '/');
-            $type = isset($tok[1]['type']) ? $tok[1]['type'] : '';
-            if ($tok[0] === 'Colortext' && $type === 'start') {
-                $source = preg_replace('/' . $pattern . ' /', ' ' . $literal, $source);
-            } elseif ($tok[0] === 'Colortext' && $type === 'end') {
-                $source = preg_replace('/ ' . $pattern . '/', $literal . ' ', $source);
+            if ($source === $beforeEdgePass) {
+                break;
             }
         }
 
@@ -181,6 +197,11 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
             $pattern = preg_quote($literal, '/');
             if ($tok[0] === 'Newline') {
                 $source = preg_replace('/' . $pattern . ' +/', $literal, $source);
+                $source = preg_replace('/ +' . $pattern . '/', $literal, $source);
+                continue;
+            }
+            if ($tok[0] === 'List' && isset($tok[1]['type'])
+                && substr($tok[1]['type'], -9) === '_item_end') {
                 $source = preg_replace('/ +' . $pattern . '/', $literal, $source);
                 continue;
             }

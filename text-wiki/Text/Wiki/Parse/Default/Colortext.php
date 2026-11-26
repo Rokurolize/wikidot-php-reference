@@ -56,6 +56,43 @@ class Text_Wiki_Parse_Colortext extends Text_Wiki_Parse {
     public $regex = '/##([A-Za-z0-9#(),\- \t]+)\|(.+?)##/';
 
     /**
+     * REFCORR34: Span and Size edge whitespace has two stage-specific owners.
+     * While the block-layout rules run it must sit outside the inline scope
+     * (the REFCORR32 placement); once Newline/Paragraph/List have finished,
+     * the same bytes must again be inside the scope so the paired-marker
+     * grammar sees live's inline edges. In particular a trailing space keeps
+     * `[[size 0%]]__ [[/size]]` from becoming half of a cross-item __ pair,
+     * while a leading space no longer sits between `**` and a Span token in
+     * `**[[span]] text[[/span]]**`. Tighten performs the final outward move.
+     */
+    function parse()
+    {
+        foreach ($this->wiki->tokens as $tid => $tok) {
+            if (! is_array($tok) || ($tok[0] !== 'Span' && $tok[0] !== 'Size')) {
+                continue;
+            }
+            $literal = $this->wiki->delim . $tid . $this->wiki->delim;
+            $type = isset($tok[1]['type']) ? $tok[1]['type'] : '';
+            if ($type === 'start' && isset($tok[1]['edge_lead']) && $tok[1]['edge_lead'] !== '') {
+                $edge = $tok[1]['edge_lead'];
+                $this->wiki->source = str_replace(
+                    $edge . $literal,
+                    $literal . $edge,
+                    $this->wiki->source
+                );
+            } elseif ($type === 'end' && isset($tok[1]['edge_trail']) && $tok[1]['edge_trail'] !== '') {
+                $edge = $tok[1]['edge_trail'];
+                $this->wiki->source = str_replace(
+                    $literal . $edge,
+                    $edge . $literal,
+                    $this->wiki->source
+                );
+            }
+        }
+        parent::parse();
+    }
+
+    /**
      * 
      * Generates a replacement for the matched text.  Token options are:
      * 
@@ -73,6 +110,7 @@ class Text_Wiki_Parse_Colortext extends Text_Wiki_Parse {
      * emphasized.
      *
      */
+    
     
     function process($matches) {
         $start = $this->wiki->addToken($this->rule, array(
