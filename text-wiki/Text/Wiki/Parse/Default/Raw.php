@@ -30,12 +30,16 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
         $n = strlen($src);
         $out = '';
         $i = 0;
+        $atRawBoundary = false;
         while ($i < $n) {
             // REFCORR15: single left-to-right pass over @<...>@ and @@...@@ so
             // earlier @< wins over interior @@@@ (formraw basic AT4: @<@@@@>@)
             // and earlier @@ wins over interior @<...>@ (@@foo @< >@ bar@@).
+            // REFCORR37: the closing @ of a completed raw is still a token
+            // boundary on live, so an angle opener glued to it starts a new
+            // angle raw instead of being suppressed as an interior opener.
             if ($src[$i] === '@' && $i + 1 < $n && $src[$i + 1] === '<'
-                && !($i > 0 && $src[$i - 1] === '@')) {
+                && ($atRawBoundary || !($i > 0 && $src[$i - 1] === '@'))) {
                 $close = strpos($src, '>@', $i + 2);
                 $nl = strpos($src, "\n", $i + 2);
                 if ($close !== false && ($nl === false || $close < $nl)) {
@@ -54,15 +58,18 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                         substr($src, $i, $close + 2 - $i)
                     );
                     $i = $close + 2;
+                    $atRawBoundary = true;
                     continue;
                 }
             }
             if ($src[$i] !== '@' || $i + 1 >= $n || $src[$i + 1] !== '@'
-                || ($i > 0 && $src[$i - 1] === '@')) {
+                || (!$atRawBoundary && $i > 0 && $src[$i - 1] === '@')) {
                 $out .= $src[$i];
                 $i++;
+                $atRawBoundary = false;
                 continue;
             }
+            $atRawBoundary = false;
             $j = $i;
             while ($j < $n && $src[$j] === '@') $j++;
             $run = $j - $i;
@@ -227,7 +234,25 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
             } else {
                 $text = ($lead === 1 ? '@' : '') . $body;
                 $out .= $this->wiki->addToken($this->rule, array('text' => $text), false, substr($src, $i, $k - $i));
-                if ($trail === 1) $out .= '@';
+                if ($trail === 1) {
+                    // REFCORR37: in a two-at opener / three-at closer run,
+                    // live reuses the closer's surplus @ as the opener of a
+                    // glued angle raw when that angle raw is complete on the
+                    // line (@@x@@@<&nbsp;>@). Otherwise it remains literal.
+                    $reserveAngle = ($closeRun === 3 && $k < $n && $src[$k] === '<');
+                    if ($reserveAngle) {
+                        $angleClose = strpos($src, '>@', $k + 1);
+                        $angleNl = strpos($src, "\n", $k + 1);
+                        $reserveAngle = $angleClose !== false
+                            && ($angleNl === false || $angleClose < $angleNl);
+                    }
+                    if ($reserveAngle) {
+                        $i = $k - 1;
+                        $atRawBoundary = true;
+                        continue;
+                    }
+                    $out .= '@';
+                }
             }
             $i = $k;
         }

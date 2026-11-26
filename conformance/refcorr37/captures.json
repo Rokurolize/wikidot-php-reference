@@ -1,0 +1,192 @@
+{
+ "PROBE-LAYOUT": {
+  "fullname": "muse-probe-hunt-pb-layout",
+  "html": "HUNTPB-L1-RAW-DIRECT-SIMPLE-TABLE<br /><span style=\"white-space: pre-wrap;\"></span><br /><table class=\"wiki-content-table\"><tr><td>a</td></tr></table><p>HUNTPB-L1-RAW-DIRECT-SIMPLE-TABLE-END</p><p>HUNTPB-L2-RAW-BLANK-SIMPLE-TABLE<br /><span style=\"white-space: pre-wrap;\"></span></p><table class=\"wiki-content-table\"><tr><td>a</td></tr></table><p>HUNTPB-L2-RAW-BLANK-SIMPLE-TABLE-END</p> HUNTPB-L3-RAW-DIRECT-TABVIEW<br /><span style=\"white-space: pre-wrap;\"></span><br /><div class=\"yui-navset\" id=\"wiki-tabview-X\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>one</em></a></li></ul><div class=\"yui-content\"><div id=\"wiki-tab-X\"><p>alpha</p></div></div></div><br /> HUNTPB-L3-RAW-DIRECT-TABVIEW-END <p>HUNTPB-L4-RAW-BLANK-TABVIEW<br /><span style=\"white-space: pre-wrap;\"></span></p><div class=\"yui-navset\" id=\"wiki-tabview-X\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>one</em></a></li></ul><div class=\"yui-content\"><div id=\"wiki-tab-X\"><p>alpha</p></div></div></div><br /> HUNTPB-L4-RAW-BLANK-TABVIEW-END <p>HUNTPB-L5-RAW-PAIR-BLANK-TABVIEW<br /><span style=\"white-space: pre-wrap;\"></span></p><span style=\"white-space: pre-wrap;\"></span><br /><div class=\"yui-navset\" id=\"wiki-tabview-X\"><ul class=\"yui-nav\"><li class=\"selected\"><a href=\"javascript:;\"><em>one</em></a></li></ul><div class=\"yui-content\"><div id=\"wiki-tab-X\"><p>alpha</p></div></div></div><br /> HUNTPB-L5-RAW-PAIR-BLANK-TABVIEW-END <p>HUNTPB-L6-RAW-DIRECT-ADV-TABLE<br /><span style=\"white-space: pre-wrap;\"></span></p><table><tr><td>a</td></tr></table><p>HUNTPB-L6-RAW-DIRECT-ADV-TABLE-END</p> HUNTPB-L7-SIMPLE-TABLE-RAW-TEXT<br /><table class=\"wiki-content-table\"><tr><td>a</td></tr></table><p><span style=\"white-space: pre-wrap;\"></span><br /> tail<br /> HUNTPB-L7-SIMPLE-TABLE-RAW-TEXT-END</p><p>HUNTPB-L8-RAW-BETWEEN-TEXT<br /> alpha<br /><span style=\"white-space: pre-wrap;\"></span><br /> omega<br /> HUNTPB-L8-RAW-BETWEEN-TEXT-END</p>",
+  "html_sha256": "30e7ce70668654465997fd9a04b2a4ac8259b762cbaa2c523be141e575d9dc03",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-RAWNBSP": {
+  "fullname": "muse-probe-hunt-pb-rawnbsp",
+  "html": "<p>HUNTPB-R1-ANGLE-NBSP-SINGLE<br /><span style=\"white-space: pre-wrap;\"></span><br /> HUNTPB-R1-ANGLE-NBSP-SINGLE-END</p><p>HUNTPB-R2-ANGLE-NBSP-ADJ2<br /><span style=\"white-space: pre-wrap;\"></span><span style=\"white-space: pre-wrap;\"></span><br /> HUNTPB-R2-ANGLE-NBSP-ADJ2-END</p><p>HUNTPB-R3-ANGLE-NBSP-ADJ4<br /><span style=\"white-space: pre-wrap;\"></span><span style=\"white-space: pre-wrap;\"></span><span style=\"white-space: pre-wrap;\"></span><span style=\"white-space: pre-wrap;\"></span><br /> HUNTPB-R3-ANGLE-NBSP-ADJ4-END</p><p>HUNTPB-R4-ANGLE-NBSP-SPACES<br /><span style=\"white-space: pre-wrap;\"></span><span style=\"white-space: pre-wrap;\"></span><br /> HUNTPB-R4-ANGLE-NBSP-SPACES-END</p><p>HUNTPB-R5-ANGLE-NBSP-LINES<br /><span style=\"white-space: pre-wrap;\"></span><br /><span style=\"white-space: pre-wrap;\"></span><br /> HUNTPB-R5-ANGLE-NBSP-LINES-END</p><p>HUNTPB-R6-ATAT-BEFORE-ANGLE<br /><span style=\"white-space: pre-wrap;\">x</span><span style=\"white-space: pre-wrap;\"></span><br /> HUNTPB-R6-ATAT-BEFORE-ANGLE-END</p><p>HUNTPB-R7-ANGLE-BEFORE-ATAT<br /><span style=\"white-space: pre-wrap;\"></span><span style=\"white-space: pre-wrap;\">x</span><br /> HUNTPB-R7-ANGLE-BEFORE-ATAT-END</p> HUNTPB-R8-RAW-BETWEEN-SIMPLE-TABLES<br /><table class=\"wiki-content-table\"><tr><td>a</td></tr></table><span style=\"white-space: pre-wrap;\"></span><br /><table class=\"wiki-content-table\"><tr><td>b</td></tr></table><p>HUNTPB-R8-RAW-BETWEEN-SIMPLE-TABLES-END</p> HUNTPB-R9-RAW-BLANK-BETWEEN-SIMPLE-TABLES<br /><table class=\"wiki-content-table\"><tr><td>a</td></tr></table><p><span style=\"white-space: pre-wrap;\"></span></p><table class=\"wiki-content-table\"><tr><td>b</td></tr></table><p>HUNTPB-R9-RAW-BLANK-BETWEEN-SIMPLE-TABLES-END</p>",
+  "html_sha256": "69e4d1f0822c0243a170cc0d5e0e5a69f784a476f99c2308f9a52b3698117616",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-DEGENERATE": {
+  "fullname": "muse-probe-hunt-pb-degenerate",
+  "html": "<p>HUNTPB-D1-EMPTY-CENTER</p><p style=\"text-align: center;\"></p><p>HUNTPB-D1-EMPTY-CENTER-END</p><p>HUNTPB-D2-EMPTY-CENTER-2SP</p><p style=\"text-align: center;\"></p><p>HUNTPB-D2-EMPTY-CENTER-2SP-END</p><p>HUNTPB-D3-EMPTY-H1</p><h1 id=\"tocN\"></h1><p>HUNTPB-D3-EMPTY-H1-END</p><p>HUNTPB-D4-EMPTY-H2</p><h2 id=\"tocN\"></h2><p>HUNTPB-D4-EMPTY-H2-END</p><p>HUNTPB-D5-EMPTY-H1-NOTOC</p><p>HUNTPB-D5-EMPTY-H1-NOTOC-END</p> HUNTPB-D6-DEFLIST-SWALLOW<br /> a<br /><p>b<br /> HUNTPB-D6-DEFLIST-SWALLOW-END</p><p>HUNTPB-D7-QUOTE-ONLY-TERM</p><p>HUNTPB-D7-QUOTE-ONLY-TERM-END</p><p>HUNTPB-D8-QUOTE-TERM-CONTEXT</p><blockquote>normal<br /></blockquote><p>HUNTPB-D8-QUOTE-TERM-CONTEXT-END</p><p>HUNTPB-D9-EMPTY-LIST-CONTROL<br /> a</p><p>b<br /> HUNTPB-D9-EMPTY-LIST-CONTROL-END</p><p>HUNTPB-D10-CENTER-CONTROL</p><p style=\"text-align: center;\">x</p><p>HUNTPB-D10-CENTER-CONTROL-END</p>",
+  "html_sha256": "12bc22a92f0ecd8a879b9598bd45100f9469ee91ee909f5bf6aa367a933f9e0a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-SPAN": {
+  "fullname": "muse-probe-hunt-pb-span",
+  "html": "<p>HUNTPB-S1-EMPTY-BARE-INLINE<br /> ab<br /> HUNTPB-S1-EMPTY-BARE-INLINE-END</p><p>HUNTPB-S2-EMPTY-BARE-LINE<br /> a<br /><br /> b<br /> HUNTPB-S2-EMPTY-BARE-LINE-END</p><p>HUNTPB-S3-EMPTY-CLASS-DROPPED-LINE<br /> a<br /><br /> b<br /> HUNTPB-S3-EMPTY-CLASS-DROPPED-LINE-END</p><p>HUNTPB-S4-NEWLINE-BODY-INLINE<br /> a<span><br /></span> b<br /> HUNTPB-S4-NEWLINE-BODY-INLINE-END</p><p>HUNTPB-S5-NEWLINE-BODY-STANDALONE<br /> before<br /><span><br /></span><br /> after<br /> HUNTPB-S5-NEWLINE-BODY-STANDALONE-END</p><p>HUNTPB-S6-EMPTY-CLASS-NOID<br /> ab<br /> HUNTPB-S6-EMPTY-CLASS-NOID-END</p><p>HUNTPB-S7-EMPTY-STYLE-NOID<br /> ab<br /> HUNTPB-S7-EMPTY-STYLE-NOID-END</p><p>HUNTPB-S8-EMPTY-DATA-NOID<br /> ab<br /> HUNTPB-S8-EMPTY-DATA-NOID-END</p><p>HUNTPB-S9-EMPTY-ID-CONTROL<br /> a<span id=\"u-X\" style=\"color:blue\"></span>b<br /> HUNTPB-S9-EMPTY-ID-CONTROL-END</p><p>HUNTPB-S10-SPACE-BODY-LINE<br /> a<br /><br /> b<br /> HUNTPB-S10-SPACE-BODY-LINE-END</p>",
+  "html_sha256": "f7bcd5504349c3090332e7bb82719a2475c98c10c7cdaa73b27c830f0821977f",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TABLECELL": {
+  "fullname": "muse-probe-hunt-pb-tablecell",
+  "html": "<p>HUNTPB-C1-CELL-NEWLINE-NESTED-ADV</p><table><tr><td><table><tr><td>inner</td></tr></table></td></tr></table><p>HUNTPB-C1-CELL-NEWLINE-NESTED-ADV-END</p><p>HUNTPB-C2-CELL-BREAK-NESTED-ADV</p><table><tr><td><p><br /></p><table><tr><td>inner</td></tr></table></td></tr></table><p>HUNTPB-C2-CELL-BREAK-NESTED-ADV-END</p><p>HUNTPB-C3-CELL-BLANK-NESTED-ADV</p><table><tr><td><table><tr><td>inner</td></tr></table></td></tr></table><p>HUNTPB-C3-CELL-BLANK-NESTED-ADV-END</p><p>HUNTPB-C4-CELL-SAMELINE-NESTED-ADV</p><table><tr><td><table><tr><td>inner</td></tr></table></td></tr></table><p>HUNTPB-C4-CELL-SAMELINE-NESTED-ADV-END</p><p>HUNTPB-C5-CELL-TEXT-NESTED-ADV</p><table><tr><td><p>lead</p><table><tr><td>inner</td></tr></table></td></tr></table><p>HUNTPB-C5-CELL-TEXT-NESTED-ADV-END</p><p>HUNTPB-C6-CELL-NEWLINE-SIMPLE-TABLE</p><table><tr><td><table class=\"wiki-content-table\"><tr><td>a</td></tr></table></td></tr></table><p>HUNTPB-C6-CELL-NEWLINE-SIMPLE-TABLE-END</p><p>HUNTPB-C7-CELL-RAW-NESTED-ADV</p><table><tr><td><p><span style=\"white-space: pre-wrap;\"></span></p><table><tr><td>inner</td></tr></table></td></tr></table><p>HUNTPB-C7-CELL-RAW-NESTED-ADV-END</p><p>HUNTPB-C8-CELL-TEXT-CONTROL</p><table><tr><td>lead</td></tr></table><p>HUNTPB-C8-CELL-TEXT-CONTROL-END</p>",
+  "html_sha256": "4a05925826fd5685a1cc7e5d7939079f88f68d83076eea14dd8c3fa461064dcb",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TERMINAL_DIV1": {
+  "fullname": "muse-probe-hunt-pb-terminal-div1",
+  "html": "<p>HUNTPB-TEXT-CONTROL<br /> alpha<br /><br /> beta<br /> HUNTPB-TEXT-CONTROL-END</p><p>HUNTPB-TD1-DIV-CENTER-ONE</p><div><div style=\"text-align: center;\"><p>X</p></div></div><br /><br /><br />",
+  "html_sha256": "dde34db68c1a23a0d89d6b5712e90884a8cb0958ac3dafc88a53988cb611de89",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TERMINAL_DIV2": {
+  "fullname": "muse-probe-hunt-pb-terminal-div2",
+  "html": "<p>HUNTPB-TEXT-CONTROL<br /> alpha<br /><br /> beta<br /> HUNTPB-TEXT-CONTROL-END</p><p>HUNTPB-TD2-DIV-CENTER-TWO</p><div><div style=\"text-align: center;\"><p>X</p></div></div><br /><br /><br /><br />",
+  "html_sha256": "c750453d1142409ff8366303b5e94df1d151cb2309a24e5b9c0c73f4040c0302",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TERMINAL_DIV3": {
+  "fullname": "muse-probe-hunt-pb-terminal-div3",
+  "html": "<p>HUNTPB-TEXT-CONTROL<br /> alpha<br /><br /> beta<br /> HUNTPB-TEXT-CONTROL-END</p><p>HUNTPB-TD3-DIV-CENTER-THREE</p><div><div style=\"text-align: center;\"><p>X</p></div></div><br /><br /><br /><br /><br />",
+  "html_sha256": "125fb07f261521b13ec8c293d3bc1cf6f709e7c4f53942f698beeb35bc41de43",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TERMINAL_TABLE3": {
+  "fullname": "muse-probe-hunt-pb-terminal-table3",
+  "html": "<p>HUNTPB-TEXT-CONTROL<br /> alpha<br /><br /> beta<br /> HUNTPB-TEXT-CONTROL-END</p> HUNTPB-TT3-SIMPLE-TABLE-THREE<br /><table class=\"wiki-content-table\"><tr><td>a</td></tr></table><br /><br /><br /><br />",
+  "html_sha256": "8b3df3b6986b0d6fc70826253e6e93361084dc658bd8fd875a2c30df575b8973",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TERMINAL_HR3": {
+  "fullname": "muse-probe-hunt-pb-terminal-hr3",
+  "html": "<p>HUNTPB-TEXT-CONTROL<br /> alpha<br /><br /> beta<br /> HUNTPB-TEXT-CONTROL-END</p><p>HUNTPB-TH3-HR-THREE</p><hr><br /><br /><br /><br />",
+  "html_sha256": "d4f96608ed1db36e4a6f41d9aa746103693e9fdc815441b9a8f2d6eaf25d0589",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-SPAN-NEWLINE-MATRIX": {
+  "fullname": "muse-probe-hunt-pb2-span-newline-matrix",
+  "html": "<p>HUNTPB-X1-NL-INLINE-NOSP<br /> a<span><br /></span> b<br /> HUNTPB-X1-NL-INLINE-NOSP-END</p><p>HUNTPB-X2-NL-INLINE-SPACES<br /> a <span><br /></span> b<br /> HUNTPB-X2-NL-INLINE-SPACES-END</p><p>HUNTPB-X3-NL-STANDALONE<br /> before<br /><span><br /></span><br /> after<br /> HUNTPB-X3-NL-STANDALONE-END</p><p>HUNTPB-X4-NL-CLASS-NOID<br /> a<span class=\"x\"><br /></span> b<br /> HUNTPB-X4-NL-CLASS-NOID-END</p><p>HUNTPB-X5-NL-ID-CONTROL<br /> a<span id=\"u-X\"><br /></span> b<br /> HUNTPB-X5-NL-ID-CONTROL-END</p><p>HUNTPB-X6-NL-DOUBLE-NL-BODY<br /> a</p><p>b<br /> HUNTPB-X6-NL-DOUBLE-NL-BODY-END</p><p>HUNTPB-X7-NL-TEXT-CONTROL<br /> a<span><br /> x<br /></span> b<br /> HUNTPB-X7-NL-TEXT-CONTROL-END</p>",
+  "html_sha256": "14124c44aa7c6b218f67228580eb17a1cac793e1188a27a35ff600ca9c1546c2",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TABLECELL-COMMENT-MATRIX": {
+  "fullname": "muse-probe-hunt-pb2-tablecell-comment-matrix",
+  "html": "<p>HUNTPB-C9-SPACES-NO-COMMENT</p><table><tr><td><table><tr><td>inner</td></tr></table></td></tr></table><p>HUNTPB-C9-SPACES-NO-COMMENT-END</p><p>HUNTPB-C10-SPACES-COMMENT</p><table><tr><td><table><tr><td>inner</td></tr></table></td></tr></table><p>HUNTPB-C10-SPACES-COMMENT-END</p><p>HUNTPB-C11-COMMENT-NOSPACES</p><table><tr><td><table><tr><td>inner</td></tr></table></td></tr></table><p>HUNTPB-C11-COMMENT-NOSPACES-END</p><p>HUNTPB-C12-INDENT-ONLY</p><table><tr><td><table><tr><td>inner</td></tr></table></td></tr></table><p>HUNTPB-C12-INDENT-ONLY-END</p><p>HUNTPB-C13-SPACES-TEXT</p><table><tr><td>lead</td></tr></table><p>HUNTPB-C13-SPACES-TEXT-END</p><p>HUNTPB-C14-SPACES-COMMENT-TEXT</p><table><tr><td>lead</td></tr></table><p>HUNTPB-C14-SPACES-COMMENT-TEXT-END</p><p>HUNTPB-C15-OWNLINE-COMMENT</p><table><tr><td><table><tr><td>inner</td></tr></table></td></tr></table><p>HUNTPB-C15-OWNLINE-COMMENT-END</p>",
+  "html_sha256": "1403472c468ff9ec296c384bfc5f252a7bbe8a9923d64b5493b8724ef1c57465",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TERMINAL-EMPTYDIV1": {
+  "fullname": "muse-probe-hunt-pb3-terminal-emptydiv1",
+  "html": "<p>HUNTPB-TE1-DIVALIGN-EMPTY</p><div><div style=\"text-align: center;\"></div></div><br /><br /><br />",
+  "html_sha256": "8e37af484288b262faa715e7b8439fc775bbf38ab5a85ec68cc06a3378f9c642",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TERMINAL-EMPTYDIV2": {
+  "fullname": "muse-probe-hunt-pb3-terminal-emptydiv2",
+  "html": "<p>HUNTPB-TE2-DIVALIGN-EMPTY</p><div><div style=\"text-align: center;\"></div></div><br /><br /><br /><br />",
+  "html_sha256": "c1b1d21cdc002d236062f96781311cdb4929b5206b1fb0af2bc156a0387955c1",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TERMINAL-EMPTYDIV3": {
+  "fullname": "muse-probe-hunt-pb3-terminal-emptydiv3",
+  "html": "<p>HUNTPB-TE3-DIVALIGN-EMPTY</p><div><div style=\"text-align: center;\"></div></div><br /><br /><br /><br /><br />",
+  "html_sha256": "6e6e1224bae8f7f3e2b848f42d9dd8d160912d907d8ad5a13cd57fe8922085ea",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TABLECELL-TRAILING-SEAM": {
+  "fullname": "muse-probe-hunt-pb4-tablecell-trailing-seam",
+  "html": "<p>HUNTPB-F1-TRAILING-SEAM</p><div><table><tr><td style=\"border: 2px solid black\"><table><tr><td>inner</td></tr></table><p><br /></p></td></tr></table></div><br /> HUNTPB-F1-TRAILING-SEAM-END <p>HUNTPB-F2-TRAILING-NOSPACES</p><div><table><tr><td style=\"border: 2px solid black\"><table><tr><td>inner</td></tr></table></td></tr></table></div><br /> HUNTPB-F2-TRAILING-NOSPACES-END <p>HUNTPB-F3-TRAILING-NOINDENT</p><div><table><tr><td style=\"border: 2px solid black\"><table><tr><td>inner</td></tr></table></td></tr></table></div><br /> HUNTPB-F3-TRAILING-NOINDENT-END <p>HUNTPB-F4-TRAILING-COMMENT-NOSPACES</p><div><table><tr><td style=\"border: 2px solid black\"><table><tr><td>inner</td></tr></table></td></tr></table></div><br /> HUNTPB-F4-TRAILING-COMMENT-NOSPACES-END",
+  "html_sha256": "8862c3c27167785cb53b31e4f352ad248e95cb678df6d50bef8578cafb25ce4c",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-SPAN-SPACE-ADJACENCY": {
+  "fullname": "muse-probe-hunt-pb5-span-space-adjacency",
+  "html": "<p>HUNTPB-SA-CLASS-NEITHER<br /> ab<br /> HUNTPB-SA-CLASS-NEITHER-END</p><p>HUNTPB-SA-CLASS-BEFORE<br /> a b<br /> HUNTPB-SA-CLASS-BEFORE-END</p><p>HUNTPB-SA-CLASS-AFTER<br /> a b<br /> HUNTPB-SA-CLASS-AFTER-END</p><p>HUNTPB-SA-CLASS-BOTH<br /> a b<br /> HUNTPB-SA-CLASS-BOTH-END</p><p>HUNTPB-SA-STYLE-NEITHER<br /> ab<br /> HUNTPB-SA-STYLE-NEITHER-END</p><p>HUNTPB-SA-STYLE-BEFORE<br /> a b<br /> HUNTPB-SA-STYLE-BEFORE-END</p><p>HUNTPB-SA-STYLE-AFTER<br /> a b<br /> HUNTPB-SA-STYLE-AFTER-END</p><p>HUNTPB-SA-STYLE-BOTH<br /> a b<br /> HUNTPB-SA-STYLE-BOTH-END</p>",
+  "html_sha256": "9239f7da759cde30399bb84ecb8d5857e0d73f3227352703340f233b523878f5",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
+ "PROBE-TABLECELL-LEADING-SEAM": {
+  "fullname": "synthetic:leading-seam",
+  "html": "<table><tr><td style=\"border: 2px solid black\"><p><br /></p><table><tr><td>inner</td></tr></table></td></tr></table>",
+  "html_sha256": "cf2f95825a7eb9a26dfc67f00eed4606fe6af92b0c926f7e20bd46df2fc2a76a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": false,
+  "fetch_count": 0,
+  "evidence": "canonical fragment of the E2-NODIV shape in saved sandbox probe muse-probe-hunt-pb3-tablecell-witness-matrix; grouped-page separator bytes excluded"
+ },
+ "EOF-CENTER-LITERAL": {
+  "fullname": "synthetic:eof-center",
+  "html": "<p>=</p>",
+  "html_sha256": "3608540d505031977bce99915e18ae35105bc297b6fe4a6d6fe50773696d025b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": false,
+  "fetch_count": 0,
+  "evidence": "recorded C-SUSPECT-PREWRAP-6 EOF probe structure (literal = in its own paragraph); trailing-space source cannot be byte-verified because Wikidot normalizes it"
+ }
+}

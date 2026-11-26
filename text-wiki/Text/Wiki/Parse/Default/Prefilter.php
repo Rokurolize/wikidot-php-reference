@@ -63,6 +63,13 @@ class Text_Wiki_Parse_Prefilter extends Text_Wiki_Parse {
         $this->wiki->source = str_replace("\t", "    ",
             $this->wiki->source);
            
+        // REFCORR37: remember whether the unpadded input ended in an
+        // empty center marker. The synthetic end padding would otherwise
+        // make that EOF-only shape indistinguishable from a mid-document
+        // empty marker line, which live does consume.
+        $this->wiki->vars['prefilter_terminal_empty_center'] =
+            preg_match('/(?:^|\n)= [ \t]*\z/', $this->wiki->source) === 1;
+
         // add extra newlines at the top and end; this
         // seems to help many rules.
         $this->wiki->source =  "\n".$this->wiki->source . "\n\n";

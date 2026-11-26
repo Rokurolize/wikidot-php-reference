@@ -135,7 +135,7 @@ class Text_Wiki_Parse_List extends Text_Wiki_Parse {
             }
         }
         if (count($items) === 0) {
-            return '';
+            return "\n\n";
         }
 
         // the stack holds one entry per open list, with the type of that

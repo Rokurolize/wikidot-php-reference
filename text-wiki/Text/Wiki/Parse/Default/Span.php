@@ -176,8 +176,11 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
         if (preg_match('/\A[ \t]+\z/', $matches[2]) === 1 && !empty($args)) {
             return $this->wiki->addToken($this->rule, array('type' => 'empty'));
         }
-        if (trim($content) === '' && empty($args)) {
-            return '';
+        if (trim($content) === '' && $content !== "\n" && empty($args)) {
+            if (preg_match('/\A\n{2,}\z/', $content) === 1) {
+                return $content;
+            }
+            return $this->wiki->addToken($this->rule, array('type' => 'empty'));
         }
         $options = array('args' => $args, 'type' => 'start');
         if ($leadSpace !== '') {

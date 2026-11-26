@@ -69,6 +69,33 @@ class Text_Wiki_Parse_Center extends Text_Wiki_Parse {
      *
      */
     
+    function parse() {
+        if (empty($this->wiki->vars['prefilter_terminal_empty_center'])) {
+            parent::parse();
+            return;
+        }
+        $src = $this->wiki->source;
+        if (!preg_match_all($this->regex, $src, $ms, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
+            return;
+        }
+        $out = '';
+        $last = 0;
+        $terminalEnd = strlen($src) - 2;
+        foreach ($ms as $m) {
+            $off = $m[0][1];
+            $out .= substr($src, $last, $off - $last);
+            $plain = array($m[0][0], $m[1][0]);
+            $end = $off + strlen($m[0][0]);
+            if (trim($m[1][0]) === '' && $end === $terminalEnd) {
+                $out .= $m[0][0];
+            } else {
+                $out .= $this->process($plain);
+            }
+            $last = $end;
+        }
+        $this->wiki->source = $out . substr($src, $last);
+    }
+
     function process($matches) {
         $start = $this->wiki->addToken($this->rule, array(
             'type' => 'start'));

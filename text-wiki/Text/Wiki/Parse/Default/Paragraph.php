@@ -396,7 +396,7 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
                         && $tok[1]['type'] === 'suppressed') {
                         continue;
                     }
-                    if ($rule === 'raw' && (!isset($tok[1]['text']) || $tok[1]['text'] === '')) {
+                    if ($rule === 'raw' && (!isset($tok[1]['text']) || trim($tok[1]['text']) === '')) {
                         continue;
                     }
                     $sub = isset($tok[1]['type']) ? $tok[1]['type'] : '';
