@@ -75,6 +75,191 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
     function parse()
     {
         $src = $this->wiki->source;
+        // A blank-line run immediately inside a Span or Size opener is
+        // inline content before it is paragraph layout. Live serves those
+        // line breaks in the leading empty fragment that Stage 2 repair
+        // leaves before a following block boundary; treating the run as a
+        // paragraph separator here loses the fragment.
+        $newlineRun = '/\n{2,}/';
+        $leadOut = '';
+        $cursor = 0;
+        $search = 0;
+        while (preg_match($newlineRun, $src, $m, PREG_OFFSET_CAPTURE, $search)) {
+            $fullPos = $m[0][1];
+            $fullLen = strlen($m[0][0]);
+            $leadOut .= substr($src, $cursor, $fullPos - $cursor);
+            $replacement = $m[0][0];
+            $prefix = substr($src, 0, $fullPos);
+            $placeholder = '/' . preg_quote($this->wiki->delim, '/') . '(\d+)'
+                . preg_quote($this->wiki->delim, '/') . '/';
+            $inlineDepth = 0;
+            $inlineStack = array();
+            $allPrefixMatches = array();
+            $horizPrefixIndexes = array();
+            if (preg_match_all($placeholder, $prefix, $pm, PREG_OFFSET_CAPTURE)) {
+                $allPrefixMatches = $pm;
+                foreach ($pm[1] as $pi => $tidm) {
+                    $tid = $tidm[0];
+                    $tok = isset($this->wiki->tokens[(int)$tid])
+                        ? $this->wiki->tokens[(int)$tid] : null;
+                    if ($tok !== null && $tok[0] === 'Horiz') {
+                        $horizPrefixIndexes[] = $pi;
+                    }
+                    if ($tok === null || !in_array($tok[0], array('Span', 'Size'), true)
+                        || !isset($tok[1]['type'])) {
+                        continue;
+                    }
+                    if ($tok[1]['type'] === 'start') {
+                        $inlineDepth++;
+                        $inlineStack[] = $pi;
+                    } elseif ($tok[1]['type'] === 'end' && $inlineDepth > 0) {
+                        $inlineDepth--;
+                        array_pop($inlineStack);
+                    }
+                }
+            }
+            $scopeAfterBlockEnd = false;
+            if (!empty($inlineStack)) {
+                $scopePi = end($inlineStack);
+                if ($scopePi > 0) {
+                    $scopeStartPos = $allPrefixMatches[0][$scopePi][1];
+                    $prevEndPos = $allPrefixMatches[0][$scopePi - 1][1]
+                        + strlen($allPrefixMatches[0][$scopePi - 1][0]);
+                    $scopeBetween = substr($prefix, $prevEndPos, $scopeStartPos - $prevEndPos);
+                    $scopePrevTok = isset($this->wiki->tokens[(int)$allPrefixMatches[1][$scopePi - 1][0]])
+                        ? $this->wiki->tokens[(int)$allPrefixMatches[1][$scopePi - 1][0]] : null;
+                    $scopeAfterBlockEnd = $scopePrevTok !== null
+                        && preg_match('/\A\n[ \t]*\z/', $scopeBetween) === 1
+                        && isset($scopePrevTok[1]['type']) && $scopePrevTok[1]['type'] === 'end'
+                        && in_array($scopePrevTok[0], array('Div', 'Divalign', 'Center', 'Horiz', 'Table', 'Tableadv'), true);
+                }
+            }
+            $directInlineLead = false;
+            if (preg_match($placeholder, $prefix, $endm, PREG_OFFSET_CAPTURE) && preg_match_all($placeholder, $prefix, $allEnds, PREG_OFFSET_CAPTURE)) {
+                $lastIndex = count($allEnds[0]) - 1;
+                if ($allEnds[0][$lastIndex][1] + strlen($allEnds[0][$lastIndex][0]) === $fullPos) {
+                    $edgeTok = isset($this->wiki->tokens[(int)$allEnds[1][$lastIndex][0]])
+                        ? $this->wiki->tokens[(int)$allEnds[1][$lastIndex][0]] : null;
+                    $directInlineLead = $edgeTok !== null
+                        && in_array($edgeTok[0], array('Span', 'Size'), true)
+                        && isset($edgeTok[1]['type']) && $edgeTok[1]['type'] === 'start';
+                    if ($directInlineLead) {
+                        $directInlineLead = false;
+                        if ($lastIndex > 0) {
+                            $inlineStartPos = $allEnds[0][$lastIndex][1];
+                            $prevEndPos = $allEnds[0][$lastIndex - 1][1]
+                                + strlen($allEnds[0][$lastIndex - 1][0]);
+                            $between = substr($prefix, $prevEndPos, $inlineStartPos - $prevEndPos);
+                            $prevTok = isset($this->wiki->tokens[(int)$allEnds[1][$lastIndex - 1][0]])
+                                ? $this->wiki->tokens[(int)$allEnds[1][$lastIndex - 1][0]] : null;
+                            if ($prevTok !== null
+                                && preg_match('/\A\n[ \t]*\z/', $between) === 1
+                                && isset($prevTok[1]['type']) && $prevTok[1]['type'] === 'end'
+                                && in_array($prevTok[0], array('Div', 'Divalign', 'Center', 'Horiz', 'Table', 'Tableadv'), true)) {
+                                $directInlineLead = true;
+                            }
+                            if ($directInlineLead) {
+                                $openerEnd = $allEnds[0][$lastIndex][1] + strlen($allEnds[0][$lastIndex][0]);
+                                if (preg_match('/\A\s*' . preg_quote($this->wiki->delim, '/') . '(\d+)'
+                                    . preg_quote($this->wiki->delim, '/') . '/', substr($src, $openerEnd, 200), $bm)) {
+                                    $bodyTok = isset($this->wiki->tokens[(int)$bm[1]])
+                                        ? $this->wiki->tokens[(int)$bm[1]] : null;
+                                    if ($bodyTok !== null && $bodyTok[0] === 'Blockquote') {
+                                        $directInlineLead = false;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            $afterPos = $fullPos + $fullLen;
+            $after = substr($src, $afterPos, 300);
+            $beforeHoriz = false;
+            if (preg_match('/^\s*' . preg_quote($this->wiki->delim, '/') . '(\d+)'
+                . preg_quote($this->wiki->delim, '/') . '/', $after, $hm)) {
+                $horizTok = isset($this->wiki->tokens[(int)$hm[1]])
+                    ? $this->wiki->tokens[(int)$hm[1]] : null;
+                $beforeHoriz = $horizTok !== null && $horizTok[0] === 'Horiz';
+            }
+            $scopeHasPriorHoriz = false;
+            if (!empty($inlineStack)) {
+                $scopePi = end($inlineStack);
+                foreach ($horizPrefixIndexes as $horizPi) {
+                    if ($horizPi > $scopePi) {
+                        $scopeHasPriorHoriz = true;
+                        break;
+                    }
+                }
+            }
+            $endsAfterWhitespaceOnlyLine = substr($prefix, -3) === "\xE3\x80\x80"
+                || preg_match('/[ \t\r\n]$/', $prefix) === 1;
+            $horizNeedsLooseScopeBreaks = $inlineDepth > 0 && !$directInlineLead
+                && $beforeHoriz && $scopeAfterBlockEnd && !$scopeHasPriorHoriz
+                && !$endsAfterWhitespaceOnlyLine;
+            if ($inlineDepth > 0 && ($directInlineLead || $horizNeedsLooseScopeBreaks)) {
+                $crossesEnclosingBlockEnd = false;
+                if (preg_match_all($placeholder, substr($src, $afterPos), $restTokens, PREG_OFFSET_CAPTURE)) {
+                    $scanDepth = 1;
+                    foreach ($restTokens[1] as $rtid) {
+                        $rtok = isset($this->wiki->tokens[(int)$rtid[0]])
+                            ? $this->wiki->tokens[(int)$rtid[0]] : null;
+                        if ($rtok === null || !isset($rtok[1]['type'])) {
+                            continue;
+                        }
+                        if (in_array($rtok[0], array('Span', 'Size'), true)) {
+                            if ($rtok[1]['type'] === 'start') {
+                                $scanDepth++;
+                            } elseif ($rtok[1]['type'] === 'end') {
+                                $scanDepth--;
+                                if ($scanDepth === 0) {
+                                    break;
+                                }
+                            }
+                        }
+                        if ($scanDepth > 0 && $rtok[1]['type'] === 'end'
+                            && in_array($rtok[0], array('Div', 'Divalign', 'Collapsible'), true)) {
+                            $crossesEnclosingBlockEnd = true;
+                            break;
+                        }
+                    }
+                }
+                $beforeCollapsible = $crossesEnclosingBlockEnd;
+                $scanOffset = 0;
+                while (preg_match($placeholder, $after, $nm, PREG_OFFSET_CAPTURE, $scanOffset)) {
+                    if ($nm[0][1] !== $scanOffset) {
+                        break;
+                    }
+                    $nextTok = isset($this->wiki->tokens[(int)$nm[1][0]])
+                        ? $this->wiki->tokens[(int)$nm[1][0]] : null;
+                    if ($nextTok !== null && in_array($nextTok[0], array('Collapsible', 'Div', 'Divalign', 'Table', 'Tableadv'), true)
+                        && isset($nextTok[1]['type']) && $nextTok[1]['type'] === 'start') {
+                        $beforeCollapsible = true;
+                        break;
+                    }
+                    if ($nextTok === null || $nextTok[0] !== 'Paragraph') {
+                        break;
+                    }
+                    $scanOffset += strlen($nm[0][0]);
+                }
+                if (!$beforeCollapsible) {
+                    if ($horizNeedsLooseScopeBreaks) {
+                        $this->wiki->tokens[(int)$hm[1]][1]['loose_scope_breaks'] = true;
+                    } else {
+                        $breaks = '';
+                        for ($i = 0; $i < min(strlen($m[0][0]), 2); $i++) {
+                            $breaks .= $this->wiki->addToken($this->rule, array(), false, "\n");
+                        }
+                        $replacement = $breaks . $m[0][0];
+                    }
+                }
+            }
+            $leadOut .= $replacement;
+            $cursor = $fullPos + $fullLen;
+            $search = $cursor;
+        }
+        $src = $leadOut . substr($src, $cursor);
+        $this->wiki->source = $src;
         if (!preg_match_all($this->regex, $src, $ms, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
             return;
         }

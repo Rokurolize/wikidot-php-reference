@@ -174,17 +174,22 @@ class Text_Wiki_Parse_Table extends Text_Wiki_Parse {
                         $attr = null;
                     }
                     
+                    $edgeLead = preg_match('/^[ \t]/', $cell[$i]) === 1;
+                    $edgeTrail = preg_match('/[ \t]$/', $cell[$i]) === 1;
+
                     // start a new cell...
                     $return .= $this->wiki->addToken(
                         $this->rule, 
                         array (
                             'type' => 'cell_start',
                             'attr' => $attr,
-                            'span' => $span
+                            'span' => $span,
+                            'edge_lead' => $edgeLead,
+                            'edge_trail' => $edgeTrail
                         )
                     );
                     
-                    // ...add the content...
+                    // ...add the content.
                     $return .= trim($cell[$i]);
                     
                     // ...and end the cell.
