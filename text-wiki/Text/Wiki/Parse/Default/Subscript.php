@@ -76,6 +76,23 @@ class Text_Wiki_Parse_Subscript extends Text_Wiki_Parse {
      *
      */
     
+
+    function parse() {
+        $edgeCells = array();
+        foreach ($this->wiki->tokens as $tid => $tok) {
+            if (is_array($tok) && $tok[0] === 'Table'
+                && isset($tok[1]['type']) && $tok[1]['type'] === 'cell_start'
+                && ! empty($tok[1]['edge_lead'])) {
+                $edgeCells[] = $this->wiki->delim . $tid . $this->wiki->delim . ',,';
+            }
+        }
+        foreach ($edgeCells as $marker) {
+            $this->wiki->source = str_replace($marker, substr($marker, 0, -2) . "\x0B,,", $this->wiki->source);
+        }
+        parent::parse();
+        $this->wiki->source = str_replace("\x0B", '', $this->wiki->source);
+    }
+
     function process($matches) {
         // R2-INLINE3 C1: the ,,,, alternation has no body group; returning ''
         // consumes both markers and emits no token pair, which is the

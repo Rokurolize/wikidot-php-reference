@@ -128,7 +128,8 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                     $scopeBetween = substr($prefix, $prevEndPos, $scopeStartPos - $prevEndPos);
                     $scopePrevTok = isset($this->wiki->tokens[(int)$allPrefixMatches[1][$scopePi - 1][0]])
                         ? $this->wiki->tokens[(int)$allPrefixMatches[1][$scopePi - 1][0]] : null;
-                    $scopeAfterBlockEnd = $scopePrevTok !== null && trim($scopeBetween) === ''
+                    $scopeAfterBlockEnd = $scopePrevTok !== null
+                        && preg_match('/\A\n[ \t]*\z/', $scopeBetween) === 1
                         && isset($scopePrevTok[1]['type']) && $scopePrevTok[1]['type'] === 'end'
                         && in_array($scopePrevTok[0], array('Div', 'Divalign', 'Center', 'Horiz', 'Table', 'Tableadv'), true);
                 }
@@ -151,7 +152,8 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                             $between = substr($prefix, $prevEndPos, $inlineStartPos - $prevEndPos);
                             $prevTok = isset($this->wiki->tokens[(int)$allEnds[1][$lastIndex - 1][0]])
                                 ? $this->wiki->tokens[(int)$allEnds[1][$lastIndex - 1][0]] : null;
-                            if ($prevTok !== null && trim($between) === ''
+                            if ($prevTok !== null
+                                && preg_match('/\A\n[ \t]*\z/', $between) === 1
                                 && isset($prevTok[1]['type']) && $prevTok[1]['type'] === 'end'
                                 && in_array($prevTok[0], array('Div', 'Divalign', 'Center', 'Horiz', 'Table', 'Tableadv'), true)) {
                                 $directInlineLead = true;
@@ -219,7 +221,7 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                     }
                     $nextTok = isset($this->wiki->tokens[(int)$nm[1][0]])
                         ? $this->wiki->tokens[(int)$nm[1][0]] : null;
-                    if ($nextTok !== null && $nextTok[0] === 'Collapsible'
+                    if ($nextTok !== null && in_array($nextTok[0], array('Collapsible', 'Div', 'Divalign', 'Table', 'Tableadv'), true)
                         && isset($nextTok[1]['type']) && $nextTok[1]['type'] === 'start') {
                         $beforeCollapsible = true;
                         break;
