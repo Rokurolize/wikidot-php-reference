@@ -1260,10 +1260,11 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
     }
 
     /**
-     * Whether an inline element crosses a block-element boundary. The scan is
-     * intentionally limited to crossings with block structure: inline-inline
-     * crossing is a separate family, and well-formed documents are left in the
-     * reference frame.
+     * Whether a paired-token inline element crosses a block-element boundary. The
+     * scan is limited to the tags emitted by the span and inline-format pair
+     * rules: crossings with block structure are this family, inline-inline
+     * crossing is separate, and well-formed documents are left in the reference
+     * frame.
      */
     function outputHasInlineBlockCrossing($html)
     {
@@ -1272,9 +1273,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
             return false;
         }
         $inline = array_flip(array(
-            'a', 'abbr', 'b', 'bdi', 'bdo', 'cite', 'code', 'data', 'dfn',
-            'em', 'i', 'kbd', 'mark', 'q', 'rp', 'rt', 'ruby', 's', 'samp',
-            'small', 'span', 'strong', 'sub', 'sup', 'time', 'tt', 'u', 'var'
+            'em', 'span', 'strong', 'sub', 'sup', 'tt'
         ));
         $block = array_flip(array(
             'address', 'article', 'aside', 'blockquote', 'dd', 'details', 'div',
