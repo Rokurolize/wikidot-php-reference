@@ -182,9 +182,6 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
             }
             return $this->wiki->addToken($this->rule, array('type' => 'empty'));
         }
-        if ($matches[2] === '' && !empty($args) && !isset($args['id'])) {
-            return $this->wiki->addToken($this->rule, array('type' => 'empty'));
-        }
         $options = array('args' => $args, 'type' => 'start');
         if ($leadSpace !== '') {
             $options['edge_lead'] = $leadSpace;

@@ -34,3 +34,7 @@ The REFCORR27 `tableadv-comment-indented-line` byte expectation was generated be
 ## Files changed
 
 The correction is limited to `Center.php`, `Deflist.php`, `List.php`, `Paragraph.php`, `Prefilter.php`, `Raw.php`, `Span.php`, and `Tableadv.php`, plus this conformance directory. No render rule, module implementation, corpus file, or ftml tree was changed.
+
+## Fix-round addendum — attributed empty Span adjacency
+
+The first REFCORR37 round dropped an empty attributed span without id at parse time. Probe `muse-probe-hunt-pb5-span-space-adjacency` (eight cells: class/style crossed with neither/before/after/both horizontal-space adjacency) shows that live preserves one space whenever either side carries one and no space when neither does. Emitting the empty span and allowing the established libtidy representation pass to remove it reproduces every cell and also trims the space when the empty span is trailing content inside an enclosing span. The parse-time drop for this attributed-empty case is therefore removed; the bare-empty, whitespace-only-atom, newline-body, and id-carrying branches are unchanged. The matrix is pinned as `PROBE-SPAN-SPACE-ADJACENCY`.

@@ -159,6 +159,16 @@
   "fetch_count": 2,
   "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
  },
+ "PROBE-SPAN-SPACE-ADJACENCY": {
+  "fullname": "muse-probe-hunt-pb5-span-space-adjacency",
+  "html": "<p>HUNTPB-SA-CLASS-NEITHER<br /> ab<br /> HUNTPB-SA-CLASS-NEITHER-END</p><p>HUNTPB-SA-CLASS-BEFORE<br /> a b<br /> HUNTPB-SA-CLASS-BEFORE-END</p><p>HUNTPB-SA-CLASS-AFTER<br /> a b<br /> HUNTPB-SA-CLASS-AFTER-END</p><p>HUNTPB-SA-CLASS-BOTH<br /> a b<br /> HUNTPB-SA-CLASS-BOTH-END</p><p>HUNTPB-SA-STYLE-NEITHER<br /> ab<br /> HUNTPB-SA-STYLE-NEITHER-END</p><p>HUNTPB-SA-STYLE-BEFORE<br /> a b<br /> HUNTPB-SA-STYLE-BEFORE-END</p><p>HUNTPB-SA-STYLE-AFTER<br /> a b<br /> HUNTPB-SA-STYLE-AFTER-END</p><p>HUNTPB-SA-STYLE-BOTH<br /> a b<br /> HUNTPB-SA-STYLE-BOTH-END</p>",
+  "html_sha256": "9239f7da759cde30399bb84ecb8d5857e0d73f3227352703340f233b523878f5",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized full page"
+ },
  "PROBE-TABLECELL-LEADING-SEAM": {
   "fullname": "synthetic:leading-seam",
   "html": "<table><tr><td style=\"border: 2px solid black\"><p><br /></p><table><tr><td>inner</td></tr></table></td></tr></table>",
