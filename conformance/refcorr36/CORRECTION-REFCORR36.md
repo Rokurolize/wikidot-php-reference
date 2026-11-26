@@ -69,4 +69,7 @@ change is confined to `text-wiki/Text/Wiki/Parse/Default/Paragraph.php`.
   REFCORR31 5/5, REFCORR32 11/11, REFCORR34 4/4, REFCORR35 6/6 byte and 6/6
   live, REFCORR-next Form/Raw 19/19 + 8/8, REFCORR24 45/45 byte and 45/45 live,
   REFCORR-next framing 8/8 + 8/8 + 5/5.
-- Corpus movement: see `corpus-movement-{en,jp,ko,cn}.json` in the lane directory.
+- Corpus movement (102,858 pages across EN/JP/KO/CN): 190 movements, all with
+  the size-to-label collapsible shape and zero unattributed; 188 improve toward
+  cached live, 2 neutral, 0 regressions. Artifacts: `corpus-movement-*.json` in
+  the lane directory.
