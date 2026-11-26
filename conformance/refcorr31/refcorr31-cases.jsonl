@@ -1,0 +1,5 @@
+{"id":"r31-freelink-fragment-amp","source":"[[[https://books.google.com.au/books?id=86KyIsdi8D8C&pg=PA189&redir_esc=y#v=onepage&q&f=false | label]]]"}
+{"id":"r31-freelink-hash-route-amp","source":"[[[*https://music.163.com/#/song?id=1443815530&market=baiduqk|The 2Singers - Pizza Song]]]"}
+{"id":"r31-freelink-entity-fragment","source":"[[[https://music.163.com/#/song?id=4937714&amp;autoplay=true&amp;market=baiduhd|label]]]"}
+{"id":"r31-freelink-plain-query-control","source":"[[[https://example.com/a?x=1&y=2|label]]]"}
+{"id":"r31-freelink-local-anchor-control","source":"[[[some-page#an&x|label]]]"}
