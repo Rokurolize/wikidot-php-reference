@@ -1,0 +1,8 @@
+{
+ "HUNTAT-S1-VALID": "<table style=\"border-collapse:collapse; margin:0 auto;\">\n<tr>\n<td>S1-CELL</td>\n</tr>\n</table>",
+ "HUNTAT-S2-WIDTH": "<table>\n<tr>\n<td style=\"border: 1px solid black;\" colspan=\"2&quot; width: 50%\">S2-CELL</td>\n</tr>\n</table>",
+ "HUNTAT-S3-SPACING": "<table>\n<tr>\n<td style=\"margin:0; font-size:120%; padding: 0.5em; line-height: 1.75em;\">S3-CELL</td>\n</tr>\n</table>",
+ "HUNTAT-S4-NESTED": "<table>\n<tr>\n<td><p>OUTER-S4</p>\n\n<table>\n<tr>\n<td>INNER-S4</td>\n</tr>\n</table></td>\n</tr>\n</table>",
+ "HUNTAT-S5-DQUOTE": "<table style=\"border-collapse:collapse; margin:0 auto;&quot;\">\n<tr>\n<td>S5-CELL</td>\n</tr>\n</table>",
+ "HUNTAT-S6-DQUOTE-NESTED": "<table style=\"border-collapse:collapse; margin:0 auto;&quot;\">\n<tr>\n<td>S6-CELL</td>\n</tr>\n</table>"
+}
