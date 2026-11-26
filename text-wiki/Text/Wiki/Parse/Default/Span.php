@@ -180,11 +180,19 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
             return '';
         }
         $options = array('args' => $args, 'type' => 'start');
+        if ($leadSpace !== '') {
+            $options['edge_lead'] = $leadSpace;
+        }
 
         $start = $this->wiki->addToken($this->rule, $options);
 
-        $end = $this->wiki->addToken($this->rule, array(
-            'type' => 'end'));
+        $endOptions = array('type' => 'end');
+        if ($trailSpace !== '') {
+            $endOptions['edge_trail'] = $trailSpace;
+        } elseif (preg_match('/(?:^|\n)[ \t]*[*#]+[ \t]+$/', $matches[2]) === 1) {
+            $endOptions['preserve_trailing_edge'] = true;
+        }
+        $end = $this->wiki->addToken($this->rule, $endOptions);
 
         return $leadSpace . $start . $content . $end . $trailSpace;
 
