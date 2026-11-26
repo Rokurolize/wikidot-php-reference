@@ -158,6 +158,17 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                                 && in_array($prevTok[0], array('Div', 'Divalign', 'Center', 'Horiz', 'Table', 'Tableadv'), true)) {
                                 $directInlineLead = true;
                             }
+                            if ($directInlineLead) {
+                                $openerEnd = $allEnds[0][$lastIndex][1] + strlen($allEnds[0][$lastIndex][0]);
+                                if (preg_match('/\A\s*' . preg_quote($this->wiki->delim, '/') . '(\d+)'
+                                    . preg_quote($this->wiki->delim, '/') . '/', substr($src, $openerEnd, 200), $bm)) {
+                                    $bodyTok = isset($this->wiki->tokens[(int)$bm[1]])
+                                        ? $this->wiki->tokens[(int)$bm[1]] : null;
+                                    if ($bodyTok !== null && $bodyTok[0] === 'Blockquote') {
+                                        $directInlineLead = false;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
