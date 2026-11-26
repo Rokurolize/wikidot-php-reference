@@ -1,6 +1,6 @@
 {
  "tableadv-comment-indented-line": {
-  "html": " <table>\n<tr>\n<td style=\"border: 2px solid black\"><table>\n<tr>\n<td>x</td>\n</tr>\n<tr>\n<td>y</td>\n</tr>\n</table></td>\n</tr>\n</table>",
+  "html": " <table>\n<tr>\n<td style=\"border: 2px solid black\"><p><br />\n</p>\n\n<table>\n<tr>\n<td>x</td>\n</tr>\n<tr>\n<td>y</td>\n</tr>\n</table></td>\n</tr>\n</table>",
   "assert": [
    "<table>",
    "<td style=\"border: 2px solid black\"><table>",

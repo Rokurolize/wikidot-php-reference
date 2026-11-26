@@ -76,7 +76,7 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
         // Nested tables are converted to opaque tokens before the enclosing
         // body is split into rows, so inner [[row]] and [[cell]] never leak
         // into the outer row or cell grammar.
-        $body = $this->_scanTableadv($body);
+        $body = $this->_scanTableadv($body, true);
 
         $rowRe = '~\[\[row([^\]]*)\]\](.*?)\[\[/row\]\]~si';
         preg_match_all($rowRe, $body, $rows, PREG_SET_ORDER);
@@ -220,7 +220,7 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
      * process() applies the same scan to a table body for its nested
      * tables, as it applied the regex before.
      */
-    private function _scanTableadv($src) {
+    private function _scanTableadv($src, $insideTable = false) {
         $n = strlen($src);
         $out = '';
         $last = 0;
@@ -239,10 +239,21 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
             $out .= substr($src, $last, $cand - $last);
             $rep = $this->process($m[1]);
             if ($rep !== $m[1][0]) {
-                if ($cand > 0 && $src[$cand - 1] === "\n") {
+                // REFCORR37: inside an advanced-table cell an explicit-break
+                // lead owns a paragraph boundary on live. Break consumed the
+                // newline before this nested table, so restore the boundary
+                // at the nested-table replacement point.
+                if ($insideTable && $this->_precededByBreakToken($src, $cand)) {
+                    $rep = "\n\n" . $rep;
+                } elseif ($insideTable && $this->_precededByWhitespaceSeam($src, $cand)) {
+                    $rep = $this->wiki->addToken('Break') . "\n\n" . $rep;
+                } elseif ($cand > 0 && $src[$cand - 1] === "\n") {
                     $rep = "\n" . $rep;
                 }
-                if ($m[0] < $n && $src[$m[0]] === "\n") {
+                $tailSpaces = preg_match('/\[\[\/table\]\]([ \t]*)$/i', $m[1][0], $tm) ? strlen($tm[1]) : 0;
+                if ($insideTable && $tailSpaces > 0 && $this->_followedByWhitespaceSeam($src, $m[0], $tailSpaces)) {
+                    $rep .= "\n\n" . $this->wiki->addToken('Break');
+                } elseif ($m[0] < $n && $src[$m[0]] === "\n") {
                     $rep .= "\n";
                 }
             }
@@ -251,6 +262,75 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
             $pos = $m[0];
         }
         return $out . substr($src, $last);
+    }
+
+    private function _precededByWhitespaceSeam($src, $pos) {
+        $i = $pos;
+        $after = 0;
+        while ($i > 0 && ($src[$i - 1] === ' ' || $src[$i - 1] === "\t")) {
+            $i--;
+            $after++;
+        }
+        if ($after === 0 || $i === 0 || $src[$i - 1] !== "\n") {
+            return false;
+        }
+        $i--;
+        $before = 0;
+        while ($i > 0 && ($src[$i - 1] === ' ' || $src[$i - 1] === "\t")) {
+            $i--;
+            $before++;
+        }
+        return $before > 0 && $i > 0 && !ctype_space($src[$i - 1]);
+    }
+
+    private function _followedByWhitespaceSeam($src, $pos, $before = null) {
+        $n = strlen($src);
+        $i = $pos;
+        if ($before === null) {
+            $before = 0;
+            while ($i < $n && ($src[$i] === ' ' || $src[$i] === "\t")) {
+                $i++;
+                $before++;
+            }
+        }
+        if ($before === 0) {
+            return false;
+        }
+        while ($i < $n && $src[$i] === "\xff" && preg_match('/\G\xff(\d+)\xff/A', $src, $m, 0, $i)) {
+            $token = $this->wiki->tokens[(int)$m[1]] ?? null;
+            if (!$token || $token[0] !== 'Comment') {
+                break;
+            }
+            $i += strlen($m[0]);
+        }
+        if ($i >= $n || $src[$i] !== "\n") {
+            return false;
+        }
+        $i++;
+        $after = 0;
+        while ($i < $n && ($src[$i] === ' ' || $src[$i] === "\t")) {
+            $i++;
+            $after++;
+        }
+        return $after > 0 && $i < $n && !ctype_space($src[$i]);
+    }
+
+    private function _precededByBreakToken($src, $pos) {
+        $delim = $this->wiki->delim;
+        if ($pos < 4 || $src[$pos - 1] !== $delim) {
+            return false;
+        }
+        $start = strrpos(substr($src, 0, $pos - 1), $delim);
+        if ($start === false) {
+            return false;
+        }
+        $id = substr($src, $start + 1, $pos - $start - 2);
+        if (!preg_match('/^[0-9]+$/', $id)) {
+            return false;
+        }
+        $tok = isset($this->wiki->tokens[(int)$id])
+            ? $this->wiki->tokens[(int)$id] : null;
+        return $tok !== null && strtolower($tok[0]) === 'break';
     }
 
     private function _tableadvBlock($src, $p, &$memo) {

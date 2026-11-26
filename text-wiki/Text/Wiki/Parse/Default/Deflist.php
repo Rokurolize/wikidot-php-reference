@@ -92,10 +92,14 @@ class Text_Wiki_Parse_Deflist extends Text_Wiki_Parse {
 
         // Live drops a colon-led run that never formed a definition
         // (a missing separator or an empty value with no trailing
-        // space) rather than emitting an empty <dl>. Keep one line
-        // break so surrounding text keeps its original separation.
+        // space) because its empty <dl> is removed by the serving repair,
+        // not because the line vanishes at parse time. Keeping the empty
+        // token pair preserves the block boundary it owns in the source.
         if (count($list) === 0) {
-            return "\n";
+            return "\n"
+                . $this->wiki->addToken($this->rule, array('type' => 'list_start'))
+                . $this->wiki->addToken($this->rule, array('type' => 'list_end'))
+                . "\n\n";
         }
 
         // the replacement text we will return to parse()
