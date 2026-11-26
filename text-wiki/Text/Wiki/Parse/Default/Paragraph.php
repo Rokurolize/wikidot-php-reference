@@ -387,6 +387,15 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
                     if ($rule === 'newline' || $rule === 'break') {
                         continue;
                     }
+                    // REFCORR36: a Size pair suppressed by Collapsible's
+                    // size-to-label transfer renders nothing. Treat it as
+                    // layout like a break or empty Raw, so a break-only lead
+                    // into a block inside such a collapsible stays bare on
+                    // live instead of being wrapped in a paragraph.
+                    if ($rule === 'size' && isset($tok[1]['type'])
+                        && $tok[1]['type'] === 'suppressed') {
+                        continue;
+                    }
                     if ($rule === 'raw' && (!isset($tok[1]['text']) || $tok[1]['text'] === '')) {
                         continue;
                     }

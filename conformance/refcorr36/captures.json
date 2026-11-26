@@ -1,0 +1,142 @@
+{
+ "HB1-PLAIN-BLANK-TABLE": {
+  "fullname": "muse-probe-hunt-block-breakwrap",
+  "html": "<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+HB1</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">– hide block</a></div><div class=\"collapsible-block-content\"><table class=\"wiki-content-table\"><tr><td>a</td><td>b</td></tr><tr><td>c</td><td>d</td></tr></table></div></div></div>",
+  "html_sha256": "d38bdaf9920f2517358b4d1ecd02e6efdd9da8b41adeca758393f22a17bfc8bb",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized fragment"
+ },
+ "HB2-SIZE-CLOSER-AT-OPENER": {
+  "fullname": "muse-probe-hunt-block-breakwrap",
+  "html": "<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+HB2</a></span></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">– hide block</a></span></div><div class=\"collapsible-block-content\"><table class=\"wiki-content-table\"><tr><td>a</td><td>b</td></tr><tr><td>c</td><td>d</td></tr></table></div></div></div>",
+  "html_sha256": "f4221ebe245652f12a2cda5ddafd22df74bab570b60b65130a3de365587c3baf",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized fragment"
+ },
+ "HB3-SIZE-ZERO-NEWLINE": {
+  "fullname": "muse-probe-hunt-block-breakwrap",
+  "html": "<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+HB3</a></span></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">– hide block</a></span></div><div class=\"collapsible-block-content\"><p><span style=\"font-size:85%;\">body HB3</span></p></div></div></div>",
+  "html_sha256": "681d4fa4c276c3b686eae31bc3529842dcc7ec59ffb5a185a4231c94db40fa2f",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized fragment"
+ },
+ "HB4-SIZE-ONE-NEWLINE": {
+  "fullname": "muse-probe-hunt-block-breakwrap",
+  "html": "<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+HB4</a></span></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">– hide block</a></span></div><div class=\"collapsible-block-content\"><p><span style=\"font-size:85%;\">body HB4</span></p></div></div></div><span style=\"font-size:85%;\"><br /></span>",
+  "html_sha256": "3a08f3ac236e0d2a5645d6872b31c4cc455242c47dca53089d4e61c87dc510f0",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized fragment"
+ },
+ "HB5-SIZE-TWO-NEWLINES": {
+  "fullname": "muse-probe-hunt-block-breakwrap",
+  "html": "<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+HB5</a></span></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">– hide block</a></span></div><div class=\"collapsible-block-content\"><p><span style=\"font-size:85%;\">body HB5</span></p></div></div></div><span style=\"font-size:85%;\"><br /></span>",
+  "html_sha256": "786a213011797593e9f476aad88a44eb69eb835952f7ea3bbe683fa9e52fd703",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized fragment"
+ },
+ "HB6-SIZE-THREE-NEWLINES": {
+  "fullname": "muse-probe-hunt-block-breakwrap",
+  "html": "<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+HB6</a></span></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">– hide block</a></span></div><div class=\"collapsible-block-content\"><p><span style=\"font-size:85%;\">body HB6</span></p></div></div></div><span style=\"font-size:85%;\"><br /></span>",
+  "html_sha256": "2e42e5075cbb0638c4b9519ff36a5eef73bd5928fc2ecd6652a09c8edbf717a1",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized fragment"
+ },
+ "HD1-DIV-EXPLICIT-NO-TOC": {
+  "fullname": "muse-probe-hunt-block-divscope",
+  "html": "<div class=\"content-panel standalone series\"><p>text HD1</p></div>",
+  "html_sha256": "a5e5ee1971034467e47aff86c38fe88511cbcf322ec3a69a90d55c20c78a8ddf",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized fragment"
+ },
+ "HD2-DIV-EXPLICIT-WITH-TOC": {
+  "fullname": "muse-probe-hunt-block-divscope",
+  "html": "<h3 id=\"tocN\"><span>HD1-DIV-EXPLICIT-NO-TOC</span></h3><div class=\"content-panel standalone series\"><p>text HD1</p></div><h3 id=\"tocN\"><span>HD2-DIV-EXPLICIT-WITH-TOC</span></h3><div class=\"content-panel standalone series\"><table style=\"margin:0; padding:0\"><tr><td style=\"margin:0; padding:0\"><div id=\"toc\"><div id=\"toc-action-bar\"><a href=\"javascript:;\">Fold</a><a href=\"javascript:;\" style=\"display: none\">Unfold</a></div><div class=\"title\">Table of Contents</div><div id=\"toc-list\"><div style=\"margin-left: 3em;\"><a href=\"#toc0\">HD1-DIV-EXPLICIT-NO-TOC</a></div><div style=\"margin-left: 3em;\"><a href=\"#toc1\">HD2-DIV-EXPLICIT-WITH-TOC</a></div><div style=\"margin-left: 3em;\"><a href=\"#toc2\">HC1-NESTED-COLLAPSIBLE</a></div><div style=\"margin-left: 3em;\"><a href=\"#toc3\">HC2-CLOSED-AFTER-HR</a></div><div style=\"margin-left: 2em;\"><a href=\"#toc4\">HC2-head</a></div><div style=\"margin-left: 3em;\"><a href=\"#toc5\">HC3-UNCLOSED-CLOSER-AT-EOF</a></div><div style=\"margin-left: 2em;\"><a href=\"#toc6\">HC3-head</a></div></div></div></td></tr></table><p>text HD2</p></div><h3 id=\"tocN\"><span>HC1-NESTED-COLLAPSIBLE</span></h3><div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+HC1-outer</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">– hide block</a></div><div class=\"collapsible-block-content\"><p>outer HC1<br /> [[collapsible show=\"+HC1-inner\"]]<br /> inner HC1</p></div></div></div><br /> after HC1<br /> [[/collapsible]] <h3 id=\"tocN\"><span>HC2-CLOSED-AFTER-HR</span></h3><hr><div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+HC2</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">– hide block</a></div><div class=\"collapsible-block-content\"><h2 id=\"tocN\"><span>HC2-head</span></h2><p>text HC2</p></div></div></div><h3 id=\"tocN\"><span>HC3-UNCLOSED-CLOSER-AT-EOF</span></h3><hr><p>[[collapsible show=\"+HC3\"]]</p><h2 id=\"tocN\"><span>HC3-head</span></h2><p>text HC3</p>",
+  "html_sha256": "5fd7df5d0708997975b10e65962e888a0903a4de79acc28dbd487232a975f248",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized fragment"
+ },
+ "HC1-NESTED-COLLAPSIBLE": {
+  "fullname": "muse-probe-hunt-block-divscope",
+  "html": "<div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+HC1-outer</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">– hide block</a></div><div class=\"collapsible-block-content\"><p>outer HC1<br /> [[collapsible show=\"+HC1-inner\"]]<br /> inner HC1</p></div></div></div><br /> after HC1<br /> [[/collapsible]]",
+  "html_sha256": "06fe016a0b2de6c6a23289d43b2cca2cb53403a3486fff71588383a4ce5f7bef",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized fragment"
+ },
+ "HC2-CLOSED-AFTER-HR": {
+  "fullname": "muse-probe-hunt-block-divscope",
+  "html": "<hr><div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+HC2</a></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">– hide block</a></div><div class=\"collapsible-block-content\"><h2 id=\"tocN\"><span>HC2-head</span></h2><p>text HC2</p></div></div></div>",
+  "html_sha256": "33f642fe3dd57481bfb339bf4d64391898d39a6e231daa73acefae01c0e05e92",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized fragment"
+ },
+ "HC3-UNCLOSED-CLOSER-AT-EOF": {
+  "fullname": "muse-probe-hunt-block-divscope",
+  "html": "<hr><p>[[collapsible show=\"+HC3\"]]</p><h2 id=\"tocN\"><span>HC3-head</span></h2><p>text HC3</p>",
+  "html_sha256": "c6ec726ccbcbcdf08082a03f95363dcabea305ddad615f871c846bed09f7be3c",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 2,
+  "evidence": "grouped saved sandbox page; two anonymous GETs; byte-exact saved-source readback; canonicalized fragment"
+ },
+ "F1000": {
+  "fullname": "corpus:jp:scp-1000-jp",
+  "html": "<div class=\"collapsible-block-content\"><br /><table class=\"wiki-content-table\"><tr><th colspan=\"2\"><span style=\"font-size:smaller;\">軌道成分</span></th></tr><tr><th><span style=\"font-size:smaller;\">軌道長半径</span></th><td><span style=\"font-size:smaller;\">5.6779724 AU</span></td></tr><tr><th><span style=\"font-size:smaller;\">公転周期</span></th><td><span style=\"font-size:smaller;\">12.17年</span></td></tr><tr><th><span style=\"font-size:smaller;\">平均軌道速度</span></th><td><span style=\"font-size:smaller;\">13.58km/s</span></td></tr><tr><th colspan=\"2\"><span style=\"font-size:smaller;\">物理成分</span></th></tr><tr><th><span style=\"font-size:smaller;\">直径</span></th><td><span style=\"font-size:smaller;\">1134.9km</span></td></tr><tr><th><span style=\"font-size:smaller;\">質量</span></th><td><span style=\"font-size:smaller;\">4.164 x 10<sup>21</sup>kg</span></td></tr><tr><th><span style=\"font-size:smaller;\">表面重力</span></th><td><span style=\"font-size:smaller;\">2.03m/s<sup>2</sup></span></td></tr><tr><th><span style=\"font-size:smaller;\">自転周期</span></th><td><span style=\"font-size:smaller;\">12.880014h</span></td></tr><tr><th><span style=\"font-size:smaller;\">スペクトル分類</span></th><td><span style=\"font-size:smaller;\">G</span></td></tr><tr><th><span style=\"font-size:smaller;\">表面温度</span></th><td><span style=\"font-size:smaller;\">40K - 396K</span></td></tr></table>",
+  "html_sha256": "2118f084ebab1504bd3d8a91e87858b5126731690e339335ff19aee19cf8f1cb",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 0,
+  "evidence": "cached corpus api-response.json canonical content fragment; no live request"
+ },
+ "F1000_CELL": {
+  "fullname": "corpus:jp:scp-1000-jp",
+  "html": "<div class=\"collapsible-block-content\"><br /><table class=\"wiki-content-table\"><tr><th colspan=\"2\"><span style=\"font-size:smaller;\">軌道成分</span></th></tr><tr><th><span style=\"font-size:smaller;\">軌道長半径</span></th><td><span style=\"font-size:smaller;\">5.6779724 AU</span></td></tr><tr><th><span style=\"font-size:smaller;\">公転周期</span></th><td><span style=\"font-size:smaller;\">12.17年</span></td></tr><tr><th><span style=\"font-size:smaller;\">平均軌道速度</span></th><td><span style=\"font-size:smaller;\">13.58km/s</span></td></tr><tr><th colspan=\"2\"><span style=\"font-size:smaller;\">物理成分</span></th></tr><tr><th><span style=\"font-size:smaller;\">直径</span></th><td><span style=\"font-size:smaller;\">1134.9km</span></td></tr><tr><th><span style=\"font-size:smaller;\">質量</span></th><td><span style=\"font-size:smaller;\">4.164 x 10<sup>21</sup>kg</span></td></tr><tr><th><span style=\"font-size:smaller;\">表面重力</span></th><td><span style=\"font-size:smaller;\">2.03m/s<sup>2</sup></span></td></tr><tr><th><span style=\"font-size:smaller;\">自転周期</span></th><td><span style=\"font-size:smaller;\">12.880014h</span></td></tr><tr><th><span style=\"font-size:smaller;\">スペクトル分類</span></th><td><span style=\"font-size:smaller;\">G</span></td></tr><tr><th><span style=\"font-size:smaller;\">表面温度</span></th><td><span style=\"font-size:smaller;\">40K - 396K</span></td></tr></table>",
+  "html_sha256": "2118f084ebab1504bd3d8a91e87858b5126731690e339335ff19aee19cf8f1cb",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 0,
+  "evidence": "cached corpus api-response.json canonical content fragment; no live request"
+ },
+ "NEXUS-ZERO-NEWLINE-CONTROL": {
+  "fullname": "corpus:jp:nexus-series",
+  "html": "<blockquote><div class=\"collapsible-block\"><div class=\"collapsible-block-folded\"><span style=\"font-size:larger;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">目次</a></span></div><div class=\"collapsible-block-unfolded\" style=\"display:none\"><div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:larger;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">畳む</a></span></div><div class=\"collapsible-block-content\"><p style=\"text-align: center;\"><strong>目次</strong></p><p><span style=\"white-space: pre-wrap;\"></span><a href=\"#nexus\">ネクサスの一覧</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#wanderers-library\">Nx-01 | 放浪者の図書館</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#hy-brasil\">Nx-03 | ハイ・ブラジル | サイト-03</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#gwag-hen\">Nx-07 | ウェールズ、スウォンジー 、グウァグ・ヘン・イ・クゥン | サイト-78</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#hoiohina\">Nx-14 | ギアナ高地、ホイオヒニャ | サイト-14</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#boring\">Nx-17 | USA、オレゴン州、ボーリング | サイト-64</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#sloths-pit\">Nx-18 | USA、ウィスコンシン州、スロースピット | サイト-87</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#olive-hill\">Nx-25 | ケンタッキー州、オリーブヒル | サイト-10</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#broken-hill\">Nx-28 | 西オーストラリア州、ブロークンヒル| 前哨基地-86</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#negaseattle\">Nx-32 | NUSA、ワシントン州、ネガシアトル | 前哨基地-32</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#drake\">Nx-33 | スコットランド、インヴァネスシャー、ドレイク | サイト-127</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#atlantic-city\">Nx-36 | USA、ニュージャージー州、アトランティックシティ | サイト-333</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#daleport\">Nx-37 | USA、ニューイングランド地方、デールポート | エリア-37</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#verstecktedorf\">Nx-43 | ドイツ、バーデン＝ヴュルテンベルク州、フェルステッケドルフ | サイト-99</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#eventide\">Nx-51 | USA、オレゴン州、イーブンタイド | サイト-51</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#harkness\">Nx-52 | USA、メリーランド州、ハークネス | サイト-52</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#summerstone\">Nx-56 | ウェールズ、サマーストーン | サイト-17</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#yumegemu\">Nx-58 | 日本国、徳島県、夢ゲーム | サイト-79</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#amityville\">Nx-59 | USA、ミズーリ州、アミティービル | サイト-59</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#mujin\">Nx-64 | 大韓民国、全羅南道、 霧津市 | サイト-64K</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#gmina-cycow\">Nx-79 | ツィツフ市 | サイト-PL-79</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#cipher-city\">Nx-91 | サイファー・シティ | サイト-15</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#lake-huron\">Nx-94 | カナダ、オンタリオ州、ヒューロン湖 | サイト-43</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#ipperwash\">Nx-143 | カナダ、オンタリオ州、キャンプ・イッパーウォッシュ | サイト-43</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#piss-world\">Nx-933 | ピス・ワールド | 前哨基地-933</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#freeport\">フリーポートの一覧</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#three-portlands\">FP-01 | スリー・ポートランド</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#backdoor-soho\">FP-02 | バックドア・ソーホー</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#eurtec\">FP-03 | ユーテック</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#larue\">FP-04 | ラ・リュー・マカーブラー</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#sjhlfels\">FP-08 | シュールフェルス・アム・ライン</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#two-blackbutts\">FP-88 | オーストラリア、ツー・ブラックバット</a><br /><span style=\"white-space: pre-wrap;\"></span><a href=\"#esterberg\">FP-120 | エスターバーグ</a></p></div></div></div></blockquote>",
+  "html_sha256": "f5655a7a79dfd1a41001ab1682f7217935cd3625caef2e1517e61e7b68cc4629",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true,
+  "fetch_count": 0,
+  "evidence": "cached corpus api-response.json canonical blockquote fragment; no live request"
+ }
+}
