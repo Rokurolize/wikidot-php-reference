@@ -228,94 +228,18 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
             $startOpts['vanished'] = true;
             $endOpts['vanished'] = true;
         }
+        if ($score !== '') {
+            $startOpts['scored'] = true;
+            $endOpts['scored'] = true;
+        }
 
         $start = $this->wiki->addToken($this->rule, $startOpts);
         $end = $this->wiki->addToken($this->rule, $endOpts);
 
         if ($score !== '') {
-            // Tokenize nested [[div]]/[[div_]] inside a scored div before
-            // blank-line stripping collapses line breaks across children.
-            if (stripos($content, '[[div') !== false && stripos($content, '[[/div]]') !== false) {
-                do {
-                    $oldInner = $content;
-                    $content = $this->_parseOnce($oldInner);
-                } while ($oldInner !== $content);
-            }
-            // The scored [[div_]] form strips paragraphs at its own level:
-            // strip blank-line runs and edge newlines ONLY at child-Div depth 0
-            // so nested unscored [[div]] blocks keep their \n\n wrappers (h068).
-            $delim = $this->wiki->delim;
-            $q = preg_quote($delim, '/');
-            $parts = preg_split('/(' . $q . '[0-9]+' . $q . ')/', $content, -1, PREG_SPLIT_DELIM_CAPTURE);
-            $divDepth = 0;
-            $quoteDepth = 0;
-            $body = '';
-            $d0Buf = '';
-            $flushD0 = function ($s, $isFirst, $isLast) {
-                $s = preg_replace('/\n[ \t]*(?:\n[ \t]*)+/', '', $s);
-                if ($isFirst) {
-                    $s = ltrim($s, "\r\n");
-                }
-                if ($isLast) {
-                    $s = rtrim($s, "\r\n");
-                }
-                return $s;
-            };
-            $seenAny = false;
-            $nParts = count($parts);
-            foreach ($parts as $pi => $part) {
-                if ($part === '') {
-                    continue;
-                }
-                if (preg_match('/^' . $q . '([0-9]+)' . $q . '$/', $part, $km)) {
-                    $tid = (int)$km[1];
-                    $tok = isset($this->wiki->tokens[$tid]) ? $this->wiki->tokens[$tid] : null;
-                    if ($tok !== null && $tok[0] === 'Div' && isset($tok[1]['type'])) {
-                        if ($tok[1]['type'] === 'start') {
-                            if ($divDepth === 0 && $quoteDepth === 0) {
-                                $body .= $flushD0($d0Buf, !$seenAny, false);
-                                $d0Buf = '';
-                                $seenAny = true;
-                            }
-                            $divDepth++;
-                            $body .= $part;
-                            continue;
-                        } elseif ($tok[1]['type'] === 'end' && $divDepth > 0) {
-                            $divDepth--;
-                            $body .= $part;
-                            continue;
-                        }
-                    }
-                    // REFCORR29: Blockquote runs are already tokenized before
-                    // Div. Blank lines inside them are quote paragraph
-                    // separators, not scored-div layout whitespace, so the
-                    // stripper must treat the quote body as opaque too
-                    // (JP corpus colors).
-                    if ($tok !== null && $tok[0] === 'Blockquote' && isset($tok[1]['type'])) {
-                        if ($tok[1]['type'] === 'start') {
-                            if ($divDepth === 0 && $quoteDepth === 0) {
-                                $body .= $flushD0($d0Buf, !$seenAny, false);
-                                $d0Buf = '';
-                                $seenAny = true;
-                            }
-                            $quoteDepth++;
-                            $body .= $part;
-                            continue;
-                        } elseif ($tok[1]['type'] === 'end' && $quoteDepth > 0) {
-                            $quoteDepth--;
-                            $body .= $part;
-                            continue;
-                        }
-                    }
-                }
-                if ($divDepth === 0 && $quoteDepth === 0) {
-                    $d0Buf .= $part;
-                } else {
-                    $body .= $part;
-                }
-            }
-            if ($d0Buf !== '') {
-                $body .= $flushD0($d0Buf, !$seenAny, true);
+            $body = ltrim($content, "\r\n");
+            if (preg_match('/[\r\n]+$/', $body)) {
+                $body = rtrim($body, "\r\n") . "\n";
             }
             return $matches[1] . $matches[1] . $start . $body . $end;
         }

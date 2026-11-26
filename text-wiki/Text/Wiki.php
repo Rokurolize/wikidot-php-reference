@@ -1401,6 +1401,18 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
                     $key = (int)$key;
                     $rule = $this->tokens[$key][0];
                     $opts = $this->tokens[$key][1];
+                    if ($rule === 'Collapsible'
+                        && isset($opts['type']) && $opts['type'] === 'start'
+                        && isset($opts['leading_size_newline'])) {
+                        $size = $opts['leading_size_newline'];
+                        $sizeOpen = '<span style="font-size:' . $size . ';">';
+                        if (substr($output, -strlen($sizeOpen)) === $sizeOpen) {
+                            $output = substr($output, 0, -strlen($sizeOpen))
+                                . $sizeOpen . '<br />' . "\n"
+                                . '<br /></span>' . "\n"
+                                . $sizeOpen;
+                        }
+                    }
                     $output .= $this->renderObj[$rule]->token($opts);
                     $in_delim = false;
 

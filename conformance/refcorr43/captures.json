@@ -1,0 +1,83 @@
+{
+ "scoredcss": {
+  "fullname": "muse-probe-hunt-block2-scoredcss",
+  "html": "<h3 id=\"toc0\"><span>W1-SIMPLE3C</span></h3>\n<div class=\"x-w1-simple3c\">W1-SIMPLE3C one\n<p>W1-SIMPLE3C two</p>\nW1-SIMPLE3C three</div>\n<h3 id=\"toc1\"><span>W5-NESTEDDIVC</span></h3>\n<div class=\"x-w5-nesteddivc\">W5-NESTEDDIVC one\n<p>W5-NESTEDDIVC two</p>\n<p>W5-NESTEDDIVC three</p>\n<div class=\"child\">\n<p>W5-NESTEDDIVC child</p>\n</div>\n</div>\n<h3 id=\"toc2\"><span>W9-COMBOC</span></h3>\n<div class=\"x-w9-comboc\">W9-COMBOC one\n<p>W9-COMBOC two</p>\n<p>W9-COMBOC three</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+W9-COMBOC</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">close</a></div>\n<div class=\"collapsible-block-content\">\n<div class=\"cover\">\n<p><span style=\"white-space: pre-wrap;\">&#32;</span></p>\n</div>\n<div class=\"fadein-txt\"><span style=\"font-size:0px;\">　</span>\n<p style=\"text-align: center;\">W9-COMBOC center</p>\n<div style=\"text-align: center;\">\n<p>W9-COMBOC centered one</p>\n<p>W9-COMBOC centered two</p>\n</div>\n<p style=\"text-align: center;\">W9-COMBOC center again</p>\n<p>W9-COMBOC hidden text</p>\n<span style=\"font-size:0px;\">　</span></div>\n</div>\n</div>\n</div>\n</div>\n<h3 id=\"toc3\"><span>W10-COMBO-UNSCOREDC</span></h3>\n<div class=\"x-w10-combo-unscoredc\">\n<p>W10-COMBO-UNSCOREDC one</p>\n<p>W10-COMBO-UNSCOREDC two</p>\n<p>W10-COMBO-UNSCOREDC three</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+W10-COMBO-UNSCOREDC</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">close</a></div>\n<div class=\"collapsible-block-content\">\n<div class=\"cover\">\n<p><span style=\"white-space: pre-wrap;\">&#32;</span></p>\n</div>\n<div class=\"fadein-txt\"><span style=\"font-size:0px;\">　</span>\n<p style=\"text-align: center;\">W10-COMBO-UNSCOREDC center</p>\n<div style=\"text-align: center;\">\n<p>W10-COMBO-UNSCOREDC centered one</p>\n<p>W10-COMBO-UNSCOREDC centered two</p>\n</div>\n<p style=\"text-align: center;\">W10-COMBO-UNSCOREDC center again</p>\n<p>W10-COMBO-UNSCOREDC hidden text</p>\n<span style=\"font-size:0px;\">　</span></div>\n</div>\n</div>\n</div>\n</div>",
+  "html_sha256": "bede2687098797c497ffe7c9bb23a573b6e941770dee5d31e9ff2cbbd3ff6beb",
+  "saved_source_matches": true,
+  "source_sha256": "c49cdf64a5363f40afb4fe20a801de1418595393a1601cf069bec38bca240182",
+  "stable": true,
+  "valid": true
+ },
+ "scoredlistedges": {
+  "fullname": "muse-probe-hunt-block2-scoredlistedges",
+  "html": "<h3 id=\"toc0\"><span>L1-SCORED-LI-DIV</span></h3>\n<div class=\"x-l1\">\n<ul>\n<li class=\"item\">\n<div class=\"closed\">\n<p>text L1</p>\n</div>\n<br /></li>\n</ul>\n</div>\n<h3 id=\"toc1\"><span>L2-SCORED-LI-TEXT</span></h3>\n<div class=\"x-l2\">\n<ul>\n<li class=\"item\">text L2<br /></li>\n</ul>\n</div>\n<h3 id=\"toc2\"><span>L3-UNSCORED-LI-DIV</span></h3>\n<div class=\"x-l3\">\n<ul>\n<li class=\"item\">\n<div class=\"closed\">\n<p>text L3</p>\n</div>\n<br /></li>\n</ul>\n</div>\n<h3 id=\"toc3\"><span>L4-SCORED-LI-DIV-NOBLANK</span></h3>\n<div class=\"x-l4\">\n<ul>\n<li class=\"item\">\n<div class=\"closed\">\n<p>text L4</p>\n</div>\n<br /></li>\n</ul>\n</div>",
+  "html_sha256": "93494aebb27e44b552e4dd6293000aa1c2e176070c9d8750c82fb001797b149b",
+  "saved_source_matches": true,
+  "source_sha256": "0d08db62863660818a6c358019b2abf9349607d06364e4cc6f7562b724dd5d76",
+  "stable": true,
+  "valid": true
+ },
+ "scorednested": {
+  "fullname": "muse-probe-hunt-block2-scorednested",
+  "html": "<h3 id=\"toc0\"><span>W1-SIMPLE3</span></h3>\n<div class=\"x-w1-simple3\">W1-SIMPLE3 one\n<p>W1-SIMPLE3 two</p>\nW1-SIMPLE3 three</div>\n<h3 id=\"toc1\"><span>W2-SIMPLE10</span></h3>\n<div class=\"x-w2-simple10\">W2-SIMPLE10 paragraph 1 with enough text to be ordinary prose\n<p>W2-SIMPLE10 paragraph 2 with enough text to be ordinary prose</p>\n<p>W2-SIMPLE10 paragraph 3 with enough text to be ordinary prose</p>\n<p>W2-SIMPLE10 paragraph 4 with enough text to be ordinary prose</p>\n<p>W2-SIMPLE10 paragraph 5 with enough text to be ordinary prose</p>\n<p>W2-SIMPLE10 paragraph 6 with enough text to be ordinary prose</p>\n<p>W2-SIMPLE10 paragraph 7 with enough text to be ordinary prose</p>\n<p>W2-SIMPLE10 paragraph 8 with enough text to be ordinary prose</p>\n<p>W2-SIMPLE10 paragraph 9 with enough text to be ordinary prose</p>\nW2-SIMPLE10 paragraph 10 with enough text to be ordinary prose</div>\n<h3 id=\"toc2\"><span>W3-CENTERLINE</span></h3>\n<div class=\"x-w3-centerline\">W3-CENTERLINE one\n<p style=\"text-align: center;\">W3-CENTERLINE center</p>\nW3-CENTERLINE three</div>\n<h3 id=\"toc3\"><span>W4-SIZE0</span></h3>\n<div class=\"x-w4-size0\">W4-SIZE0 one\n<p><span style=\"font-size:0px;\">　</span></p>\nW4-SIZE0 three</div>\n<h3 id=\"toc4\"><span>W5-NESTEDDIV</span></h3>\n<div class=\"x-w5-nesteddiv\">W5-NESTEDDIV one\n<p>W5-NESTEDDIV two</p>\n<p>W5-NESTEDDIV three</p>\n<div class=\"child\">\n<p>W5-NESTEDDIV child</p>\n</div>\n</div>\n<h3 id=\"toc5\"><span>W6-NESTEDSCOREDDIV</span></h3>\n<div class=\"x-w6-nestedscoreddiv\">W6-NESTEDSCOREDDIV one\n<p>W6-NESTEDSCOREDDIV two</p>\n<p>W6-NESTEDSCOREDDIV three</p>\n<div class=\"child\">W6-NESTEDSCOREDDIV child</div>\n</div>\n<h3 id=\"toc6\"><span>W7-COLLAPSIBLE</span></h3>\n<div class=\"x-w7-collapsible\">W7-COLLAPSIBLE one\n<p>W7-COLLAPSIBLE two</p>\n<p>W7-COLLAPSIBLE three</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+W7-COLLAPSIBLE</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">close</a></div>\n<div class=\"collapsible-block-content\">\n<p>W7-COLLAPSIBLE hidden</p>\n</div>\n</div>\n</div>\n</div>\n<h3 id=\"toc7\"><span>W8-BLOCKQUOTE</span></h3>\n<div class=\"x-w8-blockquote\">W8-BLOCKQUOTE one\n<blockquote>\n<p>W8-BLOCKQUOTE quote one<br />\nW8-BLOCKQUOTE quote two</p>\n</blockquote>\nW8-BLOCKQUOTE three</div>\n<h3 id=\"toc8\"><span>W9-COMBO</span></h3>\n<div class=\"x-w9-combo\">W9-COMBO one\n<p>W9-COMBO two</p>\n<p>W9-COMBO three</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+W9-COMBO</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">close</a></div>\n<div class=\"collapsible-block-content\">\n<div class=\"cover\">\n<p><span style=\"white-space: pre-wrap;\">&#32;</span></p>\n</div>\n<div class=\"fadein-txt\"><span style=\"font-size:0px;\">　</span>\n<p style=\"text-align: center;\">W9-COMBO center</p>\n<div style=\"text-align: center;\">\n<p>W9-COMBO centered one</p>\n<p>W9-COMBO centered two</p>\n</div>\n<p style=\"text-align: center;\">W9-COMBO center again</p>\n<p>W9-COMBO hidden text</p>\n<span style=\"font-size:0px;\">　</span></div>\n</div>\n</div>\n</div>\n</div>\n<h3 id=\"toc9\"><span>W10-COMBO-UNSCORED</span></h3>\n<div class=\"x-w10-combo-unscored\">\n<p>W10-COMBO-UNSCORED one</p>\n<p>W10-COMBO-UNSCORED two</p>\n<p>W10-COMBO-UNSCORED three</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+W10-COMBO-UNSCORED</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">close</a></div>\n<div class=\"collapsible-block-content\">\n<div class=\"cover\">\n<p><span style=\"white-space: pre-wrap;\">&#32;</span></p>\n</div>\n<div class=\"fadein-txt\"><span style=\"font-size:0px;\">　</span>\n<p style=\"text-align: center;\">W10-COMBO-UNSCORED center</p>\n<div style=\"text-align: center;\">\n<p>W10-COMBO-UNSCORED centered one</p>\n<p>W10-COMBO-UNSCORED centered two</p>\n</div>\n<p style=\"text-align: center;\">W10-COMBO-UNSCORED center again</p>\n<p>W10-COMBO-UNSCORED hidden text</p>\n<span style=\"font-size:0px;\">　</span></div>\n</div>\n</div>\n</div>\n</div>",
+  "html_sha256": "35d04755b1b7a85a22303056b95c525fe8319c6ef2c6a6c27194497d8b7a5b19",
+  "saved_source_matches": true,
+  "source_sha256": "3d48e8de043ce6b0af4ddb19b522d355a5963358c2ce66b6cc0bc0fad66c038b",
+  "stable": true,
+  "valid": true
+ },
+ "w1alignblankspan": {
+  "fullname": "muse-probe-hunt-block2-w1alignblankspan",
+  "html": "<div style=\"text-align: right;\"></div>\n<p><span style=\"padding: 10%;\"><br />\n<span style=\"font-size:85%;\">closed</span><br /></span><br /></p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+open</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">close</a></span></div>\n<div class=\"collapsible-block-content\">\n<blockquote>\n<p><span style=\"font-size:85%;\">quote one<br />\nquote two</span></p>\n</blockquote>\n</div>\n</div>\n</div>\n<span style=\"font-size:85%;\"><br /></span>",
+  "html_sha256": "2b03fc596ac87ef48a97d97fe932980cb03d02c89478929316009e9a663f0dc7",
+  "saved_source_matches": true,
+  "source_sha256": "f213c10abd10049a5e927e657354b6e6fc557dbbe9c007899cc217e8c4ca6140",
+  "stable": true,
+  "valid": true
+ },
+ "w1alignimmediate": {
+  "fullname": "muse-probe-hunt-block2-w1alignimmediate",
+  "html": "<div style=\"text-align: right;\"></div>\n<br />\n<span style=\"padding: 10%;\"><br />\n<span style=\"font-size:85%;\">closed</span><br /></span><br />\n<span style=\"font-size:85%;\"><br />\n<br /></span>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+open</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">close</a></span></div>\n<div class=\"collapsible-block-content\">\n<blockquote>\n<p><span style=\"font-size:85%;\">quote one<br />\nquote two</span></p>\n</blockquote>\n</div>\n</div>\n</div>\n<span style=\"font-size:85%;\"><br /></span>",
+  "html_sha256": "010f71a320459143321d77169681b2f7402c15890ba9ae26e01cb6d6cac5d65d",
+  "saved_source_matches": true,
+  "source_sha256": "0db6bdbf6a81b35d2b6344e7e9b7d29a1fb0e426d68a19d6df3b9ed27ee7a7bd",
+  "stable": true,
+  "valid": true
+ },
+ "w1alignnopre": {
+  "fullname": "muse-probe-hunt-block2-w1alignnopre",
+  "html": "<div style=\"text-align: right;\"></div>\n<br />\n<span style=\"font-size:85%;\"><br />\n<br /></span>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+open</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">close</a></span></div>\n<div class=\"collapsible-block-content\">\n<blockquote>\n<p><span style=\"font-size:85%;\">quote one<br />\nquote two</span></p>\n</blockquote>\n</div>\n</div>\n</div>\n<span style=\"font-size:85%;\"><br /></span>",
+  "html_sha256": "a5a958c22bde0d32bc2bf5d94883373c2aabf3890778032697c41a628f65640d",
+  "saved_source_matches": true,
+  "source_sha256": "24e30ee88b01983b4694beb1f7fb96a56b7b545f62f4e19d3bf90d0a4f8d168f",
+  "stable": true,
+  "valid": true
+ },
+ "w1alignplain": {
+  "fullname": "muse-probe-hunt-block2-w1alignplain",
+  "html": "<div style=\"text-align: right;\"></div>\n<br />\nplain closed<br />\n<span style=\"font-size:85%;\"><br />\n<br /></span>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+open</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">close</a></span></div>\n<div class=\"collapsible-block-content\">\n<blockquote>\n<p><span style=\"font-size:85%;\">quote one<br />\nquote two</span></p>\n</blockquote>\n</div>\n</div>\n</div>\n<span style=\"font-size:85%;\"><br /></span>",
+  "html_sha256": "1baf1458491989792b33f042cc14e1183f131f883432f53e75926044658d43ca",
+  "saved_source_matches": true,
+  "source_sha256": "10f1898afac61bd34c5d48d0ad2fb21fee60b588b6d4230d2586f45851e7011e",
+  "stable": true,
+  "valid": true
+ },
+ "w1alignsimple": {
+  "fullname": "muse-probe-hunt-block2-w1alignsimple",
+  "html": "<div style=\"text-align: right;\"></div>\n<br />\n<span style=\"padding: 10%;\"><br />\n<span style=\"font-size:85%;\">closed</span><br /></span><br />\n<span style=\"font-size:85%;\"><br />\n<br /></span>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+open</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">close</a></span></div>\n<div class=\"collapsible-block-content\">\n<blockquote>\n<p><span style=\"font-size:85%;\">quote one</span></p>\n</blockquote>\n</div>\n</div>\n</div>\n<span style=\"font-size:85%;\"><br /></span>",
+  "html_sha256": "6e05fa1934377b46d07f66ce17de3dc9e3d6dca659b4740f8a82b9ecfda4b32f",
+  "saved_source_matches": true,
+  "source_sha256": "eeef8a6148f90099e6380f47bd6ab9cf7e71ab7bd9f1232d7a3fc8a3da0defad",
+  "stable": true,
+  "valid": true
+ },
+ "w1centeralignspan": {
+  "fullname": "muse-probe-hunt-block2-w1centeralignspan",
+  "html": "<div style=\"text-align: center;\"></div>\n<br />\n<span style=\"padding: 10%;\"><br />\n<span style=\"font-size:85%;\">closed</span><br /></span><br />\n<span style=\"font-size:85%;\"><br />\n<br /></span>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+open</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:85%;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">close</a></span></div>\n<div class=\"collapsible-block-content\">\n<blockquote>\n<p><span style=\"font-size:85%;\">quote one<br />\nquote two</span></p>\n</blockquote>\n</div>\n</div>\n</div>\n<span style=\"font-size:85%;\"><br /></span>",
+  "html_sha256": "597baec03d30719d7c40b9aa837201e1eb23628cbf0b933054db436c4b2458aa",
+  "saved_source_matches": true,
+  "source_sha256": "df1306da681f54a4f6254dc40c42f75b4c98a78dff53f03b92c2683f86d84230",
+  "stable": true,
+  "valid": true
+ }
+}

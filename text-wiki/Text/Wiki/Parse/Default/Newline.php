@@ -97,6 +97,8 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                 // in the stream makes the later Paragraph rule wrap the
                 // following div closer in a spurious <p>.
                 $out .= $m[1][0];
+            } elseif ($this->_afterExplicitItemBeforeBlock($src, $off, strlen($m[0][0]))) {
+                $out .= $m[1][0];
             } elseif ($this->_betweenBlocks($src, $off, strlen($m[0][0]))) {
                 $out .= $m[0][0];
             } else {
@@ -193,6 +195,35 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
         }
         $opts = isset($tok[1]) && is_array($tok[1]) ? $tok[1] : array();
         return isset($opts['type']) && $opts['type'] === 'end';
+    }
+
+    private function _previousToken($src, $pos)
+    {
+        $delim = $this->wiki->delim;
+        if ($pos < 0 || $pos >= strlen($src) || $src[$pos] !== $delim) {
+            return null;
+        }
+        $start = strrpos(substr($src, 0, $pos), $delim);
+        if ($start === false) {
+            return null;
+        }
+        $id = substr($src, $start + 1, $pos - $start - 1);
+        if (!preg_match('/^\d+$/', $id)) {
+            return null;
+        }
+        return isset($this->wiki->tokens[(int)$id]) ? $this->wiki->tokens[(int)$id] : null;
+    }
+
+    private function _afterExplicitItemBeforeBlock($src, $off, $len)
+    {
+        $prev = $this->_previousToken($src, $off);
+        if ($prev === null || strtolower($prev[0]) !== 'list'
+            || !isset($prev[1]['type']) || $prev[1]['type'] !== 'explicit_item_start') {
+            return false;
+        }
+        $next = $this->_nextBlockToken($src, $off + $len);
+        return $next !== null && strtolower($next[0]) === 'div'
+            && isset($next[1]['type']) && $next[1]['type'] === 'start';
     }
 
     private function _betweenBlocks($src, $off, $len)
