@@ -1,0 +1,62 @@
+{
+ "matrix-a": {
+  "fullname": "muse-probe-hunt-inline-matrix-a",
+  "html": "<p>L-X-ANCHOR-STRONG-START</p>\n<p><a href=\"/target\">A1 <strong>B2</strong></a> C3</p>\n<p>L-X-ANCHOR-STRONG-END</p>\n<p>L-N-ANCHOR-STRONG-START</p>\n<p><a href=\"/target\">A1 <strong>B2</strong> C3</a></p>\n<p>L-N-ANCHOR-STRONG-END</p>\n<p>L-X-STRONG-EM-START</p>\n<p><strong>A1 <em>B2</em></strong> <em>C3</em></p>\n<p>L-X-STRONG-EM-END</p>\n<p>L-N-STRONG-EM-START</p>\n<p><strong>A1 <em>B2</em> C3</strong></p>\n<p>L-N-STRONG-EM-END</p>\n<p>L-X-SPAN-STRONG-START</p>\n<p><span class=\"pa\">A1 <strong>B2</strong></span> <strong>C3</strong></p>\n<p>L-X-SPAN-STRONG-END</p>\n<p>L-N-SPAN-STRONG-START</p>\n<p><span class=\"pa\">A1 <strong>B2</strong> C3</span></p>\n<p>L-N-SPAN-STRONG-END</p>",
+  "html_sha256": "b5545732eeafd9a22b115dc169f64958e68b4d1c8cbddaca63c8c015bf5f35af",
+  "source": "L-X-ANCHOR-STRONG-START\n\n[[a href=\"/target\"]]A1 **B2[[/a]] C3**\n\nL-X-ANCHOR-STRONG-END\n\nL-N-ANCHOR-STRONG-START\n\n[[a href=\"/target\"]]A1 **B2** C3[[/a]]\n\nL-N-ANCHOR-STRONG-END\n\nL-X-STRONG-EM-START\n\n**A1 //B2** C3//\n\nL-X-STRONG-EM-END\n\nL-N-STRONG-EM-START\n\n**A1 //B2// C3**\n\nL-N-STRONG-EM-END\n\nL-X-SPAN-STRONG-START\n\n[[span class=\"pa\"]]A1 **B2[[/span]] C3**\n\nL-X-SPAN-STRONG-END\n\nL-N-SPAN-STRONG-START\n\n[[span class=\"pa\"]]A1 **B2** C3[[/span]]\n\nL-N-SPAN-STRONG-END",
+  "source_sha256": "cda3626661579a74d714bcbe8eacd253aac561d69bf85f303f16bd16efda51d1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "matrix-b": {
+  "fullname": "muse-probe-hunt-inline-matrix-b",
+  "html": "<p>L-X-SPAN-ANCHOR-START</p>\n<p><span class=\"pa\">A1 <a href=\"/target\">B2 C3</a></span></p>\n<p>L-X-SPAN-ANCHOR-END</p>\n<p>L-N-SPAN-ANCHOR-START</p>\n<p><span class=\"pa\">A1 <a href=\"/target\">B2</a> C3</span></p>\n<p>L-N-SPAN-ANCHOR-END</p>\n<p>L-X-EM-UNDERLINE-START</p>\n<p><em>A1 <span style=\"text-decoration: underline;\">B2</span></em> <span style=\"text-decoration: underline;\">C3</span></p>\n<p>L-X-EM-UNDERLINE-END</p>\n<p>L-N-EM-UNDERLINE-START</p>\n<p><em>A1 <span style=\"text-decoration: underline;\">B2</span> C3</em></p>\n<p>L-N-EM-UNDERLINE-END</p>\n<p>L-X-TT-STRONG-START</p>\n<p><tt>A1 <strong>B2</strong></tt> <strong>C3</strong></p>\n<p>L-X-TT-STRONG-END</p>\n<p>L-N-TT-STRONG-START</p>\n<p><tt>A1 <strong>B2</strong> C3</tt></p>\n<p>L-N-TT-STRONG-END</p>",
+  "html_sha256": "ca1b3c62d6686c21c9e5aac1de4ff76b91b96b55de84141ccdf6674fc4300baa",
+  "source": "L-X-SPAN-ANCHOR-START\n\n[[span class=\"pa\"]]A1 [[a href=\"/target\"]]B2[[/span]] C3[[/a]]\n\nL-X-SPAN-ANCHOR-END\n\nL-N-SPAN-ANCHOR-START\n\n[[span class=\"pa\"]]A1 [[a href=\"/target\"]]B2[[/a]] C3[[/span]]\n\nL-N-SPAN-ANCHOR-END\n\nL-X-EM-UNDERLINE-START\n\n//A1 __B2// C3__\n\nL-X-EM-UNDERLINE-END\n\nL-N-EM-UNDERLINE-START\n\n//A1 __B2__ C3//\n\nL-N-EM-UNDERLINE-END\n\nL-X-TT-STRONG-START\n\n{{A1 **B2}} C3**\n\nL-X-TT-STRONG-END\n\nL-N-TT-STRONG-START\n\n{{A1 **B2** C3}}\n\nL-N-TT-STRONG-END",
+  "source_sha256": "af0b04a2d87dc1d718c0a96fd895db39a9635c98e39ab9504260d69d414ed587",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "matrix-c": {
+  "fullname": "muse-probe-hunt-inline-matrix-c",
+  "html": "<p>L-X-SUP-SUB-START</p>\n<p><sup>A1 <sub>B2</sub></sup> <sub>C3</sub></p>\n<p>L-X-SUP-SUB-END</p>\n<p>L-N-SUP-SUB-START</p>\n<p><sup>A1 <sub>B2</sub> C3</sup></p>\n<p>L-N-SUP-SUB-END</p>\n<p>L-X-SPAN-SIZE-START</p>\n<p><span class=\"pa\">A1 <span style=\"font-size:120%;\">B2</span> C3</span></p>\n<p>L-X-SPAN-SIZE-END</p>\n<p>L-N-SPAN-SIZE-START</p>\n<p><span class=\"pa\">A1 <span style=\"font-size:120%;\">B2</span> C3</span></p>\n<p>L-N-SPAN-SIZE-END</p>\n<p>L-X-SPAN-COLOR-START</p>\n<p><span class=\"pa\">A1 <span style=\"color: red\">B2</span> C3</span></p>\n<p>L-X-SPAN-COLOR-END</p>\n<p>L-N-SPAN-COLOR-START</p>\n<p><span class=\"pa\">A1 <span style=\"color: red\">B2</span> C3</span></p>\n<p>L-N-SPAN-COLOR-END</p>\n<p>L-X-SIZE-COLOR-START</p>\n<p><span style=\"font-size:120%;\">A1 <span style=\"color: red\">B2</span> C3</span></p>\n<p>L-X-SIZE-COLOR-END</p>\n<p>L-N-SIZE-COLOR-START</p>\n<p><span style=\"font-size:120%;\">A1 <span style=\"color: red\">B2</span> C3</span></p>\n<p>L-N-SIZE-COLOR-END</p>\n<p>L-X-SPAN-STRIKE-START</p>\n<p><span class=\"pa\">A1 <span style=\"text-decoration: line-through;\">B2</span> C3</span></p>\n<p>L-X-SPAN-STRIKE-END</p>\n<p>L-N-SPAN-STRIKE-START</p>\n<p><span class=\"pa\">A1 <span style=\"text-decoration: line-through;\">B2</span> C3</span></p>\n<p>L-N-SPAN-STRIKE-END</p>",
+  "html_sha256": "8c69b75d58264ddaf346f8ff8b5974764632c57e5164a1b325eea4d7b1c4c928",
+  "source": "L-X-SUP-SUB-START\n\n^^A1 ,,B2^^ C3,,\n\nL-X-SUP-SUB-END\n\nL-N-SUP-SUB-START\n\n^^A1 ,,B2,, C3^^\n\nL-N-SUP-SUB-END\n\nL-X-SPAN-SIZE-START\n\n[[span class=\"pa\"]]A1 [[size 120%]]B2[[/span]] C3[[/size]]\n\nL-X-SPAN-SIZE-END\n\nL-N-SPAN-SIZE-START\n\n[[span class=\"pa\"]]A1 [[size 120%]]B2[[/size]] C3[[/span]]\n\nL-N-SPAN-SIZE-END\n\nL-X-SPAN-COLOR-START\n\n[[span class=\"pa\"]]A1 ##red|B2[[/span]] C3##\n\nL-X-SPAN-COLOR-END\n\nL-N-SPAN-COLOR-START\n\n[[span class=\"pa\"]]A1 ##red|B2## C3[[/span]]\n\nL-N-SPAN-COLOR-END\n\nL-X-SIZE-COLOR-START\n\n[[size 120%]]A1 ##red|B2[[/size]] C3##\n\nL-X-SIZE-COLOR-END\n\nL-N-SIZE-COLOR-START\n\n[[size 120%]]A1 ##red|B2## C3[[/size]]\n\nL-N-SIZE-COLOR-END\n\nL-X-SPAN-STRIKE-START\n\n[[span class=\"pa\"]]A1 --B2[[/span]] C3--\n\nL-X-SPAN-STRIKE-END\n\nL-N-SPAN-STRIKE-START\n\n[[span class=\"pa\"]]A1 --B2-- C3[[/span]]\n\nL-N-SPAN-STRIKE-END",
+  "source_sha256": "99d2e0d6e2c2b0bb19a7a982fec79759780ecec6a5aabbb9909a62afa15b1bb9",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "triple-controls": {
+  "fullname": "muse-probe-hunt-inline-triple-controls",
+  "html": "<p>L-X-TRIPLE-ANCHOR-STRONG-EM-START</p>\n<p><a href=\"/target\">A1 <strong>B2 <em>C3</em></strong></a> D4 E5</p>\n<p>L-X-TRIPLE-ANCHOR-STRONG-EM-END</p>\n<p>L-N-TRIPLE-ANCHOR-STRONG-EM-START</p>\n<p><a href=\"/target\">A1 <strong>B2 <em>C3</em> D4</strong> E5</a></p>\n<p>L-N-TRIPLE-ANCHOR-STRONG-EM-END</p>\n<p>L-C-SPAN-IN-SPAN-START</p>\n<p><span class=\"outer\">one <span class=\"inner\">two</span> three</span></p>\n<p>L-C-SPAN-IN-SPAN-END</p>\n<p>L-C-STRONG-IN-STRONG-START</p>\n<p><strong>one **two</strong> three**</p>\n<p>L-C-STRONG-IN-STRONG-END</p>\n<p>L-C-ADJACENT-PAIRS-START</p>\n<p><strong>one</strong> <em>two</em> <span style=\"text-decoration: underline;\">three</span> <span style=\"text-decoration: line-through;\">four</span> <tt>five</tt> <sup>six</sup> <sub>seven</sub></p>\n<p>L-C-ADJACENT-PAIRS-END</p>",
+  "html_sha256": "8f3e1e825b157a6b5bb577fc66405b75279f45f7bd4ef9832e1d460380e09907",
+  "source": "L-X-TRIPLE-ANCHOR-STRONG-EM-START\n\n[[a href=\"/target\"]]A1 **B2 //C3[[/a]] D4** E5//\n\nL-X-TRIPLE-ANCHOR-STRONG-EM-END\n\nL-N-TRIPLE-ANCHOR-STRONG-EM-START\n\n[[a href=\"/target\"]]A1 **B2 //C3// D4** E5[[/a]]\n\nL-N-TRIPLE-ANCHOR-STRONG-EM-END\n\nL-C-SPAN-IN-SPAN-START\n\n[[span class=\"outer\"]]one [[span class=\"inner\"]]two[[/span]] three[[/span]]\n\nL-C-SPAN-IN-SPAN-END\n\nL-C-STRONG-IN-STRONG-START\n\n**one **two** three**\n\nL-C-STRONG-IN-STRONG-END\n\nL-C-ADJACENT-PAIRS-START\n\n**one** //two// __three__ --four-- {{five}} ^^six^^ ,,seven,,\n\nL-C-ADJACENT-PAIRS-END",
+  "source_sha256": "453519edb9f25cfe03d85ae5af1998164404debe0a4d23ab0ee898e579f49578",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "listbound-a": {
+  "fullname": "muse-probe-hunt-inline-listbound-a",
+  "html": "<p>L-L-ANCHOR-STRONG-START</p>\n<ul>\n<li><a href=\"/target\">A1 <strong>B2</strong></a></li>\n<li><a href=\"/target\"><strong>C3</strong></a> D4</li>\n</ul>\n<p>L-L-ANCHOR-STRONG-END</p>\n<p>L-L-STRONG-EM-START</p>\n<ul>\n<li><strong>A1 <em>B2</em></strong></li>\n<li><strong><em>C3</em></strong> <em>D4</em></li>\n</ul>\n<p>L-L-STRONG-EM-END</p>\n<p>L-L-SPAN-STRONG-START</p>\n<ul>\n<li><span class=\"pa\">A1 <strong>B2</strong></span></li>\n<li><span class=\"pa\"><strong>C3</strong></span> <strong>D4</strong></li>\n</ul>\n<p>L-L-SPAN-STRONG-END</p>\n<p>L-L-SPAN-ANCHOR-START</p>\n<ul>\n<li><span class=\"pa\">A1 <a href=\"/target\">B2</a></span></li>\n<li><span class=\"pa\"><a href=\"/target\">C3 D4</a></span></li>\n</ul>\n<p>L-L-SPAN-ANCHOR-END</p>\n<p>L-L-EM-UNDERLINE-START</p>\n<ul>\n<li><em>A1 <span style=\"text-decoration: underline;\">B2</span></em></li>\n<li><em><span style=\"text-decoration: underline;\">C3</span></em> <span style=\"text-decoration: underline;\">D4</span></li>\n</ul>\n<p>L-L-EM-UNDERLINE-END</p>\n<p>L-L-TT-STRONG-START</p>\n<ul>\n<li><tt>A1 <strong>B2</strong></tt></li>\n<li><tt><strong>C3</strong></tt> <strong>D4</strong></li>\n</ul>\n<p>L-L-TT-STRONG-END</p>",
+  "html_sha256": "50b575ebed8e05cf4109defb197ad26a80068e357fbca61f0606bdf36e47781a",
+  "source": "L-L-ANCHOR-STRONG-START\n\n* [[a href=\"/target\"]]A1 **B2\n* C3[[/a]] D4**\n\nL-L-ANCHOR-STRONG-END\n\nL-L-STRONG-EM-START\n\n* **A1 //B2\n* C3** D4//\n\nL-L-STRONG-EM-END\n\nL-L-SPAN-STRONG-START\n\n* [[span class=\"pa\"]]A1 **B2\n* C3[[/span]] D4**\n\nL-L-SPAN-STRONG-END\n\nL-L-SPAN-ANCHOR-START\n\n* [[span class=\"pa\"]]A1 [[a href=\"/target\"]]B2\n* C3[[/span]] D4[[/a]]\n\nL-L-SPAN-ANCHOR-END\n\nL-L-EM-UNDERLINE-START\n\n* //A1 __B2\n* C3// D4__\n\nL-L-EM-UNDERLINE-END\n\nL-L-TT-STRONG-START\n\n* {{A1 **B2\n* C3}} D4**\n\nL-L-TT-STRONG-END",
+  "source_sha256": "4cbc71a3dbcecc9f2c598dd90c73276bd4f99583f835f887c3a58a561b1ac12f",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "listbound-b": {
+  "fullname": "muse-probe-hunt-inline-listbound-b",
+  "html": "<p>L-L-SUP-SUB-START</p>\n<ul>\n<li><sup>A1 <sub>B2</sub></sup></li>\n<li><sup><sub>C3</sub></sup> <sub>D4</sub></li>\n</ul>\n<p>L-L-SUP-SUB-END</p>\n<p>L-L-SPAN-SIZE-START</p>\n<ul>\n<li><span class=\"pa\">A1 <span style=\"font-size:120%;\">B2</span></span></li>\n<li><span class=\"pa\">C3</span> D4</li>\n</ul>\n<p>L-L-SPAN-SIZE-END</p>\n<p>L-L-SPAN-COLOR-START</p>\n<ul>\n<li><span class=\"pa\">A1 <span style=\"color: red\">B2</span></span></li>\n<li><span class=\"pa\">C3</span> D4</li>\n</ul>\n<p>L-L-SPAN-COLOR-END</p>\n<p>L-L-SIZE-COLOR-START</p>\n<ul>\n<li><span style=\"font-size:120%;\">A1 <span style=\"color: red\">B2</span></span></li>\n<li><span style=\"font-size:120%;\">C3</span> D4</li>\n</ul>\n<p>L-L-SIZE-COLOR-END</p>\n<p>L-L-SPAN-STRIKE-START</p>\n<ul>\n<li><span class=\"pa\">A1 <span style=\"text-decoration: line-through;\">B2</span></span></li>\n<li><span class=\"pa\">C3</span> D4</li>\n</ul>\n<p>L-L-SPAN-STRIKE-END</p>",
+  "html_sha256": "07159ee454584c082dce6e4a8de04fea88a5aa4f8fbf834169f36492156a5c13",
+  "source": "L-L-SUP-SUB-START\n\n* ^^A1 ,,B2\n* C3^^ D4,,\n\nL-L-SUP-SUB-END\n\nL-L-SPAN-SIZE-START\n\n* [[span class=\"pa\"]]A1 [[size 120%]]B2\n* C3[[/span]] D4[[/size]]\n\nL-L-SPAN-SIZE-END\n\nL-L-SPAN-COLOR-START\n\n* [[span class=\"pa\"]]A1 ##red|B2\n* C3[[/span]] D4##\n\nL-L-SPAN-COLOR-END\n\nL-L-SIZE-COLOR-START\n\n* [[size 120%]]A1 ##red|B2\n* C3[[/size]] D4##\n\nL-L-SIZE-COLOR-END\n\nL-L-SPAN-STRIKE-START\n\n* [[span class=\"pa\"]]A1 --B2\n* C3[[/span]] D4--\n\nL-L-SPAN-STRIKE-END",
+  "source_sha256": "42844c63d945d11efe137b1ddec561f9a2cb759f043bcaef63812dc40d9a745c",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

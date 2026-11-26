@@ -1260,14 +1260,11 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
     }
 
     /**
-     * Whether a paired-token inline element crosses a block-element boundary. The
-     * scan is limited to the tags emitted by the anchor, span, and
-     * inline-format pair rules: crossings with block structure are this
-     * family, inline-inline
-     * crossing is separate, and well-formed documents are left in the reference
-     * frame.
+     * Whether a paired-token inline element crosses a block-element boundary or
+     * another inline element emitted by the pair rules. Well-formed documents are
+     * left in the reference frame.
      */
-    function outputHasInlineBlockCrossing($html)
+    function outputHasInlineCrossing($html)
     {
         $scan = preg_replace('/<(script|style)\b[^>]*>.*?<\/\1\s*>/is', '', $html);
         if (! preg_match_all('/<(\/?)([a-z][a-z0-9]*)\b([^>]*)>/i', $scan, $matches, PREG_SET_ORDER)) {
@@ -1316,6 +1313,13 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
                 continue;
             }
             if (isset($block[$tag])) {
+                for ($i = count($stack) - 1; $i > $pos; $i--) {
+                    if (isset($inline[$stack[$i]])) {
+                        return true;
+                    }
+                }
+            }
+            if (isset($inline[$tag])) {
                 for ($i = count($stack) - 1; $i > $pos; $i--) {
                     if (isset($inline[$stack[$i]])) {
                         return true;
@@ -1455,7 +1459,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         // present, so well-formed documents keep their established frame.
         if ($this->outputHasUnpurifiedTocTitleWhitespace($output)
             || $this->outputHasSpanParagraphCrossing($output)
-            || $this->outputHasInlineBlockCrossing($output)) {
+            || $this->outputHasInlineCrossing($output)) {
             $output = $this->purifyRecoveredHtml($output);
         }
 
