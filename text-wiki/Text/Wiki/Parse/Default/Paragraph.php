@@ -343,8 +343,7 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
      * not end-typed and not an image: a start-typed opener, or a standalone
      * block token such as a horizontal rule (probe V3, where live serves
      * the breaks bare ahead of the rule) or a module. A break run ahead of
-     * a bare block end still wraps (probe V1), and scored contexts are
-     * unaffected (probe V12: inside [[div_]] no paragraph forms at all).
+     * a bare block end still wraps (probe V1).
      * REFCORR18: the type-absent standalone class was enumerated over the
      * whole skip list after the REFCORR17 adjudication found the Separator
      * token unmeasured. Among run-joining tokens (whose replacement does
@@ -446,6 +445,22 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
         return $seenBlockStart;
     }
 
+    protected function runHasScoredDivEnd($run) {
+        $delim = preg_quote($this->wiki->delim, '/');
+        if (! preg_match_all('/' . $delim . '([0-9]+)' . $delim . '/', $run, $ms)) {
+            return false;
+        }
+        foreach ($ms[1] as $id) {
+            $tok = isset($this->wiki->tokens[(int)$id]) ? $this->wiki->tokens[(int)$id] : null;
+            if ($tok !== null && $tok[0] === 'Div'
+                && isset($tok[1]['type']) && $tok[1]['type'] === 'end'
+                && !empty($tok[1]['scored'])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     function process($matches) {
         $delim = $this->wiki->delim;
 
@@ -472,6 +487,9 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
         // stray-closer lead glued to a div opener (d42) are all bare on
         // live, where the fossil wrapped any run not starting with a
         // delimiter.
+        if ($this->runHasScoredDivEnd($matches[0])) {
+            return $matches[0];
+        }
         if ($this->runIsBlockLead($matches[0])) {
             return $matches[0];
         }

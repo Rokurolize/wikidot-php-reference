@@ -175,6 +175,10 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
         $options = array('args' => $attr, 'type' => 'start',
             'count' => $this->collapsibleCount, 'label_size' => $labelSize);
 
+        if ($sid !== null && $matches[2] !== ''
+            && $this->wiki->tokens[$sid][1]['type'] !== 'suppressed') {
+            $options['leading_size_newline'] = $this->wiki->tokens[$sid][1]['size'];
+        }
         $start = $this->wiki->addToken($this->rule, $options);
 
         $end = $this->wiki->addToken($this->rule, array(
