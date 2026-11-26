@@ -400,6 +400,10 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
                         continue;
                     }
                     $sub = isset($tok[1]['type']) ? $tok[1]['type'] : '';
+                    if (($rule === 'anchor' || $rule === 'span')
+                        && ($sub === 'start' || $sub === 'end')) {
+                        continue;
+                    }
                     if (in_array($rule, $skip, true)
                         && $rule !== 'image'
                         && $rule !== 'separator'

@@ -1261,8 +1261,9 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
 
     /**
      * Whether a paired-token inline element crosses a block-element boundary. The
-     * scan is limited to the tags emitted by the span and inline-format pair
-     * rules: crossings with block structure are this family, inline-inline
+     * scan is limited to the tags emitted by the anchor, span, and
+     * inline-format pair rules: crossings with block structure are this
+     * family, inline-inline
      * crossing is separate, and well-formed documents are left in the reference
      * frame.
      */
@@ -1273,7 +1274,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
             return false;
         }
         $inline = array_flip(array(
-            'em', 'span', 'strong', 'sub', 'sup', 'tt'
+            'a', 'em', 'span', 'strong', 'sub', 'sup', 'tt'
         ));
         $block = array_flip(array(
             'address', 'article', 'aside', 'blockquote', 'dd', 'details', 'div',
