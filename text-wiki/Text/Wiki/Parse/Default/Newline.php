@@ -244,7 +244,37 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                 && $scopeTok !== null && in_array($scopeTok[0], array('Span', 'Size'), true)
                 && !$scopeHasPriorHoriz
                 && !$scopeHasContentParagraphBreak && !$endsAfterWhitespaceOnlyLine;
-            if ($inlineDepth > 0 && ($directInlineLead || $horizNeedsLooseScopeBreaks || $looseScopeContentBreaks)) {
+            $directBeforeBlockedHoriz = false;
+            if ($directInlineLead && $beforeHoriz
+                && preg_match_all($placeholder, $after, $directRestTokens, PREG_OFFSET_CAPTURE)) {
+                $directScanDepth = 1;
+                foreach ($directRestTokens[1] as $directTid) {
+                    $directTok = isset($this->wiki->tokens[(int)$directTid[0]])
+                        ? $this->wiki->tokens[(int)$directTid[0]] : null;
+                    if ($directTok === null || !isset($directTok[1]['type'])) {
+                        continue;
+                    }
+                    if (in_array($directTok[0], array('Span', 'Size', 'Anchor'), true)) {
+                        if ($directTok[1]['type'] === 'start') {
+                            $directScanDepth++;
+                        } elseif ($directTok[1]['type'] === 'end') {
+                            $directScanDepth--;
+                            if ($directScanDepth === 0) {
+                                break;
+                            }
+                        }
+                    }
+                    if ($directScanDepth > 0
+                        && in_array($directTok[0], array('Center', 'Divalign'), true)
+                        && ($directTok[1]['type'] === 'start'
+                            || substr($directTok[1]['type'], -6) === '_start')) {
+                        $directBeforeBlockedHoriz = true;
+                        break;
+                    }
+                }
+            }
+            $directInlineLeadForBreaks = $directInlineLead && !$directBeforeBlockedHoriz;
+            if ($inlineDepth > 0 && ($directInlineLeadForBreaks || $horizNeedsLooseScopeBreaks || $looseScopeContentBreaks)) {
                 $crossesEnclosingBlockEnd = false;
                 $scanInlineRules = array('Span', 'Size');
                 if ($looseScopeContentBreaks || ($scopeTok !== null && $scopeTok[0] === 'Anchor')) {
@@ -320,7 +350,7 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                     }
                     $scanOffset += strlen($nm[0][0]);
                 }
-                if (($directInlineLead || $looseScopeContentBreaks) && $looseScopeTokenId !== null) {
+                if (($directInlineLeadForBreaks || $looseScopeContentBreaks) && $looseScopeTokenId !== null) {
                     $this->wiki->tokens[$looseScopeTokenId][1]['loose_scope_content_breaks'] = true;
                 }
                 if (!$beforeCollapsible) {
