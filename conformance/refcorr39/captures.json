@@ -1,0 +1,92 @@
+{
+ "link-c0a": {
+  "fullname": "muse-probe-hunt-ctrl-link-c0a",
+  "html": "<p>L-soh-href<br />\n<a href=\"http://a\">x</a></p>\n<p>L-soh-label<br />\n<a href=\"http://a\">xy</a></p>\n<p>L-soh-onlylabel<br />\n<a href=\"http://a\"></a></p>\n<p>L-bs-href<br />\n<a href=\"http://a\">x</a></p>\n<p>L-bs-label<br />\n<a href=\"http://a\">xy</a></p>\n<p>L-bs-onlylabel<br />\n<a href=\"http://a\"></a></p>\n<p>L-end</p>",
+  "html_sha256": "c1cbd28892fd284bdd4bdbab03494560aff36fb844061aac599aff2e8134dd68",
+  "saved_source_matches": true,
+  "source": "L-soh-href\n[http://a\u0001 x]\n\nL-soh-label\n[http://a x\u0001y]\n\nL-soh-onlylabel\n[http://a \u0001]\n\nL-bs-href\n[http://a\b x]\n\nL-bs-label\n[http://a x\by]\n\nL-bs-onlylabel\n[http://a \b]\n\nL-end",
+  "source_sha256": "4eea7b739b012275d294c1be403b88c1fdf24b5e06823cf6007254d971ab8a93",
+  "stable": true,
+  "valid": true
+ },
+ "link-c0b": {
+  "fullname": "muse-probe-hunt-ctrl-link-c0b",
+  "html": "<p>L-fs-href<br />\n<a href=\"http://a\">x</a></p>\n<p>L-fs-label<br />\n<a href=\"http://a\">xy</a></p>\n<p>L-fs-onlylabel<br />\n<a href=\"http://a\"></a></p>\n<p>L-us-href<br />\n<a href=\"http://a\">x</a></p>\n<p>L-us-label<br />\n<a href=\"http://a\">xy</a></p>\n<p>L-us-onlylabel<br />\n<a href=\"http://a\"></a></p>\n<p>L-end</p>",
+  "html_sha256": "169109f9ec2302f7ef38421df0a0e78a9e98d3ac46468cdbd0a2d3a90783edad",
+  "saved_source_matches": true,
+  "source": "L-fs-href\n[http://a\u001c x]\n\nL-fs-label\n[http://a x\u001cy]\n\nL-fs-onlylabel\n[http://a \u001c]\n\nL-us-href\n[http://a\u001f x]\n\nL-us-label\n[http://a x\u001fy]\n\nL-us-onlylabel\n[http://a \u001f]\n\nL-end",
+  "source_sha256": "82a394f45a0bf333fd13d757f8c406547a6bad7c6f5f95ca9c2f69426b029573",
+  "stable": true,
+  "valid": true
+ },
+ "link-forms": {
+  "fullname": "muse-probe-hunt-ctrl-link-forms",
+  "html": "<p>L-bare-interior<br />\nx <a href=\"http://ab\">http://ab</a> y</p>\n<p>L-bare-terminal<br />\nx <a href=\"http://a\">http://a</a> y</p>\n<p>L-bracket-interior<br />\n[<a href=\"http://ab\">http://ab</a>]</p>\n<p>L-bracket-terminal<br />\n[<a href=\"http://a\">http://a</a>]</p>\n<p>L-descr-href-interior<br />\n<a href=\"http://ab\">x</a></p>\n<p>L-normal<br />\nx <a href=\"http://ab\">http://ab</a> y</p>\n<p>L-end</p>",
+  "html_sha256": "d4f4e4e704c11e910073a32dea7323d323b31d43388479064c9496eba0a4ee36",
+  "saved_source_matches": true,
+  "source": "L-bare-interior\nx http://a\u000bb y\n\nL-bare-terminal\nx http://a\u000b y\n\nL-bracket-interior\n[http://a\u000bb]\n\nL-bracket-terminal\n[http://a\u000b]\n\nL-descr-href-interior\n[http://a\u000bb x]\n\nL-normal\nx http://ab y\n\nL-end",
+  "source_sha256": "e85b2e282b0dbc8131a9ecff56a8313cc4dd67ff216f6d3c066376f948072c22",
+  "stable": true,
+  "valid": true
+ },
+ "link-vtff": {
+  "fullname": "muse-probe-hunt-ctrl-link-vtff",
+  "html": "<p>L-vt-href<br />\n<a href=\"http://a\">x</a></p>\n<p>L-vt-label<br />\n<a href=\"http://a\">xy</a></p>\n<p>L-vt-onlylabel<br />\n<a href=\"http://a\"></a></p>\n<p>L-ff-href<br />\n<a href=\"http://a\">x</a></p>\n<p>L-ff-label<br />\n<a href=\"http://a\">xy</a></p>\n<p>L-ff-onlylabel<br />\n<a href=\"http://a\"></a></p>\n<p>L-end</p>",
+  "html_sha256": "0f651aff1e65d84c8cf791a1a37c973e7005684c446b134fc4dc9938d0d2cb32",
+  "saved_source_matches": true,
+  "source": "L-vt-href\n[http://a\u000b x]\n\nL-vt-label\n[http://a x\u000by]\n\nL-vt-onlylabel\n[http://a \u000b]\n\nL-ff-href\n[http://a\f x]\n\nL-ff-label\n[http://a x\fy]\n\nL-ff-onlylabel\n[http://a \f]\n\nL-end",
+  "source_sha256": "573c44a17f1f2cc4424da192159326650c489520fd6f19c553c06355bc5bfc20",
+  "stable": true,
+  "valid": true
+ },
+ "token-core": {
+  "fullname": "muse-probe-hunt-ctrl-token-core",
+  "html": "<p>L-strong-vt<br />\na****b</p>\n<p>L-strong-ff<br />\na****b</p>\n<p>L-em-vt<br />\na////b</p>\n<p>L-em-ff<br />\na////b</p>\n<p>L-underline-vt<br />\na____b</p>\n<p>L-underline-ff<br />\na____b</p>\n<p>L-end</p>",
+  "html_sha256": "a6f05ba9c11b7112c97e8471a03e0a1f7b83b4f71cc6a0ee997a349a8309051e",
+  "saved_source_matches": true,
+  "source": "L-strong-vt\na**\u000b**b\n\nL-strong-ff\na**\f**b\n\nL-em-vt\na//\u000b//b\n\nL-em-ff\na//\f//b\n\nL-underline-vt\na__\u000b__b\n\nL-underline-ff\na__\f__b\n\nL-end",
+  "source_sha256": "c05be03d8fb6c38b94561a0df493bcf5196bad0e7a6a1f2f542917dfa9a27d4c",
+  "stable": true,
+  "valid": true
+ },
+ "token-exact": {
+  "fullname": "muse-probe-hunt-ctrl-token-exact",
+  "html": "<p>a****b</p>\n<p>a****b</p>\n<p>ab</p>\n<p>ab</p>",
+  "html_sha256": "92709cc4975be7d2cfeecdb40a6675b782ef0d91c1b08cf599c2b493bea44f8a",
+  "saved_source_matches": true,
+  "source": "a**\f**b\n\na**\u000b**b\n\na{{\f}}b\n\na{{\u000b}}b",
+  "source_sha256": "2c804288ca3fbadd2fcf8d658903c539849e3af00afedabb8d292e25c55dd7d2",
+  "stable": true,
+  "valid": true
+ },
+ "token-more": {
+  "fullname": "muse-probe-hunt-ctrl-token-more",
+  "html": "<p>L-strike-vt<br />\na&#8212;&#8212;b</p>\n<p>L-strike-ff<br />\na&#8212;&#8212;b</p>\n<p>L-tt-vt<br />\nab</p>\n<p>L-tt-ff<br />\nab</p>\n<p>L-sup-vt<br />\na^^^^b</p>\n<p>L-sup-ff<br />\na^^^^b</p>\n<p>L-sub-vt<br />\na,,,,b</p>\n<p>L-sub-ff<br />\na,,,,b</p>\n<p>L-end</p>",
+  "html_sha256": "7e9d8eba0c2ffd4059c1e5cdba33666c6e5c2905ae4745f904b10b1cb1e2af5d",
+  "saved_source_matches": true,
+  "source": "L-strike-vt\na--\u000b--b\n\nL-strike-ff\na--\f--b\n\nL-tt-vt\na{{\u000b}}b\n\nL-tt-ff\na{{\f}}b\n\nL-sup-vt\na^^\u000b^^b\n\nL-sup-ff\na^^\f^^b\n\nL-sub-vt\na,,\u000b,,b\n\nL-sub-ff\na,,\f,,b\n\nL-end",
+  "source_sha256": "fdfc2c257b88fffcf9a9389bd733d7c437a14349bdcb3d9793fe61ab1d626d15",
+  "stable": true,
+  "valid": true
+ },
+ "token-neighbors": {
+  "fullname": "muse-probe-hunt-ctrl-token-neighbors",
+  "html": "<p>L-strong-normal<br />\na<strong>x</strong>b</p>\n<p>L-strong-nel<br />\na<strong></strong>b</p>\n<p>L-strong-zwsp<br />\na<strong>​</strong>b</p>\n<p>L-strong-bom<br />\na<strong>﻿</strong>b</p>\n<p>L-strong-combining<br />\na<strong>́</strong>b</p>\n<p>L-strong-tab<br />\na** **b</p>\n<p>L-strong-space-padded-ff<br />\na** **b</p>\n<p>L-end</p>",
+  "html_sha256": "601d514538fa12a124d09edd28744b37fbe6e200163449e4135013fca1b68318",
+  "saved_source_matches": true,
+  "source": "L-strong-normal\na**x**b\n\nL-strong-nel\na****b\n\nL-strong-zwsp\na**​**b\n\nL-strong-bom\na**﻿**b\n\nL-strong-combining\na**́**b\n\nL-strong-tab\na**\t**b\n\nL-strong-space-padded-ff\na** \f **b\n\nL-end",
+  "source_sha256": "d8d0bc4bd7d6e46f4973732d290936ae29d87b588d0f620c9ffc1ab16824fb4b",
+  "stable": true,
+  "valid": true
+ },
+ "tt-edges": {
+  "fullname": "muse-probe-hunt-ctrl-tt-edges",
+  "html": "<p>L-lead<br />\na<tt>x</tt>b</p>\n<p>L-trail<br />\na<tt>x</tt>b</p>\n<p>L-interior<br />\na<tt>xy</tt>b</p>\n<p>L-padded-only<br />\na b</p>\n<p>L-lead-space<br />\na <tt>x</tt>b</p>\n<p>L-trail-space<br />\na<tt>x</tt> b</p>\n<p>L-double-only<br />\nab</p>\n<p>L-end</p>",
+  "html_sha256": "019be2ff9fd643d2e104209b600afa352429635880d26f611f49bc4b1d179298",
+  "saved_source_matches": true,
+  "source": "L-lead\na{{\u000bx}}b\n\nL-trail\na{{x\u000b}}b\n\nL-interior\na{{x\u000by}}b\n\nL-padded-only\na{{ \u000b }}b\n\nL-lead-space\na{{\u000b x}}b\n\nL-trail-space\na{{x \u000b}}b\n\nL-double-only\na{{\u000b\u000b}}b\n\nL-end",
+  "source_sha256": "712f702e244ba8b78b9fa382e12eebe1af4fb6418beb10243de522aa0d1c627f",
+  "stable": true,
+  "valid": true
+ }
+}

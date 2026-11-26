@@ -127,6 +127,11 @@ class Text_Wiki_Parse_Tt extends Text_Wiki_Parse {
     function process($matches, $index = 0, $before = '', $after = '', $tail = '')
     {
         $body = $matches[1][$index][0];
+        // REFCORR39: the live-discarded C0 class is removed before the
+        // teletype padding classifier runs. A lone VT/FF body therefore
+        // behaves as an empty pair, and a control beside edge spaces joins
+        // the hoisted padding instead of leaving an empty <tt> behind.
+        $body = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $body);
 
         $leading = '';
         while ($body !== '' && ($body[0] === ' ' || $body[0] === "\t")) {

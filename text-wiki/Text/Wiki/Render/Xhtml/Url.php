@@ -54,6 +54,14 @@ class Text_Wiki_Render_Xhtml_Url extends Text_Wiki_Render {
         // href, type)
         extract($options);
 
+        // REFCORR39: a described link is claimed before live's link-text
+        // sanitization removes the discarded C0 class, so a control-only
+        // label still renders an empty anchor rather than literalizing.
+        $href = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $href);
+        if (isset($text)) {
+            $text = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $text);
+        }
+
         // find the rightmost dot and determine the filename
         // extension.
         $pos = strrpos($href, '.');
