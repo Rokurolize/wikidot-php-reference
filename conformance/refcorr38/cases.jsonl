@@ -4,6 +4,8 @@
 {"id": "probe-inline", "source": "L-strong-start\n\n* **\n* xstrong\n* **\n\nL-strong-end\n\nL-em-start\n\n* //\n* xem\n* //\n\nL-em-end\n\nL-underline-start\n\n* __\n* xunderline\n* __\n\nL-underline-end\n\nL-strike-start\n\n* --\n* xstrike\n* --\n\nL-strike-end\n\nL-tt-start\n\n* {{\n* xtt\n* }}\n\nL-tt-end\n\nL-sup-start\n\n* ^^\n* xsup\n* ^^\n\nL-sup-end\n\nL-sub-start\n\n* ,,\n* xsub\n* ,,\n\nL-sub-end", "origin": "fresh sandbox-for-codex grouped probe, two stable anonymous GETs"}
 {"id": "x37-span-in-item", "source": "[[span class=a]]A[[/span]]\n* one\n* two", "origin": "conformance/list/x-probe-cases2.jsonl frozen probe witness"}
 {"id": "x38-span-cross-item", "source": "* [[span class=a]]one\n* two[[/span]]", "origin": "conformance/list/x-probe-cases2.jsonl frozen probe witness"}
+{"id": "x40-color-cross-item", "source": "* ##red|one\n* two##", "origin": "conformance/list/x-probe-cases2.jsonl frozen probe witness"}
+{"id": "x39-size-cross-item", "source": "* [[size 12px]]one\n* two[[/size]]", "origin": "conformance/list/x-probe-cases2.jsonl frozen probe witness"}
 {"id": "x41-strike-in-item", "source": "* --one--\n* two", "origin": "conformance/list/x-probe-cases2.jsonl frozen probe witness"}
 {"id": "x43", "source": "**a** **b** //c// //d// __e__ __f__ --g-- --h--", "origin": "conformance/inline2/x-probe-cases.jsonl frozen probe witness"}
 {"id": "x60", "source": "* **a\n* b**\n* c", "origin": "conformance/inline2/x-probe-cases.jsonl frozen probe witness"}

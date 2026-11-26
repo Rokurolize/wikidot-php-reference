@@ -6,6 +6,8 @@
  "x102": "<ul>\n<li><sup>a</sup></li>\n<li><sup>b</sup> c</li>\n<li>d and * <tt>e</tt></li>\n<li><tt>f</tt> g</li>\n</ul>",
  "x37-span-in-item": "<p><span>A</span></p>\n\n<ul>\n<li>one</li>\n<li>two</li>\n</ul>",
  "x38-span-cross-item": "<ul>\n<li><span>one</span></li>\n<li><span>two</span></li>\n</ul>",
+ "x39-size-cross-item": "<ul>\n<li><span style=\"font-size:12px;\">one</span></li>\n<li><span style=\"font-size:12px;\">two</span></li>\n</ul>",
+ "x40-color-cross-item": "<ul>\n<li><span style=\"color: red\">one</span></li>\n<li><span style=\"color: red\">two</span></li>\n</ul>",
  "x41-strike-in-item": "<ul>\n<li><span style=\"text-decoration: line-through;\">one</span></li>\n<li>two</li>\n</ul>",
  "x43": "<p><strong>a</strong> <strong>b</strong> <em>c</em> <em>d</em> <span style=\"text-decoration: underline;\">e</span> <span style=\"text-decoration: underline;\">f</span> <span style=\"text-decoration: line-through;\">g</span> <span style=\"text-decoration: line-through;\">h</span></p>",
  "x60": "<ul>\n<li><strong>a</strong></li>\n<li><strong>b</strong></li>\n<li>c</li>\n</ul>",

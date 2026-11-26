@@ -69,6 +69,26 @@
   "stable": true,
   "valid": true
  },
+ "x39-size-cross-item": {
+  "fullname": "muse-probe-r2list-x-x39-size-cross-item",
+  "html": "<ul>\n<li><span style=\"font-size:12px;\">one</span></li>\n<li><span style=\"font-size:12px;\">two</span></li>\n</ul>",
+  "html_sha256": "46e6926e92aa570b945e98bf2faf066354e66f34b0d53997babd1a8cd23b3837",
+  "saved_source_matches": true,
+  "source": "* [[size 12px]]one\n* two[[/size]]",
+  "source_sha256": "13f2674d599bd56afa7dabe37934e73ee51171234c07bb0807e4ab92b0c30132",
+  "stable": true,
+  "valid": true
+ },
+ "x40-color-cross-item": {
+  "fullname": "muse-probe-r2list-x-x40-color-cross-item",
+  "html": "<ul>\n<li><span style=\"color: red\">one</span></li>\n<li><span style=\"color: red\">two</span></li>\n</ul>",
+  "html_sha256": "f929fd98644ccd6e48539040bee5f3f824ed4eeb62db58129411a44a95fadf3d",
+  "saved_source_matches": true,
+  "source": "* ##red|one\n* two##",
+  "source_sha256": "faa9332c9fb883b2bf79a6e1d18146eceb3c5a8167b59b7cf6ef486961aad425",
+  "stable": true,
+  "valid": true
+ },
  "x41-strike-in-item": {
   "fullname": "muse-probe-r2list-x-x41-strike-in-item",
   "html": "<ul>\n<li><span style=\"text-decoration: line-through;\">one</span></li>\n<li>two</li>\n</ul>",
