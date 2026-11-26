@@ -71,6 +71,33 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
     }
 
     /**
+     * Live user-id isolation collapses ASCII whitespace and prefixes "u-"
+     * unless the value already begins with it; Unicode separator characters
+     * are literal id characters, not whitespace.
+     */
+    function isolateId($value) {
+        if ($value === '') {
+            return '';
+        }
+        if (strpos($value, "\xFF") !== false) {
+            return $value;
+        }
+        if (preg_match('/^[ \t\n\r\x0B\x0C]/', $value)) {
+            $leading = true;
+        } else {
+            $leading = false;
+        }
+        $collapsed = preg_replace('/[ \t\n\r\x0B\x0C]+/', ' ', trim($value));
+        if ($collapsed === '') {
+            return 'u-';
+        }
+        if (strpos($value, 'u-') === 0) {
+            return $collapsed;
+        }
+        return 'u-' . ($leading ? ' ' : '') . $collapsed;
+    }
+
+    /**
      *
      * Generates a token entry for the matched text.  Token options are:
      *
@@ -138,10 +165,10 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
         }
         // Live puts id first and then preserves source order for the rest.
         if (isset($attr['id']) && $attr['id'] !== '') {
-            // REFCORR5 Batch 8 (p14): live does not double an author-supplied
-            // u- prefix.
-            $args['id'] = (strpos($attr['id'], 'u-') === 0)
-                ? $attr['id'] : 'u-' . $attr['id'];
+            $id = $this->isolateId($attr['id']);
+            if ($id !== '') {
+                $args['id'] = $id;
+            }
         }
         foreach ($attr as $key => $value) {
             if ($key === 'id') {

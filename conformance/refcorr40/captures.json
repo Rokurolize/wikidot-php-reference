@@ -1,0 +1,102 @@
+{
+  "id-ascii": {
+    "fullname": "muse-probe-hunt-spanid-id-ascii",
+    "html": "<p>IDA-CONTROL-START<br />\n<span id=\"u-ab\">x</span><br />\nIDA-CONTROL-END</p>\n<p>IDA-SPACE1-START<br />\n<span id=\"u-a b\">x</span><br />\nIDA-SPACE1-END</p>\n<p>IDA-SPACE2-START<br />\n<span id=\"u-a b\">x</span><br />\nIDA-SPACE2-END</p>\n<p>IDA-SPACE4-START<br />\n<span id=\"u-a b\">x</span><br />\nIDA-SPACE4-END</p>\n<p>IDA-TAB1-START<br />\n<span id=\"u-a b\">x</span><br />\nIDA-TAB1-END</p>\n<p>IDA-TAB2-START<br />\n<span id=\"u-a b\">x</span><br />\nIDA-TAB2-END</p>\n<p>IDA-MIX1-START<br />\n<span id=\"u-a b\">x</span><br />\nIDA-MIX1-END</p>\n<p>IDA-MIX2-START<br />\n<span id=\"u-a b\">x</span><br />\nIDA-MIX2-END</p>\n<p>IDA-UPREFIX-TAB-START<br />\n<span id=\"u-a b\">x</span><br />\nIDA-UPREFIX-TAB-END</p>",
+    "html_sha256": "51814de935244ff173f3adbe3482e5d1f2492ec84a57fcfcfd49557f8d3dd8d0",
+    "source": "IDA-CONTROL-START\n[[span id=\"ab\"]]x[[/span]]\nIDA-CONTROL-END\n\nIDA-SPACE1-START\n[[span id=\"a b\"]]x[[/span]]\nIDA-SPACE1-END\n\nIDA-SPACE2-START\n[[span id=\"a  b\"]]x[[/span]]\nIDA-SPACE2-END\n\nIDA-SPACE4-START\n[[span id=\"a    b\"]]x[[/span]]\nIDA-SPACE4-END\n\nIDA-TAB1-START\n[[span id=\"a\tb\"]]x[[/span]]\nIDA-TAB1-END\n\nIDA-TAB2-START\n[[span id=\"a\t\tb\"]]x[[/span]]\nIDA-TAB2-END\n\nIDA-MIX1-START\n[[span id=\"a \t b\"]]x[[/span]]\nIDA-MIX1-END\n\nIDA-MIX2-START\n[[span id=\"a\t  \tb\"]]x[[/span]]\nIDA-MIX2-END\n\nIDA-UPREFIX-TAB-START\n[[span id=\"u-a\tb\"]]x[[/span]]\nIDA-UPREFIX-TAB-END",
+    "source_sha256": "0dfea91261d634fa169ca8acab4db92a6aeb023835263ca65dbea9ea97b2ca79",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "id-edges": {
+    "fullname": "muse-probe-hunt-spanid-id-edges",
+    "html": "<p>IDE-LEAD-SP1-START<br />\n<span id=\"u- a\">x</span><br />\nIDE-LEAD-SP1-END</p>\n<p>IDE-LEAD-SP3-START<br />\n<span id=\"u- a\">x</span><br />\nIDE-LEAD-SP3-END</p>\n<p>IDE-LEAD-TAB-START<br />\n<span id=\"u- a\">x</span><br />\nIDE-LEAD-TAB-END</p>\n<p>IDE-UPREFIX-LEAD-START<br />\n<span id=\"u- u-x\">x</span><br />\nIDE-UPREFIX-LEAD-END</p>\n<p>IDE-TRAIL-SP1-START<br />\n<span id=\"u-a\">x</span><br />\nIDE-TRAIL-SP1-END</p>\n<p>IDE-TRAIL-SP3-START<br />\n<span id=\"u-a\">x</span><br />\nIDE-TRAIL-SP3-END</p>\n<p>IDE-TRAIL-TAB-START<br />\n<span id=\"u-a\">x</span><br />\nIDE-TRAIL-TAB-END</p>\n<p>IDE-BOTH-START<br />\n<span id=\"u- a\">x</span><br />\nIDE-BOTH-END</p>\n<p>IDE-ONLY-SP-START<br />\n<span id=\"u-\">x</span><br />\nIDE-ONLY-SP-END</p>\n<p>IDE-ONLY-TAB-START<br />\n<span id=\"u-\">x</span><br />\nIDE-ONLY-TAB-END</p>",
+    "html_sha256": "19bf53238fa0c6fa65f8e08508b7cd691ee561146716e5f705954ee28d5003bd",
+    "source": "IDE-LEAD-SP1-START\n[[span id=\" a\"]]x[[/span]]\nIDE-LEAD-SP1-END\n\nIDE-LEAD-SP3-START\n[[span id=\"   a\"]]x[[/span]]\nIDE-LEAD-SP3-END\n\nIDE-LEAD-TAB-START\n[[span id=\"\ta\"]]x[[/span]]\nIDE-LEAD-TAB-END\n\nIDE-UPREFIX-LEAD-START\n[[span id=\" u-x\"]]x[[/span]]\nIDE-UPREFIX-LEAD-END\n\nIDE-TRAIL-SP1-START\n[[span id=\"a \"]]x[[/span]]\nIDE-TRAIL-SP1-END\n\nIDE-TRAIL-SP3-START\n[[span id=\"a   \"]]x[[/span]]\nIDE-TRAIL-SP3-END\n\nIDE-TRAIL-TAB-START\n[[span id=\"a\t\"]]x[[/span]]\nIDE-TRAIL-TAB-END\n\nIDE-BOTH-START\n[[span id=\"  a  \"]]x[[/span]]\nIDE-BOTH-END\n\nIDE-ONLY-SP-START\n[[span id=\"   \"]]x[[/span]]\nIDE-ONLY-SP-END\n\nIDE-ONLY-TAB-START\n[[span id=\"\t\t\"]]x[[/span]]\nIDE-ONLY-TAB-END",
+    "source_sha256": "fac8c5554e938c7cbb168c28f5a2280f8837ef7df9e4f45c570c4eef6e212aa2",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "id-newline": {
+    "fullname": "muse-probe-hunt-spanid-id-newline",
+    "html": "<p>IDN-LF1-START<br />\n<span id=\"u-a b\">x</span><br />\nIDN-LF1-END</p>\n<p>IDN-LF2-START<br />\n<span id=\"u-a b\">x</span><br />\nIDN-LF2-END</p>\n<p>IDN-LF-SPACES-START<br />\n<span id=\"u-a b\">x</span><br />\nIDN-LF-SPACES-END</p>\n<p>IDN-LEAD-START<br />\n<span id=\"u- a\">x</span><br />\nIDN-LEAD-END</p>\n<p>IDN-TRAIL-START<br />\n<span id=\"u-a\">x</span><br />\nIDN-TRAIL-END</p>\n<p>IDN-BOTH-START<br />\n<span id=\"u- a\">x</span><br />\nIDN-BOTH-END</p>\n<p>IDN-ONLY-START<br />\n<span id=\"u-\">x</span><br />\nIDN-ONLY-END</p>",
+    "html_sha256": "487c6b6ef2af44cb33c47fe5cac2bb6a7549d6d3581d3a917e0216adffe69173",
+    "source": "IDN-LF1-START\n[[span id=\"a\nb\"]]x[[/span]]\nIDN-LF1-END\n\nIDN-LF2-START\n[[span id=\"a\n\nb\"]]x[[/span]]\nIDN-LF2-END\n\nIDN-LF-SPACES-START\n[[span id=\"a\n  b\"]]x[[/span]]\nIDN-LF-SPACES-END\n\nIDN-LEAD-START\n[[span id=\"\na\"]]x[[/span]]\nIDN-LEAD-END\n\nIDN-TRAIL-START\n[[span id=\"a\n\"]]x[[/span]]\nIDN-TRAIL-END\n\nIDN-BOTH-START\n[[span id=\"\na\n\"]]x[[/span]]\nIDN-BOTH-END\n\nIDN-ONLY-START\n[[span id=\"\n\"]]x[[/span]]\nIDN-ONLY-END",
+    "source_sha256": "42f7b5811a8a7993841dff2c326d2a21834b488fd93dc5a89b0a05004a06592d",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "id-unicode-a": {
+    "fullname": "muse-probe-hunt-spanid-id-unicode-a",
+    "html": "<p>IDU-NBSP-START<br />\n<span id=\"u-a&nbsp;b\">x</span><br />\nIDU-NBSP-END</p>\n<p>IDU-U2000-START<br />\n<span id=\"u-a b\">x</span><br />\nIDU-U2000-END</p>\n<p>IDU-U2001-START<br />\n<span id=\"u-a b\">x</span><br />\nIDU-U2001-END</p>\n<p>IDU-U2002-START<br />\n<span id=\"u-a b\">x</span><br />\nIDU-U2002-END</p>\n<p>IDU-U2003-START<br />\n<span id=\"u-a b\">x</span><br />\nIDU-U2003-END</p>\n<p>IDU-U2004-START<br />\n<span id=\"u-a b\">x</span><br />\nIDU-U2004-END</p>\n<p>IDU-U2005-START<br />\n<span id=\"u-a b\">x</span><br />\nIDU-U2005-END</p>\n<p>IDU-U2006-START<br />\n<span id=\"u-a b\">x</span><br />\nIDU-U2006-END</p>\n<p>IDU-U2007-START<br />\n<span id=\"u-a b\">x</span><br />\nIDU-U2007-END</p>\n<p>IDU-U2008-START<br />\n<span id=\"u-a b\">x</span><br />\nIDU-U2008-END</p>",
+    "html_sha256": "f9e8711a87cb06ff03855a913fa666de8d0204cae7ef1cda7d2a78523ea70718",
+    "source": "IDU-NBSP-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-NBSP-END\n\nIDU-U2000-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-U2000-END\n\nIDU-U2001-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-U2001-END\n\nIDU-U2002-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-U2002-END\n\nIDU-U2003-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-U2003-END\n\nIDU-U2004-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-U2004-END\n\nIDU-U2005-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-U2005-END\n\nIDU-U2006-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-U2006-END\n\nIDU-U2007-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-U2007-END\n\nIDU-U2008-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-U2008-END",
+    "source_sha256": "cfd321c4ccd6ac394d90c054d645155aa54190cc3f8a4ad8ec1a4f092a9f2448",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "id-unicode-b": {
+    "fullname": "muse-probe-hunt-spanid-id-unicode-b",
+    "html": "<p>IDU-U2009-START<br />\n<span id=\"u-a b\">x</span><br />\nIDU-U2009-END</p>\n<p>IDU-U200A-START<br />\n<span id=\"u-a b\">x</span><br />\nIDU-U200A-END</p>\n<p>IDU-U3000-START<br />\n<span id=\"u-a　b\">x</span><br />\nIDU-U3000-END</p>\n<p>IDU-NBSP-RUN-START<br />\n<span id=\"u-a&nbsp;&nbsp;b\">x</span><br />\nIDU-NBSP-RUN-END</p>\n<p>IDU-NBSP-LEAD-START<br />\n<span id=\"u-&nbsp;a\">x</span><br />\nIDU-NBSP-LEAD-END</p>\n<p>IDU-NBSP-TRAIL-START<br />\n<span id=\"u-a&nbsp;\">x</span><br />\nIDU-NBSP-TRAIL-END</p>\n<p>IDU-U2003-LEAD-START<br />\n<span id=\"u- a\">x</span><br />\nIDU-U2003-LEAD-END</p>\n<p>IDU-U2003-TRAIL-START<br />\n<span id=\"u-a \">x</span><br />\nIDU-U2003-TRAIL-END</p>\n<p>IDU-MIXED-START<br />\n<span id=\"u-a  　b\">x</span><br />\nIDU-MIXED-END</p>\n<p>IDU-ONLY-NBSP-START<br />\n<span id=\"u-&nbsp;\">x</span><br />\nIDU-ONLY-NBSP-END</p>",
+    "html_sha256": "be2f102afe1289710fd02fe44f9356a3b85b347920456d9926490d8009d06919",
+    "source": "IDU-U2009-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-U2009-END\n\nIDU-U200A-START\n[[span id=\"a b\"]]x[[/span]]\nIDU-U200A-END\n\nIDU-U3000-START\n[[span id=\"a　b\"]]x[[/span]]\nIDU-U3000-END\n\nIDU-NBSP-RUN-START\n[[span id=\"a  b\"]]x[[/span]]\nIDU-NBSP-RUN-END\n\nIDU-NBSP-LEAD-START\n[[span id=\" a\"]]x[[/span]]\nIDU-NBSP-LEAD-END\n\nIDU-NBSP-TRAIL-START\n[[span id=\"a \"]]x[[/span]]\nIDU-NBSP-TRAIL-END\n\nIDU-U2003-LEAD-START\n[[span id=\" a\"]]x[[/span]]\nIDU-U2003-LEAD-END\n\nIDU-U2003-TRAIL-START\n[[span id=\"a \"]]x[[/span]]\nIDU-U2003-TRAIL-END\n\nIDU-MIXED-START\n[[span id=\"a  　b\"]]x[[/span]]\nIDU-MIXED-END\n\nIDU-ONLY-NBSP-START\n[[span id=\" \"]]x[[/span]]\nIDU-ONLY-NBSP-END",
+    "source_sha256": "49b035f95920387f8588cba78268ed12b9aa3c9aa4f2a531c683b64c6b8024b6",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "class-ascii": {
+    "fullname": "muse-probe-hunt-spanid-class-ascii",
+    "html": "<p>CLA-CONTROL-START<br />\n<span class=\"ab\">x</span><br />\nCLA-CONTROL-END</p>\n<p>CLA-SPACE1-START<br />\n<span class=\"a b\">x</span><br />\nCLA-SPACE1-END</p>\n<p>CLA-SPACE2-START<br />\n<span class=\"a b\">x</span><br />\nCLA-SPACE2-END</p>\n<p>CLA-TAB1-START<br />\n<span class=\"a b\">x</span><br />\nCLA-TAB1-END</p>\n<p>CLA-TAB2-START<br />\n<span class=\"a b\">x</span><br />\nCLA-TAB2-END</p>\n<p>CLA-MIXED-START<br />\n<span class=\"a b\">x</span><br />\nCLA-MIXED-END</p>\n<p>CLA-LEAD-SP3-START<br />\n<span class=\"a\">x</span><br />\nCLA-LEAD-SP3-END</p>\n<p>CLA-TRAIL-SP3-START<br />\n<span class=\"a\">x</span><br />\nCLA-TRAIL-SP3-END</p>\n<p>CLA-BOTH-START<br />\n<span class=\"a\">x</span><br />\nCLA-BOTH-END</p>\n<p>CLA-ONLY-SP-START<br />\n<span class=\"\">x</span><br />\nCLA-ONLY-SP-END</p>",
+    "html_sha256": "2d7fa6b5f8ee6b063e97a6ab99ba10fe1c6ff54dcb5ba3017b04c869baa94aad",
+    "source": "CLA-CONTROL-START\n[[span class=\"ab\"]]x[[/span]]\nCLA-CONTROL-END\n\nCLA-SPACE1-START\n[[span class=\"a b\"]]x[[/span]]\nCLA-SPACE1-END\n\nCLA-SPACE2-START\n[[span class=\"a  b\"]]x[[/span]]\nCLA-SPACE2-END\n\nCLA-TAB1-START\n[[span class=\"a\tb\"]]x[[/span]]\nCLA-TAB1-END\n\nCLA-TAB2-START\n[[span class=\"a\t\tb\"]]x[[/span]]\nCLA-TAB2-END\n\nCLA-MIXED-START\n[[span class=\"a \t b\"]]x[[/span]]\nCLA-MIXED-END\n\nCLA-LEAD-SP3-START\n[[span class=\"   a\"]]x[[/span]]\nCLA-LEAD-SP3-END\n\nCLA-TRAIL-SP3-START\n[[span class=\"a   \"]]x[[/span]]\nCLA-TRAIL-SP3-END\n\nCLA-BOTH-START\n[[span class=\"  a  \"]]x[[/span]]\nCLA-BOTH-END\n\nCLA-ONLY-SP-START\n[[span class=\"   \"]]x[[/span]]\nCLA-ONLY-SP-END",
+    "source_sha256": "d36fe1bae086ccb305cfeeb629974f011671dd95907d6fe3ce715e1df49f78a1",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "class-newline-unicode": {
+    "fullname": "muse-probe-hunt-spanid-class-newline-unicode",
+    "html": "<p>CLN-LF1-START<br />\n<span class=\"a b\">x</span><br />\nCLN-LF1-END</p>\n<p>CLN-LF2-START<br />\n<span class=\"a b\">x</span><br />\nCLN-LF2-END</p>\n<p>CLN-LEAD-LF-START<br />\n<span class=\"a\">x</span><br />\nCLN-LEAD-LF-END</p>\n<p>CLN-TRAIL-LF-START<br />\n<span class=\"a\">x</span><br />\nCLN-TRAIL-LF-END</p>\n<p>CLN-NBSP-START<br />\n<span class=\"a&nbsp;b\">x</span><br />\nCLN-NBSP-END</p>\n<p>CLN-NBSP-RUN-START<br />\n<span class=\"a&nbsp;&nbsp;b\">x</span><br />\nCLN-NBSP-RUN-END</p>\n<p>CLN-U2003-START<br />\n<span class=\"a b\">x</span><br />\nCLN-U2003-END</p>\n<p>CLN-U3000-START<br />\n<span class=\"a　b\">x</span><br />\nCLN-U3000-END</p>\n<p>CLN-LEAD-NBSP-START<br />\n<span class=\"&nbsp;a\">x</span><br />\nCLN-LEAD-NBSP-END</p>\n<p>CLN-TRAIL-NBSP-START<br />\n<span class=\"a&nbsp;\">x</span><br />\nCLN-TRAIL-NBSP-END</p>",
+    "html_sha256": "b045b2c67b5b5f78dde1d46dbe32e951a506e222e1515c0bc852480b99c2cf4f",
+    "source": "CLN-LF1-START\n[[span class=\"a\nb\"]]x[[/span]]\nCLN-LF1-END\n\nCLN-LF2-START\n[[span class=\"a\n\nb\"]]x[[/span]]\nCLN-LF2-END\n\nCLN-LEAD-LF-START\n[[span class=\"\na\"]]x[[/span]]\nCLN-LEAD-LF-END\n\nCLN-TRAIL-LF-START\n[[span class=\"a\n\"]]x[[/span]]\nCLN-TRAIL-LF-END\n\nCLN-NBSP-START\n[[span class=\"a b\"]]x[[/span]]\nCLN-NBSP-END\n\nCLN-NBSP-RUN-START\n[[span class=\"a  b\"]]x[[/span]]\nCLN-NBSP-RUN-END\n\nCLN-U2003-START\n[[span class=\"a b\"]]x[[/span]]\nCLN-U2003-END\n\nCLN-U3000-START\n[[span class=\"a　b\"]]x[[/span]]\nCLN-U3000-END\n\nCLN-LEAD-NBSP-START\n[[span class=\" a\"]]x[[/span]]\nCLN-LEAD-NBSP-END\n\nCLN-TRAIL-NBSP-START\n[[span class=\"a \"]]x[[/span]]\nCLN-TRAIL-NBSP-END",
+    "source_sha256": "e9b17ff1e4aaf78497c35685642312a952dc1b836368447d7eb9c277081b9b45",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "span-attrs": {
+    "fullname": "muse-probe-hunt-spanid-span-attrs",
+    "html": "<p>SAT-STYLE-SP2-START<br />\n<span style=\"color: red\">x</span><br />\nSAT-STYLE-SP2-END</p>\n<p>SAT-STYLE-TAB-START<br />\n<span style=\"color: red\">x</span><br />\nSAT-STYLE-TAB-END</p>\n<p>SAT-STYLE-EDGES-START<br />\n<span style=\"color:red\">x</span><br />\nSAT-STYLE-EDGES-END</p>\n<p>SAT-DATA-SP2-START<br />\n<span data-x=\"a b\">x</span><br />\nSAT-DATA-SP2-END</p>\n<p>SAT-DATA-TAB-START<br />\n<span data-x=\"a b\">x</span><br />\nSAT-DATA-TAB-END</p>\n<p>SAT-DATA-LF-START<br />\n<span data-x=\"a b\">x</span><br />\nSAT-DATA-LF-END</p>\n<p>SAT-ROLE-EDGES-START<br />\n<span role=\"note\">x</span><br />\nSAT-ROLE-EDGES-END</p>\n<p>SAT-TYPE-SP2-START<br />\n<span type=\"a b\">x</span><br />\nSAT-TYPE-SP2-END</p>\n<p>SAT-DATA-NBSP-START<br />\n<span data-x=\"a&nbsp;b\">x</span><br />\nSAT-DATA-NBSP-END</p>\n<p>SAT-STYLE-NBSP-START<br />\n<span style=\"color:&nbsp;red\">x</span><br />\nSAT-STYLE-NBSP-END</p>",
+    "html_sha256": "a862a44d816072746ae6e33f9f2b307c76fe9e7cfe4bb9d289323ed3f7428c81",
+    "source": "SAT-STYLE-SP2-START\n[[span style=\"color:  red\"]]x[[/span]]\nSAT-STYLE-SP2-END\n\nSAT-STYLE-TAB-START\n[[span style=\"color:\tred\"]]x[[/span]]\nSAT-STYLE-TAB-END\n\nSAT-STYLE-EDGES-START\n[[span style=\"  color:red  \"]]x[[/span]]\nSAT-STYLE-EDGES-END\n\nSAT-DATA-SP2-START\n[[span data-x=\"a  b\"]]x[[/span]]\nSAT-DATA-SP2-END\n\nSAT-DATA-TAB-START\n[[span data-x=\"a\tb\"]]x[[/span]]\nSAT-DATA-TAB-END\n\nSAT-DATA-LF-START\n[[span data-x=\"a\nb\"]]x[[/span]]\nSAT-DATA-LF-END\n\nSAT-ROLE-EDGES-START\n[[span role=\"  note  \"]]x[[/span]]\nSAT-ROLE-EDGES-END\n\nSAT-TYPE-SP2-START\n[[span type=\"a  b\"]]x[[/span]]\nSAT-TYPE-SP2-END\n\nSAT-DATA-NBSP-START\n[[span data-x=\"a b\"]]x[[/span]]\nSAT-DATA-NBSP-END\n\nSAT-STYLE-NBSP-START\n[[span style=\"color: red\"]]x[[/span]]\nSAT-STYLE-NBSP-END",
+    "source_sha256": "cda334cbc73e7995f5402686517d369525034fb9cff1cb35f7cce1e7d834e22a",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "div-attrs": {
+    "fullname": "muse-probe-hunt-spanid-div-attrs",
+    "html": "<p>DVA-ID-TAB-START</p>\n<div id=\"u-a b\">\n<p>x</p>\n</div>\n<br />\nDVA-ID-TAB-END\n<p>DVA-ID-SP2-START</p>\n<div id=\"u-a b\">\n<p>x</p>\n</div>\n<br />\nDVA-ID-SP2-END\n<p>DVA-ID-LEAD-START</p>\n<div id=\"u- a\">\n<p>x</p>\n</div>\n<br />\nDVA-ID-LEAD-END\n<p>DVA-ID-TRAIL-START</p>\n<div id=\"u-a\">\n<p>x</p>\n</div>\n<br />\nDVA-ID-TRAIL-END\n<p>DVA-ID-NBSP-START</p>\n<div id=\"u-a&nbsp;b\">\n<p>x</p>\n</div>\n<br />\nDVA-ID-NBSP-END\n<p>DVA-ID-NBSP-LEAD-START</p>\n<div id=\"u-&nbsp;a\">\n<p>x</p>\n</div>\n<br />\nDVA-ID-NBSP-LEAD-END\n<p>DVA-CLASS-TAB-START</p>\n<div class=\"a b\">\n<p>x</p>\n</div>\n<br />\nDVA-CLASS-TAB-END\n<p>DVA-CLASS-SP2-START</p>\n<div class=\"a b\">\n<p>x</p>\n</div>\n<br />\nDVA-CLASS-SP2-END\n<p>DVA-CLASS-NBSP-START</p>\n<div class=\"a&nbsp;b\">\n<p>x</p>\n</div>\n<br />\nDVA-CLASS-NBSP-END\n<p>DVA-CLASS-ONLY-START</p>\n<div class=\"\">\n<p>x</p>\n</div>\n<br />\nDVA-CLASS-ONLY-END",
+    "html_sha256": "b4bd29ca52b8c728d5f253e01edcd32fd0bca01165c7e52d1947b2ec620b7cd4",
+    "source": "DVA-ID-TAB-START\n[[div id=\"a\tb\"]]\nx\n[[/div]]\nDVA-ID-TAB-END\n\nDVA-ID-SP2-START\n[[div id=\"a  b\"]]\nx\n[[/div]]\nDVA-ID-SP2-END\n\nDVA-ID-LEAD-START\n[[div id=\"  a\"]]\nx\n[[/div]]\nDVA-ID-LEAD-END\n\nDVA-ID-TRAIL-START\n[[div id=\"a  \"]]\nx\n[[/div]]\nDVA-ID-TRAIL-END\n\nDVA-ID-NBSP-START\n[[div id=\"a b\"]]\nx\n[[/div]]\nDVA-ID-NBSP-END\n\nDVA-ID-NBSP-LEAD-START\n[[div id=\" a\"]]\nx\n[[/div]]\nDVA-ID-NBSP-LEAD-END\n\nDVA-CLASS-TAB-START\n[[div class=\"a\tb\"]]\nx\n[[/div]]\nDVA-CLASS-TAB-END\n\nDVA-CLASS-SP2-START\n[[div class=\"a  b\"]]\nx\n[[/div]]\nDVA-CLASS-SP2-END\n\nDVA-CLASS-NBSP-START\n[[div class=\"a b\"]]\nx\n[[/div]]\nDVA-CLASS-NBSP-END\n\nDVA-CLASS-ONLY-START\n[[div class=\"   \"]]\nx\n[[/div]]\nDVA-CLASS-ONLY-END",
+    "source_sha256": "57dd226c838af484e01ba1b1e84dcaa60b450d986d4f372494377eab2dadd014",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  },
+  "anchor-attrs": {
+    "fullname": "muse-probe-hunt-spanid-anchor-attrs",
+    "html": "<p>ANA-ID-TAB-START<br />\n<a id=\"u-a b\" href=\"\">x</a><br />\nANA-ID-TAB-END</p>\n<p>ANA-ID-SP2-START<br />\n<a id=\"u-a b\" href=\"\">x</a><br />\nANA-ID-SP2-END</p>\n<p>ANA-ID-LEAD-START<br />\n<a id=\"u- a\" href=\"\">x</a><br />\nANA-ID-LEAD-END</p>\n<p>ANA-ID-TRAIL-START<br />\n<a id=\"u-a\" href=\"\">x</a><br />\nANA-ID-TRAIL-END</p>\n<p>ANA-ID-NBSP-START<br />\n<a id=\"u-a&nbsp;b\" href=\"\">x</a><br />\nANA-ID-NBSP-END</p>\n<p>ANA-ID-NBSP-LEAD-START<br />\n<a id=\"u-&nbsp;a\" href=\"\">x</a><br />\nANA-ID-NBSP-LEAD-END</p>\n<p>ANA-CLASS-TAB-START<br />\n<a class=\"a b\" href=\"\">x</a><br />\nANA-CLASS-TAB-END</p>\n<p>ANA-CLASS-SP2-START<br />\n<a class=\"a b\" href=\"\">x</a><br />\nANA-CLASS-SP2-END</p>\n<p>ANA-CLASS-NBSP-START<br />\n<a class=\"a&nbsp;b\" href=\"\">x</a><br />\nANA-CLASS-NBSP-END</p>\n<p>ANA-HREF-SP2-START<br />\n<a href=\"#a%20b\">x</a><br />\nANA-HREF-SP2-END</p>",
+    "html_sha256": "6eac5de79ccc84bf749ff0f6a97cd6ddbb350163838707a5526e71105c0e29c4",
+    "source": "ANA-ID-TAB-START\n[[a id=\"a\tb\"]]x[[/a]]\nANA-ID-TAB-END\n\nANA-ID-SP2-START\n[[a id=\"a  b\"]]x[[/a]]\nANA-ID-SP2-END\n\nANA-ID-LEAD-START\n[[a id=\"  a\"]]x[[/a]]\nANA-ID-LEAD-END\n\nANA-ID-TRAIL-START\n[[a id=\"a  \"]]x[[/a]]\nANA-ID-TRAIL-END\n\nANA-ID-NBSP-START\n[[a id=\"a b\"]]x[[/a]]\nANA-ID-NBSP-END\n\nANA-ID-NBSP-LEAD-START\n[[a id=\" a\"]]x[[/a]]\nANA-ID-NBSP-LEAD-END\n\nANA-CLASS-TAB-START\n[[a class=\"a\tb\"]]x[[/a]]\nANA-CLASS-TAB-END\n\nANA-CLASS-SP2-START\n[[a class=\"a  b\"]]x[[/a]]\nANA-CLASS-SP2-END\n\nANA-CLASS-NBSP-START\n[[a class=\"a b\"]]x[[/a]]\nANA-CLASS-NBSP-END\n\nANA-HREF-SP2-START\n[[a href=\"#a  b\"]]x[[/a]]\nANA-HREF-SP2-END",
+    "source_sha256": "1db11764b8cb501182b0db77fb0d95297428b6226d9821f2f9c861ce1c3414d2",
+    "saved_source_matches": true,
+    "stable": true,
+    "valid": true
+  }
+}

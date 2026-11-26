@@ -79,9 +79,9 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
     }
 
     /**
-     * Wikidot isolates user ids: collapse whitespace, prefix "u-" unless
-     * the value already begins with it, and turn a whitespace-only value
-     * into "u-". This mirrors ftml's isolate_ids.
+     * Live user-id isolation collapses ASCII whitespace and prefixes "u-"
+     * unless the value already begins with it; Unicode separator characters
+     * are literal id characters, not whitespace.
      */
     function isolateId($value) {
         if ($value === '') {
@@ -98,12 +98,12 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
         if (strpos($value, "\xFF") !== false) {
             return $value;
         }
-        if (preg_match('/^\s/u', $value)) {
+        if (preg_match('/^[ \t\n\r\x0B\x0C]/', $value)) {
             $leading = true;
         } else {
             $leading = false;
         }
-        $collapsed = preg_replace('/\s+/u', ' ', trim($value));
+        $collapsed = preg_replace('/[ \t\n\r\x0B\x0C]+/', ' ', trim($value));
         if ($collapsed === '') {
             return 'u-';
         }
