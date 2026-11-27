@@ -96,8 +96,59 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
      * joins change which source runs exist at all.
      */
     function parse() {
+        $this->isolateAdvancedTableBoundaries();
         $this->tokenizeScoredSpans();
         parent::parse();
+    }
+
+    /**
+     * Advanced-table tokens are hard paragraph boundaries on live even when
+     * inline bytes are glued to the token. Newline has already run, so raw
+     * blank lines inserted here are paragraph layout only: they cannot become
+     * break atoms. Insert just enough raw newlines to make the existing
+     * paragraph regex close and reopen runs around the table token.
+     */
+    protected function isolateAdvancedTableBoundaries() {
+        $delim = preg_quote($this->wiki->delim, '/');
+        $pattern = '/' . $delim . '([0-9]+)' . $delim . '/';
+        if (! preg_match_all($pattern, $this->wiki->source, $ms, PREG_OFFSET_CAPTURE)) {
+            return;
+        }
+        $out = '';
+        $cursor = 0;
+        foreach ($ms[0] as $i => $wholem) {
+            $pos = $wholem[1];
+            $whole = $wholem[0];
+            $id = (int)$ms[1][$i][0];
+            $tok = isset($this->wiki->tokens[$id]) ? $this->wiki->tokens[$id] : null;
+            if ($tok === null || $tok[0] !== 'Tableadv' || !isset($tok[1]['type'])) {
+                continue;
+            }
+            $type = $tok[1]['type'];
+            if ($type !== 'start' && $type !== 'end') {
+                continue;
+            }
+            $out .= substr($this->wiki->source, $cursor, $pos - $cursor);
+            if ($type === 'start') {
+                $lineStart = strrpos($out, "\n");
+                $sameLine = substr($out, $lineStart === false ? 0 : $lineStart + 1);
+                if (trim($sameLine) !== '') {
+                    $out .= "\n\n";
+                }
+                $out .= $whole;
+            } else {
+                $out .= $whole;
+                $after = substr($this->wiki->source, $pos + strlen($whole), 512);
+                $lineEnd = strpos($after, "\n");
+                $sameLine = substr($after, 0, $lineEnd === false ? strlen($after) : $lineEnd);
+                if (trim($sameLine) !== '') {
+                    $out .= "\n\n";
+                }
+            }
+            $cursor = $pos + strlen($whole);
+        }
+        $out .= substr($this->wiki->source, $cursor);
+        $this->wiki->source = $out;
     }
 
     /**
@@ -162,6 +213,46 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
     }
 
     /**
+     * In an unscored anchor, line breaks inside the anchor join into the
+     * scored span, but blank lines outside the anchor still own paragraph
+     * separation. The regex capture cannot tell those positions apart once
+     * Anchor has become a token, so preserve the outside side of the anchor
+     * boundary and filter only the inside side.
+     */
+    protected function filterScoredLeadRun($run) {
+        $delim = preg_quote($this->wiki->delim, '/');
+        if (preg_match_all('/' . $delim . '([0-9]+)' . $delim . '/', $run, $ms, PREG_OFFSET_CAPTURE)) {
+            $lastStart = null;
+            foreach ($ms[0] as $i => $wholem) {
+                $id = (int)$ms[1][$i][0];
+                $tok = isset($this->wiki->tokens[$id]) ? $this->wiki->tokens[$id] : null;
+                if ($tok !== null && $tok[0] === 'Anchor' && isset($tok[1]['type']) && $tok[1]['type'] === 'start') {
+                    $lastStart = $wholem[1] + strlen($wholem[0]);
+                }
+            }
+            if ($lastStart !== null) {
+                return substr($run, 0, $lastStart) . $this->filterBreakRun(substr($run, $lastStart));
+            }
+        }
+        return $this->filterBreakRun($run);
+    }
+
+    protected function filterScoredTrailRun($run) {
+        $delim = preg_quote($this->wiki->delim, '/');
+        if (preg_match_all('/' . $delim . '([0-9]+)' . $delim . '/', $run, $ms, PREG_OFFSET_CAPTURE)) {
+            foreach ($ms[0] as $i => $wholem) {
+                $id = (int)$ms[1][$i][0];
+                $tok = isset($this->wiki->tokens[$id]) ? $this->wiki->tokens[$id] : null;
+                if ($tok !== null && $tok[0] === 'Anchor' && isset($tok[1]['type']) && $tok[1]['type'] === 'end') {
+                    $split = $wholem[1] + strlen($wholem[0]);
+                    return $this->filterBreakRun(substr($run, 0, $split)) . substr($run, $split);
+                }
+            }
+        }
+        return $this->filterBreakRun($run);
+    }
+
+    /**
      * Callback for tokenizeScoredSpans(): the break-bearing lead/trail runs
      * are reduced to their non-break tokens and the Span token pair is
      * inserted in their place.
@@ -172,9 +263,9 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
             return $matches[0];
         }
         $lead = $this->runHasBreak($matches[1])
-            ? $this->filterBreakRun($matches[1]) : $matches[1];
+            ? $this->filterScoredLeadRun($matches[1]) : $matches[1];
         $trail = $this->runHasBreak($matches[4])
-            ? $this->filterBreakRun($matches[4]) : $matches[4];
+            ? $this->filterScoredTrailRun($matches[4]) : $matches[4];
         // Span::process expects the attribute capture with its leading
         // whitespace; the scored underscore is not part of that grammar.
         // Live joins leading/trailing line-break runs inside scored spans too,

@@ -62,6 +62,22 @@ class Text_Wiki_Parse_Strikethrough extends Text_Wiki_Parse {
      */
     
     function parse() {
+        // REFCORR54: a strike marker immediately after a leading-whitespace
+        // simple-table cell edge is not eligible as the closer of a scope
+        // opened in an earlier cell, though it remains eligible as a local
+        // opener. Guard it with a whitespace byte during first-fit pairing,
+        // the same ownership surface REFCORR44 measured for subscript.
+        $edgeCells = array();
+        foreach ($this->wiki->tokens as $tid => $tok) {
+            if (is_array($tok) && $tok[0] === 'Table'
+                && isset($tok[1]['type']) && $tok[1]['type'] === 'cell_start'
+                && ! empty($tok[1]['edge_lead'])) {
+                $edgeCells[] = $this->wiki->delim . $tid . $this->wiki->delim . '--';
+            }
+        }
+        foreach ($edgeCells as $marker) {
+            $this->wiki->source = str_replace($marker, substr($marker, 0, -2) . "\x0B\x0B--", $this->wiki->source);
+        }
         $src = $this->wiki->source;
         $n = strlen($src);
         $delim = $this->wiki->delim;
@@ -101,10 +117,11 @@ class Text_Wiki_Parse_Strikethrough extends Text_Wiki_Parse {
             $offset = $matchPos + strlen($matchStr);
         }
         if ($offset === 0) {
+            $this->wiki->source = str_replace("\x0B\x0B", '', $this->wiki->source);
             return;
         }
         $out .= substr($src, $offset);
-        $this->wiki->source = $out;
+        $this->wiki->source = str_replace("\x0B\x0B", '', $out);
     }
 
     function process($matches) {
