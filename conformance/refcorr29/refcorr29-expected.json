@@ -18,7 +18,7 @@
     "html": "<ul>\n<li>x<ul>\n<li>y</li>\n</ul>\n</li>\n</ul><br />"
   },
   "r29-module-quoted-closer": {
-    "html": "<div style=\"text-align: right;\">þmodule \"Rate\"þ</div><br />\nbody<blockquote><p>[[module CSS]]<br />\nx<br />\n[[/module]]</p>\n\n</blockquote>\n<p>tail</p>"
+    "html": "<div style=\"text-align: right;\">þmodule \"Rate\"þ</div><br />\nbody\n<blockquote><p>[[module CSS]]<br />\nx<br />\n[[/module]]</p>\n\n</blockquote>\n<p>tail</p>"
   },
   "r29-size-empty-nonzero": {
     "html": "<p>A<br />\n<br />\nB</p>"
