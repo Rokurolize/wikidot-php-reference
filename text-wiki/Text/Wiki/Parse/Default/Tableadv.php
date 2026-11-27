@@ -79,24 +79,32 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
         $body = $this->_scanTableadv($body, true);
 
         $rowRe = '~\[\[row([^\]]*)\]\](.*?)\[\[/row\]\]~si';
-        preg_match_all($rowRe, $body, $rows, PREG_SET_ORDER);
+        preg_match_all($rowRe, $body, $rows, PREG_SET_ORDER | PREG_OFFSET_CAPTURE);
         if (count($rows) === 0) {
             return $matches[0];
         }
-        $outsideRows = preg_replace($rowRe, '', $body);
-        $outsideRows = preg_replace('~\[\[table(?:"[^"]*""|"[^"]*"|[^\]])*\]\]~si', '', $outsideRows);
-        if (trim($outsideRows) !== '') {
+        $leadingRows = substr($body, 0, $rows[0][0][1]);
+        $leadingRows = preg_replace('~\[\[table(?:"[^"]*""|"[^"]*"|[^\]])*\]\]~si', '', $leadingRows);
+        if (trim($leadingRows) !== '') {
             return $matches[0];
         }
 
         $cellRe = '~\[\[(cell|hcell)([^\]]*)\]\](.*?)\[\[/(cell|hcell)\]\]~si';
         $rowsOut = '';
+        $rowCursor = $rows[0][0][1];
+        $hasInterRowContent = false;
         foreach ($rows as $row) {
-            preg_match_all($cellRe, $row[2], $cells, PREG_SET_ORDER);
+            $gap = substr($body, $rowCursor, $row[0][1] - $rowCursor);
+            $gap = $this->interRowContent($gap);
+            if (trim($gap) !== '') {
+                $rowsOut .= $gap;
+                $hasInterRowContent = true;
+            }
+            preg_match_all($cellRe, $row[2][0], $cells, PREG_SET_ORDER);
             if (count($cells) === 0) {
                 return $matches[0];
             }
-            if (trim(preg_replace($cellRe, '', $row[2])) !== '') {
+            if (trim(preg_replace($cellRe, '', $row[2][0])) !== '') {
                 return $matches[0];
             }
             $cellsOut = '';
@@ -120,16 +128,24 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
                     . $this->wiki->addToken($this->rule, array(
                         'type' => 'cellEnd', 'header' => $isHeader));
             }
-            $rowAttrs = $this->buildAttrs($row[1], 'row');
+            $rowAttrs = $this->buildAttrs($row[1][0], 'row');
             $rowsOut .= $this->wiki->addToken($this->rule, array(
                 'type' => 'rowStart', 'attrs' => $rowAttrs))
                 . $cellsOut
                 . $this->wiki->addToken($this->rule, array('type' => 'rowEnd'));
+            $rowCursor = $row[0][1] + strlen($row[0][0]);
+        }
+        $gap = substr($body, $rowCursor);
+        if (trim($gap) !== '') {
+            return $matches[0];
         }
 
         $tableAttrs = $this->buildAttrs($head, 'table');
-        $start = $this->wiki->addToken($this->rule, array(
-            'type' => 'start', 'attrs' => $tableAttrs));
+        $startOpts = array('type' => 'start', 'attrs' => $tableAttrs);
+        if ($hasInterRowContent) {
+            $startOpts['foster_content'] = true;
+        }
+        $start = $this->wiki->addToken($this->rule, $startOpts);
         $end = $this->wiki->addToken($this->rule, array('type' => 'end'));
         return $start . $rowsOut . $end;
     }
@@ -394,6 +410,14 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
             return $memo[$sk] = false;
         }
         return $memo[$sk] = $this->_tableadvBody($src, $next, $memo);
+    }
+
+    private function interRowContent($gap) {
+        if (substr($gap, 0, 1) === "\n") {
+            $gap = substr($gap, 1);
+        }
+        $gap = rtrim($gap, "\n");
+        return $gap;
     }
 
     private function normalizeValue($value) {

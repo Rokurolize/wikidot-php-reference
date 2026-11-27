@@ -1383,6 +1383,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         // then tidy-repairs it (WikiTransformation::purifyHtml). Documents
         // with no literal U+FFFD take the original loop unchanged.
         $sawCollapsible = false;
+        $sawTableadvFoster = false;
         if (strpos($this->source, "\xEF\xBF\xBD") !== false) {
             $output .= $this->renderLiteralUfffdRecovery($format);
         } else {
@@ -1431,6 +1432,10 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
                     }
                     if ($rule === 'Collapsible') {
                         $sawCollapsible = true;
+                    }
+                    if ($rule === 'Tableadv' && isset($opts['type'])
+                        && $opts['type'] === 'start' && !empty($opts['foster_content'])) {
+                        $sawTableadvFoster = true;
                     }
                     $output .= $this->renderObj[$rule]->token($opts);
                     $in_delim = false;
@@ -1490,6 +1495,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         // tidy-backed purifier only when one of those unrepaired shapes is
         // present, so other well-formed documents keep their established frame.
         if (($sawCollapsible && $this->outputHasCollapsibleStructuralCrossing($output))
+            || $sawTableadvFoster
             || $this->outputHasUnpurifiedTocTitleWhitespace($output)
             || $this->outputHasSpanParagraphCrossing($output)
             || $this->outputHasInlineCrossing($output)) {

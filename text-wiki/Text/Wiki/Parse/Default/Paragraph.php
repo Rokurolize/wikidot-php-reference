@@ -445,6 +445,43 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
         return $seenBlockStart;
     }
 
+
+    protected function runHasDirectNamedAnchorContainerLead($run) {
+        $delim = $this->wiki->delim;
+        $quoted = preg_quote($delim, '/');
+        $parts = preg_split('/(' . $quoted . '[0-9]+' . $quoted . ')/',
+            $run, -1, PREG_SPLIT_DELIM_CAPTURE);
+        $sawAnchor = false;
+        foreach ($parts as $part) {
+            if ($part === '') {
+                continue;
+            }
+            if (preg_match('/^' . $quoted . '([0-9]+)' . $quoted . '$/', $part, $km)) {
+                $tok = isset($this->wiki->tokens[(int)$km[1]])
+                    ? $this->wiki->tokens[(int)$km[1]] : null;
+                if ($tok === null) {
+                    return false;
+                }
+                $rule = strtolower($tok[0]);
+                $type = isset($tok[1]['type']) ? $tok[1]['type'] : '';
+                if (in_array($rule, array('collapsible', 'div'), true)
+                    && ($type === 'start' || substr($type, -6) === '_start')) {
+                    return $sawAnchor;
+                }
+                if ($rule === 'anchor' && $type === '') {
+                    $sawAnchor = true;
+                    continue;
+                }
+                return false;
+            }
+            if (preg_match('/\A[ \t]*\z/', $part) === 1) {
+                continue;
+            }
+            return false;
+        }
+        return false;
+    }
+
     protected function runHasCollapsibleHeadingEnd($run) {
         $delim = preg_quote($this->wiki->delim, '/');
         if (! preg_match_all('/' . $delim . '([0-9]+)' . $delim . '/', $run, $ms)) {
@@ -510,6 +547,9 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
             return $matches[0];
         }
         if ($this->runIsBlockLead($matches[0])) {
+            return $matches[0];
+        }
+        if ($this->runHasDirectNamedAnchorContainerLead($matches[0])) {
             return $matches[0];
         }
         if ($this->runHasUnalignedImage($matches[0])) {

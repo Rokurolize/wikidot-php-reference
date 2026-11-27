@@ -1,0 +1,142 @@
+{
+ "collapsible-s1": {
+  "html": "<p>shape S1 plain-empty-control</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+S1</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">-S1</a></div>\n<div class=\"collapsible-block-content\"></div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-collapsible-size-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "collapsible-s2": {
+  "html": "shape S2 size-empty-root<br />\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:smaller;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+S2</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:smaller;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">-S2</a></span></div>\n<div class=\"collapsible-block-content\"></div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-collapsible-size-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "collapsible-s3": {
+  "html": "<p>shape S3 size-empty-advanced-cell</p>\n<table>\n<tr>\n<th style=\"border: 1px solid silver\">\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:smaller;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+S3</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:smaller;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">-S3</a></span></div>\n<div class=\"collapsible-block-content\"></div>\n</div>\n</div>\n</th>\n</tr>\n</table>",
+  "fullname": "muse-probe-hunt-cn4-collapsible-size-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "collapsible-s5": {
+  "html": "shape S5 size-closer-at-opener-empty-body<br />\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:x-large;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+S5</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:x-large;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">&nbsp;</a></span></div>\n<div class=\"collapsible-block-content\"></div>\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">&nbsp;</a></div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-collapsible-size-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "collapsible-s6": {
+  "html": "shape S6 size-closer-at-opener-body-both<br />\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:x-large;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+S6</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:x-large;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">&nbsp;</a></span></div>\n<div class=\"collapsible-block-content\">\n<p>text S6</p>\n</div>\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">&nbsp;</a></div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-collapsible-size-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "collapsible-s7": {
+  "html": "shape S7 size-closer-at-opener-body-bottom<br />\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:x-large;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+S7</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-content\">\n<p>text S7</p>\n</div>\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">&nbsp;</a></div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-collapsible-size-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "collapsible-s8": {
+  "html": "shape S8 size-closer-at-opener-body-top<br />\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><span style=\"font-size:x-large;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+S8</a></span></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:x-large;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">&nbsp;</a></span></div>\n<div class=\"collapsible-block-content\">\n<p>text S8</p>\n</div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-collapsible-size-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "collapsible-s9": {
+  "html": "shape S9 size-closer-at-opener-body-unfolded-both<br />\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\" style=\"display:none\"><span style=\"font-size:x-large;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+S9</a></span></div>\n<div class=\"collapsible-block-unfolded\">\n<div class=\"collapsible-block-unfolded-link\"><span style=\"font-size:x-large;\"><a class=\"collapsible-block-link\" href=\"javascript:;\">&nbsp;</a></span></div>\n<div class=\"collapsible-block-content\">\n<p>text S9</p>\n</div>\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">&nbsp;</a></div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-collapsible-size-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "tableadv-t2": {
+  "html": "<p>shape T2 zwsp-root</p>\n​\n<table>\n<tr>\n<td>a</td>\n</tr>\n<tr>\n<td>b</td>\n</tr>\n</table>",
+  "fullname": "muse-probe-hunt-cn4-table-separator-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "tableadv-t3": {
+  "html": "<p>shape T3 zwsp-collapsible</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+T</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">​\n<table>\n<tr>\n<td>a</td>\n</tr>\n<tr>\n<td>b</td>\n</tr>\n</table>\n</div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-table-separator-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "tableadv-t4": {
+  "html": "<p>shape T4 rawspace-root</p>\n<br />\n<span style=\"white-space: pre-wrap;\">&#32;</span>\n<table>\n<tr>\n<td>a</td>\n</tr>\n<tr>\n<td>b</td>\n</tr>\n</table>",
+  "fullname": "muse-probe-hunt-cn4-table-separator-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "tableadv-t5": {
+  "html": "<p>shape T5 rawspace-collapsible</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+T</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\"><br />\n<span style=\"white-space: pre-wrap;\">&#32;</span>\n<table>\n<tr>\n<td>a</td>\n</tr>\n<tr>\n<td>b</td>\n</tr>\n</table>\n</div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-table-separator-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "tableadv-t6": {
+  "html": "<p>shape T6 ordinary-text-root</p>\nordinary\n<table>\n<tr>\n<td>a</td>\n</tr>\n<tr>\n<td>b</td>\n</tr>\n</table>",
+  "fullname": "muse-probe-hunt-cn4-table-separator-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "tableadv-t9": {
+  "html": "<p>shape T9 zwsp-before-first-row-root<br />\n[[table]]<br />\n​[[row]]<br />\n[[cell]]a[[/cell]]<br />\n[[/row]]<br />\n[[/table]]</p>",
+  "fullname": "muse-probe-hunt-cn4-table-separator-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "tableadv-t10": {
+  "html": "<p>shape T10 two-zwsp-lines-root</p>\n​<br />\n​\n<table>\n<tr>\n<td>a</td>\n</tr>\n<tr>\n<td>b</td>\n</tr>\n</table>",
+  "fullname": "muse-probe-hunt-cn4-table-separator-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "anchor-b1": {
+  "html": "<p>shape B1 blank-anchor-collapsible<br />\nlead B1</p>\n<a name=\"B1\"></a>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+B1</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>body B1</p>\n</div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-anchor-blocklead-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "anchor-b3": {
+  "html": "<p>shape B3 blank-anchor-space-collapsible<br />\nlead B3</p>\n<a name=\"B3\"></a>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+B3</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>body B3</p>\n</div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-anchor-blocklead-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "anchor-b4": {
+  "html": "<p>shape B4 blank-anchor-div<br />\nlead B4</p>\n<a name=\"B4\"></a>\n<div>\n<p>body B4</p>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-anchor-blocklead-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "anchor-b7": {
+  "html": "<p>shape B7 blank-anchor-newline-collapsible<br />\nlead B7</p>\n<p><a name=\"B7\"></a></p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+B7</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\">\n<p>body B7</p>\n</div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-anchor-blocklead-matrix",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "bare-centered-collapsible": {
+  "html": "<p style=\"text-align: center;\"></p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+&nbsp;show&nbsp;block</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">–&nbsp;hide&nbsp;block</a></div>\n<div class=\"collapsible-block-content\"></div>\n</div>\n</div>",
+  "fullname": "muse-probe-hunt-cn4-bare-centered-collapsible",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ }
+}
