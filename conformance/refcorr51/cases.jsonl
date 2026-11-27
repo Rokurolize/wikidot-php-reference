@@ -1,0 +1,38 @@
+{"id": "stray-iso-exact-open", "source": "[[/div]] [[div]]b"}
+{"id": "stray-iso-inline-close", "source": "[[/div]] [[div]]a[[/div]]"}
+{"id": "stray-iso-two-spaces", "source": "[[/div]]  [[div]]b"}
+{"id": "s07-span-control", "source": "PROBE-stray-matrix-a-s07-span-control\n\n[[/span]] [[span]]b"}
+{"id": "s09-foo-control", "source": "PROBE-stray-matrix-a-s09-foo-control\n\n[[/foo]] [[foo]]b"}
+{"id": "s13-valid-blocks-space", "source": "PROBE-stray-matrix-b-s13-valid-blocks-space\n\n[[div]]\nx\n[[/div]] [[div]]\ny\n[[/div]]"}
+{"id": "s18-attributed-open", "source": "PROBE-stray-matrix-b-s18-attributed-open\n\n[[/div]] [[div class=\"x\"]]b"}
+{"id": "m01-bare-x-inline", "source": "PROBE-malformed-head-a-m01-bare-x-inline\n\n[[html x]]y[[/html]]"}
+{"id": "m02-bare-stray-multiline", "source": "PROBE-malformed-head-a-m02-bare-stray-multiline\n\n[[html stray]]\nX\n[[/html]]"}
+{"id": "m03-unquoted-class", "source": "PROBE-malformed-head-a-m03-unquoted-class\n\n[[html class=a]]y[[/html]]"}
+{"id": "m04-singlequoted-class", "source": "PROBE-malformed-head-a-m04-singlequoted-class\n\n[[html class='a']]y[[/html]]"}
+{"id": "m05-empty-one-space", "source": "PROBE-malformed-head-a-m05-empty-one-space\n\n[[html ]]y[[/html]]"}
+{"id": "m06-empty-two-spaces", "source": "PROBE-malformed-head-a-m06-empty-two-spaces\n\n[[html  ]]y[[/html]]"}
+{"id": "m07-bare-x-trailing-space", "source": "PROBE-malformed-head-a-m07-bare-x-trailing-space\n\n[[html x ]]y[[/html]]"}
+{"id": "m08-valid-class", "source": "PROBE-malformed-head-a-m08-valid-class\n\n[[html class=\"a\"]]y[[/html]]"}
+{"id": "m09-valid-style", "source": "PROBE-malformed-head-a-m09-valid-style\n\n[[html style=\"color:red\"]]y[[/html]]"}
+{"id": "m10-valid-data-name", "source": "PROBE-malformed-head-a-m10-valid-data-name\n\n[[html data-x=\"a\"]]y[[/html]]"}
+{"id": "m11-valid-then-bare", "source": "PROBE-malformed-head-b-m11-valid-then-bare\n\n[[html class=\"a\" stray]]y[[/html]]"}
+{"id": "m12-bare-then-valid", "source": "PROBE-malformed-head-b-m12-bare-then-valid\n\n[[html stray class=\"a\"]]y[[/html]]"}
+{"id": "m13-valid-then-unquoted", "source": "PROBE-malformed-head-b-m13-valid-then-unquoted\n\n[[html class=\"a\" style=color:red]]y[[/html]]"}
+{"id": "m14-unquoted-then-valid", "source": "PROBE-malformed-head-b-m14-unquoted-then-valid\n\n[[html style=color:red class=\"a\"]]y[[/html]]"}
+{"id": "m15-data-and-class", "source": "PROBE-malformed-head-b-m15-data-and-class\n\n[[html data-x=\"a\" class=\"c\"]]y[[/html]]"}
+{"id": "m16-uppercase-class", "source": "PROBE-malformed-head-b-m16-uppercase-class\n\n[[html CLASS=\"a\"]]y[[/html]]"}
+{"id": "m17-singlequote-plus-valid", "source": "PROBE-malformed-head-b-m17-singlequote-plus-valid\n\n[[html style='color:red' class=\"a\"]]y[[/html]]"}
+{"id": "m18-empty-value", "source": "PROBE-malformed-head-b-m18-empty-value\n\n[[html class=\"\"]]y[[/html]]"}
+{"id": "m19-unclosed-quote", "source": "PROBE-malformed-head-b-m19-unclosed-quote\n\n[[html class=\"a]]y[[/html]]"}
+{"id": "m20-spaced-equals", "source": "PROBE-malformed-head-b-m20-spaced-equals\n\n[[html class = \"a\"]]y[[/html]]"}
+{"id": "d01-html-dup-class", "source": "PROBE-duplicate-attrs-d01-html-dup-class\n\n[[html class=\"a\" class=\"b\"]][[/html]]"}
+{"id": "d02-html-dup-style", "source": "PROBE-duplicate-attrs-d02-html-dup-style\n\n[[html style=\"color:red\" style=\"color:blue\"]][[/html]]"}
+{"id": "d03-html-triple-class", "source": "PROBE-duplicate-attrs-d03-html-triple-class\n\n[[html class=\"a\" class=\"b\" class=\"c\"]][[/html]]"}
+{"id": "d04-html-dup-separated", "source": "PROBE-duplicate-attrs-d04-html-dup-separated\n\n[[html class=\"a\" style=\"color:red\" class=\"b\"]][[/html]]"}
+{"id": "d05-iframe-dup-width", "source": "PROBE-duplicate-attrs-d05-iframe-dup-width\n\n[[iframe http://example.com width=\"100\" width=\"200\"]]"}
+{"id": "d06-span-dup-class", "source": "PROBE-duplicate-attrs-d06-span-dup-class\n\n[[span class=\"a\" class=\"b\"]]x[[/span]]"}
+{"id": "d07-div-dup-class", "source": "PROBE-duplicate-attrs-d07-div-dup-class\n\n[[div class=\"a\" class=\"b\"]]\nx\n[[/div]]"}
+{"id": "d08-anchor-dup-href", "source": "PROBE-duplicate-attrs-d08-anchor-dup-href\n\n[[a href=\"/x\" href=\"/y\"]]z[[/a]]"}
+{"id": "html-iso-stray-multiline", "source": "[[html stray]]\nX\n[[/html]]"}
+{"id": "html-iso-bare-x-inline", "source": "[[html x]]y[[/html]]"}
+{"id": "html-iso-head-args-sequence", "source": "[[html class=\"c\"]]y[[/html]]\n[[html class=\"a b\"]]y[[/html]]\n[[html style=\"color:red\"]]y[[/html]]\n[[html id=\"i\"]]y[[/html]]\n[[html width=\"100\" height=\"50\"]]y[[/html]]\n[[html align=\"left\" scrolling=\"no\" frameborder=\"1\"]]y[[/html]]\n[[html title=\"t\"]]y[[/html]]\n[[html data-x=\"1\"]]y[[/html]]\n[[html class=c]]y[[/html]]\n[[html class='a']]y[[/html]]\n[[html class = \"a\"]]y[[/html]]\n[[html ]]x[[/html]]\n[[html\n]]x[[/html]]\n[[html foo]]x[[/html]]\n[[html =]]x[[/html]]"}

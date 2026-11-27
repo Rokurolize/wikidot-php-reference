@@ -1,0 +1,268 @@
+{
+ "stray-iso-exact-open": {
+  "html": "<p>[[/div]][[div]]b</p>",
+  "fullname": "muse-probe-hunt-blockopen-stray-iso-exact-open",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "stray-iso-inline-close": {
+  "html": "<p>[[/div]][[div]]a[[/div]]</p>",
+  "fullname": "muse-probe-hunt-blockopen-stray-iso-inline-close",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "stray-iso-two-spaces": {
+  "html": "<p>[[/div]][[div]]b</p>",
+  "fullname": "muse-probe-hunt-blockopen-stray-iso-two-spaces",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "s07-span-control": {
+  "html": "<p>PROBE-stray-matrix-a-s07-span-control</p>\n<p>[<a href=\"/span]]\">[[span</a>]b</p>",
+  "fullname": "muse-probe-hunt-blockopen-stray-matrix-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "s09-foo-control": {
+  "html": "<p>PROBE-stray-matrix-a-s09-foo-control</p>\n<p>[<a href=\"/foo]]\">[[foo</a>]b</p>",
+  "fullname": "muse-probe-hunt-blockopen-stray-matrix-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "s13-valid-blocks-space": {
+  "html": "<p>PROBE-stray-matrix-b-s13-valid-blocks-space</p>\n<div>\n<p>x</p>\n</div>\n<div>\n<p>y</p>\n</div>",
+  "fullname": "muse-probe-hunt-blockopen-stray-matrix-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "s18-attributed-open": {
+  "html": "<p>PROBE-stray-matrix-b-s18-attributed-open</p>\n<p>[<a href=\"/div]][[div\">class=&quot;x&quot;</a>]b</p>",
+  "fullname": "muse-probe-hunt-blockopen-stray-matrix-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m01-bare-x-inline": {
+  "html": "<p>PROBE-malformed-head-a-m01-bare-x-inline</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-a/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-4183235611592027174\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m02-bare-stray-multiline": {
+  "html": "<p>PROBE-malformed-head-a-m02-bare-stray-multiline</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-a/html/d5e6bcf93aa428273cf01559a0098757ed016b95-542137637543783615\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m03-unquoted-class": {
+  "html": "<p>PROBE-malformed-head-a-m03-unquoted-class</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-a/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-3118124762059771155\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m04-singlequoted-class": {
+  "html": "<p>PROBE-malformed-head-a-m04-singlequoted-class</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-a/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-36787058124117135\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m05-empty-one-space": {
+  "html": "<p>PROBE-malformed-head-a-m05-empty-one-space</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-a/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-16016019171191857812\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m06-empty-two-spaces": {
+  "html": "<p>PROBE-malformed-head-a-m06-empty-two-spaces</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-a/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-18582542512061653737\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m07-bare-x-trailing-space": {
+  "html": "<p>PROBE-malformed-head-a-m07-bare-x-trailing-space</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-a/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1013459668658801718\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m08-valid-class": {
+  "html": "<p>PROBE-malformed-head-a-m08-valid-class</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-a/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1853467668632647646\" allowtransparency=\"true\" frameborder=\"0\" class=\"a html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m09-valid-style": {
+  "html": "<p>PROBE-malformed-head-a-m09-valid-style</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-a/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-916796884116723530\" allowtransparency=\"true\" frameborder=\"0\" style=\"color:red\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m10-valid-data-name": {
+  "html": "<p>PROBE-malformed-head-a-m10-valid-data-name</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-a/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1338561414376427692\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-a",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m11-valid-then-bare": {
+  "html": "<p>PROBE-malformed-head-b-m11-valid-then-bare</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-b/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-7119188251107632283\" allowtransparency=\"true\" frameborder=\"0\" class=\"a html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m12-bare-then-valid": {
+  "html": "<p>PROBE-malformed-head-b-m12-bare-then-valid</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-b/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-6068720411488531743\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m13-valid-then-unquoted": {
+  "html": "<p>PROBE-malformed-head-b-m13-valid-then-unquoted</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-b/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-411005618823657169\" allowtransparency=\"true\" frameborder=\"0\" class=\"a html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m14-unquoted-then-valid": {
+  "html": "<p>PROBE-malformed-head-b-m14-unquoted-then-valid</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-b/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-105705989557294743\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m15-data-and-class": {
+  "html": "<p>PROBE-malformed-head-b-m15-data-and-class</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-b/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1703051361126579309\" allowtransparency=\"true\" frameborder=\"0\" class=\"c html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m16-uppercase-class": {
+  "html": "<p>PROBE-malformed-head-b-m16-uppercase-class</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-b/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-6682627461020720454\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m17-singlequote-plus-valid": {
+  "html": "<p>PROBE-malformed-head-b-m17-singlequote-plus-valid</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-b/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-64208340580058587\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m18-empty-value": {
+  "html": "<p>PROBE-malformed-head-b-m18-empty-value</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-b/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1727833170217839442\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m19-unclosed-quote": {
+  "html": "<p>PROBE-malformed-head-b-m19-unclosed-quote</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-b/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-12326520441946123076\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "m20-spaced-equals": {
+  "html": "<p>PROBE-malformed-head-b-m20-spaced-equals</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-malformed-head-b/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1525611071662220603\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-malformed-head-b",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "d01-html-dup-class": {
+  "html": "<p>PROBE-duplicate-attrs-d01-html-dup-class</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-duplicate-attrs/html/da39a3ee5e6b4b0d3255bfef95601890afd80709-3686889191751468482\" allowtransparency=\"true\" frameborder=\"0\" class=\"b html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-duplicate-attrs",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "d02-html-dup-style": {
+  "html": "<p>PROBE-duplicate-attrs-d02-html-dup-style</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-duplicate-attrs/html/da39a3ee5e6b4b0d3255bfef95601890afd80709-428921998581089767\" allowtransparency=\"true\" frameborder=\"0\" style=\"color:blue\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-duplicate-attrs",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "d03-html-triple-class": {
+  "html": "<p>PROBE-duplicate-attrs-d03-html-triple-class</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-duplicate-attrs/html/da39a3ee5e6b4b0d3255bfef95601890afd80709-696594083371884459\" allowtransparency=\"true\" frameborder=\"0\" class=\"c html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-duplicate-attrs",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "d04-html-dup-separated": {
+  "html": "<p>PROBE-duplicate-attrs-d04-html-dup-separated</p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-duplicate-attrs/html/da39a3ee5e6b4b0d3255bfef95601890afd80709-1946308249205960375\" allowtransparency=\"true\" frameborder=\"0\" class=\"b html-block-iframe\" style=\"color:red\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-duplicate-attrs",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "d05-iframe-dup-width": {
+  "html": "<p>PROBE-duplicate-attrs-d05-iframe-dup-width</p>\n<p><iframe src=\"http://example.com\" align=\"\" frameborder=\"\" height=\"\" scrolling=\"\" width=\"200\" class=\"\" style=\"\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-duplicate-attrs",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "d06-span-dup-class": {
+  "html": "<p>PROBE-duplicate-attrs-d06-span-dup-class</p>\n<p><span class=\"b\">x</span></p>",
+  "fullname": "muse-probe-hunt-blockopen-duplicate-attrs",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "d07-div-dup-class": {
+  "html": "<p>PROBE-duplicate-attrs-d07-div-dup-class</p>\n<div class=\"b\">\n<p>x</p>\n</div>",
+  "fullname": "muse-probe-hunt-blockopen-duplicate-attrs",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "d08-anchor-dup-href": {
+  "html": "<p>PROBE-duplicate-attrs-d08-anchor-dup-href</p>\n<p><a href=\"/y\">z</a></p>",
+  "fullname": "muse-probe-hunt-blockopen-duplicate-attrs",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "html-iso-stray-multiline": {
+  "html": "<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-stray-multiline/html/d5e6bcf93aa428273cf01559a0098757ed016b95-2090052497810035891\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-html-iso-stray-multiline",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "html-iso-bare-x-inline": {
+  "html": "<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-bare-x-inline/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-19419810291790801380\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-html-iso-bare-x-inline",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "html-iso-head-args-sequence": {
+  "html": "<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-21911779416766969\" allowtransparency=\"true\" frameborder=\"0\" class=\"c html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-154304350773327516\" allowtransparency=\"true\" frameborder=\"0\" class=\"a b html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1321124900829945580\" allowtransparency=\"true\" frameborder=\"0\" style=\"color:red\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-17438485311366452805\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-13715716971094818662\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-2330563221674923399\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1705417818716879643\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1321632092677803529\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-11529190511320573705\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-13150285401114550913\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-13035659971465708134\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/11f6ad8ec52a2984abaafd7c3b516503785c2072-96330862083610395\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/11f6ad8ec52a2984abaafd7c3b516503785c2072-28323943103776116\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/11f6ad8ec52a2984abaafd7c3b516503785c2072-685509525590813216\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/11f6ad8ec52a2984abaafd7c3b516503785c2072-616079105751514570\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-html-iso-head-args-sequence",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ }
+}
