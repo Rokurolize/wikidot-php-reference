@@ -1343,6 +1343,36 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         return false;
     }
 
+    function outputHasListParagraphCrossing($html)
+    {
+        if (!preg_match_all('/<(\/?)(ul|ol|li|p)\b([^>]*)>/i', $html, $matches, PREG_SET_ORDER)) {
+            return false;
+        }
+        $stack = array();
+        foreach ($matches as $m) {
+            $closing = $m[1] === '/';
+            $tag = strtolower($m[2]);
+            if (!$closing) {
+                $stack[] = $tag;
+                continue;
+            }
+            if (($tag === 'li' || $tag === 'ul' || $tag === 'ol') && in_array('p', $stack, true)) {
+                return true;
+            }
+            $pos = -1;
+            for ($i = count($stack) - 1; $i >= 0; $i--) {
+                if ($stack[$i] === $tag) {
+                    $pos = $i;
+                    break;
+                }
+            }
+            if ($pos >= 0) {
+                array_splice($stack, $pos);
+            }
+        }
+        return false;
+    }
+
     /**
      * Whether a blockquote participates in a container crossing rather than
      * nesting cleanly. Inline-scope crossings have their own narrower test
@@ -1605,6 +1635,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
             || $this->outputHasSpanParagraphCrossing($output)
             || $this->outputHasInlineCrossing($output)
             || $this->outputHasQuoteStructuralCrossing($output)
+            || $this->outputHasListParagraphCrossing($output)
             || $sawBareInlineBeforeDiv
             || $sawFootnoteBlock
             || $this->outputHasEmptyBlockquote($output)) {

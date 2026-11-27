@@ -244,7 +244,19 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
             return $matches[1] . $matches[1] . $start . $body . $end;
         }
 
-        return $matches[1] . $matches[1] . $start . "\n\n" . $content . "\n\n" . $end;
+        if (!empty($matches[5])) {
+            $leadBreak = $this->wiki->addToken('Newline', array(), false, "\n");
+            return $leadBreak . $start . "
+
+" . $content . "
+
+" . $end;
+        }
+        return $matches[1] . $matches[1] . $start . "
+
+" . $content . "
+
+" . $end;
 
     }
 
@@ -348,6 +360,10 @@ class Text_Wiki_Parse_Div extends Text_Wiki_Parse {
                 $openEv['attrs'],
                 substr($src, $openEv['end'], $closeEv['start'] - $openEv['end']),
             );
+            if ($openEv['leadNl'] !== ''
+                && preg_match('/\[\[\/(?:ul|ol)\]\]\s*$/i', substr($src, 0, $openEv['start'])) === 1) {
+                $matches[5] = true;
+            }
             $out .= substr($src, $lastCopied, $openEv['start'] - $lastCopied);
             $out .= $this->process($matches);
             $lastCopied = $closeEv['end'];

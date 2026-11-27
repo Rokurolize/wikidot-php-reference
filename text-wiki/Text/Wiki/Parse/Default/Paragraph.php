@@ -335,6 +335,55 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
         return false;
     }
 
+    protected function runHasExplicitQuoteListLead($run) {
+        $delim = preg_quote($this->wiki->delim, '/');
+        if (preg_match_all('/' . $delim . '([0-9]+)' . $delim . '/', $run, $qm)) {
+            foreach ($qm[1] as $qid) {
+                $qtok = isset($this->wiki->tokens[(int)$qid])
+                    ? $this->wiki->tokens[(int)$qid] : null;
+                if ($qtok !== null && strtolower($qtok[0]) === 'list'
+                    && isset($qtok[1]['type']) && $qtok[1]['type'] === 'explicit_br_no_nl'
+                    && !empty($qtok[1]['quote_list_lead'])) {
+                    return true;
+                }
+            }
+        }
+        $parts = preg_split('/(' . $delim . '[0-9]+' . $delim . ')/',
+            $run, -1, PREG_SPLIT_DELIM_CAPTURE);
+        $seenLead = false;
+        $inList = false;
+        $sawQuote = false;
+        foreach ($parts as $part) {
+            if ($part === '') {
+                continue;
+            }
+            if (!preg_match('/^' . $delim . '([0-9]+)' . $delim . '$/', $part, $km)) {
+                if (!$inList && trim($part) !== '') {
+                    $seenLead = true;
+                }
+                continue;
+            }
+            $tok = isset($this->wiki->tokens[(int)$km[1]])
+                ? $this->wiki->tokens[(int)$km[1]] : null;
+            if ($tok === null) {
+                continue;
+            }
+            $type = isset($tok[1]['type']) ? $tok[1]['type'] : '';
+            if (!$inList && strtolower($tok[0]) === 'list' && $type === 'explicit_list_start') {
+                $inList = true;
+                continue;
+            }
+            if ($inList && $tok[0] === 'Blockquote' && $type === 'start') {
+                $sawQuote = true;
+                continue;
+            }
+            if ($inList && strtolower($tok[0]) === 'list' && $type === 'explicit_list_end') {
+                return $seenLead && $sawQuote;
+            }
+        }
+        return $seenLead && $sawQuote;
+    }
+
     /**
      * Whether a paragraph run is a block lead-in: it holds at least one
      * token of a skipped block rule, and no literal text segment sits
@@ -635,6 +684,9 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
             return $matches[0];
         }
         if ($this->runHasScoredDivEnd($matches[0])) {
+            return $matches[0];
+        }
+        if ($this->runHasExplicitQuoteListLead($matches[0])) {
             return $matches[0];
         }
         if ($this->runIsBlockLead($matches[0])) {
