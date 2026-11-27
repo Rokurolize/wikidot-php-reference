@@ -61,7 +61,18 @@ class Text_Wiki_Parse_Divprefilter extends Text_Wiki_Parse {
     function parse()
     {
         parent::parse();
-        $this->wiki->source = str_replace("\xEF\xBF\xBE\xEF\xBF\xBF", ' ', $this->wiki->source);
+        $sentinel = "\xEF\xBF\xBE\xEF\xBF\xBF";
+        $this->wiki->source = str_replace($sentinel, ' ', $this->wiki->source);
+        foreach ($this->wiki->tokens as $id => $token) {
+            if (!isset($token[1]) || !is_array($token[1])) {
+                continue;
+            }
+            foreach ($token[1] as $key => $value) {
+                if (is_string($value) && strpos($value, $sentinel) !== false) {
+                    $this->wiki->tokens[$id][1][$key] = str_replace($sentinel, ' ', $value);
+                }
+            }
+        }
     }
 
     function process($matches)

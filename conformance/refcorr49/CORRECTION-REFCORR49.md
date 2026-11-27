@@ -49,7 +49,7 @@ Three parse files changed:
   - after SHA-256 `4db1ae68b6ca452def5f88d35b86a5706d99469cf34483b4c28e4f27c87cd1d1`
 - `text-wiki/Text/Wiki/Parse/Default/Divprefilter.php`
   - before SHA-256 `4b1a5d62fc9fd5df47f2547f220f7cedd9e3160145ba02809f58f41890e2accb`
-  - after SHA-256 `063c5bf6c31d92943ca148f7810ce934923c91bf3e9d31b3a0259c910b557013`
+  - after SHA-256 `2650b56f2fac02a17b1b190d9681a3aa1fff5951e683822b62bd41963704327c`
 - `text-wiki/Text/Wiki/Parse/Default/Paragraph.php`
   - before SHA-256 `aec1c90de37db0e4ac07c1cbb8da96f6cbaac5d5f7be26386a8be1f1a4c85988`
   - after SHA-256 `36171d57b282dadc8278a50ceeebf607bb988c5c49d5573aae7fc130f4ba4f82`
