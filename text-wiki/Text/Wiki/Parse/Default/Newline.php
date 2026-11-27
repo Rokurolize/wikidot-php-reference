@@ -536,6 +536,7 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                     }
                 }
                 $beforeCollapsible = $crossesEnclosingBlockEnd;
+                $beforeCenteredDivalign = false;
                 $scanOffset = 0;
                 while (preg_match($placeholder, $after, $nm, PREG_OFFSET_CAPTURE, $scanOffset)) {
                     if ($nm[0][1] !== $scanOffset) {
@@ -546,12 +547,17 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                     if ($nextTok !== null && in_array($nextTok[0], array('Collapsible', 'Div', 'Divalign', 'Table', 'Tableadv'), true)
                         && isset($nextTok[1]['type']) && $nextTok[1]['type'] === 'start') {
                         $beforeCollapsible = true;
+                        $beforeCenteredDivalign = $nextTok[0] === 'Divalign'
+                            && isset($nextTok[1]['align']) && $nextTok[1]['align'] === 'center';
                         break;
                     }
                     if ($nextTok === null || $nextTok[0] !== 'Paragraph') {
                         break;
                     }
                     $scanOffset += strlen($nm[0][0]);
+                }
+                if ($beforeCenteredDivalign && $divalignSegmentBreaks) {
+                    $beforeCollapsible = false;
                 }
                 if (($directInlineLeadForBreaks || $looseScopeContentBreaks) && $looseScopeTokenId !== null) {
                     $this->wiki->tokens[$looseScopeTokenId][1]['loose_scope_content_breaks'] = true;
@@ -651,7 +657,7 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
             }
             if ($type === 'start') {
                 $align = isset($tok[1]['align']) ? $tok[1]['align'] : '';
-                if ($align === 'center') {
+                if ($align === 'center' && !$this->_divalignStartHasInlineLead($src, $pos)) {
                     foreach ($inlineOpen as $open) {
                         if (!empty($open['segmented'])) {
                             $insertAt[$endPos] = true;
@@ -686,6 +692,23 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
         return $src;
     }
 
+    private function _divalignStartHasInlineLead($src, $pos)
+    {
+        $before = substr($src, 0, $pos);
+        if ($before === '' || substr($before, -1) !== "\n") {
+            return false;
+        }
+        $before = substr($before, 0, -1);
+        if ($before === '' || substr($before, -1) === "\n") {
+            return false;
+        }
+        $lineStart = strrpos($before, "\n");
+        $line = substr($before, $lineStart === false ? 0 : $lineStart + 1);
+        $quoted = preg_quote($this->wiki->delim, '/');
+        $literal = preg_replace('/' . $quoted . '\d+' . $quoted . '/', '', $line);
+        return trim($literal) !== '';
+    }
+
     private function _inlineScopeBlockLeadRule($prefix, $allPrefixMatches, $scopePi)
     {
         if ($scopePi <= 0) {
@@ -714,18 +737,24 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                 $scanPos = $tokStart;
                 continue;
             }
+            if ($tok[0] === 'Newline' && trim($between) === '') {
+                $scanPos = $tokStart;
+                continue;
+            }
             if (!isset($tok[1]['type'])) {
                 return null;
             }
             $type = $tok[1]['type'];
-            if (in_array($tok[0], array('Div', 'Divalign', 'Center', 'Horiz', 'Table', 'Tableadv'), true)
-                && $type === 'end'
-                && (preg_match('/\A\n[ \t]*\z/', $between) === 1
-                    || ($insideClosedInline && trim($between) === ''))) {
-                return $tok[0];
+            if (in_array($tok[0], array('Div', 'Divalign', 'Center', 'Horiz', 'Table', 'Tableadv'), true)) {
+                if ($type === 'end'
+                    && (preg_match('/\A\n[ \t]*\z/', $between) === 1
+                        || ($insideClosedInline && preg_match('/\A(?:\n[ \t]*)?\z/', $between) === 1))) {
+                    return $tok[0];
+                }
+                return null;
             }
             if (in_array($tok[0], array('Span', 'Size', 'Anchor'), true)) {
-                if ($type === 'end') {
+                if ($type === 'end' && preg_match('/\A(?:\n[ \t]*)?\z/', $between) === 1) {
                     $insideClosedInline = true;
                     $scanPos = $tokStart;
                     continue;
@@ -735,11 +764,9 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                     $scanPos = $tokStart;
                     continue;
                 }
-            }
-            if (trim($between) !== '') {
                 return null;
             }
-            $scanPos = $tokStart;
+            return null;
         }
         return null;
     }

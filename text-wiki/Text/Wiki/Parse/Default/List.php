@@ -1137,7 +1137,7 @@ $2$3[[/li]]
                         $type = isset($tok[1]['type']) ? $tok[1]['type'] : '';
                         if (in_array($tok[0], array(
                             'Blockquote', 'Center', 'Collapsible', 'Deflist', 'Div', 'Divalign',
-                            'Gallery', 'Heading', 'Note', 'Table', 'Tableadv'
+                            'Gallery', 'Heading', 'Note', 'Table', 'Tableadv', 'Toc'
                         ), true)) {
                             if ($type === 'start' || substr($type, -6) === '_start') {
                                 $depth++;
@@ -1174,7 +1174,7 @@ $2$3[[/li]]
             && ($tok[1]['type'] === 'start' || substr($tok[1]['type'], -6) === '_start')
             && in_array($tok[0], array(
                 'Blockquote', 'Center', 'Collapsible', 'Deflist', 'Div', 'Divalign',
-                'Gallery', 'Heading', 'Note', 'Table', 'Tableadv'
+                'Gallery', 'Heading', 'Note', 'Table', 'Tableadv', 'Toc'
             ), true);
     }
 
@@ -1188,7 +1188,7 @@ $2$3[[/li]]
         return $tok !== null && isset($tok[1]['type']) && $tok[1]['type'] === 'end'
             && in_array($tok[0], array(
                 'Blockquote', 'Center', 'Collapsible', 'Deflist', 'Divalign',
-                'Gallery', 'Heading', 'Note', 'Table', 'Tableadv'
+                'Gallery', 'Heading', 'Note', 'Table', 'Tableadv', 'Toc'
             ), true);
     }
 
