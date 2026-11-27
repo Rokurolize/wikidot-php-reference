@@ -1,0 +1,32 @@
+{"id": "cl01-defterm-close", "source": "[[footnote]]\nleadcl01\n: termword[[/footnote]]", "kind": "footnote-item"}
+{"id": "cl02-defterm-firstline-control", "source": "[[footnote]]\n: firsttermcl02[[/footnote]]", "kind": "footnote-item"}
+{"id": "cl03-defterm-proper-close", "source": "[[footnote]]\nleadcl03\n: termword : definitioncl03[[/footnote]]", "kind": "footnote-item"}
+{"id": "cl04-bullet-close", "source": "[[footnote]]\nleadcl04\n* itemwordcl04[[/footnote]]", "kind": "footnote-item"}
+{"id": "cl05-numbered-close", "source": "[[footnote]]\nleadcl05\n# itemwordcl05[[/footnote]]", "kind": "footnote-item"}
+{"id": "cl06-plain-close", "source": "[[footnote]]\nleadcl06\nplainwordcl06[[/footnote]]", "kind": "footnote-item"}
+{"id": "cl07-quote-close", "source": "[[footnote]]\nleadcl07\n> quotewordcl07[[/footnote]]", "kind": "footnote-item"}
+{"id": "cl08-heading-close", "source": "[[footnote]]\nleadcl08\n+ headwordcl08[[/footnote]]", "kind": "footnote-item"}
+{"id": "cl09-center-close", "source": "[[footnote]]\nleadcl09\n= centerwordcl09[[/footnote]]", "kind": "footnote-item"}
+{"id": "bs01-bullet-list-end", "source": "A[[footnote]]intro\n* item one\n* item two[[/footnote]]", "kind": "footnote-item"}
+{"id": "bs02-numbered-list-end", "source": "A[[footnote]]introbs02\n# item one\n# item two[[/footnote]]", "kind": "footnote-item"}
+{"id": "bs03-deflist-proper", "source": "A[[footnote]]introbs03\n: term : definition[[/footnote]]", "kind": "footnote-item"}
+{"id": "bs04-quote-line", "source": "A[[footnote]]introbs04\n> quoted[[/footnote]]", "kind": "footnote-item"}
+{"id": "bs05-heading-line", "source": "A[[footnote]]introbs05\n+ heading[[/footnote]]", "kind": "footnote-item"}
+{"id": "bs06-center-line", "source": "A[[footnote]]introbs06\n= centered[[/footnote]]", "kind": "footnote-item"}
+{"id": "bs07-leading-bullet-list", "source": "A[[footnote]]\n* item one\n* item two[[/footnote]]", "kind": "footnote-item"}
+{"id": "bs08-code-crossclose", "source": "A[[footnote]]intro\n[[code]]\ncode line[[/footnote]]\n[[/code]] B[[footnote]]plain[[/footnote]]", "kind": "footnote-item"}
+{"id": "bs09-code-sameline", "source": "A[[footnote]]introbs09 [[code]]x[[/code]] tail[[/footnote]]", "kind": "footnote-item"}
+{"id": "bs10-code-normal-close", "source": "A[[footnote]]\n[[code]]\ncodebs10\n[[/code]]\n[[/footnote]]", "kind": "footnote-item"}
+{"id": "flb01-bibliography-exact", "source": "[[footnote]]\n[[bibliography]]itemone[[/bibliography]]\n[[/footnote]]", "kind": "footnote-item"}
+{"id": "flb02-bibliography-multiline-firstline", "source": "[[footnote]]\n[[bibliography]]\nitemone\n[[/bibliography]]\n[[/footnote]]", "kind": "footnote-item"}
+{"id": "flb03-bibliography-after-lead", "source": "[[footnote]]\nleadflb03\n[[bibliography]]itemone[[/bibliography]]\n[[/footnote]]", "kind": "footnote-item"}
+{"id": "flb06-div-pair-firstline-tail", "source": "[[footnote]]\n[[div]][[/div]]tailflb06[[/footnote]]", "kind": "footnote-item"}
+{"id": "flb07-code-block-firstline", "source": "[[footnote]]\n[[code]]\ncodeflb07\n[[/code]]\n[[/footnote]]", "kind": "footnote-item"}
+{"id": "flb08-list-firstline", "source": "[[footnote]]\n* itemflb08[[/footnote]]", "kind": "footnote-item"}
+{"id": "flb09-plain-firstline-control", "source": "[[footnote]]\nplainflb09[[/footnote]]", "kind": "footnote-item"}
+{"id": "flb10-math-exact-last", "source": "[[footnote]]\n[[math]]x+1\n[[/math]][[/footnote]]", "kind": "footnote-item"}
+{"id": "exact709", "source": "[[footnote]]\nleadtext\n: termword[[/footnote]]\ntail[[footnote]]\n: firstterm[[/footnote]]", "kind": "full-page"}
+{"id": "exact720", "source": "A[[footnote]]intro\n* item one\n* item two[[/footnote]] B[[footnote]]plain[[/footnote]]", "kind": "full-page"}
+{"id": "exact800", "source": "A[[footnote]]intro\n[[code]]\ncode line[[/footnote]]\n[[/code]] B[[footnote]]plain[[/footnote]]", "kind": "full-page"}
+{"id": "exact841", "source": "[[footnote]]\n[[bibliography]]itemone[[/bibliography]]\n[[/footnote]]", "kind": "full-page"}
+{"id": "exact796", "source": "[[footnote]]\n[[math]]x+1\n[[/math]][[/footnote]]\n[[footnoteblock]]", "kind": "full-page"}
