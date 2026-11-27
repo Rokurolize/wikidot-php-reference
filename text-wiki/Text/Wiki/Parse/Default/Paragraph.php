@@ -586,6 +586,46 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
     }
 
 
+
+
+    protected function runHasTextBreakHorizLead($run) {
+        $delim = $this->wiki->delim;
+        $quoted = preg_quote($delim, '/');
+        $parts = preg_split('/(' . $quoted . '[0-9]+' . $quoted . ')/',
+            $run, -1, PREG_SPLIT_DELIM_CAPTURE);
+        $seenText = false;
+        $seenBreak = false;
+        foreach ($parts as $part) {
+            if ($part === '') {
+                continue;
+            }
+            if (preg_match('/^' . $quoted . '([0-9]+)' . $quoted . '$/', $part, $km)) {
+                $tok = isset($this->wiki->tokens[(int)$km[1]])
+                    ? $this->wiki->tokens[(int)$km[1]] : null;
+                if ($tok === null) {
+                    continue;
+                }
+                $rule = strtolower($tok[0]);
+                if ($rule === 'horiz') {
+                    return $seenText && $seenBreak;
+                }
+                if ($rule === 'break') {
+                    $seenBreak = true;
+                    continue;
+                }
+                if ($rule === 'newline' || ($rule === 'raw'
+                    && (!isset($tok[1]['text']) || trim($tok[1]['text']) === ''))) {
+                    continue;
+                }
+                return false;
+            }
+            if (trim($part) !== '') {
+                $seenText = true;
+            }
+        }
+        return false;
+    }
+
     protected function runHasDirectNamedAnchorContainerLead($run) {
         $delim = $this->wiki->delim;
         $quoted = preg_quote($delim, '/');
@@ -699,6 +739,9 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
             return $matches[0];
         }
         if ($this->runIsEmptyLeadBlockLead($matches[0])) {
+            return $matches[0];
+        }
+        if ($this->runHasTextBreakHorizLead($matches[0])) {
             return $matches[0];
         }
 

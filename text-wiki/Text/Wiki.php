@@ -1448,6 +1448,45 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         return trim($text) !== '';
     }
 
+    function outputHasParagraphBlockCrossing($html)
+    {
+        $scan = preg_replace('/<(script|style)\b[^>]*>.*?<\/\1\s*>/is', '', $html);
+        if (! preg_match_all('/<(\/?)([a-z][a-z0-9]*)\b([^>]*)>/i', $scan, $matches, PREG_SET_ORDER)) {
+            return false;
+        }
+        $void = array_flip(array(
+            'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link',
+            'meta', 'param', 'source', 'track', 'wbr'
+        ));
+        $stack = array();
+        foreach ($matches as $m) {
+            $closing = $m[1] === '/';
+            $tag = strtolower($m[2]);
+            if (isset($void[$tag]) || preg_match('/\/\s*$/', $m[3])) {
+                continue;
+            }
+            if (! $closing) {
+                if ($tag === 'div' && in_array('p', $stack, true)
+                    && strpos($m[3], 'text-align: center') !== false) {
+                    return true;
+                }
+                $stack[] = $tag;
+                continue;
+            }
+            $pos = -1;
+            for ($i = count($stack) - 1; $i >= 0; $i--) {
+                if ($stack[$i] === $tag) {
+                    $pos = $i;
+                    break;
+                }
+            }
+            if ($pos >= 0) {
+                array_splice($stack, $pos);
+            }
+        }
+        return false;
+    }
+
     /**
     *
     * Renders tokens back into the source text, based on the requested format.
@@ -1567,6 +1606,15 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
                         }
                     }
                     $renderedToken = $this->renderObj[$rule]->token($opts);
+                    $startsMeasuredBlockBoundary = ($rule === 'Paragraph' && isset($opts['type']) && $opts['type'] === 'start')
+                        || $rule === 'Horiz'
+                        || (in_array($rule, array('Div', 'Divalign', 'Center', 'Blockquote'), true)
+                            && isset($opts['type']) && ($opts['type'] === 'start' || substr($opts['type'], -6) === '_start'));
+                    if ($startsMeasuredBlockBoundary && $output !== '' && ! ctype_space(substr($output, -1))
+                        && trim($trailingLiteral) !== ''
+                        && $this->outputEndsWithBareInlineText($output)) {
+                        $output .= "\n";
+                    }
                     $output .= $renderedToken;
                     $trailingLiteral = '';
                     $in_delim = false;
@@ -1609,6 +1657,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         // boundary and does not alter mixed inline runs.
         $embedNoMatch = '<div class="error-block">Sorry, no match for the embedded content.</div>';
         $output = str_replace('<p>' . $embedNoMatch . '</p>', $embedNoMatch, $output);
+        $output = preg_replace('/<dl>\s*<\/dl>\s*/', '', $output);
 
 		// this is a nasty hack... should be put somewhere else, e.g. Postfilter?
 		
@@ -1634,6 +1683,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
             || $this->outputHasUnpurifiedTocTitleWhitespace($output)
             || $this->outputHasSpanParagraphCrossing($output)
             || $this->outputHasInlineCrossing($output)
+            || $this->outputHasParagraphBlockCrossing($output)
             || $this->outputHasQuoteStructuralCrossing($output)
             || $this->outputHasListParagraphCrossing($output)
             || $sawBareInlineBeforeDiv
