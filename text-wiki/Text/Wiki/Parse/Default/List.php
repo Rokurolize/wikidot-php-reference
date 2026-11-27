@@ -806,6 +806,9 @@ $2$3[[/li]]
                         }
                     }
                 }
+                if (count($items) > 0 && preg_match('/\n[ \t]*\n/', $between) === 1) {
+                    $items[count($items) - 1]['after_blank'] = true;
+                }
 
                 $liAttrStr = isset($lm[1][0]) ? $lm[1][0] : '';
                 $liBody = $lm[2][0];
@@ -816,6 +819,7 @@ $2$3[[/li]]
                     'attrs'           => $this->buildListAttrs($liAttrStr),
                     'body'            => $liBody,
                     'attached_nested' => array(),
+                    'after_blank' => false,
                 );
             }
 
@@ -1059,14 +1063,35 @@ $2$3[[/li]]
             $brTok = ($em[2] === '') ? '' : $this->wiki->addToken('Newline', array());
             $b = $prefixText . $brTok . $nInfo['str'];
         } else {
-            if (substr($b, -1) === "\n") {
+            $blockTrimmed = rtrim($b, "\n");
+            if ($blockTrimmed !== $b && $this->explicitBodyEndsWithBlock($blockTrimmed)) {
+                $b = $blockTrimmed;
+            } elseif (substr($b, -1) === "\n") {
                 $b = substr($b, 0, -1);
                 $b = preg_replace('/[ \t]+$/', '', $b);
                 if ($b === '' && count($item['attached_nested']) === 0) {
                     return '';
                 }
-                $brNoNl = $this->wiki->addToken($this->rule, array('type' => 'explicit_br_no_nl'));
-                $b .= $brNoNl;
+                if (!$this->explicitBodyEndsWithBlock($b)) {
+                    $brNoNl = $this->wiki->addToken($this->rule, array('type' => 'explicit_br_no_nl'));
+                    $b .= $brNoNl;
+                }
+            }
+            if (preg_match('/\n[ \t]*\n/', $b) === 1) {
+                $segments = $this->splitExplicitItemSegments($b);
+                $b = array_shift($segments);
+                foreach ($segments as $segment) {
+                    if (trim($segment) === '') {
+                        continue;
+                    }
+                    if ($this->explicitSegmentStartsWithBlock($segment)) {
+                        $b .= $segment;
+                    } else {
+                        $pStart = $this->wiki->addToken('Paragraph', array('type' => 'start'));
+                        $pEnd = $this->wiki->addToken('Paragraph', array('type' => 'end'));
+                        $b .= ' ' . $pStart . $segment . $pEnd;
+                    }
+                }
             }
             $b = $this->restorePlaceholders($b, $nestedMap, $nativeMap);
         }
@@ -1091,6 +1116,80 @@ $2$3[[/li]]
         ));
 
         return $liStart . $b . $liEnd;
+    }
+
+    protected function splitExplicitItemSegments($body)
+    {
+        $delim = $this->wiki->delim;
+        $quoted = preg_quote($delim, '/');
+        $parts = array();
+        $start = 0;
+        $depth = 0;
+        $len = strlen($body);
+        $pos = 0;
+        while ($pos < $len) {
+            if ($body[$pos] === $delim) {
+                $end = strpos($body, $delim, $pos + 1);
+                if ($end !== false) {
+                    $id = substr($body, $pos + 1, $end - $pos - 1);
+                    if (preg_match('/^\d+$/', $id) && isset($this->wiki->tokens[(int)$id])) {
+                        $tok = $this->wiki->tokens[(int)$id];
+                        $type = isset($tok[1]['type']) ? $tok[1]['type'] : '';
+                        if (in_array($tok[0], array(
+                            'Blockquote', 'Center', 'Collapsible', 'Deflist', 'Div', 'Divalign',
+                            'Gallery', 'Heading', 'Note', 'Table', 'Tableadv', 'Toc'
+                        ), true)) {
+                            if ($type === 'start' || substr($type, -6) === '_start') {
+                                $depth++;
+                            } elseif (($type === 'end' || substr($type, -4) === '_end') && $depth > 0) {
+                                $depth--;
+                            }
+                        }
+                    }
+                    $pos = $end + 1;
+                    continue;
+                }
+            }
+            if ($depth === 0 && $body[$pos] === "\n"
+                && preg_match('/\G\n[ \t]*\n+/', $body, $nm, 0, $pos) === 1) {
+                $parts[] = substr($body, $start, $pos - $start);
+                $pos += strlen($nm[0]);
+                $start = $pos;
+                continue;
+            }
+            $pos++;
+        }
+        $parts[] = substr($body, $start);
+        return $parts;
+    }
+
+    protected function explicitSegmentStartsWithBlock($segment)
+    {
+        $delim = preg_quote($this->wiki->delim, '/');
+        if (!preg_match('/^\s*' . $delim . '(\d+)' . $delim . '/', $segment, $m)) {
+            return false;
+        }
+        $tok = isset($this->wiki->tokens[(int)$m[1]]) ? $this->wiki->tokens[(int)$m[1]] : null;
+        return $tok !== null && isset($tok[1]['type'])
+            && ($tok[1]['type'] === 'start' || substr($tok[1]['type'], -6) === '_start')
+            && in_array($tok[0], array(
+                'Blockquote', 'Center', 'Collapsible', 'Deflist', 'Div', 'Divalign',
+                'Gallery', 'Heading', 'Note', 'Table', 'Tableadv', 'Toc'
+            ), true);
+    }
+
+    protected function explicitBodyEndsWithBlock($body)
+    {
+        $delim = preg_quote($this->wiki->delim, '/');
+        if (!preg_match('/' . $delim . '(\d+)' . $delim . '\s*$/', $body, $m)) {
+            return false;
+        }
+        $tok = isset($this->wiki->tokens[(int)$m[1]]) ? $this->wiki->tokens[(int)$m[1]] : null;
+        return $tok !== null && isset($tok[1]['type']) && $tok[1]['type'] === 'end'
+            && in_array($tok[0], array(
+                'Blockquote', 'Center', 'Collapsible', 'Deflist', 'Divalign',
+                'Gallery', 'Heading', 'Note', 'Table', 'Tableadv', 'Toc'
+            ), true);
     }
 
     /**
@@ -1202,7 +1301,22 @@ $2$3[[/li]]
                 $prevLine = substr($source, $lineStart, ($sPos - 1) - $lineStart);
                 if ($prevLine !== '' && strpos($prevLine, '||') === false && substr($prevLine, -1) !== $delim) {
                     $brTok = $this->wiki->addToken($this->rule, array('type' => 'explicit_br_no_nl'));
-                    $source = substr($source, 0, $sPos - 1) . $brTok . "\n\n" . substr($source, $sPos);
+                    $brKey = $this->extractTokenKey($brTok);
+                    $listSegment = substr($source, $sPos, $ePos - $sPos);
+                    if (preg_match_all('/' . $d . '(\d+)' . $d . '/', $listSegment, $lm)) {
+                        foreach ($lm[1] as $listTid) {
+                            $listTok = isset($this->wiki->tokens[(int)$listTid])
+                                ? $this->wiki->tokens[(int)$listTid] : null;
+                            if ($listTok !== null && $listTok[0] === 'Blockquote'
+                                && isset($listTok[1]['type']) && $listTok[1]['type'] === 'start') {
+                                $this->wiki->tokens[$brKey][1]['quote_list_lead'] = true;
+                                break;
+                            }
+                        }
+                    }
+                    $source = substr($source, 0, $sPos - 1) . $brTok . "
+
+" . substr($source, $sPos);
                     $delta = strlen($brTok) + 1;
                     $sPos += $delta;
                     $ePos += $delta;
@@ -1237,8 +1351,15 @@ $2$3[[/li]]
             if (substr($rest, 0, 1) === "\n" && substr($rest, 0, 2) !== "\n\n") {
                 $nextChar = isset($rest[1]) ? $rest[1] : '';
                 if ($nextChar !== '' && $nextChar !== $delim && substr($rest, 1, 3) !== '[[/') {
-                    $this->wiki->tokens[$endKey][1]['trail'] = "\n";
-                    $source = substr($source, 0, $afterEnd) . substr($rest, 1);
+                    $this->wiki->tokens[$endKey][1]['trail'] = "
+";
+                    $tailSource = substr($rest, 1);
+                    if (preg_match('/^[^\n]+\n(?=\n)/', $tailSource, $pm)) {
+                        $rawNl = $this->wiki->addToken($this->rule, array('type' => 'explicit_raw_nl'));
+                        $insertAt = strlen($pm[0]) - 1;
+                        $tailSource = substr($tailSource, 0, $insertAt) . $rawNl . substr($tailSource, $insertAt);
+                    }
+                    $source = substr($source, 0, $afterEnd) . $tailSource;
                     continue;
                 }
             }

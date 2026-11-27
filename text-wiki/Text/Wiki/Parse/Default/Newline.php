@@ -74,7 +74,8 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
      */
     function parse()
     {
-        $src = $this->wiki->source;
+        $src = $this->_insertDivalignSegmentBreaks($this->wiki->source);
+        $this->wiki->source = $src;
         // A blank-line run immediately inside a Span or Size opener is
         // inline content before it is paragraph layout. Live serves those
         // line breaks in the leading empty fragment that Stage 2 repair
@@ -135,6 +136,14 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                         && in_array($scopePrevTok[0], array('Div', 'Divalign', 'Center', 'Horiz', 'Table', 'Tableadv'), true);
                     if ($scopeAfterBlockEnd) {
                         $scopePrevBlockRule = $scopePrevTok[0];
+                    }
+                }
+                if (!$scopeAfterBlockEnd) {
+                    $looseLeadRule = $this->_inlineScopeBlockLeadRule(
+                        $prefix, $allPrefixMatches, $scopePi);
+                    if ($looseLeadRule !== null) {
+                        $scopeAfterBlockEnd = true;
+                        $scopePrevBlockRule = $looseLeadRule;
                     }
                 }
             }
@@ -214,7 +223,7 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                         $hasOrdinaryInlineLine = false;
                         foreach (preg_split('/\r\n|\r|\n/', $sinceText) as $sinceLine) {
                             $lineText = trim($sinceLine);
-                            if ($lineText !== '' && preg_match('/^(?:[*#=+>]|:|\|\|)/', $lineText) !== 1) {
+                            if ($lineText !== '' && preg_match('/^(?:[*#] |=|\+|>|:|\|\|)/', $lineText) !== 1) {
                                 $hasOrdinaryInlineLine = true;
                                 break;
                             }
@@ -458,7 +467,7 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                     $sinceText = preg_replace($placeholder, '', $sinceBlockEnd);
                     foreach (preg_split('/\r\n|\r|\n/', $sinceText) as $sinceLine) {
                         $lineText = trim($sinceLine);
-                        if ($lineText !== '' && preg_match('/^(?:[*#=+>]|:|\|\|)/', $lineText) !== 1) {
+                        if ($lineText !== '' && preg_match('/^(?:[*#] |=|\+|>|:|\|\|)/', $lineText) !== 1) {
                             $divalignSegmentBreaks = !$scopeCrossedEnclosingBlockEnd;
                             break;
                         }
@@ -527,6 +536,7 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                     }
                 }
                 $beforeCollapsible = $crossesEnclosingBlockEnd;
+                $beforeCenteredDivalign = false;
                 $scanOffset = 0;
                 while (preg_match($placeholder, $after, $nm, PREG_OFFSET_CAPTURE, $scanOffset)) {
                     if ($nm[0][1] !== $scanOffset) {
@@ -537,12 +547,17 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                     if ($nextTok !== null && in_array($nextTok[0], array('Collapsible', 'Div', 'Divalign', 'Table', 'Tableadv'), true)
                         && isset($nextTok[1]['type']) && $nextTok[1]['type'] === 'start') {
                         $beforeCollapsible = true;
+                        $beforeCenteredDivalign = $nextTok[0] === 'Divalign'
+                            && isset($nextTok[1]['align']) && $nextTok[1]['align'] === 'center';
                         break;
                     }
                     if ($nextTok === null || $nextTok[0] !== 'Paragraph') {
                         break;
                     }
                     $scanOffset += strlen($nm[0][0]);
+                }
+                if ($beforeCenteredDivalign && $divalignSegmentBreaks) {
+                    $beforeCollapsible = false;
                 }
                 if (($directInlineLeadForBreaks || $looseScopeContentBreaks) && $looseScopeTokenId !== null) {
                     $this->wiki->tokens[$looseScopeTokenId][1]['loose_scope_content_breaks'] = true;
@@ -589,6 +604,8 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                 $out .= $m[1][0];
             } elseif ($this->_afterExplicitItemBeforeBlock($src, $off, strlen($m[0][0]))) {
                 $out .= $m[1][0];
+            } elseif ($this->_afterBlockBeforeExplicitItemEnd($src, $off, strlen($m[0][0]))) {
+                $out .= $m[1][0];
             } elseif ($this->_betweenBlocks($src, $off, strlen($m[0][0]))) {
                 $out .= $m[0][0];
             } else {
@@ -597,6 +614,161 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
             $last = $off + strlen($m[0][0]);
         }
         $this->wiki->source = $out . substr($src, $last);
+    }
+
+    private function _insertDivalignSegmentBreaks($src)
+    {
+        $delim = preg_quote($this->wiki->delim, '/');
+        if (!preg_match_all('/' . $delim . '(\d+)' . $delim . '/', $src, $ms, PREG_OFFSET_CAPTURE)) {
+            return $src;
+        }
+        $divaligns = array();
+        $inlineOpen = array();
+        $insertAt = array();
+        foreach ($ms[0] as $i => $wholem) {
+            $id = (int)$ms[1][$i][0];
+            $tok = isset($this->wiki->tokens[$id]) ? $this->wiki->tokens[$id] : null;
+            if ($tok === null || !isset($tok[1]['type'])) {
+                continue;
+            }
+            $rule = $tok[0];
+            $type = $tok[1]['type'];
+            $pos = $wholem[1];
+            $endPos = $pos + strlen($wholem[0]);
+            if (($rule === 'Span' || $rule === 'Size') && $type === 'start') {
+                $inlineOpen[$id] = array(
+                    'rule' => $rule,
+                    'base_depth' => count($divaligns),
+                    'segmented' => false,
+                );
+                continue;
+            }
+            if (($rule === 'Span' || $rule === 'Size') && $type === 'end') {
+                foreach (array_reverse(array_keys($inlineOpen), true) as $openId) {
+                    if ($inlineOpen[$openId]['rule'] === $rule) {
+                        unset($inlineOpen[$openId]);
+                        break;
+                    }
+                }
+                continue;
+            }
+            if ($rule !== 'Divalign') {
+                continue;
+            }
+            if ($type === 'start') {
+                $align = isset($tok[1]['align']) ? $tok[1]['align'] : '';
+                if ($align === 'center' && !$this->_divalignStartHasInlineLead($src, $pos)) {
+                    foreach ($inlineOpen as $open) {
+                        if (!empty($open['segmented'])) {
+                            $insertAt[$endPos] = true;
+                            break;
+                        }
+                    }
+                }
+                $divaligns[] = $align;
+                continue;
+            }
+            if ($type === 'end' && count($divaligns) > 0) {
+                $align = array_pop($divaligns);
+                if ($align === 'center') {
+                    foreach ($inlineOpen as $openId => $open) {
+                        $inlineOpen[$openId]['segmented'] = true;
+                    }
+                }
+            }
+        }
+        if (empty($insertAt)) {
+            return $src;
+        }
+        $positions = array_keys($insertAt);
+        rsort($positions);
+        foreach ($positions as $pos) {
+            $breaks = '';
+            for ($i = 0; $i < 2; $i++) {
+                $breaks .= $this->wiki->addToken($this->rule, array(), false, "\n");
+            }
+            $src = substr($src, 0, $pos) . $breaks . substr($src, $pos);
+        }
+        return $src;
+    }
+
+    private function _divalignStartHasInlineLead($src, $pos)
+    {
+        $before = substr($src, 0, $pos);
+        if ($before === '' || substr($before, -1) !== "\n") {
+            return false;
+        }
+        $before = substr($before, 0, -1);
+        if ($before === '' || substr($before, -1) === "\n") {
+            return false;
+        }
+        $lineStart = strrpos($before, "\n");
+        $line = substr($before, $lineStart === false ? 0 : $lineStart + 1);
+        $quoted = preg_quote($this->wiki->delim, '/');
+        $literal = preg_replace('/' . $quoted . '\d+' . $quoted . '/', '', $line);
+        return trim($literal) !== '';
+    }
+
+    private function _inlineScopeBlockLeadRule($prefix, $allPrefixMatches, $scopePi)
+    {
+        if ($scopePi <= 0) {
+            return null;
+        }
+        $scopeStart = $allPrefixMatches[0][$scopePi][1];
+        $scanPos = $scopeStart;
+        $insideClosedInline = false;
+        for ($pi = $scopePi - 1; $pi >= 0; $pi--) {
+            $tokStart = $allPrefixMatches[0][$pi][1];
+            $tokEnd = $tokStart + strlen($allPrefixMatches[0][$pi][0]);
+            if ($tokEnd > $scanPos) {
+                continue;
+            }
+            $between = substr($prefix, $tokEnd, $scanPos - $tokEnd);
+            if (trim($between) !== '' && !$insideClosedInline) {
+                return null;
+            }
+            $tok = isset($this->wiki->tokens[(int)$allPrefixMatches[1][$pi][0]])
+                ? $this->wiki->tokens[(int)$allPrefixMatches[1][$pi][0]] : null;
+            if ($tok === null) {
+                return null;
+            }
+            if ($tok[0] === 'Raw' && isset($tok[1]['text']) && $tok[1]['text'] === '') {
+                $insideClosedInline = true;
+                $scanPos = $tokStart;
+                continue;
+            }
+            if ($tok[0] === 'Newline' && trim($between) === '') {
+                $scanPos = $tokStart;
+                continue;
+            }
+            if (!isset($tok[1]['type'])) {
+                return null;
+            }
+            $type = $tok[1]['type'];
+            if (in_array($tok[0], array('Div', 'Divalign', 'Center', 'Horiz', 'Table', 'Tableadv'), true)) {
+                if ($type === 'end'
+                    && (preg_match('/\A\n[ \t]*\z/', $between) === 1
+                        || ($insideClosedInline && preg_match('/\A(?:\n[ \t]*)?\z/', $between) === 1))) {
+                    return $tok[0];
+                }
+                return null;
+            }
+            if (in_array($tok[0], array('Span', 'Size', 'Anchor'), true)) {
+                if ($type === 'end' && preg_match('/\A(?:\n[ \t]*)?\z/', $between) === 1) {
+                    $insideClosedInline = true;
+                    $scanPos = $tokStart;
+                    continue;
+                }
+                if ($type === 'start' && $insideClosedInline) {
+                    $insideClosedInline = false;
+                    $scanPos = $tokStart;
+                    continue;
+                }
+                return null;
+            }
+            return null;
+        }
+        return null;
     }
 
     private function _blockSkipList()
@@ -712,8 +884,26 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
             return false;
         }
         $next = $this->_nextBlockToken($src, $off + $len);
-        return $next !== null && strtolower($next[0]) === 'div'
-            && isset($next[1]['type']) && $next[1]['type'] === 'start';
+        return $next !== null && isset($next[1]['type']) && $next[1]['type'] === 'start'
+            && in_array(strtolower($next[0]), array(
+                'blockquote', 'center', 'collapsible', 'deflist', 'div', 'divalign',
+                'gallery', 'heading', 'list', 'note', 'table', 'tableadv'
+            ), true);
+    }
+
+    private function _afterBlockBeforeExplicitItemEnd($src, $off, $len)
+    {
+        $prev = $this->_previousToken($src, $off);
+        if ($prev === null || !isset($prev[1]['type']) || $prev[1]['type'] !== 'end'
+            || !in_array(strtolower($prev[0]), array(
+                'blockquote', 'center', 'collapsible', 'deflist', 'div', 'divalign',
+                'gallery', 'heading', 'list', 'note', 'table', 'tableadv'
+            ), true)) {
+            return false;
+        }
+        $next = $this->_nextBlockToken($src, $off + $len);
+        return $next !== null && strtolower($next[0]) === 'list'
+            && isset($next[1]['type']) && $next[1]['type'] === 'explicit_item_end';
     }
 
     private function _betweenBlocks($src, $off, $len)
@@ -728,6 +918,15 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
         // (S_local 2014-survey-results; diag d32; holdout h094). The
         // preceding side is any block-level token (div end in h078,
         // table end in h045).
+        $nextFull = $this->_nextBlockToken($src, $off + $len);
+        $prevFull = $this->_previousToken($src, $off);
+        if ($nextFull !== null && $prevFull !== null
+            && strtolower($nextFull[0]) === 'divalign'
+            && isset($nextFull[1]['type']) && $nextFull[1]['type'] === 'start'
+            && strtolower($prevFull[0]) === 'list'
+            && isset($prevFull[1]['type']) && $prevFull[1]['type'] === 'explicit_list_end') {
+            return true;
+        }
         $next = $this->_tokenRuleAt($src, $off + $len, true);
         if ($next !== 'tableadv') {
             return false;
