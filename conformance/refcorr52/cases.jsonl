@@ -1,0 +1,27 @@
+{"id": "qd01-exact-unquoted-body", "source": "PROBE-quote-div-matrix-qd01-exact-unquoted-body\n\n> [[div]]\nx\n> [[/div]]"}
+{"id": "qd02-all-quoted-body", "source": "PROBE-quote-div-matrix-qd02-all-quoted-body\n\n> [[div]]\n> x\n> [[/div]]"}
+{"id": "qd03-quoted-open-unquoted-close", "source": "PROBE-quote-div-matrix-qd03-quoted-open-unquoted-close\n\n> [[div]]\nx\n[[/div]]"}
+{"id": "qd04-unquoted-open-quoted-close", "source": "PROBE-quote-div-matrix-qd04-unquoted-open-quoted-close\n\n[[div]]\nx\n> [[/div]]"}
+{"id": "qd05-unquoted-control", "source": "PROBE-quote-div-matrix-qd05-unquoted-control\n\n[[div]]\nx\n[[/div]]"}
+{"id": "qd06-nested-exact", "source": "PROBE-quote-div-matrix-qd06-nested-exact\n\n> > [[div]]\n> > x\n> > [[/div]]"}
+{"id": "qd07-mixed-depth-body", "source": "PROBE-quote-div-matrix-qd07-mixed-depth-body\n\n> [[div]]\n> > x\n> [[/div]]"}
+{"id": "qd08-empty-contiguous-quote", "source": "PROBE-quote-div-matrix-qd08-empty-contiguous-quote\n\n> [[div]]\n> [[/div]]"}
+{"id": "qd09-attributed-exact", "source": "PROBE-quote-div-matrix-qd09-attributed-exact\n\n> [[div class=\"q\"]]\nx\n> [[/div]]"}
+{"id": "qd10-quoted-body-unquoted-close", "source": "PROBE-quote-div-matrix-qd10-quoted-body-unquoted-close\n\n> [[div]]\n> x\n[[/div]]"}
+{"id": "cd01-quoted-open-break-quoted-close", "source": "PROBE-center-close-matrix-cd01-quoted-open-break-quoted-close\n\n> [[=]]\n> first\n> last\n\n> [[/=]]\n[[div class=\"blockquote\"]]\nnext\n[[/div]]"}
+{"id": "cd02-all-quoted-control", "source": "PROBE-center-close-matrix-cd02-all-quoted-control\n\n> [[=]]\n> first\n> [[/=]]\nafter"}
+{"id": "cd03-unquoted-open-quoted-close", "source": "PROBE-center-close-matrix-cd03-unquoted-open-quoted-close\n\n[[=]]\nfirst\n> [[/=]]\nafter"}
+{"id": "cd05-left-align-crossing", "source": "PROBE-center-close-matrix-cd05-left-align-crossing\n\n> [[<]]\n> first\n\n> [[/<]]\nafter"}
+{"id": "cd06-unquoted-center-control", "source": "PROBE-center-close-matrix-cd06-unquoted-center-control\n\n[[=]]\nfirst\n[[/=]]"}
+{"id": "cd07-crossing-no-following-div", "source": "PROBE-center-close-matrix-cd07-crossing-no-following-div\n\n> [[=]]\n> first\n\n> [[/=]]\nafter"}
+{"id": "cd08-nested-quote-crossing", "source": "PROBE-center-close-matrix-cd08-nested-quote-crossing\n\n> > [[=]]\n> > first\n\n> > [[/=]]\nafter"}
+{"id": "vb01-exact-space-multiline", "source": "PROBE-valid-div-boundary-matrix-vb01-exact-space-multiline\n\n[[/div]] [[div]]\nx\n[[/div]]"}
+{"id": "vb02-exact-nospace-multiline", "source": "PROBE-valid-div-boundary-matrix-vb02-exact-nospace-multiline\n\n[[/div]][[div]]\nx\n[[/div]]"}
+{"id": "vb03-exact-twospace-multiline", "source": "PROBE-valid-div-boundary-matrix-vb03-exact-twospace-multiline\n\n[[/div]]  [[div]]\nx\n[[/div]]"}
+{"id": "vb04-attributed-space-multiline", "source": "PROBE-valid-div-boundary-matrix-vb04-attributed-space-multiline\n\n[[/div]] [[div class=\"x\"]]\nx\n[[/div]]"}
+{"id": "vb05-newline-separator-multiline", "source": "PROBE-valid-div-boundary-matrix-vb05-newline-separator-multiline\n\n[[/div]]\n[[div]]\nx\n[[/div]]"}
+{"id": "vb06-normal-previous-text-control", "source": "PROBE-valid-div-boundary-matrix-vb06-normal-previous-text-control\n\nz\n[[div]]\nx\n[[/div]]"}
+{"id": "vb07-inline-leading-text-control", "source": "PROBE-valid-div-boundary-matrix-vb07-inline-leading-text-control\n\nz [[div]]\nx\n[[/div]]"}
+{"id": "vb08-stray-valid-trailing-text", "source": "PROBE-valid-div-boundary-matrix-vb08-stray-valid-trailing-text\n\n[[/div]] [[div]]\nx\n[[/div]]\nafter"}
+{"id": "vb09-valid-open-alone-control", "source": "PROBE-valid-div-boundary-matrix-vb09-valid-open-alone-control\n\n[[div]]\nx\n[[/div]]"}
+{"id": "vb10-stray-close-only-control", "source": "PROBE-valid-div-boundary-matrix-vb10-stray-close-only-control\n\n[[/div]]\nx"}

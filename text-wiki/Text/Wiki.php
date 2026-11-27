@@ -1344,6 +1344,81 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
     }
 
     /**
+     * Whether a blockquote participates in a container crossing rather than
+     * nesting cleanly. Inline-scope crossings have their own narrower test
+     * above; this scan is for the blockquote/div/alignment class of malformed
+     * token assembly, where the first mismatched close is exactly the input
+     * live's purifyHtml repair receives.
+     */
+    function outputHasQuoteStructuralCrossing($html)
+    {
+        $scan = preg_replace('/<(script|style)\b[^>]*>.*?<\/\1\s*>/is', '', $html);
+        if (! preg_match_all('/<(\/?)([a-z][a-z0-9]*)\b([^>]*)>/i', $scan, $matches, PREG_SET_ORDER)) {
+            return false;
+        }
+        $void = array_flip(array(
+            'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link',
+            'meta', 'param', 'source', 'track', 'wbr'
+        ));
+        $stack = array();
+        foreach ($matches as $m) {
+            $closing = $m[1] === '/';
+            $tag = strtolower($m[2]);
+            if (isset($void[$tag]) || preg_match('/\/\s*$/', $m[3])) {
+                continue;
+            }
+            if (! $closing) {
+                $stack[] = $tag;
+                continue;
+            }
+            $pos = -1;
+            for ($i = count($stack) - 1; $i >= 0; $i--) {
+                if ($stack[$i] === $tag) {
+                    $pos = $i;
+                    break;
+                }
+            }
+            if ($pos < 0) {
+                continue;
+            }
+            if ($pos !== count($stack) - 1) {
+                $crossed = array_slice($stack, $pos + 1);
+                if ($tag === 'blockquote' || in_array('blockquote', $crossed, true)) {
+                    return true;
+                }
+            }
+            array_splice($stack, $pos);
+        }
+        return false;
+    }
+
+    /**
+     * Whether a blockquote shell has no rendered content. Quote parsing emits
+     * the shell before later block rules can vanish their empty contents;
+     * live's purifyHtml pass removes the resulting empty shell.
+     */
+    function outputHasEmptyBlockquote($html)
+    {
+        return preg_match('/<blockquote(?:\s[^>]*)?>\s*<\/blockquote>/i', $html) === 1;
+    }
+
+    /**
+     * Whether the output assembled so far ends in bare non-whitespace text
+     * rather than at an element boundary. Used only when a Div-rule start is
+     * about to render and the trailing source characters are literal inline
+     * text: generated module/error text is harness output, not the authored
+     * inline boundary whose byte live's purifyHtml pass owns. Synthetic
+     * offline-include error blocks are excluded as Div targets for the same
+     * reason.
+     */
+    function outputEndsWithBareInlineText($html)
+    {
+        $tagEnd = strrpos($html, '>');
+        $text = substr($html, $tagEnd === false ? 0 : $tagEnd + 1);
+        return trim($text) !== '';
+    }
+
+    /**
     *
     * Renders tokens back into the source text, based on the requested format.
     *
@@ -1384,6 +1459,8 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         // with no literal U+FFFD take the original loop unchanged.
         $sawCollapsible = false;
         $sawTableadvFoster = false;
+        $sawBareInlineBeforeDiv = false;
+        $trailingLiteral = '';
         if (strpos($this->source, "\xEF\xBF\xBD") !== false) {
             $output .= $this->renderLiteralUfffdRecovery($format);
         } else {
@@ -1437,7 +1514,16 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
                         && $opts['type'] === 'start' && !empty($opts['foster_content'])) {
                         $sawTableadvFoster = true;
                     }
-                    $output .= $this->renderObj[$rule]->token($opts);
+                    if ($rule === 'Div' && isset($opts['type']) && $opts['type'] === 'start'
+                        && empty($opts['vanished'])
+                        && (!isset($opts['args']['class']) || $opts['args']['class'] !== 'error-block')
+                        && trim($trailingLiteral) !== ''
+                        && $this->outputEndsWithBareInlineText($output)) {
+                        $sawBareInlineBeforeDiv = true;
+                    }
+                    $renderedToken = $this->renderObj[$rule]->token($opts);
+                    $output .= $renderedToken;
+                    $trailingLiteral = '';
                     $in_delim = false;
 
                 } else {
@@ -1459,6 +1545,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
                 } else {
                     // no, add to the output as-is
                     $output .= $char;
+                    $trailingLiteral .= $char;
                 }
             }
         }
@@ -1490,15 +1577,21 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         // whitespace consequences in Tighten, but some render-time surfaces
         // still need the real repair pass: whitespace inside a TOC title
         // (generated from an attribute after Tighten has run), any span
-        // scope left open across a paragraph boundary, and a collapsible
-        // caught in a centered or list-item boundary. Apply the existing
-        // tidy-backed purifier only when one of those unrepaired shapes is
-        // present, so other well-formed documents keep their established frame.
+        // scope left open across a paragraph boundary, a collapsible
+        // caught in a centered or list-item boundary, a blockquote caught in
+        // a div/alignment crossing, an empty quote shell left after vanished
+        // content, or bare inline text directly joining a Div-rule block.
+        // Apply the existing tidy-backed purifier only when one of those
+        // unrepaired shapes is present, so other well-formed documents keep
+        // their established frame.
         if (($sawCollapsible && $this->outputHasCollapsibleStructuralCrossing($output))
             || $sawTableadvFoster
             || $this->outputHasUnpurifiedTocTitleWhitespace($output)
             || $this->outputHasSpanParagraphCrossing($output)
-            || $this->outputHasInlineCrossing($output)) {
+            || $this->outputHasInlineCrossing($output)
+            || $this->outputHasQuoteStructuralCrossing($output)
+            || $sawBareInlineBeforeDiv
+            || $this->outputHasEmptyBlockquote($output)) {
             $output = $this->purifyRecoveredHtml($output);
         }
 
