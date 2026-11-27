@@ -1724,7 +1724,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
             function ($m) {
                 return $m[1] . preg_replace('/<p>\s*<\/p>\s*/', '', $m[2]) . $m[3];
             }, $output);
-        $output = preg_replace('/<\/div>(?=[^<\s])/', "</div>\n", $output);
+        $output = preg_replace('/<\/div>(?!þmodule)(?=[^<\s])/', "</div>\n", $output);
 
 		// this is a nasty hack... should be put somewhere else, e.g. Postfilter?
 		
