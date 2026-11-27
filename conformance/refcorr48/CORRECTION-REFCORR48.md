@@ -1,0 +1,21 @@
+# CORRECTION-REFCORR48 — centered-block segments inside a loose inline scope
+
+REFCORR48 is the conformance record for the hunt-cn2 paragraph-break-framing sweep. It uses byte-verified sandbox evidence on `sandbox-for-codex`; probe pages are immutable evidence and remain in place. No production page was accessed. The lane used 2 probe-page cycles: the grouped reduction page `muse-probe-hunt-cn2-framing-matrix` and the mandated `credit:style` source-projection attempt. The grouped page is valid, stable, and byte-verified. The credit projection is stable but is not byte-valid because Wikidot normalizes whitespace-only lines in the large HTML/CSS code blocks to empty lines; it is evidence about capture provenance only, not a byte-exact parser pin.
+
+## Settled mechanism: centered blocks reset loose-scope blank-line ownership
+
+The grouped probe extends REFCORR45 rather than replacing it. When a Span or Size scope remains open across a complete centered `[[=]]...[[/=]]` alignment block, live treats the block boundary as a new paragraph-layout segment. The first blank-line separation after that centered block can again own up to two break atoms in the bare inline fragment, even when an earlier blank line before the centered block already consumed the ordinary REFCORR45 ownership. The measured repeat shape is `b-one`, blank, `b-two`, centered block, `b-three`, blank, `b-four`: live serves both the first bare fragment and the post-center `b-three` fragment with `<br /><br />`. A plain document-root control still produces ordinary paragraphs and no bare break pair, so this is not a property of every inline scope.
+
+A complete centered block inside the loose scope also carries a leading empty inline fragment. When the scope has ordinary inline content before the centered block, or when a blockquote or another separator prevents the scope opener itself from supplying that fragment, live opens the centered div with `<span ...><br /><br /></span>` before the first centered paragraph. This is measured in the unquoted `c-one` shape and in the quoted centered shape. It is not doubled when the opener directly abuts the centered block and repair already supplies the empty fragment, nor when an earlier REFCORR45 blank-line ownership has already supplied the pre-boundary breaks. The rule is center-specific: the frozen h101 holdout control, a red Span crossing a left-alignment `[[<]]` block, already matched live with exactly two breaks and regressed if the same ownership was inserted for a non-center alignment.
+
+The first blank line after the centered block starts the post-block segment whether or not ordinary text precedes it. If the blank line is immediate, it reconstructs paragraph layout without a visible extra break fragment and consumes that segment; this is the `blankafter` control. If ordinary inline text intervenes first, the blank line produces the visible `<br /><br />` fragment. Later blank lines in the same post-block segment do not repeat the fragment.
+
+`Newline.php` implements both halves before the Paragraph rule consumes blank-line separators. It recognizes the parser-generated blank run at the leading edge of a nested centered alignment block inside a loose Span/Size scope, subject to the direct-opener and prior-ownership exclusions. Independently, it tracks completed centered alignment blocks inside the scope and resets blank-line ownership once per post-center segment. The implementation does not apply the leading-edge insertion to left, right, or justify alignment blocks.
+
+## Corpus witnesses and controls
+
+The correction closes four CN census survivors under the lane's canonical environment masks: `ambrose-electronic-music`, `scp-cn-006`, `snake-soushi`, and `wanderers:distruction`. The grouped probe's plain-scope control, direct-center controls, quoted-center shape, leading-newline control, generic div-led control, and centered-block internal Size control all match live byte-for-byte in the aggregate pin.
+
+## Pins
+
+`verify_refcorr48.py` checks the grouped live-probe byte pin and live-canonical fidelity pin. At the final local run it passed 1/1 byte and 1/1 live-canonical. The frozen h101 left-alignment holdout remains byte-equal to live and acts as the non-center alignment control.
