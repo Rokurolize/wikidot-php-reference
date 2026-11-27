@@ -25,6 +25,6 @@ Rate-widget HTML and localization of generated footnote headings are environment
 
 ## Pins
 
-`cases.jsonl` contains four immutable grouped probe matrices covering 29 reduced shape cells: explicit-list exact/boundary forms, explicit-list lead-context bisects, loose-scope trigger bisects, and reopened-center inline-lead controls. The grouped matrices are pinned as whole render outputs because several behaviors are context-sensitive; live fidelity is checked cellwise so the horizontal-rule probe separator does not become a false parser signal.
+`cases.jsonl` contains four immutable grouped probe matrices covering 29 reduced shape cells: explicit-list boundary forms, explicit-list lead-context bisects, loose-scope trigger bisects, and reopened-center inline-lead controls. The two earlier exact-projection probe pages remain lane evidence rather than pins: one cell is rate-widget environment chrome, and one center continuation depends on an alignment opener outside the projected source slice, so they are not independent reduced parser expectations. The grouped matrices are pinned as whole render outputs because several behaviors are context-sensitive; live fidelity is checked cellwise so the horizontal-rule probe separator does not become a false parser signal.
 
 `captures.json` records the immutable sandbox captures. `verify_refcorr55.py` passes 4/4 expected-render byte pins and 4/4 grouped-matrix live-canonical fidelity checks (29/29 grouped cells). Before/after implementation copies are stored beside the verifier.
