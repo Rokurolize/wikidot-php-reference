@@ -95,6 +95,7 @@ class Text_Wiki_Parse_Heading extends Text_Wiki_Parse {
         $level = strlen($matches[1]);
         $hasToc = ($matches[2] === '');
         $prefix = htmlspecialchars($this->getConf('id_prefix'));
+        $text = rtrim($matches[3], " \t");
 
         if ($hasToc) {
             $id = $prefix . $this->wiki->vars['headline_id'];
@@ -110,7 +111,7 @@ class Text_Wiki_Parse_Heading extends Text_Wiki_Parse {
             array(
                 'type' => $startType,
                 'level' => $level,
-                'text' => $matches[3],
+                'text' => $text,
                 'id' => $id
             )
         );
@@ -123,6 +124,6 @@ class Text_Wiki_Parse_Heading extends Text_Wiki_Parse {
             )
         );
 
-        return "\n".$start . $matches[3] . $end . "\n\n";
+        return "\n".$start . $text . $end . "\n\n";
     }
 }

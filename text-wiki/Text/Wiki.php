@@ -944,12 +944,6 @@ class Text_Wiki {
             $this->loadRenderObj($format, $rule);
         }
 
-        $orig = "\xEE\x80\x80"; // U+E000, stands in for an original delimiter
-        $fake = "\xEE\x80\x81"; // U+E001, stands in for a literal U+FFFD
-        $ufffd = "\xEF\xBF\xBD";
-        $src = str_replace($this->delim, $orig, $this->source);
-        $src = str_replace($ufffd, $fake, $src);
-
         $type = HTML_SPECIALCHARS;
         $quotes = ENT_COMPAT | ENT_SUBSTITUTE;
         if (is_object($this->formatObj[$format])) {
@@ -958,85 +952,153 @@ class Text_Wiki {
             $charset = $this->formatObj[$format]->getConf('charset', 'UTF-8');
         }
         if ($type === HTML_ENTITIES) {
-            $src = @htmlentities($src, $quotes, $charset);
-        } elseif ($type === HTML_SPECIALCHARS) {
-            $src = @htmlspecialchars($src, $quotes);
+            $src = @htmlentities($this->source, $quotes, $charset);
+        } else {
+            $src = @htmlspecialchars($this->source, $quotes);
         }
-        // ENT_SUBSTITUTE on any other invalid byte yields U+FFFD, which
-        // pre() would also turn back into a delimiter.
-        $src = str_replace($ufffd, $fake, $src);
+        $src = str_replace("\xEF\xBF\xBD", $this->delim, $src);
 
+        // Rebuild the escaped stream while remembering whether every
+        // converted U+FFFD came from an original placeholder delimiter or
+        // from authored text. htmlspecialchars() substitutes the invalid
+        // 0xFF bytes of real placeholders as U+FFFD, so position arithmetic
+        // after escaping cannot recover the distinction.
         $bytes = '';
         $origin = '';
-        $len = strlen($src);
-        $origLen = strlen($orig);
-        $fakeLen = strlen($fake);
-        for ($i = 0; $i < $len; ) {
-            if (substr($src, $i, $origLen) === $orig) {
-                $bytes .= $this->delim;
-                $origin .= 'O';
-                $i += $origLen;
-            } elseif (substr($src, $i, $fakeLen) === $fake) {
-                $bytes .= $this->delim;
-                $origin .= 'F';
-                $i += $fakeLen;
-            } else {
-                $bytes .= $src[$i];
-                $origin .= 'T';
-                $i++;
+        $raw = $this->source;
+        $appendChunk = function ($chunk) use (&$bytes, &$origin, $type, $quotes, $charset) {
+            $off = 0;
+            $len = strlen($chunk);
+            while (($at = strpos($chunk, "\xEF\xBF\xBD", $off)) !== false) {
+                $part = substr($chunk, $off, $at - $off);
+                $esc = $type === HTML_ENTITIES
+                    ? @htmlentities($part, $quotes, $charset)
+                    : @htmlspecialchars($part, $quotes);
+                $bytes .= $esc;
+                $origin .= str_repeat('T', strlen($esc));
+                $bytes .= "\xFF";
+                $origin .= 'L';
+                $off = $at + 3;
             }
+            $part = substr($chunk, $off);
+            $esc = $type === HTML_ENTITIES
+                ? @htmlentities($part, $quotes, $charset)
+                : @htmlspecialchars($part, $quotes);
+            $bytes .= $esc;
+            $origin .= str_repeat('T', strlen($esc));
+        };
+        $pos = 0;
+        while (preg_match('/\xFF([0-9]+)\xFF/', $raw, $pm, PREG_OFFSET_CAPTURE, $pos)) {
+            $at = $pm[0][1];
+            if ($at > $pos) {
+                $appendChunk(substr($raw, $pos, $at - $pos));
+            }
+            $id = $pm[1][0];
+            $bytes .= "\xFF" . $id . "\xFF";
+            $origin .= 'O' . str_repeat('D', strlen($id)) . 'O';
+            $pos = $at + strlen($pm[0][0]);
+        }
+        if ($pos < strlen($raw)) {
+            $appendChunk(substr($raw, $pos));
         }
 
-        $tokens = $this->tokens;
-        $first = $tokens ? min(array_keys($tokens)) : 0;
-        $n = strlen($bytes);
+        $tokenIds = array_keys($this->tokens);
+        $firstTokenId = $tokenIds ? min($tokenIds) : 1;
+        $freshIndex = function ($id) use ($firstTokenId) {
+            return $id - $firstTokenId + 1;
+        };
+
         $html = '';
+        $n = strlen($bytes);
         $i = 0;
         while ($i < $n) {
-            if ($bytes[$i] !== $this->delim) {
+            if ($bytes[$i] !== "\xFF") {
                 $j = $i;
-                while ($j < $n && $bytes[$j] !== $this->delim) {
+                while ($j < $n && $bytes[$j] !== "\xFF") {
                     $j++;
                 }
                 $html .= substr($bytes, $i, $j - $i);
                 $i = $j;
                 continue;
             }
-            $tok = $this->matchOriginalToken($bytes, $origin, $i, $tokens);
-            if ($tok !== null) {
-                $html .= $this->renderTokenId($tok['id']);
-                $i = $tok['next'];
-                continue;
-            }
-            $j = $i;
-            $fakeCount = 0;
-            while ($j < $n && $bytes[$j] === $this->delim && $origin[$j] === 'F') {
-                $fakeCount++;
-                $j++;
-            }
-            $tok = ($j < $n) ? $this->matchOriginalToken($bytes, $origin, $j, $tokens) : null;
-            if ($tok !== null && $fakeCount === 1) {
-                $html .= (string)($tok['id'] - $first + 1);
-                $after = $tok['next'];
-                while ($after < $n) {
-                    $next = $this->matchOriginalToken($bytes, $origin, $after, $tokens);
-                    if ($next === null) {
-                        break;
-                    }
-                    $html .= (string)($next['id'] - $first + 1);
-                    $after = $next['next'];
+
+            if ($origin[$i] === 'O') {
+                $match = $this->matchOriginalToken($bytes, $origin, $i, $this->tokens);
+                if ($match !== null) {
+                    $html .= $this->renderTokenId($match['id']);
+                    $i = $match['next'];
+                } else {
+                    $i++;
                 }
-                $i = $after;
                 continue;
             }
-            if ($fakeCount > 0) {
-                $i = $j;
+
+            // A literal followed by digits leading into a real placeholder
+            // starts the fossil pair scan: the authored digits become the
+            // first corrupted key, and malformed later keys remain visible
+            // instead of identifying tokens. This is the sentinel-cascade
+            // shape; an immediately adjacent placeholder follows the narrower
+            // swallowed-index path below.
+            if ($i + 1 < $n && ctype_digit($bytes[$i + 1])) {
+                $digitEnd = $i + 1;
+                while ($digitEnd < $n && ctype_digit($bytes[$digitEnd])) {
+                    $digitEnd++;
+                }
+                if ($digitEnd < $n && $bytes[$digitEnd] === "\xFF" && $origin[$digitEnd] === 'O') {
+                    while ($i < $n) {
+                        if ($bytes[$i] !== "\xFF") {
+                            $j = $i;
+                            while ($j < $n && $bytes[$j] !== "\xFF") {
+                                $j++;
+                            }
+                            $html .= substr($bytes, $i, $j - $i);
+                            $i = $j;
+                            continue;
+                        }
+                        $close = strpos($bytes, "\xFF", $i + 1);
+                        if ($close === false) {
+                            $html .= substr($bytes, $i + 1);
+                            $i = $n;
+                            break;
+                        }
+                        $key = substr($bytes, $i + 1, $close - $i - 1);
+                        if ($key !== '' && ctype_digit($key) && isset($this->tokens[(int)$key])) {
+                            $html .= $this->renderTokenId((int)$key);
+                        } else {
+                            $html .= $key;
+                        }
+                        $i = $close + 1;
+                    }
+                    continue;
+                }
+            }
+
+            // A literal delimiter is dropped. When it sits immediately before
+            // a real placeholder, live's corrupted scan consumes that
+            // placeholder and exposes its document-local index; adjacent real
+            // placeholders are consumed into the same run. Two adjacent
+            // literal delimiters break the run before it starts.
+            if ($i + 1 < $n && $bytes[$i + 1] === "\xFF" && $origin[$i + 1] === 'L') {
+                while ($i < $n && $bytes[$i] === "\xFF" && $origin[$i] === 'L') {
+                    $i++;
+                }
                 continue;
             }
             $i++;
+            if ($i < $n && $bytes[$i] === "\xFF" && $origin[$i] === 'O') {
+                while ($i < $n && $bytes[$i] === "\xFF" && $origin[$i] === 'O') {
+                    $match = $this->matchOriginalToken($bytes, $origin, $i, $this->tokens);
+                    if ($match === null) {
+                        break;
+                    }
+                    $html .= (string)$freshIndex($match['id']);
+                    $i = $match['next'];
+                }
+            }
         }
+        $src = $bytes;
 
-        $this->source = $bytes;
+        $this->source = $src;
         return $this->purifyRecoveredHtml($html);
     }
 
@@ -1658,6 +1720,11 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         $embedNoMatch = '<div class="error-block">Sorry, no match for the embedded content.</div>';
         $output = str_replace('<p>' . $embedNoMatch . '</p>', $embedNoMatch, $output);
         $output = preg_replace('/<dl>\s*<\/dl>\s*/', '', $output);
+        $output = preg_replace_callback('/(<div class="yui-content">)(.*?)(<\/div><\/div><script)/s',
+            function ($m) {
+                return $m[1] . preg_replace('/<p>\s*<\/p>\s*/', '', $m[2]) . $m[3];
+            }, $output);
+        $output = preg_replace('/<\/div>(?!þmodule)(?=[^<\s])/', "</div>\n", $output);
 
 		// this is a nasty hack... should be put somewhere else, e.g. Postfilter?
 		

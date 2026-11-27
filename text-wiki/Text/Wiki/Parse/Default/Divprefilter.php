@@ -62,7 +62,6 @@ class Text_Wiki_Parse_Divprefilter extends Text_Wiki_Parse {
     {
         parent::parse();
         $sentinel = "\xEF\xBF\xBE\xEF\xBF\xBF";
-        $this->wiki->source = str_replace($sentinel, ' ', $this->wiki->source);
         foreach ($this->wiki->tokens as $id => $token) {
             if (!isset($token[1]) || !is_array($token[1])) {
                 continue;

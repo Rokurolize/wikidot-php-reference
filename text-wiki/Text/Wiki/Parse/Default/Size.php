@@ -157,6 +157,9 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
 
         $split = null;
         $seenVisible = false;
+        $emptyRawAfterVisible = false;
+        $blankRunStart = null;
+        $lastVisibleLineEnd = null;
         $lineStart = 0;
         $contentLen = strlen($content);
         $emptyRawLine = '/^' . preg_quote($this->wiki->delim, '/')
@@ -168,22 +171,63 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
             }
             $line = substr($content, $lineStart, $lineEnd - $lineStart);
             $isEmptyRaw = false;
-            if (preg_match($emptyRawLine, $line, $rawMatch)
+            if ((preg_match($emptyRawLine, $line, $rawMatch)
                 && isset($this->wiki->tokens[(int)$rawMatch[1]])
                 && $this->wiki->tokens[(int)$rawMatch[1]][0] === 'Raw'
-                && $this->wiki->tokens[(int)$rawMatch[1]][1]['text'] === '') {
+                && $this->wiki->tokens[(int)$rawMatch[1]][1]['text'] === '')
+                || $line === "\xEF\xBF\xBE\xEF\xBF\xBF") {
                 $isEmptyRaw = true;
             }
             if ($seenVisible && $isEmptyRaw) {
                 $nextStart = $lineEnd + 1;
-                if ($nextStart < $contentLen
-                    && substr($content, $nextStart, 2) === '= ') {
+                $nextLine = '';
+                while ($nextStart < $contentLen) {
+                    $nextEnd = strpos($content, "\n", $nextStart);
+                    if ($nextEnd === false) {
+                        $nextEnd = $contentLen;
+                    }
+                    $nextLine = substr($content, $nextStart, $nextEnd - $nextStart);
+                    if (trim($nextLine) !== '') {
+                        break;
+                    }
+                    $nextStart = $nextEnd + 1;
+                }
+                $blockAfter = $nextLine !== '' && substr($nextLine, 0, 2) === '= ';
+                if (!$blockAfter && preg_match('/\A' . preg_quote($this->wiki->delim, '/')
+                    . '(\d+)' . preg_quote($this->wiki->delim, '/') . '/', $nextLine, $blockMatch)) {
+                    $blockToken = isset($this->wiki->tokens[(int)$blockMatch[1]])
+                        ? $this->wiki->tokens[(int)$blockMatch[1]] : null;
+                    $blockAfter = $blockToken !== null && ($blockToken[0] === 'Horiz'
+                        || ($blockToken[0] === 'Blockquote' && isset($blockToken[1]['type'])
+                            && $blockToken[1]['type'] === 'start'));
+                }
+                if ($blockAfter) {
                     $split = $lineStart;
+                    break;
+                }
+                $emptyRawAfterVisible = true;
+            }
+            if (!$isEmptyRaw && $emptyRawAfterVisible) {
+                $lineIsBlock = substr($line, 0, 2) === '= ';
+                if (!$lineIsBlock && preg_match('/\A' . preg_quote($this->wiki->delim, '/')
+                    . '(\d+)' . preg_quote($this->wiki->delim, '/') . '/', $line, $lineBlockMatch)) {
+                    $lineBlockToken = isset($this->wiki->tokens[(int)$lineBlockMatch[1]])
+                        ? $this->wiki->tokens[(int)$lineBlockMatch[1]] : null;
+                    $lineIsBlock = $lineBlockToken !== null && ($lineBlockToken[0] === 'Horiz'
+                        || ($lineBlockToken[0] === 'Blockquote' && isset($lineBlockToken[1]['type'])
+                            && $lineBlockToken[1]['type'] === 'start'));
+                }
+                if ($lineIsBlock) {
+                    $split = $lastVisibleLineEnd !== null ? $lastVisibleLineEnd : $lineStart;
                     break;
                 }
             }
             if (!$isEmptyRaw && trim($line) !== '') {
                 $seenVisible = true;
+                $blankRunStart = null;
+                $lastVisibleLineEnd = $lineEnd;
+            } elseif (!$isEmptyRaw && $blankRunStart === null) {
+                $blankRunStart = $lineStart;
             }
             $lineStart = $lineEnd + 1;
         }
@@ -238,6 +282,7 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
             $oldSource = $this->wiki->source;
             $this->wiki->source = $this->_scanSize($oldSource);
         } while ($oldSource != $this->wiki->source);
+        $this->wiki->source = str_replace("\xEF\xBF\xBE\xEF\xBF\xBF", ' ', $this->wiki->source);
     }
 
     /**

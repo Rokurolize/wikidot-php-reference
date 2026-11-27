@@ -167,13 +167,9 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                     $text = (($run - 2) === 1 ? '@' : '') . $trimmed;
                     // REFCORR6: exact consumed source span of the scanner.
                     $out .= $this->wiki->addToken($this->rule, array('text' => $text), false, substr($src, $i, $k - $i));
+                    $out .= "\xEF\xBF\xBE\xEF\xBF\xBF";
                 }
                 if ($closeRun > 2) {
-                    // The consumed cross-line newline surfaces as one space
-                    // before the literal extra @ (xline-close3/3b/4 and
-                    // xline-close3-nospace: the space is present even with no
-                    // source space after the closer run).
-                    $out .= "\xEF\xBF\xBE\xEF\xBF\xBF";
                     $out .= str_repeat('@', $closeRun - 2);
                 }
                 $i = $k;
