@@ -1,0 +1,20 @@
+{"id": "collapsible-s1", "source": "shape S1 plain-empty-control\n[[collapsible show=\"+S1\" hide=\"-S1\"]][[/collapsible]]"}
+{"id": "collapsible-s2", "source": "shape S2 size-empty-root\n[[size smaller]][[collapsible show=\"+S2\" hide=\"-S2\"]][[/collapsible]][[/size]]"}
+{"id": "collapsible-s3", "source": "shape S3 size-empty-advanced-cell\n[[table]]\n[[row]]\n[[hcell style=\"border: 1px solid silver\"]]\n[[size smaller]][[collapsible show=\"+S3\" hide=\"-S3\"]][[/collapsible]][[/size]]\n[[/hcell]]\n[[/row]]\n[[/table]]"}
+{"id": "collapsible-s5", "source": "shape S5 size-closer-at-opener-empty-body\n[[size x-large]][[collapsible show=\"+S5\" hide=\" \" hideLocation=\"both\"]][[/size]]\n\n[[/collapsible]]"}
+{"id": "collapsible-s6", "source": "shape S6 size-closer-at-opener-body-both\n[[size x-large]][[collapsible show=\"+S6\" hide=\" \" hideLocation=\"both\"]][[/size]]\n\ntext S6\n\n[[/collapsible]]"}
+{"id": "collapsible-s7", "source": "shape S7 size-closer-at-opener-body-bottom\n[[size x-large]][[collapsible show=\"+S7\" hide=\" \" hideLocation=\"bottom\"]][[/size]]\n\ntext S7\n\n[[/collapsible]]"}
+{"id": "collapsible-s8", "source": "shape S8 size-closer-at-opener-body-top\n[[size x-large]][[collapsible show=\"+S8\" hide=\" \" hideLocation=\"top\"]][[/size]]\n\ntext S8\n\n[[/collapsible]]"}
+{"id": "collapsible-s9", "source": "shape S9 size-closer-at-opener-body-unfolded-both\n[[size x-large]][[collapsible show=\"+S9\" hide=\" \" hideLocation=\"both\" folded=\"no\"]][[/size]]\n\ntext S9\n\n[[/collapsible]]"}
+{"id": "tableadv-t2", "source": "shape T2 zwsp-root\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[/row]]\n​[[row]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "tableadv-t3", "source": "shape T3 zwsp-collapsible\n[[collapsible show=\"+T\"]]\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[/row]]\n​[[row]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[/table]]\n[[/collapsible]]"}
+{"id": "tableadv-t4", "source": "shape T4 rawspace-root\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[/row]]\n\n@@ @@\n\n[[row]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "tableadv-t5", "source": "shape T5 rawspace-collapsible\n[[collapsible show=\"+T\"]]\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[/row]]\n\n@@ @@\n\n[[row]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[/table]]\n[[/collapsible]]"}
+{"id": "tableadv-t6", "source": "shape T6 ordinary-text-root\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[/row]]\nordinary\n[[row]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "tableadv-t9", "source": "shape T9 zwsp-before-first-row-root\n[[table]]\n​[[row]]\n[[cell]]a[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "tableadv-t10", "source": "shape T10 two-zwsp-lines-root\n[[table]]\n[[row]]\n[[cell]]a[[/cell]]\n[[/row]]\n​\n​[[row]]\n[[cell]]b[[/cell]]\n[[/row]]\n[[/table]]"}
+{"id": "anchor-b1", "source": "shape B1 blank-anchor-collapsible\nlead B1\n\n[[# B1]][[collapsible show=\"+B1\"]]\n\nbody B1\n[[/collapsible]]"}
+{"id": "anchor-b3", "source": "shape B3 blank-anchor-space-collapsible\nlead B3\n\n[[# B3]] [[collapsible show=\"+B3\"]]\n\nbody B3\n[[/collapsible]]"}
+{"id": "anchor-b4", "source": "shape B4 blank-anchor-div\nlead B4\n\n[[# B4]][[div]]\nbody B4\n[[/div]]"}
+{"id": "anchor-b7", "source": "shape B7 blank-anchor-newline-collapsible\nlead B7\n\n[[# B7]]\n[[collapsible show=\"+B7\"]]\n\nbody B7\n[[/collapsible]]"}
+{"id": "bare-centered-collapsible", "source": "= [[collapsible]][[/collapsible]]"}

@@ -43,7 +43,7 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
      * 
      */
     
-    public $regex = '/(\xFF\d+\xFF)?(\n)?\[\[collapsible(\s.*?)?\]\](.*?)\[\[\/collapsible\]\] */msi';
+    public $regex = '/(\xFF\d+\xFF)?(\n)?\[\[collapsible(\s.*?)?\]\](.*?)\[\[\/collapsible\]\](\xFF\d+\xFF)? */msi';
 
     /**
      * 
@@ -70,10 +70,12 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
         // Unrelated size spans inside a collapsible body must be left alone
         // (news-03-2017 regression guard).
         $labelSize = null;
+        $bottomLabelSize = null;
         $delim = $this->wiki->delim;
         $q = preg_quote($delim, '/');
         $sid = null;
         $outerStart = '';
+        $removedSuppressedEnd = false;
         if ($matches[1] !== ''
             && preg_match('/^' . $q . '(\d+)' . $q . '$/', $matches[1], $sm)) {
             $candidateSid = (int)$sm[1];
@@ -84,7 +86,28 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
                 $sid = $candidateSid;
             }
         }
-        if ($sid !== null) {
+        $trailingSizeEnd = '';
+        $dropTrailingSizeEnd = false;
+        if ($sid !== null && isset($matches[5]) && $matches[5] !== ''
+            && preg_match('/^' . $q . '(\d+)' . $q . '$/', $matches[5], $tm)) {
+            $trailTok = isset($this->wiki->tokens[(int)$tm[1]])
+                ? $this->wiki->tokens[(int)$tm[1]] : null;
+            if ($trailTok && $trailTok[0] === 'Size' && isset($trailTok[1]['type'])
+                && $trailTok[1]['type'] === 'end') {
+                $trailingSizeEnd = $matches[5];
+            }
+        }
+        if ($sid !== null && trim($content) === '' && $trailingSizeEnd !== '') {
+            $labelSize = $this->wiki->tokens[$sid][1]['size'];
+            $bottomLabelSize = $labelSize;
+            $this->wiki->tokens[$sid][1]['type'] = 'suppressed';
+            if (preg_match('/^' . $q . '(\d+)' . $q . '$/', $trailingSizeEnd, $tm)) {
+                $this->wiki->tokens[(int)$tm[1]][1]['type'] = 'suppressed';
+            }
+            $trailingSizeEnd = '';
+            $dropTrailingSizeEnd = true;
+        }
+        if ($sid !== null && $labelSize === null) {
             $endPos = null;
             $endId = null;
             if (preg_match_all('/' . $q . '(\d+)' . $q . '/', $content, $ms, PREG_OFFSET_CAPTURE)) {
@@ -131,9 +154,21 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
 
             if ($openerOnly || $rescopeBody) {
                 $labelSize = $this->wiki->tokens[$sid][1]['size'];
+                $bottomLabelSize = $endPos === null ? $labelSize : null;
                 $this->wiki->tokens[$sid][1]['type'] = 'suppressed';
                 if ($openerOnly) {
                     $this->wiki->tokens[$endId][1]['type'] = 'suppressed';
+                    $afterEnd = substr($content, $endPos + strlen($delim . $endId . $delim));
+                    $nextVisible = ltrim($afterEnd);
+                    $ordinaryLead = $nextVisible === ''
+                        || preg_match('/\A[|=>+#*:\-]/', $nextVisible) !== 1;
+                    $blankSeparated = preg_match('/\A[ \t]*\n[ \t]*\n/', $afterEnd) === 1;
+                    if ($ordinaryLead && ($blankSeparated || $afterEnd === '')) {
+                        $endPlaceholder = $delim . $endId . $delim;
+                        $content = substr($content, 0, $endPos)
+                            . substr($content, $endPos + strlen($endPlaceholder));
+                        $removedSuppressedEnd = true;
+                    }
                 } elseif ($endPos !== null) {
                     $beforeEnd = substr($content, 0, $endPos);
                     if (preg_match('/\S/', $beforeEnd, $first, PREG_OFFSET_CAPTURE)) {
@@ -204,9 +239,13 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
 
         $end = $this->wiki->addToken($this->rule, array(
             'args' => $attr, 'type' => 'end',
-            'count' => $this->collapsibleCount, 'label_size' => $labelSize));
+            'count' => $this->collapsibleCount, 'label_size' => $bottomLabelSize));
         $this->collapsibleCount++;
-        return $matches[1] . $matches[2] . $matches[2] . $start . "\n\n" . $content . "\n\n" . $end . $outerStart;
+        $trailing = (!$dropTrailingSizeEnd && isset($matches[5])) ? $matches[5] : '';
+        if ($removedSuppressedEnd) {
+            $content = ltrim($content, "\n");
+        }
+        return $matches[1] . $matches[2] . $matches[2] . $start . "\n\n" . $content . "\n\n" . $end . $outerStart . $trailing;
     
     }
 
