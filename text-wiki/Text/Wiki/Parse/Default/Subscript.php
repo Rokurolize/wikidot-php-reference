@@ -78,16 +78,17 @@ class Text_Wiki_Parse_Subscript extends Text_Wiki_Parse {
     
 
     function parse() {
-        $edgeCells = array();
+        $edgeMap = array();
         foreach ($this->wiki->tokens as $tid => $tok) {
             if (is_array($tok) && $tok[0] === 'Table'
                 && isset($tok[1]['type']) && $tok[1]['type'] === 'cell_start'
                 && ! empty($tok[1]['edge_lead'])) {
-                $edgeCells[] = $this->wiki->delim . $tid . $this->wiki->delim . ',,';
+                $prefix = $this->wiki->delim . $tid . $this->wiki->delim;
+                $edgeMap[$prefix . ',,'] = $prefix . "\x0B,,";
             }
         }
-        foreach ($edgeCells as $marker) {
-            $this->wiki->source = str_replace($marker, substr($marker, 0, -2) . "\x0B,,", $this->wiki->source);
+        if (! empty($edgeMap)) {
+            $this->wiki->source = strtr($this->wiki->source, $edgeMap);
         }
         parent::parse();
         $this->wiki->source = str_replace("\x0B", '', $this->wiki->source);

@@ -84,50 +84,61 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
         $leadOut = '';
         $cursor = 0;
         $search = 0;
+        $phRe = '/' . preg_quote($this->wiki->delim, '/') . '(\d+)'
+            . preg_quote($this->wiki->delim, '/') . '/';
+        // Perf: placeholders are scanned once and prefix state is carried
+        // incrementally (the former per-run substr/preg_match_all of the whole
+        // prefix was quadratic in page length). Output is byte-identical.
+        $allIds = array();
+        $allStart = array();
+        $allEnd = array();
+        if (preg_match_all($phRe, $src, $am, PREG_OFFSET_CAPTURE)) {
+            foreach ($am[0] as $ai => $amm) {
+                $allStart[$ai] = $amm[1];
+                $allEnd[$ai] = $amm[1] + strlen($amm[0]);
+                $allIds[$ai] = $am[1][$ai][0];
+            }
+        }
+        $nAll = count($allStart);
+        $k = 0;
+        $depth = 0;
+        $stack = array();
+        $maxHoriz = -1;
         while (preg_match($newlineRun, $src, $m, PREG_OFFSET_CAPTURE, $search)) {
             $fullPos = $m[0][1];
             $fullLen = strlen($m[0][0]);
             $leadOut .= substr($src, $cursor, $fullPos - $cursor);
             $replacement = $m[0][0];
-            $prefix = substr($src, 0, $fullPos);
-            $placeholder = '/' . preg_quote($this->wiki->delim, '/') . '(\d+)'
-                . preg_quote($this->wiki->delim, '/') . '/';
-            $inlineDepth = 0;
-            $inlineStack = array();
-            $allPrefixMatches = array();
-            $horizPrefixIndexes = array();
-            if (preg_match_all($placeholder, $prefix, $pm, PREG_OFFSET_CAPTURE)) {
-                $allPrefixMatches = $pm;
-                foreach ($pm[1] as $pi => $tidm) {
-                    $tid = $tidm[0];
-                    $tok = isset($this->wiki->tokens[(int)$tid])
-                        ? $this->wiki->tokens[(int)$tid] : null;
-                    if ($tok !== null && $tok[0] === 'Horiz') {
-                        $horizPrefixIndexes[] = $pi;
-                    }
-                    if ($tok === null || !in_array($tok[0], array('Span', 'Size'), true)
-                        || !isset($tok[1]['type'])) {
-                        continue;
-                    }
+            $placeholder = $phRe;
+            while ($k < $nAll && $allEnd[$k] <= $fullPos) {
+                $tok = isset($this->wiki->tokens[(int)$allIds[$k]])
+                    ? $this->wiki->tokens[(int)$allIds[$k]] : null;
+                if ($tok !== null && $tok[0] === 'Horiz') {
+                    $maxHoriz = $k;
+                }
+                if ($tok !== null && in_array($tok[0], array('Span', 'Size'), true)
+                    && isset($tok[1]['type'])) {
                     if ($tok[1]['type'] === 'start') {
-                        $inlineDepth++;
-                        $inlineStack[] = $pi;
-                    } elseif ($tok[1]['type'] === 'end' && $inlineDepth > 0) {
-                        $inlineDepth--;
-                        array_pop($inlineStack);
+                        $depth++;
+                        $stack[] = $k;
+                    } elseif ($tok[1]['type'] === 'end' && $depth > 0) {
+                        $depth--;
+                        array_pop($stack);
                     }
                 }
+                $k++;
             }
+            $inlineDepth = $depth;
+            $inlineStack = $stack;
             $scopeAfterBlockEnd = false;
             if (!empty($inlineStack)) {
                 $scopePi = end($inlineStack);
                 if ($scopePi > 0) {
-                    $scopeStartPos = $allPrefixMatches[0][$scopePi][1];
-                    $prevEndPos = $allPrefixMatches[0][$scopePi - 1][1]
-                        + strlen($allPrefixMatches[0][$scopePi - 1][0]);
-                    $scopeBetween = substr($prefix, $prevEndPos, $scopeStartPos - $prevEndPos);
-                    $scopePrevTok = isset($this->wiki->tokens[(int)$allPrefixMatches[1][$scopePi - 1][0]])
-                        ? $this->wiki->tokens[(int)$allPrefixMatches[1][$scopePi - 1][0]] : null;
+                    $scopeStartPos = $allStart[$scopePi];
+                    $prevEndPos = $allEnd[$scopePi - 1];
+                    $scopeBetween = substr($src, $prevEndPos, $scopeStartPos - $prevEndPos);
+                    $scopePrevTok = isset($this->wiki->tokens[(int)$allIds[$scopePi - 1]])
+                        ? $this->wiki->tokens[(int)$allIds[$scopePi - 1]] : null;
                     $scopeAfterBlockEnd = $scopePrevTok !== null
                         && preg_match('/\A\n[ \t]*\z/', $scopeBetween) === 1
                         && isset($scopePrevTok[1]['type']) && $scopePrevTok[1]['type'] === 'end'
@@ -135,23 +146,22 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                 }
             }
             $directInlineLead = false;
-            if (preg_match($placeholder, $prefix, $endm, PREG_OFFSET_CAPTURE) && preg_match_all($placeholder, $prefix, $allEnds, PREG_OFFSET_CAPTURE)) {
-                $lastIndex = count($allEnds[0]) - 1;
-                if ($allEnds[0][$lastIndex][1] + strlen($allEnds[0][$lastIndex][0]) === $fullPos) {
-                    $edgeTok = isset($this->wiki->tokens[(int)$allEnds[1][$lastIndex][0]])
-                        ? $this->wiki->tokens[(int)$allEnds[1][$lastIndex][0]] : null;
+            if ($k > 0) {
+                $lastIndex = $k - 1;
+                if ($allEnd[$lastIndex] === $fullPos) {
+                    $edgeTok = isset($this->wiki->tokens[(int)$allIds[$lastIndex]])
+                        ? $this->wiki->tokens[(int)$allIds[$lastIndex]] : null;
                     $directInlineLead = $edgeTok !== null
                         && in_array($edgeTok[0], array('Span', 'Size'), true)
                         && isset($edgeTok[1]['type']) && $edgeTok[1]['type'] === 'start';
                     if ($directInlineLead) {
                         $directInlineLead = false;
                         if ($lastIndex > 0) {
-                            $inlineStartPos = $allEnds[0][$lastIndex][1];
-                            $prevEndPos = $allEnds[0][$lastIndex - 1][1]
-                                + strlen($allEnds[0][$lastIndex - 1][0]);
-                            $between = substr($prefix, $prevEndPos, $inlineStartPos - $prevEndPos);
-                            $prevTok = isset($this->wiki->tokens[(int)$allEnds[1][$lastIndex - 1][0]])
-                                ? $this->wiki->tokens[(int)$allEnds[1][$lastIndex - 1][0]] : null;
+                            $inlineStartPos = $allStart[$lastIndex];
+                            $prevEndPos = $allEnd[$lastIndex - 1];
+                            $between = substr($src, $prevEndPos, $inlineStartPos - $prevEndPos);
+                            $prevTok = isset($this->wiki->tokens[(int)$allIds[$lastIndex - 1]])
+                                ? $this->wiki->tokens[(int)$allIds[$lastIndex - 1]] : null;
                             if ($prevTok !== null
                                 && preg_match('/\A\n[ \t]*\z/', $between) === 1
                                 && isset($prevTok[1]['type']) && $prevTok[1]['type'] === 'end'
@@ -159,7 +169,7 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                                 $directInlineLead = true;
                             }
                             if ($directInlineLead) {
-                                $openerEnd = $allEnds[0][$lastIndex][1] + strlen($allEnds[0][$lastIndex][0]);
+                                $openerEnd = $allEnd[$lastIndex];
                                 if (preg_match('/\A\s*' . preg_quote($this->wiki->delim, '/') . '(\d+)'
                                     . preg_quote($this->wiki->delim, '/') . '/', substr($src, $openerEnd, 200), $bm)) {
                                     $bodyTok = isset($this->wiki->tokens[(int)$bm[1]])
@@ -185,43 +195,39 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
             $scopeHasPriorHoriz = false;
             if (!empty($inlineStack)) {
                 $scopePi = end($inlineStack);
-                foreach ($horizPrefixIndexes as $horizPi) {
-                    if ($horizPi > $scopePi) {
-                        $scopeHasPriorHoriz = true;
-                        break;
-                    }
+                if ($maxHoriz > $scopePi) {
+                    $scopeHasPriorHoriz = true;
                 }
             }
-            $endsAfterWhitespaceOnlyLine = substr($prefix, -3) === "\xE3\x80\x80"
-                || preg_match('/[ \t\r\n]$/', $prefix) === 1;
+            $lastCh = $fullPos > 0 ? $src[$fullPos - 1] : '';
+            $endsAfterWhitespaceOnlyLine = ($fullPos >= 3 && substr($src, $fullPos - 3, 3) === "\xE3\x80\x80")
+                || ($lastCh !== '' && strpos(" \t\r\n", $lastCh) !== false);
             $horizNeedsLooseScopeBreaks = $inlineDepth > 0 && !$directInlineLead
                 && $beforeHoriz && $scopeAfterBlockEnd && !$scopeHasPriorHoriz
                 && !$endsAfterWhitespaceOnlyLine;
             if ($inlineDepth > 0 && ($directInlineLead || $horizNeedsLooseScopeBreaks)) {
                 $crossesEnclosingBlockEnd = false;
-                if (preg_match_all($placeholder, substr($src, $afterPos), $restTokens, PREG_OFFSET_CAPTURE)) {
-                    $scanDepth = 1;
-                    foreach ($restTokens[1] as $rtid) {
-                        $rtok = isset($this->wiki->tokens[(int)$rtid[0]])
-                            ? $this->wiki->tokens[(int)$rtid[0]] : null;
-                        if ($rtok === null || !isset($rtok[1]['type'])) {
-                            continue;
-                        }
-                        if (in_array($rtok[0], array('Span', 'Size'), true)) {
-                            if ($rtok[1]['type'] === 'start') {
-                                $scanDepth++;
-                            } elseif ($rtok[1]['type'] === 'end') {
-                                $scanDepth--;
-                                if ($scanDepth === 0) {
-                                    break;
-                                }
+                $scanDepth = 1;
+                for ($rj = $k; $rj < $nAll; $rj++) {
+                    $rtok = isset($this->wiki->tokens[(int)$allIds[$rj]])
+                        ? $this->wiki->tokens[(int)$allIds[$rj]] : null;
+                    if ($rtok === null || !isset($rtok[1]['type'])) {
+                        continue;
+                    }
+                    if (in_array($rtok[0], array('Span', 'Size'), true)) {
+                        if ($rtok[1]['type'] === 'start') {
+                            $scanDepth++;
+                        } elseif ($rtok[1]['type'] === 'end') {
+                            $scanDepth--;
+                            if ($scanDepth === 0) {
+                                break;
                             }
                         }
-                        if ($scanDepth > 0 && $rtok[1]['type'] === 'end'
-                            && in_array($rtok[0], array('Div', 'Divalign', 'Collapsible'), true)) {
-                            $crossesEnclosingBlockEnd = true;
-                            break;
-                        }
+                    }
+                    if ($scanDepth > 0 && $rtok[1]['type'] === 'end'
+                        && in_array($rtok[0], array('Div', 'Divalign', 'Collapsible'), true)) {
+                        $crossesEnclosingBlockEnd = true;
+                        break;
                     }
                 }
                 $beforeCollapsible = $crossesEnclosingBlockEnd;
@@ -324,7 +330,11 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
             if ($pos < 0 || $src[$pos] !== $delim) {
                 return null;
             }
-            $start = strrpos(substr($src, 0, $pos), $delim);
+            if ($pos < 1) {
+                return null;
+            }
+            // Perf: negative-offset strrpos avoids copying the prefix.
+            $start = strrpos($src, $delim, $pos - strlen($src) - 1);
             if ($start === false) {
                 return null;
             }
@@ -388,7 +398,10 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
         if ($pos < 0 || $pos >= strlen($src) || $src[$pos] !== $delim) {
             return null;
         }
-        $start = strrpos(substr($src, 0, $pos), $delim);
+        if ($pos < 1) {
+            return null;
+        }
+        $start = strrpos($src, $delim, $pos - strlen($src) - 1);
         if ($start === false) {
             return null;
         }

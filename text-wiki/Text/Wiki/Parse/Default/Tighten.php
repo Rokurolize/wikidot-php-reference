@@ -145,6 +145,54 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
         // delimiters hold no spaces or tabs, so tokenized bodies survive.
         $source = preg_replace('/[ \t]+/', ' ', $source);
 
+        // Perf: the remaining passes only ever move or delete single spaces
+        // next to placeholder literals, and a space can never cross a byte
+        // outside {0-9, 0xFF, space}. The source is therefore cut after such
+        // a byte (about every 8 KiB) and each chunk is tightened on its own
+        // against only the tokens whose literal occurs in it. This is exactly
+        // equivalent to the former whole-document passes, which were
+        // O(tokens x length).
+        $n = strlen($source);
+        $chunks = array();
+        $pos = 0;
+        while ($pos < $n) {
+            $end = $pos + 8192;
+            if ($end >= $n) {
+                $chunks[] = substr($source, $pos);
+                break;
+            }
+            $end += strspn($source, "0123456789\xFF ", $end) + 1;
+            if ($end > $n) {
+                $end = $n;
+            }
+            $chunks[] = substr($source, $pos, $end - $pos);
+            $pos = $end;
+        }
+        foreach ($chunks as $ci => $chunk) {
+            $chunks[$ci] = $this->tightenChunk($chunk, $delim);
+        }
+        $source = implode('', $chunks);
+
+        $this->wiki->source = $source;
+    }
+
+    private function tightenChunk($source, $delim)
+    {
+        if (strpos($source, $delim) === false) {
+            // no placeholder literal: only the second space fold applies
+            return preg_replace('/[ \t]+/', ' ', $source);
+        }
+        $cand = array();
+        if (preg_match_all('/' . preg_quote($delim, '/') . '(\d+)(?=' . preg_quote($delim, '/') . ')/', $source, $cm)) {
+            $cand = array_flip($cm[1]);
+        }
+        $tokens = array_intersect_key($this->wiki->tokens, $cand);
+        $edgeInlineRules = array(
+            'Colortext' => true, 'Span' => true, 'Size' => true,
+            'Strong' => true, 'Emphasis' => true, 'Underline' => true,
+            'Strikethrough' => true, 'Tt' => true,
+            'Superscript' => true, 'Subscript' => true,
+        );
         // Move an edge space out of an inline scope. Hoisting the leading
         // space to before the opener and ejecting the trailing space to after
         // the closer is what live's Stage 2 repair does; the paragraph-edge
@@ -153,15 +201,9 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
         // Span/Size and the paired inline markers, and repeats it because a
         // space leaving an inner span can be exposed immediately inside an
         // outer strong/emphasis scope and must propagate outward as well.
-        $edgeInlineRules = array(
-            'Colortext' => true, 'Span' => true, 'Size' => true,
-            'Strong' => true, 'Emphasis' => true, 'Underline' => true,
-            'Strikethrough' => true, 'Tt' => true,
-            'Superscript' => true, 'Subscript' => true,
-        );
         for ($edgePass = 0; $edgePass < 8; $edgePass++) {
             $beforeEdgePass = $source;
-            foreach ($this->wiki->tokens as $tid => $tok) {
+            foreach ($tokens as $tid => $tok) {
                 if (! is_array($tok) || ! isset($edgeInlineRules[$tok[0]])) {
                     continue;
                 }
@@ -169,10 +211,12 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
                 $pattern = preg_quote($literal, '/');
                 $type = isset($tok[1]['type']) ? $tok[1]['type'] : '';
                 if ($type === 'start') {
-                    $source = preg_replace('/' . $pattern . ' /', ' ' . $literal, $source);
+                    // Perf: fixed-string replace (same leftmost non-overlapping
+                    // semantics as the quoted-literal regex) avoids PCRE setup.
+                    $source = str_replace($literal . ' ', ' ' . $literal, $source);
                 } elseif ($type === 'end'
                     && empty($tok[1]['preserve_trailing_edge'])) {
-                    $source = preg_replace('/ ' . $pattern . '/', $literal . ' ', $source);
+                    $source = str_replace(' ' . $literal, $literal . ' ', $source);
                 }
             }
             if ($source === $beforeEdgePass) {
@@ -189,20 +233,28 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
         // space that a later rule's token deletion exposed at a paragraph or
         // break edge. Live probes tighten51, tighten53, tighten14 and
         // tighten56 settle the deletion-exposed cases at both edges.
-        foreach ($this->wiki->tokens as $tid => $tok) {
+        foreach ($tokens as $tid => $tok) {
             if (! is_array($tok)) {
                 continue;
             }
             $literal = $delim . $tid . $delim;
             $pattern = preg_quote($literal, '/');
+            // Perf: a run of spaces adjacent to the literal implies the literal
+            // followed/preceded by one space, so memmem prechecks are exact.
             if ($tok[0] === 'Newline') {
-                $source = preg_replace('/' . $pattern . ' +/', $literal, $source);
-                $source = preg_replace('/ +' . $pattern . '/', $literal, $source);
+                if (strpos($source, $literal . ' ') !== false) {
+                    $source = preg_replace('/' . $pattern . ' +/', $literal, $source);
+                }
+                if (strpos($source, ' ' . $literal) !== false) {
+                    $source = preg_replace('/ +' . $pattern . '/', $literal, $source);
+                }
                 continue;
             }
             if ($tok[0] === 'List' && isset($tok[1]['type'])
                 && substr($tok[1]['type'], -9) === '_item_end') {
-                $source = preg_replace('/ +' . $pattern . '/', $literal, $source);
+                if (strpos($source, ' ' . $literal) !== false) {
+                    $source = preg_replace('/ +' . $pattern . '/', $literal, $source);
+                }
                 continue;
             }
             if ($tok[0] !== 'Paragraph') {
@@ -210,12 +262,16 @@ class Text_Wiki_Parse_Tighten extends Text_Wiki_Parse {
             }
             $type = isset($tok[1]['type']) ? $tok[1]['type'] : '';
             if ($type === 'start') {
-                $source = preg_replace('/' . $pattern . ' +/', $literal, $source);
+                if (strpos($source, $literal . ' ') !== false) {
+                    $source = preg_replace('/' . $pattern . ' +/', $literal, $source);
+                }
             } elseif ($type === 'end') {
-                $source = preg_replace('/ +' . $pattern . '/', $literal, $source);
+                if (strpos($source, ' ' . $literal) !== false) {
+                    $source = preg_replace('/ +' . $pattern . '/', $literal, $source);
+                }
             }
         }
 
-        $this->wiki->source = $source;
+        return $source;
     }
 }
