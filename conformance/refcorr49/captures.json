@@ -28,5 +28,15 @@
   "saved_source_matches": true,
   "stable": true,
   "valid": true
+ },
+ "authored-space-control": {
+  "fullname": "muse-probe-refval-divprefilter-p04",
+  "html": "<div>\n<p>a</p>\n</div>\n<div>\n<p>b</p>\n</div>",
+  "html_sha256": "c95c406f074a9b718f6e882f1bc2ae8269b546301b83322a291eed7cb81da685",
+  "source": "[[div]]\na\n[[/div]]   [[div]]\nb\n[[/div]]",
+  "source_sha256": "e18afd07d3e30ee1fa1e14cee10ba376247737e55e91ea7b9fa9e85fafe500ba",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
  }
 }

@@ -58,9 +58,15 @@ class Text_Wiki_Parse_Divprefilter extends Text_Wiki_Parse {
     *
     */
     
+    function parse()
+    {
+        parent::parse();
+        $this->wiki->source = str_replace("\xEF\xBF\xBE\xEF\xBF\xBF", ' ', $this->wiki->source);
+    }
+
     function process($matches)
     {     
-        return '[[/div]]' . (strpos($matches[1], ' ') !== false ? $matches[1] : '') . '[[div';
+        return '[[/div]][[div';
 
     }
 }
