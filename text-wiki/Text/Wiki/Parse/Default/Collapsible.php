@@ -162,7 +162,8 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
                     $nextVisible = ltrim($afterEnd);
                     $ordinaryLead = $nextVisible === ''
                         || preg_match('/\A[|=>+#*:\-]/', $nextVisible) !== 1;
-                    if ($ordinaryLead) {
+                    $blankSeparated = preg_match('/\A[ \t]*\n[ \t]*\n/', $afterEnd) === 1;
+                    if ($ordinaryLead && ($blankSeparated || $afterEnd === '')) {
                         $endPlaceholder = $delim . $endId . $delim;
                         $content = substr($content, 0, $endPos)
                             . substr($content, $endPos + strlen($endPlaceholder));
