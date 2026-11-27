@@ -60,7 +60,7 @@ class Text_Wiki_Parse_Divprefilter extends Text_Wiki_Parse {
     
     function process($matches)
     {     
-        return '[[/div]][[div';
+        return '[[/div]]' . (strpos($matches[1], ' ') !== false ? $matches[1] : '') . '[[div';
 
     }
 }
