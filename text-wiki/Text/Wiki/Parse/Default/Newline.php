@@ -359,8 +359,41 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                                 && preg_match('/\A\s*\z/', $beforeEdgeText) === 1
                                 && substr_count($beforeEdgeText, "\n") === 1;
                         }
+                        $hasPriorInlineParagraphBreak = false;
+                        $scopeSegmentText = preg_replace($placeholder, 'X', $beforeEdge);
+                        $sawOrdinarySegmentLine = false;
+                        $pendingSegmentBlank = false;
+                        foreach (preg_split('/\r\n|\r|\n/', $scopeSegmentText) as $segmentLine) {
+                            $segmentLineText = trim($segmentLine);
+                            if ($segmentLineText === '') {
+                                if ($sawOrdinarySegmentLine) {
+                                    $pendingSegmentBlank = true;
+                                }
+                                continue;
+                            }
+                            if (preg_match('/^(?:[*#=+>]|:|\|\|)/', $segmentLineText) !== 1) {
+                                if ($pendingSegmentBlank && $sawOrdinarySegmentLine) {
+                                    $hasPriorInlineParagraphBreak = true;
+                                    break;
+                                }
+                                $sawOrdinarySegmentLine = true;
+                            }
+                        }
+                        $scopeHasHorizBeforeEdge = false;
+                        if ($hasPriorInlineParagraphBreak
+                            && preg_match_all($placeholder, $beforeEdge, $edgeTokens)) {
+                            foreach ($edgeTokens[1] as $edgeTid) {
+                                $edgeScanTok = isset($this->wiki->tokens[(int)$edgeTid])
+                                    ? $this->wiki->tokens[(int)$edgeTid] : null;
+                                if ($edgeScanTok !== null && $edgeScanTok[0] === 'Horiz') {
+                                    $scopeHasHorizBeforeEdge = true;
+                                    break;
+                                }
+                            }
+                        }
                         $divalignLeadingBreaks = !$alreadySupplied && !$scopeCrossedEnclosingBlockEnd
-                            && !($scopeOpenedInsideContainer && $hasOrdinaryText);
+                            && !($scopeOpenedInsideContainer && $hasOrdinaryText)
+                            && !($hasPriorInlineParagraphBreak && !$scopeHasHorizBeforeEdge);
                     }
                 }
             }
