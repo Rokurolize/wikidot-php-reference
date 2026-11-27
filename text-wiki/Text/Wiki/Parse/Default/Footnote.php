@@ -85,15 +85,18 @@ class Text_Wiki_Parse_Footnote extends Text_Wiki_Parse {
 	    // placeholder- and control-bearing body for a single authored LF.
 	    if (!preg_match('/[^\n]\n(?!\n)/', $content)) {
 	        // Double-LF runs, bare/edge LFs and no-LF bodies have no live
-	        // <br /> and take the trimmed visible path. REFCORR12's class D is
-	        // the live-discarded C0 set below 0x20 except TAB (9), LF (10),
-	        // CR (13) and ESC (27):
+	        // <br />, so placeholders are not newline witnesses there. They are
+	        // still inline token boundaries in a body with visible content
+	        // (REFCORR56); strip them only when the visible projection is empty.
+	        // REFCORR12's class D is the live-discarded C0 set below 0x20 except
+	        // TAB (9), LF (10), CR (13) and ESC (27):
 	        // [\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]. Dropping it here (not
-	        // before the predicate) keeps every cached REFCORR11/12 shape
-	        // byte-identical: ESC is retained verbatim, VT/FF and the rest are
-	        // removed on this fallback branch exactly as before.
-	        $content = trim($stripEmptyRaw(
-	            preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $content)));
+	        // before the predicate) keeps the control-byte ownership settled by
+	        // REFCORR11/12 while preserving empty-Raw boundary atoms in nonempty
+	        // visible bodies.
+	        $withoutDiscarded = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1A\x1C-\x1F]/', '', $content);
+	        $visible = trim($stripEmptyRaw($withoutDiscarded));
+	        $content = $visible === '' ? $visible : trim($withoutDiscarded);
 	    }
 
 	    $this->wiki->vars['footnotes'][$id-1] = $content;
