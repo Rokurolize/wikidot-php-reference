@@ -16,6 +16,10 @@ def cells(html):
     return [p.strip() for p in re.split(r'<hr />\n?', html) if p.strip()]
 
 
+def mask_module_placeholder(html):
+    return re.sub(r'þmodule.*?þ', '', html, flags=re.S)
+
+
 def main():
     cases = [json.loads(l) for l in (HERE / 'cases.jsonl').read_text(encoding='utf-8').splitlines() if l.strip()]
     expected = json.loads((HERE / 'expected.json').read_text(encoding='utf-8'))
@@ -47,14 +51,23 @@ def main():
         for cell in wanted:
             if cell > len(ref_cells) or cell > len(live_cells) or cc.canonical_census(ref_cells[cell - 1]) != cc.canonical_census(live_cells[cell - 1]):
                 canonical_fail.append(f'{cid}:{cell}')
+    masked_fail = []
+    for cid, wanted in cell_expectations['module_placeholder_masked_canonical_cells'].items():
+        ref_cells = cells(got.get(cid, ''))
+        live_cells = cells(captures[cid]['html'])
+        for cell in wanted:
+            if cell > len(ref_cells) or cell > len(live_cells) or cc.canonical_census(mask_module_placeholder(ref_cells[cell - 1])) != cc.canonical_census(live_cells[cell - 1]):
+                masked_fail.append(f'{cid}:{cell}')
 
     exact_total = sum(len(v) for v in cell_expectations['exact_cells'].values())
     canonical_total = sum(len(v) for v in cell_expectations['canonical_cells'].values())
+    masked_total = sum(len(v) for v in cell_expectations['module_placeholder_masked_canonical_cells'].values())
     print('REFCORR61 pins: %d grouped pins checked' % len(expected))
     print('  expected-render byte pins: %d/%d  failures=%s' % (len(expected) - len(byte_fail), len(expected), byte_fail))
     print('  exact live-cell fidelity:    %d/%d  failures=%s' % (exact_total - len(exact_fail), exact_total, exact_fail))
     print('  canonical live-cell fidelity:%d/%d  failures=%s' % (canonical_total - len(canonical_fail), canonical_total, canonical_fail))
-    if byte_fail or exact_fail or canonical_fail:
+    print('  masked module-cell fidelity: %d/%d  failures=%s' % (masked_total - len(masked_fail), masked_total, masked_fail))
+    if byte_fail or exact_fail or canonical_fail or masked_fail:
         sys.exit(1)
 
 
