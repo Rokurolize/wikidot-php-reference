@@ -1460,6 +1460,8 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         $sawCollapsible = false;
         $sawTableadvFoster = false;
         $sawBareInlineBeforeDiv = false;
+        $sawFootnoteBlock = false;
+        $inFootnoteItem = false;
         $trailingLiteral = '';
         if (strpos($this->source, "\xEF\xBF\xBD") !== false) {
             $output .= $this->renderLiteralUfffdRecovery($format);
@@ -1520,6 +1522,19 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
                         && trim($trailingLiteral) !== ''
                         && $this->outputEndsWithBareInlineText($output)) {
                         $sawBareInlineBeforeDiv = true;
+                    }
+                    if ($inFootnoteItem && in_array($rule, array(
+                        'List', 'Deflist', 'Blockquote', 'Heading', 'Center',
+                        'Code', 'Bibliography', 'Math'
+                    ), true)) {
+                        $sawFootnoteBlock = true;
+                    }
+                    if ($rule === 'Footnoteitem' && isset($opts['type'])) {
+                        if ($opts['type'] === 'start') {
+                            $inFootnoteItem = true;
+                        } elseif ($opts['type'] === 'end') {
+                            $inFootnoteItem = false;
+                        }
                     }
                     $renderedToken = $this->renderObj[$rule]->token($opts);
                     $output .= $renderedToken;
@@ -1591,6 +1606,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
             || $this->outputHasInlineCrossing($output)
             || $this->outputHasQuoteStructuralCrossing($output)
             || $sawBareInlineBeforeDiv
+            || $sawFootnoteBlock
             || $this->outputHasEmptyBlockquote($output)) {
             $output = $this->purifyRecoveredHtml($output);
         }
