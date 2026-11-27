@@ -18,9 +18,9 @@ The reference already had the shared tidy-backed `purifyRecoveredHtml` path used
 
 - `outputHasQuoteStructuralCrossing` recognizes rendered block-level container crossings in which a blockquote participates. It is deliberately narrower than every crossing so that the previously pinned bare-div/inline-crossing behavior is not reclassified.
 - `outputHasEmptyBlockquote` recognizes an empty `<blockquote></blockquote>` shell left behind by vanished crossed content.
-- during token rendering, a valid non-vanished Div start token that directly follows trailing authored literal characters and bare inline output sets `sawBareInlineBeforeDiv`, causing the same purify pass to establish the measured block boundary.
+- during token rendering, a valid non-vanished Div start token that directly follows trailing authored literal characters and bare inline output sets `sawBareInlineBeforeDiv`, causing the same purify pass to establish the measured block boundary. Synthetic offline-include error-block Div targets are excluded because missing-include fixtures are harness environment output, not evidence that the authored page contains a valid target div at that boundary.
 
-The helper `outputEndsWithBareInlineText` treats whitespace as ignorable for this test only. The render loop separately tracks trailing literal source characters and resets that track at every token, so generated module or offline-include text does not masquerade as the authored inline boundary. Neither helper rewrites the source or token stream.
+The helper `outputEndsWithBareInlineText` treats ASCII whitespace as ignorable for this test only; non-ASCII spacing characters remain rendered text bytes. The render loop separately tracks trailing literal source characters and resets that track at every token, so generated module or offline-include text does not masquerade as the authored inline boundary. Neither helper rewrites the source or token stream.
 
 This is not a new general-purpose pretty-printer. The pass is still gated by shape detectors, and well-formed documents that do not contain one of those surfaces keep their established byte frame.
 
@@ -44,6 +44,6 @@ Every capture is stable across two anonymous rendered GETs and its saved source 
 
 ## Regression check anchors
 
-The exact `scp-cn-3636` corpus seam was adjudicated separately. Before this correction, canonical comparison diverged at the crossed `</blockquote>...<blockquote></div></blockquote>` repair region. After the correction, the fixed render is canonical-equal to the saved live HTML for the full page (`fixed_direct_equal=true` in the lane adjudication record).
+The exact `scp-cn-3636` corpus seam was adjudicated separately. Before this correction, direct comparison diverged at the crossed `</blockquote>...<blockquote></div></blockquote>` repair region (first difference 11708). After the correction, the fixed render is byte-equal to the saved live HTML for the full page (`fixed_direct_equal=true`, first difference at end-of-output in the lane adjudication record). Under the doctrine corpus auditor the row remains conservatively `unchanged`, because the baseline is canonicalized through the established tidy pass and that pass hides this raw closing-order advance; the symmetric direct/direct measurement is `improved`.
 
 All prior conformance pins remained green after the detector refinement, including the previously sensitive bare-div/inline-crossing and typography pins, and the frozen gates plus both 150-page holdouts passed.

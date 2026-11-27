@@ -1407,7 +1407,9 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
      * rather than at an element boundary. Used only when a Div-rule start is
      * about to render and the trailing source characters are literal inline
      * text: generated module/error text is harness output, not the authored
-     * inline boundary whose byte live's purifyHtml pass owns.
+     * inline boundary whose byte live's purifyHtml pass owns. Synthetic
+     * offline-include error blocks are excluded as Div targets for the same
+     * reason.
      */
     function outputEndsWithBareInlineText($html)
     {
@@ -1513,7 +1515,9 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
                         $sawTableadvFoster = true;
                     }
                     if ($rule === 'Div' && isset($opts['type']) && $opts['type'] === 'start'
-                        && empty($opts['vanished']) && trim($trailingLiteral) !== ''
+                        && empty($opts['vanished'])
+                        && (!isset($opts['args']['class']) || $opts['args']['class'] !== 'error-block')
+                        && trim($trailingLiteral) !== ''
                         && $this->outputEndsWithBareInlineText($output)) {
                         $sawBareInlineBeforeDiv = true;
                     }
