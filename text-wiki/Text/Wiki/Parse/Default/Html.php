@@ -71,11 +71,12 @@ class Text_Wiki_Parse_Html extends Text_Wiki_Parse {
         $options = array('text' => $text);
         $opener = isset($matches[0]) ? $matches[0] : '';
         if (preg_match('/\[\[html\s+([^\]\n]*)\]\]/i', $opener, $am)) {
-            if (preg_match('/\bclass\s*=\s*"([^"]*)"/i', $am[1], $cm)) {
-                $options['class'] = $cm[1];
+            $attr = $this->getAttrs(trim($am[1]));
+            if (array_key_exists('class', $attr)) {
+                $options['class'] = $attr['class'];
             }
-            if (preg_match('/\bstyle\s*=\s*"([^"]*)"/i', $am[1], $sm)) {
-                $options['style'] = $sm[1];
+            if (array_key_exists('style', $attr)) {
+                $options['style'] = $attr['style'];
             }
         }
         return "\n" . $this->wiki->addToken($this->rule, $options) . $trailer;
