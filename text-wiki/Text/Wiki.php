@@ -1260,6 +1260,18 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
     }
 
     /**
+     * Whether a collapsible is caught in a centered paragraph or list-item
+     * boundary that live's purifyHtml pass repairs.
+     */
+    function outputHasCollapsibleStructuralCrossing($html)
+    {
+        if (preg_match('/<p\b[^>]*style="text-align:\s*center;?"[^>]*>(?:(?!<\/p>).)*<div class="collapsible-block">/s', $html)) {
+            return true;
+        }
+        return strpos($html, '<div class="collapsible-block-content"></li>') !== false;
+    }
+
+    /**
      * Whether a paired-token inline element crosses a block-element boundary or
      * another inline element emitted by the pair rules. Well-formed documents are
      * left in the reference frame.
@@ -1370,6 +1382,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         // bytes once pre() runs (R-UFFFD-1). Live recovers that stream and
         // then tidy-repairs it (WikiTransformation::purifyHtml). Documents
         // with no literal U+FFFD take the original loop unchanged.
+        $sawCollapsible = false;
         if (strpos($this->source, "\xEF\xBF\xBD") !== false) {
             $output .= $this->renderLiteralUfffdRecovery($format);
         } else {
@@ -1415,6 +1428,9 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
                     }
                     if ($rule === 'Horiz' && isset($opts['loose_scope_breaks'])) {
                         $output .= '<br />' . "\n" . '<br />' . "\n";
+                    }
+                    if ($rule === 'Collapsible') {
+                        $sawCollapsible = true;
                     }
                     $output .= $this->renderObj[$rule]->token($opts);
                     $in_delim = false;
@@ -1466,13 +1482,15 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
 
         // REFCORR30: live passes every rendered fragment through
         // WikiTransformation::purifyHtml. The reference models the common
-        // whitespace consequences in Tighten, but two render-time surfaces
+        // whitespace consequences in Tighten, but some render-time surfaces
         // still need the real repair pass: whitespace inside a TOC title
-        // (generated from an attribute after Tighten has run) and any span
-        // scope left open across a paragraph boundary. Apply the existing
+        // (generated from an attribute after Tighten has run), any span
+        // scope left open across a paragraph boundary, and a collapsible
+        // caught in a centered or list-item boundary. Apply the existing
         // tidy-backed purifier only when one of those unrepaired shapes is
-        // present, so well-formed documents keep their established frame.
-        if ($this->outputHasUnpurifiedTocTitleWhitespace($output)
+        // present, so other well-formed documents keep their established frame.
+        if (($sawCollapsible && $this->outputHasCollapsibleStructuralCrossing($output))
+            || $this->outputHasUnpurifiedTocTitleWhitespace($output)
             || $this->outputHasSpanParagraphCrossing($output)
             || $this->outputHasInlineCrossing($output)) {
             $output = $this->purifyRecoveredHtml($output);

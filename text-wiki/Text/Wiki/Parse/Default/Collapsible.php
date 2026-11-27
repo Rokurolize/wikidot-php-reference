@@ -170,6 +170,27 @@ class Text_Wiki_Parse_Collapsible extends Text_Wiki_Parse {
             }
         }
 
+        if ($matches[1] !== ''
+            && preg_match('/^' . $q . '(\d+)' . $q . '$/', $matches[1], $lm)) {
+            $leadTok = isset($this->wiki->tokens[(int)$lm[1]])
+                ? $this->wiki->tokens[(int)$lm[1]] : null;
+            if ($leadTok && $leadTok[0] === 'Heading'
+                && isset($leadTok[1]['type'])
+                && ($leadTok[1]['type'] === 'start' || $leadTok[1]['type'] === 'start-notoc')) {
+                $firstLine = preg_split('/\r\n|\r|\n/', $content, 2)[0];
+                if (preg_match_all('/' . $q . '(\d+)' . $q . '/', $firstLine, $htokens)) {
+                    foreach ($htokens[1] as $hid) {
+                        $htok = isset($this->wiki->tokens[(int)$hid])
+                            ? $this->wiki->tokens[(int)$hid] : null;
+                        if ($htok && $htok[0] === 'Heading'
+                            && isset($htok[1]['type']) && $htok[1]['type'] === 'end') {
+                            $this->wiki->tokens[(int)$hid][1]['collapsible_crossing'] = true;
+                        }
+                    }
+                }
+            }
+        }
+
         $attr = $this->getAttrs(trim($matches[3]));
 
         $options = array('args' => $attr, 'type' => 'start',
