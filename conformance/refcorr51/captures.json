@@ -243,5 +243,26 @@
   "valid": true,
   "stable": true,
   "saved_source_matches": true
+ },
+ "html-iso-stray-multiline": {
+  "html": "<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-stray-multiline/html/d5e6bcf93aa428273cf01559a0098757ed016b95-2090052497810035891\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-html-iso-stray-multiline",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "html-iso-bare-x-inline": {
+  "html": "<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-bare-x-inline/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-19419810291790801380\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-html-iso-bare-x-inline",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
+ },
+ "html-iso-head-args-sequence": {
+  "html": "<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-21911779416766969\" allowtransparency=\"true\" frameborder=\"0\" class=\"c html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-154304350773327516\" allowtransparency=\"true\" frameborder=\"0\" class=\"a b html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1321124900829945580\" allowtransparency=\"true\" frameborder=\"0\" style=\"color:red\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-17438485311366452805\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-13715716971094818662\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-2330563221674923399\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1705417818716879643\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-1321632092677803529\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-11529190511320573705\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-13150285401114550913\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/95cb0bfd2977c761298d9624e4b4d4c72a39974a-13035659971465708134\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/11f6ad8ec52a2984abaafd7c3b516503785c2072-96330862083610395\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/11f6ad8ec52a2984abaafd7c3b516503785c2072-28323943103776116\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/11f6ad8ec52a2984abaafd7c3b516503785c2072-685509525590813216\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>\n<p><iframe src=\"/muse-probe-hunt-blockopen-html-iso-head-args-sequence/html/11f6ad8ec52a2984abaafd7c3b516503785c2072-616079105751514570\" allowtransparency=\"true\" frameborder=\"0\" class=\"html-block-iframe\"></iframe></p>",
+  "fullname": "muse-probe-hunt-blockopen-html-iso-head-args-sequence",
+  "valid": true,
+  "stable": true,
+  "saved_source_matches": true
  }
 }

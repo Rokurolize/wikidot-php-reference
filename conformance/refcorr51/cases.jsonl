@@ -33,3 +33,6 @@
 {"id": "d06-span-dup-class", "source": "PROBE-duplicate-attrs-d06-span-dup-class\n\n[[span class=\"a\" class=\"b\"]]x[[/span]]"}
 {"id": "d07-div-dup-class", "source": "PROBE-duplicate-attrs-d07-div-dup-class\n\n[[div class=\"a\" class=\"b\"]]\nx\n[[/div]]"}
 {"id": "d08-anchor-dup-href", "source": "PROBE-duplicate-attrs-d08-anchor-dup-href\n\n[[a href=\"/x\" href=\"/y\"]]z[[/a]]"}
+{"id": "html-iso-stray-multiline", "source": "[[html stray]]\nX\n[[/html]]"}
+{"id": "html-iso-bare-x-inline", "source": "[[html x]]y[[/html]]"}
+{"id": "html-iso-head-args-sequence", "source": "[[html class=\"c\"]]y[[/html]]\n[[html class=\"a b\"]]y[[/html]]\n[[html style=\"color:red\"]]y[[/html]]\n[[html id=\"i\"]]y[[/html]]\n[[html width=\"100\" height=\"50\"]]y[[/html]]\n[[html align=\"left\" scrolling=\"no\" frameborder=\"1\"]]y[[/html]]\n[[html title=\"t\"]]y[[/html]]\n[[html data-x=\"1\"]]y[[/html]]\n[[html class=c]]y[[/html]]\n[[html class='a']]y[[/html]]\n[[html class = \"a\"]]y[[/html]]\n[[html ]]x[[/html]]\n[[html\n]]x[[/html]]\n[[html foo]]x[[/html]]\n[[html =]]x[[/html]]"}
