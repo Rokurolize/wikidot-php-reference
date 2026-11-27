@@ -299,6 +299,27 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                     }
                 }
             }
+            $scopeOpenedInsideContainer = false;
+            if (!empty($inlineStack)) {
+                $containerDepth = 0;
+                foreach ($allPrefixMatches[1] as $scanPi => $scanTidm) {
+                    if ($scanPi >= $scopePi) {
+                        break;
+                    }
+                    $scanTok = isset($this->wiki->tokens[(int)$scanTidm[0]])
+                        ? $this->wiki->tokens[(int)$scanTidm[0]] : null;
+                    if ($scanTok === null || !isset($scanTok[1]['type'])
+                        || !in_array($scanTok[0], array('Div', 'Divalign', 'Collapsible', 'Blockquote'), true)) {
+                        continue;
+                    }
+                    if ($scanTok[1]['type'] === 'start') {
+                        $containerDepth++;
+                    } elseif ($scanTok[1]['type'] === 'end' && $containerDepth > 0) {
+                        $containerDepth--;
+                    }
+                }
+                $scopeOpenedInsideContainer = $containerDepth > 0;
+            }
             $divalignLeadingBreaks = false;
             if ($inlineDepth > 0 && isset($allEnds[0]) && !empty($allEnds[0])) {
                 $edgeIndex = count($allEnds[0]) - 1;
@@ -338,7 +359,8 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                                 && preg_match('/\A\s*\z/', $beforeEdgeText) === 1
                                 && substr_count($beforeEdgeText, "\n") === 1;
                         }
-                        $divalignLeadingBreaks = !$alreadySupplied && !$scopeCrossedEnclosingBlockEnd;
+                        $divalignLeadingBreaks = !$alreadySupplied && !$scopeCrossedEnclosingBlockEnd
+                            && !($scopeOpenedInsideContainer && $hasOrdinaryText);
                     }
                 }
             }
