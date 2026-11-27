@@ -47,11 +47,7 @@ class Text_Wiki_Parse_Html extends Text_Wiki_Parse {
     * 
     */
     
-    // REFCORR19 F2: match live's [[html]] ... [[/html]] block form as well
-    // as the legacy <html> ... </html> form the rule originally handled.
-    // Group 1/2 are the legacy body/trailer; group 3/4 the [[html]] body and
-    // trailer.
-    public $regex = '/\[\[html(?:\s+[^\]\n]*)?\]\][ \t]*\n?(.*?)\n?[ \t]*\[\[\/html\]\](\s|$)/msi';
+    public $regex = '/^\[\[html(?:\s+[^\]\n]*)?\]\][ \t]*\n?(.*?)\n?[ \t]*\[\[\/html\]\](\s|$)/msi';
 
     /**
     * 
@@ -70,11 +66,9 @@ class Text_Wiki_Parse_Html extends Text_Wiki_Parse {
     
     function process($matches)
     {
-        // REFCORR19 F2: group 1 is the block body, group 2 its trailer.
         $text = isset($matches[1]) ? $matches[1] : '';
         $trailer = isset($matches[2]) ? $matches[2] : '';
         $options = array('text' => $text);
-        // Optional class/style on the opener, in live's form.
         $opener = isset($matches[0]) ? $matches[0] : '';
         if (preg_match('/\[\[html\s+([^\]\n]*)\]\]/i', $opener, $am)) {
             if (preg_match('/\bclass\s*=\s*"([^"]*)"/i', $am[1], $cm)) {
@@ -84,6 +78,6 @@ class Text_Wiki_Parse_Html extends Text_Wiki_Parse {
                 $options['style'] = $sm[1];
             }
         }
-        return $this->wiki->addToken($this->rule, $options) . $trailer;
+        return "\n" . $this->wiki->addToken($this->rule, $options) . $trailer;
     }
 }

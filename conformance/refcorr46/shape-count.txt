@@ -1,0 +1,1 @@
+38 measured shape cells: 30 recognition cells (15 positive, 15 negative) plus 8 closer-boundary discriminator cells, grouped as 4 probe pages
