@@ -445,6 +445,22 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
         return $seenBlockStart;
     }
 
+    protected function runHasCollapsibleHeadingEnd($run) {
+        $delim = preg_quote($this->wiki->delim, '/');
+        if (! preg_match_all('/' . $delim . '([0-9]+)' . $delim . '/', $run, $ms)) {
+            return false;
+        }
+        foreach ($ms[1] as $id) {
+            $tok = isset($this->wiki->tokens[(int)$id]) ? $this->wiki->tokens[(int)$id] : null;
+            if ($tok !== null && $tok[0] === 'Heading'
+                && isset($tok[1]['type']) && $tok[1]['type'] === 'end'
+                && !empty($tok[1]['collapsible_crossing'])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     protected function runHasScoredDivEnd($run) {
         $delim = preg_quote($this->wiki->delim, '/');
         if (! preg_match_all('/' . $delim . '([0-9]+)' . $delim . '/', $run, $ms)) {
@@ -487,6 +503,9 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
         // stray-closer lead glued to a div opener (d42) are all bare on
         // live, where the fossil wrapped any run not starting with a
         // delimiter.
+        if ($this->runHasCollapsibleHeadingEnd($matches[0])) {
+            return $matches[0];
+        }
         if ($this->runHasScoredDivEnd($matches[0])) {
             return $matches[0];
         }
