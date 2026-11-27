@@ -274,7 +274,201 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                 }
             }
             $directInlineLeadForBreaks = $directInlineLead && !$directBeforeBlockedHoriz;
-            if ($inlineDepth > 0 && ($directInlineLeadForBreaks || $horizNeedsLooseScopeBreaks || $looseScopeContentBreaks)) {
+            $scopeCrossedEnclosingBlockEnd = false;
+            if ($inlineDepth > 0 && !empty($inlineStack)) {
+                $enclosingScanDepth = 0;
+                foreach ($allPrefixMatches[1] as $scanPi => $scanTidm) {
+                    if ($scanPi <= $scopePi) {
+                        continue;
+                    }
+                    $scanTok = isset($this->wiki->tokens[(int)$scanTidm[0]])
+                        ? $this->wiki->tokens[(int)$scanTidm[0]] : null;
+                    if ($scanTok === null || !isset($scanTok[1]['type'])
+                        || !in_array($scanTok[0], array('Div', 'Divalign', 'Collapsible'), true)) {
+                        continue;
+                    }
+                    if ($scanTok[1]['type'] === 'start') {
+                        $enclosingScanDepth++;
+                    } elseif ($scanTok[1]['type'] === 'end') {
+                        if ($enclosingScanDepth > 0) {
+                            $enclosingScanDepth--;
+                        } else {
+                            $scopeCrossedEnclosingBlockEnd = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            $scopeOpenedInsideContainer = false;
+            if (!empty($inlineStack)) {
+                $containerDepth = 0;
+                foreach ($allPrefixMatches[1] as $scanPi => $scanTidm) {
+                    if ($scanPi >= $scopePi) {
+                        break;
+                    }
+                    $scanTok = isset($this->wiki->tokens[(int)$scanTidm[0]])
+                        ? $this->wiki->tokens[(int)$scanTidm[0]] : null;
+                    if ($scanTok === null || !isset($scanTok[1]['type'])
+                        || !in_array($scanTok[0], array('Div', 'Divalign', 'Collapsible', 'Blockquote'), true)) {
+                        continue;
+                    }
+                    if ($scanTok[1]['type'] === 'start') {
+                        $containerDepth++;
+                    } elseif ($scanTok[1]['type'] === 'end' && $containerDepth > 0) {
+                        $containerDepth--;
+                    }
+                }
+                $scopeOpenedInsideContainer = $containerDepth > 0;
+            }
+            $divalignLeadingBreaks = false;
+            if ($inlineDepth > 0 && isset($allEnds[0]) && !empty($allEnds[0])) {
+                $edgeIndex = count($allEnds[0]) - 1;
+                if ($allEnds[0][$edgeIndex][1] + strlen($allEnds[0][$edgeIndex][0]) === $fullPos) {
+                    $edgeTok = isset($this->wiki->tokens[(int)$allEnds[1][$edgeIndex][0]])
+                        ? $this->wiki->tokens[(int)$allEnds[1][$edgeIndex][0]] : null;
+                    $divalignLeadingBreaks = $edgeTok !== null && $edgeTok[0] === 'Divalign'
+                        && isset($edgeTok[1]['type']) && $edgeTok[1]['type'] === 'start'
+                        && isset($edgeTok[1]['align']) && $edgeTok[1]['align'] === 'center';
+                    if ($divalignLeadingBreaks && $scopeTok !== null) {
+                        $alreadySupplied = !empty($scopeTok[1]['loose_scope_content_breaks']);
+                        if (!$alreadySupplied) {
+                            $scopeTokenEnd = $allPrefixMatches[0][$scopePi][1]
+                                + strlen($allPrefixMatches[0][$scopePi][0]);
+                            $edgeTokenStart = $allEnds[0][$edgeIndex][1];
+                            $beforeEdge = substr($prefix, $scopeTokenEnd, $edgeTokenStart - $scopeTokenEnd);
+                            $beforeEdgeText = preg_replace($placeholder, '', $beforeEdge);
+                            $hasOrdinaryText = false;
+                            foreach (preg_split('/\r\n|\r|\n/', $beforeEdgeText) as $beforeLine) {
+                                if (trim($beforeLine) !== '') {
+                                    $hasOrdinaryText = true;
+                                    break;
+                                }
+                            }
+                            $hasBlockquote = false;
+                            if (preg_match_all($placeholder, $beforeEdge, $beforeTokens)) {
+                                foreach ($beforeTokens[1] as $beforeTid) {
+                                    $beforeTok = isset($this->wiki->tokens[(int)$beforeTid])
+                                        ? $this->wiki->tokens[(int)$beforeTid] : null;
+                                    if ($beforeTok !== null && $beforeTok[0] === 'Blockquote') {
+                                        $hasBlockquote = true;
+                                        break;
+                                    }
+                                }
+                            }
+                            $alreadySupplied = !$hasOrdinaryText && !$hasBlockquote
+                                && preg_match('/\A\s*\z/', $beforeEdgeText) === 1
+                                && substr_count($beforeEdgeText, "\n") === 1;
+                        }
+                        $hasPriorInlineParagraphBreak = false;
+                        $scopeSegmentText = preg_replace($placeholder, 'X', $beforeEdge);
+                        $sawOrdinarySegmentLine = false;
+                        $pendingSegmentBlank = false;
+                        foreach (preg_split('/\r\n|\r|\n/', $scopeSegmentText) as $segmentLine) {
+                            $segmentLineText = trim($segmentLine);
+                            if ($segmentLineText === '') {
+                                if ($sawOrdinarySegmentLine) {
+                                    $pendingSegmentBlank = true;
+                                }
+                                continue;
+                            }
+                            if (preg_match('/^(?:[*#=+>]|:|\|\|)/', $segmentLineText) !== 1) {
+                                if ($pendingSegmentBlank && $sawOrdinarySegmentLine) {
+                                    $hasPriorInlineParagraphBreak = true;
+                                    break;
+                                }
+                                $sawOrdinarySegmentLine = true;
+                            }
+                        }
+                        $scopeHasHorizBeforeEdge = false;
+                        if ($hasPriorInlineParagraphBreak
+                            && preg_match_all($placeholder, $beforeEdge, $edgeTokens)) {
+                            foreach ($edgeTokens[1] as $edgeTid) {
+                                $edgeScanTok = isset($this->wiki->tokens[(int)$edgeTid])
+                                    ? $this->wiki->tokens[(int)$edgeTid] : null;
+                                if ($edgeScanTok !== null && $edgeScanTok[0] === 'Horiz') {
+                                    $scopeHasHorizBeforeEdge = true;
+                                    break;
+                                }
+                            }
+                        }
+                        $divalignLeadingBreaks = !$alreadySupplied && !$scopeCrossedEnclosingBlockEnd
+                            && !($scopeOpenedInsideContainer && $hasOrdinaryText)
+                            && !($hasPriorInlineParagraphBreak && !$scopeHasHorizBeforeEdge);
+                    }
+                }
+            }
+            $divalignSegmentBreaks = false;
+            $divalignSegmentConsume = false;
+            $divalignSegmentEndPos = null;
+            if ($inlineDepth > 0 && !empty($inlineStack) && $scopeTok !== null) {
+                $baseDivalignDepth = 0;
+                $baseDivalignAligns = array();
+                foreach ($allPrefixMatches[1] as $scanPi => $scanTidm) {
+                    if ($scanPi >= $scopePi) {
+                        break;
+                    }
+                    $scanTok = isset($this->wiki->tokens[(int)$scanTidm[0]])
+                        ? $this->wiki->tokens[(int)$scanTidm[0]] : null;
+                    if ($scanTok === null || $scanTok[0] !== 'Divalign' || !isset($scanTok[1]['type'])) {
+                        continue;
+                    }
+                    if ($scanTok[1]['type'] === 'start') {
+                        $baseDivalignDepth++;
+                        $baseDivalignAligns[] = isset($scanTok[1]['align']) ? $scanTok[1]['align'] : '';
+                    } elseif ($scanTok[1]['type'] === 'end' && $baseDivalignDepth > 0) {
+                        $baseDivalignDepth--;
+                        array_pop($baseDivalignAligns);
+                    }
+                }
+                $scanDivalignDepth = $baseDivalignDepth;
+                $scanDivalignAligns = $baseDivalignAligns;
+                $lastNestedDivalignEndPos = null;
+                $lastNestedDivalignEndTokenEnd = null;
+                foreach ($allPrefixMatches[1] as $scanPi => $scanTidm) {
+                    if ($scanPi <= $scopePi) {
+                        continue;
+                    }
+                    $scanTok = isset($this->wiki->tokens[(int)$scanTidm[0]])
+                        ? $this->wiki->tokens[(int)$scanTidm[0]] : null;
+                    if ($scanTok === null || $scanTok[0] !== 'Divalign' || !isset($scanTok[1]['type'])) {
+                        continue;
+                    }
+                    if ($scanTok[1]['type'] === 'start') {
+                        $scanDivalignDepth++;
+                        $scanDivalignAligns[] = isset($scanTok[1]['align']) ? $scanTok[1]['align'] : '';
+                    } elseif ($scanTok[1]['type'] === 'end') {
+                        $endedAlign = end($scanDivalignAligns);
+                        if ($scanDivalignDepth === $baseDivalignDepth + 1 && $endedAlign === 'center') {
+                            $lastNestedDivalignEndPos = $allPrefixMatches[0][$scanPi][1];
+                            $lastNestedDivalignEndTokenEnd = $lastNestedDivalignEndPos
+                                + strlen($allPrefixMatches[0][$scanPi][0]);
+                        }
+                        if ($scanDivalignDepth > 0) {
+                            $scanDivalignDepth--;
+                            array_pop($scanDivalignAligns);
+                        }
+                    }
+                }
+                if ($lastNestedDivalignEndPos !== null
+                    && (!isset($scopeTok[1]['loose_scope_divalign_segment'])
+                        || $scopeTok[1]['loose_scope_divalign_segment'] !== $lastNestedDivalignEndPos)) {
+                    $divalignSegmentConsume = true;
+                    $divalignSegmentEndPos = $lastNestedDivalignEndPos;
+                    $sinceBlockEnd = substr($prefix, $lastNestedDivalignEndTokenEnd);
+                    $sinceText = preg_replace($placeholder, '', $sinceBlockEnd);
+                    foreach (preg_split('/\r\n|\r|\n/', $sinceText) as $sinceLine) {
+                        $lineText = trim($sinceLine);
+                        if ($lineText !== '' && preg_match('/^(?:[*#=+>]|:|\|\|)/', $lineText) !== 1) {
+                            $divalignSegmentBreaks = !$scopeCrossedEnclosingBlockEnd;
+                            break;
+                        }
+                    }
+                }
+            }
+            if ($divalignSegmentConsume && $looseScopeTokenId !== null) {
+                $this->wiki->tokens[$looseScopeTokenId][1]['loose_scope_divalign_segment'] = $divalignSegmentEndPos;
+            }
+            if ($inlineDepth > 0 && ($directInlineLeadForBreaks || $horizNeedsLooseScopeBreaks || $looseScopeContentBreaks || $divalignLeadingBreaks || $divalignSegmentBreaks)) {
                 $crossesEnclosingBlockEnd = false;
                 $scanInlineRules = array('Span', 'Size');
                 if ($looseScopeContentBreaks || ($scopeTok !== null && $scopeTok[0] === 'Anchor')) {
