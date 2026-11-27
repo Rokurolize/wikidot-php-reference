@@ -160,7 +160,7 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                 && $closeRun >= 2) {
                 $trimmed = substr($body, 0, -1);
                 if ($trimmed === '') {
-                    $out .= ' ';
+                    $out .= "\xEF\xBF\xBE\xEF\xBF\xBF";
                 } else {
                     // $lead is assigned below the cross-line branch in the
                     // original scanner; recompute the opener's extra @ here.
@@ -173,7 +173,7 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                     // before the literal extra @ (xline-close3/3b/4 and
                     // xline-close3-nospace: the space is present even with no
                     // source space after the closer run).
-                    $out .= ' ';
+                    $out .= "\xEF\xBF\xBE\xEF\xBF\xBF";
                     $out .= str_repeat('@', $closeRun - 2);
                 }
                 $i = $k;

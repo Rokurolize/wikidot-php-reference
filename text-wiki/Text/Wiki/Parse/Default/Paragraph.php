@@ -406,8 +406,8 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
                     if (in_array($rule, $skip, true)
                         && $rule !== 'image'
                         && $rule !== 'separator'
-                        && ($sub === 'start' || substr($sub, -6) === '_start'
-                            || $sub === '')) {
+                        && ($sub === 'start' || substr($sub, 0, 6) === 'start-'
+                            || substr($sub, -6) === '_start' || $sub === '')) {
                         // A start-typed token opens a span (depth 1); a
                         // standalone block token (a horizontal rule, a
                         // module) opens none but still ends the lead:
