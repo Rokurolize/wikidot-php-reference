@@ -274,6 +274,31 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                 }
             }
             $directInlineLeadForBreaks = $directInlineLead && !$directBeforeBlockedHoriz;
+            $scopeCrossedEnclosingBlockEnd = false;
+            if ($inlineDepth > 0 && !empty($inlineStack)) {
+                $enclosingScanDepth = 0;
+                foreach ($allPrefixMatches[1] as $scanPi => $scanTidm) {
+                    if ($scanPi <= $scopePi) {
+                        continue;
+                    }
+                    $scanTok = isset($this->wiki->tokens[(int)$scanTidm[0]])
+                        ? $this->wiki->tokens[(int)$scanTidm[0]] : null;
+                    if ($scanTok === null || !isset($scanTok[1]['type'])
+                        || !in_array($scanTok[0], array('Div', 'Divalign', 'Collapsible'), true)) {
+                        continue;
+                    }
+                    if ($scanTok[1]['type'] === 'start') {
+                        $enclosingScanDepth++;
+                    } elseif ($scanTok[1]['type'] === 'end') {
+                        if ($enclosingScanDepth > 0) {
+                            $enclosingScanDepth--;
+                        } else {
+                            $scopeCrossedEnclosingBlockEnd = true;
+                            break;
+                        }
+                    }
+                }
+            }
             $divalignLeadingBreaks = false;
             if ($inlineDepth > 0 && isset($allEnds[0]) && !empty($allEnds[0])) {
                 $edgeIndex = count($allEnds[0]) - 1;
@@ -313,7 +338,7 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                                 && preg_match('/\A\s*\z/', $beforeEdgeText) === 1
                                 && substr_count($beforeEdgeText, "\n") === 1;
                         }
-                        $divalignLeadingBreaks = !$alreadySupplied;
+                        $divalignLeadingBreaks = !$alreadySupplied && !$scopeCrossedEnclosingBlockEnd;
                     }
                 }
             }
@@ -379,7 +404,7 @@ class Text_Wiki_Parse_Newline extends Text_Wiki_Parse {
                     foreach (preg_split('/\r\n|\r|\n/', $sinceText) as $sinceLine) {
                         $lineText = trim($sinceLine);
                         if ($lineText !== '' && preg_match('/^(?:[*#=+>]|:|\|\|)/', $lineText) !== 1) {
-                            $divalignSegmentBreaks = true;
+                            $divalignSegmentBreaks = !$scopeCrossedEnclosingBlockEnd;
                             break;
                         }
                     }
