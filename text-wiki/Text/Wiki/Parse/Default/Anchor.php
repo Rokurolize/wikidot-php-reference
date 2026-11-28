@@ -368,7 +368,7 @@ class Text_Wiki_Parse_Anchor extends Text_Wiki_Parse {
                     $norm = $this->normalizeAttrValue($rawVal);
                     if ($norm === '') {
                         $fixed['id'] = 'u-';
-                    } elseif (strpos($norm, 'u-') === 0) {
+                    } elseif (strpos($rawVal, 'u-') === 0) {
                         $fixed['id'] = $norm;
                     } elseif (preg_match('/^[ \t\n\r]/', $rawVal)) {
                         $fixed['id'] = 'u- ' . $norm;

@@ -73,7 +73,8 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
     /**
      * Live user-id isolation collapses ASCII whitespace and prefixes "u-"
      * unless the value already begins with it; Unicode separator characters
-     * are literal id characters, not whitespace.
+     * are literal id characters, not whitespace; VT and FF are discarded
+     * control bytes rather than whitespace.
      */
     function isolateId($value) {
         if ($value === '') {
@@ -82,12 +83,13 @@ class Text_Wiki_Parse_Span extends Text_Wiki_Parse {
         if (strpos($value, "\xFF") !== false) {
             return $value;
         }
-        if (preg_match('/^[ \t\n\r\x0B\x0C]/', $value)) {
+        $clean = preg_replace('/[\x0B\x0C]/', '', $value);
+        if (preg_match('/^[ \t\n\r]/', $clean)) {
             $leading = true;
         } else {
             $leading = false;
         }
-        $collapsed = preg_replace('/[ \t\n\r\x0B\x0C]+/', ' ', trim($value));
+        $collapsed = preg_replace('/[ \t\n\r]+/', ' ', trim($clean));
         if ($collapsed === '') {
             return 'u-';
         }
