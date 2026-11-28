@@ -1413,28 +1413,46 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
         return preg_match('/<a\b[^>]*>þmodule.*?þ<\/a><p><a\b/s', $html) === 1;
     }
 
+    function outputHasUnknownModuleError($html)
+    {
+        return strpos($html, '<div class="error-block">[[module <em>') !== false;
+    }
+
+    function redistributedUnknownModuleErrorAnchor($atag, $content)
+    {
+        $pos = strpos($content, '<a');
+        if ($pos === false) {
+            $before = rtrim($content);
+            $whitespace = substr($content, strlen($before));
+            $rest = '';
+        } else {
+            $head = substr($content, 0, $pos);
+            $before = rtrim($head);
+            $whitespace = substr($head, strlen($before));
+            $rest = substr($content, $pos);
+        }
+        return '<div class="error-block">' . $atag . $before . '</a>' . $atag . '</a>' . $whitespace . $rest . '</div>';
+    }
+
     function redistributeAnchorAcrossOpaqueConstructs($html)
     {
         $html = preg_replace('/(<a\b[^>]*>)(\s+)(<div class="code">)/', '$3$1$2', $html);
-        $html = preg_replace_callback('/(?<atag><a\b[^>]*>)<div class="error-block">(\[\[module <em>.*?)<\/div><\/a><p>(?P=atag)(.*?)<\/a><\/p>/s',
+        $html = preg_replace_callback('/(?<atag><a\b[^>]*>)<div class="error-block">(?<first>\[\[module <em>.*?)<\/div><\/a>(?<middle>(?:\s*(?P=atag)<div class="error-block">\[\[module <em>.*?<\/div><\/a>)+)\s*<p>(?P=atag)(?<trail>.*?)<\/a><\/p>/s',
             function ($m) {
                 $atag = $m['atag'];
-                $content = $m[2];
-                $trail = $m[3];
-                $pos = strpos($content, '<a');
-                if ($pos === false) {
-                    $before = rtrim($content);
-                    $whitespace = substr($content, strlen($before));
-                    $rest = '';
-                } else {
-                    $head = substr($content, 0, $pos);
-                    $before = rtrim($head);
-                    $whitespace = substr($head, strlen($before));
-                    $rest = substr($content, $pos);
+                $middle = preg_replace('/' . preg_quote($atag, '/') . '(<div class="error-block">)/', '$1', $m['middle']);
+                $middle = preg_replace('/(<\/div>)<\/a>/', '$1', $middle);
+                $out = $this->redistributedUnknownModuleErrorAnchor($atag, $m['first']) . $middle;
+                if ($m['trail'] !== '') {
+                    $out .= '<p>' . $m['trail'] . '</p>';
                 }
-                $out = '<div class="error-block">' . $atag . $before . '</a>' . $atag . '</a>' . $whitespace . $rest . '</div>';
-                if ($trail !== '') {
-                    $out .= '<p>' . $trail . '</p>';
+                return $out;
+            }, $html);
+        $html = preg_replace_callback('/(?<atag><a\b[^>]*>)<div class="error-block">(\[\[module <em>.*?)<\/div><\/a><p>(?P=atag)(.*?)<\/a><\/p>/s',
+            function ($m) {
+                $out = $this->redistributedUnknownModuleErrorAnchor($m['atag'], $m[2]);
+                if ($m[3] !== '') {
+                    $out .= '<p>' . $m[3] . '</p>';
                 }
                 return $out;
             }, $html);
@@ -1799,6 +1817,7 @@ int tidySaveBuffer(TidyDoc tdoc, TidyBuffer* buf);
             || $this->outputHasListParagraphCrossing($output)
             || $sawBareInlineBeforeDiv
             || $sawFootnoteBlock
+            || $this->outputHasUnknownModuleError($output)
             || $this->outputHasEmptyBlockquote($output)) {
             $output = $this->redistributeAnchorAcrossOpaqueConstructs($output);
             $output = $this->purifyRecoveredHtml($output);

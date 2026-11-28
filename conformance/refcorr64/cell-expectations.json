@@ -1,0 +1,47 @@
+{
+ "exact_cells": {
+  "sentinel-collision": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "multi-opaque-anchor": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "module-framing": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   10
+  ]
+ },
+ "canonical_cells": {},
+ "rate_module_expansion_exact_cells": {
+  "multi-opaque-anchor": [
+   4,
+   5,
+   6,
+   8
+  ],
+  "module-framing": [
+   9
+  ]
+ },
+ "css_empty_module_masked_canonical_cells": {
+  "module-framing": [
+   8
+  ]
+ }
+}

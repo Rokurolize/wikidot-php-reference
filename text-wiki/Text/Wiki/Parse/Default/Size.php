@@ -175,7 +175,7 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
                 && isset($this->wiki->tokens[(int)$rawMatch[1]])
                 && $this->wiki->tokens[(int)$rawMatch[1]][0] === 'Raw'
                 && $this->wiki->tokens[(int)$rawMatch[1]][1]['text'] === '')
-                || $line === "\xEF\xBF\xBE\xEF\xBF\xBF") {
+                || $line === "\xFE\xFE") {
                 $isEmptyRaw = true;
             }
             if ($seenVisible && $isEmptyRaw) {
@@ -282,7 +282,8 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
             $oldSource = $this->wiki->source;
             $this->wiki->source = $this->_scanSize($oldSource);
         } while ($oldSource != $this->wiki->source);
-        $this->wiki->source = str_replace("\xEF\xBF\xBE\xEF\xBF\xBF", ' ', $this->wiki->source);
+        $placeholder = "\xFE\xFE";
+        $this->wiki->source = str_replace($placeholder, ' ', $this->wiki->source);
     }
 
     /**
