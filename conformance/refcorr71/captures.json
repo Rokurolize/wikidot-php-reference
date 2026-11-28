@@ -1,0 +1,82 @@
+{
+ "lp-controls": {
+  "fullname": "muse-p-modbody-lp-controls",
+  "html": "<p>LC-PROPER-BODY</p>\n<div class=\"list-pages-box\">    \n\n<p>LC-PROPER-BODY probe mod-basic</p>\n\n    \n    \n    \n    </div>\n<hr />\n<p>LC-NESTED-CONTROL</p>\n<div class=\"list-pages-box\">    \n\n<div>\n<p>LC-NESTED-CONTROL probe mod-basic</p>\n</div>\n\n    \n    \n    \n    </div>\n<hr />\n<p>LC-UNATTR-INLINE-CONTROL<br />\n[[module ListPages]][[/module]]</p>\n<hr />\n<p>LC-END-CONTROL</p>\n<div class=\"list-pages-box\">    \n\n<p>LC-END-CONTROL probe mod-basic</p>\n\n    \n    \n    \n    </div>\n<hr />\n<p>LC-PROPER-EMPTY</p>\n<div class=\"list-pages-box\">    \n\n<h1><span><a href=\"/muse-probe-r2mod-module-mod-basic\">probe mod-basic</a></span></h1>\n<p>by <span class=\"printuser avatarhover\"><a href=\"https://www.wikidot.com/user:info/scpaiueouiuiuiui\" onclick=\"WIKIDOT.page.listeners.userInfo(8955132); return false;\"><img class=\"small\" src=\"https://www.wikidot.com/avatar.php?userid=8955132&amp;size=small\" alt=\"scpaiueouiuiuiui\" style=\"background-image:url(https://www.wikidot.com/userkarma.php?u=8955132)\" /></a><a href=\"https://www.wikidot.com/user:info/scpaiueouiuiuiui\" onclick=\"WIKIDOT.page.listeners.userInfo(8955132); return false;\">scpaiueouiuiuiui</a></span> <span class=\"odate time_1795142119 format_%25O%20ago%20%28%25e%20%25b%20%25Y%2C%20%25H%3A%25M%29\">20 Nov 2026 02:35</span></p>\n\n    \n    \n    \n    </div>\n<p>[[/module]]</p>",
+  "html_sha256": "5eb96dd3af8e8d5c670db8a722f66a94c41f06feb86b5ef01f64886e64641411",
+  "source": "LC-PROPER-BODY\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\nLC-PROPER-BODY %%title%%\n[[/module]]\n----\nLC-NESTED-CONTROL\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\n[[div]]\nLC-NESTED-CONTROL %%title%%\n[[/div]]\n[[/module]]\n----\nLC-UNATTR-INLINE-CONTROL\n[[module ListPages]][[/module]]\n----\nLC-END-CONTROL\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\nLC-END-CONTROL %%title%%\n[[/module]]\n----\nLC-PROPER-EMPTY\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\n[[/module]]",
+  "source_sha256": "8f7af49f8e6c8b4fd631c30b1c17cecd9d6cbb75ef3c3381570d2391ed31e30d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "lp-immediate-middle": {
+  "fullname": "muse-p-modbody-lp-immediate-middle",
+  "html": "<p>LIM-CASE</p>\n<div class=\"list-pages-box\">    \n\n<h1><span><a href=\"/muse-probe-r2mod-module-mod-basic\">probe mod-basic</a></span></h1>\n<p>by <span class=\"printuser avatarhover\"><a href=\"https://www.wikidot.com/user:info/scpaiueouiuiuiui\" onclick=\"WIKIDOT.page.listeners.userInfo(8955132); return false;\"><img class=\"small\" src=\"https://www.wikidot.com/avatar.php?userid=8955132&amp;size=small\" alt=\"scpaiueouiuiuiui\" style=\"background-image:url(https://www.wikidot.com/userkarma.php?u=8955132)\" /></a><a href=\"https://www.wikidot.com/user:info/scpaiueouiuiuiui\" onclick=\"WIKIDOT.page.listeners.userInfo(8955132); return false;\">scpaiueouiuiuiui</a></span> <span class=\"odate time_1795142119 format_%25O%20ago%20%28%25e%20%25b%20%25Y%2C%20%25H%3A%25M%29\">20 Nov 2026 02:35</span></p>\n\n    \n    \n    \n    </div>\n<p>LIM-AFTER</p>",
+  "html_sha256": "ffd67c2cd4235ac2fa07933f3815238a2d63dafb79af5623f924f8b54df9a8cf",
+  "source": "LIM-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]][[/module]]\nLIM-AFTER",
+  "source_sha256": "c308e9dac3d57c256c8d41fd324b2842908163c936d115d535a835a5f477b68d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "lp-immediate-end": {
+  "fullname": "muse-p-modbody-lp-immediate-end",
+  "html": "<p>LIE-CASE</p>\n<div class=\"list-pages-box\">    \n\n<h1><span><a href=\"/muse-probe-r2mod-module-mod-basic\">probe mod-basic</a></span></h1>\n<p>by <span class=\"printuser avatarhover\"><a href=\"https://www.wikidot.com/user:info/scpaiueouiuiuiui\" onclick=\"WIKIDOT.page.listeners.userInfo(8955132); return false;\"><img class=\"small\" src=\"https://www.wikidot.com/avatar.php?userid=8955132&amp;size=small\" alt=\"scpaiueouiuiuiui\" style=\"background-image:url(https://www.wikidot.com/userkarma.php?u=8955132)\" /></a><a href=\"https://www.wikidot.com/user:info/scpaiueouiuiuiui\" onclick=\"WIKIDOT.page.listeners.userInfo(8955132); return false;\">scpaiueouiuiuiui</a></span> <span class=\"odate time_1795142119 format_%25O%20ago%20%28%25e%20%25b%20%25Y%2C%20%25H%3A%25M%29\">20 Nov 2026 02:35</span></p>\n\n    \n    \n    \n    </div>",
+  "html_sha256": "ce2c267fa8636a4338a1cb2ff6bf728784edfc347330266f1f60c438cd6a7056",
+  "source": "LIE-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]][[/module]]",
+  "source_sha256": "3bcc1f8e684336c388c19307941f240c8271264cfab56aea0fead3ef81213ac3",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "lp-bodytext-inline": {
+  "fullname": "muse-p-modbody-lp-bodytext-inline",
+  "html": "<p>LBT-CASE</p>\n<div class=\"list-pages-box\">    \n\n<h1><span><a href=\"/muse-probe-r2mod-module-mod-basic\">probe mod-basic</a></span></h1>\n<p>by <span class=\"printuser avatarhover\"><a href=\"https://www.wikidot.com/user:info/scpaiueouiuiuiui\" onclick=\"WIKIDOT.page.listeners.userInfo(8955132); return false;\"><img class=\"small\" src=\"https://www.wikidot.com/avatar.php?userid=8955132&amp;size=small\" alt=\"scpaiueouiuiuiui\" style=\"background-image:url(https://www.wikidot.com/userkarma.php?u=8955132)\" /></a><a href=\"https://www.wikidot.com/user:info/scpaiueouiuiuiui\" onclick=\"WIKIDOT.page.listeners.userInfo(8955132); return false;\">scpaiueouiuiuiui</a></span> <span class=\"odate time_1795142119 format_%25O%20ago%20%28%25e%20%25b%20%25Y%2C%20%25H%3A%25M%29\">20 Nov 2026 02:35</span></p>\n\n    \n    \n    \n    </div>\n<p>LBT-AFTER</p>",
+  "html_sha256": "d888ed2dfa0326f357825286e331c261e89baa1195816c50e020907d2c960899",
+  "source": "LBT-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]LBODY %%title%%[[/module]]\nLBT-AFTER",
+  "source_sha256": "0995fe9d2ceac428d44605592930f96166f095876af93b953ff387a2c3d0306b",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "lp-nested-div-adjacent": {
+  "fullname": "muse-p-modbody-lp-nested-div-adjacent",
+  "html": "<p>LND-CASE</p>\n<div class=\"list-pages-box\">    \n\n<h1><span><a href=\"/muse-probe-r2mod-module-mod-basic\">probe mod-basic</a></span></h1>\n<p>by <span class=\"printuser avatarhover\"><a href=\"https://www.wikidot.com/user:info/scpaiueouiuiuiui\" onclick=\"WIKIDOT.page.listeners.userInfo(8955132); return false;\"><img class=\"small\" src=\"https://www.wikidot.com/avatar.php?userid=8955132&amp;size=small\" alt=\"scpaiueouiuiuiui\" style=\"background-image:url(https://www.wikidot.com/userkarma.php?u=8955132)\" /></a><a href=\"https://www.wikidot.com/user:info/scpaiueouiuiuiui\" onclick=\"WIKIDOT.page.listeners.userInfo(8955132); return false;\">scpaiueouiuiuiui</a></span> <span class=\"odate time_1795142119 format_%25O%20ago%20%28%25e%20%25b%20%25Y%2C%20%25H%3A%25M%29\">20 Nov 2026 02:35</span></p>\n\n    \n    \n    \n    </div>\n<div>\n<p>LNDBODY %%title%%</p>\n</div>\n[[/module]]<br />\nLND-AFTER",
+  "html_sha256": "0cff538e4648c5c5efb66105fff2e558e015471a5e66f622bc6e837993333124",
+  "source": "LND-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\n[[div]]\nLNDBODY %%title%%\n[[/div]][[/module]]\nLND-AFTER",
+  "source_sha256": "a6f6f67d81c125f05d85311ead94c94394f453cdb781548fe97be80311beb9b1",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "lp-noclose-inline-end": {
+  "fullname": "muse-p-modbody-lp-noclose-inline-end",
+  "html": "<p>LNOCLOSE-CASE<br />\n[[module ListPages name=&quot;muse-probe-r2mod-module-mod-basic&quot; separate=&quot;no&quot;]]LNOCLOSE-BODY %%title%%</p>",
+  "html_sha256": "7a1e5c3cb7bc5736fd1f5fb7ac9e510f9854d33705d87d0e6736511d3ba3a724",
+  "source": "LNOCLOSE-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]LNOCLOSE-BODY %%title%%",
+  "source_sha256": "89dc2624c30bdbfe5dff32502da0e3899b96c79594765e3f346be995d9c85b19",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unknown-immediate": {
+  "fullname": "muse-p-modbody-unknown-immediate",
+  "html": "<p>UIM-CASE</p>\n<div class=\"error-block\">[[module <em>UnknownMB71</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>\n<p>UIM-AFTER</p>",
+  "html_sha256": "0030330434fdd11ca9a07ca5b6c8ac89daaa0cc2e8573fff7619f736dd0c3c0a",
+  "source": "UIM-CASE\n[[module UnknownMB71 x=\"1\"]][[/module]]\nUIM-AFTER",
+  "source_sha256": "82d8161186cb201c7cd2fcd2de548a3a0b966da7a9b4cb356982e122d226a1ea",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "unknown-bodytext-inline": {
+  "fullname": "muse-p-modbody-unknown-bodytext-inline",
+  "html": "<p>UBT-CASE</p>\n<div class=\"error-block\">[[module <em>UnknownMB71</em>]] No such module, please <a href=\"https://www.wikidot.com/doc:modules\" target=\"_blank\">check available modules</a> and fix this page.</div>\n<p>UBT-AFTER</p>",
+  "html_sha256": "9e319b84480328e3c078956f1eb70ce6e2db10350b9d69839000ad237485de02",
+  "source": "UBT-CASE\n[[module UnknownMB71 x=\"1\"]]UMBODY[[/module]]\nUBT-AFTER",
+  "source_sha256": "5c4a4ae85e66b2480440e2ee979e4b85c0d66a157d80239d688704443f5907bc",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "schema": "hunt-modbody-probe-design.v1",
+ "target": "muse-probe-r2mod-module-mod-basic",
+ "target_note": "existing immutable R2 probe page selected by exact name; no holder page is created or edited",
+ "rederived_m4_subfact": "m4 snapshot-50 attributed inline empty ListPages controls show the reference regex closing the opener at the would-be closer's terminal ]], while the opener's own ]] and the closer's leading [[/module bytes are folded into the attr field; the encoded bytes are ]][[/module with no space.",
+ "grouping_note": "only well-formed controls are grouped. Every malformed or potentially unclosed module shape is the sole module opener in its page apart from the separately grouped control page, so one shape cannot swallow or rewrite a later independent opener.",
+ "pages": [
+  {
+   "id": "lp-controls",
+   "source": "LC-PROPER-BODY\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\nLC-PROPER-BODY %%title%%\n[[/module]]\n----\nLC-NESTED-CONTROL\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\n[[div]]\nLC-NESTED-CONTROL %%title%%\n[[/div]]\n[[/module]]\n----\nLC-UNATTR-INLINE-CONTROL\n[[module ListPages]][[/module]]\n----\nLC-END-CONTROL\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\nLC-END-CONTROL %%title%%\n[[/module]]\n----\nLC-PROPER-EMPTY\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\n[[/module]]"
+  },
+  {
+   "id": "lp-immediate-middle",
+   "source": "LIM-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]][[/module]]\nLIM-AFTER"
+  },
+  {
+   "id": "lp-immediate-end",
+   "source": "LIE-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]][[/module]]"
+  },
+  {
+   "id": "lp-bodytext-inline",
+   "source": "LBT-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]LBODY %%title%%[[/module]]\nLBT-AFTER"
+  },
+  {
+   "id": "lp-nested-div-adjacent",
+   "source": "LND-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\n[[div]]\nLNDBODY %%title%%\n[[/div]][[/module]]\nLND-AFTER"
+  },
+  {
+   "id": "lp-noclose-inline-end",
+   "source": "LNOCLOSE-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]LNOCLOSE-BODY %%title%%"
+  },
+  {
+   "id": "unknown-immediate",
+   "source": "UIM-CASE\n[[module UnknownMB71 x=\"1\"]][[/module]]\nUIM-AFTER"
+  },
+  {
+   "id": "unknown-bodytext-inline",
+   "source": "UBT-CASE\n[[module UnknownMB71 x=\"1\"]]UMBODY[[/module]]\nUBT-AFTER"
+  }
+ ],
+ "shape_cells": [
+  {
+   "shape_key": "listpages/control-body-multiline",
+   "page": "lp-controls",
+   "marker": "LC-PROPER-BODY"
+  },
+  {
+   "shape_key": "listpages/control-nested-linestart-closer",
+   "page": "lp-controls",
+   "marker": "LC-NESTED-CONTROL"
+  },
+  {
+   "shape_key": "listpages/control-unattributed-inline-empty",
+   "page": "lp-controls",
+   "marker": "LC-UNATTR-INLINE-CONTROL"
+  },
+  {
+   "shape_key": "listpages/control-end-body-multiline",
+   "page": "lp-controls",
+   "marker": "LC-END-CONTROL"
+  },
+  {
+   "shape_key": "listpages/control-empty-multiline",
+   "page": "lp-controls",
+   "marker": "LC-PROPER-EMPTY"
+  },
+  {
+   "shape_key": "listpages/immediate-attributed-inline-empty-middle",
+   "page": "lp-immediate-middle",
+   "marker": "LIM-CASE"
+  },
+  {
+   "shape_key": "listpages/immediate-attributed-inline-empty-at-end",
+   "page": "lp-immediate-end",
+   "marker": "LIE-CASE"
+  },
+  {
+   "shape_key": "listpages/bodytext-attributed-inline",
+   "page": "lp-bodytext-inline",
+   "marker": "LBT-CASE"
+  },
+  {
+   "shape_key": "listpages/nested-div-adjacent-closers",
+   "page": "lp-nested-div-adjacent",
+   "marker": "LND-CASE"
+  },
+  {
+   "shape_key": "listpages/no-closer-inline-tail-at-end",
+   "page": "lp-noclose-inline-end",
+   "marker": "LNOCLOSE-CASE"
+  },
+  {
+   "shape_key": "module/immediate-attributed-inline-empty-middle",
+   "page": "unknown-immediate",
+   "marker": "UIM-CASE"
+  },
+  {
+   "shape_key": "module/bodytext-attributed-inline",
+   "page": "unknown-bodytext-inline",
+   "marker": "UBT-CASE"
+  }
+ ]
+}
