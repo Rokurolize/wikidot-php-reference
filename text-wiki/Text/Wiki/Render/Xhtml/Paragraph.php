@@ -44,6 +44,9 @@ class Text_Wiki_Render_Xhtml_Paragraph extends Text_Wiki_Render {
 
     function token($options)
     {
+        if (!empty($options['divalign_shell'])) {
+            return '';
+        }
         extract($options); //type
 
         if ($type == 'start') {

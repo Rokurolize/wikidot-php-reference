@@ -1,0 +1,11 @@
+{
+ "divalign-control-leak-only": "<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end18</p>",
+ "divalign-right-empty-pair": "<div style=\"text-align: right;\"></div>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end24</p>",
+ "left-open-only": "<p>[[&lt;]]</p>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end20</p>",
+ "divalign-center-open-only": "<p>[[=]]</p>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end20</p>",
+ "divalign-center-empty-pair": "<div style=\"text-align: center;\"></div>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end24</p>",
+ "right-pair-after-leak": "<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end202112223224</p>",
+ "left-empty-pair-before-leak": "<div style=\"text-align: left;\"></div>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end24</p>",
+ "right-text-pair-before-leak": "<div style=\"text-align: right;\">\n<p>alpha</p>\n</div>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end26</p>",
+ "divalign-right-open-only": "<p>[[&gt;]]</p>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end20</p>"
+}

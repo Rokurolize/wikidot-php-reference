@@ -1,0 +1,9 @@
+{"id": "divalign-control-leak-only", "source": "# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�"}
+{"id": "divalign-right-open-only", "source": "[[>]]\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�"}
+{"id": "divalign-right-empty-pair", "source": "[[>]]\n[[/>]]\n\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�"}
+{"id": "divalign-center-open-only", "source": "[[=]]\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�"}
+{"id": "divalign-center-empty-pair", "source": "[[=]]\n[[/=]]\n\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�"}
+{"id": "right-pair-after-leak", "source": "# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�\n\n[[>]]\n[[/>]]"}
+{"id": "right-text-pair-before-leak", "source": "[[>]]\nalpha\n[[/>]]\n\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�"}
+{"id": "left-empty-pair-before-leak", "source": "[[<]]\n[[/<]]\n\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�"}
+{"id": "left-open-only", "source": "[[<]]\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�"}
