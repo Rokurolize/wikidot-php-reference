@@ -160,14 +160,14 @@ class Text_Wiki_Parse_Raw extends Text_Wiki_Parse {
                 && $closeRun >= 2) {
                 $trimmed = substr($body, 0, -1);
                 if ($trimmed === '') {
-                    $out .= "\xEF\xBF\xBE\xEF\xBF\xBF";
+                    $out .= "\xFE\xFE";
                 } else {
                     // $lead is assigned below the cross-line branch in the
                     // original scanner; recompute the opener's extra @ here.
                     $text = (($run - 2) === 1 ? '@' : '') . $trimmed;
                     // REFCORR6: exact consumed source span of the scanner.
                     $out .= $this->wiki->addToken($this->rule, array('text' => $text), false, substr($src, $i, $k - $i));
-                    $out .= "\xEF\xBF\xBE\xEF\xBF\xBF";
+                    $out .= "\xFE\xFE";
                 }
                 if ($closeRun > 2) {
                     $out .= str_repeat('@', $closeRun - 2);
