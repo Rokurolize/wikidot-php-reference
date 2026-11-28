@@ -1,0 +1,8 @@
+{"id":"lp-controls","source":"LC-PROPER-BODY\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\nLC-PROPER-BODY %%title%%\n[[/module]]\n----\nLC-NESTED-CONTROL\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\n[[div]]\nLC-NESTED-CONTROL %%title%%\n[[/div]]\n[[/module]]\n----\nLC-UNATTR-INLINE-CONTROL\n[[module ListPages]][[/module]]\n----\nLC-END-CONTROL\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\nLC-END-CONTROL %%title%%\n[[/module]]\n----\nLC-PROPER-EMPTY\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\n[[/module]]"}
+{"id":"lp-immediate-middle","source":"LIM-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]][[/module]]\nLIM-AFTER"}
+{"id":"lp-immediate-end","source":"LIE-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]][[/module]]"}
+{"id":"lp-bodytext-inline","source":"LBT-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]LBODY %%title%%[[/module]]\nLBT-AFTER"}
+{"id":"lp-nested-div-adjacent","source":"LND-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]\n[[div]]\nLNDBODY %%title%%\n[[/div]][[/module]]\nLND-AFTER"}
+{"id":"lp-noclose-inline-end","source":"LNOCLOSE-CASE\n[[module ListPages name=\"muse-probe-r2mod-module-mod-basic\" separate=\"no\"]]LNOCLOSE-BODY %%title%%"}
+{"id":"unknown-immediate","source":"UIM-CASE\n[[module UnknownMB71 x=\"1\"]][[/module]]\nUIM-AFTER"}
+{"id":"unknown-bodytext-inline","source":"UBT-CASE\n[[module UnknownMB71 x=\"1\"]]UMBODY[[/module]]\nUBT-AFTER"}
