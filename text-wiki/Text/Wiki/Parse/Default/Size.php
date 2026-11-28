@@ -158,6 +158,7 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
         $split = null;
         $seenVisible = false;
         $emptyRawAfterVisible = false;
+        $visibleAfterEmptyRaw = false;
         $blankRunStart = null;
         $lastVisibleLineEnd = null;
         $lineStart = 0;
@@ -201,6 +202,9 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
                         || ($blockToken[0] === 'Blockquote' && isset($blockToken[1]['type'])
                             && $blockToken[1]['type'] === 'start'));
                 }
+                if (!$blockAfter && preg_match('/\A\[\[(?:f)?[<>=]image\s+/i', $nextLine)) {
+                    $blockAfter = true;
+                }
                 if ($blockAfter) {
                     $split = $lineStart;
                     break;
@@ -208,6 +212,10 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
                 $emptyRawAfterVisible = true;
             }
             if (!$isEmptyRaw && $emptyRawAfterVisible) {
+                if (trim($line) === '' && $visibleAfterEmptyRaw && $lastVisibleLineEnd !== null) {
+                    $split = $lastVisibleLineEnd;
+                    break;
+                }
                 $lineIsBlock = substr($line, 0, 2) === '= ';
                 if (!$lineIsBlock && preg_match('/\A' . preg_quote($this->wiki->delim, '/')
                     . '(\d+)' . preg_quote($this->wiki->delim, '/') . '/', $line, $lineBlockMatch)) {
@@ -217,12 +225,18 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
                         || ($lineBlockToken[0] === 'Blockquote' && isset($lineBlockToken[1]['type'])
                             && $lineBlockToken[1]['type'] === 'start'));
                 }
+                if (!$lineIsBlock && preg_match('/\A\[\[(?:f)?[<>=]image\s+/i', $line)) {
+                    $lineIsBlock = true;
+                }
                 if ($lineIsBlock) {
                     $split = $lastVisibleLineEnd !== null ? $lastVisibleLineEnd : $lineStart;
                     break;
                 }
             }
             if (!$isEmptyRaw && trim($line) !== '') {
+                if ($emptyRawAfterVisible) {
+                    $visibleAfterEmptyRaw = true;
+                }
                 $seenVisible = true;
                 $blankRunStart = null;
                 $lastVisibleLineEnd = $lineEnd;
@@ -250,7 +264,7 @@ class Text_Wiki_Parse_Size extends Text_Wiki_Parse {
         if ($split !== null) {
             return $start . substr($content, 0, $split) . $end
                 . substr($content, $split)
-                . $this->wiki->addToken($this->rule, array('type' => 'end'));
+                . $this->wiki->addToken($this->rule, array('type' => 'empty'));
         }
         return $leadSpace . $start . $content . $end . $trailSpace;
 
