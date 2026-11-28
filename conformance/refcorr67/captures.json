@@ -1,0 +1,22 @@
+{
+ "collapsible-leading-rule-matrix": {
+  "fullname": "muse-probe-hunt-hrshell-collapsible-leading-rule-matrix",
+  "html": "<p>shape C1-bare-rule</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+C1</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">hide&nbsp;C1</a></div>\n<div class=\"collapsible-block-content\">\n<hr />\n<p>tail C1</p>\n</div>\n</div>\n</div>\n<p>shape C2-empty-raw-rule</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+C2</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">hide&nbsp;C2</a></div>\n<div class=\"collapsible-block-content\">\n<hr />\n<p>tail C2</p>\n</div>\n</div>\n</div>\n<p>shape C3-whitespace-lines-rule</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+C3</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">hide&nbsp;C3</a></div>\n<div class=\"collapsible-block-content\">\n<p>　<br />\n　</p>\n<hr />\n<p>tail C3</p>\n</div>\n</div>\n</div>\n<p>shape C4-text-then-rule</p>\n<div class=\"collapsible-block\">\n<div class=\"collapsible-block-folded\"><a class=\"collapsible-block-link\" href=\"javascript:;\">+C4</a></div>\n<div class=\"collapsible-block-unfolded\" style=\"display:none\">\n<div class=\"collapsible-block-unfolded-link\"><a class=\"collapsible-block-link\" href=\"javascript:;\">hide&nbsp;C4</a></div>\n<div class=\"collapsible-block-content\">\n<p>alpha C4</p>\n<hr />\n<p>tail C4</p>\n</div>\n</div>\n</div>",
+  "html_sha256": "f5f6bd4c28b3bc0ea1a64664f246f8cfc9c75b43dca3e1383f3b82d72aa4cd0d",
+  "source": "shape C1-bare-rule\n\n[[collapsible show=\"+C1\" hide=\"hide C1\"]]\n----\n\ntail C1\n[[/collapsible]]\n\nshape C2-empty-raw-rule\n\n[[collapsible show=\"+C2\" hide=\"hide C2\"]]\n@@@@\n----\n\ntail C2\n[[/collapsible]]\n\nshape C3-whitespace-lines-rule\n\n[[collapsible show=\"+C3\" hide=\"hide C3\"]]\n　\n　\n----\n\ntail C3\n[[/collapsible]]\n\nshape C4-text-then-rule\n\n[[collapsible show=\"+C4\" hide=\"hide C4\"]]\nalpha C4\n----\n\ntail C4\n[[/collapsible]]",
+  "source_sha256": "722755b7cd72bb3d9ec0e83b8e9f86ca04fcaa0b6521273912277fef9487d3e4",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "root-div-leading-rule-matrix": {
+  "fullname": "muse-probe-hunt-hrshell-root-div-leading-rule-matrix",
+  "html": "<p>shape O1-bare-rule</p>\n<hr />\n<p>tail O1</p>\n<p>shape O2-empty-raw-rule</p>\n<hr />\n<p>tail O2</p>\n<p>shape O3-whitespace-lines-rule</p>\n<p>　<br />\n　</p>\n<hr />\n<p>tail O3</p>\n<p>shape O4-text-then-rule</p>\n<p>alpha O4</p>\n<hr />\n<p>tail O4</p>\n<p>shape D2-div-empty-raw-rule</p>\n<div>\n<hr />\n<p>tail D2</p>\n</div>",
+  "html_sha256": "2ea1bb90c030c29a88a9ecebde341420322c4341443aeeaf3d47bb803f9503bd",
+  "source": "shape O1-bare-rule\n\n----\n\ntail O1\n\nshape O2-empty-raw-rule\n\n@@@@\n----\n\ntail O2\n\nshape O3-whitespace-lines-rule\n\n　\n　\n----\n\ntail O3\n\nshape O4-text-then-rule\n\nalpha O4\n----\n\ntail O4\n\nshape D2-div-empty-raw-rule\n\n[[div]]\n@@@@\n----\n\ntail D2\n[[/div]]",
+  "source_sha256": "b9240686228285b358e891cb85328e724d9bfea1358322a6003cd3a8dce6c69e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}
