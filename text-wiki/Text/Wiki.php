@@ -903,6 +903,211 @@ class Text_Wiki {
             }
             
         }
+
+        $this->renumberModuleFamilyBeforeRaw();
+    }
+
+    /**
+     * REFCORR70: live allocates the module-family tokens before the
+     * Raw/Rawold/Html family even though those earlier opaque rules must
+     * still compose as if they had claimed their atoms first. Keep the
+     * fossil parse composition (which the corpus pins extensively) and
+     * renumber the finished token stream into live's allocation order.
+     * Only delimited token references are rewritten; ordinary numeric
+     * option values are untouched.
+     */
+    function renumberModuleFamilyBeforeRaw()
+    {
+        if (!$this->tokens) {
+            return;
+        }
+
+        $moduleFamily = array('Modulepre' => 1, 'Module' => 1, 'Module654' => 1);
+        $rawFamily = array('Raw' => 2, 'Rawold' => 2, 'Html' => 2);
+        $beforeFamily = array(
+            'Include' => 0, 'Prefilter' => 0, 'Delimiter' => 0,
+            'Code' => 0, 'Form' => 0
+        );
+
+        $needsRenumber = false;
+        foreach ($this->tokens as $token) {
+            $rule = isset($token[0]) ? $token[0] : '';
+            if (in_array($rule, array('Modulepre', 'Module', 'Module654'), true)) {
+                $hasModuleBeforeCompact = true;
+            } elseif (in_array($rule, array('Raw', 'Rawold', 'Html'), true)) {
+                $hasRawBeforeCompact = true;
+            }
+        }
+        $needsRenumber = !empty($hasModuleBeforeCompact) && !empty($hasRawBeforeCompact);
+
+        // In live allocation order the module family claims its body before
+        // Raw/Rawold/Html can scan it. The fossil composition used above may
+        // already have allocated such an opaque token inside a module body.
+        // That token is not reachable from the post-parse source (the module
+        // token owns the body), so compact it away and restore the authored
+        // body bytes in the owning module option before renumbering. This is
+        // allocation-only unless a corrupted delimiter later probes the token
+        // numbering, which is exactly the behavior REFCORR70 pins.
+        $moduleOwned = array();
+        $placeholderRegex = '/' . preg_quote($this->delim, '/') . '(\d+)'
+            . preg_quote($this->delim, '/') . '/';
+        foreach ($this->tokens as $ownerId => $ownerToken) {
+            $ownerRule = isset($ownerToken[0]) ? $ownerToken[0] : '';
+            if (!in_array($ownerRule, array('Modulepre', 'Module', 'Module654'), true)
+                || !isset($ownerToken[1]['module_body'])
+                || !is_string($ownerToken[1]['module_body'])) {
+                continue;
+            }
+            if (!preg_match_all($placeholderRegex, $ownerToken[1]['module_body'], $bodyPlaceholders)) {
+                continue;
+            }
+            foreach (array_unique($bodyPlaceholders[1]) as $candId) {
+                $candId = intval($candId);
+                if (!isset($this->tokens[$candId])) {
+                    continue;
+                }
+                $candRule = isset($this->tokens[$candId][0]) ? $this->tokens[$candId][0] : '';
+                if (!in_array($candRule, array('Raw', 'Rawold', 'Html'), true)) {
+                    continue;
+                }
+                $ph = $this->delim . $candId . $this->delim;
+                if (strpos($this->source, $ph) === false) {
+                    $moduleOwned[$candId] = true;
+                }
+            }
+        }
+        if ($moduleOwned) {
+            foreach ($this->tokens as $ownerId => $ownerToken) {
+                if (!isset($ownerToken[1]['module_body'])
+                    || !is_string($ownerToken[1]['module_body'])) {
+                    continue;
+                }
+                foreach (array_keys($moduleOwned) as $candId) {
+                    if (!isset($this->tokens[$candId])) {
+                        continue;
+                    }
+                    $ph = $this->delim . $candId . $this->delim;
+                    if (strpos($ownerToken[1]['module_body'], $ph) === false) {
+                        continue;
+                    }
+                    $replacement = null;
+                    if (isset($this->tokenSource[$candId])) {
+                        $replacement = $this->tokenSource[$candId];
+                    } elseif ($this->tokens[$candId][0] === 'Rawold'
+                        && isset($this->tokens[$candId][1]['text'])) {
+                        $replacement = '``' . $this->tokens[$candId][1]['text'] . '``';
+                    }
+                    if ($replacement === null) {
+                        unset($moduleOwned[$candId]);
+                        continue;
+                    }
+                    $ownerToken[1]['module_body'] = str_replace(
+                        $ph, $replacement, $ownerToken[1]['module_body']);
+                }
+                $this->tokens[$ownerId] = $ownerToken;
+            }
+            foreach (array_keys($moduleOwned) as $candId) {
+                $ph = $this->delim . $candId . $this->delim;
+                foreach ($this->tokens as $token) {
+                    if (isset($token[1]) && strpos(serialize($token[1]), $ph) !== false) {
+                        unset($moduleOwned[$candId]);
+                        break;
+                    }
+                }
+                if (isset($moduleOwned[$candId])) {
+                    foreach ($this->tokenSource as $span) {
+                        if (is_string($span) && strpos($span, $ph) !== false) {
+                            unset($moduleOwned[$candId]);
+                            break;
+                        }
+                    }
+                }
+            }
+            foreach (array_keys($moduleOwned) as $candId) {
+                unset($this->tokens[$candId]);
+                unset($this->tokenSource[$candId]);
+            }
+        }
+
+        $hasModule = false;
+        $hasRaw = false;
+        $ordered = array();
+        foreach ($this->tokens as $oldId => $token) {
+            $rule = isset($token[0]) ? $token[0] : '';
+            if (isset($moduleFamily[$rule])) {
+                $rank = 1;
+                $hasModule = true;
+            } elseif (isset($rawFamily[$rule])) {
+                $rank = 2;
+                $hasRaw = true;
+            } elseif (isset($beforeFamily[$rule])) {
+                $rank = 0;
+            } else {
+                $rank = 3;
+            }
+            $ordered[] = array($rank, $oldId, $token);
+        }
+        if (!$needsRenumber) {
+            return;
+        }
+
+        usort($ordered, function ($a, $b) {
+            if ($a[0] === $b[0]) {
+                return $a[1] < $b[1] ? -1 : ($a[1] > $b[1] ? 1 : 0);
+            }
+            return $a[0] < $b[0] ? -1 : 1;
+        });
+
+        $map = array();
+        $newTokens = array();
+        $newId = 1;
+        foreach ($ordered as $row) {
+            $oldId = $row[1];
+            $map[$oldId] = $newId;
+            $newTokens[$newId] = $row[2];
+            $newId++;
+        }
+
+        $rewrite = function ($text) use (&$rewrite, $map) {
+            if (is_array($text)) {
+                $out = array();
+                foreach ($text as $key => $value) {
+                    $out[$key] = $rewrite($value);
+                }
+                return $out;
+            }
+            if (!is_string($text) || strpos($text, $this->delim) === false) {
+                return $text;
+            }
+            $regex = '/' . preg_quote($this->delim, '/') . '(\d+)'
+                . preg_quote($this->delim, '/') . '/';
+            return preg_replace_callback($regex, function ($m) use ($map) {
+                $old = intval($m[1]);
+                if (!isset($map[$old])) {
+                    return $m[0];
+                }
+                return $this->delim . $map[$old] . $this->delim;
+            }, $text);
+        };
+
+        foreach ($newTokens as $id => $token) {
+            if (isset($token[1])) {
+                $token[1] = $rewrite($token[1]);
+            }
+            $newTokens[$id] = $token;
+        }
+        $oldTokenSource = $this->tokenSource;
+        $this->tokenSource = array();
+        foreach ($oldTokenSource as $id => $span) {
+            if (isset($map[$id])) {
+                $this->tokenSource[$map[$id]] = $rewrite($span);
+            }
+        }
+
+        $this->tokens = $newTokens;
+        $this->nextTokenId = $newId;
+        ksort($this->tokenSource);
+        $this->source = $rewrite($this->source);
     }
 
     /**
