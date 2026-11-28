@@ -1,0 +1,17 @@
+{
+ "intended_source_sha256": "929a2c20baaea9fcc1c70249805beedbe294177eb2dc1f7a233578ccac7e6e77",
+ "intended_source": "CRI-SPAN-CR-START\n[[span id=\"a\rb\"]]x[[/span]]\nCRI-SPAN-CR-END\n\nCRI-SPAN-CRLF-START\n[[span id=\"a\r\nb\"]]x[[/span]]\nCRI-SPAN-CRLF-END\n\nCRI-SPAN-LF-START\n[[span id=\"a\nb\"]]x[[/span]]\nCRI-SPAN-LF-END\n\nCRI-DIV-CR-START\n[[div id=\"a\rb\"]]\nx\n[[/div]]\nCRI-DIV-CR-END\n\nCRI-ANCHOR-CR-START\n[[a id=\"a\rb\"]]x[[/a]]\nCRI-ANCHOR-CR-END\n\nCRI-TABLE-CR-START\n[[table id=\"a\rb\" class=\"a\rb\" data-x=\"a\rb\"]]\n[[row id=\"a\rb\" class=\"a\rb\" data-x=\"a\rb\"]]\n[[cell id=\"a\rb\" class=\"a\rb\" data-x=\"a\rb\"]]X[[/cell]]\n[[/row]]\n[[/table]]\nCRI-TABLE-CR-END\n\nCRI-BARE-CR-START\nbefore\rafter\nCRI-BARE-CR-END",
+ "capture": {
+  "fullname": "muse-probe-hunt-spanid2-cr-instrument",
+  "html": "<p>CRI-SPAN-CR-START<br />\n<span id=\"u-a b\">x</span><br />\nCRI-SPAN-CR-END</p>\n<p>CRI-SPAN-CRLF-START<br />\n<span id=\"u-a b\">x</span><br />\nCRI-SPAN-CRLF-END</p>\n<p>CRI-SPAN-LF-START<br />\n<span id=\"u-a b\">x</span><br />\nCRI-SPAN-LF-END</p>\n<p>CRI-DIV-CR-START</p>\n<div id=\"u-a b\">\n<p>x</p>\n</div>\n<br />\nCRI-DIV-CR-END\n<p>CRI-ANCHOR-CR-START<br />\n<a id=\"u-a b\" href=\"\">x</a><br />\nCRI-ANCHOR-CR-END</p>\n<p>CRI-TABLE-CR-START</p>\n<table id=\"u-a b\" class=\"a b\" data-x=\"a b\">\n<tr id=\"u-a b\" class=\"a b\" data-x=\"a b\">\n<td id=\"u-a b\" class=\"a b\" data-x=\"a b\">X</td>\n</tr>\n</table>\n<p>CRI-TABLE-CR-END</p>\n<p>CRI-BARE-CR-START<br />\nbefore<br />\nafter<br />\nCRI-BARE-CR-END</p>",
+  "html_sha256": "9e33d10ec99dfe1802917a993aca249c8dde1744ec96b90c16d76e85555840a6",
+  "source": "CRI-SPAN-CR-START\n[[span id=\"a\nb\"]]x[[/span]]\nCRI-SPAN-CR-END\n\nCRI-SPAN-CRLF-START\n[[span id=\"a\nb\"]]x[[/span]]\nCRI-SPAN-CRLF-END\n\nCRI-SPAN-LF-START\n[[span id=\"a\nb\"]]x[[/span]]\nCRI-SPAN-LF-END\n\nCRI-DIV-CR-START\n[[div id=\"a\nb\"]]\nx\n[[/div]]\nCRI-DIV-CR-END\n\nCRI-ANCHOR-CR-START\n[[a id=\"a\nb\"]]x[[/a]]\nCRI-ANCHOR-CR-END\n\nCRI-TABLE-CR-START\n[[table id=\"a\nb\" class=\"a\nb\" data-x=\"a\nb\"]]\n[[row id=\"a\nb\" class=\"a\nb\" data-x=\"a\nb\"]]\n[[cell id=\"a\nb\" class=\"a\nb\" data-x=\"a\nb\"]]X[[/cell]]\n[[/row]]\n[[/table]]\nCRI-TABLE-CR-END\n\nCRI-BARE-CR-START\nbefore\nafter\nCRI-BARE-CR-END",
+  "source_sha256": "dc952d5fcb067d71b65cee10caf075a9befa9e0962211bf8f5a8bc209ba5d349",
+  "saved_source_matches": false,
+  "stable": true,
+  "valid": false
+ },
+ "saved_contains_cr": false,
+ "saved_source_matches": false,
+ "valid": false
+}

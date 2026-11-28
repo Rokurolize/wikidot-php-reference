@@ -427,7 +427,7 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
         // `padding: 0.5em; line-height:`; deleting the newline produced the
         // no-space form. Other C0 bytes and DEL stay invisible as before.
         $value = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/', '', $value);
-        $value = preg_replace('/\s+/u', ' ', $value);
+        $value = preg_replace('/[ \t\r\n]+/', ' ', $value);
         return trim($value);
     }
 
@@ -439,7 +439,8 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
         if (strpos($value, 'u-') === 0) {
             return $collapsed;
         }
-        $prefix = preg_match('/^\s/', $value) ? 'u- ' : 'u-';
+        $edgeProbe = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/', '', $value);
+        $prefix = preg_match('/^[ \t\r\n]/', $edgeProbe) ? 'u- ' : 'u-';
         return $prefix . $collapsed;
     }
 
@@ -494,10 +495,6 @@ class Text_Wiki_Parse_Tableadv extends Text_Wiki_Parse {
             $normalized = $key === 'id'
                 ? $this->normalizeValue($this->isolateId($value))
                 : $this->normalizeValue($value);
-            if ($normalized === ''
-                && in_array($key, array('class', 'id', 'role', 'style', 'type'), true)) {
-                continue;
-            }
             $attrs[$key] = $normalized;
         }
         // REFCORR3 C-R45-1: live orders attributes by a fixed wikidot rank
