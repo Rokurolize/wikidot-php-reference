@@ -59,6 +59,10 @@ This record does not claim to identify Wikidot's internal cache-generation mecha
 4. checks that the post-link-creation recapture is stable, valid, source-identical, has no `newpage` links, and still leaks `271272` — passed;
 5. re-runs the cached-production canonical comparison and checks cached `274275` versus fresh sandbox `271272` — passed.
 
+## Tree verification
+
+The final tree passed the full verifier sweep enumerated from the repository itself: 43/43 verifier scripts, including the non-`verify_*`-named verifier scripts. The four frozen gates were also run against the final tree and passed with zero diffs: `S_local_71` 71/71, `S_diag_44` 44/44, `S_holdout_step4_150` 150/150, and `S_holdout_fresh_150` 150/150. Because this record ships no parser or renderer implementation diff, there was no correction-induced corpus movement to audit.
+
 ## Sharpest remaining discriminator
 
 If a future lane challenges the capture-stale dissolution, the sharpest discriminator is no longer another sandbox composition variation. It is a same-generation production-serving comparison under explicit authorization: compare the corpus-cached API `html` for `scp-cn-1442` with a current anonymous or API render obtained in the same serving generation, without editing the production page. A current production-serving `271272` would confirm the stale-capture account directly; a reproducible current production-serving `274275`, together with the sandbox `271272` evidence here, would reopen the question as a branch/site-generation environment boundary rather than a composition-sensitive parser rule. That production read was outside this lane's authorization and was not performed.
