@@ -96,9 +96,114 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
      * joins change which source runs exist at all.
      */
     function parse() {
+        $this->suppressEmptyRawLinesBeforeHoriz();
         $this->isolateAdvancedTableBoundaries();
         $this->tokenizeScoredSpans();
         parent::parse();
+    }
+
+    /**
+     * Empty-Raw-only line residue immediately ahead of a horizontal rule
+     * is layout on live, not an empty paragraph. The Horiz rule has
+     * already isolated its token behind a blank line when Paragraph runs,
+     * so the ordinary empty-lead/block-lead logic cannot see the rule inside
+     * this run. Remove only the invisible empty-Raw placeholders; their token
+     * numbers remain allocated, while the newline framing and the Horiz token
+     * stay in place.
+     */
+    protected function suppressEmptyRawLinesBeforeHoriz() {
+        // Scan line positions instead of using one whole-document nested
+        // regex: very large real pages can otherwise exceed PCRE's backtrack
+        // or JIT limits, in which case preg_replace_callback returns null
+        // and would wipe the parse stream.
+        $lines = explode("\n", $this->wiki->source);
+        $count = count($lines);
+        $remove = array();
+        for ($i = 2; $i < $count; $i++) {
+            if ($lines[$i - 1] !== '') {
+                continue;
+            }
+            $horizId = $this->singlePlaceholderLineId($lines[$i]);
+            if ($horizId === null) {
+                continue;
+            }
+            $horiz = isset($this->wiki->tokens[$horizId])
+                ? $this->wiki->tokens[$horizId] : null;
+            if ($horiz === null || $horiz[0] !== 'Horiz') {
+                continue;
+            }
+            $j = $i - 2;
+            while ($j >= 0 && $this->isEmptyRawPlaceholderLine($lines[$j])) {
+                $remove[$j] = true;
+                $j--;
+            }
+        }
+        if (empty($remove)) {
+            return;
+        }
+        $kept = array();
+        foreach ($lines as $i => $line) {
+            if (!isset($remove[$i])) {
+                $kept[] = $line;
+            }
+        }
+        $this->wiki->source = implode("\n", $kept);
+    }
+
+    /**
+     * Return the token id when a line consists of exactly one placeholder,
+     * or null otherwise.
+     */
+    protected function singlePlaceholderLineId($line) {
+        $parsed = $this->placeholderAt($line, 0);
+        if ($parsed === null || $parsed[1] !== strlen($line)) {
+            return null;
+        }
+        return $parsed[0];
+    }
+
+    /**
+     * Whether a line consists only of empty Raw placeholders, each followed
+     * by optional ASCII horizontal whitespace.
+     */
+    protected function isEmptyRawPlaceholderLine($line) {
+        $pos = 0;
+        $len = strlen($line);
+        $seen = false;
+        while ($pos < $len) {
+            $parsed = $this->placeholderAt($line, $pos);
+            if ($parsed === null) {
+                return false;
+            }
+            $tok = isset($this->wiki->tokens[$parsed[0]])
+                ? $this->wiki->tokens[$parsed[0]] : null;
+            if ($tok === null || $tok[0] !== 'Raw'
+                || !isset($tok[1]['text']) || $tok[1]['text'] !== '') {
+                return false;
+            }
+            $pos += $parsed[1];
+            while ($pos < $len && ($line[$pos] === ' ' || $line[$pos] === "\t")) {
+                $pos++;
+            }
+            $seen = true;
+        }
+        return $seen;
+    }
+
+    /**
+     * Parse one token placeholder at a byte offset. Returns
+     * array(token-id, byte-length), or null when no placeholder starts there.
+     */
+    protected function placeholderAt($text, $offset) {
+        $delim = preg_quote($this->wiki->delim, '/');
+        if (! preg_match(
+            '/\A' . $delim . '([0-9]+)' . $delim . '/',
+            substr($text, $offset, 64),
+            $m
+        )) {
+            return null;
+        }
+        return array((int)$m[1], strlen($m[0]));
     }
 
     /**
