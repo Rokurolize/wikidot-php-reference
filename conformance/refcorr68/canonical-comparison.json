@@ -1,0 +1,9 @@
+{
+ "canonical_length": 11093,
+ "method": "strip the anonymous rate-widget body to the empty alignment wrapper, add the API fragment leading/trailing newlines, then mask only the first-class six-digit leaked token-index run as @@@@@@",
+ "note": "After this narrow serving-layer canonicalization the bytes are identical except for the masked leaked index run; this isolates the residual to placeholder numbering rather than visible composition.",
+ "production_cached_leak": "274275",
+ "production_length": 11093,
+ "sandbox_poslinks_canonical_masked_equals_production_cached_masked": true,
+ "sandbox_poslinks_leak": "271272"
+}

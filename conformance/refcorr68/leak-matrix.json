@@ -1,0 +1,36 @@
+{
+ "all_reference_current_live_pairs_equal": true,
+ "live_leaks": {
+  "boundary": "271272",
+  "collclosed": "270271",
+  "collextra": "271272",
+  "collunclosed": "270271",
+  "posfull": "271272",
+  "posfull-recapture": "271272",
+  "poslinks": "271272",
+  "raw0": "207208",
+  "raw1": "209210",
+  "raw16": "239240",
+  "raw2": "211212",
+  "raw31": "269270",
+  "rawafter": "270271",
+  "rawbefore": "272273"
+ },
+ "positive_source_sha256": "ad2d9197e0fdee49d2a01e8a8a71b412b92955e2cf2cf9a7b1ea7b4307b8e6f2",
+ "production_cached_leak": "274275",
+ "reference_leaks": {
+  "boundary": "271272",
+  "collclosed": "270271",
+  "collextra": "271272",
+  "collunclosed": "270271",
+  "posfull": "271272",
+  "poslinks": "271272",
+  "raw0": "207208",
+  "raw1": "209210",
+  "raw16": "239240",
+  "raw2": "211212",
+  "raw31": "269270",
+  "rawafter": "270271",
+  "rawbefore": "272273"
+ }
+}
