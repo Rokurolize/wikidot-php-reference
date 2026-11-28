@@ -1,0 +1,92 @@
+{
+ "divalign-control-leak-only": {
+  "fullname": "muse-probe-hunt-divalign-divalign-control-leak-only",
+  "html": "<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end18</p>",
+  "html_sha256": "2b5313e3398d63df89425331412a1b063f9a359c54b1a1fb3b0338d0d2fd7a4f",
+  "source": "# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�",
+  "source_sha256": "dfceda71f34bcafbd5fe03754ebc57a8d7b059a7a5360d52f9eadf2b9b155c19",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "divalign-right-empty-pair": {
+  "fullname": "muse-probe-hunt-divalign-divalign-right-empty-pair",
+  "html": "<div style=\"text-align: right;\"></div>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end24</p>",
+  "html_sha256": "e6409fb6cd0e456650ca2920b770620624edea9631c7decc2b9b41ae88c680a4",
+  "source": "[[>]]\n[[/>]]\n\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�",
+  "source_sha256": "08144701ff494c8b869a4c6edc4a858550ebb87b36fe1a55df81bce9ad20648d",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "left-open-only": {
+  "fullname": "muse-probe-hunt-divalign-left-open-only",
+  "html": "<p>[[&lt;]]</p>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end20</p>",
+  "html_sha256": "bb960c1d10246bb7920da562611ba3e7935d39d6e4ed7c426214717192bd0340",
+  "source": "[[<]]\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�",
+  "source_sha256": "ee29cb2af87f1f7aa8a3d5627a83a2bd5d4aa72ab8c2b9152e9751fa99e2e720",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "divalign-center-open-only": {
+  "fullname": "muse-probe-hunt-divalign-divalign-center-open-only",
+  "html": "<p>[[=]]</p>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end20</p>",
+  "html_sha256": "5b035748c30ecf9ed4929b2a6b2cb7a79a8a193656e715f5202f19de106eb307",
+  "source": "[[=]]\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�",
+  "source_sha256": "e21e10c27aa4cc942326caaae2cc64f9b5e5ed8fe0003d5daa4a83758f8297e5",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "divalign-center-empty-pair": {
+  "fullname": "muse-probe-hunt-divalign-divalign-center-empty-pair",
+  "html": "<div style=\"text-align: center;\"></div>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end24</p>",
+  "html_sha256": "963cf88ec05759a9b5fadcc8ccf6682c23b1de01628a91e1d84cf1ff8fe04b7c",
+  "source": "[[=]]\n[[/=]]\n\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�",
+  "source_sha256": "8ca9be026dbdec649f5822acc47d54940b2b5ab4f6f6163ba9eeb46d465e8069",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "right-pair-after-leak": {
+  "fullname": "muse-probe-hunt-divalign-right-pair-after-leak",
+  "html": "<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end202112223224</p>",
+  "html_sha256": "06a60c3097f4cae6ce329e19a1c3d40ae9ec50390a979cf108052fe8ca47d778",
+  "source": "# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�\n\n[[>]]\n[[/>]]",
+  "source_sha256": "0a37880baeb4090680b8a8ed24d22d6031c77c101b84860f8ffb323295ed7a07",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "left-empty-pair-before-leak": {
+  "fullname": "muse-probe-hunt-divalign-left-empty-pair-before-leak",
+  "html": "<div style=\"text-align: left;\"></div>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end24</p>",
+  "html_sha256": "36a2a391a170d56d6105a8eb60033ef637cc6ec30e4316949e2fccf2adba7d1f",
+  "source": "[[<]]\n[[/<]]\n\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�",
+  "source_sha256": "da325424ee3a700556d95dd5bb0d9e0fc106745a7bc640c9d58f3ef3a9d06c02",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "right-text-pair-before-leak": {
+  "fullname": "muse-probe-hunt-divalign-right-text-pair-before-leak",
+  "html": "<div style=\"text-align: right;\">\n<p>alpha</p>\n</div>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end26</p>",
+  "html_sha256": "2985c9e4760c6145815a463f6bedf51ed6dd3bb4f7418e5adc5f28861be40c5c",
+  "source": "[[>]]\nalpha\n[[/>]]\n\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�",
+  "source_sha256": "bb72900a69dd67add32fb4176d23cdd1f2a31449a7a6a2bdc5a9d6d7829e7b8e",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ },
+ "divalign-right-open-only": {
+  "fullname": "muse-probe-hunt-divalign-divalign-right-open-only",
+  "html": "<p>[[&gt;]]</p>\n<ol>\n<li>item A</li>\n<li>item B</li>\n<li>item C</li>\n</ol>\n<p>interruption</p>\n<ol>\n<li>item D</li>\n<li>item E</li>\n</ol>\n<p>paragraph with private  end20</p>",
+  "html_sha256": "c0610feb6bef4782cd00092f441cf46737529f2a5cede2f7fe3ee499d191c627",
+  "source": "[[>]]\n# item A\n# item B\n# item C\n\ninterruption\n\n# item D\n# item E\n\nparagraph with private  end�",
+  "source_sha256": "b17d80f8699abe6349b146b523ec8b3b6823d1a0a0a24ba08a71f530e411ed66",
+  "saved_source_matches": true,
+  "stable": true,
+  "valid": true
+ }
+}

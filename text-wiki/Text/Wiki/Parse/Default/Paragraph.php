@@ -811,6 +811,14 @@ class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
         $skip = $this->getConf('skip', array());
         
         if (in_array($token_type, $skip)) {
+            if ($token_type === 'divalign'
+                && trim($matches[0]) === $delim . $key . $delim) {
+                $start = $this->wiki->addToken($this->rule, array(
+                    'type' => 'start', 'divalign_shell' => true));
+                $end = $this->wiki->addToken($this->rule, array(
+                    'type' => 'end', 'divalign_shell' => true));
+                return $start . trim($matches[0]) . $end . "\n\n";
+            }
             // this type of token should not have paragraphs applied to it.
             // return the entire matched text.
             return $matches[0];
