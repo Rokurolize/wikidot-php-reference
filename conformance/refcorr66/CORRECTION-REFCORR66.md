@@ -1,0 +1,19 @@
+# CORRECTION-REFCORR66: literal-U+FFFD numeric collision is local, not a pair-scan cascade
+
+## Adjudication
+
+REFCORR66 used five fresh immutable no-rate-module reductions of the corrupted `scp-cn-048` stream on `sandbox-for-codex.wikidot.com`: `muse-probe-hunt-scp-nr2-exact`, `muse-probe-hunt-scp-nr2-remove-strong-after-6`, `muse-probe-hunt-scp-nr2-remove-strong-before-ln5`, `muse-probe-hunt-scp-nr2-remove-strong-after-n`, and `muse-probe-hunt-scp-nr2-no-strong`. All five captures are valid, stable across repeated anonymous reads, and saved-source-byte-identical. The exact corrupted byte order is preserved; the strong-removal pages vary only the measured interruption. No Rate module appears anywhere in the probe sources.
+
+The probes settle the structural rule left open by REFCORR62. A literal U+FFFD followed by authored decimal digits leading into the opening delimiter of a real placeholder forms a local numeric collision. When those digits name an existing token, live renders that token at the collision point. The collision consumes that following delimiter, so the original placeholder whose opening delimiter was consumed loses its delimiting frame: its document-local digits remain visible as text and its closing delimiter is later dropped without rendering the token. This is why the repeated `�1` collision in the SCP stream renders the Size-start token at both collision points while the adjacent Typography placeholder digits remain visible as `27` (or `25` in the reduced token numbering).
+
+The scan is not a fossil delimiter-pair cascade. Malformed non-numeric runs between literal delimiters remain in place, but they do not reposition, swallow, or parity-shift later original placeholders. After the corrupted run, the original Newline/Strong/Size placeholders render at their own positions. In particular the final adjacent literal-plus-placeholder shape still follows the narrower REFCORR59 swallowed-index rule: the newline placeholder before the literal renders normally, while the immediately following original newline placeholder is swallowed and leaks its fresh document-local index. The reference's former cascade consumed the remainder of the document in delimiter pairs; it therefore rendered the repeated collision only once, swapped the final newline/index ordering, and destroyed later strong/newline structure whenever the pair parity drifted.
+
+This local-collision rule also preserves the already pinned REFCORR59 shapes: malformed text remains visible rather than being swallowed; a literal directly before a real placeholder still leaks the swallowed fresh index; and a spurious numeric collision can render a real token even when the digits were authored corrupted text.
+
+## Implementation
+
+`text-wiki/Text/Wiki.php` now handles the digit-leading literal collision locally inside `renderLiteralUfffdRecovery()`: it renders the colliding token only when the digit sequence names an existing token and the terminating delimiter is the opening delimiter of an original placeholder, advances only past that delimiter, and otherwise resumes the ordinary origin-aware walk. The rest of the literal-U+FFFD recovery path is unchanged. The pre-correction copy is `Wiki.php.before-refcorr66` in this directory.
+
+## Pins
+
+`cases.jsonl` contains the five no-rate SCP reductions. `captures.json` records the stable source-identical live captures; `tokens.jsonl` records the reference post-parse token table for each reduction; `expected.json` pins the corrected reference bytes. `verify_refcorr66.py` checks capture validity, expected-render bytes, and exact live fidelity. At the final local run all 5/5 capture-validity, 5/5 expected-render byte, and 5/5 exact-live-fidelity pins passed. REFCORR59's nine grouped pins and REFCORR62's two pins also remain green on the corrected tree.

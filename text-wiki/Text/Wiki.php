@@ -1034,42 +1034,25 @@ class Text_Wiki {
             }
 
             // A literal followed by digits leading into a real placeholder
-            // starts the fossil pair scan: the authored digits become the
-            // first corrupted key, and malformed later keys remain visible
-            // instead of identifying tokens. This is the sentinel-cascade
-            // shape; an immediately adjacent placeholder follows the narrower
-            // swallowed-index path below.
+            // collides with that placeholder's opening delimiter. When the
+            // authored digits name an existing token, live renders that token
+            // at the collision point. The scan is local rather than a fossil
+            // pair cascade: the placeholder opening consumed as the closing
+            // delimiter leaves its document-local digits visible, malformed
+            // text remains in place, and later original placeholders still
+            // render at their own positions.
             if ($i + 1 < $n && ctype_digit($bytes[$i + 1])) {
                 $digitEnd = $i + 1;
                 while ($digitEnd < $n && ctype_digit($bytes[$digitEnd])) {
                     $digitEnd++;
                 }
                 if ($digitEnd < $n && $bytes[$digitEnd] === "\xFF" && $origin[$digitEnd] === 'O') {
-                    while ($i < $n) {
-                        if ($bytes[$i] !== "\xFF") {
-                            $j = $i;
-                            while ($j < $n && $bytes[$j] !== "\xFF") {
-                                $j++;
-                            }
-                            $html .= substr($bytes, $i, $j - $i);
-                            $i = $j;
-                            continue;
-                        }
-                        $close = strpos($bytes, "\xFF", $i + 1);
-                        if ($close === false) {
-                            $html .= substr($bytes, $i + 1);
-                            $i = $n;
-                            break;
-                        }
-                        $key = substr($bytes, $i + 1, $close - $i - 1);
-                        if ($key !== '' && ctype_digit($key) && isset($this->tokens[(int)$key])) {
-                            $html .= $this->renderTokenId((int)$key);
-                        } else {
-                            $html .= $key;
-                        }
-                        $i = $close + 1;
+                    $collisionId = (int)substr($bytes, $i + 1, $digitEnd - $i - 1);
+                    if (isset($this->tokens[$collisionId])) {
+                        $html .= $this->renderTokenId($collisionId);
+                        $i = $digitEnd + 1;
+                        continue;
                     }
-                    continue;
                 }
             }
 
